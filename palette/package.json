@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      {
+        "name": null,
+        "raw": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+        "rawSpec": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+        "scope": null,
+        "spec": "ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+        "type": "git"
+      },
+      "/Users/lawdavis/repos/spectrum"
+    ]
+  ],
+  "_from": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+  "_id": "spectrum-palette@1.0.0-pre.13",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/spectrum-palette",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": null,
+    "raw": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+    "rawSpec": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+    "scope": null,
+    "spec": "ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+    "type": "git"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#ab32d3f0761be04ec49c239b2d4d977cf3cf7594",
+  "_shasum": "a69eadbf58300f0dccdf2cc3b00324d16f12b03d",
+  "_shrinkwrap": null,
+  "_spec": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+  "_where": "/Users/lawdavis/repos/spectrum",
+  "author": "",
+  "dependencies": {},
+  "description": "The Spectrum color palette",
+  "devDependencies": {
+    "ase-utils": "^0.1.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.1.0",
+    "gulp-connect": "^4.0.0",
+    "gulp-git": "^1.7.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.7",
+    "gulp-wrap": "^0.13.0",
+    "gulp-zip": "^3.2.0",
+    "inquirer": "^1.0.2",
+    "lodash": "^4.11.1",
+    "onecolor": "^3.0.1",
+    "run-sequence": "^1.1.5",
+    "semver": "^5.1.0",
+    "through2": "^2.0.1",
+    "xtend": "^4.0.1"
+  },
+  "gitHead": "ab32d3f0761be04ec49c239b2d4d977cf3cf7594",
+  "license": "closed",
+  "name": "spectrum-palette",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:Spectrum/palette.git"
+  },
+  "version": "1.0.0-pre.13"
+}

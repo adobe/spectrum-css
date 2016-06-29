@@ -1,0 +1,40 @@
+@require('./FontIcon.styl');
+
+/* No path, since CSS will be in the same folder as the 18/ and 24/ folders */
+spectrum-FontIcon-fontface('')
+
+/* Create CSS classes from placeholders */
+.spectrum-Icon {
+  @extends $spectrum-FontIcon
+}
+
+.spectrum-Icon--sizeXXS {
+  @extends $spectrum-FontIcon--sizeXXS
+}
+
+.spectrum-Icon--sizeXS {
+  @extends $spectrum-FontIcon--sizeXS
+}
+
+.spectrum-Icon--sizeS {
+  @extends $spectrum-FontIcon--sizeS
+}
+
+.spectrum-Icon--sizeM {
+  @extends $spectrum-FontIcon--sizeM
+}
+
+.spectrum-Icon--sizeL {
+  @extends $spectrum-FontIcon--sizeL
+}
+
+.spectrum-Icon--sizeXL {
+  @extends $spectrum-FontIcon--sizeXL
+}
+
+.spectrum-Icon--sizeXXL {
+  @extends $spectrum-FontIcon--sizeXXL
+}
+
+spectrum-FontIcon-iconclasses('.spectrum-Icon--')
+

@@ -1,0 +1,116 @@
+@require('./sizes.styl')
+
+spectrum-FontIcon-fontface(path) {
+  @font-face {
+    font-family: 'AdobeSpectrumIcons24';
+    src: url(path + '24/AdobeSpectrumIcons24.eot'); /* IE9 Compat Modes */
+    src: url(path + '24/AdobeSpectrumIcons24.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(path + '24/AdobeSpectrumIcons24.woff2') format('woff2'), /* Super Modern Browsers */
+         url(path + '24/AdobeSpectrumIcons24.woff') format('woff'), /* Pretty Modern Browsers */
+         url(path + '24/AdobeSpectrumIcons24.ttf') format('truetype'), /* Safari, Android, iOS */
+         url(path + '24/AdobeSpectrumIcons24.svg#AdobeSpectrumIcons24') format('svg'); /* Legacy iOS */
+
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'AdobeSpectrumIcons18';
+    src: url(path + '18/AdobeSpectrumIcons18.eot'); /* IE9 Compat Modes */
+    src: url(path + '18/AdobeSpectrumIcons18.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url(path + '18/AdobeSpectrumIcons18.woff2') format('woff2'), /* Super Modern Browsers */
+         url(path + '18/AdobeSpectrumIcons18.woff') format('woff'), /* Pretty Modern Browsers */
+         url(path + '18/AdobeSpectrumIcons18.ttf') format('truetype'), /* Safari, Android, iOS */
+         url(path + '18/AdobeSpectrumIcons18.svg#AdobeSpectrumIcons18') format('svg'); /* Legacy iOS */
+
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+/*
+  prefix - The classname prefix for icon classnames
+*/
+spectrum-FontIcon-iconclasses(prefix) {
+  icons = json('./glyphs.json', { hash: true, leave-strings: true })
+
+  for icon, code in icons {
+    {prefix}{icon}:before {
+      content: code
+    }
+  }
+}
+
+$spectrum-FontIcon {
+  display: inline-block
+  font-style: normal
+  font-weight: normal
+  line-height: inherit
+
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+}
+
+$spectrum-FontIcon--sizeXXS {
+  font-family: AdobeSpectrumIcons18
+  font-size: $spectrum-Icon-xxs-size
+  &:before {
+    height: $spectrum-Icon-xxs-size
+    width: $spectrum-Icon-xxs-size
+  }
+}
+
+$spectrum-FontIcon--sizeXS {
+  font-family: AdobeSpectrumIcons24
+  font-size: $spectrum-Icon-xs-size
+  &:before {
+    height: $spectrum-Icon-xs-size
+    width: $spectrum-Icon-xs-size
+  }
+}
+
+$spectrum-FontIcon--sizeS {
+  font-family: AdobeSpectrumIcons18
+  font-size: $spectrum-Icon-s-size
+  &:before {
+    height: $spectrum-Icon-s-size
+    width: $spectrum-Icon-s-size
+  }
+}
+
+$spectrum-FontIcon--sizeM {
+  font-family: AdobeSpectrumIcons24
+  font-size: $spectrum-Icon-m-size
+  &:before {
+    height: $spectrum-Icon-m-size
+    width: $spectrum-Icon-m-size
+  }
+}
+
+$spectrum-FontIcon--sizeL {
+  font-family: AdobeSpectrumIcons18
+  font-size: $spectrum-Icon-l-size
+  &:before {
+    height: $spectrum-Icon-l-size
+    width: $spectrum-Icon-l-size
+  }
+}
+
+$spectrum-FontIcon--sizeXL {
+  font-family: AdobeSpectrumIcons24
+  font-size: $spectrum-Icon-xl-size
+  &:before {
+    height: $spectrum-Icon-xl-size
+    width: $spectrum-Icon-xl-size
+  }
+}
+
+$spectrum-FontIcon--sizeXXL {
+  font-family: AdobeSpectrumIcons24
+  font-size: $spectrum-Icon-xxl-size
+  &:before {
+    height: $spectrum-Icon-xxl-size
+    width: $spectrum-Icon-xxl-size
+  }
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spectrum Reference Example</title>
+  <link rel="stylesheet" href="spectrum.css">
+  <script type="text/javascript" src="https://use.typekit.net/ruf7eed.js"></script>
+  <script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <script>
+    window.onload = function() {
+      var light = true;
+      var switcher = document.querySelector('#theme-switcher');
+      switcher.addEventListener('click', function() {
+        document.body.classList.remove('spectrum--'+ (light ? 'light' : 'dark'));
+        document.body.classList.add('spectrum--'+ (light ? 'dark' : 'light'));
+        light = !light;
+        setSwitcherInnerHTML();
+      });
+      function setSwitcherInnerHTML() {
+        switcher.innerHTML = light ? 'Dark' : 'Light';
+      }
+      setSwitcherInnerHTML();
+  
+      var dialogBtns = document.querySelectorAll('.dialog-opener');
+      for (var i = 0; i < dialogBtns.length; i++) {
+        dialogBtns[i].addEventListener('click', function() {
+          var dialog = this.nextElementSibling;
+          dialog.classList.add('is-open');
+        });
+      }
+    };
+  </script>
+  <style>
+    #theme-switcher {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body class="spectrum--light">
+  <a id="theme-switcher" href="#"></a>
+  <div class="spectrum-Alert spectrum-Alert--error">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+  <div class="spectrum-Alert-header">ERROR</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+</div>
+<div class="spectrum-Alert spectrum-Alert--success">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Alert-typeIcon" role="img" aria-label="check circle"></div>
+  <div class="spectrum-Alert-header">SUCCESS</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+</div>
+<div class="spectrum-Alert spectrum-Alert--warning">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+  <div class="spectrum-Alert-header">WARNING</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+</div>
+<div class="spectrum-Alert">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Alert-typeIcon" role="img" aria-label="info circle"></div>
+  <div class="spectrum-Alert-header">INFO</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+  <div class="spectrum-Alert-footer">
+    <button class="spectrum-Button spectrum-Button--minimal">Close</button>
+  </div>
+</div>
+<button class="spectrum-Button spectrum-Button--cta">Button</button>
+<button class="spectrum-Button spectrum-Button--minimal">Button</button>
+<button class="spectrum-Button spectrum-Button--primary">Button</button>
+<button class="spectrum-Button spectrum-Button--quiet">Button</button>
+<button class="spectrum-Button spectrum-Button--secondary">Button</button>
+<button class="spectrum-Button spectrum-Button--warning">Button</button>
+<div class="spectrum-Checkbox">
+  <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+  <span class="spectrum-Checkbox-checkmark"></span>
+  <label class="spectrum-Checkbox-description" for="checkbox-0">Checkbox</label>
+</div>
+
+<button variant="primary" class="spectrum-Button spectrum-Button--primary dialog-opener">Open Dialog</button>
+<div class="spectrum-Dialog" id="closeDialog">
+  <div class="spectrum-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS"></div>
+      <h2 class="spectrum-Dialog-title spectrum-Heading spectrum-Heading--2">
+        <div class="spectrum-Dialog-header">Default Dialog</div>
+      </h2>
+      <button class="spectrum-Button spectrum-Dialog-closeButton spectrum-Button--minimal spectrum-Button--square" type="button" aria-label="Close">
+        <div class="spectrum-Icon spectrum-Icon--close spectrum-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="spectrum-Button-label"></div>
+      </button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button variant="primary" class="spectrum-Button spectrum-Button--secondaru" onclick="document.getElementById('closeDialog').classList.remove('is-open')">Cancel</button>
+      <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('closeDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="spectrum-Button spectrum-Button--primary dialog-opener">Open Dialog Error</button>
+<div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog">
+  <div class="spectrum-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS"></div>
+      <h2 class="spectrum-Dialog-title spectrum-Heading spectrum-Heading--2">
+        <div class="spectrum-Dialog-header">Error Dialog</div>
+      </h2>
+      <button class="spectrum-Button spectrum-Dialog-closeButton spectrum-Button--minimal spectrum-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="spectrum-Icon spectrum-Icon--close spectrum-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="spectrum-Button-label"></div>
+      </button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="spectrum-Button spectrum-Button--primary dialog-opener">Open Dialog Success</button>
+<div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog">
+  <div class="spectrum-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS"></div>
+      <h2 class="spectrum-Dialog-title spectrum-Heading spectrum-Heading--2">
+        <div class="spectrum-Dialog-header">Success Dialog</div>
+      </h2>
+      <button class="spectrum-Button spectrum-Dialog-closeButton spectrum-Button--minimal spectrum-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="spectrum-Icon spectrum-Icon--close spectrum-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="spectrum-Button-label"></div>
+      </button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="spectrum-Button spectrum-Button--primary dialog-opener">Open Dialog Warning</button>
+<div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
+  <div class="spectrum-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS"></div>
+      <h2 class="spectrum-Dialog-title spectrum-Heading spectrum-Heading--2">
+        <div class="spectrum-Dialog-header">Warning Dialog</div>
+      </h2>
+      <button class="spectrum-Button spectrum-Dialog-closeButton spectrum-Button--minimal spectrum-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="spectrum-Icon spectrum-Icon--close spectrum-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="spectrum-Button-label"></div>
+      </button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="spectrum-Button spectrum-Button--primary dialog-opener">Open Dialog with Close</button>
+<div class="spectrum-Dialog" id="defaultDialog">
+  <div class="spectrum-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS"></div>
+      <h2 class="spectrum-Dialog-title spectrum-Heading spectrum-Heading--2">
+        <div class="spectrum-Dialog-header">Default Dialog</div>
+      </h2>
+      <button class="spectrum-Button spectrum-Dialog-closeButton spectrum-Button--minimal spectrum-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="spectrum-Icon spectrum-Icon--close spectrum-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="spectrum-Button-label"></div>
+      </button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button variant="primary" class="spectrum-Button spectrum-Button--secondaru" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
+      <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">bottom label</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">indeterminate</div>
+  </div>
+</div>
+
+<div style="width: 300px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">large</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--leftLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">left label</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--rightLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">right label</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">small</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label" hidden=""></div>
+  </div>
+</div>
+
+<div class="spectrum-Radio" disabled>
+  <input type="radio" class="spectrum-Radio-input" id="radio-1" disabled>
+  <span class="spectrum-Radio-checkmark"></span>
+  <label class="spectrum-Radio-description" for="radio-1">Radio disabled</label>
+</div>
+
+<div class="spectrum-Radio">
+  <input type="radio" class="spectrum-Radio-input" id="radio-0">
+  <span class="spectrum-Radio-checkmark"></span>
+  <label class="spectrum-Radio-description" for="radio-0">Radio</label>
+</div>
+
+<textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
+<input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
+<input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
+</body>
+</html>
