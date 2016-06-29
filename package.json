@@ -1,6 +1,6 @@
 {
   "name": "spectrum",
-  "version": "1.0.0-pre.0",
+  "version": "1.0.0-pre.1",
   "scripts": {
     "build": "gulp build",
     "stats": "stylestats dist/coral.css"
@@ -24,9 +24,10 @@
     "inquirer": "^1.0.3",
     "run-sequence": "^1.2.1",
     "semver": "^5.1.0",
-    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.11",
+    "spectrum-icons": "git+ssh://git@git.corp.adobe.com:Spectrum/icons.git#1.0.0-pre.2",
+    "spectrum-palette": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.12",
     "stylestats": "^6.3.0",
     "stylus": "^0.54.5",
-    "svg-stylus": "0.0.2"
+    "svg-stylus": "git+https://github.com/Aaronius/svg-stylus.git"
   }
 }

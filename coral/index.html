@@ -20,6 +20,14 @@
         switcher.innerHTML = light ? 'Dark' : 'Light';
       }
       setSwitcherInnerHTML();
+  
+      var dialogBtns = document.querySelectorAll('.dialog-opener');
+      for (var i = 0; i < dialogBtns.length; i++) {
+        dialogBtns[i].addEventListener('click', function() {
+          var dialog = this.nextElementSibling;
+          dialog.classList.add('is-open');
+        });
+      }
     };
   </script>
   <style>
@@ -33,24 +41,26 @@
 <body class="coral--light">
   <a id="theme-switcher" href="#"></a>
   <div class="coral3-Alert coral3-Alert--error">
+  <div class="coral-Icon coral-Icon--sizeXS coral-Icon--Alert coral3-Alert-typeIcon" role="img" aria-label="alert"></div>
   <div class="coral3-Alert-header">ERROR</div>
   <div class="coral3-Alert-content">This is an alert.</div>
 </div>
 <div class="coral3-Alert coral3-Alert--success">
+  <div class="coral-Icon coral-Icon--sizeXS coral-Icon--Check-Circle coral3-Alert-typeIcon" role="img" aria-label="check circle"></div>
   <div class="coral3-Alert-header">SUCCESS</div>
   <div class="coral3-Alert-content">This is an alert.</div>
 </div>
 <div class="coral3-Alert coral3-Alert--warning">
+  <div class="coral-Icon coral-Icon--sizeXS coral-Icon--Alert coral3-Alert-typeIcon" role="img" aria-label="alert"></div>
   <div class="coral3-Alert-header">WARNING</div>
   <div class="coral3-Alert-content">This is an alert.</div>
 </div>
 <div class="coral3-Alert">
+  <div class="coral-Icon coral-Icon--sizeXS coral-Icon--Info-Circle coral3-Alert-typeIcon" role="img" aria-label="info circle"></div>
   <div class="coral3-Alert-header">INFO</div>
   <div class="coral3-Alert-content">This is an alert.</div>
   <div class="coral3-Alert-footer">
-    <div style="text-align:right">
-      <button class="coral-Button coral-Button--minimal">Close</button>
-    </div>
+    <button class="coral-Button coral-Button--minimal">Close</button>
   </div>
 </div>
 <button class="coral-Button coral-Button--cta">Button</button>
@@ -63,6 +73,193 @@
   <input type="checkbox" class="coral-Checkbox-input" id="checkbox-0">
   <span class="coral-Checkbox-checkmark"></span>
   <label class="coral-Checkbox-description" for="checkbox-0">Checkbox</label>
+</div>
+
+<button variant="primary" class="coral-Button coral-Button--primary dialog-opener">Open Dialog</button>
+<div class="coral-Dialog" id="closeDialog">
+  <div class="coral-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="coral-Dialog-header">
+      <div class="coral-Icon coral-Dialog-typeIcon coral-Icon--sizeS"></div>
+      <h2 class="coral-Dialog-title coral-Heading coral-Heading--2">
+        <div class="coral-Dialog-header">Default Dialog</div>
+      </h2>
+      <button class="coral-Button coral-Dialog-closeButton coral-Button--minimal coral-Button--square" type="button" aria-label="Close">
+        <div class="coral-Icon coral-Icon--close coral-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="coral-Button-label"></div>
+      </button>
+    </div>
+    <div class="coral-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="coral-Dialog-footer">
+      <button variant="primary" class="coral-Button coral-Button--secondaru" onclick="document.getElementById('closeDialog').classList.remove('is-open')">Cancel</button>
+      <button variant="primary" class="coral-Button coral-Button--primary" onclick="document.getElementById('closeDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="coral-Button coral-Button--primary dialog-opener">Open Dialog Error</button>
+<div class="coral-Dialog coral-Dialog--error" id="errorDialog">
+  <div class="coral-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="coral-Dialog-header">
+      <div class="coral-Icon coral-Dialog-typeIcon coral-Icon--sizeS"></div>
+      <h2 class="coral-Dialog-title coral-Heading coral-Heading--2">
+        <div class="coral-Dialog-header">Error Dialog</div>
+      </h2>
+      <button class="coral-Button coral-Dialog-closeButton coral-Button--minimal coral-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="coral-Icon coral-Icon--close coral-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="coral-Button-label"></div>
+      </button>
+    </div>
+    <div class="coral-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="coral-Dialog-footer">
+      <button variant="primary" class="coral-Button coral-Button--primary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="coral-Button coral-Button--primary dialog-opener">Open Dialog Success</button>
+<div class="coral-Dialog coral-Dialog--success" id="successDialog">
+  <div class="coral-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="coral-Dialog-header">
+      <div class="coral-Icon coral-Dialog-typeIcon coral-Icon--sizeS"></div>
+      <h2 class="coral-Dialog-title coral-Heading coral-Heading--2">
+        <div class="coral-Dialog-header">Success Dialog</div>
+      </h2>
+      <button class="coral-Button coral-Dialog-closeButton coral-Button--minimal coral-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="coral-Icon coral-Icon--close coral-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="coral-Button-label"></div>
+      </button>
+    </div>
+    <div class="coral-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="coral-Dialog-footer">
+      <button variant="primary" class="coral-Button coral-Button--primary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="coral-Button coral-Button--primary dialog-opener">Open Dialog Warning</button>
+<div class="coral-Dialog coral-Dialog--warning" id="warningDialog">
+  <div class="coral-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="coral-Dialog-header">
+      <div class="coral-Icon coral-Dialog-typeIcon coral-Icon--sizeS"></div>
+      <h2 class="coral-Dialog-title coral-Heading coral-Heading--2">
+        <div class="coral-Dialog-header">Warning Dialog</div>
+      </h2>
+      <button class="coral-Button coral-Dialog-closeButton coral-Button--minimal coral-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="coral-Icon coral-Icon--close coral-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="coral-Button-label"></div>
+      </button>
+    </div>
+    <div class="coral-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="coral-Dialog-footer">
+      <button variant="primary" class="coral-Button coral-Button--primary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<button variant="primary" class="coral-Button coral-Button--primary dialog-opener">Open Dialog with Close</button>
+<div class="coral-Dialog" id="defaultDialog">
+  <div class="coral-Dialog-wrapper" style="position: absolute; left: 50%; top: 50%;">
+    <div class="coral-Dialog-header">
+      <div class="coral-Icon coral-Dialog-typeIcon coral-Icon--sizeS"></div>
+      <h2 class="coral-Dialog-title coral-Heading coral-Heading--2">
+        <div class="coral-Dialog-header">Default Dialog</div>
+      </h2>
+      <button class="coral-Button coral-Dialog-closeButton coral-Button--minimal coral-Button--square" type="button" aria-label="Close" style="display: none;">
+        <div class="coral-Icon coral-Icon--close coral-Icon--sizeXS" role="img" aria-label="close"></div>
+        <div class="coral-Button-label"></div>
+      </button>
+    </div>
+    <div class="coral-Dialog-content">
+      <p>This dialog was created from markup. Dialogs can also be created with JavaScript.</p>
+    </div>
+    <div class="coral-Dialog-footer">
+      <button variant="primary" class="coral-Button coral-Button--secondaru" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
+      <button variant="primary" class="coral-Button coral-Button--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="coral-Progress coral-Progress--bottomLabel coral-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" coral-Progress-bar">
+      <div class=" coral-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="coral-Progress-label">bottom label</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="coral-Progress coral-Progress--bottomLabel coral-Progress--medium coral-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" coral-Progress-bar">
+      <div class=" coral-Progress-status" handle="status" style="width: 0%;"></div>
+    </div>
+    <div class="coral-Progress-label">indeterminate</div>
+  </div>
+</div>
+
+<div style="width: 300px; height: 25px; padding-top: 10px;">
+  <div class="coral-Progress coral-Progress--bottomLabel coral-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" coral-Progress-bar">
+      <div class=" coral-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="coral-Progress-label">large</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="coral-Progress coral-Progress--leftLabel coral-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" coral-Progress-bar">
+      <div class=" coral-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="coral-Progress-label">left label</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="coral-Progress coral-Progress--rightLabel coral-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" coral-Progress-bar">
+      <div class=" coral-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="coral-Progress-label">right label</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="coral-Progress coral-Progress--bottomLabel coral-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" coral-Progress-bar">
+      <div class=" coral-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="coral-Progress-label">small</div>
+  </div>
+</div>
+
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="coral-Progress coral-Progress--noLabel coral-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" coral-Progress-bar">
+      <div class=" coral-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="coral-Progress-label" hidden=""></div>
+  </div>
+</div>
+
+<div class="coral-Radio" disabled>
+  <input type="radio" class="coral-Radio-input" id="radio-1" disabled>
+  <span class="coral-Radio-checkmark"></span>
+  <label class="coral-Radio-description" for="radio-1">Radio disabled</label>
+</div>
+
+<div class="coral-Radio">
+  <input type="radio" class="coral-Radio-input" id="radio-0">
+  <span class="coral-Radio-checkmark"></span>
+  <label class="coral-Radio-description" for="radio-0">Radio</label>
 </div>
 
 <textarea placeholder="Enter your name" name="field" value="" class="coral-Textfield coral-Textfield--multiline"></textarea>
