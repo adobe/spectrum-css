@@ -1,42 +1,14 @@
 {
-  "_args": [
-    [
-      {
-        "name": null,
-        "raw": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-        "rawSpec": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-        "scope": null,
-        "spec": "ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-        "type": "git"
-      },
-      "/Users/lawdavis/repos/spectrum"
-    ]
-  ],
-  "_from": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-  "_id": "spectrum-palette@1.0.0-pre.13",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/spectrum-palette",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": null,
-    "raw": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-    "rawSpec": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-    "scope": null,
-    "spec": "ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-    "type": "git"
-  },
-  "_requiredBy": [
-    "#DEV:/"
-  ],
-  "_resolved": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#ab32d3f0761be04ec49c239b2d4d977cf3cf7594",
-  "_shasum": "a69eadbf58300f0dccdf2cc3b00324d16f12b03d",
-  "_shrinkwrap": null,
-  "_spec": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
-  "_where": "/Users/lawdavis/repos/spectrum",
-  "author": "",
-  "dependencies": {},
+  "name": "spectrum-palette",
+  "version": "1.0.0-pre.13",
   "description": "The Spectrum color palette",
+  "author": "",
+  "private": true,
+  "license": "closed",
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:Spectrum/palette.git"
+  },
   "devDependencies": {
     "ase-utils": "^0.1.1",
     "del": "^2.2.0",
@@ -57,14 +29,9 @@
     "xtend": "^4.0.1"
   },
   "gitHead": "ab32d3f0761be04ec49c239b2d4d977cf3cf7594",
-  "license": "closed",
-  "name": "spectrum-palette",
-  "optionalDependencies": {},
-  "private": true,
   "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git@git.corp.adobe.com:Spectrum/palette.git"
-  },
-  "version": "1.0.0-pre.13"
+  "_id": "spectrum-palette@1.0.0-pre.13",
+  "_shasum": "5426b2f234d247256d16ee37bb37306a30794576",
+  "_from": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#1.0.0-pre.13",
+  "_resolved": "git+ssh://git@git.corp.adobe.com:Spectrum/palette.git#ab32d3f0761be04ec49c239b2d4d977cf3cf7594"
 }

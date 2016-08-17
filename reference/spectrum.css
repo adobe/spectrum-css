@@ -14,86 +14,6 @@
   color: #cdcdcd;
 }
 
-.spectrum-Icon {
-  display: inline-block;
-  font-style: normal;
-  font-weight: normal;
-  line-height: inherit;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.spectrum-Icon--sizeXXS {
-  font-family: AdobeSpectrumIcons18;
-  font-size: 9px;
-}
-
-.spectrum-Icon--sizeXXS:before {
-  height: 9px;
-  width: 9px;
-}
-
-.spectrum-Icon--sizeXS {
-  font-family: AdobeSpectrumIcons24;
-  font-size: 12px;
-}
-
-.spectrum-Icon--sizeXS:before {
-  height: 12px;
-  width: 12px;
-}
-
-.spectrum-Icon--sizeS {
-  font-family: AdobeSpectrumIcons18;
-  font-size: 18px;
-}
-
-.spectrum-Icon--sizeS:before {
-  height: 18px;
-  width: 18px;
-}
-
-.spectrum-Icon--sizeM {
-  font-family: AdobeSpectrumIcons24;
-  font-size: 24px;
-}
-
-.spectrum-Icon--sizeM:before {
-  height: 24px;
-  width: 24px;
-}
-
-.spectrum-Icon--sizeL {
-  font-family: AdobeSpectrumIcons18;
-  font-size: 36px;
-}
-
-.spectrum-Icon--sizeL:before {
-  height: 36px;
-  width: 36px;
-}
-
-.spectrum-Icon--sizeXL {
-  font-family: AdobeSpectrumIcons24;
-  font-size: 48px;
-}
-
-.spectrum-Icon--sizeXL:before {
-  height: 48px;
-  width: 48px;
-}
-
-.spectrum-Icon--sizeXXL {
-  font-family: AdobeSpectrumIcons24;
-  font-size: 72px;
-}
-
-.spectrum-Icon--sizeXXL:before {
-  height: 72px;
-  width: 72px;
-}
-
 @font-face {
   font-family: 'AdobeSpectrumIcons24';
   src: url("icons/24/AdobeSpectrumIcons24.eot");
@@ -2762,9 +2682,7 @@
   opacity: 1 !important;
 }
 
-.spectrum-Alert-header,
-.spectrum--light .spectrum-Alert-header,
-.spectrum--dark .spectrum-Alert-header {
+.spectrum-Alert-header {
   display: inline-block;
   height: auto;
   min-height: 0;
@@ -2777,9 +2695,7 @@
   text-transform: none;
 }
 
-.spectrum-Alert-content,
-.spectrum--light .spectrum-Alert-content,
-.spectrum--dark .spectrum-Alert-content {
+.spectrum-Alert-content {
   display: block;
   margin: 1.375rem 0 0 0;
   padding: 0;
@@ -2802,44 +2718,54 @@
   margin-left: 0.75rem;
 }
 
-.spectrum--light .spectrum-Alert--error,
-.spectrum--dark .spectrum-Alert--error {
+.spectrum--light .spectrum-Alert {
+  background-color: #fff;
+  border-color: #1473e6;
+}
+
+.spectrum--light .spectrum-Alert .spectrum-Alert-typeIcon {
+  color: #1473e6;
+}
+
+.spectrum--light .spectrum-Alert--error {
   border-color: #e61414;
 }
 
-.spectrum--light .spectrum-Alert--error .spectrum-Alert-typeIcon,
-.spectrum--dark .spectrum-Alert--error .spectrum-Alert-typeIcon {
+.spectrum--light .spectrum-Alert--error .spectrum-Alert-typeIcon {
   color: #e61414;
 }
 
-.spectrum--light .spectrum-Alert--success,
-.spectrum--dark .spectrum-Alert--success {
+.spectrum--light .spectrum-Alert--success {
   border-color: #0f870f;
 }
 
-.spectrum--light .spectrum-Alert--success .spectrum-Alert-typeIcon,
-.spectrum--dark .spectrum-Alert--success .spectrum-Alert-typeIcon {
+.spectrum--light .spectrum-Alert--success .spectrum-Alert-typeIcon {
   color: #0f870f;
 }
 
-.spectrum--light .spectrum-Alert--warning,
-.spectrum--dark .spectrum-Alert--warning {
+.spectrum--light .spectrum-Alert--warning {
   border-color: #e6af00;
 }
 
-.spectrum--light .spectrum-Alert--warning .spectrum-Alert-typeIcon,
-.spectrum--dark .spectrum-Alert--warning .spectrum-Alert-typeIcon {
+.spectrum--light .spectrum-Alert--warning .spectrum-Alert-typeIcon {
   color: #e6af00;
 }
 
-.spectrum--light .spectrum-Alert-header,
-.spectrum--dark .spectrum-Alert-header {
+.spectrum--light .spectrum-Alert-header {
   color: #2d2d2d;
 }
 
-.spectrum--light .spectrum-Alert-content,
-.spectrum--dark .spectrum-Alert-content {
+.spectrum--light .spectrum-Alert-content {
   color: #707070;
+}
+
+.spectrum--dark .spectrum-Alert {
+  background-color: #2a2a2a;
+  border-color: #1473e6;
+}
+
+.spectrum--dark .spectrum-Alert .spectrum-Alert-typeIcon {
+  color: #1473e6;
 }
 
 .spectrum--dark .spectrum-Alert--error {
@@ -2927,225 +2853,220 @@
   margin-right: 0;
 }
 
-.spectrum--light .spectrum-Button--primary,
-.spectrum--dark .spectrum-Button--primary {
-  background-color: transparent;
-  border-color: #4b4b4b;
-  color: #4b4b4b;
-}
-
-.spectrum--light .spectrum-Button--primary:focus,
-.spectrum--dark .spectrum-Button--primary:focus {
-  background-color: #0064dc;
-  color: #fff;
-  border-color: #0064dc;
-}
-
-.spectrum--light .spectrum-Button--primary:hover,
-.spectrum--dark .spectrum-Button--primary:hover {
-  background-color: #4b4b4b;
-  border-color: #4b4b4b;
-  color: #fff;
-}
-
-.spectrum--light .spectrum-Button--primary:active,
-.spectrum--dark .spectrum-Button--primary:active {
-  background-color: #2d2d2d;
-  border-color: #2d2d2d;
-  color: #fff;
-}
-
-.spectrum--light .spectrum-Button--primary:disabled,
-.spectrum--dark .spectrum-Button--primary:disabled,
-.spectrum--light .spectrum-Button--primary[disabled],
-.spectrum--dark .spectrum-Button--primary[disabled] {
-  background-color: #eaeaea;
-  color: #c2c2c2;
-  border-color: transparent;
-}
-
-.spectrum--light .spectrum-Button--secondary,
-.spectrum--dark .spectrum-Button--secondary {
-  background-color: transparent;
-  border-color: #707070;
-  color: #707070;
-}
-
-.spectrum--light .spectrum-Button--secondary:focus,
-.spectrum--dark .spectrum-Button--secondary:focus {
-  background-color: #0064dc;
-  color: #fff;
-  border-color: #0064dc;
-}
-
-.spectrum--light .spectrum-Button--secondary:hover,
-.spectrum--dark .spectrum-Button--secondary:hover {
-  background-color: #707070;
-  border-color: #707070;
-  color: #fff;
-}
-
-.spectrum--light .spectrum-Button--secondary:active,
-.spectrum--dark .spectrum-Button--secondary:active {
-  background-color: #4b4b4b;
-  border-color: #4b4b4b;
-  color: #fff;
-}
-
-.spectrum--light .spectrum-Button--secondary:disabled,
-.spectrum--dark .spectrum-Button--secondary:disabled,
-.spectrum--light .spectrum-Button--secondary[disabled],
-.spectrum--dark .spectrum-Button--secondary[disabled] {
-  background-color: #eaeaea;
-  color: #c2c2c2;
-  border-color: transparent;
-}
-
-.spectrum--light .spectrum-Button--cta,
-.spectrum--dark .spectrum-Button--cta {
+.spectrum--light .spectrum-Button--cta {
   background-color: #1473e6;
   border-color: transparent;
   color: #fff;
 }
 
-.spectrum--light .spectrum-Button--cta:focus,
-.spectrum--dark .spectrum-Button--cta:focus {
+.spectrum--light .spectrum-Button--cta:focus {
   background-color: #0064dc;
   color: #fff;
   border-color: #0064dc;
 }
 
-.spectrum--light .spectrum-Button--cta:hover,
-.spectrum--dark .spectrum-Button--cta:hover {
+.spectrum--light .spectrum-Button--cta:hover {
   background-color: #0064dc;
   border-color: transparent;
   color: #fff;
 }
 
-.spectrum--light .spectrum-Button--cta:active,
-.spectrum--dark .spectrum-Button--cta:active {
+.spectrum--light .spectrum-Button--cta:active {
   background-color: #005abe;
   border-color: transparent;
   color: #fff;
 }
 
 .spectrum--light .spectrum-Button--cta:disabled,
-.spectrum--dark .spectrum-Button--cta:disabled,
-.spectrum--light .spectrum-Button--cta[disabled],
-.spectrum--dark .spectrum-Button--cta[disabled] {
+.spectrum--light .spectrum-Button--cta[disabled] {
   background-color: #eaeaea;
   color: #c2c2c2;
   border-color: transparent;
 }
 
-.spectrum--light .spectrum-Button--warning,
-.spectrum--dark .spectrum-Button--warning {
+.spectrum--light .spectrum-Button--primary {
+  background-color: transparent;
+  border-color: #4b4b4b;
+  color: #4b4b4b;
+}
+
+.spectrum--light .spectrum-Button--primary:focus {
+  background-color: #0064dc;
+  color: #fff;
+  border-color: #0064dc;
+}
+
+.spectrum--light .spectrum-Button--primary:hover {
+  background-color: #4b4b4b;
+  border-color: #4b4b4b;
+  color: #fff;
+}
+
+.spectrum--light .spectrum-Button--primary:active {
+  background-color: #2d2d2d;
+  border-color: #2d2d2d;
+  color: #fff;
+}
+
+.spectrum--light .spectrum-Button--primary:disabled,
+.spectrum--light .spectrum-Button--primary[disabled] {
+  background-color: #eaeaea;
+  color: #c2c2c2;
+  border-color: transparent;
+}
+
+.spectrum--light .spectrum-Button--secondary {
+  background-color: transparent;
+  border-color: #707070;
+  color: #707070;
+}
+
+.spectrum--light .spectrum-Button--secondary:focus {
+  background-color: #0064dc;
+  color: #fff;
+  border-color: #0064dc;
+}
+
+.spectrum--light .spectrum-Button--secondary:hover {
+  background-color: #707070;
+  border-color: #707070;
+  color: #fff;
+}
+
+.spectrum--light .spectrum-Button--secondary:active {
+  background-color: #4b4b4b;
+  border-color: #4b4b4b;
+  color: #fff;
+}
+
+.spectrum--light .spectrum-Button--secondary:disabled,
+.spectrum--light .spectrum-Button--secondary[disabled] {
+  background-color: #eaeaea;
+  color: #c2c2c2;
+  border-color: transparent;
+}
+
+.spectrum--light .spectrum-Button--warning {
   background-color: transparent;
   border-color: #e61414;
   color: #e61414;
 }
 
-.spectrum--light .spectrum-Button--warning:focus,
-.spectrum--dark .spectrum-Button--warning:focus {
+.spectrum--light .spectrum-Button--warning:focus {
   background-color: #0064dc;
   color: #fff;
   border-color: #fff;
 }
 
-.spectrum--light .spectrum-Button--warning:hover,
-.spectrum--dark .spectrum-Button--warning:hover {
+.spectrum--light .spectrum-Button--warning:hover {
   background-color: #e61414;
   border-color: #e61414;
   color: #fff;
 }
 
-.spectrum--light .spectrum-Button--warning:active,
-.spectrum--dark .spectrum-Button--warning:active {
+.spectrum--light .spectrum-Button--warning:active {
   background-color: #d20a0a;
   border-color: #d20a0a;
   color: #fff;
 }
 
 .spectrum--light .spectrum-Button--warning:disabled,
-.spectrum--dark .spectrum-Button--warning:disabled,
-.spectrum--light .spectrum-Button--warning[disabled],
-.spectrum--dark .spectrum-Button--warning[disabled] {
+.spectrum--light .spectrum-Button--warning[disabled] {
   background-color: #eaeaea;
   color: #c2c2c2;
   border-color: #c2c2c2;
 }
 
-.spectrum--light .spectrum-Button--quiet,
-.spectrum--dark .spectrum-Button--quiet {
+.spectrum--light .spectrum-Button--quiet {
   background-color: transparent;
   border-color: transparent;
   color: #707070;
 }
 
-.spectrum--light .spectrum-Button--quiet:focus,
-.spectrum--dark .spectrum-Button--quiet:focus {
+.spectrum--light .spectrum-Button--quiet:focus {
   background-color: transparent;
   color: #0064dc;
   border-color: #0064dc;
 }
 
-.spectrum--light .spectrum-Button--quiet:hover,
-.spectrum--dark .spectrum-Button--quiet:hover {
+.spectrum--light .spectrum-Button--quiet:hover {
   background-color: transparent;
   border-color: transparent;
   color: #4b4b4b;
 }
 
-.spectrum--light .spectrum-Button--quiet:active,
-.spectrum--dark .spectrum-Button--quiet:active {
+.spectrum--light .spectrum-Button--quiet:active {
   background-color: transparent;
   border-color: transparent;
   color: #2d2d2d;
 }
 
 .spectrum--light .spectrum-Button--quiet:disabled,
-.spectrum--dark .spectrum-Button--quiet:disabled,
-.spectrum--light .spectrum-Button--quiet[disabled],
-.spectrum--dark .spectrum-Button--quiet[disabled] {
+.spectrum--light .spectrum-Button--quiet[disabled] {
   background-color: #eaeaea;
   color: #c2c2c2;
   border-color: transparent;
 }
 
-.spectrum--light .spectrum-Button--minimal,
-.spectrum--dark .spectrum-Button--minimal {
+.spectrum--light .spectrum-Button--minimal {
   background-color: transparent;
   border-color: transparent;
   color: #707070;
 }
 
-.spectrum--light .spectrum-Button--minimal:focus,
-.spectrum--dark .spectrum-Button--minimal:focus {
+.spectrum--light .spectrum-Button--minimal:focus {
   background-color: transparent;
   color: #0064dc;
   border-color: #0064dc;
 }
 
-.spectrum--light .spectrum-Button--minimal:hover,
-.spectrum--dark .spectrum-Button--minimal:hover {
+.spectrum--light .spectrum-Button--minimal:hover {
   background-color: transparent;
   border-color: transparent;
   color: #4b4b4b;
 }
 
-.spectrum--light .spectrum-Button--minimal:active,
-.spectrum--dark .spectrum-Button--minimal:active {
+.spectrum--light .spectrum-Button--minimal:active {
   background-color: transparent;
   border-color: transparent;
   color: #2d2d2d;
 }
 
 .spectrum--light .spectrum-Button--minimal:disabled,
-.spectrum--dark .spectrum-Button--minimal:disabled,
-.spectrum--light .spectrum-Button--minimal[disabled],
-.spectrum--dark .spectrum-Button--minimal[disabled] {
+.spectrum--light .spectrum-Button--minimal[disabled] {
   background-color: #eaeaea;
   color: #c2c2c2;
+  border-color: transparent;
+}
+
+.spectrum--dark .spectrum-Button--cta {
+  background-color: #1473e6;
+  border-color: transparent;
+  color: #fff;
+}
+
+.spectrum--dark .spectrum-Button--cta:focus {
+  background-color: #0064dc;
+  color: #fff;
+  border-color: #0064dc;
+}
+
+.spectrum--dark .spectrum-Button--cta:hover {
+  background-color: #0064dc;
+  border-color: transparent;
+  color: #fff;
+}
+
+.spectrum--dark .spectrum-Button--cta:active {
+  background-color: #005abe;
+  border-color: transparent;
+  color: #fff;
+}
+
+.spectrum--dark .spectrum-Button--cta:disabled,
+.spectrum--dark .spectrum-Button--cta[disabled] {
+  background-color: #393939;
+  color: #525252;
   border-color: transparent;
 }
 
@@ -3206,37 +3127,6 @@
 
 .spectrum--dark .spectrum-Button--secondary:disabled,
 .spectrum--dark .spectrum-Button--secondary[disabled] {
-  background-color: #393939;
-  color: #525252;
-  border-color: transparent;
-}
-
-.spectrum--dark .spectrum-Button--cta {
-  background-color: #1473e6;
-  border-color: transparent;
-  color: #fff;
-}
-
-.spectrum--dark .spectrum-Button--cta:focus {
-  background-color: #0064dc;
-  color: #fff;
-  border-color: #0064dc;
-}
-
-.spectrum--dark .spectrum-Button--cta:hover {
-  background-color: #0064dc;
-  border-color: transparent;
-  color: #fff;
-}
-
-.spectrum--dark .spectrum-Button--cta:active {
-  background-color: #005abe;
-  border-color: transparent;
-  color: #fff;
-}
-
-.spectrum--dark .spectrum-Button--cta:disabled,
-.spectrum--dark .spectrum-Button--cta[disabled] {
   background-color: #393939;
   color: #525252;
   border-color: transparent;
@@ -3342,28 +3232,7 @@
   font-size: 0;
 }
 
-.spectrum-Checkbox-input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.0001;
-  z-index: 1;
-}
-
-.spectrum-Checkbox-description,
-.spectrum--light .spectrum-Checkbox-description,
-.spectrum--dark .spectrum-Checkbox-description {
-  margin: 0 0.5rem;
-  font-size: 0.875rem;
-  vertical-align: middle;
-  transition: color 150ms ease-in-out;
-}
-
-.spectrum-Checkbox-checkmark,
-.spectrum--light .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-checkmark {
   display: inline-block;
   box-sizing: border-box;
   width: 0.75rem;
@@ -3375,9 +3244,7 @@
   transition: border 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
-.spectrum-Checkbox-checkmark:after,
-.spectrum--light .spectrum-Checkbox-checkmark:after,
-.spectrum--dark .spectrum-Checkbox-checkmark:after {
+.spectrum-Checkbox-checkmark:after {
   position: absolute;
   top: 0.6875rem;
   left: 0.0625rem;
@@ -3391,27 +3258,23 @@
   content: '';
 }
 
-.spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark,
-.spectrum--light .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark {
+.spectrum-Checkbox-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.0001;
+  z-index: 1;
+}
+
+.spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
   border-width: 0.375rem;
 }
 
-.spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark:after,
-.spectrum--light .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark:after,
-.spectrum--dark .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark:after {
+.spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark:after {
   transform: scale(1);
   opacity: 1;
-}
-
-.spectrum--light .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
-  box-shadow: none;
-}
-
-.spectrum--light .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
-  box-shadow: 0 0 0 0.0625rem;
 }
 
 .spectrum-Checkbox[indeterminate] .spectrum-Checkbox-checkmark {
@@ -3419,53 +3282,49 @@
   border-bottom-width: 0.3125rem;
 }
 
-.spectrum--light .spectrum-Checkbox-description,
-.spectrum--dark .spectrum-Checkbox-description {
+.spectrum-Checkbox-description {
+  margin: 0 0.5rem;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  transition: color 150ms ease-in-out;
+}
+
+.spectrum--light .spectrum-Checkbox-description {
   color: #707070;
 }
 
-.spectrum--light .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox-checkmark {
+.spectrum--light .spectrum-Checkbox-checkmark {
   border-color: #707070;
 }
 
-.spectrum--light .spectrum-Checkbox-checkmark:after,
-.spectrum--dark .spectrum-Checkbox-checkmark:after {
+.spectrum--light .spectrum-Checkbox-checkmark:after {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0zLjgsNy40QzMuNSw3LjQsMy4yLDcuMywzLDcuMUwwLjgsNC44Yy0wLjQtMC40LTAuNC0xLDAtMS40czEtMC40LDEuNCwwTDMuOCw1bDQtNGMwLjQtMC40LDEtMC40LDEuNCwwIHMwLjQsMSwwLDEuNEw0LjUsNy4xQzQuMyw3LjMsNCw3LjQsMy44LDcuNHoiIGZpbGw9IiNlMWUxZTEiLz4KPC9zdmc+');
 }
 
-.spectrum--light .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark {
+.spectrum--light .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark {
   border-color: #707070;
 }
 
-.spectrum--light .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
-  border-color: #1473e6;
-  box-shadow-color: #1473e6;
+.spectrum--light .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
+  border-color: #2d8ceb;
+  box-shadow-color: #2d8ceb;
 }
 
-.spectrum--light .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
+.spectrum--light .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
   border-color: #4b4b4b;
 }
 
-.spectrum--light .spectrum-Checkbox:active .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox:active .spectrum-Checkbox-checkmark {
+.spectrum--light .spectrum-Checkbox:active .spectrum-Checkbox-checkmark {
   border-color: #2d2d2d;
 }
 
 .spectrum--light .spectrum-Checkbox:disabled .spectrum-Checkbox-checkmark,
-.spectrum--light .spectrum-Checkbox.is-disabled .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox:disabled .spectrum-Checkbox-checkmark,
-.spectrum--dark .spectrum-Checkbox.is-disabled .spectrum-Checkbox-checkmark {
+.spectrum--light .spectrum-Checkbox.is-disabled .spectrum-Checkbox-checkmark {
   border-color: #eaeaea;
 }
 
 .spectrum--light .spectrum-Checkbox:disabled .spectrum-Checkbox-description,
-.spectrum--light .spectrum-Checkbox.is-disabled .spectrum-Checkbox-description,
-.spectrum--dark .spectrum-Checkbox:disabled .spectrum-Checkbox-description,
-.spectrum--dark .spectrum-Checkbox.is-disabled .spectrum-Checkbox-description {
+.spectrum--light .spectrum-Checkbox.is-disabled .spectrum-Checkbox-description {
   border-color: #c2c2c2;
 }
 
@@ -3486,8 +3345,8 @@
 }
 
 .spectrum--dark .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
-  border-color: #2d8ceb;
-  box-shadow-color: #2d8ceb;
+  border-color: #1473e6;
+  box-shadow-color: #1473e6;
 }
 
 .spectrum--dark .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
@@ -3508,9 +3367,7 @@
   border-color: #525252;
 }
 
-.spectrum-Dialog,
-.spectrum--light .spectrum-Dialog,
-.spectrum--dark .spectrum-Dialog {
+.spectrum-Dialog {
   position: fixed;
   top: 0;
   right: 0;
@@ -3528,37 +3385,7 @@
   opacity: 1;
 }
 
-.spectrum-Dialog-header,
-.spectrum--light .spectrum-Dialog-header,
-.spectrum--dark .spectrum-Dialog-header {
-  display: block;
-}
-
-.spectrum-Dialog-content {
-  display: block;
-}
-
-.spectrum-Dialog-footer,
-.spectrum--light .spectrum-Dialog-footer,
-.spectrum--dark .spectrum-Dialog-footer {
-  display: block;
-}
-
-.spectrum-Dialog-wrapper,
-.spectrum--light .spectrum-Dialog-wrapper,
-.spectrum--dark .spectrum-Dialog-wrapper {
-  display: block;
-  min-width: 20rem;
-  max-width: 90%;
-  margin: 2.5rem;
-  padding: 1.5625rem;
-  border-radius: 0.25rem;
-  outline: none;
-}
-
-.spectrum-Dialog-header,
-.spectrum--light .spectrum-Dialog-header,
-.spectrum--dark .spectrum-Dialog-header {
+.spectrum-Dialog-header {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -3567,15 +3394,53 @@
   outline: none;
 }
 
-.spectrum-Dialog-header::after,
-.spectrum--light .spectrum-Dialog-header::after,
-.spectrum--dark .spectrum-Dialog-header::after {
+.spectrum-Dialog-header::after {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   height: 0.0625rem;
   content: '';
+}
+
+.spectrum-Dialog-content {
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  outline: none;
+}
+
+.spectrum-Dialog-footer {
+  border-radius: 0 0 0.25rem 0.25rem;
+  text-align: right;
+  outline: none;
+}
+
+.spectrum-Dialog-footer:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.spectrum-Dialog-footer .spectrum-Button {
+  margin: 1rem 0.75rem 0 0;
+}
+
+.spectrum-Dialog-footer .spectrum-Button:last-child {
+  margin-right: 0;
+}
+
+.spectrum-Dialog-wrapper {
+  display: block;
+  min-width: 20rem;
+  max-width: 90%;
+  margin: 2.5rem;
+  padding: 1.5625rem;
+  border-radius: 0.25rem;
+  outline: none;
 }
 
 .spectrum-Dialog-title {
@@ -3604,40 +3469,6 @@
   height: 1.125rem;
 }
 
-.spectrum-Dialog-content {
-  display: block;
-  box-sizing: border-box;
-  padding: 0;
-  outline: none;
-}
-
-.spectrum-Dialog-footer,
-.spectrum--light .spectrum-Dialog-footer,
-.spectrum--dark .spectrum-Dialog-footer {
-  border-radius: 0 0 0.25rem 0.25rem;
-  text-align: right;
-  outline: none;
-}
-
-.spectrum-Dialog-footer:after,
-.spectrum--light .spectrum-Dialog-footer:after,
-.spectrum--dark .spectrum-Dialog-footer:after {
-  content: " ";
-  /* Older browser do not support empty content */
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-.spectrum-Dialog-footer .spectrum-Button {
-  margin: 1rem 0.75rem 0 0;
-}
-
-.spectrum-Dialog-footer .spectrum-Button:last-child {
-  margin-right: 0;
-}
-
 .spectrum-Dialog--fullscreen .spectrum-Dialog-wrapper {
   position: absolute;
   top: 0;
@@ -3656,13 +3487,7 @@
 }
 
 .spectrum-Dialog--fullscreen .spectrum-Dialog-header {
-  position: fixed;
-  top: 0;
-  right: 1.5625rem;
-  left: 1.5625rem;
-  box-sizing: content-box;
-  width: auto;
-  padding-top: 1.5625rem;
+  transform: translate3d(0, 0, 0);
 }
 
 .spectrum-Dialog--fullscreen .spectrum-Dialog-typeIcon {
@@ -3671,20 +3496,6 @@
 
 .spectrum-Dialog--fullscreen .spectrum-Dialog-footer,
 .spectrum-Dialog--fullscreen .spectrum-Dialog-header {
-  position: fixed;
-  right: 1.5625rem;
-  bottom: 0;
-  left: 1.5625rem;
-  padding-top: 0.78125rem;
-  padding-bottom: 0.78125rem;
-}
-
-.spectrum-Dialog--fullscreen .spectrum-Dialog-footer,
-.spectrum-Dialog--fullscreen .spectrum-Dialog-header {
-  transform: translate3d(0, 0, 0);
-}
-
-.spectrum-Dialog--fullscreen .spectrum-Dialog-header {
   transform: translate3d(0, 0, 0);
 }
 
@@ -3692,78 +3503,114 @@
   padding-top: 1.875rem;
 }
 
-.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-title,
-.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-typeIcon,
-.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-title,
-.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-typeIcon {
+.spectrum--light .spectrum-Dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity 150ms;
+  opacity: 0;
+}
+
+.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-title {
   color: #f53c3c;
 }
 
-.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-title,
-.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-typeIcon,
-.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-title,
-.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
+.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-typeIcon {
+  color: #f53c3c;
+}
+
+.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-title {
   color: #2d2d2d;
 }
 
-.spectrum--light .spectrum-Dialog--success .spectrum-Dialog-title,
-.spectrum--light .spectrum-Dialog--success .spectrum-Dialog-typeIcon,
-.spectrum--dark .spectrum-Dialog--success .spectrum-Dialog-title,
-.spectrum--dark .spectrum-Dialog--success .spectrum-Dialog-typeIcon {
-  color: #0f870f;
+.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
+  color: #2d2d2d;
 }
 
 .spectrum--light .spectrum-Dialog--help .spectrum-Dialog-title,
-.spectrum--light.spectrum-Dialog--info .spectrum-Dialog-title,
-.spectrum--light .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
-.spectrum--light.spectrum-Dialog--info .spectrum-Dialog-typeIcon,
-.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-title,
-.spectrum--dark.spectrum-Dialog--info .spectrum-Dialog-title,
-.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
-.spectrum--dark.spectrum-Dialog--info .spectrum-Dialog-typeIcon {
+.spectrum--light.spectrum-Dialog--info .spectrum-Dialog-title {
   color: #1473e6;
 }
 
-.spectrum--light .spectrum-Dialog-wrapper,
-.spectrum--dark .spectrum-Dialog-wrapper {
+.spectrum--light .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
+.spectrum--light.spectrum-Dialog--info .spectrum-Dialog-typeIcon {
+  color: #1473e6;
+}
+
+.spectrum--light .spectrum-Dialog--success .spectrum-Dialog-title {
+  color: #0f870f;
+}
+
+.spectrum--light .spectrum-Dialog--success .spectrum-Dialog-typeIcon {
+  color: #0f870f;
+}
+
+.spectrum--light .spectrum-Dialog-wrapper {
   background: #fff;
 }
 
-.spectrum--light .spectrum-Dialog-header,
-.spectrum--dark .spectrum-Dialog-header {
+.spectrum--light .spectrum-Dialog-header {
   background: #fff;
 }
 
-.spectrum--light .spectrum-Dialog-header:after,
-.spectrum--dark .spectrum-Dialog-header:after {
+.spectrum--light .spectrum-Dialog-header:after {
   background: #e1e1e1;
 }
 
-.spectrum--light .spectrum-Dialog-footer,
-.spectrum--dark .spectrum-Dialog-footer {
+.spectrum--light .spectrum-Dialog-footer {
   background: #fff;
 }
 
-.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-title,
+.spectrum--dark .spectrum-Dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity 150ms;
+  opacity: 0;
+}
+
+.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-title {
+  color: #f53c3c;
+}
+
 .spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-typeIcon {
   color: #f53c3c;
 }
 
-.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-title,
+.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-title {
+  color: #fcfcfc;
+}
+
 .spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
   color: #fcfcfc;
 }
 
-.spectrum--dark .spectrum-Dialog--success .spectrum-Dialog-title,
-.spectrum--dark .spectrum-Dialog--success .spectrum-Dialog-typeIcon {
-  color: #0f870f;
+.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-title,
+.spectrum--dark.spectrum-Dialog--info .spectrum-Dialog-title {
+  color: #1473e6;
 }
 
-.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-title,
-.spectrum--dark.spectrum-Dialog--info .spectrum-Dialog-title,
 .spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
 .spectrum--dark.spectrum-Dialog--info .spectrum-Dialog-typeIcon {
   color: #1473e6;
+}
+
+.spectrum--dark .spectrum-Dialog--success .spectrum-Dialog-title {
+  color: #0f870f;
+}
+
+.spectrum--dark .spectrum-Dialog--success .spectrum-Dialog-typeIcon {
+  color: #0f870f;
 }
 
 .spectrum--dark .spectrum-Dialog-wrapper {
@@ -3782,6 +3629,30 @@
   background: #2a2a2a;
 }
 
+@-moz-keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@-webkit-keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@-o-keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
+}
+
 .spectrum-Progress {
   position: relative;
   display: inline-block;
@@ -3790,9 +3661,7 @@
   height: 0.375rem;
 }
 
-.spectrum-Progress-bar,
-.spectrum--light .spectrum-Progress-bar,
-.spectrum--dark .spectrum-Progress-bar {
+.spectrum-Progress-bar {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -3801,9 +3670,7 @@
   height: 0.375rem;
 }
 
-.spectrum-Progress-status,
-.spectrum--light .spectrum-Progress-status,
-.spectrum--dark .spectrum-Progress-status {
+.spectrum-Progress-status {
   height: 0.375rem;
   transition: width 1s;
 }
@@ -3839,20 +3706,16 @@
   animation: spectrum-progress-indeterminate 934ms cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite forwards;
 }
 
-.spectrum-Progress--leftLabel .spectrum-Progress-label,
-.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-label,
-.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-label {
-  left: 0;
-  padding-right: 0.625rem;
-  padding-left: 0;
-  text-align: right;
+.spectrum-Progress--leftLabel {
+  height: 0.8125rem;
 }
 
-.spectrum-Progress--leftLabel .spectrum-Progress-bar,
-.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-bar,
-.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-bar {
-  left: 2.5rem;
-  right: 0;
+.spectrum-Progress--leftLabel .spectrum-Progress-label {
+  line-height: 0.8125rem;
+}
+
+.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+  top: 0.28125rem;
 }
 
 .spectrum-Progress--bottomLabel {
@@ -3885,7 +3748,12 @@
   min-width: 9.25rem;
 }
 
-.spectrum-Progress--small .spectrum-Progress-label,
+.spectrum-Progress--small .spectrum-Progress-label {
+  height: 0.8125rem;
+  width: 1.75rem;
+  font-size: 0.6875rem;
+}
+
 .spectrum-Progress--small .spectrum-Progress-status {
   height: 0.8125rem;
   width: 1.75rem;
@@ -3907,19 +3775,16 @@
   line-height: inherit;
 }
 
-.spectrum-Progress--leftLabel,
 .spectrum-Progress--small.spectrum-Progress--leftLabel,
 .spectrum-Progress--small.spectrum-Progress--rightLabel {
   height: 0.8125rem;
 }
 
-.spectrum-Progress--leftLabel .spectrum-Progress-bar,
 .spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-bar,
 .spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-bar {
   top: 0.28125rem;
 }
 
-.spectrum-Progress--leftLabel .spectrum-Progress-label,
 .spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-label,
 .spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-label {
   line-height: 0.8125rem;
@@ -3989,38 +3854,12 @@
   line-height: 0.9375rem;
 }
 
-@-moz-keyframes spectrum-progress-indeterminate {
-  to {
-    transform: translateX(110%);
-  }
-}
-
-@-webkit-keyframes spectrum-progress-indeterminate {
-  to {
-    transform: translateX(110%);
-  }
-}
-
-@-o-keyframes spectrum-progress-indeterminate {
-  to {
-    transform: translateX(110%);
-  }
-}
-
-@keyframes spectrum-progress-indeterminate {
-  to {
-    transform: translateX(110%);
-  }
-}
-
-.spectrum--light .spectrum-Progress-bar,
-.spectrum--dark .spectrum-Progress-bar {
+.spectrum--light .spectrum-Progress-bar {
   background-color: #e1e1e1;
 }
 
-.spectrum--light .spectrum-Progress-status,
-.spectrum--dark .spectrum-Progress-status {
-  background: #1473e6;
+.spectrum--light .spectrum-Progress-status {
+  background: #2d8ceb;
 }
 
 .spectrum--dark .spectrum-Progress-bar {
@@ -4028,21 +3867,17 @@
 }
 
 .spectrum--dark .spectrum-Progress-status {
-  background: #2d8ceb;
+  background: #1473e6;
 }
 
-.spectrum-Radio,
-.spectrum--light .spectrum-Radio,
-.spectrum--dark .spectrum-Radio {
+.spectrum-Radio {
   display: inline-block;
   position: relative;
   padding: 0.4375rem 0;
   font-size: 0;
 }
 
-.spectrum-Radio-input,
-.spectrum--light .spectrum-Radio-input,
-.spectrum--dark .spectrum-Radio-input {
+.spectrum-Radio-input {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4052,24 +3887,18 @@
   cursor: pointer;
 }
 
-.spectrum-Radio-input:checked + .spectrum-Radio-checkmark,
-.spectrum--light .spectrum-Radio-input:checked + .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+.spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
   border-width: 0.375rem;
 }
 
-.spectrum-Radio-description,
-.spectrum--light .spectrum-Radio .spectrum-Radio-description,
-.spectrum--dark .spectrum-Radio .spectrum-Radio-description {
+.spectrum-Radio-description {
   margin: 0 0.5rem;
   font-size: 0.875rem;
   vertical-align: middle;
   transition: color 150ms ease-in-out;
 }
 
-.spectrum-Radio-checkmark,
-.spectrum--light .spectrum-Radio .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio .spectrum-Radio-checkmark {
+.spectrum-Radio-checkmark {
   display: inline-block;
   box-sizing: border-box;
   width: 0.75rem;
@@ -4081,65 +3910,53 @@
   transition: border 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
-.spectrum--light .spectrum-Radio-input:checked + .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+.spectrum--light .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
   border-color: #707070;
 }
 
-.spectrum--light .spectrum-Radio-input:focus + .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
-  border-color: #1473e6;
-  box-shadow: 0 0 0 0.0625rem #1473e6;
+.spectrum--light .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
+  border-color: #2d8ceb;
+  box-shadow: 0 0 0 0.0625rem #2d8ceb;
 }
 
-.spectrum--light .spectrum-Radio-input:disabled,
-.spectrum--dark .spectrum-Radio-input:disabled {
+.spectrum--light .spectrum-Radio-input:disabled {
   border-color: #eaeaea;
 }
 
-.spectrum--light .spectrum-Radio-input:disabled ~ .spectrum-Radio-description,
-.spectrum--dark .spectrum-Radio-input:disabled ~ .spectrum-Radio-description {
+.spectrum--light .spectrum-Radio-input:disabled ~ .spectrum-Radio-description {
   color: #c2c2c2;
 }
 
-.spectrum--light .spectrum-Radio .spectrum-Radio-description,
-.spectrum--dark .spectrum-Radio .spectrum-Radio-description {
+.spectrum--light .spectrum-Radio .spectrum-Radio-description {
   color: #707070;
 }
 
-.spectrum--light .spectrum-Radio .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio .spectrum-Radio-checkmark {
+.spectrum--light .spectrum-Radio .spectrum-Radio-checkmark {
   border-color: #707070;
 }
 
-.spectrum--light .spectrum-Radio:hover .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-checkmark {
+.spectrum--light .spectrum-Radio:hover .spectrum-Radio-checkmark {
   border-color: #4b4b4b;
   box-shadow: none;
 }
 
-.spectrum--light .spectrum-Radio:hover .spectrum-Radio-description,
-.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-description {
+.spectrum--light .spectrum-Radio:hover .spectrum-Radio-description {
   color: #707070;
 }
 
-.spectrum--light .spectrum-Radio:active .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio:active .spectrum-Radio-checkmark {
+.spectrum--light .spectrum-Radio:active .spectrum-Radio-checkmark {
   border-color: spectrum-color-switch-border-active;
 }
 
-.spectrum--light .spectrum-Radio:active .spectrum-Radio-description,
-.spectrum--dark .spectrum-Radio:active .spectrum-Radio-description {
+.spectrum--light .spectrum-Radio:active .spectrum-Radio-description {
   color: #707070;
 }
 
-.spectrum--light .spectrum-Radio[disabled] .spectrum-Radio-checkmark,
-.spectrum--dark .spectrum-Radio[disabled] .spectrum-Radio-checkmark {
+.spectrum--light .spectrum-Radio[disabled] .spectrum-Radio-checkmark {
   border-color: #eaeaea;
 }
 
-.spectrum--light .spectrum-Radio[disabled] .spectrum-Radio-description,
-.spectrum--dark .spectrum-Radio[disabled] .spectrum-Radio-description {
+.spectrum--light .spectrum-Radio[disabled] .spectrum-Radio-description {
   color: #c2c2c2;
 }
 
@@ -4148,8 +3965,8 @@
 }
 
 .spectrum--dark .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
-  border-color: #2d8ceb;
-  box-shadow: 0 0 0 0.0625rem #2d8ceb;
+  border-color: #1473e6;
+  box-shadow: 0 0 0 0.0625rem #1473e6;
 }
 
 .spectrum--dark .spectrum-Radio-input:disabled {
@@ -4193,9 +4010,7 @@
   color: #525252;
 }
 
-.spectrum-Textfield,
-.spectrum--light .spectrum-Textfield,
-.spectrum--dark .spectrum-Textfield {
+.spectrum-Textfield {
   box-sizing: border-box;
   border: 0.0625rem solid;
   border-radius: 0.25rem;
@@ -4214,86 +4029,60 @@
   -webkit-appearance: none;
 }
 
-.spectrum-Textfield::placeholder,
-.spectrum--light .spectrum-Textfield::placeholder,
-.spectrum--dark .spectrum-Textfield::placeholder {
+.spectrum-Textfield::placeholder {
   font-weight: normal;
   font-style: italic;
   transition: color 150ms ease-in-out;
 }
 
-.spectrum-Textfield:hover::placeholder,
-.spectrum--light .spectrum-Textfield:hover::placeholder,
-.spectrum--dark .spectrum-Textfield:hover::placeholder {
+.spectrum-Textfield:hover::placeholder {
   font-weight: normal;
 }
 
-.spectrum-Textfield:disabled,
-.spectrum--light .spectrum-Textfield:disabled,
-.spectrum--dark .spectrum-Textfield:disabled {
+.spectrum-Textfield:disabled {
   /* The opacity must be set to 1 */
   -webkit-opacity: 1;
 }
 
-.spectrum-Textfield:disabled::placeholder,
-.spectrum--light .spectrum-Textfield:disabled::placeholder,
-.spectrum--dark .spectrum-Textfield:disabled::placeholder {
+.spectrum-Textfield:disabled::placeholder {
   font-weight: normal;
 }
 
-.spectrum-Textfield::-ms-clear,
-.spectrum--light .spectrum-Textfield::-ms-clear,
-.spectrum--dark .spectrum-Textfield::-ms-clear {
+.spectrum-Textfield::-ms-clear {
   width: 0;
   height: 0;
 }
 
 .spectrum-Textfield::-webkit-inner-spin-button,
-.spectrum--light .spectrum-Textfield::-webkit-inner-spin-button,
-.spectrum--dark .spectrum-Textfield::-webkit-inner-spin-button,
-.spectrum-Textfield::-webkit-outer-spin-button,
-.spectrum--light .spectrum-Textfield::-webkit-outer-spin-button,
-.spectrum--dark .spectrum-Textfield::-webkit-outer-spin-button {
+.spectrum-Textfield::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.spectrum-Textfield:-moz-ui-invalid,
-.spectrum--light .spectrum-Textfield:-moz-ui-invalid,
-.spectrum--dark .spectrum-Textfield:-moz-ui-invalid {
+.spectrum-Textfield:-moz-ui-invalid {
   box-shadow: none;
 }
 
-.spectrum--light .spectrum-Textfield--multiline,
-.spectrum--dark .spectrum-Textfield--multiline {
-  height: auto;
-  padding: 0.25rem 0.5rem;
-  text-indent: 0;
+.spectrum--light .spectrum-Textfield {
+  border-color: #e1e1e1;
+  background-color: #fff;
+  color: #4b4b4b;
 }
 
-.spectrum--light .spectrum-Textfield--quiet,
-.spectrum--dark .spectrum-Textfield--quiet {
-  border-radius: 0;
-  text-indent: 0;
-  border: none;
-  border-bottom: 0.0625rem solid;
-  padding-left: 0;
-  padding-right: 0;
+.spectrum--light .spectrum-Textfield::placeholder {
+  color: #999;
 }
 
-.spectrum--light .spectrum-Textfield:hover::placeholder,
-.spectrum--dark .spectrum-Textfield:hover::placeholder {
+.spectrum--light .spectrum-Textfield:hover::placeholder {
   color: #707070;
 }
 
-.spectrum--light .spectrum-Textfield:focus,
-.spectrum--dark .spectrum-Textfield:focus {
-  border-color: #1473e6;
-  box-shadow: 0 0 0 0.0625rem #1473e6;
+.spectrum--light .spectrum-Textfield:focus {
+  border-color: #2d8ceb;
+  box-shadow: 0 0 0 0.0625rem #2d8ceb;
 }
 
-.spectrum--light .spectrum-Textfield:disabled,
-.spectrum--dark .spectrum-Textfield:disabled {
+.spectrum--light .spectrum-Textfield:disabled {
   background-color: #eaeaea;
   border-color: transparent;
   color: #c2c2c2;
@@ -4301,60 +4090,56 @@
   -webkit-text-fill-color: #c2c2c2;
 }
 
-.spectrum--light .spectrum-Textfield:disabled::placeholder,
-.spectrum--dark .spectrum-Textfield:disabled::placeholder {
+.spectrum--light .spectrum-Textfield:disabled::placeholder {
   color: #e1e1e1;
 }
 
-.spectrum--light .spectrum-Textfield:invalid,
-.spectrum--dark .spectrum-Textfield:invalid {
+.spectrum--light .spectrum-Textfield:invalid {
   border-color: #f53c3c;
 }
 
-.spectrum--light .spectrum-Textfield:invalid:focus,
-.spectrum--dark .spectrum-Textfield:invalid:focus {
+.spectrum--light .spectrum-Textfield:invalid:focus {
   /* might break things due to pre-defined focus */
   box-shadow: 0 0 0 0.0625rem #f53c3c;
 }
 
-.spectrum--light .spectrum-Textfield,
-.spectrum--dark .spectrum-Textfield {
+.spectrum--light .spectrum-Textfield--quiet {
+  background-color: transparent;
   border-color: #e1e1e1;
-  background-color: #fff;
   color: #4b4b4b;
 }
 
-.spectrum--light .spectrum-Textfield::placeholder,
-.spectrum--dark .spectrum-Textfield::placeholder {
-  color: #999;
+.spectrum--light .spectrum-Textfield--quiet:focus {
+  box-shadow: 0 0.0625rem 0 #2d8ceb;
 }
 
-.spectrum--light .spectrum-Textfield--quiet:focus,
-.spectrum--dark .spectrum-Textfield--quiet:focus {
-  box-shadow: 0 0.0625rem 0 #1473e6;
-}
-
-.spectrum--light .spectrum-Textfield--quiet:disabled,
-.spectrum--dark .spectrum-Textfield--quiet:disabled {
+.spectrum--light .spectrum-Textfield--quiet:disabled {
   border-color: $spectrum-color-input-border-disabled-quiet;
   background-color: transparent;
 }
 
-.spectrum--light .spectrum-Textfield--quiet:invalid,
-.spectrum--dark .spectrum-Textfield--quiet:invalid {
+.spectrum--light .spectrum-Textfield--quiet:invalid {
   border-color: #f53c3c;
 }
 
-.spectrum--light .spectrum-Textfield--quiet:invalid:focus,
-.spectrum--dark .spectrum-Textfield--quiet:invalid:focus {
+.spectrum--light .spectrum-Textfield--quiet:invalid:focus {
   box-shadow: 0 0.0625rem 0 #f53c3c;
 }
 
-.spectrum--light .spectrum-Textfield--quiet,
-.spectrum--dark .spectrum-Textfield--quiet {
-  background-color: transparent;
-  border-color: #e1e1e1;
-  color: #4b4b4b;
+.spectrum--light .spectrum-Textfield--multiline {
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  text-indent: 0;
+}
+
+.spectrum--dark .spectrum-Textfield {
+  border-color: #3e3e3e;
+  background-color: #2a2a2a;
+  color: #cdcdcd;
+}
+
+.spectrum--dark .spectrum-Textfield::placeholder {
+  color: #707070;
 }
 
 .spectrum--dark .spectrum-Textfield:hover::placeholder {
@@ -4362,8 +4147,8 @@
 }
 
 .spectrum--dark .spectrum-Textfield:focus {
-  border-color: #2d8ceb;
-  box-shadow: 0 0 0 0.0625rem #2d8ceb;
+  border-color: #1473e6;
+  box-shadow: 0 0 0 0.0625rem #1473e6;
 }
 
 .spectrum--dark .spectrum-Textfield:disabled {
@@ -4387,18 +4172,14 @@
   box-shadow: 0 0 0 0.0625rem #f53c3c;
 }
 
-.spectrum--dark .spectrum-Textfield {
+.spectrum--dark .spectrum-Textfield--quiet {
+  background-color: transparent;
   border-color: #3e3e3e;
-  background-color: #2a2a2a;
   color: #cdcdcd;
 }
 
-.spectrum--dark .spectrum-Textfield::placeholder {
-  color: #707070;
-}
-
 .spectrum--dark .spectrum-Textfield--quiet:focus {
-  box-shadow: 0 0.0625rem 0 #2d8ceb;
+  box-shadow: 0 0.0625rem 0 #1473e6;
 }
 
 .spectrum--dark .spectrum-Textfield--quiet:disabled {
@@ -4414,8 +4195,8 @@
   box-shadow: 0 0.0625rem 0 #f53c3c;
 }
 
-.spectrum--dark .spectrum-Textfield--quiet {
-  background-color: transparent;
-  border-color: #3e3e3e;
-  color: #cdcdcd;
+.spectrum--dark .spectrum-Textfield--multiline {
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  text-indent: 0;
 }
