@@ -2936,6 +2936,18 @@
   margin-right: 0;
 }
 
+.spectrum--light .spectrum-Button:focus {
+  box-shadow: 0 0 0 0.0625rem #0064dc;
+}
+
+.spectrum--light .spectrum-Button:hover {
+  box-shadow: none;
+}
+
+.spectrum--light .spectrum-Button:active {
+  box-shadow: none;
+}
+
 .spectrum--light .spectrum-Button--cta {
   background-color: #1473e6;
   border-color: transparent;
@@ -3120,6 +3132,18 @@
   background-color: #eaeaea;
   color: #c2c2c2;
   border-color: transparent;
+}
+
+.spectrum--dark .spectrum-Button:focus {
+  box-shadow: 0 0 0 0.0625rem #0064dc;
+}
+
+.spectrum--dark .spectrum-Button:hover {
+  box-shadow: none;
+}
+
+.spectrum--dark .spectrum-Button:active {
+  box-shadow: none;
 }
 
 .spectrum--dark .spectrum-Button--cta {
