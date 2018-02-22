@@ -30,7 +30,7 @@
 
   /* Add the correct box sizing for [type="checkbox"] in IE 10-. */
   box-sizing: border-box;
-  
+
   /* Remove the padding for [type="checkbox"] in IE 10-. */
   padding: 0;
 
@@ -109,5 +109,32 @@
     transition: opacity var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out;
 
     content: '';
+  }
+}
+
+/* Mobile overrides */
+.spectrum-mobile {
+  .spectrum-Checkbox-box {
+    width: 17PX;
+    height: 17PX;
+  }
+
+  /* Fix checkmark alignment */
+  .spectrum-Checkbox-checkmark {
+    margin-top: -7PX;
+  }
+
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-width: 8.5PX;
+  }
+
+  .spectrum-Checkbox-checkmark  {
+    left: 1PX;
+  }
+
+  /* Fix indeterminate line */
+  .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-width: 7PX 3PX 7PX 3PX;
   }
 }

@@ -34,7 +34,7 @@
 
   /* Add the correct box sizing for [type="radio"] in IE 10-. */
   box-sizing: border-box;
-  
+
   /* Remove the padding for [type="radio"] in IE 10-. */
   padding: 0;
 
@@ -81,4 +81,12 @@
   vertical-align: middle;
 
   transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+}
+
+/* Mobile overrides */
+.spectrum-mobile {
+  .spectrum-Radio-button {
+    width: 17PX;
+    height: 17PX;
+  }
 }
