@@ -21,7 +21,12 @@ var processors = [
   require('postcss-custom-properties')({noValueNotifications: 'error'}),
   require('postcss-calc'),
   require('postcss-svg'),
-  require('postcss-pxtorem'),
+  require('postcss-pxtorem')({
+    rootValue: 16,
+    propList: ['*'],
+    minPixelValue: 1,
+    selectorBlackList: [/^html$/]
+  }),
   require('postcss-focus-ring'),
   require('autoprefixer')({
     'browsers': [
