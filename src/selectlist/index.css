@@ -17,8 +17,8 @@
   right: 9px;
   top: 11px;
 
-  width: var(--spectrum-selectlist-option-icon-width-default);
-  height: var(--spectrum-selectlist-option-icon-height-default);
+  width: var(--spectrum-select-list-option-icon-width-default);
+  height: var(--spectrum-select-list-option-icon-height-default);
 
   width: 12px;
   height: 12px;
@@ -32,14 +32,14 @@
   position: relative;
   display: flex;
 
-  padding: 0 calc(calc(var(--spectrum-selectlist-option-padding-default) * 2) + var(--spectrum-selectlist-option-icon-width-default)) 0 var(--spectrum-selectlist-option-padding-default);
+  padding: 0 calc(calc(var(--spectrum-select-list-option-padding-default) * 2) + var(--spectrum-select-list-option-icon-width-default)) 0 var(--spectrum-select-list-option-padding-default);
   margin: 0;
 
   height: var(--spectrum-component-single-line-height);
   line-height: var(--spectrum-component-single-line-height);
 
-  font-size: var(--spectrum-selectlist-option-font-size-default);
-  font-weight: var(--spectrum-selectlist-option-font-weight-default);
+  font-size: var(--spectrum-select-list-option-font-size-default);
+  font-weight: var(--spectrum-select-list-option-font-weight-default);
   font-style: normal;
 
   &:focus {
@@ -61,8 +61,8 @@
   /* Show the overflow for hr in Edge and IE. */
   overflow: visible;
 
-  height: var(--spectrum-selectlist-divider-size-default);
-  margin: var(--spectrum-selectlist-divider-padding-default) var(--spectrum-selectlist-option-padding-default);
+  height: var(--spectrum-select-list-divider-size-default);
+  margin: var(--spectrum-select-list-divider-padding-default) var(--spectrum-select-list-option-padding-default);
   padding: 0 0;
   border: none;
 }

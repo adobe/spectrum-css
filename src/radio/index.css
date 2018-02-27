@@ -84,9 +84,9 @@
 }
 
 /* Mobile overrides */
-.spectrum-mobile {
+.spectrum-large {
   .spectrum-Radio-button {
-    width: 17PX;
-    height: 17PX;
+    width: noscale(var(--spectrum-scale-lg-radio-circle-diameter));
+    height: noscale(var(--spectrum-scale-lg-radio-circle-diameter));
   }
 }
