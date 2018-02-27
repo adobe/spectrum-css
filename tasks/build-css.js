@@ -21,6 +21,13 @@ var processors = [
   require('postcss-custom-properties')({noValueNotifications: 'error'}),
   require('postcss-calc'),
   require('postcss-svg'),
+  require('postcss-functions')({
+    functions: {
+      noscale: function(value) {
+        return value.toString().toUpperCase();
+      }
+    }
+  }),
   require('postcss-pxtorem')({
     rootValue: 16,
     propList: ['*'],
