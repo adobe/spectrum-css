@@ -55,7 +55,7 @@ gulp.task('build-css:individual-components-multistops', function() {
       '!src/commons/skin.css'
     ])
       .pipe(plumb())
-      .pipe(insert.prepend(`@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-${colorStop}.css';\n.spectrum--${colorStop} {\n`))
+      .pipe(insert.prepend(`@import '../../dist/vars/spectrum-medium.css';\n@import '../colorStops/spectrum-${colorStop}.css';\n.spectrum--${colorStop} {\n`))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
       .pipe(rename(function(path) {
@@ -75,7 +75,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
 
   return gulp.src(globs)
     .pipe(plumb())
-    .pipe(insert.prepend(`@import '../../dist/vars/spectrum-dimensions.css';\n@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
+    .pipe(insert.prepend(`@import '../../dist/vars/spectrum-medium.css';\n@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
     .pipe(insert.append(appendString))
     .pipe(postcss(processors))
     .pipe(replace(/^&/gm, '.spectrum')) // Any stray & in colorstops should just apply to .spectrum
