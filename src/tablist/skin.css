@@ -23,7 +23,7 @@
 
   &:focus-ring {
     color: var(--spectrum-tablist-text-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-tablist-tab-item-border-width-default) var(--spectrum-tablist-border-color-key-focus);
+    box-shadow: 0 0 0 2px var(--spectrum-tablist-border-color-key-focus);
   }
 
   &.is-disabled {

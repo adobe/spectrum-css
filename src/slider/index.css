@@ -181,6 +181,8 @@
     content: '';
     width: var(--spectrum-slider-tick-mark-width-default);
     height: var(--spectrum-slider-tick-mark-height-default);
+
+    border-radius: var(--spectrum-slider-tick-mark-border-radius-default);
   }
 
   .spectrum-Slider-labelContainer {
@@ -323,6 +325,19 @@
 
   .spectrum-Slider-handle {
     cursor: default;
+
+    &:hover,
+    &:active {
+      border-width: var(--spectrum-slider-handle-outset-border-width-default);
+    }
+  }
+
+  &.spectrum-Slider--color {
+    .spectrum-Slider-handle {
+      &:hover,
+      &:active {
+        border-width: var(--spectrum-slider-handle-outset-border-width-default);
+      }
+    }
   }
 }
-

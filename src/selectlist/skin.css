@@ -2,45 +2,45 @@
 {{ selectlist/selectlist-default.yml }}
 */
 .spectrum-SelectList {
-  background-color: var(--spectrum-select-list-background-color-default);
+  background-color: var(--spectrum-selectlist-background-color-default);
 }
 
 .spectrum-SelectList-item {
-  background-color: var(--spectrum-select-list-option-background-color-default);
-  color: var(--spectrum-select-list-option-text-color-default);
+  background-color: var(--spectrum-selectlist-option-background-color-default);
+  color: var(--spectrum-selectlist-option-text-color-default);
 
   &:focus,
   &.is-focused {
-    background-color: var(--spectrum-select-list-option-background-color-key-focus);
-    color: var(--spectrum-select-list-option-text-color-key-focus);
+    background-color: var(--spectrum-selectlist-option-background-color-key-focus);
+    color: var(--spectrum-selectlist-option-text-color-key-focus);
   }
 
   &:hover {
-    background-color: var(--spectrum-select-list-option-background-color-hover);
-    color: var(--spectrum-select-list-option-text-color-hover);
+    background-color: var(--spectrum-selectlist-option-background-color-hover);
+    color: var(--spectrum-selectlist-option-text-color-hover);
   }
 
   &.is-selected {
-    color: var(--spectrum-select-list-option-text-color-selected);
+    color: var(--spectrum-selectlist-option-text-color-selected);
 
     .spectrum-SelectList-checkmark {
-      color: var(--spectrum-select-list-option-icon-color-selected);
+      color: var(--spectrum-selectlist-option-icon-color-selected);
     }
   }
 
   .is-active,
   &:active {
-    background-color: var(--spectrum-select-list-option-background-color-down);
+    background-color: var(--spectrum-selectlist-option-background-color-down);
   }
 
   &.is-disabled {
-    background-color: var(--spectrum-select-list-option-background-color-disabled);
+    background-color: var(--spectrum-selectlist-option-background-color-disabled);
     background-image: none;
-    color: var(--spectrum-select-list-option-text-color-disabled);
+    color: var(--spectrum-selectlist-option-text-color-disabled);
     cursor: default;
   }
 }
 
 .spectrum-SelectList-divider {
-  background-color: var(--spectrum-select-list-divider-color-default);
+  background-color: var(--spectrum-selectlist-divider-color-default);
 }

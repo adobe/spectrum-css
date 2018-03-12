@@ -82,11 +82,3 @@
 
   transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 }
-
-/* Mobile overrides */
-.spectrum-large {
-  .spectrum-Radio-button {
-    width: noscale(var(--spectrum-scale-lg-radio-circle-diameter));
-    height: noscale(var(--spectrum-scale-lg-radio-circle-diameter));
-  }
-}

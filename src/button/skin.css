@@ -267,7 +267,7 @@
 
   &:focus-ring {
     background-color: var(--spectrum-button-quiet-action-background-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-button-border-size-default) var(--spectrum-button-quiet-action-border-color-key-focus);
+    box-shadow: 0 0 0 2px var(--spectrum-button-quiet-action-border-color-key-focus);
     color: var(--spectrum-button-quiet-action-text-color-key-focus);
   }
 
@@ -305,8 +305,6 @@
 .spectrum-Button--toggle {
   background-color: var(--spectrum-button-toggle-off-background-color-default);
   border-color: var(--spectrum-button-toggle-off-border-color-default);
-  border-width: var(--spectrum-button-toggle-off-border-size-default);
-  border-radius: var(--spectrum-button-toggle-off-border-radius-default);
   color: var(--spectrum-button-toggle-off-text-color-default);
 
   &:focus-ring {
