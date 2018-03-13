@@ -86,7 +86,7 @@
     bottom: 4px;
     left: 0;
 
-    height: var(--spectrum-dialog-rule-height-default);
+    height: var(--spectrum-dialog-rule-height);
 
     content: '';
   }
@@ -117,8 +117,8 @@
 
   outline: none; /* Hide focus outline */
 
-  font-size: var(--spectrum-dialog-content-text-size-default);
-  font-weight: var(--spectrum-dialog-content-text-font-weight-default);
+  font-size: var(--spectrum-dialog-content-text-size);
+  font-weight: var(--spectrum-dialog-content-text-font-weight);
 }
 
 .spectrum-Dialog-footer {
@@ -149,8 +149,8 @@
 }
 
 .spectrum-Dialog-title {
-  font-size: var(--spectrum-dialog-title-text-size-default);
-  font-weight: var(--spectrum-dialog-title-text-font-weight-default);
+  font-size: var(--spectrum-dialog-title-text-size);
+  font-weight: var(--spectrum-dialog-title-text-font-weight);
 
   /* Get correct height on the heading */
   margin: -4px 0 0 0;

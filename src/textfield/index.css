@@ -17,7 +17,7 @@
   text-indent: 0;
 
   min-width: 110px;
-  height: var(--spectrum-input-height-default);
+  height: var(--spectrum-input-height);
   width: var(--spectrum-component-single-line-width);
 
   vertical-align: top; /* used to align them correctly in forms. */
@@ -45,14 +45,14 @@
   -webkit-appearance: none !important;
 
   &::placeholder {
-    font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
-    font-style: var(--spectrum-input-placeholder-text-style-default);
+    font-weight: var(--spectrum-input-placeholder-text-font-weight);
+    font-style: var(--spectrum-input-placeholder-text-style);
     transition: color var(--spectrum-transition-time) ease-in-out;
   }
 
   &:hover {
     &::placeholder {
-      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
+      font-weight: var(--spectrum-input-placeholder-text-font-weight);
     }
   }
 
@@ -60,7 +60,7 @@
     /* The opacity must be set to 1 */
     opacity: 1;
     &::placeholder {
-      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
+      font-weight: var(--spectrum-input-placeholder-text-font-weight);
     }
   }
 

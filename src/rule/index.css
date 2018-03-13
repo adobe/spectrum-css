@@ -1,7 +1,7 @@
 @import '../commons/index.css';
 
 /* topdoc
-{{ rule/rule-default.yml }}
+{{ rule/rule.yml }}
 */
 .spectrum-Rule {
 
@@ -13,24 +13,24 @@
   overflow: visible;
 
   border-style: solid;
-  border-width: var(--spectrum-rule-border-width-default);
-  border-radius: var(--spectrum-rule-border-width-default);
+  border-width: var(--spectrum-rule-border-width);
+  border-radius: var(--spectrum-rule-border-width);
 }
 
 /* topdoc
 {{ rule/rule-subsection.yml }}
 */
 .spectrum-Rule--subsection {
-  border-width: var(--spectrum-rule-subsection-border-width-default);
-  border-radius: var(--spectrum-rule-subsection-border-width-default);
+  border-width: var(--spectrum-rule-subsection-border-width);
+  border-radius: var(--spectrum-rule-subsection-border-width);
 }
 
 /* topdoc
 {{ rule/rule-subsection2.yml }}
 */
 .spectrum-Rule--subsection2 {
-  border-width: var(--spectrum-rule-subsection2-border-width-default);
-  border-radius: var(--spectrum-rule-subsection2-border-width-default);
+  border-width: var(--spectrum-rule-subsection2-border-width);
+  border-radius: var(--spectrum-rule-subsection2-border-width);
 }
 
 /* topdoc
@@ -39,9 +39,9 @@
 .spectrum-Rule--panel {
   box-sizing: border-box;
   display: inline-block;
-  border-width: var(--spectrum-rule-panel-border-width-default);
-  height: var(--spectrum-rule-panel-height-default);
+  border-width: var(--spectrum-rule-panel-border-width);
+  height: var(--spectrum-rule-panel-height);
   vertical-align: text-bottom;
-  margin: 0 var(--spectrum-rule-panel-margin-horizontal-default);
+  margin: 0 var(--spectrum-rule-panel-margin-horizontal);
   border-radius: 0;
 }

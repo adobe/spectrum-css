@@ -8,8 +8,8 @@
 */
 
 :root {
-  --spectrum-combobox-chevron-icon-width-default: 10px;
-  --spectrum-combobox-chevron-icon-height-default: 6px;
+  --spectrum-combobox-chevron-icon-width: 10px;
+  --spectrum-combobox-chevron-icon-height: 6px;
 }
 
 .spectrum-InputGroup {
@@ -24,20 +24,20 @@
 .spectrum-InputGroup-button {
   padding: 0;
   width: 34px;
-  border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius-default);
-  border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius-default);
+  border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
+  border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
 }
 
 .spectrum-InputGroup-input {
-  border-top-right-radius: var(--spectrum-combobox-textfield-border-top-right-radius-default);
-  border-bottom-right-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius-default);
+  border-top-right-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
+  border-bottom-right-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
   border-right-width: 0;
   flex: 1;
 }
 
 .spectrum-InputGroup-icon {
-  width: var(--spectrum-combobox-chevron-icon-width-default);
-  height: var(--spectrum-combobox-chevron-icon-height-default);
+  width: var(--spectrum-combobox-chevron-icon-width);
+  height: var(--spectrum-combobox-chevron-icon-height);
   margin: 13px auto;
 }
 

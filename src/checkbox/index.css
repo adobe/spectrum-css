@@ -13,8 +13,8 @@
   display: inline-block;
   position: relative;
   font-size: 0;
-  height: var(--spectrum-checkbox-box-size-default);
-  line-height: var(--spectrum-checkbox-box-size-default);
+  height: var(--spectrum-checkbox-box-size);
+  line-height: var(--spectrum-checkbox-box-size);
 }
 
 .spectrum-Checkbox-input {
@@ -50,7 +50,7 @@
   }
 
   &:checked + .spectrum-Checkbox-box {
-    border-width: calc(var(--spectrum-checkbox-box-size-default) / 2);
+    border-width: calc(var(--spectrum-checkbox-box-size) / 2);
 
     .spectrum-Checkbox-checkmark {
       transform: scale(1);
@@ -63,10 +63,10 @@
   .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-width:
-      calc(calc(var(--spectrum-checkbox-box-size-default) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-height) / 2))
-      calc(calc(var(--spectrum-checkbox-box-size-default) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-width) / 2))
-      calc(calc(var(--spectrum-checkbox-box-size-default) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-height) / 2))
-      calc(calc(var(--spectrum-checkbox-box-size-default) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-width) / 2));
+      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-height) / 2))
+      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-width) / 2))
+      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-height) / 2))
+      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-width) / 2));
 
     .spectrum-Checkbox-checkmark {
       display: none;
@@ -85,11 +85,11 @@
 .spectrum-Checkbox-box {
   display: inline-block;
   box-sizing: border-box;
-  width: var(--spectrum-checkbox-box-size-default);
-  height: var(--spectrum-checkbox-box-size-default);
+  width: var(--spectrum-checkbox-box-size);
+  height: var(--spectrum-checkbox-box-size);
 
   border-radius: var(--spectrum-checkbox-checkmark-box-border-radius);
-  border-width: var(--spectrum-checkbox-box-border-size-default);
+  border-width: var(--spectrum-checkbox-box-border-size);
   border-style: solid;
 
   vertical-align: middle;

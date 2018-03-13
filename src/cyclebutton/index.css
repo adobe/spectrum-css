@@ -4,13 +4,13 @@
 
   /* Change the font styles in all browsers */
   font-size: 100%;
-  
+
   /* Remove the button margin in Firefox and Safari. */
   margin: 0;
-  
+
   /* Show button the overflow in Edge and IE. */
   overflow: visible;
-  
+
   /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
   text-transform: none;
 
@@ -18,10 +18,10 @@
   -webkit-appearance: button;
 
   position: relative;
-  width: var(--spectrum-cyclebutton-button-width-default);
-  height: var(--spectrum-cyclebutton-button-height-default);
-  line-height: var(--spectrum-cyclebutton-button-height-default);
-  border-radius: var(--spectrum-cyclebutton-button-border-radius-default);
+  width: var(--spectrum-cyclebutton-button-width);
+  height: var(--spectrum-cyclebutton-button-height);
+  line-height: var(--spectrum-cyclebutton-button-height);
+  border-radius: var(--spectrum-cyclebutton-button-border-radius);
   border: none;
   padding: 0;
   cursor: pointer;

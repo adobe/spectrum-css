@@ -25,7 +25,7 @@
   border-radius: var(--spectrum-border-radius);
 
   font-size: var(--spectrum-font-size-text-label);
-  font-weight: var(--spectrum-tooltip-font-weight-default);
+  font-weight: var(--spectrum-tooltip-font-weight);
   line-height: var(--spectrum-line-height-text-label);
 
   &.is-open {
@@ -118,7 +118,7 @@
 {{ tooltip/tooltip-icons.yml }}
 */
 .spectrum-Tooltip-typeIcon {
-  margin-right: var(--spectrum-button-text-gap-default);
+  margin-right: var(--spectrum-button-text-gap);
 
   /* Override the size, just for these icons only */
   font-size: 14px;
@@ -130,7 +130,7 @@
 
 .spectrum-Tooltip-label {
   /* Make sure line height is correct to prevent problems in Windows */
-  line-height: var(--spectrum-body-font-line-height-default);
+  line-height: var(--spectrum-body-font-line-height);
 }
 
 .u-tooltip-showOnHover {

@@ -9,10 +9,10 @@
   /* Ensure text vertical alignment matches the specs */
   padding: 13px 18px 15px 18px;
 
-  border-radius: var(--spectrum-toast-border-radius-default);
+  border-radius: var(--spectrum-toast-border-radius);
 
-  font-size: var(--spectrum-toast-font-size-default);
-  font-weight: var(--spectrum-toast-font-weight-default);
+  font-size: var(--spectrum-toast-font-size);
+  font-weight: var(--spectrum-toast-font-weight);
   line-height: 20px;
   -webkit-font-smoothing: antialiased;
 }
@@ -47,13 +47,13 @@
   /* Change the font styles in all browsers */
   font-size: 100%;
   line-height: 1.15;
-  
+
   /* Remove the button margin in Firefox and Safari. */
   margin: 0;
-  
+
   /* Show button the overflow in Edge and IE. */
   overflow: visible;
-  
+
   /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
   text-transform: none;
 

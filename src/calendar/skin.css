@@ -53,7 +53,6 @@
   &.is-today {
     color: var(--spectrum-calendar-day-today-text-color-default);
     border-color: var(--spectrum-calendar-day-today-border-color-default);
-    font-weight: var(--spectrum-calendar-day-today-font-weight-default);
 
     &:before {
       border-color: var(--spectrum-calendar-day-today-border-color-default);

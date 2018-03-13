@@ -1,9 +1,9 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-dropdown-chevron-icon-width-default: 10px;
-  --spectrum-dropdown-chevron-icon-height-default: 6px;
-  --spectrum-dropdown-icon-margin-default: 5px;
+  --spectrum-dropdown-chevron-icon-width: 10px;
+  --spectrum-dropdown-chevron-icon-height: 6px;
+  --spectrum-dropdown-icon-margin: 5px;
 }
 
 /* topdoc
@@ -17,7 +17,7 @@
   .spectrum-Popover {
     top: 100%;
     min-width: 100%;
-    margin-top: var(--spectrum-dropdown-flyout-margin-default);
+    margin-top: var(--spectrum-dropdown-flyout-margin);
 
     overflow-y: auto;
   }
@@ -25,7 +25,7 @@
 
 .spectrum-Dropdown--quiet {
   .spectrum-Popover {
-    left: -var(--spectrum-dropdown-padding-default);
+    left: -var(--spectrum-dropdown-padding);
   }
 }
 
@@ -60,10 +60,10 @@
   position: relative;
   vertical-align: top;
 
-  width: var(--spectrum-dropdown-chevron-icon-width-default);
-  height: var(--spectrum-dropdown-chevron-icon-height-default);
+  width: var(--spectrum-dropdown-chevron-icon-width);
+  height: var(--spectrum-dropdown-chevron-icon-height);
 
-  margin-left: var(--spectrum-dropdown-icon-margin-default);
+  margin-left: var(--spectrum-dropdown-icon-margin);
 
   opacity: 1;
 }

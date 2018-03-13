@@ -33,25 +33,25 @@
   /* Change the font styles in all browsers */
   font-size: 100%;
   line-height: 1.15;
-  
+
   /* Remove the button margin in Firefox and Safari. */
   margin: 0;
-  
+
   /* Show button the overflow in Edge and IE. */
   overflow: visible;
-  
+
   /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
   text-transform: none;
 
   /* Correct the inability to style clickable types in iOS and Safari. */
   -webkit-appearance: button;
 
-  width: var(--spectrum-quickaction-width-default);
-  height: var(--spectrum-quickaction-height-default);
-  margin-left: var(--spectrum-quickaction-margin-default);
+  width: var(--spectrum-quickaction-width);
+  height: var(--spectrum-quickaction-height);
+  margin-left: var(--spectrum-quickaction-margin);
   padding: 0;
   border-width: var(--spectrum-quickaction-border-width);
-  border-radius: var(--spectrum-quickaction-border-radius-default);
+  border-radius: var(--spectrum-quickaction-border-radius);
   border-style: solid;
   transition: border-color var(--spectrum-transition-time) ease-out,
     color var(--spectrum-transition-time) ease-out,

@@ -13,10 +13,10 @@
 
   display: inline-block;
   box-sizing: border-box;
-  min-width: var(--spectrum-alert-min-width-default);
+  min-width: var(--spectrum-alert-min-width);
   min-height: var(--spectrum-alert-header-height);
   margin: 8px 0;
-  padding: var(--spectrum-alert-padding-y-default) var(--spectrum-alert-padding-x-default);
+  padding: var(--spectrum-alert-padding-y) var(--spectrum-alert-padding-x);
 
   border-width: 2px;
   border-style: solid;
@@ -51,7 +51,7 @@
 
 .spectrum-Alert-content {
   display: block;
-  margin: var(--spectrum-alert-content-margin-top-default) 0 0 0;
+  margin: var(--spectrum-alert-content-margin-top) 0 0 0;
   padding: 0;
 
   font-size: 14px;

@@ -1,8 +1,8 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter-default) / 2);
-  --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter-default) / 2) - calc(var(--spectrum-radio-circle-dot-size-default) / 2));
+  --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
+  --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter) / 2) - calc(var(--spectrum-radio-circle-dot-size) / 2));
 }
 
 .spectrum-Radio {
@@ -70,8 +70,8 @@
 .spectrum-Radio-button {
   display: inline-block;
   box-sizing: border-box;
-  width: var(--spectrum-radio-circle-diameter-default);
-  height: var(--spectrum-radio-circle-diameter-default);
+  width: var(--spectrum-radio-circle-diameter);
+  height: var(--spectrum-radio-circle-diameter);
 
   border-radius: var(--spectrum-radio-radius);
   border-width: 2px;
