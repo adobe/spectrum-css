@@ -3,8 +3,8 @@ var gulp = require('gulp');
 gulp.task('build',
   gulp.series(
     'lint',
-    //'clean',
-    //'load-dna',
+    'clean',
+    'load-dna',
     'icons',
     'build-css',
     'build-docs'

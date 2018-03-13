@@ -6,6 +6,7 @@ var insert = require('gulp-insert');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
 var plumb = require('./lib/plumb.js');
+var postcssdiff = require('./lib/postcssdiff.js');
 
 var colorStops = [
   'darkest',
@@ -61,6 +62,23 @@ gulp.task('build-css:individual-components-md', function() {
 });
 /**
   Builds individual components (dimensions only)
+*/
+gulp.task('build-css:individual-components-diffscale', function() {
+  return gulp.src('dist/components/*/index-md.css')
+    .pipe(plumb())
+    .pipe(postcssdiff(function(file) {
+      // Choose the file to diff against
+      return file.path.replace('-md', '-lg');
+    }))
+    .pipe(rename(function(path) {
+      path.basename += '-diff';
+    }))
+    .pipe(gulp.dest('dist/components/'));
+});
+
+
+/**
+  Diffs md and large
 */
 gulp.task('build-css:individual-components-lg', function() {
   return gulp.src('src/*/index.css')
