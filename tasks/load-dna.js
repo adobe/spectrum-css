@@ -37,7 +37,8 @@ gulp.task('dna:generate', function() {
 gulp.task('dna:postprocess-colorstops', function() {
   return gulp.src([
     'dist/vars/spectrum-*.css',
-    '!dist/vars/spectrum-dimensions.css',
+    '!dist/vars/spectrum-medium.css',
+    '!dist/vars/spectrum-large.css',
     '!dist/vars/spectrum-metadata.css'
   ])
     // replace anything with a value of 'transparent' with an actual transparent color
