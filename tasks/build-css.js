@@ -60,8 +60,23 @@ gulp.task('build-css:individual-components-md', function() {
     }))
     .pipe(gulp.dest('dist/components/'));
 });
+
 /**
   Builds individual components (dimensions only)
+*/
+gulp.task('build-css:individual-components-lg', function() {
+  return gulp.src('src/*/index.css')
+    .pipe(plumb())
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
+    .pipe(postcss(processors))
+    .pipe(rename(function(path) {
+      path.basename += '-lg';
+    }))
+    .pipe(gulp.dest('dist/components/'));
+});
+
+/**
+  Diffs md and large
 */
 gulp.task('build-css:individual-components-diffscale', function() {
   return gulp.src('dist/components/*/index-md.css')
@@ -71,22 +86,7 @@ gulp.task('build-css:individual-components-diffscale', function() {
       return file.path.replace('-md', '-lg');
     }))
     .pipe(rename(function(path) {
-      path.basename += '-diff';
-    }))
-    .pipe(gulp.dest('dist/components/'));
-});
-
-
-/**
-  Diffs md and large
-*/
-gulp.task('build-css:individual-components-lg', function() {
-  return gulp.src('src/*/index.css')
-    .pipe(plumb())
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
-    .pipe(postcss(processors))
-    .pipe(rename(function(path) {
-      path.basename += '-lg';
+      path.basename = path.basename.replace('-md', '-diff');
     }))
     .pipe(gulp.dest('dist/components/'));
 });
@@ -248,6 +248,7 @@ gulp.task('build-css',
       'build-css:core-lg-multistops'
     ),
     gulp.parallel(
+      'build-css:individual-components-diffscale',
       'build-css:concat-standalone',
       'build-css:build-multistops'
     )
