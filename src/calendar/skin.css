@@ -46,7 +46,6 @@
   }
 
   &.is-selected:not(.is-range-selection) {
-    font-weight: var(--spectrum-calendar-day-font-weight-selected);
     background: var(--spectrum-calendar-day-background-color-cap-selected);
   }
 

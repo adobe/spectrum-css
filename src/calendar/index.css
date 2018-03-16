@@ -176,6 +176,8 @@
   }
 
   &.is-selected:not(.is-range-selection) {
+    font-weight: var(--spectrum-calendar-day-font-weight-selected);
+
     &:before {
       /* No highlight for lone selections */
       display: none;
