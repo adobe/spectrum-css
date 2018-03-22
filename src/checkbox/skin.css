@@ -5,9 +5,10 @@
 .spectrum-Checkbox-box {
   border-color: var(--spectrum-checkbox-box-border-color-default);
 
-  .spectrum-Checkbox-checkmark {
-    color: var(--spectrum-checkbox-checkmark-color-default);
-  }
+}
+
+.spectrum-Checkbox-checkmark {
+  color: var(--spectrum-checkbox-checkmark-color);
 }
 
 .spectrum-Checkbox-box {
