@@ -65,13 +65,13 @@ spectrum-slider-track-disabled(){
 
   &.is-focused {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
-    background: var(--spectrum-slider-handle-fill-color-key-focus);
+    background: var(--spectrum-slider-handle-background-color-key-focus);
   }
 
   &:active,
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
-    background: var(--spectrum-slider-handle-fill-color-down);
+    background: var(--spectrum-slider-handle-background-color-down);
   }
 }
 
@@ -104,28 +104,28 @@ Todo: Determine if these are supposed to be pseudo classes
 .spectrum-Slider-controls--focus {
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
-    background: var(--spectrum-slider-handle-fill-color-key-focus);
+    background: var(--spectrum-slider-handle-background-color-key-focus);
   }
 }
 
 .spectrum-Slider-handle {
   &.is-focused {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
-    background: var(--spectrum-slider-handle-fill-color-key-focus);
+    background: var(--spectrum-slider-handle-background-color-key-focus);
   }
 }
 
 .spectrum-Slider-controls--active {
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-down);
-    background: var(--spectrum-slider-handle-fill-color-down);
+    background: var(--spectrum-slider-handle-background-color-down);
   }
 }
 
 .spectrum-Slider-handle {
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
-    background: var(--spectrum-slider-handle-fill-color-down);
+    background: var(--spectrum-slider-handle-background-color-down);
   }
 }
 
@@ -143,6 +143,9 @@ Todo: Determine if these are supposed to be pseudo classes
       border-color: var(--spectrum-slider-handle-border-color-disabled);
       background: var(--spectrum-slider-handle-color-default);
     }
+  }
+  .spectrum-Slider-track {
+    background: var(--spectrum-slider-track-color-disabled);
   }
   .spectrum-Slider-track--fill {
     background: var(--spectrum-slider-fill-track-color-disabled);
@@ -212,7 +215,7 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 
     &.is-focused {
-      background-color: var(--spectrum-slider-handle-fill-color-key-focus);
+      background-color: var(--spectrum-slider-handle-background-color-key-focus);
 
       &::after {
         background-color: var(--spectrum-slider-round-handle-marker-color-key-focus);
