@@ -2,7 +2,7 @@
 {{ selectlist/selectlist-default.yml }}
 */
 .spectrum-SelectList {
-  background-color: var(--spectrum-selectlist-background-color-default);
+  background-color: var(--spectrum-selectlist-background-color);
 }
 
 .spectrum-SelectList-item {
