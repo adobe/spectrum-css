@@ -76,6 +76,18 @@ function toggleSliderFocus(event) {
   handle.classList[func]('is-focused');
 }
 
+function changeScale(scale) {
+  if (scale === 'large') {
+    document.documentElement.classList.remove('spectrum--medium');
+    document.documentElement.classList.add('spectrum--large');
+    document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-lg.css');
+  } else {
+    document.documentElement.classList.remove('spectrum--large');
+    document.documentElement.classList.add('spectrum--medium');
+    document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-md.css');
+  }
+}
+
 document.addEventListener('focus', toggleSliderFocus, true);
 document.addEventListener('blur', toggleSliderFocus, true);
 

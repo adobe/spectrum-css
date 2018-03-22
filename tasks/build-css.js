@@ -220,13 +220,13 @@ gulp.task('build-css:build-multistops', function() {
 /**
   Builds standalone single colorstop CSS files
 */
-gulp.task('build-css:concat-standalone', function() {
+gulp.task('build-css:concat-standalone-md', function() {
   function concatStandalone(colorStop) {
     return gulp.src([
-      'dist/spectrum-core.css',
+      'dist/spectrum-core-md.css',
       'dist/spectrum-' + colorStop + '.css'
     ])
-      .pipe(concat('spectrum-' + colorStop + '.css'))
+      .pipe(concat('spectrum-' + colorStop + '-md.css'))
       // Replace instances of & that refer to the colorstop selector with .secptrum
       .pipe(replace(/^&/gm, '.spectrum'))
       .pipe(gulp.dest('dist/standalone'));
@@ -234,6 +234,22 @@ gulp.task('build-css:concat-standalone', function() {
 
   return merge.apply(this, colorStops.map(concatStandalone));
 });
+
+gulp.task('build-css:concat-standalone-lg', function() {
+  function concatStandalone(colorStop) {
+    return gulp.src([
+      'dist/spectrum-core-lg.css',
+      'dist/spectrum-' + colorStop + '.css'
+    ])
+      .pipe(concat('spectrum-' + colorStop + '-lg.css'))
+      // Replace instances of & that refer to the colorstop selector with .secptrum
+      .pipe(replace(/^&/gm, '.spectrum'))
+      .pipe(gulp.dest('dist/standalone'));
+  }
+
+  return merge.apply(this, colorStops.map(concatStandalone));
+});
+
 
 gulp.task('build-css',
   gulp.series(
@@ -249,7 +265,8 @@ gulp.task('build-css',
     ),
     gulp.parallel(
       'build-css:individual-components-diffscale',
-      'build-css:concat-standalone',
+      'build-css:concat-standalone-md',
+      'build-css:concat-standalone-lg',
       'build-css:build-multistops'
     )
   )
