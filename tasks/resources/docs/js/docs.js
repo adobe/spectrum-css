@@ -82,16 +82,53 @@ var scaleAbbreviations = {
   'large': 'lg'
 };
 
+var currentTitle = null;
+function setHashFromScroll() {
+  var scrollTop = document.documentElement.scrollTop;
+  var titles = document.getElementsByClassName('js-hashtitle');
+  var minTitleCloseness = Infinity;
+  var closestTitle = null;
+  for (var i = 0; i < titles.length; i++) {
+    var title = titles[i];
+    var titleCloseness = Math.abs(scrollTop - title.offsetTop)
+    if (titleCloseness < minTitleCloseness) {
+      minTitleCloseness = titleCloseness;
+      closestTitle = title;
+    }
+
+    if (closestTitle !== null && titleCloseness > minTitleCloseness) {
+      // We're not finding closer titles now
+      break;
+    }
+  }
+  if (closestTitle) {
+    history.pushState({}, '', closestTitle.getAttribute('href'));
+    currentTitle = closestTitle;
+  }
+}
+
+window.ignoreScroll = false;
 var curScale = 'medium';
 var curMethod = 'rem';
 function changeScale(scale, method) {
+  // Set the hash while changing scales
+  // setHashFromScroll();
+
   method = method || curMethod;
   scale = scale || curScale;
 
   switch (method) {
   case 'rem':
-    document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '../spectrum-core-diff.css');
-    document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-md.css');
+    var diffLink = document.querySelector('link[data-spectrum-core-diff]');
+    if (diffLink.getAttribute('href') !== 'diffLink') {
+      diffLink.setAttribute('href', '../spectrum-core-diff.css');
+    }
+
+    var coreLink = document.querySelector('link[data-spectrum-core]');
+    if (coreLink.getAttribute('href') !== '../spectrum-core-md.css') {
+      coreLink.setAttribute('href', '../spectrum-core-md.css');
+    }
+
     Object.keys(scaleAbbreviations).forEach(function(otherScale) {
       if (otherScale !== scale) {
         document.documentElement.classList.remove('spectrum--' + otherScale);
@@ -100,17 +137,39 @@ function changeScale(scale, method) {
     document.documentElement.classList.add('spectrum--' + scale);
     break;
   case 'token':
-    document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '');
     document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-' + scaleAbbreviations[scale] + '.css');
+    document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '');
     Object.keys(scaleAbbreviations).forEach(function(otherScale) {
       document.documentElement.classList.remove('spectrum--' + otherScale);
     });
     break;
   }
 
+  var count = 0;
+  ignoreScroll = true;
+  document.documentElement.scrollTop = currentTitle.offsetTop;
+  var interval = window.setInterval(function() {
+    document.documentElement.scrollTop = currentTitle.offsetTop;
+    count++;
+    if (count > 50) {
+      clearInterval(interval);
+      ignoreScroll = false;
+    }
+  }, 10);
+
   curScale = scale;
   curMethod = method;
 }
+
+// Set the hash while scrolling
+var scrollTimeout = null;
+window.addEventListener('scroll', function() {
+  clearTimeout(scrollTimeout);
+  if (ignoreScroll) {
+    return;
+  }
+  scrollTimeout = setTimeout(setHashFromScroll, 250);
+});
 
 document.addEventListener('focus', toggleSliderFocus, true);
 document.addEventListener('blur', toggleSliderFocus, true);
