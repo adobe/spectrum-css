@@ -60,6 +60,12 @@ pre.html {
   min-height: 48px;
   line-height: 48px;
 }
+.sdldocs-floating {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
 .sdldocs-header-logo-image {
   vertical-align: middle;
 }

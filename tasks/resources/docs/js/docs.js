@@ -102,6 +102,9 @@ function changeScale(scale, method) {
   case 'token':
     document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '');
     document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-' + scaleAbbreviations[scale] + '.css');
+    Object.keys(scaleAbbreviations).forEach(function(otherScale) {
+      document.documentElement.classList.remove('spectrum--' + otherScale);
+    });
     break;
   }
 
