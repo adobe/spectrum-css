@@ -85,6 +85,13 @@ gulp.task('build-css:individual-components-diffscale', function() {
       // Choose the file to diff against
       return file.path.replace('-md', '-lg');
     }))
+    .pipe(insert.prepend('.spectrum--large {\n'))
+    .pipe(insert.append('\n}\n'))
+    .pipe(postcss([
+      require('postcss-nested'),
+      require('postcss-discard-empty'),
+      require('postcss-remtopx')({ rootFontSize: 16 })
+    ]))
     .pipe(rename(function(path) {
       path.basename = path.basename.replace('-md', '-diff');
     }))
@@ -250,6 +257,18 @@ gulp.task('build-css:concat-standalone-lg', function() {
   return merge.apply(this, colorStops.map(concatStandalone));
 });
 
+gulp.task('build-css:concat-core-diff', function() {
+  return gulp.src([
+    'src/components.css'
+  ])
+    .pipe(replace(/@import '(.*?)\/index\.css';/g, '@import "../dist/components/$1/index-diff.css";'))
+    .pipe(postcss([
+      require('postcss-import')
+    ]))
+    .pipe(rename('spectrum-core-diff.css'))
+    .pipe(gulp.dest('dist/'));
+});
+
 
 gulp.task('build-css',
   gulp.series(
@@ -268,6 +287,9 @@ gulp.task('build-css',
       'build-css:concat-standalone-md',
       'build-css:concat-standalone-lg',
       'build-css:build-multistops'
+    ),
+    gulp.parallel(
+      'build-css:concat-core-diff'
     )
   )
 );

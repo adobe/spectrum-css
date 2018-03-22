@@ -76,16 +76,37 @@ function toggleSliderFocus(event) {
   handle.classList[func]('is-focused');
 }
 
-function changeScale(scale) {
-  if (scale === 'large') {
-    document.documentElement.classList.remove('spectrum--medium');
-    document.documentElement.classList.add('spectrum--large');
-    document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-lg.css');
-  } else {
-    document.documentElement.classList.remove('spectrum--large');
-    document.documentElement.classList.add('spectrum--medium');
+var currentScale = 'medium';
+var scaleAbbreviations = {
+  'medium': 'md',
+  'large': 'lg'
+};
+
+var curScale = 'medium';
+var curMethod = 'rem';
+function changeScale(scale, method) {
+  method = method || curMethod;
+  scale = scale || curScale;
+
+  switch (method) {
+  case 'rem':
+    document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '../spectrum-core-diff.css');
     document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-md.css');
+    Object.keys(scaleAbbreviations).forEach(function(otherScale) {
+      if (otherScale !== scale) {
+        document.documentElement.classList.remove('spectrum--' + otherScale);
+      }
+    });
+    document.documentElement.classList.add('spectrum--' + scale);
+    break;
+  case 'token':
+    document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '');
+    document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-' + scaleAbbreviations[scale] + '.css');
+    break;
   }
+
+  curScale = scale;
+  curMethod = method;
 }
 
 document.addEventListener('focus', toggleSliderFocus, true);
