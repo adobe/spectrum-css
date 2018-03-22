@@ -76,12 +76,6 @@ function toggleSliderFocus(event) {
   handle.classList[func]('is-focused');
 }
 
-var currentScale = 'medium';
-var scaleAbbreviations = {
-  'medium': 'md',
-  'large': 'lg'
-};
-
 var currentTitle = null;
 function setHashFromScroll() {
   var scrollTop = document.documentElement.scrollTop;
@@ -90,7 +84,7 @@ function setHashFromScroll() {
   var closestTitle = null;
   for (var i = 0; i < titles.length; i++) {
     var title = titles[i];
-    var titleCloseness = Math.abs(scrollTop - title.offsetTop)
+    var titleCloseness = Math.abs(scrollTop - title.offsetTop);
     if (titleCloseness < minTitleCloseness) {
       minTitleCloseness = titleCloseness;
       closestTitle = title;
@@ -102,14 +96,19 @@ function setHashFromScroll() {
     }
   }
   if (closestTitle) {
-    history.pushState({}, '', closestTitle.getAttribute('href'));
+    window.history.pushState({}, '', closestTitle.getAttribute('href'));
     currentTitle = closestTitle;
   }
 }
 
 window.ignoreScroll = false;
+
 var curScale = 'medium';
 var curMethod = 'rem';
+var scaleAbbreviations = {
+  'medium': 'md',
+  'large': 'lg'
+};
 function changeScale(scale, method) {
   // Set the hash while changing scales
   // setHashFromScroll();
@@ -146,14 +145,14 @@ function changeScale(scale, method) {
   }
 
   var count = 0;
-  ignoreScroll = true;
+  window.ignoreScroll = true;
   document.documentElement.scrollTop = currentTitle.offsetTop;
   var interval = window.setInterval(function() {
     document.documentElement.scrollTop = currentTitle.offsetTop;
     count++;
     if (count > 50) {
       clearInterval(interval);
-      ignoreScroll = false;
+      window.ignoreScroll = false;
     }
   }, 10);
 
@@ -165,11 +164,13 @@ function changeScale(scale, method) {
 var scrollTimeout = null;
 window.addEventListener('scroll', function() {
   clearTimeout(scrollTimeout);
-  if (ignoreScroll) {
+  if (window.ignoreScroll) {
     return;
   }
   scrollTimeout = setTimeout(setHashFromScroll, 250);
 });
+
+window.addEventListener('DOMContentLoaded', setHashFromScroll);
 
 document.addEventListener('focus', toggleSliderFocus, true);
 document.addEventListener('blur', toggleSliderFocus, true);
