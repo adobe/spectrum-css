@@ -9,10 +9,13 @@
   display: inline-block;
   position: relative;
 
-  padding: 6px var(--spectrum-radio-hitarea);
-  margin-left: calc(-1 * var(--spectrum-radio-hitarea));
+  padding: 0 var(--spectrum-radio-cursor-hit-x);
+  margin-left: calc(-1 * var(--spectrum-radio-cursor-hit-x));
 
   font-size: 0;
+
+  height: var(--spectrum-radio-height);
+  line-height: var(--spectrum-radio-height);
 
   & + .spectrum-Radio {
     margin-left: 0;

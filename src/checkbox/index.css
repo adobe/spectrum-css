@@ -13,6 +13,9 @@
   font-size: 0;
   height: var(--spectrum-checkbox-height);
   line-height: var(--spectrum-checkbox-height);
+
+  padding: 0 var(--spectrum-radio-cursor-hit-x);
+  margin-left: calc(-1 * var(--spectrum-radio-cursor-hit-x));
 }
 
 .spectrum-Checkbox-input {
@@ -81,6 +84,7 @@
 }
 
 .spectrum-Checkbox-box {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: var(--spectrum-checkbox-box-size);
@@ -98,11 +102,12 @@
 .spectrum-Checkbox-checkmark {
   position: absolute;
   top: 50%;
-  left: 1px;
+  left: 50%;
   width: var(--spectrum-checkbox-checkmark-size);
   height: var(--spectrum-checkbox-checkmark-size);
 
   margin-top: calc(var(--spectrum-checkbox-checkmark-size) / -2);
+  margin-left: calc(var(--spectrum-checkbox-checkmark-size) / -2);
 
   background-repeat: no-repeat;
   background-position: center;
