@@ -6,7 +6,6 @@ var insert = require('gulp-insert');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
 var plumb = require('./lib/plumb.js');
-var postcssdiff = require('./lib/postcssdiff.js');
 
 var colorStops = [
   'darkest',
@@ -79,21 +78,27 @@ gulp.task('build-css:individual-components-lg', function() {
   Diffs md and large
 */
 gulp.task('build-css:individual-components-diffscale', function() {
-  return gulp.src('dist/components/*/index-md.css')
+  return gulp.src('src/*/index.css')
     .pipe(plumb())
-    .pipe(postcssdiff(function(file) {
-      // Choose the file to diff against
-      return file.path.replace('-md', '-lg');
-    }))
+    // Get var statements only
+    .pipe(postcss([
+      require('./lib/postcss-varsonly')()
+    ]))
+    // Use large variables
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
+    // Build
+    .pipe(postcss(processors))
+    // Wrap in large
     .pipe(insert.prepend('.spectrum--large {\n'))
     .pipe(insert.append('\n}\n'))
+    // Stay as pixels
     .pipe(postcss([
       require('postcss-nested'),
-      require('postcss-discard-empty'),
-      require('postcss-remtopx')({ rootFontSize: 16 })
+      require('postcss-remtopx'),
+      require('postcss-discard-empty')
     ]))
     .pipe(rename(function(path) {
-      path.basename = path.basename.replace('-md', '-diff');
+      path.basename += '-diff';
     }))
     .pipe(gulp.dest('dist/components/'));
 });

@@ -2,15 +2,21 @@ var Transform = require('readable-stream/transform');
 var fs = require('fs');
 var postcss = require('postcss');
 
-module.exports = function(pathFunc) {
+module.exports = function(pathFunc, contentsFunc) {
   return new Transform({
     objectMode: true,
     transform: function(file, enc, callback) {
       // Parse input
       var modPath = pathFunc(file);
 
+
+      var modContents = fs.readFileSync(modPath);
+      if (contentsFunc) {
+        modContents = contentsFunc(modContents);
+      }
+
       var baseRoot = postcss.parse(file.contents);
-      var modRoot = postcss.parse(fs.readFileSync(modPath));
+      var modRoot = postcss.parse(modContents);
 
       if (baseRoot.nodes.length != modRoot.nodes.length) {
         throw new Error(`Rule count mismatch between ${file.path} and ${modPath}`);
