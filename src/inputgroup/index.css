@@ -10,6 +10,10 @@
 :root {
   --spectrum-combobox-chevron-icon-width: 10px;
   --spectrum-combobox-chevron-icon-height: 6px;
+
+  /* Todo: move to DNA */
+  --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
+  --spectrum-combovox-fieldbutton-border-width: var(--spectrum-input-border-size);
 }
 
 .spectrum-InputGroup {
@@ -22,8 +26,10 @@
 }
 
 .spectrum-InputGroup-button {
+  position: relative;
   padding: 0;
   width: 34px;
+  border-width: var(--spectrum-combovox-fieldbutton-border-width);
   border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
   border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
 }
@@ -38,14 +44,19 @@
 .spectrum-InputGroup-icon {
   width: var(--spectrum-combobox-chevron-icon-width);
   height: var(--spectrum-combobox-chevron-icon-height);
-  margin: 13px auto;
+
+  position: absolute;
+  top: calc(50% - calc(var(--spectrum-combobox-chevron-icon-height) / 2));
+  right: calc(50% - calc(var(--spectrum-combobox-chevron-icon-width) / 2));
 }
 
 .spectrum-InputGroup--quiet {
   .spectrum-InputGroup-button {
+    border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+
     position: relative;
     width: 24px;
-    border-bottom: 1px solid;
+    border-bottom: var(--spectrum-textfield-quiet-affixed-border-size) solid;
 
     /* More hitarea */
     &:after {
@@ -58,6 +69,6 @@
   }
 
   .spectrum-InputGroup-icon {
-    margin-left: 10px;
+    right: 0;
   }
 }

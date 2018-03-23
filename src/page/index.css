@@ -1,5 +1,5 @@
 @import '../commons/index.css';
 
 html.spectrum--large {
-  font-size: calc(var(--spectrum-basesize) * 1.25);
+  font-size: noscale(calc(var(--spectrum-basesize) * 1.25));
 }

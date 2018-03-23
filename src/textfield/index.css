@@ -3,6 +3,12 @@
 :root {
   --spectrum-input-padding-top: 3px;
   --spectrum-input-padding-bottom: 5px;
+
+  /* Todo fix in DNA */
+  --spectrum-textfield-quiet-border-radius: 0;
+
+  /* Todo fix in DNA */
+  --spectrum-input-height: var(--spectrum-switch-height);
 }
 
 .spectrum-Textfield {
@@ -111,7 +117,7 @@
 }
 
 .spectrum-Textfield--quiet {
-  border-radius: 0;
+  border-radius: var(--spectrum-textfield-quiet-border-radius);
   text-indent: 0;
 
   border: none;
