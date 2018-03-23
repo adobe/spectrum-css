@@ -11,8 +11,8 @@
   display: inline-block;
   position: relative;
   font-size: 0;
-  height: var(--spectrum-checkbox-box-size);
-  line-height: var(--spectrum-checkbox-box-size);
+  height: var(--spectrum-checkbox-height);
+  line-height: var(--spectrum-checkbox-height);
 }
 
 .spectrum-Checkbox-input {
