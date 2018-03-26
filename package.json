@@ -12,11 +12,11 @@
     "release": "npm run release:stable"
   },
   "devDependencies": {
-    "@spectrum/balthazar": "^3.0.0-beta.0",
+    "@spectrum/balthazar": "^3.0.1",
     "@spectrum/dna-npm-release": "^1.x",
     "@spectrum/dna-topdoc-template": "^1.8.0",
-    "@spectrum/spectrum-dna": "^4.0.0-beta.16",
-    "@spectrum/spectrum-icons": "^1.0.0-beta.13",
+    "@spectrum/spectrum-dna": "^4.0.0-beta.17",
+    "@spectrum/spectrum-icons": "^1.0.0-beta.17",
     "autoprefixer": "^6.5.3",
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
