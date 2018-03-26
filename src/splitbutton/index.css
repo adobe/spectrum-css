@@ -3,6 +3,7 @@
 :root {
   --spectrum-splitbutton-icon-width: 10px;
   --spectrum-splitbutton-icon-height: 6px;
+  --spectrum-splitbutton-trigger-border-left: 0;
 }
 
 /* topdoc
@@ -47,9 +48,9 @@
   margin-left: 0 !important;
 
   border-radius: 0 var(--spectrum-button-border-radius) var(--spectrum-button-border-radius) 0;
-  border-left-width: 0;
+  border-left-width: var(--spectrum-splitbutton-trigger-border-left);
   padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
-  padding-right: calc(var(--spectrum-padding) - 2px);
+  padding-right: calc(var(--spectrum-padding) - var(--spectrum-button-border-size));
 
   &:focus-ring {
     box-shadow: none;

@@ -61,11 +61,7 @@
   left: 12px;
   top: 0;
   width: var(--spectrum-search-icon-width);
-  height: var(--spectrum-input-height);
-
-  /* Support font icons */
-  text-align: center;
-  line-height: 32px;
+  height: var(--spectrum-textfield-height);
 
   /* Support SVG icons */
   background-repeat: no-repeat;

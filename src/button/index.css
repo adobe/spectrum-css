@@ -2,7 +2,7 @@
 
 :root {
   /* Icon Button */
-  --spectrum-button-icon-width: 32px;
+  --spectrum-button-icon-width: var(--spectrum-button-height);
   --spectrum-button-icon-border-radius: 2px;
   --spectrum-button-icon-background-size: 16px;
   --spectrum-button-icon-icon-size: 8px;
@@ -245,7 +245,8 @@ a.spectrum-Button {
   margin: 0;
   padding: 0 var(--spectrum-dropdown-padding);
 
-  border: 1px solid;
+  border-width: var(--spectrum-dropdown-border-size);
+  border-style: solid;
   border-radius: var(--spectrum-border-radius);
 
   transition: background-color var(--spectrum-transition-time),
@@ -259,7 +260,7 @@ a.spectrum-Button {
   }
 
   &.is-open {
-    border: 1px solid;
+    border-width: var(--spectrum-dropdown-border-size);
   }
 }
 

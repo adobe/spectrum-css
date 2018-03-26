@@ -12,7 +12,6 @@
 .spectrum-Dropdown {
   position: relative;
   display: inline-block;
-  min-width: var(--spectrum-component-single-line-width);
 
   .spectrum-Popover {
     top: 100%;
