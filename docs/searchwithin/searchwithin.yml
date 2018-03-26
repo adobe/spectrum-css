@@ -14,7 +14,11 @@ markup: |
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SearchClear" />
+      </svg>
+    </button>
   </div>
 
   <h4>Open</h4>
@@ -28,7 +32,11 @@ markup: |
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SearchClear" />
+      </svg>
+    </button>
 
     <div class="spectrum-Popover is-open" style="position: absolute; top: 38px; left: 0;">
       <ul class="spectrum-SelectList" role="menu" tabindex="0">
@@ -51,7 +59,11 @@ markup: |
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SearchClear" />
+      </svg>
+    </button>
   </div>
 
   <h4>Disabled</h4>
@@ -65,5 +77,9 @@ markup: |
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield" value="Term" disabled>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled>
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SearchClear" />
+      </svg>
+    </button>
   </div>
