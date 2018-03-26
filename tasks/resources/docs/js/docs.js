@@ -150,6 +150,15 @@ function changeScale(scale, method) {
     });
   }
 
+  // Swap out icons
+  var uiIcons = scale === 'medium' ? mediumIcons : largeIcons;
+  var oldUIIcons = scale != 'medium' ? mediumIcons : largeIcons;
+  document.head.insertBefore(uiIcons, null);
+  if (oldUIIcons.parentElement) {
+    oldUIIcons.parentElement.removeChild(oldUIIcons);
+  }
+
+  // Scroll to the same place we were before
   var count = 0;
   window.ignoreScroll = true;
   document.documentElement.scrollTop = currentTitle.offsetTop;
@@ -168,12 +177,15 @@ function changeScale(scale, method) {
 
 window.addEventListener('DOMContentLoaded', function() {
   if (window.location.hash) {
+    // Scroll to the hash
+    // This is required for refreshes when the size is changed
     var el = document.querySelector(window.location.hash);
     if (el) {
       document.documentElement.scrollTop = el.offsetTop;
     }
   }
   else {
+    // Otherwise, make it #official
     setHashFromScroll();
   }
 
@@ -192,5 +204,16 @@ window.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('focus', toggleSliderFocus, true);
 document.addEventListener('blur', toggleSliderFocus, true);
 
-AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
+// Load and store references to icon SVGs
+var mediumIcons;
+var largeIcons;
+AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-medium.svg', function(err, svg) {
+  mediumIcons = svg;
+});
+AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, svg) {
+  largeIcons = svg;
+
+  // Immediately remove from the DOM -- it will be added back when we switch scale
+  largeIcons.parentElement.removeChild(largeIcons);
+});
 AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');
