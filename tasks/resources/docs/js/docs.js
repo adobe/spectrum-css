@@ -104,7 +104,7 @@ function setHashFromScroll() {
 window.ignoreScroll = false;
 
 var curScale = 'medium';
-var curMethod = 'rem';
+var curMethod = 'rem-auto';
 var scaleAbbreviations = {
   'medium': 'md',
   'large': 'lg'
@@ -116,11 +116,18 @@ function changeScale(scale, method) {
   method = method || curMethod;
   scale = scale || curScale;
 
-  switch (method) {
-  case 'rem':
+  if (method === 'rem' || method === 'rem-auto') {
     var diffLink = document.querySelector('link[data-spectrum-core-diff]');
-    if (diffLink.getAttribute('href') !== 'diffLink') {
-      diffLink.setAttribute('href', '../spectrum-core-diff.css');
+    if (method === 'rem-auto') {
+      if (diffLink.getAttribute('href') !== '../spectrum-core-diff.css') {
+        diffLink.setAttribute('href', '../spectrum-core-diff.css');
+      }
+    }
+    else {
+      // Remove auto diffs
+      if (diffLink.getAttribute('href') !== '') {
+        diffLink.setAttribute('href', '');
+      }
     }
 
     var coreLink = document.querySelector('link[data-spectrum-core]');
@@ -134,14 +141,13 @@ function changeScale(scale, method) {
       }
     });
     document.documentElement.classList.add('spectrum--' + scale);
-    break;
-  case 'token':
+  }
+  else if (method === 'token') {
     document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-' + scaleAbbreviations[scale] + '.css');
     document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '');
     Object.keys(scaleAbbreviations).forEach(function(otherScale) {
       document.documentElement.classList.remove('spectrum--' + otherScale);
     });
-    break;
   }
 
   var count = 0;
@@ -160,17 +166,28 @@ function changeScale(scale, method) {
   curMethod = method;
 }
 
-// Set the hash while scrolling
-var scrollTimeout = null;
-window.addEventListener('scroll', function() {
-  clearTimeout(scrollTimeout);
-  if (window.ignoreScroll) {
-    return;
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.location.hash) {
+    var el = document.querySelector(window.location.hash);
+    if (el) {
+      document.documentElement.scrollTop = el.offsetTop;
+    }
   }
-  scrollTimeout = setTimeout(setHashFromScroll, 250);
-});
+  else {
+    setHashFromScroll();
+  }
 
-window.addEventListener('DOMContentLoaded', setHashFromScroll);
+  // Set the hash while scrolling
+  var scrollTimeout = null;
+  window.addEventListener('scroll', function() {
+    clearTimeout(scrollTimeout);
+    if (window.ignoreScroll) {
+      return;
+    }
+    scrollTimeout = setTimeout(setHashFromScroll, 250);
+  });
+
+});
 
 document.addEventListener('focus', toggleSliderFocus, true);
 document.addEventListener('blur', toggleSliderFocus, true);
