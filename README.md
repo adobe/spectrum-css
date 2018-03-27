@@ -115,8 +115,8 @@ Typical testing workflow:
 1. Build the `dist/` folder with `gulp build`
 2. `gulp test`
 3. Wait for results to finish (approx 7 mins)
-	a. If this is the first run test, the results will be all failures since it has no reference pictures to compare against. Use `backstop approve` to make the screen shots taken in this run to become the new reference set.
-	b. If you have an existing reference set, you will get a result of which components have changed. You may also choose to again `backstop approve` the new changes to set the new reference set or continue testing.
+	* If this is the first run test, the results will be all failures since it has no reference pictures to compare against. Use `backstop approve` to make the screen shots taken in this run to become the new reference set.
+	* If you have an existing reference set, you will get a result of which components have changed. You may also choose to again `backstop approve` the new changes to set the new reference set or continue testing.
 4. Navigate to `backstop_data/html_report/index.html` to see the nicely formatted html report.
 
 To note: If you see your tests returning with a 'Tag Not Found' image, then it's usually because of a particular chrome instance that was taking that screen shot was left hanging and timed out. Try these commands and run the test again:
