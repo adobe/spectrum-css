@@ -7,7 +7,8 @@
 
 }
 
-.spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-checkmark,
+.spectrum-Checkbox-partialCheckmark {
   color: var(--spectrum-checkbox-checkmark-color);
 }
 

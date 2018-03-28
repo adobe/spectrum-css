@@ -63,22 +63,26 @@
 .spectrum-Checkbox.is-indeterminate {
   .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-width:
-      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-height) / 2))
-      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-width) / 2))
-      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-height) / 2))
-      calc(calc(var(--spectrum-checkbox-box-size) / 2) - calc(var(--spectrum-checkbox-indeterminate-check-width) / 2));
+    border-width: calc(var(--spectrum-checkbox-box-size) / 2);
 
     .spectrum-Checkbox-checkmark {
       display: none;
+    }
+
+    .spectrum-Checkbox-partialCheckmark {
+      display: block;
+
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }
 
 .spectrum-Checkbox-label {
   display: inline-block;
-  margin: 0 8px;
-  font-size: var(--spectrum-font-size);
+  margin: 0 var(--spectrum-checkbox-text-gap);
+  font-size: var(--spectrum-checkbox-text-font-size);
+  font-weight: var(--spectrum-checkbox-text-font-weight);
   vertical-align: middle;
   transition: color var(--spectrum-transition-time) ease-in-out;
 }
@@ -99,7 +103,8 @@
   transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 }
 
-.spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-checkmark,
+.spectrum-Checkbox-partialCheckmark {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -109,13 +114,12 @@
   margin-top: calc(var(--spectrum-checkbox-checkmark-size) / -2);
   margin-left: calc(var(--spectrum-checkbox-checkmark-size) / -2);
 
-  background-repeat: no-repeat;
-  background-position: center;
-
   opacity: 0;
   transform: scale(0);
 
   transition: opacity var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out;
+}
 
-  content: '';
+.spectrum-Checkbox-partialCheckmark {
+  display: none;
 }
