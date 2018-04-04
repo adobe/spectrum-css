@@ -126,6 +126,10 @@
   height: var(--spectrum-calendar-day-size-default);
   width: var(--spectrum-calendar-day-size-default);
   padding: var(--spectrum-calendar-day-padding-size-default);
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .spectrum-Calendar-date {
