@@ -101,8 +101,10 @@
 
   &:active,
   &.is-focused,
-  &.is-dragged {
+  &.is-dragged,
+  &.is-tophandle {
     border-width: var(--spectrum-slider-border-width-key-focus);
+    z-index: 1;
   }
 }
 
@@ -156,6 +158,7 @@
 .spectrum-Slider-value {
   float: right;
   padding-right: 0;
+  cursor: default;
 }
 
 .spectrum-Slider-ticks {
@@ -322,6 +325,7 @@
 
   .spectrum-Slider-handle {
     cursor: default;
+    pointer-events: none;
   }
 }
 
