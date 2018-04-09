@@ -1,12 +1,5 @@
 @import '../commons/index.css';
 
-:root {
-  --spectrum-checkbox-indeterminate-check-width: 8px;
-  --spectrum-checkbox-indeterminate-check-height: 2px;
-
-  --spectrum-checkbox-checkmark-box-border-radius: 2px;
-}
-
 .spectrum-Checkbox {
   display: inline-block;
   position: relative;
@@ -94,7 +87,7 @@
   width: var(--spectrum-checkbox-box-size);
   height: var(--spectrum-checkbox-box-size);
 
-  border-radius: var(--spectrum-checkbox-checkmark-box-border-radius);
+  border-radius: var(--spectrum-checkbox-box-border-radius);
   border-width: var(--spectrum-checkbox-box-border-size);
   border-style: solid;
 
