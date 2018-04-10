@@ -101,8 +101,10 @@
 
   &:active,
   &.is-focused,
-  &.is-dragged {
+  &.is-dragged,
+  &.is-tophandle {
     border-width: var(--spectrum-slider-border-width-key-focus);
+    z-index: 1;
   }
 }
 
@@ -110,6 +112,7 @@
 
   /* Normalize input field */
   /* Change the font styles for input in all browsers */
+  font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
   /*  Remove the margin for input in Firefox and Safari. */
@@ -156,6 +159,7 @@
 .spectrum-Slider-value {
   float: right;
   padding-right: 0;
+  cursor: default;
 }
 
 .spectrum-Slider-ticks {
@@ -324,11 +328,7 @@
 
   .spectrum-Slider-handle {
     cursor: default;
-
-    &:hover,
-    &:active {
-      border-width: var(--spectrum-slider-handle-outset-border-width);
-    }
+    pointer-events: none;
   }
 
   &.spectrum-Slider--color {

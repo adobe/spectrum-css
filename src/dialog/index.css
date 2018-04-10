@@ -3,7 +3,7 @@
 
 :root {
   --spectrum-dialog-min-width: 320px;
-  --spectrum-dialog-max-width: 480px;
+  --spectrum-dialog-max-width: var(--spectrum-dialog-width-default);
   --spectrum-dialog-margin: 32px;
 
   --spectrum-dialog-border-radius: var(--spectrum-border-radius);
@@ -109,6 +109,7 @@
   padding-top: var(--spectrum-dialog-content-padding-top);
 
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   flex: 1 1 auto;
 

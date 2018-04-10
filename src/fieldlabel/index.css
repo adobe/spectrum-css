@@ -46,9 +46,9 @@
   padding: var(--spectrum-field-label-right-padding);
 }
 
-/**
- * Spectrum Table Form
- */
+/* topdoc
+{{ form/index.yml }}
+*/
 .spectrum-Form {
   display: table;
   border-collapse: separate;
@@ -68,4 +68,3 @@
 .spectrum-Form-itemField {
   display: table-cell;
 }
-
