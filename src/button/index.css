@@ -8,7 +8,8 @@
   --spectrum-button-icon-icon-size: 8px;
   --spectrum-button-icon-border-radius: 4px;
 
-  --spectrum-logicbutton-padding-x: 8px;
+  /* Temporary: Will change this to a logic-button specific variable once the element is canonized */
+  --spectrum-logicbutton-padding-x: var(--spectrum-actionbuttongroup-text-button-gap-y);
 
   /* Todo: move to dna */
   --spectrum-actionbutton-quiet-padding-x: var(--spectrum-actionbutton-padding-x);
