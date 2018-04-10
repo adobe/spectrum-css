@@ -2,28 +2,44 @@
 @import '../commons/overlay.css';
 
 :root {
-  --spectrum-dialog-min-width: 320px;
-  --spectrum-dialog-max-width: var(--spectrum-dialog-width);
+  /* Not sure where to get the scaled real max width from */
+  --spectrum-dialog-max-width: var(--spectrum-dialog-medium-max-width);
+
+  /* Distance between top and bottom of dialog and edge of window */
   --spectrum-dialog-margin: 32px;
 
-  --spectrum-dialog-border-radius: var(--spectrum-border-radius);
-
+  /* The height of the dialog header */
   --spectrum-dialog-header-height: 34px;
+
+  /* The font-size of the dialog header */
   --spectrum-dialog-header-font-size: 18px;
 
+  /* Distance between the edge of the document and right/bottom/left of content */
   --spectrum-dialog-padding: 40px;
+
+  /* Distance between the edge of the dialog and header */
   --spectrum-dialog-padding-top: 46px;
 
+  /* Distance between rule and top content */
   --spectrum-dialog-content-padding-top: 11px;
 
-  --spectrum-dialog-fullscreen-padding-top: var(--spectrum-dialog-padding);
-  --spectrum-dialog-fullscreen-header-padding-bottom: 24px;
-  --spectrum-dialog-fullscreen-header-font-size: 28px;
-  --spectrum-dialog-fullscreen-header-font-weight: 100;
-  --spectrum-dialog-fullscreen-header-line-height: 36px;
-
-  --spectrum-dialog-closebutton-height: 18px;
+  /* The distance the dialog should animate in from */
   --spectrum-dialog-animation-distance: 8px;
+
+  /* Distance between the edge of the fullscreen dialog and header */
+  --spectrum-dialog-fullscreen-padding-top: var(--spectrum-dialog-padding);
+
+  /* Distance between the fullscreen dialog header and the rule */
+  --spectrum-dialog-fullscreen-header-padding-bottom: 24px;
+
+  /* The font-size of the fullscreen dialog header */
+  --spectrum-dialog-fullscreen-header-font-size: 28px;
+
+  /* The font-weight of the fullscreen dialog header */
+  --spectrum-dialog-fullscreen-header-font-weight: 100;
+
+  /* The line-height of the fullscreen dialog header */
+  --spectrum-dialog-fullscreen-header-line-height: 36px;
 }
 
 /* topdoc
@@ -53,7 +69,7 @@
 
   /* Don't be bigger than the screen */
   max-height: calc(100vh - calc(var(--spectrum-dialog-margin) * 2));
-  max-width: var(--spectrum-dialog-max-width);
+  max-width: var(--spectrum-dialog-width);
 
   min-width: var(--spectrum-dialog-min-width);
 
@@ -80,6 +96,7 @@
   border-radius: var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius) 0 0;
   outline: none; /* Hide focus outline around header */
 
+  /* The rule element */
   &::after {
     position: absolute;
     right: 0;
@@ -124,7 +141,7 @@
 
 .spectrum-Dialog-footer {
   border-radius: 0 0 var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius);
-  margin-top: 46px;
+  margin-top: var(--spectrum-dialog-content-margin-bottom);
 
   text-align: right; /* right align buttons */
 
@@ -141,7 +158,7 @@
   }
 
   .spectrum-Button {
-    margin: 0 12px 0 0;
+    margin: 0 var(--spectrum-dialog-button-gap) 0 0;
 
     &:last-child {
       margin-right: 0;
@@ -162,19 +179,6 @@
   text-overflow: ellipsis;
 
   outline: none; /* Hide focus outline */
-}
-
-.spectrum-Dialog-closeButton {
-  line-height: var(--spectrum-dialog-closebutton-height);
-
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  display: none;
-
-  width: var(--spectrum-dialog-closebutton-height);
-  height: var(--spectrum-dialog-closebutton-height);
 }
 
 /* topdoc
