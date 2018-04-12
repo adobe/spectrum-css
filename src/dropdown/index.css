@@ -1,11 +1,5 @@
 @import '../commons/index.css';
 
-:root {
-  --spectrum-dropdown-chevron-icon-width: 10px;
-  --spectrum-dropdown-chevron-icon-height: 6px;
-  --spectrum-dropdown-icon-margin: 5px;
-}
-
 /* topdoc
 {{ dropdown/dropdown-default.yml }}
 */
@@ -28,7 +22,6 @@
   }
 }
 
-
 .spectrum-Dropdown-trigger {
   position: relative;
   width: 100%;
@@ -43,7 +36,10 @@
     white-space: nowrap;
     overflow: hidden;
 
-    margin-right: 12px;
+    height: calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2));
+    line-height: calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2));
+
+    font-size: var(--spectrum-dropdown-text-font-size);
 
     text-overflow: ellipsis;
     text-align: left;
@@ -54,17 +50,35 @@
   }
 }
 
+/* Only apply margin to the icon if there's a label */
+.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
+  margin-left: var(--spectrum-dropdown-icon-margin-left);
+}
+/* Only apply margin if there's a label */
+.spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
+  margin-left: var(--spectrum-dropdown-icon-margin-left);
+}
+
 .spectrum-Dropdown-icon {
   display: inline-block;
   position: relative;
   vertical-align: top;
 
-  width: var(--spectrum-dropdown-chevron-icon-width);
-  height: var(--spectrum-dropdown-chevron-icon-height);
-
-  margin-left: var(--spectrum-dropdown-icon-margin);
+  width: var(--spectrum-dropdown-ui-icon-width);
+  height: var(--spectrum-dropdown-ui-icon-height);
 
   opacity: 1;
+}
+
+/* Error icons */
+.spectrum-Dropdown {
+  .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+    margin-left: var(--spectrum-dropdown-icon-margin-left);
+  }
+}
+
+.spectrum-Icon + .spectrum-Dropdown-icon {
+  margin-left: var(--spectrum-dropdown-icon-gap);
 }
 
 /* topdoc
@@ -77,7 +91,3 @@
     width: auto;
   }
 }
-
-/* topdoc
-{{ dropdown/dropdown-invalid.yml }}
-*/

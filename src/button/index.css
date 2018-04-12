@@ -232,6 +232,8 @@ a.spectrum-Button {
 .spectrum-Button--quiet--dropdown {
   height: var(--spectrum-dropdown-height);
 
+  padding: 0 var(--spectrum-dropdown-padding);
+
   font-family: inherit;
   font-weight: normal;
   font-size: var(--spectrum-dropdown-font-size);
