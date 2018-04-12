@@ -21,8 +21,11 @@ if (!Element.prototype.closest) {
   };
 }
 
+var curColorstop = 'light';
 function changeCSS(colorStop) {
+  curColorstop = colorStop;
   document.body.className = 'spectrum spectrum--'+colorStop;
+  setURLParams();
 }
 
 function openDialog(dialog, withOverlay) {
@@ -37,10 +40,6 @@ function closeDialog(dialog) {
   document.getElementById('spectrum-underlay').classList.remove('is-open');
   dialog.classList.remove('is-open');
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  changeCSS('light');
-});
 
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
@@ -96,7 +95,7 @@ function setHashFromScroll() {
     }
   }
   if (closestTitle) {
-    window.history.pushState({}, '', closestTitle.getAttribute('href'));
+    setURLParams(closestTitle.getAttribute('href'));
     currentTitle = closestTitle;
   }
 }
@@ -109,10 +108,7 @@ var scaleAbbreviations = {
   'medium': 'md',
   'large': 'lg'
 };
-function changeScale(scale, method) {
-  // Set the hash while changing scales
-  // setHashFromScroll();
-
+function changeScale(scale, method, noState) {
   method = method || curMethod;
   scale = scale || curScale;
 
@@ -159,23 +155,52 @@ function changeScale(scale, method) {
   }
 
   // Scroll to the same place we were before
-  var count = 0;
-  window.ignoreScroll = true;
-  document.documentElement.scrollTop = currentTitle.offsetTop;
-  var interval = window.setInterval(function() {
+  if (currentTitle) {
+    var count = 0;
+    window.ignoreScroll = true;
     document.documentElement.scrollTop = currentTitle.offsetTop;
-    count++;
-    if (count > 50) {
-      clearInterval(interval);
-      window.ignoreScroll = false;
-    }
-  }, 10);
+    var interval = window.setInterval(function() {
+      document.documentElement.scrollTop = currentTitle.offsetTop;
+      count++;
+      if (count > 50) {
+        clearInterval(interval);
+        window.ignoreScroll = false;
+      }
+    }, 10);
+  }
 
   curScale = scale;
   curMethod = method;
+
+  if (!noState) {
+    setURLParams();
+  }
+}
+
+function setURLParams(hash) {
+  hash = hash || window.location.hash;
+  window.history.pushState({}, '', '?color='+curColorstop+'&scale='+curScale+'&method='+curMethod+hash);
+
+  // Set radio buttons
+  document.querySelector('#radio-'+curScale).checked = true;
+  document.querySelector('#radio-'+curMethod).checked = true;
+  document.querySelector('#radio-'+curColorstop).checked = true;
 }
 
 window.addEventListener('DOMContentLoaded', function() {
+  var searchParams = new URLSearchParams(document.location.search.substring(1));
+  // Set scale from params
+  var colorStop = searchParams.get('color');
+  var scale = searchParams.get('scale');
+  var method = searchParams.get('method');
+  if (scale || method) {
+    curColorstop = colorStop;
+    curScale = scale;
+    curMethod = method;
+    changeCSS(colorStop);
+    changeScale(scale, method, true);
+  }
+
   if (window.location.hash) {
     // Scroll to the hash
     // This is required for refreshes when the size is changed
@@ -185,7 +210,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   }
   else {
-    // Otherwise, make it #official
+    // Make it #official
     setHashFromScroll();
   }
 
@@ -198,7 +223,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     scrollTimeout = setTimeout(setHashFromScroll, 250);
   });
-
 });
 
 document.addEventListener('focus', toggleSliderFocus, true);
