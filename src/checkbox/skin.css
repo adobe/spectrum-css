@@ -2,36 +2,17 @@
   color: var(--spectrum-checkbox-text-color-default);
 }
 
-.spectrum-Checkbox-box {
-  border-color: var(--spectrum-checkbox-box-border-color-default);
-
-}
-
 .spectrum-Checkbox-checkmark,
 .spectrum-Checkbox-partialCheckmark {
   color: var(--spectrum-checkbox-checkmark-color);
 }
 
 .spectrum-Checkbox-box {
+  border-color: var(--spectrum-checkbox-box-border-color-default);
   background-color: var(--spectrum-checkbox-box-background-color-default);
 }
 
-.spectrum-Checkbox-input {
-  &:checked + .spectrum-Checkbox-box {
-    border-color: var(--spectrum-checkbox-box-border-color-selected);
-  }
-
-  &:focus-ring + .spectrum-Checkbox-box {
-    border-color: var(--spectrum-checkbox-box-border-color-key-focus);
-    box-shadow: 0 0 0 1px var(--spectrum-checkbox-box-border-color-key-focus);
-
-  }
-
-  &:focus-ring ~ .spectrum-Checkbox-label {
-    color: var(--spectrum-checkbox-text-color-key-focus);
-  }
-}
-
+/* Indetermiate is basically a checked state, so handle colors for checked state here */
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
   border-color: var(--spectrum-checkbox-box-border-color-selected);
@@ -80,36 +61,40 @@
     }
   }
 
+/* topdoc
+{{ checkbox/checkbox-error.yml }}
+*/
   &.is-invalid {
+    /* Extra-specific selectors added here to handle checked state */
+    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     .spectrum-Checkbox-box {
       border-color: var(--spectrum-checkbox-box-border-color-error);
-
     }
 
     .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-box-border-color-error);
+      color: var(--spectrum-checkbox-text-color-error);
     }
   }
 
   &.is-invalid:hover {
+    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     .spectrum-Checkbox-box {
-      border-color: var(--spectrum-checkbox-box-border-color-error-hover) !important;
-
+      border-color: var(--spectrum-checkbox-box-border-color-error-hover);
     }
 
     .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-box-border-color-error-hover);
+      color: var(--spectrum-checkbox-text-color-error-hover);
     }
   }
 
   &.is-invalid:active {
+    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     .spectrum-Checkbox-box {
       border-color: var(--spectrum-checkbox-box-border-color-error-down);
-
     }
 
     .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-box-border-color-error-down);
+      color: var(--spectrum-checkbox-text-color-error-down);
     }
   }
 }
@@ -119,10 +104,10 @@
 {{ checkbox/checkbox-disabled.yml }}
 */
   &:disabled + .spectrum-Checkbox-box {
-    /* I'm sorry about the !important */
+    /* Use important to override hover states */
     border-color: var(--spectrum-checkbox-box-border-color-disabled) !important;
 
-    background-color: transparent;
+    background-color: var(--spectrum-checkbox-box-background-color-disabled);
   }
 
   &:disabled ~ .spectrum-Checkbox-label {
@@ -130,16 +115,16 @@
   }
 }
 
+/* Focus */
 .spectrum-Checkbox-input {
-/* topdoc
-{{ checkbox/checkbox-error.yml }}
-*/
-  &:error + .spectrum-Checkbox-box {
-    border-color: var(--spectrum-checkbox-box-border-color-error);
+  &:focus-ring + .spectrum-Checkbox-box {
+    /* Since the specificity of .focus-ring is less than :hover, we need important */
+    border-color: var(--spectrum-checkbox-box-border-color-key-focus) !important;
 
+    box-shadow: 0 0 0 1px var(--spectrum-checkbox-box-border-color-key-focus) !important;
   }
 
-  &:error ~ .spectrum-Checkbox-label {
-    color: var(--spectrum-checkbox-text-color-error);
+  &:focus-ring ~ .spectrum-Checkbox-label {
+    color: var(--spectrum-checkbox-text-color-key-focus) !important;
   }
 }
