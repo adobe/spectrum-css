@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-/* global document, window, Element, AdobeSpectrum */
+/* global document, window, Element, AdobeSpectrum, URLSearchParams */
 
 'use strict';
 
