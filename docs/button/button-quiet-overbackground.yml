@@ -1,6 +1,6 @@
 ---
 name: Button - Quiet Over Background
-description: A Spectrum quiet button that's meant to be placed over a non-standard color
+description: A Spectrum quiet button that's meant to be placed over a non-standard color. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.
 status: Released
 modifiers:
   ':disabled': Disabled state
