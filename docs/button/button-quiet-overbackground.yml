@@ -1,5 +1,5 @@
 ---
-name: Button - Quiet Over Color
+name: Button - Quiet Over Background
 description: A Spectrum quiet button that's meant to be placed over a non-standard color
 status: Released
 modifiers:
@@ -8,7 +8,7 @@ modifiers:
   ':focus': Focused
 markup: |
   <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
-    <button class="spectrum-Button spectrum-Button--quiet--overColor">Button</button>
+    <button class="spectrum-Button spectrum-Button--quiet--overBackground">Button</button>
 
-    <button class="spectrum-Button spectrum-Button--quiet--overColor" disabled>Button</button>
+    <button class="spectrum-Button spectrum-Button--quiet--overBackground" disabled>Button</button>
   </div>

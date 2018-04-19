@@ -150,9 +150,9 @@
 }
 
 /* topdoc
-{{ button/button-overcolor.yml }}
+{{ button/button-overbackground.yml }}
 */
-.spectrum-Button--overColor {
+.spectrum-Button--overBackground {
   background-color: var(--spectrum-button-over-color-background-color-default);
   border-color: var(--spectrum-button-over-color-border-color-default);
   color: var(--spectrum-button-over-color-text-color-default);
@@ -185,9 +185,9 @@
 }
 
 /* topdoc
-{{ button/button-quiet-overcolor.yml }}
+{{ button/button-quiet-overbackground.yml }}
 */
-.spectrum-Button--quiet--overColor {
+.spectrum-Button--quiet--overBackground {
   background-color: var(--spectrum-button-quiet-over-color-background-color-default);
   border-color: var(--spectrum-button-quiet-over-color-border-color-default);
   color: var(--spectrum-button-quiet-over-color-text-color-default);
