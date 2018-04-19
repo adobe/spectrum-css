@@ -1,0 +1,14 @@
+---
+name: Button - Over Color
+description: A Spectrum button that's meant to be placed over a non-standard color
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
+    <button class="spectrum-Button spectrum-Button--overColor">Button</button>
+
+    <button class="spectrum-Button spectrum-Button--overColor" disabled>Button</button>
+  </div>

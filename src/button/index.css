@@ -24,8 +24,9 @@
   border-radius: var(--spectrum-button-border-radius);
 
   height: var(--spectrum-button-height);
-  padding: 0 calc(var(--spectrum-button-padding-x) - var(--spectrum-button-border-size)) 1px; /* 1px to push up text, sits kind of low */
-  
+  /* Use primary padding as it should be the same */
+  padding: 0 var(--spectrum-button-primary-padding-x) 1px; /* 1px to push up text, sits kind of low */
+
   /* Remove button the margin in Firefox and Safari. */
   margin: 0;
 
