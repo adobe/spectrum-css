@@ -1,34 +1,3 @@
-.spectrum-Loader {
-  background-image: url(var(--spectrum-loader-round-medium-sprite-url));
-}
-
-.spectrum-Loader--small {
-  background-image: url(var(--spectrum-loader-round-small-sprite-url));
-}
-
-.spectrum-Loader--large {
-  background-image: url(var(--spectrum-loader-round-large-sprite-url));
-}
-
-.spectrum-Loader--fullpage {
-  background-image: url(var(--spectrum-loader-round-full-page-sprite-url));
-}
-
-.spectrum-Loader--indeterminate {
-  background-image: url(var(--spectrum-loader-round-indeterminate-medium-sprite-url));
-}
-
-.spectrum-Loader--indeterminate--small {
-  background-image: url(var(--spectrum-loader-round-indeterminate-small-sprite-url));
-}
-
-.spectrum-Loader--indeterminate--large {
-  background-image: url(var(--spectrum-loader-round-indeterminate-large-sprite-url));
-}
-.spectrum-Loader--indeterminate--fullpage {
-  background-image: url(var(--spectrum-loader-round-indeterminate-full-page-sprite-url));
-}
-
 .spectrum-Loader--bar-fill {
   background: var(--spectrum-loader-blue-color-default);
 }
@@ -48,5 +17,35 @@
 
   .spectrum-Loader--bar-track {
     background-color: var(--spectrum-loader-background-color-fullpage);
+  }
+}
+
+.spectrum-Loader-track {
+  border-color: var(--spectrum-loader-background-color-default);
+}
+
+.spectrum-Loader-Indeterminate {
+  background-color: inherit;
+}
+
+.spectrum-Loader-fill {
+  border-color: var(--spectrum-loader-blue-color-default);
+}
+
+.spectrum-Loader--fullpage {
+  .spectrum-Loader-track {
+    border-color: var(--spectrum-loader-background-color-fullpage);
+  }
+  .spectrum-Loader-fill {
+    border-color: var(--spectrum-loader-fill-color-fullpage);
+  }
+}
+
+.spectrum-Loader--indeterminateFullpage {
+  .spectrum-Loader-track {
+    border-color: var(--spectrum-loader-background-color-fullpage);
+  }
+  .spectrum-Loader-fill {
+    border-color: var(--spectrum-loader-fill-color-fullpage);
   }
 }

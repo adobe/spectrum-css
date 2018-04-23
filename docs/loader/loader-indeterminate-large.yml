@@ -3,4 +3,18 @@ name: Loader - Indeterminate - Large
 description: An indeterminate Spectrum Loader of default type (round) in large size
 status: Beta
 markup: |
-  <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--large"></span>
+  <div class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--large">
+    <div class="spectrum-Loader-track"></div>
+    <div class="spectrum-Loader-fills">
+      <div class="spectrum-Loader-fill-mask-1">
+        <div class="spectrum-Loader-fill-submask-1">
+          <div class="spectrum-Loader-fill"></div>
+        </div>
+      </div>
+      <div class="spectrum-Loader-fill-mask-2">
+        <div class="spectrum-Loader-fill-submask-2">
+          <div class="spectrum-Loader-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -4,5 +4,20 @@ description: A Spectrum loader of default type (round) for full page overlays.
 status: Beta
 markup: |
   <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
-    <div class="spectrum-Loader spectrum-Loader--fullpage" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+    <div class="spectrum-Loader spectrum-Loader--fullpage">
+      <div class="spectrum-Loader-track"></div>
+      <div class="spectrum-Loader-fills">
+        <div class="spectrum-Loader-fill-mask-1">
+          <div class="spectrum-Loader-fill-submask-1">
+            <div class="spectrum-Loader-fill"></div>
+          </div>
+        </div>
+        <div class="spectrum-Loader-fill-mask-2">
+          <div class="spectrum-Loader-fill-submask-2">
+            <div class="spectrum-Loader-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <input type="number" min="0" max="100" style="display: block;" onchange="changeLoader(this.previousElementSibling.firstElementChild, this.value)"/>
