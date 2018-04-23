@@ -16,20 +16,19 @@
   }
 }
 
+.spectrum-Radio-label {
+  color: var(--spectrum-radio-text-color-default);
+}
+
+.spectrum-Radio-button {
+  background-color: var(--spectrum-radio-circle-background-color-default);
+  border-color: var(--spectrum-radio-circle-border-color-default);
+}
 
 /* topdoc
 {{ radio/radio-default.yml }}
 */
 .spectrum-Radio {
-  .spectrum-Radio-label {
-    color: var(--spectrum-radio-text-color-default);
-  }
-
-  .spectrum-Radio-button {
-    border-color: var(--spectrum-radio-circle-border-color-default);
-  }
-
-  
   &:hover {
     .spectrum-Radio-button {
       border-color: var(--spectrum-radio-circle-border-color-hover);
@@ -65,7 +64,6 @@
   &.is-invalid {
     .spectrum-Radio-button {
       border-color: var(--spectrum-radio-circle-border-color-error);
-
     }
 
     .spectrum-Radio-label {
@@ -79,7 +77,6 @@
   &.is-invalid:hover {
     .spectrum-Radio-input + .spectrum-Radio-button {
       border-color: var(--spectrum-radio-circle-border-color-error-hover);
-
     }
 
     .spectrum-Radio-label {
