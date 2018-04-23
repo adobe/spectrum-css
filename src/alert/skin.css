@@ -1,25 +1,25 @@
 .spectrum-Alert {
-  background-color: var(--spectrum-alert-background-color-default);
+  background-color: var(--spectrum-alert-background-color);
   /* default color set to body color, header element overwrites this */
-  color: var(--spectrum-alert-body-text-color-default);
+  color: var(--spectrum-alert-body-text-color);
 }
 
 .spectrum-Alert-header {
-  color: var(--spectrum-alert-header-text-color-default);
+  color: var(--spectrum-alert-header-text-color);
 }
 
 .spectrum-Alert-content {
-  color: var(--spectrum-alert-body-text-color-default);
+  color: var(--spectrum-alert-body-text-color);
 }
 
 /* topdoc
 {{ alert/alert-info.yml }}
 */
 .spectrum-Alert--info {
-  border-color: var(--spectrum-alert-info-border-color-default);
+  border-color: var(--spectrum-alert-info-border-color);
 
   .spectrum-Alert-icon {
-    color: var(--spectrum-alert-info-border-color-default);
+    color: var(--spectrum-alert-info-border-color);
   }
 }
 
@@ -27,10 +27,10 @@
 {{ alert/alert-error.yml }}
 */
 .spectrum-Alert--error {
-  border-color: var(--spectrum-alert-error-border-color-default);
+  border-color: var(--spectrum-alert-error-border-color);
 
   .spectrum-Alert-icon {
-    color: var(--spectrum-alert-error-border-color-default);
+    color: var(--spectrum-alert-error-border-color);
   }
 }
 
@@ -38,10 +38,10 @@
 {{ alert/alert-success.yml }}
 */
 .spectrum-Alert--success {
-  border-color: var(--spectrum-alert-success-border-color-default);
+  border-color: var(--spectrum-alert-success-border-color);
 
   .spectrum-Alert-icon {
-    color: var(--spectrum-alert-success-border-color-default);
+    color: var(--spectrum-alert-success-border-color);
   }
 }
 
@@ -49,9 +49,9 @@
 {{ alert/alert-warning.yml }}
 */
 .spectrum-Alert--warning {
-  border-color: var(--spectrum-alert-warning-border-color-default);
+  border-color: var(--spectrum-alert-warning-border-color);
 
   .spectrum-Alert-icon {
-    color: var(--spectrum-alert-warning-border-color-default);
+    color: var(--spectrum-alert-warning-border-color);
   }
 }

@@ -4,16 +4,16 @@
 
 .spectrum-Stepper {
   &.is-focused {
-    box-shadow: 0 0 0 1px var(--spectrum-input-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-key-focus);
 
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-input-border-color-key-focus);
+      border-color: var(--spectrum-textfield-border-color-key-focus);
     }
 
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-input-border-color-key-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-input-border-color-key-focus);
+      border-color: var(--spectrum-textfield-border-color-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-key-focus);
     }
   }
 
@@ -21,28 +21,28 @@
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown,
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-input-invalid-border-color-default);
+      border-color: var(--spectrum-textfield-invalid-border-color);
 
       &:focus {
-        border-color: var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
       }
     }
 
     .spectrum-Stepper-input {
-      border-left-color: var(--spectrum-input-border-color-default);
+      border-left-color: var(--spectrum-textfield-border-color);
 
       &:focus {
-        border-color: var(--spectrum-input-invalid-border-color-default);
-        box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
+        box-shadow: 0 0 0 1px var(--spectrum-textfield-invalid-border-color);
       }
     }
 
     &.is-focused {
-      box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+      box-shadow: 0 0 0 1px var(--spectrum-textfield-invalid-border-color);
 
       .spectrum-Stepper-input {
-        border-left-color: var(--spectrum-input-invalid-border-color-default);
-        box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+        border-left-color: var(--spectrum-textfield-invalid-border-color);
+        box-shadow: 0 0 0 1px var(--spectrum-textfield-invalid-border-color);
       }
     }
   }
@@ -50,10 +50,10 @@
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
-  border-color: var(--spectrum-input-border-color-default);
+  border-color: var(--spectrum-textfield-border-color);
 
   &:disabled {
-    border-color: var(--spectrum-input-border-color-disabled);
+    border-color: var(--spectrum-textfield-border-color-disabled);
   }
 }
 
@@ -61,7 +61,7 @@
 .spectrum-Stepper-stepDown {
   &:hover {
     /* Keep the border on hover */
-    border-bottom-color: var(--spectrum-input-border-color-default);
+    border-bottom-color: var(--spectrum-textfield-border-color);
   }
 }
 
@@ -72,54 +72,54 @@
   .spectrum-Stepper-stepUp,
   .spectrum-Stepper-stepDown {
     &:disabled {
-      border-color: var(--spectrum-input-quiet-border-color-disabled);
+      border-color: var(--spectrum-textfield-quiet-border-color-disabled);
     }
   }
 
   &.is-focused {
-    box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-key-focus);
+    box-shadow: 0 1px 0 0 var(--spectrum-textfield-border-color-key-focus);
 
     .spectrum-Stepper-stepUp,
     .spectrum-Stepper-stepDown {
-      border-color: var(--spectrum-input-border-color-key-focus);
+      border-color: var(--spectrum-textfield-border-color-key-focus);
     }
 
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-input-border-color-key-focus);
-      box-shadow: 0 1px 0 0 var(--spectrum-input-border-color-key-focus);
+      border-color: var(--spectrum-textfield-border-color-key-focus);
+      box-shadow: 0 1px 0 0 var(--spectrum-textfield-border-color-key-focus);
     }
   }
 
   &.is-invalid {
     .spectrum-Stepper-stepDown,
     .spectrum-Stepper-input {
-      border-color: var(--spectrum-input-invalid-border-color-default);
+      border-color: var(--spectrum-textfield-invalid-border-color);
 
       &:focus {
-        border-color: var(--spectrum-input-invalid-border-color-default);
-        box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
+        box-shadow: 0 1px 0 0 var(--spectrum-textfield-invalid-border-color);
       }
     }
 
     .spectrum-Stepper-stepUp {
-      border-color: var(--spectrum-input-border-color-default);
+      border-color: var(--spectrum-textfield-border-color);
 
       &:focus {
-        border-color: var(--spectrum-input-border-color-default);
+        border-color: var(--spectrum-textfield-border-color);
       }
     }
 
     &.is-focused {
-      box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
+      box-shadow: 0 1px 0 0 var(--spectrum-textfield-invalid-border-color);
 
       .spectrum-Stepper-stepUp,
       .spectrum-Stepper-stepDown {
-        border-color: var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
       }
 
       .spectrum-Stepper-input {
-        border-color: var(--spectrum-input-invalid-border-color-default);
-        box-shadow: 0 1px 0 0 var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
+        box-shadow: 0 1px 0 0 var(--spectrum-textfield-invalid-border-color);
       }
     }
   }

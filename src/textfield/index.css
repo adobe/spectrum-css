@@ -1,8 +1,8 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-input-padding-top: 3px;
-  --spectrum-input-padding-bottom: 5px;
+  --spectrum-textfield-padding-top: 3px;
+  --spectrum-textfield-padding-bottom: 5px;
 
   /* Todo fix in DNA */
   --spectrum-textfield-quiet-border-radius: 0;
@@ -11,11 +11,11 @@
 .spectrum-Textfield {
   /* box */
   box-sizing: border-box;
-  border: var(--spectrum-textfield-border-size-default) solid;
+  border: var(--spectrum-textfield-border-size) solid;
   border-radius: var(--spectrum-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: var(--spectrum-input-padding-top) var(--spectrum-padding) var(--spectrum-input-padding-bottom);
+  padding: var(--spectrum-textfield-padding-top) var(--spectrum-padding) var(--spectrum-textfield-padding-bottom);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
@@ -49,14 +49,14 @@
   -webkit-appearance: none !important;
 
   &::placeholder {
-    font-weight: var(--spectrum-input-placeholder-text-font-weight);
-    font-style: var(--spectrum-input-placeholder-text-style);
+    font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
+    font-style: var(--spectrum-textfield-placeholder-text-font-style);
     transition: color var(--spectrum-transition-time) ease-in-out;
   }
 
   &:hover {
     &::placeholder {
-      font-weight: var(--spectrum-input-placeholder-text-font-weight);
+      font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
     }
   }
 
@@ -64,7 +64,7 @@
     /* The opacity must be set to 1 */
     opacity: 1;
     &::placeholder {
-      font-weight: var(--spectrum-input-placeholder-text-font-weight);
+      font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
     }
   }
 

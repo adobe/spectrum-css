@@ -2,7 +2,11 @@
 @import '../commons/overlay.css';
 
 :root {
-  --spectrum-quickaction-border-width: 1px;
+  --spectrum-quickactions-border-width: 1px;
+
+  /* Missing from DNA */
+  --spectrum-quickactions-width: 40px;
+  --spectrum-quickactions-margin: 10px;
 }
 
 .spectrum-QuickActions {
@@ -47,12 +51,12 @@
   /* Correct the inability to style clickable types in iOS and Safari. */
   -webkit-appearance: button;
 
-  width: var(--spectrum-quickaction-width);
-  height: var(--spectrum-quickaction-height);
-  margin-left: var(--spectrum-quickaction-margin);
+  width: var(--spectrum-quickactions-width);
+  height: var(--spectrum-quickactions-height);
+  margin-left: var(--spectrum-quickactions-margin);
   padding: 0;
-  border-width: var(--spectrum-quickaction-border-width);
-  border-radius: var(--spectrum-quickaction-border-radius);
+  border-width: var(--spectrum-quickactions-border-width);
+  border-radius: var(--spectrum-quickactions-border-radius);
   border-style: solid;
   transition: border-color var(--spectrum-transition-time) ease-out,
     color var(--spectrum-transition-time) ease-out,

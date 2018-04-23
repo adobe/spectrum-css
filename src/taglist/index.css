@@ -14,12 +14,12 @@
 */
 
 :root {
-  --spectrum-tag-height-default: 24px;
-  --spectrum-tag-margin-default: 8px;
-  --spectrum-tag-label-font-size-default: 12px;
-  --spectrum-tag-remove-button-size-default: 12px;
-  --spectrum-tag-remove-icon-size-default: 8px;
-  --spectrum-tag-avatar-size-default: 16px;
+  --spectrum-tag-height: 24px;
+  --spectrum-tag-margin: 8px;
+  --spectrum-tag-label-font-size: 12px;
+  --spectrum-tag-remove-button-size: 12px;
+  --spectrum-tag-remove-icon-size: 8px;
+  --spectrum-tag-avatar-size: 16px;
 }
 
 .spectrum-TagList {
@@ -30,7 +30,7 @@
   list-style: none;
 
   & > .spectrum-TagList-item {
-    margin: 0 var(--spectrum-tag-margin-default) var(--spectrum-tag-margin-default) 0;
+    margin: 0 var(--spectrum-tag-margin) var(--spectrum-tag-margin) 0;
   }
 
   &:after {
@@ -48,8 +48,8 @@
   max-width: 100%;
   border-radius: var(--spectrum-border-radius);
   outline: none;
-  padding: calc(var(--spectrum-tag-margin-default) / 2) var(--spectrum-tag-margin-default);
-  height: var(--spectrum-tag-height-default);
+  padding: calc(var(--spectrum-tag-margin) / 2) var(--spectrum-tag-margin);
+  height: var(--spectrum-tag-height);
   user-select: none;
 
   transition: border-color var(--spectrum-transition-time) ease-in-out,
@@ -62,13 +62,13 @@
   }
 
   .spectrum-Icon {
-    margin-right: var(--spectrum-tag-margin-default);
+    margin-right: var(--spectrum-tag-margin);
   }
 }
 
 .spectrum-TagList-item-label {
   flex: 1 1 auto;
-  font-size: var(--spectrum-tag-label-font-size-default);
+  font-size: var(--spectrum-tag-label-font-size);
   cursor: default;
   overflow: hidden;
   white-space: nowrap;
@@ -76,24 +76,24 @@
 }
 
 .spectrum-TagList-item-removeButton {
-  width: var(--spectrum-tag-height-default);
-  height: var(--spectrum-tag-height-default);
-  margin-right: -var(--spectrum-tag-margin-default); /* Undo right padding on .spectrum-TagList-item */
+  width: var(--spectrum-tag-height);
+  height: var(--spectrum-tag-height);
+  margin-right: -var(--spectrum-tag-margin); /* Undo right padding on .spectrum-TagList-item */
   cursor: pointer;
 
   /* The fake background, inherited from .spectrum-Button--icon */
   &::before {
-    top: calc(var(--spectrum-tag-height-default) / 4);
-    left: calc(var(--spectrum-tag-height-default) / 4);
+    top: calc(var(--spectrum-tag-height) / 4);
+    left: calc(var(--spectrum-tag-height) / 4);
 
-    width: var(--spectrum-tag-remove-button-size-default);
-    height: var(--spectrum-tag-remove-button-size-default);
+    width: var(--spectrum-tag-remove-button-size);
+    height: var(--spectrum-tag-remove-button-size);
   }
 
   /* The actual icon */
   .spectrum-Icon {
-    width: var(--spectrum-tag-remove-icon-size-default);
-    height: var(--spectrum-tag-remove-icon-size-default);
+    width: var(--spectrum-tag-remove-icon-size);
+    height: var(--spectrum-tag-remove-icon-size);
   }
 }
 
@@ -102,8 +102,8 @@
   /* Remove the border on images inside links in IE 10-. */
   border-style: none;
 
-  height: var(--spectrum-tag-avatar-size-default);
-  margin-right: var(--spectrum-tag-margin-default);
+  height: var(--spectrum-tag-avatar-size);
+  margin-right: var(--spectrum-tag-margin);
   border-radius: 50%;
   user-drag: none;
 }

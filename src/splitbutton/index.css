@@ -35,22 +35,22 @@
 }
 
 .spectrum-SplitButton-action {
-  border-radius: var(--spectrum-button-border-radius) 0 0 var(--spectrum-button-border-radius);
+  border-radius: var(--spectrum-button-primary-border-radius) 0 0 var(--spectrum-button-primary-border-radius);
 
   /* CTA is special and doesn't have a border between the buttons */
   &.spectrum-Button--cta {
     border-right: 0;
-    margin-right: var(--spectrum-button-border-size);
+    margin-right: var(--spectrum-button-primary-border-size);
   }
 }
 
 .spectrum-SplitButton-trigger {
   margin-left: 0 !important;
 
-  border-radius: 0 var(--spectrum-button-border-radius) var(--spectrum-button-border-radius) 0;
+  border-radius: 0 var(--spectrum-button-primary-border-radius) var(--spectrum-button-primary-border-radius) 0;
   border-left-width: var(--spectrum-splitbutton-trigger-border-left);
   padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
-  padding-right: calc(var(--spectrum-padding) - var(--spectrum-button-border-size));
+  padding-right: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
 
   &:focus-ring {
     box-shadow: none;

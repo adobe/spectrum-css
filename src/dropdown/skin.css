@@ -7,7 +7,7 @@
 
   &.is-invalid {
     .spectrum-Icon:not(.spectrum-Dropdown-icon) {
-      color: var(--spectrum-dropdown-icon-color-invalid-default);
+      color: var(--spectrum-dropdown-icon-color-invalid);
     }
   }
 
@@ -22,5 +22,5 @@
 }
 
 .spectrum-Dropdown-icon {
-  color: var(--spectrum-dropdown-text-color-default);
+  color: var(--spectrum-dropdown-text-color);
 }

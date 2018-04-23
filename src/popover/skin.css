@@ -1,7 +1,7 @@
 .spectrum-Popover {
-  background-color: var(--spectrum-popover-background-color-default);
-  border-color: var(--spectrum-popover-border-color-default);
-  box-shadow: 0 0 2px var(--spectrum-popover-shadow-color-default);
+  background-color: var(--spectrum-popover-background-color);
+  border-color: var(--spectrum-popover-border-color);
+  box-shadow: 0 0 2px var(--spectrum-popover-shadow-color);
 
   .spectrum-Dialog-header,
   .spectrum-Dialog-footer,
@@ -10,8 +10,8 @@
   }
 
   .spectrum-Popover-tip::after {
-    background-color: var(--spectrum-popover-background-color-default);
-    border-color: var(--spectrum-popover-border-color-default);
-    box-shadow: 0 1px 2px var(--spectrum-popover-shadow-color-default);
+    background-color: var(--spectrum-popover-background-color);
+    border-color: var(--spectrum-popover-border-color);
+    box-shadow: 0 1px 2px var(--spectrum-popover-shadow-color);
   }
 }

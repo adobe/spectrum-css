@@ -6,8 +6,8 @@
 }
 
 .spectrum-SelectList-item {
-  background-color: var(--spectrum-selectlist-option-background-color-default);
-  color: var(--spectrum-selectlist-option-text-color-default);
+  background-color: var(--spectrum-selectlist-option-background-color);
+  color: var(--spectrum-selectlist-option-text-color);
 
   &:focus,
   &.is-focused {
@@ -42,5 +42,5 @@
 }
 
 .spectrum-SelectList-divider {
-  background-color: var(--spectrum-selectlist-divider-color-default);
+  background-color: var(--spectrum-selectlist-divider-color);
 }

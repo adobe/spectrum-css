@@ -1,5 +1,5 @@
 .spectrum-Checkbox-label {
-  color: var(--spectrum-checkbox-text-color-default);
+  color: var(--spectrum-checkbox-text-color);
 }
 
 .spectrum-Checkbox-checkmark,
@@ -8,8 +8,8 @@
 }
 
 .spectrum-Checkbox-box {
-  border-color: var(--spectrum-checkbox-box-border-color-default);
-  background-color: var(--spectrum-checkbox-box-background-color-default);
+  border-color: var(--spectrum-checkbox-box-border-color);
+  background-color: var(--spectrum-checkbox-box-background-color);
 }
 
 /* Indetermiate is basically a checked state, so handle colors for checked state here */
@@ -38,7 +38,7 @@
 {{ checkbox/checkbox-default.yml }}
 */
 .spectrum-Checkbox {
-  border-color: var(--spectrum-checkbox-box-border-color-default);
+  border-color: var(--spectrum-checkbox-box-border-color);
 
   &:hover {
     .spectrum-Checkbox-box {

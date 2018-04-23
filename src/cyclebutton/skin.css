@@ -3,10 +3,10 @@
 */
 
 .spectrum-CycleButton {
-  background-color: var(--spectrum-cyclebutton-button-background-color-default);
+  background-color: var(--spectrum-cyclebutton-button-background-color);
 
   .spectrum-Icon {
-    color: var(--spectrum-cyclebutton-icon-color-default);
+    color: var(--spectrum-cyclebutton-icon-color);
   }
 
   &:hover {

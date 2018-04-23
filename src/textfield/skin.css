@@ -13,58 +13,58 @@
 {{ textfield/textfield-default.yml }}
 */
 .spectrum-Textfield {
-  background-color: var(--spectrum-input-background-color-default);
-  border-color: var(--spectrum-input-border-color-default);
-  color: var(--spectrum-input-text-color-default);
+  background-color: var(--spectrum-textfield-background-color);
+  border-color: var(--spectrum-textfield-border-color);
+  color: var(--spectrum-textfield-text-color);
 
   &::placeholder {
-    color: var(--spectrum-input-placeholder-text-color-default);
+    color: var(--spectrum-textfield-placeholder-text-color);
   }
 
   &:hover {
-    border-color: var(--spectrum-input-border-color-hover);
+    border-color: var(--spectrum-textfield-border-color-hover);
     box-shadow: none;
 
     &::placeholder {
-      color: var(--spectrum-input-placeholder-text-color-hover);
+      color: var(--spectrum-textfield-placeholder-text-color-hover);
     }
   }
 
   &:focus {
-    border-color: var(--spectrum-input-border-color-down);
+    border-color: var(--spectrum-textfield-border-color-down);
   }
 
   &:focus-ring {
     &:not(:active) {
-      border-color: var(--spectrum-input-border-color-key-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-input-border-color-key-focus);
+      border-color: var(--spectrum-textfield-border-color-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-key-focus);
     }
   }
 
 
 
   &[disabled] {
-    background-color: var(--spectrum-input-background-color-disabled);
-    border-color: var(--spectrum-input-border-color-disabled);
-    color: var(--spectrum-input-text-color-disabled);
+    background-color: var(--spectrum-textfield-background-color-disabled);
+    border-color: var(--spectrum-textfield-border-color-disabled);
+    color: var(--spectrum-textfield-text-color-disabled);
 
     /* For safari mobile browser */
-    -webkit-text-fill-color: var(--spectrum-input-text-color-disabled);
+    -webkit-text-fill-color: var(--spectrum-textfield-text-color-disabled);
 
     &::placeholder {
-      color: var(--spectrum-input-placeholder-text-color-disabled);
+      color: var(--spectrum-textfield-placeholder-text-color-disabled);
     }
   }
 
   &.is-invalid,
   &:invalid {
-    border-color: var(--spectrum-input-invalid-border-color-default);
-    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-alert-error-border-color-default)));
+    border-color: var(--spectrum-textfield-invalid-border-color);
+    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-alert-error-border-color)));
 
     &:focus-ring { /* might break things due to pre-defined focus-ring */
       &:not(:active) {
-        border-color: var(--spectrum-input-invalid-border-color-default);
-        box-shadow: 0 0 0 1px var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
+        box-shadow: 0 0 0 1px var(--spectrum-textfield-invalid-border-color);
       }
     }
   }
@@ -75,46 +75,46 @@
 {{ textfield/textfield-quiet.yml }}
 */
 .spectrum-Textfield--quiet {
-  background-color: var(--spectrum-input-quiet-background-color-default);
-  border-color: var(--spectrum-input-quiet-border-color-default);
+  background-color: var(--spectrum-textfield-quiet-background-color);
+  border-color: var(--spectrum-textfield-quiet-border-color);
 
   &:hover {
-    border-color: var(--spectrum-input-quiet-border-color-hover);
+    border-color: var(--spectrum-textfield-quiet-border-color-hover);
   }
 
   &:active {
-    border-color: var(--spectrum-input-quiet-border-color-down);
+    border-color: var(--spectrum-textfield-quiet-border-color-down);
   }
 
   &:focus {
-    border-color: var(--spectrum-input-quiet-border-color-key-focus);
-    box-shadow: 0 1px 0 var(--spectrum-input-quiet-border-color-key-focus);
+    border-color: var(--spectrum-textfield-quiet-border-color-key-focus);
+    box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-border-color-key-focus);
   }
 
   &:focus-ring {
     &:not(:active) {
-      border-color: var(--spectrum-input-border-color-key-focus);
-      box-shadow: 0 1px 0 var(--spectrum-input-border-color-key-focus);
+      border-color: var(--spectrum-textfield-border-color-key-focus);
+      box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-key-focus);
     }
   }
 
   &:disabled {
-    background-color: var(--spectrum-input-quiet-background-color-disabled);
-    border-color:  var(--spectrum-input-quiet-border-color-disabled);
+    background-color: var(--spectrum-textfield-quiet-background-color-disabled);
+    border-color:  var(--spectrum-textfield-quiet-border-color-disabled);
   }
 
   &.is-invalid,
   &:invalid {
-    border-color: var(--spectrum-input-invalid-border-color-default);
+    border-color: var(--spectrum-textfield-invalid-border-color);
 
     &:focus {
-      box-shadow: 0 1px 0 var(--spectrum-input-invalid-border-color-default);
+      box-shadow: 0 1px 0 var(--spectrum-textfield-invalid-border-color);
     }
 
     &:focus-ring { /* might break things due to pre-defined focus-ring */
       &:not(:active) {
-        border-color: var(--spectrum-input-invalid-border-color-default);
-        box-shadow: 0 1px 0 var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
+        box-shadow: 0 1px 0 var(--spectrum-textfield-invalid-border-color);
       }
     }
   }

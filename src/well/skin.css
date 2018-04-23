@@ -2,6 +2,6 @@
 {{ well/well.yml }}
 */
 .spectrum-Well {
-  background-color: var(--spectrum-well-background-color-default);
-  border-color: var(--spectrum-well-border-color-default);
+  background-color: var(--spectrum-well-background-color);
+  border-color: var(--spectrum-well-border-color);
 }

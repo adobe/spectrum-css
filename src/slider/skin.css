@@ -30,7 +30,7 @@
 }
 
 .spectrum-Slider-track {
-  background: var(--spectrum-slider-track-color-default);
+  background: var(--spectrum-slider-track-color);
 }
 
 /*
@@ -41,23 +41,23 @@ spectrum-slider-track-disabled(){
 */
 
 .spectrum-Slider-track--fill {
-  background: var(--spectrum-slider-fill-track-color-default);
+  background: var(--spectrum-slider-fill-track-color);
 }
 
 .spectrum-Slider-track--buffer {
-  background: var(--spectrum-slider-player-track-buffer-color-default);
+  background: var(--spectrum-slider-player-track-buffer-color);
 }
 
 .spectrum-Slider-track--ramp {
   path {
-    fill: var(--spectrum-slider-track-color-default);
+    fill: var(--spectrum-slider-track-color);
   }
 }
 
 .spectrum-Slider-handle {
-  border-color: var(--spectrum-slider-handle-border-color-default);
-  background: var(--spectrum-slider-handle-color-default);
-  box-shadow: 0 0 0 4px var(--spectrum-slider-handle-outset-border-color-default);
+  border-color: var(--spectrum-slider-handle-border-color);
+  background: var(--spectrum-slider-handle-color);
+  box-shadow: 0 0 0 4px var(--spectrum-slider-handle-outset-border-color);
 
   &:hover {
     border-color: var(--spectrum-slider-handle-border-color-hover);
@@ -88,7 +88,7 @@ Todo: Determine if missing mixin is required
 
 .spectrum-Slider-tick-mark {
   &:after {
-    background-color: var(--spectrum-slider-tick-mark-color-default);
+    background-color: var(--spectrum-slider-tick-mark-color);
   }
 }
 
@@ -136,12 +136,12 @@ Todo: Determine if these are supposed to be pseudo classes
 
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-disabled);
-    background: var(--spectrum-slider-handle-color-default);
+    background: var(--spectrum-slider-handle-color);
 
     &:hover,
     &:active {
       border-color: var(--spectrum-slider-handle-border-color-disabled);
-      background: var(--spectrum-slider-handle-color-default);
+      background: var(--spectrum-slider-handle-color);
     }
   }
   .spectrum-Slider-track {
@@ -183,13 +183,13 @@ Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum-Slider--color {
   .spectrum-Slider-track {
-    background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start-default), var(--spectrum-slider-color-track-background-color-gradient-end-default));
-    box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-track-border-color-default);
+    background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
+    box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-track-border-color);
   }
   .spectrum-Slider-handle {
-    box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-handle-inset-border-color-default), 0 0 0 1px var(--spectrum-slider-color-handle-outset-border-color-default);
-    border-color: var(--spectrum-slider-color-handle-border-color-default);
-    background: var(--spectrum-slider-color-handle-color-default);
+    box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-handle-inset-border-color), 0 0 0 1px var(--spectrum-slider-color-handle-outset-border-color);
+    border-color: var(--spectrum-slider-color-handle-border-color);
+    background: var(--spectrum-slider-color-handle-color);
 
     &.is-focused {
       box-shadow: 0 0 0 1px var(--spectrum-slider-color-handle-outset-border-color-key-focus);
@@ -205,12 +205,12 @@ Todo: Determine if these are supposed to be pseudo classes
     box-shadow: none;
 
     &::after {
-      background-color: var(--spectrum-slider-round-handle-marker-color-default);
+      background-color: var(--spectrum-dial-handle-marker-color);
     }
 
     &:hover {
       &::after {
-        background-color: var(--spectrum-slider-round-handle-marker-color-hover);
+        background-color: var(--spectrum-dial-handle-marker-color-hover);
       }
     }
 
@@ -218,16 +218,16 @@ Todo: Determine if these are supposed to be pseudo classes
       background-color: var(--spectrum-slider-handle-background-color-key-focus);
 
       &::after {
-        background-color: var(--spectrum-slider-round-handle-marker-color-key-focus);
+        background-color: var(--spectrum-dial-handle-marker-color-key-focus);
       }
     }
 
     &:active,
     &.is-dragged {
-      background-color: var(--spectrum-slider-round-border-color-hover);
+      background-color: var(--spectrum-dial-border-color-hover);
 
       &::after {
-        background-color: var(--spectrum-slider-round-handle-marker-color-key-focus);
+        background-color: var(--spectrum-dial-handle-marker-color-key-focus);
       }
     }
   }
@@ -235,7 +235,7 @@ Todo: Determine if these are supposed to be pseudo classes
   .spectrum-Slider-controls {
     &::before,
     &::after {
-      background-color: var(--spectrum-slider-round-min-max-tick-color-default);
+      background-color: var(--spectrum-dial-min-max-tick-color);
     }
   }
 }

@@ -2,14 +2,14 @@
 {{ quickaction/quickaction-default.yml }}
 */
 .spectrum-QuickActions-item {
-  background-color: var(--spectrum-actionbutton-background-color-default);
-  border-color: var(--spectrum-actionbutton-border-color-default);
-  color: var(--spectrum-actionbutton-text-color-default);
+  background-color: var(--spectrum-actionbutton-background-color);
+  border-color: var(--spectrum-actionbutton-border-color);
+  color: var(--spectrum-actionbutton-text-color);
 
   &:focus-ring {
     background-color: var(--spectrum-actionbutton-background-color-key-focus);
     border-color: var(--spectrum-actionbutton-border-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-button-border-focus-grow) var(--spectrum-actionbutton-border-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-button-primary-border-size-increase-key-focus) var(--spectrum-actionbutton-border-color-key-focus);
     color: var(--spectrum-actionbutton-text-color-key-focus);
   }
 

@@ -30,11 +30,11 @@
 }
 
 .spectrum-Loader--bar-fill {
-  background: var(--spectrum-loader-blue-color-default);
+  background: var(--spectrum-loader-blue-color);
 }
 
 .spectrum-Loader--bar-track {
-  background-color: var(--spectrum-loader-background-color-default);
+  background-color: var(--spectrum-loader-background-color);
 }
 
 .spectrum-Loader--bar--fullpage {

@@ -13,8 +13,8 @@
   overflow: visible;
 
   border-style: solid;
-  border-width: var(--spectrum-rule-border-width);
-  border-radius: var(--spectrum-rule-border-width);
+  border-width: var(--spectrum-rule-medium-height);
+  border-radius: var(--spectrum-rule-medium-height);
 }
 
 /* topdoc
@@ -29,8 +29,8 @@
 {{ rule/rule-subsection2.yml }}
 */
 .spectrum-Rule--subsection2 {
-  border-width: var(--spectrum-rule-subsection2-border-width-default);
-  border-radius: var(--spectrum-rule-subsection2-border-width-default);
+  border-width: var(--spectrum-rule-subsection2-border-width);
+  border-radius: var(--spectrum-rule-subsection2-border-width);
 }
 
 /* topdoc

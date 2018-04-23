@@ -17,7 +17,7 @@
 
   /* Todo: Remove hardcoded values */
   --spectrum-slider-height: 32px;
-  --spectrum-slider-round-width: 32px;
+  --spectrum-dial-width: 32px;
 }
 
 .spectrum-Slider {
@@ -232,19 +232,19 @@
 
 .spectrum-Slider--round {
   display: inline-block;
-  width: var(--spectrum-slider-round-container-width);
+  width: var(--spectrum-dial-container-width);
   height: auto;
   min-height: 0;
 
   .spectrum-Slider-controls {
-    width: var(--spectrum-slider-round-width);
-    height: var(--spectrum-slider-round-width);
+    width: var(--spectrum-dial-width);
+    height: var(--spectrum-dial-width);
     min-height: 0;
 
-    border-radius: var(--spectrum-slider-round-border-radius);
+    border-radius: var(--spectrum-dial-border-radius);
     position: relative;
     display: inline-block;
-    margin-right: var(--spectrum-slider-round-margin-right);
+    margin-right: var(--spectrum-dial-margin-right);
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
@@ -264,17 +264,17 @@
     &::before {
       left: auto;
       right: -2px;
-      transform: rotate(var(--spectrum-slider-round-min-max-tick-angles));
+      transform: rotate(var(--spectrum-dial-min-max-tick-angles));
     }
     &::after {
       left: -2px;
-      transform: rotate(calc(-1 * var(--spectrum-slider-round-min-max-tick-angles)));
+      transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
     }
   }
   &.spectrum-Slider--round--small {
     .spectrum-Slider-controls {
-      width: var(--spectrum-slider-round-small-width);
-      height: var(--spectrum-slider-round-small-width);
+      width: var(--spectrum-dial-small-width);
+      height: var(--spectrum-dial-small-width);
     }
   }
   .spectrum-Slider-handle {
@@ -287,8 +287,8 @@
     left: 8px;
     right: 8px;
     bottom: 8px;
-    border-radius: var(--spectrum-slider-round-border-radius);
-    transform: rotate(calc(-1 * var(--spectrum-slider-round-min-max-tick-angles)));
+    border-radius: var(--spectrum-dial-border-radius);
+    transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
@@ -300,9 +300,9 @@
       position: absolute;
       top: 50%;
       left: -2px;
-      width: var(--spectrum-slider-round-handle-marker-width);
-      height: var(--spectrum-slider-round-handle-marker-height);
-      border-radius: var(--spectrum-slider-round-handle-marker-border-radius);
+      width: var(--spectrum-dial-handle-marker-width);
+      height: var(--spectrum-dial-handle-marker-height);
+      border-radius: var(--spectrum-dial-handle-marker-border-radius);
       transform: translateY(-50%);
       transition: background-color var(--spectrum-slider-animation-transition-time) var(--spectrum-slider-animation-ease);
     }

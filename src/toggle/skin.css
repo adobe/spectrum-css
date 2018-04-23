@@ -1,13 +1,13 @@
 .spectrum-ToggleSwitch-switch {
   /* :before is used for the track of the switch */
   &::before {
-    background-color: var(--spectrum-switch-track-color-default);
+    background-color: var(--spectrum-switch-track-color);
   }
 
   /* :after is used for the handle of the switch */
   &::after {
-    background-color: var(--spectrum-switch-handle-background-color-default);
-    border-color: var(--spectrum-switch-handle-border-color-default);
+    background-color: var(--spectrum-switch-handle-background-color);
+    border-color: var(--spectrum-switch-handle-border-color);
   }
 }
 
@@ -32,7 +32,7 @@
 
     &:checked + .spectrum-ToggleSwitch-switch {
       &::before {
-        background-color: var(--spectrum-switch-track-color-default);
+        background-color: var(--spectrum-switch-track-color);
       }
     }
 
@@ -121,7 +121,7 @@
     & {
       &:checked + .spectrum-ToggleSwitch-switch {
         &::before {
-          background-color: var(--spectrum-switch-track-color-default);
+          background-color: var(--spectrum-switch-track-color);
         }
       }
     }
@@ -129,14 +129,14 @@
     &:checked + .spectrum-ToggleSwitch-switch {
       &::after {
         /* Don't be blue */
-        border-color: var(--spectrum-switch-handle-border-color-default);
+        border-color: var(--spectrum-switch-handle-border-color);
       }
     }
 
     &:focus-ring {
       &:checked + .spectrum-ToggleSwitch-switch {
         &::before {
-          background-color: var(--spectrum-switch-track-color-default);
+          background-color: var(--spectrum-switch-track-color);
         }
         &::after {
           border-color: var(--spectrum-switch-handle-border-color-key-focus);
@@ -167,7 +167,7 @@
     .spectrum-ToggleSwitch-input {
       &:checked:enabled + .spectrum-ToggleSwitch-switch {
         &::before {
-          background-color: var(--spectrum-switch-track-color-default);
+          background-color: var(--spectrum-switch-track-color);
         }
         &::after {
           border-color: var(--spectrum-switch-handle-border-color-hover);
@@ -180,7 +180,7 @@
     .spectrum-ToggleSwitch-input {
       &:checked:enabled + .spectrum-ToggleSwitch-switch {
         &::before {
-          background-color: var(--spectrum-switch-track-color-default);
+          background-color: var(--spectrum-switch-track-color);
         }
         &::after {
           border-color: var(--spectrum-switch-handle-border-color-down);

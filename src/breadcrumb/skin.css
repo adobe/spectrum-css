@@ -1,8 +1,8 @@
 .spectrum-Breadcrumb {
-  color: var(--spectrum-breadcrumb-text-color-default);
+  color: var(--spectrum-breadcrumb-text-color);
 
   .spectrum-Breadcrumb-separator {
-    color: var(--spectrum-breadcrumb-chevron-icon-color-default);
+    color: var(--spectrum-breadcrumb-chevron-icon-color);
   }
 
   .spectrum-Breadcrumb-link {
@@ -33,7 +33,7 @@
   &.is-selected {
     ~ .spectrum-Breadcrumb {
       &:last-of-type {
-        color: var(--spectrum-breadcrumb-text-color-default);
+        color: var(--spectrum-breadcrumb-text-color);
       }
     }
     .spectrum-Breadcrumb-link {

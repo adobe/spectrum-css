@@ -23,7 +23,7 @@
 
   .spectrum-Textfield {
     flex: 1;
-    margin-left: calc(-1 * var(--spectrum-textfield-border-size-default)); /* hides left border */
+    margin-left: calc(-1 * var(--spectrum-textfield-border-size)); /* hides left border */
     border-top-left-radius: var(--spectrum-searchwithin-border-radius);
     border-bottom-left-radius: var(--spectrum-searchwithin-border-radius);
 

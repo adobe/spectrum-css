@@ -1,9 +1,9 @@
 .spectrum-Table-headCell {
-  color: var(--spectrum-table-head-cell-text-color-default);
+  color: var(--spectrum-table-head-cell-text-color);
 
   &.is-sortable {
     .spectrum-Table-sortedIcon {
-      color: var(--spectrum-table-head-cell-sort-icon-color-default);
+      color: var(--spectrum-table-head-cell-sort-icon-color);
     }
 
     &:hover {
@@ -34,8 +34,8 @@
 }
 
 .spectrum-Table-body {
-  border: 1px solid var(--spectrum-table-body-cell-border-color-default);
-  background-color: var(--spectrum-table-body-cell-background-color-default);
+  border: 1px solid var(--spectrum-table-body-cell-border-color);
+  background-color: var(--spectrum-table-body-cell-background-color);
 }
 
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
@@ -48,25 +48,25 @@ tbody.spectrum-Table-body {
   }
 
   .spectrum-Table-cell {
-    border-top: 1px solid var(--spectrum-table-body-cell-border-color-default);
+    border-top: 1px solid var(--spectrum-table-body-cell-border-color);
   }
 
   .spectrum-Table-row .spectrum-Table-cell:first-child {
-    border-left: 1px solid var(--spectrum-table-body-cell-border-color-default);
+    border-left: 1px solid var(--spectrum-table-body-cell-border-color);
   }
 
   .spectrum-Table-row .spectrum-Table-cell:last-child {
-    border-right: 1px solid var(--spectrum-table-body-cell-border-color-default);
+    border-right: 1px solid var(--spectrum-table-body-cell-border-color);
   }
 
   .spectrum-Table-row:last-child .spectrum-Table-cell {
-    border-bottom: 1px solid var(--spectrum-table-body-cell-border-color-default);
+    border-bottom: 1px solid var(--spectrum-table-body-cell-border-color);
   }
 }
 
 .spectrum-Table-row {
-  border-bottom: 1px solid var(--spectrum-table-body-cell-border-color-default);
-  background-color: var(--spectrum-table-body-cell-background-color-default);
+  border-bottom: 1px solid var(--spectrum-table-body-cell-border-color);
+  background-color: var(--spectrum-table-body-cell-background-color);
 
   &:last-child {
     border-bottom: none;
@@ -100,21 +100,21 @@ tbody.spectrum-Table-body {
 }
 
 .spectrum-Table-cell {
-  color: var(--spectrum-table-body-cell-text-color-default);
+  color: var(--spectrum-table-body-cell-text-color);
 }
 
 .spectrum-Table-cell--divider {
-  border-right: 1px solid var(--spectrum-table-body-cell-border-color-default);
+  border-right: 1px solid var(--spectrum-table-body-cell-border-color);
 }
 
 .spectrum-Table--quiet {
   .spectrum-Table-body {
     border-width: 1px 0;
-    background-color: var(--spectrum-table-quiet-body-cell-background-color-default);
+    background-color: var(--spectrum-table-quiet-body-cell-background-color);
   }
 
   .spectrum-Table-row {
-    background-color: var(--spectrum-table-quiet-body-cell-background-color-default);
+    background-color: var(--spectrum-table-quiet-body-cell-background-color);
 
     &:hover {
       background-color: var(--spectrum-table-quiet-body-cell-background-color-hover);

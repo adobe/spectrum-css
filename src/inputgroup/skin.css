@@ -3,7 +3,7 @@
     .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) {
       &,
       & ~ .spectrum-InputGroup-button {
-        border-color: var(--spectrum-input-border-color-hover);
+        border-color: var(--spectrum-textfield-border-color-hover);
       }
     }
   }
@@ -17,7 +17,7 @@
   &.is-invalid,
   &:invalid {
     ~ .spectrum-InputGroup-button {
-      border-color: var(--spectrum-dropdown-border-color-invalid-default);
+      border-color: var(--spectrum-dropdown-border-color-invalid);
     }
   }
 }
@@ -31,7 +31,7 @@
   &.is-invalid,
   &:invalid {
     ~ .spectrum-InputGroup-button {
-      box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-invalid-default);
+      box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-invalid);
     }
   }
 }
@@ -47,7 +47,7 @@
     &.is-invalid,
     &:disabled,
     &:disabled:hover {
-      border-color: var(--spectrum-input-quiet-border-color-default);
+      border-color: var(--spectrum-textfield-quiet-border-color);
     }
   }
 
@@ -55,7 +55,7 @@
     .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) {
       &,
       & ~ .spectrum-InputGroup-button {
-        border-color: var(--spectrum-input-quiet-border-color-hover);
+        border-color: var(--spectrum-textfield-quiet-border-color-hover);
       }
     }
   }
@@ -65,22 +65,22 @@
     &:invalid {
       &,
       ~ .spectrum-InputGroup-button {
-        border-color: var(--spectrum-input-invalid-border-color-default);
+        border-color: var(--spectrum-textfield-invalid-border-color);
       }
     }
 
     /* Always add the 2px ring for keyboard focus for quiet inputgroups */
     &:focus {
       ~ .spectrum-InputGroup-button {
-        box-shadow: 0 1px 0 var(--spectrum-input-quiet-border-color-key-focus);
-        border-color: var(--spectrum-input-quiet-border-color-key-focus);
+        box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-border-color-key-focus);
+        border-color: var(--spectrum-textfield-quiet-border-color-key-focus);
       }
 
       &.is-invalid,
       &:invalid {
         ~ .spectrum-InputGroup-button {
-          box-shadow: 0 1px 0 var(--spectrum-input-invalid-border-color-default);
-          border-color: var(--spectrum-input-invalid-border-color-default);
+          box-shadow: 0 1px 0 var(--spectrum-textfield-invalid-border-color);
+          border-color: var(--spectrum-textfield-invalid-border-color);
         }
       }
     }

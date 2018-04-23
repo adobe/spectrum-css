@@ -13,7 +13,7 @@
 
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
-  --spectrum-combovox-fieldbutton-border-width: var(--spectrum-input-border-size);
+  --spectrum-combobox-fieldbutton-border-width: var(--spectrum-textfield-border-size);
 }
 
 .spectrum-InputGroup {
@@ -29,7 +29,7 @@
   position: relative;
   padding: 0;
   width: 34px;
-  border-width: var(--spectrum-combovox-fieldbutton-border-width);
+  border-width: var(--spectrum-combobox-fieldbutton-border-width);
   border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
   border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
 }

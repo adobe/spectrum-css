@@ -1,13 +1,13 @@
 .spectrum-Accordion-item {
-  border-color: var(--spectrum-accordion-border-color-default);
+  border-color: var(--spectrum-accordion-border-color);
 }
 
 .spectrum-Accordion-indicator {
-  color: var(--spectrum-accordion-icon-color-default);
+  color: var(--spectrum-accordion-icon-color);
 }
 
 .spectrum-Accordion-header {
-  color: var(--spectrum-accordion-text-color-default);
+  color: var(--spectrum-accordion-text-color);
 
   &:focus,
   &:hover {
