@@ -7,10 +7,6 @@
     /* Override focus -- clicking with spacebar should not show outline */
     box-shadow: none;
   }
-
-  &.is-selected .spectrum-Icon {
-    color: var(--spectrum-button-primary-icon-color-down);
-  }
 }
 
 /* topdoc
