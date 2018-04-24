@@ -34,7 +34,7 @@
   line-height: var(--spectrum-table-header-height);
   letter-spacing: var(--spectrum-table-header-text-letter-spacing);
   text-transform: uppercase;
-  padding: var(--spectrum-table-header-padding-y) var(--spectrum-table-item-padding);
+  padding: var(--spectrum-table-header-padding-y) var(--spectrum-table-cell-padding);
   transition: color var(--spectrum-transition-time) ease-in-out;
   cursor: default;
   outline: 0;
@@ -100,9 +100,9 @@
 }
 
 .spectrum-Table-cell {
-  font-size: var(--spectrum-table-item-text-size);
-  line-height: var(--spectrum-table-item-line-height);
-  padding: var(--spectrum-table-item-padding-vertical) var(--spectrum-table-item-padding);
+  font-size: var(--spectrum-table-cell-text-size);
+  line-height: var(--spectrum-table-cell-line-height);
+  padding: var(--spectrum-table-cell-padding-vertical) var(--spectrum-table-cell-padding);
 }
 
 .spectrum-Table-row {
