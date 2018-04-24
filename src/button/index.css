@@ -180,26 +180,6 @@ a.spectrum-Button {
     outline: none;
   }
 
-  /* The artificial background */
-  &::before {
-    display: block;
-
-    /* Center ourselves */
-    position: absolute;
-    top: calc(var(--spectrum-button-icon-width) / 4);
-    left: calc(var(--spectrum-button-icon-width) / 4);
-
-    width: calc(var(--spectrum-button-icon-width) / 2);
-    height: calc(var(--spectrum-button-icon-width) / 2);
-
-    /* Be below content and icons */
-    z-index: 0;
-
-    content: '';
-
-    border-radius: var(--spectrum-button-icon-border-radius);
-  }
-
   &:disabled {
     cursor: default;
   }

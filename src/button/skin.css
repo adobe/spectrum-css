@@ -537,10 +537,6 @@
 
   &:active {
     color: var(--spectrum-button-icon-icon-color-down);
-
-    &::before {
-      background-color: var(--spectrum-button-icon-background-color-down);
-    }
   }
 
   &:disabled {
