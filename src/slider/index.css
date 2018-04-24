@@ -273,8 +273,8 @@
   }
   &.spectrum-Slider--round--small {
     .spectrum-Slider-controls {
-      width: var(--spectrum-dial-small-small-width);
-      height: var(--spectrum-dial-small-small-height);
+      width: var(--spectrum-dial-small-width);
+      height: var(--spectrum-dial-small-height);
     }
   }
   .spectrum-Slider-handle {
