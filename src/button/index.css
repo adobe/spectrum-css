@@ -7,9 +7,6 @@
   --spectrum-button-icon-background-size: 16px;
   --spectrum-button-icon-icon-size: 8px;
   --spectrum-button-icon-border-radius: 4px;
-
-  /* Temporary: Will change this to a logic-button specific variable once the element is canonized */
-  --spectrum-logicbutton-padding-x: var(--spectrum-actionbuttongroup-text-button-gap-y);
 }
 
 .spectrum-Button {
@@ -135,7 +132,7 @@ a.spectrum-Button {
 .spectrum-Button--logic--or {
   height: var(--spectrum-logicbutton-and-height);
   line-height: 0;
-  /*padding: var(--spectrum-logicbutton-and-padding-x);*/
+  padding: var(--spectrum-logicbutton-and-padding-x);
   border-width: var(--spectrum-logicbutton-and-border-size);
   border-radius: var(--spectrum-logicbutton-and-border-radius);
   font-size: var(--spectrum-logicbutton-and-text-size);
