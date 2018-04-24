@@ -7,7 +7,7 @@
 
   &.is-invalid {
     .spectrum-Icon:not(.spectrum-Dropdown-icon) {
-      color: var(--spectrum-dropdown-icon-color-invalid);
+      color: var(--spectrum-dropdown-validation-icon-color-error);
     }
   }
 
