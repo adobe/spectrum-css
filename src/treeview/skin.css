@@ -6,7 +6,7 @@
     color: var(--spectrum-treeview-item-text-color-hover);
 
     &::before {
-      background-color: var(--spectrum-treeview-wrap-background-color-hover);
+      background-color: var(--spectrum-treeview-item-background-color-hover);
     }
   }
 
@@ -14,17 +14,17 @@
     color: var(--spectrum-treeview-item-text-color-hover);
 
     &::before {
-      background-color: var(--spectrum-treeview-wrap-background-color-hover);
+      background-color: var(--spectrum-treeview-item-background-color-key-focus);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-      box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-wrap-box-shadow-color-key-focus) inset;
+      box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-item-border-color-key-focus) inset;
     }
   }
 
   &.is-drop-target {
     &::before {
       background-color: var(--spectrum-alias-highlight-selected);
-      box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-wrap-box-shadow-color-key-focus) inset;
+      box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-item-border-color-key-focus) inset;
     }
   }
 }

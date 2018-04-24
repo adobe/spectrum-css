@@ -3,13 +3,6 @@
 :root {
   --spectrum-treeview-icon-width: var(--spectrum-accordion-icon-width);
   --spectrum-treeview-icon-height: var(--spectrum-accordion-icon-height);
-  --spectrum-treeview-link-margin-vertical: 4px;
-  --spectrum-treeview-list-padding-left: 28px;
-  --spectrum-treeview-icon-margin-right: 100px; /* haha */
-  --spectrum-treeview-row-padding-horizontal: 100px;
-  --spectrum-treeview-row-padding-vertical: 100px;
-  --spectrum-treeview-chevron-line-height: 100px;
-  --spectrum-treeview-wrap-border-radius: 100px;
 }
 
 /* topdoc
@@ -51,6 +44,7 @@
   width: 100%;
 
   padding: var(--spectrum-treeview-item-padding-y) var(--spectrum-treeview-item-padding-x);
+  margin: calc(var(--spectrum-treeview-item-margin-y) / 2) 0;
 
   text-decoration: none;
 
@@ -64,25 +58,25 @@
 
   .spectrum-Icon {
     vertical-align: top;
-    margin-right: var(--spectrum-treeview-icon-margin-right);
+    margin-right: var(--spectrum-treeview-item-icon-gap);
   }
 
   &::before {
     content: '';
 
     position: absolute;
-    left: calc(var(--spectrum-treeview-row-padding-horizontal) + var(--spectrum-treeview-item-border-size));
-    right: var(--spectrum-treeview-row-padding-horizontal);
+    left: calc(0 + var(--spectrum-treeview-item-border-size));
+    right: 0;
     z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
     margin-top: calc(-1 * var(--spectrum-treeview-item-padding-y));
 
-    height: var(--spectrum-treeview-chevron-line-height);
+    height: var(--spectrum-treeview-item-height);
 
     background-color: transparent;
 
-    border-radius: var(--spectrum-treeview-wrap-border-radius);
+    border-radius: var(--spectrum-treeview-item-border-radius);
   }
 }
 
@@ -103,7 +97,7 @@
   /* Don't be a highlight container stealer */
   position: static;
 
-  padding-left: var(--spectrum-treeview-list-padding-left);
+  padding-left: var(--spectrum-treeview-item-indent);
 
   /* Be hidden */
   height: 0;
@@ -114,43 +108,43 @@
 {{ treeview/treeview-flat.yml }}
 */
 .spectrum-TreeView-item--indent1 {
-  padding-left: var(--spectrum-treeview-list-padding-left);
+  padding-left: var(--spectrum-treeview-item-indent);
 }
 
 .spectrum-TreeView-item--indent2 {
-  padding-left: calc(2 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(2 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent3 {
-  padding-left: calc(3 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(3 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent4 {
-  padding-left: calc(4 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(4 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent5 {
-  padding-left: calc(5 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(5 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent6 {
-  padding-left: calc(6 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(6 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent7 {
-  padding-left: calc(7 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(7 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent8 {
-  padding-left: calc(8 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(8 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent9 {
-  padding-left: calc(9 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(9 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent10 {
-  padding-left: calc(10 * var(--spectrum-treeview-list-padding-left));
+  padding-left: calc(10 * var(--spectrum-treeview-item-indent));
 }
 
 /* topdoc
