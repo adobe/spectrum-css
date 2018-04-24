@@ -1,0 +1,14 @@
+---
+name: Rail - Right Draggable Gripper
+description: Right rail with draggable width and gripper
+markup: |
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open right rail with draggable width and gripper</button>
+  <div class="spectrum-Rail spectrum-Rail--right spectrum-Rail--draggable">
+    <div class="spectrum-Rail-content">
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Rail'))" style='margin: 2rem;'>Close Rail Example</button>
+    </div>
+    <div class="spectrum-Rail-dragHandle">
+      <div class="spectrum-Rail-gripper">
+      </div>
+    </div>
+  </div>

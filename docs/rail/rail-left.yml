@@ -1,0 +1,11 @@
+---
+name: Rail - Left
+description: Left rail
+markup: |
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open left rail</button>
+  <div class="spectrum-Rail spectrum-Rail--left">
+    <div class="spectrum-Rail-content">
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Rail'))" style='margin: 2rem;'>Close Rail Example</button>
+    </div>
+    <div class="spectrum-Rail-dragHandle"></div>
+  </div>
