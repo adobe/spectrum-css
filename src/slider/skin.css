@@ -33,6 +33,10 @@
   background: var(--spectrum-slider-track-color);
 }
 
+.spectrum-Slider-labelContainer {
+  color: var(--spectrum-label-text-color);
+}
+
 /*
 Todo: Determine if unused mixin is required
 spectrum-slider-track-disabled(){
@@ -56,8 +60,9 @@ spectrum-slider-track-disabled(){
 
 .spectrum-Slider-handle {
   border-color: var(--spectrum-slider-handle-border-color);
-  background: var(--spectrum-slider-handle-background-color);
-  box-shadow: 0 0 0 4px var(--spectrum-slider-handle-outset-border-color);
+  background: var(--spectrum-alias-background-color-default);
+  /*background: var(--spectrum-slider-handle-background-color);*/
+  box-shadow: 0 0 0 4px var(--spectrum-alias-background-color-default);
 
   &:hover {
     border-color: var(--spectrum-slider-handle-border-color-hover);
@@ -65,13 +70,13 @@ spectrum-slider-track-disabled(){
 
   &.is-focused {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
-    background: var(--spectrum-slider-handle-background-color-key-focus);
+    /*background: var(--spectrum-slider-handle-background-color-key-focus);*/
   }
 
   &:active,
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
-    background: var(--spectrum-slider-handle-background-color-down);
+    /*background: var(--spectrum-slider-handle-background-color-down);*/
   }
 }
 
@@ -131,12 +136,13 @@ Todo: Determine if these are supposed to be pseudo classes
 
 .spectrum-Slider.is-disabled {
   .spectrum-Slider-labelContainer {
-    color: var(--spectrum-slider-text-color-disabled);
+    color: var(--spectrum-label-text-color-disabled);
   }
 
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-disabled);
-    background: var(--spectrum-slider-handle-background-color);
+    /*background: var(--spectrum-slider-handle-background-color);*/
+    background: var(--spectrum-alias-background-color-default);
 
     &:hover,
     &:active {
