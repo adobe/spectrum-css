@@ -352,9 +352,9 @@
 
   &.is-selected:disabled,
   &.is-selected.is-disabled {
-    background-color: pink;
-    border-color: pink;
-    color: pink;
+    background-color: var(--spectrum-actionbutton-background-color-selected-disabled);
+    border-color: var(--spectrum-actionbutton-border-color-selected-disabled);
+    color: var(--spectrum-actionbutton-text-color-selected-disabled);
   }
 }
 
@@ -420,9 +420,9 @@
 
   &.is-selected:disabled,
   &.is-selected.is-disabled {
-    background-color: pink;
-    border-color: pink;
-    color: pink;
+    background-color: var(--spectrum-actionbutton-quiet-background-color-selected-disabled);
+    border-color: var(--spectrum-actionbutton-quiet-border-color-selected-disabled);
+    color: var(--spectrum-actionbutton-quiet-text-color-selected-disabled);
   }
 }
 
