@@ -25,6 +25,9 @@ var processors = [
     functions: {
       noscale: function(value) {
         return value.toString().toUpperCase();
+      },
+      percent: function(value) {
+        return parseInt(value, 10) / 100;
       }
     }
   }),
