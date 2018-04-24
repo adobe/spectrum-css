@@ -37,7 +37,7 @@
   align-items: center;
   box-sizing: border-box;
 
-  margin: var(--spectrum-taggroup-tag-gap-x) var(--spectrum-taggroup-tag-gap-y);
+  margin: calc(var(--spectrum-taggroup-tag-gap-y) / 2) calc(var(--spectrum-taggroup-tag-gap-x) / 2);
   padding: 0 var(--spectrum-tag-padding-x);
   height: var(--spectrum-tag-height);
   max-width: 100%;
@@ -57,7 +57,7 @@
 
   > .spectrum-Icon,
   > .spectrum-Avatar {
-    margin-right: var(--spectrum-taggroup-tag-gap-x);
+    margin-right: var(--spectrum-tag-icon-padding-x);
   }
 
   > .spectrum-Icon,
