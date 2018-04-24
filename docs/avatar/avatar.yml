@@ -1,0 +1,7 @@
+---
+name: Avatar
+description: An avatar, used within other components
+status: Beta
+markup: |
+  <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+  <img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg" alt="Disabled Avatar">

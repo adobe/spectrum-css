@@ -1,0 +1,13 @@
+/* topdoc
+{{ avatar/avatar.yml }}
+*/
+
+.spectrum-Avatar {
+  width: var(--spectrum-avatar-small-width);
+  height: var(--spectrum-avatar-small-height);
+
+  border-radius: var(--spectrum-avatar-small-border-radius);
+  border-style: none;
+
+  user-drag: none;
+}
