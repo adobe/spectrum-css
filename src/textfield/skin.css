@@ -58,13 +58,13 @@
 
   &.is-invalid,
   &:invalid {
-    border-color: var(--spectrum-textfield-invalid-border-color);
+    border-color: var(--spectrum-textfield-border-color-error);
     background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-alert-error-border-color)));
 
     &:focus-ring { /* might break things due to pre-defined focus-ring */
       &:not(:active) {
-        border-color: var(--spectrum-textfield-invalid-border-color);
-        box-shadow: 0 0 0 1px var(--spectrum-textfield-invalid-border-color);
+        border-color: var(--spectrum-textfield-border-color-error);
+        box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-error);
       }
     }
   }
@@ -105,16 +105,16 @@
 
   &.is-invalid,
   &:invalid {
-    border-color: var(--spectrum-textfield-invalid-border-color);
+    border-color: var(--spectrum-textfield-border-color-error);
 
     &:focus {
-      box-shadow: 0 1px 0 var(--spectrum-textfield-invalid-border-color);
+      box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-error);
     }
 
     &:focus-ring { /* might break things due to pre-defined focus-ring */
       &:not(:active) {
-        border-color: var(--spectrum-textfield-invalid-border-color);
-        box-shadow: 0 1px 0 var(--spectrum-textfield-invalid-border-color);
+        border-color: var(--spectrum-textfield-border-color-error);
+        box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-error);
       }
     }
   }
