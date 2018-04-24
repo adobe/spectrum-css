@@ -12,7 +12,7 @@
   --spectrum-dialog-header-height: 34px;
 
   /* The font-size of the dialog header */
-  --spectrum-dialog-header-font-size: 18px;
+  --spectrum-dialog-header-text-size: 18px;
 
   /* Distance between the edge of the document and right/bottom/left of content */
   --spectrum-dialog-padding: 40px;
@@ -33,10 +33,10 @@
   --spectrum-dialog-fullscreen-header-padding-bottom: 24px;
 
   /* The font-size of the fullscreen dialog header */
-  --spectrum-dialog-fullscreen-header-font-size: 28px;
+  --spectrum-dialog-fullscreen-header-text-size: 28px;
 
   /* The font-weight of the fullscreen dialog header */
-  --spectrum-dialog-fullscreen-header-font-weight: 100;
+  --spectrum-dialog-fullscreen-header-text-font-weight: 100;
 
   /* The line-height of the fullscreen dialog header */
   --spectrum-dialog-fullscreen-header-line-height: 36px;
@@ -210,8 +210,8 @@
   }
 
   .spectrum-Dialog-title {
-    font-size: var(--spectrum-dialog-fullscreen-header-font-size);
-    font-weight: var(--spectrum-dialog-fullscreen-header-font-weight);
+    font-size: var(--spectrum-dialog-fullscreen-header-text-size);
+    font-weight: var(--spectrum-dialog-fullscreen-header-text-font-weight);
     line-height: var(--spectrum-dialog-fullscreen-header-line-height);
   }
 

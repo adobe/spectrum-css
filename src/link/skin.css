@@ -35,21 +35,21 @@
 }
 
 .spectrum-Link--overBackground {
-  color: var(--spectrum-link-over-color-text-color);
+  color: var(--spectrum-link-over-background-text-color);
 
   &:hover {
-    color: var(--spectrum-link-over-color-text-color-hover);
+    color: var(--spectrum-link-over-background-text-color-hover);
   }
 
   &:active {
-    color: var(--spectrum-link-over-color-text-color-down);
+    color: var(--spectrum-link-over-background-text-color-down);
   }
 
   &:focus {
-    color: var(--spectrum-link-over-color-text-color-key-focus);
+    color: var(--spectrum-link-over-background-text-color-key-focus);
   }
 
   &.is-disabled {
-    color: var(--spectrum-link-over-color-text-color-disabled);
+    color: var(--spectrum-link-over-background-text-color-disabled);
   }
 }

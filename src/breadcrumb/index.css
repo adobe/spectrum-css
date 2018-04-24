@@ -15,11 +15,11 @@
 
 .spectrum-Breadcrumb-separator {
   position: absolute;
-  top: calc(50% - calc(calc(var(--spectrum-breadcrumb-chevron-icon-height) / 2) - 1px));
-  right: calc(calc(var(--spectrum-breadcrumb-margin) / -2) - calc(var(--spectrum-breadcrumb-chevron-icon-width) / 2));
+  top: calc(50% - calc(calc(var(--spectrum-breadcrumb-ui-icon-height) / 2) - 1px));
+  right: calc(calc(var(--spectrum-breadcrumb-margin) / -2) - calc(var(--spectrum-breadcrumb-ui-icon-width) / 2));
 
-  width: var(--spectrum-breadcrumb-chevron-icon-width);
-  height: var(--spectrum-breadcrumb-chevron-icon-height);
+  width: var(--spectrum-breadcrumb-ui-icon-width);
+  height: var(--spectrum-breadcrumb-ui-icon-height);
 
   transform: scale(1);
 
@@ -34,8 +34,8 @@
 
   margin-right: var(--spectrum-breadcrumb-margin);
 
-  font-size: var(--spectrum-breadcrumb-font-size);
-  font-weight: var(--spectrum-breadcrumb-font-weight);
+  font-size: var(--spectrum-breadcrumb-text-size);
+  font-weight: var(--spectrum-breadcrumb-text-font-weight);
 
   .spectrum-Breadcrumb-link {
     cursor: default;
@@ -62,9 +62,9 @@
 
     margin: var(--spectrum-breadcrumb-title-margin);
 
-    font-size: var(--spectrum-breadcrumb-title-active-font-size);
-    font-weight: var(--spectrum-breadcrumb-title-active-font-weight);
-    line-height: var(--spectrum-breadcrumb-title-active-line-height);
+/*    font-size: var(--spectrum-breadcrumb-title-active-text-size);
+    font-weight: var(--spectrum-breadcrumb-title-active-text-font-weight);
+    line-height: var(--spectrum-breadcrumb-title-active-line-height);*/
   }
 
   .spectrum-Heading--pageTitle {

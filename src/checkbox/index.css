@@ -75,7 +75,7 @@
 .spectrum-Checkbox-label {
   display: inline-block;
   margin: 0 var(--spectrum-checkbox-text-gap);
-  font-size: var(--spectrum-checkbox-text-font-size);
+  font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
   vertical-align: middle;
   transition: color var(--spectrum-transition-time) ease-in-out;

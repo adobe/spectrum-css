@@ -10,9 +10,6 @@
 
   /* Temporary: Will change this to a logic-button specific variable once the element is canonized */
   --spectrum-logicbutton-padding-x: var(--spectrum-actionbuttongroup-text-button-gap-y);
-
-  /* Todo: move to dna */
-  --spectrum-actionbutton-quiet-padding-x: var(--spectrum-actionbutton-padding-x);
 }
 
 .spectrum-Button {
@@ -34,7 +31,7 @@
   overflow: visible;
 
   font-family: inherit;
-  font-size: var(--spectrum-button-primary-text-font-size);
+  font-size: var(--spectrum-button-primary-text-size);
   line-height: calc(var(--spectrum-button-primary-height) - calc(2 * var(--spectrum-button-primary-border-size)));
   font-weight: var(--spectrum-button-primary-text-font-weight);
   text-decoration: none;
@@ -111,9 +108,9 @@ a.spectrum-Button {
 }
 
 .spectrum-Button--action {
-  font-size: var(--spectrum-actionbutton-font-size);
-  font-weight: var(--spectrum-actionbutton-font-weight);
-  padding: 0 var(--spectrum-actionbutton-padding-x);
+  font-size: var(--spectrum-actionbutton-text-size);
+  font-weight: var(--spectrum-actionbutton-text-font-weight);
+  padding: 0 var(--spectrum-actionbutton-text-padding-x);
   border-width: var(--spectrum-actionbutton-border-size);
   border-radius: var(--spectrum-actionbutton-border-radius);
 }
@@ -123,9 +120,9 @@ a.spectrum-Button {
 }
 
 .spectrum-Button--quiet--action {
-  font-size: var(--spectrum-actionbutton-quiet-text-font-size);
+  font-size: var(--spectrum-actionbutton-quiet-text-size);
   font-weight: var(--spectrum-actionbutton-quiet-text-font-weight);
-  padding: 0 var(--spectrum-actionbutton-quiet-padding-x);
+  padding: 0 var(--spectrum-actionbutton-text-padding-x);
   border-width: var(--spectrum-actionbutton-quiet-border-size);
   border-radius: var(--spectrum-actionbutton-quiet-border-radius);
 }
@@ -134,22 +131,26 @@ a.spectrum-Button {
   padding: 0 var(--spectrum-actionbutton-icon-padding-x);
 }
 
+/*
+DNAUPDATE
+
 .spectrum-Button--toggle {
-  font-size: var(--spectrum-button-toggle-off-font-size);
-  font-weight: var(--spectrum-button-toggle-off-font-weight);
+  font-size: var(--spectrum-button-toggle-off-text-size);
+  font-weight: var(--spectrum-button-toggle-off-text-font-weight);
   border-width: var(--spectrum-button-toggle-off-border-size);
   border-radius: var(--spectrum-button-toggle-off-border-radius);
 }
+*/
 
 .spectrum-Button--logic--and,
 .spectrum-Button--logic--or {
-  height: var(--spectrum-logicbutton-height);
+  height: var(--spectrum-logicbutton-and-height);
   line-height: 0;
-  padding: var(--spectrum-logicbutton-padding-x);
-  border-width: var(--spectrum-logicbutton-border-size);
-  border-radius: var(--spectrum-logicbutton-border-radius);
-  font-size: var(--spectrum-logicbutton-font-size);
-  font-weight: var(--spectrum-logicbutton-font-weight);
+  /*padding: var(--spectrum-logicbutton-and-padding-x);*/
+  border-width: var(--spectrum-logicbutton-and-border-size);
+  border-radius: var(--spectrum-logicbutton-and-border-radius);
+  font-size: var(--spectrum-logicbutton-and-text-size);
+  font-weight: var(--spectrum-logicbutton-and-text-font-weight);
 }
 
 .spectrum-Button--block {
@@ -233,11 +234,11 @@ a.spectrum-Button {
 .spectrum-Button--quiet--dropdown {
   height: var(--spectrum-dropdown-height);
 
-  padding: 0 var(--spectrum-dropdown-padding);
+  padding: 0 var(--spectrum-dropdown-padding-x);
 
   font-family: inherit;
   font-weight: normal;
-  font-size: var(--spectrum-dropdown-font-size);
+  font-size: var(--spectrum-dropdown-text-size);
   line-height: normal;
   -webkit-font-smoothing: initial;
 
@@ -247,7 +248,7 @@ a.spectrum-Button {
 
 .spectrum-Button--dropdown {
   margin: 0;
-  padding: 0 var(--spectrum-dropdown-padding);
+  padding: 0 var(--spectrum-dropdown-padding-x);
 
   border-width: var(--spectrum-dropdown-border-size);
   border-style: solid;

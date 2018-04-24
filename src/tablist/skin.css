@@ -11,23 +11,23 @@
 {{ tablist/tablist-panel-vertical.yml }}
 */
 .spectrum-TabList-item {
-  color: var(--spectrum-tablist-text-color);
+  color: var(--spectrum-tablist-panel-text-color);
 
   &:hover {
-    color: var(--spectrum-tablist-text-color-hover);
+    color: var(--spectrum-tablist-panel-text-color-hover);
   }
 
   &.is-selected {
-    color: var(--spectrum-tablist-text-color-down);
+    color: var(--spectrum-tablist-panel-text-color-down);
   }
 
   &:focus-ring {
-    color: var(--spectrum-tablist-text-color-key-focus);
-    box-shadow: 0 0 0 2px var(--spectrum-tablist-border-color-key-focus);
+    color: var(--spectrum-tablist-panel-text-color-key-focus);
+    box-shadow: 0 0 0 2px var(--spectrum-tablist-panelborder-color-key-focus);
   }
 
   &.is-disabled {
-    color: var(--spectrum-tablist-text-color-disabled);
+    color: var(--spectrum-tablist-panel-text-color-disabled);
   }
 }
 
@@ -41,12 +41,12 @@
 
       /* The focus line should become blue only for anchored tabs */
       ~ .spectrum-TabList-item-line {
-          background-color:  var(--spectrum-tablist-anchored-tabline-background-color-key-focus);
+          background-color: var(--spectrum-tablist-anchored-tabline-background-color-key-focus);
       }
     }
   }
 }
 
 .spectrum-TabList-item-line {
-  background-color: var(--spectrum-tablist-tabline-background-color);
+  background-color: var(--spectrum-tablist-panel-selection-indicator-color);
 }

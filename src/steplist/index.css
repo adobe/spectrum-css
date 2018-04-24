@@ -23,7 +23,7 @@
   --spectrum-steplist-label-labelOffset: 10px;
 
   /* Font size of the label */
-  --spectrum-steplist-label-font-size: 12px;
+  --spectrum-steplist-label-text-size: 12px;
 }
 
 /* topdoc
@@ -135,7 +135,7 @@
   display: block;
   width: calc(var(--spectrum-steplist-step-width) * 1.5);
 
-  font-size: var(--spectrum-steplist-label-font-size);
+  font-size: var(--spectrum-steplist-label-text-size);
   white-space: normal;
 
   transform: translateX(-50%);

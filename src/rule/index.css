@@ -16,32 +16,3 @@
   border-width: var(--spectrum-rule-medium-height);
   border-radius: var(--spectrum-rule-medium-height);
 }
-
-/* topdoc
-{{ rule/rule-subsection.yml }}
-*/
-.spectrum-Rule--subsection {
-  border-width: var(--spectrum-rule-subsection-border-width);
-  border-radius: var(--spectrum-rule-subsection-border-width);
-}
-
-/* topdoc
-{{ rule/rule-subsection2.yml }}
-*/
-.spectrum-Rule--subsection2 {
-  border-width: var(--spectrum-rule-subsection2-border-width);
-  border-radius: var(--spectrum-rule-subsection2-border-width);
-}
-
-/* topdoc
-{{ rule/rule-panel.yml }}
-*/
-.spectrum-Rule--panel {
-  box-sizing: border-box;
-  display: inline-block;
-  border-width: var(--spectrum-rule-panel-border-width);
-  height: var(--spectrum-rule-panel-height);
-  vertical-align: text-bottom;
-  margin: 0 var(--spectrum-rule-panel-margin-horizontal);
-  border-radius: 0;
-}

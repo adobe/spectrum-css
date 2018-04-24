@@ -3,9 +3,9 @@
 .spectrum-Banner {
   display: inline-block;
   border-radius: var(--spectrum-banner-border-radius);
-  padding: var(--spectrum-banner-padding-vertical) var(--spectrum-banner-padding-horizontal);
-  font-size: var(--spectrum-banner-font-size);
-  line-height: var(--spectrum-banner-line-height);
+  padding: var(--spectrum-banner-padding-y) var(--spectrum-banner-padding-x);
+  font-size: var(--spectrum-banner-text-size);
+  line-height: var(--spectrum-banner-text-line-height);
 }
 
 .spectrum-Banner-header {

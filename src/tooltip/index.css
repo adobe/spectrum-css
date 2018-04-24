@@ -24,8 +24,8 @@
   padding: 2px 8px;
   border-radius: var(--spectrum-border-radius);
 
-  font-size: var(--spectrum-font-size-text-label);
-  font-weight: var(--spectrum-tooltip-font-weight);
+  font-size: var(--spectrum-text-size-text-label);
+  font-weight: var(--spectrum-tooltip-text-font-weight);
   line-height: var(--spectrum-line-height-text-label);
 
   &.is-open {
@@ -134,7 +134,7 @@
 
 .spectrum-Tooltip-label {
   /* Make sure line height is correct to prevent problems in Windows */
-  line-height: var(--spectrum-body-font-line-height);
+  line-height: var(--spectrum-body-text-line-height);
 }
 
 .u-tooltip-showOnHover {

@@ -56,7 +56,7 @@ spectrum-slider-track-disabled(){
 
 .spectrum-Slider-handle {
   border-color: var(--spectrum-slider-handle-border-color);
-  background: var(--spectrum-slider-handle-color);
+  background: var(--spectrum-slider-handle-background-color);
   box-shadow: 0 0 0 4px var(--spectrum-slider-handle-outset-border-color);
 
   &:hover {
@@ -136,12 +136,12 @@ Todo: Determine if these are supposed to be pseudo classes
 
   .spectrum-Slider-handle {
     border-color: var(--spectrum-slider-handle-border-color-disabled);
-    background: var(--spectrum-slider-handle-color);
+    background: var(--spectrum-slider-handle-background-color);
 
     &:hover,
     &:active {
       border-color: var(--spectrum-slider-handle-border-color-disabled);
-      background: var(--spectrum-slider-handle-color);
+      background: var(--spectrum-slider-handle-background-color);
     }
   }
   .spectrum-Slider-track {

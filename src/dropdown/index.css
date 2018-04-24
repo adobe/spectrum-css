@@ -10,7 +10,7 @@
   .spectrum-Popover {
     top: 100%;
     min-width: 100%;
-    margin-top: var(--spectrum-dropdown-flyout-margin);
+    margin-top: var(--spectrum-dropdown-flyout-menu-offset-y);
 
     overflow-y: auto;
   }
@@ -18,7 +18,7 @@
 
 .spectrum-Dropdown--quiet {
   .spectrum-Popover {
-    left: -var(--spectrum-dropdown-padding);
+    left: -var(--spectrum-dropdown-padding-x);
   }
 }
 
@@ -39,7 +39,7 @@
     height: calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2));
     line-height: calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2));
 
-    font-size: var(--spectrum-dropdown-text-font-size);
+    font-size: var(--spectrum-dropdown-text-size);
 
     text-overflow: ellipsis;
     text-align: left;

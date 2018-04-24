@@ -9,8 +9,8 @@
 {{ pagination/pagination-explicit.yml }}
 */
 .spectrum-Pagination-input {
-  width: var(--spectrum-pagination-input-width);
-  min-width: var(--spectrum-pagination-input-width);
+  width: var(--spectrum-pagination-textfield-width);
+  min-width: var(--spectrum-pagination-textfield-width);
 }
 
 .spectrum-Pagination-counter {
@@ -24,7 +24,7 @@
 {{ pagination/pagination-listing.yml }}
 */
 .spectrum-Pagination-directionButton {
-  font-size: var(--spectrum-pagination-direction-button-font-size);
+  font-size: var(--spectrum-pagination-direction-button-text-size);
   font-weight: bold;
 }
 
@@ -38,7 +38,7 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 0 var(--spectrum-pagination-page-button-margin-horizontal);
-  border: var(--spectrum-pagination-page-button-border-width) solid transparent;
+  border: var(--spectrum-pagination-page-button-border-size) solid transparent;
   outline: none;
   transition: background-color var(--spectrum-transition-time) ease-in-out,
               color var(--spectrum-transition-time) ease-in-out,

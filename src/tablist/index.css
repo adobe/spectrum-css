@@ -2,7 +2,7 @@
 
 :root {
   /* The size of the icons in tabs */
-  --spectrum-tablist-icon-size: 18px;
+  --spectrum-tablist-panel-icon-size: 18px;
 }
 
 .spectrum-TabList {
@@ -28,8 +28,8 @@
   outline: none;
   text-decoration: none;
   transition: color var(--spectrum-transition-time) ease-out;
-  height: var(--spectrum-tablist-tab-item-height);
-  line-height: var(--spectrum-tablist-tab-item-height);
+  height: var(--spectrum-tablist-panel-tab-item-height);
+  line-height: var(--spectrum-tablist-panel-tab-item-height);
 
   &.is-disabled {
     cursor: default;
@@ -62,19 +62,19 @@
  .spectrum-TabList--page,
  .spectrum-TabList--panel {
   .spectrum-TabList-item {
-    margin-bottom: var(--spectrum-tablist-horizontal-tabline-height);
+    margin-bottom: var(--spectrum-tabs-horizontal-selection-indicator-height);
 
     &:focus-ring {
-      border-radius: var(--spectrum-tablist-tab-item-border-radius);
+      border-radius: var(--spectrum-tablist-panel-tab-item-border-radius);
     }
   }
 }
 
 .spectrum-TabList--panel {
   .spectrum-TabList-item-label {
-    font-size: var(--spectrum-tablist-panel-tab-item-label-font-size);
-    font-weight: var(--spectrum-tablist-panel-tab-item-label-font-weight);
-    letter-spacing: var(--spectrum-tablist-panel-tab-item-label-letter-spacing);
+    font-size: var(--spectrum-tablist-panel-tab-item-label-text-size);
+    font-weight: var(--spectrum-tablist-panel-tab-item-label-text-font-weight);
+    letter-spacing: var(--spectrum-tablist-panel-tab-item-label-text-letter-spacing);
     text-transform: uppercase;
   }
 
@@ -105,8 +105,8 @@
   .spectrum-TabList-item-line {
     position: absolute;
     bottom: 0px;
-    width: var(--spectrum-tablist-horizontal-tabline-width);
-    height: var(--spectrum-tablist-horizontal-tabline-height);
+    width: var(--spectrum-tablist-panel-horizontal-selection-indicator-width);
+    height: var(--spectrum-tablist-panel-horizontal-selection-indicator-height);
   }
 
   &.spectrum-TabList--page {
@@ -123,7 +123,7 @@
 
   &.spectrum-TabList--anchored {
     display: inline-block;
-    border-bottom: var(--spectrum-tablist-anchored-tab-item-border-width) solid;
+    /*border-bottom: var(--spectrum-tablist-panel-anchored-tab-item-border-width) solid;*/
 
     .spectrum-TabList-item {
       margin: 0px 16px;
@@ -137,7 +137,7 @@
     }
 
     .spectrum-TabList-item-line {
-      bottom: calc(var(--spectrum-tablist-horizontal-tabline-height) * -1);
+      bottom: calc(var(--spectrum-tablist-panel-horizontal-selection-indicator-height) * -1);
     }
   }
 
@@ -169,7 +169,7 @@
 
   .spectrum-TabList-item {
     display: block;
-    margin-left: var(--spectrum-tablist-horizontal-tabline-height);
+    margin-left: var(--spectrum-tablist-panel-vertical-selection-indicator-width);
   }
 
   .spectrum-TabList-item-label {
@@ -179,11 +179,11 @@
   }
 
   .spectrum-TabList-item-line {
-    top: var(--spectrum-tablist-horizontal-tabline-height);
+    top: var(--spectrum-tablist-panel-vertical-selection-indicator-width);
     left: 0;
-    width: var(--spectrum-tablist-vertical-tabline-width);
-    height: var(--spectrum-tablist-vertical-tabline-height);
-    border-radius:  var(--spectrum-tablist-vertical-tabline-border-radius);
+    width: var(--spectrum-tablist-panel-vertical-selection-indicator-width);
+    height: var(--spectrum-tablist-panel-vertical-selection-indicator-height);
+    border-radius:  var(--spectrum-tablist-panel-vertical-selection-indicator-border-radius);
   }
 
   &.spectrum-TabList--panel {

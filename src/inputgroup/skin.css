@@ -17,7 +17,7 @@
   &.is-invalid,
   &:invalid {
     ~ .spectrum-InputGroup-button {
-      border-color: var(--spectrum-dropdown-border-color-invalid);
+      border-color: var(--spectrum-dropdown-border-color-error);
     }
   }
 }
@@ -31,7 +31,7 @@
   &.is-invalid,
   &:invalid {
     ~ .spectrum-InputGroup-button {
-      box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-invalid);
+      box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-error);
     }
   }
 }

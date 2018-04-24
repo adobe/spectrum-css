@@ -35,8 +35,8 @@
   height: var(--spectrum-component-single-line-height);
   line-height: var(--spectrum-component-single-line-height);
 
-  font-size: var(--spectrum-selectlist-option-font-size);
-  font-weight: var(--spectrum-selectlist-option-font-weight);
+  font-size: var(--spectrum-selectlist-option-text-size);
+  font-weight: var(--spectrum-selectlist-option-text-font-weight);
   font-style: normal;
 
   &:focus {

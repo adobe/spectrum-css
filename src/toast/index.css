@@ -11,8 +11,8 @@
 
   border-radius: var(--spectrum-toast-border-radius);
 
-  font-size: var(--spectrum-toast-font-size);
-  font-weight: var(--spectrum-toast-font-weight);
+  font-size: var(--spectrum-toast-text-size);
+  font-weight: var(--spectrum-toast-text-font-weight);
   line-height: 20px;
   -webkit-font-smoothing: antialiased;
 }

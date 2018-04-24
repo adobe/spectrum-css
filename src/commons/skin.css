@@ -26,4 +26,23 @@
 
   /* haha remove this */
   --spectrum-textfield-invalid-border-color: purple;
+  --spectrum-actionbutton-text-color: purple;
+  --spectrum-actionbutton-text-color-hover: orange;
+  --spectrum-actionbutton-text-color-key-focus: pink;
+  --spectrum-actionbutton-text-color-down: green;
+  --spectrum-actionbutton-text-color-disabled: brown;
+  --spectrum-actionbutton-quiet-border-color-key-focus: orange;
+  --spectrum-cyclebutton-box-shadow-color-key-focus: yellow;
+  --spectrum-dropdown-icon-color-invalid: pink;
+  --spectrum-slider-handle-outset-border-color: red;
+  --spectrum-slider-text-color-disabled: green;
+  --spectrum-tablist-anchored-border-color: pink;
+  --spectrum-tablist-anchored-text-color-key-focus: green;
+  --spectrum-tablist-anchored-tabline-background-color-key-focus: orange;
+  --spectrum-tablist-anchored-tabline-background-color-key-focus: green;
+  --spectrum-tablist-panelborder-color-key-focus: orange;
+  --spectrum-tablist-panelborder-color-key-focus: red;
+  --spectrum-tooltip-text-color: brown;
+  --spectrum-treeview-wrap-background-color-hover: orange;
+  --spectrum-treeview-wrap-box-shadow-color-key-focus: purple;
 }

@@ -8,8 +8,8 @@
 */
 
 :root {
-  --spectrum-combobox-chevron-icon-width: 10px;
-  --spectrum-combobox-chevron-icon-height: 6px;
+  --spectrum-combobox-ui-icon-width: 10px;
+  --spectrum-combobox-ui-icon-height: 6px;
 
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
@@ -42,12 +42,12 @@
 }
 
 .spectrum-InputGroup-icon {
-  width: var(--spectrum-combobox-chevron-icon-width);
-  height: var(--spectrum-combobox-chevron-icon-height);
+  width: var(--spectrum-combobox-ui-icon-width);
+  height: var(--spectrum-combobox-ui-icon-height);
 
   position: absolute;
-  top: calc(50% - calc(var(--spectrum-combobox-chevron-icon-height) / 2));
-  right: calc(50% - calc(var(--spectrum-combobox-chevron-icon-width) / 2));
+  top: calc(50% - calc(var(--spectrum-combobox-ui-icon-height) / 2));
+  right: calc(50% - calc(var(--spectrum-combobox-ui-icon-width) / 2));
 }
 
 .spectrum-InputGroup--quiet {

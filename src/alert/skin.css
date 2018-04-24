@@ -1,15 +1,15 @@
 .spectrum-Alert {
   background-color: var(--spectrum-alert-background-color);
   /* default color set to body color, header element overwrites this */
-  color: var(--spectrum-alert-body-text-color);
+  color: var(--spectrum-alert-text-color);
 }
 
 .spectrum-Alert-header {
-  color: var(--spectrum-alert-header-text-color);
+  color: var(--spectrum-alert-title-text-color);
 }
 
 .spectrum-Alert-content {
-  color: var(--spectrum-alert-body-text-color);
+  color: var(--spectrum-alert-text-color);
 }
 
 /* topdoc

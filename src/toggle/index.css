@@ -42,7 +42,7 @@
 
   &:checked + .spectrum-ToggleSwitch-switch {
     &::after {
-      transform: translateX(calc(var(--spectrum-switch-track-width) - var(--spectrum-switch-handle-diameter)));
+      transform: translateX(calc(var(--spectrum-switch-track-width) - var(--spectrum-switch-handle-size)));
     }
   }
 
@@ -54,7 +54,7 @@
 
 .spectrum-ToggleSwitch-label {
   margin: 0 var(--spectrum-switch-text-gap);
-  font-size: var(--spectrum-switch-text-font-size);
+  font-size: var(--spectrum-switch-text-size);
   vertical-align: middle;
   transition: color 150ms ease-in-out;
 }
@@ -93,8 +93,8 @@
   &::after {
     transition: background var(--spectrum-transition-time) ease-in-out, border var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 
-    width: var(--spectrum-switch-handle-diameter);
-    height: var(--spectrum-switch-handle-diameter);
+    width: var(--spectrum-switch-handle-size);
+    height: var(--spectrum-switch-handle-size);
 
     top: 0;
     left: 0;

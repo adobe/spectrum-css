@@ -19,10 +19,10 @@
   -webkit-appearance: button;
 
   position: relative;
-  width: var(--spectrum-cyclebutton-button-width);
-  height: var(--spectrum-cyclebutton-button-height);
-  line-height: var(--spectrum-cyclebutton-button-height);
-  border-radius: var(--spectrum-cyclebutton-button-border-radius);
+  width: var(--spectrum-cyclebutton-min-width);
+  height: var(--spectrum-cyclebutton-height);
+  line-height: var(--spectrum-cyclebutton-height);
+  border-radius: var(--spectrum-cyclebutton-border-radius);
   border: none;
   padding: 0;
   cursor: pointer;

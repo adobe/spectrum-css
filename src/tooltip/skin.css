@@ -12,7 +12,7 @@
 .spectrum-Tooltip--error {
   &,
   .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-error-background-color);
+    background-color: var(--spectrum-tooltip-negative-background-color);
   }
 }
 
@@ -26,6 +26,6 @@
 .spectrum-Tooltip--success {
   &,
   .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-success-background-color);
+    background-color: var(--spectrum-tooltip-positive-background-color);
   }
 }
