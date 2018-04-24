@@ -103,7 +103,7 @@ function setHashFromScroll() {
 window.ignoreScroll = false;
 
 var curScale = 'medium';
-var curMethod = 'rem-auto';
+var curMethod = 'token';
 var scaleAbbreviations = {
   'medium': 'md',
   'large': 'lg'
