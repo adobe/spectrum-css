@@ -3,6 +3,9 @@
   margin: 0 auto;
   max-width: 1100px;
 }
+.sdldocs-header-title {
+  margin-left: 12px;
+}
 .wf-loading {
   visibility: hidden;
 }
@@ -68,12 +71,6 @@ pre.html {
 }
 .sdldocs-header-logo-image {
   vertical-align: middle;
-}
-.sdldocs-header-title {
-  margin-left: 10px;
-  font-size: 18px;
-  font-weight: normal;
-  display: none;
 }
 .sdldocs-colorstop {
   min-width: 300px;
