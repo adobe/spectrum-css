@@ -62,9 +62,9 @@
 
     margin: var(--spectrum-breadcrumb-title-margin);
 
-/*    font-size: var(--spectrum-breadcrumb-title-active-text-size);
+    font-size: var(--spectrum-breadcrumb-title-active-text-size);
     font-weight: var(--spectrum-breadcrumb-title-active-text-font-weight);
-    line-height: var(--spectrum-breadcrumb-title-active-line-height);*/
+    line-height: var(--spectrum-breadcrumb-title-active-text-line-height);
   }
 
   .spectrum-Heading--pageTitle {
