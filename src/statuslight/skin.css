@@ -1,56 +1,55 @@
-/*.spectrum-StatusLight--negative::before {
-  background-color: var(--spectrum-statuslight-state-color-negative);
+.spectrum-StatusLight--negative::before {
+  background-color: var(--spectrum-statuslight-negative-dot-color);
 }
 
 .spectrum-StatusLight--notice::before {
-  background-color: var(--spectrum-statuslight-state-color-notice);
+  background-color: var(--spectrum-statuslight-notice-dot-color);
 }
 
 .spectrum-StatusLight--positive::before {
-  background-color: var(--spectrum-statuslight-state-color-positive);
+  background-color: var(--spectrum-statuslight-positive-dot-color);
 }
 
 .spectrum-StatusLight--active::before {
-  background-color: var(--spectrum-statuslight-state-color-active);
+  background-color: var(--spectrum-statuslight-info-dot-color);
 }
 
 .spectrum-StatusLight--archived {
-  color: var(--spectrum-statuslight-text-color-archived);
+  color: var(--spectrum-statuslight-neutral-text-color);
 
   &::before {
-    background-color: var(--spectrum-statuslight-state-color-archived);
+    background-color: var(--spectrum-statuslight-neutral-dot-color);
   }
 }
 
 .spectrum-StatusLight--celery::before {
-  background-color: var(--spectrum-statuslight-color-organizational-celery);
+  background-color: var(--spectrum-statuslight-dot-color-label-celery);
 }
 
-.spectrum-StatusLight--yellow::before { 
-  background-color: var(--spectrum-statuslight-color-organizational-yellow);
+.spectrum-StatusLight--yellow::before {
+  background-color: var(--spectrum-statuslight-dot-color-label-yellow);
 }
 
 .spectrum-StatusLight--fuchsia::before {
-  background-color: var(--spectrum-statuslight-color-organizational-fuchsia);
+  background-color: var(--spectrum-statuslight-dot-color-label-fuchsia);
 }
 
 .spectrum-StatusLight--indigo::before {
-  background-color: var(--spectrum-statuslight-color-organizational-indigo);
+  background-color: var(--spectrum-statuslight-dot-color-label-indigo);
 }
 
 .spectrum-StatusLight--seafoam::before {
-  background-color: var(--spectrum-statuslight-color-organizational-seafoam);
+  background-color: var(--spectrum-statuslight-dot-color-label-seafoam);
 }
 
 .spectrum-StatusLight--chartreuse::before {
-  background-color: var(--spectrum-statuslight-color-organizational-chartreuse);
+  background-color: var(--spectrum-statuslight-dot-color-label-chartreuse);
 }
 
 .spectrum-StatusLight--magenta::before {
-  background-color: var(--spectrum-statuslight-color-organizational-magenta);
+  background-color: var(--spectrum-statuslight-dot-color-label-magenta);
 }
 
 .spectrum-StatusLight--purple::before {
-  background-color: var(--spectrum-statuslight-color-organizational-purple);
+  background-color: var(--spectrum-statuslight-dot-color-label-purple);
 }
-*/
