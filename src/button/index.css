@@ -131,17 +131,6 @@ a.spectrum-Button {
   padding: 0 var(--spectrum-actionbutton-icon-padding-x);
 }
 
-/*
-DNAUPDATE
-
-.spectrum-Button--toggle {
-  font-size: var(--spectrum-button-toggle-off-text-size);
-  font-weight: var(--spectrum-button-toggle-off-text-font-weight);
-  border-width: var(--spectrum-button-toggle-off-border-size);
-  border-radius: var(--spectrum-button-toggle-off-border-radius);
-}
-*/
-
 .spectrum-Button--logic--and,
 .spectrum-Button--logic--or {
   height: var(--spectrum-logicbutton-and-height);

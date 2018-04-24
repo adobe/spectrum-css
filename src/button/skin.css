@@ -325,6 +325,37 @@
     border-color: var(--spectrum-actionbutton-border-color-disabled);
     color: var(--spectrum-actionbutton-text-color-disabled);
   }
+
+  &.is-selected {
+    background-color: var(--spectrum-actionbutton-background-color-selected);
+    border-color: var(--spectrum-actionbutton-border-color-selected);
+    color: var(--spectrum-actionbutton-text-color-selected);
+  }
+
+  &.is-selected:focus-ring {
+    background-color: var(--spectrum-actionbutton-background-color-selected-key-focus);
+    border-color: var(--spectrum-actionbutton-border-color-selected-key-focus);
+    color: var(--spectrum-actionbutton-text-color-selected-key-focus);
+  }
+
+  &.is-selected:hover {
+    background-color: var(--spectrum-actionbutton-background-color-selected-hover);
+    border-color: var(--spectrum-actionbutton-border-color-selected-hover);
+    color: var(--spectrum-actionbutton-text-color-selected-hover);
+  }
+
+  &.is-selected:active {
+    background-color: var(--spectrum-actionbutton-background-color-selected-down);
+    border-color: var(--spectrum-actionbutton-border-color-selected-down);
+    color: var(--spectrum-actionbutton-text-color-selected-down);
+  }
+
+  &.is-selected:disabled,
+  &.is-selected.is-disabled {
+    background-color: pink;
+    border-color: pink;
+    color: pink;
+  }
 }
 
 /* topdoc
@@ -356,83 +387,48 @@
     color: var(--spectrum-actionbutton-quiet-text-color-down);
   }
 
-  /* Make sure background color overrides hover and active */
-  &.is-selected {
-    background-color: var(--spectrum-actionbutton-quiet-background-color-selected);
-  }
 
   &:disabled,
   &[disabled] {
-    background-color: var(--spectrum-button-quiet-warning-background-color-disabled);
-    color: var(--spectrum-button-quiet-warning-text-color-disabled);
+    background-color: var(--spectrum-actionbutton-quiet-background-color-disabled);
+    color: var(--spectrum-actionbutton-quiet-text-color-disabled);
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-actionbutton-quiet-background-color-selected);
+    border-color: var(--spectrum-actionbutton-quiet-border-color-selected);
+    color: var(--spectrum-actionbutton-quiet-text-color-selected);
+  }
+
+  &.is-selected:focus-ring {
+    background-color: var(--spectrum-actionbutton-quiet-background-color-selected-key-focus);
+    border-color: var(--spectrum-actionbutton-quiet-border-color-selected-key-focus);
+    color: var(--spectrum-actionbutton-quiet-text-color-selected-key-focus);
+  }
+
+  &.is-selected:hover {
+    background-color: var(--spectrum-actionbutton-quiet-background-color-selected-hover);
+    border-color: var(--spectrum-actionbutton-quiet-border-color-selected-hover);
+    color: var(--spectrum-actionbutton-quiet-text-color-selected-hover);
+  }
+
+  &.is-selected:active {
+    background-color: var(--spectrum-actionbutton-quiet-background-color-selected-down);
+    border-color: var(--spectrum-actionbutton-quiet-border-color-selected-down);
+    color: var(--spectrum-actionbutton-quiet-text-color-selected-down);
+  }
+
+  &.is-selected:disabled,
+  &.is-selected.is-disabled {
+    background-color: pink;
+    border-color: pink;
+    color: pink;
   }
 }
 
 /* topdoc
 {{ button/button-toggle.yml }}
 */
-/*.spectrum-Button--toggle {
-  background-color: var(--spectrum-button-toggle-off-background-color);
-  border-color: var(--spectrum-button-toggle-off-border-color);
-  color: var(--spectrum-button-toggle-off-text-color);
-
-  &:hover {
-    background-color: var(--spectrum-button-toggle-off-background-color-hover);
-    border-color: var(--spectrum-button-toggle-off-border-color-hover);
-    color: var(--spectrum-button-toggle-off-text-color-hover);
-  }
-
-  &:focus-ring {
-    background-color: var(--spectrum-button-toggle-off-background-color-key-focus);
-    border-color: var(--spectrum-button-toggle-off-border-color-key-focus);
-    color: var(--spectrum-button-toggle-off-text-color-key-focus);
-  }
-
-  &:active {
-    background-color: var(--spectrum-button-toggle-off-background-color-down);
-    border-color: var(--spectrum-button-toggle-off-border-color-down);
-    color: var(--spectrum-button-toggle-off-text-color-down);
-  }
-
-  &:disabled,
-  &.is-disabled {
-    background-color: var(--spectrum-button-toggle-off-background-color-disabled);
-    border-color: var(--spectrum-button-toggle-off-border-color-disabled);
-    color: var(--spectrum-button-toggle-off-text-color-disabled);
-  }
-
-  &.is-selected {
-    background-color: var(--spectrum-button-toggle-on-background-color);
-    border-color: var(--spectrum-button-toggle-on-border-color);
-    color: var(--spectrum-button-toggle-on-text-color);
-  }
-
-  &.is-selected:focus-ring {
-    background-color: var(--spectrum-button-toggle-on-background-color-key-focus);
-    border-color: var(--spectrum-button-toggle-on-border-color-key-focus);
-    color: var(--spectrum-button-toggle-on-text-color-key-focus);
-  }
-
-  &.is-selected:hover {
-    background-color: var(--spectrum-button-toggle-on-background-color-hover);
-    border-color: var(--spectrum-button-toggle-on-border-color-hover);
-    color: var(--spectrum-button-toggle-on-text-color-hover);
-  }
-
-  &.is-selected:active {
-    background-color: var(--spectrum-button-toggle-on-background-color-down);
-    border-color: var(--spectrum-button-toggle-on-border-color-down);
-    color: var(--spectrum-button-toggle-on-text-color-down);
-  }
-
-  &.is-selected:disabled,
-  &.is-selected.is-disabled {
-    background-color: var(--spectrum-button-toggle-on-background-color-disabled);
-    border-color: var(--spectrum-button-toggle-on-border-color-disabled);
-    color: var(--spectrum-button-toggle-on-text-color-disabled);
-  }
-
-}*/
 
 /* topdoc
 {{ button/button-quiet-warning.yml }}
