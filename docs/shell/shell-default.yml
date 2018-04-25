@@ -18,17 +18,17 @@ markup: |
           </svg>
         </div>
         <div class="spectrum-Shell-logoLabel">Adobe Media Optimizer</div>
-        <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
-          <div class="spectrum-TabList-item" tabindex="0">
-            <label class="spectrum-TabList-item-label">Display</label>
+        <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--page">
+          <div class="spectrum-Tabs-item" tabindex="0">
+            <label class="spectrum-Tabs-item-label">Display</label>
           </div>
-          <div class="spectrum-TabList-item is-selected" tabindex="0">
-            <label class="spectrum-TabList-item-label">Search</label>
+          <div class="spectrum-Tabs-item is-selected" tabindex="0">
+            <label class="spectrum-Tabs-item-label">Search</label>
           </div>
-          <div class="spectrum-TabList-item" tabindex="0">
-            <label class="spectrum-TabList-item-label">Social</label>
+          <div class="spectrum-Tabs-item" tabindex="0">
+            <label class="spectrum-Tabs-item-label">Social</label>
           </div>
-          <div class="spectrum-TabList-item-line" style="width: 39px; left: 80px;"></div>
+          <div class="spectrum-Tabs-item-line" style="width: 39px; left: 80px;"></div>
         </div>
       </div>
       <div class="spectrum-Shell-rightContainer">

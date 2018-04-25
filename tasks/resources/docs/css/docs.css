@@ -125,6 +125,33 @@ pre.html {
   color: inherit;
 }
 
+.sdldocs-badge {
+  display: inline-flex;
+  height: 20px;
+
+  line-height: 20px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: white;
+  font-weight: 300;
+  text-shadow: 0 1px 0 rgb(0,0,0,0.3);
+}
+.sdldocs-badge-label,
+.sdldocs-badge-version {
+  padding: 0 8px;
+  border-radius: 3px;
+}
+.sdldocs-badge-label {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #4B4B4B;
+}
+.sdldocs-badge-version {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #1473E6;
+}
+
 /* For documentation beautification only - DO NOT COPY */
 .dummy-spacing {
   height: 160px;
