@@ -1,0 +1,16 @@
+---
+name: Logic Button
+description: A button that toggles between and/or when clicked.
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-LogicButton spectrum-LogicButton--and">And</button>
+  <button class="spectrum-LogicButton spectrum-LogicButton--or">Or</button>
+
+  <br><br>
+
+  <button class="spectrum-LogicButton spectrum-LogicButton--and" disabled>And</button>
+  <button class="spectrum-LogicButton spectrum-LogicButton--or" disabled>Or</button>

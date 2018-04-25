@@ -10,6 +10,12 @@
 .spectrum-Search {
   display: inline-block;
   position: relative;
+
+  .spectrum-ClearButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 .spectrum-Search-input {
@@ -70,19 +76,3 @@
 
   pointer-events: none;
 }
-
-.spectrum-Search-clear {
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  .spectrum-Icon {
-    width: 8px;
-    height: 8px;
-  }
-
-  .spectrum-Search-clear:disabled {
-    cursor: default;
-  }
-}
-

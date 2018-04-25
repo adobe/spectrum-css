@@ -4,7 +4,7 @@ description: A Spectrum 'listing' pagination
 status: Beta
 markup: |
   <nav>
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Prev</button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-directionButton">Prev</button>
     <span tabindex="0" class="spectrum-Pagination-pageButton">1</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton is-active">2</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">3</span>
@@ -15,5 +15,5 @@ markup: |
     <span tabindex="0" class="spectrum-Pagination-pageButton">8</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">...</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">24</span>
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Next</button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-directionButton">Next</button>
   </nav>

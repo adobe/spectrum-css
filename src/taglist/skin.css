@@ -3,7 +3,7 @@
   background-color: var(--spectrum-tag-background-color);
   border: 1px solid var(--spectrum-tag-border-color);
 
-  .spectrum-TagList-item-removeButton {
+  .spectrum-ClearButton {
     color: var(--spectrum-tag-deletable-icon-color);
   }
 
@@ -12,7 +12,7 @@
     color: var(--spectrum-tag-text-color-hover);
     border-color: var(--spectrum-tag-border-color-hover);
 
-    .spectrum-TagList-item-removeButton {
+    .spectrum-ClearButton {
       color: var(--spectrum-tag-deletable-icon-color-hover);
     }
   }
@@ -23,7 +23,7 @@
     border-color: var(--spectrum-tag-border-color-key-focus);
     box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-key-focus);
 
-    .spectrum-TagList-item-removeButton {
+    .spectrum-ClearButton {
       color: var(--spectrum-tag-deletable-icon-color-key-focus);
     }
   }
@@ -32,7 +32,7 @@
     color: var(--spectrum-tag-text-color-error);
     border-color: var(--spectrum-tag-border-color-error);
 
-    .spectrum-TagList-item-removeButton {
+    .spectrum-ClearButton {
       color: var(--spectrum-tag-icon-color-error);
     }
 
@@ -40,7 +40,7 @@
       color: var(--spectrum-tag-text-color-error-hover);
       border-color: var(--spectrum-tag-border-color-error-hover);
 
-      .spectrum-TagList-item-removeButton {
+      .spectrum-ClearButton {
         color: var(--spectrum-tag-icon-color-error-hover);
       }
     }
@@ -50,7 +50,7 @@
       border-color: var(--spectrum-tag-border-color-key-focus);
       box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-key-focus);
 
-      .spectrum-TagList-item-removeButton {
+      .spectrum-ClearButton {
         color: var(--spectrum-tag-icon-color-error-key-focus);
       }
     }
@@ -68,7 +68,7 @@
   }
 }
 
-.spectrum-TagList-item.is-disabled .spectrum-TagList-item-removeButton {
+.spectrum-TagList-item.is-disabled .spectrum-ClearButton {
   .spectrum-Icon {
     color: var(--spectrum-tag-icon-color-disabled);
   }

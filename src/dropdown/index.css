@@ -18,7 +18,7 @@
 
 .spectrum-Dropdown--quiet {
   .spectrum-Popover {
-    left: -var(--spectrum-dropdown-padding-x);
+    left: calc(-1 * var(--spectrum-dropdown-padding-x));
   }
 }
 

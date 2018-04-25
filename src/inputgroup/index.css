@@ -8,12 +8,8 @@
 */
 
 :root {
-  --spectrum-combobox-ui-icon-width: 10px;
-  --spectrum-combobox-ui-icon-height: 6px;
-
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
-  --spectrum-combobox-fieldbutton-border-width: var(--spectrum-textfield-border-size);
 }
 
 .spectrum-InputGroup {
@@ -23,15 +19,11 @@
   flex-wrap: nowrap;
   min-width: var(--spectrum-component-single-line-width);
 
-}
-
-.spectrum-InputGroup-button {
-  position: relative;
-  padding: 0;
-  width: 34px;
-  border-width: var(--spectrum-combobox-fieldbutton-border-width);
-  border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
-  border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
+  .spectrum-FieldButton {
+    padding: 0 var(--spectrum-dropdown-padding-x);
+    border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
+    border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
+  }
 }
 
 .spectrum-InputGroup-input {
@@ -42,16 +34,13 @@
 }
 
 .spectrum-InputGroup-icon {
-  width: var(--spectrum-combobox-ui-icon-width);
-  height: var(--spectrum-combobox-ui-icon-height);
-
-  position: absolute;
-  top: calc(50% - calc(var(--spectrum-combobox-ui-icon-height) / 2));
-  right: calc(50% - calc(var(--spectrum-combobox-ui-icon-width) / 2));
+  width: var(--spectrum-dropdown-ui-icon-width);
+  height: var(--spectrum-dropdown-ui-icon-width);
+  height: 100%;
 }
 
 .spectrum-InputGroup--quiet {
-  .spectrum-InputGroup-button {
+  .spectrum-FieldButton {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
     position: relative;

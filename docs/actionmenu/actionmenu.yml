@@ -5,7 +5,7 @@ status: Beta
 markup: |
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action is-selected">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>
@@ -25,7 +25,7 @@ markup: |
   <div class="dummy-spacing"></div>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action is-selected">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>
@@ -44,7 +44,7 @@ markup: |
   <div class="dummy-spacing"></div>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
       <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>

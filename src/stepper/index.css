@@ -28,6 +28,7 @@
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
+  position: relative;
   display: block;
 
   height: var(--spectrum-stepper-button-height);
@@ -42,11 +43,24 @@
   border-width: 1px;
   border-right-width: 0;
   border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
+
+  .spectrum-Icon {
+    width: var(--spectrum-Stepper-stepUpIcon-width);
+    height: var(--spectrum-Stepper-stepUpIcon-height);
+    opacity: 1;
+  }
 }
 
 .spectrum-Stepper-stepUp {
   border-bottom: none;
   border-bottom-left-radius: 0;
+
+  .spectrum-Icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3px;
+  }
 }
 
 .spectrum-Stepper-stepDown {
@@ -56,6 +70,13 @@
 
   &:focus {
     border-top: none;
+  }
+
+  .spectrum-Icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3px;
   }
 }
 
@@ -68,27 +89,11 @@
   border-bottom-left-radius: 0;
 }
 
-.spectrum-Stepper-stepUpIcon,
-.spectrum-Stepper-stepDownIcon {
-  width: var(--spectrum-Stepper-stepUpIcon-width);
-  height: var(--spectrum-Stepper-stepUpIcon-height);
-  margin-left: 2px;
-  opacity: 1;
-}
-
-/* Be aligned nicely */
-.spectrum-Stepper-stepUpIcon {
-  margin-top: 1px;
-}
-.spectrum-Stepper-stepDownIcon {
-  margin-top: -1px;
-}
-
 .spectrum-Stepper--quiet {
   border-radius: 0;
 
   .spectrum-Stepper-buttons {
-    .spectrum-Button--quiet--action {
+    .spectrum-ActionButton {
       border-top: none;
       border-left: none;
     }

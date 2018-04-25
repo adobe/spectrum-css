@@ -31,4 +31,10 @@
       position: relative; /* shows left border */
     }
   }
+
+  .spectrum-ClearButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

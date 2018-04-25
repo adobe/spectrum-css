@@ -4,7 +4,7 @@ status: Released
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 220px;">
-    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -14,7 +14,7 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown is-open" style="width: 220px;">
-    <button class="spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -40,7 +40,7 @@ markup: |
 
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-disabled" style="width: 220px;">
-    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" disabled aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -50,7 +50,7 @@ markup: |
 
   <h4>No placeholder</h4>
   <div class="spectrum-Dropdown">
-    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
       </svg>
@@ -59,7 +59,7 @@ markup: |
 
   <h4>Closed</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 220px;">
-    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-18-Alert" />
@@ -72,7 +72,7 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown is-open is-invalid" style="width: 220px;">
-    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-18-Alert" />
@@ -101,7 +101,7 @@ markup: |
 
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 220px;">
-    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-18-Alert" />
@@ -114,7 +114,7 @@ markup: |
 
   <h4>No placeholder</h4>
   <div class="spectrum-Dropdown">
-    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
       </svg>

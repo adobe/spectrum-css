@@ -8,7 +8,7 @@ markup: |
     <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
     </svg>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear">
+    <button type="reset" class="spectrum-ClearButton">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SearchClear" />
       </svg>
@@ -20,7 +20,7 @@ markup: |
     <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
     </svg>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled>
+    <button type="reset" class="spectrum-ClearButton" disabled>
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SearchClear" />
       </svg>
