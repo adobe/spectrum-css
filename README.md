@@ -106,6 +106,41 @@ gulp
 
 Your `dist/` folder should now have a local copy of the Spectrum CSS docs and ready-to-use CSS files.
 
+## Testing with the Visual Regression Tools
+
+Under the hood, the visual regression tool is powered by a library called [BackstopJS](https://github.com/garris/BackstopJS). The idea is that by running some `gulp` tasks, the BackstopJS library will take a screenshot of every component described in the `docs/` folder using a headless chrome instance. This process is fairly intensive to run locally and has some quirks (eg, hanging chrome processes).
+
+### Local Testing
+Typical testing workflow:
+1. Build the `dist/` folder with `gulp build`
+2. `gulp test`
+3. Wait for results to finish (approx 7 mins)
+	* If this is the first run test, the results will be all failures since it has no reference pictures to compare against. Use `backstop approve` to make the screen shots taken in this run to become the new reference set.
+	* If you have an existing reference set, you will get a result of which components have changed. You may also choose to again `backstop approve` the new changes to set the new reference set or continue testing.
+4. Navigate to `backstop_data/html_report/index.html` to see the nicely formatted html report.
+
+To note: If you see your tests returning with a 'Tag Not Found' image, then it's usually because of a particular chrome instance that was taking that screen shot was left hanging and timed out. Try these commands and run the test again:
+MacOS and Linux:
+
+```
+pkill -f "(chrome)?(--headless)"
+```
+Windows PowerShell:
+
+```
+Get-CimInstance Win32_Process -Filter "Name = 'chrome.exe' AND CommandLine LIKE '%--headless%'" | %{Stop-Process $_.ProcessId}
+```
+
+### Remote Testing with the Test Server
+
+There's a Jenkins box that's connected to this repo and will build on any branch and commit so long as it has the `Jenkinsfile` in the project root. If all goes well, you should see your commit in the status page for the JenkinsCI: [https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity](https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity).
+
+Additonally, the Jenkins server will build the html report but will try to compare the test images against the last commit OR if the last commit's images cannot be found, it will compare against what's currently on `HEAD at master`. The html report lives under the `Artifacts` tab and is labeled `Spectrum CSS Visual Regression Report`.
+
+You may also view all of the screenshots taken so far by Jenkins in this repo: [https://git.corp.adobe.com/Spectrum/spectrum-css-visual-reports](https://git.corp.adobe.com/Spectrum/spectrum-css-visual-reports).
+
+To note: the JenkinsCI server will almost always have a green check mark in the commit message but should be taken with a grain a salt. The green check mark in this case means the project built succesfully BUT it does not mean the components aren't all mangled up or whatever. It is up to the developer who is committing to ensure that their commits are good and are using this tool to see how much visual change their commits are actually doing.
+
 ## Where is the JavaScript?
 We have found that JavaScript is where a framework or library quickly becomes opinionated and stops being easy to use with or across other frameworks. To avoid this problem, Spectrum-CSS avoids implementation details that require JavaScript.  Where an element might require multiple states, the documentation here will simply show all the states in a flat, static example.  We leave it to the frameworks implementing Spectrum-CSS to create JavaScript that suits their needs. 
 

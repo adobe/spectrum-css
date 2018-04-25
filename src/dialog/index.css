@@ -10,18 +10,14 @@
 
   /* The height of the dialog header */
   --spectrum-dialog-header-height: 34px;
+  --spectrum-dialog-header-font-size: 18px;
+  --spectrum-dialog-header-padding: 0 1px;
 
-  /* The font-size of the dialog header */
-  --spectrum-dialog-header-text-size: 18px;
-
-  /* Distance between the edge of the document and right/bottom/left of content */
-  --spectrum-dialog-padding: 40px;
-
-  /* Distance between the edge of the dialog and header */
+  --spectrum-dialog-padding: 40px 39px;
   --spectrum-dialog-padding-top: 46px;
 
-  /* Distance between rule and top content */
-  --spectrum-dialog-content-padding-top: 11px;
+  --spectrum-dialog-content-padding: 11px 1px 1px 1px;
+  --spectrum-dialog-content-border-bottom: -1px;
 
   /* The distance the dialog should animate in from */
   --spectrum-dialog-animation-distance: 8px;
@@ -89,7 +85,8 @@
 .spectrum-Dialog-header {
   display: flex;
   position: relative;
-
+  padding: var(--spectrum-dialog-header-padding);
+  box-sizing: border-box;
   width: 100%;
   flex: 0 0 var(--spectrum-dialog-header-height);
 
@@ -99,9 +96,9 @@
   /* The rule element */
   &::after {
     position: absolute;
-    right: 0;
+    right: 1px;
     bottom: 4px;
-    left: 0;
+    left: 1px;
 
     height: var(--spectrum-dialog-rule-height);
 
@@ -123,7 +120,8 @@
 .spectrum-Dialog-content {
   display: block;
   box-sizing: border-box;
-  padding-top: var(--spectrum-dialog-content-padding-top);
+  padding: var(--spectrum-dialog-content-padding);
+  margin-bottom: var(--spectrum-dialog-content-border-bottom);
 
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
