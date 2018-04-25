@@ -9,6 +9,8 @@
 }
 
 .spectrum-Tabs {
+  display: inline-flex;
+
   /* Contain the selection indicator */
   position: relative;
   z-index: 0;
@@ -111,11 +113,9 @@
 }
 
 .spectrum-Tabs--horizontal {
-  display: inline-block;
   border-bottom: var(--spectrum-tabs-rule-height) solid;
 
   .spectrum-Tabs-item {
-    display: inline-block;
     vertical-align: top;
 
     & + .spectrum-Tabs-item {
@@ -150,12 +150,11 @@
 }
 
 .spectrum-Tabs--vertical {
-  display: inline-block;
+  flex-direction: column;
   padding: 0;
   margin: 0;
 
   .spectrum-Tabs-item {
-    display: block;
     margin-left: var(--spectrum-tabs-rule-height);
 
     &::before {
