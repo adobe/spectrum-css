@@ -127,8 +127,8 @@ function changeScale(scale, method, noState) {
     }
 
     var coreLink = document.querySelector('link[data-spectrum-core]');
-    if (coreLink.getAttribute('href') !== '../spectrum-core-md.css') {
-      coreLink.setAttribute('href', '../spectrum-core-md.css');
+    if (coreLink.getAttribute('href') !== '../spectrum-core.css') {
+      coreLink.setAttribute('href', '../spectrum-core.css');
     }
 
     Object.keys(scaleAbbreviations).forEach(function(otherScale) {
@@ -139,7 +139,12 @@ function changeScale(scale, method, noState) {
     document.documentElement.classList.add('spectrum--' + scale);
   }
   else if (method === 'token') {
-    document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-' + scaleAbbreviations[scale] + '.css');
+    if (scale !== 'medium') {
+      document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-' + scaleAbbreviations[scale] + '.css');
+    }
+    else {
+      document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core.css');
+    }
     document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '');
     Object.keys(scaleAbbreviations).forEach(function(otherScale) {
       document.documentElement.classList.remove('spectrum--' + otherScale);

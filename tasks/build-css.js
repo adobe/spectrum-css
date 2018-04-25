@@ -57,9 +57,9 @@ gulp.task('build-css:individual-components-md', function() {
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-medium.css";'))
     .pipe(postcss(processors))
-    .pipe(rename(function(path) {
-      path.basename += '-md';
-    }))
+    // .pipe(rename(function(path) {
+    //   path.basename += '-md';
+    // }))
     .pipe(gulp.dest('dist/components/'));
 });
 
@@ -194,9 +194,9 @@ gulp.task('build-css:core-md-multistops', function() {
     .pipe(plumb())
     .pipe(insert.prepend('@import "../dist/vars/spectrum-medium.css";'))
     .pipe(postcss(processors))
-    .pipe(rename(function(path) {
-      path.basename += '-md';
-    }))
+    // .pipe(rename(function(path) {
+    //   path.basename += '-md';
+    // }))
     .pipe(gulp.dest('dist/'));
 });
 
@@ -238,10 +238,12 @@ gulp.task('build-css:build-multistops', function() {
 gulp.task('build-css:concat-standalone-md', function() {
   function concatStandalone(colorStop) {
     return gulp.src([
-      'dist/spectrum-core-md.css',
+      // 'dist/spectrum-core-md.css',
+      'dist/spectrum-core.css',
       'dist/spectrum-' + colorStop + '.css'
     ])
-      .pipe(concat('spectrum-' + colorStop + '-md.css'))
+      // .pipe(concat('spectrum-' + colorStop + '-md.css'))
+      .pipe(concat('spectrum-' + colorStop + '.css'))
       // Replace instances of & that refer to the colorstop selector with .secptrum
       .pipe(replace(/^&/gm, '.spectrum'))
       .pipe(gulp.dest('dist/standalone'));
