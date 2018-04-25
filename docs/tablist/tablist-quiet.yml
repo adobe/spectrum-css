@@ -7,7 +7,7 @@ modifiers:
   :hover: Hover state
   :focus: Focused
 markup: |
-  <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-TablList--quiet">
+  <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
     <div class="spectrum-Tabs-item is-selected" tabindex="0">
       <label class="spectrum-Tabs-item-label">Tab 1</label>
     </div>
@@ -25,7 +25,7 @@ markup: |
 
   <br><br>
 
-  <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-TablList--quiet">
+  <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
     <div class="spectrum-Tabs-item is-selected" tabindex="0">
       <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-24-Folder" />
