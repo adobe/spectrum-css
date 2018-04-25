@@ -4,5 +4,19 @@ description: An indeterminate Spectrum loader of default type (round) for full p
 status: Beta
 markup: |
   <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
-    <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--fullpage"></span>
+    <div class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--overBackground">
+      <div class="spectrum-Loader-track"></div>
+      <div class="spectrum-Loader-fills">
+        <div class="spectrum-Loader-fill-mask-1">
+          <div class="spectrum-Loader-fill-submask-1">
+            <div class="spectrum-Loader-fill"></div>
+          </div>
+        </div>
+        <div class="spectrum-Loader-fill-mask-2">
+          <div class="spectrum-Loader-fill-submask-2">
+            <div class="spectrum-Loader-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>

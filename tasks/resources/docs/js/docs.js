@@ -241,3 +241,19 @@ AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, s
   largeIcons.parentElement.removeChild(largeIcons);
 });
 AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');
+
+function changeLoader(loader, value, submask1, submask2) {
+  submask1 = submask1 || loader.querySelector('.spectrum-Loader-fill-submask-1');
+  submask2 = submask2 || loader.querySelector('.spectrum-Loader-fill-submask-2');
+  var angle;
+  if(value > 0 && value <= 50) {
+    angle = -180 + (value/50 * 180);
+    submask1.style.transform = 'rotate('+angle+'deg)';
+    submask2.style.transform = 'rotate(-180deg)';
+  }
+  else if (value > 50) {
+    angle = -180 + (value-50)/50 * 180;
+    submask1.style.transform = 'rotate(0deg)';
+    submask2.style.transform = 'rotate('+angle+'deg)';
+  }
+}

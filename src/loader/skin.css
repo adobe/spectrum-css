@@ -1,53 +1,51 @@
-/*.spectrum-Loader {
-  background-image: url(var(--spectrum-loader-round-medium-sprite-url));
-}
-
-.spectrum-Loader--small {
-  background-image: url(var(--spectrum-loader-round-small-sprite-url));
-}
-
-.spectrum-Loader--large {
-  background-image: url(var(--spectrum-loader-round-large-sprite-url));
-}
-
-.spectrum-Loader--fullpage {
-  background-image: url(var(--spectrum-loader-round-full-page-sprite-url));
-}
-
-.spectrum-Loader--indeterminate {
-  background-image: url(var(--spectrum-loader-round-indeterminate-medium-sprite-url));
-}
-
-.spectrum-Loader--indeterminate--small {
-  background-image: url(var(--spectrum-loader-round-indeterminate-small-sprite-url));
-}
-
-.spectrum-Loader--indeterminate--large {
-  background-image: url(var(--spectrum-loader-round-indeterminate-large-sprite-url));
-}
-.spectrum-Loader--indeterminate--fullpage {
-  background-image: url(var(--spectrum-loader-round-indeterminate-full-page-sprite-url));
-}
-
 .spectrum-Loader--bar-fill {
-  background: var(--spectrum-loader-blue-color);
+  background: var(--spectrum-loader-circle-medium-track-fill-color);
 }
 
 .spectrum-Loader--bar-track {
-  background-color: var(--spectrum-loader-background-color);
+  background-color: var(--spectrum-loader-circle-medium-track-color);
 }
 
 .spectrum-Loader--bar--fullpage {
   .spectrum-Loader--bar-fill {
-    background: var(--spectrum-loader-fill-color-fullpage);
+    background: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 
   .spectrum-Loader--bar-label, & .spectrum-Loader--bar-percentage {
-    color: var(--spectrum-loader-fill-color-fullpage);
+    color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 
   .spectrum-Loader--bar-track {
-    background-color: var(--spectrum-loader-background-color-fullpage);
+    background-color: var(--spectrum-loader-circle-medium-over-background-track-color);
   }
 }
-*/
+
+.spectrum-Loader-track {
+  border-color: var(--spectrum-loader-circle-medium-track-color);
+}
+
+.spectrum-Loader-Indeterminate {
+  background-color: inherit;
+}
+
+.spectrum-Loader-fill {
+  border-color: var(--spectrum-loader-circle-medium-track-fill-color);
+}
+
+.spectrum-Loader--overBackground {
+  .spectrum-Loader-track {
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-color);
+  }
+  .spectrum-Loader-fill {
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+  }
+}
+
+.spectrum-Loader--indeterminateFullpage {
+  .spectrum-Loader-track {
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-color);
+  }
+  .spectrum-Loader-fill {
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+  }
+}
