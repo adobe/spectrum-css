@@ -49,33 +49,3 @@
     border-color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 }
-
-.spectrum-Loader-track {
-  border-color: var(--spectrum-loader-background-color-default);
-}
-
-.spectrum-Loader-Indeterminate {
-  background-color: inherit;
-}
-
-.spectrum-Loader-fill {
-  border-color: var(--spectrum-loader-blue-color-default);
-}
-
-.spectrum-Loader--fullpage {
-  .spectrum-Loader-track {
-    border-color: var(--spectrum-loader-background-color-fullpage);
-  }
-  .spectrum-Loader-fill {
-    border-color: var(--spectrum-loader-fill-color-fullpage);
-  }
-}
-
-.spectrum-Loader--indeterminateFullpage {
-  .spectrum-Loader-track {
-    border-color: var(--spectrum-loader-background-color-fullpage);
-  }
-  .spectrum-Loader-fill {
-    border-color: var(--spectrum-loader-fill-color-fullpage);
-  }
-}
