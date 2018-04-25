@@ -113,6 +113,10 @@
   }
 }
 
+.spectrum-Table > .spectrum-Table-body > .spectrum-Table-row:last-of-type {
+  border-bottom-style: none;
+}
+
 /* topdoc
 {{ table/table-quiet.yml }}
 */
