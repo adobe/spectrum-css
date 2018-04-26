@@ -73,7 +73,7 @@
 
   height: var(--spectrum-button-primary-height);
 
-  padding: 0 var(--spectrum-button-primary-padding-x) 1px; /* 1px to push up text, sits kind of low */
+  padding: 0 calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size)) 1px; /* 1px to push up text, sits kind of low */
 
   font-size: var(--spectrum-button-primary-text-size);
   font-weight: var(--spectrum-button-primary-text-font-weight);

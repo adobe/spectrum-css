@@ -1,19 +1,13 @@
 @import '../commons/index.css';
 
 /* topdoc
-{{ taglist/taglist-default.yml }}
+{{ tags/tags-default.yml }}
 */
 /* topdoc
-{{ taglist/taglist-removable.yml }}
-*/
-/* topdoc
-{{ taglist/taglist-avatar.yml }}
-*/
-/* topdoc
-{{ taglist/taglist-icon.yml }}
+{{ tags/tags-deletable.yml }}
 */
 
-.spectrum-TagList {
+.spectrum-Tags {
   display: inline-block;
 
   margin: 0;
@@ -27,17 +21,19 @@
   }
 }
 
-.spectrum-TagList-item {
+.spectrum-Tags-item {
   float: left;
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
 
   margin: calc(var(--spectrum-taggroup-tag-gap-y) / 2) calc(var(--spectrum-taggroup-tag-gap-x) / 2);
-  padding: 0 var(--spectrum-tag-padding-x);
+  padding: 0 calc(var(--spectrum-tag-padding-x) - var(--spectrum-tag-border-size));
   height: var(--spectrum-tag-height);
   max-width: 100%;
 
+  border-width: var(--spectrum-tag-border-size);
+  border-style: solid;
   border-radius: var(--spectrum-border-radius);
   outline: none;
   user-select: none;
@@ -54,12 +50,13 @@
   > .spectrum-Icon,
   > .spectrum-Avatar {
     margin-right: var(--spectrum-tag-icon-padding-x);
-  }
 
-  > .spectrum-Icon,
-  > .spectrum-Avatar {
-    /* Move it 2px to the left cause Nate says so */
-    margin-left: -2px;
+    /* Add padding for "avatar" variant */
+    margin-left: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
+
+    ~ .spectrum-Tags-item-label {
+      margin-right: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
+    }
   }
 
   .spectrum-ClearButton {
@@ -67,7 +64,9 @@
   }
 }
 
-.spectrum-TagList-item-label {
+.spectrum-Tags-item-label {
+  height: 100%;
+  line-height: calc(var(--spectrum-tag-height) - calc(var(--spectrum-tag-border-size) * 2));
   flex: 1 1 auto;
   font-size: var(--spectrum-tag-text-size);
   cursor: default;
