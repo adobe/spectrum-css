@@ -1,7 +1,7 @@
 @import '../commons/index.css';
 
 %spectrum-BaseButton {
-  display: inline-block;
+  display: inline-flex;
   box-sizing: border-box;
 
   /* Show the button overflow in Edge. */
@@ -63,6 +63,7 @@
 
   .spectrum-Icon {
     height: 100%;
+    flex-shrink: 0;
     vertical-align: middle;
   }
 }
@@ -117,6 +118,10 @@ a.spectrum-Button {
   font-weight: var(--spectrum-actionbutton-text-font-weight);
 
   text-align: center;
+
+  .spectrum-Icon + .spectrum-ActionButton-label {
+    margin-left: var(--spectrum-button-primary-text-gap);
+  }
 }
 
 .spectrum-ActionButton-label,
