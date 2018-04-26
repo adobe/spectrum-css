@@ -1,0 +1,27 @@
+.spectrum-Label {
+  color: var(--spectrum-label-colored-text-color);
+}
+
+/* topdoc
+{{ label/label-special.yml }}
+*/
+.spectrum-Label--inactive,
+.spectrum-Label--grey {
+  background-color: var(--spectrum-label-colored-gray-background-color);
+}
+
+.spectrum-Label--green {
+  background-color: var(--spectrum-label-colored-green-background-color);
+}
+
+.spectrum-Label--blue, .spectrum-Label--active, .spectrum-Label--and  {
+  background-color: var(--spectrum-label-colored-blue-background-color);
+}
+
+.spectrum-Label--red {
+  background-color: var(--spectrum-label-colored-red-background-color);
+}
+
+.spectrum-Label--orange, .spectrum-Label--or {
+  background-color: var(--spectrum-label-colored-orange-background-color);
+}
