@@ -1,11 +1,11 @@
 .spectrum-Search-icon {
-  color: var(--spectrum-input-icon-color-default);
+  color: var(--spectrum-textfield-icon-color);
 }
 
 .spectrum-Search-input {
   &:disabled {
     & ~ .spectrum-Search-icon {
-      color: var(--spectrum-input-text-color-disabled);
+      color: var(--spectrum-textfield-text-color-disabled);
     }
   }
 }

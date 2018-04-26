@@ -1,9 +1,9 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-miller-column-chevron-height-default: 10px;
-  --spectrum-miller-column-chevron-width-default: 6px;
-  --spectrum-miller-column-margin-default: 8px;
+  --spectrum-miller-column-chevron-height: 10px;
+  --spectrum-miller-column-chevron-width: 6px;
+  --spectrum-miller-column-margin: 8px;
 }
 
 /* topdoc
@@ -13,29 +13,29 @@
   overflow-x: auto;
   white-space: nowrap;
   user-select: none;
-  padding: var(--spectrum-miller-column-margin-default) 0;
+  padding: var(--spectrum-miller-column-margin) 0;
 }
 
 .spectrum-MillerColumn {
   display: inline-block;
-  width: var(--spectrum-miller-column-width-default);
+  width: var(--spectrum-miller-column-width);
   vertical-align: top;
   outline: none;
   margin: 0;
   padding: 0;
-  margin-right: var(--spectrum-miller-column-margin-default);
+  margin-right: var(--spectrum-miller-column-margin);
   overflow: auto;
   height: 100%;
 
   &:first-child {
-    margin-left: var(--spectrum-miller-column-margin-default);
+    margin-left: var(--spectrum-miller-column-margin);
   }
 }
 
 .spectrum-MillerColumn-childIndicator {
   display: none;
-  width: var(--spectrum-miller-column-chevron-width-default);
-  height: var(--spectrum-miller-column-chevron-height-default);
+  width: var(--spectrum-miller-column-chevron-width);
+  height: var(--spectrum-miller-column-chevron-height);
   transition: transform ease var(--spectrum-transition-time);
 }
 
@@ -43,15 +43,15 @@
   cursor: pointer;
   position: relative;
   display: flex;
-  padding: 0 var(--spectrum-miller-column-item-padding-right-default) 0 var(--spectrum-miller-column-item-padding-left-default);
-  margin-bottom: var(--spectrum-miller-column-item-margin-bottom-default);
-  font-size: var(--spectrum-selectlist-option-font-size-default);
-  font-weight: var(--spectrum-selectlist-option-font-weight-default);
+  padding: 0 var(--spectrum-miller-column-item-padding-right) 0 var(--spectrum-miller-column-item-padding-left);
+  margin-bottom: var(--spectrum-miller-column-item-margin-bottom);
+  font-size: var(--spectrum-selectlist-option-text-size);
+  font-weight: var(--spectrum-selectlist-option-text-font-weight);
   font-style: normal;
-  height: var(--spectrum-miller-column-item-height-default);
-  border-radius: var(--spectrum-miller-column-item-border-radius-default);
+  height: var(--spectrum-miller-column-item-height);
+  border-radius: var(--spectrum-miller-column-item-border-radius);
   align-items: center;
-  width: var(--spectrum-miller-column-width-default);
+  width: var(--spectrum-miller-column-width);
   box-sizing: border-box;
   transition: background-color var(--spectrum-transition-time) ease-in-out;
 
@@ -78,16 +78,16 @@
     /* Remove the border on images inside links in IE 10-. */
     border-style: none;
 
-    width: var(--spectrum-miller-column-thumbnail-width-default);
-    height: var(--spectrum-miller-column-thumbnail-height-default);
-    margin-left: var(--spectrum-miller-column-thumbnail-margin-left-default);
+    width: var(--spectrum-miller-column-thumbnail-width);
+    height: var(--spectrum-miller-column-thumbnail-height);
+    margin-left: var(--spectrum-miller-column-thumbnail-margin-left);
     vertical-align: middle;
   }
 }
 
 .spectrum-MillerColumn-itemLabel {
   flex: 1;
-  padding-left: var(--spectrum-miller-column-item-label-padding-left-default);
+  padding-left: var(--spectrum-miller-column-item-label-padding-left);
 
   text-overflow: ellipsis;
   overflow: hidden;

@@ -8,12 +8,13 @@
   },
   "extends": "eslint:recommended",
   "rules": {
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
     "func-call-spacing": ["error", "never"],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "no-console": "off",
     "quotes": ["error", "single"],
+    "avoidEscape": true,
     "semi": ["error", "always"],
     "space-before-blocks": ["error", "always"]
   }

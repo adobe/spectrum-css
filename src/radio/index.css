@@ -1,18 +1,21 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter-default) / 2);
-  --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter-default) / 2) - calc(var(--spectrum-radio-circle-dot-size-default) / 2));
+  --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
+  --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter) / 2) - calc(var(--spectrum-radio-circle-dot-size) / 2));
 }
 
 .spectrum-Radio {
   display: inline-block;
   position: relative;
 
-  padding: 6px var(--spectrum-radio-hitarea);
-  margin-left: calc(-1 * var(--spectrum-radio-hitarea));
+  padding: 0 var(--spectrum-radio-cursor-hit-x);
+  margin-left: calc(-1 * var(--spectrum-radio-cursor-hit-x));
 
   font-size: 0;
+
+  height: var(--spectrum-radio-height);
+  line-height: var(--spectrum-radio-height);
 
   & + .spectrum-Radio {
     margin-left: 0;
@@ -34,7 +37,7 @@
 
   /* Add the correct box sizing for [type="radio"] in IE 10-. */
   box-sizing: border-box;
-  
+
   /* Remove the padding for [type="radio"] in IE 10-. */
   padding: 0;
 
@@ -59,9 +62,9 @@
 }
 
 .spectrum-Radio-label {
-  margin-left: 8px;
+  margin-left: var(--spectrum-radio-text-gap);
 
-  font-size: var(--spectrum-font-size);
+  font-size: var(--spectrum-radio-text-size);
 
   vertical-align: middle;
 
@@ -71,11 +74,11 @@
 .spectrum-Radio-button {
   display: inline-block;
   box-sizing: border-box;
-  width: var(--spectrum-radio-circle-diameter-default);
-  height: var(--spectrum-radio-circle-diameter-default);
+  width: var(--spectrum-radio-circle-diameter);
+  height: var(--spectrum-radio-circle-diameter);
 
   border-radius: var(--spectrum-radio-radius);
-  border-width: 2px;
+  border-width: var(--spectrum-radio-circle-border-size);
   border-style: solid;
 
   vertical-align: middle;

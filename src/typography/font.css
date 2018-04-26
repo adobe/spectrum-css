@@ -1,6 +1,6 @@
 .spectrum {
   font-family: var(--spectrum-font-family-base);
-  font-size: var(--spectrum-font-size);
+  font-size: var(--spectrum-text-size);
 
   &:lang(zh-Hans) {
     font-family: var(--spectrum-font-family-zhhans);

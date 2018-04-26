@@ -5,7 +5,7 @@
   color: var(--spectrum-shell-grey900);
   background-color: var(--spectrum-shell-grey100);
 
-  .spectrum-TabList-item {
+  .spectrum-Tabs-item {
     color: var(--spectrum-shell-grey700);
     &.is-selected {
       color: var(--spectrum-shell-grey900);
@@ -15,7 +15,7 @@
     }
   }
 
-  .spectrum-TabList-item-line {
+  .spectrum-Tabs-selectionIndicator {
     background-color: var(--spectrum-shell-grey900);
   }
 

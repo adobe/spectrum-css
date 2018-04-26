@@ -13,25 +13,12 @@
 {{ taglist/taglist-icon.yml }}
 */
 
-:root {
-  --spectrum-tag-height-default: 24px;
-  --spectrum-tag-margin-default: 8px;
-  --spectrum-tag-label-font-size-default: 12px;
-  --spectrum-tag-remove-button-size-default: 12px;
-  --spectrum-tag-remove-icon-size-default: 8px;
-  --spectrum-tag-avatar-size-default: 16px;
-}
-
 .spectrum-TagList {
   display: inline-block;
 
   margin: 0;
   padding: 0;
   list-style: none;
-
-  & > .spectrum-TagList-item {
-    margin: 0 var(--spectrum-tag-margin-default) var(--spectrum-tag-margin-default) 0;
-  }
 
   &:after {
     content: "";
@@ -45,11 +32,14 @@
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
+
+  margin: calc(var(--spectrum-taggroup-tag-gap-y) / 2) calc(var(--spectrum-taggroup-tag-gap-x) / 2);
+  padding: 0 var(--spectrum-tag-padding-x);
+  height: var(--spectrum-tag-height);
   max-width: 100%;
+
   border-radius: var(--spectrum-border-radius);
   outline: none;
-  padding: calc(var(--spectrum-tag-margin-default) / 2) var(--spectrum-tag-margin-default);
-  height: var(--spectrum-tag-height-default);
   user-select: none;
 
   transition: border-color var(--spectrum-transition-time) ease-in-out,
@@ -61,55 +51,27 @@
     pointer-events: none;
   }
 
-  .spectrum-Icon {
-    margin-right: var(--spectrum-tag-margin-default);
+  > .spectrum-Icon,
+  > .spectrum-Avatar {
+    margin-right: var(--spectrum-tag-icon-padding-x);
+  }
+
+  > .spectrum-Icon,
+  > .spectrum-Avatar {
+    /* Move it 2px to the left cause Nate says so */
+    margin-left: -2px;
+  }
+
+  .spectrum-ClearButton {
+    margin-right: calc(-1 * var(--spectrum-tag-padding-x));
   }
 }
 
 .spectrum-TagList-item-label {
   flex: 1 1 auto;
-  font-size: var(--spectrum-tag-label-font-size-default);
+  font-size: var(--spectrum-tag-text-size);
   cursor: default;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.spectrum-TagList-item-removeButton {
-  width: var(--spectrum-tag-height-default);
-  height: var(--spectrum-tag-height-default);
-  margin-right: -var(--spectrum-tag-margin-default); /* Undo right padding on .spectrum-TagList-item */
-  cursor: pointer;
-
-  /* The fake background, inherited from .spectrum-Button--icon */
-  &::before {
-    top: calc(var(--spectrum-tag-height-default) / 4);
-    left: calc(var(--spectrum-tag-height-default) / 4);
-
-    width: var(--spectrum-tag-remove-button-size-default);
-    height: var(--spectrum-tag-remove-button-size-default);
-  }
-
-  /* The actual icon */
-  .spectrum-Icon {
-    width: var(--spectrum-tag-remove-icon-size-default);
-    height: var(--spectrum-tag-remove-icon-size-default);
-  }
-}
-
-.spectrum-TagList-item-avatar {
-
-  /* Remove the border on images inside links in IE 10-. */
-  border-style: none;
-
-  height: var(--spectrum-tag-avatar-size-default);
-  margin-right: var(--spectrum-tag-margin-default);
-  border-radius: 50%;
-  user-drag: none;
-}
-
-.spectrum-TagList-item-icon,
-.spectrum-TagList-item-avatar {
-  /* Move it 2px to the left cause Nate says so */
-  margin-left: -2px;
 }

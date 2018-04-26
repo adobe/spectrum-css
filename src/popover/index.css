@@ -21,8 +21,8 @@
   min-height: var(--spectrum-component-single-line-height);
 
   border-style: solid;
-  border-width: var(--spectrum-popover-border-size-default);
-  border-radius: var(--spectrum-popover-border-radius-default);
+  border-width: var(--spectrum-popover-border-size);
+  border-radius: var(--spectrum-popover-border-radius);
 
   outline: none; /* Hide focus outline */
 
@@ -32,7 +32,7 @@
 
   /* Don't let sharp corners be pokey */
   .spectrum-SelectList {
-    border-radius: var(--spectrum-popover-border-radius-default);
+    border-radius: var(--spectrum-popover-border-radius);
   }
 }
 
@@ -40,14 +40,14 @@
   position: absolute;
   /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
   overflow: hidden;
-  width: var(--spectrum-popover-tip-width-default);
-  height: calc((var(--spectrum-popover-tip-width-default)/2)+(var(--spectrum-popover-border-size-default)));
+  width: var(--spectrum-popover-tip-width);
+  height: calc((var(--spectrum-popover-tip-width)/2)+(var(--spectrum-popover-border-size)));
 
   &::after {
     content: '';
-    width: var(--spectrum-popover-tip-width-default);
-    height: var(--spectrum-popover-tip-width-default);
-    border-width: var(--spectrum-popover-border-size-default);
+    width: var(--spectrum-popover-tip-width);
+    height: var(--spectrum-popover-tip-width);
+    border-width: var(--spectrum-popover-border-size);
     border-style: solid;
     position: absolute;
     transform: rotate(45deg);

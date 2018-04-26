@@ -1,52 +1,52 @@
 /* topdoc
-{{ tablist/tablist-anchored.yml }}
+{{ tablist/tablist.yml }}
 */
 /* topdoc
-{{ tablist/tablist-page.yml }}
+{{ tablist/tablist-quiet.yml }}
 */
 /* topdoc
-{{ tablist/tablist-panel.yml }}
+{{ tablist/tablist-compact.yml }}
 */
 /* topdoc
-{{ tablist/tablist-panel-vertical.yml }}
+{{ tablist/tablist-quiet-compact.yml }}
 */
-.spectrum-TabList-item {
-  color: var(--spectrum-tablist-text-color-default);
+/* topdoc
+{{ tablist/tablist-vertical.yml }}
+*/
+.spectrum-Tabs {
+  border-bottom-color: var(--spectrum-tabs-rule-color);
+}
+
+.spectrum-Tabs-selectionIndicator {
+  background-color: var(--spectrum-tabs-selection-indicator-color);
+}
+
+.spectrum-Tabs-item {
+  color: var(--spectrum-tabs-text-color);
 
   &:hover {
-    color: var(--spectrum-tablist-text-color-hover);
+    color: var(--spectrum-tabs-text-color-hover);
   }
 
   &.is-selected {
-    color: var(--spectrum-tablist-text-color-down);
+    color: var(--spectrum-tabs-text-color-down);
   }
 
   &:focus-ring {
-    color: var(--spectrum-tablist-text-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-tablist-tab-item-border-width-default) var(--spectrum-tablist-border-color-key-focus);
+    &::before {
+      border-color: var(--spectrum-tabs-focus-ring-color);
+    }
   }
 
   &.is-disabled {
-    color: var(--spectrum-tablist-text-color-disabled);
+    color: var(--spectrum-tabs-text-color-disabled);
   }
 }
 
-.spectrum-TabList--anchored {
-  border-color: var(--spectrum-tablist-anchored-border-color-default);
+.spectrum-Tabs--quiet {
+  border-bottom-color: var(--spectrum-tabs-quiet-rule-color);
 
-  .spectrum-TabList-item {
-    &:focus-ring {
-      color: var(--spectrum-tablist-anchored-text-color-key-focus);
-      box-shadow: initial;
-
-      /* The focus line should become blue only for anchored tabs */
-      ~ .spectrum-TabList-item-line {
-          background-color:  var(--spectrum-tablist-anchored-tabline-background-color-key-focus);
-      }
-    }
+  .spectrum-Tabs-selectionIndicator {
+    background-color: var(--spectrum-tabs-quiet-selection-indicator-color);
   }
-}
-
-.spectrum-TabList-item-line {
-  background-color: var(--spectrum-tablist-tabline-background-color-default);
 }

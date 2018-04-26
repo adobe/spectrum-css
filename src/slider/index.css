@@ -1,30 +1,27 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-slider-controls-margin: calc(var(--spectrum-slider-handle-width-default) / 2);
+  --spectrum-slider-controls-margin: calc(var(--spectrum-slider-handle-width) / 2);
   --spectrum-slider-track-margin-left: calc(var(--spectrum-slider-controls-margin) * -1);
 
-  --spectrum-slider-handle-margin-top: calc(var(--spectrum-slider-handle-width-default) / -2);
-  --spectrum-slider-handle-margin-left: calc(var(--spectrum-slider-handle-width-default) / -2);
+  --spectrum-slider-handle-margin-top: calc(var(--spectrum-slider-handle-width) / -2);
+  --spectrum-slider-handle-margin-left: calc(var(--spectrum-slider-handle-width) / -2);
 
-  --spectrum-slider-ticks-margin-left: calc(var(--spectrum-slider-handle-width-default) / -2);
-  --spectrum-slider-ticks-margin-right: calc(var(--spectrum-slider-handle-width-default) / -2);
-
-  --spectrum-slider-color-track-height-default: 24px;
+  --spectrum-slider-color-track-height: 24px;
 
   /* This must be fixed to prevent problems with different width labels */
-  --spectrum-slider-ticks-width: 16px;
+  --spectrum-slider-ticks-width: 2px;
 
   /* Todo: Remove hardcoded values */
-  --spectrum-slider-height-default: 32px;
-  --spectrum-slider-round-width-default: 32px;
+  --spectrum-slider-height: 32px;
+  --spectrum-dial-width: 32px;
 }
 
 .spectrum-Slider {
   position: relative;
   display: block;
-  min-height: var(--spectrum-slider-height-default);
-  width: var(--spectrum-slider-width-default);
+  min-height: var(--spectrum-slider-height);
+  width: var(--spectrum-slider-min-width);
 }
 
 .spectrum-Slider-controls {
@@ -34,21 +31,22 @@
   vertical-align: top;
   z-index: auto;
   width: 100%;
-  min-height: var(--spectrum-slider-height-default);
+  min-height: var(--spectrum-slider-height);
 }
 
 .spectrum-Slider-track {
-  border-radius: var(--spectrum-slider-track-border-radius-default);
+  border-radius: var(--spectrum-slider-track-border-radius);
   pointer-events: none;
-  height: var(--spectrum-slider-track-height-default);
+  height: var(--spectrum-slider-track-height);
 
-  top: calc(var(--spectrum-slider-height-default) / 2);
+  top: calc(var(--spectrum-slider-height) / 2);
+  z-index: 1;
 
   left: 8px;
   margin-top: -1px;
   margin-right: 0;
   margin-bottom: 0;
-  padding: 0 var(--spectrum-slider-handle-width-default) 0 0;
+  padding: 0 var(--spectrum-slider-handle-width) 0 0;
 
   position: absolute;
 
@@ -58,7 +56,7 @@
 
 .spectrum-Slider-track--fill {
   width: 0;
-  height: var(--spectrum-slider-track-height-default);
+  height: var(--spectrum-slider-track-height);
   position: relative;
   margin-left: 0;
 }
@@ -70,7 +68,7 @@
 }
 
 .spectrum-Slider-track--ramp {
-  height: var(--spectrum-slider-ramp-track-height-default);
+  height: var(--spectrum-slider-ramp-track-height);
   position: absolute;
   top: -7px;
   width: 100%;
@@ -79,31 +77,31 @@
 .spectrum-Slider-handle {
   position: absolute;
   left: 0;
+  z-index: 2;
 
-  top: calc(var(--spectrum-slider-height-default) / 2);
+  top: calc(var(--spectrum-slider-height) / 2);
   display: inline-block;
   box-sizing: border-box;
   outline: none;
-  z-index: auto;
   cursor: pointer;
-  border-radius: var(--spectrum-slider-handle-border-radius-default);
+  border-radius: var(--spectrum-slider-handle-border-radius);
   margin-right: 0;
   margin-bottom: 0;
   margin-top: var(--spectrum-slider-handle-margin-top);
   margin-left: var(--spectrum-slider-handle-margin-top);
-  width: var(--spectrum-slider-handle-width-default);
-  height: var(--spectrum-slider-handle-height-default);
+  width: var(--spectrum-slider-handle-width);
+  height: var(--spectrum-slider-handle-height);
 
-  border-width: var(--spectrum-slider-handle-border-width-default);
+  border-width: var(--spectrum-slider-handle-border-size);
   border-style: solid;
 
-  transition: border-width var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+  transition: border-width var(--spectrum-slider-animation-duration) var(--spectrum-slider-animation-ease);
 
   &:active,
   &.is-focused,
   &.is-dragged,
   &.is-tophandle {
-    border-width: var(--spectrum-slider-border-width-key-focus);
+    border-width: var(--spectrum-slider-handle-border-size-key-focus);
     z-index: 1;
   }
 }
@@ -118,7 +116,7 @@
   /*  Remove the margin for input in Firefox and Safari. */
   margin: 0;
 
-  width: var(--spectrum-slider-track-width-default);
+  width: 100%;
   height: 100%;
   padding: 0;
   position: absolute;
@@ -145,7 +143,7 @@
 
   border-radius: var(--spectrum-border-radius);
 
-  font-size: var(--spectrum-font-size-text-label);
+  font-size: var(--spectrum-text-size-text-label);
   line-height: var(--spectrum-line-height-text-label);
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
@@ -163,8 +161,7 @@
 }
 
 .spectrum-Slider-ticks {
-  margin-left: var(--spectrum-slider-ticks-margin-right);
-  margin-right: var(--spectrum-slider-ticks-margin-right);
+  margin: 0 var(--spectrum-slider-tick-mark-margin-x);
   margin-top: 11px;
   display: flex;
   justify-content: space-between;
@@ -180,10 +177,12 @@
     display: block;
     position: absolute;
     top: 0;
-    left: calc(50% - calc(var(--spectrum-slider-tick-mark-width-default) / 2));
+    left: calc(50% - calc(var(--spectrum-slider-tick-mark-width) / 2));
     content: '';
-    width: var(--spectrum-slider-tick-mark-width-default);
-    height: var(--spectrum-slider-tick-mark-height-default);
+    width: var(--spectrum-slider-tick-mark-width);
+    height: var(--spectrum-slider-tick-mark-height);
+
+    border-radius: var(--spectrum-slider-tick-mark-border-radius);
   }
 
   .spectrum-Slider-labelContainer {
@@ -216,7 +215,7 @@
   .spectrum-Slider-controls,
   .spectrum-Slider-track {
     min-height: auto;
-    height: var(--spectrum-slider-color-track-height-default);
+    height: var(--spectrum-slider-color-track-height);
   }
   .spectrum-Slider-track {
     top: 0;
@@ -230,19 +229,19 @@
 
 .spectrum-Slider--round {
   display: inline-block;
-  width: var(--spectrum-slider-round-container-width-default);
+  width: var(--spectrum-dial-container-width);
   height: auto;
   min-height: 0;
 
   .spectrum-Slider-controls {
-    width: var(--spectrum-slider-round-width-default);
-    height: var(--spectrum-slider-round-width-default);
+    width: var(--spectrum-dial-width);
+    height: var(--spectrum-dial-width);
     min-height: 0;
 
-    border-radius: var(--spectrum-slider-round-border-radius-default);
+    border-radius: var(--spectrum-dial-border-radius);
     position: relative;
     display: inline-block;
-    margin-right: var(--spectrum-slider-round-margin-right-default);
+    margin-right: var(--spectrum-dial-margin-right);
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
@@ -262,17 +261,17 @@
     &::before {
       left: auto;
       right: -2px;
-      transform: rotate(var(--spectrum-slider-round-min-max-tick-angles-default));
+      transform: rotate(var(--spectrum-dial-min-max-tick-angles));
     }
     &::after {
       left: -2px;
-      transform: rotate(calc(-1 * var(--spectrum-slider-round-min-max-tick-angles-default)));
+      transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
     }
   }
   &.spectrum-Slider--round--small {
     .spectrum-Slider-controls {
-      width: var(--spectrum-slider-round-small-width-default);
-      height: var(--spectrum-slider-round-small-width-default);
+      width: var(--spectrum-dial-small-width);
+      height: var(--spectrum-dial-small-height);
     }
   }
   .spectrum-Slider-handle {
@@ -285,24 +284,24 @@
     left: 8px;
     right: 8px;
     bottom: 8px;
-    border-radius: var(--spectrum-slider-round-border-radius-default);
-    transform: rotate(calc(-1 * var(--spectrum-slider-round-min-max-tick-angles-default)));
+    border-radius: var(--spectrum-dial-border-radius);
+    transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
 
-    transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+    transition: background-color var(--spectrum-slider-animation-duration) var(--spectrum-slider-animation-ease);
 
     &::after {
       content: '';
       position: absolute;
       top: 50%;
       left: -2px;
-      width: var(--spectrum-slider-round-handle-marker-width-default);
-      height: var(--spectrum-slider-round-handle-marker-height-default);
-      border-radius: var(--spectrum-slider-round-handle-marker-border-radius-default);
+      width: var(--spectrum-dial-handle-marker-width);
+      height: var(--spectrum-dial-handle-marker-height);
+      border-radius: var(--spectrum-dial-handle-marker-border-radius);
       transform: translateY(-50%);
-      transition: background-color var(--spectrum-slider-animation-transition-time-default) var(--spectrum-slider-animation-ease-default);
+      transition: background-color var(--spectrum-slider-animation-duration) var(--spectrum-slider-animation-ease);
     }
 
     &:active,
@@ -328,5 +327,13 @@
     cursor: default;
     pointer-events: none;
   }
-}
 
+  &.spectrum-Slider--color {
+    .spectrum-Slider-handle {
+      &:hover,
+      &:active {
+        border-width: var(--spectrum-slider-color-handle-outset-border-size);
+      }
+    }
+  }
+}

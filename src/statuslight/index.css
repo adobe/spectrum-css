@@ -4,13 +4,19 @@
 {{ statuslight/statuslight-status.yml }}
 */
 .spectrum-StatusLight {
+  height: var(--spectrum-statuslight-height);
+
+  line-height: var(--spectrum-statuslight-height);
+  font-size: var(--spectrum-statuslight-text-size);
+  font-weight: var(--spectrum-statuslight-text-font-weight);
+
   &::before {
     content: '';
     display: inline-block;
-    width: var(--spectrum-statuslight-circle-width-default);
-    height: var(--spectrum-statuslight-circle-width-default); /* same as width */
+    width: var(--spectrum-statuslight-dot-size);
+    height: var(--spectrum-statuslight-dot-size);
     border-radius: 50%;
-    margin: 0 var(--spectrum-statuslight-circle-margin-horizontal-default);
+    margin: 0 var(--spectrum-statuslight-text-gap);
   }
 }
 

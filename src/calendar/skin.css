@@ -1,13 +1,13 @@
 .spectrum-Calendar-prevMonth {
-  color: var(--spectrum-calendar-button-icon-color-default);
+  color: var(--spectrum-calendar-button-icon-color);
 }
 
 .spectrum-Calendar-nextMonth {
-  color: var(--spectrum-calendar-button-icon-color-default);
+  color: var(--spectrum-calendar-button-icon-color);
 }
 
 .spectrum-Calendar-dayOfWeek {
-  color: var(--spectrum-calendar-day-header-text-color-default);
+  color: var(--spectrum-calendar-day-title-text-color);
 }
 
 .spectrum-Calendar-date {
@@ -46,17 +46,15 @@
   }
 
   &.is-selected:not(.is-range-selection) {
-    font-weight: var(--spectrum-calendar-day-font-weight-selected);
     background: var(--spectrum-calendar-day-background-color-cap-selected);
   }
 
   &.is-today {
-    color: var(--spectrum-calendar-day-today-text-color-default);
-    border-color: var(--spectrum-calendar-day-today-border-color-default);
-    font-weight: var(--spectrum-calendar-day-today-font-weight-default);
+    color: var(--spectrum-calendar-day-today-text-color);
+    border-color: var(--spectrum-calendar-day-today-border-color);
 
     &:before {
-      border-color: var(--spectrum-calendar-day-today-border-color-default);
+      border-color: var(--spectrum-calendar-day-today-border-color);
     }
 
     &:hover {

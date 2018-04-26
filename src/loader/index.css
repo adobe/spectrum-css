@@ -2,15 +2,6 @@
 @import 'animation.css';
 
 :root {
-  --spectrum-loader-round-small-height: 16px;
-  --spectrum-loader-round-small-width: 16px;
-  --spectrum-loader-round-medium-height: 32px;
-  --spectrum-loader-round-medium-width: 32px;
-  --spectrum-loader-round-large-height: 64px;
-  --spectrum-loader-round-large-width: 64px;
-  --spectrum-loader-round-small-thickness: 2px;
-  --spectrum-loader-round-medium-thickness: 3px;
-  --spectrum-loader-round-large-thickness: 4px;
 
   --spectrum-loader-bar-label-padding: 10px;
   --spectrum-loader-bar-label-vertical-padding: 2px;
@@ -33,15 +24,15 @@
 */
 .spectrum-Loader {
   display: inline-block;
-  width: var(--spectrum-loader-round-medium-width);
-  height: var(--spectrum-loader-round-medium-height);
+  width: var(--spectrum-loader-circle-medium-width);
+  height: var(--spectrum-loader-circle-medium-height);
   position: relative;
 }
 .spectrum-Loader-track {
-  width: calc(var(--spectrum-loader-round-medium-width) - (var(--spectrum-loader-round-medium-thickness) * 2));
-  height: calc(var(--spectrum-loader-round-medium-height) - (var(--spectrum-loader-round-medium-thickness) * 2));
-  border: solid var(--spectrum-loader-round-medium-thickness);
-  border-radius: var(--spectrum-loader-round-medium-width);
+  width: calc(var(--spectrum-loader-circle-medium-width) - (var(--spectrum-loader-circle-medium-border-size) * 2));
+  height: calc(var(--spectrum-loader-circle-medium-height) - (var(--spectrum-loader-circle-medium-border-size) * 2));
+  border: solid var(--spectrum-loader-circle-medium-border-size);
+  border-radius: var(--spectrum-loader-circle-medium-width);
 }
 .spectrum-Loader-fills {
   position: absolute;
@@ -51,10 +42,10 @@
   height: 100%;
 }
 .spectrum-Loader-fill {
-  width: calc(var(--spectrum-loader-round-medium-width) - (var(--spectrum-loader-round-medium-thickness) * 2));
-  height: calc(var(--spectrum-loader-round-medium-height) - (var(--spectrum-loader-round-medium-thickness) * 2));
-  border: solid var(--spectrum-loader-round-medium-thickness);
-  border-radius: var(--spectrum-loader-round-medium-width);
+  width: calc(var(--spectrum-loader-circle-medium-width) - (var(--spectrum-loader-circle-medium-border-size) * 2));
+  height: calc(var(--spectrum-loader-circle-medium-height) - (var(--spectrum-loader-circle-medium-border-size) * 2));
+  border: solid var(--spectrum-loader-circle-medium-border-size);
+  border-radius: var(--spectrum-loader-circle-medium-width);
 }
 .spectrum-Loader-fill-mask-1,
 .spectrum-Loader-fill-mask-2 {
@@ -81,19 +72,19 @@
 {{ loader/loader-small.yml }}
 */
 .spectrum-Loader--small {
-  width: var(--spectrum-loader-round-small-width);
-  height: var(--spectrum-loader-round-small-height);
+  width: var(--spectrum-loader-circle-small-width);
+  height: var(--spectrum-loader-circle-small-height);
   .spectrum-Loader-track {
-    width: calc(var(--spectrum-loader-round-small-width) - (var(--spectrum-loader-round-small-thickness) * 2));
-    height: calc(var(--spectrum-loader-round-small-height) - (var(--spectrum-loader-round-small-thickness) * 2));
-    border: solid var(--spectrum-loader-round-small-thickness);
-    border-radius: var(--spectrum-loader-round-small-width);
+    width: calc(var(--spectrum-loader-circle-small-width) - (var(--spectrum-loader-circle-small-border-size) * 2));
+    height: calc(var(--spectrum-loader-circle-small-height) - (var(--spectrum-loader-circle-small-border-size) * 2));
+    border: solid var(--spectrum-loader-circle-small-border-size);
+    border-radius: var(--spectrum-loader-circle-small-width);
   }
   .spectrum-Loader-fill {
-    width: calc(var(--spectrum-loader-round-small-width) - (var(--spectrum-loader-round-small-thickness) * 2));
-    height: calc(var(--spectrum-loader-round-small-height) - (var(--spectrum-loader-round-small-thickness) * 2));
-    border: solid var(--spectrum-loader-round-small-thickness);
-    border-radius: var(--spectrum-loader-round-small-width);
+    width: calc(var(--spectrum-loader-circle-small-width) - (var(--spectrum-loader-circle-small-border-size) * 2));
+    height: calc(var(--spectrum-loader-circle-small-height) - (var(--spectrum-loader-circle-small-border-size) * 2));
+    border: solid var(--spectrum-loader-circle-small-border-size);
+    border-radius: var(--spectrum-loader-circle-small-width);
   }
 }
 
@@ -101,41 +92,41 @@
 {{ loader/loader-large.yml }}
 */
 .spectrum-Loader--large {
-  width: var(--spectrum-loader-round-large-width);
-  height: var(--spectrum-loader-round-large-height);
+  width: var(--spectrum-loader-circle-large-width);
+  height: var(--spectrum-loader-circle-large-height);
   .spectrum-Loader-track {
-    width: calc(var(--spectrum-loader-round-large-width) - (var(--spectrum-loader-round-large-thickness) * 2));
-    height: calc(var(--spectrum-loader-round-large-height) - (var(--spectrum-loader-round-large-thickness) * 2));
-    border: solid var(--spectrum-loader-round-large-thickness);
-    border-radius: var(--spectrum-loader-round-large-width);
+    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    border: solid var(--spectrum-loader-circle-large-border-size);
+    border-radius: var(--spectrum-loader-circle-large-width);
   }
 
   .spectrum-Loader-fill {
-    width: calc(var(--spectrum-loader-round-large-width) - (var(--spectrum-loader-round-large-thickness) * 2));
-    height: calc(var(--spectrum-loader-round-large-height) - (var(--spectrum-loader-round-large-thickness) * 2));
-    border: solid var(--spectrum-loader-round-large-thickness);
-    border-radius: var(--spectrum-loader-round-large-width);
+    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    border: solid var(--spectrum-loader-circle-large-border-size);
+    border-radius: var(--spectrum-loader-circle-large-width);
   }
 }
 
 /* topdoc
 {{ loader/loader-full-page.yml }}
 */
-.spectrum-Loader--fullpage {
-  width: var(--spectrum-loader-round-large-width);
-  height: var(--spectrum-loader-round-large-height);
+.spectrum-Loader--overBackground {
+  width: var(--spectrum-loader-circle-large-width);
+  height: var(--spectrum-loader-circle-large-height);
   .spectrum-Loader-track {
-    width: calc(var(--spectrum-loader-round-large-width) - (var(--spectrum-loader-round-large-thickness) * 2));
-    height: calc(var(--spectrum-loader-round-large-height) - (var(--spectrum-loader-round-large-thickness) * 2));
-    border: solid var(--spectrum-loader-round-large-thickness);
-    border-radius: var(--spectrum-loader-round-large-width);
+    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    border: solid var(--spectrum-loader-circle-large-border-size);
+    border-radius: var(--spectrum-loader-circle-large-width);
   }
 
   .spectrum-Loader-fill {
-    width: calc(var(--spectrum-loader-round-large-width) - (var(--spectrum-loader-round-large-thickness) * 2));
-    height: calc(var(--spectrum-loader-round-large-height) - (var(--spectrum-loader-round-large-thickness) * 2));
-    border: solid var(--spectrum-loader-round-large-thickness);
-    border-radius: var(--spectrum-loader-round-large-width);
+    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    border: solid var(--spectrum-loader-circle-large-border-size);
+    border-radius: var(--spectrum-loader-circle-large-width);
   }
 }
 

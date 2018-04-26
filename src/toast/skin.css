@@ -1,6 +1,6 @@
 .spectrum-Toast {
-  background-color: var(--spectrum-toast-background-color-default);
-  color: var(--spectrum-toast-text-color-default);
+  background-color: var(--spectrum-toast-background-color);
+  color: var(--spectrum-toast-text-color);
 }
 
 .spectrum-Toast-typeIcon {
@@ -18,7 +18,7 @@
     background-color: rgba(255, 255, 255, 1);
 
     &:not(:active) {
-      color: var(--spectrum-toast-background-color-default);
+      color: var(--spectrum-toast-background-color);
     }
   }
 
@@ -32,11 +32,11 @@
 {{ toast/toast-warning.yml }}
 */
 .spectrum-Toast--warning {
-  background-color: var(--spectrum-toast-warning-background-color-default);
+  background-color: var(--spectrum-toast-warning-background-color);
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      color: var(--spectrum-toast-warning-background-color-default);
+      color: var(--spectrum-toast-warning-background-color);
     }
   }
 }
@@ -45,11 +45,11 @@
 {{ toast/toast-error.yml }}
 */
 .spectrum-Toast--error {
-  background-color: var(--spectrum-toast-error-background-color-default);
+  background-color: var(--spectrum-toast-error-background-color);
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      color: var(--spectrum-toast-error-background-color-default);
+      color: var(--spectrum-toast-error-background-color);
     }
   }
 }
@@ -58,11 +58,11 @@
 {{ toast/toast-info.yml }}
 */
 .spectrum-Toast--info {
-  background-color: var(--spectrum-toast-info-background-color-default);
+  background-color: var(--spectrum-toast-info-background-color);
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      color: var(--spectrum-toast-info-background-color-default);
+      color: var(--spectrum-toast-info-background-color);
     }
   }
 }
@@ -71,12 +71,12 @@
 {{ toast/toast-success.yml }}
 */
 .spectrum-Toast--success {
-  background-color: var(--spectrum-toast-success-background-color-default);
+  background-color: var(--spectrum-toast-success-background-color);
 
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      color: var(--spectrum-toast-success-background-color-default);
+      color: var(--spectrum-toast-success-background-color);
     }
   }
 }

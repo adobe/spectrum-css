@@ -1,25 +1,28 @@
 :root {
   /* Icon Button*/
-  --spectrum-button-icon-icon-color-default: var(--spectrum-button-icon-color-default);
-  --spectrum-button-icon-icon-color-hover: var(--spectrum-button-icon-color-hover);
-  --spectrum-button-icon-icon-color-down: var(--spectrum-button-icon-color-down);
-  --spectrum-button-icon-icon-color-key-focus: var(--spectrum-button-icon-color-key-focus);
-  --spectrum-button-icon-icon-color-disabled: var(--spectrum-button-icon-color-disabled);
-  --spectrum-button-icon-background-color-default: transparent;
+  --spectrum-button-icon-icon-color: var(--spectrum-button-primary-icon-color);
+  --spectrum-button-icon-icon-color-hover: var(--spectrum-button-primary-icon-color-hover);
+  --spectrum-button-icon-icon-color-down: var(--spectrum-button-primary-icon-color-down);
+  --spectrum-button-icon-icon-color-key-focus: var(--spectrum-button-primary-icon-color-key-focus);
+  --spectrum-button-icon-icon-color-disabled: var(--spectrum-button-primary-icon-color-disabled);
+  --spectrum-button-icon-background-color: transparent;
   --spectrum-button-icon-background-color-down: var(--spectrum-actionbutton-background-color-down);
 
   /* Button */
-  --spectrum-button-border-focus-grow: 1px;
-
-  /* Loader */
-  --spectrum-loader-round-full-page-sprite-url: 'embed/Loader_Determinate_Full-Page_64_Sprite.svg';
-  --spectrum-loader-round-indeterminate-full-page-sprite-url: 'embed/Loader_Indeterminate_Full-Page_64_Sprite.svg';
-  --spectrum-loader-background-color-fullpage: rgba(255,255,255,0.2);
-  --spectrum-loader-fill-color-fullpage: #FFFFFF;
+  --spectrum-button-primary-border-size: 2px;
+  --spectrum-button-primary-border-size-increase-key-focus: 1px;
 
   /* Shell */
   --spectrum-shell-grey100: rgb(30, 30, 30);
   --spectrum-shell-grey700: rgb(133, 133, 133);
   --spectrum-shell-grey800: rgb(180, 180, 180);
   --spectrum-shell-grey900: rgb(226, 226, 226);
+
+  /* haha remove this */
+  --spectrum-tablist-anchored-border-color: pink;
+  --spectrum-tablist-anchored-text-color-key-focus: green;
+  --spectrum-tablist-anchored-tabline-background-color-key-focus: orange;
+  --spectrum-tablist-anchored-tabline-background-color-key-focus: green;
+  --spectrum-tablist-panelborder-color-key-focus: orange;
+  --spectrum-tablist-panelborder-color-key-focus: red;
 }

@@ -1,44 +1,44 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-pagination-icon-width-default: 7px;
-  --spectrum-pagination-icon-height-default: 10px;
+  --spectrum-pagination-icon-width: 7px;
+  --spectrum-pagination-icon-height: 10px;
 }
 
 /* topdoc
 {{ pagination/pagination-explicit.yml }}
 */
 .spectrum-Pagination-input {
-  width: var(--spectrum-pagination-input-width-default);
-  min-width: var(--spectrum-pagination-input-width-default);
+  width: var(--spectrum-pagination-textfield-width);
+  min-width: var(--spectrum-pagination-textfield-width);
 }
 
 .spectrum-Pagination-counter {
   display: inline-block;
-  height: var(--spectrum-pagination-counter-height-default);
-  line-height: var(--spectrum-pagination-counter-height-default);
-  margin-left: var(--spectrum-pagination-counter-margin-left-default);
+  height: var(--spectrum-pagination-counter-height);
+  line-height: var(--spectrum-pagination-counter-height);
+  margin-left: var(--spectrum-pagination-counter-margin-left);
 }
 
 /* topdoc
 {{ pagination/pagination-listing.yml }}
 */
 .spectrum-Pagination-directionButton {
-  font-size: var(--spectrum-pagination-direction-button-font-size-default);
+  font-size: var(--spectrum-pagination-direction-button-text-size);
   font-weight: bold;
 }
 
 .spectrum-Pagination-pageButton {
   box-sizing: border-box;
   display: inline-block;
-  width: var(--spectrum-pagination-page-button-width-default);
-  height: var(--spectrum-pagination-page-button-width-default);
-  line-height: var(--spectrum-pagination-page-button-line-height-default);
+  width: var(--spectrum-pagination-page-button-width);
+  height: var(--spectrum-pagination-page-button-width);
+  line-height: var(--spectrum-pagination-page-button-line-height);
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 var(--spectrum-pagination-page-button-margin-horizontal-default);
-  border: var(--spectrum-pagination-page-button-border-width-default) solid transparent;
+  margin: 0 var(--spectrum-pagination-page-button-margin-horizontal);
+  border: var(--spectrum-pagination-page-button-border-size) solid transparent;
   outline: none;
   transition: background-color var(--spectrum-transition-time) ease-in-out,
               color var(--spectrum-transition-time) ease-in-out,
@@ -49,7 +49,7 @@
 {{ pagination/pagination-button-style-cta.yml }}
 */
 .spectrum-Pagination-prevButton {
-  border-radius: var(--spectrum-button-border-radius-default) 0 0 var(--spectrum-button-border-radius-default);
+  border-radius: var(--spectrum-button-primary-border-radius) 0 0 var(--spectrum-button-primary-border-radius);
   float: left; /* removes DOM whitespace */
   padding-right: calc(var(--spectrum-padding) / 2);
   padding-left: calc(var(--spectrum-padding) / 2);
@@ -62,13 +62,13 @@
 }
 
 .spectrum-Pagination-nextButton {
-  border-radius: 0 var(--spectrum-button-border-radius-default) var(--spectrum-button-border-radius-default) 0;
+  border-radius: 0 var(--spectrum-button-primary-border-radius) var(--spectrum-button-primary-border-radius) 0;
   margin-left: 0 !important;
 
   /* CTA is special and doesn't have a border between the buttons */
   &.spectrum-Button--cta {
     border-left: 0;
-    margin-left: var(--spectrum-button-border-size-default) !important;
+    margin-left: var(--spectrum-button-primary-border-size) !important;
   }
 
   .spectrum-Icon {
@@ -84,8 +84,8 @@
   }
 
   .spectrum-Icon {
-    width: var(--spectrum-pagination-icon-width-default);
-    height: var(--spectrum-pagination-icon-height-default);
+    width: var(--spectrum-pagination-icon-width);
+    height: var(--spectrum-pagination-icon-height);
 
     vertical-align: baseline;
   }

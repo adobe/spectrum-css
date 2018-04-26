@@ -4,28 +4,28 @@
 .spectrum-Tooltip {
   &,
   .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-background-color-default);
-    color: var(--spectrum-tooltip-text-color-default);
+    background-color: var(--spectrum-tooltip-background-color);
+    color: var(--spectrum-tooltip-text-color);
   }
 }
 
 .spectrum-Tooltip--error {
   &,
   .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-error-background-color-default);
+    background-color: var(--spectrum-tooltip-negative-background-color);
   }
 }
 
 .spectrum-Tooltip--info {
   &,
   .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-info-background-color-default);
+    background-color: var(--spectrum-tooltip-info-background-color);
   }
 }
 
 .spectrum-Tooltip--success {
   &,
   .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-success-background-color-default);
+    background-color: var(--spectrum-tooltip-positive-background-color);
   }
 }

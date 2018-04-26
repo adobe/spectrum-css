@@ -1,0 +1,14 @@
+---
+name: Button - Over Background
+description: A Spectrum button that's meant to be placed over a non-standard color. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
+    <button class="spectrum-Button spectrum-Button--overBackground">Button</button>
+
+    <button class="spectrum-Button spectrum-Button--overBackground" disabled>Button</button>
+  </div>

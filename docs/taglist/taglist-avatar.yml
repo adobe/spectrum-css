@@ -5,27 +5,27 @@ status: Released
 markup: |
   <div class="spectrum-TagList" role="list" aria-label="Tags">
     <div class="spectrum-TagList-item" role="listitem" tabindex="0">
-      <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
       <span class="spectrum-TagList-item-label">Shantanu</span>
-      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>
       </button>
     </div>
     <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
-      <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
       <span class="spectrum-TagList-item-label">Shantanu</span>
-      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>
       </button>
     </div>
     <div class="spectrum-TagList-item is-disabled" role="listitem">
-      <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
       <span class="spectrum-TagList-item-label">Shantanu</span>
-      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>

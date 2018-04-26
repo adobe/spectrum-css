@@ -47,6 +47,7 @@ gulp.task('build-docs:rewrite-spectrum-icons', function() {
   return gulp.src([
     'dist/icons/*.html'
   ])
+    // Use the local copy of spectrum-css
     .pipe(replace('../lib/', ''))
     .pipe(replace('../spectrum-css/', '../'))
     .pipe(gulp.dest('dist/icons/'));

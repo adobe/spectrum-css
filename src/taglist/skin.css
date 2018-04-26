@@ -1,12 +1,20 @@
 .spectrum-TagList-item {
-  color: var(--spectrum-tag-text-color-default);
-  background-color: var(--spectrum-tag-background-color-default);
-  border: 1px solid var(--spectrum-tag-border-color-default);
+  color: var(--spectrum-tag-text-color);
+  background-color: var(--spectrum-tag-background-color);
+  border: 1px solid var(--spectrum-tag-border-color);
+
+  .spectrum-ClearButton {
+    color: var(--spectrum-tag-deletable-icon-color);
+  }
 
   &:hover {
     background-color: var(--spectrum-tag-background-color-hover);
     color: var(--spectrum-tag-text-color-hover);
     border-color: var(--spectrum-tag-border-color-hover);
+
+    .spectrum-ClearButton {
+      color: var(--spectrum-tag-deletable-icon-color-hover);
+    }
   }
 
   &:focus-ring {
@@ -14,38 +22,36 @@
     color: var(--spectrum-tag-text-color-key-focus);
     border-color: var(--spectrum-tag-border-color-key-focus);
     box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-key-focus);
+
+    .spectrum-ClearButton {
+      color: var(--spectrum-tag-deletable-icon-color-key-focus);
+    }
   }
 
   &.is-invalid {
-    color: var(--spectrum-tag-invalid-text-color-default);
-    border-color: var(--spectrum-tag-invalid-border-color-default);
+    color: var(--spectrum-tag-text-color-error);
+    border-color: var(--spectrum-tag-border-color-error);
+
+    .spectrum-ClearButton {
+      color: var(--spectrum-tag-icon-color-error);
+    }
 
     &:hover {
-      border-color: var(--spectrum-tag-invalid-border-color-hover);
-      color: var(--spectrum-tag-invalid-text-color-hover);
+      color: var(--spectrum-tag-text-color-error-hover);
+      border-color: var(--spectrum-tag-border-color-error-hover);
+
+      .spectrum-ClearButton {
+        color: var(--spectrum-tag-icon-color-error-hover);
+      }
     }
 
     &:focus-ring {
-      color: var(--spectrum-tag-invalid-text-color-key-focus);
-      border-color: var(--spectrum-tag-invalid-border-color-default);
-      box-shadow: 0 0 0 1px var(--spectrum-tag-invalid-border-color-default);
+      color: var(--spectrum-tag-text-color-error-key-focus);
+      border-color: var(--spectrum-tag-border-color-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-key-focus);
 
-    }
-    .spectrum-TagList-item-removeButton {
-      .spectrum-Icon {
-        color: var(--spectrum-tag-invalid-icon-color-default);
-      }
-
-      &::focus {
-        .spectrum-Icon {
-          color: var(--spectrum-tag-invalid-icon-color-key-focus);
-        }
-      }
-
-      &:hover {
-        .spectrum-Icon {
-          color: var(--spectrum-tag-invalid-icon-color-hover);
-        }
+      .spectrum-ClearButton {
+        color: var(--spectrum-tag-icon-color-error-key-focus);
       }
     }
   }
@@ -55,25 +61,14 @@
     background-color: var(--spectrum-tag-background-color-disabled);
     border-color: var(--spectrum-tag-border-color-disabled);
 
-    .spectrum-TagList-item-avatar {
-      opacity: 0.3;
+    .spectrum-Avatar {
+      /* Duplicated so state is on the tag */
+      opacity: percent(var(--spectrum-avatar-small-opacity-disabled));
     }
   }
 }
 
-.spectrum-TagList-item-removeButton {
-  .spectrum-Icon {
-    color: var(--spectrum-tag-icon-color-default);
-  }
-
-  &:hover {
-    .spectrum-Icon {
-      color: var(--spectrum-tag-icon-color-hover);
-    }
-  }
-}
-
-.spectrum-TagList-item.is-disabled .spectrum-TagList-item-removeButton {
+.spectrum-TagList-item.is-disabled .spectrum-ClearButton {
   .spectrum-Icon {
     color: var(--spectrum-tag-icon-color-disabled);
   }

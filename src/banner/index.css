@@ -2,10 +2,10 @@
 
 .spectrum-Banner {
   display: inline-block;
-  border-radius: var(--spectrum-banner-border-radius-default);
-  padding: var(--spectrum-banner-padding-vertical-default) var(--spectrum-banner-padding-horizontal-default);
-  font-size: var(--spectrum-banner-font-size-default);
-  line-height: var(--spectrum-banner-line-height-default);
+  border-radius: var(--spectrum-banner-border-radius);
+  padding: var(--spectrum-banner-padding-y) var(--spectrum-banner-padding-x);
+  font-size: var(--spectrum-banner-text-size);
+  line-height: var(--spectrum-banner-text-line-height);
 }
 
 .spectrum-Banner-header {

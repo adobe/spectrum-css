@@ -10,6 +10,12 @@
 .spectrum-Search {
   display: inline-block;
   position: relative;
+
+  .spectrum-ClearButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 .spectrum-Search-input {
@@ -23,11 +29,11 @@
   outline-offset: -2px;
 
   /* Use padding instead of text-indent so long strings don't overlap the icon */
-  padding-left: var(--spectrum-search-padding-left-default);
+  padding-left: var(--spectrum-search-padding-left);
   text-indent: 0;
 
   /* Don't let long strings overlap the close icon */
-  padding-right: var(--spectrum-search-padding-right-default);
+  padding-right: var(--spectrum-search-padding-right);
 
   /* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
   &::-webkit-search-cancel-button,
@@ -36,8 +42,8 @@
   }
 
   &.spectrum-Textfield--quiet {
-    padding-left: var(--spectrum-search-quiet-padding-left-default);
-    padding-right: var(--spectrum-search-quiet-padding-right-default);
+    padding-left: var(--spectrum-search-quiet-padding-left);
+    padding-right: var(--spectrum-search-quiet-padding-right);
 
     /* Since quiet button has no left padding, push the icon all the way to the left */
     & ~ .spectrum-Search-icon {
@@ -60,12 +66,8 @@
   position: absolute;
   left: 12px;
   top: 0;
-  width: var(--spectrum-search-icon-width-default);
-  height: var(--spectrum-input-height-default);
-
-  /* Support font icons */
-  text-align: center;
-  line-height: 32px;
+  width: var(--spectrum-search-icon-width);
+  height: var(--spectrum-textfield-height);
 
   /* Support SVG icons */
   background-repeat: no-repeat;
@@ -74,19 +76,3 @@
 
   pointer-events: none;
 }
-
-.spectrum-Search-clear {
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  .spectrum-Icon {
-    width: 8px;
-    height: 8px;
-  }
-
-  .spectrum-Search-clear:disabled {
-    cursor: default;
-  }
-}
-

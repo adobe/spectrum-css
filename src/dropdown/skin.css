@@ -6,12 +6,8 @@
   }
 
   &.is-invalid {
-    .spectrum-Icon {
-      color: var(--spectrum-dropdown-icon-color-invalid-default);
-    }
-
-    &:hover .spectrum-Dropdown-icon {
-      color: var(--spectrum-dropdown-icon-color-invalid-default);
+    .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+      color: var(--spectrum-dropdown-validation-icon-color-error);
     }
   }
 
@@ -26,5 +22,5 @@
 }
 
 .spectrum-Dropdown-icon {
-  color: var(--spectrum-dropdown-text-color-default);
+  color: var(--spectrum-dropdown-text-color);
 }

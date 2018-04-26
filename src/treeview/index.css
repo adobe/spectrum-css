@@ -1,11 +1,8 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-treenav-icon-width-default: var(--spectrum-accordion-icon-width-default);
-  --spectrum-treenav-icon-height-default: var(--spectrum-accordion-icon-height-default);
-  --spectrum-treenav-link-margin-vertical-default: 4px;
-  --spectrum-treenav-list-padding-left-default: 28px;
-  --spectrum-treenav-link-padding-horizontal-default: var(--spectrum-treenav-link-padding-left-default);
+  --spectrum-treeview-icon-width: var(--spectrum-accordion-icon-width);
+  --spectrum-treeview-icon-height: var(--spectrum-accordion-icon-height);
 }
 
 /* topdoc
@@ -46,8 +43,8 @@
 
   width: 100%;
 
-  padding: var(--spectrum-treenav-link-padding-vertical-default) var(--spectrum-treenav-link-padding-horizontal-default);
-  margin: var(--spectrum-treenav-link-margin-vertical-default) 0;
+  padding: var(--spectrum-treeview-item-padding-y) var(--spectrum-treeview-item-padding-x);
+  margin: calc(var(--spectrum-treeview-item-margin-y) / 2) 0;
 
   text-decoration: none;
 
@@ -61,32 +58,32 @@
 
   .spectrum-Icon {
     vertical-align: top;
-    margin-right: var(--spectrum-treenav-icon-margin-right-default);
+    margin-right: var(--spectrum-treeview-item-icon-gap);
   }
 
   &::before {
     content: '';
 
     position: absolute;
-    left: calc(var(--spectrum-treenav-row-padding-horizontal-default) + var(--spectrum-treenav-listitem-border-width-default));
-    right: var(--spectrum-treenav-row-padding-horizontal-default);
+    left: calc(0 + var(--spectrum-treeview-item-border-size));
+    right: 0;
     z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
-    margin-top: calc(-1 * var(--spectrum-treenav-link-padding-vertical-default));
+    margin-top: calc(-1 * var(--spectrum-treeview-item-padding-y));
 
-    height: var(--spectrum-treenav-chevron-line-height-default);
+    height: var(--spectrum-treeview-item-height);
 
     background-color: transparent;
 
-    border-radius: var(--spectrum-treenav-wrap-border-radius-default);
+    border-radius: var(--spectrum-treeview-item-border-radius);
   }
 }
 
 .spectrum-TreeView-indicator {
   display: block;
-  width: var(--spectrum-treenav-icon-width-default);
-  height: var(--spectrum-treenav-icon-height-default);
+  width: var(--spectrum-treeview-icon-width);
+  height: var(--spectrum-treeview-icon-height);
 
   float: left;
   margin-left: -14px;
@@ -100,7 +97,7 @@
   /* Don't be a highlight container stealer */
   position: static;
 
-  padding-left: var(--spectrum-treenav-list-padding-left-default);
+  padding-left: var(--spectrum-treeview-item-indent);
 
   /* Be hidden */
   height: 0;
@@ -111,43 +108,43 @@
 {{ treeview/treeview-flat.yml }}
 */
 .spectrum-TreeView-item--indent1 {
-  padding-left: var(--spectrum-treenav-list-padding-left-default);
+  padding-left: var(--spectrum-treeview-item-indent);
 }
 
 .spectrum-TreeView-item--indent2 {
-  padding-left: calc(2 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(2 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent3 {
-  padding-left: calc(3 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(3 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent4 {
-  padding-left: calc(4 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(4 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent5 {
-  padding-left: calc(5 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(5 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent6 {
-  padding-left: calc(6 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(6 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent7 {
-  padding-left: calc(7 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(7 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent8 {
-  padding-left: calc(8 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(8 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent9 {
-  padding-left: calc(9 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(9 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent10 {
-  padding-left: calc(10 * var(--spectrum-treenav-list-padding-left-default));
+  padding-left: calc(10 * var(--spectrum-treeview-item-indent));
 }
 
 /* topdoc

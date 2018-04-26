@@ -1,41 +1,14 @@
 @import '../commons/index.css';
 
-:root {
-  /* Icon Button */
-  --spectrum-button-icon-width: 32px;
-  --spectrum-button-icon-border-radius: 2px;
-  --spectrum-button-icon-background-size: 16px;
-  --spectrum-button-icon-icon-size: 8px;
-  --spectrum-button-icon-border-radius: 4px;
-
-  --spectrum-logicbutton-padding-x-default: 8px;
-
-  /* Todo: move to dna */
-  --spectrum-button-quiet-action-padding-x-default: var(--spectrum-actionbutton-padding-x-default);
-}
-
-.spectrum-Button {
+%spectrum-BaseButton {
   display: inline-block;
   box-sizing: border-box;
-
-  border-width: var(--spectrum-button-border-size-default);
-  border-style: solid;
-  border-radius: var(--spectrum-button-border-radius-default);
-
-  height: var(--spectrum-button-height-default);
-  padding: 0 calc(var(--spectrum-button-padding-x-default) - var(--spectrum-button-border-size-default)) 1px; /* 1px to push up text, sits kind of low */
-  
-  /* Remove button the margin in Firefox and Safari. */
-  margin: 0;
 
   /* Show the button overflow in Edge. */
   overflow: visible;
 
-  font-family: inherit;
-  font-size: var(--spectrum-button-text-font-size-default);
-  line-height: calc(var(--spectrum-button-height-default) - calc(2 * var(--spectrum-button-border-size-default)));
-  font-weight: var(--spectrum-button-text-font-weight-default);
-  text-decoration: none;
+  /* Remove button the margin in Firefox and Safari. */
+  margin: 0;
 
   /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
   text-transform: none;
@@ -52,21 +25,20 @@
               color var(--spectrum-transition-time) ease-out,
               box-shadow var(--spectrum-transition-time) ease-out;
 
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--spectrum-font-family-base);
+
   cursor: pointer;
 
   &:focus {
     outline: none;
   }
 
-  &:disabled,
-  &.is-disabled {
-    cursor: default;
-  }
-
   /* Fix Firefox */
   &::-moz-focus-inner {
     border: 0;
-    
+
     /* Remove the inner border and padding for button in Firefox. */
     border-style: none;
     padding: 0;
@@ -81,17 +53,38 @@
     outline: 1px dotted ButtonText;
   }
 
+  &:disabled,
+  &.is-disabled {
+    cursor: default;
+  }
+
+  .spectrum-Icon {
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.spectrum-Button {
+  @inherit: %spectrum-BaseButton;
+
+  border-width: var(--spectrum-button-primary-border-size);
+  border-style: solid;
+  border-radius: var(--spectrum-button-primary-border-radius);
+
+  height: var(--spectrum-button-primary-height);
+
+  padding: 0 var(--spectrum-button-primary-padding-x) 1px; /* 1px to push up text, sits kind of low */
+
+  font-size: var(--spectrum-button-primary-text-size);
+  font-weight: var(--spectrum-button-primary-text-font-weight);
+
   &:hover,
   &:active {
     box-shadow: none;
   }
 
-  .spectrum-Icon {
-    vertical-align: text-top;
-  }
-
   .spectrum-Icon + .spectrum-Button-label {
-    margin-left: var(--spectrum-button-text-gap-default);
+    margin-left: var(--spectrum-button-primary-text-gap);
   }
 
   /* Space out buttons when placed next to eachother */
@@ -100,7 +93,6 @@
   }
 }
 
-
 a.spectrum-Button {
   /* Remove appearance for clickable types in iOS and Safari. */
   -webkit-appearance: none;
@@ -108,44 +100,67 @@ a.spectrum-Button {
   user-select: none;
 }
 
-.spectrum-Button--action {
-  font-size: var(--spectrum-actionbutton-font-size-default);
-  font-weight: var(--spectrum-actionbutton-font-weight-default);
-  padding: 0 var(--spectrum-actionbutton-padding-x-default);
-  border-width: var(--spectrum-actionbutton-border-size-default);
-  border-radius: var(--spectrum-actionbutton-border-radius-default);
+.spectrum-ActionButton {
+  @inherit: %spectrum-BaseButton;
+
+  height: var(--spectrum-actionbutton-height);
+  min-width: var(--spectrum-actionbutton-min-width);
+  padding: 0 var(--spectrum-actionbutton-text-padding-x);
+
+  border-width: var(--spectrum-actionbutton-border-size);
+  border-radius: var(--spectrum-actionbutton-border-radius);
+
+  font-size: var(--spectrum-actionbutton-text-size);
+  font-weight: var(--spectrum-actionbutton-text-font-weight);
+
+  text-align: center;
 }
 
-.spectrum-Button--action--iconOnly {
-  padding: 0 var(--spectrum-actionbutton-icon-padding-x-default);
+.spectrum-ActionButton-label,
+.spectrum-Button-label {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+
+  &:empty {
+    display: none;
+  }
 }
 
-.spectrum-Button--quiet--action {
-  font-size: var(--spectrum-button-quiet-action-font-size-default);
-  font-weight: var(--spectrum-button-quiet-action-font-weight-default);
-  padding: 0 var(--spectrum-button-quiet-action-padding-x-default);
-  border-width: 0;
-  border-radius: var(--spectrum-button-quiet-action-border-radius-default);
+.spectrum-Button-label {
+  line-height: calc(var(--spectrum-button-primary-height) - calc(2 * var(--spectrum-button-primary-border-size)));
 }
 
-.spectrum-Button--quiet--action--iconOnly {
-  padding: 0 var(--spectrum-actionbutton-icon-padding-x-default);
+.spectrum-ActionButton-label {
+  line-height: calc(var(--spectrum-actionbutton-height) - calc(2 * var(--spectrum-actionbutton-border-size)));
 }
 
-.spectrum-Button--toggle {
-  font-size: var(--spectrum-button-toggle-off-font-size-default);
-  font-weight: var(--spectrum-button-toggle-off-font-weight-default);
+.spectrum-ActionButton--quiet {
+  padding: 0 var(--spectrum-actionbutton-text-padding-x);
+
+  border-width: var(--spectrum-actionbutton-quiet-border-size);
+  border-radius: var(--spectrum-actionbutton-quiet-border-radius);
+
+  font-size: var(--spectrum-actionbutton-quiet-text-size);
+  font-weight: var(--spectrum-actionbutton-quiet-text-font-weight);
+
+  .spectrum-ActionButton-label {
+    line-height: calc(var(--spectrum-actionbutton-quiet-height) - calc(2 * var(--spectrum-actionbutton-quiet-border-size)));
+  }
 }
 
-.spectrum-Button--logic--and,
-.spectrum-Button--logic--or {
-  height: var(--spectrum-logicbutton-height-default);
+.spectrum-LogicButton {
+  @inherit: %spectrum-BaseButton;
+
+  height: var(--spectrum-logicbutton-and-height);
+  padding: var(--spectrum-logicbutton-and-padding-x);
+
+  border-width: var(--spectrum-logicbutton-and-border-size);
+  border-radius: var(--spectrum-logicbutton-and-border-radius);
+
+  font-size: var(--spectrum-logicbutton-and-text-size);
+  font-weight: var(--spectrum-logicbutton-and-text-font-weight);
   line-height: 0;
-  padding: var(--spectrum-logicbutton-padding-x-default);
-  border-width: var(--spectrum-logicbutton-border-size-default);
-  border-radius: var(--spectrum-logicbutton-border-radius-default);
-  font-size: var(--spectrum-logicbutton-font-size-default);
-  font-weight: var(--spectrum-logicbutton-font-weight-default);
 }
 
 .spectrum-Button--block {
@@ -154,84 +169,22 @@ a.spectrum-Button {
   margin-left: 0;
   margin-right: 0;
   min-width: 0;
+
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.spectrum-Button--icon {
-  position: relative;
+.spectrum-FieldButton {
+  @inherit: %spectrum-BaseButton;
 
-  /* Contain child elements with z-index */
-  z-index: 0;
+  height: var(--spectrum-dropdown-height);
 
-  box-sizing: border-box;
-
-  width: var(--spectrum-button-icon-width);
-  height: var(--spectrum-button-icon-width);
-  padding: 0;
-  margin: 0;
-
-  border: none;
-  border-radius: var(--spectrum-button-icon-border-radius);
-
-  /* There's never a background itself */
-  background-color: transparent;
-
-  text-align: center;
-
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
-
-  /* The artificial background */
-  &::before {
-    display: block;
-
-    /* Center ourselves */
-    position: absolute;
-    top: calc(var(--spectrum-button-icon-width) / 4);
-    left: calc(var(--spectrum-button-icon-width) / 4);
-
-    width: calc(var(--spectrum-button-icon-width) / 2);
-    height: calc(var(--spectrum-button-icon-width) / 2);
-
-    /* Be below content and icons */
-    z-index: 0;
-
-    content: '';
-
-    border-radius: var(--spectrum-button-icon-border-radius);
-  }
-
-  &:disabled {
-    cursor: default;
-  }
-
-  .spectrum-Icon {
-    /* Float above the artificial background */
-    z-index: 1;
-
-    /* Be centered */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 12px;
-    height: 12px;
-  }
-}
-
-.spectrum-Button--dropdown,
-.spectrum-Button--quiet--dropdown {
-  height: var(--spectrum-dropdown-height-default);
+  padding: 0 var(--spectrum-dropdown-padding-x);
 
   font-family: inherit;
   font-weight: normal;
-  font-size: var(--spectrum-dropdown-font-size-default);
+  font-size: var(--spectrum-dropdown-text-size);
   line-height: normal;
   -webkit-font-smoothing: initial;
 
@@ -239,11 +192,12 @@ a.spectrum-Button {
   outline: none;
 }
 
-.spectrum-Button--dropdown {
+.spectrum-FieldButton {
   margin: 0;
-  padding: 0 var(--spectrum-dropdown-padding-default);
+  padding: 0 var(--spectrum-dropdown-padding-x);
 
-  border: 1px solid;
+  border-width: var(--spectrum-dropdown-border-size);
+  border-style: solid;
   border-radius: var(--spectrum-border-radius);
 
   transition: background-color var(--spectrum-transition-time),
@@ -257,14 +211,36 @@ a.spectrum-Button {
   }
 
   &.is-open {
-    border: 1px solid;
+    border-width: var(--spectrum-dropdown-border-size);
   }
 }
 
-.spectrum-Button--quiet--dropdown {
+.spectrum-FieldButton--quiet {
   margin: 0;
   padding: 0;
 
   border: none;
   border-radius: 0;
+}
+
+.spectrum-ClearButton {
+  @inherit: %spectrum-BaseButton;
+
+  width: var(--spectrum-clearbutton-medium-width);
+  height: var(--spectrum-clearbutton-medium-height);
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  .spectrum-Icon {
+    width: var(--spectrum-clearbutton-medium-icon-size);
+    height: 100%;
+  }
+}
+
+.spectrum-ClearButton--small {
+  width: var(--spectrum-clearbutton-small-width);
+  height: var(--spectrum-clearbutton-small-height);
 }

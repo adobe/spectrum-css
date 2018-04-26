@@ -8,8 +8,8 @@
 */
 
 :root {
-  --spectrum-combobox-chevron-icon-width-default: 10px;
-  --spectrum-combobox-chevron-icon-height-default: 6px;
+  /* Todo: move to DNA */
+  --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
 }
 
 .spectrum-InputGroup {
@@ -19,33 +19,33 @@
   flex-wrap: nowrap;
   min-width: var(--spectrum-component-single-line-width);
 
-}
-
-.spectrum-InputGroup-button {
-  padding: 0;
-  width: 34px;
-  border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius-default);
-  border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius-default);
+  .spectrum-FieldButton {
+    padding: 0 var(--spectrum-dropdown-padding-x);
+    border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
+    border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
+  }
 }
 
 .spectrum-InputGroup-input {
-  border-top-right-radius: var(--spectrum-combobox-textfield-border-top-right-radius-default);
-  border-bottom-right-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius-default);
+  border-top-right-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
+  border-bottom-right-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
   border-right-width: 0;
   flex: 1;
 }
 
 .spectrum-InputGroup-icon {
-  width: var(--spectrum-combobox-chevron-icon-width-default);
-  height: var(--spectrum-combobox-chevron-icon-height-default);
-  margin: 13px auto;
+  width: var(--spectrum-dropdown-ui-icon-width);
+  height: var(--spectrum-dropdown-ui-icon-width);
+  height: 100%;
 }
 
 .spectrum-InputGroup--quiet {
-  .spectrum-InputGroup-button {
+  .spectrum-FieldButton {
+    border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+
     position: relative;
     width: 24px;
-    border-bottom: 1px solid;
+    border-bottom: var(--spectrum-textfield-quiet-affixed-border-size) solid;
 
     /* More hitarea */
     &:after {
@@ -58,6 +58,6 @@
   }
 
   .spectrum-InputGroup-icon {
-    margin-left: 10px;
+    right: 0;
   }
 }

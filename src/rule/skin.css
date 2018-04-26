@@ -1,15 +1,3 @@
 .spectrum-Rule {
-  border-color: var(--spectrum-rule-border-color-default);
-}
-
-.spectrum-Rule--subsection {
-  border-color: var(--spectrum-rule-subsection-border-color-default);
-}
-
-.spectrum-Rule--subsection2 {
-  border-color: var(--spectrum-rule-subsection2-border-color-default);
-}
-
-.spectrum-Rule--panel {
-  border-color: var(--spectrum-rule-panel-border-color-default);
+  border-color: var(--spectrum-rule-medium-background-color);
 }

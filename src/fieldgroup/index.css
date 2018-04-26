@@ -27,7 +27,7 @@
   .spectrum-Radio,
   .spectrum-Checkbox {
     display: block;
-    margin: 0 0 0 calc(-1 * var(--spectrum-radio-hitarea));
+    margin: 0 0 0 calc(-1 * var(--spectrum-radio-cursor-hit-x));
   }
 
   & + .spectrum-FieldGroup--vertical {

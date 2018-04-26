@@ -9,6 +9,7 @@
 /* topdoc
 {{ table/table-divs-quiet.yml }}
 */
+
 .spectrum-Table {
   border-collapse: separate;
   border-spacing: 0;
@@ -16,10 +17,10 @@
 
 .spectrum-Table-sortedIcon {
   display: none;
-  margin-left: var(--spectrum-table-head-cell-sort-icon-margin-left-default);
+  margin-left: var(--spectrum-table-header-sort-icon-margin-left);
 
-  width: var(--spectrum-table-head-cell-sort-icon-width-default);
-  height: var(--spectrum-table-head-cell-sort-icon-height-default);
+  width: var(--spectrum-table-header-sort-icon-width);
+  height: var(--spectrum-table-header-sort-icon-height);
 
   vertical-align: bottom;
 
@@ -28,12 +29,12 @@
 
 .spectrum-Table-headCell {
   text-align: left;
-  font-size: var(--spectrum-table-head-cell-font-size-default);
-  font-weight: var(--spectrum-table-head-cell-font-weight-default);
-  line-height: var(--spectrum-table-head-cell-height-default);
-  letter-spacing: var(--spectrum-table-head-cell-letter-spacing-default);
+  font-size: var(--spectrum-table-header-text-size);
+  font-weight: var(--spectrum-table-header-text-font-weight);
+  line-height: var(--spectrum-table-header-height);
+  letter-spacing: var(--spectrum-table-header-text-letter-spacing);
   text-transform: uppercase;
-  padding: var(--spectrum-table-head-cell-padding-vertical-default) var(--spectrum-table-cell-padding-default);
+  padding: var(--spectrum-table-header-padding-y) var(--spectrum-table-cell-padding);
   transition: color var(--spectrum-transition-time) ease-in-out;
   cursor: default;
   outline: 0;
@@ -99,9 +100,9 @@
 }
 
 .spectrum-Table-cell {
-  font-size: var(--spectrum-table-body-cell-font-size-default);
-  line-height: var(--spectrum-table-body-cell-line-height-default);
-  padding: var(--spectrum-table-body-cell-padding-vertical-default) var(--spectrum-table-cell-padding-default);
+  font-size: var(--spectrum-table-cell-text-size);
+  line-height: var(--spectrum-table-cell-line-height);
+  padding: var(--spectrum-table-cell-padding-vertical) var(--spectrum-table-cell-padding);
 }
 
 .spectrum-Table-row {

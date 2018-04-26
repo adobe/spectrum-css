@@ -1,27 +1,27 @@
 .spectrum-Loader--bar-fill {
-  background: var(--spectrum-loader-blue-color-default);
+  background: var(--spectrum-loader-circle-medium-track-fill-color);
 }
 
 .spectrum-Loader--bar-track {
-  background-color: var(--spectrum-loader-background-color-default);
+  background-color: var(--spectrum-loader-circle-medium-track-color);
 }
 
 .spectrum-Loader--bar--fullpage {
   .spectrum-Loader--bar-fill {
-    background: var(--spectrum-loader-fill-color-fullpage);
+    background: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 
   .spectrum-Loader--bar-label, & .spectrum-Loader--bar-percentage {
-    color: var(--spectrum-loader-fill-color-fullpage);
+    color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 
   .spectrum-Loader--bar-track {
-    background-color: var(--spectrum-loader-background-color-fullpage);
+    background-color: var(--spectrum-loader-circle-medium-over-background-track-color);
   }
 }
 
 .spectrum-Loader-track {
-  border-color: var(--spectrum-loader-background-color-default);
+  border-color: var(--spectrum-loader-circle-medium-track-color);
 }
 
 .spectrum-Loader-Indeterminate {
@@ -29,23 +29,23 @@
 }
 
 .spectrum-Loader-fill {
-  border-color: var(--spectrum-loader-blue-color-default);
+  border-color: var(--spectrum-loader-circle-medium-track-fill-color);
 }
 
-.spectrum-Loader--fullpage {
+.spectrum-Loader--overBackground {
   .spectrum-Loader-track {
-    border-color: var(--spectrum-loader-background-color-fullpage);
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-color);
   }
   .spectrum-Loader-fill {
-    border-color: var(--spectrum-loader-fill-color-fullpage);
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 }
 
 .spectrum-Loader--indeterminateFullpage {
   .spectrum-Loader-track {
-    border-color: var(--spectrum-loader-background-color-fullpage);
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-color);
   }
   .spectrum-Loader-fill {
-    border-color: var(--spectrum-loader-fill-color-fullpage);
+    border-color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 }

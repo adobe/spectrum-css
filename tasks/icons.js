@@ -39,11 +39,11 @@ gulp.task('unzip-icons', function() {
 gulp.task('extract-icons', function() {
   return gulp.src('temp/icons/*/*.svg')
     .pipe(rename(stripDir))
-    .pipe(gulp.dest('icons/'));
+    .pipe(gulp.dest('icons/medium/'));
 });
 
 gulp.task('clean-icons', function() {
-  return gulp.src('icons/*.svg')
+  return gulp.src('icons/**/*.svg')
     .pipe(svgmin())
     .pipe(replace(/<defs>.*?<\/defs>/, ''))
     .pipe(replace(/<title>.*?<\/title>/, ''))
@@ -53,19 +53,23 @@ gulp.task('clean-icons', function() {
     .pipe(gulp.dest('icons/'));
 });
 
+function getSVGSpriteTask(size) {
+  return function() {
+    return gulp.src(`icons/${size}/*.svg`)
+      .pipe(rename(function (path) {
+        path.basename = `spectrum-css-icon-${path.basename}`;
+      }))
+      .pipe(svgmin())
+      .pipe(svgstore({
+        inlineSvg: true
+      }))
+      .pipe(rename(`spectrum-css-icons-${size}.svg`))
+      .pipe(gulp.dest('dist/icons/'));
+  };
+}
 
-gulp.task('generate-svgsprite', function () {
-  return gulp.src('icons/*.svg')
-    .pipe(rename(function (path) {
-      path.basename = 'spectrum-css-icon-'+path.basename;
-    }))
-    .pipe(svgmin())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('spectrum-css-icons.svg'))
-    .pipe(gulp.dest('dist/icons/'));
-});
+gulp.task('generate-svgsprite-medium', getSVGSpriteTask('medium'));
+gulp.task('generate-svgsprite-large', getSVGSpriteTask('large'));
 
 gulp.task('update-icons',
   gulp.series(
@@ -77,4 +81,7 @@ gulp.task('update-icons',
   )
 );
 
-gulp.task('icons', gulp.series('generate-svgsprite'));
+gulp.task('icons', gulp.series(
+  'generate-svgsprite-medium',
+  'generate-svgsprite-large'
+));

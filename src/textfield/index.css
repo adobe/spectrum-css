@@ -1,23 +1,26 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-input-padding-top: 3px;
-  --spectrum-input-padding-bottom: 5px;
+  --spectrum-textfield-padding-top: 3px;
+  --spectrum-textfield-padding-bottom: 5px;
+
+  /* Todo fix in DNA */
+  --spectrum-textfield-quiet-border-radius: 0;
 }
 
 .spectrum-Textfield {
   /* box */
   box-sizing: border-box;
-  border: 1px solid;
+  border: var(--spectrum-textfield-border-size) solid;
   border-radius: var(--spectrum-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: var(--spectrum-input-padding-top) var(--spectrum-padding) var(--spectrum-input-padding-bottom);
+  padding: var(--spectrum-textfield-padding-top) var(--spectrum-padding) var(--spectrum-textfield-padding-bottom);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
-  min-width: 110px;
-  height: var(--spectrum-input-height-default);
+  min-width: var(--spectrum-textfield-min-width);
+  height: var(--spectrum-textfield-height);
   width: var(--spectrum-component-single-line-width);
 
   vertical-align: top; /* used to align them correctly in forms. */
@@ -30,7 +33,7 @@
 
   /* Change the input font styles in all browsers */
   font-family: inherit;
-  font-size: var(--spectrum-font-size);
+  font-size: var(--spectrum-text-size);
   line-height: var(--spectrum-text-body-line-height);
   text-overflow: ellipsis;
 
@@ -46,14 +49,14 @@
   -webkit-appearance: none !important;
 
   &::placeholder {
-    font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
-    font-style: var(--spectrum-input-placeholder-text-style-default);
+    font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
+    font-style: var(--spectrum-textfield-placeholder-text-font-style);
     transition: color var(--spectrum-transition-time) ease-in-out;
   }
 
   &:hover {
     &::placeholder {
-      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
+      font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
     }
   }
 
@@ -61,7 +64,7 @@
     /* The opacity must be set to 1 */
     opacity: 1;
     &::placeholder {
-      font-weight: var(--spectrum-input-placeholder-text-font-weight-default);
+      font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
     }
   }
 
@@ -112,7 +115,7 @@
 }
 
 .spectrum-Textfield--quiet {
-  border-radius: 0;
+  border-radius: var(--spectrum-textfield-quiet-border-radius);
   text-indent: 0;
 
   border: none;

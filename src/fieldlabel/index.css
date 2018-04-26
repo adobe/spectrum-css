@@ -19,7 +19,7 @@
 
   margin: var(--spectrum-field-label-margin);
 
-  font-size: var(--spectrum-font-size-text-label);
+  font-size: var(--spectrum-text-size-text-label);
   line-height: var(--spectrum-line-height-text-label);
 
   vertical-align: top;
@@ -46,13 +46,12 @@
   padding: var(--spectrum-field-label-right-padding);
 }
 
-
 /* topdoc
 {{ form/index.yml }}
 */
 .spectrum-Form {
   display: table;
-  border-collapse: separate;  
+  border-collapse: separate;
   border-spacing: var(--spectrum-tableform-border-spacing);
   margin: var(--spectrum-tableform-margin);
 }

@@ -1,0 +1,7 @@
+.spectrum-Avatar {
+  opacity: percent(var(--spectrum-avatar-small-opacity));
+
+  &.is-disabled {
+    opacity: percent(var(--spectrum-avatar-small-opacity-disabled));
+  }
+}

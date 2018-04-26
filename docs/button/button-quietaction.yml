@@ -1,31 +1,31 @@
 ---
-name: Button - Quiet Action
-description: A Spectrum 'action' button, used in the action bar
+name: Action Button - Quiet
+description: The quiet action button.
 status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-Button spectrum-Button--quiet--action">
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
-  <button class="spectrum-Button spectrum-Button--quiet--action" disabled>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
 
-  <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Button--quiet--action--iconOnly">
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
   </button>
-  <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Button--quiet--action--iconOnly" disabled>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>

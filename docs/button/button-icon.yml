@@ -1,19 +1,32 @@
 ---
-name: Button - Icon
-description: A Spectrum icon-only button
+name: Clear Button
+description: The clear button used in search and tags.
 status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-Button spectrum-Button--icon">
-    <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Close">
-      <use xlink:href="#spectrum-icon-24-Close" />
+  <button class="spectrum-ClearButton">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-TagClose" />
     </svg>
   </button>
-  <button class="spectrum-Button spectrum-Button--icon" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Close">
-      <use xlink:href="#spectrum-icon-24-Close" />
+  <button class="spectrum-ClearButton" disabled>
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-TagClose" />
+    </svg>
+  </button>
+
+  <br><br>
+
+  <button class="spectrum-ClearButton spectrum-ClearButton--small">
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-TagClose" />
+    </svg>
+  </button>
+  <button class="spectrum-ClearButton spectrum-ClearButton--small" disabled>
+    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-TagClose" />
     </svg>
   </button>

@@ -31,7 +31,10 @@ function serve(done) {
 function watch() {
   gulp.watch('src/**/*.css', gulp.series('reload-css'));
 
-  gulp.watch('docs/**/*.yml', gulp.series('reload-docs'));
+  gulp.watch([
+    'docs/**/*.yml',
+    'tasks/resources/docs/js/*.js'
+  ], gulp.series('reload-docs'));
 
   gulp.watch('icons/*.svg', gulp.series('reload-icons'));
 }

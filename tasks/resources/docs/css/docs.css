@@ -3,6 +3,9 @@
   margin: 0 auto;
   max-width: 1100px;
 }
+.sdldocs-header-title {
+  margin-left: 12px;
+}
 .wf-loading {
   visibility: hidden;
 }
@@ -60,14 +63,14 @@ pre.html {
   min-height: 48px;
   line-height: 48px;
 }
+.sdldocs-floating {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
 .sdldocs-header-logo-image {
   vertical-align: middle;
-}
-.sdldocs-header-title {
-  margin-left: 10px;
-  font-size: 18px;
-  font-weight: normal;
-  display: none;
 }
 .sdldocs-colorstop {
   min-width: 300px;
@@ -120,6 +123,33 @@ pre.html {
 .sdldocs-subtleLink {
   text-decoration: none;
   color: inherit;
+}
+
+.sdldocs-badge {
+  display: inline-flex;
+  height: 20px;
+
+  line-height: 20px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: white;
+  font-weight: 300;
+  text-shadow: 0 1px 0 rgb(0,0,0,0.3);
+}
+.sdldocs-badge-label,
+.sdldocs-badge-version {
+  padding: 0 8px;
+  border-radius: 3px;
+}
+.sdldocs-badge-label {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #4B4B4B;
+}
+.sdldocs-badge-version {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #1473E6;
 }
 
 /* For documentation beautification only - DO NOT COPY */
