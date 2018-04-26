@@ -19,7 +19,13 @@ markup: |
     </svg>
   </button>
 
-  <button class="spectrum-Tool is-disabled">
+  <button class="spectrum-Tool" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected" disabled>
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
       <use xlink:href="#spectrum-icon-18-Brush" />
     </svg>
