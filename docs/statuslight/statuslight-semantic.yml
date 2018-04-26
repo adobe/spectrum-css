@@ -1,0 +1,10 @@
+---
+name: Status Light - Semantic
+description: Color has meaning; use these to convey specific meaning.
+status: Beta
+markup: |
+  <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>

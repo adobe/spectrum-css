@@ -14,7 +14,7 @@
   background-color: var(--spectrum-statuslight-info-dot-color);
 }
 
-.spectrum-StatusLight--archived {
+.spectrum-StatusLight--neutral {
   color: var(--spectrum-statuslight-neutral-text-color);
 
   &::before {

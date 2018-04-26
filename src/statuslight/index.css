@@ -1,7 +1,7 @@
 @import '../commons/index.css';
 
 /* topdoc
-{{ statuslight/statuslight-status.yml }}
+{{ statuslight/statuslight-semantic.yml }}
 */
 .spectrum-StatusLight {
   height: var(--spectrum-statuslight-height);
@@ -20,10 +20,10 @@
   }
 }
 
-.spectrum-StatusLight--archived {
+.spectrum-StatusLight--neutral {
   font-style: italic;
 }
 
 /* topdoc
-{{ statuslight/statuslight-category.yml }}
+{{ statuslight/statuslight-label.yml }}
 */
