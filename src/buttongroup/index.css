@@ -4,6 +4,10 @@
 .spectrum-ButtonGroup {
   display: flex;
 
+  * {
+    flex-shrink: 0;
+  }
+
   .spectrum-Button + .spectrum-Button {
     margin-left: var(--spectrum-buttongroup-button-gap-x);
   }
