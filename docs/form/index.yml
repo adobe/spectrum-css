@@ -21,7 +21,7 @@ markup: |
       <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
       <div class="spectrum-Form-itemField">
         <div class="spectrum-Dropdown" style="width: 195px;">
-          <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+          <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
             <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
