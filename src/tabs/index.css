@@ -169,7 +169,7 @@
   }
 
   .spectrum-Tabs-selectionIndicator {
-    top: var(--spectrum-tabs-rule-height);
+    top: 0;
     left: calc(calc(-1 * var(--spectrum-tabs-focus-ring-padding-x)) + var(--spectrum-tabs-focus-ring-size));
     width: var(--spectrum-tabs-rule-height);
   }
