@@ -31,12 +31,6 @@ var processors = [
       }
     }
   }),
-  require('postcss-pxtorem')({
-    rootValue: 16,
-    propList: ['*'],
-    minPixelValue: 1,
-    selectorBlackList: [/^html$/]
-  }),
   require('postcss-focus-ring'),
   require('autoprefixer')({
     'browsers': [
@@ -120,6 +114,8 @@ gulp.task('build-css:individual-components-multistops', function() {
       .pipe(insert.prepend(`\n@import '../colorStops/spectrum-${colorStop}.css';\n.spectrum--${colorStop} {\n`))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
+      // Fix a nested + inherit bug
+      .pipe(replace(`.spectrum--${colorStop} .spectrum--${colorStop}`, `.spectrum--${colorStop}`))
       .pipe(rename(function(path) {
         path.dirname += '/multiStops';
         path.basename = colorStop;
