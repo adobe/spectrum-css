@@ -1,7 +1,7 @@
 @import '../commons/index.css';
 
 %spectrum-BaseButton {
-  display: inline-flex;
+  display: inline-block;
   box-sizing: border-box;
 
   /* Show the button overflow in Edge. */
