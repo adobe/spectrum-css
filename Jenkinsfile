@@ -20,8 +20,8 @@ pipeline {
                         script: 'npm config get userconfig',
                         returnStdout: true
                     )
-                    env.REGISTRY_MUNGE = """@react:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-react-release/\
-//artifactory.corp.adobe.com:443/artifactory/api/npm/npm-react-release/:always-auth=false"""
+                    env.REGISTRY_MUNGE = """@react:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/\
+//artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/:always-auth=false"""
                 }
                 // if grep finds the registry munge is already present in the npmrc file, cool, stop there.
                 // otherwise, concat the registry munge into the npmrc file.
