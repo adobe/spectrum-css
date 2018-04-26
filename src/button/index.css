@@ -244,3 +244,13 @@ a.spectrum-Button {
   width: var(--spectrum-clearbutton-small-width);
   height: var(--spectrum-clearbutton-small-height);
 }
+
+.spectrum-Tool {
+  @inherit: .spectrum-ActionButton;
+  @inherit: .spectrum-ActionButton--quiet;
+
+  width: var(--spectrum-tool-min-width);
+  height: var(--spectrum-tool-height);
+
+  padding: 0;
+}

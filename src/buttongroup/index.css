@@ -1,0 +1,41 @@
+/* topdoc
+{{ buttongroup/buttongroup.yml }}
+*/
+.spectrum-ButtonGroup {
+  display: flex;
+
+  .spectrum-Button + .spectrum-Button {
+    margin-left: var(--spectrum-buttongroup-button-gap-x);
+  }
+
+  .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: var(--spectrum-actionbuttongroup-text-button-gap-x);
+  }
+
+  .spectrum-Tool + .spectrum-Tool {
+    margin-left: var(--spectrum-toolgroup-text-button-gap-x);
+  }
+}
+
+/* topdoc
+{{ buttongroup/buttongroup-vertical.yml }}
+*/
+.spectrum-ButtonGroup--vertical {
+  display: inline-flex;
+  flex-direction: column;
+
+  .spectrum-Button + .spectrum-Button {
+    margin-top: var(--spectrum-buttongroup-button-gap-y);
+    margin-left: 0;
+  }
+
+  .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-top: var(--spectrum-actionbuttongroup-text-button-gap-y);
+    margin-left: 0;
+  }
+
+  .spectrum-Tool + .spectrum-Tool {
+    margin-top: var(--spectrum-toolgroup-text-button-gap-y);
+    margin-left: 0;
+  }
+}

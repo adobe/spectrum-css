@@ -1,0 +1,86 @@
+---
+name: Button Group (vertical)
+description: A group for buttons, action buttons, or tools.
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+
+  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+    <button class="spectrum-ActionButton">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+    <button class="spectrum-Tool">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+        <use xlink:href="#spectrum-icon-18-Brush" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+  </div>

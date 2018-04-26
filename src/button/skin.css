@@ -423,10 +423,6 @@
 }
 
 /* topdoc
-{{ button/button-toggle.yml }}
-*/
-
-/* topdoc
 {{ button/button-quiet-warning.yml }}
 */
 .spectrum-Button--quiet--warning {
@@ -517,37 +513,6 @@
 /* topdoc
 {{ button/button-icon.yml }}
 */
-
-.spectrum-Button--quiet--dropdown {
-  color: var(--spectrum-dropdown-text-color);
-  border-color: var(--spectrum-dropdown-quiet-border-color);
-  background-color: var(--spectrum-dropdown-quiet-background-color);
-
-  &:hover {
-    color: var(--spectrum-dropdown-text-color-hover);
-  }
-
-  &:focus-ring,
-  &.is-focused {
-    box-shadow: 0 2px 0 0 var(--spectrum-dropdown-border-color-key-focus);
-  }
-
-  &.is-invalid {
-    &:focus-ring,
-    &.is-focused {
-      box-shadow: 0 2px 0 0 var(--spectrum-dropdown-border-color-error);
-    }
-  }
-
-  &:disabled,
-  &.is-disabled {
-    color: var(--spectrum-dropdown-text-color-disabled);
-
-    &:focus-ring {
-      box-shadow: none;
-    }
-  }
-}
 
 .spectrum-FieldButton {
   color: var(--spectrum-dropdown-text-color);
@@ -666,9 +631,54 @@
     color: var(--spectrum-clearbutton-medium-icon-color-key-focus);
   }
 
-  &:disabled {
+  &:disabled,
+  &.is-disabled {
     background-color: var(--spectrum-clearbutton-medium-background-color-disabled);
 
     color: var(--spectrum-clearbutton-medium-icon-color-disabled);
+  }
+}
+
+.spectrum-Tool {
+  @inherit: .spectrum-ActionButton;
+  @inherit: .spectrum-ActionButton--quiet;
+
+  &.is-selected {
+    color: var(--spectrum-tool-icon-color-selected);
+
+    .spectrum-Tool-hold {
+      color: var(--spectrum-tool-hold-icon-color-selected);
+    }
+
+    &:hover {
+      color: var(--spectrum-tool-icon-color-selected-hover);
+
+      .spectrum-Tool-hold {
+        color: var(--spectrum-tool-hold-icon-color-selected-hover);
+      }
+    }
+
+    &:active {
+      color: var(--spectrum-tool-icon-color-selected-down);
+
+      .spectrum-Tool-hold {
+        color: var(--spectrum-tool-hold-icon-color-selected-down);
+      }
+    }
+
+    &:focus-ring {
+      color: var(--spectrum-tool-icon-color-selected-key-focus);
+
+      .spectrum-Tool-hold {
+        color: var(--spectrum-tool-hold-icon-color-selected-key-focus);
+      }
+    }
+
+    &:disabled,
+    &.is-disabled {
+      background-color: var(--spectrum-actionbutton-quiet-background-color-selected-disabled);
+      border-color: var(--spectrum-actionbutton-quiet-border-color-selected-disabled);
+      color: var(--spectrum-actionbutton-quiet-text-color-selected-disabled);
+    }
   }
 }
