@@ -50,6 +50,8 @@
 
   /* Prevent weirdness that can cause the vertical bar to fall down */
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:focus {
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
