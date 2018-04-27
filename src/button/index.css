@@ -260,8 +260,22 @@ a.spectrum-Button {
   @inherit: .spectrum-ActionButton;
   @inherit: .spectrum-ActionButton--quiet;
 
+  position: relative;
+
   width: var(--spectrum-tool-min-width);
   height: var(--spectrum-tool-height);
 
   padding: 0;
+
+  .spectrum-Tool-hold {
+    /* Increase specificity */
+    width: var(--spectrum-tool-hold-icon-size);
+    height: var(--spectrum-tool-hold-icon-size);
+  }
+}
+
+.spectrum-Tool-hold {
+  position: absolute;
+  right: var(--spectrum-tool-hold-icon-padding-right);
+  bottom: var(--spectrum-tool-hold-icon-padding-bottom);
 }
