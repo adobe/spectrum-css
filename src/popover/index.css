@@ -76,7 +76,7 @@
     @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Popover-tip {
-    right: -18px;
+    right: -15px;
     transform: rotate(-90deg);
   }
 }
@@ -90,7 +90,7 @@
     @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Popover-tip {
-    left: -18px;
+    left: -15px;
     transform: rotate(90deg);
   }
 }
@@ -113,7 +113,7 @@
     @inherit: %spectrum-overlay--bottom--open;
   }
   .spectrum-Popover-tip {
-    top: -13px;
+    top: -11px;
     transform: rotate(180deg);
   }
 }
@@ -127,7 +127,7 @@
     @inherit: %spectrum-overlay--top--open;
   }
   .spectrum-Popover-tip {
-    bottom: -13px;
+    bottom: -11px;
   }
 }
 
