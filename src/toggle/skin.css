@@ -32,7 +32,7 @@
 
     &:checked + .spectrum-ToggleSwitch-switch {
       &::before {
-        background-color: var(--spectrum-switch-track-color);
+        background-color: var(--spectrum-switch-handle-border-color-key-focus);
       }
     }
 
