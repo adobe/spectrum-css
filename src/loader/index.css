@@ -203,14 +203,20 @@
 */
 .spectrum-Loader--indeterminate {
   .spectrum-Loader-fills {
+    will-change: transform;
+    transform: translateZ(0);
     animation: 1s infinite cubic-bezier(.25,.78,.48,.89) spectrum-fills-rotate;
     transform-origin: center;
   }
   .spectrum-Loader-fill-submask-1 {
+    will-change: transform;
+    transform: translateZ(0);
     animation: 1s infinite linear spectrum-fill-mask-1;
   }
 
   .spectrum-Loader-fill-submask-2 {
+    will-change: transform;
+    transform: translateZ(0);
     animation: 1s infinite linear spectrum-fill-mask-2;
   }
 }
