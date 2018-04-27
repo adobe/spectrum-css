@@ -36,15 +36,11 @@
 }
 
 .spectrum-TreeView-link {
-  /* Be inline block with 100% width to prevent margin collapse */
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   cursor: pointer;
 
-  width: 100%;
-
-  padding: var(--spectrum-treeview-item-padding-y) var(--spectrum-treeview-item-padding-x);
-  margin: calc(var(--spectrum-treeview-item-margin-y) / 2) 0;
+  padding: calc(calc(var(--spectrum-treeview-item-margin-y) / 2) + var(--spectrum-treeview-item-padding-y)) var(--spectrum-treeview-item-padding-x);
 
   text-decoration: none;
 
