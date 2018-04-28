@@ -90,11 +90,6 @@
   .spectrum-Icon + .spectrum-Button-label {
     margin-left: var(--spectrum-button-primary-text-gap);
   }
-
-  /* Space out buttons when placed next to eachother */
-  & + .spectrum-Button {
-    margin-left: var(--spectrum-margin);
-  }
 }
 
 a.spectrum-Button {
@@ -278,4 +273,17 @@ a.spectrum-Button {
   position: absolute;
   right: var(--spectrum-tool-hold-icon-padding-right);
   bottom: var(--spectrum-tool-hold-icon-padding-bottom);
+}
+
+/* Potentially temporary: Add back default margin between all buttons when adjacent */
+.spectrum-Button:not(.spectrum-Button--block) + .spectrum-Button {
+  margin-left: var(--spectrum-buttongroup-button-gap-x);
+}
+
+.spectrum-ActionButton + .spectrum-ActionButton {
+  margin-left: var(--spectrum-actionbuttongroup-text-button-gap-x);
+}
+
+.spectrum-Tool + .spectrum-Tool {
+  margin-left: var(--spectrum-toolgroup-text-button-gap-x);
 }

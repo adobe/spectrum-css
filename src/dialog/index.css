@@ -156,14 +156,6 @@
     height: 0;
     clear: both;
   }
-
-  .spectrum-Button {
-    margin: 0 var(--spectrum-dialog-button-gap) 0 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 }
 
 .spectrum-Dialog-title {
