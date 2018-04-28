@@ -23,7 +23,9 @@
   --spectrum-dialog-animation-distance: 8px;
 
   /* Distance between the edge of the fullscreen dialog and header */
-  --spectrum-dialog-fullscreen-padding-top: var(--spectrum-dialog-padding);
+  --spectrum-dialog-fullscreen-padding-top: calc(var(--spectrum-dialog-padding-top) - 10px);
+
+  --spectrum-dialog-fullscreenheader-height: 48px;
 
   /* Distance between the fullscreen dialog header and the rule */
   --spectrum-dialog-fullscreen-header-padding-bottom: 24px;
@@ -204,13 +206,15 @@
   padding-top: var(--spectrum-dialog-fullscreen-padding-top);
 
   .spectrum-Dialog-header {
-    padding-bottom: var(--spectrum-dialog-fullscreen-header-padding-bottom);
+    flex: 0 0 var(--spectrum-dialog-fullscreenheader-height);
   }
 
   .spectrum-Dialog-title {
     font-size: var(--spectrum-dialog-fullscreen-header-text-size);
     font-weight: var(--spectrum-dialog-fullscreen-header-text-font-weight);
-    line-height: var(--spectrum-dialog-fullscreen-header-line-height);
+
+    /* Get correct height on the heading */
+    margin: 4px 0 0 0;
   }
 
   .spectrum-Dialog-content {
