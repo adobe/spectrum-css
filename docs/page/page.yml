@@ -2,5 +2,34 @@
 name: Page
 status: n/a
 description: |
-  The outer page container. The `<body>` tag should only have the `.spectrum` class if using a standalone CSS file.
-  If using multistops, the `<body>` tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
+  The outer page container. A parent tag should only have the `.spectrum` class if using a standalone CSS file.
+  If using multistops, a parent tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
+  Finally, if scaling to large with the diff strategy, a parent tag should have the `.spectrum--large` class.
+markup: |
+  <button class="spectrum-Button spectrum-Button--cta">Button</button>
+  <br><br>
+  <div class="spectrum--large">
+    <button class="spectrum-Button spectrum-Button--cta">Button</button>
+  </div>
+  <br><br>
+
+  <div class="spectrum-Dropdown" style="width: 220px;">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-label">Ballard</span>
+      <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      </svg>
+    </button>
+  </div>
+  <br><br>
+
+  <div class="spectrum--large">
+    <div class="spectrum-Dropdown" style="width: 220px;">
+      <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-label">Ballard</span>
+        <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+        </svg>
+      </button>
+    </div>
+  </div>

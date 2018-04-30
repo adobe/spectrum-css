@@ -103,7 +103,7 @@ function setHashFromScroll() {
 window.ignoreScroll = false;
 
 var curScale = 'medium';
-var curMethod = 'token';
+var curMethod = 'standalone';
 var scaleAbbreviations = {
   'medium': 'md',
   'large': 'lg'
@@ -112,33 +112,11 @@ function changeScale(scale, method, noState) {
   method = method || curMethod;
   scale = scale || curScale;
 
-  if (method === 'rem' || method === 'rem-auto') {
-    var diffLink = document.querySelector('link[data-spectrum-core-diff]');
-    if (method === 'rem-auto') {
-      if (diffLink.getAttribute('href') !== '../spectrum-core-diff.css') {
-        diffLink.setAttribute('href', '../spectrum-core-diff.css');
-      }
-    }
-    else {
-      // Remove auto diffs
-      if (diffLink.getAttribute('href') !== '') {
-        diffLink.setAttribute('href', '');
-      }
-    }
-
-    var coreLink = document.querySelector('link[data-spectrum-core]');
-    if (coreLink.getAttribute('href') !== '../spectrum-core.css') {
-      coreLink.setAttribute('href', '../spectrum-core.css');
-    }
-
-    Object.keys(scaleAbbreviations).forEach(function(otherScale) {
-      if (otherScale !== scale) {
-        document.documentElement.classList.remove('spectrum--' + otherScale);
-      }
-    });
-    document.documentElement.classList.add('spectrum--' + scale);
+  if (method === 'diff') {
+    document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core.css');
+    document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '../spectrum-core-diff.css');
   }
-  else if (method === 'token') {
+  else if (method === 'standalone') {
     if (scale !== 'medium') {
       document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core-' + scaleAbbreviations[scale] + '.css');
     }
@@ -146,10 +124,12 @@ function changeScale(scale, method, noState) {
       document.querySelector('link[data-spectrum-core]').setAttribute('href', '../spectrum-core.css');
     }
     document.querySelector('link[data-spectrum-core-diff]').setAttribute('href', '');
-    Object.keys(scaleAbbreviations).forEach(function(otherScale) {
-      document.documentElement.classList.remove('spectrum--' + otherScale);
-    });
   }
+
+  Object.keys(scaleAbbreviations).forEach(function(otherScale) {
+    document.body.classList.remove('spectrum--' + otherScale);
+  });
+  document.body.classList.add('spectrum--' + scale);
 
   // Swap out icons
   var uiIcons = scale === 'medium' ? mediumIcons : largeIcons;
