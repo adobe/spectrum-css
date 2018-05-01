@@ -7,22 +7,8 @@
   > .spectrum-ActionButton {
     display: block;
 
-    padding: 0 8px;
-
-    /* Increase specificity by nesting to override stuff here */
-    > .spectrum-ActionMenu-icon {
-      display: inline-block;
-      content: '';
+    > .spectrum-Icon {
       width: 18px;
-      height: 5px;
-      background-position: center center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      vertical-align: 2px;
     }
   }
-}
-
-.spectrum-ActionMenu-label {
-  margin-left: 6px;
 }
