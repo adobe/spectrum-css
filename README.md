@@ -1,5 +1,5 @@
 ![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
-# spectrum-css
+# spectrum-css ![spectrum-version](https://git.corp.adobe.com/brownlee/stupid-stuff/blob/master/spectrum-badge.png)
 The goal of this project is to provide a standard CSS implementation of the [Spectrum][spectrum-link] design language.  
 
 This project makes use of [Spectrum DNA](https://dna.corp.adobe.com) generated data. Its output is meant to be used to build elements in other frameworks such as [Torq Spectrum Web SDK][torq-spectrum-web-sdk], [React-Spectrum][reactspectrum-link], or [CoralUI][coralui-link]. **Consider using one of these projects instead of Spectrum CSS directly.**
@@ -86,7 +86,7 @@ As there is CSS for only one color stop present, simply set `<body class="spectr
 
 With Spectrum CSS, dependency management between components is the responsibility of the consumer, you. The framework you're building likely has dependencies itself, such as `dropdown` depends on `button`, and each of the components includes its CSS. If this is the case, you'll get the CSS in the right order automatically, since `dropdown` is going to depend on `button`, and `button` will import the necessary CSS.
 
-However, if you're doing a more manual inclusion of CSS files, the easiest thing to do is to use the fully built `dist/spectrum-core.css` + `dist/spectrum-light.css` or `dist/standalone/spectrum-light.css` files described above. If you need only specific components, be sure to follow the order in `src/components.css` so components can override styles of their dependencies. 
+However, if you're doing a more manual inclusion of CSS files, the easiest thing to do is to use the fully built `dist/spectrum-core.css` + `dist/spectrum-light.css` or `dist/standalone/spectrum-light.css` files described above. If you need only specific components, be sure to follow the order in `src/components.css` so components can override styles of their dependencies.
 
 
 ## Project Structure
@@ -142,7 +142,7 @@ You may also view all of the screenshots taken so far by Jenkins in this repo: [
 To note: the JenkinsCI server will almost always have a green check mark in the commit message but should be taken with a grain a salt. The green check mark in this case means the project built succesfully BUT it does not mean the components aren't all mangled up or whatever. It is up to the developer who is committing to ensure that their commits are good and are using this tool to see how much visual change their commits are actually doing.
 
 ## Where is the JavaScript?
-We have found that JavaScript is where a framework or library quickly becomes opinionated and stops being easy to use with or across other frameworks. To avoid this problem, Spectrum-CSS avoids implementation details that require JavaScript.  Where an element might require multiple states, the documentation here will simply show all the states in a flat, static example.  We leave it to the frameworks implementing Spectrum-CSS to create JavaScript that suits their needs. 
+We have found that JavaScript is where a framework or library quickly becomes opinionated and stops being easy to use with or across other frameworks. To avoid this problem, Spectrum-CSS avoids implementation details that require JavaScript.  Where an element might require multiple states, the documentation here will simply show all the states in a flat, static example.  We leave it to the frameworks implementing Spectrum-CSS to create JavaScript that suits their needs.
 
 ## Learn More
 For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
