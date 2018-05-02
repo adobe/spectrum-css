@@ -1,5 +1,7 @@
 ![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
-# spectrum-css ![spectrum-version](https://git.corp.adobe.com/brownlee/stupid-stuff/blob/master/spectrum-badge.png)
+
+# spectrum-css <img src='https://git.corp.adobe.com/pages/brownlee/stupid-stuff/spectrum-badge.svg' height=20 />
+
 The goal of this project is to provide a standard CSS implementation of the [Spectrum][spectrum-link] design language.  
 
 This project makes use of [Spectrum DNA](https://dna.corp.adobe.com) generated data. Its output is meant to be used to build elements in other frameworks such as [Torq Spectrum Web SDK][torq-spectrum-web-sdk], [React-Spectrum][reactspectrum-link], or [CoralUI][coralui-link]. **Consider using one of these projects instead of Spectrum CSS directly.**
