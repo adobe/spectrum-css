@@ -16,6 +16,7 @@
   display: block;
 
   min-width: var(--spectrum-field-min-width);
+  box-sizing: border-box;
 
   margin: var(--spectrum-field-label-margin);
 
