@@ -74,7 +74,6 @@
 }
 
 .spectrum-Calendar-dayOfWeek {
-
   position: absolute;
   bottom: var(--spectrum-calendar-day-padding);
 
@@ -123,6 +122,7 @@
   text-align: center;
   padding: 0;
   position: relative;
+  box-sizing: content-box;
   height: var(--spectrum-calendar-day-height);
   width: var(--spectrum-calendar-day-width);
   padding: var(--spectrum-calendar-day-padding);
