@@ -29,8 +29,9 @@
   position: relative;
 }
 .spectrum-Loader-track {
-  width: calc(var(--spectrum-loader-circle-medium-width) - (var(--spectrum-loader-circle-medium-border-size) * 2));
-  height: calc(var(--spectrum-loader-circle-medium-height) - (var(--spectrum-loader-circle-medium-border-size) * 2));
+  box-sizing: border-box;
+  width: calc(var(--spectrum-loader-circle-medium-width));
+  height: calc(var(--spectrum-loader-circle-medium-height));
   border: solid var(--spectrum-loader-circle-medium-border-size);
   border-radius: var(--spectrum-loader-circle-medium-width);
 }
@@ -42,8 +43,9 @@
   height: 100%;
 }
 .spectrum-Loader-fill {
-  width: calc(var(--spectrum-loader-circle-medium-width) - (var(--spectrum-loader-circle-medium-border-size) * 2));
-  height: calc(var(--spectrum-loader-circle-medium-height) - (var(--spectrum-loader-circle-medium-border-size) * 2));
+  box-sizing: border-box;
+  width: calc(var(--spectrum-loader-circle-medium-width));
+  height: calc(var(--spectrum-loader-circle-medium-height));
   border: solid var(--spectrum-loader-circle-medium-border-size);
   border-radius: var(--spectrum-loader-circle-medium-width);
 }
@@ -75,14 +77,14 @@
   width: var(--spectrum-loader-circle-small-width);
   height: var(--spectrum-loader-circle-small-height);
   .spectrum-Loader-track {
-    width: calc(var(--spectrum-loader-circle-small-width) - (var(--spectrum-loader-circle-small-border-size) * 2));
-    height: calc(var(--spectrum-loader-circle-small-height) - (var(--spectrum-loader-circle-small-border-size) * 2));
+    width: calc(var(--spectrum-loader-circle-small-width));
+    height: calc(var(--spectrum-loader-circle-small-height));
     border: solid var(--spectrum-loader-circle-small-border-size);
     border-radius: var(--spectrum-loader-circle-small-width);
   }
   .spectrum-Loader-fill {
-    width: calc(var(--spectrum-loader-circle-small-width) - (var(--spectrum-loader-circle-small-border-size) * 2));
-    height: calc(var(--spectrum-loader-circle-small-height) - (var(--spectrum-loader-circle-small-border-size) * 2));
+    width: calc(var(--spectrum-loader-circle-small-width));
+    height: calc(var(--spectrum-loader-circle-small-height));
     border: solid var(--spectrum-loader-circle-small-border-size);
     border-radius: var(--spectrum-loader-circle-small-width);
   }
@@ -95,15 +97,15 @@
   width: var(--spectrum-loader-circle-large-width);
   height: var(--spectrum-loader-circle-large-height);
   .spectrum-Loader-track {
-    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
-    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    width: calc(var(--spectrum-loader-circle-large-width));
+    height: calc(var(--spectrum-loader-circle-large-height));
     border: solid var(--spectrum-loader-circle-large-border-size);
     border-radius: var(--spectrum-loader-circle-large-width);
   }
 
   .spectrum-Loader-fill {
-    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
-    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    width: calc(var(--spectrum-loader-circle-large-width));
+    height: calc(var(--spectrum-loader-circle-large-height));
     border: solid var(--spectrum-loader-circle-large-border-size);
     border-radius: var(--spectrum-loader-circle-large-width);
   }
@@ -116,15 +118,15 @@
   width: var(--spectrum-loader-circle-large-width);
   height: var(--spectrum-loader-circle-large-height);
   .spectrum-Loader-track {
-    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
-    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    width: calc(var(--spectrum-loader-circle-large-width));
+    height: calc(var(--spectrum-loader-circle-large-height));
     border: solid var(--spectrum-loader-circle-large-border-size);
     border-radius: var(--spectrum-loader-circle-large-width);
   }
 
   .spectrum-Loader-fill {
-    width: calc(var(--spectrum-loader-circle-large-width) - (var(--spectrum-loader-circle-large-border-size) * 2));
-    height: calc(var(--spectrum-loader-circle-large-height) - (var(--spectrum-loader-circle-large-border-size) * 2));
+    width: calc(var(--spectrum-loader-circle-large-width));
+    height: calc(var(--spectrum-loader-circle-large-height));
     border: solid var(--spectrum-loader-circle-large-border-size);
     border-radius: var(--spectrum-loader-circle-large-width);
   }
