@@ -75,7 +75,7 @@ markup: |
         </div>
         <div class="spectrum-Shell-logoLabel">Media Optimizer</div>
         <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 88px;">
-          <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+          <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label">Search</span>
             <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -120,7 +120,7 @@ markup: |
         </svg>
       </div>
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 88px;">
-        <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+        <button class="spectrum-Button spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" aria-haspopup="true">
           <span class="spectrum-Dropdown-label">Search</span>
           <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
