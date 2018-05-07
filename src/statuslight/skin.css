@@ -1,3 +1,16 @@
+.spectrum-StatusLight {
+  color: var(--spectrum-statuslight-text-color);
+
+  &[disabled],
+  &.is-disabled {
+    color: var(--spectrum-statuslight-text-color-disabled);
+
+    &::before {
+      background-color: var(--spectrum-statuslight-dot-color-disabled);
+    }
+  }
+}
+
 .spectrum-StatusLight--negative::before {
   background-color: var(--spectrum-statuslight-negative-dot-color);
 }
