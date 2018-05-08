@@ -1,5 +1,10 @@
 @import '../commons/index.css';
 
+:root {
+  /* hardcoded cause Nate said so */
+  --spectrum-dropdown-label-min-width: 144px;
+}
+
 /* topdoc
 {{ dropdown/dropdown-default.yml }}
 */
@@ -32,6 +37,8 @@
   .spectrum-Dropdown-label {
     /* Be the biggest! */
     flex: 1;
+
+    min-width: var(--spectrum-dropdown-label-min-width);
 
     white-space: nowrap;
     overflow: hidden;
