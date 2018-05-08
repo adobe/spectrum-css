@@ -6,6 +6,8 @@
 
   /* Todo fix in DNA */
   --spectrum-textfield-quiet-border-radius: 0;
+
+  --spectrum-textfield-icon-size: 16px;
 }
 
 .spectrum-Textfield {
@@ -91,9 +93,9 @@
   &.is-invalid,
   &:invalid {
     background-repeat: no-repeat;
-    background-size: 16px 16px;
-    background-position: calc(100% - 7px) 50%;
-    padding-right: 30px;
+    background-size: var(--spectrum-textfield-icon-size) var(--spectrum-textfield-icon-size);
+    background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) 50%;
+    padding-right: var(--spectrum-textfield-icon-frame);
   }
 }
 
@@ -107,10 +109,7 @@
 
   &.is-invalid,
   &:invalid {
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    background-position: calc(100% - 7px) calc(100% - 7px);
-    padding-right: 30px;
+    background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) calc(100% - calc(var(--spectrum-textfield-icon-size) / 2));
   }
 }
 
@@ -119,7 +118,7 @@
   text-indent: 0;
 
   border: none;
-  border-bottom: 1px solid;
+  border-bottom: var(--spectrum-textfield-quiet-border-size) solid;
 
   /* removes the side padding to align the text properly */
   padding-left: 0;
