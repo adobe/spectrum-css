@@ -126,6 +126,8 @@ Second, you'll need workflow icons for your app. The `icons/spectrum-icons.svg` 
 AdobeSpectrum.loadIcons('icons/spectrum-icons.svg');
 ```
 
+You can then use the icons in your app. Visit the [Spectrum CSS icon list](https://git.corp.adobe.com/pages/Spectrum/spectrum-css/icons/) and click on any icon to get the markup.
+
 ### Swapping out icons sets for scaling
 
 If you're using different scales, you'll need to import the proper icon set to match. Note that both of the files have the same SVG IDs, so for a responsive site, you'll need to remove the SVG element from the DOM when switching scales:
