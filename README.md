@@ -94,6 +94,29 @@ However, if you're doing a more manual inclusion of CSS files, the easiest thing
 
 If your pages are light by default, with some dark elements embedded within (shell, etc), you should import the light colorstop first, adding `.spectrum--light` to an outer container (affecting the whole page), and adding `.spectrum--dark` to an inner container when you need dark elements (affecting only elements inside of it). That is, the import order of colorstops should match the nesting on your page.
 
+### Scale support
+
+Spectrum CSS supports two scale sizes:
+
+* Medium - Desktop
+* Large - Mobile
+
+#### Medium only
+
+By default, when you import `index.css` for each component or `spectrum-core.css`, you'll get the Medium scale.
+
+#### Large only
+
+If your site is always mobile, you can get large by default by importing `index-lg.css` for individual components, or `spectrum-core-lg.css` for all components.
+
+#### Medium and Large
+
+If you need to display both Medium and Large, you can import `index.css` and `index-diff.css` for individual components, or `spectrum-core.css` and `spectrum-core-diff.css` for all components.
+
+You can then switch scales by adding the `.spectrum--large`  or `.spectrum--medium` class on an outer element.
+
+Note that the Spectrum CSS UI icons must change as well, see below for a full example.
+
 ### Importing Icons
 
 To get icons, you'll need to use the `AS.loadIcons()` function (also available as `AdobeSpectrum.loadIcons()`). This function lives in the `icons/AS.loadIcons.js` file and has the following signature:
@@ -130,7 +153,7 @@ You can then use the icons in your app. Visit the [Spectrum CSS icon list](https
 
 ### Swapping out icons sets for scaling
 
-If you're using different scales, you'll need to import the proper icon set to match. Note that both of the files have the same SVG IDs, so for a responsive site, you'll need to remove the SVG element from the DOM when switching scales:
+If you're using different scales, you'll need to import the proper icon set to match. Note that both of the files have the same SVG IDs, so for a responsive site using `index-diff.css` for each component, you'll need to remove the SVG element from the DOM when switching scales:
 
 ```js
 var mediumIcons;
@@ -138,8 +161,22 @@ var largeIcons;
 
 // Call when you switch scale
 function switchScale(scale) {
-  document.head.removeChild(scale === 'large' ? mediumIcons : largeIcons);
-  document.head.appendChild(scale === 'large' ? largeIcons : mediumIcons)
+  var otherScale = scale === 'large' ? 'medium' : 'large';
+
+  // Remove the old icons from the DOM
+  try {
+    document.head.removeChild(scale === 'large' ? mediumIcons : largeIcons);
+  }
+  catch (err) {
+    console.error(err);
+  }
+
+  // Add the new icons
+  document.head.appendChild(scale === 'large' ? largeIcons : mediumIcons);
+
+  // Switch the outer class if you're using index-diff.css to support both medium and large
+  document.documentElement.classList.toggle('spectrum--' + scale, true);
+  document.documentElement.classList.toggle('spectrum--' + otherScale, false);
 }
 
 // Load medium icons
