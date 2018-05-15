@@ -21,6 +21,11 @@
     border-bottom-right-radius: var(--spectrum-searchwithin-border-radius);
   }
 
+  .spectrum-Dropdown-label {
+    /* Override dropdown's min-width and be tiny */
+    min-width: 0;
+  }
+
   .spectrum-Textfield {
     flex: 1;
     margin-left: calc(-1 * var(--spectrum-textfield-border-size)); /* hides left border */
