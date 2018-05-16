@@ -57,6 +57,7 @@
 
   width: var(--spectrum-rail-handle-width);
   height: 100%;
+  z-index: 1;
 
   &.is-collapsed-start,
   &.is-collapsed-end {
