@@ -29,7 +29,7 @@
     }
   }
 
-  .spectrum-Button--quiet--dropdown, .spectrum-Dropdown-icon {
+  .spectrum-FieldButton, .spectrum-Dropdown-icon {
     color: var(--spectrum-shell-grey800);
     &:hover, &:active {
       color: var(--spectrum-shell-grey900);
