@@ -41,6 +41,10 @@
   }
 }
 
+.spectrum-SelectList-sectionHeading {
+  color: var(--spectrum-heading-subtitle3-text-color);
+}
+
 .spectrum-SelectList-divider {
   background-color: var(--spectrum-selectlist-divider-color);
 }
