@@ -1,27 +1,42 @@
 ---
 name: Quick Actions
-description: Spectrum quick actions (requires an icon)
+description: Note that the .spectrum-QuickActions-overlay class should be placed on the container where the Quick Actions are displayed, and the .spectrum-QuickActions--textOnly class should be applied when the buttons have text only.
 status: Beta
 markup: |
-  <div class="spectrum-QuickActions is-open">
-    <button class="spectrum-QuickActions-item">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Text">
-        <use xlink:href="#spectrum-icon-18-Text" />
-      </svg>
-    </button>
-    <button class="spectrum-QuickActions-item">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
-        <use xlink:href="#spectrum-icon-18-RotateLeft" />
-      </svg>
-    </button>
-    <button class="spectrum-QuickActions-item">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Crop">
-        <use xlink:href="#spectrum-icon-18-Crop" />
-      </svg>
-    </button>
-    <button class="spectrum-QuickActions-item">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="DeleteOutline">
-        <use xlink:href="#spectrum-icon-18-DeleteOutline" />
-      </svg>
-    </button>
+  <div class="spectrum-QuickActions-overlay" style="padding: 40px;">
+
+    <div class="spectrum-QuickActions is-open">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+          <use xlink:href="#spectrum-icon-18-Edit" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Copy">
+          <use xlink:href="#spectrum-icon-18-Copy" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="spectrum-QuickActions-overlay" style="padding: 40px;">
+
+    <div class="spectrum-QuickActions spectrum-QuickActions--textOnly is-open">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <span class="spectrum-ActionButton-label">Edit</span>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <span class="spectrum-ActionButton-label">Copy</span>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <span class="spectrum-ActionButton-label">Delete</span>
+      </button>
+    </div>
+
   </div>

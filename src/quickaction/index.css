@@ -1,22 +1,33 @@
 @import '../commons/index.css';
 @import '../commons/overlay.css';
 
-:root {
-  --spectrum-quickactions-border-width: 1px;
-
-  /* Missing from DNA */
-  --spectrum-quickactions-width: 40px;
-  --spectrum-quickactions-margin: 10px;
-}
-
 .spectrum-QuickActions {
+  box-sizing: border-box;
+
   @inherit: %spectrum-overlay;
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+
+  padding: var(--spectrum-quickactions-padding-y) var(--spectrum-quickactions-padding-x);
+
+  height: var(--spectrum-quickactions-height);
+
+  border-radius: var(--spectrum-quickactions-border-radius);
 
   &.is-open {
     @inherit: %spectrum-overlay--open;
+  }
+
+  .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: var(--spectrum-quickactions-icon-button-gap-x);
+  }
+}
+
+.spectrum-QuickActions--textOnly {
+  .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: var(--spectrum-quickactions-text-button-gap-x);
   }
 }
 
@@ -32,62 +43,3 @@
   }
 }
 
-.spectrum-QuickActions-item {
-
-  /* Change the font styles in all browsers */
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-
-  /* Remove the button margin in Firefox and Safari. */
-  margin: 0;
-
-  /* Show button the overflow in Edge and IE. */
-  overflow: visible;
-
-  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
-  text-transform: none;
-
-  /* Correct the inability to style clickable types in iOS and Safari. */
-  -webkit-appearance: button;
-
-  width: var(--spectrum-quickactions-width);
-  height: var(--spectrum-quickactions-height);
-  margin-left: var(--spectrum-quickactions-margin);
-  padding: 0;
-  border-width: var(--spectrum-quickactions-border-width);
-  border-radius: var(--spectrum-quickactions-border-radius);
-  border-style: solid;
-  transition: border-color var(--spectrum-transition-time) ease-out,
-    color var(--spectrum-transition-time) ease-out,
-    box-shadow var(--spectrum-transition-time) ease-out;
-
-
-  /* Remove the inner border and padding for button in Firefox. */
-  &::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-
-  /* Restore the focus styles unset by the previous rule. */
-  &:-moz-focusring{
-    outline: 1px dotted ButtonText;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:active {
-    cursor: pointer;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  .spectrum-Icon {
-    /* Fix alignment */
-    margin-top: 2px;
-  }
-}

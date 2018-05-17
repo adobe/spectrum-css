@@ -116,6 +116,11 @@ a.spectrum-Button {
   .spectrum-Icon + .spectrum-ActionButton-label {
     margin-left: var(--spectrum-button-primary-text-gap);
   }
+
+  .spectrum-Icon:only-child {
+    /* Remove padding if we're the only child */
+    margin: 0 calc(-1 * var(--spectrum-actionbutton-text-padding-x));
+  }
 }
 
 .spectrum-ActionButton-label,
