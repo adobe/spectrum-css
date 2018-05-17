@@ -28,8 +28,9 @@
   display: inline-flex;
   flex-direction: column;
 
-  .spectrum-ActionButton {
-    justify-content: left;
+  .spectrum-ActionButton-label {
+    flex-grow: 1;
+    text-align: left;
   }
 
   .spectrum-Button + .spectrum-Button {
