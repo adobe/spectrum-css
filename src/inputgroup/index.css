@@ -6,6 +6,9 @@
 /* topdoc
 {{ inputgroup/combobox-quiet.yml }}
 */
+/* topdoc
+{{ inputgroup/datepicker-quiet.yml }}
+*/
 
 :root {
   /* Todo: move to DNA */
@@ -44,7 +47,7 @@
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
     position: relative;
-    width: 24px;
+    padding-right: 0;
     border-bottom: var(--spectrum-textfield-quiet-affixed-border-size) solid;
 
     /* More hitarea */
