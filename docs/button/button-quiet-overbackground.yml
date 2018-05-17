@@ -8,7 +8,11 @@ modifiers:
   ':focus': Focused
 markup: |
   <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
-    <button class="spectrum-Button spectrum-Button--quiet--overBackground">Button</button>
+    <button class="spectrum-Button spectrum-Button--quiet--overBackground">
+      <span class="spectrum-Button-label">Button</span>
+    </button>
 
-    <button class="spectrum-Button spectrum-Button--quiet--overBackground" disabled>Button</button>
+    <button class="spectrum-Button spectrum-Button--quiet--overBackground" disabled>
+      <span class="spectrum-Button-label">Button</span>
+    </button>
   </div>

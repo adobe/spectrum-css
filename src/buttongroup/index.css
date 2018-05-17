@@ -28,6 +28,10 @@
   display: inline-flex;
   flex-direction: column;
 
+  .spectrum-ActionButton {
+    justify-content: left;
+  }
+
   .spectrum-Button + .spectrum-Button {
     margin-top: var(--spectrum-buttongroup-button-gap-y);
     margin-left: 0;

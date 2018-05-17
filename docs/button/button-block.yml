@@ -1,0 +1,33 @@
+---
+name: Button - Block
+description: Spectrum buttons modified with the --block variant
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button spectrum-Button--cta spectrum-Button--block">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
+
+  <br>
+
+  <button class="spectrum-Button spectrum-Button--primary spectrum-Button--block">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
+
+  <br>
+
+  <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--block">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
+
+  <br>
+
+  <button class="spectrum-ActionButton spectrum-Button--block">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+    <span class="spectrum-ActionButton-label">Button</span>
+  </button>

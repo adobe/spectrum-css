@@ -7,7 +7,10 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-Button spectrum-Button--secondary">Button</button>
+  <button class="spectrum-Button spectrum-Button--secondary">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
 
-  <button class="spectrum-Button spectrum-Button--secondary"
-  disabled>Button</button>
+  <button class="spectrum-Button spectrum-Button--secondary" disabled>
+    <span class="spectrum-Button-label">Button</span>
+  </button>

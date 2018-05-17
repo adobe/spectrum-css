@@ -5,7 +5,8 @@
   display: inline-block;
 
   > .spectrum-ActionButton {
-    display: block;
+    /* Don't be inline */
+    display: flex;
 
     > .spectrum-Icon {
       width: 18px;
