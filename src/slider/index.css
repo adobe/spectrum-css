@@ -19,6 +19,8 @@
 
 .spectrum-Slider {
   position: relative;
+  /* Don't let z-index'd child elements float above other things on the page */
+  z-index: 1;
   display: block;
   min-height: var(--spectrum-slider-height);
   width: var(--spectrum-slider-min-width);
