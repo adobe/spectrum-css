@@ -47,6 +47,7 @@
   border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
 
   .spectrum-Icon {
+    margin: 0 !important;
     width: var(--spectrum-Stepper-stepUpIcon-width);
     height: var(--spectrum-Stepper-stepUpIcon-height);
     opacity: 1;
