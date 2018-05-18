@@ -11,12 +11,8 @@
   justify-content: space-between;
   position: relative;
 
-  .spectrum-TabList-item {
+  .spectrum-Tabs-item {
     top: 1px;
-  }
-
-  .spectrum-TabList-item-line {
-    bottom: -7px;
   }
 
   .spectrum-Button--icon {

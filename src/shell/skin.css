@@ -15,6 +15,10 @@
     }
   }
 
+  .spectrum-Tabs {
+    border-bottom-color: transparent;
+  }
+
   .spectrum-Tabs-selectionIndicator {
     background-color: var(--spectrum-shell-grey900);
   }
