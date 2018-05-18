@@ -15,6 +15,9 @@
   /* Todo: Remove hardcoded values */
   --spectrum-slider-height: 32px;
   --spectrum-dial-width: 32px;
+
+  --spectrum-slider-input-top: calc(var(--spectrum-slider-handle-margin-top) / 4);
+  --spectrum-slider-input-left: calc(var(--spectrum-slider-handle-margin-left) / 4);
 }
 
 .spectrum-Slider {
@@ -101,10 +104,20 @@
 
   &:active,
   &.is-focused,
+  &.is-dragged {
+    border-width: var(--spectrum-slider-handle-border-size-key-focus);
+
+    .spectrum-Slider-input {
+      top: var(--spectrum-slider-handle-margin-top);
+      left: var(--spectrum-slider-handle-margin-left);
+    }
+  }
+
+  &:active,
+  &.is-focused,
   &.is-dragged,
   &.is-tophandle {
-    border-width: var(--spectrum-slider-handle-border-size-key-focus);
-    z-index: 1;
+    z-index: 3;
   }
 }
 
@@ -118,12 +131,12 @@
   /*  Remove the margin for input in Firefox and Safari. */
   margin: 0;
 
-  width: 100%;
-  height: 100%;
+  width: var(--spectrum-slider-handle-width);
+  height: var(--spectrum-slider-handle-height);
   padding: 0;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: var(--spectrum-slider-input-top);
+  left: var(--spectrum-slider-input-left);
   overflow: hidden;
   opacity: .000001;
   cursor: default;
