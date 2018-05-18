@@ -10,7 +10,7 @@
 
 .spectrum-Stepper {
   display: inline-flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
 
   width: var(--spectrum-component-single-line-width);
@@ -24,6 +24,8 @@
 
 .spectrum-Stepper-buttons {
   display: block;
+  border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
+  transition: box-shadow var(--spectrum-transition-time) ease-in-out;
 }
 
 .spectrum-Stepper-stepUp,
@@ -87,6 +89,8 @@
 
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+
+  z-index: 1;
 }
 
 .spectrum-Stepper--quiet {
