@@ -9,6 +9,6 @@
   border-radius: var(--spectrum-avatar-small-border-radius);
   border-style: none;
 
-  user-drag: none;
+  -webkit-user-drag: none;
   user-select: none;
 }
