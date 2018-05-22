@@ -1,39 +1,62 @@
 var gulp = require('gulp');
+var replace = require('gulp-replace');
 var git = require('gulp-git');
 var fs = require('fs');
 var package = JSON.parse(fs.readFileSync('./package.json'));
 
-gulp.task('gh-pages', function(cb) {
-  git.checkout('gh-pages', function(err) {
-    if (err) {
-      return cb(err);
-    }
-
-    // Move files
-    gulp.src('dist/**')
-      .pipe(gulp.dest('./'))
-      .on('end', function() {
-        // Commit
-        gulp.src([
-          './components',
-          './docs',
-          './standalone',
-          './vars',
-          './icons',
-          './spectrum*'
-        ])
-          .pipe(git.commit('Deploy version ' + package.version))
-          .on('end', function() {
-            // Push
-            git.push('origin', 'gh-pages', function (err) {
-              if (err) {
-                return cb(err);
-              }
-
-              // Return to master
-              git.checkout('master', cb);
-            });
-          });
-      });
-  });
+/**
+ * Replace the redirect path to latest version
+ */
+gulp.task('gh-pages:prepare-docs', function () {
+  return gulp.src('index.html')
+    .pipe(replace(/content="(.[^"]+)"/, 'content="0; url=' + package.version + '/docs"'))
+    .pipe(gulp.dest('./'));
 });
+
+/**
+ * Publish change to gh-pages
+ */
+gulp.task('gh-pages:publish', function (cb) {
+
+  // Move files
+  gulp.src('dist/**')
+    .pipe(gulp.dest(package.version))
+    .on('end', function () {
+
+      // Add new files
+      gulp.src([
+        package.version
+      ])
+        .pipe(git.add())
+        .on('end', function () {
+          // Commit
+          gulp.src([
+            package.version + '/**',
+            'index.html'
+          ])
+            .pipe(git.add())
+            .pipe(git.commit('Deploy version ' + package.version))
+            .on('end', function () {
+              // Push
+              git.push('origin', 'gh-pages', cb);
+            });
+        });
+    });
+});
+
+gulp.task('gh-pages:checkout-gh-pages', function (cb) {
+  git.checkout('gh-pages', cb);
+});
+
+gulp.task('gh-pages:checkout-master', function (cb) {
+  git.checkout('master', cb);
+});
+
+gulp.task('gh-pages',
+  gulp.series(
+    'gh-pages:checkout-gh-pages',
+    'gh-pages:prepare-docs',
+    'gh-pages:publish',
+    'gh-pages:checkout-master'
+  )
+);
