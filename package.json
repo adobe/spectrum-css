@@ -12,9 +12,9 @@
     "release": "npm run release:stable"
   },
   "devDependencies": {
+    "@adobe/focus-ring-polyfill": "^0.1.5",
     "@spectrum/balthazar": "^3.0.1",
     "@spectrum/dna-npm-release": "^1.x",
-    "@spectrum/dna-topdoc-template": "^2.0.0-beta.5",
     "@spectrum/spectrum-dna": "4.2.1",
     "@spectrum/spectrum-icons": "^1.0.0-beta.17",
     "autoprefixer": "^6.5.3",
