@@ -1,11 +1,11 @@
-.spectrum-Breadcrumb {
+.spectrum-Breadcrumbs-item {
   color: var(--spectrum-breadcrumb-text-color);
 
-  .spectrum-Breadcrumb-separator {
+  .spectrum-Breadcrumbs-separator {
     color: var(--spectrum-breadcrumb-ui-icon-color);
   }
 
-  .spectrum-Breadcrumb-link {
+  .spectrum-Breadcrumbs-link {
     color: inherit;
     text-decoration: none;
 
@@ -36,7 +36,7 @@
         color: var(--spectrum-breadcrumb-text-color);
       }
     }
-    .spectrum-Breadcrumb-link {
+    .spectrum-Breadcrumbs-link {
       &:focus-ring {
         color: var(--spectrum-breadcrumb-text-color-down);
         border-bottom: 0;

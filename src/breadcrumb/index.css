@@ -13,7 +13,7 @@
   }
 }
 
-.spectrum-Breadcrumb-separator {
+.spectrum-Breadcrumbs-separator {
   position: absolute;
   top: calc(50% - calc(calc(var(--spectrum-breadcrumb-ui-icon-height) / 2) - 1px));
   right: calc(calc(var(--spectrum-breadcrumb-margin) / -2) - calc(var(--spectrum-breadcrumb-ui-icon-width) / 2));
@@ -26,7 +26,7 @@
   opacity: 1;
 }
 
-.spectrum-Breadcrumb {
+.spectrum-Breadcrumbs-item {
   display: block;
   float: left;
 
@@ -37,7 +37,7 @@
   font-size: var(--spectrum-breadcrumb-text-size);
   font-weight: var(--spectrum-breadcrumb-text-font-weight);
 
-  .spectrum-Breadcrumb-link {
+  .spectrum-Breadcrumbs-link {
     cursor: default;
 
     &[href],
@@ -47,13 +47,13 @@
   }
 
   &:last-of-type {
-    .spectrum-Breadcrumb-separator {
+    .spectrum-Breadcrumbs-separator {
       display: none;
     }
   }
 }
 
-.spectrum-Breadcrumbs--title .spectrum-Breadcrumb {
+.spectrum-Breadcrumbs--title .spectrum-Breadcrumbs-item {
   &:last-of-type {
     /* Clear the floats so we drop to a new line */
     clear: left;
