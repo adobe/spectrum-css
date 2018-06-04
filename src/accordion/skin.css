@@ -2,11 +2,11 @@
   border-color: var(--spectrum-accordion-border-color);
 }
 
-.spectrum-Accordion-indicator {
+.spectrum-Accordion-itemIndicator {
   color: var(--spectrum-accordion-icon-color);
 }
 
-.spectrum-Accordion-header {
+.spectrum-Accordion-itemHeader {
   color: var(--spectrum-accordion-text-color);
 
   &:focus,
@@ -15,7 +15,7 @@
 
     background-color: var(--spectrum-accordion-background-color-hover);
 
-    + .spectrum-Accordion-indicator {
+    + .spectrum-Accordion-itemIndicator {
       color: var(--spectrum-accordion-icon-color-hover);
     }
   }
@@ -29,7 +29,7 @@
 
 .spectrum-Accordion-item {
   &.is-open {
-    .spectrum-Accordion-header {
+    .spectrum-Accordion-itemHeader {
       &:hover {
         background-color: transparent;
       }
@@ -38,7 +38,7 @@
 }
 
 .spectrum-Accordion-item.is-disabled {
-  .spectrum-Accordion-header {
+  .spectrum-Accordion-itemHeader {
     &,
     &:hover,
     &:focus {
@@ -46,7 +46,7 @@
       background-color: transparent;
     }
 
-    + .spectrum-Accordion-indicator {
+    + .spectrum-Accordion-itemIndicator {
       color: var(--spectrum-accordion-icon-color-disabled);
     }
   }
