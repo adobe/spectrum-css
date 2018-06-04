@@ -54,7 +54,7 @@
     /* Add padding for "avatar" variant */
     margin-left: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
 
-    ~ .spectrum-Tags-item-label {
+    ~ .spectrum-Tags-itemLabel {
       margin-right: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
     }
   }
@@ -64,7 +64,7 @@
   }
 }
 
-.spectrum-Tags-item-label {
+.spectrum-Tags-itemLabel {
   height: 100%;
   line-height: calc(var(--spectrum-tag-height) - calc(var(--spectrum-tag-border-size) * 2));
   flex: 1 1 auto;
