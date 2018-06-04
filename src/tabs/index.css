@@ -43,7 +43,7 @@
   &.is-disabled {
     cursor: default;
 
-    .spectrum-Tabs-item-label {
+    .spectrum-Tabs-itemLabel {
       cursor: default;
     }
   }
@@ -52,7 +52,7 @@
     /* Vertical centering */
     height: var(--spectrum-tabs-item-height);
 
-    & + .spectrum-Tabs-item-label {
+    & + .spectrum-Tabs-itemLabel {
       /* Icons really aren't supposed to be here, so there is no gap variable in DNA */
       margin-left: var(--spectrum-global-dimension-size-75);
     }
@@ -76,7 +76,7 @@
   }
 }
 
-.spectrum-Tabs-item-label {
+.spectrum-Tabs-itemLabel {
   cursor: pointer;
   vertical-align: top;
   display: inline-block;
@@ -123,7 +123,7 @@
     }
   }
 
-  .spectrum-Tabs-item-label {
+  .spectrum-Tabs-itemLabel {
     text-overflow: ellipsis;
     text-transform: capitalize;
     padding: 0;
@@ -162,7 +162,7 @@
     }
   }
 
-  .spectrum-Tabs-item-label {
+  .spectrum-Tabs-itemLabel {
     display: inline-block;
     text-overflow: ellipsis;
     vertical-align: top;
