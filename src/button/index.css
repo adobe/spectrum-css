@@ -154,21 +154,6 @@ a.spectrum-Button {
   line-height: 0;
 }
 
-/* topdoc
-{{ button/button-block.yml }}
-*/
-.spectrum-Button--block {
-  display: flex;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  min-width: 0;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .spectrum-FieldButton {
   @inherit: %spectrum-BaseButton;
 
@@ -267,7 +252,7 @@ a.spectrum-Button {
 }
 
 /* Potentially temporary: Add back default margin between all buttons when adjacent */
-.spectrum-Button:not(.spectrum-Button--block) + .spectrum-Button {
+.spectrum-Button + .spectrum-Button {
   margin-left: var(--spectrum-buttongroup-button-gap-x);
 }
 
