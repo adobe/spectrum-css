@@ -13,7 +13,7 @@
   }
 }
 
-.spectrum-Breadcrumbs-separator {
+.spectrum-Breadcrumbs-itemSeparator {
   position: absolute;
   top: calc(50% - calc(calc(var(--spectrum-breadcrumb-ui-icon-height) / 2) - 1px));
   right: calc(calc(var(--spectrum-breadcrumb-margin) / -2) - calc(var(--spectrum-breadcrumb-ui-icon-width) / 2));
@@ -37,7 +37,7 @@
   font-size: var(--spectrum-breadcrumb-text-size);
   font-weight: var(--spectrum-breadcrumb-text-font-weight);
 
-  .spectrum-Breadcrumbs-link {
+  .spectrum-Breadcrumbs-itemLink {
     cursor: default;
 
     &[href],
@@ -47,7 +47,7 @@
   }
 
   &:last-of-type {
-    .spectrum-Breadcrumbs-separator {
+    .spectrum-Breadcrumbs-itemSeparator {
       display: none;
     }
   }

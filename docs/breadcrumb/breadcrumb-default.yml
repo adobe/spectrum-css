@@ -10,19 +10,19 @@ markup: |
   <nav>
     <ul class="spectrum-Breadcrumbs">
       <li class="spectrum-Breadcrumbs-item">
-        <a class="spectrum-Breadcrumbs-link" href="#">Nike</a>
-        <svg class="spectrum-Icon spectrum-Breadcrumbs-separator" focusable="false" aria-hidden="true">
+        <a class="spectrum-Breadcrumbs-itemLink" href="#">Nike</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
         </svg>
       </li>
       <li class="spectrum-Breadcrumbs-item">
-        <a class="spectrum-Breadcrumbs-link" role="link" tabindex="0">Mens</a>
-        <svg class="spectrum-Icon spectrum-Breadcrumbs-separator" focusable="false" aria-hidden="true">
+        <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Mens</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
         </svg>
       </li>
       <li class="spectrum-Breadcrumbs-item">
-        <a class="spectrum-Breadcrumbs-link" role="link" aria-current="page">Summer 2016</a>
+        <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">Summer 2016</a>
       </li>
     </ul>
   </nav>
