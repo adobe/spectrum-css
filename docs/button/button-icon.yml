@@ -8,12 +8,12 @@ modifiers:
   ':focus': Focused
 markup: |
   <button class="spectrum-ClearButton">
-    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-TagClose" />
     </svg>
   </button>
   <button class="spectrum-ClearButton" disabled>
-    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-TagClose" />
     </svg>
   </button>
@@ -21,12 +21,12 @@ markup: |
   <br><br>
 
   <button class="spectrum-ClearButton spectrum-ClearButton--small">
-    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-TagClose" />
     </svg>
   </button>
   <button class="spectrum-ClearButton spectrum-ClearButton--small" disabled>
-    <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-TagClose" />
     </svg>
   </button>

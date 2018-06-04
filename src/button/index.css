@@ -227,11 +227,11 @@ a.spectrum-Button {
   margin: 0;
 
   border: none;
+}
 
-  .spectrum-Icon {
-    width: var(--spectrum-clearbutton-medium-icon-size);
-    height: 100%;
-  }
+.spectrum-ClearButton-icon {
+  width: var(--spectrum-clearbutton-medium-icon-size);
+  height: var(--spectrum-clearbutton-medium-icon-size);
 }
 
 .spectrum-ClearButton--small {
