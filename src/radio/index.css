@@ -85,3 +85,20 @@
 
   transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 }
+
+.spectrum-Radio--labelBelow {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+
+  margin: 0;
+
+  .spectrum-Radio-button {
+    flex-shrink: 0;
+  }
+
+  .spectrum-Radio-label {
+    margin: 0;
+  }
+}
