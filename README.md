@@ -237,6 +237,16 @@ Windows PowerShell:
 Get-CimInstance Win32_Process -Filter "Name = 'chrome.exe' AND CommandLine LIKE '%--headless%'" | %{Stop-Process $_.ProcessId}
 ```
 
+### Testing Specific Components
+Instead of waiting around and testing all of the components, you may supply optional arguments to the `gulp test` command like so:
+
+```
+gulp test --component button
+gulp test --component button --component well
+```
+
+As long as the component name matches one of the folder names within `dist/components`, the `gulp test` command will find it and test it.
+
 ### Remote Testing with the Test Server
 
 There's a Jenkins box that's connected to this repo and will build on any branch and commit so long as it has the `Jenkinsfile` in the project root. If all goes well, you should see your commit in the status page for the JenkinsCI: [https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity](https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity).
