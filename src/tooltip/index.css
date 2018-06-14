@@ -33,12 +33,12 @@
   }
 
   & {
-    pointer-events: none;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
-}
-
-.spectrum-Tooltip.is-open {
-  pointer-events: none;
 }
 
 .spectrum-Tooltip-tip {
