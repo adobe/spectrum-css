@@ -1,15 +1,3 @@
 /* topdoc
 {{ actionmenu/actionmenu.yml }}
 */
-.spectrum-ActionMenu {
-  display: inline-block;
-
-  > .spectrum-ActionButton {
-    /* Don't be inline */
-    display: flex;
-
-    > .spectrum-Icon {
-      width: 18px;
-    }
-  }
-}
