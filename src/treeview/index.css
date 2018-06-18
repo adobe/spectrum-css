@@ -22,7 +22,7 @@
   overflow: hidden;
 
   &.is-open {
-    > .spectrum-TreeView-link > .spectrum-TreeView-indicator {
+    > .spectrum-TreeView-itemLink > .spectrum-TreeView-indicator {
       /* Rotate the chevron */
       transform: rotate(90deg);
     }
@@ -35,7 +35,7 @@
   }
 }
 
-.spectrum-TreeView-link {
+.spectrum-TreeView-itemLink {
   display: block;
   box-sizing: border-box;
   cursor: pointer;

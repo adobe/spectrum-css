@@ -6,7 +6,7 @@ description: |
 markup: |
   <ul class="spectrum-TreeView" style="width: 250px">
     <li class="spectrum-TreeView-item">
-      <a class="spectrum-TreeView-link" href="#">
+      <a class="spectrum-TreeView-itemLink" href="#">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
           <use xlink:href="#spectrum-icon-18-Layers"></use>
         </svg>
@@ -15,7 +15,7 @@ markup: |
     </li>
 
     <li class="spectrum-TreeView-item is-open">
-      <a class="spectrum-TreeView-link" href="#">
+      <a class="spectrum-TreeView-itemLink" href="#">
         <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AccordionChevron" />
         </svg>
@@ -26,7 +26,7 @@ markup: |
       </a>
       <ul class="spectrum-TreeView">
         <li class="spectrum-TreeView-item">
-          <a class="spectrum-TreeView-link" href="#">
+          <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
               <use xlink:href="#spectrum-icon-18-Layers"></use>
             </svg>
@@ -34,7 +34,7 @@ markup: |
           </a>
         </li>
         <li class="spectrum-TreeView-item">
-          <a class="spectrum-TreeView-link" href="#">
+          <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
               <use xlink:href="#spectrum-icon-18-Layers"></use>
             </svg>
@@ -45,7 +45,7 @@ markup: |
     </li>
 
     <li class="spectrum-TreeView-item">
-      <a class="spectrum-TreeView-link" href="#">
+      <a class="spectrum-TreeView-itemLink" href="#">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
           <use xlink:href="#spectrum-icon-18-Layers"></use>
         </svg>
@@ -53,7 +53,7 @@ markup: |
       </a>
     </li>
     <li class="spectrum-TreeView-item">
-      <a class="spectrum-TreeView-link" href="#">
+      <a class="spectrum-TreeView-itemLink" href="#">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
           <use xlink:href="#spectrum-icon-18-Layers"></use>
         </svg>
@@ -62,7 +62,7 @@ markup: |
     </li>
 
     <li class="spectrum-TreeView-item is-open">
-      <a class="spectrum-TreeView-link" href="#">
+      <a class="spectrum-TreeView-itemLink" href="#">
         <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AccordionChevron" />
         </svg>
@@ -73,7 +73,7 @@ markup: |
       </a>
       <ul class="spectrum-TreeView">
         <li class="spectrum-TreeView-item is-open">
-          <a class="spectrum-TreeView-link" href="#">
+          <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-AccordionChevron" />
             </svg>
@@ -84,7 +84,7 @@ markup: |
           </a>
           <ul class="spectrum-TreeView">
             <li class="spectrum-TreeView-item">
-              <a class="spectrum-TreeView-link" href="#">
+              <a class="spectrum-TreeView-itemLink" href="#">
                 <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-AccordionChevron" />
                 </svg>
@@ -95,7 +95,7 @@ markup: |
               </a>
               <ul class="spectrum-TreeView">
                 <li class="spectrum-TreeView-item">
-                  <a class="spectrum-TreeView-link" href="#">
+                  <a class="spectrum-TreeView-itemLink" href="#">
                     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
                       <use xlink:href="#spectrum-icon-18-Layers"></use>
                     </svg>
@@ -103,7 +103,7 @@ markup: |
                   </a>
                 </li>
                 <li class="spectrum-TreeView-item">
-                  <a class="spectrum-TreeView-link" href="#">
+                  <a class="spectrum-TreeView-itemLink" href="#">
                     <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-AccordionChevron" />
                     </svg>
