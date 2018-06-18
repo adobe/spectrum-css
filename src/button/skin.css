@@ -362,28 +362,26 @@
   border-color: var(--spectrum-actionbutton-quiet-border-color);
   color: var(--spectrum-actionbutton-quiet-text-color);
 
-  &.is-selected {
-    color: var(--spectrum-actionbutton-quiet-text-color-selected);
-  }
-
   &:hover {
     background-color: var(--spectrum-actionbutton-quiet-background-color-hover);
-    box-shadow: none;
+    border-color: var(--spectrum-actionbutton-quiet-border-color-hover);
     color: var(--spectrum-actionbutton-quiet-text-color-hover);
+    box-shadow: none;
   }
 
   &:focus-ring {
     background-color: var(--spectrum-actionbutton-quiet-background-color-key-focus);
     box-shadow: 0 0 0 var(--spectrum-actionbutton-quiet-border-size-key-focus) var(--spectrum-actionbutton-quiet-border-color-key-focus);
+    border-color: var(--spectrum-actionbutton-quiet-border-color-key-focus);
     color: var(--spectrum-actionbutton-quiet-text-color-key-focus);
   }
 
   &:active {
     background-color: var(--spectrum-actionbutton-quiet-background-color-down);
-    box-shadow: none;
+    border-color: var(--spectrum-actionbutton-quiet-border-color-down);
     color: var(--spectrum-actionbutton-quiet-text-color-down);
+    box-shadow: none;
   }
-
 
   &:disabled,
   &[disabled] {
