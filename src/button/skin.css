@@ -359,6 +359,7 @@
 */
 .spectrum-ActionButton--quiet {
   background-color: var(--spectrum-actionbutton-quiet-background-color);
+  border-color: var(--spectrum-actionbutton-quiet-border-color);
   color: var(--spectrum-actionbutton-quiet-text-color);
 
   &.is-selected {
@@ -387,6 +388,7 @@
   &:disabled,
   &[disabled] {
     background-color: var(--spectrum-actionbutton-quiet-background-color-disabled);
+    border-color: var(--spectrum-actionbutton-quiet-border-color-disabled);
     color: var(--spectrum-actionbutton-quiet-text-color-disabled);
   }
 

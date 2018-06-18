@@ -103,6 +103,8 @@ a.spectrum-Button {
 .spectrum-ActionButton {
   @inherit: %spectrum-BaseButton;
 
+  justify-content: left;
+
   height: var(--spectrum-actionbutton-height);
   min-width: var(--spectrum-actionbutton-min-width);
   padding: 0 var(--spectrum-actionbutton-text-padding-x);
@@ -119,7 +121,7 @@ a.spectrum-Button {
 
   .spectrum-Icon:only-child {
     /* Remove padding if we're the only child */
-    margin: 0 calc(-1 * var(--spectrum-actionbutton-text-padding-x));
+    margin: 0 calc(-1 * calc(var(--spectrum-actionbutton-text-padding-x) / 2));
   }
 }
 
