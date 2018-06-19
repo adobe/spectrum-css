@@ -2,14 +2,16 @@ var gulp = require('gulp');
 var git = require('gulp-git');
 var fs = require('fs');
 var template = require('gulp-template');
+var rename = require('gulp-rename');
 var package = JSON.parse(fs.readFileSync('./package.json'));
 
 /**
  * Replace the redirect path to latest version
  */
 gulp.task('gh-pages:prepare-docs', function () {
-  return gulp.src('tasks/resources/docs/index.html')
+  return gulp.src('tasks/resources/docs/gh-pages.html')
     .pipe(template({ version: package.version }))
+    .pipe(rename('index.html'))
     .pipe(gulp.dest('./'));
 });
 

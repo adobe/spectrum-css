@@ -29,7 +29,8 @@ gulp.task('build-docs:inject-topdoc', function() {
 
 gulp.task('build-docs:copy-site-resources', function() {
   return gulp.src([
-    'tasks/resources/docs/**'
+    'tasks/resources/docs/**',
+    '!gh-pages.html'
   ])
     .pipe(gulp.dest('dist/docs'));
 });
