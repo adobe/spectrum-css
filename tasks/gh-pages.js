@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var replace = require('gulp-replace');
 var git = require('gulp-git');
 var fs = require('fs');
 var template = require('gulp-template');
