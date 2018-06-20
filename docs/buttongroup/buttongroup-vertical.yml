@@ -55,22 +55,22 @@ markup: |
     </div>
 
     <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
-      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
           <use xlink:href="#spectrum-icon-18-Delete" />
         </svg>
       </button>
-      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
           <use xlink:href="#spectrum-icon-18-Delete" />
         </svg>
       </button>
-      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
           <use xlink:href="#spectrum-icon-18-Delete" />
         </svg>
       </button>
-      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
           <use xlink:href="#spectrum-icon-18-Delete" />
         </svg>

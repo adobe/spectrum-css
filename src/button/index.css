@@ -235,6 +235,8 @@ a.spectrum-Button {
 
   position: relative;
 
+  justify-content: center;
+
   width: var(--spectrum-tool-min-width);
   height: var(--spectrum-tool-height);
 
