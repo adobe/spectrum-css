@@ -1,5 +1,7 @@
 :root {
   --spectrum-font-family-base: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  --spectrum-font-family-code: Source Code Pro, monospace;
+  --spectrum-font-family-article: adobe-clean-serif, Source Serif, serif;
   --spectrum-font-family-zh: adobe-clean-han-traditional, var(--spectrum-font-family-base);
   --spectrum-font-family-zhhans: adobe-clean-han-simplified-c, var(--spectrum-font-family-base);
   --spectrum-font-family-ko: adobe-clean-han-korean, var(--spectrum-font-family-base);
