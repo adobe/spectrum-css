@@ -15,7 +15,7 @@ markup: |
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-ClearButton">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
@@ -33,7 +33,7 @@ markup: |
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-ClearButton">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
@@ -60,7 +60,7 @@ markup: |
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-ClearButton">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
@@ -78,7 +78,7 @@ markup: |
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield" value="Term" disabled>
     <button type="reset" class="spectrum-ClearButton" disabled>
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
