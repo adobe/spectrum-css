@@ -7,7 +7,7 @@
     border-color: var(--spectrum-pagination-page-button-border-color-key-focus);
   }
 
-  &.is-active {
+  &.is-selected {
     background-color: var(--spectrum-pagination-page-button-background-color-down);
     color: var(--spectrum-pagination-page-button-text-color-down);
   }

@@ -6,7 +6,7 @@ markup: |
   <nav>
     <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-directionButton">Prev</button>
     <span tabindex="0" class="spectrum-Pagination-pageButton">1</span>
-    <span tabindex="0" class="spectrum-Pagination-pageButton is-active">2</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton is-selected">2</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">3</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">4</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">5</span>

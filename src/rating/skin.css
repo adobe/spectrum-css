@@ -14,7 +14,7 @@
 }
 
 .spectrum-Rating:not(:hover) {
-  .spectrum-Rating-icon:not(.is-active) {
+  .spectrum-Rating-icon:not(.is-selected) {
     color: var(--spectrum-rating-icon-color);
 
     /* StarOutline */
@@ -27,7 +27,7 @@
   }
 }
 
-.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-active) {
+.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-selected) {
   color: var(--spectrum-rating-icon-color);
 
   /* StarOutline */
@@ -42,7 +42,7 @@
 /* topdoc
 {{ rating/rating-active.yml }}
 */
-.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-active {
+.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-selected {
   color: var(--spectrum-rating-icon-color);
 
   /* Star */
@@ -55,7 +55,7 @@
 }
 
 .spectrum-Rating-icon {
-  &.is-active {
+  &.is-selected {
     color: var(--spectrum-rating-icon-color-down);
 
     /* Star */
@@ -71,7 +71,7 @@
 /* topdoc
 {{ rating/rating-disabled.yml }}
 */
-.spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active {
+.spectrum-Rating.is-disabled .spectrum-Rating-icon.is-selected {
   color: var(--spectrum-rating-icon-color-disabled);
 
   /* Star */
@@ -82,7 +82,7 @@
     display: none;
   }
 }
-.spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) {
+.spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-selected) {
   color: var(--spectrum-rating-icon-color-disabled);
 
   /* StarOutline */
@@ -98,8 +98,8 @@
   &:not(:hover) {
     .spectrum-Rating-input:focus-ring {
       ~ .spectrum-Rating-icon,
-      ~ .spectrum-Rating-icon:not(.is-active),
-      ~ .spectrum-Rating-icon.is-active {
+      ~ .spectrum-Rating-icon:not(.is-selected),
+      ~ .spectrum-Rating-icon.is-selected {
         color: var(--spectrum-button-primary-border-color-key-focus);
 
         > .spectrum-Icon {

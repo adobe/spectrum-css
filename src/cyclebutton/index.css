@@ -7,7 +7,7 @@
   /* Be square */
   padding: 0 var(--spectrum-actionbutton-icon-padding-x);
 
-  .spectrum-CycleButton-item:not(.is-active) {
+  .spectrum-CycleButton-item:not(.is-selected) {
     display: none
   }
 }
