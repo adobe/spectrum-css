@@ -34,6 +34,9 @@
 
   cursor: pointer;
 
+  transition: background var(--spectrum-transition-time) ease-out,
+              color var(--spectrum-transition-time) ease-out;
+
   &:focus {
     outline: none;
   }
