@@ -1,0 +1,59 @@
+/* topdoc
+{{ sidenav/sidenav-default.yml }}
+*/
+/* topdoc
+{{ sidenav/sidenav-multilevel.yml }}
+*/
+
+.spectrum-SideNav-item {
+  &.is-selected {
+    > .spectrum-SideNav-itemLink {
+      color: var(--spectrum-sidenav-item-text-color-selected);
+      background-color: var(--spectrum-sidenav-item-background-color-selected);
+    }
+  }
+
+  .is-active {
+    > .spectrum-SideNav-itemLink {
+      background-color: var(--spectrum-sidenav-item-background-color-down);
+    }
+  }
+
+  &.is-disabled {
+    /* Disable all children */
+    .spectrum-SideNav-itemLink {
+      background-color: var(--spectrum-sidenav-item-background-color-disabled);
+      color: var(--spectrum-sidenav-item-text-color-disabled);
+
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}
+
+.spectrum-SideNav-itemLink {
+  background-color: var(--spectrum-sidenav-item-background-color);
+  color: var(--spectrum-sidenav-item-text-color);
+
+  &:hover {
+    background-color: var(--spectrum-sidenav-item-background-color-hover);
+    color: var(--spectrum-sidenav-item-text-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-sidenav-item-background-color-down);
+  }
+
+  &:focus-ring {
+    background-color: var(--spectrum-sidenav-item-background-color-key-focus);
+    color: var(--spectrum-sidenav-item-text-color-key-focus);
+
+    &::before {
+      border-color: var(--spectrum-sidenav-item-border-color-key-focus);
+    }
+  }
+}
+
+.spectrum-SideNav-header {
+  color: var(--spectrum-sidenav-header-text-color);
+}
