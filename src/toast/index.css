@@ -1,105 +1,53 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-toast-height: 48px;
+  --spectrum-toast-icon-size: 18px;
+  --spectrum-toast-button-group-margin: 8px 8px 0 8px;
+  --spectrum-toast-icon-margin: 15px -4px 15px 16px;
+  --spectrum-toast-button-margin: 0 0 8px 8px;
+  --spectrum-toast-content-margin: 14px 0 14px 16px;
+}
+
 /* topdoc
 {{ toast/toast-default.yml }}
 */
 .spectrum-Toast {
-  position: relative;
-
-  /* Ensure text vertical alignment matches the specs */
-  padding: 13px 18px 15px 18px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
 
   border-radius: var(--spectrum-toast-border-radius);
 
   font-size: var(--spectrum-toast-text-size);
   font-weight: var(--spectrum-toast-text-font-weight);
-  line-height: 20px;
   -webkit-font-smoothing: antialiased;
 }
 
 .spectrum-Toast-typeIcon {
-  position: absolute;
-  left: 16px;
-  top: 15px;
+  width: var(--spectrum-toast-icon-size);
+  height: var(--spectrum-toast-icon-size);
 
-  width: 18px;
-  height: 18px;
-  vertical-align: -4px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  margin: var(--spectrum-toast-icon-margin);
+}
+
+.spectrum-Toast-buttons {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+
+  margin: var(--spectrum-toast-button-group-margin);
+
+  .spectrum-Button,
+  .spectrum-ClearButton {
+    margin: var(--spectrum-toast-button-margin);
+  }
 }
 
 .spectrum-Toast-content {
-  display: block;
-
-  padding-right: 30px;
-}
-
-.spectrum-Toast--warning,
-.spectrum-Toast--error,
-.spectrum-Toast--info,
-.spectrum-Toast--success {
-  .spectrum-Toast-content {
-    padding-left: 28px;
-  }
-}
-
-.spectrum-Toast-closeButton {
-
-  /* Change the font styles in all browsers */
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-
-  /* Remove the button margin in Firefox and Safari. */
-  margin: 0;
-
-  /* Show button the overflow in Edge and IE. */
-  overflow: visible;
-
-  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
-  text-transform: none;
-
-  /* Correct the inability to style clickable types in iOS and Safari. */
-  -webkit-appearance: button;
-
-
-  position: absolute;
-  right: 8px;
-  top: 8px;
-
-  padding: 0;
-
-  width: 32px;
-  height: 32px;
-
-  border: none;
-  border-radius: 18px;
-
-  background-color: transparent;
-
-  transition: background-color var(--spectrum-transition-time) ease-in-out;
-
-  cursor: pointer;
-
-  /* Remove the inner border and padding for button in Firefox. */
-  &::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-
-  /* Restore the focus styles unset by the previous rule. */
-  &:-moz-focusring{
-    outline: 1px dotted ButtonText;
-  }
-
-  .spectrum-Icon {
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    width: 8px;
-    height: 8px;
-  }
-
-  &:focus {
-    outline: none;
-  }
+  margin: var(--spectrum-toast-content-margin);
 }

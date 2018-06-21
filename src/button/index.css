@@ -210,6 +210,8 @@ a.spectrum-Button {
   width: var(--spectrum-clearbutton-medium-width);
   height: var(--spectrum-clearbutton-medium-height);
 
+  border-radius: 100%;
+
   padding: 0;
   margin: 0;
 

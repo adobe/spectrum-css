@@ -4,21 +4,15 @@ description: The default toast.
 status: Beta
 markup: |
   <div class="spectrum-Toast">
-    <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ToastClose" />
-      </svg>
-    </button>
-  </div>
-
-  <br>
-
-  <div class="spectrum-Toast" style="position: absolute">
-    <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ToastClose" />
-      </svg>
-    </button>
+    <div class="spectrum-Toast-content">File archived</div>
+    <div class="spectrum-Toast-buttons">
+      <button class="spectrum-Button spectrum-Button--quiet--overBackground">
+        <span class="spectrum-Button-label">Undo</span>
+      </button>
+      <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
+        <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ToastClose" />
+        </svg>
+      </button>
+    </div>
   </div>
