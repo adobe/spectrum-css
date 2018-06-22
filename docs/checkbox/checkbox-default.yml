@@ -43,3 +43,16 @@ markup: |
     </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
+  <br>
+  <label class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox with an extrordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the checkbox which has an unacceptably long label</span>
+  </label>

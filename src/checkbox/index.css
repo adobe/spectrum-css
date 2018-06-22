@@ -1,14 +1,18 @@
 @import '../commons/index.css';
 
 .spectrum-Checkbox {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+
   position: relative;
-  font-size: 0;
+
   height: var(--spectrum-checkbox-height);
-  line-height: var(--spectrum-checkbox-height);
+  max-width: 100%;
 
   padding: 0 var(--spectrum-radio-cursor-hit-x);
   margin-left: calc(-1 * var(--spectrum-radio-cursor-hit-x));
+
+  vertical-align: top;
 }
 
 .spectrum-Checkbox-input {
@@ -73,26 +77,29 @@
 }
 
 .spectrum-Checkbox-label {
-  display: inline-block;
   margin: 0 var(--spectrum-checkbox-text-gap);
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
-  vertical-align: middle;
   transition: color var(--spectrum-transition-time) ease-in-out;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .spectrum-Checkbox-box {
   position: relative;
-  display: inline-block;
   box-sizing: border-box;
   width: var(--spectrum-checkbox-box-size);
   height: var(--spectrum-checkbox-box-size);
 
+  flex-grow: 0;
+  flex-shrink: 0;
+
   border-radius: var(--spectrum-checkbox-box-border-radius);
   border-width: var(--spectrum-checkbox-box-border-size);
   border-style: solid;
-
-  vertical-align: middle;
 
   transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 }
