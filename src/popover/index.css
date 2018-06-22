@@ -34,7 +34,7 @@
   }
 
   /* Don't let sharp corners be pokey */
-  .spectrum-SelectList {
+  .spectrum-Menu {
     border-radius: var(--spectrum-popover-border-radius);
   }
 }

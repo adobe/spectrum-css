@@ -1,11 +1,11 @@
 /* topdoc
-{{ selectlist/selectlist-default.yml }}
+{{ menu/menu-default.yml }}
 */
-.spectrum-SelectList {
+.spectrum-Menu {
   background-color: var(--spectrum-selectlist-background-color);
 }
 
-.spectrum-SelectList-item {
+.spectrum-Menu-item {
   background-color: var(--spectrum-selectlist-option-background-color);
   color: var(--spectrum-selectlist-option-text-color);
 
@@ -23,7 +23,7 @@
   &.is-selected {
     color: var(--spectrum-selectlist-option-text-color-selected);
 
-    .spectrum-SelectList-checkmark {
+    .spectrum-Menu-checkmark {
       color: var(--spectrum-selectlist-option-icon-color-selected);
     }
   }
@@ -41,10 +41,10 @@
   }
 }
 
-.spectrum-SelectList-sectionHeading {
+.spectrum-Menu-sectionHeading {
   color: var(--spectrum-heading-subtitle3-text-color);
 }
 
-.spectrum-SelectList-divider {
+.spectrum-Menu-divider {
   background-color: var(--spectrum-selectlist-divider-color);
 }

@@ -21,12 +21,12 @@ markup: |
       </svg>
     </button>
     <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; width: 100%">
-      <ul class="spectrum-SelectList" role="menu" tabindex="0">
-        <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="-1">Ballard</li>
-        <li class="spectrum-SelectList-item" role="menuitem" tabindex="-1">Fremont</li>
-        <li class="spectrum-SelectList-item" role="menuitem" tabindex="-1">Greenwood</li>
-        <hr class="spectrum-SelectList-divider">
-        <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      <ul class="spectrum-Menu" role="listbox">
+        <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">Ballard</li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">Fremont</li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">Greenwood</li>
+        <li class="spectrum-Menu-divider" role="separator"></li>
+        <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">United States of America</li>
       </ul>
     </div>
   </div>

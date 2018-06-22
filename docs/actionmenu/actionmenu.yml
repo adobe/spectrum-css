@@ -1,6 +1,6 @@
 ---
 name: Action Menu
-description: Simply an action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open.
+description: Simply an action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open. Also note the accessibility roles are different for an action menu vs a normal menu.
 status: Beta
 markup: |
   <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
@@ -12,11 +12,11 @@ markup: |
   <br>
 
   <div class="spectrum-Popover spectrum-Popover--bottom is-open">
-    <ul class="spectrum-SelectList" role="menu">
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 4</li>
+    <ul class="spectrum-Menu" role="menu">
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 3</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 4</li>
     </ul>
   </div>
 
@@ -30,11 +30,11 @@ markup: |
   <br>
 
   <div class="spectrum-Popover spectrum-Popover--bottom is-open">
-    <ul class="spectrum-SelectList" role="menu">
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 4</li>
+    <ul class="spectrum-Menu" role="menu">
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 3</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 4</li>
     </ul>
   </div>
 

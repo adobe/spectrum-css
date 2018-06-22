@@ -1,0 +1,70 @@
+---
+name: Menu
+description: A list of options or actions.
+status: Beta
+markup: |
+
+  <div style="position: relative; height: 260px;">
+
+    <div class="spectrum-Popover is-open" style="top: 0; left: 0">
+      <ul class="spectrum-Menu" role="menu">
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Deselect</li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Select Inverse</li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Feather...</li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Select and Mask...</li>
+        <li class="spectrum-Menu-divider" role="separator"></li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Save Selection</li>
+        <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">Make Work Path</li>
+      </ul>
+    </div>
+
+    <div class="spectrum-Popover is-open" style="top: 0; left: 200px;">
+      <ul class="spectrum-Menu" role="menu">
+        <li role="presentation">
+          <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-1"  aria-hidden="true">Section Heading</span>
+          <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-category-1">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 1</li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 2</li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 3</li>
+          </ul>
+        </li>
+        <li class="spectrum-Menu-divider" role="separator"></li>
+        <li role="presentation">
+          <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-2"  aria-hidden="true">Section Heading</span>
+          <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-category-1" aria-disabled="true">
+            <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">Action 4</li>
+            <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">Action 5</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="spectrum-Popover is-open" style="top: 0; left: 400px;">
+      <ul class="spectrum-Menu" role="listbox">
+        <li role="presentation">
+          <span class="spectrum-Menu-sectionHeading" id="menu-heading-sf" aria-hidden="true">San Francisco</span>
+          <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-sf">
+            <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
+              Financial District
+              <svg class="spectrum-Icon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-MenuCheckmark" />
+              </svg>
+            </li>
+            <li class="spectrum-Menu-item" role="option" tabindex="0">South of Market</li>
+            <li class="spectrum-Menu-item" role="option" tabindex="0">North Beach</li>
+          </ul>
+        </li>
+        <li class="spectrum-Menu-divider" role="separator"></li>
+        <li role="presentation">
+          <span class="spectrum-Menu-sectionHeading" id="menu-heading-oak" aria-hidden="true">Oakland</span>
+          <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-oak">
+            <li class="spectrum-Menu-item" role="option" tabindex="0">City Center</li>
+            <li class="spectrum-Menu-item" role="option" tabindex="0">Jack London Square</li>
+            <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">Uptown</li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+  </div>

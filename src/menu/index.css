@@ -1,27 +1,30 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-menu-heading-text-size: 11px;
-  --spectrum-menu-heading-text-font-weight: 400;
-  --spectrum-menu-heading-text-transform: uppercase;
-  --spectrum-menu-heading-letter-spacing: 0.06em;
-  --spectrum-menu-heading-margin: 4px 0;
-  --spectrum-menu-heading-padding: 0 36px 0 12px;
+  --spectrum-selectlist-heading-text-size: 11px;
+  --spectrum-selectlist-heading-text-font-weight: 400;
+  --spectrum-selectlist-heading-text-transform: uppercase;
+  --spectrum-selectlist-heading-letter-spacing: 0.06em;
+  --spectrum-selectlist-heading-margin: 6px 0 0 0;
+  --spectrum-selectlist-heading-padding: 0 36px 0 12px;
 }
 
-.spectrum-SelectList {
+.spectrum-Menu {
   display: inline-block;
-  white-space: nowrap;
-  overflow: auto;
 
   box-sizing: border-box;
 
+  margin: 3px 0;
+  padding: 0;
+
+  white-space: nowrap;
+
   list-style-type: none;
-  margin: 0;
-  padding: 3px 0;
+
+  overflow: auto;
 }
 
-.spectrum-SelectList-checkmark {
+.spectrum-Menu-checkmark {
   position: absolute;
   right: 9px;
   top: 11px;
@@ -33,7 +36,7 @@
   opacity: 1;
 }
 
-.spectrum-SelectList-item {
+.spectrum-Menu-item {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -53,14 +56,13 @@
   }
 
   &.is-selected {
-    .spectrum-SelectList-checkmark {
+    .spectrum-Menu-checkmark {
       display: block;
     }
   }
 }
 
-.spectrum-SelectList-divider {
-
+.spectrum-Menu-divider {
   /* Add the correct box sizing for hr in Firefox. */
   box-sizing: content-box;
 
@@ -68,17 +70,23 @@
   overflow: visible;
 
   height: var(--spectrum-selectlist-divider-size);
-  margin: var(--spectrum-selectlist-divider-padding) var(--spectrum-selectlist-option-padding);
+  margin: calc(var(--spectrum-selectlist-divider-padding) / 2) var(--spectrum-selectlist-option-padding);
   padding: 0 0;
   border: none;
 }
 
-.spectrum-SelectList-sectionHeading {
-  font-size: var(--spectrum-menu-heading-text-size);
-  font-weight: var(--spectrum-menu-heading-text-font-weight);
+.spectrum-Menu-sectionHeading {
+  margin: var(--spectrum-selectlist-heading-margin);
+  padding: var(--spectrum-selectlist-heading-padding);
+
+  font-size: var(--spectrum-selectlist-heading-text-size);
+  font-weight: var(--spectrum-selectlist-heading-text-font-weight);
   line-height: var(--spectrum-text-body-line-height);
-  text-transform: var(--spectrum-menu-heading-text-transform);
-  letter-spacing: var(--spectrum-menu-heading-letter-spacing);
-  margin: var(--spectrum-menu-heading-margin);
-  padding: var(--spectrum-menu-heading-padding);
+  text-transform: var(--spectrum-selectlist-heading-text-transform);
+  letter-spacing: var(--spectrum-selectlist-heading-letter-spacing);
+}
+
+.spectrum-Menu .spectrum-Menu {
+  /* Fill parent menu when nested */
+  display: block;
 }
