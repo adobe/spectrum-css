@@ -215,7 +215,7 @@
 /* topdoc
 {{ button/button-quiet-overbackground.yml }}
 */
-.spectrum-Button--quiet--overBackground,
+.spectrum-Button--overBackground.spectrum-Button--quiet,
 .spectrum-ClearButton--overBackground {
   background-color: var(--spectrum-button-quiet-over-background-background-color);
   border-color: var(--spectrum-button-quiet-over-background-border-color);
@@ -252,7 +252,7 @@
 /* topdoc
 {{ button/button-quiet-primary.yml }}
 */
-.spectrum-Button--quiet--primary {
+.spectrum-Button--primary.spectrum-Button--quiet {
   background-color: var(--spectrum-button-quiet-primary-background-color);
   border-color: var(--spectrum-button-quiet-primary-border-color);
   color: var(--spectrum-button-quiet-primary-text-color);
@@ -286,7 +286,7 @@
 /* topdoc
 {{ button/button-quiet-secondary.yml }}
 */
-.spectrum-Button--quiet--secondary {
+.spectrum-Button--secondary.spectrum-Button--quiet {
   background-color: var(--spectrum-button-quiet-secondary-background-color);
   border-color: var(--spectrum-button-quiet-secondary-border-color);
   color: var(--spectrum-button-quiet-secondary-text-color);
@@ -457,7 +457,7 @@
 /* topdoc
 {{ button/button-quiet-warning.yml }}
 */
-.spectrum-Button--quiet--warning {
+.spectrum-Button--warning.spectrum-Button--quiet {
   background-color: var(--spectrum-button-quiet-warning-background-color);
   border-color: var(--spectrum-button-quiet-warning-border-color);
   color: var(--spectrum-button-quiet-warning-text-color);

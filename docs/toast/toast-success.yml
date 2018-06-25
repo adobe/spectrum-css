@@ -9,7 +9,7 @@ markup: |
     </svg>
     <div class="spectrum-Toast-content">The toast is golden brown.</div>
     <div class="spectrum-Toast-buttons">
-      <button class="spectrum-Button spectrum-Button--quiet--overBackground">
+      <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
         <span class="spectrum-Button-label">Eject</span>
       </button>
       <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
