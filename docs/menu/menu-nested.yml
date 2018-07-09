@@ -1,0 +1,31 @@
+---
+name: Menu Nested
+description: A nested menu.
+status: Beta
+markup: |
+
+  <div style="position: relative; height: 260px;">
+
+    <div class="spectrum-Popover is-open" style="top: 0; left: 0">
+      <ul class="spectrum-Menu" role="menu">
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Deselect</li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Select Inverse</li>
+        <li class="spectrum-Menu-item is-open" role="menuitem" tabindex="0">
+          Feather...
+          <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Menu-chevron" focusable="false" aria-hidden="true" aria-label="Next">
+            <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
+          </svg>
+        </li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Select and Mask...</li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Save Selection</li>
+      </ul>
+    </div>
+
+    <div class="spectrum-Popover spectrum-Popover--right is-open" style="top: 64px; left: 181px">
+      <ul class="spectrum-Menu" role="menu">
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Deselect</li>
+        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Select and Mask...</li>
+      </ul>
+    </div>
+
+  </div>

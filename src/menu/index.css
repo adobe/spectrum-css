@@ -60,6 +60,12 @@
       display: block;
     }
   }
+
+  .spectrum-Menu-chevron {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 }
 
 .spectrum-Menu-divider {

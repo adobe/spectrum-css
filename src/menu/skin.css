@@ -1,6 +1,10 @@
 /* topdoc
 {{ menu/menu-default.yml }}
 */
+/* topdoc
+{{ menu/menu-nested.yml }}
+*/
+
 .spectrum-Menu {
   background-color: var(--spectrum-selectlist-background-color);
 }
@@ -15,7 +19,8 @@
     color: var(--spectrum-selectlist-option-text-color-key-focus);
   }
 
-  &:hover {
+  &:hover,
+  &.is-open {
     background-color: var(--spectrum-selectlist-option-background-color-hover);
     color: var(--spectrum-selectlist-option-text-color-hover);
   }
