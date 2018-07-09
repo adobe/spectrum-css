@@ -78,7 +78,7 @@
 
   height: var(--spectrum-button-primary-height);
 
-  padding: 0 calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size)) 1px; /* 1px to push up text, sits kind of low */
+  padding: 0 calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size)) 0;
 
   font-size: var(--spectrum-button-primary-text-size);
   font-weight: var(--spectrum-button-primary-text-font-weight);
@@ -91,9 +91,14 @@
   .spectrum-Icon + .spectrum-Button-label {
     margin-left: var(--spectrum-button-primary-text-gap);
   }
+
+  .spectrum-Button-label + .spectrum-Icon {
+    margin-left: calc(var(--spectrum-button-primary-text-gap) / 2);
+  }
 }
 
-a.spectrum-Button {
+a.spectrum-Button,
+a.spectrum-ActionButton {
   /* Remove appearance for clickable types in iOS and Safari. */
   -webkit-appearance: none;
   /* Make link text not selectable  */

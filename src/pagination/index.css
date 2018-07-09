@@ -1,8 +1,13 @@
 @import '../commons/index.css';
 
-:root {
-  --spectrum-pagination-icon-width: 7px;
-  --spectrum-pagination-icon-height: 10px;
+/* topdoc
+{{ pagination/pagination-listing.yml }}
+*/
+.spectrum-Pagination--explicit,
+.spectrum-Pagination--listing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* topdoc
@@ -14,82 +19,20 @@
 }
 
 .spectrum-Pagination-counter {
-  display: inline-block;
-  height: var(--spectrum-pagination-counter-height);
-  line-height: var(--spectrum-pagination-counter-height);
   margin-left: var(--spectrum-pagination-counter-margin-left);
 }
 
-/* topdoc
-{{ pagination/pagination-listing.yml }}
-*/
-.spectrum-Pagination-directionButton {
-  font-size: var(--spectrum-pagination-direction-button-text-size);
-  font-weight: bold;
+.spectrum-Pagination-prevButton {
+  margin-right: var(--spectrum-pagination-page-button-margin-horizontal);
 }
 
-.spectrum-Pagination-pageButton {
-  box-sizing: border-box;
-  display: inline-block;
-  width: var(--spectrum-pagination-page-button-width);
-  height: var(--spectrum-pagination-page-button-width);
-  line-height: var(--spectrum-pagination-page-button-line-height);
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 0 var(--spectrum-pagination-page-button-margin-horizontal);
-  border: var(--spectrum-pagination-page-button-border-size) solid transparent;
-  outline: none;
-  transition: background-color var(--spectrum-transition-time) ease-in-out,
-              color var(--spectrum-transition-time) ease-in-out,
-              border-color var(--spectrum-transition-time) ease-in-out;
+.spectrum-Pagination-nextButton {
+  margin-left: var(--spectrum-pagination-page-button-margin-horizontal);
 }
 
 /* topdoc
 {{ pagination/pagination-button-style-cta.yml }}
 */
-.spectrum-Pagination-prevButton {
-  border-radius: var(--spectrum-button-primary-border-radius) 0 0 var(--spectrum-button-primary-border-radius);
-  float: left; /* removes DOM whitespace */
-  padding-right: calc(var(--spectrum-padding) / 2);
-  padding-left: calc(var(--spectrum-padding) / 2);
-  border-right: 0;
-
-  .spectrum-Icon {
-    margin-left: 4px;
-    margin-right: 4px;
-  }
-}
-
-.spectrum-Pagination-nextButton {
-  border-radius: 0 var(--spectrum-button-primary-border-radius) var(--spectrum-button-primary-border-radius) 0;
-  margin-left: 0 !important;
-
-  /* CTA is special and doesn't have a border between the buttons */
-  &.spectrum-Button--cta {
-    border-left: 0;
-    margin-left: var(--spectrum-button-primary-border-size) !important;
-  }
-
-  .spectrum-Icon {
-    margin-left: 8px;
-  }
-}
-
-.spectrum-Pagination-prevButton,
-.spectrum-Pagination-nextButton {
-  &:focus {
-    /* this also triggers 'z-index: auto' and stays on top */
-    position: relative;
-  }
-
-  .spectrum-Icon {
-    width: var(--spectrum-pagination-icon-width);
-    height: var(--spectrum-pagination-icon-height);
-
-    vertical-align: baseline;
-  }
-}
 
 /* topdoc
 {{ pagination/pagination-button-style-primary.yml }}

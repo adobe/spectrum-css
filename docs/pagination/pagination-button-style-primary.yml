@@ -3,16 +3,16 @@ name: Pagination - Button Style Primary
 description: A Spectrum 'button style primary' pagination
 status: Beta
 markup: |
-  <nav>
-    <button class="spectrum-Button spectrum-Button--primary spectrum-Pagination-prevButton">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Previous">
-        <use xlink:href="#spectrum-css-icon-CarouselLeftChevron" />
+  <nav class="spectrum-SplitButton spectrum-SplitButton--left">
+    <a href="#" class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="ChevronLeft">
+        <use xlink:href="#spectrum-icon-18-ChevronLeft"></use>
       </svg>
-    </button>
-    <button class="spectrum-Button spectrum-Button--primary spectrum-Pagination-nextButton">
-      Next
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Next">
-        <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
+    </a>
+    <a href="#" class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">
+      <span class="spectrum-Button-label">Next</span>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="ChevronRight">
+        <use xlink:href="#spectrum-icon-18-ChevronRight"></use>
       </svg>
-    </button>
+    </a>
   </nav>

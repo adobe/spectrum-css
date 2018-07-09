@@ -15,3 +15,12 @@ markup: |
       </svg>
     </button>
   </div>
+
+  <div class="spectrum-SplitButton spectrum-SplitButton--left">
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      </svg>
+    </button>
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
+  </div>

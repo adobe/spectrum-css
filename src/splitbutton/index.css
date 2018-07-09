@@ -20,7 +20,9 @@
 
 .spectrum-SplitButton {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
+  vertical-align: top;
 
   /* Spacing for buttons placed inline */
   & + .spectrum-SplitButton,
@@ -35,6 +37,8 @@
 }
 
 .spectrum-SplitButton-action {
+  margin-left: 0;
+
   border-radius: var(--spectrum-button-primary-border-radius) 0 0 var(--spectrum-button-primary-border-radius);
 
   /* CTA is special and doesn't have a border between the buttons */
@@ -42,18 +46,28 @@
     border-right: 0;
     margin-right: var(--spectrum-button-primary-border-size);
   }
+
+  & + .spectrum-SplitButton-trigger {
+    /* Override button + button style */
+    margin-left: 0;
+  }
 }
 
 .spectrum-SplitButton-trigger {
-  margin-left: 0 !important;
+  margin-left: 0;
 
   border-radius: 0 var(--spectrum-button-primary-border-radius) var(--spectrum-button-primary-border-radius) 0;
   border-left-width: var(--spectrum-splitbutton-trigger-border-left);
-  padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
-  padding-right: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
+  padding: 0;
+  width: 30px;
 
   &:focus-ring {
     box-shadow: none;
+  }
+
+  & + .spectrum-SplitButton-action {
+    /* Override button + button style */
+    margin-left: 0;
   }
 }
 
@@ -68,11 +82,34 @@
 .spectrum-SplitButton-trigger {
   position: relative;
 
-  display: block;
-  float: left;
-
   &:focus {
     /* Be on top when focused or border leaks */
     z-index: 1;
+  }
+}
+
+.spectrum-SplitButton--left {
+  .spectrum-SplitButton-action {
+    border-radius: 0 var(--spectrum-button-primary-border-radius) var(--spectrum-button-primary-border-radius) 0;
+    margin-right: 0;
+    margin-left: 0;
+
+    /* CTA is special and doesn't have a border between the buttons */
+    &.spectrum-Button--cta {
+      border-left: 0;
+      margin-left: var(--spectrum-button-primary-border-size);
+    }
+  }
+
+  .spectrum-SplitButton-trigger {
+    margin-right: 0;
+
+    border-radius: var(--spectrum-button-primary-border-radius) 0 0 var(--spectrum-button-primary-border-radius);
+
+    border-left-width: var(--spectrum-button-primary-border-size);
+    border-right-width: var(--spectrum-splitbutton-trigger-border-left);
+
+    padding-right: calc(var(--spectrum-padding) * calc(2 / 3));
+    padding-left: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
   }
 }
