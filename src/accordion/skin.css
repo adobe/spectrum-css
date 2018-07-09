@@ -20,7 +20,7 @@
     }
   }
 
-  &:focus {
+  &:focus-ring {
     &:after  {
       background-color: var(--spectrum-accordion-border-left-color-key-focus);
     }
