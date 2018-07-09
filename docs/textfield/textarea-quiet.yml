@@ -13,5 +13,9 @@ markup: |
   <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
   </textarea>
 
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid" required>
+    A valid Text Area
+  </textarea>
+
   <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid" required>
   </textarea>

@@ -91,7 +91,8 @@
   }
 
   &.is-invalid,
-  &:invalid {
+  &:invalid,
+  &.is-valid {
     background-repeat: no-repeat;
     background-size: var(--spectrum-textfield-icon-size) var(--spectrum-textfield-icon-size);
     background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) 50%;
@@ -108,7 +109,8 @@
   overflow: auto;
 
   &.is-invalid,
-  &:invalid {
+  &:invalid,
+  &.is-valid {
     background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) calc(100% - calc(var(--spectrum-textfield-icon-size) / 2));
   }
 }

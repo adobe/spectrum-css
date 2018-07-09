@@ -1,0 +1,26 @@
+---
+name: Text Field - Decorated
+description: A Spectrum text field with an additional icon.
+status: Beta
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-DecoratedTextfield is-decorated">
+    <label for="DecoratedTextField-single" class="spectrum-FieldLabel">Search</label>
+
+    <input id="DecoratedTextField-single" placeholder="Enter your name" class="spectrum-Textfield spectrum-DecoratedTextfield-field" aria-invalid="false" type="text">
+
+    <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-InlineInfo" />
+    </svg>
+  </div>
+
+  <h4>Multiline</h4>
+  <div class="spectrum-DecoratedTextfield is-decorated">
+    <label for="DecoratedTextField-multiline" class="spectrum-FieldLabel spectrum-FieldLabel--left">Search</label>
+
+    <textarea id="DecoratedTextField-multiline" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-DecoratedTextfield-field"></textarea>
+
+    <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-InlineInfo" />
+    </svg>
+  </div>

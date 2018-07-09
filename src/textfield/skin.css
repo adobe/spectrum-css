@@ -68,6 +68,10 @@
       }
     }
   }
+
+  &.is-valid {
+    background-image: url("embed/Smock_Checkmark_18_N@2x.svg" param(--color var(--spectrum-alert-success-icon-color)));
+  }
 }
 
 

@@ -1,0 +1,22 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ decoratedtextfield/decoratedtextfield.yml }}
+*/
+.spectrum-DecoratedTextfield {
+  display: inline-block;
+  position: relative;
+}
+
+.spectrum-DecoratedTextfield-icon {
+  width: var(--spectrum-textfield-icon-size);
+  height: var(--spectrum-textfield-icon-size);
+
+  position: absolute;
+  bottom: calc(var(--spectrum-textfield-icon-size) / 2);
+  right: calc(var(--spectrum-textfield-icon-size) / 2);
+}
+
+.spectrum-DecoratedTextfield-field {
+  padding-right: var(--spectrum-textfield-icon-frame);
+}
