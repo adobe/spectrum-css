@@ -1,6 +1,6 @@
 .spectrum-InputGroup {
   &:hover {
-    .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) {
+    .spectrum-InputGroup-field:not(:disabled):not(.is-invalid):not(:focus) {
       &,
       & ~ .spectrum-FieldButton {
         border-color: var(--spectrum-textfield-border-color-hover);
@@ -9,7 +9,7 @@
   }
 }
 
-.spectrum-InputGroup-input:focus {
+.spectrum-InputGroup-field:focus {
   ~ .spectrum-FieldButton {
     border-color: var(--spectrum-dropdown-border-color-key-focus);
   }
@@ -23,7 +23,7 @@
 }
 
 /* Only add the 2px ring for keyboard focus */
-.spectrum-InputGroup-input:focus-ring {
+.spectrum-InputGroup-field:focus-ring {
   ~ .spectrum-FieldButton {
     box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-key-focus);
   }
@@ -52,7 +52,7 @@
   }
 
   &:hover {
-    .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) {
+    .spectrum-InputGroup-field:not(:disabled):not(.is-invalid):not(:focus) {
       &,
       & ~ .spectrum-FieldButton {
         border-color: var(--spectrum-textfield-quiet-border-color-hover);
@@ -60,7 +60,7 @@
     }
   }
 
-  .spectrum-InputGroup-input {
+  .spectrum-InputGroup-field {
     &.is-invalid,
     &:invalid {
       &,

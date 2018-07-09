@@ -4,7 +4,7 @@ status: Beta
 markup: |
   <h4>Default</h4>
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true">
       <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -14,7 +14,7 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-open">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-selected" aria-haspopup="true">
       <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -35,7 +35,7 @@ markup: |
 
   <h4>Disabled</h4>
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input" disabled>
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" disabled>
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true" disabled>
       <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -45,7 +45,7 @@ markup: |
 
   <h4>Invalid</h4>
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field is-invalid">
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-invalid" aria-haspopup="true">
       <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SelectDownChevron" />

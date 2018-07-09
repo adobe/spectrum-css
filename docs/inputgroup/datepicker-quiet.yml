@@ -3,7 +3,7 @@ description: A date picker uses the input group component to display a field wit
 status: Beta
 markup: |
   <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-haspopup="true">
-    <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
+    <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" aria-invalid="false" placeholder="Choose a date" value="">
       <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button">
         <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS">
           <path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z">
