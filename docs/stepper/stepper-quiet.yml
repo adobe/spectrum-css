@@ -11,12 +11,12 @@ markup: |
     <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
     <span class="spectrum-Stepper-buttons">
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
         </svg>
       </button>
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
         </svg>
       </button>
@@ -27,12 +27,12 @@ markup: |
     <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
     <span class="spectrum-Stepper-buttons">
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
         </svg>
       </button>
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
         </svg>
       </button>
@@ -43,12 +43,12 @@ markup: |
     <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
     <span class="spectrum-Stepper-buttons">
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
         </svg>
       </button>
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
         </svg>
       </button>
@@ -59,12 +59,12 @@ markup: |
     <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
     <span class="spectrum-Stepper-buttons">
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1" disabled>
-        <svg class="spectrum-Icon spectrum-Icon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
         </svg>
       </button>
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1" disabled>
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
         </svg>
       </button>

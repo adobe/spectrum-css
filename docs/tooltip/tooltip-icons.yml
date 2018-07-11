@@ -4,7 +4,7 @@ description: A Spectrum tooltip
 status: Released
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
-    <svg class="spectrum-Icon spectrum-Icon-SuccessSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-UIIcon-SuccessSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SuccessSmall" />
     </svg>
     <span class="spectrum-Tooltip-label">Success</span>
@@ -18,7 +18,7 @@ markup: |
   <br><br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
-    <svg class="spectrum-Icon spectrum-Icon-InfoSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-UIIcon-InfoSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-InfoSmall" />
     </svg>
     <span class="spectrum-Tooltip-label">Info</span>
@@ -32,7 +32,7 @@ markup: |
   <br><br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
-    <svg class="spectrum-Icon spectrum-Icon-AlertSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-UIIcon-AlertSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-AlertSmall" />
     </svg>
     <span class="spectrum-Tooltip-label">Warning</span>

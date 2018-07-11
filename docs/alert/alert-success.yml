@@ -4,7 +4,7 @@ description: The Spectrum alert 'success'
 status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--success">
-    <svg class="spectrum-Icon spectrum-Icon-SuccessMedium spectrum-Alert-icon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-UIIcon-SuccessMedium spectrum-Alert-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SuccessMedium" />
     </svg>
     <div class="spectrum-Alert-header">Successful Alert Header</div>

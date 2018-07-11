@@ -4,7 +4,7 @@ description: The closable Spectrum alert. It has a close button in the footer. C
 status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
-    <svg class="spectrum-Icon spectrum-Icon-AlertMedium spectrum-Alert-icon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Alert-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-AlertMedium" />
     </svg>
     <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>

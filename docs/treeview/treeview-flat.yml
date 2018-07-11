@@ -12,7 +12,7 @@ markup: |
 
     <li class="spectrum-TreeView-item is-open">
       <a class="spectrum-TreeView-itemLink" href="#">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
         Group 1
@@ -37,7 +37,7 @@ markup: |
 
     <li class="spectrum-TreeView-item is-open">
       <a class="spectrum-TreeView-itemLink" href="#">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
         Group 2
@@ -46,7 +46,7 @@ markup: |
 
     <li class="spectrum-TreeView-item spectrum-TreeView-item--indent1 is-open">
       <a class="spectrum-TreeView-itemLink" href="#">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
         Group 3
@@ -55,7 +55,7 @@ markup: |
 
     <li class="spectrum-TreeView-item spectrum-TreeView-item--indent2">
       <a class="spectrum-TreeView-itemLink" href="#">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
         Group 4
@@ -68,7 +68,7 @@ markup: |
 
     <li class="spectrum-TreeView-item spectrum-TreeView-item--indent3" hidden>
       <a class="spectrum-TreeView-itemLink" href="#">
-        <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
         Group 5

@@ -4,7 +4,7 @@ description: The info toast.
 status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--success">
-    <svg class="spectrum-Icon spectrum-Icon-SuccessMedium spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+    <svg class="spectrum-Icon spectrum-UIIcon-SuccessMedium spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SuccessMedium" />
     </svg>
     <div class="spectrum-Toast-content">The toast is golden brown.</div>
@@ -13,7 +13,7 @@ markup: |
         <span class="spectrum-Button-label">Eject</span>
       </button>
       <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
-        <svg class="spectrum-Icon spectrum-Icon-CrossMedium focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-CrossMedium focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-CrossMedium" />
         </svg>
       </button>

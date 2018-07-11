@@ -7,7 +7,7 @@ markup:
   <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--centered" id="errorDialog">
     <div class="spectrum-Dialog-header">
       <h2 class="spectrum-Dialog-title">Unable to Share</h2>
-      <svg class="spectrum-Icon spectrum-Icon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-AlertMedium" />
       </svg>
     </div>

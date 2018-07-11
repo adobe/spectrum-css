@@ -8,14 +8,14 @@ markup: |
       <label class="spectrum-Checkbox spectrum-AssetList-itemSelector">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
         <span class="spectrum-Checkbox-box">
-          <svg class="spectrum-Icon spectrum-Icon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+          <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
           </svg>
         </span>
       </label>
       <img src="img/example-ava.jpg" class="spectrum-AssetList-itemThumbnail">
       <span class="spectrum-AssetList-itemLabel">Shantanu.jpg</span>
-      <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
       </svg>
     </li>
@@ -23,7 +23,7 @@ markup: |
       <label class="spectrum-Checkbox spectrum-AssetList-itemSelector">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
         <span class="spectrum-Checkbox-box">
-          <svg class="spectrum-Icon spectrum-Icon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+          <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
           </svg>
         </span>
@@ -32,7 +32,7 @@ markup: |
         <use xlink:href="#spectrum-icon-24-FileCSV"></use>
       </svg>
       <span class="spectrum-AssetList-itemLabel">Resource Allocation.csv</span>
-      <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
       </svg>
     </li>
@@ -40,7 +40,7 @@ markup: |
       <label class="spectrum-Checkbox spectrum-AssetList-itemSelector">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
         <span class="spectrum-Checkbox-box">
-          <svg class="spectrum-Icon spectrum-Icon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+          <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
           </svg>
         </span>
@@ -49,7 +49,7 @@ markup: |
         <use xlink:href="#spectrum-icon-24-Folder"></use>
       </svg>
       <span class="spectrum-AssetList-itemLabel">Frontend Projects</span>
-      <svg class="spectrum-Icon spectrum-Icon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
       </svg>
     </li>

@@ -7,13 +7,13 @@ markup: |
     <div class="spectrum-Table-head" style="display: flex" role="row">
       <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
         Column Title
-        <svg class="spectrum-Icon spectrum-Icon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
         </svg>
       </div>
       <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none" tabindex="0">
         Column Title
-        <svg class="spectrum-Icon spectrum-Icon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
         </svg>
       </div>

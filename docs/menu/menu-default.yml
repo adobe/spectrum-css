@@ -68,7 +68,7 @@ markup: |
           <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-sf">
             <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Financial District</span>
-              <svg class="spectrum-Icon spectrum-Icon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>

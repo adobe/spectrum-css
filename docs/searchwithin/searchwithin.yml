@@ -8,14 +8,14 @@ markup: |
     <div class="spectrum-Dropdown">
       <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
         <span class="spectrum-Dropdown-label">All</span>
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
         </svg>
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-ClearButton">
-      <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CrossSmall" />
       </svg>
     </button>
@@ -26,14 +26,14 @@ markup: |
     <div class="spectrum-Dropdown is-open">
       <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
         <span class="spectrum-Dropdown-label">All</span>
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
         </svg>
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-ClearButton">
-      <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CrossSmall" />
       </svg>
     </button>
@@ -61,14 +61,14 @@ markup: |
     <div class="spectrum-Dropdown">
       <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
         <span class="spectrum-Dropdown-label">Campaigns</span>
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
         </svg>
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-ClearButton">
-      <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CrossSmall" />
       </svg>
     </button>
@@ -79,14 +79,14 @@ markup: |
     <div class="spectrum-Dropdown is-disabled">
       <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger" disabled aria-haspopup="true">
         <span class="spectrum-Dropdown-label">All</span>
-        <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
         </svg>
       </button>
     </div>
     <input type="text" placeholder="Search" class="spectrum-Textfield" value="Term" disabled>
     <button type="reset" class="spectrum-ClearButton" disabled>
-      <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CrossSmall" />
       </svg>
     </button>
