@@ -1,0 +1,9 @@
+---
+name: Tooltip - Wrapping
+description: A Tooltip with text that wraps
+status: Released
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+    <span class="spectrum-Tooltip-label">Created: July 11, 2018<br>File size: 104kB<br>File type: JPG</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
