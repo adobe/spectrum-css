@@ -1,19 +1,19 @@
 ---
-name: Loader - Indeterminate - Large
-description: An indeterminate Spectrum Loader of default type (round) in large size
-status: Beta
+name: Circle Loader - Indeterminate Large
+description: A large, indeterminate circle loader
+status: Released
 markup: |
-  <div class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--large">
-    <div class="spectrum-Loader-track"></div>
-    <div class="spectrum-Loader-fills">
-      <div class="spectrum-Loader-fill-mask-1">
-        <div class="spectrum-Loader-fill-submask-1">
-          <div class="spectrum-Loader-fill"></div>
+  <div class="spectrum-CircleLoader spectrum-CircleLoader--indeterminate spectrum-CircleLoader--large">
+    <div class="spectrum-CircleLoader-track"></div>
+    <div class="spectrum-CircleLoader-fills">
+      <div class="spectrum-CircleLoader-fillMask1">
+        <div class="spectrum-CircleLoader-fillSubMask1">
+          <div class="spectrum-CircleLoader-fill"></div>
         </div>
       </div>
-      <div class="spectrum-Loader-fill-mask-2">
-        <div class="spectrum-Loader-fill-submask-2">
-          <div class="spectrum-Loader-fill"></div>
+      <div class="spectrum-CircleLoader-fillMask2">
+        <div class="spectrum-CircleLoader-fillSubMask2">
+          <div class="spectrum-CircleLoader-fill"></div>
         </div>
       </div>
     </div>

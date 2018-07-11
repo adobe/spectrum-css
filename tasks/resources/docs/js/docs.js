@@ -229,8 +229,8 @@ AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
 AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');
 
 function changeLoader(loader, value, submask1, submask2) {
-  submask1 = submask1 || loader.querySelector('.spectrum-Loader-fill-submask-1');
-  submask2 = submask2 || loader.querySelector('.spectrum-Loader-fill-submask-2');
+  submask1 = submask1 || loader.querySelector('.spectrum-CircleLoader-fillSubMask1');
+  submask2 = submask2 || loader.querySelector('.spectrum-CircleLoader-fillSubMask2');
   var angle;
   if(value > 0 && value <= 50) {
     angle = -180 + (value/50 * 180);

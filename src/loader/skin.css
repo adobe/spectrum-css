@@ -1,51 +1,50 @@
-.spectrum-Loader--bar-fill {
-  background: var(--spectrum-loader-circle-medium-track-fill-color);
-}
-
-.spectrum-Loader--bar-track {
-  background-color: var(--spectrum-loader-circle-medium-track-color);
-}
-
-.spectrum-Loader--bar--fullpage {
-  .spectrum-Loader--bar-fill {
-    background: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+.spectrum-BarLoader {
+  .spectrum-BarLoader-fill {
+    background: var(--spectrum-loader-circle-medium-track-fill-color);
   }
 
-  .spectrum-Loader--bar-label, & .spectrum-Loader--bar-percentage {
-    color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+  .spectrum-BarLoader-track {
+    background-color: var(--spectrum-loader-circle-medium-track-color);
   }
 
-  .spectrum-Loader--bar-track {
-    background-color: var(--spectrum-loader-circle-medium-over-background-track-color);
+  &.spectrum-BarLoader--overBackground {
+    .spectrum-BarLoader-fill {
+      background: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+    }
+
+    .spectrum-BarLoader-label,
+    .spectrum-BarLoader-percentage {
+      color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+    }
+
+    .spectrum-BarLoader-track {
+      background-color: var(--spectrum-loader-circle-medium-over-background-track-color);
+    }
   }
 }
 
-.spectrum-Loader-track {
+.spectrum-CircleLoader-track {
   border-color: var(--spectrum-loader-circle-medium-track-color);
 }
 
-.spectrum-Loader-Indeterminate {
-  background-color: inherit;
-}
-
-.spectrum-Loader-fill {
+.spectrum-CircleLoader-fill {
   border-color: var(--spectrum-loader-circle-medium-track-fill-color);
 }
 
-.spectrum-Loader--overBackground {
-  .spectrum-Loader-track {
+.spectrum-CircleLoader--overBackground {
+  .spectrum-CircleLoader-track {
     border-color: var(--spectrum-loader-circle-medium-over-background-track-color);
   }
-  .spectrum-Loader-fill {
+  .spectrum-CircleLoader-fill {
     border-color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 }
 
-.spectrum-Loader--indeterminateFullpage {
-  .spectrum-Loader-track {
+.spectrum-CircleLoader--indeterminate.spectrum-CircleLoader--overBackground {
+  .spectrum-CircleLoader-track {
     border-color: var(--spectrum-loader-circle-medium-over-background-track-color);
   }
-  .spectrum-Loader-fill {
+  .spectrum-CircleLoader-fill {
     border-color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
   }
 }
