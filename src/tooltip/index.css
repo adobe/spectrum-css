@@ -5,7 +5,6 @@
   --spectrum-tooltip-animation-distance: 4px;
   --spectrum-tooltip-target-offset: 3px;
   --spectrum-tooltip-max-width: 256px;
-  --spectrum-tooltip-tip-size: 8px;
   --spectrum-tooltip-tip-cross: 11px;
 }
 
@@ -25,12 +24,12 @@
 
   width: auto;
   max-width: var(--spectrum-tooltip-max-width);
-  padding: 2px 8px;
-  border-radius: var(--spectrum-border-radius);
+  padding: var(--spectrum-tooltip-padding-top) var(--spectrum-tooltip-padding-x);
+  border-radius: var(--spectrum-tooltip-border-radius);
 
-  font-size: var(--spectrum-text-size-text-label);
+  font-size: var(--spectrum-tooltip-text-size);
   font-weight: var(--spectrum-tooltip-text-font-weight);
-  line-height: var(--spectrum-line-height-text-label);
+  line-height: var(--spectrum-tooltip-text-line-height);
 
   &.is-open {
     @inherit: %spectrum-overlay--open;
@@ -52,8 +51,8 @@
   height: var(--spectrum-tooltip-tip-cross);
   &::after {
     content: '';
-    width: var(--spectrum-tooltip-tip-size);
-    height: var(--spectrum-tooltip-tip-size);
+    width: var(--spectrum-tooltip-tip-width);
+    height: var(--spectrum-tooltip-tip-width);
     top: -2px;
     left: 1px;
     position: absolute;
@@ -74,7 +73,7 @@
     @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Tooltip-tip {
-    left: calc(var(--spectrum-tooltip-tip-size) * -1);
+    left: calc(var(--spectrum-tooltip-tip-width) * -1);
     transform: rotate(90deg);
 
     /* This is a gross hack */
@@ -88,7 +87,7 @@
     @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Tooltip-tip {
-    right: calc(var(--spectrum-tooltip-tip-size) * -1);
+    right: calc(var(--spectrum-tooltip-tip-width) * -1);
     transform: rotate(-90deg);
   }
 }
@@ -99,7 +98,7 @@
     @inherit: %spectrum-overlay--bottom--open;
   }
   .spectrum-Tooltip-tip {
-    top: calc(var(--spectrum-tooltip-tip-size) * -1);
+    top: calc(var(--spectrum-tooltip-tip-width) * -1);
     transform: rotate(180deg);
   }
 }
@@ -110,7 +109,7 @@
     @inherit: %spectrum-overlay--top--open;
   }
   .spectrum-Tooltip-tip {
-    bottom: calc(var(--spectrum-tooltip-tip-size) * -1);
+    bottom: calc(var(--spectrum-tooltip-tip-width) * -1);
   }
 }
 
@@ -131,7 +130,7 @@
 
 .spectrum-Tooltip-label {
   /* Make sure line height is correct to prevent problems in Windows */
-  line-height: var(--spectrum-body-text-line-height);
+  line-height: var(--spectrum-tooltip-text-line-height);
 }
 
 .u-tooltip-showOnHover {

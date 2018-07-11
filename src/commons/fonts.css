@@ -5,9 +5,9 @@
   --spectrum-font-family-ko: adobe-clean-han-korean, var(--spectrum-font-family-base);
   --spectrum-font-family-ja: adobe-clean-han-japanese,  var(--spectrum-font-family-base);
   --spectrum-font-family-condensed: adobe-clean-condensed, var(--spectrum-font-family-base);
-  --spectrum-text-size: 14px;
-  --spectrum-text-body-line-height: 20px;
+  --spectrum-text-size: var(--spectrum-alias-font-size-default);
+  --spectrum-text-body-line-height: var(--spectrum-alias-line-height-medium);
 
-  --spectrum-text-size-text-label: 12px;
-  --spectrum-line-height-text-label: 12px;
+  --spectrum-text-size-text-label: var(--spectrum-label-text-size);
+  --spectrum-line-height-text-label: var(--spectrum-label-text-line-height);
 }
