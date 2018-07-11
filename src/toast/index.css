@@ -2,7 +2,6 @@
 
 :root {
   --spectrum-toast-height: 48px;
-  --spectrum-toast-icon-size: 18px;
   --spectrum-toast-button-group-margin: 8px 8px 0 8px;
   --spectrum-toast-icon-margin: 15px -4px 15px 16px;
   --spectrum-toast-button-margin: 0 0 8px 8px;
@@ -25,9 +24,6 @@
 }
 
 .spectrum-Toast-typeIcon {
-  width: var(--spectrum-toast-icon-size);
-  height: var(--spectrum-toast-icon-size);
-
   flex-shrink: 0;
   flex-grow: 0;
 

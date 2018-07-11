@@ -22,8 +22,6 @@
 
 .spectrum-Accordion-itemIndicator {
   display: block;
-  width: var(--spectrum-accordion-icon-width);
-  height: var(--spectrum-accordion-icon-height);
 
   position: absolute;
   left: var(--spectrum-accordion-icon-spacing);

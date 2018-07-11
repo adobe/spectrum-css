@@ -1,10 +1,5 @@
 @import '../commons/index.css';
 
-:root {
-  --spectrum-treeview-icon-width: var(--spectrum-accordion-icon-width);
-  --spectrum-treeview-icon-height: var(--spectrum-accordion-icon-height);
-}
-
 /* topdoc
 {{ treeview/treeview-default.yml }}
 */
@@ -80,8 +75,6 @@
 
 .spectrum-TreeView-indicator {
   display: block;
-  width: var(--spectrum-treeview-icon-width);
-  height: var(--spectrum-treeview-icon-height);
 
   float: left;
   margin-left: -14px;

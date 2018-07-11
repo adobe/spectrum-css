@@ -223,11 +223,6 @@ a.spectrum-ActionButton {
   border: none;
 }
 
-.spectrum-ClearButton-icon {
-  width: var(--spectrum-clearbutton-medium-icon-size);
-  height: var(--spectrum-clearbutton-medium-icon-size);
-}
-
 .spectrum-ClearButton--small {
   width: var(--spectrum-clearbutton-small-width);
   height: var(--spectrum-clearbutton-small-height);
@@ -248,12 +243,6 @@ a.spectrum-ActionButton {
   height: var(--spectrum-tool-height);
 
   padding: 0;
-
-  .spectrum-Tool-hold {
-    /* Increase specificity */
-    width: var(--spectrum-tool-hold-icon-size);
-    height: var(--spectrum-tool-hold-icon-size);
-  }
 }
 
 .spectrum-Tool-hold {

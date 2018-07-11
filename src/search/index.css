@@ -65,14 +65,7 @@
   display: block;
   position: absolute;
   left: 12px;
-  top: 0;
-  width: var(--spectrum-search-icon-width);
-  height: var(--spectrum-textfield-height);
-
-  /* Support SVG icons */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 16px 16px;
+  top: calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-magnifier-width) / 2));
 
   pointer-events: none;
 }

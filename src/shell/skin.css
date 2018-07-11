@@ -23,16 +23,6 @@
     background-color: var(--spectrum-shell-grey900);
   }
 
-  .spectrum-Button--icon {
-    color: var(--spectrum-shell-grey700);
-    &:hover, &:active {
-      color: var(--spectrum-shell-grey900);
-    }
-    &:active::before {
-      background: transparent;
-    }
-  }
-
   .spectrum-FieldButton, .spectrum-Dropdown-icon {
     color: var(--spectrum-shell-grey800);
     &:hover, &:active {

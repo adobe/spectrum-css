@@ -127,17 +127,17 @@ function changeScale(scale, method, noState) {
   }
 
   Object.keys(scaleAbbreviations).forEach(function(otherScale) {
-    document.body.classList.remove('spectrum--' + otherScale);
+    document.documentElement.classList.remove('spectrum--' + otherScale);
   });
-  document.body.classList.add('spectrum--' + scale);
+  document.documentElement.classList.add('spectrum--' + scale);
 
   // Swap out icons
-  var uiIcons = scale === 'medium' ? mediumIcons : largeIcons;
-  var oldUIIcons = scale != 'medium' ? mediumIcons : largeIcons;
-  document.head.insertBefore(uiIcons, null);
-  if (oldUIIcons.parentElement) {
-    oldUIIcons.parentElement.removeChild(oldUIIcons);
-  }
+  // var uiIcons = scale === 'medium' ? mediumIcons : largeIcons;
+  // var oldUIIcons = scale != 'medium' ? mediumIcons : largeIcons;
+  // document.head.insertBefore(uiIcons, null);
+  // if (oldUIIcons.parentElement) {
+  //   oldUIIcons.parentElement.removeChild(oldUIIcons);
+  // }
 
   // Scroll to the same place we were before
   if (currentTitle) {
@@ -214,17 +214,18 @@ document.addEventListener('focus', toggleSliderFocus, true);
 document.addEventListener('blur', toggleSliderFocus, true);
 
 // Load and store references to icon SVGs
-var mediumIcons;
-var largeIcons;
-AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-medium.svg', function(err, svg) {
-  mediumIcons = svg;
-});
-AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, svg) {
-  largeIcons = svg;
+// var mediumIcons;
+// var largeIcons;
+// AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-medium.svg', function(err, svg) {
+//   mediumIcons = svg;
+// });
+// AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, svg) {
+//   largeIcons = svg;
 
-  // Immediately remove from the DOM -- it will be added back when we switch scale
-  largeIcons.parentElement.removeChild(largeIcons);
-});
+//   // Immediately remove from the DOM -- it will be added back when we switch scale
+//   largeIcons.parentElement.removeChild(largeIcons);
+// });
+AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
 AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');
 
 function changeLoader(loader, value, submask1, submask2) {

@@ -6,8 +6,6 @@
 
   /* Todo fix in DNA */
   --spectrum-textfield-quiet-border-radius: 0;
-
-  --spectrum-textfield-icon-size: 16px;
 }
 
 .spectrum-Textfield {
@@ -94,9 +92,19 @@
   &:invalid,
   &.is-valid {
     background-repeat: no-repeat;
-    background-size: var(--spectrum-textfield-icon-size) var(--spectrum-textfield-icon-size);
-    background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) 50%;
-    padding-right: var(--spectrum-textfield-icon-frame);
+  }
+
+  &.is-invalid,
+  &:invalid {
+    background-size: var(--spectrum-icon-alert-medium-width) var(--spectrum-icon-alert-medium-width);
+    background-position: calc(100% - var(--spectrum-textfield-padding-x)) 50%;
+    padding-right: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-icon-margin-left));
+  }
+
+  &.is-valid {
+    background-size: var(--spectrum-icon-checkmark-medium-width) var(--spectrum-icon-checkmark-medium-width);
+    background-position: calc(100% - var(--spectrum-textfield-padding-x)) 50%;
+    padding-right: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-icon-margin-left));
   }
 }
 
@@ -129,4 +137,10 @@
   /* Treat all quiet inputs and textareas the same */
   resize: none;
   overflow-y: hidden;
+
+  &.is-invalid,
+  &:invalid,
+  &.is-valid {
+    background-position: 100% 50%;
+  }
 }

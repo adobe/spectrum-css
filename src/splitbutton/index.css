@@ -1,9 +1,9 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-splitbutton-icon-width: 10px;
-  --spectrum-splitbutton-icon-height: 6px;
   --spectrum-splitbutton-trigger-border-left: 0;
+  --spectrum-spltibutton-margin-left: 0;
+  --spectrum-splitbutton-icon-gap: var(--spectrum-global-dimension-size-150);
 }
 
 /* topdoc
@@ -49,7 +49,7 @@
 
   & + .spectrum-SplitButton-trigger {
     /* Override button + button style */
-    margin-left: 0;
+    margin-left: var(--spectrum-spltibutton-margin-left);
   }
 }
 
@@ -58,23 +58,17 @@
 
   border-radius: 0 var(--spectrum-button-primary-border-radius) var(--spectrum-button-primary-border-radius) 0;
   border-left-width: var(--spectrum-splitbutton-trigger-border-left);
-  padding: 0;
-  width: 30px;
+
+  padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
+  padding-right: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
 
   &:focus-ring {
     box-shadow: none;
-  }
-
-  & + .spectrum-SplitButton-action {
-    /* Override button + button style */
-    margin-left: 0;
   }
 }
 
 .spectrum-SplitButton-icon {
   display: block;
-  width: var(--spectrum-splitbutton-icon-width);
-  height: var(--spectrum-splitbutton-icon-height);
   margin-top: 1px;
 }
 
@@ -88,11 +82,17 @@
   }
 }
 
+.spectrum-SplitButton-action {
+  .spectrum-Button-label + .spectrum-Icon {
+    margin-left: var(--spectrum-splitbutton-icon-gap);
+  }
+}
+
 .spectrum-SplitButton--left {
   .spectrum-SplitButton-action {
     border-radius: 0 var(--spectrum-button-primary-border-radius) var(--spectrum-button-primary-border-radius) 0;
     margin-right: 0;
-    margin-left: 0;
+    margin-left: var(--spectrum-spltibutton-margin-left);
 
     /* CTA is special and doesn't have a border between the buttons */
     &.spectrum-Button--cta {

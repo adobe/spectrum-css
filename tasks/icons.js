@@ -1,65 +1,69 @@
 var gulp = require('gulp');
-var download = require('gulp-download-stream');
-var unzip = require('gulp-unzip');
+var path = require('path');
 var svgmin = require('gulp-svgmin');
 var rename = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
 var replace = require('gulp-replace');
-var del = require('del');
+var svgcombiner = require('gulp-svgcombiner');
 
-function stripDir(file) {
-  file.dirname = '';
-  cleanIconFilename(file);
-}
-
-function cleanIconFilename(file) {
-  file.basename = file.basename.replace(/_.*/, '');
-}
-
-var baseUrl = 'http://icons.corp.adobe.com:4502/content/athena/clients/spectrum/collections/spectrum_css.zip';
-
-gulp.task('clean-iconfiles', function() {
-  return del([
-    'temp',
-    'icons'
-  ]);
+gulp.task('copy-icons-large', function() {
+  return gulp.src('node_modules/@a4u/a4u-collection-essential-ui-icons-release/assets/UI_Icons_SVG_Large/*.svg')
+    .pipe(gulp.dest('icons/large/'));
 });
 
-gulp.task('download-icons', function() {
-  return download(baseUrl)
-    .pipe(gulp.dest('temp/'));
-});
-
-gulp.task('unzip-icons', function() {
-  return gulp.src('temp/*.zip')
-    .pipe(unzip())
-    .pipe(gulp.dest('temp/'));
-});
-
-gulp.task('extract-icons', function() {
-  return gulp.src('temp/icons/*/*.svg')
-    .pipe(rename(stripDir))
+gulp.task('copy-icons-medium', function() {
+  return gulp.src('node_modules/@a4u/a4u-collection-essential-ui-icons-release/assets/UI_Icons_SVG_Medium/*.svg')
     .pipe(gulp.dest('icons/medium/'));
 });
 
 gulp.task('clean-icons', function() {
   return gulp.src('icons/**/*.svg')
-    .pipe(svgmin())
+    .pipe(replace(/ data-name=".*?"/g, ''))
+    .pipe(replace(/ id=".*?"/g, ''))
+    .pipe(replace(/ class=".*?"/g, ''))
+    .pipe(svgmin({
+      plugins: [{
+        collapseGroups: true
+      }]
+    }))
     .pipe(replace(/<defs>.*?<\/defs>/, ''))
     .pipe(replace(/<title>.*?<\/title>/, ''))
-    .pipe(replace(/ data-name=".*?"/, ''))
-    .pipe(replace(/ id=".*?"/, ''))
-    .pipe(replace(/ class="fill"/g, ''))
     .pipe(gulp.dest('icons/'));
+});
+
+// Only ran by Adobe
+gulp.task('copy-icons',
+  gulp.series(
+    gulp.parallel('copy-icons-medium', 'copy-icons-large'),
+    'clean-icons'
+  )
+);
+
+gulp.task('generate-svgsprite', function() {
+  return gulp.src('icons/**/*.svg')
+    .pipe(svgcombiner({
+      processName: function(filePath) {
+        // Clean filename
+        return 'spectrum-css-icon-' + path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1');
+      },
+      processClass: function(filePath) {
+        // Return the last directory
+        return 'spectrum-UIIcon--' + path.dirname(filePath).split(path.sep).pop();
+      }
+    }))
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('spectrum-css-icons.svg'))
+    .pipe(gulp.dest('dist/icons/'));
 });
 
 function getSVGSpriteTask(size) {
   return function() {
     return gulp.src(`icons/${size}/*.svg`)
-      .pipe(rename(function (path) {
-        path.basename = `spectrum-css-icon-${path.basename}`;
+      .pipe(rename(function(filePath) {
+        filePath.basename = 'spectrum-css-icon-' + filePath.basename.replace(/S_UI(.*?)_.*/, '$1');
       }))
-      .pipe(svgmin())
       .pipe(svgstore({
         inlineSvg: true
       }))
@@ -71,17 +75,9 @@ function getSVGSpriteTask(size) {
 gulp.task('generate-svgsprite-medium', getSVGSpriteTask('medium'));
 gulp.task('generate-svgsprite-large', getSVGSpriteTask('large'));
 
-gulp.task('update-icons',
-  gulp.series(
-    'clean-iconfiles',
-    'download-icons',
-    'unzip-icons',
-    'extract-icons',
-    'clean-icons'
-  )
-);
 
 gulp.task('icons', gulp.series(
   'generate-svgsprite-medium',
-  'generate-svgsprite-large'
+  'generate-svgsprite-large',
+  'generate-svgsprite'
 ));

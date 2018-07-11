@@ -43,7 +43,7 @@
   &:hover {
     /* checkbox on the left, shows up always */
     .spectrum-Checkbox {
-      display: inline-block;
+      display: inline-flex;
     }
   }
 
@@ -71,8 +71,6 @@
 
 .spectrum-AssetList-itemChildIndicator {
   display: none;
-  width: var(--spectrum-miller-column-chevron-width);
-  height: var(--spectrum-miller-column-chevron-height);
   transition: transform ease var(--spectrum-transition-time);
 }
 

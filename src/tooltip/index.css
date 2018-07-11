@@ -16,8 +16,12 @@
   left: 0px;
   top: 0px;
 
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
   box-sizing: border-box;
+
+  vertical-align: top;
 
   width: auto;
   max-width: var(--spectrum-tooltip-max-width);
@@ -123,13 +127,6 @@
 */
 .spectrum-Tooltip-typeIcon {
   margin-right: var(--spectrum-button-primary-text-gap);
-
-  /* Override the size, just for these icons only */
-  font-size: 14px;
-
-  /* Fix font icon alignment in Chrome on Windows, works for Mac too */
-  vertical-align: -2px;
-  line-height: 14px;
 }
 
 .spectrum-Tooltip-label {

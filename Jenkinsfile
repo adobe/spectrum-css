@@ -16,6 +16,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc'
+                sh 'echo "@a4u:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release-local/" >> ~/.npmrc'
                 // install npm dependencies
                 sh "npm install"
             }

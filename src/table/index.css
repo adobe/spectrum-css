@@ -19,9 +19,6 @@
   display: none;
   margin-left: var(--spectrum-table-header-sort-icon-margin-left);
 
-  width: var(--spectrum-table-header-sort-icon-width);
-  height: var(--spectrum-table-header-sort-icon-height);
-
   vertical-align: bottom;
 
   transition: transform var(--spectrum-transition-time) ease-in-out;

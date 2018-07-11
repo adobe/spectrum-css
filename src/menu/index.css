@@ -25,13 +25,6 @@
 }
 
 .spectrum-Menu-checkmark {
-  position: absolute;
-  right: 9px;
-  top: 11px;
-
-  width: var(--spectrum-selectlist-option-icon-width);
-  height: var(--spectrum-selectlist-option-icon-height);
-
   transform: scale(1);
   opacity: 1;
 }
@@ -40,12 +33,13 @@
   cursor: pointer;
   position: relative;
   display: flex;
+  align-items: center;
 
-  padding: 0 calc(calc(var(--spectrum-selectlist-option-padding) * 2) + var(--spectrum-selectlist-option-icon-width)) 0 var(--spectrum-selectlist-option-padding);
+  padding: 0 var(--spectrum-selectlist-option-padding) 0 var(--spectrum-selectlist-option-padding);
   margin: 0;
 
-  height: var(--spectrum-component-single-line-height);
-  line-height: var(--spectrum-component-single-line-height);
+  height: var(--spectrum-selectlist-option-height);
+  line-height: var(--spectrum-selectlist-option-height);
 
   font-size: var(--spectrum-selectlist-option-text-size);
   font-weight: var(--spectrum-selectlist-option-text-font-weight);
@@ -60,12 +54,15 @@
       display: block;
     }
   }
+}
 
-  .spectrum-Menu-chevron {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
+.spectrum-Menu-itemLabel {
+  flex: 1;
+}
+
+.spectrum-Menu-checkmark,
+.spectrum-Menu-chevron {
+  flex-grow: 0;
 }
 
 .spectrum-Menu-divider {

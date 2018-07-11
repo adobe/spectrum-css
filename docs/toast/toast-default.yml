@@ -10,8 +10,8 @@ markup: |
         <span class="spectrum-Button-label">Undo</span>
       </button>
       <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
-        <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-ToastClose" />
+        <svg class="spectrum-Icon spectrum-Icon-CrossMedium focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CrossMedium" />
         </svg>
       </button>
     </div>

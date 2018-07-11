@@ -13,10 +13,18 @@ markup: |
 
   <div class="spectrum-Popover spectrum-Popover--bottom is-open">
     <ul class="spectrum-Menu" role="menu">
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 3</li>
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 4</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 1</span>
+      </li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 2</span>
+      </li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 3</span>
+      </li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 4</span>
+      </li>
     </ul>
   </div>
 
@@ -31,10 +39,18 @@ markup: |
 
   <div class="spectrum-Popover spectrum-Popover--bottom is-open">
     <ul class="spectrum-Menu" role="menu">
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 3</li>
-      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">Action 4</li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 1</span>
+      </li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 2</span>
+      </li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 3</span>
+      </li>
+      <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+        <span class="spectrum-Menu-itemLabel">Action 4</span>
+      </li>
     </ul>
   </div>
 

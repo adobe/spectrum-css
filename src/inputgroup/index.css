@@ -36,12 +36,6 @@
   flex: 1;
 }
 
-.spectrum-InputGroup-icon {
-  width: var(--spectrum-dropdown-ui-icon-width);
-  height: var(--spectrum-dropdown-ui-icon-width);
-  height: 100%;
-}
-
 .spectrum-InputGroup--quiet {
   .spectrum-FieldButton {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);

@@ -11,14 +11,14 @@ markup: |
     <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
       <li class="spectrum-Breadcrumbs-item">
         <a class="spectrum-Breadcrumbs-itemLink" href="#">Home</a>
-        <svg class="spectrum-Icon spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        <svg class="spectrum-Icon spectrum-Icon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
         </svg>
       </li>
       <li class="spectrum-Breadcrumbs-item">
         <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Playground</a>
-        <svg class="spectrum-Icon spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        <svg class="spectrum-Icon spectrum-Icon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
         </svg>
       </li>
       <li class="spectrum-Breadcrumbs-item">

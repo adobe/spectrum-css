@@ -19,8 +19,8 @@ markup: |
     <label class="spectrum-Checkbox">
       <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
       <span class="spectrum-Checkbox-box">
-        <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+        <svg class="spectrum-Icon spectrum-Icon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
         </svg>
       </span>
       <span class="spectrum-Checkbox-label">Checkbox</span>
@@ -28,8 +28,8 @@ markup: |
     <label class="spectrum-Checkbox">
       <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
       <span class="spectrum-Checkbox-box">
-        <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+        <svg class="spectrum-Icon spectrum-Icon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
         </svg>
       </span>
       <span class="spectrum-Checkbox-label">Checkbox</span>

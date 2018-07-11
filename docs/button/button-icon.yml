@@ -8,25 +8,25 @@ modifiers:
   ':focus': Focused
 markup: |
   <button class="spectrum-ClearButton">
-    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-TagClose" />
+    <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CrossSmall" />
     </svg>
   </button>
   <button class="spectrum-ClearButton" disabled>
-    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-TagClose" />
+    <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CrossSmall" />
     </svg>
   </button>
 
   <br><br>
 
   <button class="spectrum-ClearButton spectrum-ClearButton--small">
-    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-TagClose" />
+    <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CrossSmall" />
     </svg>
   </button>
   <button class="spectrum-ClearButton spectrum-ClearButton--small" disabled>
-    <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-TagClose" />
+    <svg class="spectrum-Icon spectrum-Icon-CrossSmall" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CrossSmall" />
     </svg>
   </button>

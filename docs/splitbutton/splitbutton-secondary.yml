@@ -10,16 +10,16 @@ markup: |
   <div class="spectrum-SplitButton">
     <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
     <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">
-      <svg class="spectrum-Icon spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
   </div>
 
   <div class="spectrum-SplitButton spectrum-SplitButton--left">
     <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">
-      <svg class="spectrum-Icon spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
     <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>

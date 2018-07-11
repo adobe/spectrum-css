@@ -109,11 +109,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: var(--spectrum-checkbox-checkmark-size);
-  height: var(--spectrum-checkbox-checkmark-size);
 
-  margin-top: calc(var(--spectrum-checkbox-checkmark-size) / -2);
-  margin-left: calc(var(--spectrum-checkbox-checkmark-size) / -2);
+  margin-top: calc(var(--spectrum-icon-checkmark-small-height) / -2);
+  margin-left: calc(var(--spectrum-icon-checkmark-small-width) / -2);
 
   opacity: 0;
   transform: scale(0);

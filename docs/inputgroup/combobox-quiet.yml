@@ -6,8 +6,8 @@ markup: |
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet">
     <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true">
-      <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
   </div>
@@ -16,17 +16,25 @@ markup: |
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-open">
     <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-selected" aria-haspopup="true">
-      <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
     <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; width: 100%">
       <ul class="spectrum-Menu" role="listbox">
-        <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">Ballard</li>
-        <li class="spectrum-Menu-item" role="option" tabindex="0">Fremont</li>
-        <li class="spectrum-Menu-item" role="option" tabindex="0">Greenwood</li>
+        <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Ballard</span>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Fremont</span>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Greenwood</span>
+        </li>
         <li class="spectrum-Menu-divider" role="separator"></li>
-        <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">United States of America</li>
+        <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+          <span class="spectrum-Menu-itemLabel">United States of America</span>
+        </li>
       </ul>
     </div>
   </div>
@@ -37,8 +45,8 @@ markup: |
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
     <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" disabled>
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true" disabled>
-      <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
   </div>
@@ -47,8 +55,8 @@ markup: |
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
     <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field is-invalid">
     <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-invalid" aria-haspopup="true">
-      <svg class="spectrum-Icon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
   </div>

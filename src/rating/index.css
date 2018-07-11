@@ -1,8 +1,6 @@
 @import '../commons/index.css';
 
 :root {
-  /* Rating icon */
-  --spectrum-rating-icon-hitarea: 16px;
   --spectrum-rating-icon-spacing: 8px;
 }
 
@@ -18,8 +16,8 @@
 
 .spectrum-Rating-input {
   position: absolute;
-  width: calc(5 * (var(--spectrum-rating-icon-hitarea) + var(--spectrum-rating-icon-spacing))); /* 120px */
-  height: var(--spectrum-rating-icon-hitarea); /* 16px; */
+  width: calc(5 * (var(--spectrum-icon-star-width) + var(--spectrum-rating-icon-spacing)));
+  height: var(--spectrum-icon-star-width);
   opacity: 0.0001;
   pointer-events: none;
   z-index: 0;
@@ -28,15 +26,15 @@
 .spectrum-Rating-icon {
   background-size: contain;
   background-repeat: no-repeat;
-  width: calc(var(--spectrum-rating-icon-hitarea) + var(--spectrum-rating-icon-spacing)); /* 24px; */
-  height: var(--spectrum-rating-icon-hitarea); /* 16px; */
+  width: calc(var(--spectrum-icon-star-width) + var(--spectrum-rating-icon-spacing));
+  height: var(--spectrum-icon-star-width);
   float: left;
 }
 
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  width: var(--spectrum-rating-icon-hitarea);
-  height: var(--spectrum-rating-icon-hitarea);
+  width: var(--spectrum-icon-star-width);
+  height: var(--spectrum-icon-star-width);
   margin: 0 auto;
 }
 

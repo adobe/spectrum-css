@@ -59,7 +59,7 @@
   &.is-invalid,
   &:invalid {
     border-color: var(--spectrum-textfield-border-color-error);
-    background-image: url("embed/S_Alert_18_N@2x.svg" param(--color var(--spectrum-alert-error-border-color)));
+    background-image: url("embed/AlertMedium.svg" param(--color var(--spectrum-alert-error-border-color)));
 
     &:focus-ring { /* might break things due to pre-defined focus-ring */
       &:not(:active) {
@@ -70,7 +70,7 @@
   }
 
   &.is-valid {
-    background-image: url("embed/Smock_Checkmark_18_N@2x.svg" param(--color var(--spectrum-alert-success-icon-color)));
+    background-image: url("embed/CheckmarkMedium.svg" param(--color var(--spectrum-alert-success-icon-color)));
   }
 }
 

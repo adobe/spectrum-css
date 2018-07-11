@@ -4,14 +4,14 @@ description: The info toast.
 status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--info">
-    <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-AlertInfo" />
+    <svg class="spectrum-Icon spectrum-Icon-InfoMedium spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-InfoMedium" />
     </svg>
     <div class="spectrum-Toast-content">A new version is available</div>
     <div class="spectrum-Toast-buttons">
       <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
-        <svg class="spectrum-Icon spectrum-ClearButton-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-ToastClose" />
+        <svg class="spectrum-Icon spectrum-Icon-CrossMedium focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CrossMedium" />
         </svg>
       </button>
     </div>

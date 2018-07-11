@@ -23,8 +23,8 @@ markup: |
         <div class="spectrum-Dropdown" style="width: 195px;">
           <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
-            <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+            <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
             </svg>
           </button>
         </div>
@@ -51,8 +51,8 @@ markup: |
           <label class="spectrum-Checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
             <span class="spectrum-Checkbox-box">
-              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              <svg class="spectrum-Icon spectrum-Icon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
               </svg>
             </span>
             <span class="spectrum-Checkbox-label">Checkbox</span>
@@ -60,8 +60,8 @@ markup: |
           <label class="spectrum-Checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
             <span class="spectrum-Checkbox-box">
-              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              <svg class="spectrum-Icon spectrum-Icon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
               </svg>
             </span>
             <span class="spectrum-Checkbox-label">Checkbox</span>
@@ -77,13 +77,13 @@ markup: |
           <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
           <span class="spectrum-Stepper-buttons">
             <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
+              <svg class="spectrum-Icon spectrum-Icon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
               </svg>
             </button>
             <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
+              <svg class="spectrum-Icon spectrum-Icon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
               </svg>
             </button>
           </span>

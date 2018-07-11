@@ -13,8 +13,8 @@
   height: var(--spectrum-textfield-icon-size);
 
   position: absolute;
-  bottom: calc(var(--spectrum-textfield-icon-size) / 2);
-  right: calc(var(--spectrum-textfield-icon-size) / 2);
+  bottom: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-textfield-icon-size) / 2));
+  right: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-textfield-icon-size) / 2));
 }
 
 .spectrum-DecoratedTextfield-field {

@@ -4,11 +4,10 @@ description: A Spectrum tooltip
 status: Released
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
-    <span class="spectrum-Tooltip-label">
-      <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="CheckmarkCircle">
-        <use xlink:href="#spectrum-icon-24-CheckmarkCircle" />
-      </svg>Success
-    </span>
+    <svg class="spectrum-Icon spectrum-Icon-SuccessSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-SuccessSmall" />
+    </svg>
+    <span class="spectrum-Tooltip-label">Success</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
@@ -19,10 +18,10 @@ markup: |
   <br><br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
-  <span class="spectrum-Tooltip-label">
-    <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="Info">
-      <use xlink:href="#spectrum-icon-24-Info" />
-    </svg>Info</span>
+    <svg class="spectrum-Icon spectrum-Icon-InfoSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-InfoSmall" />
+    </svg>
+    <span class="spectrum-Tooltip-label">Info</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
@@ -33,10 +32,10 @@ markup: |
   <br><br>
 
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
-    <span class="spectrum-Tooltip-label">
-    <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true" aria-label="Alert">
-      <use xlink:href="#spectrum-icon-24-Alert" />
-    </svg>Warning</span>
+    <svg class="spectrum-Icon spectrum-Icon-AlertSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertSmall" />
+    </svg>
+    <span class="spectrum-Tooltip-label">Warning</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">

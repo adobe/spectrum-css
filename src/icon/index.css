@@ -1,3 +1,13 @@
+:root {
+  --spectrum-icon-size-xxs: 9px;
+  --spectrum-icon-size-xs: 12px;
+  --spectrum-icon-size-s: 18px;
+  --spectrum-icon-size-m: 24px;
+  --spectrum-icon-size-l: 36px;
+  --spectrum-icon-size-xl: 48px;
+  --spectrum-icon-size-xxl: 72px;
+}
+
 .spectrum-Icon {
   display: inline-block;
 
@@ -11,6 +21,210 @@
   &:not(:root) {
     overflow: hidden;
   }
+
   /* Don't catch clicks or hover, otherwise they may not escape the SVG */
   pointer-events: none;
+}
+
+.spectrum-Icon--sizeXXS {
+  &,
+  img,
+  svg {
+    height: var(--spectrum-icon-size-xxs);
+    width: var(--spectrum-icon-size-xxs);
+  }
+}
+
+.spectrum-Icon--sizeXS {
+  &,
+  img,
+  svg {
+    height: var(--spectrum-icon-size-xs);
+    width: var(--spectrum-icon-size-xs);
+  }
+}
+
+.spectrum-Icon--sizeS {
+  &,
+  img,
+  svg {
+    height: var(--spectrum-icon-size-s);
+    width: var(--spectrum-icon-size-s);
+  }
+}
+
+.spectrum-Icon--sizeM {
+  &,
+  img,
+  svg {
+    height: var(--spectrum-icon-size-m);
+    width: var(--spectrum-icon-size-m);
+  }
+}
+
+.spectrum-Icon--sizeL {
+  &,
+  img,
+  svg {
+    height: var(--spectrum-icon-size-l);
+    width: var(--spectrum-icon-size-l);
+  }
+}
+
+.spectrum-Icon--sizeXL {
+  &,
+  img,
+  svg {
+    height: var(--spectrum-icon-size-xl);
+    width: var(--spectrum-icon-size-xl);
+  }
+}
+
+.spectrum-Icon--sizeXXL {
+  &,
+  img,
+  svg {
+    height: var(--spectrum-icon-size-xxl);
+    width: var(--spectrum-icon-size-xxl);
+  }
+}
+
+.spectrum--large {
+  .spectrum-UIIcon--medium {
+    display: none;
+  }
+  .spectrum-UIIcon--large {
+    display: inline;
+  }
+}
+
+.spectrum--medium {
+  .spectrum-UIIcon--large {
+    display: none;
+  }
+  .spectrum-UIIcon--medium {
+    display: inline;
+  }
+}
+
+/* UI Icons */
+.spectrum-Icon-AlertMedium {
+  width: var(--spectrum-icon-alert-medium-width);
+  height: var(--spectrum-icon-alert-medium-height);
+}
+.spectrum-Icon-AlertSmall {
+  width: var(--spectrum-icon-alert-small-width);
+  height: var(--spectrum-icon-alert-small-height);
+}
+.spectrum-Icon-ArrowDownSmall {
+  width: var(--spectrum-icon-arrow-down-small-width);
+  height: var(--spectrum-icon-arrow-down-small-height);
+}
+.spectrum-Icon-ArrowLeftMedium {
+  width: var(--spectrum-icon-arrow-left-medium-width);
+  height: var(--spectrum-icon-arrow-left-medium-height);
+}
+.spectrum-Icon-CheckmarkMedium {
+  width: var(--spectrum-icon-checkmark-medium-width);
+  height: var(--spectrum-icon-checkmark-medium-height);
+}
+.spectrum-Icon-CheckmarkSmall {
+  width: var(--spectrum-icon-checkmark-small-width);
+  height: var(--spectrum-icon-checkmark-small-height);
+}
+.spectrum-Icon-ChevronDownMedium {
+  width: var(--spectrum-icon-chevron-down-medium-width);
+  height: var(--spectrum-icon-chevron-down-medium-height);
+}
+.spectrum-Icon-ChevronDownSmall {
+  width: var(--spectrum-icon-chevron-down-small-width);
+  height: var(--spectrum-icon-chevron-down-small-height);
+}
+.spectrum-Icon-ChevronLeftLarge {
+  width: var(--spectrum-icon-chevron-left-large-width);
+  height: var(--spectrum-icon-chevron-left-large-height);
+}
+.spectrum-Icon-ChevronLeftMedium {
+  width: var(--spectrum-icon-chevron-left-medium-width);
+  height: var(--spectrum-icon-chevron-left-medium-height);
+}
+.spectrum-Icon-ChevronRightLarge {
+  width: var(--spectrum-icon-chevron-right-large-width);
+  height: var(--spectrum-icon-chevron-right-large-height);
+}
+.spectrum-Icon-ChevronRightMedium {
+  width: var(--spectrum-icon-chevron-right-medium-width);
+  height: var(--spectrum-icon-chevron-right-medium-height);
+}
+.spectrum-Icon-ChevronRightSmall {
+  width: var(--spectrum-icon-chevron-right-small-width);
+  height: var(--spectrum-icon-chevron-right-small-height);
+}
+.spectrum-Icon-ChevronUpSmall {
+  width: var(--spectrum-icon-chevron-up-small-width);
+  height: var(--spectrum-icon-chevron-up-small-height);
+}
+.spectrum-Icon-CornerTriangle {
+  width: var(--spectrum-icon-cornertriangle-width);
+  height: var(--spectrum-icon-cornertriangle-height);
+}
+.spectrum-Icon-CrossLarge {
+  width: var(--spectrum-icon-cross-large-width);
+  height: var(--spectrum-icon-cross-large-height);
+}
+.spectrum-Icon-CrossMedium {
+  width: var(--spectrum-icon-cross-medium-width);
+  height: var(--spectrum-icon-cross-medium-height);
+}
+.spectrum-Icon-CrossSmall {
+  width: var(--spectrum-icon-cross-small-width);
+  height: var(--spectrum-icon-cross-small-height);
+}
+.spectrum-Icon-DashSmall {
+  width: var(--spectrum-icon-dash-small-width);
+  height: var(--spectrum-icon-dash-small-height);
+}
+.spectrum-Icon-DoubleGripper {
+  width: var(--spectrum-icon-doublegripper-width);
+  height: var(--spectrum-icon-doublegripper-height);
+}
+.spectrum-Icon-InfoMedium {
+  width: var(--spectrum-icon-info-medium-width);
+  height: var(--spectrum-icon-info-medium-height);
+}
+.spectrum-Icon-InfoSmall {
+  width: var(--spectrum-icon-info-small-width);
+  height: var(--spectrum-icon-info-small-height);
+}
+.spectrum-Icon-Magnifier {
+  width: var(--spectrum-icon-magnifier-width);
+  height: var(--spectrum-icon-magnifier-height);
+}
+.spectrum-Icon-SkipLeft {
+  width: var(--spectrum-icon-skip-left-width);
+  height: var(--spectrum-icon-skip-left-height);
+}
+.spectrum-Icon-SkipRight {
+  width: var(--spectrum-icon-skip-right-width);
+  height: var(--spectrum-icon-skip-right-height);
+}
+.spectrum-Icon-Star {
+  width: var(--spectrum-icon-star-width);
+  height: var(--spectrum-icon-star-height);
+}
+.spectrum-Icon-StarOutline {
+  width: var(--spectrum-icon-star-outline-width);
+  height: var(--spectrum-icon-star-outline-height);
+}
+.spectrum-Icon-SuccessMedium {
+  width: var(--spectrum-icon-success-medium-width);
+  height: var(--spectrum-icon-success-medium-height);
+}
+.spectrum-Icon-SuccessSmall {
+  width: var(--spectrum-icon-success-small-width);
+  height: var(--spectrum-icon-success-small-height);
+}
+.spectrum-Icon-TripleGripper {
+  width: var(--spectrum-icon-triplegripper-width);
+  height: var(--spectrum-icon-triplegripper-height);
 }

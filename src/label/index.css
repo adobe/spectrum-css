@@ -21,16 +21,6 @@
   font-smoothing: subpixel-antialiased;
 }
 
-.spectrum-Label-icon {
-  font-size: 14px;
-  line-height: 0;
-
-  &:before {
-    vertical-align: sub;
-  }
-}
-
-
 /* topdoc
 {{ label/label-large.yml }}
 */

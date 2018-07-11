@@ -77,8 +77,8 @@ markup: |
         <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
           <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label">Display</span>
-            <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+            <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
             </svg>
           </button>
         </div>
@@ -122,8 +122,8 @@ markup: |
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
         <button class="spectrum-Button spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" aria-haspopup="true">
           <span class="spectrum-Dropdown-label">Display</span>
-          <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+          <svg class="spectrum-Icon spectrum-Icon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
       </div>

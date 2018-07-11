@@ -4,8 +4,6 @@
   --spectrum-stepper-button-height: calc(var(--spectrum-component-single-line-height) / 2);
   --spectrum-stepper-button-width: 24px;
   --spectrum-stepper-padding: calc(var(--spectrum-padding) / 2);
-  --spectrum-Stepper-stepUpIcon-width: 8px;
-  --spectrum-Stepper-stepUpIcon-height: 6px;
 }
 
 .spectrum-Stepper {
@@ -48,8 +46,6 @@
 
   .spectrum-Icon {
     margin: 0 !important;
-    width: var(--spectrum-Stepper-stepUpIcon-width);
-    height: var(--spectrum-Stepper-stepUpIcon-height);
     opacity: 1;
   }
 }
