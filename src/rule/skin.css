@@ -1,3 +1,11 @@
-.spectrum-Rule {
-  border-color: var(--spectrum-rule-medium-background-color);
+.spectrum-Rule--large {
+  background-color: var(--spectrum-rule-large-background-color);
+}
+
+.spectrum-Rule--medium {
+  background-color: var(--spectrum-rule-medium-background-color);
+}
+
+.spectrum-Rule--small {
+  background-color: var(--spectrum-rule-small-background-color);
 }
