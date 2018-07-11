@@ -5,6 +5,11 @@ var rename = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
 var replace = require('gulp-replace');
 var svgcombiner = require('gulp-svgcombiner');
+var del = require('del');
+
+gulp.task('delete-icons', function() {
+  return del('icons/**');
+});
 
 gulp.task('copy-icons-large', function() {
   return gulp.src('node_modules/@a4u/a4u-collection-essential-ui-icons-release/assets/UI_Icons_SVG_Large/*.svg')
@@ -34,22 +39,34 @@ gulp.task('clean-icons', function() {
 // Only ran by Adobe
 gulp.task('copy-icons',
   gulp.series(
+    'delete-icons',
     gulp.parallel('copy-icons-medium', 'copy-icons-large'),
     'clean-icons'
   )
 );
 
-gulp.task('generate-svgsprite', function() {
-  return gulp.src('icons/**/*.svg')
+gulp.task('generate-combined-icons', function() {
+  return gulp.src([
+    'icons/medium/*.svg',
+    'icons/large/*.svg'
+  ])
     .pipe(svgcombiner({
       processName: function(filePath) {
         // Clean filename
-        return 'spectrum-css-icon-' + path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1');
+        return path.basename(filePath, path.extname(filePath)).replace(/S_UI(.*?)_.*/, '$1');
       },
       processClass: function(filePath) {
         // Return the last directory
         return 'spectrum-UIIcon--' + path.dirname(filePath).split(path.sep).pop();
       }
+    }))
+    .pipe(gulp.dest('icons/combined/'));
+});
+
+gulp.task('generate-svgsprite', function() {
+  return gulp.src('icons/combined/*.svg')
+    .pipe(rename(function(filePath) {
+      filePath.basename = 'spectrum-css-icon-' + filePath.basename;
     }))
     .pipe(svgstore({
       inlineSvg: true
@@ -75,9 +92,11 @@ function getSVGSpriteTask(size) {
 gulp.task('generate-svgsprite-medium', getSVGSpriteTask('medium'));
 gulp.task('generate-svgsprite-large', getSVGSpriteTask('large'));
 
-
-gulp.task('icons', gulp.series(
+gulp.task('icons', gulp.parallel(
   'generate-svgsprite-medium',
   'generate-svgsprite-large',
-  'generate-svgsprite'
+  gulp.series(
+    'generate-combined-icons',
+    'generate-svgsprite'
+  )
 ));
