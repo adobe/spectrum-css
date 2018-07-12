@@ -61,16 +61,13 @@ markup: |
       </ul>
     </div>
 
-    <div class="spectrum-Popover is-open" style="top: 0; left: 400px;">
+    <div class="spectrum-Popover is-open" style="top: 0; left: 400px; max-width: 192px;">
       <ul class="spectrum-Menu" role="listbox">
         <li role="presentation">
           <span class="spectrum-Menu-sectionHeading" id="menu-heading-sf" aria-hidden="true">San Francisco</span>
           <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-sf">
-            <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
+            <li class="spectrum-Menu-item" role="option" aria-selected="true" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Financial District</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
-              </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">South of Market</span>
@@ -87,11 +84,14 @@ markup: |
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">City Center</span>
             </li>
-            <li class="spectrum-Menu-item" role="option" tabindex="0">
+            <li class="spectrum-Menu-item is-disabled" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Jack London Square</span>
             </li>
-            <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
-              <span class="spectrum-Menu-itemLabel">Uptown</span>
+            <li class="spectrum-Menu-item is-selected" role="option" aria-disabled="true">
+              <span class="spectrum-Menu-itemLabel">My best friend's mom's house</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
           </ul>
         </li>

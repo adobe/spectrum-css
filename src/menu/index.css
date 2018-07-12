@@ -58,11 +58,15 @@
 
 .spectrum-Menu-itemLabel {
   flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .spectrum-Menu-checkmark,
 .spectrum-Menu-chevron {
   flex-grow: 0;
+  margin-left: var(--spectrum-selectlist-option-icon-padding-x);
 }
 
 .spectrum-Menu-divider {
