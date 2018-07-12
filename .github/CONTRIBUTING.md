@@ -19,7 +19,8 @@ git remote add upstream git@git.corp.adobe.com:Spectrum/spectrum-css.git
 Set up the `@spectrum` npm namespace in your `.npmrc`
 
 ```
-echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc
+echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc;
+echo "@a4u:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release-local/" >> ~/.npmrc;
 ```
 
 Install dependencies:
