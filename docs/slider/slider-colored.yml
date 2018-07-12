@@ -10,7 +10,7 @@ modifiers:
 markup: |
   <div class="spectrum-Slider spectrum-Slider--color">
     <div class="spectrum-Slider-labelContainer">
-      <label class="spectrum-Slider-label" id="spectrum-Slider-label-0" for="spectrum-Slider-input-0">Slider Label - Default</label>
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-0" for="spectrum-Slider-input-0">Color</label>
       <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-0">#2680eb</div>
     </div>
     <div class="spectrum-Slider-controls">
@@ -22,7 +22,7 @@ markup: |
   </div>
   <div class="spectrum-Slider spectrum-Slider--color is-disabled">
     <div class="spectrum-Slider-labelContainer">
-      <label class="spectrum-Slider-label" id="spectrum-Slider-label-1" for="spectrum-Slider-input-1">Slider Label - Disabled</label>
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-1" for="spectrum-Slider-input-1">Color</label>
       <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-1">#2680eb</div>
     </div>
     <div class="spectrum-Slider-controls">

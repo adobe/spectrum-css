@@ -8,9 +8,6 @@
 {{ slider/slider-filled.yml }}
 */
 /* topdoc
-{{ slider/slider-double.yml }}
-*/
-/* topdoc
 {{ slider/slider-video.yml }}
 */
 /* topdoc
@@ -22,37 +19,33 @@
 /* topdoc
 {{ slider/slider-ramp.yml }}
 */
-.spectrum-Slider {
-}
-
-.spectrum-Slider-controls {
-  background-color: transparent;
-}
 
 .spectrum-Slider-track {
-  background: var(--spectrum-slider-track-color);
+  &::before {
+    background: var(--spectrum-slider-track-color);
+  }
 }
 
 .spectrum-Slider-labelContainer {
   color: var(--spectrum-label-text-color);
 }
 
-/*
-Todo: Determine if unused mixin is required
-spectrum-slider-track-disabled(){
-  background: $spectrum-slider-track-color-disabled;
-}
-*/
-
-.spectrum-Slider-track--fill {
-  background: var(--spectrum-slider-fill-track-color);
+.spectrum-Slider--filled {
+  .spectrum-Slider-track:first-child {
+    &::before {
+      background: var(--spectrum-slider-fill-track-color);
+    }
+  }
 }
 
-.spectrum-Slider-track--buffer {
-  background: var(--spectrum-slider-player-track-buffer-color);
+.spectrum-Slider-buffer {
+  &::before,
+  &::after {
+    background: var(--spectrum-slider-player-track-buffer-color);
+  }
 }
 
-.spectrum-Slider-track--ramp {
+.spectrum-Slider-ramp {
   path {
     fill: var(--spectrum-slider-track-color);
   }
@@ -61,8 +54,6 @@ spectrum-slider-track-disabled(){
 .spectrum-Slider-handle {
   border-color: var(--spectrum-slider-handle-border-color);
   background: var(--spectrum-alias-background-color-default);
-  /*background: var(--spectrum-slider-handle-background-color);*/
-  box-shadow: 0 0 0 4px var(--spectrum-alias-background-color-default);
 
   &:hover {
     border-color: var(--spectrum-slider-handle-border-color-hover);
@@ -70,13 +61,18 @@ spectrum-slider-track-disabled(){
 
   &.is-focused {
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
-    /*background: var(--spectrum-slider-handle-background-color-key-focus);*/
   }
 
   &:active,
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
-    /*background: var(--spectrum-slider-handle-background-color-down);*/
+  }
+}
+
+.spectrum-Slider--ramp {
+  .spectrum-Slider-handle {
+    /* We can't draw this one correctly without this hack : ( */
+    box-shadow: 0 0 0 4px var(--spectrum-alias-background-color-default);
   }
 }
 
@@ -84,32 +80,9 @@ spectrum-slider-track-disabled(){
   background: transparent;
 }
 
-/*
-Todo: Determine if missing mixin is required
-.spectrum-Slider-ticks {
-  spectrum-slider-ticks()
-}
-*/
-
-.spectrum-Slider-tick-mark {
+.spectrum-Slider-tick {
   &:after {
     background-color: var(--spectrum-slider-tick-mark-color);
-  }
-}
-
-/*
-Todo: Determine if these are supposed to be pseudo classes
-*/
-.spectrum-Slider-controls--hover {
-  .spectrum-Slider-handle {
-    border-color: var(--spectrum-slider-handle-border-color-hover);
-  }
-}
-
-.spectrum-Slider-controls--focus {
-  .spectrum-Slider-handle {
-    border-color: var(--spectrum-slider-handle-border-color-key-focus);
-    background: var(--spectrum-slider-handle-background-color-key-focus);
   }
 }
 
@@ -118,67 +91,21 @@ Todo: Determine if these are supposed to be pseudo classes
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
     background: var(--spectrum-slider-handle-background-color-key-focus);
   }
-}
 
-.spectrum-Slider-controls--active {
-  .spectrum-Slider-handle {
-    border-color: var(--spectrum-slider-handle-border-color-down);
-    background: var(--spectrum-slider-handle-background-color-down);
-  }
-}
-
-.spectrum-Slider-handle {
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
     background: var(--spectrum-slider-handle-background-color-down);
   }
 }
 
-.spectrum-Slider.is-disabled {
-  .spectrum-Slider-labelContainer {
-    color: var(--spectrum-label-text-color-disabled);
-  }
-
-  .spectrum-Slider-handle {
-    border-color: var(--spectrum-slider-handle-border-color-disabled);
-    /*background: var(--spectrum-slider-handle-background-color);*/
-    background: var(--spectrum-alias-background-color-default);
-
-    &:hover,
-    &:active {
-      border-color: var(--spectrum-slider-handle-border-color-disabled);
-      background: var(--spectrum-slider-handle-background-color);
-    }
-  }
+/* topdoc
+{{ slider/slider-double.yml }}
+*/
+.spectrum-Slider--range {
   .spectrum-Slider-track {
-    background: var(--spectrum-slider-track-color-disabled);
-  }
-  .spectrum-Slider-track--fill {
-    background: var(--spectrum-slider-fill-track-color-disabled);
-  }
-  .spectrum-Slider-track--buffer {
-    background: var(--spectrum-slider-player-track-buffer-color-disabled);
-  }
-  .spectrum-Slider-track--ramp {
-    path {
-      fill: var(--spectrum-slider-ramp-track-color-disabled);
-    }
-  }
-  &.spectrum-Slider--color {
-    .spectrum-Slider-track {
-      background: var(--spectrum-slider-color-track-color-disabled);
-      box-shadow: none;
-    }
-    .spectrum-Slider-handle {
-      background: var(--spectrum-slider-color-handle-color-disabled);
-      box-shadow: none;
-      border-color: var(--spectrum-slider-color-handle-border-color-disabled);
-
-      &:hover,
-      &:active {
-        background: var(--spectrum-slider-color-handle-color-disabled);
-        box-shadow: none;
-        border-color: var(--spectrum-slider-color-handle-border-color-disabled);
+    &:not(:first-of-type):not(:last-of-type) {
+      &:before {
+        background: var(--spectrum-slider-fill-track-color);
       }
     }
   }
@@ -189,8 +116,10 @@ Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum-Slider--color {
   .spectrum-Slider-track {
-    background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
-    box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-track-border-color);
+    &::before {
+      background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
+      box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-track-border-color);
+    }
   }
   .spectrum-Slider-handle {
     box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-handle-inset-border-color), 0 0 0 1px var(--spectrum-slider-color-handle-outset-border-color);
@@ -204,10 +133,10 @@ Todo: Determine if these are supposed to be pseudo classes
 }
 
 /* topdoc
-{{ slider/slider-round.yml }}
+{{ slider/slider-dial.yml }}
 */
-.spectrum-Slider--round {
-  .spectrum-Slider-handle {
+.spectrum-Dial {
+  .spectrum-Dial-handle {
     box-shadow: none;
 
     &::after {
@@ -238,10 +167,104 @@ Todo: Determine if these are supposed to be pseudo classes
     }
   }
 
-  .spectrum-Slider-controls {
+  .spectrum-Dial-controls {
     &::before,
     &::after {
       background-color: var(--spectrum-dial-min-max-tick-color);
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Dial-controls {
+      &::after,
+      &::before {
+        background-color: var(--spectrum-slider-handle-border-color-disabled);
+      }
+    }
+    .spectrum-Dial-handle {
+      border-color: var(--spectrum-slider-handle-border-color-disabled);
+      background: var(--spectrum-alias-background-color-default);
+
+      &:hover,
+      &:active {
+        border-color: var(--spectrum-slider-handle-border-color-disabled);
+        background: var(--spectrum-slider-handle-background-color);
+      }
+
+      &::after,
+      &::before {
+        background-color: var(--spectrum-slider-track-color-disabled);
+      }
+    }
+  }
+}
+
+.spectrum-Slider {
+  &.is-disabled {
+    .spectrum-Slider-labelContainer {
+      color: var(--spectrum-label-text-color-disabled);
+    }
+
+    .spectrum-Slider-handle {
+      border-color: var(--spectrum-slider-handle-border-color-disabled);
+      background: var(--spectrum-alias-background-color-default);
+
+      &:hover,
+      &:active {
+        border-color: var(--spectrum-slider-handle-border-color-disabled);
+        background: var(--spectrum-slider-handle-background-color);
+      }
+    }
+    .spectrum-Slider-track {
+      &::before {
+        background: var(--spectrum-slider-track-color-disabled);
+      }
+    }
+    &.spectrum-Slider--filled {
+      .spectrum-Slider-track:first-child {
+        &::before {
+          background: var(--spectrum-slider-fill-track-color-disabled);
+        }
+      }
+    }
+    .spectrum-Slider-buffer {
+      &::before {
+        background: var(--spectrum-slider-player-track-buffer-color-disabled);
+      }
+    }
+    .spectrum-Slider-ramp {
+      path {
+        fill: var(--spectrum-slider-ramp-track-color-disabled);
+      }
+    }
+
+    &.spectrum-Slider--color {
+      .spectrum-Slider-track {
+        background: var(--spectrum-slider-color-track-color-disabled);
+        box-shadow: none;
+      }
+      .spectrum-Slider-handle {
+        background: var(--spectrum-slider-color-handle-color-disabled);
+        box-shadow: none;
+        border-color: var(--spectrum-slider-color-handle-border-color-disabled);
+
+        &:hover,
+        &:active {
+          background: var(--spectrum-slider-color-handle-color-disabled);
+          box-shadow: none;
+          border-color: var(--spectrum-slider-color-handle-border-color-disabled);
+        }
+      }
+    }
+
+    &.spectrum-Slider--range {
+      .spectrum-Slider-track {
+        &:not(:first-of-type):not(:last-of-type) {
+          &:before {
+            background: var(--spectrum-slider-fill-track-color-disabled);
+          }
+        }
+      }
     }
   }
 }

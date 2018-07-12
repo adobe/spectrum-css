@@ -156,3 +156,8 @@ pre.html {
 .dummy-spacing {
   height: 160px;
 }
+
+/* Limit slider widths */
+.spectrum-Slider {
+  max-width: 256px;
+}

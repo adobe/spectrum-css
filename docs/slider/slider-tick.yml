@@ -16,16 +16,17 @@ markup: |
     <div class="spectrum-Slider-controls">
       <div class="spectrum-Slider-track"></div>
       <div class="spectrum-Slider-ticks">
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
       </div>
       <div class="spectrum-Slider-handle" style="left: 40%;">
         <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
       </div>
+      <div class="spectrum-Slider-track"></div>
     </div>
   </div>
   <div class="spectrum-Slider spectrum-Slider--tick is-disabled">
@@ -36,15 +37,16 @@ markup: |
     <div class="spectrum-Slider-controls">
       <div class="spectrum-Slider-track"></div>
       <div class="spectrum-Slider-ticks">
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
-        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
+        <div class="spectrum-Slider-tick"></div>
       </div>
       <div class="spectrum-Slider-handle" style="left: 40%;">
         <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-15">
       </div>
+      <div class="spectrum-Slider-track"></div>
     </div>
   </div>
