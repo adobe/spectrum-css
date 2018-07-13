@@ -1,12 +1,13 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-selectlist-heading-text-size: 11px;
+  --spectrum-menu-margin-x: var(--spectrum-global-dimension-size-40);
+  --spectrum-selectlist-heading-text-size: var(--spectrum-global-dimension-font-size-50);
   --spectrum-selectlist-heading-text-font-weight: 400;
   --spectrum-selectlist-heading-text-transform: uppercase;
   --spectrum-selectlist-heading-letter-spacing: 0.06em;
-  --spectrum-selectlist-heading-margin: 6px 0 0 0;
-  --spectrum-selectlist-heading-padding: 0 36px 0 12px;
+  --spectrum-selectlist-heading-margin: var(--spectrum-global-dimension-size-75) 0 0 0;
+  --spectrum-selectlist-heading-padding: 0 var(--spectrum-global-dimension-size-450) 0 var(--spectrum-global-dimension-size-150);
 }
 
 .spectrum-Menu {
@@ -14,7 +15,7 @@
 
   box-sizing: border-box;
 
-  margin: 3px 0;
+  margin: var(--spectrum-menu-margin-x) 0;
   padding: 0;
 
   white-space: nowrap;
@@ -22,6 +23,12 @@
   list-style-type: none;
 
   overflow: auto;
+
+  > .spectrum-Menu-sectionHeading {
+    /* Support headings as LI */
+    margin-top: var(--spectrum-menu-margin-x);
+    margin-bottom: var(--spectrum-menu-margin-x);
+  }
 }
 
 .spectrum-Menu-checkmark {
@@ -87,6 +94,7 @@
 }
 
 .spectrum-Menu-sectionHeading {
+  display: block;
   margin: var(--spectrum-selectlist-heading-margin);
   padding: var(--spectrum-selectlist-heading-padding);
 
