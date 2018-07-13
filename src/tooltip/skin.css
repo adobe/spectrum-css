@@ -23,6 +23,13 @@
   }
 }
 
+.spectrum-Tooltip--help {
+  &,
+  .spectrum-Tooltip-tip::after {
+    background-color: var(--spectrum-tooltip-info-background-color);
+  }
+}
+
 .spectrum-Tooltip--success {
   &,
   .spectrum-Tooltip-tip::after {

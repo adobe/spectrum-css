@@ -188,6 +188,14 @@
   width: var(--spectrum-icon-doublegripper-width);
   height: var(--spectrum-icon-doublegripper-height);
 }
+.spectrum-UIIcon-HelpMedium {
+  width: var(--spectrum-icon-info-medium-width);
+  height: var(--spectrum-icon-info-medium-height);
+}
+.spectrum-UIIcon-HelpSmall {
+  width: var(--spectrum-icon-info-small-width);
+  height: var(--spectrum-icon-info-small-height);
+}
 .spectrum-UIIcon-InfoMedium {
   width: var(--spectrum-icon-info-medium-width);
   height: var(--spectrum-icon-info-medium-height);

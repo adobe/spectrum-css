@@ -1,5 +1,5 @@
 ---
-name: Tooltip
+name: Tooltip - Icons
 description: A Spectrum tooltip
 status: Released
 markup: |
@@ -26,6 +26,20 @@ markup: |
   </span>
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
     <span class="spectrum-Tooltip-label">Info</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--help is-open">
+    <svg class="spectrum-Icon spectrum-UIIcon-HelpSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-HelpSmall" />
+    </svg>
+    <span class="spectrum-Tooltip-label">Help</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--help is-open">
+    <span class="spectrum-Tooltip-label">Help</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
 

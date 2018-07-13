@@ -24,6 +24,17 @@
 }
 
 /* topdoc
+{{ alert/alert-help.yml }}
+*/
+.spectrum-Alert--help {
+  border-color: var(--spectrum-alert-info-border-color);
+
+  .spectrum-Alert-icon {
+    color: var(--spectrum-alert-info-border-color);
+  }
+}
+
+/* topdoc
 {{ alert/alert-error.yml }}
 */
 .spectrum-Alert--error {
