@@ -152,19 +152,7 @@
 {{ typography/typography-specimen-main.yml }}
 */
 
-code {
-  font-family: "source-code-pro", monospace;
-}
 
-li {
-  margin: 0.25rem 0;
-  display: flex;
-
-  &:before {
-     content: "•";
-     width: 2ch;
-   }
-}
 
 /* Line-length */
 .spectrum {
@@ -217,6 +205,20 @@ li {
 
   section {
     font-weight: normal;
+
+    code {
+      font-family: "source-code-pro", monospace;
+    }
+
+    li {
+      margin: 0.25rem 0;
+      display: flex;
+
+    &:before {
+       content: "•";
+       width: 2ch;
+     }
+    }
 
     em,
     &--em {
@@ -376,6 +378,10 @@ li {
     font-family: "adobe-hebrew", "adobe-clean-serif", serif;
     direction: rtl;
   }
+
+/* topdoc
+{{ typography/typography-specimen-han.yml }}
+*/
 
   &--han {
     font-feature-settings: "palt";

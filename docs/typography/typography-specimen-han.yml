@@ -1,0 +1,33 @@
+---
+name: Typography - Specimen - Han
+description: An example of sans-serif main section
+status: Beta
+markup: |
+  <div class="spectrum-Type--han" lang="ja">
+    <main>
+      <h1 class="spectrum-Heading spectrum-Heading--1" id="CreativeCloud">Creative Cloudデスクトップ</h1>
+      <h2 class="spectrum-Heading spectrum-Heading--2" id="CreativeCloud">Creative Cloudアプリケーションとサービスのダッシュボード</h2>
+      <section class="spectrum-Section spectrum-Section--2">
+        <p>クリエイティブプロジェクトを開始するにはタスクバーに常駐しているCreative Cloudデスクトップをご利用いただくと便利です。デスクトップアプリケーションの起動とアップデートが高速になり、Creative Cloudに保存されたアセットの管理と共有、Adobe Typekitのフォントまたは高品質のロイヤリティフリーアセットの検索とダウンロード、Behanceでクリエイティブ作品を公開し、発見するといった使い方ができます。使用したいアプリケーションをすぐに起動できるので、制作活動に集中できます。</p>
+      </section>
+      <h3 class="spectrum-Heading spectrum-Heading--3" id="">機能</h3>
+      <section class="spectrum-Section spectrum-Section--3">
+        <ul class="spectrum-Section--3">
+          <li>アプリケーションのダウンロードとインストール</li>
+          <li>Adobe Stockで画像検索</li>
+          <li>アクティビティストリームでCreative Cloudのすべての操作履歴を表示</li>
+          <li>ファイルの同期と共有</li>
+          <li>アプリケーション内でデザインアセットを検索</li>
+          <li>Typekitからのフォントを追加</li>
+          <li>Behanceで共有、発見</li>
+        </ul>
+      </section>
+      <h3 class="spectrum-Heading spectrum-Heading--3" id="CreativeCloud">今日から始めるCreative Cloud</h3>
+      <section class="spectrum-Section spectrum-Section--3">
+        <p>
+          アドビとラーニングパートナーのエキスパートが提供するビデオチュートリアルをご覧ください。何百ものAdobe Creative Cloudチュートリアルコレクションからお選びいただけます。主要なスキルを学び、常に新機能をチェック、さらに高度な技術も磨けます。
+
+        </p>
+      </section>
+    </main>
+  </div>
