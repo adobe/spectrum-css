@@ -12,6 +12,11 @@ gulp.task('gh-pages:prepare-docs', function () {
   return gulp.src('tasks/resources/docs/gh-pages.html')
     .pipe(template({ version: package.version }))
     .pipe(rename('index.html'))
+    .pipe(gulp.dest('./temp'));
+});
+
+gulp.task('gh-pages:copy-index', function () {
+  return gulp.src('temp/index.html')
     .pipe(gulp.dest('./'));
 });
 
@@ -56,8 +61,9 @@ gulp.task('gh-pages:checkout-master', function (cb) {
 
 gulp.task('gh-pages',
   gulp.series(
-    'gh-pages:checkout-gh-pages',
     'gh-pages:prepare-docs',
+    'gh-pages:checkout-gh-pages',
+    'gh-pages:copy-index',
     'gh-pages:publish',
     'gh-pages:checkout-master'
   )
