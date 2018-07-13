@@ -1,0 +1,24 @@
+.spectrum-BarLoader {
+  .spectrum-BarLoader-fill {
+    background: var(--spectrum-loader-circle-medium-track-fill-color);
+  }
+
+  .spectrum-BarLoader-track {
+    background-color: var(--spectrum-loader-circle-medium-track-color);
+  }
+
+  &.spectrum-BarLoader--overBackground {
+    .spectrum-BarLoader-fill {
+      background: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+    }
+
+    .spectrum-BarLoader-label,
+    .spectrum-BarLoader-percentage {
+      color: var(--spectrum-loader-circle-medium-over-background-track-fill-color);
+    }
+
+    .spectrum-BarLoader-track {
+      background-color: var(--spectrum-loader-circle-medium-over-background-track-color);
+    }
+  }
+}
