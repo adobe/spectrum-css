@@ -22,7 +22,10 @@ gulp.task('copy-icons-medium', function() {
 });
 
 gulp.task('clean-icons', function() {
-  return gulp.src('icons/**/*.svg')
+  return gulp.src([
+    'icons/medium/*.svg',
+    'icons/large/*.svg',
+  ])
     .pipe(replace(/ data-name=".*?"/g, ''))
     .pipe(replace(/ id=".*?"/g, ''))
     .pipe(replace(/ class=".*?"/g, ''))
