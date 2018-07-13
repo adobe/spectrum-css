@@ -2,8 +2,96 @@
 @import 'font.css';
 
 :root {
+    --heading-line-height: 1.3;
+    --section-line-height: 1.5;
+    --color-info-primary-acc-1: #00a4e4;
+    --color-info-primary-acc-2: #5fc6cb;
+    --color-info-primary-acc-3: #c1d82f;
+    --color-info-secondary-acc-1: #ed1c24;
+    --color-info-secondary-acc-2: #ffa400;
+    --color-info-secondary-acc-3: #783cbd;
+    --color-interface-green-500: #268e6c;
+    --color-interface-gray-50: #ffffff;
+    --color-interface-gray-100: #f5f5f5;
+    --color-interface-gray-200: #eaeaea;
+    --color-interface-gray-700: #707070;
+    --color-interface-gray-800: #4b4b4b;
+    --heading-line-length: 50ch;
+    --section-line-length: 75ch;
+    --han-heading-line-length: 45ch;
+    --han-section-line-length: 60ch;
 
+    --typ-medium-size-900: 2.25rem;
+    --typ-medium-size-800: 2rem;
+    --typ-medium-size-700: 1.75rem;
+    --typ-medium-size-600: 1.5625rem;
+    --typ-medium-size-500: 1.375rem;
+    --typ-medium-size-400: 1.25rem;
+    --typ-medium-size-300: 1.125rem;
+    --typ-medium-size-200: 1rem;
+    --typ-medium-size-100: 0.875rem;
+    --typ-medium-size-75: 0.75rem;
+
+    --typ-medium-heading-height-900: 2.925rem;
+    --typ-medium-heading-height-800: 2.6rem;
+    --typ-medium-heading-height-700: 2.275rem;
+    --typ-medium-heading-height-600: 2.03125rem;
+    --typ-medium-heading-height-500: 1.7875rem;
+    --typ-medium-heading-height-400: 1.625rem;
+    --typ-medium-heading-height-300: 1.4625rem;
+    --typ-medium-heading-height-200: 1.3rem;
+    --typ-medium-heading-height-100: 1.1375rem;
+
+    --typ-medium-section-height-900: 3.375rem;
+    --typ-medium-section-height-800: 3rem;
+    --typ-medium-section-height-700: 2.625rem;
+    --typ-medium-section-height-600: 2.34375rem;
+    --typ-medium-section-height-500: 2.0625rem;
+    --typ-medium-section-height-400: 1.875rem;
+    --typ-medium-section-height-300: 1.6875rem;
+    --typ-medium-section-height-200: 1.5rem;
+    --typ-medium-section-height-100: 1.3125rem;
+    --typ-medium-section-height-75: 1.125rem;
+
+    --typ-large-size-900: 2.75rem;
+    --typ-large-size-800: 2.4375rem;
+    --typ-large-size-700: 2.125rem;
+    --typ-large-size-600: 1.9375rem;
+    --typ-large-size-500: 1.6875rem;
+    --typ-large-size-400: 1.5rem;
+    --typ-large-size-300: 1.375rem;
+    --typ-large-size-200: 1.1875rem;
+    --typ-large-size-100: 1.0625rem;
+    --typ-large-size-75: 0.9375rem;
+
+    --typ-large-heading-height-900: 2.925rem;
+    --typ-large-heading-height-800: 2.6rem;
+    --typ-large-heading-height-700: 2.275rem;
+    --typ-large-heading-height-600: 2.03125rem;
+    --typ-large-heading-height-500: 1.7875rem;
+    --typ-large-heading-height-400: 1.625rem;
+    --typ-large-heading-height-300: 1.4625rem;
+    --typ-large-heading-height-200: 1.3rem;
+    --typ-large-heading-height-100: 1.1375rem;
+
+    --typ-large-section-height-900: 3.375rem;
+    --typ-large-section-height-800: 3rem;
+    --typ-large-section-height-700: 2.625rem;
+    --typ-large-section-height-600: 2.34375rem;
+    --typ-large-section-height-500: 2.0625rem;
+    --typ-large-section-height-400: 1.875rem;
+    --typ-large-section-height-300: 1.6875rem;
+    --typ-large-section-height-200: 1.5rem;
+    --typ-large-section-height-100: 1.3125rem;
+    --typ-large-section-height-75: 1.125rem;
+
+    --air-300: 2rem;
+    --air-200: 1.5rem;
+    --air-100: 1rem;
+    --air-75: 0.5rem;
+    --air-50: 0.25rem;
 }
+
 
 /* topdoc
 {{ typography/typography-default.yml }}
@@ -80,107 +168,6 @@
 {{ typography/typography-specimen-main.yml }}
 */
 
-:root {
-  --heading-line-height: 1.3;
-  --section-line-height: 1.5;
-  --color-info-primary-acc-1: #00a4e4;
-  --color-info-primary-acc-2: #5fc6cb;
-  --color-info-primary-acc-3: #c1d82f;
-  --color-info-secondary-acc-1: #ed1c24;
-  --color-info-secondary-acc-2: #ffa400;
-  --color-info-secondary-acc-3: #783cbd;
-  --color-interface-green-500: #268e6c;
-  --color-interface-gray-50: #ffffff;
-  --color-interface-gray-100: #f5f5f5;
-  --color-interface-gray-200: #eaeaea;
-  --color-interface-gray-700: #707070;
-  --color-interface-gray-800: #4b4b4b;
-  --heading-line-length: 50ch;
-  --section-line-length: 75ch;
-  --han-heading-line-length: 45ch;
-  --han-section-line-length: 60ch;
-
-  --typ-medium-size-900: 2.25rem;
-  --typ-medium-size-800: 2rem;
-  --typ-medium-size-700: 1.75rem;
-  --typ-medium-size-600: 1.5625rem;
-  --typ-medium-size-500: 1.375rem;
-  --typ-medium-size-400: 1.25rem;
-  --typ-medium-size-300: 1.125rem;
-  --typ-medium-size-200: 1rem;
-  --typ-medium-size-100: 0.875rem;
-  --typ-medium-size-75: 0.75rem;
-
-  --typ-medium-heading-height-900: 2.925rem;
-  --typ-medium-heading-height-800: 2.6rem;
-  --typ-medium-heading-height-700: 2.275rem;
-  --typ-medium-heading-height-600: 2.03125rem;
-  --typ-medium-heading-height-500: 1.7875rem;
-  --typ-medium-heading-height-400: 1.625rem;
-  --typ-medium-heading-height-300: 1.4625rem;
-  --typ-medium-heading-height-200: 1.3rem;
-  --typ-medium-heading-height-100: 1.1375rem;
-
-  --typ-medium-section-height-900: 3.375rem;
-  --typ-medium-section-height-800: 3rem;
-  --typ-medium-section-height-700: 2.625rem;
-  --typ-medium-section-height-600: 2.34375rem;
-  --typ-medium-section-height-500: 2.0625rem;
-  --typ-medium-section-height-400: 1.875rem;
-  --typ-medium-section-height-300: 1.6875rem;
-  --typ-medium-section-height-200: 1.5rem;
-  --typ-medium-section-height-100: 1.3125rem;
-  --typ-medium-section-height-75: 1.125rem;
-
-  --typ-large-size-900: 2.75rem;
-  --typ-large-size-800: 2.4375rem;
-  --typ-large-size-700: 2.125rem;
-  --typ-large-size-600: 1.9375rem;
-  --typ-large-size-500: 1.6875rem;
-  --typ-large-size-400: 1.5rem;
-  --typ-large-size-300: 1.375rem;
-  --typ-large-size-200: 1.1875rem;
-  --typ-large-size-100: 1.0625rem;
-  --typ-large-size-75: 0.9375rem;
-
-  --typ-large-heading-height-900: 2.925rem;
-  --typ-large-heading-height-800: 2.6rem;
-  --typ-large-heading-height-700: 2.275rem;
-  --typ-large-heading-height-600: 2.03125rem;
-  --typ-large-heading-height-500: 1.7875rem;
-  --typ-large-heading-height-400: 1.625rem;
-  --typ-large-heading-height-300: 1.4625rem;
-  --typ-large-heading-height-200: 1.3rem;
-  --typ-large-heading-height-100: 1.1375rem;
-
-  --typ-large-section-height-900: 3.375rem;
-  --typ-large-section-height-800: 3rem;
-  --typ-large-section-height-700: 2.625rem;
-  --typ-large-section-height-600: 2.34375rem;
-  --typ-large-section-height-500: 2.0625rem;
-  --typ-large-section-height-400: 1.875rem;
-  --typ-large-section-height-300: 1.6875rem;
-  --typ-large-section-height-200: 1.5rem;
-  --typ-large-section-height-100: 1.3125rem;
-  --typ-large-section-height-75: 1.125rem;
-
-  --air-300: 2rem;
-  --air-200: 1.5rem;
-  --air-100: 1rem;
-  --air-75: 0.5rem;
-  --air-50: 0.25rem;
-}
-
-body {
-  margin: 10%;
-  background-color: var(--color-interface-gray-100);
-  color: var(--color-interface-gray-700);
-}
-
-article,
-main {
-  margin: 10% auto;
-}
 
 code {
   font-family: "source-code-pro", monospace;
