@@ -138,49 +138,53 @@
 /* topdoc
 {{ slider/dial-label.yml }}
 */
+.spectrum-Dial-labelContainer {
+  @inherit: .spectrum-Slider-labelContainer;
+}
+
+.spectrum-Dial-handle {
+  box-shadow: none;
+
+  &::after {
+    background-color: var(--spectrum-dial-handle-marker-color);
+  }
+
+  &:hover {
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-hover);
+    }
+  }
+
+  &.is-focused {
+    background-color: var(--spectrum-slider-handle-background-color-key-focus);
+
+    border-color: var(--spectrum-slider-handle-border-color-key-focus);
+
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+    }
+  }
+
+  &:active,
+  &.is-dragged {
+    background-color: var(--spectrum-dial-border-color-hover);
+
+    border-color: var(--spectrum-slider-handle-border-color-down);
+
+    &::after {
+      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
+    }
+  }
+}
+
+.spectrum-Dial-controls {
+  &::before,
+  &::after {
+    background-color: var(--spectrum-dial-min-max-tick-color);
+  }
+}
+
 .spectrum-Dial {
-  .spectrum-Dial-handle {
-    box-shadow: none;
-
-    &::after {
-      background-color: var(--spectrum-dial-handle-marker-color);
-    }
-
-    &:hover {
-      &::after {
-        background-color: var(--spectrum-dial-handle-marker-color-hover);
-      }
-    }
-
-    &.is-focused {
-      background-color: var(--spectrum-slider-handle-background-color-key-focus);
-
-      border-color: var(--spectrum-slider-handle-border-color-key-focus);
-
-      &::after {
-        background-color: var(--spectrum-dial-handle-marker-color-key-focus);
-      }
-    }
-
-    &:active,
-    &.is-dragged {
-      background-color: var(--spectrum-dial-border-color-hover);
-
-      border-color: var(--spectrum-slider-handle-border-color-down);
-
-      &::after {
-        background-color: var(--spectrum-dial-handle-marker-color-key-focus);
-      }
-    }
-  }
-
-  .spectrum-Dial-controls {
-    &::before,
-    &::after {
-      background-color: var(--spectrum-dial-min-max-tick-color);
-    }
-  }
-
   &.is-disabled {
     .spectrum-Dial-labelContainer {
       color: var(--spectrum-label-text-color-disabled);
