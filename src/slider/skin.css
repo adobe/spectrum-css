@@ -133,7 +133,10 @@
 }
 
 /* topdoc
-{{ slider/slider-dial.yml }}
+{{ slider/dial.yml }}
+*/
+/* topdoc
+{{ slider/dial-label.yml }}
 */
 .spectrum-Dial {
   .spectrum-Dial-handle {
@@ -175,6 +178,9 @@
   }
 
   &.is-disabled {
+    .spectrum-Dial-labelContainer {
+      color: var(--spectrum-label-text-color-disabled);
+    }
     .spectrum-Dial-controls {
       &::after,
       &::before {

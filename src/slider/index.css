@@ -8,6 +8,8 @@
   --spectrum-slider-handle-margin-left: calc(var(--spectrum-slider-handle-width) / -2);
 
   --spectrum-dial-width: var(--spectrum-slider-height);
+  --spectrum-dial-label-gap-y: var(--spectrum-global-dimension-size-65);
+  --spectrum-dial-handle-position: var(--spectrum-global-dimension-size-100);
 
   --spectrum-slider-track-handleoffset: calc(var(--spectrum-slider-handle-gap));
   --spectrum-slider-track-middle-handleoffset: calc(var(--spectrum-slider-handle-gap) + calc(var(--spectrum-slider-handle-width) / 2));
@@ -212,12 +214,14 @@
   line-height: var(--spectrum-line-height-text-label);
 }
 
-.spectrum-Slider-label {
+.spectrum-Slider-label,
+.spectrum-Dial-label {
   padding-left: 0;
   flex-grow: 1;
 }
 
-.spectrum-Slider-value {
+.spectrum-Slider-value,
+.spectrum-Dial-value {
   flex-grow: 0;
   padding-right: 0;
   cursor: default;
@@ -304,12 +308,25 @@
 
 .spectrum-Dial {
   @inherit: .spectrum-Slider;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
 
-  width: var(--spectrum-dial-container-width);
   height: auto;
   min-width: 0;
   min-height: 0;
+  width: var(--spectrum-dial-container-width);
+}
+
+.spectrum-Dial-labelContainer {
+  @inherit: .spectrum-Slider-labelContainer;
+  margin-bottom: var(--spectrum-dial-label-gap-y);
+}
+
+.spectrum-Dial-label {
+  &:only-child {
+    /* Only center if we don't have a value */
+    text-align: center;
+  }
 }
 
 .spectrum-Dial-controls {
@@ -321,7 +338,7 @@
   border-radius: var(--spectrum-dial-border-radius);
   position: relative;
   display: inline-block;
-  margin-right: var(--spectrum-dial-margin-right);
+  margin: auto;
 
   box-sizing: border-box;
   outline: none;
@@ -329,19 +346,19 @@
   &::before,
   &::after {
     content: '';
-    width: 4px;
-    height: 2px;
-    border-radius: 1px;
+    width: calc(var(--spectrum-slider-tick-mark-width) * 2);
+    height: var(--spectrum-slider-tick-mark-width);
+    border-radius: var(--spectrum-slider-tick-mark-border-radius);
     position: absolute;
     bottom: 0;
   }
   &::before {
     left: auto;
-    right: -2px;
+    right: calc(var(--spectrum-slider-tick-mark-width) * -1);
     transform: rotate(var(--spectrum-dial-min-max-tick-angles));
   }
   &::after {
-    left: -2px;
+    left: calc(var(--spectrum-slider-tick-mark-width) * -1);
     transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
   }
 }
@@ -350,13 +367,13 @@
   @inherit: .spectrum-Slider-handle;
   width: 100%;
   height: 100%;
-  border-width: 2px;
+  border-width: var(--spectrum-slider-handle-border-size);
   box-shadow: none;
   position: absolute;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
+  top: var(--spectrum-dial-handle-position);
+  left: var(--spectrum-dial-handle-position);
+  right: var(--spectrum-dial-handle-position);
+  bottom: var(--spectrum-dial-handle-position);
   border-radius: var(--spectrum-dial-border-radius);
   transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
   cursor: pointer;
@@ -368,7 +385,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: -2px;
+    left: calc(var(--spectrum-slider-tick-mark-width) * -1);
     width: var(--spectrum-dial-handle-marker-width);
     height: var(--spectrum-dial-handle-marker-height);
     border-radius: var(--spectrum-dial-handle-marker-border-radius);
@@ -379,7 +396,7 @@
   &:active,
   &.is-focused,
   &.is-dragged {
-    border-width: 2px;
+    border-width: var(--spectrum-slider-handle-border-size);
     cursor: ns-resize;
     cursor: grabbing;
   }
