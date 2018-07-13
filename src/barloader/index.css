@@ -19,7 +19,7 @@
 }
 
 /* topdoc
-{{ loader/barloader-default.yml }}
+{{ barloader/barloader-default.yml }}
 */
 .spectrum-BarLoader {
   position: relative;
@@ -73,7 +73,7 @@
 }
 
 /* topdoc
-{{ loader/barloader-small.yml }}
+{{ barloader/barloader-small.yml }}
 */
 .spectrum-BarLoader--small {
   height: var(--spectrum-loader-bar-small-height);
@@ -90,5 +90,5 @@
 }
 
 /* topdoc
-{{ loader/barloader-overbackground.yml }}
+{{ barloader/barloader-overbackground.yml }}
 */
