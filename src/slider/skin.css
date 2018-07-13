@@ -155,6 +155,8 @@
     &.is-focused {
       background-color: var(--spectrum-slider-handle-background-color-key-focus);
 
+      border-color: var(--spectrum-slider-handle-border-color-key-focus);
+
       &::after {
         background-color: var(--spectrum-dial-handle-marker-color-key-focus);
       }
@@ -163,6 +165,8 @@
     &:active,
     &.is-dragged {
       background-color: var(--spectrum-dial-border-color-hover);
+
+      border-color: var(--spectrum-slider-handle-border-color-down);
 
       &::after {
         background-color: var(--spectrum-dial-handle-marker-color-key-focus);
