@@ -54,6 +54,10 @@
       display: block;
     }
   }
+
+  .spectrum-Icon + .spectrum-Menu-itemLabel {
+    margin-left: var(--spectrum-selectlist-option-icon-padding-y);
+  }
 }
 
 .spectrum-Menu-itemLabel {
