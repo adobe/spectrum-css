@@ -5,15 +5,15 @@ status: Beta
 markup: |
   <div class="spectrum-Body">
     <article class="spectrum-Article">
-      <h1 class="spectrum-Heading spectrum-Heading--1">Heading 1</h1>
-      <section class="spectrum-Section spectrum-Section--1">Section 1</section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">Heading 2</h2>
-      <section class="spectrum-Section spectrum-Section--2">Section 2</section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">Heading 3</h3>
-      <section class="spectrum-Section spectrum-Section--3">Section 3</section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">Heading 4</h4>
-      <section class="spectrum-Section spectrum-Section--4">Section 4</section>
-      <h2 class="spectrum-Heading spectrum-Heading--5">Heading 5</h2>
-      <section class="spectrum-Section spectrum-Section--5">Section 5</section>
+      <h1 class="spectrum-Heading spectrum-Heading--1">Heading 1 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h1>
+      <section class="spectrum-Section spectrum-Section--1">Section 1 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">Heading 2 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h2>
+      <section class="spectrum-Section spectrum-Section--2">Section 2 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">Heading 3 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h3>
+      <section class="spectrum-Section spectrum-Section--3">Section 3 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">Heading 4 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h4>
+      <section class="spectrum-Section spectrum-Section--4">Section 4 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--5">Heading 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h2>
+      <section class="spectrum-Section spectrum-Section--5">Section 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
     </article>
   </div>

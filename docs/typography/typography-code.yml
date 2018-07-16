@@ -1,0 +1,14 @@
+---
+name: Typography - Body - Code
+description: The sectional elements within a code section.
+status: Beta
+markup: |
+  <div class="spectrum-Body">
+    <section class="spectrum-Code">
+      <div class="spectrum-Section spectrum-Section--1">Code Section 1 <em>+ Emphasis</em> <strong>+ Strong Emphasis</strong></div>
+      <div class="spectrum-Section spectrum-Section--2">Code Section 2 <em>+ Emphasis</em> <strong>+ Strong Emphasis</strong></div>
+      <div class="spectrum-Section spectrum-Section--3">Code Section 3 <em>+ Emphasis</em> <strong>+ Strong Emphasis</strong></div>
+      <div class="spectrum-Section spectrum-Section--4">Code Section 4 <em>+ Emphasis</em> <strong>+ Strong Emphasis</strong></div>
+      <div class="spectrum-Section spectrum-Section--5">Code Section 5 <em>+ Emphasis</em> <strong>+ Strong Emphasis</strong></div>
+    </section>
+  </div>

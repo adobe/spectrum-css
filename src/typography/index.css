@@ -6,76 +6,14 @@
   --section-line-length: 75ch;
   --han-heading-line-length: 45ch;
   --han-section-line-length: 60ch;
+  --spectrum-dimension-static-font-size-1100: 45px;
+  --spectrum-font-line-height-large: 1.7;
 
-  --typ-medium-size-900: 2.25rem;
-  --typ-medium-size-800: 2rem;
-  --typ-medium-size-700: 1.75rem;
-  --typ-medium-size-600: 1.5625rem;
-  --typ-medium-size-500: 1.375rem;
-  --typ-medium-size-400: 1.25rem;
-  --typ-medium-size-300: 1.125rem;
-  --typ-medium-size-200: 1rem;
-  --typ-medium-size-100: 0.875rem;
-  --typ-medium-size-75: 0.75rem;
-
-  --typ-medium-heading-height-900: 2.925rem;
-  --typ-medium-heading-height-800: 2.6rem;
-  --typ-medium-heading-height-700: 2.275rem;
-  --typ-medium-heading-height-600: 2.03125rem;
-  --typ-medium-heading-height-500: 1.7875rem;
-  --typ-medium-heading-height-400: 1.625rem;
-  --typ-medium-heading-height-300: 1.4625rem;
-  --typ-medium-heading-height-200: 1.3rem;
-  --typ-medium-heading-height-100: 1.1375rem;
-
-  --typ-medium-section-height-900: 3.375rem;
-  --typ-medium-section-height-800: 3rem;
-  --typ-medium-section-height-700: 2.625rem;
-  --typ-medium-section-height-600: 2.34375rem;
-  --typ-medium-section-height-500: 2.0625rem;
-  --typ-medium-section-height-400: 1.875rem;
-  --typ-medium-section-height-300: 1.6875rem;
-  --typ-medium-section-height-200: 1.5rem;
-  --typ-medium-section-height-100: 1.3125rem;
-  --typ-medium-section-height-75: 1.125rem;
-
-  --typ-large-size-900: 2.75rem;
-  --typ-large-size-800: 2.4375rem;
-  --typ-large-size-700: 2.125rem;
-  --typ-large-size-600: 1.9375rem;
-  --typ-large-size-500: 1.6875rem;
-  --typ-large-size-400: 1.5rem;
-  --typ-large-size-300: 1.375rem;
-  --typ-large-size-200: 1.1875rem;
-  --typ-large-size-100: 1.0625rem;
-  --typ-large-size-75: 0.9375rem;
-
-  --typ-large-heading-height-900: 2.925rem;
-  --typ-large-heading-height-800: 2.6rem;
-  --typ-large-heading-height-700: 2.275rem;
-  --typ-large-heading-height-600: 2.03125rem;
-  --typ-large-heading-height-500: 1.7875rem;
-  --typ-large-heading-height-400: 1.625rem;
-  --typ-large-heading-height-300: 1.4625rem;
-  --typ-large-heading-height-200: 1.3rem;
-  --typ-large-heading-height-100: 1.1375rem;
-
-  --typ-large-section-height-900: 3.375rem;
-  --typ-large-section-height-800: 3rem;
-  --typ-large-section-height-700: 2.625rem;
-  --typ-large-section-height-600: 2.34375rem;
-  --typ-large-section-height-500: 2.0625rem;
-  --typ-large-section-height-400: 1.875rem;
-  --typ-large-section-height-300: 1.6875rem;
-  --typ-large-section-height-200: 1.5rem;
-  --typ-large-section-height-100: 1.3125rem;
-  --typ-large-section-height-75: 1.125rem;
-
-  --air-300: 2rem;
-  --air-200: 1.5rem;
-  --air-100: 1rem;
-  --air-75: 0.5rem;
-  --air-50: 0.25rem;
+  --spectrum-air-300: 2rem;
+  --spectrum-air-200: 1.5rem;
+  --spectrum-air-100: 1rem;
+  --spectrum-air-75: 0.5rem;
+  --spectrum-air-50: 0.25rem;
 }
 
 /* topdoc
@@ -154,7 +92,7 @@
   &-Heading {
     max-width: var(--heading-line-length);
 
-    .spectrum-Type--han & {
+    .spectrum-Body--han & {
       max-width: var(--han-heading-line-length);
     }
   }
@@ -162,7 +100,7 @@
   &-Section {
     max-width: var(--section-line-length);
 
-    .spectrum-Type--han & {
+    .spectrum-Body--han & {
       max-width: var(--han-section-line-length);
     }
   }
@@ -171,29 +109,23 @@
 /* AIR */
 
 .spectrum-Heading {
-  margin-top: var(--air-100);
-  margin-bottom: var(--air-100);
+  margin-top: var(--spectrum-air-100);
+  margin-bottom: var(--spectrum-air-100);
 }
 
 .spectrum-Section {
-  margin-top: var(--air-200);
-  margin-bottom: var(--air-200);
+  margin-top: var(--spectrum-air-200);
+  margin-bottom: var(--spectrum-air-200);
 
   > * {
-    margin-top: var(--air-100);
-    margin-bottom: var(--air-100);
+    margin-top: var(--spectrum-air-100);
+    margin-bottom: var(--spectrum-air-100);
   }
 
   .spectrum-Heading + & {
-    margin-top: calc(var(--air-50) * -1);
-    margin-bottom: var(--air-200);
+    margin-top: calc(var(--spectrum-air-50) * -1);
+    margin-bottom: var(--spectrum-air-200);
   }
-}
-
-/* FONT FAMILIES */
-
-.spectrum-Code {
-  font-family: "source-code-pro", monospace;
 }
 
 /* topdoc
@@ -201,6 +133,12 @@
 */
 /* topdoc
 {{ typography/typography-article.yml }}
+*/
+/* topdoc
+{{ typography/typography-hero.yml }}
+*/
+/* topdoc
+{{ typography/typography-code.yml }}
 */
 /* topdoc
 {{ typography/typography-body-han.yml }}
@@ -211,6 +149,13 @@
 /* topdoc
 {{ typography/typography-body-hebrew.yml }}
 */
+
+/* FONT FAMILIES */
+
+.spectrum-Code {
+  font-family: "source-code-pro", monospace;
+}
+
 .spectrum-Body {
   font-family: "adobe-clean", sans-serif;
 
@@ -231,18 +176,42 @@
   }
 }
 
-/* FONT LAYOUT (Direction, Feature settings, Letter-spacing) */
+/* FONT LAYOUT (Direction, Feature settings, Letter-spacing, Line-height) */
 
 .spectrum-Body {
+
+  .spectrum-Heading {
+    line-height: var(--spectrum-global-font-line-height-small);
+  }
+
+  .spectrum-Section {
+    line-height: var(--spectrum-global-font-line-height-medium);
+  }
 
   &--han {
     font-feature-settings: "palt";
     letter-spacing: 0.05em;
+
+    .spectrum-Heading {
+      line-height: var(--spectrum-global-font-line-height-medium);
+    }
+
+    .spectrum-Section {
+      line-height: var(--spectrum-font-line-height-large);
+    }
   }
 
   &--arabic,
   &--hebrew {
     direction: rtl;
+
+    .spectrum-Heading {
+      line-height: var(--spectrum-global-font-line-height-small);
+    }
+
+    .spectrum-Section {
+      line-height: var(--spectrum-global-font-line-height-medium);
+    }
   }
 
   .spectrum-Article {
@@ -255,11 +224,17 @@
 .spectrum-Body {
 
   .spectrum-Heading {
-    font-weight: bold;
+    font-weight: var(--spectrum-global-font-weight-bold);
+
+    em,
+    &--em {
+      font-weight: var(--spectrum-global-font-weight-regular);
+      font-style: italic;
+    }
   }
 
   .spectrum-Section {
-    font-weight: normal;
+    font-weight: var(--spectrum-global-font-weight-regular);
 
     em,
     &--em {
@@ -268,18 +243,18 @@
 
     strong,
     &--strong {
-      font-weight: bold;
+      font-weight: var(--spectrum-global-font-weight-bold);
     }
   }
 
   .spectrum-Article {
 
     .spectrum-Heading {
-      font-weight: normal;
+      font-weight: var(--spectrum-global-font-weight-regular);
     }
 
     .spectrum-Section {
-      font-weight: normal;
+      font-weight: var(--spectrum-global-font-weight-regular);
 
       em,
       &--em {
@@ -288,7 +263,7 @@
 
       strong,
       &--strong {
-        font-weight: bold;
+        font-weight: var(--spectrum-global-font-weight-bold);
       }
     }
   }
@@ -296,20 +271,22 @@
   .spectrum-Hero {
 
     .spectrum-Heading {
-      font-weight: 900;
+      font-weight: var(--spectrum-global-font-weight-light);
 
       em,
       &--em {
-        font-weight: 300;
+        font-style: normal;
+        font-weight: var(--spectrum-global-font-weight-black);
       }
     }
 
     .spectrum-Section {
-      font-weight: 300;
+      font-weight: var(--spectrum-global-font-weight-regular);
 
       em,
       &--em {
-        font-weight: bold;
+        font-style: normal;
+        font-weight: var(--spectrum-global-font-weight-bold);
       }
     }
   }
@@ -317,40 +294,55 @@
   &--han {
 
     .spectrum-Heading {
-      font-weight: bold;
-    }
-
-    .spectrum-Section {
-      font-weight: 300;
+      font-weight: var(--spectrum-global-font-weight-bold);
 
       em,
       &--em {
-        font-weight: 500;
+        font-style: normal;
+        font-weight: var(--spectrum-global-font-weigh-extra-bold);
+      }
+
+    }
+
+    .spectrum-Section {
+      font-weight: var(--spectrum-global-font-weight-light);
+
+      em,
+      &--em {
+        font-style: normal;
+        font-weight: var(--spectrum-global-font-weight-medium);
       }
 
       strong,
       &--strong {
-        font-weight: bold;
+        font-weight: var(--spectrum-global-font-weight-bold);
       }
     }
 
     .spectrum-Article {
 
       .spectrum-Heading {
-        font-weight: 500;
-      }
-
-      .spectrum-Section {
-        font-weight: 200;
+        font-weight: var(--spectrum-global-font-weight-medium);
 
         em,
         &--em {
-          font-weight: 500;
+          font-style: normal;
+          font-weight: var(--spectrum-global-font-weight-bold);
+        }
+      }
+
+      .spectrum-Section {
+        font-weight: var(--spectrum-global-font-weight-ultra-light);
+
+        em,
+        &--em {
+          font-style: normal;
+          font-weight: var(--spectrum-global-font-weight-medium);
         }
 
         strong,
         &--strong {
-          font-weight: bold;
+          font-weight: var(--spectrum-global-font-weight-bold);
         }
       }
     }
@@ -358,20 +350,22 @@
     .spectrum-Hero {
 
       .spectrum-Heading {
-        font-weight: 900;
+        font-weight: var(--spectrum-global-font-weight-light);
 
         em,
         &--em {
-          font-weight: 300;
+          font-style: normal;
+          font-weight: var(--spectrum-global-font-weight-black);
         }
       }
 
       .spectrum-Section {
-        font-weight: normal;
+        font-weight: var(--spectrum-global-font-weight-regular);
 
         em,
         &--em {
-          font-weight: bold;
+          font-style: normal;
+          font-weight: var(--spectrum-global-font-weight-bold);
         }
       }
     }
@@ -387,47 +381,37 @@
 
     .spectrum-Heading-- {
       &1 {
-        font-size: var(--typ-medium-size-900);
-        line-height: var(--typ-medium-heading-height-900);
+        font-size: var(--spectrum-global-dimension-static-font-size-900);
       }
       &2 {
-        font-size: var(--typ-medium-size-700);
-        line-height: var(--typ-medium-heading-height-700);
+        font-size: var(--spectrum-global-dimension-static-font-size-700);
       }
       &3 {
-        font-size: var(--typ-medium-size-500);
-        line-height: var(--typ-medium-heading-height-500);
+        font-size: var(--spectrum-global-dimension-static-font-size-500);
       }
       &4 {
-        font-size: var(--typ-medium-size-300);
-        line-height: var(--typ-medium-heading-height-300);
+        font-size: var(--spectrum-global-dimension-static-font-size-300);
       }
       &5 {
-        font-size: var(--typ-medium-size-200);
-        line-height: var(--typ-medium-heading-height-200);
+        font-size: var(--spectrum-global-dimension-static-font-size-200);
       }
     }
 
     .spectrum-Section-- {
       &1 {
-        font-size: var(--typ-medium-size-400);
-        line-height: var(--typ-medium-section-height-400);
+        font-size: var(--spectrum-global-dimension-static-font-size-400);
       }
       &2 {
-        font-size: var(--typ-medium-size-300);
-        line-height: var(--typ-medium-section-height-300);
+        font-size: var(--spectrum-global-dimension-static-font-size-300);
       }
       &3 {
-        font-size: var(--typ-medium-size-200);
-        line-height: var(--typ-medium-section-height-200);
+        font-size: var(--spectrum-global-dimension-static-font-size-200);
       }
       &4 {
-        font-size: var(--typ-medium-size-100);
-        line-height: var(--typ-medium-section-height-100);
+        font-size: var(--spectrum-global-dimension-static-font-size-100);
       }
       &5 {
-        font-size: var(--typ-medium-size-75);
-        line-height: var(--typ-medium-section-height-75);
+        font-size: var(--spectrum-global-dimension-static-font-size-75);
       }
     }
   }
@@ -436,46 +420,46 @@
 
     .spectrum-Heading-- {
       &1 {
-        font-size: 2.8125rem;
+        font-size: var(--spectrum-dimension-static-font-size-1100);
         line-height: 3.6875rem;
       }
       &2 {
-        font-size: 2.25rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-900);
         line-height: 2.9375rem;
       }
       &3 {
-        font-size: 1.75rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-700);
         line-height: 2.25rem;
       }
       &4 {
-        font-size: 1.5625rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-600);
         line-height: 2.0625rem;
       }
       &5 {
-        font-size: 1.375rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-500);
         line-height: 1.8125rem;
       }
     }
 
     .spectrum-Section-- {
       &1 {
-        font-size: 1.75rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-700);
         line-height: 2.625rem;
       }
       &2 {
-        font-size: 1.5625rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-600);
         line-height: 2.375rem;
       }
       &3 {
-        font-size: 1.375rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-500);
         line-height: 2.0625rem;
       }
       &4 {
-        font-size: 1.25rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-400);
         line-height: 1.875rem;
       }
       &5 {
-        font-size: 1.125rem;
+        font-size: var(--spectrum-global-dimension-static-font-size-300);
         line-height: 1.6875rem;
       }
     }
@@ -487,48 +471,38 @@
     .spectrum-Heading-- {
 
       &1 {
-        font-size: var(--typ-medium-size-800);
-        line-height: var(--typ-medium-heading-height-800);
+        font-size: var(--spectrum-global-dimension-static-font-size-800);
       }
       &2 {
-        font-size: var(--typ-medium-size-600);
-        line-height: var(--typ-medium-heading-height-600);
+        font-size: var(--spectrum-global-dimension-static-font-size-600);
       }
       &3 {
-        font-size: var(--typ-medium-size-400);
-        line-height: var(--typ-medium-heading-height-400);
+        font-size: var(--spectrum-global-dimension-static-font-size-400);
       }
       &4 {
-        font-size: var(--typ-medium-size-300);
-        line-height: var(--typ-medium-heading-height-300);
+        font-size: var(--spectrum-global-dimension-static-font-size-300);
       }
       &5 {
-        font-size: var(--typ-medium-size-200);
-        line-height: var(--typ-medium-heading-height-200);
+        font-size: var(--spectrum-global-dimension-static-font-size-200);
       }
     }
 
     .spectrum-Section-- {
 
       &1 {
-        font-size: var(--typ-medium-size-400);
-        line-height: var(--typ-medium-section-height-500);
+        font-size: var(--spectrum-global-dimension-static-font-size-400);
       }
       &2 {
-        font-size: var(--typ-medium-size-300);
-        line-height: var(--typ-medium-section-height-400);
+        font-size: var(--spectrum-global-dimension-static-font-size-300);
       }
       &3 {
-        font-size: var(--typ-medium-size-200);
-        line-height: var(--typ-medium-section-height-300);
+        font-size: var(--spectrum-global-dimension-static-font-size-200);
       }
       &4 {
-        font-size: var(--typ-medium-size-100);
-        line-height: var(--typ-medium-section-height-200);
+        font-size: var(--spectrum-global-dimension-static-font-size-100);
       }
       &5 {
-        font-size: var(--typ-medium-size-75);
-        line-height: var(--typ-medium-section-height-100);
+        font-size: var(--spectrum-global-dimension-static-font-size-75);
       }
     }
   }
