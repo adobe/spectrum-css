@@ -1,0 +1,19 @@
+---
+name: Typography - Body - Hebrew
+description: The sectional elements for Hebrew.
+status: Beta
+markup: |
+  <div class="spectrum-Body--hebrew">
+    <main>
+      <h1 class="spectrum-Heading spectrum-Heading--1">מכוון ל 1</h1>
+      <section class="spectrum-Section spectrum-Section--1">מחלקה 1</section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">כותרת 2</h2>
+      <section class="spectrum-Section spectrum-Section--2">סעיף 2</section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">כותרת 3</h3>
+      <section class="spectrum-Section spectrum-Section--3">סעיף 3</section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">כותרת 4</h4>
+      <section class="spectrum-Section spectrum-Section--4">סעיף 4</section>
+      <h2 class="spectrum-Heading spectrum-Heading--5">כותרת 5</h2>
+      <section class="spectrum-Section spectrum-Section--5">סעיף 5</section>
+    </main>
+  </div>

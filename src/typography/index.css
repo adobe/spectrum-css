@@ -148,13 +148,8 @@
   letter-spacing: var(--spectrum-heading-subtitle3-text-letter-spacing);
 }
 
-/* topdoc
-{{ typography/typography-specimen-main.yml }}
-*/
+/* LINE-LENGTH */
 
-
-
-/* Line-length */
 .spectrum {
   &-Heading {
     max-width: var(--heading-line-length);
@@ -173,7 +168,7 @@
   }
 }
 
-/* Air */
+/* AIR */
 
 .spectrum-Heading {
   margin-top: var(--air-100);
@@ -189,40 +184,86 @@
     margin-bottom: var(--air-100);
   }
 
-  /* Parent Modifiers */
   .spectrum-Heading + & {
     margin-top: calc(var(--air-50) * -1);
     margin-bottom: var(--air-200);
   }
 }
 
-.spectrum-Type {
+/* FONT FAMILIES */
+
+.spectrum-Code {
+  font-family: "source-code-pro", monospace;
+}
+
+/* topdoc
+{{ typography/typography-body.yml }}
+*/
+/* topdoc
+{{ typography/typography-article.yml }}
+*/
+/* topdoc
+{{ typography/typography-body-han.yml }}
+*/
+/* topdoc
+{{ typography/typography-body-arabic.yml }}
+*/
+/* topdoc
+{{ typography/typography-body-hebrew.yml }}
+*/
+.spectrum-Body {
   font-family: "adobe-clean", sans-serif;
+
+  &--arabic {
+    font-family: "adobe-arabic", serif;
+  }
+
+  &--hebrew {
+    font-family: "adobe-hebrew", "adobe-clean-serif", serif;
+  }
+
+  &--han {
+    font-family: "adobe-clean-han-japanese", sans-serif;
+  }
+
+  .spectrum-Article {
+    font-family: "adobe-clean-serif", serif;
+  }
+}
+
+/* FONT LAYOUT (Direction, Feature settings, Letter-spacing) */
+
+.spectrum-Body {
+
+  &--han {
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+  }
+
+  &--arabic,
+  &--hebrew {
+    direction: rtl;
+  }
+
+  .spectrum-Article {
+    letter-spacing: 0.0125em;
+  }
+}
+
+/* EMPHASIS */
+
+.spectrum-Body {
 
   .spectrum-Heading {
     font-weight: bold;
   }
 
-  section {
+  .spectrum-Section {
     font-weight: normal;
-
-    code {
-      font-family: "source-code-pro", monospace;
-    }
-
-    li {
-      margin: 0.25rem 0;
-      display: flex;
-
-    &:before {
-       content: "•";
-       width: 2ch;
-     }
-    }
 
     em,
     &--em {
-       font-style: italic;
+      font-style: italic;
     }
 
     strong,
@@ -231,51 +272,119 @@
     }
   }
 
-  article {
-    font-family: "adobe-clean-serif", serif;
-    letter-spacing: 0.0125em;
+  .spectrum-Article {
 
     .spectrum-Heading {
       font-weight: normal;
     }
 
-    section {
+    .spectrum-Section {
       font-weight: normal;
 
       em,
       &--em {
-         font-style: italic;
+        font-style: italic;
       }
 
       strong,
       &--strong {
-         font-weight: bold;
+        font-weight: bold;
       }
     }
   }
 
   .spectrum-Hero {
+
     .spectrum-Heading {
       font-weight: 900;
 
       em,
       &--em {
-         font-weight: 300;
+        font-weight: 300;
       }
     }
 
-    section {
+    .spectrum-Section {
       font-weight: 300;
 
       em,
       &--em {
-         font-weight: bold;
+        font-weight: bold;
       }
     }
   }
 
+  &--han {
+
+    .spectrum-Heading {
+      font-weight: bold;
+    }
+
+    .spectrum-Section {
+      font-weight: 300;
+
+      em,
+      &--em {
+        font-weight: 500;
+      }
+
+      strong,
+      &--strong {
+        font-weight: bold;
+      }
+    }
+
+    .spectrum-Article {
+
+      .spectrum-Heading {
+        font-weight: 500;
+      }
+
+      .spectrum-Section {
+        font-weight: 200;
+
+        em,
+        &--em {
+          font-weight: 500;
+        }
+
+        strong,
+        &--strong {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .spectrum-Hero {
+
+      .spectrum-Heading {
+        font-weight: 900;
+
+        em,
+        &--em {
+          font-weight: 300;
+        }
+      }
+
+      .spectrum-Section {
+        font-weight: normal;
+
+        em,
+        &--em {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+/* SIZES */
+
+.spectrum-Body {
+
   &,
   &--hebrew {
+
     .spectrum-Heading-- {
       &1 {
         font-size: var(--typ-medium-size-900);
@@ -324,8 +433,6 @@
   }
 
   &--arabic {
-    font-family: "adobe-arabic", serif;
-    direction: rtl;
 
     .spectrum-Heading-- {
       &1 {
@@ -374,79 +481,11 @@
     }
   }
 
-  &--hebrew {
-    font-family: "adobe-hebrew", "adobe-clean-serif", serif;
-    direction: rtl;
-  }
 
-/* topdoc
-{{ typography/typography-specimen-han.yml }}
-*/
 
   &--han {
-    font-feature-settings: "palt";
-    font-family: "adobe-clean-han-japanese", sans-serif;
-    letter-spacing: 0.05em;
-
-    .spectrum-Heading {
-      font-weight: bold;
-    }
-
-    section {
-      font-weight: 300;
-
-      em,
-      &--em {
-        font-weight: 500;
-      }
-
-      strong,
-      &--strong {
-        font-weight: bold;
-      }
-    }
-
-    article {
-      .spectrum-Heading {
-        font-weight: 500;
-      }
-
-      section {
-        font-weight: 200;
-
-        em,
-        &--em {
-           font-weight: 500;
-         }
-
-        strong,
-        &--strong {
-          font-weight: bold;
-        }
-      }
-    }
-
-    .spectrum-Hero {
-      .spectrum-Heading {
-        font-weight: 900;
-
-        em,
-        &--em {
-          font-weight: 300;
-        }
-      }
-
-      &-section {
-        font-weight: normal;
-
-        em,
-        &--em {
-          font-weight: bold;
-        }
-      }
-    }
-
     .spectrum-Heading-- {
+
       &1 {
         font-size: var(--typ-medium-size-800);
         line-height: var(--typ-medium-heading-height-800);
@@ -470,6 +509,7 @@
     }
 
     .spectrum-Section-- {
+
       &1 {
         font-size: var(--typ-medium-size-400);
         line-height: var(--typ-medium-section-height-500);
