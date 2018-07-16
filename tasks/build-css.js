@@ -50,6 +50,7 @@ gulp.task('build-css:individual-components-md', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-medium.css";'))
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
@@ -64,6 +65,7 @@ gulp.task('build-css:individual-components-lg', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(rename(function(path) {
       path.basename += '-lg';
@@ -83,6 +85,7 @@ gulp.task('build-css:individual-components-diffscale', function() {
     ]))
     // Use large variables
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     // Build
     .pipe(postcss(processors))
     // Wrap in large
@@ -133,7 +136,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
 
   return gulp.src(globs)
     .pipe(plumb())
-    .pipe(insert.prepend(`\n@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
+    .pipe(insert.prepend(`@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
     .pipe(insert.append(appendString))
     .pipe(postcss(processors))
     .pipe(replace(/^&/gm, '.spectrum')) // Any stray & in colorstops should just apply to .spectrum
@@ -189,6 +192,7 @@ gulp.task('build-css:core-md-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../dist/vars/spectrum-medium.css";'))
+    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
@@ -203,6 +207,7 @@ gulp.task('build-css:core-lg-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../dist/vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(rename(function(path) {
       path.basename += '-lg';
