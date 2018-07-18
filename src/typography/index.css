@@ -153,26 +153,26 @@
 /* FONT FAMILIES */
 
 .spectrum-Code {
-  font-family: "source-code-pro", monospace;
+  font-family: var(--spectrum-font-family-code);
 }
 
 .spectrum-Body {
-  font-family: "adobe-clean", sans-serif;
+  font-family: var(--spectrum-font-family-base);
 
   &--arabic {
-    font-family: "adobe-arabic", serif;
+    font-family: var(--spectrum-font-family-arabic);
   }
 
   &--hebrew {
-    font-family: "adobe-hebrew", "adobe-clean-serif", serif;
+    font-family: var(--spectrum-font-family-hebrew);
   }
 
   &--han {
-    font-family: "adobe-clean-han-japanese", sans-serif;
+    font-family: var(--spectrum-font-family-han);
   }
 
   .spectrum-Article {
-    font-family: "adobe-clean-serif", serif;
+    font-family: var(--spectrum-font-family-article);
   }
 }
 
@@ -421,46 +421,36 @@
     .spectrum-Heading-- {
       &1 {
         font-size: var(--spectrum-dimension-static-font-size-1100);
-        line-height: 3.6875rem;
       }
       &2 {
         font-size: var(--spectrum-global-dimension-static-font-size-900);
-        line-height: 2.9375rem;
       }
       &3 {
         font-size: var(--spectrum-global-dimension-static-font-size-700);
-        line-height: 2.25rem;
       }
       &4 {
         font-size: var(--spectrum-global-dimension-static-font-size-600);
-        line-height: 2.0625rem;
       }
       &5 {
         font-size: var(--spectrum-global-dimension-static-font-size-500);
-        line-height: 1.8125rem;
       }
     }
 
     .spectrum-Section-- {
       &1 {
         font-size: var(--spectrum-global-dimension-static-font-size-700);
-        line-height: 2.625rem;
       }
       &2 {
         font-size: var(--spectrum-global-dimension-static-font-size-600);
-        line-height: 2.375rem;
       }
       &3 {
         font-size: var(--spectrum-global-dimension-static-font-size-500);
-        line-height: 2.0625rem;
       }
       &4 {
         font-size: var(--spectrum-global-dimension-static-font-size-400);
-        line-height: 1.875rem;
       }
       &5 {
         font-size: var(--spectrum-global-dimension-static-font-size-300);
-        line-height: 1.6875rem;
       }
     }
   }

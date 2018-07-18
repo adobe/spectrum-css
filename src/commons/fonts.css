@@ -1,11 +1,14 @@
 :root {
+  --spectrum-font-family-arabic: adobe-arabic, serif;
+  --spectrum-font-family-article: adobe-clean-serif, "Source Serif", serif;
   --spectrum-font-family-base: adobe-clean, "Source Sans Pro", Helvetica, Arial, sans-serif;
   --spectrum-font-family-code: source-code-pro, "Source Code Pro", monospace;
-  --spectrum-font-family-article: adobe-clean-serif, "Source Serif", serif;
-  --spectrum-font-family-zh: adobe-clean-han-traditional, var(--spectrum-font-family-base);
-  --spectrum-font-family-zhhans: adobe-clean-han-simplified-c, var(--spectrum-font-family-base);
-  --spectrum-font-family-ko: adobe-clean-han-korean, var(--spectrum-font-family-base);
-  --spectrum-font-family-ja: adobe-clean-han-japanese,  var(--spectrum-font-family-base);
+  --spectrum-font-family-han: adobe-clean-han-japanese, sans-serif;
+  --spectrum-font-family-hebrew: adobe-hebrew, adobe-clean-serif, serif;
+  --spectrum-font-family-zh: var(--spectrum-font-family-han);
+  --spectrum-font-family-zhhans: var(--spectrum-font-family-han);
+  --spectrum-font-family-ko: var(--spectrum-font-family-han);
+  --spectrum-font-family-ja: var(--spectrum-font-family-han);
   --spectrum-font-family-condensed: adobe-clean-condensed, var(--spectrum-font-family-base);
   --spectrum-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-text-body-line-height: var(--spectrum-alias-line-height-medium);
