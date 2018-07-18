@@ -223,34 +223,17 @@
 
 .spectrum-Body {
 
-  .spectrum-Heading {
-    font-weight: var(--spectrum-global-font-weight-bold);
-
-    em,
-    &--em {
-      font-weight: var(--spectrum-global-font-weight-regular);
-      font-style: italic;
-    }
-  }
-
-  .spectrum-Section {
-    font-weight: var(--spectrum-global-font-weight-regular);
-
-    em,
-    &--em {
-      font-style: italic;
-    }
-
-    strong,
-    &--strong {
-      font-weight: var(--spectrum-global-font-weight-bold);
-    }
-  }
-
-  .spectrum-Article {
+  &,
+  &--hebrew {
 
     .spectrum-Heading {
-      font-weight: var(--spectrum-global-font-weight-regular);
+      font-weight: var(--spectrum-global-font-weight-bold);
+
+      em,
+      &--em {
+        font-weight: var(--spectrum-global-font-weight-regular);
+        font-style: italic;
+      }
     }
 
     .spectrum-Section {
@@ -264,6 +247,27 @@
       strong,
       &--strong {
         font-weight: var(--spectrum-global-font-weight-bold);
+      }
+    }
+
+    .spectrum-Article {
+
+      .spectrum-Heading {
+        font-weight: var(--spectrum-global-font-weight-regular);
+      }
+
+      .spectrum-Section {
+        font-weight: var(--spectrum-global-font-weight-regular);
+
+        em,
+        &--em {
+          font-style: italic;
+        }
+
+        strong,
+        &--strong {
+          font-weight: var(--spectrum-global-font-weight-bold);
+        }
       }
     }
   }
