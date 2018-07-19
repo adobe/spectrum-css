@@ -23,8 +23,9 @@ gulp.task('copy-icons-medium', function() {
 
 gulp.task('clean-icons', function() {
   return gulp.src([
-    'icons/medium/*.svg',
-    'icons/large/*.svg',
+    'icons/*/*.svg',
+    'icons/*/*.svg',
+    '!icons/combined/**/*'
   ])
     .pipe(replace(/ data-name=".*?"/g, ''))
     .pipe(replace(/ id=".*?"/g, ''))
