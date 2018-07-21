@@ -135,9 +135,6 @@
 {{ typography/typography-article.yml }}
 */
 /* topdoc
-{{ typography/typography-hero.yml }}
-*/
-/* topdoc
 {{ typography/typography-code.yml }}
 */
 /* topdoc
@@ -229,23 +226,45 @@
     .spectrum-Heading {
       font-weight: var(--spectrum-global-font-weight-bold);
 
+      small,
+      .spectrum-Emphasis--75,
+      &-Emphasis--75 {
+        font-weight: var(--spectrum-global-font-weight-light);
+      }
+
       em,
-      &--em {
+      .spectrum-Emphasis--200,
+      &-Emphasis--200 {
         font-weight: var(--spectrum-global-font-weight-regular);
         font-style: italic;
       }
+
+      strong,
+      .spectrum-Emphasis--300,
+      &-Emphasis--300 {
+        font-weight: var(--spectrum-global-font-weight-black);
+      }
+
     }
 
     .spectrum-Section {
       font-weight: var(--spectrum-global-font-weight-regular);
 
+      small,
+      .spectrum-Emphasis--75,
+      &-Emphasis--75 {
+        font-weight: var(--spectrum-global-font-weight-light);
+      }
+
       em,
-      &--em {
+      .spectrum-Emphasis--200,
+      &-Emphasis--200 {
         font-style: italic;
       }
 
       strong,
-      &--strong {
+      .spectrum-Emphasis--300,
+      &-Emphasis--300 {
         font-weight: var(--spectrum-global-font-weight-bold);
       }
     }
@@ -253,44 +272,49 @@
     .spectrum-Article {
 
       .spectrum-Heading {
-        font-weight: var(--spectrum-global-font-weight-regular);
+        font-weight: var(--spectrum-global-font-weight-medium);
+
+        em,
+        .spectrum-Emphasis--200,
+        &-Emphasis--200 {
+          font-style: italic;
+          font-weight: var(--spectrum-global-font-weight-regular);
+        }
+
+        strong,
+        .spectrum-Emphasis--300,
+        &-Emphasis--300 {
+          font-weight: var(--spectrum-global-font-weight-bold);
+        }
+
       }
 
       .spectrum-Section {
         font-weight: var(--spectrum-global-font-weight-regular);
 
         em,
-        &--em {
+        .spectrum-Emphasis--200,
+        &-Emphasis--200 {
           font-style: italic;
         }
 
         strong,
-        &--strong {
+        .spectrum-Emphasis--300,
+        &-Emphasis--300 {
           font-weight: var(--spectrum-global-font-weight-bold);
         }
       }
     }
   }
 
-  .spectrum-Hero {
-
-    .spectrum-Heading {
-      font-weight: var(--spectrum-global-font-weight-light);
-
-      em,
-      &--em {
-        font-style: normal;
-        font-weight: var(--spectrum-global-font-weight-black);
-      }
-    }
-
+  .spectrum-Code {
     .spectrum-Section {
-      font-weight: var(--spectrum-global-font-weight-regular);
 
-      em,
-      &--em {
-        font-style: normal;
-        font-weight: var(--spectrum-global-font-weight-bold);
+      small,
+      .spectrum-Emphasis--75,
+      &-Emphasis--75 {
+        font-style: italic;
+        font-weight: var(--spectrum-global-font-weight-light);
       }
     }
   }
@@ -300,10 +324,23 @@
     .spectrum-Heading {
       font-weight: var(--spectrum-global-font-weight-bold);
 
+      small,
+      .spectrum-Emphasis--75,
+      &-Emphasis--75 {
+        font-weight: var(--spectrum-global-font-weight-regular);
+      }
+
       em,
-      &--em {
+      .spectrum-Emphasis--200,
+      &-Emphasis--200 {
         font-style: normal;
-        font-weight: var(--spectrum-global-font-weigh-extra-bold);
+        font-weight: var(--spectrum-global-font-weight-medium);
+      }
+
+      strong,
+      .spectrum-Emphasis--300,
+      &-Emphasis--300 {
+        font-weight: var(--spectrum-global-font-weight-black);
       }
 
     }
@@ -311,14 +348,22 @@
     .spectrum-Section {
       font-weight: var(--spectrum-global-font-weight-light);
 
+      small,
+      .spectrum-Emphasis--75,
+      &-Emphasis--75 {
+        font-weight: var(--spectrum-global-font-weight-light);
+      }
+
       em,
-      &--em {
+      .spectrum-Emphasis--200,
+      &-Emphasis--200 {
         font-style: normal;
         font-weight: var(--spectrum-global-font-weight-medium);
       }
 
       strong,
-      &--strong {
+      .spectrum-Emphasis--300,
+      &-Emphasis--300 {
         font-weight: var(--spectrum-global-font-weight-bold);
       }
     }
@@ -329,7 +374,8 @@
         font-weight: var(--spectrum-global-font-weight-medium);
 
         em,
-        &--em {
+        .spectrum-Emphasis--200,
+        &-Emphasis--200 {
           font-style: normal;
           font-weight: var(--spectrum-global-font-weight-bold);
         }
@@ -339,36 +385,15 @@
         font-weight: var(--spectrum-global-font-weight-ultra-light);
 
         em,
-        &--em {
+        .spectrum-Emphasis--200,
+        &-Emphasis--200 {
           font-style: normal;
           font-weight: var(--spectrum-global-font-weight-medium);
         }
 
         strong,
-        &--strong {
-          font-weight: var(--spectrum-global-font-weight-bold);
-        }
-      }
-    }
-
-    .spectrum-Hero {
-
-      .spectrum-Heading {
-        font-weight: var(--spectrum-global-font-weight-light);
-
-        em,
-        &--em {
-          font-style: normal;
-          font-weight: var(--spectrum-global-font-weight-black);
-        }
-      }
-
-      .spectrum-Section {
-        font-weight: var(--spectrum-global-font-weight-regular);
-
-        em,
-        &--em {
-          font-style: normal;
+        .spectrum-Emphasis--300,
+        &-Emphasis--300 {
           font-weight: var(--spectrum-global-font-weight-bold);
         }
       }
@@ -381,41 +406,55 @@
 .spectrum-Body {
 
   &,
+  &--hebrew,
+  &--han,
+  &--arabic {
+
+    .spectrum-Heading,
+    .spectrum-Section {
+
+      small {
+        font-size: inherit;
+      }
+    }
+  }
+
+  &,
   &--hebrew {
 
     .spectrum-Heading-- {
       &1 {
-        font-size: var(--spectrum-global-dimension-static-font-size-900);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
       }
       &2 {
-        font-size: var(--spectrum-global-dimension-static-font-size-700);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
       }
       &3 {
-        font-size: var(--spectrum-global-dimension-static-font-size-500);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
       }
       &4 {
-        font-size: var(--spectrum-global-dimension-static-font-size-300);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
       }
       &5 {
-        font-size: var(--spectrum-global-dimension-static-font-size-200);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
       }
     }
 
     .spectrum-Section-- {
       &1 {
-        font-size: var(--spectrum-global-dimension-static-font-size-400);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-400) * var(--spectrum-global-dimension-scale-factor));
       }
       &2 {
-        font-size: var(--spectrum-global-dimension-static-font-size-300);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
       }
       &3 {
-        font-size: var(--spectrum-global-dimension-static-font-size-200);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
       }
       &4 {
-        font-size: var(--spectrum-global-dimension-static-font-size-100);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-100) * var(--spectrum-global-dimension-scale-factor));
       }
       &5 {
-        font-size: var(--spectrum-global-dimension-static-font-size-75);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-75) * var(--spectrum-global-dimension-scale-factor));
       }
     }
   }
@@ -424,37 +463,37 @@
 
     .spectrum-Heading-- {
       &1 {
-        font-size: var(--spectrum-dimension-static-font-size-1100);
+        font-size: calc(var(--spectrum-dimension-static-font-size-1100) * var(--spectrum-global-dimension-scale-factor));
       }
       &2 {
-        font-size: var(--spectrum-global-dimension-static-font-size-900);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
       }
       &3 {
-        font-size: var(--spectrum-global-dimension-static-font-size-700);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
       }
       &4 {
-        font-size: var(--spectrum-global-dimension-static-font-size-600);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-600) * var(--spectrum-global-dimension-scale-factor));
       }
       &5 {
-        font-size: var(--spectrum-global-dimension-static-font-size-500);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
       }
     }
 
     .spectrum-Section-- {
       &1 {
-        font-size: var(--spectrum-global-dimension-static-font-size-700);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
       }
       &2 {
-        font-size: var(--spectrum-global-dimension-static-font-size-600);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-600) * var(--spectrum-global-dimension-scale-factor));
       }
       &3 {
-        font-size: var(--spectrum-global-dimension-static-font-size-500);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
       }
       &4 {
-        font-size: var(--spectrum-global-dimension-static-font-size-400);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-400) * var(--spectrum-global-dimension-scale-factor));
       }
       &5 {
-        font-size: var(--spectrum-global-dimension-static-font-size-300);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
       }
     }
   }
@@ -465,38 +504,38 @@
     .spectrum-Heading-- {
 
       &1 {
-        font-size: var(--spectrum-global-dimension-static-font-size-800);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-800) * var(--spectrum-global-dimension-scale-factor));
       }
       &2 {
-        font-size: var(--spectrum-global-dimension-static-font-size-600);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-600) * var(--spectrum-global-dimension-scale-factor));
       }
       &3 {
-        font-size: var(--spectrum-global-dimension-static-font-size-400);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-400) * var(--spectrum-global-dimension-scale-factor));
       }
       &4 {
-        font-size: var(--spectrum-global-dimension-static-font-size-300);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
       }
       &5 {
-        font-size: var(--spectrum-global-dimension-static-font-size-200);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
       }
     }
 
     .spectrum-Section-- {
 
       &1 {
-        font-size: var(--spectrum-global-dimension-static-font-size-400);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-400) * var(--spectrum-global-dimension-scale-factor));
       }
       &2 {
-        font-size: var(--spectrum-global-dimension-static-font-size-300);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
       }
       &3 {
-        font-size: var(--spectrum-global-dimension-static-font-size-200);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
       }
       &4 {
-        font-size: var(--spectrum-global-dimension-static-font-size-100);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-100) * var(--spectrum-global-dimension-scale-factor));
       }
       &5 {
-        font-size: var(--spectrum-global-dimension-static-font-size-75);
+        font-size: calc(var(--spectrum-global-dimension-static-font-size-75) * var(--spectrum-global-dimension-scale-factor));
       }
     }
   }
