@@ -1,9 +1,9 @@
 ---
 name: Typography - Body
-description: The sectional elements for the body section for Belarusian, Catalan, Czech, Danish, German, Greek, English, Spanish, French, Hungarian, Italian, Macedonian, Maltese, Dutch, Norwegian, Polish, Portuguese, Russian, Slovenian, Serbian, Swedish, Turkish, Ukrainian, and Vietnamese languages. Layout elements, such as paragraphs and lists, will inherit typographic style from their parent section. Emphasis elements (em, strong) will modify the styles within both headings and sections based on the specfied language. Some languages require othrographic empahsis.
+description: The typographic sectional elements for the body. Layout elements, such as paragraphs and lists, inherit font style from their parent section. Emphasis elements (small, em, strong) will modify the styles within both headings and sections based on the specfied language.
 status: Beta
 markup: |
-  <div class="spectrum-Body">
+  <section class="spectrum-Body" lang="en">
     <h1 class="spectrum-Heading spectrum-Heading--1">Heading 1 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h1>
     <section class="spectrum-Section spectrum-Section--1">Section 1 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
     <h2 class="spectrum-Heading spectrum-Heading--2">Heading 2 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h2>
@@ -14,4 +14,43 @@ markup: |
     <section class="spectrum-Section spectrum-Section--4">Section 4 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
     <h5 class="spectrum-Heading spectrum-Heading--5">Heading 5 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h5>
     <section class="spectrum-Section spectrum-Section--5">Section 5 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
-  </div>
+  </section>
+  <hr class="spectrum-Rule spectrum-Rule--medium">
+  <section class="spectrum-Body" lang="ja">
+    <h1 class="spectrum-Heading spectrum-Heading--1">見出し1 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h1>
+    <section class="spectrum-Section spectrum-Section--1">セクション1 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></section>
+    <h2 class="spectrum-Heading spectrum-Heading--2">見出し2 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h2>
+    <section class="spectrum-Section spectrum-Section--2">セクション2 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></section>
+    <h3 class="spectrum-Heading spectrum-Heading--3">見出し3 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h3>
+    <section class="spectrum-Section spectrum-Section--3">セクション3 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></section>
+    <h4 class="spectrum-Heading spectrum-Heading--4">見出し4 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h4>
+    <section class="spectrum-Section spectrum-Section--4">セクション4 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></section>
+    <h5 class="spectrum-Heading spectrum-Heading--5">見出し5 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h5>
+    <section class="spectrum-Section spectrum-Section--5">セクション5 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></section>
+  </section>
+  <hr class="spectrum-Rule spectrum-Rule--medium">
+  <section class="spectrum-Body" lang="ar">
+    <h1 class="spectrum-Heading spectrum-Heading--1">عنوان 1 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h1>
+    <section class="spectrum-Section spectrum-Section--1">القسم 1 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+    <h2 class="spectrum-Heading spectrum-Heading--2">العنوان 2 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h2>
+    <section class="spectrum-Section spectrum-Section--2">القسم 2 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+    <h3 class="spectrum-Heading spectrum-Heading--3">العنوان 3 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h3>
+    <section class="spectrum-Section spectrum-Section--3">القسم 3 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+    <h4 class="spectrum-Heading spectrum-Heading--4">العنوان 4 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h4>
+    <section class="spectrum-Section spectrum-Section--4">القسم 4 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+    <h5 class="spectrum-Heading spectrum-Heading--5">العنوان 5 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h5>
+    <section class="spectrum-Section spectrum-Section--5">القسم 5 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+  </section>
+  <hr class="spectrum-Rule spectrum-Rule--medium">
+  <section class="spectrum-Body" lang="he">
+    <h1 class="spectrum-Heading spectrum-Heading--1">מכוון ל 1 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h1>
+    <section class="spectrum-Section spectrum-Section--1">מחלקה 1 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+    <h2 class="spectrum-Heading spectrum-Heading--2">כותרת 2 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h2>
+    <section class="spectrum-Section spectrum-Section--2">סעיף 2 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+    <h3 class="spectrum-Heading spectrum-Heading--3">כותרת 3  + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h3>
+    <section class="spectrum-Section spectrum-Section--3">סעיף 3 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+    <h4 class="spectrum-Heading spectrum-Heading--4">כותרת 4 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h4>
+    <section class="spectrum-Section spectrum-Section--4">סעיף 4 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+    <h5 class="spectrum-Heading spectrum-Heading--5">כותרת 5 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h5>
+    <section class="spectrum-Section spectrum-Section--5">סעיף 5 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+  </section>

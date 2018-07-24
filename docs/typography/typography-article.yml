@@ -1,9 +1,9 @@
 ---
-name: Typography - Body - Article
-description: Typographic article elements for Belarusian, Catalan, Czech, Danish, German, Greek, English, Spanish, French, Hungarian, Italian, Macedonian, Maltese, Dutch, Norwegian, Polish, Portuguese, Russian, Slovenian, Serbian, Swedish, Turkish, Ukrainian, and Vietnamese languages.
+name: Typography - Article
+description: Typographic article elements.
 status: Beta
 markup: |
-  <div class="spectrum-Body">
+  <main class="spectrum-Body">
     <article class="spectrum-Article">
       <h1 class="spectrum-Heading spectrum-Heading--1">Article Heading 1 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h1>
       <section class="spectrum-Section spectrum-Section--1">Article Section 1 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
@@ -16,4 +16,82 @@ markup: |
       <h5 class="spectrum-Heading spectrum-Heading--5">Article Heading 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h5>
       <section class="spectrum-Section spectrum-Section--5">Article Section 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></section>
     </article>
-  </div>
+    <hr class="spectrum-Rule spectrum-Rule--medium">
+    <article class="spectrum-Article" lang="ja">
+      <h1 class="spectrum-Heading spectrum-Heading--1">記事の見出し1 + <em>重点</em> + <strong>強い強調</strong></h1>
+      <section class="spectrum-Section spectrum-Section--1">第1条 + <em>重点</em> + <strong>強い強調</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">記事の見出し2 + <em>重点</em> + <strong>強い強調</strong></h2>
+      <section class="spectrum-Section spectrum-Section--2">第2条 + <em>重点</em> + <strong>強い強調</strong></section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">記事の見出し3 + <em>重点</em> + <strong>強い強調</strong></h3>
+      <section class="spectrum-Section spectrum-Section--3">第3条 + <em>重点</em> + <strong>強い強調</strong></section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">記事の見出し4 + <em>重点</em> + <strong>強い強調</strong></h4>
+      <section class="spectrum-Section spectrum-Section--4">第4条 + <em>重点</em> + <strong>強い強調</strong></section>
+      <h5 class="spectrum-Heading spectrum-Heading--5">記事の見出し5 + <em>重点</em> + <strong>強い強調</strong></h5>
+      <section class="spectrum-Section spectrum-Section--5">第5条 + <em>重点</em> + <strong>強い強調</strong></section>
+    </article>
+    <hr class="spectrum-Rule spectrum-Rule--medium">
+    <article class="spectrum-Article" lang="ko">
+      <h1 class="spectrum-Heading spectrum-Heading--1">기사 제목 1 + <em>중요성</em> + <strong>강력한 강조</strong></h1>
+      <section class="spectrum-Section spectrum-Section--1">제 1 조 + <em>중요성</em> + <strong>강력한 강조</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">기사 제목 2 + <em>중요성</em> + <strong>강력한 강조</strong></h2>
+      <section class="spectrum-Section spectrum-Section--2">제 2 조 + <em>중요성</em> + <strong>강력한 강조</strong></section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">기사 제목 3 + <em>중요성</em> + <strong>강력한 강조</strong></h3>
+      <section class="spectrum-Section spectrum-Section--3">제 3 조 + <em>중요성</em> + <strong>강력한 강조</strong></section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">기사 제목 4 + <em>중요성</em> + <strong>강력한 강조</strong></h4>
+      <section class="spectrum-Section spectrum-Section--4">제 4 조 + <em>중요성</em> + <strong>강력한 강조</strong></section>
+      <h5 class="spectrum-Heading spectrum-Heading--5">기사 제목 5 + <em>중요성</em> + <strong>강력한 강조</strong></h5>
+      <section class="spectrum-Section spectrum-Section--5">제 3 조 + <em>중요성</em> + <strong>강력한 강조</strong></section>
+    </article>
+    <hr class="spectrum-Rule spectrum-Rule--medium">
+    <article class="spectrum-Article" lang="zh-hans">
+      <h1 class="spectrum-Heading spectrum-Heading--1">文章标题1 + <em>重点</em> + <strong>强烈的重点</strong></h1>
+      <section class="spectrum-Section spectrum-Section--1">第1条 + <em>重点</em> + <strong>强烈的重点</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">文章标题2 + <em>重点</em> + <strong>强烈的重点</strong></h2>
+      <section class="spectrum-Section spectrum-Section--2">第2条 + <em>重点</em> + <strong>强烈的重点</strong></section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">文章标题3 + <em>重点</em> + <strong>强烈的重点</strong></h3>
+      <section class="spectrum-Section spectrum-Section--3">第3条 + <em>重点</em> + <strong>强烈的重点</strong></section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">文章标题4 + <em>重点</em> + <strong>强烈的重点</strong></h4>
+      <section class="spectrum-Section spectrum-Section--4">第4条 + <em>重点</em> + <strong>强烈的重点</strong></section>
+      <h5 class="spectrum-Heading spectrum-Heading--5">文章标题5 + <em>重点</em> + <strong>强烈的重点</strong></h5>
+      <section class="spectrum-Section spectrum-Section--5">第5条 + <em>重点</em> + <strong>强烈的重点</strong></section>
+    </article>
+    <hr class="spectrum-Rule spectrum-Rule--medium">
+    <article class="spectrum-Article" lang="zh-hant">
+      <h1 class="spectrum-Heading spectrum-Heading--1">文章標題1 + <em>重點</em> + <strong>強烈的重點</strong></h1>
+      <section class="spectrum-Section spectrum-Section--1">第1條 + <em>重點</em> + <strong>強烈的重點</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">文章標題2 + <em>重點</em> + <strong>強烈的重點</strong></h2>
+      <section class="spectrum-Section spectrum-Section--2">第2條 + <em>重點</em> + <strong>強烈的重點</strong></section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">文章標題3 + <em>重點</em> + <strong>強烈的重點</strong></h3>
+      <section class="spectrum-Section spectrum-Section--3">第3條 + <em>重點</em> + <strong>強烈的重點</strong></section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">文章標題4 + <em>重點</em> + <strong>強烈的重點</strong></h4>
+      <section class="spectrum-Section spectrum-Section--4">第4條 + <em>重點</em> + <strong>強烈的重點</strong></section>
+      <h5 class="spectrum-Heading spectrum-Heading--5">文章標題5 + <em>重點</em> + <strong>強烈的重點</strong></h5>
+      <section class="spectrum-Section spectrum-Section--5">第5條 + <em>重點</em> + <strong>強烈的重點</strong></section>
+    </article>
+    <hr class="spectrum-Rule spectrum-Rule--medium">
+    <article class="spectrum-Article" lang="ar">
+      <h1 class="spectrum-Heading spectrum-Heading--1">المادة العنوان 1 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h1>
+      <section class="spectrum-Section spectrum-Section--1">المادة القسم 1 + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">المادة العنوان 2 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h2>
+      <section class="spectrum-Section spectrum-Section--2">المادة القسم 2 + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">المادة العنوان 3 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h3>
+      <section class="spectrum-Section spectrum-Section--3">المادة القسم 3 + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">المادة العنوان 4 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h4>
+      <section class="spectrum-Section spectrum-Section--4">المادة القسم 4 + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+      <h5 class="spectrum-Heading spectrum-Heading--5">المادة العنوان 5 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h5>
+      <section class="spectrum-Section spectrum-Section--5">المادة القسم 5 + <em>تشديد</em> + <strong>تأكيد قوي</strong></section>
+    </article>
+    <hr class="spectrum-Rule spectrum-Rule--medium">
+    <article class="spectrum-Article" lang="he">
+      <h1 class="spectrum-Heading spectrum-Heading--1">מאמר כותרת 1 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h1>
+      <section class="spectrum-Section spectrum-Section--1">סעיף 1 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+      <h2 class="spectrum-Heading spectrum-Heading--2">מאמר כותרת 2 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h2>
+      <section class="spectrum-Section spectrum-Section--2">סעיף 2 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+      <h3 class="spectrum-Heading spectrum-Heading--3">מאמר כותרת 3 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h3>
+      <section class="spectrum-Section spectrum-Section--3">סעיף 3 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+      <h4 class="spectrum-Heading spectrum-Heading--4">מאמר כותרת 4 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h4>
+      <section class="spectrum-Section spectrum-Section--4">סעיף 4 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+      <h5 class="spectrum-Heading spectrum-Heading--5">מאמר כותרת 5 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h5>
+      <section class="spectrum-Section spectrum-Section--5">סעיף 5 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></section>
+    </article>
+  <main>

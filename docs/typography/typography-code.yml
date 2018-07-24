@@ -1,14 +1,12 @@
 ---
 name: Typography - Body - Code
-description: The sectional elements within a code section for C, C#, Coffeescript, CSS, D, Go, Haskell, HTML, Java, JavaScript, JSON, Lua, PHP, Python, R, Ruby, Scheme, Shell, and Smalltalk languages.
+description: Typographic sectional styles for computer code. Small and strong emphasis elements are styled for comments and keywords.
 status: Beta
 markup: |
-  <div class="spectrum-Body">
-    <pre class="spectrum-Code">
-      <code class="spectrum-Section spectrum-Section--1">Code Section 1 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-      <code class="spectrum-Section spectrum-Section--2">Code Section 2 <small>+ De-mphasis</small> <strong>+ Strong Emphasis</strong></code>
-      <code class="spectrum-Section spectrum-Section--3">Code Section 3 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-      <code class="spectrum-Section spectrum-Section--4">Code Section 4 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-      <code class="spectrum-Section spectrum-Section--5">Code Section 5 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-    </pre>
-  </div>
+  <pre class="spectrum-Code">
+    <code class="spectrum-Section spectrum-Section--1">Code Section 1 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
+    <code class="spectrum-Section spectrum-Section--2">Code Section 2 <small>+ De-mphasis</small> <strong>+ Strong Emphasis</strong></code>
+    <code class="spectrum-Section spectrum-Section--3">Code Section 3 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
+    <code class="spectrum-Section spectrum-Section--4">Code Section 4 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
+    <code class="spectrum-Section spectrum-Section--5">Code Section 5 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
+  </pre>
