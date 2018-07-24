@@ -1,11 +1,12 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-toast-height: 48px;
-  --spectrum-toast-button-group-margin: 8px 8px 0 8px;
-  --spectrum-toast-icon-margin: 15px -4px 15px 16px;
-  --spectrum-toast-button-margin: 0 0 8px 8px;
-  --spectrum-toast-content-margin: 14px 0 14px 16px;
+  --spectrum-toast-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-toast-icon-size: var(--spectrum-icon-alert-medium-height);
+  --spectrum-toast-button-group-margin: var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-100) 0 calc(-1 * calc(var(--spectrum-global-dimension-size-200) - var(--spectrum-global-dimension-size-100)));
+  --spectrum-toast-icon-margin: calc(calc(var(--spectrum-toast-height) - var(--spectrum-toast-icon-size)) / 2) calc(-1 * var(--spectrum-global-dimension-size-50)) calc(calc(var(--spectrum-toast-height) - var(--spectrum-toast-icon-size)) / 2) var(--spectrum-global-dimension-size-200);
+  --spectrum-toast-button-margin: 0 0 var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-100);
+  --spectrum-toast-content-margin: var(--spectrum-global-dimension-size-175) var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-175) var(--spectrum-global-dimension-size-200);
 }
 
 /* topdoc
