@@ -124,8 +124,8 @@ a.spectrum-ActionButton {
     margin-left: var(--spectrum-button-primary-text-gap);
   }
 
-  .spectrum-Icon:only-child {
-    /* Remove padding if we're the only child */
+  .spectrum-Icon--sizeS:only-child {
+    /* Remove padding if the only thing in the button is a small icon */
     margin: 0 calc(-1 * calc(var(--spectrum-actionbutton-text-padding-x) / 2));
   }
 }
