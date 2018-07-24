@@ -1,6 +1,6 @@
 ---
 name: Typography - Body
-description: The typographic sectional elements for the body. Layout elements, such as paragraphs and lists, inherit font style from their parent section. Emphasis elements (small, em, strong) will modify the styles within both headings and sections based on the specfied language.
+description: The typographic body elements. Heading and Sectional elements inherit font family from the body. Emphasis elements (small, em, strong) will modify the styles within both headings and sections based on the specfied language.
 status: Beta
 markup: |
   <section class="spectrum-Body" lang="en">
