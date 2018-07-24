@@ -242,12 +242,6 @@
   .spectrum-Emphasis--75,
   &-Emphasis--75 {
     font-weight: var(--spectrum-global-font-weight-light);
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-weight: var(--spectrum-global-font-weight-regular);
-    }
   }
 
   em,
@@ -274,12 +268,6 @@
 
 .spectrum-Section {
   font-weight: var(--spectrum-global-font-weight-regular);
-
-  &:lang(ja),
-  &:lang(ko),
-  &:lang(zh) {
-    font-weight: var(--spectrum-global-font-weight-light);
-  }
 
   small,
   .spectrum-Emphasis--75,
