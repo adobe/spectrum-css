@@ -89,20 +89,20 @@
   }
 }
 
-.spectrum--large {
-  .spectrum-UIIcon--medium {
-    display: none;
-  }
-  .spectrum-UIIcon--large {
-    display: inline;
-  }
-}
-
 .spectrum--medium {
   .spectrum-UIIcon--large {
     display: none;
   }
   .spectrum-UIIcon--medium {
+    display: inline;
+  }
+}
+
+.spectrum--large {
+  .spectrum-UIIcon--medium {
+    display: none;
+  }
+  .spectrum-UIIcon--large {
     display: inline;
   }
 }
