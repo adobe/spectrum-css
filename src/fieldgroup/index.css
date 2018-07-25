@@ -21,11 +21,6 @@
 .spectrum-FieldGroup--vertical {
   display: inline-flex;
   flex-direction: column;
-
-  .spectrum-Radio,
-  .spectrum-Checkbox {
-    margin: 0;
-  }
 }
 
 /* topdoc

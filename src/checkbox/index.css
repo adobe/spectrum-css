@@ -9,8 +9,7 @@
   height: var(--spectrum-checkbox-height);
   max-width: 100%;
 
-  padding: 0 var(--spectrum-radio-cursor-hit-x);
-  margin-left: calc(-1 * var(--spectrum-radio-cursor-hit-x));
+  margin-right: calc(var(--spectrum-radio-cursor-hit-x) * 2);
 
   vertical-align: top;
 }
@@ -34,10 +33,10 @@
   padding: 0;
 
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
-  left: 0;
+  left: calc(var(--spectrum-radio-cursor-hit-x) * -1);
+  width: calc(100% + var(--spectrum-radio-cursor-hit-x));
+  height: 100%;
 
   opacity: .0001;
   z-index: 1;

@@ -9,17 +9,12 @@
   display: inline-block;
   position: relative;
 
-  padding: 0 var(--spectrum-radio-cursor-hit-x);
-  margin-left: calc(-1 * var(--spectrum-radio-cursor-hit-x));
-
   font-size: 0;
 
   height: var(--spectrum-radio-height);
   line-height: var(--spectrum-radio-height);
 
-  & + .spectrum-Radio {
-    margin-left: 0;
-  }
+  margin-right: calc(var(--spectrum-radio-cursor-hit-x) * 2);
 }
 
 .spectrum-Radio-input {
@@ -40,11 +35,12 @@
   /* Remove the padding for [type="radio"] in IE 10-. */
   padding: 0;
 
+  /* Hit area */
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
-  left: 0;
+  left: calc(var(--spectrum-radio-cursor-hit-x) * -1);
+  width: calc(100% + var(--spectrum-radio-cursor-hit-x));
+  height: 100%;
 
   opacity: .0001;
 
@@ -52,7 +48,6 @@
 
   &:checked + .spectrum-Radio-button {
     border-width: var(--spectrum-radio-border-width-checked);
-
   }
 
   &:disabled {
@@ -91,10 +86,13 @@
   align-items: center;
   height: auto;
 
-  margin: 0;
-
   .spectrum-Radio-button {
     flex-shrink: 0;
+  }
+
+  .spectrum-Radio-input {
+    /* Hit area */
+    width: calc(100% + calc(var(--spectrum-radio-cursor-hit-x) * 2));
   }
 
   .spectrum-Radio-label {
