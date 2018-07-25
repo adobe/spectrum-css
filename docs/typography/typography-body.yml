@@ -1,6 +1,6 @@
 ---
 name: Typography - Body
-description: The typographic body elements. Heading and Sectional elements inherit font family from the body. Emphasis elements (small, em, strong) will modify the styles within both headings and sections based on the specfied language.
+description: The typographic elements for body. There are 5 levels of sectional styles with paired with a heading style at each level. Emphasis, De-empahsis, and strong emphasis is supported within both headings and sections relative of the attributed language.
 status: Beta
 markup: |
   <section class="spectrum-Body" lang="en">
