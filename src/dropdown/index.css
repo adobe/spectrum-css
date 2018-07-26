@@ -48,12 +48,16 @@
   text-align: left;
 
   &.is-placeholder {
-    font-style: italic;
+    font-weight: var(--spectrum-dropdown-placeholder-text-font-weight);
+    font-style: var(--spectrum-dropdown-placeholder-text-font-style);
+    transition: color var(--spectrum-transition-time) ease-in-out;
   }
 }
 
 .spectrum-Dropdown--quiet {
   .spectrum-Popover {
+    min-width: 0;
+    margin-top: var(--spectrum-dropdown-quiet-flyout-menu-offset-y);
     left: calc(-1 * var(--spectrum-dropdown-padding-x));
   }
 
@@ -76,6 +80,7 @@
   display: inline-block;
   position: relative;
   vertical-align: top;
+  transition: color var(--spectrum-transition-time) ease-out;
 
   opacity: 1;
 }

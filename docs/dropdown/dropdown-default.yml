@@ -66,7 +66,7 @@ markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 220px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
-      <span class="spectrum-Dropdown-label">Select a Country</span>
+      <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-18-Alert" />
       </svg>
@@ -112,9 +112,9 @@ markup: |
   <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-Dropdown is-invalid" style="width: 220px;">
-    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
-      <span class="spectrum-Dropdown-label">Select a Country</span>
+  <div class="spectrum-Dropdown is-invalid is-disabled" style="width: 220px;">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" disabled aria-haspopup="true">
+      <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-18-Alert" />
       </svg>
@@ -132,4 +132,3 @@ markup: |
       </svg>
     </button>
   </div>
-
