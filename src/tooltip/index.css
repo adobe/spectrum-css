@@ -5,7 +5,7 @@
   --spectrum-tooltip-animation-distance: 4px;
   --spectrum-tooltip-target-offset: 3px;
   --spectrum-tooltip-max-width: 256px;
-  --spectrum-tooltip-tip-cross: 11px;
+  --spectrum-tooltip-tip-cross: calc(11px * var(--spectrum-global-dimension-scale-factor));
 }
 
 .spectrum-Tooltip {
