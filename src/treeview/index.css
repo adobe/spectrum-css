@@ -77,10 +77,18 @@
   display: block;
 
   float: left;
-  margin-left: -14px;
-  margin-top: 5px;
+  position: relative;
+
+  left: var(--spectrum-global-dimension-size-125);
+  top: calc(-1 * var(--spectrum-global-dimension-size-65));
+  margin-left: calc(-1 * calc(var(--spectrum-global-dimension-size-400) + var(--spectrum-global-dimension-size-25)));
+  margin-bottom: calc(-1 * var(--spectrum-global-dimension-size-125));
+
+  padding: var(--spectrum-global-dimension-size-125);
 
   transition: transform ease var(--spectrum-transition-time);
+
+  pointer-events: all !important;
 }
 
 /* Close nested treeviews by default */
