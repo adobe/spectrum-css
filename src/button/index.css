@@ -107,6 +107,7 @@ a.spectrum-ActionButton {
 
 .spectrum-ActionButton {
   @inherit: %spectrum-BaseButton;
+  position: relative;
 
   justify-content: left;
 
@@ -125,8 +126,10 @@ a.spectrum-ActionButton {
   }
 
   .spectrum-Icon--sizeS:only-child {
-    /* Remove padding if the only thing in the button is a small icon */
-    margin: 0 calc(-1 * calc(var(--spectrum-actionbutton-text-padding-x) / 2));
+    position: absolute;
+    /* Icon size is hardcoded here until the icons team provides mobile icons and we can use --spectrum-actionbutton-icon-size */
+    top: calc(50% - calc(18px / 2));
+    left: calc(50% - calc(18px / 2));
   }
 }
 
