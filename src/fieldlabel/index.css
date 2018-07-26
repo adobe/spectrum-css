@@ -1,12 +1,11 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-field-min-width: 100px;
-  --spectrum-field-label-margin: 0 0 6px;
-  --spectrum-field-label-left-padding: 10px 5px 0 0;
-  --spectrum-field-label-right-padding: 10px 8px 0 0;
-  --spectrum-tableform-border-spacing: 0 20px;
-  --spectrum-tableform-margin: -20px 0;
+  --spectrum-field-label-margin: 0 0 calc(var(--spectrum-textfield-label-gap-x) - 2px);
+  --spectrum-field-label-left-padding: var(--spectrum-global-dimension-size-100) var(--spectrum-textfield-label-gap-x) 0 0;
+  --spectrum-field-label-right-padding: var(--spectrum-global-dimension-size-100) var(--spectrum-textfield-label-gap-x) 0 0;
+  --spectrum-tableform-border-spacing: 0 var(--spectrum-global-dimension-size-300);
+  --spectrum-tableform-margin: calc(var(--spectrum-global-dimension-size-250) * -1) 0;
 }
 
 /* topdoc
@@ -15,7 +14,6 @@
 .spectrum-FieldLabel {
   display: block;
 
-  min-width: var(--spectrum-field-min-width);
   box-sizing: border-box;
 
   margin: var(--spectrum-field-label-margin);
