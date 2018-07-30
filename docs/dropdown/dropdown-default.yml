@@ -3,7 +3,7 @@ description: A Spectrum 'default' dropdown element with a Flyout whose minimum w
 status: Released
 markup: |
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown" style="width: 220px;">
+  <div class="spectrum-Dropdown" style="width: 250px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -13,7 +13,7 @@ markup: |
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown is-open" style="width: 220px;">
+  <div class="spectrum-Dropdown is-open" style="width: 250px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -45,7 +45,7 @@ markup: |
   <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-Dropdown is-disabled" style="width: 220px;">
+  <div class="spectrum-Dropdown is-disabled" style="width: 250px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger" disabled aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -64,7 +64,7 @@ markup: |
   </div>
 
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown is-invalid" style="width: 220px;">
+  <div class="spectrum-Dropdown is-invalid" style="width: 250px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
@@ -77,7 +77,7 @@ markup: |
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown is-open is-invalid" style="width: 220px;">
+  <div class="spectrum-Dropdown is-open is-invalid" style="width: 250px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
@@ -112,7 +112,7 @@ markup: |
   <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-Dropdown is-invalid is-disabled" style="width: 220px;">
+  <div class="spectrum-Dropdown is-invalid is-disabled" style="width: 250px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" disabled aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
