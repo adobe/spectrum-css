@@ -1,6 +1,11 @@
 /* topdoc
 {{ buttongroup/buttongroup.yml }}
 */
+
+:root {
+  --spectrum-buttongroup-button-gap-reset: 0;
+}
+
 .spectrum-ButtonGroup {
   display: flex;
 
@@ -35,16 +40,16 @@
 
   .spectrum-Button + .spectrum-Button {
     margin-top: var(--spectrum-buttongroup-button-gap-y);
-    margin-left: 0;
+    margin-left: var(--spectrum-buttongroup-button-gap-reset);
   }
 
   .spectrum-ActionButton + .spectrum-ActionButton {
     margin-top: var(--spectrum-actionbuttongroup-text-button-gap-y);
-    margin-left: 0;
+    margin-left: var(--spectrum-buttongroup-button-gap-reset);
   }
 
   .spectrum-Tool + .spectrum-Tool {
     margin-top: var(--spectrum-toolgroup-text-button-gap-y);
-    margin-left: 0;
+    margin-left: var(--spectrum-buttongroup-button-gap-reset);
   }
 }

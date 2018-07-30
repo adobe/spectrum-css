@@ -1,5 +1,13 @@
 @import '../commons/index.css';
 
+:root {
+  /* Todo: fix in DNA, should have been zero */
+  --spectrum-fieldbutton-quiet-border-size: 0;
+  --spectrum-fieldbutton-disabled-border-size: 0;
+  --spectrum-fieldbutton-quiet-margin: 0;
+  --spectrum-fieldbutton-quiet-padding: 0;
+}
+
 %spectrum-BaseButton {
   display: inline-flex;
   box-sizing: border-box;
@@ -195,7 +203,7 @@ a.spectrum-ActionButton {
 
   &:disabled,
   &.is-disabled {
-    border-width: 0;
+    border-width: var(--spectrum-fieldbutton-disabled-border-size);
     cursor: default;
   }
 
@@ -205,11 +213,11 @@ a.spectrum-ActionButton {
 }
 
 .spectrum-FieldButton--quiet {
-  margin: 0;
-  padding: 0;
+  margin: var(--spectrum-fieldbutton-quiet-margin);
+  padding: var(--spectrum-fieldbutton-quiet-padding);
 
-  border: none;
-  border-radius: 0;
+  border-width: var(--spectrum-fieldbutton-quiet-border-size);
+  border-radius: var(--spectrum-fieldbutton-quiet-border-radius);
 }
 
 .spectrum-ClearButton {

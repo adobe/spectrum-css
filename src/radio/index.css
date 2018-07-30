@@ -3,6 +3,9 @@
 :root {
   --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
   --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter) / 2) - calc(var(--spectrum-radio-circle-dot-size) / 2));
+
+  --spectrum-radio-labelbelow-label-margin: 0;
+  --spectrum-radio-labelbelow-height: auto;
 }
 
 .spectrum-Radio {
@@ -84,7 +87,7 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
+  height: var(--spectrum-radio-labelbelow-height);
 
   .spectrum-Radio-button {
     flex-shrink: 0;
@@ -96,6 +99,6 @@
   }
 
   .spectrum-Radio-label {
-    margin: 0;
+    margin: var(--spectrum-radio-labelbelow-label-margin);
   }
 }

@@ -10,6 +10,11 @@
 {{ table/table-divs-quiet.yml }}
 */
 
+:root {
+  --spectrum-table-checkboxcell-padding-right: 0;
+  --spectrum-table-quiet-border-radius: 0;
+}
+
 .spectrum-Table {
   border-collapse: separate;
   border-spacing: 0;
@@ -120,7 +125,7 @@
 */
 .spectrum-Table--quiet {
   .spectrum-Table-body {
-    border-radius: 0;
+    border-radius: var(--spectrum-table-quiet-border-radius);
   }
 }
 
@@ -129,7 +134,7 @@
 */
 
 .spectrum-Table-checkboxCell {
-  padding-right: 0;
+  padding-right: var(--spectrum-table-checkboxcell-padding-right);
 }
 
 .spectrum-Table-checkbox {

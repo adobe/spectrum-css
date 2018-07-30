@@ -16,6 +16,11 @@
 {{ calendar/calendar-range.yml }}
 */
 
+:root {
+  --spectrum-calendar-border-radius-reset: 0;
+  --spectrum-calendar-border-width-reset: 0;
+}
+
 .spectrum-Calendar {
   display: inline-block;
   /*width: var(--spectrum-calendar-width);*/
@@ -183,9 +188,9 @@
   &.is-range-selection {
     /* overrides to make the cells appear connected */
     margin: var(--spectrum-calendar-day-padding) 0;
-    border-width: 0;
+    border-width: var(--spectrum-calendar-border-width-reset);
     line-height: var(--spectrum-calendar-day-height);
-    border-radius: 0;
+    border-radius: var(--spectrum-calendar-border-radius-reset);
 
     /* Todo: Calculate this */
     width: calc(var(--spectrum-calendar-day-width) + calc(var(--spectrum-calendar-day-padding) * 2));

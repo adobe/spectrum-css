@@ -13,6 +13,8 @@
 :root {
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
+  --spectrum-combobox-field-border-width-right: 0;
+  --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
 }
 
 .spectrum-InputGroup {
@@ -32,7 +34,7 @@
 .spectrum-InputGroup-field {
   border-top-right-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
   border-bottom-right-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
-  border-right-width: 0;
+  border-right-width: var(--spectrum-combobox-field-border-width-right);
   flex: 1;
 }
 
@@ -41,7 +43,7 @@
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
     position: relative;
-    padding-right: 0;
+    padding-right: var(--spectrum-combobox-quiet-fieldbutton-padding-right);
     border-bottom: var(--spectrum-textfield-quiet-affixed-border-size) solid;
 
     /* More hitarea */

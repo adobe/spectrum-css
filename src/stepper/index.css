@@ -4,6 +4,9 @@
   --spectrum-stepper-button-height: calc(var(--spectrum-component-single-line-height) / 2);
   --spectrum-stepper-button-width: 24px;
   --spectrum-stepper-padding: calc(var(--spectrum-padding) / 2);
+  --spectrum-stepper-border-radius-reset: 0;
+  --spectrum-stepper-border-size-reset: 0;
+  --spectrum-stepper-border-size-default: 1px;
 }
 
 .spectrum-Stepper {
@@ -40,8 +43,8 @@
   /* Avoid margin added by adjacent buttons */
   margin: 0 !important;
 
-  border-width: 1px;
-  border-right-width: 0;
+  border-width: var(--spectrum-stepper-border-size-default);
+  border-right-width: var(--spectrum-stepper-border-size-reset);
   border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
 
   .spectrum-Icon {
@@ -52,7 +55,7 @@
 
 .spectrum-Stepper-stepUp {
   border-bottom: none;
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: var(--spectrum-stepper-border-radius-reset);
 
   .spectrum-Icon {
     position: absolute;
@@ -64,8 +67,8 @@
 
 .spectrum-Stepper-stepDown {
   border-top: none;
-  border-top-left-radius: 0;
-  border-bottom-width: 1px;
+  border-top-left-radius: var(--spectrum-stepper-border-radius-reset);
+  border-bottom-width: var(--spectrum-stepper-border-size-default);
 
   &:focus {
     border-top: none;
@@ -84,14 +87,14 @@
 
   flex: 1;
 
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-left-radius: var(--spectrum-stepper-border-radius-reset);
+  border-bottom-left-radius: var(--spectrum-stepper-border-radius-reset);
 
   z-index: 1;
 }
 
 .spectrum-Stepper--quiet {
-  border-radius: 0;
+  border-radius: var(--spectrum-stepper-border-radius-reset);
 
   .spectrum-Stepper-buttons {
     .spectrum-ActionButton {
@@ -100,7 +103,7 @@
     }
 
     .spectrum-Stepper-stepDown {
-      border-radius: 0;
+      border-radius: var(--spectrum-stepper-border-radius-reset);
     }
   }
 }

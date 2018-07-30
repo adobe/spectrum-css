@@ -22,6 +22,13 @@
 {{ splitview/splitview-vertical-collapsed-bottom.yml }}
 */
 
+:root {
+  --spectrum-splitview-vertical-width: 100%;
+  --spectrum-splitview-vertical-gripper-width: 50%;
+  --spectrum-splitview-vertical-gripper-outer-width: 100%;
+  --spectrum-splitview-vertical-gripper-reset: 0;
+}
+
 .spectrum-SplitView {
   display: flex;
   overflow: hidden;
@@ -94,15 +101,15 @@
 
   .spectrum-SplitView-pane {
     height: auto;
-    width: 100%;
+    width: var(--spectrum-splitview-vertical-width);
   }
 
   .spectrum-SplitView-gripper {
     /* half of (height + vertical border - handle width) * -1 (for negative opposite) */
     top: calc(((var(--spectrum-rail-gripper-width) + (2 * var(--spectrum-rail-gripper-border-width-horizontal)) - var(--spectrum-rail-handle-width)) / 2) * -1);
 
-    transform: translate(-50%, 0);
-    left: 50%;
+    transform: translate(calc(-1 * var(--spectrum-splitview-vertical-gripper-width)), 0);
+    left: var(--spectrum-splitview-vertical-gripper-width);
     width: var(--spectrum-rail-gripper-height); /* same as default height */
     height: var(--spectrum-rail-gripper-width); /* same as default width */
 
@@ -111,19 +118,19 @@
   }
 
   .spectrum-SplitView-splitter {
-    width: 100%;
+    width: var(--spectrum-splitview-vertical-width);
     height: var(--spectrum-rail-handle-width);
 
     &.is-collapsed-start,
     &.is-collapsed-end {
       .spectrum-SplitView-gripper {
-        left: 50%;
+        left: var(--spectrum-splitview-vertical-gripper-width);
 
         /* make the center line of the gripper */
         &:before {
-          top: calc(50% - calc(var(--spectrum-rail-handle-width) / 2));
-          left: 0;
-          width: 100%;
+          top: calc(var(--spectrum-splitview-vertical-gripper-width) - calc(var(--spectrum-rail-handle-width) / 2));
+          left: var(--spectrum-splitview-vertical-gripper-reset);
+          width: var(--spectrum-splitview-vertical-gripper-outer-width);
           height: var(--spectrum-rail-handle-width);
         }
       }
@@ -131,14 +138,14 @@
 
     &.is-collapsed-start {
       .spectrum-SplitView-gripper {
-        top: 0;
+        top: var(--spectrum-splitview-vertical-gripper-reset);
       }
     }
 
     &.is-collapsed-end {
       .spectrum-SplitView-gripper {
         top: auto;
-        bottom: 0;
+        bottom: var(--spectrum-splitview-vertical-gripper-reset);
       }
     }
   }

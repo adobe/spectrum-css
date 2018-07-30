@@ -1,7 +1,6 @@
 @import '../commons/index.css';
 
 :root {
-
   --spectrum-loader-bar-label-padding: 10px;
   --spectrum-loader-bar-label-vertical-padding: 2px;
 
@@ -16,6 +15,8 @@
 
   --spectrum-loader-bar-label-margin-side: 12px;
   --spectrum-loader-bar-label-margin-bottom: 8px;
+
+  --spectrum-loader-bar-width-side: auto;
 }
 
 /* topdoc
@@ -58,7 +59,7 @@
   display: inline-flex;
   flex-flow: row;
   justify-content: space-between;
-  width: auto;
+  width: var(--spectrum-loader-bar-width-side);
 
   .spectrum-BarLoader-label {
     margin-right: var(--spectrum-loader-bar-label-margin-side);

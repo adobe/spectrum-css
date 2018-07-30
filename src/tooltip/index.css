@@ -142,8 +142,8 @@
   position: relative;
 
   .spectrum-Tooltip {
-    /* Required for animations to work */
-    visibility: visible;
+    /* Required for animations to work, !important for diff scaling to work */
+    visibility: visible !important;
     transition: transform var(--spectrum-transition-time) ease-in-out;
     top: -100%;
   }

@@ -6,6 +6,13 @@
 
   /* Todo fix in DNA */
   --spectrum-textfield-quiet-border-radius: 0;
+
+  --spectrum-textfield-quiet-invalid-background-position: 100% 50%;
+
+  --spectrum-textfield-multiline-height: auto;
+
+  --spectrum-textfield-multiline-padding-y: 4px;
+  --spectrum-textfield-multiline-padding-x: 8px;
 }
 
 .spectrum-Textfield {
@@ -109,8 +116,8 @@
 }
 
 .spectrum-Textfield--multiline {
-  height: auto;
-  padding: 4px 8px;
+  height: var(--spectrum-textfield-multiline-height);
+  padding: var(--spectrum-textfield-multiline-padding-y) var(--spectrum-textfield-multiline-padding-x);
   text-indent: 0;
 
   /* Remove the default vertical scrollbar for textarea in IE. */
@@ -127,12 +134,11 @@
   border-radius: var(--spectrum-textfield-quiet-border-radius);
   text-indent: 0;
 
-  border: none;
-  border-bottom: var(--spectrum-textfield-quiet-border-size) solid;
+  border-width: 0 0 var(--spectrum-textfield-quiet-border-size) 0;
 
   /* removes the side padding to align the text properly */
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: var(--spectrum-textfield-quiet-padding-x);
+  padding-right: var(--spectrum-textfield-quiet-padding-x);
 
   /* Treat all quiet inputs and textareas the same */
   resize: none;
@@ -141,6 +147,6 @@
   &.is-invalid,
   &:invalid,
   &.is-valid {
-    background-position: 100% 50%;
+    background-position: var(--spectrum-textfield-quiet-invalid-background-position);
   }
 }
