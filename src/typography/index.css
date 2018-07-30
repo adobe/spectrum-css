@@ -92,7 +92,9 @@
   &-Heading {
     max-width: var(--heading-line-length);
 
-    .spectrum-Body--han & {
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
       max-width: var(--han-heading-line-length);
     }
   }
