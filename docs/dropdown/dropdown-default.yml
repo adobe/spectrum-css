@@ -54,15 +54,6 @@ markup: |
     </button>
   </div>
 
-  <h4>No placeholder</h4>
-  <div class="spectrum-Dropdown">
-    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
-      </svg>
-    </button>
-  </div>
-
   <h4>Closed</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 250px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
@@ -78,7 +69,7 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown is-open is-invalid" style="width: 250px;">
-    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid is-selected" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-18-Alert" />
@@ -118,15 +109,6 @@ markup: |
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
         <use xlink:href="#spectrum-icon-18-Alert" />
       </svg>
-      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
-      </svg>
-    </button>
-  </div>
-
-  <h4>No placeholder</h4>
-  <div class="spectrum-Dropdown">
-    <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>

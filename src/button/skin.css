@@ -587,7 +587,8 @@
       border-color: var(--spectrum-fieldbutton-border-color-error-hover);
     }
 
-    &:active {
+    &:active,
+    &.is-selected {
       border-color: var(--spectrum-fieldbutton-border-color-error-down);
     }
 

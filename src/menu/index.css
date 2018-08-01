@@ -42,8 +42,10 @@
   display: flex;
   align-items: center;
 
-  padding: 0 var(--spectrum-selectlist-option-padding) 0 var(--spectrum-selectlist-option-padding);
+  padding: 0 var(--spectrum-selectlist-option-padding) 0 calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-selectlist-border-size-key-focus));
   margin: 0;
+
+  border-left: var(--spectrum-selectlist-border-size-key-focus) solid transparent;
 
   height: var(--spectrum-selectlist-option-height);
   line-height: var(--spectrum-selectlist-option-height);

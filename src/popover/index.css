@@ -32,18 +32,13 @@
   &.is-open {
     @inherit: %spectrum-overlay--open;
   }
-
-  /* Don't let sharp corners be pokey */
-  .spectrum-Menu {
-    border-radius: var(--spectrum-popover-border-radius);
-  }
 }
 
 .spectrum-Popover-tip {
   position: absolute;
   /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
   overflow: hidden;
-  width: var(--spectrum-popover-tip-width);
+  width: calc(var(--spectrum-popover-tip-width) + 1px);
   height: calc((var(--spectrum-popover-tip-width)/2)+(var(--spectrum-popover-border-size)));
 
   &::after {
@@ -76,7 +71,7 @@
     @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Popover-tip {
-    right: -15px;
+    right: -16px;
     transform: rotate(-90deg);
   }
 }
@@ -90,7 +85,7 @@
     @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Popover-tip {
-    left: -15px;
+    left: -16px;
     transform: rotate(90deg);
   }
 }

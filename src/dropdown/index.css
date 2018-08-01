@@ -1,13 +1,8 @@
 @import '../commons/index.css';
 
 :root {
-  /* hardcoded cause Nate said so */
-  --spectrum-dropdown-label-min-width: 144px;
-
   --spectrum-dropdown-popover-min-width: 100%;
-  --spectrum-dropdown-quiet-label-min-width: 0;
   --spectrum-dropdown-quiet-popover-min-width: 0;
-  --spectrum-dropdown-quiet-min-width: 0;
 }
 
 /* topdoc
@@ -17,10 +12,11 @@
   position: relative;
   display: inline-block;
 
+  min-width: var(--spectrum-dropdown-min-width);
+
   .spectrum-Popover {
     top: 100%;
     min-width: var(--spectrum-dropdown-popover-min-width);
-    margin-top: var(--spectrum-dropdown-flyout-menu-offset-y);
 
     overflow-y: auto;
   }
@@ -38,8 +34,6 @@
 .spectrum-Dropdown-label {
   /* Be the biggest! */
   flex: 1;
-
-  min-width: var(--spectrum-dropdown-label-min-width);
 
   white-space: nowrap;
   overflow: hidden;
@@ -65,11 +59,6 @@
     margin-top: var(--spectrum-dropdown-quiet-flyout-menu-offset-y);
     left: calc(-1 * var(--spectrum-dropdown-padding-x));
   }
-
-  .spectrum-Dropdown-label {
-    /* Don't enforce minimum width for quiet dropdowns */
-    min-width: var(--spectrum-dropdown-quiet-label-min-width);
-  }
 }
 
 /* Only apply margin to the icon if there's a label */
@@ -86,6 +75,9 @@
   position: relative;
   vertical-align: top;
   transition: color var(--spectrum-transition-time) ease-out;
+
+  /* Center the icon */
+  margin: auto;
 
   opacity: 1;
 }
