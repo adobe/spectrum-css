@@ -24,19 +24,27 @@ gulp.task('copy-icons-medium', function() {
 gulp.task('clean-icons', function() {
   return gulp.src([
     'icons/*/*.svg',
-    'icons/*/*.svg',
     '!icons/combined/**/*'
   ])
     .pipe(replace(/ data-name=".*?"/g, ''))
     .pipe(replace(/ id=".*?"/g, ''))
     .pipe(replace(/ class=".*?"/g, ''))
+    .pipe(replace(/<defs>[\s\S]*?<\/defs>/m, ''))
+    .pipe(replace(/<title>[\s\S]*?<\/title>/m, ''))
     .pipe(svgmin({
-      plugins: [{
-        collapseGroups: true
-      }]
+      plugins: [
+        {
+          removeAttrs: {
+            attrs: [
+              'class',
+              'data-name',
+              'id'
+            ]
+          }
+        },
+        { collapseGroups: true }
+      ]
     }))
-    .pipe(replace(/<defs>.*?<\/defs>/, ''))
-    .pipe(replace(/<title>.*?<\/title>/, ''))
     .pipe(gulp.dest('icons/'));
 });
 
@@ -44,8 +52,7 @@ gulp.task('clean-icons', function() {
 gulp.task('copy-icons',
   gulp.series(
     'delete-icons',
-    gulp.parallel('copy-icons-medium', 'copy-icons-large'),
-    'clean-icons'
+    gulp.parallel('copy-icons-medium', 'copy-icons-large')
   )
 );
 
@@ -95,6 +102,14 @@ function getSVGSpriteTask(size) {
 
 gulp.task('generate-svgsprite-medium', getSVGSpriteTask('medium'));
 gulp.task('generate-svgsprite-large', getSVGSpriteTask('large'));
+
+gulp.task('update-icons',
+  gulp.series(
+    'copy-icons',
+    'clean-icons',
+    'generate-combined-icons'
+  )
+);
 
 gulp.task('icons', gulp.parallel(
   'generate-svgsprite-medium',
