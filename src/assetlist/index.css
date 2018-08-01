@@ -3,6 +3,7 @@
 :root {
   --spectrum-miller-column-chevron-height: 10px;
   --spectrum-miller-column-chevron-width: 6px;
+  --spectrum-miller-column-checkbox-margin: 0;
 }
 
 /* topdoc
@@ -68,6 +69,7 @@
 
 .spectrum-AssetList-itemSelector {
   display: none;
+  margin: var(--spectrum-miller-column-checkbox-margin);
 }
 
 .spectrum-AssetList-itemChildIndicator {
