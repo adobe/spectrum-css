@@ -85,6 +85,7 @@
   border-radius: var(--spectrum-button-primary-border-radius);
 
   height: var(--spectrum-button-primary-height);
+  min-width: var(--spectrum-button-primary-min-width);
 
   padding: 0 calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size)) 0;
 
