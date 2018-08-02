@@ -50,7 +50,7 @@ markup: |
         <li role="presentation">
           <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-2"  aria-hidden="true">Section Heading</span>
           <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-category-1" aria-disabled="true">
-            <li class="spectrum-Menu-item" role="menuitem">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
               <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="SaveFloppy">
                 <use xlink:href="#spectrum-icon-18-SaveFloppy"></use>
               </svg>
@@ -90,10 +90,10 @@ markup: |
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">City Center</span>
             </li>
-            <li class="spectrum-Menu-item is-disabled" role="option" tabindex="0">
+            <li class="spectrum-Menu-item is-disabled" role="option">
               <span class="spectrum-Menu-itemLabel">Jack London Square</span>
             </li>
-            <li class="spectrum-Menu-item is-selected" role="option" aria-disabled="true">
+            <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">My best friend's mom's house</span>
               <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
@@ -125,7 +125,7 @@ markup: |
         <li role="presentation">
           <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-2"  aria-hidden="true">Section Heading</span>
           <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-category-1" aria-disabled="true">
-            <li class="spectrum-Menu-item" role="menuitem">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
               <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="SaveFloppy">
                 <use xlink:href="#spectrum-icon-18-SaveFloppy"></use>
               </svg>
