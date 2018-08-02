@@ -42,8 +42,6 @@
 
 .spectrum-BarLoader-fill {
   border: none;
-  border-radius: var(--spectrum-loader-bar-radius);
-
   height: var(--spectrum-loader-bar-height);
 
   transition: width 1s;
