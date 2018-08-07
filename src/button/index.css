@@ -125,7 +125,9 @@ a.spectrum-ActionButton {
 
   height: var(--spectrum-actionbutton-height);
   min-width: var(--spectrum-actionbutton-min-width);
-  padding: 0 var(--spectrum-actionbutton-text-padding-x);
+
+  /* Use icon padding by default as it's smaller */
+  padding: 0 calc(var(--spectrum-actionbutton-icon-padding-x) - var(--spectrum-actionbutton-border-size));
 
   border-width: var(--spectrum-actionbutton-border-size);
   border-radius: var(--spectrum-actionbutton-border-radius);
@@ -134,15 +136,30 @@ a.spectrum-ActionButton {
   font-weight: var(--spectrum-actionbutton-text-font-weight);
 
   .spectrum-Icon + .spectrum-ActionButton-label {
-    margin-left: var(--spectrum-button-primary-text-gap);
+    /* Have icon padding on the left */
+    padding-left: var(--spectrum-actionbutton-icon-padding-x);
+
+    /* Have text padding on the right */
+    padding-right: calc(var(--spectrum-actionbutton-text-padding-x) - var(--spectrum-actionbutton-icon-padding-x));
   }
 
   .spectrum-Icon--sizeS:only-child {
+    /* Position absolutely to avoid layout errors introduced by padding */
     position: absolute;
-    /* Icon size is hardcoded here until the icons team provides mobile icons and we can use --spectrum-actionbutton-icon-size */
-    top: calc(50% - calc(18px / 2));
-    left: calc(50% - calc(18px / 2));
+    top: calc(50% - calc(var(--spectrum-alias-workflow-icon-size) / 2));
+    left: calc(50% - calc(var(--spectrum-alias-workflow-icon-size) / 2));
   }
+
+  .spectrum-ActionButton-label:only-child {
+    /* Add padding for text only buttons */
+    padding: 0 calc(var(--spectrum-actionbutton-text-padding-x) - var(--spectrum-actionbutton-icon-padding-x));
+  }
+}
+
+.spectrum-ActionButton-hold {
+  position: absolute;
+  right: var(--spectrum-actionbutton-hold-icon-padding-right);
+  bottom: var(--spectrum-actionbutton-hold-icon-padding-bottom);
 }
 
 .spectrum-ActionButton-label,
@@ -153,8 +170,6 @@ a.spectrum-ActionButton {
 }
 
 .spectrum-ActionButton--quiet {
-  padding: 0 var(--spectrum-actionbutton-text-padding-x);
-
   border-width: var(--spectrum-actionbutton-quiet-border-size);
   border-radius: var(--spectrum-actionbutton-quiet-border-radius);
 
