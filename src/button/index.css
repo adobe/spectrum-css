@@ -92,6 +92,9 @@
   font-size: var(--spectrum-button-primary-text-size);
   font-weight: var(--spectrum-button-primary-text-font-weight);
 
+  /* Prevent vertical text alignment mismatch between anchor and button in Chrome */
+  line-height: 0;
+
   &:hover,
   &:active {
     box-shadow: none;
