@@ -1,11 +1,11 @@
 :root {
-  --spectrum-icon-size-xxs: 9px;
-  --spectrum-icon-size-xs: 12px;
-  --spectrum-icon-size-s: 18px;
-  --spectrum-icon-size-m: 24px;
-  --spectrum-icon-size-l: 36px;
-  --spectrum-icon-size-xl: 48px;
-  --spectrum-icon-size-xxl: 72px;
+  --spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-icon-size-m: var(--spectrum-global-dimension-size-300);
+  --spectrum-icon-size-xxs: calc(var(--spectrum-icon-size-s) / 2);
+  --spectrum-icon-size-xs: calc(var(--spectrum-icon-size-m) / 2);
+  --spectrum-icon-size-l: calc(var(--spectrum-icon-size-s) * 2);
+  --spectrum-icon-size-xl: calc(var(--spectrum-icon-size-m) * 2);
+  --spectrum-icon-size-xxl: calc(var(--spectrum-icon-size-m) * 3);
 }
 
 .spectrum-Icon {

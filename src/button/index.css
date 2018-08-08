@@ -146,8 +146,8 @@ a.spectrum-ActionButton {
   .spectrum-Icon--sizeS:only-child {
     /* Position absolutely to avoid layout errors introduced by padding */
     position: absolute;
-    top: calc(50% - calc(var(--spectrum-alias-workflow-icon-size) / 2));
-    left: calc(50% - calc(var(--spectrum-alias-workflow-icon-size) / 2));
+    top: calc(50% - calc(var(--spectrum-actionbutton-icon-size) / 2));
+    left: calc(50% - calc(var(--spectrum-actionbutton-icon-size) / 2));
   }
 
   .spectrum-ActionButton-label:only-child {
