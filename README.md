@@ -193,7 +193,8 @@ AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, s
 });
 ```
 
-
+### Lang support
+To take advantage of locale specific change, for instance, placeholders not italicizing Japanese, applications should specify a response header for the language, a meta tag lang, or declare a lang attribute on their element. That's lowest to highest priority, so a meta tag can be overridden by an inline attribute.
 
 ## Project Structure
 

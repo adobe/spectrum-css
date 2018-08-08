@@ -61,6 +61,24 @@
     transition: color var(--spectrum-transition-time) ease-in-out;
   }
 
+  /* added to work with Edge, note, it needs double ::
+   * not single : which is what autoprefixer will add
+   */
+  &::-ms-input-placeholder {
+    font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
+    font-style: var(--spectrum-textfield-placeholder-text-font-style);
+    transition: color var(--spectrum-transition-time) ease-in-out;
+  }
+
+  &:lang(ja), &:lang(zh), &:lang(ko) {
+    &::placeholder {
+       font-style: normal;
+    }
+    &::-ms-input-placeholder { /* added to work with Edge, same as above */
+       font-style: normal;
+    }
+  }
+
   &:hover {
     &::placeholder {
       font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
