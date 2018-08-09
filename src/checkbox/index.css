@@ -9,7 +9,7 @@
   height: var(--spectrum-checkbox-height);
   max-width: 100%;
 
-  margin-right: calc(var(--spectrum-radio-cursor-hit-x) * 2);
+  margin-right: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
 
   vertical-align: top;
 }
@@ -32,10 +32,11 @@
   /* Remove the padding for [type="checkbox"] in IE 10-. */
   padding: 0;
 
+  /* Hit area */
   position: absolute;
   top: 0;
-  left: calc(var(--spectrum-radio-cursor-hit-x) * -1);
-  width: calc(100% + var(--spectrum-radio-cursor-hit-x));
+  left: calc(var(--spectrum-checkbox-cursor-hit-x) * -1);
+  width: calc(100% + var(--spectrum-checkbox-cursor-hit-x) * 2);;
   height: 100%;
 
   opacity: .0001;
@@ -76,7 +77,7 @@
 }
 
 .spectrum-Checkbox-label {
-  margin: 0 var(--spectrum-checkbox-text-gap);
+  margin-left: var(--spectrum-checkbox-text-gap);
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
   transition: color var(--spectrum-transition-time) ease-in-out;
