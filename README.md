@@ -207,6 +207,7 @@ In this project, there are three sets of source files.
 Run the following commands:
 
 ```
+npm install -g gulp-cli
 npm install
 gulp
 ```
