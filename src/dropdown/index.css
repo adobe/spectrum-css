@@ -1,8 +1,7 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-dropdown-popover-min-width: 100%;
-  --spectrum-dropdown-quiet-popover-min-width: 0;
+  --spectrum-dropdown-popover-max-width: var(--spectrum-global-dimension-size-3000);
 }
 
 /* topdoc
@@ -12,14 +11,9 @@
   position: relative;
   display: inline-block;
 
+  /* Truncate if menu options make us too wide */
+  max-width: 100%;
   min-width: var(--spectrum-dropdown-min-width);
-
-  .spectrum-Popover {
-    top: 100%;
-    min-width: var(--spectrum-dropdown-popover-min-width);
-
-    overflow-y: auto;
-  }
 }
 
 
@@ -55,9 +49,6 @@
 
 .spectrum-Dropdown--quiet {
   .spectrum-Popover {
-    min-width: var(--spectrum-dropdown-quiet-popover-min-width);
-    margin-top: var(--spectrum-dropdown-quiet-flyout-menu-offset-y);
-    left: calc(-1 * var(--spectrum-dropdown-padding-x));
   }
 }
 
@@ -102,4 +93,8 @@
   .spectrum-Dropdown-trigger {
     width: auto;
   }
+}
+
+.spectrum-Dropdown-popover {
+  max-width: var(--spectrum-dropdown-popover-max-width);
 }

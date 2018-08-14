@@ -3,7 +3,7 @@ description: A Spectrum 'default' dropdown element with a Flyout whose minimum w
 status: Released
 markup: |
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown" style="width: 250px;">
+  <div class="spectrum-Dropdown" style="width: 240px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -13,14 +13,14 @@ markup: |
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown is-open" style="width: 250px;">
+  <div class="spectrum-Dropdown is-open" style="width: 240px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
-    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+    <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover is-open" style="width: 100%">
       <ul class="spectrum-Menu" role="listbox">
         <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
           <span class="spectrum-Menu-itemLabel">Ballard</span>
@@ -45,7 +45,7 @@ markup: |
   <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-Dropdown is-disabled" style="width: 250px;">
+  <div class="spectrum-Dropdown is-disabled" style="width: 240px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger" disabled aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -55,7 +55,7 @@ markup: |
   </div>
 
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown is-invalid" style="width: 250px;">
+  <div class="spectrum-Dropdown is-invalid" style="width: 240px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
@@ -68,7 +68,7 @@ markup: |
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown is-open is-invalid" style="width: 250px;">
+  <div class="spectrum-Dropdown is-open is-invalid" style="width: 240px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid is-selected" aria-haspopup="true">
       <span class="spectrum-Dropdown-label">Ballard</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
@@ -78,7 +78,7 @@ markup: |
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
-    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+    <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover is-open" style="width: 100%">
       <ul class="spectrum-Menu" role="listbox">
         <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
           <span class="spectrum-Menu-itemLabel">Ballard</span>
@@ -103,7 +103,7 @@ markup: |
   <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-Dropdown is-invalid is-disabled" style="width: 250px;">
+  <div class="spectrum-Dropdown is-invalid is-disabled" style="width: 240px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" disabled aria-haspopup="true">
       <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
       <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">

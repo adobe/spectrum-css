@@ -8,6 +8,9 @@
   --spectrum-selectlist-heading-letter-spacing: 0.06em;
   --spectrum-selectlist-heading-margin: var(--spectrum-global-dimension-size-75) 0 0 0;
   --spectrum-selectlist-heading-padding: 0 var(--spectrum-global-dimension-size-450) 0 var(--spectrum-global-dimension-size-150);
+
+  --spectrum-selectlist-option-padding-y: var(--spectrum-global-dimension-size-85);
+  --spectrum-selectlist-option-icon-padding-x: var(--spectrum-global-dimension-size-100);
 }
 
 .spectrum-Menu {
@@ -18,16 +21,22 @@
   margin: var(--spectrum-popover-padding-y) 0;
   padding: 0;
 
-  white-space: nowrap;
-
   list-style-type: none;
-
-  overflow: auto;
 
   > .spectrum-Menu-sectionHeading {
     /* Support headings as LI */
     margin-top: var(--spectrum-menu-margin-x);
     margin-bottom: var(--spectrum-menu-margin-x);
+  }
+
+  &.is-selectable {
+    .spectrum-Menu-item {
+      padding-right: var(--spectrum-selectlist-padding-right);
+
+      &.is-selected {
+        padding-right: calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-popover-border-size));
+      }
+    }
   }
 }
 
@@ -42,13 +51,15 @@
   display: flex;
   align-items: center;
 
-  padding: 0 var(--spectrum-selectlist-option-padding) 0 calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-selectlist-border-size-key-focus));
+  box-sizing: border-box;
+
+  padding: var(--spectrum-selectlist-option-padding-y) var(--spectrum-selectlist-option-padding) var(--spectrum-selectlist-option-padding-y) calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-selectlist-border-size-key-focus));
+
   margin: 0;
 
   border-left: var(--spectrum-selectlist-border-size-key-focus) solid transparent;
 
-  height: var(--spectrum-selectlist-option-height);
-  line-height: var(--spectrum-selectlist-option-height);
+  min-height: var(--spectrum-selectlist-option-height);
 
   font-size: var(--spectrum-selectlist-option-text-size);
   font-weight: var(--spectrum-selectlist-option-text-font-weight);
@@ -59,6 +70,9 @@
   }
 
   &.is-selected {
+    /* Redundant, but included for backwards compatibility */
+    padding-right: calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-popover-border-size));
+
     .spectrum-Menu-checkmark {
       display: block;
     }
@@ -71,6 +85,9 @@
 
 .spectrum-Menu-itemLabel {
   flex: 1;
+}
+
+.spectrum-Menu-itemLabel--wrapping {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
