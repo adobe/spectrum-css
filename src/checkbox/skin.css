@@ -60,43 +60,6 @@
       color: var(--spectrum-checkbox-text-color-down);
     }
   }
-
-/* topdoc
-{{ checkbox/checkbox-error.yml }}
-*/
-  &.is-invalid {
-    /* Extra-specific selectors added here to handle checked state */
-    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
-    .spectrum-Checkbox-box {
-      border-color: var(--spectrum-checkbox-box-border-color-error);
-    }
-
-    .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-text-color-error);
-    }
-  }
-
-  &.is-invalid:hover {
-    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
-    .spectrum-Checkbox-box {
-      border-color: var(--spectrum-checkbox-box-border-color-error-hover);
-    }
-
-    .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-text-color-error-hover);
-    }
-  }
-
-  &.is-invalid:active {
-    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
-    .spectrum-Checkbox-box {
-      border-color: var(--spectrum-checkbox-box-border-color-error-down);
-    }
-
-    .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-text-color-error-down);
-    }
-  }
 }
 
 .spectrum-Checkbox-input {
@@ -126,5 +89,64 @@
 
   &:focus-ring ~ .spectrum-Checkbox-label {
     color: var(--spectrum-checkbox-text-color-key-focus) !important;
+  }
+}
+
+/* topdoc
+{{ checkbox/checkbox-quiet.yml }}
+*/
+.spectrum-Checkbox--quiet.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox--quiet .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+  border-color: var(--spectrum-checkbox-quiet-box-border-color-selected);
+}
+
+.spectrum-Checkbox--quiet:hover {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-color: var(--spectrum-checkbox-quiet-box-border-color-selected-hover);
+  }
+}
+
+.spectrum-Checkbox--quiet:active {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-color: var(--spectrum-checkbox-quiet-box-border-color-selected-down);
+  }
+}
+
+/* topdoc
+{{ checkbox/checkbox-error.yml }}
+*/
+.spectrum-Checkbox.is-invalid {
+  /* Extra-specific selectors added here to handle checked state */
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+  .spectrum-Checkbox-box {
+    border-color: var(--spectrum-checkbox-box-border-color-error);
+  }
+
+  .spectrum-Checkbox-label {
+    color: var(--spectrum-checkbox-text-color-error);
+  }
+
+  &:hover {
+    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    .spectrum-Checkbox-box {
+      border-color: var(--spectrum-checkbox-box-border-color-error-hover);
+    }
+
+    .spectrum-Checkbox-label {
+      color: var(--spectrum-checkbox-text-color-error-hover);
+    }
+  }
+
+  &:active {
+    .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    .spectrum-Checkbox-box {
+      border-color: var(--spectrum-checkbox-box-border-color-error-down);
+    }
+
+    .spectrum-Checkbox-label {
+      color: var(--spectrum-checkbox-text-color-error-down);
+    }
   }
 }
