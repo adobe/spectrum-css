@@ -2,6 +2,7 @@
 
 :root {
   --spectrum-dropdown-popover-max-width: var(--spectrum-global-dimension-size-3000);
+  --spectrum-dropdown-width: var(--spectrum-global-dimension-size-2400);
 }
 
 /* topdoc
@@ -13,9 +14,9 @@
 
   /* Truncate if menu options make us too wide */
   max-width: 100%;
+  width: var(--spectrum-dropdown-width);
   min-width: var(--spectrum-dropdown-min-width);
 }
-
 
 .spectrum-Dropdown-trigger {
   position: relative;
@@ -44,11 +45,6 @@
     font-weight: var(--spectrum-dropdown-placeholder-text-font-weight);
     font-style: var(--spectrum-dropdown-placeholder-text-font-style);
     transition: color var(--spectrum-transition-time) ease-in-out;
-  }
-}
-
-.spectrum-Dropdown--quiet {
-  .spectrum-Popover {
   }
 }
 
