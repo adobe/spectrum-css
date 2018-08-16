@@ -11,6 +11,8 @@
 
   --spectrum-selectlist-option-padding-y: var(--spectrum-global-dimension-size-85);
   --spectrum-selectlist-option-icon-padding-x: var(--spectrum-global-dimension-size-100);
+
+  --spectrum-selectlist-option-selectable-padding-right: calc(var(--spectrum-global-dimension-size-100) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-selectlist-option-icon-padding-x));
 }
 
 .spectrum-Menu {
@@ -31,7 +33,7 @@
 
   &.is-selectable {
     .spectrum-Menu-item {
-      padding-right: var(--spectrum-selectlist-padding-right);
+      padding-right: var(--spectrum-selectlist-option-selectable-padding-right);
 
       &.is-selected {
         padding-right: calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-popover-border-size));
@@ -91,6 +93,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.spectrum-Menu-checkmark {
+  display: none;
 }
 
 .spectrum-Menu-checkmark,
