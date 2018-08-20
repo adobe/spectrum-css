@@ -119,8 +119,8 @@
   .spectrum-Tabs-item {
     vertical-align: top;
 
-    & + .spectrum-Tabs-item,
-    & + .spectrum-ActionButton {
+    /* Target anything since React likes to add lots of happy <div>s around all things */
+    & + * {
       margin-left: var(--spectrum-tabs-item-gap);
     }
   }
