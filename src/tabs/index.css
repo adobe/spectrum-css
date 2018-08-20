@@ -120,7 +120,7 @@
     vertical-align: top;
 
     /* Target anything since React likes to add lots of happy <div>s around all things */
-    & + * {
+    & + *:not(.spectrum-Tabs-selectionIndicator) {
       margin-left: var(--spectrum-tabs-item-gap);
     }
   }
