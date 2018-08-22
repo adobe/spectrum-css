@@ -4,6 +4,8 @@ status: Beta
 description: >-
   Field label for use with form inputs.
 markup: |
-  <label for="lifestory" class="spectrum-FieldLabel">Life Story *</label>
+  <label for="lifestory" class="spectrum-FieldLabel">Life Story</label>
+  <input id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield">
 
-  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
+  <label for="lifestory2" class="spectrum-FieldLabel is-disabled">Life Story</label>
+  <input id="lifestory2" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield" disabled>

@@ -124,6 +124,10 @@
   width: var(--spectrum-icon-arrow-left-medium-width);
   height: var(--spectrum-icon-arrow-left-medium-height);
 }
+.spectrum-UIIcon-Asterisk {
+  width: var(--spectrum-fieldlabel-asterisk-size);
+  height: var(--spectrum-fieldlabel-asterisk-size);
+}
 .spectrum-UIIcon-CheckmarkMedium {
   width: var(--spectrum-icon-checkmark-medium-width);
   height: var(--spectrum-icon-checkmark-medium-height);
