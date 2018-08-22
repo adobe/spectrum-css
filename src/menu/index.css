@@ -25,6 +25,8 @@
 
   list-style-type: none;
 
+  overflow: auto;
+
   > .spectrum-Menu-sectionHeading {
     /* Support headings as LI */
     margin-top: var(--spectrum-menu-margin-x);
