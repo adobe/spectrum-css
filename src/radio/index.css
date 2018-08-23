@@ -4,7 +4,7 @@
   --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
   --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter) / 2) - calc(var(--spectrum-radio-circle-dot-size) / 2));
 
-  --spectrum-radio-labelbelow-label-margin: 0;
+  --spectrum-radio-labelbelow-label-margin: var(--spectrum-global-dimension-size-40) 0 0 0;
   --spectrum-radio-labelbelow-height: auto;
 }
 
