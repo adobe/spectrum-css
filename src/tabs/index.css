@@ -14,7 +14,7 @@
   z-index: 0;
 
   margin: 0;
-  padding: 0;
+  padding: 0 var(--spectrum-tabs-focus-ring-padding-x);
 
   /* Friends should align to the top of the tabs */
   vertical-align: top;
@@ -170,7 +170,7 @@
 
   .spectrum-Tabs-selectionIndicator {
     top: 0;
-    left: calc(calc(-1 * var(--spectrum-tabs-focus-ring-padding-x)) + var(--spectrum-tabs-focus-ring-size));
+    left: var(--spectrum-tabs-focus-ring-size);
     width: var(--spectrum-tabs-rule-height);
   }
 }
