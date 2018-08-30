@@ -763,10 +763,10 @@
 
     &:disabled,
     &.is-disabled {
-      background-color: var(--spectrum-actionbutton-quiet-background-color-selected-disabled);
-      border-color: var(--spectrum-actionbutton-quiet-border-color-selected-disabled);
+      background-color: var(--spectrum-tool-background-color-selected-disabled);
+      border-color: var(--spectrum-tool-border-color-selected-disabled);
       .spectrum-Icon {
-        color: var(--spectrum-actionbutton-quiet-text-color-selected-disabled);
+        color: var(--spectrum-tool-icon-color-selected-disabled);
       }
 
       .spectrum-Tool-hold {
@@ -786,6 +786,9 @@
   }
 
   &:active {
+    background-color: var(--spectrum-tool-background-color-down);
+    border-color: var(--spectrum-tool-border-color-down);
+
     .spectrum-Tool-hold {
       color: var(--spectrum-tool-hold-icon-color-down);
     }
