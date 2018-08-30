@@ -19,11 +19,16 @@
 :root {
   --spectrum-calendar-border-radius-reset: 0;
   --spectrum-calendar-border-width-reset: 0;
+  --spectrum-calendar-margin-y: 24px;
+  --spectrum-calendar-margin-x: 32px;
 }
 
 .spectrum-Calendar {
   display: inline-block;
-  /*width: var(--spectrum-calendar-width);*/
+}
+
+.spectrum-Calendar--padded {
+  margin: var(--spectrum-calendar-margin-x) var(--spectrum-calendar-margin-y);
 }
 
 .spectrum-Calendar-header {

@@ -1,9 +1,6 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-field-label-margin: 0 0 calc(var(--spectrum-textfield-label-gap-x) - 2px);
-  --spectrum-field-label-left-padding: var(--spectrum-global-dimension-size-100) var(--spectrum-textfield-label-gap-x) 0 0;
-  --spectrum-field-label-right-padding: var(--spectrum-global-dimension-size-100) var(--spectrum-textfield-label-gap-x) 0 0;
   --spectrum-tableform-border-spacing: 0 var(--spectrum-global-dimension-size-300);
   --spectrum-tableform-margin: calc(var(--spectrum-global-dimension-size-250) * -1) 0;
 }
@@ -11,15 +8,20 @@
 /* topdoc
 {{ fieldlabel/fieldlabel.yml }}
 */
+
+/* topdoc
+{{ fieldlabel/fieldlabel-required.yml }}
+*/
 .spectrum-FieldLabel {
   display: block;
 
   box-sizing: border-box;
 
-  margin: var(--spectrum-field-label-margin);
+  padding: var(--spectrum-fieldlabel-padding-top) 0 var(--spectrum-fieldlabel-padding-bottom);
 
-  font-size: var(--spectrum-text-size-text-label);
-  line-height: var(--spectrum-line-height-text-label);
+  font-size: var(--spectrum-fieldlabel-text-size);
+  font-weight: var(--spectrum-fieldlabel-text-font-weight);
+  line-height: var(--spectrum-fieldlabel-text-line-height);
 
   vertical-align: top;
 
@@ -28,12 +30,20 @@
   font-smoothing: subpixel-antialiased;
 }
 
+.spectrum-FieldLabel-requiredIcon {
+  margin: var(--spectrum-fieldlabel-asterisk-margin-y) 0 0 var(--spectrum-fieldlabel-asterisk-gap);
+}
+
 /* topdoc
 {{ fieldlabel/fieldlabel-left.yml }}
 */
 .spectrum-FieldLabel--left {
   display: inline-block;
-  padding: var(--spectrum-field-label-left-padding);
+  padding: var(--spectrum-fieldlabel-side-padding-top) var(--spectrum-fieldlabel-side-padding-x) 0 0;
+
+  & .spectrum-FieldLabel-requiredIcon {
+    margin: var(--spectrum-fieldlabel-side-asterisk-margin-y) 0 0 var(--spectrum-fieldlabel-asterisk-gap);
+  }
 }
 
 /* topdoc
@@ -42,7 +52,7 @@
 .spectrum-FieldLabel--right {
   display: inline-block;
   text-align: right;
-  padding: var(--spectrum-field-label-right-padding);
+  padding: var(--spectrum-fieldlabel-side-padding-top) var(--spectrum-fieldlabel-side-padding-x) 0 0;
 }
 
 /* topdoc

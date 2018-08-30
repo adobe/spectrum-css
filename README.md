@@ -6,7 +6,7 @@ The goal of this project is to provide a standard CSS implementation of the [Spe
 
 This project makes use of [Spectrum DNA](https://dna.corp.adobe.com) generated data. Its output is meant to be used to build elements in other frameworks such as [Torq Spectrum Web SDK][torq-spectrum-web-sdk], [React-Spectrum][reactspectrum-link], or [CoralUI][coralui-link]. **Consider using one of these projects instead of Spectrum CSS directly.**
 
-The output from this project can be seen at [spectrum-css.corp.adobe.com](http://spectrum-css.corp.adobe.com).
+The output from this project can be seen at [git.corp.adobe.com/pages/Spectrum/spectrum-css/](https://git.corp.adobe.com/pages/Spectrum/spectrum-css/).
 
 ## Spectrum, DNA, and Spectrum-CSS
 Spectrum, the design language, is represented by the DNA project as data values in JSON.  This is the `spectrum-origins` repository.  The structure of that repo is detailed in the README for that project.
@@ -17,7 +17,7 @@ The `spectrum-css` project can build both a 'multi-stop' and 'single-stop' versi
 
 `spectrum-css` organizes the CSS source files in the `src` folder.   Each Spectrum element has it's own folder.  That folder contains an `index.css` file for the basic structual CSS for all variants of an element.  There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
 
-The CSS source files also contain [Topdoc][topdoc_link] comments with a placeholder for documentation values that are injected at build time.  The source of those injected values is found in the YAML formatted files in the `docs` folder.  A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
+The CSS source files also contain [Topdoc][https://github.com/Topdoc/topdoc] comments with a placeholder for documentation values that are injected at build time.  The source of those injected values is found in the YAML formatted files in the `docs` folder.  A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
 
 A successful build will create a `dist` folder.  The `dist/docs` folder is where the Topdoc output and related template files will end up.  The
 
@@ -113,7 +113,7 @@ If your site is always mobile, you can get large by default by importing `index-
 
 If you need to display both Medium and Large, you can import `index.css` and `index-diff.css` for individual components, or `spectrum-core.css` and `spectrum-core-diff.css` for all components.
 
-You can then switch scales by adding the `.spectrum--large`  or `.spectrum--medium` class on an outer element.
+You can then switch scales by adding the `.spectrum--large`  or `.spectrum--medium` class on the `<html>` element.
 
 Note that the Spectrum CSS UI icons must change as well, see below for a full example.
 
@@ -133,17 +133,19 @@ function(error {Error}, svg {SVGElement})
 
 First, you'll need the Spectrum CSS UI icons, which come in two flavors:
 
-* `icons/spectrum-css-icons-medium.svg` - Medium icons, for desktop display
-* `icons/spectrum-css-icons-large.svg` - Large icons, for mobile display
+* `icons/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs
+* `icons/spectrum-css-icons-medium.svg` - Medium icons only, for desktop display
+* `icons/spectrum-css-icons-large.svg` - Large icons only, for mobile display
 
 Import the icon set for the scale you're using:
 
 ```js
-AdobeSpectrum.loadIcons('icons/spectrum-css-icons-medium.svg');
+AdobeSpectrum.loadIcons('icons/spectrum-css-icons.svg');
 ```
 
+If you're using `icons/spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
 
-Second, you'll need workflow icons for your app. The `icons/spectrum-icons.svg` file contains all of the Spectrum icons. If you're using React Spectrum, you'll import each icon where it's used. If you're not, you can import the entire set of icons in all sizes as follows:
+Finally, you'll need workflow icons for your app. The `icons/spectrum-icons.svg` file contains all of the Spectrum icons. If you're using React Spectrum, you'll import each icon where it's used. If you're not, you can import the entire set of icons in all sizes as follows:
 
 ```js
 AdobeSpectrum.loadIcons('icons/spectrum-icons.svg');
@@ -193,7 +195,8 @@ AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, s
 });
 ```
 
-
+### Lang support
+To take advantage of locale specific change, for instance, placeholders not italicizing Japanese, applications should specify a response header for the language, a meta tag lang, or declare a lang attribute on their element. That's lowest to highest priority, so a meta tag can be overridden by an inline attribute.
 
 ## Project Structure
 
@@ -206,6 +209,7 @@ In this project, there are three sets of source files.
 Run the following commands:
 
 ```
+npm install -g gulp-cli
 npm install
 gulp
 ```

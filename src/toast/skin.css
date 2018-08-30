@@ -1,5 +1,6 @@
 .spectrum-Toast {
   background-color: var(--spectrum-toast-background-color);
+  color: var(--spectrum-toast-background-color);
 }
 
 .spectrum-Toast-content {
@@ -56,12 +57,12 @@
 {{ toast/toast-success.yml }}
 */
 .spectrum-Toast--success {
-  background-color: var(--spectrum-toast-success-background-color);
-  color: var(--spectrum-toast-success-background-color);
+  background-color: var(--spectrum-toast-positive-background-color);
+  color: var(--spectrum-toast-positive-background-color);
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      color: var(--spectrum-toast-success-background-color);
+      color: var(--spectrum-toast-positive-background-color);
     }
   }
 }

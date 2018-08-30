@@ -1,0 +1,12 @@
+.spectrum-Dropzone {
+  border-color: var(--spectrum-dropzone-border-color);
+
+  &.is-dragged {
+    border-color: var(--spectrum-dropzone-border-color-selected-hover);
+    background-color: var(--spectrum-dropzone-background-color-selected-hover);
+
+    .spectrum-IllustratedMessage-illustration {
+      color: var(--spectrum-global-color-blue-400);
+    }
+  }
+}

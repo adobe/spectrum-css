@@ -2,6 +2,7 @@
 
 :root {
   --spectrum-splitbutton-trigger-border-left: 0;
+  --spectrum-splitbutton-trigger-min-width: 0;
   --spectrum-spltibutton-margin-left: 0;
   --spectrum-splitbutton-icon-gap: var(--spectrum-global-dimension-size-150);
 }
@@ -61,6 +62,8 @@
 
   padding-left: calc(var(--spectrum-padding) * calc(2 / 3));
   padding-right: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
+
+  min-width: var(--spectrum-splitbutton-trigger-min-width);
 
   &:focus-ring {
     box-shadow: none;

@@ -1,0 +1,16 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ dropzone/dropzone-default.yml }}
+*/
+.spectrum-Dropzone {
+  text-align: center;
+  border-width: var(--spectrum-dropzone-border-width);
+  border-radius: var(--spectrum-dropzone-border-radius);
+  padding: var(--spectrum-dropzone-padding);
+  border-style: dashed;
+
+  &.is-dragged {
+    border-style: solid;
+  }
+}

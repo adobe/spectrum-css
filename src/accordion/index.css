@@ -71,9 +71,9 @@
 
       position: absolute;
       left: 0;
-      top: -var(--spectrum-accordion-item-border-size);
+      top: calc(-1 * var(--spectrum-accordion-item-border-size));
+      bottom: calc(-1 * var(--spectrum-accordion-item-border-size));
 
-      height: calc(var(--spectrum-accordion-item-height-actual) + var(--spectrum-accordion-item-border-size));
       width: var(--spectrum-accordion-item-border-size-key-focus);
     }
   }

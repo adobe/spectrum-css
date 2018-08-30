@@ -4,6 +4,6 @@ status: Beta
 description: >-
   Field label right aligned
 markup: |
-  <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--right">Life Story *</label>
+  <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--right">Life Story</label>
 
   <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>

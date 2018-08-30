@@ -3,17 +3,18 @@
 :root {
   --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-height));
   --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-height));
+  --spectrum-tabs-icon-gap: var(--spectrum-global-dimension-size-75);
 }
 
 .spectrum-Tabs {
-  display: inline-flex;
+  display: flex;
 
   /* Contain the selection indicator */
   position: relative;
   z-index: 0;
 
   margin: 0;
-  padding: 0;
+  padding: 0 var(--spectrum-tabs-focus-ring-padding-x);
 
   /* Friends should align to the top of the tabs */
   vertical-align: top;
@@ -32,6 +33,7 @@
   z-index: 1;
 
   text-decoration: none;
+  white-space: nowrap;
 
   transition: color var(--spectrum-transition-time) ease-out;
   cursor: pointer;
@@ -51,7 +53,7 @@
 
     & + .spectrum-Tabs-itemLabel {
       /* Icons really aren't supposed to be here, so there is no gap variable in DNA */
-      margin-left: var(--spectrum-global-dimension-size-75);
+      margin-left: var(--spectrum-tabs-icon-gap);
     }
   }
 
@@ -110,20 +112,17 @@
 }
 
 .spectrum-Tabs--horizontal {
+  align-items: center;
+
   border-bottom: var(--spectrum-tabs-rule-height) solid;
 
   .spectrum-Tabs-item {
     vertical-align: top;
 
-    & + .spectrum-Tabs-item {
+    /* Target anything since React likes to add lots of happy <div>s around all things */
+    & + *:not(.spectrum-Tabs-selectionIndicator) {
       margin-left: var(--spectrum-tabs-item-gap);
     }
-  }
-
-  .spectrum-Tabs-itemLabel {
-    text-overflow: ellipsis;
-    text-transform: capitalize;
-    padding: 0;
   }
 
   .spectrum-Tabs-selectionIndicator {
@@ -134,22 +133,32 @@
     bottom: calc(-1 * var(--spectrum-tabs-rule-height));
   }
 
-  /* Optimization: margin is the same for compact and normal tabs */
-  /*
+
   &.spectrum-Tabs--compact {
+    /* The ActionButton is taller than the tabs, so don't push tabs around */
+    box-sizing: content-box;
+    height: var(--spectrum-tabs-compact-item-height);
+    align-items: end;
+
+    /* Optimization: margin is the same for compact and normal tabs */
+    /*
     .spectrum-Tabs-item {
       & + .spectrum-Tabs-item {
         margin-left: var(--spectrum-tabs-quiet-compact-item-gap);
       }
     }
+    */
   }
-  */
+}
+
+/* Quiet tabs should not extend all the way across the screen as their line doesn't */
+.spectrum-Tabs--quiet {
+  display: inline-flex;
 }
 
 .spectrum-Tabs--vertical {
+  display: inline-flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
 
   .spectrum-Tabs-item {
     margin-left: var(--spectrum-tabs-rule-height);
@@ -159,15 +168,13 @@
     }
   }
 
-  .spectrum-Tabs-itemLabel {
-    display: inline-block;
-    text-overflow: ellipsis;
-    vertical-align: top;
-  }
-
   .spectrum-Tabs-selectionIndicator {
     top: 0;
-    left: calc(calc(-1 * var(--spectrum-tabs-focus-ring-padding-x)) + var(--spectrum-tabs-focus-ring-size));
+    left: var(--spectrum-tabs-focus-ring-size);
     width: var(--spectrum-tabs-rule-height);
   }
 }
+
+/* topdoc
+{{ tabs/tabs-toomany.yml }}
+*/

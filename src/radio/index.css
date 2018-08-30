@@ -4,20 +4,22 @@
   --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
   --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter) / 2) - calc(var(--spectrum-radio-circle-dot-size) / 2));
 
-  --spectrum-radio-labelbelow-label-margin: 0;
+  --spectrum-radio-labelbelow-label-margin: var(--spectrum-global-dimension-size-40) 0 0 0;
   --spectrum-radio-labelbelow-height: auto;
 }
 
 .spectrum-Radio {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+
   position: relative;
 
-  font-size: 0;
-
   height: var(--spectrum-radio-height);
-  line-height: var(--spectrum-radio-height);
+  max-width: 100%;
 
   margin-right: calc(var(--spectrum-radio-cursor-hit-x) * 2);
+
+  vertical-align: top;
 }
 
 .spectrum-Radio-input {
@@ -42,43 +44,47 @@
   position: absolute;
   top: 0;
   left: calc(var(--spectrum-radio-cursor-hit-x) * -1);
-  width: calc(100% + var(--spectrum-radio-cursor-hit-x));
+  width: calc(100% + var(--spectrum-radio-cursor-hit-x) * 2);
   height: 100%;
 
   opacity: .0001;
+  z-index: 1;
 
   cursor: pointer;
 
-  &:checked + .spectrum-Radio-button {
-    border-width: var(--spectrum-radio-border-width-checked);
-  }
-
   &:disabled {
     cursor: default;
+  }
+
+  &:checked + .spectrum-Radio-button {
+    border-width: var(--spectrum-radio-border-width-checked);
   }
 }
 
 .spectrum-Radio-label {
   margin-left: var(--spectrum-radio-text-gap);
-
   font-size: var(--spectrum-radio-text-size);
 
-  vertical-align: middle;
-
   transition: color var(--spectrum-transition-time) ease-in-out;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .spectrum-Radio-button {
-  display: inline-block;
+  position: relative;
   box-sizing: border-box;
   width: var(--spectrum-radio-circle-diameter);
   height: var(--spectrum-radio-circle-diameter);
 
+  flex-grow: 0;
+  flex-shrink: 0;
+
   border-radius: var(--spectrum-radio-radius);
   border-width: var(--spectrum-radio-circle-border-size);
   border-style: solid;
-
-  vertical-align: middle;
 
   transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
 }
@@ -91,11 +97,6 @@
 
   .spectrum-Radio-button {
     flex-shrink: 0;
-  }
-
-  .spectrum-Radio-input {
-    /* Hit area */
-    width: calc(100% + calc(var(--spectrum-radio-cursor-hit-x) * 2));
   }
 
   .spectrum-Radio-label {

@@ -3,8 +3,11 @@
 
 :root {
   --spectrum-popover-target-offset: 13px;
-  --spectrum-popover-padding: 30px 29px;
-  --spectrum-popover-min-width: 270px;
+  --spectrum-popover-dialog-padding: 30px 29px;
+  --spectrum-popover-dialog-min-width: 270px;
+
+  --spectrum-popover-min-width: var(--spectrum-global-dimension-size-400);
+  --spectrum-popover-min-height: var(--spectrum-global-dimension-size-400);
 }
 
 /* topdoc
@@ -18,10 +21,10 @@
   flex-direction: column;
   box-sizing: border-box;
 
-  position: absolute;
+  min-width: var(--spectrum-popover-min-width);
+  min-height: var(--spectrum-popover-min-height);
 
-  min-width: var(--spectrum-component-single-line-width);
-  min-height: var(--spectrum-component-single-line-height);
+  position: absolute;
 
   border-style: solid;
   border-width: var(--spectrum-popover-border-size);
@@ -32,18 +35,13 @@
   &.is-open {
     @inherit: %spectrum-overlay--open;
   }
-
-  /* Don't let sharp corners be pokey */
-  .spectrum-Menu {
-    border-radius: var(--spectrum-popover-border-radius);
-  }
 }
 
 .spectrum-Popover-tip {
   position: absolute;
   /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
   overflow: hidden;
-  width: var(--spectrum-popover-tip-width);
+  width: calc(var(--spectrum-popover-tip-width) + 1px);
   height: calc((var(--spectrum-popover-tip-width)/2)+(var(--spectrum-popover-border-size)));
 
   &::after {
@@ -60,8 +58,8 @@
 }
 
 .spectrum-Popover--dialog {
-  min-width: var(--spectrum-popover-min-width);
-  padding: var(--spectrum-popover-padding);
+  min-width: var(--spectrum-popover-dialog-min-width);
+  padding: var(--spectrum-popover-dialog-padding);
 }
 
 /* topdoc
@@ -76,7 +74,7 @@
     @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Popover-tip {
-    right: -15px;
+    right: -16px;
     transform: rotate(-90deg);
   }
 }
@@ -90,7 +88,7 @@
     @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Popover-tip {
-    left: -15px;
+    left: -16px;
     transform: rotate(90deg);
   }
 }
