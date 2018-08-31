@@ -1,252 +1,202 @@
 ---
 name: Typography - Article
-description: Typographic article elements. . There are 5 levels of sectional styles with paired with a heading style at each level. Emphasis and strong emphasis are supported in both headings and sections relative to the atttributed language.
+description: Sectioning elements for long-form article content.
 status: Beta
 markup: |
-  <main class="spectrum-Body">
+  <div class="spectrum-Body" lang="en">
     <article class="spectrum-Article">
-      <h1 class="spectrum-Heading spectrum-Heading--1">
-        Article Heading 1 + <em>Emphasis</em> + <strong>Strong Emphasis</strong>
-      </h1>
       <section class="spectrum-Section spectrum-Section--1">
+        <h1 class="spectrum-Heading spectrum-Heading--1">Article Heading 1 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h1>
         <p>Article Section 1 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
         <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-      </section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">
-        Article Heading 2 + <em>Emphasis</em> + <strong>Strong Emphasis</strong>
-      </h2>
-      <section class="spectrum-Section spectrum-Section--2">
-        <p>Article Section 2 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-        <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-      </section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">
-        Article Heading 3 + <em>Emphasis</em> + <strong>Strong Emphasis</strong>
-      </h3>
-      <section class="spectrum-Section spectrum-Section--3">
-        <p>Article Section 3 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-        <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-      </section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">
-        Article Heading 4 + <em>Emphasis</em> + <strong>Strong Emphasis</strong>
-      </h4>
-      <section class="spectrum-Section spectrum-Section--4">
-        <p>Article Section 4 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-        <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-      </section>
-      <h5 class="spectrum-Heading spectrum-Heading--5">
-        Article Heading 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong>
-      </h5>
-      <section class="spectrum-Section spectrum-Section--5">
-        <p>Article Section 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-        <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
+        <section class="spectrum-Section spectrum-Section--2">
+          <h2 class="spectrum-Heading spectrum-Heading--2">Article Heading 2 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h2>
+          <p>Article Section 2 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
+          <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
+          <section class="spectrum-Section spectrum-Section--3">
+            <h3 class="spectrum-Heading spectrum-Heading--3">Article Heading 3 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h3>
+            <p>Article Section 3 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
+            <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
+            <section class="spectrum-Section spectrum-Section--4">
+              <h4 class="spectrum-Heading spectrum-Heading--4">Article Heading 4 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h4>
+              <p>Article Section 4 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
+              <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
+              <section class="spectrum-Section spectrum-Section--5">
+                <h5 class="spectrum-Heading spectrum-Heading--5">Article Heading 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h5>
+                <p>Article Section 5 + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
+                <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
     </article>
     <hr class="spectrum-Rule spectrum-Rule--medium">
     <article class="spectrum-Article" lang="ja">
-      <h1 class="spectrum-Heading spectrum-Heading--1">
-        記事の見出し1 + <em>重点</em> + <strong>強い強調</strong>
-      </h1>
       <section class="spectrum-Section spectrum-Section--1">
+        <h1 class="spectrum-Heading spectrum-Heading--1">記事の見出し1 + <em>重点</em> + <strong>強い強調</strong></h1>
         <p>第1条 + <em>重点</em> + <strong>強い強調</strong></p>
         <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
-      </section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">
-        記事の見出し2 + <em>重点</em> + <strong>強い強調</strong>
-      </h2>
-      <section class="spectrum-Section spectrum-Section--2">
-        <p>第2条 + <em>重点</em> + <strong>強い強調</strong></p>
-        <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
-      </section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">
-        記事の見出し3 + <em>重点</em> + <strong>強い強調</strong>
-      </h3>
-      <section class="spectrum-Section spectrum-Section--3">
-        <p>第3条 + <em>重点</em> + <strong>強い強調</strong></p>
-        <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
-      </section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">
-        記事の見出し4 + <em>重点</em> + <strong>強い強調</strong>
-      </h4>
-      <section class="spectrum-Section spectrum-Section--4">
-        <p>第4条 + <em>重点</em> + <strong>強い強調</strong></p>
-        <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
-      </section>
-      <h5 class="spectrum-Heading spectrum-Heading--5">
-        記事の見出し5 + <em>重点</em> + <strong>強い強調</strong>
-      </h5>
-      <section class="spectrum-Section spectrum-Section--5">
-        <p>第5条 + <em>重点</em> + <strong>強い強調</strong></p>
-        <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
+        <section class="spectrum-Section spectrum-Section--2">
+          <h2 class="spectrum-Heading spectrum-Heading--2">記事の見出し2 + <em>重点</em> + <strong>強い強調</strong></h2>
+          <p>第2条 + <em>重点</em> + <strong>強い強調</strong></p>
+          <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
+          <section class="spectrum-Section spectrum-Section--3">
+            <h3 class="spectrum-Heading spectrum-Heading--3">記事の見出し3 + <em>重点</em> + <strong>強い強調</strong></h3>
+            <p>第3条 + <em>重点</em> + <strong>強い強調</strong></p>
+            <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
+            <section class="spectrum-Section spectrum-Section--4">
+              <h4 class="spectrum-Heading spectrum-Heading--4">記事の見出し4 + <em>重点</em> + <strong>強い強調</strong></h4>
+              <p>第4条 + <em>重点</em> + <strong>強い強調</strong></p>
+              <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
+              <section class="spectrum-Section spectrum-Section--5">
+                <h5 class="spectrum-Heading spectrum-Heading--5">記事の見出し5 + <em>重点</em> + <strong>強い強調</strong></h5>
+                <p>第5条 + <em>重点</em> + <strong>強い強調</strong></p>
+                <p>Ryokoは、2014年にAdobeの最初の7つの重さからなるPan-CJKタイプフェイスファミリーSource Han Sansの設計作業を指揮しました。各ソースHan Sansフォントには、簡体字中国語、繁体字中国語、日本語、韓国語で使用されるスクリプトをサポートするために、65,000を超えるグリフが含まれています。ハンス・サンズの近代的なスタイルは、タブレットやスマートフォンなどの小さな機器でも、テキストをより明瞭に、より読みやすくします。</p>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
     </article>
     <hr class="spectrum-Rule spectrum-Rule--medium">
     <article class="spectrum-Article" lang="ko">
-      <h1 class="spectrum-Heading spectrum-Heading--1">
-        기사 제목 1 + <em>중요성</em> + <strong>강력한 강조</strong>
-      </h1>
       <section class="spectrum-Section spectrum-Section--1">
+        <h1 class="spectrum-Heading spectrum-Heading--1">기사 제목 1 + <em>중요성</em> + <strong>강력한 강조</strong></h1>
         <p>제 1 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
         <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
-     </section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">
-        기사 제목 2 + <em>중요성</em> + <strong>강력한 강조</strong>
-      </h2>
-      <section class="spectrum-Section spectrum-Section--2">
-        <p>제 2 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
-        <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
-      </section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">
-        기사 제목 3 + <em>중요성</em> + <strong>강력한 강조</strong>
-      </h3>
-      <section class="spectrum-Section spectrum-Section--3">
-        <p>제 3 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
-        <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
-      </section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">
-        기사 제목 4 + <em>중요성</em> + <strong>강력한 강조</strong>
-      </h4>
-      <section class="spectrum-Section spectrum-Section--4">
-        <p>제 4 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
-        <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
-      </section>
-      <h5 class="spectrum-Heading spectrum-Heading--5">
-        기사 제목 5 + <em>중요성</em> + <strong>강력한 강조</strong>
-      </h5>
-      <section class="spectrum-Section spectrum-Section--5">
-        <p>제 5 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
-        <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
+        <section class="spectrum-Section spectrum-Section--2">
+          <h2 class="spectrum-Heading spectrum-Heading--2">기사 제목 2 + <em>중요성</em> + <strong>강력한 강조</strong></h2>
+          <p>제 2 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
+          <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
+          <section class="spectrum-Section spectrum-Section--3">
+            <h3 class="spectrum-Heading spectrum-Heading--3">기사 제목 3 + <em>중요성</em> + <strong>강력한 강조</strong></h3>
+            <p>제 3 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
+            <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
+            <section class="spectrum-Section spectrum-Section--4">
+              <h4 class="spectrum-Heading spectrum-Heading--4">기사 제목 4 + <em>중요성</em> + <strong>강력한 강조</strong></h4>
+              <p>제 4 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
+              <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
+              <section class="spectrum-Section spectrum-Section--5">
+                <h5 class="spectrum-Heading spectrum-Heading--5">기사 제목 5 + <em>중요성</em> + <strong>강력한 강조</strong></h5>
+                <p>제 5 조 + <em>중요성</em> + <strong>강력한 강조</strong></p>
+                <p>Ryoko는 2014 년 7 가지 가중치로 구성된 Adobe의 최초 Pan-CJK 서체 제품군 인 Han Sans의 디자인 작업을 감독했습니다. 각 Source Sans 글꼴에는 중국어 간체, 중국어 번체, 일본어 및 한국어에서 사용되는 스크립트를 지원하는 65,000 개 이상의 글리프가 포함되어 있습니다. 한산 (Han Sans)의 출처는 알맞게 현대적인 스타일로 태블릿과 스마트 폰과 같은 소형 장치에서 텍스트를보다 선명하고 읽기 쉽게 만듭니다.</p>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
     </article>
     <hr class="spectrum-Rule spectrum-Rule--medium">
     <article class="spectrum-Article" lang="zh-hans">
-      <h1 class="spectrum-Heading spectrum-Heading--1">
-        文章标题1 + <em>重点</em> + <strong>强烈的重点</strong>
-      </h1>
       <section class="spectrum-Section spectrum-Section--1">
+        <h1 class="spectrum-Heading spectrum-Heading--1">文章标题1 + <em>重点</em> + <strong>强烈的重点</strong></h1>
         <p>第1条 + <em>重点</em> + <strong>强烈的重点</strong></p>
         <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
-      </section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">
-        文章标题2 + <em>重点</em> + <strong>强烈的重点</strong>
-      </h2>
-      <section class="spectrum-Section spectrum-Section--2">
-        <p>第2条 + <em>重点</em> + <strong>强烈的重点</strong></p>
-        <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
-      </section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">
-        文章标题3 + <em>重点</em> + <strong>强烈的重点</strong>
-      </h3>
-      <section class="spectrum-Section spectrum-Section--3">
-        <p>第3条 + <em>重点</em> + <strong>强烈的重点</strong></p>
-        <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
-      </section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">
-        文章标题4 + <em>重点</em> + <strong>强烈的重点</strong>
-      </h4>
-      <section class="spectrum-Section spectrum-Section--4">
-        <p>第4条 + <em>重点</em> + <strong>强烈的重点</strong></p>
-        <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
-      </section>
-      <h5 class="spectrum-Heading spectrum-Heading--5">
-        文章标题5 + <em>重点</em> + <strong>强烈的重点</strong>
-      </h5>
-      <section class="spectrum-Section spectrum-Section--5">
-        <p>第5条 + <em>重点</em> + <strong>强烈的重点</strong></p>
-        <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
+        <section class="spectrum-Section spectrum-Section--2">
+          <h2 class="spectrum-Heading spectrum-Heading--2">文章标题2 + <em>重点</em> + <strong>强烈的重点</strong></h2>
+          <p>第2条 + <em>重点</em> + <strong>强烈的重点</strong></p>
+          <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
+          <section class="spectrum-Section spectrum-Section--3">
+            <h3 class="spectrum-Heading spectrum-Heading--3">文章标题3 + <em>重点</em> + <strong>强烈的重点</strong></h3>
+            <p>第3条 + <em>重点</em> + <strong>强烈的重点</strong></p>
+            <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
+            <section class="spectrum-Section spectrum-Section--4">
+              <h4 class="spectrum-Heading spectrum-Heading--4">文章标题4 + <em>重点</em> + <strong>强烈的重点</strong></h4>
+              <p>第4条 + <em>重点</em> + <strong>强烈的重点</strong></p>
+              <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
+              <section class="spectrum-Section spectrum-Section--5">
+                <h5 class="spectrum-Heading spectrum-Heading--5">文章标题5 + <em>重点</em> + <strong>强烈的重点</strong></h5>
+                <p>第5条 + <em>重点</em> + <strong>强烈的重点</strong></p>
+                <p>2014年，Ryoko执导了Source Han Sans的设计工作，这是Adobe的第一个由七个重量组成的Pan-CJK字体系列。每个Source Han Sans字体包含超过65,000个字形，以支持简体中文，繁体中文，日文和韩文使用的脚本。来源Han Sans的中等现代风格使文字在平板电脑和智能手机等小型设备上更清晰，更易读。</p>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
     </article>
     <hr class="spectrum-Rule spectrum-Rule--medium">
     <article class="spectrum-Article" lang="zh-hant">
-      <h1 class="spectrum-Heading spectrum-Heading--1">
-        文章標題1 + <em>重點</em> + <strong>強烈的重點</strong>
-      </h1>
       <section class="spectrum-Section spectrum-Section--1">
+        <h1 class="spectrum-Heading spectrum-Heading--1">文章標題1 + <em>重點</em> + <strong>強烈的重點</strong></h1>
         <p>第1條 + <em>重點</em> + <strong>強烈的重點</strong></p>
         <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
-      </section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">
-        文章標題2 + <em>重點</em> + <strong>強烈的重點</strong>
-      </h2>
-      <section class="spectrum-Section spectrum-Section--2">
-        <p>第2條 + <em>重點</em> + <strong>強烈的重點</strong></p>
-        <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
-      </section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">
-        文章標題3 + <em>重點</em> + <strong>強烈的重點</strong>
-      </h3>
-      <section class="spectrum-Section spectrum-Section--3">
-        <p>第3條 + <em>重點</em> + <strong>強烈的重點</strong></p>
-        <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
-      </section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">
-        文章標題4 + <em>重點</em> + <strong>強烈的重點</strong>
-      </h4>
-      <section class="spectrum-Section spectrum-Section--4">
-        <p>第4條 + <em>重點</em> + <strong>強烈的重點</strong></p>
-        <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
-      </section>
-      <h5 class="spectrum-Heading spectrum-Heading--5">
-        文章標題5 + <em>重點</em> + <strong>強烈的重點</strong>
-      </h5>
-      <section class="spectrum-Section spectrum-Section--5">
-        <p>第5條 + <em>重點</em> + <strong>強烈的重點</strong></p>
-        <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
+        <section class="spectrum-Section spectrum-Section--2">
+          <h2 class="spectrum-Heading spectrum-Heading--2">文章標題2 + <em>重點</em> + <strong>強烈的重點</strong></h2>
+          <p>第2條 + <em>重點</em> + <strong>強烈的重點</strong></p>
+          <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
+          <section class="spectrum-Section spectrum-Section--3">
+            <h3 class="spectrum-Heading spectrum-Heading--3">文章標題3 + <em>重點</em> + <strong>強烈的重點</strong></h3>
+            <p>第3條 + <em>重點</em> + <strong>強烈的重點</strong></p>
+            <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
+            <section class="spectrum-Section spectrum-Section--4">
+              <h4 class="spectrum-Heading spectrum-Heading--4">文章標題4 + <em>重點</em> + <strong>強烈的重點</strong></h4>
+              <p>第4條 + <em>重點</em> + <strong>強烈的重點</strong></p>
+              <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
+              <section class="spectrum-Section spectrum-Section--5">
+                <h5 class="spectrum-Heading spectrum-Heading--5">文章標題5 + <em>重點</em> + <strong>強烈的重點</strong></h5>
+                <p>第5條 + <em>重點</em> + <strong>強烈的重點</strong></p>
+                <p>2014年，Ryoko執導了Source Han Sans的設計工作，這是Adobe的第一個由七個重量組成的Pan-CJK字體系列。每個Source Han Sans字體包含超過65,000個字形，以支持簡體中文，繁體中文，日文和韓文使用的腳本。來源Han Sans的中等現代風格使文字在平板電腦和智能手機等小型設備上更清晰，更易讀。</p>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
     </article>
     <hr class="spectrum-Rule spectrum-Rule--medium">
     <article class="spectrum-Article" lang="ar">
-      <h1 class="spectrum-Heading spectrum-Heading--1">المادة العنوان 1 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h1>
       <section class="spectrum-Section spectrum-Section--1">
+        <h1 class="spectrum-Heading spectrum-Heading--1">المادة العنوان 1 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h1>
         <p>المادة القسم 1 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
         <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
-      </section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">المادة العنوان 2 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h2>
-      <section class="spectrum-Section spectrum-Section--2">
-        <p>المادة القسم 2 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-        <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
-      </section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">المادة العنوان 3 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h3>
-      <section class="spectrum-Section spectrum-Section--3">
-        <p>المادة القسم 3 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-        <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
-     </section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">المادة العنوان 4 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h4>
-      <section class="spectrum-Section spectrum-Section--4">
-        <p>المادة القسم 4 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-        <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
-      </section>
-      <h5 class="spectrum-Heading spectrum-Heading--5">المادة العنوان 5 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h5>
-      <section class="spectrum-Section spectrum-Section--5">
-        <p>المادة القسم 5 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-        <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
+        <section class="spectrum-Section spectrum-Section--2">
+          <h2 class="spectrum-Heading spectrum-Heading--2">المادة العنوان 2 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h2>
+          <p>المادة القسم 2 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
+          <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
+          <section class="spectrum-Section spectrum-Section--3">
+            <h3 class="spectrum-Heading spectrum-Heading--3">المادة العنوان 3 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h3>
+            <p>المادة القسم 3 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
+            <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
+            <section class="spectrum-Section spectrum-Section--4">
+              <h4 class="spectrum-Heading spectrum-Heading--4">المادة العنوان 4 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h4>
+              <p>المادة القسم 4 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
+              <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
+              <section class="spectrum-Section spectrum-Section--5">
+                <h5 class="spectrum-Heading spectrum-Heading--5">المادة العنوان 5 + <em>تشديد</em> + <strong>تأكيد قوي</strong></h5>
+                <p>المادة القسم 5 + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
+                <p>بدأ روبرت Slimbach ، الذي انضم إلى Adobe في عام 1987 ، العمل بجدية على النوع والخط قبل أربع سنوات في قسم الرسم من Autologic في Newbury Park ، كاليفورنيا. ومنذ ذلك الحين ، ركز في المقام الأول على تصميم الوجوه النصية للتكنولوجيا الرقمية ، مستوحاة من المصادر الكلاسيكية. في عام 1991 ، حصل على جائزة Prix تشارلز Peignot من جمعية Typographique الدولية للتميز في نوع التصميم. وقد قام بتصميم خطوط محرفية لشركة Typeface International ، بالإضافة إلى Adobe Adobe.</p>
+              </section>
+            </section>
+         </section>
+        </section>
       </section>
     </article>
     <hr class="spectrum-Rule spectrum-Rule--medium">
     <article class="spectrum-Article" lang="he">
-      <h1 class="spectrum-Heading spectrum-Heading--1">מאמר כותרת 1 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h1>
       <section class="spectrum-Section spectrum-Section--1">
+        <h1 class="spectrum-Heading spectrum-Heading--1">מאמר כותרת 1 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h1>
         <p>סעיף 1 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
         <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
-      </section>
-      <h2 class="spectrum-Heading spectrum-Heading--2">מאמר כותרת 2 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h2>
-      <section class="spectrum-Section spectrum-Section--2">
-        <p>סעיף 2 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-        <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
-      </section>
-      <h3 class="spectrum-Heading spectrum-Heading--3">מאמר כותרת 3 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h3>
-      <section class="spectrum-Section spectrum-Section--3">
-        <p>סעיף 3 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-        <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
-      </section>
-      <h4 class="spectrum-Heading spectrum-Heading--4">מאמר כותרת 4 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h4>
-      <section class="spectrum-Section spectrum-Section--4">
-        <p>סעיף 4 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-        <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
-      </section>
-      <h5 class="spectrum-Heading spectrum-Heading--5">מאמר כותרת 5 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h5>
-      <section class="spectrum-Section spectrum-Section--5">
-        <p>סעיף 5 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-        <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
+        <section class="spectrum-Section spectrum-Section--2">
+          <h2 class="spectrum-Heading spectrum-Heading--2">מאמר כותרת 2 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h2>
+          <p>סעיף 2 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
+          <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
+          <section class="spectrum-Section spectrum-Section--3">
+            <h3 class="spectrum-Heading spectrum-Heading--3">מאמר כותרת 3 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h3>
+            <p>סעיף 3 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
+            <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
+            <section class="spectrum-Section spectrum-Section--4">
+              <h4 class="spectrum-Heading spectrum-Heading--4">מאמר כותרת 4 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h4>
+              <p>סעיף 4 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
+              <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
+              <section class="spectrum-Section spectrum-Section--5">
+                <h5 class="spectrum-Heading spectrum-Heading--5">מאמר כותרת 5 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h5>
+                <p>סעיף 5 + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
+                <p>רוברט Slimbach, שהצטרף Adobe בשנת 1987, החל לעבוד ברצינות על סוג קליגרפיה ארבע שנים קודם לכן במחלקת ציור סוג של Autologic ב ניוברי פארק, קליפורניה. מאז, הוא התרכז בעיקר בעיצוב פנים טקסט עבור טכנולוגיה דיגיטלית, השראה ממקורות קלאסיים. בשנת 1991, הוא קיבל את צ 'ארלס פריס פריו מן האגודה Typographyique Internationale למצוינות בעיצוב סוג. הוא עיצב גופי צורה עבור הבינלאומי Typeface Corporation, כמו גם Adobe של אופי החברה Adobe Clean.</p>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
     </article>
-  <main>
+  <div>

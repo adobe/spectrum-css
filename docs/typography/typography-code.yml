@@ -1,12 +1,10 @@
 ---
 name: Typography - Code
-description: Typographic styles for computer code. There are 5 sectional styles. Headings are omitted as they are not applicable to computer code. Small and strong emphasis elements are styled for comments and keywords.
+description: Typographic styles for computer code.
 status: Beta
 markup: |
-  <pre class="spectrum-Code">
-  <code class="spectrum-Section spectrum-Section--1">Code Section 1 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-  <code class="spectrum-Section spectrum-Section--2">Code Section 2 <small>+ De-mphasis</small> <strong>+ Strong Emphasis</strong></code>
-  <code class="spectrum-Section spectrum-Section--3">Code Section 3 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-  <code class="spectrum-Section spectrum-Section--4">Code Section 4 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-  <code class="spectrum-Section spectrum-Section--5">Code Section 5 <small>+ De-Emphasis</small> <strong>+ Strong Emphasis</strong></code>
-  </pre>
+  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--1">Code Section 1 <strong>+ Strong Emphasis</strong></code></pre>
+  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--2">Code Section 2 <strong>+ Strong Emphasis</strong></code></pre>
+  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--3">Code Section 3 <strong>+ Strong Emphasis</strong></code></pre>
+  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--4">Code Section 4 <strong>+ Strong Emphasis</strong></code></pre>
+  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--5">Code Section 5 <strong>+ Strong Emphasis</strong></code></pre>
