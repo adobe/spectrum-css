@@ -24,7 +24,21 @@ if (!Element.prototype.closest) {
 var curColorstop = 'light';
 function changeCSS(colorStop) {
   curColorstop = colorStop;
-  document.body.className = 'spectrum spectrum--'+colorStop;
+  Array.prototype.forEach.call(document.getElementsByClassName('spectrum'), function(el) {
+    el.classList.remove('spectrum--lightest');
+    el.classList.remove('spectrum--light');
+    el.classList.remove('spectrum--dark');
+    el.classList.remove('spectrum--darkest');
+    el.classList.add('spectrum--'+colorStop);
+  });
+
+  if (colorStop === 'light' || colorStop === 'lightest') {
+    document.querySelector('link[data-rainbow]').setAttribute('href', 'css/vendor/github.css');
+  }
+  else {
+    document.querySelector('link[data-rainbow]').setAttribute('href', 'css/vendor/blackboard.css');
+  }
+
   setURLParams();
 }
 
@@ -44,15 +58,15 @@ function closeDialog(dialog) {
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
   event.preventDefault();
-  var exampleMarkup = event.target.closest('.sdldocs-component').querySelector('.sdldocs-code-example');
+  var exampleMarkup = event.target.closest('.cssdocs-example-markup');
   var style = window.getComputedStyle(exampleMarkup);
-  var isHidden = style.getPropertyValue('display') === 'none';
-  event.target.innerHTML = isHidden ? 'hide markup' : 'show markup';
-  exampleMarkup.style.display = isHidden ? 'block' : 'none';
+  var isOpen = exampleMarkup.classList.contains('is-open');
+  event.target.innerHTML = isOpen ? 'Show Markup' : 'Hide Markup';
+  exampleMarkup.classList.toggle('is-open');
 }
 
 document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('sdldocs-code-link')) {
+  if (event.target.classList.contains('js-markup-toggle')) {
     toggleMarkupVisibility(event);
   }
 });
@@ -77,7 +91,7 @@ function toggleSliderFocus(event) {
 
 var currentTitle = null;
 function setHashFromScroll() {
-  var scrollTop = document.documentElement.scrollTop;
+  var scrollTop = document.querySelector('.sdldocs-components').scrollTop;
   var titles = document.getElementsByClassName('js-hashtitle');
   var minTitleCloseness = Infinity;
   var closestTitle = null;
@@ -95,8 +109,36 @@ function setHashFromScroll() {
     }
   }
   if (closestTitle) {
+    selectNavItem(closestTitle.getAttribute('href'));
     setURLParams(closestTitle.getAttribute('href'));
     currentTitle = closestTitle;
+  }
+}
+
+var selectedNavItem = null;
+function selectNavItem(href) {
+  var navLink = document.querySelector('.sdldocs-nav [href="' + href + '"]');
+  if (navLink) {
+    var navItem = navLink.parentElement;
+
+    if (navItem != selectedNavItem) {
+      if (selectedNavItem) {
+        selectedNavItem.classList.remove('is-selected');
+      }
+      navItem.classList.add('is-selected');
+
+      var nav = document.querySelector('.sdldocs-nav');
+      if (navItem.offsetTop + navItem.offsetHeight > nav.scrollTop + nav.offsetHeight) {
+        // Scroll down to the item
+        nav.scrollTop = navItem.offsetTop - nav.offsetHeight + navItem.offsetHeight;
+      }
+      else if (navItem.offsetTop < nav.scrollTop) {
+        // Scroll up to the item
+        nav.scrollTop = navItem.offsetTop;
+      }
+
+      selectedNavItem = navItem;
+    }
   }
 }
 
@@ -143,9 +185,9 @@ function changeScale(scale, method, noState) {
   if (currentTitle) {
     var count = 0;
     window.ignoreScroll = true;
-    document.documentElement.scrollTop = currentTitle.offsetTop;
+    document.querySelector('.sdldocs-components').scrollTop = currentTitle.offsetTop;
     var interval = window.setInterval(function() {
-      document.documentElement.scrollTop = currentTitle.offsetTop;
+      document.querySelector('.sdldocs-components').scrollTop = currentTitle.offsetTop;
       count++;
       if (count > 50) {
         clearInterval(interval);
@@ -167,9 +209,8 @@ function setURLParams(hash) {
   window.history.pushState({}, '', '?color='+curColorstop+'&scale='+curScale+'&method='+curMethod+hash);
 
   // Set radio buttons
-  document.querySelector('#radio-'+curScale).checked = true;
-  document.querySelector('#radio-'+curMethod).checked = true;
-  document.querySelector('#radio-'+curColorstop).checked = true;
+  document.querySelector('#scale').value = curScale+','+curMethod;
+  document.querySelector('#colorstop').value = curColorstop;
 }
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -191,7 +232,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // This is required for refreshes when the size is changed
     var el = document.querySelector(window.location.hash);
     if (el) {
-      document.documentElement.scrollTop = el.offsetTop;
+      document.querySelector('.sdldocs-components').scrollTop = el.offsetTop;
     }
   }
   else {
@@ -200,13 +241,22 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   // Set the hash while scrolling
-  var scrollTimeout = null;
-  window.addEventListener('scroll', function() {
-    clearTimeout(scrollTimeout);
+  var lastTime = 0;
+  var scrollTimeDelay = 100;
+  var hashTimeout;
+  document.querySelector('.sdldocs-components').addEventListener('scroll', function() {
+    clearTimeout(hashTimeout);
     if (window.ignoreScroll) {
       return;
     }
-    scrollTimeout = setTimeout(setHashFromScroll, 250);
+    var time = Date.now();
+    if (time - lastTime > scrollTimeDelay) {
+      setHashFromScroll();
+      lastTime = time;
+    }
+    else {
+      hashTimeout = setTimeout(setHashFromScroll, scrollTimeDelay);
+    }
   });
 });
 
@@ -246,7 +296,7 @@ function changeLoader(loader, value, submask1, submask2) {
 
 function makeDoubleSlider(slider) {
   var sliderOffsetWidth = slider.offsetWidth;
-  var sliderOffsetLeft = slider.offsetLeft;
+  var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
   var tracks = slider.querySelectorAll('.spectrum-Slider-track');
   var leftTrack = tracks[0];
   var middleTrack = tracks[1];
@@ -307,7 +357,7 @@ function makeDoubleSlider(slider) {
 
 function makeSlider(slider) {
   var sliderOffsetWidth = slider.offsetWidth;
-  var sliderOffsetLeft = slider.offsetLeft;
+  var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
   var tracks = slider.querySelectorAll('.spectrum-Slider-track');
   var leftTrack = tracks[0];
   var rightTrack = tracks[1];
@@ -374,7 +424,7 @@ function makeSlider(slider) {
 
 function makeDial(dial) {
   var dialOffsetWidth = dial.offsetWidth;
-  var dialOffsetLeft = dial.offsetLeft;
+  var dialOffsetLeft = dial.offsetLeft + dial.offsetParent.offsetLeft;
   var input = dial.querySelector('input');
   var handle = dial.querySelector('.spectrum-Dial-handle');
   var min = -45;

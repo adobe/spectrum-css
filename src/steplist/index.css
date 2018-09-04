@@ -258,7 +258,3 @@
 /* topdoc
 {{ steplist/steplist-tooltip.yml }}
 */
-.spectrum-Steplist-tooltip {
-  /* adjust the tooltip position */
-  margin-top: calc(var(--spectrum-steplist-marker-hitArea) * -1) !important;
-}

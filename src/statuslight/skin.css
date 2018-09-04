@@ -23,7 +23,8 @@
   background-color: var(--spectrum-statuslight-positive-dot-color);
 }
 
-.spectrum-StatusLight--active::before {
+.spectrum-StatusLight--info::before,
+/** @depreacted */.spectrum-StatusLight--active::before {
   background-color: var(--spectrum-statuslight-info-dot-color);
 }
 

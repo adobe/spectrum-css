@@ -1,7 +1,8 @@
 ---
-name: Table - Standard Multi-Select
+id: table
+name: Table - Multi-Select
 description: The standard multi-select table
-status: Beta
+ignoreDNA: true
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">

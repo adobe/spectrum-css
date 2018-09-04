@@ -1,11 +1,9 @@
 ---
+id: switch
 name: Switch - On/Off - Quiet
-description: The Spectrum Quiet Switch
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+description: The quiet variant of the Switch.
+ignoreDNA: true
+status: Verified
 markup: |
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--quiet">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0">

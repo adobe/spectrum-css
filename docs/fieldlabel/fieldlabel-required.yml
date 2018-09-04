@@ -1,8 +1,9 @@
 ---
+id: fieldlabel
 name: Field Label - Required
-status: Beta
 description: >-
   Field label for a required field.
+ignoreDNA: true
 markup: |
   <label for="lifestory3" class="spectrum-FieldLabel">Life Story
     <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">

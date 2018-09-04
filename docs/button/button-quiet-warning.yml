@@ -1,11 +1,6 @@
 ---
 name: Button - Quiet Warning
-description: A 'quiet warning' Spectrum button
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+status: Verified
 markup: |
   <button class="spectrum-Button spectrum-Button--warning spectrum-Button--quiet">
     <span class="spectrum-Button-label">Button</span>

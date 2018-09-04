@@ -17,6 +17,11 @@
   display: inline-flex;
   position: relative;
 
+  .spectrum-Dropdown {
+    width: auto;
+    min-width: 0;
+  }
+
   .spectrum-Dropdown-trigger {
     border-top-right-radius: var(--spectrum-searchwithin-border-radius);
     border-bottom-right-radius: var(--spectrum-searchwithin-border-radius);

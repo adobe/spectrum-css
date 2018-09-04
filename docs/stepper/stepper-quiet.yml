@@ -1,11 +1,7 @@
 ---
 name: Stepper - Quiet
-description: A Spectrum stepper - quiet
-status: Beta
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+description: The quiet variant of the Stepper.
+status: Deprecated
 markup: |
   <div class="spectrum-Stepper spectrum-Stepper--quiet">
     <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">

@@ -1,16 +1,9 @@
 ---
 name: Slider - Ramp
-description: Spectrum ramp slider
-status: Released
-modifiers:
-  :disabled: Disabled state
-  :hover: Hover state
-  :focus: Focused state
-  :active: Active state
 markup: |
   <div class="spectrum-Slider spectrum-Slider--ramp">
     <div class="spectrum-Slider-labelContainer">
-      <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label - Default</label>
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label</label>
       <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-10">14</div>
     </div>
     <div class="spectrum-Slider-controls">

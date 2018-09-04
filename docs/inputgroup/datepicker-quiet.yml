@@ -1,6 +1,5 @@
 name: Date Picker - Quiet
 description: A date picker uses the input group component to display a field with a button next to it
-status: Beta
 markup: |
   <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-haspopup="true">
     <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" aria-invalid="false" placeholder="Choose a date" value="">

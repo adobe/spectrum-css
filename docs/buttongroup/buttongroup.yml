@@ -1,11 +1,5 @@
 ---
 name: Button Group
-description: A group for buttons, action buttons, or tools.
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
 markup: |
   <div class="spectrum-ButtonGroup">
     <button class="spectrum-ActionButton">

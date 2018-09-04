@@ -1,11 +1,6 @@
 ---
 name: Button - Warning
-description: A Spectrum button in 'warning' style
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+status: Verified
 markup: |
   <button class="spectrum-Button spectrum-Button--warning">
     <span class="spectrum-Button-label">Button</span>

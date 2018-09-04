@@ -33,14 +33,17 @@ function watch() {
 
   gulp.watch([
     'docs/**/*.yml',
-    'tasks/resources/docs/js/*.js'
+    'topdoc/lib/template.pug',
+    'topdoc/lib/index.js',
+    'tasks/resources/docs/js/*.js',
+    'tasks/resources/docs/css/*.css'
   ], gulp.series('reload-docs'));
 
   gulp.watch('icons/*.svg', gulp.series('reload-icons'));
 }
 
 gulp.task('reload-css', gulp.series('build-css', reload));
-gulp.task('reload-docs', gulp.series('build-lite', reload));
+gulp.task('reload-docs', gulp.series('build-docs', reload));
 gulp.task('reload-icons', gulp.series('icons', reload));
 
 gulp.task('dev', gulp.series('build', serve, watch));

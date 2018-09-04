@@ -1,19 +1,14 @@
 ---
 name: Label - Large
-description: A large Spectrum label
-status: Beta
+description: A large label.
+id: label-colored
+ignoreDNA: true
 markup: |
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
-  style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green"
-  style="margin: 0rem 0.25rem 0.25rem;">Green Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--blue"
-  style="margin: 0rem 0.25rem 0.25rem;">Blue Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red"
-  style="margin: 0rem 0.25rem 0.25rem;">Red Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--orange"
-  style="margin: 0rem 0.25rem 0.25rem;">Orange Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey">Grey Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red">Red Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--orange">Orange Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--yellow">Yellow Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--seafoam">Seafoam Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green">Green Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--blue">Blue Label</span>
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--fuchsia">Fuchsia Label</span>

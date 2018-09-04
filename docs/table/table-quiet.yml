@@ -1,7 +1,8 @@
 ---
+id: table
 name: Table - Quiet
 description: The quiet table
-status: Beta
+ignoreDNA: true
 markup: |
   <table class="spectrum-Table spectrum-Table--quiet">
     <thead class="spectrum-Table-head">

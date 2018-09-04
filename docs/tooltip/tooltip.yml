@@ -1,0 +1,28 @@
+---
+name: Tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--left is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--right is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--bottom is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>

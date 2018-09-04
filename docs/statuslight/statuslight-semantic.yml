@@ -1,12 +1,37 @@
 ---
 name: Status Light - Semantic
-description: Color has meaning; use these to convey specific meaning.
-status: Beta
-markup: |
-  <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
-
-  <div class="spectrum-StatusLight is-disabled">Disabled</div>
+id: statuslight
+components:
+  statuslight-neutral:
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
+  statuslight-active:
+    name: Status Light (Active)
+    description: The active variant of Status Light
+    details: Use the `info` variant instead
+    status: Deprecated
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
+  statuslight-info:
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--info">Active</div>
+  statuslight-positive:
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
+  statuslight-notice:
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
+  statuslight-negative:
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
+  statuslight:
+    name: Status Light (disabled)
+    description: The disabled state of Status Light.
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight is-disabled">Disabled</div>

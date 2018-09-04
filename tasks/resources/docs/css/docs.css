@@ -1,112 +1,325 @@
-.sdldocs-main-content,
-.sdldocs-header {
-  margin: 0 auto;
-  max-width: 1100px;
+html, body {
+  margin: 0;
 }
-.sdldocs-header-title {
-  margin-left: 12px;
+
+.cssdocs-component {
+  margin: 0 1rem 4rem 1rem;
 }
+
+.cssdocs-example {
+  margin: 1rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 6px;
+  border: 1px solid rgb(200, 200, 200);
+
+  box-shadow: 0 0 18px rgba(0,0,0,.15);
+}
+
+.cssdocs-example-demo,
+.cssdocs-example-markup {
+  box-sizing: border-box;
+}
+
+.cssdocs-example-demo {
+  flex: 1;
+
+  padding: 3rem 4rem;
+
+  border-radius: 6px 6px 0 0;
+}
+
+.cssdocs-example-markup {
+  position: relative;
+  max-width: 100%;
+  max-height: 100px;
+
+  padding: 0.75rem;
+
+  border-radius: 0 0 6px 6px;
+  border-top: 1px solid rgb(200, 200, 200);
+
+  background: rgb(253, 253, 253);
+
+  overflow: hidden;
+}
+
+.cssdocs-example-markup.is-open {
+  max-height: 100%;
+}
+
+.cssdocs-example-markup.is-open .cssdocs-example-markupToggle::before {
+  display: none;
+}
+
+.cssdocs-example-markupToggle + pre {
+  padding-bottom: 1rem;
+}
+
+.spectrum--dark .cssdocs-example,
+.spectrum--darkest .cssdocs-example {
+  box-shadow: 0 0 18px rgba(240, 240, 240, .20);
+}
+
+.spectrum--dark .cssdocs-example-demo,
+.spectrum--dark .cssdocs-example-markup {
+  border-color: rgb(80, 80, 80);
+}
+
+.spectrum--dark .cssdocs-example-markup {
+  background-color: rgb(40, 40, 40);
+}
+
+.spectrum--darkest .cssdocs-example-demo,
+.spectrum--darkest .cssdocs-example-markup {
+  border-color: rgb(60, 60, 60);
+}
+
+.spectrum--darkest .cssdocs-example-markup {
+  background-color: rgb(15, 15, 15);
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+}
+
+pre code {
+  background: transparent;
+  white-space: pre-wrap;
+}
+
+.cssdocs-example-markupToggle {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  box-sizing: border-box;
+  padding: 0.25rem 0;
+
+  background: white;
+
+  text-align: center;
+}
+
+.cssdocs-example-markupToggle::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+
+  width: 100%;
+  height: 32px;
+
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,rgba(255,255,255,1) 100%);
+}
+
+
+.spectrum--dark .cssdocs-example-markupToggle,
+.spectrum--darkest .cssdocs-example-markupToggle {
+  background: rgb(40, 40, 40);
+}
+.spectrum--dark .cssdocs-example-markupToggle::before,
+.spectrum--darkest .cssdocs-example-markupToggle::before {
+  background: linear-gradient(to bottom, rgba(40,40,40,0) 10%,rgba(40,40,40,1) 100%);
+}
+
+
+/** **/
+
+.sdldocs-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sdldocs-scrollable {
+  -webkit-background-clip: text;
+  -webkit-overflow-scrolling: touch;
+  transition: background-color 250ms linear;
+  background-color: rgba(0, 0, 0, 0) !important;
+  transition-delay: 750ms;
+}
+
+.sdldocs-scrollable > .spectrum {
+  padding-right: 6px;
+}
+
+.sdldocs-scrollable:hover {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+  transition-delay: 0s;
+}
+
+.sdldocs-scrollable::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+}
+
+.sdldocs-scrollable::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+}
+
+.sdldocs-scrollable::-webkit-scrollbar,
+.sdldocs-scrollable::-webkit-scrollbar-thumb {
+  background-color: inherit;
+  transition: background-color 250ms linear;
+}
+
+.sdldocs-scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.sdldocs-scrollable::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .wf-loading {
   visibility: hidden;
 }
-.sdldocs-component {
-  margin-bottom: 3rem;
+
+.sdldocs-splitview {
+  height: 100%;
+  margin: 8px;
 }
-.sdldocs-component-description {
+
+.sdldocs-splitview > * {
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.sdldocs-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.sdldocs-spectrumVersion {
   padding-left: 1rem;
-  font-size: 0.99rem;
 }
-.sdldocs-component-description p {
-  margin-top: 0;
+
+.sdldocs-dnaStatus {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
 }
-.sdldocs-component-markup {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+
+.sdl-switcher {
+  flex: 1;
+  text-align: right;
 }
-.sdldocs-code-link a {
-  color: #005abe;
+
+.sdl-switcher .spectrum-Dropdown + .spectrum-FieldLabel {
+  margin-left: 2rem;
+}
+
+.sdl-switcher .spectrum-Dropdown {
+  width: 124px !important;
+}
+
+.sdldocs-main-content {
+  margin: 0 auto;
+}
+
+.sdldocs-header-title {
+  margin-left: 12px;
+}
+
+.sdldocs-component {
+  margin: 0 0 5rem 0;
+}
+
+.sdldocs-subtleLink {
+  display: inline-block;
   text-decoration: none;
+  color: inherit;
+  outline: none;
+  vertical-align: middle;
 }
-.sdldocs-code-link a:hover {
+
+.sdldocs-subtleLink:focus {
   text-decoration: underline;
+  text-decoration-color: rgb(38, 128, 235);
 }
-.sdldocs-code-example {
-  display: none;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  padding: 0 14px 25px 14px;
-  font-size: 12px;
-  border-radius: 1px;
-  font-weight: 400;
-  width: 100%;
+
+.sdldocs-component-name {
+  margin: 0;
 }
-.sdldocs-code-example-title {
-  margin-bottom: 3px;
+
+.sdldocs-subComponent {
+  margin: 2rem 0;
 }
+
+.sdldocs-subComponent-name {
+  margin: 0;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sdldocs-subComponent-header {
+  margin: 1rem 0 0 0;
+}
+
+.sdldocs-subComponent-header + .sdldocs-subComponent-example {
+  margin-top: 1rem;
+}
+
+.sdldocs-subComponent-example {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.sdldocs-component-description {
+}
+
 pre.html {
   margin: 0;
   white-space: pre-wrap; /* css-3 */
   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
 }
-.u-sdldocs-clearfix {
-  zoom: 1;
+
+.sdldocs-header-logo-image {
+  vertical-align: middle;
 }
-.u-sdldocs-clearfix:before,
-.u-sdldocs-clearfix:after {
-  content: "";
-  display: table;
-}
-.u-sdldocs-clearfix:after {
-  clear: both;
-}
-.sdldocs-header {
-  min-height: 48px;
-  line-height: 48px;
-}
+
 .sdldocs-floating {
   position: fixed;
   top: 0;
   right: 0;
   z-index: 0;
 }
-.sdldocs-header-logo-image {
-  vertical-align: middle;
-}
-.sdldocs-colorstop {
-  min-width: 300px;
-  float: right;
-}
-.sdldocs-colorstop-label {
-  font-size: 0.9rem;
-  padding-right: 0;
-}
-.sdldocs-colorstop-selector {
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-align: left;
-  padding-left: 4px;
-}
-@media (min-width: 48em) {
-  .sdldocs-header-title {
-    display: inline;
-  }
-}
+
 .sdldocs-nav {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
   display: none;
 }
-.sdldocs-nav-item {
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+.sdldocs-components {
+  flex: 1;
 }
-.sdldocs-nav-link {
-  color: #6b6b6b;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 80px;
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
 @media (min-width: 48em) {
   .sdldocs-nav {
     display: block;
@@ -120,10 +333,6 @@ pre.html {
   }
 }
 
-.sdldocs-subtleLink {
-  text-decoration: none;
-  color: inherit;
-}
 
 .sdldocs-badge {
   display: inline-flex;
@@ -154,7 +363,11 @@ pre.html {
 
 /* For documentation beautification only - DO NOT COPY */
 .dummy-spacing {
-  height: 160px;
+  height: 175px;
+}
+
+.spectrum--large .dummy-spacing {
+  height: 225px;
 }
 
 /* Limit slider widths */

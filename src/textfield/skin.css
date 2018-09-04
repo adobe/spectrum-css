@@ -1,8 +1,5 @@
-/* TODO: is it wonky that textarea shares the selector? */
-/* It's a little wonky, right? */
-
 /* topdoc
-{{ textfield/textarea-default.yml }}
+{{ textfield/textarea.yml }}
 */
 
 /* topdoc
@@ -10,7 +7,7 @@
 */
 
 /* topdoc
-{{ textfield/textfield-default.yml }}
+{{ textfield/textfield.yml }}
 */
 .spectrum-Textfield {
   background-color: var(--spectrum-textfield-background-color);

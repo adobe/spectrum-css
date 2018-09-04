@@ -1,11 +1,5 @@
 ---
 name: Bar Loader - Small
-description: A small bar loader
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
 markup: |
   <div style="width: 200px; height: 25px; padding-top: 10px;">
     <div class="spectrum-BarLoader spectrum-BarLoader--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">

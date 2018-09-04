@@ -9,12 +9,13 @@
 
   width: auto;
 
-  padding: 6px 9px;
+  padding: var(--spectrum-global-dimension-size-50) var(--spectrum-global-dimension-size-125);
 
   border-radius: var(--spectrum-border-radius);
 
-  font-size: var(--spectrum-label-text-size);
-  line-height: var(--spectrum-label-text-line-height);
+  font-size: var(--spectrum-global-dimension-size-150);
+
+  cursor: default;
 
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
@@ -25,5 +26,14 @@
 {{ label/label-large.yml }}
 */
 .spectrum-Label--large {
-  padding: 10px 14px;
+  font-size: var(--spectrum-global-dimension-size-175);
+  padding: var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-150);
+}
+
+/* topdoc
+{{ label/label-small.yml }}
+*/
+.spectrum-Label--small {
+  font-size: var(--spectrum-global-dimension-font-size-50);
+  padding: var(--spectrum-global-dimension-size-40) var(--spectrum-global-dimension-size-85);
 }

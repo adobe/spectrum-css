@@ -1,11 +1,8 @@
 ---
+id: splitbutton
 name: SplitButton - CTA
 description: A CTA split button.
-status: Beta
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+ignoreDNA: true
 markup: |
   <div class="spectrum-SplitButton">
     <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>

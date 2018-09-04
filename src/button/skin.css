@@ -177,7 +177,7 @@
 }
 
 /* topdoc
-{{ button/button-overbackground.yml }}
+{{ button/button-over-background.yml }}
 */
 .spectrum-Button--overBackground {
   background-color: var(--spectrum-button-over-background-background-color);
@@ -213,7 +213,7 @@
 }
 
 /* topdoc
-{{ button/button-quiet-overbackground.yml }}
+{{ button/button-quiet-over-background.yml }}
 */
 .spectrum-Button--overBackground.spectrum-Button--quiet,
 .spectrum-ClearButton--overBackground {
@@ -318,7 +318,7 @@
 }
 
 /* topdoc
-{{ button/button-action.yml }}
+{{ button/actionbutton.yml }}
 */
 .spectrum-ActionButton {
   background-color: var(--spectrum-actionbutton-background-color);
@@ -442,7 +442,7 @@
 }
 
 /* topdoc
-{{ button/button-quietaction.yml }}
+{{ button/actionbutton-quiet.yml }}
 */
 .spectrum-ActionButton--quiet {
   background-color: var(--spectrum-actionbutton-quiet-background-color);
@@ -598,7 +598,7 @@
 }
 
 /* topdoc
-{{ button/button-icon.yml }}
+{{ button/clearbutton-medium.yml }}
 */
 
 .spectrum-FieldButton {

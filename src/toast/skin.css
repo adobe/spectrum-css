@@ -1,3 +1,7 @@
+.spectrum-Tooltip-label p {
+  margin: 0;
+}
+
 .spectrum-Toast {
   background-color: var(--spectrum-toast-background-color);
   color: var(--spectrum-toast-background-color);
@@ -11,9 +15,6 @@
   color: white;
 }
 
-/* topdoc
-{{ toast/toast-warning.yml }}
-*/
 .spectrum-Toast--warning {
   background-color: var(--spectrum-toast-warning-background-color);
   color: var(--spectrum-toast-warning-background-color);
@@ -25,10 +26,8 @@
   }
 }
 
-/* topdoc
-{{ toast/toast-error.yml }}
-*/
-.spectrum-Toast--error {
+.spectrum-Toast--negative,
+/** @deprecated */.spectrum-Toast--error {
   background-color: var(--spectrum-toast-error-background-color);
   color: var(--spectrum-toast-error-background-color);
 
@@ -39,9 +38,6 @@
   }
 }
 
-/* topdoc
-{{ toast/toast-info.yml }}
-*/
 .spectrum-Toast--info {
   background-color: var(--spectrum-toast-info-background-color);
   color: var(--spectrum-toast-info-background-color);
@@ -53,10 +49,8 @@
   }
 }
 
-/* topdoc
-{{ toast/toast-success.yml }}
-*/
-.spectrum-Toast--success {
+.spectrum-Toast--positive,
+/** @deprecated */.spectrum-Toast--success {
   background-color: var(--spectrum-toast-positive-background-color);
   color: var(--spectrum-toast-positive-background-color);
 

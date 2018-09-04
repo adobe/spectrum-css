@@ -2,7 +2,7 @@
 @import 'animation.css';
 
 /* topdoc
-{{ circleloader/circleloader-default.yml }}
+{{ circleloader/circleloader-medium.yml }}
 */
 .spectrum-CircleLoader {
   display: inline-block;
@@ -102,7 +102,7 @@
 }
 
 /* topdoc
-{{ circleloader/circleloader-overbackground.yml }}
+{{ circleloader/circleloader-medium-over-background.yml }}
 */
 .spectrum-CircleLoader--overBackground {
   width: var(--spectrum-loader-circle-large-width);
@@ -155,5 +155,5 @@
 */
 
 /* topdoc
-{{ circleloader/circleloader-indeterminate-overbackground.yml }}
+{{ circleloader/circleloader-indeterminate-over-background.yml }}
 */

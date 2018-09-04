@@ -143,6 +143,8 @@
   position: relative;
 
   .spectrum-Tooltip {
+    position: absolute;
+    white-space: nowrap;
     /* Required for animations to work, !important for diff scaling to work */
     visibility: visible !important;
     transition: transform var(--spectrum-transition-time) ease-in-out;
@@ -151,24 +153,25 @@
 
   .spectrum-Tooltip--right,
   .spectrum-Tooltip--left {
-    top:50%;
+    top: 50%;
     .spectrum-Tooltip-tip {
       top: 50%;
-      margin-top: -4px;
+      margin-top: -5px;
     }
   }
 
   .spectrum-Tooltip--right {
-    transform: translate(-8px, -50%);
+    left: 100%;
+    transform: translate(0, -50%);
   }
 
   .spectrum-Tooltip--left {
-    transform: translate(calc(-100% + 8px), -50%);
+    transform: translate(-100%, -50%);
   }
 
   .spectrum-Tooltip--bottom,
   .spectrum-Tooltip--top {
-    left:50%;
+    left: 50%;
     .spectrum-Tooltip-tip {
       left: 50%;
       margin-left: -4px;
@@ -176,6 +179,7 @@
   }
 
   .spectrum-Tooltip--bottom {
+    top: 100%;
     transform: translate(-50%, -8px);
   }
 
@@ -188,7 +192,7 @@
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
-    transform: translate(-50%, 8px);
+    transform: translate(-50%, 0);
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--top {
@@ -196,10 +200,10 @@
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--left {
-    transform: translate(-100%, -50%);
+    transform: translate(calc(-100% - 8px), -50%);
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--right {
-    transform: translate(0, -50%);
+    transform: translate(8px, -50%);
   }
 }

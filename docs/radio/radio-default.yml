@@ -1,11 +1,6 @@
 ---
-name: Radio - Default
-description: The Spectrum radio thingy
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+name: Radio
+status: Verified
 markup: |
   <div class="spectrum-Radio">
     <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">

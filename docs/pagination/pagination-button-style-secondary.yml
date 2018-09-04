@@ -1,7 +1,7 @@
 ---
 name: Pagination - Button Style Secondary
 description: A Spectrum 'button style secondary' pagination
-status: Beta
+ignoreDNA: true
 markup: |
   <nav class="spectrum-SplitButton spectrum-SplitButton--left">
     <a href="#" class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">

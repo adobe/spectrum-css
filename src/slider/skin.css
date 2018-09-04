@@ -1,5 +1,5 @@
 /* topdoc
-{{ slider/slider-default.yml }}
+{{ slider/slider.yml }}
 */
 /* topdoc
 {{ slider/slider-label.yml }}
@@ -8,7 +8,7 @@
 {{ slider/slider-filled.yml }}
 */
 /* topdoc
-{{ slider/slider-video.yml }}
+{{ slider/slider-player.yml }}
 */
 /* topdoc
 {{ slider/slider-tick.yml }}
@@ -99,7 +99,7 @@
 }
 
 /* topdoc
-{{ slider/slider-double.yml }}
+{{ slider/slider-range.yml }}
 */
 .spectrum-Slider--range {
   .spectrum-Slider-track {

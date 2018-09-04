@@ -1,11 +1,5 @@
 ---
 name: Breadcrumbs - Title
-description: A Spectrum 'page title' breadcrumbs
-status: Beta
-modifiers:
-  ':hover': Hover state
-  ':focus': Focused
-  ':active': Active state
 markup: |
   <nav>
     <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
