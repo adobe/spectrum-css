@@ -20,7 +20,7 @@ html.spectrum--medium
     script(src='js/docs.js')
     script(src='js/vendor/focus-ring-polyfill.js')
 
-  body.spectrum
+  body.spectrum.spectrum--light
     .sdldocs-outer
       header.sdldocs-header
         h2.spectrum-Heading--pageTitle
@@ -56,14 +56,14 @@ html.spectrum--medium
 
       section.sdldocs-splitview.spectrum-SplitView.spectrum-SplitView--horizontal
         .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-nav
-          nav.spectrum
+          nav.spectrum.spectrum--light
             ul.spectrum-SideNav
               each component in document.components
                 li.spectrum-SideNav-item
                   a.spectrum-SideNav-itemLink(href='#'+component.slug)= component.name
 
         .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-components
-          .spectrum
+          .spectrum.spectrum--light
             each component in document.components
               -
                 var showSubStyles = false;
