@@ -12,6 +12,8 @@
   --spectrum-selectlist-option-padding-y: var(--spectrum-global-dimension-size-85);
 
   --spectrum-selectlist-option-selectable-padding-right: calc(var(--spectrum-global-dimension-size-100) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-selectlist-option-icon-padding-x));
+
+  --spectrum-selectlist-option-icon-margin-top: var(--spectrum-global-dimension-size-50);
 }
 
 .spectrum-Menu {
@@ -103,6 +105,8 @@
 
 .spectrum-Menu-checkmark {
   display: none;
+  align-self: flex-start;
+  margin-top: var(--spectrum-selectlist-option-icon-margin-top);
 }
 
 .spectrum-Menu-checkmark,
