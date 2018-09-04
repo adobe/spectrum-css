@@ -8,7 +8,7 @@
     "ci-all": "npm run build",
     "bump": "node node_modules/.bin/dna-npm-bump-version",
     "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\"",
-    "release:stable": "npm run build && npm run bump && npm run publish:stable",
+    "release:stable": "npm run bump && npm run build && npm run publish:stable",
     "release": "npm run release:stable"
   },
   "devDependencies": {
