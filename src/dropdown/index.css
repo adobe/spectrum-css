@@ -52,6 +52,11 @@
 .spectrum-Dropdown-label + .spectrum-Dropdown-icon {
   margin-left: var(--spectrum-dropdown-icon-margin-left);
 }
+
+.spectrum-Icon + .spectrum-Dropdown-label {
+  margin-left: var(--spectrum-selectlist-thumbnail-image-padding-x);
+}
+
 /* Only apply margin if there's a label */
 .spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
   margin-left: var(--spectrum-dropdown-icon-margin-left);
@@ -71,7 +76,7 @@
 
 /* Error icons */
 .spectrum-Dropdown {
-  .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+  .spectrum-Dropdown-label + .spectrum-Icon:not(.spectrum-Dropdown-icon) {
     margin-left: var(--spectrum-dropdown-icon-margin-left);
   }
 }
