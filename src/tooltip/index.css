@@ -64,7 +64,8 @@
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--left {
   .spectrum-Tooltip-tip {
-    top: calc(50% - calc(var(--spectrum-tooltip-tip-cross) / 2));
+    top: 50%;
+    margin-top: calc(var(--spectrum-tooltip-tip-cross) / -2);
   }
 }
 
@@ -76,9 +77,6 @@
   .spectrum-Tooltip-tip {
     left: calc(var(--spectrum-tooltip-tip-width) * -1);
     transform: rotate(90deg);
-
-    /* This is a gross hack */
-    top: calc(50% - calc(calc(var(--spectrum-tooltip-tip-cross) / 2) - 0.5px));
   }
 }
 
