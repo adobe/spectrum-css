@@ -14,7 +14,7 @@
 }
 
 /* topdoc
-{{ radio/radio-default.yml }}
+{{ radio/radio.yml }}
 */
 .spectrum-Radio {
   &:hover {
@@ -49,9 +49,7 @@
     }
   }
 }
-/* topdoc
-{{ radio/radio-quiet.yml }}
-*/
+
 .spectrum-Radio--quiet {
   .spectrum-Radio-input:checked + .spectrum-Radio-button {
     border-color: var(--spectrum-radio-quiet-circle-border-color-selected);
@@ -68,9 +66,7 @@
   }
 }
 
-/* topdoc
-{{ radio/radio-invalid.yml }}
-*/
+
 .spectrum-Radio, .spectrum-Radio--quiet {
   &.is-invalid:hover {
     .spectrum-Radio-input + .spectrum-Radio-button {
@@ -99,9 +95,6 @@
 }
 
 .spectrum-Radio-input {
-/* topdoc
-{{ radio/radio-disabled.yml }}
-*/
   &:disabled + .spectrum-Radio-button {
     border-color: var(--spectrum-radio-circle-border-color-disabled) !important;
   }

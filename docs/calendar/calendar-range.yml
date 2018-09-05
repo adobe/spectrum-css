@@ -1,5 +1,6 @@
 ---
 name: Calendar - Range Selection
+id: calendar
 description: |
     A calendar with a range selected.
     `.is-selection-start` goes on the first day in the selection, and `.is-range-start` goes on the first day of each week or month in the middle of a selection (but not the first day of the selection).
