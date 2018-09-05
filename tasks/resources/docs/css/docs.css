@@ -60,6 +60,9 @@ html {
   max-height: 100%;
 }
 
+.cssdocs-example-markup.is-open .cssdocs-example-markupToggle {
+  background-color: transparent;
+}
 .cssdocs-example-markup.is-open .cssdocs-example-markupToggle::before {
   display: none;
 }
@@ -73,7 +76,7 @@ html {
   box-shadow: 0 0 18px rgba(240, 240, 240, .20);
 }
 
-.spectrum--dark .cssdocs-example-demo,
+.spectrum--dark .cssdocs-example,
 .spectrum--dark .cssdocs-example-markup {
   border-color: rgb(80, 80, 80);
 }
@@ -82,7 +85,7 @@ html {
   background-color: rgb(40, 40, 40);
 }
 
-.spectrum--darkest .cssdocs-example-demo,
+.spectrum--darkest .cssdocs-example,
 .spectrum--darkest .cssdocs-example-markup {
   border-color: rgb(60, 60, 60);
 }
