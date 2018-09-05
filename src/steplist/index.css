@@ -97,6 +97,7 @@
   /* Don't let tooltips mess up alignment */
   vertical-align: bottom;
 
+  box-sizing: content-box;
   width: var(--spectrum-steplist-step-width);
   padding: 0 calc(var(--spectrum-steplist-step-width) / 2) 0 0;
 
@@ -183,6 +184,8 @@
   z-index: 1;
   position: absolute;
   right: calc(var(--spectrum-steplist-step-width) - calc(var(--spectrum-steplist-marker-diameter) * 1.5));
+
+  box-sizing: content-box;
   width: calc(calc(var(--spectrum-steplist-step-width) * 1.5) - calc(var(--spectrum-steplist-marker-diameter) * 2));
   bottom: calc(-1 * calc(var(--spectrum-steplist-segment-height) / 2));
 
