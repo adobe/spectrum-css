@@ -223,8 +223,8 @@ window.addEventListener('DOMContentLoaded', function() {
     curColorstop = colorStop;
     curScale = scale;
     curMethod = method;
-    changeCSS(colorStop);
-    changeScale(scale, method, true);
+    changeCSS(curColorstop);
+    changeScale(curScale, curMethod, true);
   }
 
   if (window.location.hash) {

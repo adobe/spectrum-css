@@ -2,12 +2,22 @@ html, body {
   margin: 0;
 }
 
+html {
+  visibility: hidden;
+}
+
+.wf-active {
+  visibility: visible;
+}
+
 .cssdocs-component {
-  margin: 0 1rem 4rem 1rem;
+  max-width: 1288px;
+  margin: 0 auto 6rem;
+  padding: 0 12px;
 }
 
 .cssdocs-example {
-  margin: 1rem 1rem;
+  margin: 1rem -4px;
 
   display: flex;
   flex-direction: column;
@@ -36,7 +46,7 @@ html, body {
   max-width: 100%;
   max-height: 100px;
 
-  padding: 0.75rem;
+  padding: 0.75rem 1.5rem;
 
   border-radius: 0 0 6px 6px;
   border-top: 1px solid rgb(200, 200, 200);
@@ -103,7 +113,7 @@ pre code {
   right: 0;
 
   box-sizing: border-box;
-  padding: 0.25rem 0;
+  padding: 0.5rem 0;
 
   background: white;
 
@@ -186,10 +196,6 @@ pre code {
 
 .sdldocs-scrollable::-webkit-scrollbar-thumb:active {
   background-color: rgba(0, 0, 0, 0.25);
-}
-
-.wf-loading {
-  visibility: hidden;
 }
 
 .sdldocs-splitview {
@@ -288,6 +294,10 @@ pre code {
 }
 
 .sdldocs-component-description {
+}
+
+.sdldocs-component-description p {
+  max-width: 90ch;
 }
 
 pre.html {

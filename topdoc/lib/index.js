@@ -137,7 +137,7 @@ function template(topDocument) {
           }
 
           // Gather DNA data
-          subComponent.description = subComponent.description;
+          subComponent.description = subComponent.description || '';
           var subComponentDNADescription = dnaVars.metadata['spectrum-' + subComponent.id + '-description'];
           if (subComponentDNADescription && !subComponent.ignoreDNA) {
             subComponent.description = subComponentDNADescription + '\n\n' + subComponent.description;
