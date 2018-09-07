@@ -25,6 +25,7 @@
 }
 
 .spectrum-Table-headCell {
+  box-sizing: border-box;
   text-align: left;
   font-size: var(--spectrum-table-header-text-size);
   font-weight: var(--spectrum-table-header-text-font-weight);
@@ -107,6 +108,7 @@
 }
 
 .spectrum-Table-cell {
+  box-sizing: border-box;
   font-size: var(--spectrum-table-cell-text-size);
   font-weight: var(--spectrum-table-cell-text-font-weight);
   line-height: var(--spectrum-table-cell-text-line-height);
