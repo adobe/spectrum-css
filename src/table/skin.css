@@ -1,5 +1,6 @@
 .spectrum-Table-headCell {
   color: var(--spectrum-table-header-text-color);
+  background-color: var(--spectrum-table-header-background-color);
 
   &.is-sortable {
     .spectrum-Table-sortedIcon {
@@ -16,10 +17,11 @@
 
     &:focus-ring,
     &.is-focused {
-      color: var(--spectrum-table-header-text-color-hover);
+      color: var(--spectrum-table-header-text-color-key-focus);
+      border-color: var(--spectrum-table-header-border-color-key-focus);
 
       .spectrum-Table-sortedIcon {
-        color: var(--spectrum-table-header-sort-icon-color-hover);
+        color: var(--spectrum-table-header-sort-icon-color-key-focus);
       }
     }
 
@@ -34,8 +36,9 @@
 }
 
 .spectrum-Table-body {
-  border: 1px solid var(--spectrum-table-cell-border-color);
-  background-color: var(--spectrum-table-cell-background-color);
+  border-style: solid;
+  border-color: var(--spectrum-table-border-color);
+  background-color: var(--spectrum-table-background-color);
 }
 
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
@@ -66,41 +69,43 @@ tbody.spectrum-Table-body {
 
 .spectrum-Table-row {
   border-bottom: 1px solid var(--spectrum-table-cell-border-color);
-  background-color: var(--spectrum-table-cell-background-color);
+  background-color: var(--spectrum-table-row-background-color);
 
   &:hover {
-    background-color: var(--spectrum-table-cell-background-color-hover);
+    background-color: var(--spectrum-table-row-background-color-hover);
   }
 
   &:focus-ring,
   &.is-focused {
-    background-color: var(--spectrum-table-cell-background-color-hover);
+    background-color: var(--spectrum-table-row-background-color-hover);
   }
 
   &:active {
-    background-color: var(--spectrum-table-cell-background-color-down);
+    background-color: var(--spectrum-table-row-background-color-down);
   }
 
   &.is-selected {
-    background-color: var(--spectrum-table-cell-background-color-selected);
+    background-color: var(--spectrum-table-row-background-color-selected);
 
     &:hover {
-      background-color: var(--spectrum-table-cell-background-color-selected-hover);
+      background-color: var(--spectrum-table-row-background-color-selected-hover);
     }
 
     &:focus-ring,
     &.is-focused {
-      background-color: var(--spectrum-table-cell-background-color-selected-hover);
+      background-color: var(--spectrum-table-row-background-color-selected-key-focus);
     }
   }
 }
 
 .spectrum-Table-cell {
   color: var(--spectrum-table-cell-text-color);
+  background-color: var(--spectrum-table-cell-background-color);
 }
 
 .spectrum-Table-cell--divider {
-  border-right: 1px solid var(--spectrum-table-cell-border-color);
+  border-right-style: solid;
+  border-right-color: var(--spectrum-table-divider-border-color);
 }
 
 .spectrum-Table--quiet {
@@ -110,31 +115,31 @@ tbody.spectrum-Table-body {
   }
 
   .spectrum-Table-row {
-    background-color: var(--spectrum-table-quiet-cell-background-color);
+    background-color: var(--spectrum-table-quiet-row-background-color);
 
     &:hover {
-      background-color: var(--spectrum-table-quiet-cell-background-color-hover);
+      background-color: var(--spectrum-table-quiet-row-background-color-hover);
     }
 
     &:focus-ring,
     &.is-focused {
-      background-color: var(--spectrum-table-quiet-cell-background-color-hover);
+      background-color: var(--spectrum-table-quiet-row-background-color-hover);
     }
 
     &:active {
-      background-color: var(--spectrum-table-quiet-cell-background-color-down);
+      background-color: var(--spectrum-table-quiet-row-background-color-down);
     }
 
     &.is-selected {
-      background-color: var(--spectrum-table-quiet-cell-background-color-selected);
+      background-color: var(--spectrum-table-quiet-row-background-color-selected);
 
       &:hover {
-        background-color: var(--spectrum-table-quiet-cell-background-color-selected-hover);
+        background-color: var(--spectrum-table-quiet-row-background-color-selected-hover);
       }
 
       &:focus-ring,
       &.is-focused {
-        background-color: var(--spectrum-table-quiet-cell-background-color-selected-hover);
+        background-color: var(--spectrum-table-quiet-row-background-color-selected-key-focus);
       }
     }
   }
