@@ -127,117 +127,6 @@
   }
 }
 
-.spectrum-Heading {
-  font-weight: var(--spectrum-global-font-weight-bold);
-  line-height: var(--spectrum-global-font-line-height-small);
-  margin-bottom: var(--spectrum-spacing-100);
-  margin-top: var(--spectrum-spacing-100);
-  max-width: var(--heading-line-length);
-
-  &:lang(ja),
-  &:lang(ko),
-  &:lang(zh) {
-    line-height: var(--spectrum-global-font-line-height-medium);
-    max-width: var(--han-heading-line-length);
-  }
-
-  &--1 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-dimension-static-font-size-1100) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--2 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--3 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--4 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-600) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--5 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-100) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  small,
-  .spectrum-Emphasis--75,
-  &-Emphasis--75 {
-    font-weight: var(--spectrum-global-font-weight-light);
-  }
-
-  em,
-  .spectrum-Emphasis--200,
-  &-Emphasis--200 {
-    font-weight: var(--spectrum-global-font-weight-regular);
-    font-style: italic;
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-style: normal;
-      font-weight: var(--spectrum-global-font-weight-medium);
-    }
-  }
-
-  strong,
-  .spectrum-Emphasis--300,
-  &-Emphasis--300 {
-    font-weight: var(--spectrum-global-font-weight-black);
-  }
-}
-
 .spectrum-Section {
   font-weight: var(--spectrum-global-font-weight-regular);
   line-height: var(--spectrum-global-font-line-height-medium);
@@ -362,6 +251,117 @@
   }
 }
 
+.spectrum-Heading {
+  font-weight: var(--spectrum-global-font-weight-bold);
+  line-height: var(--spectrum-global-font-line-height-small);
+  margin-bottom: var(--spectrum-spacing-100);
+  margin-top: var(--spectrum-spacing-100);
+  max-width: var(--heading-line-length);
+
+  &:lang(ja),
+  &:lang(ko),
+  &:lang(zh) {
+    line-height: var(--spectrum-global-font-line-height-medium);
+    max-width: var(--han-heading-line-length);
+  }
+
+  &--1 {
+    font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
+
+    &:lang(ar) {
+      font-size: calc(var(--spectrum-dimension-static-font-size-1100) * var(--spectrum-global-dimension-scale-factor));
+    }
+
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
+    }
+  }
+
+  &--2 {
+    font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
+
+    &:lang(ar) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
+    }
+
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
+    }
+  }
+
+  &--3 {
+    font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
+
+    &:lang(ar) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
+    }
+
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
+    }
+  }
+
+  &--4 {
+    font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
+
+    &:lang(ar) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-600) * var(--spectrum-global-dimension-scale-factor));
+    }
+
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
+    }
+  }
+
+  &--5 {
+    font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
+
+    &:lang(ar) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
+    }
+
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
+      font-size: calc(var(--spectrum-global-dimension-static-font-size-100) * var(--spectrum-global-dimension-scale-factor));
+    }
+  }
+
+  small,
+  .spectrum-Emphasis--75,
+  &-Emphasis--75 {
+    font-weight: var(--spectrum-global-font-weight-light);
+  }
+
+  em,
+  .spectrum-Emphasis--200,
+  &-Emphasis--200 {
+    font-weight: var(--spectrum-global-font-weight-regular);
+    font-style: italic;
+
+    &:lang(ja),
+    &:lang(ko),
+    &:lang(zh) {
+      font-style: normal;
+      font-weight: var(--spectrum-global-font-weight-medium);
+    }
+  }
+
+  strong,
+  .spectrum-Emphasis--300,
+  &-Emphasis--300 {
+    font-weight: var(--spectrum-global-font-weight-black);
+  }
+}
+
 /* topdoc
 {{ typography/typography-article.yml }}
 */
@@ -393,37 +393,6 @@
     font-family: var(--spectrum-font-family-article-zh-hant);
   }
 
-  .spectrum-Heading {
-    font-weight: var(--spectrum-global-font-weight-medium);
-
-    em,
-    .spectrum-Emphasis--200,
-    &-Emphasis--200 {
-      font-style: italic;
-      font-weight: var(--spectrum-global-font-weight-regular);
-
-      &:lang(ja),
-      &:lang(ko),
-      &:lang(zh) {
-        font-style: normal;
-        font-weight: var(--spectrum-global-font-weight-bold);
-      }
-    }
-
-    strong,
-    .spectrum-Emphasis--300,
-    &-Emphasis--300 {
-      font-weight: var(--spectrum-global-font-weight-bold);
-
-      &:lang(ja),
-      &:lang(ko),
-      &:lang(zh) {
-        font-weight: var(--spectrum-global-font-weight-semi-bold);
-      }
-    }
-
-  }
-
   .spectrum-Section {
     font-weight: var(--spectrum-global-font-weight-regular);
 
@@ -451,6 +420,36 @@
     .spectrum-Emphasis--300,
     &-Emphasis--300 {
       font-weight: var(--spectrum-global-font-weight-bold);
+    }
+  }
+
+  .spectrum-Heading {
+    font-weight: var(--spectrum-global-font-weight-medium);
+
+    em,
+    .spectrum-Emphasis--200,
+    &-Emphasis--200 {
+      font-style: italic;
+      font-weight: var(--spectrum-global-font-weight-regular);
+
+      &:lang(ja),
+      &:lang(ko),
+      &:lang(zh) {
+        font-style: normal;
+        font-weight: var(--spectrum-global-font-weight-bold);
+      }
+    }
+
+    strong,
+    .spectrum-Emphasis--300,
+    &-Emphasis--300 {
+      font-weight: var(--spectrum-global-font-weight-bold);
+
+      &:lang(ja),
+      &:lang(ko),
+      &:lang(zh) {
+        font-weight: var(--spectrum-global-font-weight-semi-bold);
+      }
     }
   }
 }
