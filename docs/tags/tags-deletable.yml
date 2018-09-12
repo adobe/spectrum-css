@@ -1,7 +1,9 @@
 ---
+id: tag-deletable
 name: Tags - Deletable
-description: An editable taglist. Be sure to add the `spectrum-Tags-item--deletable`
-status: Released
+description: An editable taglist.
+ignoreDNA: true
+status: Verified
 markup: |
   <div class="spectrum-Tags" role="list" aria-label="Tags">
     <div class="spectrum-Tags-item spectrum-Tags-item--deletable" tabindex="0" role="listitem">

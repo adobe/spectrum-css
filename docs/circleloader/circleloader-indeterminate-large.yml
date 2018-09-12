@@ -1,7 +1,8 @@
 ---
+id: circleloader-large
 name: Circle Loader - Indeterminate Large
 description: A large, indeterminate circle loader
-status: Released
+ignoreDNA: true
 markup: |
   <div class="spectrum-CircleLoader spectrum-CircleLoader--indeterminate spectrum-CircleLoader--large">
     <div class="spectrum-CircleLoader-track"></div>

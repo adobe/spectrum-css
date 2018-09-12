@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0;
 
+  /* Prevent margin collapase */
+  overflow: hidden;
+
   width: var(--spectrum-sidenav-width);
 }
 
@@ -16,11 +19,13 @@
 
 .spectrum-SideNav-itemLink {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
   box-sizing: border-box;
 
   width: 100%;
-  height: var(--spectrum-sidenav-item-height);
+  min-height: var(--spectrum-sidenav-item-height);
 
   padding: 0 var(--spectrum-sidenav-item-padding-x);
 
@@ -30,11 +35,10 @@
   font-weight: var(--spectrum-sidenav-item-font-weight);
   font-style: normal;
   text-decoration: none;
-  line-height: var(--spectrum-sidenav-item-height);
 
   cursor: pointer;
 
-  transition: background var(--spectrum-transition-time) ease-out,
+  transition: background-color var(--spectrum-transition-time) ease-out,
               color var(--spectrum-transition-time) ease-out;
 
   &:focus {

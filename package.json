@@ -1,6 +1,6 @@
 {
   "name": "@spectrum/spectrum-css",
-  "version": "2.0.0-typography.0",
+  "version": "2.2.1",
   "scripts": {
     "build": "gulp",
     "dev": "gulp dev",
@@ -8,7 +8,7 @@
     "ci-all": "npm run build",
     "bump": "node node_modules/.bin/dna-npm-bump-version",
     "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\"",
-    "release:stable": "npm run build && npm run bump && npm run publish:stable",
+    "release:stable": "npm run bump && npm run build && npm run publish:stable",
     "release": "npm run release:stable"
   },
   "devDependencies": {
@@ -16,10 +16,10 @@
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@spectrum/balthazar": "^3.0.1",
     "@spectrum/dna-npm-release": "^1.x",
-    "@spectrum/spectrum-dna": "4.8.1",
-    "@spectrum/spectrum-icons": "1.0.0-beta.17",
+    "@spectrum/spectrum-dna": "4.8.2",
+    "@spectrum/spectrum-icons": "^1.0.0-beta.22",
     "autoprefixer": "^6.5.3",
-    "backstopjs": "^3.5.2",
+    "backstopjs": "^3.5.10",
     "browser-sync": "^2.24.6",
     "del": "^3.0.0",
     "express": "^4.15.3",
@@ -43,6 +43,7 @@
     "gulp-unzip": "^0.2.0",
     "gulp-watch": "^4.3.11",
     "gulp-yaml": "^1.0.1",
+    "markdown": "^0.5.0",
     "merge-stream": "^1.0.1",
     "postcss": "^5.2.18",
     "postcss-calc": "^6.0.0",

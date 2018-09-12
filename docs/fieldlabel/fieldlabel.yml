@@ -1,8 +1,8 @@
 ---
 name: Field Label
-status: Beta
 description: >-
   Field label for use with form inputs.
+ignoreDNA: true
 markup: |
   <label for="lifestory" class="spectrum-FieldLabel">Life Story</label>
   <input id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield">

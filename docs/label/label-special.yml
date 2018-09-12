@@ -1,7 +1,8 @@
 ---
 name: Label - Special
-description: A special label
-status: Beta
+description: A special label.
+id: label-colored
+ignoreDNA: true
 markup: |
   <span class="spectrum-Label spectrum-Label--active">Active</span>
   <span class="spectrum-Label spectrum-Label--inactive">Inactive</span>

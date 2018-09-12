@@ -10,6 +10,22 @@
   background-color: var(--spectrum-label-colored-gray-background-color);
 }
 
+.spectrum-Label--red {
+  background-color: var(--spectrum-label-colored-red-background-color);
+}
+
+.spectrum-Label--orange, .spectrum-Label--or {
+  background-color: var(--spectrum-label-colored-orange-background-color);
+}
+
+.spectrum-Label--yellow {
+  background-color: var(--spectrum-label-colored-yellow-background-color);
+}
+
+.spectrum-Label--seafoam  {
+  background-color: var(--spectrum-label-colored-seafoam-background-color);
+}
+
 .spectrum-Label--green {
   background-color: var(--spectrum-label-colored-green-background-color);
 }
@@ -18,10 +34,6 @@
   background-color: var(--spectrum-label-colored-blue-background-color);
 }
 
-.spectrum-Label--red {
-  background-color: var(--spectrum-label-colored-red-background-color);
-}
-
-.spectrum-Label--orange, .spectrum-Label--or {
-  background-color: var(--spectrum-label-colored-orange-background-color);
+.spectrum-Label--fuchsia  {
+  background-color: var(--spectrum-label-colored-fuchsia-background-color);
 }

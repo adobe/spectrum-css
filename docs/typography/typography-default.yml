@@ -1,7 +1,8 @@
 ---
-name: Typography - Default
-description: The default Spectrum Typography elements
-status: Beta
+id: body-1
+name: Typography
+description: Typography elements.
+ignoreDNA: true
 markup: |
   <h1 class="spectrum-Heading--display">Display (h1)</h1>
   <h2 class="spectrum-Heading--pageTitle">Page Title (h2)</h2>

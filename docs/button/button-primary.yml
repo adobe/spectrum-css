@@ -1,11 +1,6 @@
 ---
 name: Button - Primary
-description: A Spectrum 'primary' button (which is also the default style)
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+status: Verified
 markup: |
   <button class="spectrum-Button spectrum-Button--primary">
     <span class="spectrum-Button-label">Button</span>

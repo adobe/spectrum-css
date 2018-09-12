@@ -1,11 +1,8 @@
 ---
+id: rating
 name: Rating - Disabled
-description: The 'disabled' Spectrum rating
-status: Beta
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+description: The disabled state of the Rating element.
+ignoreDNA: true
 markup: |
   <div class="spectrum-Rating is-disabled">
     <input class="spectrum-Rating-input" type="range" min="0" max="5" value="1" aria-label="Rating - Disabled" disabled>

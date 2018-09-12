@@ -1,23 +1,31 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = defaultTemplate;
+var pug = require('pug');
+var path = require('path');
+var markdown = require('markdown').markdown;
+var fsExtra = require('fs-extra');
 
-var _pug = require('pug');
+const labelColors = {
+  'Deprecated': 'red',
 
-var _pug2 = _interopRequireDefault(_pug);
+  'Beta Precursor': 'orange',
 
-var _path = require('path');
+  'Precursor': 'yellow',
+  'CSS Unverified': 'yellow',
 
-var _path2 = _interopRequireDefault(_path);
+  'Canon': 'green',
+  'CSS Verified': 'green'
+};
 
-var _fsExtra = require('fs-extra');
+const dnaStatusTranslation = {
+  'Released': 'Canon',
+  'Beta': 'Precursor'
+};
 
-var _fsExtra2 = _interopRequireDefault(_fsExtra);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const cssStatusTranslation = {
+  'Beta': 'CSS Unverified',
+  'Verified': 'CSS Verified'
+};
 
 /**
  *  Private: replaces the extension of a file path string with a new one.
@@ -27,15 +35,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *
  *  Returns {String} with replaced extension
  */
-function _replaceExt(npath, ext) {
+function replaceExt(npath, ext) {
   if (typeof npath !== 'string') {
     return npath;
   }
   if (npath.length === 0) {
     return npath;
   }
-  const nFileName = _path2.default.basename(npath, _path2.default.extname(npath)) + ext;
-  return _path2.default.join(_path2.default.dirname(npath), nFileName);
+  const nFileName = path.basename(npath, path.extname(npath)) + ext;
+  return path.join(path.dirname(npath), nFileName);
 }
 
 /**
@@ -54,65 +62,168 @@ function _replaceExt(npath, ext) {
  *  ```
  */
 /* eslint-disable no-console */
-function defaultTemplate(topDocument) {
-  console.log('dna-topdoc-template: starting...');
+function template(topDocument) {
   let pugFile;
   if (topDocument.pugFile) {
-    pugFile = _path2.default.resolve(topDocument.pugFile);
+    pugFile = path.resolve(topDocument.pugFile);
   } else {
-    pugFile = _path2.default.resolve(__dirname, 'template.pug');
+    pugFile = path.resolve(__dirname, 'template.pug');
   }
 
-  console.log('dna-topdoc-template: reading package.json...');
   var pkg;
   try {
-    pkg = JSON.parse(_fsExtra2.default.readFileSync(topDocument.packageFile, 'utf-8'));
+    pkg = JSON.parse(fsExtra.readFileSync(topDocument.packageFile, 'utf-8'));
   } catch (err) {
-    console.log('dna-topdoc-template failed to read package.json');
-    console.error(err);
-    pkg = {
-      version: '?.??',
-      devDependencies: {
-        '@spectrum/spectrum-dna': '?.??'
-      }
-    };
+    console.error('dna-topdoc-template failed to read package.json');
+    throw(err);
   }
 
-  console.log('dna-topdoc-template: established pugfile as', pugFile);
-
-  console.log('dna-topdoc-template: sorting elements before pug renderer call...');
+  var dnaVars;
+  try {
+    dnaVars = JSON.parse(fsExtra.readFileSync(require.resolve(path.join('@spectrum/spectrum-dna', 'dist', 'vars', 'json', 'dna-vars.json')), 'utf-8'));
+  } catch (err) {
+    console.error('dna-topdoc-template failed to read dna-vars.json');
+    throw(err);
+  }
 
   try {
-    console.log('dna-topdoc-template: trying topDocument.components.sort', pugFile);
-
     topDocument.components.sort(_nameCompareFunction);
   } catch (sortFail) {
-    console.log('dna-topdoc-template failed sorting topDocument.components');
-    console.error(sortFail);
+    console.error('dna-topdoc-template failed sorting topDocument.components');
+    throw(err);
   }
 
   try {
-
-    console.log(`dna-topdoc-template: iterate ${topDocument.files.length} topDocument.files`);
     topDocument.files.forEach(file => {
-      file.filename = _replaceExt(file.filename, '.html');
+      file.filename = replaceExt(file.filename, '.html');
     });
-    console.log('dna-topdoc-template: reading polyfill');
-    const focusRingPolyfillContent = _fsExtra2.default.readFileSync(require.resolve('@adobe/focus-ring-polyfill'), 'utf-8');
-    console.log('dna-topdoc-template: calling pug.renderFile');
-    const content = _pug2.default.renderFile(pugFile, { document: topDocument, pretty: true, frPolyfill: focusRingPolyfillContent, pkg: pkg });
-    console.log('dna-topdoc-template: creating output css directory');
-    _fsExtra2.default.mkdirsSync(_path2.default.resolve(topDocument.destination, 'css'));
-    const cssDestination = _path2.default.resolve(topDocument.destination, 'css', 'vendor', topDocument.filename);
-    console.log('dna-topdoc-template: copying css');
-    _fsExtra2.default.copySync(topDocument.source, cssDestination);
-    console.log('dna-topdoc-template: copying css');
-    const newFileName = topDocument.first ? 'index.html' : _replaceExt(topDocument.filename, '.html');
-    _fsExtra2.default.writeFileSync(_path2.default.resolve(topDocument.destination, newFileName), content);
+
+    var components = {};
+    topDocument.components.forEach(component => {
+      var dnaComponentId = component.id || component.filename;
+
+      // Get info based on component variation first, then component name second
+      var dnaComponentTitle = dnaVars.metadata['spectrum-' + dnaComponentId + '-name'];
+
+      var dnaDescription = dnaVars.metadata['spectrum-' + dnaComponentId + '-description'];
+
+      var cssStatus = getCSSStatus(dnaComponentId, component.status);
+      var dnaStatus = getDNAStatus(dnaComponentId, dnaVars.metadata['spectrum-' + dnaComponentId + '-status'] || component.dnaStatus, cssStatus);
+
+      // Store the info
+      component.name = component.name || dnaComponentTitle;
+      component.cssStatus = cssStatus;
+      component.dnaStatus = dnaStatus;
+      component.cssColor = getLabelColor(component.cssStatus);
+      component.dnaColor = getLabelColor(component.dnaStatus);
+
+      // Add other data
+      component.id = dnaComponentId;
+      component.description = component.description || '';
+
+      if (component.components) {
+        var extraComponentDescriptions = '';
+        for (var subComponentId in component.components) {
+          var subComponent = {};
+          if (typeof component.components[subComponentId] === 'string') {
+            // Shorthand
+            subComponent.markup = component.components[subComponentId];
+            subComponent.id = subComponentId;
+          }
+          else {
+            // Verbose
+            subComponent = component.components[subComponentId];
+            subComponent.id = subComponent.id || subComponentId;
+          }
+
+          // Gather DNA data
+          subComponent.description = subComponent.description || '';
+          var subComponentDNADescription = dnaVars.metadata['spectrum-' + subComponent.id + '-description'];
+          if (subComponentDNADescription && !subComponent.ignoreDNA) {
+            subComponent.description = subComponentDNADescription + '\n\n' + subComponent.description;
+          }
+
+          subComponent.name = subComponent.name || dnaVars.metadata['spectrum-' + subComponent.id + '-name'];
+
+          if (subComponent.description) {
+            subComponent.description = markdown.toHTML(subComponent.description);
+          }
+
+          if (subComponent.details) {
+            subComponent.details = markdown.toHTML(subComponent.details);
+          }
+
+          subComponent.cssStatus = getCSSStatus(subComponent.id, subComponent.status);
+          subComponent.cssColor = getLabelColor(subComponent.cssStatus);
+          subComponent.dnaStatus = getDNAStatus(subComponent.id, dnaVars.metadata['spectrum-' + subComponent.id + '-status'] || subComponent.dnaStatus, subComponent.cssStatus);
+          subComponent.dnaColor = getLabelColor(subComponent.dnaStatus);
+
+          // Store the object back
+          component.components[subComponentId] = subComponent;
+        }
+      }
+      else if (dnaDescription && !component.ignoreDNA) {
+        component.description = dnaDescription + '\n\n' + component.description;
+      }
+
+      if (component.description) {
+        component.description = markdown.toHTML(component.description);
+      }
+
+      if (component.details) {
+        component.details = markdown.toHTML(component.details);
+      }
+    });
+
+    const content = pug.renderFile(pugFile, {
+      document: topDocument,
+      pretty: true,
+      pkg: pkg,
+      dnaVars: dnaVars
+    });
+
+    fsExtra.mkdirsSync(path.resolve(topDocument.destination, 'css'));
+
+    const cssDestination = path.resolve(topDocument.destination, 'css', 'vendor', topDocument.filename);
+    fsExtra.copySync(topDocument.source, cssDestination);
+
+    const newFileName = topDocument.first ? 'index.html' : replaceExt(topDocument.filename, '.html');
+    fsExtra.writeFileSync(path.resolve(topDocument.destination, newFileName), content);
   } catch (err) {
-    console.log('dna-topdoc-template: Error caught processing template!');
-    console.log(err);
+    console.error('dna-topdoc-template: Error caught processing template!');
+    throw(err);
   }
+}
+
+function getLabelColor(status) {
+  return labelColors[status] || 'grey';
+}
+
+function getDNAStatus(dnaComponentId, dnaStatus, cssStatus) {
+  if (cssStatus === 'Deprecated') {
+    dnaStatus = 'Deprecated';
+  }
+
+  if (cssStatus === 'CSS Verified') {
+    if (dnaStatus !== 'Released') {
+      console.log(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
+      dnaStatus = 'Canon';
+    }
+  }
+
+  if (!dnaStatus) {
+    console.log(`${dnaComponentId} has no DNA status`);
+    dnaStatus = 'Beta Precursor';
+  }
+
+  return dnaStatusTranslation[dnaStatus] || dnaStatus;
+}
+
+function getCSSStatus(dnaComponentId, cssStatus) {
+  if (cssStatus === 'Released' || !cssStatus) {
+    cssStatus = 'CSS Unverified';
+  }
+  return cssStatusTranslation[cssStatus] || cssStatus;
 }
 
 /**
@@ -123,4 +234,5 @@ function _nameCompareFunction(a, b) {
   if (a.name > b.name) return 1;
   return 0;
 }
-module.exports = exports['default'];
+
+module.exports = template;

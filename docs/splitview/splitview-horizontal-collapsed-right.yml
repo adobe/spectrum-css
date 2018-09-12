@@ -1,7 +1,6 @@
 ---
 name: SplitView - Horizontal Collapsed Right
 description: Horizontally collapsed SplitView
-status: Beta
 markup: |
   <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
     <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>

@@ -1,7 +1,7 @@
 ---
 name: Tooltip - Icons
-description: A Spectrum tooltip
-status: Released
+description: A Tooltip with icons.
+ignoreDNA: true
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <svg class="spectrum-Icon spectrum-UIIcon-SuccessSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">

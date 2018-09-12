@@ -1,11 +1,7 @@
 ---
 name: Radio - Disabled
-description: The 'disabled' Spectrum radio
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+id: radio
+status: Verified
 markup: |
   <div class="spectrum-Radio">
     <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-disable-0" disabled>

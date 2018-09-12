@@ -121,8 +121,6 @@ a.spectrum-ActionButton {
   @inherit: %spectrum-BaseButton;
   position: relative;
 
-  justify-content: left;
-
   height: var(--spectrum-actionbutton-height);
   min-width: var(--spectrum-actionbutton-min-width);
 
@@ -259,7 +257,7 @@ a.spectrum-ActionButton {
 }
 
 /* topdoc
-{{ button/button-tool.yml }}
+{{ button/tool.yml }}
 */
 .spectrum-Tool {
   @inherit: .spectrum-ActionButton;

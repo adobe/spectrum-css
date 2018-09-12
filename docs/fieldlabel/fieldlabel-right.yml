@@ -1,9 +1,10 @@
 ---
+id: fieldlabel
 name: Field Label - Right
-status: Beta
 description: >-
-  Field label right aligned
+  A right aligned field label.
+ignoreDNA: true
 markup: |
-  <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--right">Life Story</label>
+  <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--right" style="width: 72px">Life Story</label>
 
   <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>

@@ -1,7 +1,8 @@
 ---
 name: Link - Subtle
 description: A subtle link
-status: Released
+ignoreDNA: true
+status: Verified
 markup: |
   <p> This uses <a href="#" class="spectrum-Link
   spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>

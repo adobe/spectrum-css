@@ -10,9 +10,10 @@
   --spectrum-selectlist-heading-padding: 0 var(--spectrum-global-dimension-size-450) 0 var(--spectrum-global-dimension-size-150);
 
   --spectrum-selectlist-option-padding-y: var(--spectrum-global-dimension-size-85);
-  --spectrum-selectlist-option-icon-padding-x: var(--spectrum-global-dimension-size-100);
 
   --spectrum-selectlist-option-selectable-padding-right: calc(var(--spectrum-global-dimension-size-100) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-selectlist-option-icon-padding-x));
+
+  --spectrum-selectlist-option-icon-margin-top: var(--spectrum-global-dimension-size-50);
 }
 
 .spectrum-Menu {
@@ -82,8 +83,13 @@
     }
   }
 
+  .spectrum-Icon {
+    /* Don't get smaller, you're an icon! */
+    flex-shrink: 0;
+  }
+
   .spectrum-Icon + .spectrum-Menu-itemLabel {
-    margin-left: var(--spectrum-selectlist-option-icon-padding-y);
+    margin-left: var(--spectrum-selectlist-thumbnail-image-padding-x);
   }
 }
 
@@ -99,6 +105,8 @@
 
 .spectrum-Menu-checkmark {
   display: none;
+  align-self: flex-start;
+  margin-top: var(--spectrum-selectlist-option-icon-margin-top);
 }
 
 .spectrum-Menu-checkmark,

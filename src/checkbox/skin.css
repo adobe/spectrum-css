@@ -35,7 +35,7 @@
 }
 
 /* topdoc
-{{ checkbox/checkbox-default.yml }}
+{{ checkbox/checkbox.yml }}
 */
 .spectrum-Checkbox {
   border-color: var(--spectrum-checkbox-box-border-color);
@@ -63,9 +63,6 @@
 }
 
 .spectrum-Checkbox-input {
-/* topdoc
-{{ checkbox/checkbox-disabled.yml }}
-*/
   &:disabled + .spectrum-Checkbox-box {
     /* Use important to override hover states */
     border-color: var(--spectrum-checkbox-box-border-color-disabled) !important;
@@ -114,9 +111,6 @@
   }
 }
 
-/* topdoc
-{{ checkbox/checkbox-error.yml }}
-*/
 .spectrum-Checkbox.is-invalid {
   /* Extra-specific selectors added here to handle checked state */
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,

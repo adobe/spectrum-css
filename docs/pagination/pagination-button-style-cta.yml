@@ -1,7 +1,7 @@
 ---
 name: Pagination - Button Style CTA
 description: A Spectrum 'button style call-to-action' pagination
-status: Beta
+ignoreDNA: true
 markup: |
   <nav class="spectrum-SplitButton spectrum-SplitButton--left">
     <a href="#" class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-trigger">

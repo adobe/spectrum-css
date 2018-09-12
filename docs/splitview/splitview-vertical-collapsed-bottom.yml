@@ -1,7 +1,6 @@
 ---
 name: SplitView - Vertical Collapsed Bottom
 description: Vertically collapsed SplitView
-status: Beta
 markup: |
   <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
     <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>

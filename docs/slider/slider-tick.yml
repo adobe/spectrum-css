@@ -1,12 +1,6 @@
 ---
 name: Slider - Tick
 description: Spectrum tick slider
-status: Released
-modifiers:
-  :disabled: Disabled state
-  :hover: Hover state
-  :focus: Focused state
-  :active: Active state
 markup: |
   <div class="spectrum-Slider spectrum-Slider--tick">
     <div class="spectrum-Slider-labelContainer">

@@ -1,11 +1,6 @@
 ---
 name: Radio - Quiet
-description: The 'quiet' Spectrum radio
-status: Released
-modifiers:
-  ':hover': Hover state
-  ':active': Active state
-  ':focus': Focused
+status: Verified
 markup: |
   <form>
     <div class="spectrum-Radio spectrum-Radio--quiet">

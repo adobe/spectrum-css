@@ -1,7 +1,7 @@
 ---
 name: Pagination - Explicit
 description: A Spectrum 'explicit' pagination
-status: Beta
+ignoreDNA: true
 markup: |
   <nav class="spectrum-Pagination spectrum-Pagination--explicit">
     <a href="#" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-prevButton">

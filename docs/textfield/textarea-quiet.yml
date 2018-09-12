@@ -1,11 +1,8 @@
 ---
+id: textfield-quiet
 name: Text Area - Quiet
 description: A Spectrum text area - quiet
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+ignoreDNA: true
 markup: |
   <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
   </textarea>

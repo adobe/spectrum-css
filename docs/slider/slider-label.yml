@@ -1,11 +1,9 @@
 ---
 name: Slider - With Label
-description: The default Spectrum Slider element
-status: Released
 markup: |
   <div class="spectrum-Slider">
     <div class="spectrum-Slider-labelContainer">
-      <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label - Default</label>
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label</label>
       <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
     </div>
     <div class="spectrum-Slider-controls">

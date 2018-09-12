@@ -72,14 +72,14 @@ The second method of applying colorstops, *singlestops*, makes it so it's only p
 2. To get only the CSS for components you need and a single colorstop, include the following to start:
 
 * `dist/components/page/index.css`
-* `dist/components/page/colorStop/COLORSTOP.css` for the single colorstop
+* `dist/components/page/colorStops/COLORSTOP.css` for the single colorstop
 * `dist/components/typography/index.css`
-* `dist/components/typography/colorStop/COLORSTOP.css` for the single colorstop
+* `dist/components/typography/colorStops/COLORSTOP.css` for the single colorstop
 
 Then, for each component you need:
 
 * `dist/components/COMPONENT/index.css` for each component
-* `dist/components/COMPONENT/colorStop/COLORSTOP.css` for the single colorstop
+* `dist/components/COMPONENT/colorStops/COLORSTOP.css` for the single colorstop
 
 As there is CSS for only one color stop present, simply set `<body class="spectrum">`. If mixing with individual components using the *multistop* strategy, you can add `class="spectrum--dark"` on `<body>` or anywhere else, but it only affects components whose colorstops were imported using the individual component multistop strategy.
 
@@ -225,8 +225,8 @@ Typical testing workflow:
 1. Build the `dist/` folder with `gulp build`
 2. `gulp test`
 3. Wait for results to finish (approx 7 mins)
-	* If this is the first run test, the results will be all failures since it has no reference pictures to compare against. Use `backstop approve` to make the screen shots taken in this run to become the new reference set.
-	* If you have an existing reference set, you will get a result of which components have changed. You may also choose to again `backstop approve` the new changes to set the new reference set or continue testing.
+  * If this is the first run test, the results will be all failures since it has no reference pictures to compare against. Use `backstop approve` to make the screen shots taken in this run to become the new reference set.
+  * If you have an existing reference set, you will get a result of which components have changed. You may also choose to again `backstop approve` the new changes to set the new reference set or continue testing.
 4. Navigate to `backstop_data/html_report/index.html` to see the nicely formatted html report.
 
 To note: If you see your tests returning with a 'Tag Not Found' image, then it's usually because of a particular chrome instance that was taking that screen shot was left hanging and timed out. Try these commands and run the test again:

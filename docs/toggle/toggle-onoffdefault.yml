@@ -1,11 +1,9 @@
 ---
+id: switch
 name: Switch - On/Off
-description: The Spectrum Switch
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
+description: The on/off variant of the Switch.
+ignoreDNA: true
+status: Verified
 markup: |
   <div class="spectrum-ToggleSwitch">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0">

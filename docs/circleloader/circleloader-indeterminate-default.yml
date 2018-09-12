@@ -1,7 +1,8 @@
 ---
+id: circleloader-small
 name: Circle Loader - Indeterminate
 description: An indeterminate Spectrum Loader of default type (round)
-status: Released
+ignoreDNA: true
 markup: |
   <div class="spectrum-CircleLoader spectrum-CircleLoader--indeterminate">
     <div class="spectrum-CircleLoader-track"></div>

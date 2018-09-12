@@ -1,7 +1,8 @@
 ---
+id: table
 name: Table - Column Dividers
 description: The standard table with column dividers
-status: Beta
+ignoreDNA: true
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">

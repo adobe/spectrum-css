@@ -1,12 +1,7 @@
 ---
 name: Dial - With label
 description: A dial for turning it up to 11, now with labels.
-status: Released
-modifiers:
-  :disabled: Disabled state
-  :hover: Hover state
-  :focus: Focused state
-  :active: Active state
+ignoreDNA: true
 markup: |
   <div class="spectrum-Dial">
     <div class="spectrum-Dial-labelContainer">

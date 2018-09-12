@@ -1,11 +1,5 @@
 ---
 name: Button Group (vertical)
-description: A group for buttons, action buttons, or tools.
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
 markup: |
 
   <div style="display: flex; justify-content: space-between; width: 400px;">

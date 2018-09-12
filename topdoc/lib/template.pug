@@ -3,119 +3,136 @@ html.spectrum--medium
   head
     meta(charset = 'utf-8')
     meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
-    title Spectrum CSS - Documentation
+    title Spectrum CSS Documentation
     meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
 
-    link(rel='stylesheet', type='text/css', href='css/vendor/rainbow.css')
-    link(rel='stylesheet', type='text/css', href='css/vendor/flexboxgrid.css')
-    link(rel='stylesheet', type='text/css', href='css/docs.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/github.css', data-rainbow)
     link(rel='stylesheet', type='text/css', href='../spectrum-core.css', data-spectrum-core)
     link(rel='stylesheet', type='text/css', href='', data-spectrum-core-diff)
-    link(rel='stylesheet', type='text/css', href='../spectrum-darkest.css')
-    link(rel='stylesheet', type='text/css', href='../spectrum-dark.css')
-    link(rel='stylesheet', type='text/css', href='../spectrum-light.css')
     link(rel='stylesheet', type='text/css', href='../spectrum-lightest.css')
+    link(rel='stylesheet', type='text/css', href='../spectrum-light.css')
+    link(rel='stylesheet', type='text/css', href='../spectrum-dark.css')
+    link(rel='stylesheet', type='text/css', href='../spectrum-darkest.css')
+
+    link(rel='stylesheet', type='text/css', href='css/docs.css')
 
     script(src='../icons/AS.loadIcons.js')
     script(src='js/docs.js')
+    script(src='js/vendor/focus-ring-polyfill.js')
 
-    script.
-      !{frPolyfill}
-
-  body.u-sdldocs-clearfix.spectrum.spectrum--light
-    div.spectrum-Underlay#spectrum-underlay
-    header.sdldocs-header
-      h2.spectrum-Heading--pageTitle
-        a.sdldocs-header-link(href='http://spectrum.corp.adobe.com')
+  body.spectrum.spectrum--light
+    .sdldocs-outer
+      header.sdldocs-header
+        h2.spectrum-Heading--pageTitle
           img.sdldocs-header-logo-image(src='img/spectrum_logo_light.svg', alt='Adobe Spectrum Logo')
-        span.sdldocs-header-title.
-          spectrum-css #{pkg.version}
-      div.sdldocs-badge
-        div.sdldocs-badge-label.
-          Spectrum
-        div.sdldocs-badge-version.
-          #{pkg.devDependencies['@spectrum/spectrum-dna']}
+          span.sdldocs-header-title.
+            spectrum-css #{pkg.version}
+        div.sdldocs-spectrumVersion.sdldocs-badge
+          div.sdldocs-badge-label.
+            Spectrum
+          div.sdldocs-badge-version.
+            #{pkg.devDependencies['@spectrum/spectrum-dna']}
+        div.sdl-switcher
+          label.spectrum-FieldLabel.spectrum-FieldLabel--left.
+            Scale
+          .spectrum-Dropdown
+            select.spectrum-FieldButton.spectrum-Dropdown-trigger(onchange="changeScale.apply(this, this[this.selectedIndex].value.split(','))")#scale
+              option(value="medium,standalone")|Medium
+              option(value="large,standalone")|Large
+              option(value="medium,diff")|Medium (diff)
+              option(value="large,diff")|Large (diff)
+            svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Dropdown-icon
+              use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
+          label.spectrum-FieldLabel.spectrum-FieldLabel--left.
+            Color Theme
+          .spectrum-Dropdown
+            select.spectrum-FieldButton.spectrum-Dropdown-trigger(onchange="changeCSS(this[this.selectedIndex].value)")#colorstop
+              option(value="lightest")|Lightest
+              option(value="light")|Light
+              option(value="dark")|Dark
+              option(value="darkest")|Darkest
+            svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Dropdown-icon
+              use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
 
-    div.sdldocs-floating
-      form(class="spectrum-Form")
-        div(class="spectrum-Form-item")
-          label.spectrum-Form-itemLabel.spectrum-FieldLabel--right Colorstop
-          div.spectrum-Form-itemField
-            div.spectrum-FieldGroup.spectrum-FieldGroup--vertical
-              div.spectrum-Radio(onclick="changeCSS('lightest')")
-                input.spectrum-Radio-input(type="radio" name="colorStop" class="" id="radio-lightest")
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-lightest") Lightest
-              div.spectrum-Radio(onclick="changeCSS('light')")
-                input.spectrum-Radio-input(type="radio" name="colorStop" class="" id="radio-light" checked)
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-light") Light
-              div.spectrum-Radio(onclick="changeCSS('dark')")
-                input.spectrum-Radio-input(type="radio" name="colorStop" class="" id="radio-dark")
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-dark") Dark
-              div.spectrum-Radio(onclick="changeCSS('darkest')")
-                input.spectrum-Radio-input(type="radio" name="colorStop" class="" id="radio-darkest")
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-darkest") Darkest
+      section.sdldocs-splitview.spectrum-SplitView.spectrum-SplitView--horizontal
+        .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-nav
+          nav.spectrum.spectrum--light
+            ul.spectrum-SideNav
+              each component in document.components
+                li.spectrum-SideNav-item
+                  a.spectrum-SideNav-itemLink(href='#'+component.slug)= component.name
 
-        div(class="spectrum-Form-item")
-          label.spectrum-Form-itemLabel.spectrum-FieldLabel--right Scale
-          div.spectrum-Form-itemField
-            div.spectrum-FieldGroup.spectrum-FieldGroup--vertical
-              div.spectrum-Radio(onclick="changeScale('medium')")
-                input.spectrum-Radio-input(type="radio" name="scalingSize" class="" id="radio-medium" checked)
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-medium") Medium
-              div.spectrum-Radio(onclick="changeScale('large')")
-                input.spectrum-Radio-input(type="radio" name="scalingSize" class="" id="radio-large")
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-large") Large
+        .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-components
+          .spectrum.spectrum--light
+            each component in document.components
+              -
+                var showSubStyles = false;
+                if (component.cssStatus !== 'Deprecated' && component.cssStatus !== 'CSS Verified' && component.components) {
+                  showSubStyles = Object.keys(component.components).some(function(subComponentId) {
+                    var subComponent = component.components[subComponentId];
+                    return subComponent.dnaStatus != component.dnaStatus || subComponent.cssStatus != component.cssStatus;
+                  });
+                }
+              article.cssdocs-component
+                header.row.middle-sm(id=component.slug)
+                  a(href=`#${component.slug}`).sdldocs-subtleLink.js-hashtitle
+                    h2.sdldocs-component-name.spectrum-Heading--pageTitle #{component.name}
+                  if component.cssStatus != 'n/a' && !showSubStyles
+                    .u-tooltip-showOnHover
+                      div(class=`sdldocs-dnaStatus spectrum-Label spectrum-Label--${component.dnaColor}`).
+                        #{component.dnaStatus}
+                      if component.dnaStatus != 'Deprecated'
+                        div(class=`sdldocs-cssStatus spectrum-Label spectrum-Label--${component.cssColor}`).
+                          #{component.cssStatus}
+                      if component.details
+                        .spectrum-Tooltip.spectrum-Tooltip--right
+                          .spectrum-Tooltip-label!= component.details
+                          .spectrum-Tooltip-tip
 
-        div(class="spectrum-Form-item")
-          label.spectrum-Form-itemLabel.spectrum-FieldLabel--right Method
-          div.spectrum-Form-itemField
-            div.spectrum-FieldGroup.spectrum-FieldGroup--vertical
-              div.spectrum-Radio(onclick="changeScale(undefined, 'standalone')")
-                input.spectrum-Radio-input(type="radio" name="scalingMethod" class="" id="radio-standalone")
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-rem") Standalone
-              div.spectrum-Radio(onclick="changeScale(undefined, 'diff')")
-                input.spectrum-Radio-input(type="radio" name="scalingMethod" class="" id="radio-diff" checked)
-                span.spectrum-Radio-button
-                label.spectrum-Radio-label(for="radio-rem") Diff
+                if component.description
+                  section.sdldocs-component-description.spectrum-Body!= component.description
 
-    section.sdldocs-main-content.row
-      .sdldocs-nav.col-sm-3
-        nav.box
-          each component in document.components
-            .row.center-xs.around-xs.start-sm
-              .sdldocs-nav-item
-                  a.sdldocs-nav-link.box(href='#'+component.slug)= component.name
+                if component.components
+                  each subComponent in component.components
+                    section.sdldocs-subComponent
+                      header.row.middle-sm.sdldocs-subComponent-header
+                        if subComponent.name
+                          h4.sdldocs-subComponent-name.spectrum-Heading--subtitle3!= subComponent.name
+                        if subComponent.cssStatus != 'n/a' && showSubStyles
+                          .u-tooltip-showOnHover
+                            div(class=`sdldocs-dnaStatus spectrum-Label spectrum-Label--small spectrum-Label--${subComponent.dnaColor}`)
+                              = subComponent.dnaStatus
+                            if subComponent.details
+                              .spectrum-Tooltip.spectrum-Tooltip--right
+                                .spectrum-Tooltip-label!= subComponent.details
+                                .spectrum-Tooltip-tip
 
-      .sdldocs-components.col-xs-12.col-sm-8
-        each component in document.components
-          article.sdldocs-component.box
-            a(href=`#${component.slug}`).sdldocs-subtleLink.js-hashtitle
-              header.row(id=component.slug)
-                .col-xs
-                  h2.sdldocs-component-name.spectrum-Heading--pagetitle.box= component.name
-            section.sdldocs-component-description.row
-              .col-xs
-                h2.spectrum-Heading--subtitle1 Design Status: #{component.status}
-                p Description: #{component.description}
-            section.sdldocs-component-markup.row
-              .col-xs-offset-1.col-xs
-                .box!= component.markup
+                          if subComponent.dnaStatus != 'Deprecated'
+                            div(class=`sdldocs-cssStatus spectrum-Label spectrum-Label--small spectrum-Label--${subComponent.cssColor}`).
+                              #{subComponent.cssStatus}
 
-            section.sdldocs-component-example.col-xs-12
-                .row.end-xs
-                  a.sdldocs-code-link.spectrum-Link.box(href="#") show markup
-                .row
-                  .sdldocs-code-example.box
-                    h3.sdldocs-code-example-title.spectrum-Heading--subtitle2 HTML
-                    pre.html
-                      code(data-language="html")=component.markup
+                      if subComponent.description
+                        .spectrum-Body--small!= subComponent.description
+
+                      section.cssdocs-example.spectrum
+                        .cssdocs-example-demo!= subComponent.markup
+                        .cssdocs-example-markup
+                          if subComponent.markup.split('\n').length > 2
+                            a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
+                          pre
+                            code(data-language="html")=subComponent.markup
+
+
+                else if component.markup
+                  section.cssdocs-example.spectrum
+                    .cssdocs-example-demo!= component.markup
+                    .cssdocs-example-markup
+                      if component.markup.split('\n').length > 2
+                        a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
+                      pre
+                        code(data-language="html")=component.markup
+
+          div.spectrum-Underlay#spectrum-underlay
 
     script(type="text/javascript", src='js/vendor/rainbow-custom.min.js')
     script(type="text/javascript", src='js/vendor/typekit.js')

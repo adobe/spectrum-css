@@ -6,7 +6,7 @@
 }
 
 /* topdoc
-{{ dropdown/dropdown-default.yml }}
+{{ dropdown/dropdown.yml }}
 */
 .spectrum-Dropdown {
   position: relative;
@@ -16,6 +16,18 @@
   max-width: 100%;
   width: var(--spectrum-dropdown-width);
   min-width: var(--spectrum-dropdown-min-width);
+
+  /* Hack to enable select-powered Dropdowns */
+  select {
+    appearance: none;
+
+    & + .spectrum-Dropdown-icon {
+      position: absolute;
+      right: var(--spectrum-dropdown-padding-x);
+      top: 50%;
+      margin-top: calc(var(--spectrum-icon-chevron-down-medium-height) / -2);
+    }
+  }
 }
 
 .spectrum-Dropdown-trigger {
@@ -52,6 +64,11 @@
 .spectrum-Dropdown-label + .spectrum-Dropdown-icon {
   margin-left: var(--spectrum-dropdown-icon-margin-left);
 }
+
+.spectrum-Icon + .spectrum-Dropdown-label {
+  margin-left: var(--spectrum-selectlist-thumbnail-image-padding-x);
+}
+
 /* Only apply margin if there's a label */
 .spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
   margin-left: var(--spectrum-dropdown-icon-margin-left);
@@ -63,15 +80,12 @@
   vertical-align: top;
   transition: color var(--spectrum-transition-time) ease-out;
 
-  /* Center the icon */
-  margin: auto;
-
   opacity: 1;
 }
 
 /* Error icons */
 .spectrum-Dropdown {
-  .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+  .spectrum-Dropdown-label + .spectrum-Icon:not(.spectrum-Dropdown-icon) {
     margin-left: var(--spectrum-dropdown-icon-margin-left);
   }
 }

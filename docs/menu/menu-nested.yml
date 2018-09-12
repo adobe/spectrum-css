@@ -1,9 +1,7 @@
 ---
+id: selectlist
 name: Menu Nested
-description: A nested menu.
-status: Beta
 markup: |
-
   <div style="position: relative; height: 260px;">
 
     <div class="spectrum-Popover is-open" style="top: 0; left: 0">

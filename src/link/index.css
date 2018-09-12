@@ -1,7 +1,7 @@
 @import '../commons/index.css';
 
 /* topdoc
-{{ link/link-default.yml }}
+{{ link/link.yml }}
 */
 .spectrum-Link {
 
@@ -48,7 +48,7 @@
 }
 
 /* topdoc
-{{ link/link-overbackground.yml }}
+{{ link/link-over-background.yml }}
 */
 .spectrum-Link--overBackground {
   text-decoration: underline;

@@ -1,6 +1,5 @@
 name: Dropdown - Quiet
-description: A Spectrum 'quiet' dropdown.
-status: Released
+status: Verified
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 220px;">
@@ -36,6 +35,53 @@ markup: |
         </li>
         <li class="spectrum-Menu-divider" role="separator"></li>
         <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+          <span class="spectrum-Menu-itemLabel">United States of America</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dummy-spacing"></div>
+
+  <h4>With Thumbnails</h4>
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open" style="width: 240px;">
+    <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+        <use xlink:href="#spectrum-icon-18-Image" />
+      </svg>
+      <span class="spectrum-Dropdown-label">Ballard</span>
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+    <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover is-open" style="width: 100%">
+      <ul class="spectrum-Menu" role="listbox">
+        <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Menu-itemLabel">Ballard</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+          </svg>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Menu-itemLabel">Fremont</span>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Menu-itemLabel">Greenwood</span>
+        </li>
+        <li class="spectrum-Menu-divider" role="separator"></li>
+        <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
           <span class="spectrum-Menu-itemLabel">United States of America</span>
         </li>
       </ul>

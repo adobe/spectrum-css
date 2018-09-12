@@ -1,7 +1,7 @@
 ---
 name: Alert - Closable
-description: The closable Spectrum alert. It has a close button in the footer. Combine this strategy with any variant.
-status: Beta
+description: An Alert with a close button in the footer. Combine this strategy with any variant.
+ignoreDNA: true
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
     <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Alert-icon" focusable="false" aria-hidden="true">
