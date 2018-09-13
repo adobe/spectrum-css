@@ -11,7 +11,7 @@ markup: |
             <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
           </svg>
         </th>
-        <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+        <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
           Column Title
           <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
@@ -22,29 +22,29 @@ markup: |
     </thead>
     <tbody class="spectrum-Table-body">
       <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Alpha</td>
-        <td class="spectrum-Table-cell">Row Item Alpha</td>
-        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
       </tr>
       <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Bravo</td>
-        <td class="spectrum-Table-cell">Row Item Bravo</td>
-        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
       </tr>
       <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Charlie</td>
-        <td class="spectrum-Table-cell">Row Item Charlie</td>
-        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
       </tr>
       <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Delta</td>
-        <td class="spectrum-Table-cell">Row Item Delta</td>
-        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
       </tr>
       <tr class="spectrum-Table-row">
-        <td class="spectrum-Table-cell">Row Item Echo</td>
-        <td class="spectrum-Table-cell">Row Item Echo</td>
-        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+        <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
       </tr>
     </tbody>
   </table>

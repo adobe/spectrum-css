@@ -18,7 +18,6 @@
     &:focus-ring,
     &.is-focused {
       color: var(--spectrum-table-header-text-color-key-focus);
-      border-color: var(--spectrum-table-header-border-color-key-focus);
 
       .spectrum-Table-sortedIcon {
         color: var(--spectrum-table-header-sort-icon-color-key-focus);
@@ -42,6 +41,16 @@
 
   &::before {
     background-color: var(--spectrum-alias-highlight-selected);
+  }
+}
+
+.spectrum-Table-cell,
+.spectrum-Table-headCell {
+  &:focus-ring,
+  .is-focused {
+    &::before {
+      box-shadow: 0 0 0 2px var(--spectrum-table-cell-border-color-key-focus);
+    }
   }
 }
 
