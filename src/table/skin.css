@@ -49,7 +49,7 @@
   &:focus-ring,
   .is-focused {
     &::before {
-      box-shadow: 0 0 0 2px var(--spectrum-table-cell-border-color-key-focus);
+      box-shadow: inset 0 0 0 2px var(--spectrum-table-cell-border-color-key-focus);
     }
   }
 }
@@ -60,7 +60,12 @@
   background-color: var(--spectrum-table-background-color);
 
   &.is-drop-target {
-    @inherit: %drop-target;
+    border-color: var(--spectrum-alias-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-alias-border-color-focus);
+
+    &::before {
+      background-color: var(--spectrum-alias-highlight-selected);
+    }
   }
 }
 
@@ -121,7 +126,10 @@ tbody.spectrum-Table-body {
   }
 
   &.is-drop-target {
-    @inherit: %drop-target;
+    &::before {
+      box-shadow: inset 0 0 0 2px var(--spectrum-alias-border-color-focus);
+      background-color: var(--spectrum-alias-highlight-selected);
+    }
   }
 }
 

@@ -151,7 +151,7 @@
       bottom: 0;
       left: 0;
 
-      border-radius: var(--spectrum-table-cell-border-radius-key-focus);
+      border-radius: calc(var(--spectrum-table-cell-border-radius-key-focus) - 1px);
     }
   }
 }
@@ -173,6 +173,7 @@
 }
 
 .spectrum-Table-row {
+  position: relative;
   cursor: pointer;
   transition: background-color var(--spectrum-transition-time) ease-in-out;
 
