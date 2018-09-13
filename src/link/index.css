@@ -4,7 +4,6 @@
 {{ link/link.yml }}
 */
 .spectrum-Link {
-
   /* Remove the gray background on active links in IE 10. */
   background-color: transparent;
   /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
@@ -26,9 +25,6 @@
     text-decoration-style: double;
   }
 
-/* topdoc
-{{ link/link-disabled.yml }}
-*/
   &.is-disabled {
     cursor: default;
     pointer-events: none;
@@ -40,16 +36,11 @@
   }
 }
 
-/* topdoc
-{{ link/link-subtle.yml }}
-*/
-.spectrum-Link--subtle {
+.spectrum-Link--subtle,
+/** @deprecated */.spectrum-Link--quiet {
   text-decoration: underline;
 }
 
-/* topdoc
-{{ link/link-over-background.yml }}
-*/
 .spectrum-Link--overBackground {
   text-decoration: underline;
 }
