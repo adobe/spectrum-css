@@ -9,6 +9,9 @@
 /* topdoc
 {{ table/table-divs-quiet.yml }}
 */
+/* topdoc
+{{ table/table-dropzone.yml }}
+*/
 
 .spectrum-Table {
   border-collapse: separate;
@@ -75,11 +78,30 @@
   text-align: right;
 }
 
+/* Helper for shared drop target overlay */
+%drop-target {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
 .spectrum-Table-body {
+  position: relative;
+
   border-width: var(--spectrum-table-border-size);
   border-radius: var(--spectrum-table-border-radius);
   overflow: auto;
   vertical-align: var(--spectrum-table-cell-vertical-alignment);
+
+  &.is-drop-target {
+    @inherit: %drop-target;
+  }
 }
 
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
@@ -128,6 +150,10 @@
   &:focus {
     outline: 0;
   }
+
+  &.is-drop-target {
+    @inherit: %drop-target;
+  }
 }
 
 .spectrum-Table > .spectrum-Table-body > .spectrum-Table-row:last-of-type {
@@ -140,6 +166,15 @@
 .spectrum-Table--quiet {
   .spectrum-Table-body {
     border-radius: var(--spectrum-table-quiet-border-radius);
+  }
+
+  .spectrum-Table-body,
+  .spectrum-Table-row {
+    &.is-drop-target {
+      &::before {
+        border-radius: var(--spectrum-border-radius);
+      }
+    }
   }
 }
 
