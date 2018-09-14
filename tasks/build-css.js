@@ -50,7 +50,6 @@ var processors = [
             ${buildProperties(`${tokenName}-strong`)}
           }
         }`;
-        console.log(output);
         var nodes = postcssReal.parse(output);
         nodes.nodes[0].append(mixin.nodes);
         mixin.replaceWith(nodes);
