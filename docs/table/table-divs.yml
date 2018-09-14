@@ -12,7 +12,7 @@ markup: |
           <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
         </svg>
       </div>
-      <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none" tabindex="0">
+      <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none">
         Column Title
         <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
@@ -22,29 +22,29 @@ markup: |
     </div>
     <div class="spectrum-Table-body" style="height: 120px" role="rowgroup">
       <div class="spectrum-Table-row" style="display: flex" role="row">
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Alpha</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Alpha</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Alpha</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Alpha</div>
       </div>
       <div class="spectrum-Table-row" style="display: flex" role="row">
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Bravo</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Bravo</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Bravo</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Bravo</div>
       </div>
       <div class="spectrum-Table-row" style="display: flex" role="row">
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Charlie</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Charlie</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Charlie</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Charlie</div>
       </div>
       <div class="spectrum-Table-row" style="display: flex" role="row">
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Delta</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Delta</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Delta</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Delta</div>
       </div>
       <div class="spectrum-Table-row" style="display: flex" role="row">
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
-        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Echo</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Echo</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Echo</div>
+        <div class="spectrum-Table-cell" style="flex: 1" role="gridcell" tabindex="0">Row Item Echo</div>
       </div>
     </div>
   </div>

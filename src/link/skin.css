@@ -18,7 +18,8 @@
   }
 }
 
-.spectrum-Link--subtle {
+.spectrum-Link--quiet,
+/** @deprecated */.spectrum-Link--subtle {
   color: inherit;
 
   &:hover {

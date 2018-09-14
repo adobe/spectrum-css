@@ -9,6 +9,9 @@
 /* topdoc
 {{ table/table-divs-quiet.yml }}
 */
+/* topdoc
+{{ table/table-dropzone.yml }}
+*/
 
 .spectrum-Table {
   border-collapse: separate;
@@ -41,14 +44,6 @@
 
   &.is-sortable {
     cursor: pointer;
-
-    &:focus-ring {
-      text-decoration: none;
-      border-style: solid;
-      border-width: var(--spectrum-table-header-border-size-key-focus);
-      padding: calc(var(--spectrum-table-header-padding-y) - var(--spectrum-table-header-border-size-key-focus)) calc(var(--spectrum-table-header-padding-x) - var(--spectrum-table-header-border-size-key-focus));
-      border-radius: var(--spectrum-table-header-border-radius-key-focus);
-    }
   }
 
   &.is-sorted-asc,
@@ -75,11 +70,30 @@
   text-align: right;
 }
 
+/* Helper for shared drop target overlay */
+%drop-target {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
 .spectrum-Table-body {
+  position: relative;
+
   border-width: var(--spectrum-table-border-size);
   border-radius: var(--spectrum-table-border-radius);
   overflow: auto;
   vertical-align: var(--spectrum-table-cell-vertical-alignment);
+
+  &.is-drop-target {
+    @inherit: %drop-target;
+  }
 }
 
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
@@ -117,16 +131,58 @@
   min-height: calc(var(--spectrum-table-cell-min-height) - calc(var(--spectrum-table-cell-padding-y) * 2));
 }
 
+.spectrum-Table-cell,
+.spectrum-Table-headCell {
+  position: relative;
+
+  &:focus-ring,
+  .is-focused {
+    outline: none;
+
+    &::before {
+      content: '';
+
+      /* Float above border */
+      z-index: 1;
+      position: absolute;
+
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      border-radius: calc(var(--spectrum-table-cell-border-radius-key-focus) - 1px);
+    }
+  }
+}
+
+.spectrum-Table-headCell {
+  &:focus-ring,
+  .is-focused {
+    &::before {
+      top: var(--spectrum-table-border-size);
+      right: var(--spectrum-table-border-size);
+      bottom: var(--spectrum-table-border-size);
+      left: var(--spectrum-table-border-size);
+    }
+  }
+}
+
 .spectrum-Table-cell--divider {
   border-right-width: var(--spectrum-table-divider-border-size);
 }
 
 .spectrum-Table-row {
+  position: relative;
   cursor: pointer;
   transition: background-color var(--spectrum-transition-time) ease-in-out;
 
   &:focus {
     outline: 0;
+  }
+
+  &.is-drop-target {
+    @inherit: %drop-target;
   }
 }
 
@@ -140,6 +196,15 @@
 .spectrum-Table--quiet {
   .spectrum-Table-body {
     border-radius: var(--spectrum-table-quiet-border-radius);
+  }
+
+  .spectrum-Table-body,
+  .spectrum-Table-row {
+    &.is-drop-target {
+      &::before {
+        border-radius: var(--spectrum-border-radius);
+      }
+    }
   }
 }
 

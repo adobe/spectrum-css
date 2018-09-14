@@ -4,10 +4,6 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-
-  /* Prevent margin collapase */
-  overflow: hidden;
-
   width: var(--spectrum-sidenav-width);
 }
 

@@ -18,7 +18,6 @@
     &:focus-ring,
     &.is-focused {
       color: var(--spectrum-table-header-text-color-key-focus);
-      border-color: var(--spectrum-table-header-border-color-key-focus);
 
       .spectrum-Table-sortedIcon {
         color: var(--spectrum-table-header-sort-icon-color-key-focus);
@@ -35,10 +34,39 @@
   }
 }
 
+/* Helper for shared drop target overlay */
+%drop-target {
+  border-color: var(--spectrum-alias-border-color-focus);
+  box-shadow: 0 0 0 1px var(--spectrum-alias-border-color-focus);
+
+  &::before {
+    background-color: var(--spectrum-alias-highlight-selected);
+  }
+}
+
+.spectrum-Table-cell,
+.spectrum-Table-headCell {
+  &:focus-ring,
+  .is-focused {
+    &::before {
+      box-shadow: inset 0 0 0 2px var(--spectrum-table-cell-border-color-key-focus);
+    }
+  }
+}
+
 .spectrum-Table-body {
   border-style: solid;
   border-color: var(--spectrum-table-border-color);
   background-color: var(--spectrum-table-background-color);
+
+  &.is-drop-target {
+    border-color: var(--spectrum-alias-border-color-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-alias-border-color-focus);
+
+    &::before {
+      background-color: var(--spectrum-alias-highlight-selected);
+    }
+  }
 }
 
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
@@ -96,6 +124,13 @@ tbody.spectrum-Table-body {
       background-color: var(--spectrum-table-row-background-color-selected-key-focus);
     }
   }
+
+  &.is-drop-target {
+    &::before {
+      box-shadow: inset 0 0 0 2px var(--spectrum-alias-border-color-focus);
+      background-color: var(--spectrum-alias-highlight-selected);
+    }
+  }
 }
 
 .spectrum-Table-cell {
@@ -112,6 +147,15 @@ tbody.spectrum-Table-body {
   .spectrum-Table-body {
     border-width: 1px 0;
     background-color: var(--spectrum-table-quiet-cell-background-color);
+
+    &.is-drop-target {
+      box-shadow: none;
+      border-color: transparent;
+
+      &::before {
+        box-shadow: inset 0 0 0 2px var(--spectrum-alias-border-color-focus);
+      }
+    }
   }
 
   .spectrum-Table-row {
