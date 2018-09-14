@@ -1,4 +1,4 @@
-/* @mixin typographyColor Body1 {}
+@mixin typographyColor Body1 {}
 @mixin typographyColor Body2 {}
 @mixin typographyColor Body3 {}
 @mixin typographyColor Body4 {}
@@ -23,7 +23,6 @@
 @mixin typographyColor Heading2--displayQuiet, display-quiet-2 {}
 
 .spectrum-Article {
-  font-family: var(--spectrum-body-article-1-text-font-family);
   @mixin typographyColor Body1, body-article-1 {}
   @mixin typographyColor Body2, body-article-2 {}
   @mixin typographyColor Body3, body-article-3 {}
@@ -77,7 +76,7 @@
 @mixin typographyColor Code2, body-code-2 {}
 @mixin typographyColor Code3, body-code-3 {}
 @mixin typographyColor Code4, body-code-4 {}
-@mixin typographyColor Code5, body-code-5 {} */
+@mixin typographyColor Code5, body-code-5 {}
 
 &,
 .spectrum-Body {
