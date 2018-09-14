@@ -115,12 +115,25 @@
 */
 .spectrum,
 .spectrum-Body {
-  @extend .spectrum-Body4;
+  font-size: var(--spectrum-body-4-text-size);
+  font-weight: var(--spectrum-body-4-text-font-weight);
+  line-height: var(--spectrum-body-4-text-line-height);
+  font-style: var(--spectrum-body-4-text-font-style);
+  letter-spacing: var(--spectrum-body-4-text-letter-spacing);
+  text-transform: var(--spectrum-body-4-text-transform);
+  margin-bottom: var(--spectrum-body-4-margin-bottom);
+  margin-top: var(--spectrum-body-4-margin-top);
 }
 
 .spectrum-Body--italic {
-  @extend .spectrum-Body4;
+  font-size: var(--spectrum-body-4-emphasis-text-size);
+  font-weight: var(--spectrum-body-4-emphasis-text-font-weight);
+  line-height: var(--spectrum-body-4-emphasis-text-line-height);
   font-style: var(--spectrum-body-4-emphasis-text-font-style);
+  letter-spacing: var(--spectrum-body-4-emphasis-text-letter-spacing);
+  text-transform: var(--spectrum-body-4-emphasis-text-transform);
+  margin-bottom: var(--spectrum-body-4-emphasis-margin-bottom);
+  margin-top: var(--spectrum-body-4-emphasis-margin-top);
 }
 
 .spectrum-Body--large {
