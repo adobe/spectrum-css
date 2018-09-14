@@ -116,8 +116,8 @@
 */
 .spectrum-Slider--color {
   .spectrum-Slider-track {
+    background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
     &::before {
-      background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
       box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-track-border-color);
     }
   }
