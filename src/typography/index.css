@@ -109,6 +109,10 @@
 /* topdoc
 {{ typography/typography-default.yml }}
 */
+
+/* topdoc
+{{ typography/typography-body.yml }}
+*/
 .spectrum,
 .spectrum-Body {
   @extend .spectrum-Body4;

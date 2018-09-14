@@ -3,90 +3,38 @@ name: Typography - Body
 description: Sectioning elements for body content.
 status: Beta
 markup: |
-  <div class="spectrum-Body" lang="en">
-    <section class="spectrum-Section spectrum-Section--1">
-      <h1 class="spectrum-Heading spectrum-Heading--1">Heading 1 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h1>
-        <p>Section 1 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-        <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-        <section class="spectrum-Section spectrum-Section--2">
-          <h2 class="spectrum-Heading spectrum-Heading--2">Heading 2 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h2>
-          <p>Section 2 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-          <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-          <section class="spectrum-Section spectrum-Section--3">
-            <h3 class="spectrum-Heading spectrum-Heading--3">Heading 3 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h3>
-            <p>Section 3 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-            <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-            <section class="spectrum-Section spectrum-Section--4">
-              <h4 class="spectrum-Heading spectrum-Heading--4">Heading 4 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h4>
-              <p>Section 4 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-              <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-              <section class="spectrum-Section spectrum-Section--5">
-                <h5 class="spectrum-Heading spectrum-Heading--5">Heading 5 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></h5>
-                <p>Section 5 + <small>De-Emphasis</small> + <em>Emphasis</em> + <strong>Strong Emphasis</strong></p>
-                <p>Robert Slimbach, who joined Adobe in 1987, began working seriously on type and calligraphy four years earlier in the type drawing department of Autologic in Newbury Park, California. Since then, he has concentrated primarily on designing text faces for digital technology, drawing inspiration from classical sources. In 1991, he received the Prix Charles Peignot from Association Typographique Internationale for excellence in type design. He has designed typefaces for the International Typeface Corporation, as well as Adobe’s corporate typeface Adobe Clean.</p>
-            </section>
-          </section>
-        </section>
-      </section>
-    </section>
+  <div class="spectrum" lang="en">
+    <p class="spectrum-Body1">Body1 Text <em>Body1 Emphasis</em> <strong>Body1 Strong</strong>.</p>
+    <p class="spectrum-Body2">Body2 text <em>Body2 Emphasis</em> <strong>Body2 Strong</strong>.</p>
+    <p class="spectrum-Body3">Body3 Text <em>Body3 Emphasis</em> <strong>Body3 Strong</strong>.</p>
+    <p class="spectrum-Body4">Body4 Text <em>Body4 Emphasis</em> <strong>Body4 Strong</strong>.</p>
+    <p class="spectrum-Body5">Body5 Text <em>Body5 Emphasis</em> <strong>Body5 Strong</strong>.</p>
   </div>
-  <hr class="spectrum-Rule spectrum-Rule--medium">
-  <div class="spectrum-Body" lang="ja">
-    <section class="spectrum-Section spectrum-Section--1">
-      <h1 class="spectrum-Heading spectrum-Heading--1">見出し1 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h1>
-      <p>セクション1 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></p>
-      <p>アドビでは、ポールはインドのトップ10言語のタイプファミリーの開発を率いてきました。彼らはこの取り組みの一環としてAdobe Gurmukhiをデザインしました。さらに、Adobeの初のオープンソース・ファミリー、Source Sans ProとSource Code Proを設計し、開発しました。彼らはまた、Han Sans出身のために西洋スクリプトコンポーネントを提供しています。 PaulはAdobeのユニコードコンソーシアムの代表者の1人であり、Emoji小委員会に参加して、絵文字のシステム内のより良い性別表現を主張しています。</p>
-      <section class="spectrum-Section spectrum-Section--2">
-        <h2 class="spectrum-Heading spectrum-Heading--2">見出し2 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h2>
-        <p>セクション2 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></p>
-        <p>アドビでは、ポールはインドのトップ10言語のタイプファミリーの開発を率いてきました。彼らはこの取り組みの一環としてAdobe Gurmukhiをデザインしました。さらに、Adobeの初のオープンソース・ファミリー、Source Sans ProとSource Code Proを設計し、開発しました。彼らはまた、Han Sans出身のために西洋スクリプトコンポーネントを提供しています。 PaulはAdobeのユニコードコンソーシアムの代表者の1人であり、Emoji小委員会に参加して、絵文字のシステム内のより良い性別表現を主張しています。</p>
-        <section class="spectrum-Section spectrum-Section--3">
-          <h3 class="spectrum-Heading spectrum-Heading--3">見出し3 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h3>
-          <p>セクション3 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></p>
-          <p>アドビでは、ポールはインドのトップ10言語のタイプファミリーの開発を率いてきました。彼らはこの取り組みの一環としてAdobe Gurmukhiをデザインしました。さらに、Adobeの初のオープンソース・ファミリー、Source Sans ProとSource Code Proを設計し、開発しました。彼らはまた、Han Sans出身のために西洋スクリプトコンポーネントを提供しています。 PaulはAdobeのユニコードコンソーシアムの代表者の1人であり、Emoji小委員会に参加して、絵文字のシステム内のより良い性別表現を主張しています。</p>
-          <section class="spectrum-Section spectrum-Section--4">
-            <h4 class="spectrum-Heading spectrum-Heading--4">見出し4 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h4>
-            <p>セクション4 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></p>
-            <p>アドビでは、ポールはインドのトップ10言語のタイプファミリーの開発を率いてきました。彼らはこの取り組みの一環としてAdobe Gurmukhiをデザインしました。さらに、Adobeの初のオープンソース・ファミリー、Source Sans ProとSource Code Proを設計し、開発しました。彼らはまた、Han Sans出身のために西洋スクリプトコンポーネントを提供しています。 PaulはAdobeのユニコードコンソーシアムの代表者の1人であり、Emoji小委員会に参加して、絵文字のシステム内のより良い性別表現を主張しています。</p>
-            <section class="spectrum-Section spectrum-Section--5">
-              <h5 class="spectrum-Heading spectrum-Heading--5">見出し5 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></h5>
-              <p>セクション5 + <small>デエンファシス</small> + <em>重点</em> + <strong>強い強調</strong></p>
-              <p>アドビでは、ポールはインドのトップ10言語のタイプファミリーの開発を率いてきました。彼らはこの取り組みの一環としてAdobe Gurmukhiをデザインしました。さらに、Adobeの初のオープンソース・ファミリー、Source Sans ProとSource Code Proを設計し、開発しました。彼らはまた、Han Sans出身のために西洋スクリプトコンポーネントを提供しています。 PaulはAdobeのユニコードコンソーシアムの代表者の1人であり、Emoji小委員会に参加して、絵文字のシステム内のより良い性別表現を主張しています。</p>
-            </section>
-          </section>
-        </section>
-      </section>
-    </section>
+
+  <div class="spectrum" lang="ja">
+    <p class="spectrum-Body1">見出し1 Text <em>見出し1 重点</em> <strong>見出し1 強い強調</strong>.</p>
+    <p class="spectrum-Body2">見出し2  text <em>見出し2  重点</em> <strong>見出し2 強い強調</strong>.</p>
+    <p class="spectrum-Body3">見出し3 Text <em>見出し3 重点</em> <strong>見出し3 強い強調</strong>.</p>
+    <p class="spectrum-Body4">見出し4 Text <em>見出し4 重点</em> <strong>見出し4 強い強調</strong>.</p>
+    <p class="spectrum-Body5">見出し5 Text <em>見出し5 重点</em> <strong>見出し5 強い強調</strong>.</p>
   </div>
-  <hr class="spectrum-Rule spectrum-Rule--medium">
-  <div class="spectrum-Body" lang="ar">
-    <section class="spectrum-Section spectrum-Section--1">
-      <h1 class="spectrum-Heading spectrum-Heading--1">عنوان 1 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h1>
-      <p>القسم 1 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-      <p>خلال الأحد عشر سنة التي أمضتها مع Adobe ، صممت كارول عددًا من النصوص المحترفة جدًا وعرضها. تصميمات مثل Trajan و Charlemagne و Lithos و Adobe Caslon مستوحاة من الأشكال الكلاسيكية للماضي - من نقوش يونانية مبكرة ، حوالي عام 400 قبل الميلاد ، إلى محارف William Caslon من القرن الثامن عشر. تصاميم مثل فيفا ونويفا استكشاف مناطق جديدة مع الحفاظ على الجذور التقليدية. في عام 1994 ، تلقت جائزة تشارلز Peignot من جمعية Typographique Internationale للمساهمات البارزة في نوع التصميم. كانت أول امرأة وفقط الأميركي الثاني يحصل على هذا الشرف المرموق.</p>
-      <section class="spectrum-Section spectrum-Section--2">
-        <h2 class="spectrum-Heading spectrum-Heading--2">العنوان 2 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h2>
-        <p>القسم 2 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-        <p>خلال الأحد عشر سنة التي أمضتها مع Adobe ، صممت كارول عددًا من النصوص المحترفة جدًا وعرضها. تصميمات مثل Trajan و Charlemagne و Lithos و Adobe Caslon مستوحاة من الأشكال الكلاسيكية للماضي - من نقوش يونانية مبكرة ، حوالي عام 400 قبل الميلاد ، إلى محارف William Caslon من القرن الثامن عشر. تصاميم مثل فيفا ونويفا استكشاف مناطق جديدة مع الحفاظ على الجذور التقليدية. في عام 1994 ، تلقت جائزة تشارلز Peignot من جمعية Typographique Internationale للمساهمات البارزة في نوع التصميم. كانت أول امرأة وفقط الأميركي الثاني يحصل على هذا الشرف المرموق.</p>
-        <section class="spectrum-Section spectrum-Section--3">
-          <h3 class="spectrum-Heading spectrum-Heading--3">العنوان 3 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h3>
-          <p>القسم 3 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-          <p>خلال الأحد عشر سنة التي أمضتها مع Adobe ، صممت كارول عددًا من النصوص المحترفة جدًا وعرضها. تصميمات مثل Trajan و Charlemagne و Lithos و Adobe Caslon مستوحاة من الأشكال الكلاسيكية للماضي - من نقوش يونانية مبكرة ، حوالي عام 400 قبل الميلاد ، إلى محارف William Caslon من القرن الثامن عشر. تصاميم مثل فيفا ونويفا استكشاف مناطق جديدة مع الحفاظ على الجذور التقليدية. في عام 1994 ، تلقت جائزة تشارلز Peignot من جمعية Typographique Internationale للمساهمات البارزة في نوع التصميم. كانت أول امرأة وفقط الأميركي الثاني يحصل على هذا الشرف المرموق.</p>
-          <section class="spectrum-Section spectrum-Section--4">
-            <h4 class="spectrum-Heading spectrum-Heading--4">العنوان 4 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h4>
-            <p>القسم 4 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-            <p>خلال الأحد عشر سنة التي أمضتها مع Adobe ، صممت كارول عددًا من النصوص المحترفة جدًا وعرضها. تصميمات مثل Trajan و Charlemagne و Lithos و Adobe Caslon مستوحاة من الأشكال الكلاسيكية للماضي - من نقوش يونانية مبكرة ، حوالي عام 400 قبل الميلاد ، إلى محارف William Caslon من القرن الثامن عشر. تصاميم مثل فيفا ونويفا استكشاف مناطق جديدة مع الحفاظ على الجذور التقليدية. في عام 1994 ، تلقت جائزة تشارلز Peignot من جمعية Typographique Internationale للمساهمات البارزة في نوع التصميم. كانت أول امرأة وفقط الأميركي الثاني يحصل على هذا الشرف المرموق.</p>
-            <section class="spectrum-Section spectrum-Section--5">
-              <h5 class="spectrum-Heading spectrum-Heading--5">العنوان 5 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></h5>
-              <p>القسم 5 + <small>دي التركيز</small> + <em>تشديد</em> + <strong>تأكيد قوي</strong></p>
-              <p>خلال الأحد عشر سنة التي أمضتها مع Adobe ، صممت كارول عددًا من النصوص المحترفة جدًا وعرضها. تصميمات مثل Trajan و Charlemagne و Lithos و Adobe Caslon مستوحاة من الأشكال الكلاسيكية للماضي - من نقوش يونانية مبكرة ، حوالي عام 400 قبل الميلاد ، إلى محارف William Caslon من القرن الثامن عشر. تصاميم مثل فيفا ونويفا استكشاف مناطق جديدة مع الحفاظ على الجذور التقليدية. في عام 1994 ، تلقت جائزة تشارلز Peignot من جمعية Typographique Internationale للمساهمات البارزة في نوع التصميم. كانت أول امرأة وفقط الأميركي الثاني يحصل على هذا الشرف المرموق.</p>
-            </section>
-          </section>
-        </section>
-      </section>
-    </section>
+
+  <div class="spectrum" lang="ar">
+    <p class="spectrum-Body1">القسم  <em>القسم  تشديد</em> <strong>القسم  تأكيد قو</strong>.</p>
+    <p class="spectrum-Body2">القسم   <em>القسم 1  تشديد</em> <strong>القسم 2 تأكيد قو</strong>.</p>
+    <p class="spectrum-Body3">القسم 3 <em>القسم 3 تشديد</em> <strong>القسم 3 تأكيد قو</strong>.</p>
+    <p class="spectrum-Body4">القسم 4 <em>القسم 4 تشديد</em> <strong>القسم 4 تأكيد قو</strong>.</p>
+    <p class="spectrum-Body5">القسم 5 <em>القسم 5 تشديد</em> <strong>القسم 5 تأكيد قو</strong>.</p>
   </div>
-  <hr class="spectrum-Rule spectrum-Rule--medium">
+
+<div class="spectrum" lang="he">
+  <p class="spectrum-Body1">מחלקה 1 <em>מחלקה 1 דָגֵשׁ</em> <strong>מחלקה 1 Strong</strong>.</p>
+  <p class="spectrum-Body2">סעיף 2 <em>סעיף 2  דָגֵשׁ</em> <strong>סעיף 2 Strong</strong>.</p>
+  <p class="spectrum-Body3">סעיף 3 <em>סעיף 3 דָגֵשׁ</em> <strong>סעיף 3 Strong</strong>.</p>
+  <p class="spectrum-Body4">סעיף 4 <em>סעיף 4 דָגֵשׁ</em> <strong>סעיף 4 Strong</strong>.</p>
+  <p class="spectrum-Body5">סעיף 5 <em>סעיף 5 דָגֵשׁ</em> <strong>סעיף 5 Strong</strong>.</p>
+</div>
+
   <div class="spectrum-Body" lang="he">
     <section class="spectrum-Section spectrum-Section--1">
       <h1 class="spectrum-Heading spectrum-Heading--1">מכוון ל 1 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h1>
