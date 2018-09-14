@@ -19,9 +19,11 @@ var processors = [
   require('postcss-import'),
   require('postcss-mixins')({
     mixins: {
-      typography: function(mixin, name, tokenName) {
+      typography: function(mixin, name, tokenName, textTransformIgnore) {
         if(!tokenName) tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
-        var output = `.spectrum-${name} {
+        var output = '';
+        if(!textTransformIgnore) {
+          output = `.spectrum-${name} {
   font-size: var(--spectrum-${tokenName}-text-size);
   font-weight: var(--spectrum-${tokenName}-text-font-weight);
   line-height: var(--spectrum-${tokenName}-text-line-height);
@@ -45,6 +47,30 @@ var processors = [
     text-transform: var(--spectrum-${tokenName}-strong-text-transform);
   }
 }`;
+        }
+        else {
+          output = `.spectrum-${name} {
+  font-size: var(--spectrum-${tokenName}-text-size);
+  font-weight: var(--spectrum-${tokenName}-text-font-weight);
+  line-height: var(--spectrum-${tokenName}-text-line-height);
+  font-style: var(--spectrum-${tokenName}-text-font-style);
+  letter-spacing: var(--spectrum-${tokenName}-text-letter-spacing);
+  em {
+    font-size: var(--spectrum-${tokenName}-emphasis-text-size);
+    font-weight: var(--spectrum-${tokenName}-emphasis-text-font-weight);
+    line-height: var(--spectrum-${tokenName}-emphasis-text-line-height);
+    font-style: var(--spectrum-${tokenName}-emphasis-text-font-style);
+    letter-spacing: var(--spectrum-${tokenName}-emphasis-text-letter-spacing);
+  }
+  strong {
+    font-size: var(--spectrum-${tokenName}-strong-text-size);
+    font-weight: var(--spectrum-${tokenName}-strong-text-font-weight);
+    line-height: var(--spectrum-${tokenName}-strong-text-line-height);
+    font-style: var(--spectrum-${tokenName}-strong-text-font-style);
+    letter-spacing: var(--spectrum-${tokenName}-strong-text-letter-spacing);
+  }
+}`;
+        }
         var nodes = postcssReal.parse(output);
         nodes.nodes[0].append(mixin.nodes);
         mixin.replaceWith(nodes);

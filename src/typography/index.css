@@ -90,19 +90,19 @@
     @mixin typography Heading2--displayQuiet, display-quiet-han-2 {}
   }
 }
-@mixin typography Code1, body-code-1 {
+@mixin typography Code1, body-code-1, true {
   font-family: var(--spectrum-body-code-1-text-font-family);
 }
-@mixin typography Code2, body-code-2 {
+@mixin typography Code2, body-code-2, true {
   font-family: var(--spectrum-body-code-2-text-font-family);
 }
-@mixin typography Code3, body-code-3 {
+@mixin typography Code3, body-code-3, true {
   font-family: var(--spectrum-body-code-3-text-font-family);
 }
-@mixin typography Code4, body-code-4 {
+@mixin typography Code4, body-code-4, true {
   font-family: var(--spectrum-body-code-4-text-font-family);
 }
-@mixin typography Code5, body-code-5 {
+@mixin typography Code5, body-code-5, true {
   font-family: var(--spectrum-body-code-5-text-font-family);
 }
 
@@ -111,424 +111,41 @@
 */
 .spectrum,
 .spectrum-Body {
-  font-size: var(--spectrum-body-text-size);
-  font-weight: var(--spectrum-body-text-font-weight);
-  line-height: var(--spectrum-body-text-line-height);
+  @extend .spectrum-Body4;
 }
 
 .spectrum-Body--italic {
-  font-style: italic;
+  @extend .spectrum-Body4 em;
 }
 
 .spectrum-Body--large {
-  font-size: var(--spectrum-body-large-text-size);
-  font-weight: var(--spectrum-body-large-text-font-weight);
-  line-height: var(--spectrum-body-large-text-line-height);
+  @extend .spectrum-Body2;
 }
 
 .spectrum-Body--small {
-  font-size: var(--spectrum-body-small-text-size);
-  font-weight: var(--spectrum-body-small-text-font-weight);
-  line-height: var(--spectrum-body-small-text-line-height);
+  @extend .spectrum-Body5;
 }
 
 .spectrum-Body--secondary {
-  font-size: var(--spectrum-body-secondary-text-size);
-  font-weight: var(--spectrum-body-secondary-text-font-weight);
-  line-height: var(--spectrum-body-secondary-text-line-height);
+  @extend .spectrum-Body4;
 }
 
-/* .spectrum-Heading--display {
-  font-weight: var(--spectrum-display-text-font-weight);
-  font-size: var(--spectrum-display-text-size);
-  line-height: var(--spectrum-display-text-line-height);
-} */
+.spectrum-Heading--display {
+  @extend .spectrum-Heading2--displayQuiet;
+}
 
 .spectrum-Heading--pageTitle {
-  /**
-  * Normalize the margin on `h1` elements within `section` and
-  * `article` contexts in Chrome, Firefox, and Safari.
-  */
-  margin: 0.67em 0;
-  font-weight: var(--spectrum-heading-page-title-text-font-weight);
-  font-size: var(--spectrum-heading-page-title-text-size);
-  line-height: var(--spectrum-heading-page-title-text-line-height);
+  @extend .spectrum-Heading2--quiet;
 }
 
 .spectrum-Heading--subtitle1 {
-  font-weight: var(--spectrum-heading-subtitle1-text-font-weight);
-  font-size: var(--spectrum-heading-subtitle1-text-size);
-  line-height: var(--spectrum-heading-subtitle1-text-line-height);
+  @extend .spectrum-Heading4;
 }
 
 .spectrum-Heading--subtitle2 {
-  font-weight: var(--spectrum-heading-subtitle2-text-font-weight);
-  font-size: var(--spectrum-heading-subtitle2-text-size);
-  line-height: var(--spectrum-heading-subtitle2-text-line-height);
+  @extend .spectrum-Heading6;
 }
 
 .spectrum-Heading--subtitle3 {
-  font-weight: var(--spectrum-heading-subtitle3-text-font-weight);
-  font-size: var(--spectrum-heading-subtitle3-text-size);
-  line-height: var(--spectrum-heading-subtitle3-text-line-height);
-  text-transform: var(--spectrum-heading-subtitle3-text-transform);
-  letter-spacing: var(--spectrum-heading-subtitle3-text-letter-spacing);
-}
-
-.spectrum-Heading,
-.spectrum-Section {
-
-  &:lang(ja),
-  &:lang(ko),
-  &:lang(zh) {
-    font-feature-settings: "palt";
-    letter-spacing: 0.05em;
-  }
-
-  small {
-    font-size: inherit;
-  }
-}
-
-.spectrum-Section {
-  font-weight: var(--spectrum-global-font-weight-regular);
-  line-height: var(--spectrum-global-font-line-height-medium);
-  margin-bottom: var(--spectrum-spacing-200);
-  margin-top: var(--spectrum-spacing-200);
-  max-width: var(--section-line-length);
-
-  &:lang(ja),
-  &:lang(ko),
-  &:lang(zh) {
-    font-weight: var(--spectrum-global-font-weight-light);
-    line-height: var(--spectrum-font-line-height-large);
-    max-width: var(--han-section-line-length);
-  }
-
-  &--1 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-400) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--2 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-600) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--3 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-100) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--4 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-100) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-400) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-75) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--5 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-75) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-50) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  small,
-  .spectrum-Emphasis--75,
-  &-Emphasis--75 {
-    font-weight: var(--spectrum-global-font-weight-light);
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-weight: var(--spectrum-global-font-weight-thin);
-    }
-  }
-
-  em,
-  .spectrum-Emphasis--200,
-  &-Emphasis--200 {
-    font-style: italic;
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-style: normal;
-      font-weight: var(--spectrum-global-font-weight-medium);
-    }
-  }
-
-  strong,
-  .spectrum-Emphasis--300,
-  &-Emphasis--300 {
-    font-weight: var(--spectrum-global-font-weight-bold);
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-style: normal;
-      font-weight: var(--spectrum-global-font-weight-semi-bold);
-    }
-  }
-}
-
-.spectrum-Heading {
-  font-weight: var(--spectrum-global-font-weight-bold);
-  line-height: var(--spectrum-global-font-line-height-small);
-  margin-bottom: var(--spectrum-spacing-100);
-  margin-top: var(--spectrum-spacing-100);
-  max-width: var(--heading-line-length);
-
-  &:lang(ja),
-  &:lang(ko),
-  &:lang(zh) {
-    line-height: var(--spectrum-global-font-line-height-medium);
-    max-width: var(--han-heading-line-length);
-  }
-
-  &--1 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-dimension-static-font-size-1100) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--2 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-900) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--3 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-700) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--4 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-300) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-600) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  &--5 {
-    font-size: calc(var(--spectrum-global-dimension-static-font-size-200) * var(--spectrum-global-dimension-scale-factor));
-
-    &:lang(ar) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-500) * var(--spectrum-global-dimension-scale-factor));
-    }
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-size: calc(var(--spectrum-global-dimension-static-font-size-100) * var(--spectrum-global-dimension-scale-factor));
-    }
-  }
-
-  small,
-  .spectrum-Emphasis--75,
-  &-Emphasis--75 {
-    font-weight: var(--spectrum-global-font-weight-light);
-  }
-
-  em,
-  .spectrum-Emphasis--200,
-  &-Emphasis--200 {
-    font-weight: var(--spectrum-global-font-weight-regular);
-    font-style: italic;
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-style: normal;
-      font-weight: var(--spectrum-global-font-weight-medium);
-    }
-  }
-
-  strong,
-  .spectrum-Emphasis--300,
-  &-Emphasis--300 {
-    font-weight: var(--spectrum-global-font-weight-black);
-  }
-}
-
-/* topdoc
-{{ typography/typography-article.yml }}
-*/
-.spectrum-Article {
-  font-family: var(--spectrum-font-family-article);
-  letter-spacing: 0.0125em;
-
-  &:lang(ar) {
-    font-family: var(--spectrum-font-family-article-ar);
-  }
-
-  &:lang(he) {
-    font-family: var(--spectrum-font-family-article-he);
-  }
-
-  &:lang(ja) {
-    font-family: var(--spectrum-font-family-article-ja);
-  }
-
-  &:lang(ko) {
-    font-family: var(--spectrum-font-family-article-ko);
-  }
-
-  &:lang(zh-hans) {
-    font-family: var(--spectrum-font-family-article-zh-hans);
-  }
-
-  &:lang(zh-hant) {
-    font-family: var(--spectrum-font-family-article-zh-hant);
-  }
-
-  .spectrum-Section {
-    font-weight: var(--spectrum-global-font-weight-regular);
-
-    &:lang(ja),
-    &:lang(ko),
-    &:lang(zh) {
-      font-weight: var(--spectrum-global-font-weight-ultra-light);
-    }
-
-    em,
-    .spectrum-Emphasis--200,
-    &-Emphasis--200 {
-      font-style: italic;
-
-      &:lang(ja),
-      &:lang(ko),
-      &:lang(zh) {
-        font-style: normal;
-        font-weight: var(--spectrum-global-font-weight-medium);
-      }
-    }
-
-    strong,
-    .spectrum-Emphasis--300,
-    &-Emphasis--300 {
-      font-weight: var(--spectrum-global-font-weight-bold);
-    }
-  }
-
-  .spectrum-Heading {
-    font-weight: var(--spectrum-global-font-weight-medium);
-
-    em,
-    .spectrum-Emphasis--200,
-    &-Emphasis--200 {
-      font-style: italic;
-      font-weight: var(--spectrum-global-font-weight-regular);
-
-      &:lang(ja),
-      &:lang(ko),
-      &:lang(zh) {
-        font-style: normal;
-        font-weight: var(--spectrum-global-font-weight-bold);
-      }
-    }
-
-    strong,
-    .spectrum-Emphasis--300,
-    &-Emphasis--300 {
-      font-weight: var(--spectrum-global-font-weight-bold);
-
-      &:lang(ja),
-      &:lang(ko),
-      &:lang(zh) {
-        font-weight: var(--spectrum-global-font-weight-semi-bold);
-      }
-    }
-  }
-}
-
-/* topdoc
-{{ typography/typography-code.yml }}
-*/
-.spectrum-Code {
-  font-family: var(--spectrum-font-family-code);
-
-  .spectrum-Section {
-
-    small,
-    .spectrum-Emphasis--75,
-    &-Emphasis--75 {
-      font-style: italic;
-      font-weight: var(--spectrum-global-font-weight-light);
-    }
-  }
+  @extend .spectrum-Subheading;
 }
