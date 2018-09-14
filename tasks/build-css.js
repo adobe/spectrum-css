@@ -22,59 +22,35 @@ var processors = [
       typography: function(mixin, name, tokenName, textTransformIgnore) {
         if(!tokenName) tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
         var output = '';
-        if(!textTransformIgnore) {
-          output = `.spectrum-${name} {
-  font-size: var(--spectrum-${tokenName}-text-size);
-  font-weight: var(--spectrum-${tokenName}-text-font-weight);
-  line-height: var(--spectrum-${tokenName}-text-line-height);
-  font-style: var(--spectrum-${tokenName}-text-font-style);
-  letter-spacing: var(--spectrum-${tokenName}-text-letter-spacing);
-  text-transform: var(--spectrum-${tokenName}-text-transform);
-  margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
-  margin-top: var(--spectrum-${tokenName}-margin-top);
-  em {
-    font-size: var(--spectrum-${tokenName}-emphasis-text-size);
-    font-weight: var(--spectrum-${tokenName}-emphasis-text-font-weight);
-    line-height: var(--spectrum-${tokenName}-emphasis-text-line-height);
-    font-style: var(--spectrum-${tokenName}-emphasis-text-font-style);
-    letter-spacing: var(--spectrum-${tokenName}-emphasis-text-letter-spacing);
-    text-transform: var(--spectrum-${tokenName}-emphasis-text-transform);
-  }
-  strong {
-    font-size: var(--spectrum-${tokenName}-strong-text-size);
-    font-weight: var(--spectrum-${tokenName}-strong-text-font-weight);
-    line-height: var(--spectrum-${tokenName}-strong-text-line-height);
-    font-style: var(--spectrum-${tokenName}-strong-text-font-style);
-    letter-spacing: var(--spectrum-${tokenName}-strong-text-letter-spacing);
-    text-transform: var(--spectrum-${tokenName}-strong-text-transform);
-  }
-}`;
+        var propMap = {
+          'font-size': 'text-size',
+          'font-weight': 'text-font-weight',
+          'line-height': 'text-line-height',
+          'font-style': 'text-font-style',
+          'letter-spacing': 'text-letter-spacing',
+          'text-transform': 'text-transform'
+        };
+        function buildProperties (tokeString) {
+          var ruleString = '';
+          Object.keys(propMap).forEach((key) => {
+            if(!textTransformIgnore || key != 'text-transform') {
+              ruleString += `  ${key}: var(--spectrum-${tokeString}-${propMap[key]});\n`;
+            }
+          });
+          return ruleString;
         }
-        else {
-          output = `.spectrum-${name} {
-  font-size: var(--spectrum-${tokenName}-text-size);
-  font-weight: var(--spectrum-${tokenName}-text-font-weight);
-  line-height: var(--spectrum-${tokenName}-text-line-height);
-  font-style: var(--spectrum-${tokenName}-text-font-style);
-  letter-spacing: var(--spectrum-${tokenName}-text-letter-spacing);
-  margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
-  margin-top: var(--spectrum-${tokenName}-margin-top);
-  em {
-    font-size: var(--spectrum-${tokenName}-emphasis-text-size);
-    font-weight: var(--spectrum-${tokenName}-emphasis-text-font-weight);
-    line-height: var(--spectrum-${tokenName}-emphasis-text-line-height);
-    font-style: var(--spectrum-${tokenName}-emphasis-text-font-style);
-    letter-spacing: var(--spectrum-${tokenName}-emphasis-text-letter-spacing);
-  }
-  strong {
-    font-size: var(--spectrum-${tokenName}-strong-text-size);
-    font-weight: var(--spectrum-${tokenName}-strong-text-font-weight);
-    line-height: var(--spectrum-${tokenName}-strong-text-line-height);
-    font-style: var(--spectrum-${tokenName}-strong-text-font-style);
-    letter-spacing: var(--spectrum-${tokenName}-strong-text-letter-spacing);
-  }
-}`;
-        }
+        output = `.spectrum-${name} {
+        ${buildProperties(tokenName)}
+          margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+          margin-top: var(--spectrum-${tokenName}-margin-top);
+          em {
+            ${buildProperties(`${tokenName}-emphasis`)}
+          }
+          strong {
+            ${buildProperties(`${tokenName}-strong`)}
+          }
+        }`;
+        console.log(output);
         var nodes = postcssReal.parse(output);
         nodes.nodes[0].append(mixin.nodes);
         mixin.replaceWith(nodes);
@@ -82,8 +58,8 @@ var processors = [
       typographyColor: function(mixin, name, tokenName) {
         if(!tokenName) tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
         var output = `.spectrum-${name} {
-  color: var(--spectrum-${tokenName}-text-color);
-}`;
+          color: var(--spectrum-${tokenName}-text-color);
+        }`;
         var nodes = postcssReal.parse(output);
         nodes.nodes[0].append(mixin.nodes);
         mixin.replaceWith(nodes);
