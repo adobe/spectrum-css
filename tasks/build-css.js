@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
+var postcssReal = require('postcss');
 var rename = require('gulp-rename');
 var replace = require('gulp-replace');
 var insert = require('gulp-insert');
@@ -16,9 +17,45 @@ var colorStops = [
 
 var processors = [
   require('postcss-import'),
+  require('postcss-mixins')({
+    mixins: {
+      typography: function(mixin, name, tokenName) {
+        if(!tokenName) tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+        var output = `.spectrum-${name} {
+  font-size: var(--spectrum-${tokenName}-text-size);
+  font-weight: var(--spectrum-${tokenName}-text-font-weight);
+  line-height: var(--spectrum-${tokenName}-text-line-height);
+  font-style: var(--spectrum-${tokenName}-text-font-style);
+  letter-spacing: var(--spectrum-${tokenName}-text-letter-spacing);
+  text-transform: var(--spectrum-${tokenName}-text-transform);
+  em {
+    font-size: var(--spectrum-${tokenName}-emphasis-text-size);
+    font-weight: var(--spectrum-${tokenName}-emphasis-text-font-weight);
+    line-height: var(--spectrum-${tokenName}-emphasis-text-line-height);
+    font-style: var(--spectrum-${tokenName}-emphasis-text-font-style);
+    letter-spacing: var(--spectrum-${tokenName}-emphasis-text-letter-spacing);
+    text-transform: var(--spectrum-${tokenName}-emphasis-text-transform);
+  }
+  strong {
+    font-size: var(--spectrum-${tokenName}-strong-text-size);
+    font-weight: var(--spectrum-${tokenName}-strong-text-font-weight);
+    line-height: var(--spectrum-${tokenName}-strong-text-line-height);
+    font-style: var(--spectrum-${tokenName}-strong-text-font-style);
+    letter-spacing: var(--spectrum-${tokenName}-strong-text-letter-spacing);
+    text-transform: var(--spectrum-${tokenName}-strong-text-transform);
+  }
+}`;
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
+      }
+    }
+  }),
   require('postcss-nested'),
   require('postcss-inherit'),
-  require('postcss-custom-properties')({noValueNotifications: 'error'}),
+  require('postcss-custom-properties')({
+    noValueNotifications: 'error'
+  }),
   require('postcss-calc'),
   require('postcss-svg'),
   require('postcss-functions')({
