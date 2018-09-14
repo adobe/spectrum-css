@@ -1,7 +1,9 @@
 ---
+id: heading-strong
 name: Typography - Heading (Strong)
 description: Strong headings for typography.
-status: Beta
+status: Verified
+ignoreDNA: true
 markup: |
   <div class="spectrum" lang="en">
     <p class="spectrum-Heading1--strong">Heading1 <em>Heading1 Emphasis</em> <strong>Heading1 Strong</strong>.</p>

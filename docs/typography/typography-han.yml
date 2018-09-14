@@ -1,7 +1,9 @@
 ---
+id: body-han-1
 name: Typography - Han
 description: Typographic pairings for Adobe Clean Han.
-status: Beta
+status: Verified
+ignoreDNA: true
 markup: |
   <div lang="ja">
     <h1 class="spectrum-Heading1">見出し1</h1>

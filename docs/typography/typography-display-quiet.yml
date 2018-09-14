@@ -1,7 +1,9 @@
 ---
+id: display-quiet
 name: Typography - Display (Quiet)
 description: Quiet display headings for typography.
-status: Beta
+status: Verified
+ignoreDNA: true
 markup: |
   <div class="spectrum" lang="en">
     <p class="spectrum-Heading1--displayQuiet">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>

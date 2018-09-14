@@ -1,7 +1,9 @@
 ---
+id: body-article-1
 name: Typography - Article
-description: Sectioning elements for long-form article content.
-status: Beta
+description: Typography elements paired to display clear content hierarchies in long form articles.
+status: Verified
+ignoreDNA: true
 markup: |
   <div class="spectrum-Article">
     <h1 class="spectrum-Heading1">Heading 1</h1>

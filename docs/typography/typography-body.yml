@@ -1,7 +1,9 @@
 ---
+id: body-1
 name: Typography - Body
-description: Sectioning elements for body content.
-status: Beta
+description: Default body text sizes.
+status: Verified
+ignoreDNA: true
 markup: |
   <div class="spectrum" lang="en">
     <p class="spectrum-Body1">Body1 Text <em>Body1 Emphasis</em> <strong>Body1 Strong</strong>.</p>

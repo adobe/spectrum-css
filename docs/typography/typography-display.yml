@@ -1,7 +1,9 @@
 ---
+id: display-1
 name: Typography - Display
 description: Display headings for typography.
-status: Beta
+status: Verified
+ignoreDNA: true
 markup: |
   <div class="spectrum" lang="en">
     <p class="spectrum-Heading1--display">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
