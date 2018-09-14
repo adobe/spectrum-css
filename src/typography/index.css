@@ -119,7 +119,8 @@
 }
 
 .spectrum-Body--italic {
-  @extend .spectrum-Body4 em;
+  @extend .spectrum-Body4;
+  font-style: var(--spectrum-body-4-emphasis-text-font-style);
 }
 
 .spectrum-Body--large {
