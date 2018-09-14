@@ -30,6 +30,8 @@ var processors = [
   font-style: var(--spectrum-${tokenName}-text-font-style);
   letter-spacing: var(--spectrum-${tokenName}-text-letter-spacing);
   text-transform: var(--spectrum-${tokenName}-text-transform);
+  margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+  margin-top: var(--spectrum-${tokenName}-margin-top);
   em {
     font-size: var(--spectrum-${tokenName}-emphasis-text-size);
     font-weight: var(--spectrum-${tokenName}-emphasis-text-font-weight);
@@ -55,6 +57,8 @@ var processors = [
   line-height: var(--spectrum-${tokenName}-text-line-height);
   font-style: var(--spectrum-${tokenName}-text-font-style);
   letter-spacing: var(--spectrum-${tokenName}-text-letter-spacing);
+  margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+  margin-top: var(--spectrum-${tokenName}-margin-top);
   em {
     font-size: var(--spectrum-${tokenName}-emphasis-text-size);
     font-weight: var(--spectrum-${tokenName}-emphasis-text-font-weight);
@@ -71,6 +75,15 @@ var processors = [
   }
 }`;
         }
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
+      },
+      typographyColor: function(mixin, name, tokenName) {
+        if(!tokenName) tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+        var output = `.spectrum-${name} {
+  color: var(--spectrum-${tokenName}-text-color);
+}`;
         var nodes = postcssReal.parse(output);
         nodes.nodes[0].append(mixin.nodes);
         mixin.replaceWith(nodes);
