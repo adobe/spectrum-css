@@ -53,6 +53,9 @@ function openDialog(dialog, withOverlay) {
 function closeDialog(dialog) {
   document.getElementById('spectrum-underlay').classList.remove('is-open');
   dialog.classList.remove('is-open');
+  setTimeout(function() {
+    dialog.classList.remove('cssdocs-Dialog');
+  }, 10);
 }
 
 // Show and hide code samples
@@ -90,9 +93,9 @@ function toggleSliderFocus(event) {
 }
 
 var currentTitle = null;
+var titles;
 function setHashFromScroll() {
   var scrollTop = document.querySelector('.sdldocs-components').scrollTop;
-  var titles = document.getElementsByClassName('js-hashtitle');
   var minTitleCloseness = Infinity;
   var closestTitle = null;
   for (var i = 0; i < titles.length; i++) {
@@ -108,7 +111,7 @@ function setHashFromScroll() {
       break;
     }
   }
-  if (closestTitle) {
+  if (closestTitle && currentTitle !== closestTitle) {
     selectNavItem(closestTitle.getAttribute('href'));
     setURLParams(closestTitle.getAttribute('href'));
     currentTitle = closestTitle;
@@ -116,6 +119,7 @@ function setHashFromScroll() {
 }
 
 var selectedNavItem = null;
+var nav;
 function selectNavItem(href) {
   var navLink = document.querySelector('.sdldocs-nav [href="' + href + '"]');
   if (navLink) {
@@ -127,7 +131,6 @@ function selectNavItem(href) {
       }
       navItem.classList.add('is-selected');
 
-      var nav = document.querySelector('.sdldocs-nav');
       if (navItem.offsetTop + navItem.offsetHeight > nav.scrollTop + nav.offsetHeight) {
         // Scroll down to the item
         nav.scrollTop = navItem.offsetTop - nav.offsetHeight + navItem.offsetHeight;
@@ -204,16 +207,24 @@ function changeScale(scale, method, noState) {
   }
 }
 
+var scaleDropdown;
+var colorstopDropdown;
 function setURLParams(hash) {
   hash = hash || window.location.hash;
   window.history.pushState({}, '', '?color='+curColorstop+'&scale='+curScale+'&method='+curMethod+hash);
 
   // Set radio buttons
-  document.querySelector('#scale').value = curScale+','+curMethod;
-  document.querySelector('#colorstop').value = curColorstop;
+  scaleDropdown.value = curScale+','+curMethod;
+  colorstopDropdown.value = curColorstop;
 }
 
 window.addEventListener('DOMContentLoaded', function() {
+  // Get elements once
+  titles = document.getElementsByClassName('js-hashtitle');
+  nav = document.querySelector('.sdldocs-nav');
+  scaleDropdown = document.querySelector('#scale');
+  colorstopDropdown = document.querySelector('#colorstop');
+
   var searchParams = new URLSearchParams(document.location.search.substring(1));
   // Set scale from params
   var colorStop = searchParams.get('color');

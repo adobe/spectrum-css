@@ -94,6 +94,30 @@ html {
   background-color: rgb(15, 15, 15);
 }
 
+.cssdocs-Overlay-example {
+  position: relative;
+  background: rgba(0,0,0,0.4);
+  color: rgba(0,0,0,0.4);
+}
+
+.cssdocs-Dialog {
+  position: relative !important;
+  transform: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: none;
+}
+
+.cssdocs-Overlay-showButton {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 pre {
   margin: 0;
   padding: 0;

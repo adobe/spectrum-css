@@ -11,12 +11,14 @@
 }
 
 .spectrum-Dialog-title {
-  /* Todo: Determine if missing class is required */
   color: var(--spectrum-dialog-title-text-color);
 }
 
+.spectrum-Dialog-content {
+  color: var(--spectrum-dialog-content-text-color);
+}
+
 .spectrum-Dialog-typeIcon {
-  /* Todo: Determine if missing class is required */
   color: var(--spectrum-dialog-icon-color);
 }
 
@@ -24,15 +26,12 @@
   background: var(--spectrum-dialog-background-color);
 }
 
-/* topdoc
-{{ dialog/dialog-error.yml }}
-*/
 .spectrum-Dialog--error {
   .spectrum-Dialog-title {
     color: var(--spectrum-dialog-error-title-text-color);
   }
 
-  .spectrum-Dialog-typeIcon{
+  .spectrum-Dialog-typeIcon {
     color: var(--spectrum-dialog-error-icon-color);
   }
 }

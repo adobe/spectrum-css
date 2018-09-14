@@ -95,9 +95,10 @@ html.spectrum--medium
                 if component.components
                   each subComponent in component.components
                     section.sdldocs-subComponent
-                      header.row.middle-sm.sdldocs-subComponent-header
+                      header.row.middle-sm.sdldocs-subComponent-header(id=`${component.slug}-${subComponent.id}`)
                         if subComponent.name
-                          h4.sdldocs-subComponent-name.spectrum-Heading--subtitle3!= subComponent.name
+                          a(href=`#${component.slug}-${subComponent.id}`).sdldocs-subtleLink.js-hashtitle
+                            h4.sdldocs-subComponent-name.spectrum-Heading--subtitle3!= subComponent.name
                         if subComponent.cssStatus != 'n/a' && showSubStyles
                           .u-tooltip-showOnHover
                             div(class=`sdldocs-dnaStatus spectrum-Label spectrum-Label--small spectrum-Label--${subComponent.dnaColor}`)
@@ -115,7 +116,7 @@ html.spectrum--medium
                         .spectrum-Body--small!= subComponent.description
 
                       section.cssdocs-example.spectrum
-                        .cssdocs-example-demo!= subComponent.markup
+                        .cssdocs-example-demo(class=subComponent.demoClassName ? `${subComponent.demoClassName}` : '')!= subComponent.markup
                         .cssdocs-example-markup
                           if subComponent.markup.split('\n').length > 2
                             a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
@@ -125,7 +126,7 @@ html.spectrum--medium
 
                 else if component.markup
                   section.cssdocs-example.spectrum
-                    .cssdocs-example-demo!= component.markup
+                    .cssdocs-example-demo(class=component.demoClassName ? `${component.demoClassName}` : '')!= component.markup
                     .cssdocs-example-markup
                       if component.markup.split('\n').length > 2
                         a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
