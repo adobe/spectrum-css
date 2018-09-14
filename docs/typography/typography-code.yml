@@ -1,10 +1,10 @@
 ---
 name: Typography - Code
-description: Typographic styles for computer code.
+description: Typographic styles for computer p.
 status: Beta
 markup: |
-  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--1">Code Section 1 <strong>+ Strong Emphasis</strong></code></pre>
-  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--2">Code Section 2 <strong>+ Strong Emphasis</strong></code></pre>
-  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--3">Code Section 3 <strong>+ Strong Emphasis</strong></code></pre>
-  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--4">Code Section 4 <strong>+ Strong Emphasis</strong></code></pre>
-  <pre class="spectrum-Code"><code class="spectrum-Section spectrum-Section--5">Code Section 5 <strong>+ Strong Emphasis</strong></code></pre>
+  <p class="spectrum-Code1">Code1 Text <strong>Strong</strong></p>
+  <p class="spectrum-Code2">Code2 Text <strong>Strong</strong></p>
+  <p class="spectrum-Code3">Code3 Text <strong>Strong</strong></p>
+  <p class="spectrum-Code4">Code4 Text <strong>Strong</strong></p>
+  <p class="spectrum-Code5">Code5 Text <strong>Strong</strong></p>

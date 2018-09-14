@@ -11,54 +11,26 @@ markup: |
     <p class="spectrum-Body5">Body5 Text <em>Body5 Emphasis</em> <strong>Body5 Strong</strong>.</p>
   </div>
 
+  <div class="spectrum-Article">
+    <p class="spectrum-Body1">Article Body1 Text <em>Article Body1 Emphasis</em> <strong>Article Body1 Strong</strong>.</p>
+    <p class="spectrum-Body2">Article Body2 text <em>Article Body2 Emphasis</em> <strong>Article Body2 Strong</strong>.</p>
+    <p class="spectrum-Body3">Article Body3 Text <em>Article Body3 Emphasis</em> <strong>Article Body3 Strong</strong>.</p>
+    <p class="spectrum-Body4">Article Body4 Text <em>Article Body4 Emphasis</em> <strong>Article Body4 Strong</strong>.</p>
+    <p class="spectrum-Body5">Article Body5 Text <em>Article Body5 Emphasis</em> <strong>Article Body5 Strong</strong>.</p>
+  </div>
+
   <div class="spectrum" lang="ja">
-    <p class="spectrum-Body1">見出し1 Text <em>見出し1 重点</em> <strong>見出し1 強い強調</strong>.</p>
-    <p class="spectrum-Body2">見出し2  text <em>見出し2  重点</em> <strong>見出し2 強い強調</strong>.</p>
-    <p class="spectrum-Body3">見出し3 Text <em>見出し3 重点</em> <strong>見出し3 強い強調</strong>.</p>
-    <p class="spectrum-Body4">見出し4 Text <em>見出し4 重点</em> <strong>見出し4 強い強調</strong>.</p>
-    <p class="spectrum-Body5">見出し5 Text <em>見出し5 重点</em> <strong>見出し5 強い強調</strong>.</p>
+    <p class="spectrum-Body1">見出し1 <em>見出し1 重点</em> <strong>見出し1 強い強調</strong>.</p>
+    <p class="spectrum-Body2">見出し2 <em>見出し2  重点</em> <strong>見出し2 強い強調</strong>.</p>
+    <p class="spectrum-Body3">見出し3 <em>見出し3 重点</em> <strong>見出し3 強い強調</strong>.</p>
+    <p class="spectrum-Body4">見出し4 <em>見出し4 重点</em> <strong>見出し4 強い強調</strong>.</p>
+    <p class="spectrum-Body5">見出し5 <em>見出し5 重点</em> <strong>見出し5 強い強調</strong>.</p>
   </div>
 
   <div class="spectrum" lang="ar">
-    <p class="spectrum-Body1">القسم  <em>القسم  تشديد</em> <strong>القسم  تأكيد قو</strong>.</p>
-    <p class="spectrum-Body2">القسم   <em>القسم 1  تشديد</em> <strong>القسم 2 تأكيد قو</strong>.</p>
+    <p class="spectrum-Body1">القسم <em>القسم  تشديد</em> <strong>القسم  تأكيد قو</strong>.</p>
+    <p class="spectrum-Body2">القسم <em>القسم 1  تشديد</em> <strong>القسم 2 تأكيد قو</strong>.</p>
     <p class="spectrum-Body3">القسم 3 <em>القسم 3 تشديد</em> <strong>القسم 3 تأكيد قو</strong>.</p>
     <p class="spectrum-Body4">القسم 4 <em>القسم 4 تشديد</em> <strong>القسم 4 تأكيد قو</strong>.</p>
     <p class="spectrum-Body5">القسم 5 <em>القسم 5 تشديد</em> <strong>القسم 5 تأكيد قو</strong>.</p>
-  </div>
-
-<div class="spectrum" lang="he">
-  <p class="spectrum-Body1">מחלקה 1 <em>מחלקה 1 דָגֵשׁ</em> <strong>מחלקה 1 Strong</strong>.</p>
-  <p class="spectrum-Body2">סעיף 2 <em>סעיף 2  דָגֵשׁ</em> <strong>סעיף 2 Strong</strong>.</p>
-  <p class="spectrum-Body3">סעיף 3 <em>סעיף 3 דָגֵשׁ</em> <strong>סעיף 3 Strong</strong>.</p>
-  <p class="spectrum-Body4">סעיף 4 <em>סעיף 4 דָגֵשׁ</em> <strong>סעיף 4 Strong</strong>.</p>
-  <p class="spectrum-Body5">סעיף 5 <em>סעיף 5 דָגֵשׁ</em> <strong>סעיף 5 Strong</strong>.</p>
-</div>
-
-  <div class="spectrum-Body" lang="he">
-    <section class="spectrum-Section spectrum-Section--1">
-      <h1 class="spectrum-Heading spectrum-Heading--1">מכוון ל 1 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h1>
-      <p>מחלקה 1 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-      <p>במהלך אחת עשרה שנים + שלה עם Adobe, קרול עיצבה מספר טקסט פופולרי מאוד להציג גופים. עיצובים כמו טרייאן, קרל הגדול, ליתוס, ו Adobe Caslon הם בהשראת אותיות הקלאסי של העבר - מן הכתובות היווני מוקדם, בסביבות 400 לפנה"ס, על הקלפים של ויליאם קסלון של 1700s. עיצובים כמו Viva ו Nueva לחקור שטח חדש תוך שמירה על שורשים מסורתיים. בשנת 1994, היא קיבלה את פרס צ'ארלס פינו מן האגודה Typographyique Internationale עבור תרומות מצטיינים כדי סוג העיצוב. היא היתה האישה הראשונה, ורק האמריקאית השנייה קיבלה את הכבוד היוקרתי הזה.</p>
-      <section class="spectrum-Section spectrum-Section--2">
-        <h2 class="spectrum-Heading spectrum-Heading--2">כותרת 2 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h2>
-        <p>סעיף 2 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-        <p>במהלך אחת עשרה שנים + שלה עם Adobe, קרול עיצבה מספר טקסט פופולרי מאוד להציג גופים. עיצובים כמו טרייאן, קרל הגדול, ליתוס, ו Adobe Caslon הם בהשראת אותיות הקלאסי של העבר - מן הכתובות היווני מוקדם, בסביבות 400 לפנה"ס, על הקלפים של ויליאם קסלון של 1700s. עיצובים כמו Viva ו Nueva לחקור שטח חדש תוך שמירה על שורשים מסורתיים. בשנת 1994, היא קיבלה את פרס צ'ארלס פינו מן האגודה Typographyique Internationale עבור תרומות מצטיינים כדי סוג העיצוב. היא היתה האישה הראשונה, ורק האמריקאית השנייה קיבלה את הכבוד היוקרתי הזה.</p>
-        <section class="spectrum-Section spectrum-Section--3">
-          <h3 class="spectrum-Heading spectrum-Heading--3">כותרת 3  + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h3>
-          <p>סעיף 3 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-          <p>במהלך אחת עשרה שנים + שלה עם Adobe, קרול עיצבה מספר טקסט פופולרי מאוד להציג גופים. עיצובים כמו טרייאן, קרל הגדול, ליתוס, ו Adobe Caslon הם בהשראת אותיות הקלאסי של העבר - מן הכתובות היווני מוקדם, בסביבות 400 לפנה"ס, על הקלפים של ויליאם קסלון של 1700s. עיצובים כמו Viva ו Nueva לחקור שטח חדש תוך שמירה על שורשים מסורתיים. בשנת 1994, היא קיבלה את פרס צ'ארלס פינו מן האגודה Typographyique Internationale עבור תרומות מצטיינים כדי סוג העיצוב. היא היתה האישה הראשונה, ורק האמריקאית השנייה קיבלה את הכבוד היוקרתי הזה.</p>
-          <section class="spectrum-Section spectrum-Section--4">
-            <h4 class="spectrum-Heading spectrum-Heading--4">כותרת 4 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h4>
-            <p>סעיף 4 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-            <p>במהלך אחת עשרה שנים + שלה עם Adobe, קרול עיצבה מספר טקסט פופולרי מאוד להציג גופים. עיצובים כמו טרייאן, קרל הגדול, ליתוס, ו Adobe Caslon הם בהשראת אותיות הקלאסי של העבר - מן הכתובות היווני מוקדם, בסביבות 400 לפנה"ס, על הקלפים של ויליאם קסלון של 1700s. עיצובים כמו Viva ו Nueva לחקור שטח חדש תוך שמירה על שורשים מסורתיים. בשנת 1994, היא קיבלה את פרס צ'ארלס פינו מן האגודה Typographyique Internationale עבור תרומות מצטיינים כדי סוג העיצוב. היא היתה האישה הראשונה, ורק האמריקאית השנייה קיבלה את הכבוד היוקרתי הזה.</p>
-            <section class="spectrum-Section spectrum-Section--5">
-              <h5 class="spectrum-Heading spectrum-Heading--5">כותרת 5 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></h5>
-              <p>סעיף 5 + <small>דה-דגש</small> + <em>דָגֵשׁ</em> + <strong>דגש חזק</strong></p>
-              <p>במהלך אחת עשרה שנים + שלה עם Adobe, קרול עיצבה מספר טקסט פופולרי מאוד להציג גופים. עיצובים כמו טרייאן, קרל הגדול, ליתוס, ו Adobe Caslon הם בהשראת אותיות הקלאסי של העבר - מן הכתובות היווני מוקדם, בסביבות 400 לפנה"ס, על הקלפים של ויליאם קסלון של 1700s. עיצובים כמו Viva ו Nueva לחקור שטח חדש תוך שמירה על שורשים מסורתיים. בשנת 1994, היא קיבלה את פרס צ'ארלס פינו מן האגודה Typographyique Internationale עבור תרומות מצטיינים כדי סוג העיצוב. היא היתה האישה הראשונה, ורק האמריקאית השנייה קיבלה את הכבוד היוקרתי הזה.</p>
-            </section>
-          </section>
-        </section>
-      </section>
-    </section>
   </div>
