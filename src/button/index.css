@@ -162,6 +162,10 @@ a.spectrum-ActionButton {
 
 .spectrum-ActionButton-label,
 .spectrum-Button-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &:empty {
     display: none;
   }
