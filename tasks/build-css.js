@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
+var postcssReal = require('postcss');
 var rename = require('gulp-rename');
 var replace = require('gulp-replace');
 var insert = require('gulp-insert');
@@ -16,9 +17,65 @@ var colorStops = [
 
 var processors = [
   require('postcss-import'),
+  require('postcss-mixins')({
+    mixins: {
+      typography: function(mixin, name, tokenName, textTransformIgnore) {
+        if(!tokenName) {
+          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+          tokenName = tokenName.replace('.spectrum--', '');
+        }
+        var output = '';
+        var propMap = {
+          'font-size': 'text-size',
+          'font-weight': 'text-font-weight',
+          'line-height': 'text-line-height',
+          'font-style': 'text-font-style',
+          'letter-spacing': 'text-letter-spacing',
+          'text-transform': 'text-transform'
+        };
+        function buildProperties (tokeString) {
+          var ruleString = '';
+          Object.keys(propMap).forEach((key) => {
+            if(!textTransformIgnore || key != 'text-transform') {
+              ruleString += `  ${key}: var(--spectrum-${tokeString}-${propMap[key]});\n`;
+            }
+          });
+          return ruleString;
+        }
+        output = `${name} {
+        ${buildProperties(tokenName)}
+          margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+          margin-top: var(--spectrum-${tokenName}-margin-top);
+          em {
+            ${buildProperties(`${tokenName}-emphasis`)}
+          }
+          strong {
+            ${buildProperties(`${tokenName}-strong`)}
+          }
+        }`;
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
+      },
+      typographyColor: function(mixin, name, tokenName) {
+        if(!tokenName) {
+          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+          tokenName = tokenName.replace('.spectrum--', '');
+        }
+        var output = `${name} {
+          color: var(--spectrum-${tokenName}-text-color);
+        }`;
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
+      }
+    }
+  }),
   require('postcss-nested'),
   require('postcss-inherit'),
-  require('postcss-custom-properties')({noValueNotifications: 'error'}),
+  require('postcss-custom-properties')({
+    noValueNotifications: 'error'
+  }),
   require('postcss-calc'),
   require('postcss-svg'),
   require('postcss-functions')({
@@ -50,6 +107,7 @@ gulp.task('build-css:individual-components-md', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-medium.css";'))
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
@@ -64,6 +122,7 @@ gulp.task('build-css:individual-components-lg', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(rename(function(path) {
       path.basename += '-lg';
@@ -83,6 +142,7 @@ gulp.task('build-css:individual-components-diffscale', function() {
     ]))
     // Use large variables
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     // Build
     .pipe(postcss(processors))
     // Wrap in large
@@ -133,7 +193,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
 
   return gulp.src(globs)
     .pipe(plumb())
-    .pipe(insert.prepend(`\n@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
+    .pipe(insert.prepend(`@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
     .pipe(insert.append(appendString))
     .pipe(postcss(processors))
     .pipe(replace(/^&/gm, '.spectrum')) // Any stray & in colorstops should just apply to .spectrum
@@ -189,6 +249,7 @@ gulp.task('build-css:core-md-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../dist/vars/spectrum-medium.css";'))
+    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
@@ -203,6 +264,7 @@ gulp.task('build-css:core-lg-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../dist/vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(rename(function(path) {
       path.basename += '-lg';
