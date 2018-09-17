@@ -6,37 +6,43 @@
 {{ tooltip/tooltip-demo-button.yml }}
 */
 .spectrum-Tooltip {
-  &,
-  .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-background-color);
-    color: var(--spectrum-tooltip-text-color);
-  }
+  background-color: var(--spectrum-tooltip-background-color);
+
+  color: var(--spectrum-tooltip-text-color);
+}
+
+.spectrum-Tooltip-tip {
+  border-top-color: var(--spectrum-tooltip-background-color);
 }
 
 .spectrum-Tooltip--error {
-  &,
-  .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-negative-background-color);
+  background-color: var(--spectrum-tooltip-negative-background-color);
+
+  .spectrum-Tooltip-tip {
+    border-top-color: var(--spectrum-tooltip-negative-background-color);
   }
 }
 
 .spectrum-Tooltip--info {
-  &,
-  .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-info-background-color);
+  background-color: var(--spectrum-tooltip-info-background-color);
+
+  .spectrum-Tooltip-tip {
+    border-top-color: var(--spectrum-tooltip-info-background-color);
   }
 }
 
 .spectrum-Tooltip--help {
-  &,
-  .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-info-background-color);
+  background-color: var(--spectrum-tooltip-info-background-color);
+
+  .spectrum-Tooltip-tip {
+    border-top-color: var(--spectrum-tooltip-info-background-color);
   }
 }
 
 .spectrum-Tooltip--success {
-  &,
-  .spectrum-Tooltip-tip::after {
-    background-color: var(--spectrum-tooltip-positive-background-color);
+  background-color: var(--spectrum-tooltip-positive-background-color);
+
+  .spectrum-Tooltip-tip {
+    border-top-color: var(--spectrum-tooltip-positive-background-color);
   }
 }

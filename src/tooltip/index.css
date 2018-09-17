@@ -2,10 +2,9 @@
 @import '../commons/overlay.css';
 
 :root {
-  --spectrum-tooltip-animation-distance: 4px;
   --spectrum-tooltip-target-offset: 3px;
-  --spectrum-tooltip-max-width: 256px;
-  --spectrum-tooltip-tip-cross: calc(11px * var(--spectrum-global-dimension-scale-factor));
+  /* This variable needs to be updated in Spectrum DNA. Using the height variable so it scales to spectrum-large */
+  --spectrum-tooltip-tip-width: var(--spectrum-tooltip-tip-height);
 }
 
 .spectrum-Tooltip {
@@ -23,9 +22,9 @@
   vertical-align: top;
 
   width: auto;
-  max-width: var(--spectrum-tooltip-max-width);
   padding: var(--spectrum-tooltip-padding-top) var(--spectrum-tooltip-padding-x);
   border-radius: var(--spectrum-tooltip-border-radius);
+  min-height: var(--spectrum-tooltip-min-height);
 
   font-size: var(--spectrum-tooltip-text-size);
   font-weight: var(--spectrum-tooltip-text-font-weight);
@@ -47,25 +46,22 @@
 
 .spectrum-Tooltip-tip {
   position: absolute;
-  overflow: hidden;
-  width: var(--spectrum-tooltip-tip-cross);
-  height: var(--spectrum-tooltip-tip-cross);
-  &::after {
-    content: '';
-    width: var(--spectrum-tooltip-tip-width);
-    height: var(--spectrum-tooltip-tip-width);
-    top: -2px;
-    left: 1px;
-    position: absolute;
-    transform: rotate(45deg);
-  }
+
+  height: 0;
+  width: 0;
+
+  border-width: var(--spectrum-tooltip-tip-width);
+  border-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
 }
 
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--left {
   .spectrum-Tooltip-tip {
     top: 50%;
-    margin-top: calc(var(--spectrum-tooltip-tip-cross) / -2);
+    margin-top: calc(-1 * var(--spectrum-tooltip-tip-width));
   }
 }
 
@@ -75,7 +71,7 @@
     @inherit: %spectrum-overlay--right--open;
   }
   .spectrum-Tooltip-tip {
-    left: calc(var(--spectrum-tooltip-tip-width) * -1);
+    right: 100%;
     transform: rotate(90deg);
   }
 }
@@ -86,19 +82,8 @@
     @inherit: %spectrum-overlay--left--open;
   }
   .spectrum-Tooltip-tip {
-    right: calc(var(--spectrum-tooltip-tip-width) * -1);
+    left: 100%;
     transform: rotate(-90deg);
-  }
-}
-
-.spectrum-Tooltip--bottom {
-  margin-top: var(--spectrum-tooltip-target-offset);
-  &.is-open {
-    @inherit: %spectrum-overlay--bottom--open;
-  }
-  .spectrum-Tooltip-tip {
-    top: calc(var(--spectrum-tooltip-tip-width) * -1);
-    transform: rotate(180deg);
   }
 }
 
@@ -108,7 +93,18 @@
     @inherit: %spectrum-overlay--top--open;
   }
   .spectrum-Tooltip-tip {
-    bottom: calc(var(--spectrum-tooltip-tip-width) * -1);
+    top: 100%;
+  }
+}
+
+.spectrum-Tooltip--bottom {
+  margin-top: var(--spectrum-tooltip-target-offset);
+  &.is-open {
+    @inherit: %spectrum-overlay--bottom--open;
+  }
+  .spectrum-Tooltip-tip {
+    bottom: 100%;
+    transform: rotate(-180deg);
   }
 }
 
@@ -116,7 +112,7 @@
 .spectrum-Tooltip--top {
   .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: calc(var(--spectrum-tooltip-tip-cross) / -2);
+    margin-left: calc(-1 * var(--spectrum-tooltip-tip-width));
   }
 }
 
@@ -128,10 +124,19 @@
 {{ tooltip/tooltip-icons.yml }}
 */
 .spectrum-Tooltip-typeIcon {
-  margin-right: var(--spectrum-button-primary-text-gap);
+  margin-left: calc(var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x));
+  margin-right: var(--spectrum-tooltip-icon-margin-x);
+  width: var(--spectrum-tooltip-icon-size);
+  height: var(--spectrum-tooltip-icon-size);
+  align-self: flex-start;
+
+  /* Adjusts for weird misalignment */
+  margin-top: 1px;
 }
 
 .spectrum-Tooltip-label {
+  max-width: var(--spectrum-tooltip-content-max-width);
+
   /* Make sure line height is correct to prevent problems in Windows */
   line-height: var(--spectrum-tooltip-text-line-height);
 }
@@ -145,7 +150,7 @@
     white-space: nowrap;
     /* Required for animations to work, !important for diff scaling to work */
     visibility: visible !important;
-    transition: transform var(--spectrum-transition-time) ease-in-out;
+    transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
     top: -100%;
   }
 
@@ -154,7 +159,6 @@
     top: 50%;
     .spectrum-Tooltip-tip {
       top: 50%;
-      margin-top: -5px;
     }
   }
 
@@ -172,17 +176,16 @@
     left: 50%;
     .spectrum-Tooltip-tip {
       left: 50%;
-      margin-left: -4px;
     }
   }
 
   .spectrum-Tooltip--bottom {
     top: 100%;
-    transform: translate(-50%, -8px);
+    transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-tip-margin)));
   }
 
   .spectrum-Tooltip--top {
-    transform: translate(-50%, 8px);
+    transform: translate(-50%, var(--spectrum-tooltip-tip-margin));
   }
 
   &:hover .spectrum-Tooltip {
@@ -194,14 +197,14 @@
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--top {
-    transform: translate(-50%, -8px);
+    transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-tip-margin)));
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--left {
-    transform: translate(calc(-100% - 8px), -50%);
+    transform: translate(calc(-100% - var(--spectrum-tooltip-tip-margin)), -50%);
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--right {
-    transform: translate(8px, -50%);
+    transform: translate(var(--spectrum-tooltip-tip-margin), -50%);
   }
 }
