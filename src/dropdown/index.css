@@ -20,6 +20,21 @@
   /* Hack to enable select-powered Dropdowns */
   select {
     appearance: none;
+    -ms-appearance: none; /* Edge */
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &::-ms-value {
+      background-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
 
     & + .spectrum-Dropdown-icon {
       position: absolute;
