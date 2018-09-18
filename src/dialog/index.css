@@ -78,7 +78,8 @@
   &::after {
     position: absolute;
     bottom: var(--spectrum-dialog-rule-margin-bottom);
-    width: 100%;
+    left: 0;
+    right: 0;
     content: '';
 
     height: var(--spectrum-dialog-rule-height);
