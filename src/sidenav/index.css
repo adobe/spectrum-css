@@ -1,5 +1,9 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-sidenav-item-padding-y: var(--spectrum-global-dimension-size-65);
+}
+
 .spectrum-SideNav {
   list-style-type: none;
   margin: 0;
@@ -23,7 +27,7 @@
   width: 100%;
   min-height: var(--spectrum-sidenav-item-height);
 
-  padding: 0 var(--spectrum-sidenav-item-padding-x);
+  padding: var(--spectrum-sidenav-item-padding-y) var(--spectrum-sidenav-item-padding-x);
 
   border-radius: var(--spectrum-sidenav-item-border-radius);
 
