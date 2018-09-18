@@ -7,6 +7,9 @@
   --spectrum-tooltip-tip-width: var(--spectrum-tooltip-tip-height);
 }
 
+/* topdoc
+{{ tooltip/tooltip.yml }}
+*/
 .spectrum-Tooltip {
   @inherit: %spectrum-overlay;
 
@@ -117,13 +120,6 @@
   }
 }
 
-/* topdoc
-{{ tooltip/tooltip-wrapping.yml }}
-*/
-
-/* topdoc
-{{ tooltip/tooltip-icons.yml }}
-*/
 .spectrum-Tooltip-typeIcon {
   margin-left: calc(var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x));
   margin-right: var(--spectrum-tooltip-icon-margin-x);
@@ -153,6 +149,11 @@
     visibility: visible !important;
     transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
     top: -100%;
+  }
+
+  .spectrum-Tooltip-label {
+    /* Don't try to wrap as the mechanism used for this helper does not support wrapping */
+    max-width: none;
   }
 
   .spectrum-Tooltip--right,
