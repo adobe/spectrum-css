@@ -29,7 +29,7 @@ gulp.task('test-backstop', function() {
         'report': ['browser'],
         'engine': 'chrome',
         'engineFlags': [],
-        'asyncCaptureLimit': 2,
+        'asyncCaptureLimit': 10,
         'asyncCompareLimit': 10,
         'debug': false,
         'debugWindow': false
