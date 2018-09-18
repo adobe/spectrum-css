@@ -1,0 +1,33 @@
+.spectrum-AssetCard {
+
+  &:hover {
+    .spectrum-AssetCard-wrapper {
+      background-color: var(--spectrum-global-color-gray-300);
+    }
+    .spectrum-AssetCard-checkbox {
+      background: var(--spectrum-global-color-gray-50);
+    }
+  }
+
+  .spectrum-AssetCard-wrapper {
+    background-color: var(--spectrum-global-color-gray-200);
+    &.selected {
+      border-color: var(--spectrum-global-color-blue-500);
+      .spectrum-AssetCard-checkbox {
+        background: var(--spectrum-global-color-gray-50);
+      }
+    }
+  }
+
+  .spectrum-AssetCard-detail-wrapper {    
+    .spectrum-AssetCard-detail {
+      .spectrum-AssetCard-name-large {
+        color: var(--spectrum-global-color-gray-800);
+      }
+    }
+
+    .spectrum-AssetCard-type {
+      color: var(--spectrum-global-color-gray-700);
+    }
+  }
+}

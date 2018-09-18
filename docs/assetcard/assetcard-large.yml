@@ -1,0 +1,29 @@
+---
+name: Asset Card - Image (Large)
+description: A spectrum AssetCard
+status: Beta
+markup: |
+  <div class="spectrum-AssetCard large">
+    <div class="spectrum-AssetCard-wrapper large">
+      <div class="spectrum-AssetCard-content">
+        <img class="s-img s-img-loaded" src="https://t4.ftcdn.net/jpg/02/07/87/45/240_F_207874517_3oVZH5OJ399mo6FfLIyLGmu7ZJjsaqfU.jpg" width="150" height="150" />
+        <div class="spectrum-AssetCard-checkbox">
+          <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" aria-checked="false" value="">
+              <span class="spectrum-Checkbox-box">
+                <svg class="spectrum-UIIcon-CheckmarkSmall spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true" role="img">
+                  <path d="M3.788 9A1 1 0 0 1 3 8.615l-2.288-3a1 1 0 1 1 1.576-1.23l1.5 1.991 3.924-4.991a1 1 0 1 1 1.576 1.23l-4.712 6A1 1 0 0 1 3.788 9z" class="spectrum-UIIcon--medium"></path>
+                  <path d="M4.5 11a1 1 0 0 1-.788-.385l-3-4A.991.991 0 0 1 .5 6a1 1 0 0 1 1.788-.616L4.5 8.376l5.212-6.991a1 1 0 1 1 1.576 1.231l-6 8A1 1 0 0 1 4.5 11z" class="spectrum-UIIcon--large"></path>
+                </svg>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spectrum-AssetCard-detail-wrapper large">
+      <div class="spectrum-AssetCard-detail large">
+        <div class="spectrum-AssetCard-name large">Name</div>
+      </div>
+      <div class="spectrum-AssetCard-type">image</div>
+    </div>
+  </div>

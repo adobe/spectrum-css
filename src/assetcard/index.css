@@ -1,0 +1,181 @@
+/* topdoc
+{{ assetcard/assetcard-large.yml }}
+*/
+
+/* topdoc
+{{ assetcard/assetcard-small.yml }}
+*/
+
+:root {
+  --spectrum-assetcard-large-font: 14px;
+  --spectrum-assetcard-small-font: 12px;
+  --spectrum-assetcard-type-font: 11px;
+  --spectrum-assetcard-large-default-size: 208px;
+  --spectrum-assetcard-small-default-size: 120px;
+}
+
+.spectrum-AssetCard {
+  height: 100%;
+
+  &:hover {
+    cursor: pointer;
+
+    .spectrum-AssetCard-checkbox {
+      display: block;
+      width:30px; height:30px; opacity:0.7;
+      position : absolute;
+      left: 25px;
+      top: 25px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      border-radius: 4px;
+      align-items: center;
+    
+    .spectrum-Checkbox-input {
+      left: 0px;
+    }
+
+    .spectrum-Checkbox-box {
+      width: 15px;
+      height: 15px;
+      left: 50%;
+      top:-1px;
+    }
+  }
+}
+
+  .spectrum-AssetCard-checkbox {
+    display: none;
+  }
+
+  .spectrum-AssetCard-refresh {
+    display: none;
+  }
+
+  &.is-uploading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .spectrum-AssetCard-wrapper {
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 20px;/*padding: 12px;*/
+    position: relative;
+    transition: background-color 200ms;
+    &.selected {
+      border: 2px solid;
+      padding: 20px;
+      .spectrum-AssetCard-checkbox {
+        display: block;
+        width:30px; height:30px; opacity:0.7;
+        position : absolute;
+        left: 25px;
+        top: 25px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+        align-items: center;
+    
+        .spectrum-Checkbox-input {
+          left: 0px;
+        }
+
+        .spectrum-Checkbox-box {
+          width: 15px;
+          height: 15px;
+          left: 50%;
+          top:-1px;
+        }
+      }
+    }
+    .spectrum-AssetCard-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .folder-icon,
+      .file-icon {
+        width: 80px;
+        margin: 20px 0;
+      }
+      img {
+        object-fit: contain;
+        opacity: 0;
+        transition: opacity 200ms;
+        &.s-img-loaded {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .spectrum-AssetCard-wrapper.small {
+    height: var(--spectrum-assetcard-small-default-size); 
+    width: var(--spectrum-assetcard-small-default-size);  
+  }
+  .spectrum-AssetCard-wrapper.large {
+    height: var(--spectrum-assetcard-large-default-size); 
+    width: var(--spectrum-assetcard-large-default-size); 
+  }
+
+  .spectrum-AssetCard-detail-wrapper {
+    padding: 0;
+    
+    .spectrum-AssetCard-detail {
+      display: flex;
+      justify-content: space-between;
+
+      .spectrum-AssetCard-name-large {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 8px;
+      }
+
+      .spectrum-AssetCard-name.large {
+        font-size: var(--spectrum-assetcard-large-font);
+      }
+      .spectrum-AssetCard-name.small {
+        font-size: var(--spectrum-assetcard-small-font);
+      }
+    }
+
+    .spectrum-AssetCard-detail.large {
+      height: 20px;
+      div:last-child:not(.name) {
+        height: 32px;
+      }
+    }
+    .spectrum-AssetCard-detail.small {
+      height: 16px;
+      div:last-child:not(.name) {
+        height: 20px;
+      }
+    }
+
+    .spectrum-AssetCard-type {
+      font-size: var(--spectrum-assetcard-type-font);
+      letter-spacing: .666px;
+      text-transform: uppercase;
+    }
+  }
+
+  .spectrum-AssetCard-detail-wrapper.large {
+    margin: 12px 0 0;
+  }
+  .spectrum-AssetCard-detail-wrapper.small {
+    margin: 4px 0 0;
+  }
+}
+
+.spectrum-AssetCard.large {
+    width: var(--spectrum-assetcard-large-default-size);
+}
+.spectrum-AssetCard.small {
+    width: var(--spectrum-assetcard-small-default-size);
+}
