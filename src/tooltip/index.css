@@ -29,7 +29,7 @@
   font-size: var(--spectrum-tooltip-text-size);
   font-weight: var(--spectrum-tooltip-text-font-weight);
   line-height: var(--spectrum-tooltip-text-line-height);
-  word-break: break-all;
+  word-break: break-word;
 
   &.is-open {
     @inherit: %spectrum-overlay--open;
