@@ -195,19 +195,6 @@
   }
 }
 
-.folder-icon,
-.file-icon {
-  .folder-background {
-    fill: #E1E1E1
-  }
-  .file-background {
-    fill: #FFFFFF
-  }
-  .folder-outline, .file-outline {
-    fill: #B3B3B3
-  }
-}
-
 .spectrum-AssetCard.large {
   max-width: var(--spectrum-assetcard-large-max-size);
   min-width: var(--spectrum-assetcard-large-min-size);
