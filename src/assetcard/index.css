@@ -6,17 +6,28 @@
 {{ assetcard/assetcard-small.yml }}
 */
 
+/* topdoc
+{{ assetcard/assetcard-folder.yml }}
+*/
+
+/* topdoc
+{{ assetcard/assetcard-file.yml }}
+*/
+
 :root {
   --spectrum-assetcard-large-font: 14px;
   --spectrum-assetcard-small-font: 12px;
   --spectrum-assetcard-type-font: 11px;
-  --spectrum-assetcard-large-default-size: 208px;
-  --spectrum-assetcard-small-default-size: 120px;
+  --spectrum-assetcard-large-max-size: 248px;
+  --spectrum-assetcard-large-min-size: 168px;
+  --spectrum-assetcard-small-max-size: 152px;
+  --spectrum-assetcard-small-min-size: 72px;
 }
 
 .spectrum-AssetCard {
   height: 100%;
-
+  width: 100%;
+ 
   &:hover {
     cursor: pointer;
 
@@ -59,13 +70,16 @@
   }
 
   .spectrum-AssetCard-wrapper {
+    width: 100%;
+    height: calc(100% - 52px);
     margin: 0 auto;
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 20px;/*padding: 12px;*/
+    padding: 20px;
     position: relative;
     transition: background-color 200ms;
-    &.selected {
+    border: 2px solid transparent;
+    &.is-selected {
       border: 2px solid;
       padding: 20px;
       .spectrum-AssetCard-checkbox {
@@ -105,6 +119,8 @@
       }
       img {
         object-fit: contain;
+        max-height: 100%;
+        max-width: 100%;
         opacity: 0;
         transition: opacity 200ms;
         &.s-img-loaded {
@@ -112,15 +128,21 @@
         }
       }
     }
+    .spectrum-AssetCard-content.large {
+      min-height: var(--spectrum-assetcard-large-min-size);
+    }
+    .spectrum-AssetCard-content.small {
+      min-height: var(--spectrum-assetcard-small-min-size);
+    }
   }
 
-  .spectrum-AssetCard-wrapper.small {
-    height: var(--spectrum-assetcard-small-default-size); 
-    width: var(--spectrum-assetcard-small-default-size);  
-  }
   .spectrum-AssetCard-wrapper.large {
-    height: var(--spectrum-assetcard-large-default-size); 
-    width: var(--spectrum-assetcard-large-default-size); 
+    max-height: var(--spectrum-assetcard-large-max-size);
+    min-height: var(--spectrum-assetcard-large-min-size);
+  }
+  .spectrum-AssetCard-wrapper.small {
+    max-height: var(--spectrum-assetcard-small-max-size);
+    min-height: var(--spectrum-assetcard-small-min-size);
   }
 
   .spectrum-AssetCard-detail-wrapper {
@@ -173,9 +195,24 @@
   }
 }
 
+.folder-icon,
+.file-icon {
+  .folder-background {
+    fill: #E1E1E1
+  }
+  .file-background {
+    fill: #FFFFFF
+  }
+  .folder-outline, .file-outline {
+    fill: #B3B3B3
+  }
+}
+
 .spectrum-AssetCard.large {
-    width: var(--spectrum-assetcard-large-default-size);
+  max-width: var(--spectrum-assetcard-large-max-size);
+  min-width: var(--spectrum-assetcard-large-min-size);
 }
 .spectrum-AssetCard.small {
-    width: var(--spectrum-assetcard-small-default-size);
+  max-width: var(--spectrum-assetcard-small-max-size);
+  min-width: var(--spectrum-assetcard-small-min-size);
 }

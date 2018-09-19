@@ -11,7 +11,7 @@
 
   .spectrum-AssetCard-wrapper {
     background-color: var(--spectrum-global-color-gray-200);
-    &.selected {
+    &.is-selected {
       border-color: var(--spectrum-global-color-blue-500);
       .spectrum-AssetCard-checkbox {
         background: var(--spectrum-global-color-gray-50);
@@ -29,5 +29,18 @@
     .spectrum-AssetCard-type {
       color: var(--spectrum-global-color-gray-700);
     }
+  }
+}
+
+.folder-icon,
+.file-icon {
+  .folder-background {
+    fill: var(--spectrum-global-color-gray-300);
+  }
+  .file-background {
+    fill: var(--spectrum-global-color-gray-50);
+  }
+  .folder-outline, .file-outline {
+    fill: var(--spectrum-global-color-gray-500);
   }
 }
