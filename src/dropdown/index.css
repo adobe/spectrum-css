@@ -95,11 +95,21 @@
   vertical-align: top;
   transition: color var(--spectrum-transition-time) ease-out;
 
+  /* Fix Safari 10 bug where align-items is ignored inside of buttons */
+  margin-top: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-icon-chevron-down-medium-height)) / 2);
+  margin-bottom: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-icon-chevron-down-medium-height)) / 2);
+
   opacity: 1;
 }
 
 /* Error icons */
 .spectrum-Dropdown {
+  .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+    /* Fix Safari 10 bug where align-items is ignored inside of buttons */
+    margin-top: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-dropdown-icon-size)) / 2);
+    margin-bottom: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-dropdown-icon-size)) / 2);
+  }
+
   .spectrum-Dropdown-label + .spectrum-Icon:not(.spectrum-Dropdown-icon) {
     margin-left: var(--spectrum-dropdown-icon-margin-left);
   }
