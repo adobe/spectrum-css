@@ -19,7 +19,7 @@
     }
   }
 
-  .spectrum-AssetCard-detail-wrapper {    
+  .spectrum-AssetCard-detail-wrapper {
     .spectrum-AssetCard-detail {
       .spectrum-AssetCard-name-large {
         color: var(--spectrum-global-color-gray-800);
@@ -32,8 +32,8 @@
   }
 }
 
-.folder-icon,
-.file-icon {
+.spectrum-AssetCard-folder,
+.spectrum-AssetCard-file {
   .folder-background {
     fill: var(--spectrum-global-color-gray-300);
   }

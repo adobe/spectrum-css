@@ -1,12 +1,12 @@
 ---
 name: Asset Card - File
-description: A spectrum AssetCard
+description: A spectrum AssetCard for a file asset
 status: Beta
 markup: |
-  <div class="spectrum-AssetCard large">
-    <div class="spectrum-AssetCard-wrapper large">
-      <div class="spectrum-AssetCard-content large">
-        <svg viewBox="0 0 128 128" class="file-icon">
+  <div class="spectrum-AssetCard spectrum-AssetCard-large">
+    <div class="spectrum-AssetCard-wrapper">
+      <div class="spectrum-AssetCard-content">
+        <svg viewBox="0 0 128 128" class="spectrum-AssetCard-file">
           <g>
             <path class="file-background" d="M24,126c-5.5,0-10-4.5-10-10V12c0-5.5,4.5-10,10-10h61.5c2.1,0,4.1,0.8,5.6,2.3l20.5,20.4c1.5,1.5,2.4,3.5,2.4,5.7V116c0,5.5-4.5,10-10,10H24z"></path>
             <g>
@@ -27,9 +27,9 @@ markup: |
         </div>
       </div>
     </div>
-    <div class="spectrum-AssetCard-detail-wrapper large">
-      <div class="spectrum-AssetCard-detail large">
-        <div class="spectrum-AssetCard-name large">FileName</div>
+    <div class="spectrum-AssetCard-detail-wrapper">
+      <div class="spectrum-AssetCard-detail">
+        <div class="spectrum-AssetCard-name">FileName</div>
       </div>
       <div class="spectrum-AssetCard-type">file</div>
     </div>

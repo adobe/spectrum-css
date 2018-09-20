@@ -1,12 +1,12 @@
 ---
 name: Asset Card - Large Image
-description: A spectrum AssetCard
+description: A spectrum AssetCard for an image
 status: Beta
 markup: |
-  <div class="spectrum-AssetCard large">
-    <div class="spectrum-AssetCard-wrapper large">
-      <div class="spectrum-AssetCard-content large">
-        <img class="s-img s-img-loaded" src="https://t4.ftcdn.net/jpg/02/07/87/45/240_F_207874517_3oVZH5OJ399mo6FfLIyLGmu7ZJjsaqfU.jpg">
+  <div class="spectrum-AssetCard spectrum-AssetCard-large">
+    <div class="spectrum-AssetCard-wrapper">
+      <div class="spectrum-AssetCard-content">
+        <img class="spectrum-AssetCard-image" src="https://t4.ftcdn.net/jpg/02/07/87/45/240_F_207874517_3oVZH5OJ399mo6FfLIyLGmu7ZJjsaqfU.jpg">
         <div class="spectrum-AssetCard-checkbox">
           <div class="spectrum-Checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" aria-checked="false" value="">
@@ -20,9 +20,9 @@ markup: |
         </div>
       </div>
     </div>
-    <div class="spectrum-AssetCard-detail-wrapper large">
-      <div class="spectrum-AssetCard-detail large">
-        <div class="spectrum-AssetCard-name large">Name</div>
+    <div class="spectrum-AssetCard-detail-wrapper">
+      <div class="spectrum-AssetCard-detail">
+        <div class="spectrum-AssetCard-name">Name</div>
       </div>
       <div class="spectrum-AssetCard-type">jpg</div>
     </div>
