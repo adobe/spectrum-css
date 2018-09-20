@@ -34,13 +34,13 @@
 
 .spectrum-AssetCard-folder,
 .spectrum-AssetCard-file {
-  .folder-background {
+  .spectrum-AssetCard-folder-background {
     fill: var(--spectrum-global-color-gray-300);
   }
-  .file-background {
+  .spectrum-AssetCard-file-background {
     fill: var(--spectrum-global-color-gray-50);
   }
-  .folder-outline, .file-outline {
+  .spectrum-AssetCard-folder-outline, .spectrum-AssetCard-file-outline {
     fill: var(--spectrum-global-color-gray-500);
   }
 }
