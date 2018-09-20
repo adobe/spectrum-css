@@ -9,7 +9,9 @@
 .spectrum-ButtonGroup {
   display: flex;
 
-  * {
+  .spectrum-Button,
+  .spectrum-ActionButton,
+  .spectrum-Tool {
     flex-shrink: 0;
   }
 
