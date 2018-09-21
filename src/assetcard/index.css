@@ -123,13 +123,16 @@
 
   .spectrum-AssetCard-detail-wrapper {
     padding: 0;
+    display: flex;
+    justify-content: space-between;
     
     .spectrum-AssetCard-detail {
-      display: flex;
-      justify-content: space-between;
-
       .spectrum-AssetCard-name {
-        white-space: nowrap;
+        display: -webkit-box;
+        /* autoprefixer: off */
+        -webkit-box-orient: vertical;
+        /* autoprefixer: on */
+        -webkit-line-clamp: 2;
         overflow: hidden;
         text-overflow: ellipsis;
         padding-right: 8px;
@@ -140,6 +143,11 @@
       font-size: var(--spectrum-assetcard-type-font);
       letter-spacing: .666px;
       text-transform: uppercase;
+      padding-top: 3px;
+    }
+
+    .spectrum-AssetCard-actionButton {
+      height: 32px;
     }
   }
 }
@@ -158,16 +166,10 @@
   }
 
   .spectrum-AssetCard-detail-wrapper {
-    margin: 12px 0 0;
+    margin: 15px 0 0;
     
-    .spectrum-AssetCard-detail {
-      height: 20px;
-      div:last-child:not(.name) {
-        height: 32px;
-      }
-      .spectrum-AssetCard-name {
+    .spectrum-AssetCard-name {
         font-size: var(--spectrum-assetcard-large-font);
-      }
     }
   }
 }
@@ -185,17 +187,14 @@
   }
 
   .spectrum-AssetCard-detail-wrapper {
-    margin: 4px 0 0;
+    margin: 6px 0 0;
 
-    .spectrum-AssetCard-detail {
-      height: 16px;
-      div:last-child:not(.name) {
-        height: 20px;
-      }
-
-      .spectrum-AssetCard-name {
+    .spectrum-AssetCard-name {
         font-size: var(--spectrum-assetcard-small-font);
-      }
+    }
+
+    .spectrum-AssetCard-type {
+      display: none;
     }
   }
 }
