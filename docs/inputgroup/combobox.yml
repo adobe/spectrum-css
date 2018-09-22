@@ -18,7 +18,7 @@ markup: |
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
-    <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; width: 100%">
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; left: 0; width: 100%">
       <ul class="spectrum-Menu" role="listbox">
         <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">
           <span class="spectrum-Menu-itemLabel">Ballard</span>
