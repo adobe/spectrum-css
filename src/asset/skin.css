@@ -1,0 +1,46 @@
+.spectrum-Asset {
+
+  &:hover {
+    .spectrum-Asset-header {
+      background-color: var(--spectrum-global-color-gray-300);
+    }
+    .spectrum-Asset-checkbox {
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  .spectrum-Asset-header {
+    background-color: var(--spectrum-global-color-gray-200);
+    &.is-selected {
+      border-color: var(--spectrum-global-color-blue-500);
+      .spectrum-Asset-checkbox {
+        background: rgba(255, 255, 255, 0.85);
+      }
+    }
+  }
+
+  .spectrum-Asset-detail-header {
+    .spectrum-Asset-metadata {
+      .spectrum-Asset-title-large {
+        color: var(--spectrum-global-color-gray-800);
+      }
+    }
+
+    .spectrum-Asset-subtitle {
+      color: var(--spectrum-global-color-gray-700);
+    }
+  }
+}
+
+.spectrum-Asset-folder,
+.spectrum-Asset-file {
+  .spectrum-Asset-folder-background {
+    fill: var(--spectrum-global-color-gray-300);
+  }
+  .spectrum-Asset-file-background {
+    fill: var(--spectrum-global-color-gray-50);
+  }
+  .spectrum-Asset-folder-outline, .spectrum-Asset-file-outline {
+    fill: var(--spectrum-global-color-gray-500);
+  }
+}
