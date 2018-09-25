@@ -59,13 +59,14 @@
       align-items: center;
       justify-content: center;
     }
-    .spectrum-Checkbox {
-      margin-right: 0px;
-    }
   }
 
   .spectrum-Asset-checkbox {
     display: none;
+
+    .spectrum-Checkbox {
+      margin-right: 0px;
+    }
   }
 
   &.is-uploading {
@@ -91,9 +92,6 @@
         margin: var(--spectrum-asset-checkbox-margin);
         align-items: center;
         justify-content: center;
-      }
-      .spectrum-Checkbox {
-        margin-right: 0px;
       }
     }
     .spectrum-Asset-content {
