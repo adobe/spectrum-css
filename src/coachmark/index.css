@@ -14,14 +14,16 @@
   border-width: var(--spectrum-coachmark-border-size);
   border-style: solid;
 
-  .spectrum-CoachMarkPopover-image {
-    border-radius: var(--spectrum-coachmark-border-radius) var(--spectrum-coachmark-border-radius) 0 0;
+}
+.spectrum-CoachMarkPopover-image {
+  border-radius: var(--spectrum-coachmark-border-radius) var(--spectrum-coachmark-border-radius) 0 0;
 
-    width: 100%;
-  }
+  width: 100%;
 }
 
-.spectrum-CoachMarkPopover-header, .spectrum-CoachMarkPopover-content, .spectrum-CoachMarkPopover-footer {
+.spectrum-CoachMarkPopover-header,
+.spectrum-CoachMarkPopover-content,
+.spectrum-CoachMarkPopover-footer {
   padding: 0 var(--spectrum-coachmark-padding-x);
 }
 
@@ -62,9 +64,9 @@
   text-align: right;
 }
 
-.spectrum-CoachMarkIndicator, .spectrum-CoachMarkIndicator--quiet {
+.spectrum-CoachMarkIndicator {
   position: relative;
-  
+
   margin: var(--spectrum-coachmark-indicator-gap);
 }
 
@@ -88,18 +90,18 @@
 .spectrum-CoachMarkIndicator {
   min-width: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 3);
   min-height: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 3);
+}
 
-  .spectrum-CoachMarkIndicator-ring {
-    top: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 0.75);
-    left: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 0.75);
+.spectrum-CoachMarkIndicator-ring {
+  top: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 0.75);
+  left: calc(var(--spectrum-coachmark-indicator-ring-diameter) * 0.75);
 
-    width: var(--spectrum-coachmark-indicator-ring-diameter);
-    height: var(--spectrum-coachmark-indicator-ring-diameter);
-    animation: pulse var(--spectrum-coachmark-animation-indicator-ring-duration) linear infinite;
+  width: var(--spectrum-coachmark-indicator-ring-diameter);
+  height: var(--spectrum-coachmark-indicator-ring-diameter);
+  animation: pulse var(--spectrum-coachmark-animation-indicator-ring-duration) linear infinite;
 
-    &:nth-child(1) {
-      animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-inticator-ring-inner-delay-multiple));
-    }
+  &:nth-child(1) {
+    animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-inticator-ring-inner-delay-multiple));
   }
 }
 
@@ -120,3 +122,4 @@
     }
   }
 }
+
