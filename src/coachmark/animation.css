@@ -1,0 +1,29 @@
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(var(--spectrum-coachmark-animation-indicator-keyframe-0-scale));
+    opacity: var(--spectrum-coachmark-animation-indicator-keyframe-0-opacity);
+  }
+  50% {
+    -webkit-transform: scale(var(--spectrum-coachmark-animation-indicator-keyframe-50-scale));
+    opacity: var(--spectrum-coachmark-animation-indicator-keyframe-50-opacity);
+  }
+  100% {
+    -webkit-transform: scale(var(--spectrum-coachmark-animation-indicator-keyframe-100-scale));
+    opacity: var(--spectrum-coachmark-animation-indicator-keyframe-100-opacity);
+  }
+}
+
+@keyframes pulse--quiet {
+  0% {
+    -webkit-transform: scale(var(--spectrum-coachmark-quiet-animation-indicator-keyframe-0-scale));
+    opacity: var(--spectrum-coachmark-animation-indicator-keyframe-0-opacity);
+  }
+  50% {
+    -webkit-transform: scale(var(--spectrum-coachmark-animation-indicator-keyframe-50-scale));
+    opacity: var(--spectrum-coachmark-animation-indicator-keyframe-50-opacity);
+  }
+  100% {
+    -webkit-transform: scale(var(--spectrum-coachmark-animation-indicator-keyframe-100-scale));
+    opacity: var(--spectrum-coachmark-animation-indicator-keyframe-100-opacity);
+  }
+}
