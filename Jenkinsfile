@@ -4,7 +4,9 @@ pipeline {
         PATH = "/apps/java/latest/bin:/usr/bin/node:$PATH"
         SPECTRUM_GIT_REPO_PATH = "${BRANCH_NAME}/${GIT_PREVIOUS_SUCCESSFUL_COMMIT}/"
     }
-
+    options {
+        lock resource: 'Lock to one build at a time'
+    }
     stages {
         stage('Show Environment') {
             steps {
