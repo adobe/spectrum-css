@@ -29,15 +29,12 @@
   --spectrum-asset-actionButton-height: 32px;
 
   --spectrum-asset--large-font-size: 14px;
-  --spectrum-asset--large-max-size: 248px;
   --spectrum-asset--large-min-size: 168px;
   --spectrum-asset--large-body-margin: 15px 0 0;
   --spectrum-asset--large-checkbox-size: 40px;
   --spectrum-asset--large-padding: 20px;
 
-
   --spectrum-asset--small-font-size: 12px;
-  --spectrum-asset--small-max-size: 152px;
   --spectrum-asset--small-min-size: 72px;
   --spectrum-asset--small-body-margin: 5px 0 0;
   --spectrum-asset--small-checkbox-size: 32px;
@@ -138,15 +135,10 @@
       text-transform: uppercase;
       padding-top: var(--spectrum-asset-subtitle-padding);
     }
-
-    .spectrum-Asset-actionButton {
-      height: var(--spectrum-asset-actionButton-height);
-    }
   }
 }
 
 .spectrum-Asset--large {
-  max-width: var(--spectrum-asset--large-max-size);
   min-width: var(--spectrum-asset--large-min-size);
   
   &:hover {
@@ -159,19 +151,14 @@
   }
 
   .spectrum-Asset-header {
-    max-height: var(--spectrum-asset--large-max-size);
-    min-height: var(--spectrum-asset--large-min-size);
     padding: var(--spectrum-asset--large-padding);
+    min-height: var(--spectrum-asset--large-min-size);
 
     &.is-selected {
       .spectrum-Asset-checkbox {
         width: var(--spectrum-asset--large-checkbox-size);
         height: var(--spectrum-asset--large-checkbox-size);
       }
-    }
-    
-    .spectrum-Asset-content {
-      min-height: var(--spectrum-asset--large-min-size);
     }
   }
 
@@ -181,11 +168,13 @@
     .spectrum-Asset-title {
       font-size: var(--spectrum-asset--large-font-size);
     }
-  }
+    .spectrum-Asset-actionButton {
+      height: var(--spectrum-asset-actionButton-height);
+    }
+  } 
 }
 
 .spectrum-Asset--small {
-  max-width: var(--spectrum-asset--small-max-size);
   min-width: var(--spectrum-asset--small-min-size);
     
     &:hover {
@@ -198,18 +187,14 @@
     }
 
   .spectrum-Asset-header {
-    max-height: var(--spectrum-asset--small-max-size);
-    min-height: var(--spectrum-asset--small-min-size);
     padding: var(--spectrum-asset--small-padding);
+    min-height: var(--spectrum-asset--small-min-size);
 
     &.is-selected {
       .spectrum-Asset-checkbox {
         width: var(--spectrum-asset--small-checkbox-size);
         height: var(--spectrum-asset--small-checkbox-size);
       }
-    }
-    .spectrum-Asset-content {
-      min-height: var(--spectrum-asset--small-min-size);
     }
   }
 
