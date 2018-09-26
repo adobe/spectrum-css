@@ -15,9 +15,21 @@ gulp.task('gh-pages:prepare-docs', function () {
     .pipe(gulp.dest('./temp'));
 });
 
+gulp.task('gh-pages:prepare-docs', function () {
+  return gulp.src('tasks/resources/docs/gh-pages-icons.html')
+    .pipe(template({ version: package.version }))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('./temp/icons/'));
+});
+
 gulp.task('gh-pages:copy-index', function () {
   return gulp.src('temp/index.html')
     .pipe(gulp.dest('./'));
+});
+
+gulp.task('gh-pages:copy-icons/index', function () {
+  return gulp.src('temp/icons/index.html')
+    .pipe(gulp.dest('./icons/'));
 });
 
 /**
@@ -62,8 +74,10 @@ gulp.task('gh-pages:checkout-master', function (cb) {
 gulp.task('gh-pages',
   gulp.series(
     'gh-pages:prepare-docs',
+    'gh-pages:prepare-icons',
     'gh-pages:checkout-gh-pages',
     'gh-pages:copy-index',
+    'gh-pages:copy-icons-index',
     'gh-pages:publish',
     'gh-pages:checkout-master'
   )
