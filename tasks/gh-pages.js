@@ -15,7 +15,7 @@ gulp.task('gh-pages:prepare-docs', function () {
     .pipe(gulp.dest('./temp'));
 });
 
-gulp.task('gh-pages:prepare-docs', function () {
+gulp.task('gh-pages:prepare-icons', function () {
   return gulp.src('tasks/resources/docs/gh-pages-icons.html')
     .pipe(template({ version: package.version }))
     .pipe(rename('index.html'))
@@ -27,7 +27,7 @@ gulp.task('gh-pages:copy-index', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('gh-pages:copy-icons/index', function () {
+gulp.task('gh-pages:copy-icons-index', function () {
   return gulp.src('temp/icons/index.html')
     .pipe(gulp.dest('./icons/'));
 });
