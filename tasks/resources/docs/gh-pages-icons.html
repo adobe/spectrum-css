@@ -2,12 +2,12 @@
 <html lang="en-US">
   <meta charset="utf-8">
   <title>Redirecting…</title>
-  <link rel="canonical" href="<%= version %>/icons">
-  <meta http-equiv="refresh" content="0; url=<%= version %>/icons/">
+  <link rel="canonical" href="../<%= version %>/icons/">
+  <meta http-equiv="refresh" content="0; url=../<%= version %>/icons/">
   <h1>Redirecting…</h1>
-  <a href="<%= version %>/icons/">Click here if you are not redirected.</a>
+  <a href="../<%= version %>/icons/">Click here if you are not redirected.</a>
   <script>
-    var url = '<%= version %>/icons/';
+    var url = '../<%= version %>/icons/';
     if (location.search && url.indexOf('?') === -1) {
       url = url.replace(/($|#)/, location.search + '$1');
     }
