@@ -86,13 +86,6 @@
         width: var(--spectrum-asset-file-width);
         margin: var(--spectrum-asset-file-margin);
       }
-      .img {
-        opacity: 0.25;
-        transition: opacity 200ms;
-        &.spectrum-AssetImage-loaded {
-          opacity: 1;
-        }
-      }
     }
   }
 
