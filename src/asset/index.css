@@ -15,13 +15,24 @@
 */
 
 :root {
-  /* Fix in DNA */
+  /* This padding above the subtitle ensure that there is 20px total
+    between the bottom of the title and the bottom of the subtitle */
   --spectrum-asset-subtitle-padding: 3px;
+  /* Letter Spacing of the subtitle, used for when it displays the asset type */
   --spectrum-asset-subtitle-letter-spacing: .666px;
+  /* Checkbox naturally lines up with top left corner of content.
+    Requires negative margin in order to provide offset, and ensure that the checkbox
+    is always 16px from the side for large cards and 8px from the side for small cards */
   --spectrum-asset-checkbox-margin: -4px;
+  /* Minimum height and width of a large card */
   --spectrum-asset--large-min-size: 168px;
+  /* Minimum height and width of a small card */
   --spectrum-asset--small-min-size: 72px;
+  /* Margin above the Asset 'detail' which ensures that the spacing between header and
+    the bottom of the title is always 32px for large cards */
   --spectrum-asset--large-body-margin: 15px 0 0;
+  /* Margin above the Asset 'detail' which ensures that the spacing between header and
+    the bottom of the title is always 20px for small cards */
   --spectrum-asset--small-body-margin: 5px 0 0;
 }
 
