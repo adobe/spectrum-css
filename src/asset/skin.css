@@ -41,6 +41,6 @@
     fill: var(--spectrum-asset-file-background-color);
   }
   .spectrum-Asset-folder-outline, .spectrum-Asset-file-outline {
-    fill: var(--spectrum-global-color-gray-500);
+    fill: var(--spectrum-asset-file-outline-color);
   }
 }
