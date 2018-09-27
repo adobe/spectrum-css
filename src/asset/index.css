@@ -15,30 +15,14 @@
 */
 
 :root {
-  /* Variables, move to DNA */
-  --spectrum-asset-border-radius: 4px;
-  --spectrum-asset-border-size: 2px;
-  --spectrum-asset-title-margin: 8px;
+  /* Fix in DNA */
   --spectrum-asset-subtitle-padding: 3px;
-  --spectrum-asset-subtitle-font-size: 11px;
-  --spectrum-asset-subtitle-letter-spacing: .666px;;
-  --spectrum-asset-checkbox-border-radius: 4px;
+  --spectrum-asset-subtitle-letter-spacing: .666px;
   --spectrum-asset-checkbox-margin: -4px;
-  --spectrum-asset-file-width: 80px;
-  --spectrum-asset-file-margin: 20px 0;
-  --spectrum-asset-actionButton-height: 32px;
-
-  --spectrum-asset--large-font-size: 14px;
   --spectrum-asset--large-min-size: 168px;
-  --spectrum-asset--large-body-margin: 15px 0 0;
-  --spectrum-asset--large-checkbox-size: 40px;
-  --spectrum-asset--large-padding: 20px;
-
-  --spectrum-asset--small-font-size: 12px;
   --spectrum-asset--small-min-size: 72px;
+  --spectrum-asset--large-body-margin: 15px 0 0;
   --spectrum-asset--small-body-margin: 5px 0 0;
-  --spectrum-asset--small-checkbox-size: 32px;
-  --spectrum-asset--small-padding: 12px;
 }
 
 .spectrum-Asset {
@@ -79,7 +63,7 @@
     border-radius: var(--spectrum-asset-border-radius);
     position: relative;
     transition: background-color 200ms;
-    border: var(--spectrum-asset-border-size) solid transparent;
+    border: var(--spectrum-asset-border-width) solid transparent;
 
     &.is-selected {
       .spectrum-Asset-checkbox {
@@ -102,10 +86,12 @@
         width: var(--spectrum-asset-file-width);
         margin: var(--spectrum-asset-file-margin);
       }
-      .spectrum-Asset-image {
-        object-fit: contain;
-        max-height: 100%;
-        max-width: 100%;
+      .img {
+        opacity: 0.25;
+        transition: opacity 200ms;
+        &.spectrum-AssetImage-loaded {
+          opacity: 1;
+        }
       }
     }
   }
@@ -145,19 +131,19 @@
     cursor: pointer;
     
     .spectrum-Asset-checkbox {
-      width: var(--spectrum-asset--large-checkbox-size);
-      height: var(--spectrum-asset--large-checkbox-size);
+      width: var(--spectrum-asset-large-checkbox-size);
+      height: var(--spectrum-asset-large-checkbox-size);
     }
   }
 
   .spectrum-Asset-header {
-    padding: var(--spectrum-asset--large-padding);
+    padding: var(--spectrum-asset-large-padding);
     min-height: var(--spectrum-asset--large-min-size);
 
     &.is-selected {
       .spectrum-Asset-checkbox {
-        width: var(--spectrum-asset--large-checkbox-size);
-        height: var(--spectrum-asset--large-checkbox-size);
+        width: var(--spectrum-asset-large-checkbox-size);
+        height: var(--spectrum-asset-large-checkbox-size);
       }
     }
   }
@@ -166,7 +152,7 @@
     margin: var(--spectrum-asset--large-body-margin);
     
     .spectrum-Asset-title {
-      font-size: var(--spectrum-asset--large-font-size);
+      font-size: var(--spectrum-asset-large-font-size);
     }
     .spectrum-Asset-actionButton {
       height: var(--spectrum-asset-actionButton-height);
@@ -181,19 +167,19 @@
       cursor: pointer;
       
       .spectrum-Asset-checkbox {
-        width: var(--spectrum-asset--small-checkbox-size);
-        height: var(--spectrum-asset--small-checkbox-size);
+        width: var(--spectrum-asset-small-checkbox-size);
+        height: var(--spectrum-asset-small-checkbox-size);
       }
     }
 
   .spectrum-Asset-header {
-    padding: var(--spectrum-asset--small-padding);
+    padding: var(--spectrum-asset-small-padding);
     min-height: var(--spectrum-asset--small-min-size);
 
     &.is-selected {
       .spectrum-Asset-checkbox {
-        width: var(--spectrum-asset--small-checkbox-size);
-        height: var(--spectrum-asset--small-checkbox-size);
+        width: var(--spectrum-asset-small-checkbox-size);
+        height: var(--spectrum-asset-small-checkbox-size);
       }
     }
   }
@@ -202,7 +188,7 @@
     margin: var(--spectrum-asset--small-body-margin);
 
     .spectrum-Asset-title {
-      font-size: var(--spectrum-asset--small-font-size);
+      font-size: var(--spectrum-asset-small-font-size);
     }
 
     .spectrum-Asset-subtitle {

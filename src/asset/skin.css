@@ -2,7 +2,7 @@
 
   &:hover {
     .spectrum-Asset-header {
-      background-color: var(--spectrum-global-color-gray-300);
+      background-color: var(--spectrum-asset-header-background-color-hover);
     }
     .spectrum-Asset-checkbox {
       background: rgba(255, 255, 255, 0.85);
@@ -10,9 +10,9 @@
   }
 
   .spectrum-Asset-header {
-    background-color: var(--spectrum-global-color-gray-200);
+    background-color: var(--spectrum-asset-header-background-color);
     &.is-selected {
-      border-color: var(--spectrum-global-color-blue-500);
+      border-color: var(--spectrum-asset-border-color-selected);
       .spectrum-Asset-checkbox {
         background: rgba(255, 255, 255, 0.85);
       }
@@ -21,13 +21,13 @@
 
   .spectrum-Asset-detail-header {
     .spectrum-Asset-metadata {
-      .spectrum-Asset-title-large {
-        color: var(--spectrum-global-color-gray-800);
+      .spectrum-Asset-title {
+        color: var(--spectrum-asset-title-color);
       }
     }
 
     .spectrum-Asset-subtitle {
-      color: var(--spectrum-global-color-gray-700);
+      color: var(--spectrum-asset-subtitle-color);
     }
   }
 }
@@ -35,10 +35,10 @@
 .spectrum-Asset-folder,
 .spectrum-Asset-file {
   .spectrum-Asset-folder-background {
-    fill: var(--spectrum-global-color-gray-300);
+    fill: var(--spectrum-asset-folder-background-color);
   }
   .spectrum-Asset-file-background {
-    fill: var(--spectrum-global-color-gray-50);
+    fill: var(--spectrum-asset-file-background-color);
   }
   .spectrum-Asset-folder-outline, .spectrum-Asset-file-outline {
     fill: var(--spectrum-global-color-gray-500);
