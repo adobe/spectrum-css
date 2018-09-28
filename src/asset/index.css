@@ -23,7 +23,7 @@
   /* Checkbox naturally lines up with top left corner of content.
     Requires negative margin in order to provide offset, and ensure that the checkbox
     is always 16px from the side for large cards and 8px from the side for small cards */
-  --spectrum-asset-checkbox-margin: -4px;
+  --spectrum-asset-checkbox-margin: 6%;
   /* Minimum height and width of a large card */
   --spectrum-asset--large-min-size: 168px;
   /* Minimum height and width of a small card */
@@ -43,21 +43,11 @@
   &:hover {
     cursor: pointer;
 
-    .spectrum-Asset-checkbox {
-      display: flex;
-      position: absolute;
-      border-radius: var(--spectrum-asset-checkbox-border-radius);
-      margin: var(--spectrum-asset-checkbox-margin);
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  .spectrum-Asset-checkbox {
-    display: none;
-
-    .spectrum-Checkbox {
-      margin-right: 0px;
+    .spectrum-Asset-quickActions {
+      /* Ideally, this would simply apply is-open to the QuickActions component */
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
     }
   }
 
@@ -74,16 +64,14 @@
     border-radius: var(--spectrum-asset-border-radius);
     position: relative;
     transition: background-color 200ms;
-    border: var(--spectrum-asset-border-width) solid transparent;
+    border: var(--spectrum-asset-border-size) solid transparent;
 
     &.is-selected {
-      .spectrum-Asset-checkbox {
-        display: flex;
-        position: absolute;
-        border-radius: var(--spectrum-asset-checkbox-border-radius);
-        margin: var(--spectrum-asset-checkbox-margin);
-        align-items: center;
-        justify-content: center;
+      .spectrum-Asset-quickActions {
+        /* Ideally, this would simply apply is-open to the QuickActions component */
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
       }
     }
     .spectrum-Asset-content {
@@ -115,12 +103,12 @@
         -webkit-line-clamp: 2;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding-right: var(--spectrum-asset-title-margin);
+        padding-right: var(--spectrum-asset-title-padding-right);
       }
     }
 
     .spectrum-Asset-subtitle {
-      font-size: var(--spectrum-asset-subtitle-font-size);
+      font-size: var(--spectrum-asset-subtitle-text-size);
       letter-spacing: var(--spectrum-asset-subtitle-letter-spacing);
       text-transform: uppercase;
       padding-top: var(--spectrum-asset-subtitle-padding);
@@ -128,38 +116,37 @@
   }
 }
 
+.spectrum-Asset-quickActions {
+  position: absolute;
+  left: var(--spectrum-asset-checkbox-margin);
+  top: var(--spectrum-asset-checkbox-margin);
+
+  width: var(--spectrum-quickactions-height);
+  height: var(--spectrum-quickactions-height);
+
+  visibility: hidden;
+
+  .spectrum-Checkbox {
+    margin: 0;
+  }
+}
+
 .spectrum-Asset--large {
   min-width: var(--spectrum-asset--large-min-size);
   
-  &:hover {
-    cursor: pointer;
-    
-    .spectrum-Asset-checkbox {
-      width: var(--spectrum-asset-large-checkbox-size);
-      height: var(--spectrum-asset-large-checkbox-size);
-    }
-  }
-
   .spectrum-Asset-header {
-    padding: var(--spectrum-asset-large-padding);
+    padding: var(--spectrum-asset-large-header-padding);
     min-height: var(--spectrum-asset--large-min-size);
-
-    &.is-selected {
-      .spectrum-Asset-checkbox {
-        width: var(--spectrum-asset-large-checkbox-size);
-        height: var(--spectrum-asset-large-checkbox-size);
-      }
-    }
   }
 
   .spectrum-Asset-body {
     margin: var(--spectrum-asset--large-body-margin);
     
     .spectrum-Asset-title {
-      font-size: var(--spectrum-asset-large-font-size);
+      font-size: var(--spectrum-asset-large-title-text-size);
     }
     .spectrum-Asset-actionButton {
-      height: var(--spectrum-asset-actionButton-height);
+      height: var(--spectrum-asset-actionbutton-height);
     }
   } 
 }
@@ -170,18 +157,18 @@
     &:hover {
       cursor: pointer;
       
-      .spectrum-Asset-checkbox {
+      .spectrum-Asset-quickActions {
         width: var(--spectrum-asset-small-checkbox-size);
         height: var(--spectrum-asset-small-checkbox-size);
       }
     }
 
   .spectrum-Asset-header {
-    padding: var(--spectrum-asset-small-padding);
+    padding: var(--spectrum-asset-small-header-padding);
     min-height: var(--spectrum-asset--small-min-size);
 
     &.is-selected {
-      .spectrum-Asset-checkbox {
+      .spectrum-Asset-quickActions {
         width: var(--spectrum-asset-small-checkbox-size);
         height: var(--spectrum-asset-small-checkbox-size);
       }
@@ -192,7 +179,7 @@
     margin: var(--spectrum-asset--small-body-margin);
 
     .spectrum-Asset-title {
-      font-size: var(--spectrum-asset-small-font-size);
+      font-size: var(--spectrum-asset-small-title-text-size);
     }
 
     .spectrum-Asset-subtitle {

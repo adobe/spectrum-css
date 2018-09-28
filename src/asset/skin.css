@@ -4,8 +4,8 @@
     .spectrum-Asset-header {
       background-color: var(--spectrum-asset-header-background-color-hover);
     }
-    .spectrum-Asset-checkbox {
-      background: rgba(255, 255, 255, 0.85);
+    .spectrum-Asset-quickActions {
+      background: var(--spectrum-quickactions-background-color);
     }
   }
 
@@ -13,8 +13,8 @@
     background-color: var(--spectrum-asset-header-background-color);
     &.is-selected {
       border-color: var(--spectrum-asset-border-color-selected);
-      .spectrum-Asset-checkbox {
-        background: rgba(255, 255, 255, 0.85);
+      .spectrum-Asset-quickActions {
+        background: var(--spectrum-quickactions-background-color);
       }
     }
   }
@@ -22,12 +22,12 @@
   .spectrum-Asset-detail-header {
     .spectrum-Asset-metadata {
       .spectrum-Asset-title {
-        color: var(--spectrum-asset-title-color);
+        color: var(--spectrum-asset-title-text-color);
       }
     }
 
     .spectrum-Asset-subtitle {
-      color: var(--spectrum-asset-subtitle-color);
+      color: var(--spectrum-asset-subtitle-text-color);
     }
   }
 }
@@ -41,6 +41,6 @@
     fill: var(--spectrum-asset-file-background-color);
   }
   .spectrum-Asset-folder-outline, .spectrum-Asset-file-outline {
-    fill: var(--spectrum-asset-file-outline-color);
+    fill: var(--spectrum-asset-file-fill-color);
   }
 }
