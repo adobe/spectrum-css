@@ -86,16 +86,16 @@
 
 .spectrum-Accordion-item {
   &.is-open {
-    .spectrum-Accordion-itemIndicator {
+    > .spectrum-Accordion-itemIndicator {
       transform: rotate(90deg);
     }
 
-    .spectrum-Accordion-itemHeader::after {
+    > .spectrum-Accordion-itemHeader::after {
       /* No bottom border when open, so be less tall */
       height: var(--spectrum-accordion-item-height-actual);
     }
 
-    .spectrum-Accordion-itemContent {
+    > .spectrum-Accordion-itemContent {
       display: block;
     }
   }
