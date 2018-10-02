@@ -17,12 +17,6 @@
 :root {
   /* Letter Spacing of the subtitle, used for when it displays the asset type */
   --spectrum-asset-subtitle-letter-spacing: .666px;
-  /* Offset from the sides of the container */
-  --spectrum-asset-checkbox-margin: 6%;
-  /* Minimum height and width of a large card */
-  --spectrum-asset--large-min-size: 168px;
-  /* Minimum height and width of a small card */
-  --spectrum-asset--small-min-size: 72px;
 }
 
 .spectrum-Asset {
@@ -110,11 +104,11 @@
 }
 
 .spectrum-Asset--large {
-  min-width: var(--spectrum-asset--large-min-size);
+  min-width: var(--spectrum-asset-large-min-size);
   
   .spectrum-Asset-header {
     padding: var(--spectrum-asset-large-header-padding);
-    min-height: var(--spectrum-asset--large-min-size);
+    min-height: var(--spectrum-asset-large-min-size);
   }
 
   .spectrum-Asset-body {
@@ -130,15 +124,17 @@
 }
 
 .spectrum-Asset--small {
-  min-width: var(--spectrum-asset--small-min-size);
+  min-width: var(--spectrum-asset-small-min-size);
 
   .spectrum-Asset-header {
     padding: var(--spectrum-asset-small-header-padding);
-    min-height: var(--spectrum-asset--small-min-size);
+    min-height: var(--spectrum-asset-small-min-size);
 
     .spectrum-Asset-quickActions {
       width: var(--spectrum-asset-small-checkbox-size);
       height: var(--spectrum-asset-small-checkbox-size);
+      left: var(--spectrum-asset-small-checkbox-margin);
+      top: var(--spectrum-asset-small-checkbox-margin);
     }
   }
 
