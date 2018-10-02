@@ -22,9 +22,10 @@
   border-radius: var(--spectrum-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: var(--spectrum-textfield-padding-top) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) 0;
+  padding: var(--spectrum-textfield-padding-top) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) var(--spectrum-textfield-padding-x);
 
-  text-indent: var(--spectrum-textfield-padding-x);
+  /* Do not use text-indent, the designs changed */
+  text-indent: 0;
 
   min-width: var(--spectrum-textfield-min-width);
   width: var(--spectrum-textfield-width);
@@ -87,12 +88,6 @@
     }
   }
 
-  &:focus,
-  &:focus-ring {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   &:focus-ring {
     border-width: var(--spectrum-textfield-border-size-key-focus);
   }
@@ -147,7 +142,6 @@
 .spectrum-Textfield--multiline {
   height: var(--spectrum-textfield-multiline-height);
   padding: var(--spectrum-textfield-multiline-padding-y) var(--spectrum-textfield-multiline-padding-x);
-  text-indent: 0;
 
   /* Remove the default vertical scrollbar for textarea in IE. */
   overflow: auto;
@@ -156,13 +150,6 @@
   &:invalid,
   &.is-valid {
     background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) calc(100% - calc(var(--spectrum-textfield-icon-size) / 2));
-  }
-
-  &:focus,
-  &:focus-ring {
-    padding-left: var(--spectrum-textfield-multiline-padding-x);
-    padding-right: var(--spectrum-textfield-multiline-padding-x);
-    text-indent: 0;
   }
 
   &.spectrum-Textfield--quiet {
@@ -178,7 +165,6 @@
 
 .spectrum-Textfield--quiet {
   border-radius: var(--spectrum-textfield-quiet-border-radius);
-  text-indent: 0;
 
   border-width: 0 0 var(--spectrum-textfield-quiet-border-size) 0;
 
@@ -189,11 +175,6 @@
   /* Treat all quiet inputs and textareas the same */
   resize: none;
   overflow-y: hidden;
-
-  &:focus,
-  &:focus-ring {
-    text-indent: 0;
-  }
 
   &:focus-ring {
     border-width: 0 0 var(--spectrum-textfield-quiet-border-size-key-focus) 0;
