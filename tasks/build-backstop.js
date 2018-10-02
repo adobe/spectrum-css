@@ -129,10 +129,7 @@ gulp.task('build-backstop:generate-scenarios', function() {
         return {
           'label' : parsedJSON.name,
           'url': './dist/backstop_docs_test/' + parsedJSON.relative,
-          'delay': 100,
-          'hideSelectors':[],
-          'readySelector' : '',
-          'removeSelectors':[],
+          'readySelector' : '.wf-active',
           'selectors':['#backstopSelector'],
           'selectorExpansion':false,
           'misMatchThreshold':0.1,
