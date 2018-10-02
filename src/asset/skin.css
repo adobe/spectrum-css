@@ -4,22 +4,16 @@
     .spectrum-Asset-header {
       background-color: var(--spectrum-asset-header-background-color-hover);
     }
-    .spectrum-Asset-quickActions {
-      background: var(--spectrum-quickactions-background-color);
-    }
   }
 
   .spectrum-Asset-header {
     background-color: var(--spectrum-asset-header-background-color);
     &.is-selected {
       border-color: var(--spectrum-asset-border-color-selected);
-      .spectrum-Asset-quickActions {
-        background: var(--spectrum-quickactions-background-color);
-      }
     }
   }
 
-  .spectrum-Asset-detail-header {
+  .spectrum-Asset-body {
     .spectrum-Asset-metadata {
       .spectrum-Asset-title {
         color: var(--spectrum-asset-title-text-color);
@@ -41,6 +35,6 @@
     fill: var(--spectrum-asset-file-background-color);
   }
   .spectrum-Asset-folder-outline, .spectrum-Asset-file-outline {
-    fill: var(--spectrum-asset-file-fill-color);
+    fill: var(--spectrum-asset-file-outline-fill-color);
   }
 }

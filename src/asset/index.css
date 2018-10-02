@@ -28,17 +28,6 @@
 .spectrum-Asset {
   height: 100%;
   width: 100%;
- 
-  &:hover {
-    cursor: pointer;
-
-    .spectrum-Asset-quickActions {
-      /* Ideally, this would simply apply is-open to the QuickActions component */
-      visibility: visible;
-      opacity: 1;
-      pointer-events: all;
-    }
-  }
 
   &.is-uploading {
     opacity: 0.5;
@@ -55,7 +44,8 @@
     transition: background-color 200ms;
     border: var(--spectrum-asset-border-size) solid transparent;
 
-    &.is-selected {
+    &.is-selected,
+    &:hover {
       .spectrum-Asset-quickActions {
         visibility: visible;
         opacity: 1;
@@ -141,25 +131,14 @@
 
 .spectrum-Asset--small {
   min-width: var(--spectrum-asset--small-min-size);
-    
-    &:hover {
-      cursor: pointer;
-      
-      .spectrum-Asset-quickActions {
-        width: var(--spectrum-asset-small-checkbox-size);
-        height: var(--spectrum-asset-small-checkbox-size);
-      }
-    }
 
   .spectrum-Asset-header {
     padding: var(--spectrum-asset-small-header-padding);
     min-height: var(--spectrum-asset--small-min-size);
 
-    &.is-selected {
-      .spectrum-Asset-quickActions {
-        width: var(--spectrum-asset-small-checkbox-size);
-        height: var(--spectrum-asset-small-checkbox-size);
-      }
+    .spectrum-Asset-quickActions {
+      width: var(--spectrum-asset-small-checkbox-size);
+      height: var(--spectrum-asset-small-checkbox-size);
     }
   }
 
