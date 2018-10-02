@@ -103,10 +103,10 @@
 }
 
 /* Error icons */
-.spectrum-Dropdown {
+.spectrum-Dropdown-trigger {
   .spectrum-Icon:not(.spectrum-Dropdown-icon) {
     /* Fix Safari 10 bug where align-items is ignored inside of buttons */
-    margin-top: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-dropdown-icon-size)) / 2);
+  margin-top: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-dropdown-icon-size)) / 2);
     margin-bottom: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-dropdown-icon-size)) / 2);
   }
 
