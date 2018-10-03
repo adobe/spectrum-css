@@ -28,5 +28,5 @@
   --spectrum-tablist-panelborder-color-key-focus: red;
 
   /* Custom selection color for placeholders using global blue-500 at 30% opacity. Should be updated in Spectrum-DNA */
-  --spectrum-textfield-placeholder-selected: rgb(20, 115, 230, 0.3);
+  --spectrum-textfield-placeholder-selected: rgba(20, 115, 230, 0.3);
 }
