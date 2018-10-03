@@ -30,7 +30,6 @@
 
   .spectrum-Asset-header {
     width: 100%;
-    height: calc(100% - 52px);
     margin: 0 auto;
     box-sizing: border-box;
     border-radius: var(--spectrum-asset-border-radius);
@@ -107,6 +106,7 @@
   min-width: var(--spectrum-asset-large-min-size);
   
   .spectrum-Asset-header {
+    height: calc(100% - var(--spectrum-asset-large-body-height));
     padding: var(--spectrum-asset-large-header-padding);
     min-height: var(--spectrum-asset-large-min-size);
   }
@@ -127,6 +127,7 @@
   min-width: var(--spectrum-asset-small-min-size);
 
   .spectrum-Asset-header {
+    height: calc(100% - var(--spectrum-asset-small-body-height));
     padding: var(--spectrum-asset-small-header-padding);
     min-height: var(--spectrum-asset-small-min-size);
 
