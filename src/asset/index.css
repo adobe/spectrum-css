@@ -61,17 +61,13 @@
 
   .spectrum-Asset-body {
     padding: 0;
-    display: flex;
-    justify-content: space-between;
     
     .spectrum-Asset-metadata {
-      /* Modify WebKit CSS for all browser compatibility */
+      display: flex;
+      justify-content: space-between;
+
       .spectrum-Asset-title {
-        display: -webkit-box;
-        /* autoprefixer: off */
-        -webkit-box-orient: vertical;
-        /* autoprefixer: on */
-        -webkit-line-clamp: 2;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         padding-right: var(--spectrum-asset-title-padding-right);
@@ -114,11 +110,14 @@
   .spectrum-Asset-body {
     margin: var(--spectrum-asset-large-body-margin-top) 0 0;
     
-    .spectrum-Asset-title {
-      font-size: var(--spectrum-asset-large-title-text-size);
-    }
-    .spectrum-Asset-actionButton {
-      height: var(--spectrum-asset-actionbutton-height);
+    .spectrum-Asset-metadata {
+      height: var(--spectrum-asset-metadata-height);
+      .spectrum-Asset-title {
+        font-size: var(--spectrum-asset-large-title-text-size);
+      }
+      .spectrum-Asset-actionButton {
+        height: var(--spectrum-asset-actionbutton-height);
+      }
     }
   } 
 }
