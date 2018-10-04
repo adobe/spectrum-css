@@ -33,7 +33,7 @@
 
 .spectrum-Toast-buttons {
   display: flex;
-  flex: 1;
+  flex: 1 0 auto;
   flex-wrap: wrap-reverse;
   justify-content: flex-end;
 
