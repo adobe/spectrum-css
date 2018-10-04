@@ -165,13 +165,14 @@ gulp.task('build-css:individual-components-diffscale', function() {
   This enables the use of multiple colorstops on the same page
 */
 gulp.task('build-css:individual-components-multistops', function() {
-  function buildSkinFiles(colorStop) {
+  function buildMultistopSkinFiles(colorStop) {
     return gulp.src([
       'src/*/skin.css',
       '!src/commons/skin.css'
     ])
       .pipe(plumb())
       .pipe(insert.prepend(`\n@import '../colorStops/spectrum-${colorStop}.css';\n.spectrum--${colorStop} {\n`))
+      .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
       // Fix a nested + inherit bug
@@ -183,7 +184,7 @@ gulp.task('build-css:individual-components-multistops', function() {
       .pipe(gulp.dest('dist/components/'));
   }
 
-  return merge.apply(this, colorStops.map(buildSkinFiles));
+  return merge.apply(this, colorStops.map(buildMultistopSkinFiles));
 });
 
 function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
@@ -194,6 +195,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
   return gulp.src(globs)
     .pipe(plumb())
     .pipe(insert.prepend(`@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
+    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     .pipe(insert.append(appendString))
     .pipe(postcss(processors))
     .pipe(replace(/^&/gm, '.spectrum')) // Any stray & in colorstops should just apply to .spectrum
@@ -238,6 +240,7 @@ gulp.task('build-css:all-components-multistops', function() {
     '!src/spectrum-core.css'
   ])
     .pipe(plumb())
+    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
 });
