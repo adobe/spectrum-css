@@ -364,3 +364,20 @@ gulp.task('build-css',
     )
   )
 );
+
+gulp.task('build-css-lite',
+  gulp.series(
+    gulp.parallel(
+      'build-css:all-components-multistops',
+      'build-css:core-md-multistops',
+      'build-css:core-lg-multistops'
+    ),
+    gulp.parallel(
+      'build-css:individual-components-diffscale',
+      'build-css:build-multistops'
+    ),
+    gulp.parallel(
+      'build-css:concat-core-diff'
+    )
+  )
+);
