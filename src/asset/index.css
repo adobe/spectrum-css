@@ -78,7 +78,6 @@
       font-size: var(--spectrum-asset-subtitle-text-size);
       letter-spacing: var(--spectrum-asset-subtitle-letter-spacing);
       text-transform: uppercase;
-      padding-top: var(--spectrum-asset-subtitle-padding-top);
     }
   }
 }
@@ -119,6 +118,9 @@
         height: var(--spectrum-asset-actionbutton-height);
       }
     }
+    .spectrum-Asset-subtitle {
+      padding-top: var(--spectrum-asset-large-subtitle-padding-top);
+    }
   } 
 }
 
@@ -143,10 +145,6 @@
 
     .spectrum-Asset-title {
       font-size: var(--spectrum-asset-small-title-text-size);
-    }
-
-    .spectrum-Asset-subtitle {
-      display: none;
     }
   }
 }
