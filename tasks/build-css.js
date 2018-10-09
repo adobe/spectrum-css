@@ -76,6 +76,7 @@ var processors = [
   require('postcss-custom-properties')({
     noValueNotifications: 'error'
   }),
+  require('./lib/postcss-custom-properties-passthrough')(),
   require('postcss-calc'),
   require('postcss-svg'),
   require('postcss-functions')({

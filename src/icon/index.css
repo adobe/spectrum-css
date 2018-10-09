@@ -89,6 +89,7 @@
   }
 }
 
+/* Hide UI icons on older browsers with SVG 1.1 implementations */
 .spectrum--medium {
   .spectrum-UIIcon--large {
     display: none;
@@ -105,6 +106,23 @@
   .spectrum-UIIcon--large {
     display: inline;
   }
+}
+
+/* Hide UI icons on browsers that implement SVG 2 correctly (Firefox 56+) */
+.spectrum--large {
+  x--ui-icon-large-display: block;
+  x--ui-icon-medium-display: none;
+}
+.spectrum--medium {
+  x--ui-icon-medium-display: block;
+  x--ui-icon-large-display: none;
+}
+
+.spectrum-UIIcon--large {
+  display: xvar(--ui-icon-large-display);
+}
+.spectrum-UIIcon--medium {
+  display: xvar(--ui-icon-medium-display);
 }
 
 /* UI Icons */

@@ -1,0 +1,34 @@
+.spectrum--medium {
+  .spectrum-UIIcon--large {
+    display: none;
+  }
+  .spectrum-UIIcon--medium {
+    display: inline;
+  }
+}
+
+.spectrum--large {
+  .spectrum-UIIcon--medium {
+    display: none;
+  }
+  .spectrum-UIIcon--large {
+    display: inline;
+  }
+}
+
+/* Workaround browsers that implement SVG 2 correctly */
+.spectrum--large {
+  x--ui-icon-large-display: block;
+  x--ui-icon-medium-display: none;
+}
+.spectrum--medium {
+  x--ui-icon-medium-display: block;
+  x--ui-icon-large-display: none;
+}
+
+.spectrum-UIIcon--large {
+  display: xvar(--ui-icon-large-display);
+}
+.spectrum-UIIcon--medium {
+  display: xvar(--ui-icon-medium-display);
+}
