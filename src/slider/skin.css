@@ -115,8 +115,26 @@
 {{ slider/slider-colored.yml }}
 */
 .spectrum-Slider--color {
+  .spectrum-Slider-controls::before {
+    background-color: var(--spectrum-global-color-static-white);
+    background-image:
+      linear-gradient(-45deg, transparent 75%, var(--spectrum-global-color-static-gray-500) 75%),
+      linear-gradient(45deg, transparent 75%, var(--spectrum-global-color-static-gray-500) 75%),
+      linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25%, transparent 25%),
+      linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25%, transparent 25%);
+    background-size:
+      var(--spectrum-global-dimension-static-size-200)
+      var(--spectrum-global-dimension-static-size-200);
+    background-position:
+      0 0,
+      0 var(--spectrum-global-dimension-static-size-100),
+      var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)),
+      calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
+    z-index: 0;
+  }
   .spectrum-Slider-track {
-    background: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
+    background-color: transparent;
+    background-image: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
     box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-track-border-color);
     &::before {
       display: none;
@@ -255,7 +273,7 @@
 
     &.spectrum-Slider--color {
       .spectrum-Slider-track {
-        background: var(--spectrum-slider-color-track-color-disabled);
+        background: var(--spectrum-slider-color-track-color-disabled) !important;
         box-shadow: none;
       }
       .spectrum-Slider-handle {

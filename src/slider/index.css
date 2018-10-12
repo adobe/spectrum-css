@@ -26,6 +26,8 @@
   --spectrum-slider-color-track-padding: 0;
   --spectrum-slider-color-track-top: 0;
   --spectrum-slider-color-track-margin-top: 0;
+  --spectrum-slider-color-track-margin-left: 0;
+  --spectrum-slider-color-track-margin-right: 0;
   --spectrum-slider-color-handle-top: 50%;
 
   --spectrum-slider-ramp-margin-top: 0;
@@ -225,6 +227,8 @@
 
   width: auto;
 
+  padding-top: var(--spectrum-fieldlabel-padding-top);
+
   font-size: var(--spectrum-text-size-text-label);
   line-height: var(--spectrum-line-height-text-label);
 }
@@ -303,18 +307,28 @@
 }
 
 .spectrum-Slider--color {
+  .spectrum-Slider-labelContainer {
+    padding-bottom: var(--spectrum-fieldlabel-padding-bottom);
+  }
   .spectrum-Slider-controls,
+  .spectrum-Slider-controls::before,
   .spectrum-Slider-track {
     min-height: var(--spectrum-slider-color-min-height);
     height: var(--spectrum-slider-color-track-height);
+    margin-left: var(--spectrum-slider-color-track-margin-left);
+    width: 100%;
   }
+  .spectrum-Slider-controls::before {
+    display: block;
+    content: '';
+  }
+  .spectrum-Slider-controls::before,
   .spectrum-Slider-track {
     top: var(--spectrum-slider-color-track-top);
-    width: calc(100% + calc(var(--spectrum-slider-controls-margin) * 2));
-
     padding: var(--spectrum-slider-color-track-padding);
     margin-top: var(--spectrum-slider-color-track-margin-top);
-    margin-right: var(--spectrum-slider-track-margin-offset);
+    margin-right: var(--spectrum-slider-color-track-margin-right);
+    border-radius: var(--spectrum-alias-border-radius-regular);
   }
   .spectrum-Slider-handle {
     top: var(--spectrum-slider-color-handle-top);
