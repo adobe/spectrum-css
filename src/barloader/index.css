@@ -1,22 +1,7 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-loader-bar-label-padding: 10px;
-  --spectrum-loader-bar-label-vertical-padding: 2px;
-
-  --spectrum-loader-bar-width: 182px;
-  --spectrum-loader-bar-height: 6px;
-  --spectrum-loader-bar-label-size: 12px;
-  --spectrum-loader-bar-radius: 4px;
-
-  --spectrum-loader-bar-small-width: 148px;
-  --spectrum-loader-bar-small-height: 4px;
-  --spectrum-loader-bar-small-radius: 2px;
-
   --spectrum-loader-bar-label-margin-side: 12px;
-  --spectrum-loader-bar-label-margin-bottom: 8px;
-
-  --spectrum-loader-bar-width-side: auto;
 }
 
 /* topdoc
@@ -28,36 +13,40 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  width: var(--spectrum-loader-bar-width);
+  width: var(--spectrum-barloader-large-width);
   vertical-align: top;
 }
 
 .spectrum-BarLoader-track {
   /* Visually apply border radius to child elements */
   overflow: hidden;
-  width: var(--spectrum-loader-bar-width);
-  height: var(--spectrum-loader-bar-height);
-  border-radius: var(--spectrum-loader-bar-radius);
+  width: var(--spectrum-barloader-large-width);
+  height: var(--spectrum-barloader-large-height);
+  border-radius: var(--spectrum-barloader-large-border-radius);
 }
 
 .spectrum-BarLoader-fill {
   border: none;
-  height: var(--spectrum-loader-bar-height);
+  height: var(--spectrum-barloader-large-height);
 
   transition: width 1s;
 }
 
-.spectrum-BarLoader-label, .spectrum-BarLoader-percentage {
-  font-size: var(--spectrum-loader-bar-label-size);
+.spectrum-BarLoader-label,
+.spectrum-BarLoader-percentage {
+  font-size: var(--spectrum-fieldlabel-text-size);
+  font-weight: var(--spectrum-fieldlabel-text-font-weight);
+  line-height: var(--spectrum-fieldlabel-text-line-height);
   text-align: left;
-  margin-bottom: var(--spectrum-loader-bar-label-margin-bottom);
+  margin-bottom: var(--spectrum-barloader-large-label-gap-y);
+
 }
 
 .spectrum-BarLoader--sideLabel {
   display: inline-flex;
   flex-flow: row;
   justify-content: space-between;
-  width: var(--spectrum-loader-bar-width-side);
+  width: auto;
 
   .spectrum-BarLoader-label {
     margin-right: var(--spectrum-loader-bar-label-margin-side);
@@ -75,19 +64,22 @@
 {{ barloader/barloader-small.yml }}
 */
 .spectrum-BarLoader--small {
-  height: var(--spectrum-loader-bar-small-height);
-  min-width: var(--spectrum-loader-bar-small-width);
+  height: var(--spectrum-barloader-small-height);
+  min-width: var(--spectrum-barloader-small-width);
 
   .spectrum-BarLoader-fill {
-    height: var(--spectrum-loader-bar-small-height);
+    height: var(--spectrum-barloader-small-height);
   }
 
   .spectrum-BarLoader-track {
-    height: var(--spectrum-loader-bar-small-height);
-    border-radius: var(--spectrum-loader-bar-small-radius);
+    height: var(--spectrum-barloader-small-height);
+    border-radius: var(--spectrum-barloader-small-border-radius);
   }
 }
 
 /* topdoc
 {{ barloader/barloader-large-over-background.yml }}
+*/
+/* topdoc
+{{ barloader/barloader-small-over-background.yml }}
 */
