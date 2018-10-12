@@ -1,0 +1,53 @@
+/* topdoc
+{{ dropindicator/dropindicator.yml }}
+*/
+.spectrum-DropIndicator {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: var(--spectrum-dropindicator-circle-size);
+    height: var(--spectrum-dropindicator-circle-size);
+    border-radius: 50%;
+    border: var(--spectrum-dropindicator-border-size) solid;
+    box-sizing: border-box;
+  }
+}
+
+.spectrum-DropIndicator--horizontal {
+  height: var(--spectrum-dropindicator-border-size);
+  margin: 0 var(--spectrum-dropindicator-circle-size);
+
+  &:before,
+  &:after {
+    top: calc(-1 * var(--spectrum-dropindicator-circle-size) / 2 + var(--spectrum-dropindicator-border-size) / 2);
+  }
+
+  &:before {
+    left: calc(-1 * var(--spectrum-dropindicator-circle-size));
+  }
+
+  &:after {
+    right: calc(-1 * var(--spectrum-dropindicator-circle-size));
+  }
+}
+
+.spectrum-DropIndicator--vertical {
+  width: var(--spectrum-dropindicator-border-size);
+  margin: var(--spectrum-dropindicator-circle-size) 0;
+
+  &:before,
+  &:after {
+    left: calc(-1 * var(--spectrum-dropindicator-circle-size) / 2 + var(--spectrum-dropindicator-border-size) / 2);
+  }
+
+  &:before {
+    top: calc(-1 * var(--spectrum-dropindicator-circle-size));
+  }
+
+  &:after {
+    bottom: calc(-1 * var(--spectrum-dropindicator-circle-size));
+  }
+}
