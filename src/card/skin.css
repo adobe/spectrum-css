@@ -1,0 +1,23 @@
+.spectrum-Card {
+  border-color: var(--spectrum-card-border-color);
+  background-color: var(--spectrum-card-background-color);
+
+  &:hover {
+    border-color: var(--spectrum-card-border-color-hover);
+  }
+
+  &.is-selected,
+  &:focus {
+    border-color: var(--spectrum-card-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-card-border-color-key-focus);
+  }
+}
+
+.spectrum-Card-description {
+  color: var(--spectrum-card-description-text-color);
+}
+
+.spectrum-Card-coverPhoto {
+  background-color: var(--spectrum-card-coverphoto-background-color);
+  border-bottom-color: var(--spectrum-card-coverphoto-border-color);
+}

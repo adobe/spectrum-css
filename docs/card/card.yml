@@ -1,0 +1,38 @@
+---
+name: Card
+description: The non-quiet Card component.
+markup: |
+  <div class="spectrum-Card" tabindex="0">
+    <div class="spectrum-QuickActions spectrum-Card-quickActions">
+      <label class="spectrum-Checkbox">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+        <span class="spectrum-Checkbox-box">
+          <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+          </svg>
+          <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-DashSmall" />
+          </svg>
+        </span>
+      </label>
+    </div>
+
+    <div class="spectrum-Card-coverPhoto">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXXL" focusable="false" aria-hidden="true" aria-label="FileChart">
+        <use xlink:href="#spectrum-icon-24-FileChart" />
+      </svg>
+    </div>
+
+    <div class="spectrum-Card-body">
+      <div class="spectrum-Card-header">
+        <span class="spectrum-Card-title">Card Title</span>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-More" />
+          </svg>
+        </button>
+      </div>
+      <div class="spectrum-Card-description">Optional Metadata<br> Can be two to three lines.</div>
+    </div>
+
+  </div>
