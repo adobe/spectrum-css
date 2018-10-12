@@ -102,29 +102,6 @@
 }
 
 /* topdoc
-{{ circleloader/circleloader-medium-over-background.yml }}
-*/
-.spectrum-CircleLoader--overBackground {
-  width: var(--spectrum-loader-circle-large-width);
-  height: var(--spectrum-loader-circle-large-height);
-  .spectrum-CircleLoader-track {
-    width: calc(var(--spectrum-loader-circle-large-width));
-    height: calc(var(--spectrum-loader-circle-large-height));
-    border-style: solid;
-    border-width: var(--spectrum-loader-circle-large-border-size);
-    border-radius: var(--spectrum-loader-circle-large-width);
-  }
-
-  .spectrum-CircleLoader-fill {
-    width: calc(var(--spectrum-loader-circle-large-width));
-    height: calc(var(--spectrum-loader-circle-large-height));
-    border-style: solid;
-    border-width: var(--spectrum-loader-circle-large-border-size);
-    border-radius: var(--spectrum-loader-circle-large-width);
-  }
-}
-
-/* topdoc
 {{ circleloader/circleloader-indeterminate-default.yml }}
 */
 .spectrum-CircleLoader--indeterminate {
@@ -153,7 +130,15 @@
 /* topdoc
 {{ circleloader/circleloader-indeterminate-large.yml }}
 */
-
+/* topdoc
+{{ circleloader/circleloader-small-over-background.yml }}
+*/
+/* topdoc
+{{ circleloader/circleloader-medium-over-background.yml }}
+*/
+/* topdoc
+{{ circleloader/circleloader-large-over-background.yml }}
+*/
 /* topdoc
 {{ circleloader/circleloader-indeterminate-over-background.yml }}
 */
