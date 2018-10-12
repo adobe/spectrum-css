@@ -21,6 +21,29 @@
       background-color: var(--spectrum-barloader-large-over-background-track-color);
     }
   }
+  &.is-positive {
+    .spectrum-BarLoader-fill {
+      background: var(--spectrum-meter-large-track-color-positive);
+    }
+  }
+  &.is-warning {
+    .spectrum-BarLoader-fill {
+      background: var(--spectrum-meter-large-track-color-warning);
+    }
+  }
+  &.is-critical {
+    .spectrum-BarLoader-fill {
+      background: var(--spectrum-meter-large-track-color-critical);
+    }
+  }
+}
+.spectrum-BarLoader-label,
+.spectrum-BarLoader-percentage {
+  color: var(--spectrum-fieldlabel-text-color);
+}
+.spectrum-BarLoader-label,
+.spectrum-BarLoader-percentage {
+  color: var(--spectrum-fieldlabel-text-color);
 }
 .spectrum-BarLoader-label,
 .spectrum-BarLoader-percentage {
