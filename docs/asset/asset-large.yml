@@ -5,7 +5,7 @@ status: Beta
 markup: |
   <div style="width: 208px; height: 260px;">
     <div class="spectrum-Asset spectrum-Asset--large">
-      <div class="spectrum-Asset-header">
+      <div class="spectrum-Asset-preview">
         <div class="spectrum-QuickActions spectrum-Asset-quickActions">
           <label class="spectrum-Checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -19,16 +19,16 @@ markup: |
             </span>
           </label>
         </div>
-        <div class="spectrum-Asset-content">
+        <div class="spectrum-Asset-previewContent">
           <img class="spectrum-AssetImage-loaded" src="img/example-ava.jpg" style="width: 75%; height: 75%; object-fit: contain;">
         </div>
       </div>
       <div class="spectrum-Asset-body">
-        <div class="spectrum-Asset-metadata">
+        <div class="spectrum-Asset-header">
           <div class="spectrum-Asset-title">Name</div>
-          <div class="spectrum-Asset-subtitle">jpg</div>
+          <div class="spectrum-Asset-actionButton"></div>
         </div>
-        <div class="spectrum-Asset-actionButton"></div>
+        <div class="spectrum-Asset-subtitle">jpg</div>
       </div>
     </div>
   </div>

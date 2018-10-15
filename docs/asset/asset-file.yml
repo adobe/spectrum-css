@@ -5,7 +5,7 @@ status: Beta
 markup: |
   <div style="width: 208px; height: 260px;">
     <div class="spectrum-Asset spectrum-Asset--large">
-      <div class="spectrum-Asset-header">
+      <div class="spectrum-Asset-preview">
         <div class="spectrum-QuickActions spectrum-Asset-quickActions">
           <label class="spectrum-Checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -19,7 +19,7 @@ markup: |
             </span>
           </label>
         </div>
-        <div class="spectrum-Asset-content">
+        <div class="spectrum-Asset-previewContent">
           <svg viewBox="0 0 128 128" class="spectrum-Asset-file">
             <g>
               <path class="spectrum-Asset-file-background" d="M24,126c-5.5,0-10-4.5-10-10V12c0-5.5,4.5-10,10-10h61.5c2.1,0,4.1,0.8,5.6,2.3l20.5,20.4c1.5,1.5,2.4,3.5,2.4,5.7V116c0,5.5-4.5,10-10,10H24z"></path>
@@ -31,11 +31,11 @@ markup: |
         </div>
       </div>
       <div class="spectrum-Asset-body">
-        <div class="spectrum-Asset-metadata">
+        <div class="spectrum-Asset-header">
           <div class="spectrum-Asset-title">FileName</div>
-          <div class="spectrum-Asset-subtitle">pdf</div>
+          <div class="spectrum-Asset-actionButton"></div>
         </div>
-        <div class="spectrum-Asset-actionButton"></div>
+        <div class="spectrum-Asset-subtitle">pdf</div>
       </div>
     </div>
   </div>

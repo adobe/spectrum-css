@@ -3,9 +3,9 @@ name: Asset - Small Image
 description: A spectrum Asset for an image
 status: Beta
 markup: |
-  <div style="width: 112px; height: 164px">
+  <div style="width: 112px; height: 136px">
     <div class="spectrum-Asset spectrum-Asset--small">
-      <div class="spectrum-Asset-header">
+      <div class="spectrum-Asset-preview">
         <div class="spectrum-QuickActions spectrum-Asset-quickActions">
           <label class="spectrum-Checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -19,16 +19,16 @@ markup: |
             </span>
           </label>
         </div>
-        <div class="spectrum-Asset-content">
+        <div class="spectrum-Asset-previewContent">
           <img class="spectrum-AssetImage-loaded" src="img/example-ava.jpg" style="width: 75%; height: 75%; object-fit: contain;">
         </div>
       </div>
       <div class="spectrum-Asset-body">
-        <div class="spectrum-Asset-metadata">
+        <div class="spectrum-Asset-header">
           <div class="spectrum-Asset-title">Name</div>
-          <div class="spectrum-Asset-subtitle"></div>
+          <div class="spectrum-Asset-actionButton"></div>
         </div>
-        <div class="spectrum-Asset-actionButton"></div>
+        <div class="spectrum-Asset-subtitle"></div>
       </div>
     </div>
   </div>

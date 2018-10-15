@@ -1,20 +1,20 @@
 .spectrum-Asset {
 
   &:hover {
-    .spectrum-Asset-header {
-      background-color: var(--spectrum-asset-header-background-color-hover);
+    .spectrum-Asset-preview {
+      background-color: var(--spectrum-asset-preview-background-color-hover);
     }
   }
 
-  .spectrum-Asset-header {
-    background-color: var(--spectrum-asset-header-background-color);
+  .spectrum-Asset-preview {
+    background-color: var(--spectrum-asset-preview-background-color);
     &.is-selected {
       border-color: var(--spectrum-asset-border-color-selected);
     }
   }
 
   .spectrum-Asset-body {
-    .spectrum-Asset-metadata {
+    .spectrum-Asset-header {
       .spectrum-Asset-title {
         color: var(--spectrum-asset-title-text-color);
       }
