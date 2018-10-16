@@ -13,6 +13,9 @@
 
   --spectrum-textfield-multiline-padding-y: 4px;
   --spectrum-textfield-multiline-padding-x: 8px;
+
+  /* Todo: DNA uses incorrect font family "Adobe Clean" */;
+  --spectrum-textfield-text-font-family-fixed: adobe-clean, Helvetica, Arial, sans-serif;
 }
 
 .spectrum-Textfield {
@@ -40,7 +43,7 @@
   overflow: visible;
 
   /* Change the input font styles in all browsers */
-  font-family: var(--spectrum-textfield-text-font-family);
+  font-family: var(--spectrum-textfield-text-font-family-fixed);
   font-size: var(--spectrum-textfield-text-size);
   line-height: var(--spectrum-textfield-text-line-height);
   text-overflow: ellipsis;
