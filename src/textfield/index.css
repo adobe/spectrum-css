@@ -25,7 +25,8 @@
   border-radius: var(--spectrum-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: var(--spectrum-textfield-padding-top) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) var(--spectrum-textfield-padding-x);
+  /* + 1px on top padding to fix weirdness in #618 */
+  padding: calc(var(--spectrum-textfield-padding-top) + 1px) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) var(--spectrum-textfield-padding-x);
 
   /* Do not use text-indent, the designs changed */
   text-indent: 0;
