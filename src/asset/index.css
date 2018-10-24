@@ -16,7 +16,7 @@
 
 :root {
   /* Letter Spacing of the subtitle, used for when it displays the asset type */
-  --spectrum-asset-subtitle-letter-spacing: .666px;
+  --spectrum-card-quiet-subtitle-letter-spacing: .666px;
 }
 
 .spectrum-Asset {
@@ -32,10 +32,10 @@
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    border-radius: var(--spectrum-asset-border-radius);
+    border-radius: var(--spectrum-card-quiet-border-radius);
     position: relative;
     transition: background-color 200ms;
-    border: var(--spectrum-asset-border-size) solid transparent;
+    border: var(--spectrum-card-quiet-border-size) solid transparent;
 
     &.is-selected,
     &:hover {
@@ -53,15 +53,15 @@
       justify-content: center;
       .spectrum-Asset-folder,
       .spectrum-Asset-file {
-        width: var(--spectrum-asset-file-width);
-        margin: var(--spectrum-asset-file-margin);
+        width: var(--spectrum-card-quiet-file-width);
+        margin: var(--spectrum-card-quiet-file-margin);
       }
     }
   }
 
   .spectrum-Asset-body {
     padding: 0;
-    
+
     .spectrum-Asset-header {
       display: flex;
       justify-content: space-between;
@@ -70,13 +70,13 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding-right: var(--spectrum-asset-title-padding-right);
+        padding-right: var(--spectrum-card-quiet-title-padding-right);
       }
     }
 
     .spectrum-Asset-subtitle {
-      font-size: var(--spectrum-asset-subtitle-text-size);
-      letter-spacing: var(--spectrum-asset-subtitle-letter-spacing);
+      font-size: var(--spectrum-card-quiet-subtitle-text-size);
+      letter-spacing: var(--spectrum-card-quiet-subtitle-letter-spacing);
       text-transform: uppercase;
     }
   }
@@ -84,8 +84,8 @@
 
 .spectrum-Asset-quickActions {
   position: absolute;
-  left: var(--spectrum-asset-checkbox-margin);
-  top: var(--spectrum-asset-checkbox-margin);
+  left: var(--spectrum-card-quiet-checkbox-margin);
+  top: var(--spectrum-card-quiet-checkbox-margin);
 
   width: var(--spectrum-quickactions-height);
   height: var(--spectrum-quickactions-height);
@@ -98,53 +98,53 @@
 }
 
 .spectrum-Asset--large {
-  min-width: var(--spectrum-asset-large-min-size);
-  
+  min-width: var(--spectrum-card-quiet-large-min-size);
+
   .spectrum-Asset-preview {
-    height: calc(100% - var(--spectrum-asset-large-body-height));
-    padding: var(--spectrum-asset-large-preview-padding);
-    min-height: var(--spectrum-asset-large-min-size);
+    height: calc(100% - var(--spectrum-card-quiet-large-body-height));
+    padding: var(--spectrum-card-quiet-large-preview-padding);
+    min-height: var(--spectrum-card-quiet-large-min-size);
   }
 
   .spectrum-Asset-body {
-    margin: var(--spectrum-asset-large-body-margin-top) 0 0;
-    
+    margin: var(--spectrum-card-quiet-large-body-margin-top) 0 0;
+
     .spectrum-Asset-header {
-      height: var(--spectrum-asset-header-height);
+      height: var(--spectrum-card-quiet-header-height);
       .spectrum-Asset-title {
-        font-size: var(--spectrum-asset-large-title-text-size);
+        font-size: var(--spectrum-card-quiet-large-title-text-size);
       }
       .spectrum-Asset-actionButton {
-        height: var(--spectrum-asset-actionbutton-height);
+        height: var(--spectrum-card-quiet-actionbutton-height);
       }
     }
     .spectrum-Asset-subtitle {
-      padding-top: var(--spectrum-asset-large-subtitle-padding-top);
+      padding-top: var(--spectrum-card-quiet-large-subtitle-padding-top);
     }
-  } 
+  }
 }
 
 .spectrum-Asset--small {
-  min-width: var(--spectrum-asset-small-min-size);
+  min-width: var(--spectrum-card-quiet-small-min-size);
 
   .spectrum-Asset-preview {
-    height: calc(100% - var(--spectrum-asset-small-body-height));
-    padding: var(--spectrum-asset-small-preview-padding);
-    min-height: var(--spectrum-asset-small-min-size);
+    height: calc(100% - var(--spectrum-card-quiet-small-body-height));
+    padding: var(--spectrum-card-quiet-small-preview-padding);
+    min-height: var(--spectrum-card-quiet-small-min-size);
 
     .spectrum-Asset-quickActions {
-      width: var(--spectrum-asset-small-checkbox-size);
-      height: var(--spectrum-asset-small-checkbox-size);
-      left: var(--spectrum-asset-small-checkbox-margin);
-      top: var(--spectrum-asset-small-checkbox-margin);
+      width: var(--spectrum-card-quiet-small-checkbox-size);
+      height: var(--spectrum-card-quiet-small-checkbox-size);
+      left: var(--spectrum-card-quiet-small-checkbox-margin);
+      top: var(--spectrum-card-quiet-small-checkbox-margin);
     }
   }
 
   .spectrum-Asset-body {
-    margin: var(--spectrum-asset-small-body-margin-top) 0 0;
+    margin: var(--spectrum-card-quiet-small-body-margin-top) 0 0;
 
     .spectrum-Asset-title {
-      font-size: var(--spectrum-asset-small-title-text-size);
+      font-size: var(--spectrum-card-quiet-small-title-text-size);
     }
   }
 }

@@ -2,39 +2,39 @@
 
   &:hover {
     .spectrum-Asset-preview {
-      background-color: var(--spectrum-asset-preview-background-color-hover);
+      background-color: var(--spectrum-card-quiet-preview-background-color-hover);
     }
   }
 
   .spectrum-Asset-preview {
-    background-color: var(--spectrum-asset-preview-background-color);
+    background-color: var(--spectrum-card-quiet-preview-background-color);
     &.is-selected {
-      border-color: var(--spectrum-asset-border-color-selected);
+      border-color: var(--spectrum-card-quiet-border-color-selected);
     }
   }
 
   .spectrum-Asset-body {
     .spectrum-Asset-header {
       .spectrum-Asset-title {
-        color: var(--spectrum-asset-title-text-color);
+        color: var(--spectrum-card-quiet-title-text-color);
       }
     }
-
-    .spectrum-Asset-subtitle {
-      color: var(--spectrum-asset-subtitle-text-color);
-    }
   }
+}
+
+.spectrum-Asset-subtitle {
+  color: var(--spectrum-card-quiet-subtitle-text-color);
 }
 
 .spectrum-Asset-folder,
 .spectrum-Asset-file {
   .spectrum-Asset-folder-background {
-    fill: var(--spectrum-asset-folder-background-color);
+    fill: var(--spectrum-card-quiet-folder-background-color);
   }
   .spectrum-Asset-file-background {
-    fill: var(--spectrum-asset-file-background-color);
+    fill: var(--spectrum-card-quiet-file-background-color);
   }
   .spectrum-Asset-folder-outline, .spectrum-Asset-file-outline {
-    fill: var(--spectrum-asset-file-outline-fill-color);
+    fill: var(--spectrum-card-quiet-file-outline-fill-color);
   }
 }
