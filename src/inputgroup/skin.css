@@ -86,3 +86,105 @@
     }
   }
 }
+
+/* 
+  TODO: discuss with other 
+  Way to keep this datapicker related
+*/
+.spectrum-InputGroup {
+  &.spectrum-Datepicker {
+    border-color: var(--spectrum-textfield-border-color);
+    /* Simulating horizontal line between two inputs */
+    hr {
+      background-color: var(--spectrum-textfield-placeholder-text-color);
+      border: 0;
+      margin: 15px 0px;
+      height: 1px;
+      width: 10px;
+      position: absolute;
+    }
+
+    /* Horisontal line and placeholder text color on hover */
+    &:not(.is-disabled):hover,
+    &.is-focused {
+      hr {
+        background-color: var(--spectrum-textfield-placeholder-text-color-hover);
+      }
+      .spectrum-InputGroup-field {
+        &::placeholder {
+          color: var(--spectrum-textfield-placeholder-text-color-hover);
+        }
+      }
+    }
+
+    /* Border color in different cases: hover, focus, invalid */
+    &:not(.is-disabled):not(.is-focused):not(.is-invalid):hover {
+      border-color: var(--spectrum-textfield-border-color-hover);
+    }
+    &.is-focused {
+      border-color: var(--spectrum-textfield-border-color-down);
+    }
+    &.is-invalid {
+      border-color: var(--spectrum-textfield-border-color-error);
+    }
+
+    /* Not quiet datepicker */
+    &:not(.spectrum-InputGroup--quiet){
+      border-width: 1px;
+      border-style: solid;
+      /* border-radius: var(--spectrum-border-radius); */
+    
+      hr {
+        left: 95px;
+      }
+
+      .spectrum-InputGroup-field {
+        border: 0;
+        width: 100px;
+        min-width: 100px;
+        &:nth-child(2) {
+          border-left: 0;
+          border-radius: 0;
+        }
+        &.is-invalid {
+          width: 120px;
+        }
+        &:focus ~ .spectrum-FieldButton {
+          border-color: var(--spectrum-textfield-border-color-hover);
+        }
+      }
+
+      .spectrum-FieldButton {
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+      }
+    }
+    /* Quiet datepicker */
+    &.spectrum-InputGroup--quiet {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+
+      hr {
+        left: 85px;
+      }
+      .spectrum-InputGroup-field, 
+      .spectrum-FieldButton{
+        border: 0;
+      }
+      .spectrum-InputGroup-field {
+        width: 90px;
+        min-width: 90px;
+        &:nth-of-type(2) {
+          padding-left: 12px;
+        }
+        &:focus ~ .spectrum-FieldButton{
+          box-shadow: none;
+        }
+        &.is-invalid {
+          width: 120px;
+        }
+      }
+    }
+  }
+}
