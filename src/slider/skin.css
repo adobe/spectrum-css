@@ -117,11 +117,12 @@
 .spectrum-Slider--color {
   .spectrum-Slider-controls::before {
     background-color: var(--spectrum-global-color-static-white);
+    /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
     background-image:
-      linear-gradient(-45deg, transparent 75%, var(--spectrum-global-color-static-gray-500) 75%),
-      linear-gradient(45deg, transparent 75%, var(--spectrum-global-color-static-gray-500) 75%),
-      linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25%, transparent 25%),
-      linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25%, transparent 25%);
+      linear-gradient(-45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+      linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+      linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%),
+      linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%);
     background-size:
       var(--spectrum-global-dimension-static-size-200)
       var(--spectrum-global-dimension-static-size-200);
