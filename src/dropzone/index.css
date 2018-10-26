@@ -13,4 +13,12 @@
   &.is-dragged {
     border-style: solid;
   }
+
+  &:focus {
+    outline: 0;
+    border-style: dashed;
+    &.focus-ring {
+      border-style: solid;
+    }
+  }
 }

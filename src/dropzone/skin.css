@@ -9,4 +9,19 @@
       color: var(--spectrum-global-color-blue-400);
     }
   }
+
+  &:focus {
+    border-color: var(--spectrum-dropzone-border-color);
+    .spectrum-IllustratedMessage-illustration {
+      color: var(--spectrum-global-color-static-gray-500);
+    }
+    &.focus-ring {
+      border-color: var(--spectrum-dropzone-border-color-selected-hover);
+    }
+    &.is-dragged.focus-ring {
+      .spectrum-IllustratedMessage-illustration {
+        color: var(--spectrum-global-color-blue-400);
+      }
+    }
+  }
 }
