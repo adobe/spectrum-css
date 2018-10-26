@@ -39,6 +39,7 @@
 
   .spectrum-Breadcrumbs-itemLink {
     cursor: default;
+    display: inline;
 
     &[href],
     &[tabindex="0"] {

@@ -1,11 +1,11 @@
 @import '../commons/index.css';
 
 :root {
+  --spectrum-textfield-padding-top: 3px;
+  --spectrum-textfield-padding-bottom: 5px;
+
   /* Todo fix in DNA */
   --spectrum-textfield-quiet-border-radius: 0;
-
-  /* Todo this is hardcoded */
-  --spectrum-textfield-width: 192px;
 
   --spectrum-textfield-quiet-invalid-background-position: 100% 50%;
 
@@ -25,15 +25,13 @@
   border-radius: var(--spectrum-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  /* + 1px on top padding to fix weirdness in #618 */
-  padding: calc(var(--spectrum-textfield-padding-top) + 1px) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) var(--spectrum-textfield-padding-x);
-
-  /* Do not use text-indent, the designs changed */
+  padding: var(--spectrum-textfield-padding-top) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) var(--spectrum-textfield-padding-x);
+  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
   min-width: var(--spectrum-textfield-min-width);
-  width: var(--spectrum-textfield-width);
   height: var(--spectrum-textfield-height);
+  width: var(--spectrum-component-single-line-width);
 
   vertical-align: top; /* used to align them correctly in forms. */
 
@@ -46,7 +44,7 @@
   /* Change the input font styles in all browsers */
   font-family: var(--spectrum-textfield-text-font-family-fixed);
   font-size: var(--spectrum-textfield-text-size);
-  line-height: var(--spectrum-textfield-text-line-height);
+  line-height: var(--spectrum-text-body-line-height);
   text-overflow: ellipsis;
 
   transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
@@ -77,23 +75,17 @@
 
   &:lang(ja), &:lang(zh), &:lang(ko) {
     &::placeholder {
-      font-style: normal;
+       font-style: normal;
     }
     &::-ms-input-placeholder { /* added to work with Edge, same as above */
-      font-style: normal;
+       font-style: normal;
     }
   }
 
   &:hover {
-    text-overflow: clip;
-
     &::placeholder {
       font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
     }
-  }
-
-  &:focus-ring {
-    border-width: var(--spectrum-textfield-border-size-key-focus);
   }
 
   &:disabled {
@@ -128,18 +120,19 @@
   &:invalid,
   &.is-valid {
     background-repeat: no-repeat;
-    padding-right: var(--spectrum-textfield-icon-frame);
   }
 
   &.is-invalid,
   &:invalid {
-    background-size: var(--spectrum-textfield-error-icon-height) var(--spectrum-textfield-error-icon-width);
-    background-position: calc(100% - calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-textfield-error-icon-width) / 2))) 50%;
+    background-size: var(--spectrum-icon-alert-medium-width) var(--spectrum-icon-alert-medium-width);
+    background-position: calc(100% - var(--spectrum-textfield-padding-x)) 50%;
+    padding-right: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-icon-margin-left));
   }
 
   &.is-valid {
-    background-size: var(--spectrum-textfield-success-icon-height) var(--spectrum-textfield-success-icon-width);
-    background-position: calc(100% - calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-textfield-success-icon-width) / 2))) 50%;
+    background-size: var(--spectrum-icon-checkmark-medium-width) var(--spectrum-icon-checkmark-medium-width);
+    background-position: calc(100% - var(--spectrum-textfield-padding-x)) 50%;
+    padding-right: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-icon-margin-left));
   }
 }
 
@@ -155,21 +148,10 @@
   &.is-valid {
     background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) calc(100% - calc(var(--spectrum-textfield-icon-size) / 2));
   }
-
-  &.spectrum-Textfield--quiet {
-    overflow-y: auto;
-
-    &:focus,
-    &:focus-ring {
-      padding-left: var(--spectrum-textfield-quiet-padding-x);
-      padding-right: var(--spectrum-textfield-multiline-padding-x);
-    }
-  }
 }
 
 .spectrum-Textfield--quiet {
   border-radius: var(--spectrum-textfield-quiet-border-radius);
-
   border-width: 0 0 var(--spectrum-textfield-quiet-border-size) 0;
 
   /* removes the side padding to align the text properly */
@@ -180,29 +162,9 @@
   resize: none;
   overflow-y: hidden;
 
-  &:focus-ring {
-    border-width: 0 0 var(--spectrum-textfield-quiet-border-size-key-focus) 0;
-  }
-
   &.is-invalid,
   &:invalid,
   &.is-valid {
     background-position: var(--spectrum-textfield-quiet-invalid-background-position);
   }
-
-  &.is-invalid,
-  &:invalid {
-    &:focus {
-      padding-right: calc(var(--spectrum-textfield-icon-frame) - (var(--spectrum-textfield-padding-x) / 2));
-    }
-  }
-
-  &.is-valid {
-    padding-right: calc(var(--spectrum-textfield-icon-frame) - var(--spectrum-textfield-padding-x));
-
-    &:focus {
-      padding-right: calc(var(--spectrum-textfield-icon-frame) - (var(--spectrum-textfield-padding-x) / 2));
-    }
-  }
-
 }
