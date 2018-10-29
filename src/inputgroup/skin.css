@@ -138,19 +138,25 @@
         left: 95px;
       }
 
+      
       .spectrum-InputGroup-field {
         border: 0;
-        width: 100px;
-        min-width: 100px;
         &:nth-child(2) {
           border-left: 0;
           border-radius: 0;
         }
-        &.is-invalid {
-          width: 120px;
-        }
         &:focus ~ .spectrum-FieldButton {
           border-color: var(--spectrum-textfield-border-color-hover);
+        }
+      }
+
+      &.spectrum-Datepicker--range {
+        .spectrum-InputGroup-field {
+          width: 100px;
+          min-width: 100px;
+          &.is-invalid {
+            width: 120px;
+          }
         }
       }
 
