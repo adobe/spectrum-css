@@ -16,7 +16,7 @@ git push -u origin my-awesome-new-feature
 git remote add upstream git@git.corp.adobe.com:Spectrum/spectrum-css.git
 ```
 
-Set up the `@spectrum` npm namespace in your `.npmrc`
+Set up the `@spectrum` and `@a4u` npm namespaces in your `.npmrc`
 
 ```
 echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc;

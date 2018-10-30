@@ -206,6 +206,13 @@ In this project, there are three sets of source files.
 
 ## Building
 
+Set up the `@spectrum` and `@a4u` npm namespaces in your `.npmrc`
+
+```
+echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc;
+echo "@a4u:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release-local/" >> ~/.npmrc;
+```
+
 Run the following commands:
 
 ```
