@@ -69,6 +69,9 @@
   box-sizing: border-box;
   width: 100%;
 
+  /* Don't get small when the dialog does */
+  flex-shrink: 0;
+
   border-radius: var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius) 0 0;
   outline: none; /* Hide focus outline around header */
 
