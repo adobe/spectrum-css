@@ -1,4 +1,4 @@
-@import '../commons/index.css';
+  @import '../commons/index.css';
 
 :root {
   --spectrum-toast-height: var(--spectrum-global-dimension-size-600);
@@ -47,4 +47,19 @@
 
 .spectrum-Toast-content {
   margin: var(--spectrum-toast-content-margin);
+}
+.spectrum-Toast--bottom {
+  position: fixed;
+  bottom: 0px;
+}
+.spectrum-Toast--top {
+  position: fixed;
+  top: 0px;
+}
+.spectrum-Toast--left {
+  position: fixed;
+  left: 5px;
+}
+.spectrum-Toast--right {
+  right: 5px;
 }
