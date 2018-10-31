@@ -80,6 +80,9 @@
   vertical-align: top;
   display: inline-block;
 
+  font-size: var(--spectrum-tabs-text-size);
+  font-weight: var(--spectrum-tabs-text-font-weight);
+
   &:empty {
     /* Hide the tab label if it's not being used */
     display: none;
