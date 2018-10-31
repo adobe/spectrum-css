@@ -38,6 +38,16 @@
   }
 }
 
+.spectrum-Slider--filled-offset {
+  .spectrum-Slider-track {
+    &:not(:first-of-type):not(:last-of-type) {
+      &:before {
+        background: var(--spectrum-slider-fill-track-color);
+      }
+    }
+  }
+}
+
 .spectrum-Slider-buffer {
   &::before,
   &::after {
@@ -292,6 +302,16 @@
     }
 
     &.spectrum-Slider--range {
+      .spectrum-Slider-track {
+        &:not(:first-of-type):not(:last-of-type) {
+          &:before {
+            background: var(--spectrum-slider-fill-track-color-disabled);
+          }
+        }
+      }
+    }
+
+    &.spectrum-Slider--filled-offset {
       .spectrum-Slider-track {
         &:not(:first-of-type):not(:last-of-type) {
           &:before {
