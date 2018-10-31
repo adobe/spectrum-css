@@ -1,7 +1,7 @@
 name: Date Picker - Range
 description: A date picker uses the input group component to display a field with a button next to it
 markup: |
-  <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-owns="react-spectrum-110" aria-haspopup="true">
+  <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range" aria-readonly="false" aria-required="false" aria-owns="react-spectrum-110" aria-haspopup="true">
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" aria-invalid="false" placeholder="mm/dd/yyyy" name="start" value="">
     <hr>
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" aria-invalid="false" placeholder="mm/dd/yyyy" name="end" value="">

@@ -150,16 +150,6 @@
         }
       }
 
-      &.spectrum-Datepicker--range {
-        .spectrum-InputGroup-field {
-          width: 100px;
-          min-width: 100px;
-          &.is-invalid {
-            width: 120px;
-          }
-        }
-      }
-
       .spectrum-FieldButton {
         border-top: 0;
         border-right: 0;
@@ -179,16 +169,32 @@
         border: 0;
       }
       .spectrum-InputGroup-field {
-        width: 90px;
-        min-width: 90px;
-        &:nth-of-type(2) {
-          padding-left: 12px;
-        }
         &:focus ~ .spectrum-FieldButton{
           box-shadow: none;
         }
-        &.is-invalid {
-          width: 120px;
+      }
+    }
+    /* Field dimenstion  */
+    &.spectrum-Datepicker--range {
+      &:not(.spectrum-InputGroup--quiet){
+        .spectrum-InputGroup-field {
+          width: 100px;
+          min-width: 100px;
+          &.is-invalid {
+            width: 120px;
+          }
+        }
+      }
+      &.spectrum-InputGroup--quiet {
+        .spectrum-InputGroup-field {
+          width: 90px;
+          min-width: 90px;
+          &:nth-of-type(2) {
+            padding-left: 12px;
+          }
+          &.is-invalid {
+            width: 120px;
+          }
         }
       }
     }
