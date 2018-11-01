@@ -116,6 +116,10 @@
 }
 
 .spectrum-Slider--range {
+  .spectrum-Slider-value {
+    user-select: text;
+  }
+
   .spectrum-Slider-track {
     &:first-of-type {
       padding: 0 var(--spectrum-slider-track-handleoffset) 0 0;
