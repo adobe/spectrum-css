@@ -371,7 +371,7 @@ function makeSlider(slider) {
   var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
   var tracks = slider.querySelectorAll('.spectrum-Slider-track');
   var leftTrack = tracks[0];
-  var rightTrack = tracks[1];
+  var rightTrack = tracks[tracks.length - 1];
   var handles = slider.querySelectorAll('.spectrum-Slider-handle');
   var handle = handles[0];
   var isColor = slider.classList.contains('spectrum-Slider--color');
@@ -381,11 +381,42 @@ function makeSlider(slider) {
     return;
   }
 
+  if (tracks.length > 2) {
+    var middleTrack = tracks[1];
+    var filledOffset = middleTrack.offsetLeft;
+    var filledOffsetPercent = (filledOffset / sliderOffsetWidth) * 100;
+  }
+
   var buffers = slider.querySelectorAll('.spectrum-Slider-buffer');
   if (buffers.length) {
     var leftBuffer = buffers[0];
     var rightBuffer = buffers[1];
     var bufferedAmount = parseInt(handle.style.left, 10) + parseInt(rightBuffer.style.width, 10);
+  }
+
+  function setTracksWidth(percent) {
+    if (leftTrack && rightTrack && !middleTrack && !isColor) {
+      leftTrack.style.width = percent + '%';
+      rightTrack.style.width = (100 - percent) + '%';
+    } 
+    else if (leftTrack && middleTrack && rightTrack && !isColor) {
+      leftTrack.style.width = Math.min(percent, filledOffsetPercent) + '%';
+      middleTrack.style.left = Math.min(percent, filledOffsetPercent) + '%';
+      middleTrack.style.width = Math.abs(percent - filledOffsetPercent) + '%';
+      rightTrack.style.width = (100 - Math.max(percent, filledOffsetPercent)) + '%';
+      if (filledOffsetPercent < percent) {
+        leftTrack.classList.add('extend-right');
+        middleTrack.classList.remove('extend-right');
+        middleTrack.classList.add('extend-left');
+        rightTrack.classList.remove('extend-left');
+      } 
+      else {
+        leftTrack.classList.remove('extend-right');
+        middleTrack.classList.remove('extend-left');
+        middleTrack.classList.add('extend-right');
+        rightTrack.classList.add('extend-left');
+      }
+    }
   }
 
   function onMouseDown(e, sliderHandle) {
@@ -399,10 +430,7 @@ function makeSlider(slider) {
   function onMouseMove(e, sliderHandle) {
     var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
     var percent = (x / sliderOffsetWidth) * 100;
-    if (leftTrack && rightTrack && !isColor) {
-      leftTrack.style.width = percent + '%';
-      rightTrack.style.width = (100 - percent) + '%';
-    }
+    setTracksWidth(percent);
     handle.style.left = percent + '%';
 
     if (buffers.length) {
@@ -424,10 +452,7 @@ function makeSlider(slider) {
 
   // Set initial track position
   var percent = parseInt(handle.style.left, 10);
-  if (leftTrack && rightTrack && !isColor) {
-    leftTrack.style.width = percent + '%';
-    rightTrack.style.width = (100 - percent) + '%';
-  }
+  setTracksWidth(percent);
 
   if (!slider.classList.contains('is-disabled')) {
     slider.addEventListener('mousedown', onMouseDown);

@@ -138,7 +138,7 @@
   }
 }
 
-.spectrum-Slider--filled-offset {
+.spectrum-Slider--filledOffset {
   .spectrum-Slider-handle {
     & + .spectrum-Slider-track {
       padding: 0 0 0 var(--spectrum-slider-track-handleoffset);
