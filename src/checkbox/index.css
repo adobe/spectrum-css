@@ -80,7 +80,7 @@
   margin-left: var(--spectrum-checkbox-text-gap);
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
-  transition: color var(--spectrum-transition-time) ease-in-out;
+  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 
   white-space: nowrap;
 
@@ -101,7 +101,7 @@
   border-width: var(--spectrum-checkbox-box-border-size);
   border-style: solid;
 
-  transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+  transition: border var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Checkbox-checkmark,
@@ -116,7 +116,7 @@
   opacity: 0;
   transform: scale(0);
 
-  transition: opacity var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out;
+  transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out, transform var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Checkbox-partialCheckmark {

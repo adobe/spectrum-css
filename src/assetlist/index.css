@@ -30,7 +30,7 @@
 
   border-radius: var(--spectrum-miller-column-item-border-radius);
 
-  transition: background-color var(--spectrum-transition-time) ease-in-out;
+  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
 
   font-size: var(--spectrum-selectlist-option-text-size);
   font-weight: var(--spectrum-selectlist-option-text-font-weight);
@@ -89,7 +89,7 @@
 
 .spectrum-AssetList-itemChildIndicator {
   display: none;
-  transition: transform ease var(--spectrum-transition-time);
+  transition: transform ease var(--spectrum-global-animation-duration-100);
 }
 
 .spectrum-AssetList-itemLabel {

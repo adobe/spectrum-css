@@ -38,10 +38,10 @@
   outline: none;
   user-select: none;
 
-  transition: border-color var(--spectrum-transition-time) ease-in-out,
-    color var(--spectrum-transition-time) ease-in-out,
-    box-shadow var(--spectrum-transition-time) ease-in-out,
-    background-color var(--spectrum-transition-time) ease-in-out;
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out,
+    color var(--spectrum-global-animation-duration-100) ease-in-out,
+    box-shadow var(--spectrum-global-animation-duration-100) ease-in-out,
+    background-color var(--spectrum-global-animation-duration-100) ease-in-out;
 
   &.is-disabled {
     pointer-events: none;

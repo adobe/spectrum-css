@@ -27,7 +27,7 @@
   left: var(--spectrum-accordion-icon-spacing);
   top: calc(var(--spectrum-accordion-item-height-actual) / 2 - var(--spectrum-accordion-icon-height) / 2);
 
-  transition: transform ease var(--spectrum-transition-time);
+  transition: transform ease var(--spectrum-global-animation-duration-100);
 }
 
 .spectrum-Accordion-item {

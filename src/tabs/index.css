@@ -35,7 +35,7 @@
   text-decoration: none;
   white-space: nowrap;
 
-  transition: color var(--spectrum-transition-time) ease-out;
+  transition: color var(--spectrum-global-animation-duration-100) ease-out;
   cursor: pointer;
   outline: none;
 
@@ -96,7 +96,7 @@
   /* Be below the tab */
   z-index: 0;
 
-  transition: transform var(--spectrum-transition-time) ease-in-out;
+  transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
   transform-origin: top left;
 
   border-radius: var(--spectrum-tabs-rule-border-radius);

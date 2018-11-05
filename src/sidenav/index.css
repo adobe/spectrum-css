@@ -38,8 +38,8 @@
 
   cursor: pointer;
 
-  transition: background-color var(--spectrum-transition-time) ease-out,
-              color var(--spectrum-transition-time) ease-out;
+  transition: background-color var(--spectrum-global-animation-duration-100) ease-out,
+              color var(--spectrum-global-animation-duration-100) ease-out;
 
   &:focus {
     outline: none;

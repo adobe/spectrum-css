@@ -7,9 +7,9 @@
 
   opacity: 0;
 
-  transition: transform var(--spectrum-transition-time) ease-in-out,
-              opacity var(--spectrum-transition-time) ease-in-out,
-              visibility 0ms linear var(--spectrum-transition-time);
+  transition: transform var(--spectrum-global-animation-duration-100) ease-in-out,
+              opacity var(--spectrum-global-animation-duration-100) ease-in-out,
+              visibility 0ms linear var(--spectrum-global-animation-duration-100);
 
   pointer-events: none;
 }

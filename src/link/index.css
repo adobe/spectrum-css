@@ -9,7 +9,7 @@
   /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
-  transition: color var(--spectrum-transition-time) ease-in-out;
+  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   outline: none;
 
   &:hover {

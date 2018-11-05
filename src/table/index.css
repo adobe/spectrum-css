@@ -24,7 +24,7 @@
 
   vertical-align: middle;
 
-  transition: transform var(--spectrum-transition-time) ease-in-out;
+  transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Table-headCell {
@@ -37,7 +37,7 @@
   letter-spacing: var(--spectrum-table-header-text-letter-spacing);
   text-transform: uppercase;
   padding: var(--spectrum-table-header-padding-y) var(--spectrum-table-header-padding-x);
-  transition: color var(--spectrum-transition-time) ease-in-out;
+  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   cursor: default;
   outline: 0;
   border-radius: var(--spectrum-table-header-border-radius);
@@ -175,7 +175,7 @@
 .spectrum-Table-row {
   position: relative;
   cursor: pointer;
-  transition: background-color var(--spectrum-transition-time) ease-in-out;
+  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
 
   &:focus {
     outline: 0;

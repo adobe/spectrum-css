@@ -17,7 +17,7 @@
   width: var(--spectrum-component-single-line-width);
   line-height: 0;
   border-radius: var(--spectrum-border-radius);
-  transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 .spectrum-Stepper::before {
   content: '';
@@ -26,7 +26,7 @@
 .spectrum-Stepper-buttons {
   display: block;
   border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
-  transition: box-shadow var(--spectrum-transition-time) ease-in-out;
+  transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Stepper-stepUp,

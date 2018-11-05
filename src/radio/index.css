@@ -65,7 +65,7 @@
   margin-left: var(--spectrum-radio-text-gap);
   font-size: var(--spectrum-radio-text-size);
 
-  transition: color var(--spectrum-transition-time) ease-in-out;
+  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 
   white-space: nowrap;
 
@@ -86,7 +86,7 @@
   border-width: var(--spectrum-radio-circle-border-size);
   border-style: solid;
 
-  transition: border var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+  transition: border var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Radio--labelBelow {

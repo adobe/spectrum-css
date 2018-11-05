@@ -47,7 +47,7 @@
   line-height: var(--spectrum-text-body-line-height);
   text-overflow: ellipsis;
 
-  transition: border-color var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 
   outline: none;
 
@@ -61,7 +61,7 @@
   &::placeholder {
     font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
     font-style: var(--spectrum-textfield-placeholder-text-font-style);
-    transition: color var(--spectrum-transition-time) ease-in-out;
+    transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 
   /* added to work with Edge, note, it needs double ::
@@ -70,7 +70,7 @@
   &::-ms-input-placeholder {
     font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
     font-style: var(--spectrum-textfield-placeholder-text-font-style);
-    transition: color var(--spectrum-transition-time) ease-in-out;
+    transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 
   &:lang(ja), &:lang(zh), &:lang(ko) {

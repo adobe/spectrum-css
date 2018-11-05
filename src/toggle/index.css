@@ -55,7 +55,7 @@
   margin: 0 var(--spectrum-switch-text-gap);
   font-size: var(--spectrum-switch-text-size);
   vertical-align: middle;
-  transition: color 150ms ease-in-out;
+  transition: color var(--spectrum-global-animation-duration-200) ease-in-out;
 }
 
 .spectrum-ToggleSwitch-switch {
@@ -78,7 +78,7 @@
 
   /* ::before is used for the track of the switch */
   &::before {
-    transition: background var(--spectrum-transition-time) ease-in-out, border var(--spectrum-transition-time) ease-in-out;
+    transition: background var(--spectrum-global-animation-duration-100) ease-in-out, border var(--spectrum-global-animation-duration-100) ease-in-out;
 
     height: var(--spectrum-switch-track-height);
 
@@ -90,7 +90,7 @@
 
   /* ::after is used for the handle of the switch */
   &::after {
-    transition: background var(--spectrum-transition-time) ease-in-out, border var(--spectrum-transition-time) ease-in-out, transform var(--spectrum-transition-time) ease-in-out, box-shadow var(--spectrum-transition-time) ease-in-out;
+    transition: background var(--spectrum-global-animation-duration-100) ease-in-out, border var(--spectrum-global-animation-duration-100) ease-in-out, transform var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 
     width: var(--spectrum-switch-handle-size);
     height: var(--spectrum-switch-handle-size);

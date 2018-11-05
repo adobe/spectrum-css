@@ -71,7 +71,7 @@
   &.is-placeholder {
     font-weight: var(--spectrum-dropdown-placeholder-text-font-weight);
     font-style: var(--spectrum-dropdown-placeholder-text-font-style);
-    transition: color var(--spectrum-transition-time) ease-in-out;
+    transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 }
 
@@ -93,7 +93,7 @@
   display: inline-block;
   position: relative;
   vertical-align: top;
-  transition: color var(--spectrum-transition-time) ease-out;
+  transition: color var(--spectrum-global-animation-duration-100) ease-out;
 
   /* Fix Safari 10 bug where align-items is ignored inside of buttons */
   margin-top: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-icon-chevron-down-medium-height)) / 2);
