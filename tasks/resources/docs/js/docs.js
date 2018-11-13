@@ -306,8 +306,6 @@ function changeLoader(loader, value, submask1, submask2) {
 }
 
 function makeDoubleSlider(slider) {
-  var sliderOffsetWidth = slider.offsetWidth;
-  var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
   var tracks = slider.querySelectorAll('.spectrum-Slider-track');
   var leftTrack = tracks[0];
   var middleTrack = tracks[1];
@@ -333,6 +331,9 @@ function makeDoubleSlider(slider) {
     if (!handle) {
       return;
     }
+
+    var sliderOffsetWidth = slider.offsetWidth;
+    var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
     var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
     var percent = (x / sliderOffsetWidth) * 100;
@@ -367,8 +368,6 @@ function makeDoubleSlider(slider) {
 }
 
 function makeSlider(slider) {
-  var sliderOffsetWidth = slider.offsetWidth;
-  var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
   var tracks = slider.querySelectorAll('.spectrum-Slider-track');
   var leftTrack = tracks[0];
   var rightTrack = tracks[1];
@@ -397,6 +396,9 @@ function makeSlider(slider) {
     window.removeEventListener('mousemove', onMouseMove);
   }
   function onMouseMove(e, sliderHandle) {
+    var sliderOffsetWidth = slider.offsetWidth;
+    var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
+
     var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
     var percent = (x / sliderOffsetWidth) * 100;
     if (leftTrack && rightTrack && !isColor) {
