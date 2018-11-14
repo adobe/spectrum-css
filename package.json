@@ -12,11 +12,7 @@
     "release": "npm run release:stable"
   },
   "devDependencies": {
-    "@a4u/a4u-collection-essential-ui-icons-release": "^3.7.1",
     "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@spectrum/balthazar": "^3.0.1",
-    "@spectrum/dna-npm-release": "^1.x",
-    "@spectrum/spectrum-dna": "5.3.0",
     "@spectrum/spectrum-icons": "^1.0.0-beta.22",
     "autoprefixer": "^6.5.3",
     "backstopjs": "^3.5.10",
@@ -43,6 +39,7 @@
     "gulp-unzip": "^0.2.0",
     "gulp-watch": "^4.3.11",
     "gulp-yaml": "^1.0.1",
+    "loadicons": "^1.0.0",
     "markdown": "^0.5.0",
     "merge-stream": "^1.0.1",
     "postcss": "^5.2.18",
@@ -63,5 +60,6 @@
     "topdoc": "^1.1.6",
     "yargs": "^11.0.0"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {}
 }

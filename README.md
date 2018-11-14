@@ -11,7 +11,7 @@ The output from this project can be seen at [git.corp.adobe.com/pages/Spectrum/s
 ## Spectrum, DNA, and Spectrum-CSS
 Spectrum, the design language, is represented by the DNA project as data values in JSON.  This is the `spectrum-origins` repository.  The structure of that repo is detailed in the README for that project.
 
-That JSON data must be compiled into output that can be consumed by UI frameworks.  The `balthazar` project contains tooling to do that conversion. In this case, the `spectrum-css` project uses `balthazar` to [extract native CSS vars](https://git.corp.adobe.com/Spectrum/spectrum-css/blob/master/tasks/balthazar.js).  If a new element is added to `spectrum-css`, there must be a corresponding addtion to spectrum-origins to be sure the values needed for the new element are available.
+That JSON data must be compiled into output that can be consumed by UI frameworks.  The `balthazar` project contains tooling to do that conversion. In this case, the `spectrum-css` project uses `balthazar` to [extract native CSS vars](https://git.corp.adobe.com/Spectrum/spectrum-css/blob/master/tasks/balthazar.js).  If a new element is added to `spectrum-css`, there must be a corresponding addtion to spectrum-origins to be sure the values needed for the new element are available. The repo `spectrum-css-deps` consumes `balthazar` to create the `vars` directory which is checked into this repo. See the [Updating internal dependencies](updating-internal-dependencies) section below.
 
 The `spectrum-css` project can build both a 'multi-stop' and 'single-stop' version of the CSS. This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
 
@@ -22,6 +22,10 @@ The CSS source files also contain [Topdoc][https://github.com/Topdoc/topdoc] com
 A successful build will create a `dist` folder.  The `dist/docs` folder is where the Topdoc output and related template files will end up.  The
 
 The README for files for `spectrum-css`, `balthazar`, and `spectrum-origins` are helpful for more details.
+
+### Updating internal dependencies
+
+Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by spectrum-css. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run local-copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
 
 ## Using Spectrum CSS
 

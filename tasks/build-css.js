@@ -107,8 +107,8 @@ var processors = [
 gulp.task('build-css:individual-components-md', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-medium.css";'))
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-medium.css";'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
@@ -122,8 +122,8 @@ gulp.task('build-css:individual-components-md', function() {
 gulp.task('build-css:individual-components-lg', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(rename(function(path) {
       path.basename += '-lg';
@@ -142,8 +142,8 @@ gulp.task('build-css:individual-components-diffscale', function() {
       require('./lib/postcss-varsonly')()
     ]))
     // Use large variables
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-large.css";'))
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
     // Build
     .pipe(postcss(processors))
     // Wrap in large
@@ -252,8 +252,8 @@ gulp.task('build-css:all-components-multistops', function() {
 gulp.task('build-css:core-md-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
-    .pipe(insert.prepend('@import "../dist/vars/spectrum-medium.css";'))
-    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../vars/spectrum-medium.css";'))
+    .pipe(insert.prepend('@import "../vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
@@ -267,8 +267,8 @@ gulp.task('build-css:core-md-multistops', function() {
 gulp.task('build-css:core-lg-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
-    .pipe(insert.prepend('@import "../dist/vars/spectrum-large.css";'))
-    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../vars/spectrum-large.css";'))
+    .pipe(insert.prepend('@import "../vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(rename(function(path) {
       path.basename += '-lg';

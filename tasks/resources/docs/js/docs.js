@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-/* global document, window, Element, AdobeSpectrum, URLSearchParams */
+/* global document, window, Element, loadIcons, URLSearchParams */
 
 'use strict';
 
@@ -286,8 +286,8 @@ document.addEventListener('blur', toggleSliderFocus, true);
 //   // Immediately remove from the DOM -- it will be added back when we switch scale
 //   largeIcons.parentElement.removeChild(largeIcons);
 // });
-AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
-AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');
+loadIcons('../icons/spectrum-css-icons.svg');
+loadIcons('../icons/spectrum-icons.svg');
 
 function changeLoader(loader, value, submask1, submask2) {
   submask1 = submask1 || loader.querySelector('.spectrum-CircleLoader-fillSubMask1');

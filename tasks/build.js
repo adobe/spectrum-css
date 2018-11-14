@@ -4,8 +4,9 @@ gulp.task('build',
   gulp.series(
     'lint',
     'clean',
-    'load-dna',
     'icons',
+    'copy-vars',
+    'copy-loadIcons',
     'build-css',
     'build-docs'
   )

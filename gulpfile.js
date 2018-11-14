@@ -2,7 +2,8 @@ var gulp = require('gulp');
 
 // Include all tasks
 require('./tasks/lint');
-require('./tasks/load-dna');
+require('./tasks/copy-vars');
+require('./tasks/copy-loadIcons');
 require('./tasks/icons');
 require('./tasks/build-css');
 require('./tasks/build-docs');

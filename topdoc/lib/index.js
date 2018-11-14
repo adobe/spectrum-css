@@ -80,7 +80,7 @@ function template(topDocument) {
 
   var dnaVars;
   try {
-    dnaVars = JSON.parse(fsExtra.readFileSync(require.resolve(path.join('@spectrum/spectrum-dna', 'dist', 'vars', 'json', 'dna-vars.json')), 'utf-8'));
+    dnaVars = JSON.parse(fsExtra.readFileSync(require.resolve(path.join('..', '..', 'vars', 'spectrum-metadata.json')), 'utf-8'));
   } catch (err) {
     console.error('dna-topdoc-template failed to read dna-vars.json');
     throw(err);
@@ -103,12 +103,12 @@ function template(topDocument) {
       var dnaComponentId = component.id || component.filename;
 
       // Get info based on component variation first, then component name second
-      var dnaComponentTitle = dnaVars.metadata['spectrum-' + dnaComponentId + '-name'];
+      var dnaComponentTitle = dnaVars['spectrum-' + dnaComponentId + '-name'];
 
-      var dnaDescription = dnaVars.metadata['spectrum-' + dnaComponentId + '-description'];
+      var dnaDescription = dnaVars['spectrum-' + dnaComponentId + '-description'];
 
       var cssStatus = getCSSStatus(dnaComponentId, component.status);
-      var dnaStatus = getDNAStatus(dnaComponentId, dnaVars.metadata['spectrum-' + dnaComponentId + '-status'] || component.dnaStatus, cssStatus);
+      var dnaStatus = getDNAStatus(dnaComponentId, dnaVars['spectrum-' + dnaComponentId + '-status'] || component.dnaStatus, cssStatus);
 
       // Store the info
       component.name = component.name || dnaComponentTitle;
@@ -138,12 +138,12 @@ function template(topDocument) {
 
           // Gather DNA data
           subComponent.description = subComponent.description || '';
-          var subComponentDNADescription = dnaVars.metadata['spectrum-' + subComponent.id + '-description'];
+          var subComponentDNADescription = dnaVars['spectrum-' + subComponent.id + '-description'];
           if (subComponentDNADescription && !subComponent.ignoreDNA) {
             subComponent.description = subComponentDNADescription + '\n\n' + subComponent.description;
           }
 
-          subComponent.name = subComponent.name || dnaVars.metadata['spectrum-' + subComponent.id + '-name'];
+          subComponent.name = subComponent.name || dnaVars['spectrum-' + subComponent.id + '-name'];
 
           if (subComponent.description) {
             subComponent.description = markdown.toHTML(subComponent.description);
@@ -155,7 +155,7 @@ function template(topDocument) {
 
           subComponent.cssStatus = getCSSStatus(subComponent.id, subComponent.status);
           subComponent.cssColor = getLabelColor(subComponent.cssStatus);
-          subComponent.dnaStatus = getDNAStatus(subComponent.id, dnaVars.metadata['spectrum-' + subComponent.id + '-status'] || subComponent.dnaStatus, subComponent.cssStatus);
+          subComponent.dnaStatus = getDNAStatus(subComponent.id, dnaVars['spectrum-' + subComponent.id + '-status'] || subComponent.dnaStatus, subComponent.cssStatus);
           subComponent.dnaColor = getLabelColor(subComponent.dnaStatus);
 
           // Store the object back
