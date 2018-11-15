@@ -31,7 +31,7 @@ var processors = [
           'line-height': 'text-line-height',
           'font-style': 'text-font-style',
           'letter-spacing': 'text-letter-spacing',
-          'text-transform': 'text-transform'
+          'text-transform': 'text-transform',
         };
         function buildProperties (tokeString) {
           var ruleString = '';
@@ -40,12 +40,11 @@ var processors = [
               ruleString += `  ${key}: var(--spectrum-${tokeString}-${propMap[key]});\n`;
             }
           });
+          ruleString += '  margin-top: 0;\n  margin-bottom: 0;\n';
           return ruleString;
         }
         output = `${name} {
         ${buildProperties(tokenName)}
-          margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
-          margin-top: var(--spectrum-${tokenName}-margin-top);
           em {
             ${buildProperties(`${tokenName}-emphasis`)}
           }
@@ -68,7 +67,20 @@ var processors = [
         var nodes = postcssReal.parse(output);
         nodes.nodes[0].append(mixin.nodes);
         mixin.replaceWith(nodes);
-      }
+      },
+      typographyMargins: function(mixin, name, tokenName) {
+        if(!tokenName) {
+          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+          tokenName = tokenName.replace('.spectrum--', '');
+        }
+        var output = `${name} {
+          margin-top: var(--spectrum-${tokenName}-margin-top);
+          margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+        }`;
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
+      },
     }
   }),
   require('postcss-nested'),
