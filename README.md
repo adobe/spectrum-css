@@ -8,7 +8,7 @@ The Spectrum CSS project can build both a 'multi-stop' and 'single-stop' version
 
 Spectrum CSS organizes the CSS source files in the `src` folder.   Each Spectrum element has it's own folder.  That folder contains an `index.css` file for the basic structual CSS for all variants of an element.  There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
 
-The CSS source files also contain [Topdoc][https://github.com/Topdoc/topdoc] comments with a placeholder for documentation values that are injected at build time.  The source of those injected values is found in the YAML formatted files in the `docs` folder.  A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
+The CSS source files also contain [Topdoc](https://github.com/Topdoc/topdoc) comments with a placeholder for documentation values that are injected at build time.  The source of those injected values is found in the YAML formatted files in the `docs` folder.  A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
 
 A successful build will create a `dist` folder.  The `dist/docs` folder is where the Topdoc output and related template files will end up.
 
