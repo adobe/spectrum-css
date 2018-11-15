@@ -1,17 +1,8 @@
-![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
+# Spectrum-CSS
 
-# spectrum-css <img src='https://git.corp.adobe.com/pages/brownlee/stupid-stuff/spectrum-badge.svg' height=20 />
+The goal of this project is to provide a standard CSS implementation of the [Spectrum][spectrum-link] design language for internal and 3rd party use on Adobe's platforms.
 
-The goal of this project is to provide a standard CSS implementation of the [Spectrum][spectrum-link] design language.  
-
-This project makes use of [Spectrum DNA](https://dna.corp.adobe.com) generated data. Its output is meant to be used to build elements in other frameworks such as [Torq Spectrum Web SDK][torq-spectrum-web-sdk], [React-Spectrum][reactspectrum-link], or [CoralUI][coralui-link]. **Consider using one of these projects instead of Spectrum CSS directly.**
-
-The output from this project can be seen at [git.corp.adobe.com/pages/Spectrum/spectrum-css/](https://git.corp.adobe.com/pages/Spectrum/spectrum-css/).
-
-## Spectrum, DNA, and Spectrum-CSS
-Spectrum, the design language, is represented by the DNA project as data values in JSON.  This is the `spectrum-origins` repository.  The structure of that repo is detailed in the README for that project.
-
-That JSON data must be compiled into output that can be consumed by UI frameworks.  The `balthazar` project contains tooling to do that conversion. In this case, the `spectrum-css` project uses `balthazar` to [extract native CSS vars](https://git.corp.adobe.com/Spectrum/spectrum-css/blob/master/tasks/balthazar.js).  If a new element is added to `spectrum-css`, there must be a corresponding addtion to spectrum-origins to be sure the values needed for the new element are available. The repo `spectrum-css-deps` consumes `balthazar` to create the `vars` directory which is checked into this repo. See the [Updating internal dependencies](updating-internal-dependencies) section below.
+## Organization
 
 The `spectrum-css` project can build both a 'multi-stop' and 'single-stop' version of the CSS. This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
 
@@ -210,13 +201,6 @@ In this project, there are three sets of source files.
 
 ## Building
 
-Set up the `@spectrum` and `@a4u` npm namespaces in your `.npmrc`
-
-```
-echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc;
-echo "@a4u:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release-local/" >> ~/.npmrc;
-```
-
 Run the following commands:
 
 ```
@@ -278,8 +262,4 @@ We have found that JavaScript is where a framework or library quickly becomes op
 ## Learn More
 For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
 
-[spectrum-link]: http://spectrum.corp.adobe.com
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
-[coralui-link]: http://coralui.corp.adobe.com/
-[reactspectrum-link]: https://git.corp.adobe.com/React/react-spectrum
-[torq-spectrum-web-sdk]: https://git.corp.adobe.com/torq/torq-web-spectrum
