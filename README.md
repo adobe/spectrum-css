@@ -1,22 +1,20 @@
-# Spectrum-CSS
+# Spectrum CSS
 
 The goal of this project is to provide a standard CSS implementation of the [Spectrum][spectrum-link] design language for internal and 3rd party use on Adobe's platforms.
 
 ## Organization
 
-The `spectrum-css` project can build both a 'multi-stop' and 'single-stop' version of the CSS. This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
+The Spectrum CSS project can build both a 'multi-stop' and 'single-stop' version of the CSS. This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
 
-`spectrum-css` organizes the CSS source files in the `src` folder.   Each Spectrum element has it's own folder.  That folder contains an `index.css` file for the basic structual CSS for all variants of an element.  There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
+Spectrum CSS organizes the CSS source files in the `src` folder.   Each Spectrum element has it's own folder.  That folder contains an `index.css` file for the basic structual CSS for all variants of an element.  There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
 
 The CSS source files also contain [Topdoc][https://github.com/Topdoc/topdoc] comments with a placeholder for documentation values that are injected at build time.  The source of those injected values is found in the YAML formatted files in the `docs` folder.  A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
 
-A successful build will create a `dist` folder.  The `dist/docs` folder is where the Topdoc output and related template files will end up.  The
-
-The README for files for `spectrum-css`, `balthazar`, and `spectrum-origins` are helpful for more details.
+A successful build will create a `dist` folder.  The `dist/docs` folder is where the Topdoc output and related template files will end up.
 
 ### Updating internal dependencies
 
-Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by spectrum-css. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run local-copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
+Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by Spectrum CSS. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run local-copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
 
 ## Using Spectrum CSS
 
@@ -257,7 +255,7 @@ You may also view all of the screenshots taken so far by Jenkins in this repo: [
 To note: the JenkinsCI server will almost always have a green check mark in the commit message but should be taken with a grain a salt. The green check mark in this case means the project built succesfully BUT it does not mean the components aren't all mangled up or whatever. It is up to the developer who is committing to ensure that their commits are good and are using this tool to see how much visual change their commits are actually doing.
 
 ## Where is the JavaScript?
-We have found that JavaScript is where a framework or library quickly becomes opinionated and stops being easy to use with or across other frameworks. To avoid this problem, Spectrum-CSS avoids implementation details that require JavaScript.  Where an element might require multiple states, the documentation here will simply show all the states in a flat, static example.  We leave it to the frameworks implementing Spectrum-CSS to create JavaScript that suits their needs.
+We have found that JavaScript is where a framework or library quickly becomes opinionated and stops being easy to use with or across other frameworks. To avoid this problem, Spectrum CSS avoids implementation details that require JavaScript.  Where an element might require multiple states, the documentation here will simply show all the states in a flat, static example.  We leave it to the frameworks implementing Spectrum CSS to create JavaScript that suits their needs.
 
 ## Learn More
 For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
