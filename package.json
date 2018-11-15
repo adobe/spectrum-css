@@ -11,6 +11,13 @@
     "release:stable": "npm run bump && npm run build && npm run publish:stable",
     "release": "npm run release:stable"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "autoprefixer": "^6.5.3",
