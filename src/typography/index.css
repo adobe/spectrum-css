@@ -25,6 +25,32 @@
 @mixin typography .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-1 {}
 @mixin typography .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-2 {}
 
+.spectrum-Typography {
+  @mixin typographyMargins .spectrum-Body1 {}
+  @mixin typographyMargins .spectrum-Body2 {}
+  @mixin typographyMargins .spectrum-Body3 {}
+  @mixin typographyMargins .spectrum-Body4 {}
+  @mixin typographyMargins .spectrum-Body5 {}
+  @mixin typographyMargins .spectrum-Heading1 {}
+  @mixin typographyMargins .spectrum-Heading2 {}
+  @mixin typographyMargins .spectrum-Heading3 {}
+  @mixin typographyMargins .spectrum-Heading4 {}
+  @mixin typographyMargins .spectrum-Heading5 {}
+  @mixin typographyMargins .spectrum-Heading6 {}
+  @mixin typographyMargins .spectrum-Subheading {}
+  @mixin typographyMargins .spectrum-Detail {}
+  @mixin typographyMargins .spectrum-Heading1--quiet, heading-quiet-1 {}
+  @mixin typographyMargins .spectrum-Heading2--quiet, heading-quiet-2 {}
+  @mixin typographyMargins .spectrum-Heading1--strong, heading-strong-1 {}
+  @mixin typographyMargins .spectrum-Heading2--strong, heading-strong-2 {}
+  @mixin typographyMargins .spectrum-Heading1--display, display-1 {}
+  @mixin typographyMargins .spectrum-Heading2--display, display-2 {}
+  @mixin typographyMargins .spectrum-Heading1--display.spectrum-Heading1--strong, display-strong-1 {}
+  @mixin typographyMargins .spectrum-Heading2--display.spectrum-Heading2--strong, display-strong-2 {}
+  @mixin typographyMargins .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-1 {}
+  @mixin typographyMargins .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-2 {}
+}
+
 .spectrum-Article {
   font-family: var(--spectrum-body-article-1-text-font-family);
   @mixin typography .spectrum-Body1, body-article-1 {}
