@@ -76,7 +76,6 @@ gulp.task('build-backstop:inject-backstop-docs', function() {
   // svg files will create errors which will then keep chrome processes running
   // to get around this and allow the svg icons to work, just conditionally inject 
   // the correct svg and embed it in the head of the index.html
-  var spectrumIconsStore = fs.readFileSync(path.resolve(__dirname, '../dist/icons/spectrum-icons.svg'), 'utf8');
   var spectrumCssIconsStore = fs.readFileSync(path.resolve(__dirname, '../dist/icons/spectrum-css-icons.svg'), 'utf8');
 
   return gulp.src('./backstop_data/build_data/current_components/**/*.html')
@@ -84,15 +83,8 @@ gulp.task('build-backstop:inject-backstop-docs', function() {
     .pipe(replace(/img\/example-ava.jpg/g, '../../docs/img/example-ava.jpg'))
     .pipe(insert.transform(function(contents) {
       // find the svg icons being used and make sure no duplicates are reported
-      var spectrumIconsMatch = [...new Set(contents.match(/spectrum-icon-(\d)*-(\w)*/g))];
       var spectrumCssIconsMatch = [...new Set(contents.match(/spectrum-css-icon-(\w)*/g))];
       var svgInject = '<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">';
-
-      if(spectrumIconsMatch !== null) {
-        for(var i=0;i<spectrumIconsMatch.length;i++) {
-          svgInject += getSVGSymbol(spectrumIconsStore, spectrumIconsMatch[i])[0] + '\n';
-        }
-      }
 
       if(spectrumCssIconsMatch !== null) {
         for(var j=0;j<spectrumCssIconsMatch.length;j++) {
