@@ -1,6 +1,6 @@
 # Spectrum CSS
 
-The goal of this project is to provide a standard CSS implementation of the [Spectrum][spectrum-link] design language for internal and 3rd party use on Adobe's platforms.
+The goal of this project is to provide a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
 ## Organization
 
