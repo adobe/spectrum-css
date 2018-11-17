@@ -72,3 +72,18 @@
     border-left-style: solid;
   }
 }
+.spectrum-Toast--bottom {
+  position: fixed;
+  bottom: 0;
+}
+.spectrum-Toast--top {
+  position: fixed;
+  top: 0;
+}
+.spectrum-Toast--left {
+  position: fixed;
+  left: var(--spectrum-global-dimension-size-65);
+}
+.spectrum-Toast--right {
+  right: var(--spectrum-global-dimension-size-65);
+}
