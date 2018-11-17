@@ -15,6 +15,10 @@
   color: white;
 }
 
+.spectrum-Toast-buttons {
+  border-left-color: rgba(255, 255, 255, 0.2);
+}
+
 .spectrum-Toast--warning {
   background-color: var(--spectrum-toast-warning-background-color);
   color: var(--spectrum-toast-warning-background-color);

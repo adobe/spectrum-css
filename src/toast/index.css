@@ -1,23 +1,25 @@
 @import '../commons/index.css';
 
 :root {
-  --spectrum-toast-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-toast-icon-size: var(--spectrum-icon-alert-medium-height);
-  --spectrum-toast-button-group-margin: var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-100) 0 calc(-1 * calc(var(--spectrum-global-dimension-size-200) - var(--spectrum-global-dimension-size-100)));
-  --spectrum-toast-icon-margin: calc(calc(var(--spectrum-toast-height) - var(--spectrum-toast-icon-size)) / 2) calc(-1 * var(--spectrum-global-dimension-size-50)) calc(calc(var(--spectrum-toast-height) - var(--spectrum-toast-icon-size)) / 2) var(--spectrum-global-dimension-size-200);
-  --spectrum-toast-button-margin: 0 0 var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-100);
-  --spectrum-toast-content-margin: var(--spectrum-global-dimension-size-175) var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-175) var(--spectrum-global-dimension-size-200);
+  --spectrum-toast-icon-padding-y: var(--spectrum-global-dimension-size-85);
+  --spectrum-toast-content-padding-top: var(--spectrum-global-dimension-size-65);
+  --spectrum-toast-content-padding-bottom: var(--spectrum-global-dimension-size-65);
+
+  --spectrum-toast-button-margin-right: var(--spectrum-global-dimension-size-130);
 }
 
 /* topdoc
 {{ toast/toast.yml }}
 */
 .spectrum-Toast {
+  box-sizing: border-box;
   display: inline-flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
 
   border-radius: var(--spectrum-toast-border-radius);
+
+  padding: var(--spectrum-toast-padding-y) var(--spectrum-toast-padding-right) var(--spectrum-toast-padding-y) var(--spectrum-toast-padding-left);
 
   font-size: var(--spectrum-toast-text-size);
   font-weight: var(--spectrum-toast-text-font-weight);
@@ -28,23 +30,45 @@
   flex-shrink: 0;
   flex-grow: 0;
 
-  margin: var(--spectrum-toast-icon-margin);
+  margin: var(--spectrum-toast-icon-padding-y) var(--spectrum-toast-icon-padding-right) var(--spectrum-toast-icon-padding-y) 0;
+}
+
+.spectrum-Toast-content {
+  flex: 1;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: var(--spectrum-toast-content-padding-top) var(--spectrum-toast-content-padding-right) var(--spectrum-toast-content-padding-bottom) 0;
+  text-align: left;
 }
 
 .spectrum-Toast-buttons {
   display: flex;
-  flex: 1 0 auto;
+  flex: 0 0 auto;
+  align-items: flex-end;
   flex-wrap: wrap-reverse;
-  justify-content: flex-end;
-
-  margin: var(--spectrum-toast-button-group-margin);
 
   .spectrum-Button,
   .spectrum-ClearButton {
-    margin: var(--spectrum-toast-button-margin);
+    & + .spectrum-Button,
+    & + .spectrum-ClearButton {
+      margin-left: var(--spectrum-toast-button-gap);
+    }
   }
 }
 
-.spectrum-Toast-content {
-  margin: var(--spectrum-toast-content-margin);
+.spectrum-Toast-body {
+  flex: 1;
+  align-self: center;
+  text-align: right;
+
+  .spectrum-Button {
+    margin-right: var(--spectrum-toast-button-margin-right);
+  }
+
+  & + .spectrum-Toast-buttons {
+    padding-left: var(--spectrum-toast-padding-right);
+
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
 }
