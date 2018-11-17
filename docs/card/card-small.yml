@@ -1,20 +1,14 @@
 ---
-name: Card
-description: The standard Card component with cover photo and footer.
+name: Card - Small
+description: Small cards are not supported, don't do this.
+status: Unsupported
 markup: |
   <div style="width: 208px;">
-    <div class="spectrum-Card">
+    <div class="spectrum-Card spectrum-Card--small">
       <div class="spectrum-Card-coverPhoto" style="background-image: url(https://git.corp.adobe.com/pages/govett/photos/photos/DSC06369.jpg)"></div>
       <div class="spectrum-Card-body">
         <div class="spectrum-Card-header">
           <div class="spectrum-Card-title">Card Title</div>
-          <div class="spectrum-Card-actionButton">
-            <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-icon-18-More" />
-              </svg>
-            </button>
-          </div>
         </div>
         <div class="spectrum-Card-content">
           <div class="spectrum-Card-subtitle">jpg</div>
@@ -38,3 +32,4 @@ markup: |
       </div>
     </div>
   </div>
+

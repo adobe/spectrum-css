@@ -11,6 +11,12 @@
     border-color: var(--spectrum-card-border-color-key-focus);
     box-shadow: 0 0 0 1px var(--spectrum-card-border-color-key-focus);
   }
+
+  &.is-drop-target {
+    border-color: var(--spectrum-card-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-card-border-color-key-focus);
+    background-color: var(--spectrum-alias-highlight-selected);
+  }
 }
 
 .spectrum-Card-description {
@@ -20,4 +26,72 @@
 .spectrum-Card-coverPhoto {
   background-color: var(--spectrum-card-coverphoto-background-color);
   border-bottom-color: var(--spectrum-card-coverphoto-border-color);
+}
+
+.spectrum-Card-footer {
+  border-color: var(--spectrum-card-border-color);
+}
+
+.spectrum-Card--quiet,
+.spectrum-Card--gallery {
+  border-color: transparent;
+  background-color: transparent;
+
+  .spectrum-Card-preview {
+    background-color: var(--spectrum-card-quiet-preview-background-color);
+  }
+
+  &:hover {
+    border-color: transparent;
+    .spectrum-Card-preview {
+      background-color: var(--spectrum-card-quiet-preview-background-color-hover);
+    }
+  }
+
+  &.is-selected,
+  &:focus {
+    border-color: transparent;
+    box-shadow: none;
+    .spectrum-Card-preview {
+      background-color: var(--spectrum-card-quiet-preview-background-color);
+
+      &:before {
+        border-color: var(--spectrum-card-quiet-border-color-selected);
+        box-shadow: 0 0 0 1px var(--spectrum-card-quiet-border-color-selected);
+      }
+    }
+  }
+
+  &.is-drop-target {
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+
+    .spectrum-Card-preview {
+      background-color: var(--spectrum-alias-highlight-selected);
+
+      &:before {
+        border-color: var(--spectrum-card-quiet-border-color-selected);
+        box-shadow: 0 0 0 1px var(--spectrum-card-quiet-border-color-selected);
+      }
+    }
+
+    .spectrum-Asset-folderBackground,
+    .spectrum-Asset-fileBackground {
+      fill: var(--spectrum-alias-highlight-selected);
+    }
+    
+    .spectrum-Asset-folderOutline,
+    .spectrum-Asset-fileOutline {
+      fill: var(--spectrum-card-quiet-border-color-selected);
+    }
+  }
+
+  .spectrum-Card-title {
+    color: var(--spectrum-card-quiet-title-text-color);
+  }
+
+  .spectrum-Card-subtitle {
+    color: var(--spectrum-card-quiet-subtitle-text-color);
+  }
 }
