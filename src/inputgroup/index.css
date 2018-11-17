@@ -12,6 +12,12 @@
 /* topdoc
 {{ inputgroup/datepicker-quiet.yml }}
 */
+/* topdoc
+{{ inputgroup/datepicker-range.yml }}
+*/
+/* topdoc
+{{ inputgroup/datepicker-range-quiet.yml }}
+*/
 
 :root {
   /* Todo: move to DNA */
@@ -26,6 +32,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: var(--spectrum-component-single-line-width);
+  border-radius: var(--spectrum-border-radius);
 
   .spectrum-FieldButton {
     padding: 0 var(--spectrum-dropdown-padding-x);
@@ -42,8 +49,9 @@
 }
 
 .spectrum-InputGroup--quiet {
+  border-radius: 0;
   .spectrum-FieldButton {
-    border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+    border-radius: var(--spectrum-textfield-padding-top);
 
     position: relative;
     padding-right: var(--spectrum-combobox-quiet-fieldbutton-padding-right);

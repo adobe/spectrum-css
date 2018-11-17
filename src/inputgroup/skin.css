@@ -86,3 +86,89 @@
     }
   }
 }
+
+/* 
+  TODO: discuss with other 
+  Way to keep this datapicker related
+  IN PROGRESS
+*/
+.spectrum-InputGroup {
+  &.spectrum-Datepicker {
+    /** Normal **/
+    &:not(.spectrum-InputGroup--quiet) {
+      border: 1px solid var(--spectrum-textfield-border-color);
+    }
+    /** Quiet **/
+    &.spectrum-InputGroup--quiet {
+      border-bottom: 1px solid var(--spectrum-textfield-border-color);
+      hr {
+        left: calc(50% - 21px); /*22px half button width and 5px hald of HR width*/
+      }
+    }
+    /* Border color in different cases: hover, focus, invalid */
+    &:not(.is-disabled):hover,
+    &.is-focused {
+      .spectrum-InputGroup-field::placeholder {
+        color: var(--spectrum-textfield-placeholder-text-color-hover);
+      }
+      hr {
+        background-color: var(--spectrum-textfield-placeholder-text-color-hover);
+      }
+    }
+    &:not(.is-disabled):not(.is-focused):not(.is-invalid):hover {
+      border-color: var(--spectrum-textfield-border-color-hover);
+    }
+    &.is-focused {
+      border-color: var(--spectrum-textfield-border-color-down);
+    }
+    &.is-invalid:not(.is-focused) {
+      border-color: var(--spectrum-textfield-border-color-error);
+    }
+    &.is-disabled {
+      hr {
+        background-color: var(--spectrum-textfield-text-color-disabled);
+      }
+    }
+    /* Single & Range Inputs */
+    .spectrum-InputGroup-field {
+      border: 0;
+      &:focus ~ .spectrum-FieldButton {
+        border-color: var(--spectrum-textfield-border-color);
+        box-shadow: none;
+      }
+    }
+    /* Single & Range Button */
+    .spectrum-FieldButton {
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    /* Horisontal line */
+    /* TODO: Add class to HR */
+    hr {
+      background-color: var(--spectrum-textfield-placeholder-text-color);
+      border: 0;
+      margin: 15px 0px;
+      height: 1px;
+      width: 10px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 27px); /*22px half button width and 5px hald of HR width*/
+    }
+    /* Range */
+    /* TODO: use defined variable for width and padding */
+    &.spectrum-Datepicker--range {
+      /* Inputs */ 
+      .spectrum-InputGroup-field {
+        width: 100px;
+        min-width: 100px;
+        &:nth-of-type(1) {
+          padding-right: 12px; 
+        }
+        &:nth-of-type(2) {
+          padding-left: 12px; 
+        }
+      }
+    }
+  }
+}
