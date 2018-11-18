@@ -1,11 +1,10 @@
----
 name: Card - Small
 description: Small cards are not supported, don't do this.
 status: Unsupported
 markup: |
   <div style="width: 208px;">
     <div class="spectrum-Card spectrum-Card--small">
-      <div class="spectrum-Card-coverPhoto" style="background-image: url(https://git.corp.adobe.com/pages/govett/photos/photos/DSC06369.jpg)"></div>
+      <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
       <div class="spectrum-Card-body">
         <div class="spectrum-Card-header">
           <div class="spectrum-Card-title">Card Title</div>
@@ -32,4 +31,3 @@ markup: |
       </div>
     </div>
   </div>
-

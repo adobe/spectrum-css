@@ -1,4 +1,3 @@
----
 name: Card - Asset preview
 description: Standard cards will full-sized asset previews are not supported, don't do this.
 status: Unsupported
@@ -7,7 +6,7 @@ markup: |
     <div class="spectrum-Card">
       <div class="spectrum-Card-preview">
         <div class="spectrum-Asset">
-          <img class="spectrum-Asset-image" src="https://git.corp.adobe.com/pages/govett/photos/photos/DSC06369.jpg" />
+          <img class="spectrum-Asset-image" src="img/example-card-portrait.jpg" />
         </div>
       </div>
       <div class="spectrum-Card-body">
