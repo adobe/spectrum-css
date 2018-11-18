@@ -1,4 +1,3 @@
----
 name: Card - Gallery
 description: A spectrum gallery card for an image
 status: Beta
@@ -7,7 +6,7 @@ markup: |
     <div class="spectrum-Card spectrum-Card--gallery">
       <div class="spectrum-Card-preview">
         <div class="spectrum-Asset">
-          <img class="spectrum-Asset-image" src="https://git.corp.adobe.com/pages/govett/photos/photos/DSC01822-Pano.jpeg" />
+          <img class="spectrum-Asset-image" src="img/example-card-landscape.jpeg" />
         </div>
       </div>
       <div class="spectrum-Card-body">
