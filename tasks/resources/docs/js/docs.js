@@ -252,7 +252,6 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   // Set the hash while scrolling
-  var lastTime = 0;
   var scrollTimeDelay = 100;
   var hashTimeout;
   document.querySelector('.sdldocs-components').addEventListener('scroll', function() {
@@ -260,14 +259,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if (window.ignoreScroll) {
       return;
     }
-    var time = Date.now();
-    if (time - lastTime > scrollTimeDelay) {
-      setHashFromScroll();
-      lastTime = time;
-    }
-    else {
-      hashTimeout = setTimeout(setHashFromScroll, scrollTimeDelay);
-    }
+    hashTimeout = setTimeout(setHashFromScroll, scrollTimeDelay);
   });
 });
 
