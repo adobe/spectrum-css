@@ -1,3 +1,11 @@
+.spectrum-TreeView-item {
+  &.is-disabled {
+    > .spectrum-TreeView-itemLink {
+      color: var(--spectrum-treeview-item-group-border-color-hover);
+    }
+  }
+}
+
 .spectrum-TreeView-itemLink {
   color: var(--spectrum-treeview-item-text-color);
 
