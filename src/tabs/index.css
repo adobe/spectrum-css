@@ -3,7 +3,6 @@
 :root {
   --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-height));
   --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-height));
-  --spectrum-tabs-icon-gap: var(--spectrum-global-dimension-size-75);
 }
 
 .spectrum-Tabs {
@@ -52,8 +51,9 @@
     height: var(--spectrum-tabs-item-height);
 
     & + .spectrum-Tabs-itemLabel {
-      /* Icons really aren't supposed to be here, so there is no gap variable in DNA */
-      margin-left: var(--spectrum-tabs-icon-gap);
+      /* icons are inexplicably offset by 3px. Subtract this value from the icon-gap
+         to correct the gap in CSS */
+      margin-left: calc(var(--spectrum-tabs-icon-gap) - var(--spectrum-global-dimension-size-40));
     }
   }
 
@@ -96,7 +96,7 @@
   /* Be below the tab */
   z-index: 0;
 
-  transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: transform var(--spectrum-tabs-selection-indicator-animation-duration) ease-in-out;
   transform-origin: top left;
 
   border-radius: var(--spectrum-tabs-rule-border-radius);
@@ -142,15 +142,6 @@
     box-sizing: content-box;
     height: var(--spectrum-tabs-compact-item-height);
     align-items: end;
-
-    /* Optimization: margin is the same for compact and normal tabs */
-    /*
-    .spectrum-Tabs-item {
-      & + .spectrum-Tabs-item {
-        margin-left: var(--spectrum-tabs-quiet-compact-item-gap);
-      }
-    }
-    */
   }
 }
 
@@ -162,19 +153,43 @@
 .spectrum-Tabs--vertical {
   display: inline-flex;
   flex-direction: column;
+  padding: 0;
+  border-left: var(--spectrum-tabs-vertical-rule-width) solid;
 
   .spectrum-Tabs-item {
-    margin-left: var(--spectrum-tabs-rule-height);
+    height: var(--spectrum-tabs-vertical-item-height);
+    padding: 0 var(--spectrum-tabs-focus-ring-padding-x);
+    /* Subtract focus ring padding from margin-left since the padding value already offsets tabs-items */
+    margin-left: calc(var(--spectrum-tabs-vertical-item-margin-left) - var(--spectrum-tabs-focus-ring-padding-x));
+    margin-bottom: var(--spectrum-tabs-vertical-item-gap);
 
     &::before {
+      /* padding is included in click area of tab items, so only need to offset by the size of the focus ring's border */
+      left: calc(-1 * var(--spectrum-tabs-focus-ring-size));
+      right: calc(-1 * var(--spectrum-tabs-focus-ring-size));
       margin-top: calc(calc(var(--spectrum-tabs-focus-ring-height) / -2));
     }
   }
 
+  &.spectrum-Tabs--compact {
+    .spectrum-Tabs-item {
+      height: var(--spectrum-tabs-compact-vertical-item-height);
+      line-height: var(--spectrum-tabs-compact-vertical-item-height);
+      margin-bottom: var(--spectrum-tabs-compact-vertical-item-gap);
+
+      .spectrum-Icon {
+        /* Vertical centering */
+        height: var(--spectrum-tabs-compact-vertical-item-height);
+      }
+    }
+  }
+
   .spectrum-Tabs-selectionIndicator {
-    top: 0;
-    left: var(--spectrum-tabs-focus-ring-size);
-    width: var(--spectrum-tabs-rule-height);
+    position: absolute;
+    left: 0px;
+    width: var(--spectrum-tabs-vertical-rule-width);
+
+    left: calc(-1 * var(--spectrum-tabs-vertical-rule-width));
   }
 }
 
