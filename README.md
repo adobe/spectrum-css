@@ -158,7 +158,7 @@ Finally, you'll need workflow icons for your app. The `icons/spectrum-icons.svg`
 AdobeSpectrum.loadIcons('icons/spectrum-icons.svg');
 ```
 
-> NOTE: the following link is internal-to-Adobe-only
+***NOTE**: the following link is internal-to-Adobe-only*
 
 You can then use the icons in your app. Visit the [Spectrum CSS icon list](https://git.corp.adobe.com/pages/Spectrum/spectrum-css/icons/) and click on any icon to get the markup.
 
