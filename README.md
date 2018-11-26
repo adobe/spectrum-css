@@ -27,7 +27,7 @@ A successful build will create a `dist` folder. The `dist/docs` folder is where 
 
 ### Updating internal dependencies
 
-> Internal-to-Adobe only - for now
+*Internal-to-Adobe only - for now*
 
 Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by Spectrum CSS. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run local-copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
 
