@@ -267,7 +267,7 @@ As long as the component name matches one of the folder names within `dist/compo
 
 ### Remote Testing with the Test Server
 
-> Internal-to-Adobe only - for now
+*Internal-to-Adobe only - for now. Follow progress on [this issue](https://github.com/adobe/spectrum-css/issues/23).*
 
 There's a Jenkins box that's connected to this repo and will build on any branch and commit so long as it has the `Jenkinsfile` in the project root. If all goes well, you should see your commit in the status page for the JenkinsCI: [https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity](https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity).
 
