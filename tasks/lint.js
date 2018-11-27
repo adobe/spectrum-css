@@ -5,7 +5,7 @@ gulp.task('lint', function() {
   return gulp.src([
     'gulpfile.js',
     'tasks/*.js',
-    'tasks/resources/docs/js/docs.js'
+    'topdoc/resources/js/docs.js'
   ])
     .pipe(eslint())
     .pipe(eslint.format())
