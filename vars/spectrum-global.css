@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.3.0 */
+/* generated from dna-version: 5.4.0 */
 :root {
   --spectrum-global-color-static-black: rgb(0, 0, 0);
   --spectrum-global-color-static-white: rgb(255, 255, 255);
@@ -30,9 +30,9 @@
   --spectrum-global-color-static-green-500: rgb(45, 157, 120);
   --spectrum-global-color-static-green-600: rgb(38, 142, 108);
   --spectrum-global-color-static-green-700: rgb(18, 128, 92);
-  --spectrum-global-font-family-base: adobe-clean, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-  --spectrum-global-font-family-serif: adobe-clean-serif, "Source Serif Pro", Georgia, serif;
-  --spectrum-global-font-family-code: "Source Code Pro", Monaco, monospace;
+  --spectrum-global-font-family-base: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-global-font-family-serif: adobe-clean-serif, 'Source Serif Pro', Georgia, serif;
+  --spectrum-global-font-family-code: 'Source Code Pro', Monaco, monospace;
   --spectrum-global-font-weight-thin: 100;
   --spectrum-global-font-weight-ultra-light: 200;
   --spectrum-global-font-weight-light: 300;
