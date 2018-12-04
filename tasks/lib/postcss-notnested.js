@@ -9,17 +9,14 @@ module.exports = postcss.plugin('postcss-notnested', function (opts) {
   return function (root, result) {
     root.walkRules((rule, ruleIndex) => {
       var matchFound = false;
-      var selectors = rule.selectors;
-      if (selectors) {
-        for (var i = selectors.length - 1; i >= 0; i--) {
-          var selector = selectors[i];
-          if (re.test(selector)) {
-            // Kill the selector with the stray ampersand -- it's not nested!
-            selectors.splice(i, 1);
-            matchFound = true;
-          }
-        }
-        if (matchFound) {
+      if (rule.selectors) {
+        var selectors = rule.selectors.filter(selector => {
+          // Kill the selector with the stray ampersand -- it's not nested!
+          return !re.test(selector)
+        });
+
+        // Only replace the selectors if we changed something (avoids extra work for every selector)
+        if (selectors.length != rule.selectors.length) {
           rule.selectors = selectors;
         }
       }
