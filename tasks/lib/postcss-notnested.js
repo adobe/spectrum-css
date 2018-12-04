@@ -4,7 +4,7 @@ module.exports = postcss.plugin('postcss-notnested', function (opts) {
   opts = opts || {};
 
   // Match ampersands at the start of a given selector
-  var re = /^&.*/m;
+  var re = /^&.*/;
 
   return function (root, result) {
     root.walkRules((rule, ruleIndex) => {
