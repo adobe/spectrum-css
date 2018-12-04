@@ -89,6 +89,7 @@ var processors = [
     noValueNotifications: 'error'
   }),
   require('./lib/postcss-custom-properties-passthrough')(),
+  require('./lib/postcss-notnested')(),
   require('postcss-calc'),
   require('postcss-svg'),
   require('postcss-functions')({
@@ -318,7 +319,7 @@ gulp.task('build-css:concat-standalone-md', function() {
     ])
       // .pipe(concat('spectrum-' + colorStop + '-md.css'))
       .pipe(concat('spectrum-' + colorStop + '.css'))
-      // Replace instances of & that refer to the colorstop selector with .secptrum
+      // Replace instances of & that refer to the colorstop selector with .spectrum
       .pipe(replace(/^&/gm, '.spectrum'))
       .pipe(gulp.dest('dist/standalone'));
   }
@@ -333,7 +334,7 @@ gulp.task('build-css:concat-standalone-lg', function() {
       'dist/spectrum-' + colorStop + '.css'
     ])
       .pipe(concat('spectrum-' + colorStop + '-lg.css'))
-      // Replace instances of & that refer to the colorstop selector with .secptrum
+      // Replace instances of & that refer to the colorstop selector with .spectrum
       .pipe(replace(/^&/gm, '.spectrum'))
       .pipe(gulp.dest('dist/standalone'));
   }
