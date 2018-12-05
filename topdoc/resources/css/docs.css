@@ -139,6 +139,11 @@ pre code {
   white-space: pre-wrap;
 }
 
+code[class*="language-"], pre[class*="language-"] {
+  text-shadow: none;
+  font-size: 12px;
+}
+
 .cssdocs-example-markupToggle {
   position: absolute;
   z-index: 1;
