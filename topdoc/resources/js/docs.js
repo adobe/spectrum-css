@@ -75,8 +75,10 @@ document.addEventListener('click', function(event) {
 });
 
 window.addEventListener('click', function(event) {
+  var isDisabled = event.target.closest('.spectrum-TreeView-item') !== null &&
+    event.target.closest('.spectrum-TreeView-item').classList.contains('is-disabled');
   var el;
-  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null) {
+  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null && !isDisabled) {
     el.classList.toggle('is-open');
     event.preventDefault();
   }

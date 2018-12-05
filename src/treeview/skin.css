@@ -1,3 +1,15 @@
+.spectrum-TreeView-item {
+  &.is-disabled {
+    > .spectrum-TreeView-itemLink {
+      color: var(--spectrum-alias-text-color-disabled);
+
+      .spectrum-Icon {
+        color: var(--spectrum-alias-icon-color-disabled);
+      }
+    }
+  }
+}
+
 .spectrum-TreeView-itemLink {
   color: var(--spectrum-treeview-item-text-color);
 
