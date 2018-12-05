@@ -33,10 +33,10 @@ function changeCSS(colorStop) {
   });
 
   if (colorStop === 'light' || colorStop === 'lightest') {
-    document.querySelector('link[data-rainbow]').setAttribute('href', 'css/vendor/github.css');
+    document.querySelector('link[data-prism]').setAttribute('href', 'css/vendor/prism.css');
   }
   else {
-    document.querySelector('link[data-rainbow]').setAttribute('href', 'css/vendor/blackboard.css');
+    document.querySelector('link[data-prism]').setAttribute('href', 'css/vendor/prism-tomorrow.css');
   }
 
   setURLParams();
