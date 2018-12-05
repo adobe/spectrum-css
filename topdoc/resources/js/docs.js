@@ -115,7 +115,6 @@ function setHashFromScroll() {
   }
   if (closestTitle && currentTitle !== closestTitle) {
     selectNavItem(closestTitle.getAttribute('href'));
-    setURLParams(closestTitle.getAttribute('href'));
     currentTitle = closestTitle;
   }
 }
@@ -177,14 +176,6 @@ function changeScale(scale, method, noState) {
     document.documentElement.classList.remove('spectrum--' + otherScale);
   });
   document.documentElement.classList.add('spectrum--' + scale);
-
-  // Swap out icons
-  // var uiIcons = scale === 'medium' ? mediumIcons : largeIcons;
-  // var oldUIIcons = scale != 'medium' ? mediumIcons : largeIcons;
-  // document.head.insertBefore(uiIcons, null);
-  // if (oldUIIcons.parentElement) {
-  //   oldUIIcons.parentElement.removeChild(oldUIIcons);
-  // }
 
   // Scroll to the same place we were before
   if (currentTitle) {
