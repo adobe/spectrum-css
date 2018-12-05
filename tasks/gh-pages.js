@@ -9,14 +9,14 @@ var package = JSON.parse(fs.readFileSync('./package.json'));
  * Replace the redirect path to latest version
  */
 gulp.task('gh-pages:prepare-docs', function () {
-  return gulp.src('../topdoc/resources/gh-pages.html')
+  return gulp.src('topdoc/resources/gh-pages.html')
     .pipe(template({ version: package.version }))
     .pipe(rename('index.html'))
     .pipe(gulp.dest('./temp'));
 });
 
 gulp.task('gh-pages:prepare-icons', function () {
-  return gulp.src('../topdoc/resources/gh-pages-icons.html')
+  return gulp.src('topdoc/resources/gh-pages-icons.html')
     .pipe(template({ version: package.version }))
     .pipe(rename('index.html'))
     .pipe(gulp.dest('./temp/icons/'));
