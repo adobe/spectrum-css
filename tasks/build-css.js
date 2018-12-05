@@ -7,6 +7,7 @@ var insert = require('gulp-insert');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
 var plumb = require('./lib/plumb.js');
+var notnested = require('./lib/postcss-notnested');
 
 var colorStops = [
   'darkest',
@@ -121,7 +122,7 @@ gulp.task('build-css:individual-components-md', function() {
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../vars/spectrum-medium.css";'))
     .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
-    .pipe(postcss(processors))
+    .pipe(postcss(processors.concat([notnested()])))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
     // }))
@@ -136,7 +137,7 @@ gulp.task('build-css:individual-components-lg', function() {
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../vars/spectrum-large.css";'))
     .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
-    .pipe(postcss(processors))
+    .pipe(postcss(processors.concat([notnested()])))
     .pipe(rename(function(path) {
       path.basename += '-lg';
     }))
@@ -210,8 +211,8 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
     .pipe(insert.prepend(`@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
     .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
     .pipe(insert.append(appendString))
-    .pipe(postcss(processors))
-    .pipe(replace(/^&/gm, '.spectrum')) // Any stray & in colorstops should just apply to .spectrum
+    // Any stray & in colorstops should just apply to .spectrum
+    .pipe(postcss(processors.concat([notnested({ replace: '.spectrum' })])))
     .pipe(rename(function(path) {
       path.dirname += '/colorStops';
       path.basename = colorStop;
@@ -266,7 +267,7 @@ gulp.task('build-css:core-md-multistops', function() {
     .pipe(plumb())
     .pipe(insert.prepend('@import "../vars/spectrum-medium.css";'))
     .pipe(insert.prepend('@import "../vars/spectrum-global.css";\n'))
-    .pipe(postcss(processors))
+    .pipe(postcss(processors.concat([notnested()])))
     // .pipe(rename(function(path) {
     //   path.basename += '-md';
     // }))
@@ -281,7 +282,7 @@ gulp.task('build-css:core-lg-multistops', function() {
     .pipe(plumb())
     .pipe(insert.prepend('@import "../vars/spectrum-large.css";'))
     .pipe(insert.prepend('@import "../vars/spectrum-global.css";\n'))
-    .pipe(postcss(processors))
+    .pipe(postcss(processors.concat([notnested()])))
     .pipe(rename(function(path) {
       path.basename += '-lg';
     }))
@@ -318,8 +319,6 @@ gulp.task('build-css:concat-standalone-md', function() {
     ])
       // .pipe(concat('spectrum-' + colorStop + '-md.css'))
       .pipe(concat('spectrum-' + colorStop + '.css'))
-      // Replace instances of & that refer to the colorstop selector with .secptrum
-      .pipe(replace(/^&/gm, '.spectrum'))
       .pipe(gulp.dest('dist/standalone'));
   }
 
@@ -333,8 +332,6 @@ gulp.task('build-css:concat-standalone-lg', function() {
       'dist/spectrum-' + colorStop + '.css'
     ])
       .pipe(concat('spectrum-' + colorStop + '-lg.css'))
-      // Replace instances of & that refer to the colorstop selector with .secptrum
-      .pipe(replace(/^&/gm, '.spectrum'))
       .pipe(gulp.dest('dist/standalone'));
   }
 
