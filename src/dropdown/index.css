@@ -30,12 +30,6 @@
       background-color: transparent;
     }
 
-    &:focus {
-      background-color: transparent;
-      border: none;
-      outline: none;
-    }
-
     & + .spectrum-Dropdown-icon {
       position: absolute;
       right: var(--spectrum-dropdown-padding-x);
