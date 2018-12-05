@@ -199,6 +199,7 @@ code[class*="language-"], pre[class*="language-"] {
   overflow-x: hidden;
 
   -webkit-overflow-scrolling: touch;
+  will-change: transform;
 }
 
 .sdldocs-splitview {
