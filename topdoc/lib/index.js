@@ -136,7 +136,7 @@ function template(topDocument) {
           var subComponent = {};
           if (typeof component.components[subComponentId] === 'string') {
             // Shorthand
-            subComponent.markup = processMarkup(component.components[subComponentId]);
+            subComponent.markup = component.components[subComponentId];
             subComponent.highlightedMarkup = processMarkup(subComponent.markup);
             subComponent.id = subComponentId;
           }
