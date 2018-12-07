@@ -1,5 +1,7 @@
 # Spectrum CSS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adobe/spectrum-css.svg)](https://greenkeeper.io/)
+
 The goal of this project is to provide a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
 1. [Where is the JavaScript?](#where-is-the-javascript)
