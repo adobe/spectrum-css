@@ -12,12 +12,20 @@
 /* topdoc
 {{ inputgroup/datepicker-quiet.yml }}
 */
+/* topdoc
+{{ inputgroup/datepicker-range.yml }}
+*/
+/* topdoc
+{{ inputgroup/datepicker-range-quiet.yml }}
+*/
 
 :root {
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
   --spectrum-combobox-field-border-width-right: 0;
   --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
+  --spectrum-datepicker-input-width: calc(var(--spectrum-global-dimension-size-1600) -  2 * var(--spectrum-padding));
+  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700));
 }
 
 .spectrum-InputGroup {
@@ -26,6 +34,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: var(--spectrum-component-single-line-width);
+  border-radius: var(--spectrum-border-radius);
 
   .spectrum-FieldButton {
     padding: 0 var(--spectrum-dropdown-padding-x);
@@ -42,6 +51,7 @@
 }
 
 .spectrum-InputGroup--quiet {
+  border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
   .spectrum-FieldButton {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
@@ -61,5 +71,74 @@
 
   .spectrum-InputGroup-icon {
     right: 0;
+  }
+}
+
+.spectrum-Datepicker--range {
+  border-radius: var(--spectrum-border-radius);
+  /* Input Group */
+  &.spectrum-InputGroup--quiet {
+    border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+    .spectrum-FieldButton {
+      border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+    }
+  }
+  /** Datetime Range **/
+  &.spectrum-Datepicker--datetimeRange {
+    /* Inputs */
+    .spectrum-InputGroup-field {
+      width: var(--spectrum-datepicker-datetime-input-width);
+      min-width: var(--spectrum-datepicker-datetime-input-width);
+    }
+  }
+  /* Inputs */
+  .spectrum-InputGroup-field {
+    width: var(--spectrum-datepicker-input-width);
+    min-width: var(--spectrum-datepicker-input-width);
+    &:nth-of-type(1) {
+      border-right: 0;
+      padding-right: var(--spectrum-padding);
+      &.is-invalid,
+      &:invalid {
+        background-image: none;
+        padding-right: var(--spectrum-padding);
+      }
+    }
+    &:nth-of-type(2) {
+      border-left: 0;
+      border-radius: 0;
+      padding-left: var(--spectrum-padding);
+    }
+  }
+  /* Em dash */
+  hr {
+    border: 0;
+    margin: 4px 0;
+    width: 0;
+    overflow: visible;
+    &:before {
+      content: '–';
+      margin: 0 -4px;
+    }
+  }
+  /* Focus ring */
+  &.is-focused {
+    .spectrum-Datepicker-focusRing {
+      position: absolute;
+      border-radius: var(--spectrum-border-radius);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+  &.spectrum-InputGroup--quiet {
+    &.is-focused {
+      .spectrum-Datepicker-focusRing {
+        border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+        top: auto;
+      }
+    }
   }
 }
