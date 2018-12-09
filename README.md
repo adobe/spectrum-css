@@ -283,3 +283,43 @@ To note: the JenkinsCI server will almost always have a green check mark in the 
 Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
+
+## Releasing
+
+We are currently releasing this pacakage on `npm`. We are also releasing an internal version of this package for Adobe on an internal instance of Artifactory. 
+
+First, prepare the package for release by bumping the version (minor version bump by default), committing the changes, tagging the repo, and pushing the changes and tags up to GitHub (origin remote). We have a command that does this for you. 
+
+```
+npm run bump (patch/minor/major)
+```
+
+This command takes an optional argument of the type of version increase you want. You can pass either patch, minor or major. If you don't supply an argument, the command will do a minor version bump by default. You could also pass a version you want the package to be. Ex: `npm run bump 5.0.0`.
+
+Now that we have prepared the repo for publishing, let's publish the package to `npm`! Run the following command. 
+
+```
+npm publish
+```
+
+Now let's prepare to release to artifactory. For legacy reasons, we need to update the scope from `@adobe` to `@spectrum` and add the internal only `@spectrum/spectrum-icons` dependency. We have a command that does this for you.
+
+```
+npm run prepare-artifactory
+```
+
+Now let's publish the package to artifactory. Run the following command.
+
+```
+npm publish --registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release-local
+```
+
+Now that the package is published, let's revert the changes we did for artifactory by running the following commands.
+
+```
+git checkout package.json package-lock.json
+rm -rf node_modules && npm install
+```
+
+
+
