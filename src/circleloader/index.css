@@ -9,6 +9,7 @@
   width: var(--spectrum-loader-circle-medium-width);
   height: var(--spectrum-loader-circle-medium-height);
   position: relative;
+  direction: ltr;
 }
 .spectrum-CircleLoader-track {
   box-sizing: border-box;
