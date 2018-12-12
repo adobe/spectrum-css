@@ -20,7 +20,7 @@ var processors = [
   require('postcss-import'),
   require('postcss-mixins')({
     mixins: {
-      typography: function(mixin, name, tokenName, textTransformIgnore) {
+      typography: function(mixin, name, tokenName, textTransformIgnore, margins) {
         if(!tokenName) {
           tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
           tokenName = tokenName.replace('.spectrum--', '');
@@ -34,6 +34,10 @@ var processors = [
           'letter-spacing': 'text-letter-spacing',
           'text-transform': 'text-transform',
         };
+        if (margins) {
+          propMap['margin-top'] = 'margin-top';
+          propMap['margin-bottom'] = 'margin-bottom';
+        }
         function buildProperties (tokeString) {
           var ruleString = '';
           Object.keys(propMap).forEach((key) => {
@@ -41,7 +45,9 @@ var processors = [
               ruleString += `  ${key}: var(--spectrum-${tokeString}-${propMap[key]});\n`;
             }
           });
-          ruleString += '  margin-top: 0;\n  margin-bottom: 0;\n';
+          if (!margins) {
+            ruleString += '  margin-top: 0;\n  margin-bottom: 0;\n';
+          }
           return ruleString;
         }
         output = `${name} {
@@ -74,7 +80,7 @@ var processors = [
           tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
           tokenName = tokenName.replace('.spectrum--', '');
         }
-        var output = `${name} {
+        var output = `& ${name}, &${name} {
           margin-top: var(--spectrum-${tokenName}-margin-top);
           margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
         }`;

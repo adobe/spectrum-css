@@ -5,7 +5,7 @@ description: Default body text sizes.
 status: Verified
 ignoreDNA: true
 markup: |
-  <div class="spectrum" lang="en">
+  <div class="spectrum-Typography" lang="en">
     <p class="spectrum-Body1">Body1 Text <em>Body1 Emphasis</em> <strong>Body1 Strong</strong>.</p>
     <p class="spectrum-Body2">Body2 text <em>Body2 Emphasis</em> <strong>Body2 Strong</strong>.</p>
     <p class="spectrum-Body3">Body3 Text <em>Body3 Emphasis</em> <strong>Body3 Strong</strong>.</p>
@@ -21,7 +21,7 @@ markup: |
     <p class="spectrum-Body5">Article Body5 Text <em>Article Body5 Emphasis</em> <strong>Article Body5 Strong</strong>.</p>
   </div>
 
-  <div class="spectrum" lang="ja">
+  <div class="spectrum-Typography" lang="ja">
     <p class="spectrum-Body1">見出し1 <em>見出し1 重点</em> <strong>見出し1 強い強調</strong>.</p>
     <p class="spectrum-Body2">見出し2 <em>見出し2  重点</em> <strong>見出し2 強い強調</strong>.</p>
     <p class="spectrum-Body3">見出し3 <em>見出し3 重点</em> <strong>見出し3 強い強調</strong>.</p>
@@ -29,7 +29,7 @@ markup: |
     <p class="spectrum-Body5">見出し5 <em>見出し5 重点</em> <strong>見出し5 強い強調</strong>.</p>
   </div>
 
-  <div class="spectrum" lang="ar">
+  <div class="spectrum-Typography" lang="ar">
     <p class="spectrum-Body1">القسم <em>القسم  تشديد</em> <strong>القسم  تأكيد قو</strong>.</p>
     <p class="spectrum-Body2">القسم <em>القسم 1  تشديد</em> <strong>القسم 2 تأكيد قو</strong>.</p>
     <p class="spectrum-Body3">القسم 3 <em>القسم 3 تشديد</em> <strong>القسم 3 تأكيد قو</strong>.</p>
