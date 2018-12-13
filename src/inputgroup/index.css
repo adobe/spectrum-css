@@ -25,7 +25,7 @@
   --spectrum-combobox-field-border-width-right: 0;
   --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
   --spectrum-datepicker-input-width: calc(var(--spectrum-global-dimension-size-1600) -  2 * var(--spectrum-padding));
-  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700));
+  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700) - 0.5em);
 }
 
 .spectrum-InputGroup {
@@ -113,12 +113,14 @@
   /* Em dash */
   hr {
     border: 0;
-    margin: 4px 0;
+    margin: var(--spectrum-global-dimension-size-50) 0;
     width: 0;
     overflow: visible;
+    position: relative;
+    z-index: 1;
     &:before {
-      content: '–';
-      margin: 0 -4px;
+      content: '—';
+      margin-left: -0.5em;
     }
   }
   /* Focus ring */
