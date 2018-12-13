@@ -288,7 +288,7 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 We are currently releasing this pacakage on `npm`. We are also releasing an internal version of this package for Adobe on an internal instance of Artifactory. 
 
-First, prepare the package for release by bumping the version (minor version bump by default), committing the changes, tagging the repo, and pushing the changes and tags up to GitHub (origin remote). We have a command that does this for you. 
+First, prepare the package for release by bumping the version (minor version bump by default), committing the changes, tagging the repo, and pushing the changes and tags up to GitHub. We have a command that does this for you. 
 
 ```
 npm run bump (patch/minor/major)
