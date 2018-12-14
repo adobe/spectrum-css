@@ -6,7 +6,8 @@
     "dev": "gulp dev",
     "start": "npm run dev",
     "ci-all": "npm run build",
-    "bump": "node node_modules/.bin/dna-npm-bump-version",
+    "bump": "node scripts/prepare-release",
+    "prepare-artifactory": "node scripts/prepare-artifactory-release",
     "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\"",
     "release:stable": "npm run bump && npm run build && npm run publish:stable",
     "release": "npm run release:stable"
@@ -66,6 +67,7 @@
     "prismjs": "^1.15.0",
     "readable-stream": "^2.3.5",
     "run-sequence": "^1.2.2",
+    "shelljs": "^0.8.3",
     "svgmin": "^0.1.0",
     "topdoc": "^1.1.6",
     "yargs": "^11.0.0"
