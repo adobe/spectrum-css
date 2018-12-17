@@ -7,10 +7,7 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "bump": "node scripts/prepare-release",
-    "prepare-artifactory": "node scripts/prepare-artifactory-release",
-    "publish:stable": "node node_modules/.bin/dna-npm-publish --releaseAsType=\"stable\"",
-    "release:stable": "npm run bump && npm run build && npm run publish:stable",
-    "release": "npm run release:stable"
+    "prepare-artifactory": "node scripts/prepare-artifactory-release"
   },
   "repository": {
     "type": "git",
@@ -18,7 +15,8 @@
   },
   "author": "Larry Davis <lazdnet@gmail.com>",
   "contributors": [
-    "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com)"
+    "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com)",
+    "Steve Gill <stevengill97@gmail.com>"
   ],
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"

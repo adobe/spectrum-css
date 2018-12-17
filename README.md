@@ -288,7 +288,14 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 We are currently releasing this pacakage on `npm`. We are also releasing an internal version of this package for Adobe on an internal instance of Artifactory. 
 
-First, prepare the package for release by bumping the version (minor version bump by default), committing the changes, tagging the repo, and pushing the changes and tags up to GitHub. We have a command that does this for you. 
+Before we get started, clean up your dependencies with the following command.
+
+```
+git checkout master
+rm -rf node_modules && npm install
+```
+
+Now prepare the package for release by bumping the version (minor version bump by default), committing the changes, tagging the repo, and pushing the changes and tags up to GitHub. Run the following script which does all of this for you. 
 
 ```
 npm run bump (patch/minor/major)
@@ -314,12 +321,35 @@ Now let's publish the package to artifactory. Run the following command.
 npm publish --registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release-local
 ```
 
-Now that the package is published, let's revert the changes we did for artifactory by running the following commands.
+Now that the package is published, let's revert the changes we did for artifactory by running the following command.
 
 ```
 git checkout package.json package-lock.json
-rm -rf node_modules && npm install
 ```
 
+Now let's deploy the docs. We need to build the repo, make a copy of `dist` named after the release, checkout the `gh-pages` branch, add the new version of the docs and update references in the redirect files and commit. Run the following commands.
 
+```
+npm run build
+cp -r dist 2.7.2 (replace this with the version you are releasing)
+git checkout gh-pages
+git add 2.7.2 (replace this with the version you are releasing)
+```
+Manually update the old versions in `index.html` and `icons/index.html`. 
 
+Now do a quick sanity check of the docs by testing the docs site. Run the site in your browser with the `npm run start` command.
+
+If everything looks good, commit and push the docs.
+
+```
+git commit --am "Deploy version 2.7.0"
+git push https://github.com/adobe/spectrum-css.git gh-pages
+git push git@git.corp.adobe.com:Spectrum/spectrum-css.git gh-pages
+git checkout master
+```
+
+You are all done now! Clean up your working directory. 
+
+```
+rm -rf node_modules && npm install
+```
