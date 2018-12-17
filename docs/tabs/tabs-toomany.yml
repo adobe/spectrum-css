@@ -10,69 +10,102 @@ components:
     status: Verified
     name: Basic tabs with overflow
     markup: |
+      <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 1</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 2</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 3</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 4</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 5</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 6</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 7</label>
-        </div>
-
-        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-More" />
-          </svg>
-        </button>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+          <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Dropdown-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+              </svg>
+            </button>
+          </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
+
+      <h4 style="margin-top: 62px;">Open</h4>
+      <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
+          <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Dropdown-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+              </svg>
+            </button>
+          </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
+      </div>
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="display: block; margin-left: -5px; margin-top: -9px;">
+        <ul class="spectrum-Menu" role="listbox">
+          <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Tab 1</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
+          </li>
+          <li class="spectrum-Menu-item" role="option" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Tab 2</span>
+          </li>
+          <li class="spectrum-Menu-item" role="option" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Tab 3</span>
+          </li>
+          <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+            <span class="spectrum-Menu-itemLabel">Tab 4</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dummy-spacing"></div>
+
 
   tabs-too-many-compact:
     id: tabs
     status: Verified
     name: Compact tabs with overflow
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact">
-        <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 1</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 2</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 3</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 4</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 5</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 6</label>
-        </div>
-        <div class="spectrum-Tabs-item" tabindex="0">
-          <label class="spectrum-Tabs-itemLabel">Tab 7</label>
-        </div>
-
-        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-icon-18-More" />
-          </svg>
-        </button>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+      <h4>Closed</h4>
+      <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
+          <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Dropdown-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+              </svg>
+            </button>
+          </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
+
+      <h4 style="margin-top: 62px;">Open</h4>
+      <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
+          <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Dropdown-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+              </svg>
+            </button>
+          </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
+      </div>
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="display: block; margin-left: -5px; margin-top: -9px;">
+        <ul class="spectrum-Menu" role="listbox">
+          <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Tab 1</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
+          </li>
+          <li class="spectrum-Menu-item" role="option" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Tab 2</span>
+          </li>
+          <li class="spectrum-Menu-item" role="option" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Tab 3</span>
+          </li>
+          <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+            <span class="spectrum-Menu-itemLabel">Tab 4</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dummy-spacing"></div>
