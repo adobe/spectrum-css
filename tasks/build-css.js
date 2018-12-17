@@ -319,6 +319,7 @@ gulp.task('build-css:concat-standalone-md', function() {
     ])
       // .pipe(concat('spectrum-' + colorStop + '-md.css'))
       .pipe(concat('spectrum-' + colorStop + '.css'))
+      .pipe(postcss([notnested()]))
       .pipe(gulp.dest('dist/standalone'));
   }
 
@@ -332,6 +333,7 @@ gulp.task('build-css:concat-standalone-lg', function() {
       'dist/spectrum-' + colorStop + '.css'
     ])
       .pipe(concat('spectrum-' + colorStop + '-lg.css'))
+      .pipe(postcss([notnested()]))
       .pipe(gulp.dest('dist/standalone'));
   }
 
