@@ -3,7 +3,7 @@ description: A date picker uses the input group component to display a field wit
 markup: |
   <div aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" placeholder="mm/dd/yyyy" name="start" value="">
-    <hr>
+    <div class="spectrum-Datepicker--range-dash"></div>
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" placeholder="mm/dd/yyyy" name="end" value="">
     <button type="button" class="spectrum-FieldButton" tabindex="-1" aria-expanded="false" aria-haspopup="dialog">
       <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS"><path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z"></path><path d="M6 12h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 18h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 24h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg>
@@ -15,7 +15,7 @@ markup: |
 
   <div aria-invalid="true" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="">
-    <hr>
+    <div class="spectrum-Datepicker--range-dash"></div>
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field is-invalid" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="">
     <button type="button" class="spectrum-FieldButton is-invalid" tabindex="-1" aria-expanded="false" aria-haspopup="dialog">
       <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS"><path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z"></path><path d="M6 12h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 18h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 24h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg>
@@ -27,7 +27,7 @@ markup: |
 
   <div aria-disabled="true" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range is-disabled" role="combobox" aria-expanded="false" aria-haspopup="dialog">
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" placeholder="mm/dd/yyyy" name="start" value="" disabled>
-    <hr>
+    <div class="spectrum-Datepicker--range-dash"></div>
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" placeholder="mm/dd/yyyy" name="end" value="" disabled>
     <button type="button" class="spectrum-FieldButton" disabled tabindex="-1">
       <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS"><path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z"></path><path d="M6 12h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 18h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 24h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg>
@@ -37,9 +37,9 @@ markup: |
 
   <p/>
 
-  <div class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range  spectrum-Datepicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
+  <div class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range spectrum-Datepicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
-    <hr>
+    <div class="spectrum-Datepicker--range-dash"></div>
     <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
     <button type="button" class="spectrum-FieldButton" tabindex="-1" aria-expanded="false" aria-haspopup="dialog">
       <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS"><path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z"></path><path d="M6 12h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 18h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 24h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg>

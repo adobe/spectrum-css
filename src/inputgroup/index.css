@@ -26,6 +26,7 @@
   --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
   --spectrum-datepicker-input-width: calc(var(--spectrum-global-dimension-size-1600) -  2 * var(--spectrum-padding));
   --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700) - 0.5em);
+  --spectrum-datepicker-range-dash-margin-left: -0.5em;
 }
 
 .spectrum-InputGroup {
@@ -111,16 +112,14 @@
     }
   }
   /* Em dash */
-  hr {
-    border: 0;
+  .spectrum-Datepicker--range-dash {
     margin: var(--spectrum-global-dimension-size-50) 0;
     width: 0;
-    overflow: visible;
     position: relative;
     z-index: 1;
     &:before {
       content: '—';
-      margin-left: -0.5em;
+      margin-left: var(--spectrum-datepicker-range-dash-margin-left);
     }
   }
   /* Focus ring */
@@ -140,6 +139,11 @@
       .spectrum-Datepicker-focusRing {
         border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
         top: auto;
+      }
+    }
+    .spectrum-Datepicker--range-dash {
+      &:before {
+        margin-left: var(--spectrum-datepicker-range-dash-margin-left);
       }
     }
   }
