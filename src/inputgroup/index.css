@@ -25,8 +25,8 @@
   --spectrum-combobox-field-border-width-right: 0;
   --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
   --spectrum-datepicker-input-width: calc(var(--spectrum-global-dimension-size-1600) -  2 * var(--spectrum-padding));
-  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700) - 0.5em);
-  --spectrum-datepicker-range-dash-margin-left: -0.5em;
+  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700) - var(--spectrum-global-dimension-static-font-size-100) / 2);
+  --spectrum-datepicker-range-dash-margin-left: calc(-0.5 * var(--spectrum-global-dimension-static-font-size-100));
 }
 
 .spectrum-InputGroup {
@@ -96,6 +96,7 @@
   .spectrum-InputGroup-field {
     width: var(--spectrum-datepicker-input-width);
     min-width: var(--spectrum-datepicker-input-width);
+    flex: initial;
     &:nth-of-type(1) {
       border-right: 0;
       padding-right: var(--spectrum-padding);
@@ -113,13 +114,20 @@
   }
   /* Em dash */
   .spectrum-Datepicker--range-dash {
-    margin: var(--spectrum-global-dimension-size-50) 0;
-    width: 0;
+    padding: var(--spectrum-textfield-padding-top) 0 var(--spectrum-textfield-padding-bottom);
     position: relative;
+    width: 0;
     z-index: 1;
     &:before {
       content: '—';
-      margin-left: var(--spectrum-datepicker-range-dash-margin-left);
+      display: inline-block;
+      letter-spacing: 0;
+      line-height: var(--spectrum-text-body-line-height);
+      margin: 0 var(--spectrum-datepicker-range-dash-margin-left);
+      overflow: hidden;
+      text-align: center;
+      vertical-align: middle;
+      width: var(--spectrum-global-dimension-static-font-size-100);
     }
   }
   /* Focus ring */

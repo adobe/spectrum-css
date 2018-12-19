@@ -490,7 +490,7 @@ function makeRangeDatepicker(rangedatepicker) {
   function updateDashMarginStyle(event) {
     var textfieldNode = event.target;
     var dash = textfieldNode.nextElementSibling;
-    var isQuiet = textfieldNode.classList.contains('spectrum-TextField--quiet');
+    var isQuiet = textfieldNode.className.indexOf('spectrum-TextField--quiet') !== -1;
     var font = getFontShorthand(textfieldNode);
     var text = textfieldNode.value.trim();
     if (!text.length) {
@@ -498,19 +498,19 @@ function makeRangeDatepicker(rangedatepicker) {
     }
     var textWidth = getTextWidth(text, font);
     var computedStyle = window.getComputedStyle(textfieldNode, null);
-    var paddingLeft = parseFloat(computedStyle.paddingLeft);
-    var fieldWidth = parseFloat(computedStyle.width) - paddingLeft;
-    var emWidth = parseFloat(computedStyle.fontSize) / 2;
-    var offsetPadding = isQuiet ? parseInt(computedStyle.paddingRight) : paddingLeft;
-    var offset = Math.max(emWidth * 2, fieldWidth - textWidth - emWidth + offsetPadding) / 2;
-    dash.style.marginLeft =  emWidth - offset + 'px';
-    dash.style.marginRight = offset - emWidth + 'px';
+    const emWidth = parseFloat(computedStyle.fontSize) / 2;
+    const paddingRight = parseFloat(computedStyle.paddingRight);
+    const paddingLeft = parseFloat(computedStyle.paddingLeft);
+    const fieldWidth = parseFloat(computedStyle.width);
+    const offset = Math.max(emWidth / 2, fieldWidth - textWidth - paddingRight - paddingLeft + emWidth / 2) / 2;
+    dash.style.marginLeft = -offset + 'px';
+    dash.style.marginRight = offset + 'px';
   }
 
   startInput.addEventListener('input', updateDashMarginStyle);
   setTimeout(function() {
     updateDashMarginStyle({target: startInput});
-  }, 2000);
+  }, 5000);
 }
 
 window.addEventListener('DOMContentLoaded', function() {
