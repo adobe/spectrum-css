@@ -10,7 +10,8 @@ markup: |
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
-    <div class="spectrum-Datepicker-focusRing"></div>
+    <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
+    <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
   </div>
 
   <p />
@@ -24,7 +25,8 @@ markup: |
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
-    <div class="spectrum-Datepicker-focusRing"></div>
+    <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
+    <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
   </div>
 
   <p />
@@ -38,7 +40,8 @@ markup: |
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
-    <div class="spectrum-Datepicker-focusRing"></div>
+    <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
+    <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
   </div>
   <p/>
 
@@ -51,5 +54,6 @@ markup: |
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>
     </button>
-    <div class="spectrum-Datepicker-focusRing"></div>
+    <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
+    <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
   </div>

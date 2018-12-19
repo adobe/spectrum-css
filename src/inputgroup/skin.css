@@ -115,7 +115,7 @@
     }
   }
 
-  /* Focus ring */
+  /* Focus ring: When one of the inputs or the button has keyboard focus, render the focus ring border around the entire input group by styling an adjacent descendant element. */
   :focus-ring {
     ~ .spectrum-Datepicker-focusRing {
       box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-key-focus);
@@ -135,6 +135,8 @@
     .spectrum-InputGroup-field {
       border-color: var(--spectrum-dropdown-border-color-error) !important;
     }
+
+    /* Focus ring: When one of the inputs or the button has keyboard focus, render the focus ring border around the entire input group by styling an adjacent descendant element. */
     :focus-ring {
       ~ .spectrum-Datepicker-focusRing {
         box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-error);
