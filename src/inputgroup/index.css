@@ -27,6 +27,8 @@
   --spectrum-datepicker-input-width: calc(var(--spectrum-global-dimension-size-1600) -  2 * var(--spectrum-padding));
   --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700) - var(--spectrum-global-dimension-static-font-size-100) / 2);
   --spectrum-datepicker-range-dash-margin-left: calc(-0.5 * var(--spectrum-global-dimension-static-font-size-100));
+  --spectrum-datepicker-range-dash-padding-top: 3px;
+  --spectrum-datepicker-range-dash-line-height: calc(var(--spectrum-textfield-height) - var(--spectrum-global-dimension-static-size-125));
 }
 
 .spectrum-InputGroup {
@@ -114,15 +116,14 @@
   }
   /* Em dash */
   .spectrum-Datepicker--range-dash {
-    padding: var(--spectrum-textfield-padding-top) 0 var(--spectrum-textfield-padding-bottom);
+    line-height: var(--spectrum-datepicker-range-dash-line-height);
+    padding-top: var(--spectrum-datepicker-range-dash-padding-top);
     position: relative;
     width: 0;
     z-index: 1;
     &:before {
       content: '—';
       display: inline-block;
-      letter-spacing: 0;
-      line-height: var(--spectrum-text-body-line-height);
       margin: 0 var(--spectrum-datepicker-range-dash-margin-left);
       overflow: hidden;
       text-align: center;
