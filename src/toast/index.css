@@ -34,7 +34,7 @@
 }
 
 .spectrum-Toast-content {
-  flex: 1;
+  flex: 1 1 auto;
   display: inline-block;
   box-sizing: border-box;
   padding: var(--spectrum-toast-content-padding-top) var(--spectrum-toast-content-padding-right) var(--spectrum-toast-content-padding-bottom) 0;
@@ -44,8 +44,7 @@
 .spectrum-Toast-buttons {
   display: flex;
   flex: 0 0 auto;
-  align-items: flex-end;
-  flex-wrap: wrap-reverse;
+  align-items: flex-start;
 
   .spectrum-Button,
   .spectrum-ClearButton {
@@ -57,7 +56,7 @@
 }
 
 .spectrum-Toast-body {
-  flex: 1;
+  flex: 1 1 auto;
   align-self: center;
 
   .spectrum-Button {
