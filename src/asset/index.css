@@ -12,7 +12,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: opacity var(--spectrum-transition-time);
+  transition: opacity var(--spectrum-global-animation-duration-100);
 }
 
 .spectrum-Asset-folder,
