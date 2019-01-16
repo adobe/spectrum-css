@@ -49,7 +49,7 @@
 
 .spectrum-Dropdown-label {
   /* Be the biggest! */
-  flex: 1;
+  flex: 1 0 auto;
 
   white-space: nowrap;
   overflow: hidden;
