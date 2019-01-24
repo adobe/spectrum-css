@@ -8,7 +8,9 @@ gulp.task('build',
     'copy-vars',
     'copy-loadIcons',
     'build-css',
-    'build-docs'
+    'build-docs',
+    'sass-compiling-validate',
+    'clean-sass-compile'
   )
 );
 
