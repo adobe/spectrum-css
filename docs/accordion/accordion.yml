@@ -1,33 +1,41 @@
 ---
 name: Accordion
 markup: |
-  <div class="spectrum-Accordion">
-    <div class="spectrum-Accordion-item is-open">
-      <div class="spectrum-Accordion-itemHeader" tabindex="0">Header 1</div>
-      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
-      </svg>
-      <div class="spectrum-Accordion-itemContent">Item 1</div>
+  <div class="spectrum-Accordion" role="region">
+    <div class="spectrum-Accordion-item is-open" role="presentation">
+      <h3 class="spectrum-Accordion-itemHeading">
+        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Header 1</button>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+        </svg>
+      </h3>
+      <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
     </div>
-    <div class="spectrum-Accordion-item is-disabled">
-      <div class="spectrum-Accordion-itemHeader">Header 2</div>
-      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
-      </svg>
-      <div class="spectrum-Accordion-itemContent">Item 1</div>
+    <div class="spectrum-Accordion-item is-disabled" role="presentation">
+      <h3 class="spectrum-Accordion-itemHeading">
+        <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Header 2</button>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+        </svg>
+      </h3>
+      <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
     </div>
-    <div class="spectrum-Accordion-item">
-      <div class="spectrum-Accordion-itemHeader" tabindex="0">Header 2</div>
-      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
-      </svg>
-      <div class="spectrum-Accordion-itemContent">Item 1</div>
+    <div class="spectrum-Accordion-item" role="presentation">
+      <h3 class="spectrum-Accordion-itemHeading">
+        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Header 3</button>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+        </svg>
+      </h3>
+      <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
     </div>
-    <div class="spectrum-Accordion-item">
-      <div class="spectrum-Accordion-itemHeader" tabindex="0">Header 3</div>
-      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
-      </svg>
-      <div class="spectrum-Accordion-itemContent">Item 1</div>
+    <div class="spectrum-Accordion-item" role="presentation">
+      <h3 class="spectrum-Accordion-itemHeading">
+        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Header 4</button>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+        </svg>
+      </h3>
+      <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
     </div>
   </div>

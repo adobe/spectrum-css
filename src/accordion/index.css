@@ -44,6 +44,10 @@
   }
 }
 
+.spectrum-Accordion-itemHeading {
+  margin: 0;
+}
+
 .spectrum-Accordion-itemHeader {
   position: relative;
 
@@ -62,6 +66,17 @@
   text-overflow: ellipsis;
   cursor: pointer;
   font-weight: 500;
+
+  /* reset styling if button element is used */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: inherit;
+  border: 0;
+  display: block;
+  font-family: inherit;
+  text-align: start;
+  width: 100%;
 
   &:focus {
     outline: none;
@@ -86,6 +101,12 @@
 
 .spectrum-Accordion-item {
   &.is-open {
+    > .spectrum-Accordion-itemHeading {
+      > .spectrum-Accordion-itemIndicator {
+        transform: rotate(90deg);
+      }
+    }
+
     > .spectrum-Accordion-itemIndicator {
       transform: rotate(90deg);
     }
