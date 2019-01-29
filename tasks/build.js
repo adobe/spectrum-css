@@ -8,9 +8,7 @@ gulp.task('build',
     'copy-vars',
     'copy-loadIcons',
     'build-css',
-    'build-docs',
-    'sass-compiling-validate',
-    'clean-sass-compile'
+    'build-docs'
   )
 );
 
@@ -18,5 +16,13 @@ gulp.task('build-lite',
   gulp.series(
     'build-css',
     'build-docs'
+  )
+);
+
+gulp.task('travis-build',
+  gulp.series(
+    'build',
+    'sass-compiling-validate',
+    'clean-sass-compile'
   )
 );
