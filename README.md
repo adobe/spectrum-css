@@ -342,9 +342,8 @@ Now do a quick sanity check of the docs by testing the docs site. Run the site i
 If everything looks good, commit and push the docs.
 
 ```
-git commit --am "Deploy version 2.7.0"
+git commit -am "Deploy version 2.7.0"
 git push https://github.com/adobe/spectrum-css.git gh-pages
-git push git@git.corp.adobe.com:Spectrum/spectrum-css.git gh-pages
 git checkout master
 ```
 
