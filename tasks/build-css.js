@@ -106,7 +106,7 @@ var processors = [
   require('autoprefixer')({
     'browsers': [
       'IE >= 10',
-      'last 2 Chrome versions',
+      'Chrome >= 41',
       'last 2 Firefox versions',
       'last 2 Safari versions',
       'last 2 iOS versions'
