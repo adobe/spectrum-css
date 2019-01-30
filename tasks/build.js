@@ -18,3 +18,15 @@ gulp.task('build-lite',
     'build-docs'
   )
 );
+
+gulp.task('cep7',
+  gulp.series(
+    'lint',
+    'clean',
+    'icons',
+    'copy-vars',
+    'copy-loadIcons',
+    'build-css-cep7',
+    'build-docs'
+  )
+);

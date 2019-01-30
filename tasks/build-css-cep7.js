@@ -106,7 +106,7 @@ var processors = [
   require('autoprefixer')({
     'browsers': [
       'IE >= 10',
-      'last 2 Chrome versions',
+      'Chrome >= 41',
       'last 2 Firefox versions',
       'last 2 Safari versions',
       'last 2 iOS versions'
@@ -117,7 +117,7 @@ var processors = [
 /**
   Builds individual components (dimensions only)
 */
-gulp.task('build-css:individual-components-md', function() {
+gulp.task('build-css-cep7:individual-components-md', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../vars/spectrum-medium.css";'))
@@ -132,7 +132,7 @@ gulp.task('build-css:individual-components-md', function() {
 /**
   Builds individual components (dimensions only)
 */
-gulp.task('build-css:individual-components-lg', function() {
+gulp.task('build-css-cep7:individual-components-lg', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../../vars/spectrum-large.css";'))
@@ -147,7 +147,7 @@ gulp.task('build-css:individual-components-lg', function() {
 /**
   Diffs md and large
 */
-gulp.task('build-css:individual-components-diffscale', function() {
+gulp.task('build-css-cep7:individual-components-diffscale', function() {
   return gulp.src('src/*/index.css')
     .pipe(plumb())
     // Get var statements only
@@ -178,7 +178,7 @@ gulp.task('build-css:individual-components-diffscale', function() {
   Builds all skin files individually against each colorstop for each component with outer descendant selectors
   This enables the use of multiple colorstops on the same page
 */
-gulp.task('build-css:individual-components-multistops', function() {
+gulp.task('build-css-cep7:individual-components-multistops', function() {
   function buildMultistopSkinFiles(colorStop) {
     return gulp.src([
       'src/*/skin.css',
@@ -224,7 +224,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
   Builds all skin files individually against each colorstop for each component
   This increases performance, but does not allow multiple colorstops on the same page
 */
-gulp.task('build-css:individual-components-colorstops', function() {
+gulp.task('build-css-cep7:individual-components-colorstops', function() {
   function buildComponentSkinFiles(colorStop) {
     return buildSkinFiles(colorStop, [
       'src/*/skin.css',
@@ -237,7 +237,7 @@ gulp.task('build-css:individual-components-colorstops', function() {
 /**
   Build page skin files separately
 */
-gulp.task('build-css:page-component-colorstops', function() {
+gulp.task('build-css-cep7:page-component-colorstops', function() {
   function buildPageSkinFiles(colorStop) {
     return buildSkinFiles(colorStop, 'src/page/skin.css', '.spectrum {\n', '\n}', 'dist/components/page/');
   }
@@ -246,9 +246,9 @@ gulp.task('build-css:page-component-colorstops', function() {
 
 /**
   Builds all components and all color stops for all components
-  This task results in unresolved multistop files that require build-css:build-multistops to be ready-to-use
+  This task results in unresolved multistop files that require build-css-cep7:build-multistops to be ready-to-use
 */
-gulp.task('build-css:all-components-multistops', function() {
+gulp.task('build-css-cep7:all-components-multistops', function() {
   return gulp.src([
     'src/spectrum-*.css',
     '!src/spectrum-core.css'
@@ -262,7 +262,7 @@ gulp.task('build-css:all-components-multistops', function() {
 /**
   Builds core multistop files
 */
-gulp.task('build-css:core-md-multistops', function() {
+gulp.task('build-css-cep7:core-md-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../vars/spectrum-medium.css";'))
@@ -277,7 +277,7 @@ gulp.task('build-css:core-md-multistops', function() {
 /**
   Builds core multistop files
 */
-gulp.task('build-css:core-lg-multistops', function() {
+gulp.task('build-css-cep7:core-lg-multistops', function() {
   return gulp.src('src/spectrum-core.css')
     .pipe(plumb())
     .pipe(insert.prepend('@import "../vars/spectrum-large.css";'))
@@ -292,7 +292,7 @@ gulp.task('build-css:core-lg-multistops', function() {
 /**
   Builds standalone multistop CSS files
 */
-gulp.task('build-css:build-multistops', function() {
+gulp.task('build-css-cep7:build-multistops', function() {
   function buildMultistops(colorStop) {
     return gulp.src('dist/spectrum-' + colorStop + '.css')
       .pipe(plumb())
@@ -310,7 +310,7 @@ gulp.task('build-css:build-multistops', function() {
 /**
   Builds standalone single colorstop CSS files
 */
-gulp.task('build-css:concat-standalone-md', function() {
+gulp.task('build-css-cep7:concat-standalone-md', function() {
   function concatStandalone(colorStop) {
     return gulp.src([
       // 'dist/spectrum-core-md.css',
@@ -325,7 +325,7 @@ gulp.task('build-css:concat-standalone-md', function() {
   return merge.apply(this, colorStops.map(concatStandalone));
 });
 
-gulp.task('build-css:concat-standalone-lg', function() {
+gulp.task('build-css-cep7:concat-standalone-lg', function() {
   function concatStandalone(colorStop) {
     return gulp.src([
       'dist/spectrum-core-lg.css',
@@ -338,7 +338,7 @@ gulp.task('build-css:concat-standalone-lg', function() {
   return merge.apply(this, colorStops.map(concatStandalone));
 });
 
-gulp.task('build-css:concat-core-diff', function() {
+gulp.task('build-css-cep7:concat-core-diff', function() {
   return gulp.src([
     'src/components.css'
   ])
@@ -351,43 +351,43 @@ gulp.task('build-css:concat-core-diff', function() {
 });
 
 
-gulp.task('build-css',
+gulp.task('build-css-cep7',
   gulp.series(
     gulp.parallel(
-      'build-css:individual-components-md',
-      'build-css:individual-components-lg',
-      'build-css:individual-components-multistops',
-      'build-css:individual-components-colorstops',
-      'build-css:page-component-colorstops',
-      'build-css:all-components-multistops',
-      'build-css:core-md-multistops',
-      'build-css:core-lg-multistops'
+      'build-css-cep7:individual-components-md',
+      'build-css-cep7:individual-components-lg',
+      'build-css-cep7:individual-components-multistops',
+      'build-css-cep7:individual-components-colorstops',
+      'build-css-cep7:page-component-colorstops',
+      'build-css-cep7:all-components-multistops',
+      'build-css-cep7:core-md-multistops',
+      'build-css-cep7:core-lg-multistops'
     ),
     gulp.parallel(
-      'build-css:individual-components-diffscale',
-      'build-css:concat-standalone-md',
-      'build-css:concat-standalone-lg',
-      'build-css:build-multistops'
+      'build-css-cep7:individual-components-diffscale',
+      'build-css-cep7:concat-standalone-md',
+      'build-css-cep7:concat-standalone-lg',
+      'build-css-cep7:build-multistops'
     ),
     gulp.parallel(
-      'build-css:concat-core-diff'
+      'build-css-cep7:concat-core-diff'
     )
   )
 );
 
-gulp.task('build-css-lite',
+gulp.task('build-css-cep7-lite',
   gulp.series(
     gulp.parallel(
-      'build-css:all-components-multistops',
-      'build-css:core-md-multistops',
-      'build-css:core-lg-multistops'
+      'build-css-cep7:all-components-multistops',
+      'build-css-cep7:core-md-multistops',
+      'build-css-cep7:core-lg-multistops'
     ),
     gulp.parallel(
-      'build-css:individual-components-diffscale',
-      'build-css:build-multistops'
+      'build-css-cep7:individual-components-diffscale',
+      'build-css-cep7:build-multistops'
     ),
     gulp.parallel(
-      'build-css:concat-core-diff'
+      'build-css-cep7:concat-core-diff'
     )
   )
 );
