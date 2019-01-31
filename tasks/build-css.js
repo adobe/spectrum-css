@@ -15,7 +15,25 @@ var colorStops = [
   'light',
   'lightest'
 ];
-
+var browsers, i = process.argv.indexOf('--cep7');
+if(i>-1) {
+  browsers = [
+    'IE >= 10',
+    'Chrome >= 41',
+    'last 2 Firefox versions',
+    'last 2 Safari versions',
+    'last 2 iOS versions'
+  ];
+}
+else {
+  browsers = [
+    'IE >= 10',
+    'last 2 Chrome versions',
+    'last 2 Firefox versions',
+    'last 2 Safari versions',
+    'last 2 iOS versions'
+  ];
+}
 var processors = [
   require('postcss-import'),
   require('postcss-mixins')({
@@ -104,13 +122,7 @@ var processors = [
   }),
   require('postcss-focus-ring'),
   require('autoprefixer')({
-    'browsers': [
-      'IE >= 10',
-      'last 2 Chrome versions',
-      'last 2 Firefox versions',
-      'last 2 Safari versions',
-      'last 2 iOS versions'
-    ]
+    'browsers': browsers
   })
 ];
 

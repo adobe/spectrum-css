@@ -6,7 +6,6 @@ require('./tasks/copy-vars');
 require('./tasks/copy-loadIcons');
 require('./tasks/icons');
 require('./tasks/build-css');
-require('./tasks/build-css-cep7');
 require('./tasks/build-docs');
 require('./tasks/clean');
 require('./tasks/gh-pages');
