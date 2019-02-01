@@ -126,7 +126,7 @@ Note that the Spectrum CSS UI icons must change as well, see below for a full ex
 
 ### Importing Icons
 
-To get icons, you'll need to use the `loadIcons()` function. This function lives in the `icons/AS.loadIcons.js` file and has the following signature:
+To get icons, you'll need to use the `loadIcons()` function. This function lives in the `icons/loadIcons.js` file and has the following signature:
 
 ```js
 loadIcons(svgURL {String}, callback {Function});
