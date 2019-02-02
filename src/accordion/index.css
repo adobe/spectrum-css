@@ -63,6 +63,8 @@
   cursor: pointer;
   font-weight: 500;
 
+  display: block;
+
   &:focus {
     outline: none;
 

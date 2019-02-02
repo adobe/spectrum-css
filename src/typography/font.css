@@ -2,6 +2,14 @@
   font-family: var(--spectrum-font-family-base);
   font-size: var(--spectrum-text-size);
 
+  &:lang(ar) {
+    font-family: var(--spectrum-font-family-ar);
+  }
+
+  &:lang(he) {
+    font-family: var(--spectrum-font-family-he);
+  }
+
   &:lang(zh-Hans) {
     font-family: var(--spectrum-font-family-zhhans);
   }

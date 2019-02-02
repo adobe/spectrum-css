@@ -6,7 +6,7 @@ html.spectrum--medium
     title Spectrum CSS Documentation
     meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
 
-    link(rel='stylesheet', type='text/css', href='css/vendor/github.css', data-rainbow)
+    link(rel='stylesheet', type='text/css', href='css/vendor/prism.css', data-prism)
     link(rel='stylesheet', type='text/css', href='../spectrum-core.css', data-spectrum-core)
     link(rel='stylesheet', type='text/css', href='', data-spectrum-core-diff)
     link(rel='stylesheet', type='text/css', href='../spectrum-lightest.css')
@@ -121,7 +121,7 @@ html.spectrum--medium
                           if subComponent.markup.split('\n').length > 2
                             a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
                           pre
-                            code(data-language="html")=subComponent.markup
+                            code.language-markup!=subComponent.highlightedMarkup
 
 
                 else if component.markup
@@ -131,9 +131,8 @@ html.spectrum--medium
                       if component.markup.split('\n').length > 2
                         a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
                       pre
-                        code(data-language="html")=component.markup
+                        code.language-markup!=component.highlightedMarkup
 
           div.spectrum-Underlay#spectrum-underlay
 
-    script(type="text/javascript", src='js/vendor/rainbow-custom.min.js')
     script(type="text/javascript", src='js/vendor/typekit.js')

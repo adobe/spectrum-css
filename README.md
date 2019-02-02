@@ -2,19 +2,34 @@
 
 The goal of this project is to provide a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
+1. [Where is the JavaScript?](#where-is-the-javascript)
+1. [Organization](#organization)
+2. [Using Spectrum CSS](#using-spectrum-css)
+    1. [Multi-stop Strategy](#multi-stop-strategy)
+    2. [Single-stop Strategy](#single-stop-strategy)
+3. [Building](#building)
+4. [Testing](#testing-with-the-visual-regression-tools)
+5. [Contributing](#contributing)
+
+## Where is the JavaScript?
+
+We have found that JavaScript is where a framework or library quickly becomes opinionated and stops being easy to use with or across other frameworks. To avoid this problem, Spectrum CSS avoids implementation details that require JavaScript.  Where an element might require multiple states, the documentation here will simply show all the states in a flat, static example.  We leave it to the frameworks implementing Spectrum CSS to create JavaScript that suits their needs.
+
 ## Organization
 
 The Spectrum CSS project can build both a 'multi-stop' and 'single-stop' version of the CSS. This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
 
-Spectrum CSS organizes the CSS source files in the `src` folder.   Each Spectrum element has it's own folder.  That folder contains an `index.css` file for the basic structual CSS for all variants of an element.  There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
+Spectrum CSS organizes the CSS source files in the `src` folder. Each Spectrum element has it's own folder. That folder contains an `index.css` file for the basic structual CSS for all variants of an element. There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
 
-The CSS source files also contain [Topdoc](https://github.com/Topdoc/topdoc) comments with a placeholder for documentation values that are injected at build time.  The source of those injected values is found in the YAML formatted files in the `docs` folder.  A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
+The CSS source files also contain [Topdoc](https://github.com/Topdoc/topdoc) comments with a placeholder for documentation values that are injected at build time. The source of those injected values is found in the YAML formatted files in the `docs` folder. A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
 
-A successful build will create a `dist` folder.  The `dist/docs` folder is where the Topdoc output and related template files will end up.
+A successful build will create a `dist` folder. The `dist/docs` folder is where the Topdoc output and related template files will end up.
 
 ### Updating internal dependencies
 
-Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by Spectrum CSS. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run local-copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
+*Internal-to-Adobe only - for now*
+
+Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by Spectrum CSS. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
 
 ## Using Spectrum CSS
 
@@ -76,14 +91,13 @@ Then, for each component you need:
 
 As there is CSS for only one color stop present, simply set `<body class="spectrum">`. If mixing with individual components using the *multistop* strategy, you can add `class="spectrum--dark"` on `<body>` or anywhere else, but it only affects components whose colorstops were imported using the individual component multistop strategy.
 
-
 ### Import Order and Components
 
 With Spectrum CSS, dependency management between components is the responsibility of the consumer, you. The framework you're building likely has dependencies itself, such as `dropdown` depends on `button`, and each of the components includes its CSS. If this is the case, you'll get the CSS in the right order automatically, since `dropdown` is going to depend on `button`, and `button` will import the necessary CSS.
 
 However, if you're doing a more manual inclusion of CSS files, the easiest thing to do is to use the fully built `dist/spectrum-core.css` + `dist/spectrum-light.css` or `dist/standalone/spectrum-light.css` files described above. If you need only specific components, be sure to follow the order in `src/components.css` so components can override styles of their dependencies.
 
-### Import order and Colorstops
+### Import Order and Colorstops
 
 If your pages are light by default, with some dark elements embedded within (shell, etc), you should import the light colorstop first, adding `.spectrum--light` to an outer container (affecting the whole page), and adding `.spectrum--dark` to an inner container when you need dark elements (affecting only elements inside of it). That is, the import order of colorstops should match the nesting on your page.
 
@@ -144,6 +158,8 @@ Finally, you'll need workflow icons for your app. The `icons/spectrum-icons.svg`
 AdobeSpectrum.loadIcons('icons/spectrum-icons.svg');
 ```
 
+***NOTE**: the following link is internal-to-Adobe-only*
+
 You can then use the icons in your app. Visit the [Spectrum CSS icon list](https://git.corp.adobe.com/pages/Spectrum/spectrum-css/icons/) and click on any icon to get the markup.
 
 ### Swapping out icons sets for scaling
@@ -189,6 +205,7 @@ AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, s
 ```
 
 ### Lang support
+
 To take advantage of locale specific change, for instance, placeholders not italicizing Japanese, applications should specify a response header for the language, a meta tag lang, or declare a lang attribute on their element. That's lowest to highest priority, so a meta tag can be overridden by an inline attribute.
 
 ## Project Structure
@@ -214,7 +231,9 @@ Your `dist/` folder should now have a local copy of the Spectrum CSS docs and re
 Under the hood, the visual regression tool is powered by a library called [BackstopJS](https://github.com/garris/BackstopJS). The idea is that by running some `gulp` tasks, the BackstopJS library will take a screenshot of every component described in the `docs/` folder using a headless chrome instance. This process is fairly intensive to run locally and has some quirks (eg, hanging chrome processes).
 
 ### Local Testing
+
 Typical testing workflow:
+
 1. Build the `dist/` folder with `gulp build`
 2. `gulp test`
 3. Wait for results to finish (approx 7 mins)
@@ -228,6 +247,7 @@ MacOS and Linux:
 ```
 pkill -f "(chrome)?(--headless)"
 ```
+
 Windows PowerShell:
 
 ```
@@ -235,6 +255,7 @@ Get-CimInstance Win32_Process -Filter "Name = 'chrome.exe' AND CommandLine LIKE 
 ```
 
 ### Testing Specific Components
+
 Instead of waiting around and testing all of the components, you may supply optional arguments to the `gulp test` command like so:
 
 ```
@@ -246,6 +267,8 @@ As long as the component name matches one of the folder names within `dist/compo
 
 ### Remote Testing with the Test Server
 
+*Internal-to-Adobe only - for now. Follow progress on [this issue](https://github.com/adobe/spectrum-css/issues/23).*
+
 There's a Jenkins box that's connected to this repo and will build on any branch and commit so long as it has the `Jenkinsfile` in the project root. If all goes well, you should see your commit in the status page for the JenkinsCI: [https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity](https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity).
 
 Additonally, the Jenkins server will build the html report but will try to compare the test images against the last commit OR if the last commit's images cannot be found, it will compare against what's currently on `HEAD at master`. The html report lives under the `Artifacts` tab and is labeled `Spectrum CSS Visual Regression Report`.
@@ -254,10 +277,78 @@ You may also view all of the screenshots taken so far by Jenkins in this repo: [
 
 To note: the JenkinsCI server will almost always have a green check mark in the commit message but should be taken with a grain a salt. The green check mark in this case means the project built succesfully BUT it does not mean the components aren't all mangled up or whatever. It is up to the developer who is committing to ensure that their commits are good and are using this tool to see how much visual change their commits are actually doing.
 
-## Where is the JavaScript?
-We have found that JavaScript is where a framework or library quickly becomes opinionated and stops being easy to use with or across other frameworks. To avoid this problem, Spectrum CSS avoids implementation details that require JavaScript.  Where an element might require multiple states, the documentation here will simply show all the states in a flat, static example.  We leave it to the frameworks implementing Spectrum CSS to create JavaScript that suits their needs.
 
-## Learn More
-For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
+## Contributing
+
+Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
+
+## Releasing
+
+We are currently releasing this pacakage on `npm`. We are also releasing an internal version of this package for Adobe on an internal instance of Artifactory. 
+
+Before we get started, clean up your dependencies with the following command.
+
+```
+git checkout master
+rm -rf node_modules && npm install
+```
+
+Now prepare the package for release by bumping the version (minor version bump by default), committing the changes, tagging the repo, and pushing the changes and tags up to GitHub. Run the following script which does all of this for you. 
+
+```
+npm run bump (patch/minor/major)
+```
+
+This command takes an optional argument of the type of version increase you want. You can pass either patch, minor or major. If you don't supply an argument, the command will do a minor version bump by default. You could also pass a version you want the package to be. Ex: `npm run bump 5.0.0`.
+
+Now that we have prepared the repo for publishing, let's publish the package to `npm`! Run the following command. 
+
+```
+npm publish
+```
+
+Now let's prepare to release to artifactory. For legacy reasons, we need to update the scope from `@adobe` to `@spectrum` and add the internal only `@spectrum/spectrum-icons` dependency. We have a command that does this for you.
+
+```
+npm run prepare-artifactory
+```
+
+Now let's publish the package to artifactory. Run the following command.
+
+```
+npm publish --registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release-local
+```
+
+Now that the package is published, let's revert the changes we did for artifactory by running the following command.
+
+```
+git checkout package.json package-lock.json
+```
+
+Now let's deploy the docs. We need to build the repo, make a copy of `dist` named after the release, checkout the `gh-pages` branch, add the new version of the docs and update references in the redirect files and commit. Run the following commands.
+
+```
+npm run build
+cp -r dist 2.7.2 (replace this with the version you are releasing)
+git checkout gh-pages
+git add 2.7.2 (replace this with the version you are releasing)
+```
+Manually update the old versions in `index.html` and `icons/index.html`. 
+
+Now do a quick sanity check of the docs by testing the docs site. Run the site in your browser with the `npm run start` command.
+
+If everything looks good, commit and push the docs.
+
+```
+git commit -am "Deploy version 2.7.0"
+git push https://github.com/adobe/spectrum-css.git gh-pages
+git checkout master
+```
+
+You are all done now! Clean up your working directory. 
+
+```
+rm -rf node_modules && npm install
+```

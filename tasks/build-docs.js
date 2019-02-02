@@ -36,10 +36,18 @@ gulp.task('build-docs:inject-topdoc', function() {
 
 gulp.task('build-docs:copy-site-resources', function() {
   return gulp.src([
-    'tasks/resources/docs/**',
+    'topdoc/resources/**',
     '!gh-pages.html'
   ])
     .pipe(gulp.dest('dist/docs'));
+});
+
+gulp.task('build-docs:copy-prism-resources', function() {
+  return gulp.src([
+    'node_modules/prismjs/themes/prism.css',
+    'node_modules/prismjs/themes/prism-tomorrow.css'
+  ])
+    .pipe(gulp.dest('dist/docs/css/vendor/'));
 });
 
 
@@ -76,6 +84,7 @@ gulp.task('build-docs',
     'build-docs:topdoc',
     gulp.parallel(
       'build-docs:copy-site-resources',
+      'build-docs:copy-prism-resources',
       'build-docs:copy-polyfill',
       'build-docs:copy-spectrum-icons'
     ),

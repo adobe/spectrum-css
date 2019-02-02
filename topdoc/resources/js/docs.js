@@ -33,10 +33,10 @@ function changeCSS(colorStop) {
   });
 
   if (colorStop === 'light' || colorStop === 'lightest') {
-    document.querySelector('link[data-rainbow]').setAttribute('href', 'css/vendor/github.css');
+    document.querySelector('link[data-prism]').setAttribute('href', 'css/vendor/prism.css');
   }
   else {
-    document.querySelector('link[data-rainbow]').setAttribute('href', 'css/vendor/blackboard.css');
+    document.querySelector('link[data-prism]').setAttribute('href', 'css/vendor/prism-tomorrow.css');
   }
 
   setURLParams();
@@ -75,8 +75,10 @@ document.addEventListener('click', function(event) {
 });
 
 window.addEventListener('click', function(event) {
+  var isDisabled = event.target.closest('.spectrum-TreeView-item') !== null &&
+    event.target.closest('.spectrum-TreeView-item').classList.contains('is-disabled');
   var el;
-  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null) {
+  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null && !isDisabled) {
     el.classList.toggle('is-open');
     event.preventDefault();
   }
@@ -113,7 +115,6 @@ function setHashFromScroll() {
   }
   if (closestTitle && currentTitle !== closestTitle) {
     selectNavItem(closestTitle.getAttribute('href'));
-    setURLParams(closestTitle.getAttribute('href'));
     currentTitle = closestTitle;
   }
 }
@@ -175,14 +176,6 @@ function changeScale(scale, method, noState) {
     document.documentElement.classList.remove('spectrum--' + otherScale);
   });
   document.documentElement.classList.add('spectrum--' + scale);
-
-  // Swap out icons
-  // var uiIcons = scale === 'medium' ? mediumIcons : largeIcons;
-  // var oldUIIcons = scale != 'medium' ? mediumIcons : largeIcons;
-  // document.head.insertBefore(uiIcons, null);
-  // if (oldUIIcons.parentElement) {
-  //   oldUIIcons.parentElement.removeChild(oldUIIcons);
-  // }
 
   // Scroll to the same place we were before
   if (currentTitle) {
@@ -252,7 +245,6 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   // Set the hash while scrolling
-  var lastTime = 0;
   var scrollTimeDelay = 100;
   var hashTimeout;
   document.querySelector('.sdldocs-components').addEventListener('scroll', function() {
@@ -260,14 +252,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if (window.ignoreScroll) {
       return;
     }
-    var time = Date.now();
-    if (time - lastTime > scrollTimeDelay) {
-      setHashFromScroll();
-      lastTime = time;
-    }
-    else {
-      hashTimeout = setTimeout(setHashFromScroll, scrollTimeDelay);
-    }
+    hashTimeout = setTimeout(setHashFromScroll, scrollTimeDelay);
   });
 });
 

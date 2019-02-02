@@ -4,6 +4,7 @@ var pug = require('pug');
 var path = require('path');
 var markdown = require('markdown').markdown;
 var fsExtra = require('fs-extra');
+var Prism = require('prismjs');
 
 const labelColors = {
   'Deprecated': 'red',
@@ -44,6 +45,13 @@ function replaceExt(npath, ext) {
   }
   const nFileName = path.basename(npath, path.extname(npath)) + ext;
   return path.join(path.dirname(npath), nFileName);
+}
+
+function processMarkup(markup) {
+  if (markup) {
+    return Prism.highlight(markup, Prism.languages.markup, 'markup');
+  }
+  return '';
 }
 
 /**
@@ -120,6 +128,7 @@ function template(topDocument) {
       // Add other data
       component.id = dnaComponentId;
       component.description = component.description || '';
+      component.highlightedMarkup = processMarkup(component.markup);
 
       if (component.components) {
         var extraComponentDescriptions = '';
@@ -128,6 +137,7 @@ function template(topDocument) {
           if (typeof component.components[subComponentId] === 'string') {
             // Shorthand
             subComponent.markup = component.components[subComponentId];
+            subComponent.highlightedMarkup = processMarkup(subComponent.markup);
             subComponent.id = subComponentId;
           }
           else {

@@ -1,12 +1,12 @@
 ---
-name: Tabs - Vertical
+name: Tabs - Compact Vertical
 status: n/a
 ignoreDNA: true
 components:
-  tabs-vertical:
-    name: Vertical tabs
+  tabs-compact-vertical:
+    name: Compact vertical tabs
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--vertical">
+      <div class="spectrum-Tabs spectrum-Tabs--vertical spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <label class="spectrum-Tabs-itemLabel">Tab 1</label>
         </div>
@@ -19,13 +19,13 @@ components:
         <div class="spectrum-Tabs-item" tabindex="0">
           <label class="spectrum-Tabs-itemLabel">Tab 4</label>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
 
-  tabs-vertical-icon:
-    name: Vertical tabs with icon and text
+  tabs-compact-vertical-icon:
+    name: Compact vertical tabs with icon and text
     markup: |
-      <div class="spectrum-Tabs spectrum-Tabs--vertical">
+      <div class="spectrum-Tabs spectrum-Tabs--vertical spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
@@ -50,5 +50,5 @@ components:
           </svg>
           <label class="spectrum-Tabs-itemLabel">Tab 4</label>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>

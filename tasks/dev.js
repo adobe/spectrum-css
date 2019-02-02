@@ -45,11 +45,11 @@ function watch() {
     'docs/**/*.yml',
     'topdoc/lib/template.pug',
     'topdoc/lib/index.js',
-    'tasks/resources/docs/js/*.js'
+    'topdoc/resources/js/*.js'
   ], gulp.series('reload-docs'));
 
   gulp.watch([
-    'tasks/resources/docs/css/*.css'
+    'topdoc/resources/css/*.css'
   ], gulp.series('reload-docs-css'));
 
   gulp.watch('icons/*.svg', gulp.series('reload-icons'));

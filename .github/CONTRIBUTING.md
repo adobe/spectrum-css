@@ -2,7 +2,38 @@
 
 We love pull requests from everyone.
 
-Star by [forking](https://help.github.com/articles/fork-a-repo/) the repo, then [clone](https://help.github.com/articles/cloning-a-repository/) your fork:
+The following are a set of guidelines to follow when contributing to this project.
+
+## Code Of Conduct
+
+This project adheres to the Adobe [code of conduct](CODE_OF_CONDUCT.md). By participating,
+you are expected to uphold this code. Please report unacceptable behavior to
+[Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+
+## Have A Question?
+
+Start by filing an issue. The existing committers on this project work to reach
+consensus around project direction and issue solutions within issue threads
+(when appropriate).
+
+### Security Issues
+
+Security issues shouldn't be reported on this issue tracker. Instead, [file an issue to our security experts](https://helpx.adobe.com/security/alertus.html).
+
+## Contributor License Agreement
+
+All third-party contributions to this project must be accompanied by a signed contributor
+license agreement. This gives Adobe permission to redistribute your contributions
+as part of the project. [Sign our CLA](http://opensource.adobe.com/cla.html). You
+only need to submit an Adobe CLA one time, so if you have submitted one previously,
+you are good to go!
+
+## Code Reviews
+
+All submissions should come in the form of pull requests and need to be reviewed
+by project committers.
+
+Start by [forking](https://help.github.com/articles/fork-a-repo/) the repo, then [clone](https://help.github.com/articles/cloning-a-repository/) your fork:
 
 ```
 git clone git@github.com:yourusername/spectrum-css.git
@@ -13,14 +44,7 @@ Set up a branch for your feature or bug fix, push it to your fork, and set up a 
 ```
 git checkout -b my-awesome-new-feature
 git push -u origin my-awesome-new-feature
-git remote add upstream git@git.corp.adobe.com:Spectrum/spectrum-css.git
-```
-
-Set up the `@spectrum` and `@a4u` npm namespaces in your `.npmrc`
-
-```
-echo "@spectrum:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/" >> ~/.npmrc;
-echo "@a4u:registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release-local/" >> ~/.npmrc;
+git remote add upstream git@github.com:adobe/spectrum-css.git
 ```
 
 Install dependencies:
@@ -41,7 +65,7 @@ Build the project, open a livereloading browser window, and watch for changes:
 gulp dev
 ```
 
-Commit changes, refercing the relevant issue number (if any):
+Commit changes, referencing the relevant issue number (if any):
 
 ```
 git commit -m "Cool stuff, closes #250, fixes #252"
