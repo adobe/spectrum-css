@@ -359,6 +359,7 @@ function makeSlider(slider) {
   var handles = slider.querySelectorAll('.spectrum-Slider-handle');
   var handle = handles[0];
   var isColor = slider.classList.contains('spectrum-Slider--color');
+  var sliderOffsetWidth = slider.offsetWidth;
 
   if (handles.length > 1) {
     makeDoubleSlider(slider);
@@ -412,7 +413,6 @@ function makeSlider(slider) {
     window.removeEventListener('mousemove', onMouseMove);
   }
   function onMouseMove(e, sliderHandle) {
-    var sliderOffsetWidth = slider.offsetWidth;
     var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
     var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
