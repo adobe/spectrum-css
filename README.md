@@ -126,10 +126,10 @@ Note that the Spectrum CSS UI icons must change as well, see below for a full ex
 
 ### Importing Icons
 
-To get icons, you'll need to use the `AS.loadIcons()` function (also available as `AdobeSpectrum.loadIcons()`). This function lives in the `icons/AS.loadIcons.js` file and has the following signature:
+To get icons, you'll need to use the `loadIcons()` function. This function lives in the `icons/loadIcons.js` file and has the following signature:
 
 ```js
-AdobeSpectrum.loadIcons(svgURL {String}, callback {Function});
+loadIcons(svgURL {String}, callback {Function});
 ```
 
 The callback function has the following signature:
@@ -147,20 +147,18 @@ First, you'll need the Spectrum CSS UI icons, which come in two flavors:
 Import the icon set for the scale you're using:
 
 ```js
-AdobeSpectrum.loadIcons('icons/spectrum-css-icons.svg');
+loadIcons('icons/spectrum-css-icons.svg');
 ```
 
 If you're using `icons/spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
 
-Finally, you'll need workflow icons for your app. The `icons/spectrum-icons.svg` file contains all of the Spectrum icons. If you're using React Spectrum, you'll import each icon where it's used. If you're not, you can import the entire set of icons in all sizes as follows:
+Finally, you'll need _workflow_ icons for your app. These are currently **Adobe-internal-only** (sorry!) and live in `icons/spectrum-icons.svg` (if you have your local repo set up with all internal Adobe bits properly). This file contains all of the Spectrum icons. If you're using React Spectrum, you'll import each icon where it's used. If you're not, you can import the entire set of icons in all sizes as follows:
 
 ```js
-AdobeSpectrum.loadIcons('icons/spectrum-icons.svg');
+loadIcons('icons/spectrum-icons.svg');
 ```
 
-***NOTE**: the following link is internal-to-Adobe-only*
-
-You can then use the icons in your app. Visit the [Spectrum CSS icon list](https://git.corp.adobe.com/pages/Spectrum/spectrum-css/icons/) and click on any icon to get the markup.
+You can then use the icons in your app. Visit the [Spectrum CSS workflow icon list](http://opensource.adobe.com/spectrum-css/icons/) and click on any icon to get the markup.
 
 ### Swapping out icons sets for scaling
 
@@ -191,12 +189,12 @@ function switchScale(scale) {
 }
 
 // Load medium icons
-AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-medium.svg', function(err, svg) {
+loadIcons('../icons/spectrum-css-icons-medium.svg', function(err, svg) {
   mediumIcons = svg;
 });
 
 // Load large icons
-AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, svg) {
+loadIcons('../icons/spectrum-css-icons-large.svg', function(err, svg) {
   largeIcons = svg;
 
   // Immediately remove from the DOM -- it will be added back when we switch scale
