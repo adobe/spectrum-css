@@ -284,7 +284,7 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 ## Releasing
 
-We are currently releasing this pacakage on `npm`. We are also releasing an internal version of this package for Adobe on an internal instance of Artifactory. 
+We are currently releasing this package on `npm`. We are also releasing an internal version of this package for Adobe on an internal instance of Artifactory. 
 
 Before we get started, clean up your dependencies with the following command.
 
