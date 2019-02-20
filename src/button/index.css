@@ -166,6 +166,9 @@ a.spectrum-ActionButton {
   justify-content: center;
   align-items: center;
 
+  /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
+  width: 100%;
+
   &:empty {
     display: none;
   }
@@ -253,6 +256,11 @@ a.spectrum-ActionButton {
   margin: 0;
 
   border: none;
+
+  > .spectrum-Icon {
+    /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
+    margin: 0 auto;
+  }
 }
 
 .spectrum-ClearButton--small {

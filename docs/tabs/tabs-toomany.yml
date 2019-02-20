@@ -35,7 +35,7 @@ components:
           </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
-      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="display: block; margin-left: -5px; margin-top: -9px;">
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Tab 1</span>
@@ -88,7 +88,8 @@ components:
           </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
-      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="display: block; margin-left: -5px; margin-top: -9px;">
+      <br>
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Tab 1</span>
