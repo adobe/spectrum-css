@@ -1,112 +1,87 @@
 /* topdoc
 {{ rating/rating.yml }}
 */
-.spectrum-Rating-icon {
-  color: var(--spectrum-rating-icon-color);
-
-  /* Star */
-  .spectrum-Rating-starActive {
-    display: block;
-  }
-  .spectrum-Rating-starInactive {
-    display: none;
-  }
-}
-
-.spectrum-Rating:not(:hover) {
-  .spectrum-Rating-icon:not(.is-selected) {
-    color: var(--spectrum-rating-icon-color);
-
-    /* StarOutline */
-    .spectrum-Rating-starActive {
-      display: none;
-    }
-    .spectrum-Rating-starInactive {
-      display: block;
-    }
-  }
-}
-
-.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-selected) {
-  color: var(--spectrum-rating-icon-color);
-
-  /* StarOutline */
-  .spectrum-Rating-starActive {
-    display: none;
-  }
-  .spectrum-Rating-starInactive {
-    display: block;
-  }
-}
-
-/* topdoc
-{{ rating/rating-active.yml }}
-*/
-.spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-selected {
-  color: var(--spectrum-rating-icon-color);
-
-  /* Star */
-  .spectrum-Rating-starActive {
-    display: block;
-  }
-  .spectrum-Rating-starInactive {
-    display: none;
-  }
-}
-
-.spectrum-Rating-icon {
-  &.is-selected {
-    color: var(--spectrum-rating-icon-color-down);
-
-    /* Star */
-    .spectrum-Rating-starActive {
-      display: block;
-    }
-    .spectrum-Rating-starInactive {
-      display: none;
-    }
-  }
-}
-
-/* topdoc
-{{ rating/rating-disabled.yml }}
-*/
-.spectrum-Rating.is-disabled .spectrum-Rating-icon.is-selected {
-  color: var(--spectrum-rating-icon-color-disabled);
-
-  /* Star */
-  .spectrum-Rating-starActive {
-    display: block;
-  }
-  .spectrum-Rating-starInactive {
-    display: none;
-  }
-}
-.spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-selected) {
-  color: var(--spectrum-rating-icon-color-disabled);
-
-  /* StarOutline */
-  .spectrum-Rating-starActive {
-    display: none;
-  }
-  .spectrum-Rating-starInactive {
-    display: block;
-  }
-}
 
 .spectrum-Rating {
-  &:not(:hover) {
-    .spectrum-Rating-input:focus-ring {
-      ~ .spectrum-Rating-icon,
-      ~ .spectrum-Rating-icon:not(.is-selected),
-      ~ .spectrum-Rating-icon.is-selected {
-        color: var(--spectrum-button-primary-border-color-key-focus);
+  &.is-focused {
+    box-shadow: 0 0 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-rating-focus-ring-color);
+  }
 
-        > .spectrum-Icon {
-          stroke: currentColor;
-          stroke-width: var(--spectrum-button-primary-border-size-increase-key-focus);
+  &:hover {
+    .spectrum-Rating-icon {
+      /* Make all stars colored when the component is hovered */
+      color: var(--spectrum-rating-icon-color-selected);
+
+      &:hover {
+        /* The icon that's actually hovered is darker */
+        color: var(--spectrum-rating-icon-color-hover);
+      }
+
+      &:active {
+        /* The icon that's actually hovered is darker */
+        color: var(--spectrum-rating-icon-color-down);
+      }
+
+      /* Show which star is currently selected */
+      &.is-currentValue {
+        &:after {
+          /* Match the color of the star */
+          background: currentColor;
         }
+      }
+    }
+  }
+}
 
+.spectrum-Rating-icon {
+  color: var(--spectrum-rating-icon-color);
+
+  &.is-selected {
+    color: var(--spectrum-alias-icon-color-selected);
+  }
+
+  &:hover {
+    /* All stars following the hovered star */
+    & ~ .spectrum-Rating-icon {
+      color: var(--spectrum-rating-icon-color);
+    }
+  }
+}
+
+.spectrum-Rating--quiet {
+  .spectrum-Rating-icon {
+    color: var(--spectrum-rating-quiet-icon-color);
+
+    &.is-selected {
+      color: var(--spectrum-rating-quiet-icon-color-selected);
+    }
+  }
+
+  &:hover {
+    .spectrum-Rating-icon {
+      /* Make all stars selected when the component is hovered */
+      color: var(--spectrum-rating-quiet-icon-color-selected);
+
+      &:hover {
+        /* The icon that's actually hovered is darker */
+        color: var(--spectrum-rating-quiet-icon-color-hover);
+      }
+
+      &:active {
+        color: var(--spectrum-rating-quiet-icon-color-down);
+      }
+    }
+  }
+}
+
+/* Disabled */
+.spectrum-Rating {
+  &.is-disabled {
+    .spectrum-Rating-icon {
+      color: var(--spectrum-rating-icon-color-disabled);
+
+      &.is-selected {
+        color: var(--spectrum-rating-icon-color-disabled);
       }
     }
   }
