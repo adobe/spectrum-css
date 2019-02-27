@@ -74,8 +74,6 @@
   cursor: pointer;
   font-weight: 500;
 
-<<<<<<< HEAD
-=======
   /* reset styling if button element is used */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -86,8 +84,7 @@
   font-family: inherit;
   text-align: start;
   width: 100%;
-  
->>>>>>> master
+
   &:focus {
     outline: none;
 
