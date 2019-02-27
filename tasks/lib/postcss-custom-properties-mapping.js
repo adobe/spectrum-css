@@ -2,14 +2,8 @@ var postcss = require('postcss');
 var valueParser = require('postcss-value-parser');
 var {mapping, static} = require('./vars');
 
-// match custom properties
-const customPropertyRegExp = /^--[A-z][\w-]*$/;
-
 // match custom property inclusions
 const customPropertiesRegExp = /(^|[^\w-])var\([\W\w]+\)/;
-
-// whether the declaration should be potentially transformed
-const isTransformableDecl = decl => !customPropertyRegExp.test(decl.prop) && customPropertiesRegExp.test(decl.value);
 
 module.exports = postcss.plugin('postcss-custom-properties-mapping', function () {
   return function (root, result) {

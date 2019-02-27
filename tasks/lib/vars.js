@@ -8,8 +8,8 @@ function getVars(file) {
   let root = postcss.parse(contents);
 
   let vars = {};
-  root.walkRules((rule, ruleIndex) => {
-    rule.walkDecls((decl) => {
+  root.walkRules(rule => {
+    rule.walkDecls(decl => {
       if (customPropertyRegExp.test(decl.prop)) {
         vars[decl.prop] = decl.value;
       }
@@ -29,59 +29,70 @@ function getUniqueVars(vars) {
     }
   }
 
-  let uniqueVars = {};
-  let mapping = {};
+  let mappings = {};
   for (let val in unique) {
-    uniqueVars[unique[val][0]] = val;
     for (let key of unique[val]) {
-      mapping[key] = unique[val][0];
+      mappings[key] = unique[val];
     }
   }
 
-  return {vars, uniqueVars, mapping};
+  return mappings;
 }
 
 function getVariableMappings(themes) {
   let themeVars = {};
   for (let theme of themes) {
-    let vars = getVars(`vars/spectrum-${theme}.css`);
-    let unique = getUniqueVars(vars);
-    themeVars[theme] = unique;
+    let values = getVars(`vars/spectrum-${theme}.css`);
+    let mappings = getUniqueVars(values);
+    themeVars[theme] = {values, mappings};
   }
 
-  let {vars, mapping, uniqueVars} = themeVars[themes[0]];
+  let {values, mappings} = themeVars[themes[0]];
+  let mapping = {};
   let static = {};
-  for (let v in mapping) {
-    let mapped = mapping[v];
-    let matches = themes.every(t => {
-      let v2 = themeVars[t].mapping[v];
-      return mapped === v2 || themeVars[t].vars[v] === themeVars[t].vars[v2];
+  let vars = {};
+  for (let v in mappings) {
+    // If the variable does not change values across themes, save it in the static variables list
+    let isStatic = themes.every(t => themeVars[t].values[v] === values[v]);
+    if (isStatic) {
+      static[v] = values[v];
+      continue;
+    }
+
+    // Find a variable that exists in the mappings across all themes
+    let mapped = mappings[v].find(mapped => {
+      return themes.every(t => {
+        return themeVars[t].mappings[v].includes(mapped);
+      });
     });
 
-    if (!matches) {
-      throw new Error('Non matching variable across themes');
+    if (!mapped) {
+      throw new Error('Could not find mapping');
     }
 
-    let val = vars[v];
-    // if (themes.every(t => themeVars[t].vars[v] === val)) {
-    //   static[v] = val;
-    // }
-  }
+    // If the variable maps to itself, add it to the mapping of unique variables
+    if (mapped === v) {
+      for (let t of themes) {
+        if (!vars[t]) {
+          vars[t] = {};
+        }
 
-  vars = {};
-  // let static = {};
-  for (let theme in themeVars) {
-    vars[theme] = {};
-    for (let v in uniqueVars) {
-      let val = uniqueVars[v];
-      // if (themes.every(t => themeVars[t].vars[v] === val)) {
-      //   static[v] = val;
-      // } else {
-        vars[theme][v] = themeVars[theme].vars[v];
-      // }
+        vars[t][v] = themeVars[t].values[v];
+      }
+    } else {
+      // Otherwise, map the variable to one of the unique variables.
+      mapping[v] = mapped;
     }
   }
-  
+
+  for (let mapped in mapping) {
+    for (let t of themes) {
+      if (themeVars[t].values[mapped] !== themeVars[t].values[mapping[mapped]] || !vars[t][mapping[mapped]]) {
+        throw new Error('Invalid mapping ' + mapped + ' ' + mapping[mapped]);
+      }
+    }
+  }
+
   return {mapping, vars, static};
 }
 
@@ -92,8 +103,6 @@ exports.themes = themes.vars;
 exports.scales = scales.vars;
 exports.mapping = Object.assign({}, themes.mapping, scales.mapping);
 exports.static = Object.assign({}, themes.static, scales.static);
-
-console.log(exports.static)
 
 exports.generate = function generate(theme, vars) {
   return `.spectrum--${theme} {\n${Object.keys(vars).map(v => `  ${v}: ${vars[v]};`).join('\n')}\n}`;
