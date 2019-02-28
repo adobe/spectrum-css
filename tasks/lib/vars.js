@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const customPropertyRegExp = /^--[A-z][\w-]*$/;
 
+// Parse variables from a file with postcss.
 function getVars(file) {
   let contents = fs.readFileSync(file, 'utf8');
   let root = postcss.parse(contents);
@@ -19,6 +20,7 @@ function getVars(file) {
   return vars;
 }
 
+// Find variables with unique values, and create a mapping between them.
 function getUniqueVars(vars) {
   let unique = {};
   for (let key in vars) {
@@ -39,6 +41,7 @@ function getUniqueVars(vars) {
   return mappings;
 }
 
+// Get unique variables, static variables, and a mapping of original variable names.
 function getVariableMappings(themes) {
   let themeVars = {};
   for (let theme of themes) {

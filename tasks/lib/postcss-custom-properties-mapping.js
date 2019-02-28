@@ -11,9 +11,13 @@ module.exports = postcss.plugin('postcss-custom-properties-mapping', function ()
       rule.walkDecls((decl) => {
         if (customPropertiesRegExp.test(decl.value)) {
           let value = valueParser(decl.value);
+
           value.walk((node, index, nodes) => {
             if (node.type === 'function' && node.value === 'var') {
               let v = node.nodes[0].value;
+
+              // If the value is static, replace the variable with the value.
+              // Otherwise, change the variable name to the mapped name.
               if (static[v]) {
                 nodes.splice(index, 1, ...valueParser(static[v]).nodes);
               } else if (mapping[v]) {
