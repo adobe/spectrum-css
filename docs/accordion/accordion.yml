@@ -8,9 +8,8 @@ markup: |
 
       <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
       <h3 class="spectrum-Accordion-itemHeading">
-
         <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
-        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Header 1</button>
+        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
         <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
@@ -21,7 +20,7 @@ markup: |
     </div>
     <div class="spectrum-Accordion-item is-disabled" role="presentation">
       <h3 class="spectrum-Accordion-itemHeading">
-        <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Header 2</button>
+        <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
         <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
@@ -30,7 +29,7 @@ markup: |
     </div>
     <div class="spectrum-Accordion-item" role="presentation">
       <h3 class="spectrum-Accordion-itemHeading">
-        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Header 3</button>
+        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
         <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
@@ -39,7 +38,7 @@ markup: |
     </div>
     <div class="spectrum-Accordion-item" role="presentation">
       <h3 class="spectrum-Accordion-itemHeading">
-        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Header 4</button>
+        <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
         <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
         </svg>
