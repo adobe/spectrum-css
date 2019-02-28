@@ -1,35 +1,89 @@
 @import '../commons/index.css';
 
-:root {
-  --spectrum-rating-icon-spacing: 8px;
+/* A solid star */
+%spectrum-Rating-filledStar {
+  .spectrum-Rating-starActive {
+    display: block;
+  }
+  .spectrum-Rating-starInactive {
+    display: none;
+  }
+}
+
+/* A star with an outline only */
+%spectrum-Rating-strokedStar {
+  .spectrum-Rating-starActive {
+    display: none;
+  }
+  .spectrum-Rating-starInactive {
+    display: block;
+  }
 }
 
 .spectrum-Rating {
-  cursor: pointer;
   position: relative;
   display: inline-flex;
+  flex: 0 0 auto;
+
+  width: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
+
+  border-radius: var(--spectrum-rating-border-radius);
+
+  cursor: pointer;
 
   &.is-disabled {
     cursor: default;
     pointer-events: none;
   }
+
+  /* When the entire component is hovered, show all solid icons */
+  &:hover {
+    .spectrum-Rating-icon {
+      @extend %spectrum-Rating-filledStar;
+    }
+  }
 }
 
 .spectrum-Rating-input {
   position: absolute;
-  width: calc(5 * (var(--spectrum-icon-star-width) + var(--spectrum-rating-icon-spacing)));
-  height: var(--spectrum-icon-star-width);
+  z-index: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
   opacity: 0.0001;
   pointer-events: none;
-  z-index: 0;
 }
 
 .spectrum-Rating-icon {
+  position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  width: calc(var(--spectrum-icon-star-width) + var(--spectrum-rating-icon-spacing));
-  height: var(--spectrum-icon-star-width);
+  width: var(--spectrum-rating-icon-width);
+  height: var(--spectrum-icon-star-height);
+  padding: var(--spectrum-rating-icon-padding-y) 0;
+
+  @extend %spectrum-Rating-strokedStar;
+
+  &.is-selected {
+    @extend %spectrum-Rating-filledStar;
+  }
+
+  &.is-currentValue {
+    &:after {
+      border-radius: var(--spectrum-rating-indicator-border-radius);
+      content: '';
+      height: var(--spectrum-rating-indicator-height);
+      position: absolute;
+      bottom: var(--spectrum-rating-indicator-offset);
+      left: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
+      right: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
+    }
+  }
+
+  /* All stars following the hovered star */
+  &:hover ~ .spectrum-Rating-icon {
+    @extend %spectrum-Rating-strokedStar;
+  }
 }
 
 .spectrum-Rating-starActive,
@@ -37,12 +91,4 @@
   width: var(--spectrum-icon-star-width);
   height: var(--spectrum-icon-star-width);
   margin: 0 auto;
-}
-
-.spectrum-Rating-starActive {
-  display: none;
-}
-
-.spectrum-Rating-starInactive {
-  display: block;
 }

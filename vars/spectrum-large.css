@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.8.0 */
+/* generated from dna-version: 5.9.0 */
 :root {
   --spectrum-global-dimension-scale-factor: 1.25;
   --spectrum-global-dimension-size-0: 0px;
@@ -29,6 +29,7 @@
   --spectrum-global-dimension-size-700: 70px;
   --spectrum-global-dimension-size-800: 80px;
   --spectrum-global-dimension-size-900: 112px;
+  --spectrum-global-dimension-size-1000: 100px;
   --spectrum-global-dimension-size-1200: 120px;
   --spectrum-global-dimension-size-1600: 160px;
   --spectrum-global-dimension-size-1700: 212px;
@@ -54,6 +55,8 @@
   --spectrum-global-dimension-font-size-900: 44px;
   --spectrum-global-dimension-font-size-1000: 49px;
   --spectrum-global-dimension-font-size-1100: 55px;
+  --spectrum-alias-dropshadow-blur: 5px;
+  --spectrum-alias-dropshadow-offset-y: 1px;
   --spectrum-alias-font-size-default: 17px;
   --spectrum-alias-line-height-small: 20px;
   --spectrum-alias-line-height-medium: 25px;
@@ -676,12 +679,14 @@
   --spectrum-combobox-textfield-border-bottom-right-radius: 0;
   --spectrum-combobox-fieldbutton-border-top-left-radius: 0;
   --spectrum-combobox-fieldbutton-border-bottom-left-radius: 0;
+  --spectrum-combobox-min-width: 100px;
   --spectrum-combobox-popover-offset-y: 8px;
   --spectrum-combobox-popover-offset-x: 0px;
   --spectrum-combobox-quiet-textfield-border-top-right-radius: 0;
   --spectrum-combobox-quiet-textfield-border-bottom-right-radius: 0;
   --spectrum-combobox-quiet-fieldbutton-border-top-left-radius: 0;
   --spectrum-combobox-quiet-fieldbutton-border-bottom-left-radius: 0;
+  --spectrum-combobox-quiet-min-width: 80px;
   --spectrum-combobox-quiet-popover-offset-y: 8px;
   --spectrum-combobox-quiet-popover-offset-x: 15px;
   --spectrum-cyclebutton-text-font-family: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
@@ -813,7 +818,7 @@
   --spectrum-dropdown-quiet-ui-icon-width: 10px;
   --spectrum-dropdown-quiet-height: 40px;
   --spectrum-dropdown-quiet-min-width: 60px;
-  --spectrum-dropdown-quiet-padding-x: 15px;
+  --spectrum-dropdown-quiet-padding-x: 0px;
   --spectrum-dropdown-quiet-border-radius: 0px;
   --spectrum-dropdown-quiet-affixed-border-radius: 0;
   --spectrum-dropdown-quiet-label-gap-x: 15px;
@@ -938,8 +943,8 @@
   --spectrum-fieldbutton-quiet-ui-icon-height: 6px;
   --spectrum-fieldbutton-quiet-ui-icon-width: 10px;
   --spectrum-fieldbutton-quiet-height: 40px;
-  --spectrum-fieldbutton-quiet-min-width: 40px;
-  --spectrum-fieldbutton-quiet-padding-x: 15px;
+  --spectrum-fieldbutton-quiet-min-width: 20px;
+  --spectrum-fieldbutton-quiet-padding-x: 0px;
   --spectrum-fieldbutton-quiet-border-radius: 0px;
   --spectrum-fieldbutton-quiet-affixed-border-radius: 0;
   --spectrum-fieldbutton-quiet-label-gap-x: 15px;
@@ -1331,6 +1336,26 @@
   --spectrum-rail-gripper-border-width-vertical: 4px;
   --spectrum-rail-gripper-border-width-horizontal: 3px;
   --spectrum-rail-gripper-border-radius: 2px;
+  --spectrum-rating-border-radius: 5px;
+  --spectrum-rating-focus-ring-size: 2px;
+  --spectrum-rating-icon-count: 5;
+  --spectrum-rating-icon-spacing: 8px;
+  --spectrum-rating-icon-width: 30px;
+  --spectrum-rating-icon-padding-y: 8px;
+  --spectrum-rating-indicator-width: 20px;
+  --spectrum-rating-indicator-height: 2px;
+  --spectrum-rating-indicator-border-radius: 2px;
+  --spectrum-rating-indicator-offset: 1px;
+  --spectrum-rating-quiet-border-radius: 5px;
+  --spectrum-rating-quiet-focus-ring-size: 2px;
+  --spectrum-rating-quiet-icon-count: 5;
+  --spectrum-rating-quiet-icon-spacing: 8px;
+  --spectrum-rating-quiet-icon-width: 30px;
+  --spectrum-rating-quiet-icon-padding-y: 8px;
+  --spectrum-rating-quiet-indicator-width: 20px;
+  --spectrum-rating-quiet-indicator-height: 2px;
+  --spectrum-rating-quiet-indicator-border-radius: 2px;
+  --spectrum-rating-quiet-indicator-offset: 1px;
   --spectrum-rule-large-height: 4px;
   --spectrum-rule-large-border-radius: 2px;
   --spectrum-rule-medium-height: 2px;
@@ -1397,7 +1422,7 @@
   --spectrum-search-quiet-text-transform: none;
   --spectrum-search-quiet-text-size: 17px;
   --spectrum-search-quiet-height: 40px;
-  --spectrum-search-quiet-min-width: 112px;
+  --spectrum-search-quiet-min-width: 60px;
   --spectrum-search-quiet-padding-x: 0;
   --spectrum-search-quiet-padding-top: 6px;
   --spectrum-search-quiet-padding-bottom: 9px;
@@ -2131,7 +2156,7 @@
   --spectrum-textfield-text-transform: none;
   --spectrum-textfield-text-size: 17px;
   --spectrum-textfield-height: 40px;
-  --spectrum-textfield-min-width: 112px;
+  --spectrum-textfield-min-width: 60px;
   --spectrum-textfield-padding-x: 15px;
   --spectrum-textfield-padding-top: 6px;
   --spectrum-textfield-padding-bottom: 9px;
@@ -2168,7 +2193,7 @@
   --spectrum-textfield-quiet-text-transform: none;
   --spectrum-textfield-quiet-text-size: 17px;
   --spectrum-textfield-quiet-height: 40px;
-  --spectrum-textfield-quiet-min-width: 112px;
+  --spectrum-textfield-quiet-min-width: 60px;
   --spectrum-textfield-quiet-padding-x: 0;
   --spectrum-textfield-quiet-padding-top: 6px;
   --spectrum-textfield-quiet-padding-bottom: 9px;

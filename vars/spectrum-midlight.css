@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.8.0 */
+/* generated from dna-version: 5.9.0 */
 :root {
   --spectrum-global-color-celery-400: rgb(61, 167, 78);
   --spectrum-global-color-celery-500: rgb(55, 153, 71);
@@ -1334,10 +1334,18 @@
   --spectrum-rail-handle-background-color: rgb(202, 202, 202);
   --spectrum-rail-handle-background-color-hover: rgb(180, 180, 180);
   --spectrum-rail-handle-background-color-down: rgb(60, 60, 60);
-  --spectrum-rating-icon-color: rgb(125, 125, 125);
-  --spectrum-rating-icon-color-hover: rgb(25, 25, 25);
-  --spectrum-rating-icon-color-down: rgb(60, 60, 60);
-  --spectrum-rating-icon-color-disabled: rgb(202, 202, 202);
+  --spectrum-rating-icon-color: rgb(97, 97, 97);
+  --spectrum-rating-focus-ring-color: rgb(20, 115, 230);
+  --spectrum-rating-icon-color-selected: rgb(13, 102, 208);
+  --spectrum-rating-icon-color-hover: rgb(9, 90, 186);
+  --spectrum-rating-icon-color-down: rgb(6, 79, 165);
+  --spectrum-rating-icon-color-disabled: rgb(180, 180, 180);
+  --spectrum-rating-quiet-icon-color: rgb(97, 97, 97);
+  --spectrum-rating-quiet-focus-ring-color: rgb(20, 115, 230);
+  --spectrum-rating-quiet-icon-color-selected: rgb(97, 97, 97);
+  --spectrum-rating-quiet-icon-color-hover: rgb(60, 60, 60);
+  --spectrum-rating-quiet-icon-color-down: rgb(25, 25, 25);
+  --spectrum-rating-quiet-icon-color-disabled: rgb(180, 180, 180);
   --spectrum-rule-large-background-color: rgb(60, 60, 60);
   --spectrum-rule-medium-background-color: rgb(202, 202, 202);
   --spectrum-rule-small-background-color: rgb(202, 202, 202);
