@@ -237,39 +237,6 @@ gulp.task('build-css:individual-components-colorstops', function() {
 });
 
 /**
-  Builds all skin files individually against each colorstop for each component
-  This increases performance, but does not allow multiple colorstops on the same page
-*/
-gulp.task('build-css:individual-components-vars', function() {
-  function buildComponent(component) {
-    return gulp.src(`src/${component}/{index,skin}.css`)
-      .pipe(plumb())
-      .pipe(concat('vars.css'))
-      .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
-      .pipe(postcss(processors))
-      .pipe(rename(function(path) {
-        path.dirname += '/' + component;
-      }))
-      .pipe(gulp.dest('dist/components'));
-  }
-
-  return merge.apply(this, fs.readdirSync('src').map(buildComponent));
-});
-
-gulp.task('build-css:unique-vars', function(cb) {
-  let vars = require('./lib/vars');
-  for (let theme in vars.themes) {
-    fs.writeFileSync(`dist/vars/spectrum-${theme}-unique.css`, vars.generate(theme, vars.themes[theme]));
-  }
-
-  for (let scale in vars.scales) {
-    fs.writeFileSync(`dist/vars/spectrum-${scale}-unique.css`, vars.generate(scale, vars.scales[scale]));
-  }
-
-  cb();
-});
-
-/**
   Build page skin files separately
 */
 gulp.task('build-css:page-component-colorstops', function() {
@@ -385,6 +352,41 @@ gulp.task('build-css:concat-core-diff', function() {
     .pipe(gulp.dest('dist/'));
 });
 
+/**
+ * Builds a version of each component that uses native CSS variables. Relies on the unique variables extracted from DNA.
+ */
+gulp.task('build-css:individual-components-vars', function() {
+  function buildComponent(component) {
+    return gulp.src(`src/${component}/{index,skin}.css`)
+      .pipe(plumb())
+      .pipe(concat('vars.css'))
+      .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+      .pipe(postcss(processors))
+      .pipe(rename(function(path) {
+        path.dirname += '/' + component;
+      }))
+      .pipe(gulp.dest('dist/components'));
+  }
+
+  return merge.apply(this, fs.readdirSync('src').map(buildComponent));
+});
+
+/**
+ * Builds a list of unique variables from DNA for each theme and scale.
+ */
+gulp.task('build-css:unique-vars', function(cb) {
+  let vars = require('./lib/vars');
+  for (let theme in vars.themes) {
+    fs.writeFileSync(`dist/vars/spectrum-${theme}-unique.css`, vars.generate(theme, vars.themes[theme]));
+  }
+
+  for (let scale in vars.scales) {
+    fs.writeFileSync(`dist/vars/spectrum-${scale}-unique.css`, vars.generate(scale, vars.scales[scale]));
+  }
+
+  cb();
+});
+
 
 gulp.task('build-css',
   gulp.series(
@@ -396,7 +398,9 @@ gulp.task('build-css',
       'build-css:page-component-colorstops',
       'build-css:all-components-multistops',
       'build-css:core-md-multistops',
-      'build-css:core-lg-multistops'
+      'build-css:core-lg-multistops',
+      'build-css:individual-components-vars',
+      'build-css:unique-vars'
     ),
     gulp.parallel(
       'build-css:individual-components-diffscale',
