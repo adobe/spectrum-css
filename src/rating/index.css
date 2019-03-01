@@ -31,7 +31,8 @@
 
   cursor: pointer;
 
-  &.is-disabled {
+  &.is-disabled,
+  &.is-readonly {
     cursor: default;
     pointer-events: none;
   }
