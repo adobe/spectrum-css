@@ -8,6 +8,9 @@
 {{ slider/slider-filled.yml }}
 */
 /* topdoc
+{{ slider/slider-filled-offset.yml }}
+*/
+/* topdoc
 {{ slider/slider-player.yml }}
 */
 /* topdoc
@@ -34,6 +37,16 @@
   .spectrum-Slider-track:first-child {
     &::before {
       background: var(--spectrum-slider-fill-track-color);
+    }
+  }
+}
+
+.spectrum-Slider--filledOffset {
+  .spectrum-Slider-track {
+    &:not(:first-of-type):not(:last-of-type) {
+      &:before {
+        background: var(--spectrum-slider-fill-track-color);
+      }
     }
   }
 }
@@ -292,6 +305,16 @@
     }
 
     &.spectrum-Slider--range {
+      .spectrum-Slider-track {
+        &:not(:first-of-type):not(:last-of-type) {
+          &:before {
+            background: var(--spectrum-slider-fill-track-color-disabled);
+          }
+        }
+      }
+    }
+
+    &.spectrum-Slider--filledOffset {
       .spectrum-Slider-track {
         &:not(:first-of-type):not(:last-of-type) {
           &:before {
