@@ -2,31 +2,45 @@
 name: Slider - Filled-Offset
 description: With fill and offset.
 markup: |
-  <div class="spectrum-Slider spectrum-Slider--filledOffset">
+  <div class="spectrum-Slider">
     <div class="spectrum-Slider-labelContainer">
       <label class="spectrum-Slider-label" id="spectrum-Slider-label-18" for="spectrum-Slider-input-18">Slider Label</label>
       <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-18">14</div>
     </div>
     <div class="spectrum-Slider-controls">
       <div class="spectrum-Slider-track" style="width: 25%;"></div>
-      <div class="spectrum-Slider-track" style="left: 25%; width: 25%;"></div>
-      <div class="spectrum-Slider-handle" style="left: 50%;">
+      <div class="spectrum-Slider-handle" style="left: 20%;">
         <input type="range" class="spectrum-Slider-input" value="14" min="10" max="20" id="spectrum-Slider-input-18">
       </div>
       <div class="spectrum-Slider-track" style="width: 50%;"></div>
+      <div class="spectrum-Slider-fill" style="left: 20%; width: 30%"></div>
     </div>
   </div>
-  <div class="spectrum-Slider spectrum-Slider--filledOffset is-disabled">
+  <div class="spectrum-Slider">
     <div class="spectrum-Slider-labelContainer">
       <label class="spectrum-Slider-label" id="spectrum-Slider-label-19" for="spectrum-Slider-input-19">Slider Label</label>
       <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-19">14</div>
     </div>
     <div class="spectrum-Slider-controls">
       <div class="spectrum-Slider-track" style="width: 25%;"></div>
-      <div class="spectrum-Slider-track" style="left: 25%; width: 25%;"></div>
-      <div class="spectrum-Slider-handle" style="left: 50%;">
+      <div class="spectrum-Slider-handle" style="left: 70%;">
         <input type="range" class="spectrum-Slider-input" value="14" min="10" max="20" id="spectrum-Slider-input-19">
       </div>
       <div class="spectrum-Slider-track" style="width: 50%;"></div>
+      <div class="spectrum-Slider-fill spectrum-Slider-fill--right" style="left: 50%; width: 20%"></div>
+    </div>
+  </div>
+  <div class="spectrum-Slider is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-19" for="spectrum-Slider-input-19">Slider Label</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-19">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track" style="width: 25%;"></div>
+      <div class="spectrum-Slider-handle" style="left: 70%;">
+        <input type="range" class="spectrum-Slider-input" value="14" min="10" max="20" id="spectrum-Slider-input-19">
+      </div>
+      <div class="spectrum-Slider-track" style="width: 50%;"></div>
+      <div class="spectrum-Slider-fill spectrum-Slider-fill--right" style="left: 50%; width: 20%"></div>
     </div>
   </div>
