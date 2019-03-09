@@ -1,0 +1,16 @@
+@import '../commons/index.css';
+
+/* topdoc
+{{ actionbar/actionbar.yml }}
+*/
+.spectrum-Actionbar {
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+
+  height: 48px;
+  padding: 0 16px;
+  min-width: 280px;
+  max-width: 1280px;
+  width: calc(100% - 32px);
+}
