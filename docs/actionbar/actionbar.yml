@@ -2,7 +2,7 @@
 name: Action Bar
 description: This is a action bar
 markup: |
-  <div style="position: relative; padding: 0 16px; height: 48px;">
+  <div style="position: relative; margin-bottom: 20px;">
     <div class="spectrum-Popover is-open spectrum-Actionbar">
       <label class="spectrum-Checkbox is-indeterminate">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -32,7 +32,7 @@ markup: |
 
   <br><br>
 
-  <div style="position: relative; padding: 0 16px; height: 48px;">
+  <div style="position: relative; margin-bottom: 20px;">
     <div class="spectrum-Popover is-open spectrum-Actionbar">
       <label class="spectrum-Checkbox is-indeterminate">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
@@ -71,7 +71,7 @@ markup: |
 
   <br><br>
 
-  <div style="position: relative; padding: 0 16px; height: 48px;">
+  <div style="position: relative; margin-bottom: 20px;">
     <div class="spectrum-Popover is-open spectrum-Actionbar">
       <label class="spectrum-Checkbox is-indeterminate">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
@@ -107,7 +107,7 @@ markup: |
 
   <br><br>
 
-  <div style="position: relative; padding: 0 16px; height: 48px; width: 200px;">
+  <div style="position: relative; margin-bottom: 20px; width: 200px;">
     <div class="spectrum-Popover is-open spectrum-Actionbar">
       <label class="spectrum-Checkbox is-indeterminate">
         <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
