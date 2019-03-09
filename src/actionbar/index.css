@@ -1,5 +1,13 @@
 @import '../commons/index.css';
 
+:root {
+  --spectrum-actionbar-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-actionbar-padding-x: var(--spectrum-global-dimension-size-160);
+
+  --spectrum-actionbar-min-width: 280px;
+  --spectrum-actionbar-max-width: 1280px;
+}
+
 /* topdoc
 {{ actionbar/actionbar.yml }}
 */
@@ -8,9 +16,9 @@
   justify-content: space-between;
   flex-direction: initial;
 
-  height: 48px;
-  padding: 0 16px;
-  min-width: 280px;
-  max-width: 1280px;
-  width: calc(100% - 32px);
+  height: var(--spectrum-actionbar-height);
+  padding: 0 var(--spectrum-actionbar-padding-x);
+  min-width: var(--spectrum-actionbar-min-width);
+  max-width: var(--spectrum-actionbar-max-width);
+  width: 100%;
 }
