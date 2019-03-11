@@ -3,6 +3,8 @@
 :root {
   --spectrum-actionbar-height: var(--spectrum-global-dimension-size-600);
   --spectrum-actionbar-padding-x: var(--spectrum-global-dimension-size-200);
+  --spectrum-actionbar-margin-x: var(--spectrum-global-dimension-size-200);
+  --spectrum-actionbar-offset-y: var(--spectrum-global-dimension-size-200);
 
   --spectrum-actionbar-min-width: 280px;
   --spectrum-actionbar-max-width: 1280px;
@@ -13,12 +15,32 @@
 */
 .spectrum-Actionbar {
   align-items: center;
-  justify-content: space-between;
   flex-direction: initial;
+  justify-content: space-between;
 
   height: var(--spectrum-actionbar-height);
   padding: 0 var(--spectrum-actionbar-padding-x);
   min-width: var(--spectrum-actionbar-min-width);
   max-width: var(--spectrum-actionbar-max-width);
   width: 100%;
+}
+
+/* topdoc
+{{ actionbar/table-actionbar.yml }}
+*/
+.spectrum-Actionbar-tableContainer {
+  margin: 0 var(--spectrum-actionbar-margin-x);
+
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+
+  .spectrum-Actionbar {
+    &.is-open {
+       transform: translateY(calc(-1*(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-offset-y))));
+    }
+  }
 }
