@@ -359,6 +359,7 @@ function makeSlider(slider) {
   var handles = slider.querySelectorAll('.spectrum-Slider-handle');
   var handle = handles[0];
   var isColor = slider.classList.contains('spectrum-Slider--color');
+  var fill = slider.querySelector('.spectrum-Slider-fill');
 
   if (handles.length > 1) {
     makeDoubleSlider(slider);
@@ -405,6 +406,17 @@ function makeSlider(slider) {
         rightBuffer.style.width = 'auto';
         rightBuffer.style.left = percent + '%';
         rightBuffer.style.right = (100 - bufferedAmount) + '%';
+      }
+    }
+
+    if (fill) {
+      fill.style.left = (percent < 50 ? percent : 50) + '%';
+      fill.style.width = (percent < 50 ? 50 - percent : percent - 50) + '%';
+      if (percent > 50) {
+        fill.classList.add('spectrum-Slider-fill--right');
+      }
+      else {
+        fill.classList.remove('spectrum-Slider-fill--right');
       }
     }
   }

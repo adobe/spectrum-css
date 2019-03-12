@@ -64,7 +64,8 @@
 
 .spectrum-Slider-track,
 .spectrum-Slider-buffer,
-.spectrum-Slider-ramp {
+.spectrum-Slider-ramp,
+.spectrum-Slider-fill {
   height: var(--spectrum-slider-track-height);
   box-sizing: border-box;
 
@@ -80,7 +81,8 @@
 }
 
 .spectrum-Slider-track,
-.spectrum-Slider-buffer {
+.spectrum-Slider-buffer,
+.spectrum-Slider-fill {
   padding: 0 var(--spectrum-slider-track-handleoffset) 0 0;
   margin-left: var(--spectrum-slider-track-margin-offset);
 
@@ -91,6 +93,15 @@
 
     border-radius: var(--spectrum-slider-track-border-radius);
   }
+}
+
+.spectrum-Slider-fill {
+  margin-left: 0;
+  padding: 0 0 0 calc(var(--spectrum-slider-controls-margin) + var(--spectrum-slider-track-handleoffset));
+}
+
+.spectrum-Slider-fill--right {
+  padding: 0 calc(var(--spectrum-slider-controls-margin) + var(--spectrum-slider-track-handleoffset)) 0 0;
 }
 
 .spectrum-Slider-buffer {
