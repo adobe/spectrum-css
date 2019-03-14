@@ -244,12 +244,6 @@
   .spectrum-Card-title {
     font-size: var(--spectrum-card-quiet-small-title-text-size);
   }
-
-  .spectrum-Card-content,
-  .spectrum-Card-subtitle,
-  .spectrum-Card-description {
-    display: none;
-  }
 }
 
 .spectrum-Card--gallery {
