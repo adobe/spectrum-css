@@ -110,7 +110,7 @@ components:
     status: Verified
     description: The readOnly state of the Rating element.
     markup: |
-      <div class="spectrum-Rating is-readonly">
+      <div class="spectrum-Rating is-readOnly">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" readOnly aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
@@ -266,7 +266,7 @@ components:
     name: Quiet readOnly
     status: Verified
     markup: |
-      <div class="spectrum-Rating spectrum-Rating--quiet is-readonly">
+      <div class="spectrum-Rating spectrum-Rating--quiet is-readOnly">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" readOnly aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">

@@ -32,7 +32,7 @@
   cursor: pointer;
 
   &.is-disabled,
-  &.is-readonly {
+  &.is-readOnly {
     cursor: default;
     pointer-events: none;
   }
