@@ -3,7 +3,7 @@ description: Standard cards will full-sized asset previews are not supported, do
 status: Unsupported
 markup: |
   <div style="width: 208px;">
-    <div class="spectrum-Card">
+    <div class="spectrum-Card" tabindex="0" role="figure">
       <div class="spectrum-Card-preview">
         <div class="spectrum-Asset">
           <img class="spectrum-Asset-image" src="img/example-card-portrait.jpg" />
@@ -19,7 +19,7 @@ markup: |
       </div>
       <div class="spectrum-QuickActions spectrum-Card-quickActions">
         <div class="spectrum-Checkbox">
-          <input type="checkbox" class="spectrum-Checkbox-input" aria-checked="false" title="Select" value="">
+          <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
           <span class="spectrum-Checkbox-box">
             <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
