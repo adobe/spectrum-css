@@ -109,7 +109,7 @@
       box-shadow: none !important;
     }
     &[disabled] {
-      ~ hr {
+      ~ .spectrum-Datepicker--rangeDash {
         color: var(--spectrum-textfield-text-color-disabled);
       }
     }

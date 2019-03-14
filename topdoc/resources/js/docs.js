@@ -460,67 +460,11 @@ function makeDial(dial) {
   }
 }
 
-function getTextWidth(text, font) {
-  var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement('canvas'));
-  var context = canvas.getContext('2d');
-  if (context) {
-    context.font = font || '14px adobe-clean, Helvetica, Arial, sans-serif';
-    var metrics = context.measureText(text);
-    return metrics.width;
-  }
-  return 0;
-}
-
-function getFontShorthand(element) {
-  if (!element) {
-    element = document.body;
-  }
-  var prop = ['font-style', 'font-variant', 'font-weight', 'font-size', 'font-family'];
-  var props = [];
-  var computedStyle = window.getComputedStyle(element, null);
-  for (var x in prop) {
-    props.push(computedStyle.getPropertyValue(prop[x]));
-  }
-  return props.join(' ');
-}
-
-function makeRangeDatepicker(rangedatepicker) {
-  var startInput = rangedatepicker.querySelector('.spectrum-InputGroup-field');
-
-  function updateDashMarginStyle(event) {
-    var textfieldNode = event.target;
-    var dash = textfieldNode.nextElementSibling;
-    var isQuiet = textfieldNode.className.indexOf('spectrum-TextField--quiet') !== -1;
-    var font = getFontShorthand(textfieldNode);
-    var text = textfieldNode.value.trim();
-    if (!text.length) {
-      text = textfieldNode.getAttribute('placeholder').trim();
-    }
-    var textWidth = getTextWidth(text, font);
-    var computedStyle = window.getComputedStyle(textfieldNode, null);
-    const emWidth = parseFloat(computedStyle.fontSize) / 2;
-    const paddingRight = parseFloat(computedStyle.paddingRight);
-    const paddingLeft = parseFloat(computedStyle.paddingLeft);
-    const fieldWidth = parseFloat(computedStyle.width);
-    const offset = Math.max(emWidth / 2, fieldWidth - textWidth - paddingRight - paddingLeft + emWidth / 2) / 2;
-    dash.style.marginLeft = -offset + 'px';
-    dash.style.marginRight = offset + 'px';
-  }
-
-  startInput.addEventListener('input', updateDashMarginStyle);
-  setTimeout(function() {
-    updateDashMarginStyle({target: startInput});
-  }, 5000);
-}
-
 window.addEventListener('DOMContentLoaded', function() {
   Array.prototype.forEach.call(document.querySelectorAll('.spectrum-Slider'), function(slider) {
     makeSlider(slider);
   });
   Array.prototype.forEach.call(document.querySelectorAll('.spectrum-Dial'), function(dial) {
     makeDial(dial);
-  });
-  Array.prototype.forEach.call(document.querySelectorAll('.spectrum-Datepicker--range'), function(rangedatepicker) {
-    makeRangeDatepicker(rangedatepicker);
   });
 });
