@@ -99,7 +99,7 @@
     width: var(--spectrum-datepicker-input-width);
     min-width: var(--spectrum-datepicker-input-width);
     flex: initial;
-    &:nth-of-type(1) {
+    &.spectrum-Datepicker-field--start {
       border-right: 0;
       padding-right: var(--spectrum-padding);
       &.is-invalid,
@@ -108,7 +108,7 @@
         padding-right: var(--spectrum-padding);
       }
     }
-    &:nth-of-type(2) {
+    &.spectrum-Datepicker-field--end {
       border-left: 0;
       border-radius: 0;
       padding-left: var(--spectrum-padding);
