@@ -48,8 +48,8 @@
 }
 
 .spectrum-Dropdown-label {
-  /* Be the biggest! */
-  flex: 1 0 auto;
+  /* Be the biggest, but also shrink! */
+  flex: 1 1 auto;
 
   white-space: nowrap;
   overflow: hidden;
