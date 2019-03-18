@@ -84,15 +84,29 @@ window.addEventListener('click', function(event) {
   }
 });
 
-// Display Slider focus style
-function toggleSliderFocus(event) {
-  if (!event.target.classList.contains('spectrum-Slider-input')) {
+// Display InputGroup focus style
+function toggleInputGroupFocus(event) {
+  var classList = event.target.classList;
+  var closestSelector;
+  // target within InputGroup
+  if (classList.contains('spectrum-InputGroup-field') ||
+      classList.contains('spectrum-FieldButton')) {
+    closestSelector = '.spectrum-InputGroup';
+  }
+  // target within a Slider
+  else if (classList.contains('spectrum-Slider-input')) {
+    closestSelector = '.spectrum-Slider-handle';
+  }
+  else {
     return;
   }
   var func = event.type === 'focus' ? 'add' : 'remove';
-  var handle = event.target.closest('.spectrum-Slider-handle');
-  handle.classList[func]('is-focused');
+  var closestElement = event.target.closest(closestSelector);
+  closestElement.classList[func]('is-focused');
 }
+
+document.addEventListener('focus', toggleInputGroupFocus, true);
+document.addEventListener('blur', toggleInputGroupFocus, true);
 
 var currentTitle = null;
 var titles;
@@ -255,9 +269,6 @@ window.addEventListener('DOMContentLoaded', function() {
     hashTimeout = setTimeout(setHashFromScroll, scrollTimeDelay);
   });
 });
-
-document.addEventListener('focus', toggleSliderFocus, true);
-document.addEventListener('blur', toggleSliderFocus, true);
 
 // Load and store references to icon SVGs
 // var mediumIcons;
