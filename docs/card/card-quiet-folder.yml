@@ -4,7 +4,7 @@ description: A spectrum Quiet Card for a folder asset
 status: Beta
 markup: |
   <div style="width: 208px; height: 264px;">
-    <div class="spectrum-Card spectrum-Card--quiet">
+    <div class="spectrum-Card spectrum-Card--quiet" tabindex="0" role="figure">
       <div class="spectrum-Card-preview">
         <div class="spectrum-Asset">
           <svg viewBox="0 0 32 32" class="spectrum-Asset-folder">
@@ -23,7 +23,7 @@ markup: |
       </div>
       <div class="spectrum-QuickActions spectrum-Card-quickActions">
         <div class="spectrum-Checkbox">
-          <input type="checkbox" class="spectrum-Checkbox-input" aria-checked="false" title="Select" value="">
+          <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
           <span class="spectrum-Checkbox-box">
             <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />

@@ -3,7 +3,7 @@ description: Small cards are not supported, don't do this.
 status: Unsupported
 markup: |
   <div style="width: 208px;">
-    <div class="spectrum-Card spectrum-Card--small">
+    <div class="spectrum-Card spectrum-Card--small" tabindex="0" role="figure">
       <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
       <div class="spectrum-Card-body">
         <div class="spectrum-Card-header">
@@ -18,7 +18,7 @@ markup: |
       </div>
       <div class="spectrum-QuickActions spectrum-Card-quickActions">
         <div class="spectrum-Checkbox">
-          <input type="checkbox" class="spectrum-Checkbox-input" aria-checked="false" title="Select" value="">
+          <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
           <span class="spectrum-Checkbox-box">
             <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
