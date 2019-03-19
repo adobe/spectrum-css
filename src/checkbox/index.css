@@ -9,9 +9,19 @@
   height: var(--spectrum-checkbox-height);
   max-width: 100%;
 
-  margin-right: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
+  /*margin-right: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);*/
+  padding-right: var(--spectrum-checkbox-cursor-hit-x);
 
   vertical-align: top;
+
+  & + .spectrum-Checkbox {
+    padding-left: var(--spectrum-checkbox-cursor-hit-x);
+
+    .spectrum-Checkbox-input {
+      width: 100%;
+      left: 0;
+    }
+  }
 }
 
 .spectrum-Checkbox-input {
@@ -36,7 +46,7 @@
   position: absolute;
   top: 0;
   left: calc(var(--spectrum-checkbox-cursor-hit-x) * -1);
-  width: calc(100% + var(--spectrum-checkbox-cursor-hit-x) * 2);;
+  width: calc(100% + var(--spectrum-checkbox-cursor-hit-x));
   height: 100%;
 
   opacity: .0001;
