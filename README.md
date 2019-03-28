@@ -224,6 +224,8 @@ gulp
 
 Your `dist/` folder should now have a local copy of the Spectrum CSS docs and ready-to-use CSS files.
 
+**Important:** Ensure you have NodeJS 10.x installed to build the CSS correctly (checkout [#61](https://github.com/adobe/spectrum-css/issues/61) for more information).
+
 ## Testing with the Visual Regression Tools
 
 Under the hood, the visual regression tool is powered by a library called [BackstopJS](https://github.com/garris/BackstopJS). The idea is that by running some `gulp` tasks, the BackstopJS library will take a screenshot of every component described in the `docs/` folder using a headless chrome instance. This process is fairly intensive to run locally and has some quirks (eg, hanging chrome processes).
