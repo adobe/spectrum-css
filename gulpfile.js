@@ -9,6 +9,7 @@ require('./tasks/build-css');
 require('./tasks/build-docs');
 require('./tasks/clean');
 require('./tasks/gh-pages');
+require('./tasks/sass-compile');
 require('./tasks/build');
 require('./tasks/dev');
 require('./tasks/build-backstop');

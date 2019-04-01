@@ -84,15 +84,29 @@ window.addEventListener('click', function(event) {
   }
 });
 
-// Display Slider focus style
-function toggleSliderFocus(event) {
-  if (!event.target.classList.contains('spectrum-Slider-input')) {
+// Display InputGroup focus style
+function toggleInputGroupFocus(event) {
+  var classList = event.target.classList;
+  var closestSelector;
+  // target within InputGroup
+  if (classList.contains('spectrum-InputGroup-field') ||
+      classList.contains('spectrum-FieldButton')) {
+    closestSelector = '.spectrum-InputGroup';
+  }
+  // target within a Slider
+  else if (classList.contains('spectrum-Slider-input')) {
+    closestSelector = '.spectrum-Slider-handle';
+  }
+  else {
     return;
   }
   var func = event.type === 'focus' ? 'add' : 'remove';
-  var handle = event.target.closest('.spectrum-Slider-handle');
-  handle.classList[func]('is-focused');
+  var closestElement = event.target.closest(closestSelector);
+  closestElement.classList[func]('is-focused');
 }
+
+document.addEventListener('focus', toggleInputGroupFocus, true);
+document.addEventListener('blur', toggleInputGroupFocus, true);
 
 var currentTitle = null;
 var titles;
@@ -256,9 +270,6 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('focus', toggleSliderFocus, true);
-document.addEventListener('blur', toggleSliderFocus, true);
-
 // Load and store references to icon SVGs
 // var mediumIcons;
 // var largeIcons;
@@ -359,6 +370,7 @@ function makeSlider(slider) {
   var handles = slider.querySelectorAll('.spectrum-Slider-handle');
   var handle = handles[0];
   var isColor = slider.classList.contains('spectrum-Slider--color');
+  var fill = slider.querySelector('.spectrum-Slider-fill');
 
   if (handles.length > 1) {
     makeDoubleSlider(slider);
@@ -405,6 +417,17 @@ function makeSlider(slider) {
         rightBuffer.style.width = 'auto';
         rightBuffer.style.left = percent + '%';
         rightBuffer.style.right = (100 - bufferedAmount) + '%';
+      }
+    }
+
+    if (fill) {
+      fill.style.left = (percent < 50 ? percent : 50) + '%';
+      fill.style.width = (percent < 50 ? 50 - percent : percent - 50) + '%';
+      if (percent > 50) {
+        fill.classList.add('spectrum-Slider-fill--right');
+      }
+      else {
+        fill.classList.remove('spectrum-Slider-fill--right');
       }
     }
   }

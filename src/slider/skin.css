@@ -8,6 +8,9 @@
 {{ slider/slider-filled.yml }}
 */
 /* topdoc
+{{ slider/slider-filled-offset.yml }}
+*/
+/* topdoc
 {{ slider/slider-player.yml }}
 */
 /* topdoc
@@ -35,6 +38,12 @@
     &::before {
       background: var(--spectrum-slider-fill-track-color);
     }
+  }
+}
+
+.spectrum-Slider-fill {
+  &::before {
+    background: var(--spectrum-slider-fill-track-color);
   }
 }
 
@@ -259,6 +268,11 @@
         &::before {
           background: var(--spectrum-slider-fill-track-color-disabled);
         }
+      }
+    }
+    .spectrum-Slider-fill {
+      &::before {
+        background: var(--spectrum-slider-fill-track-color-disabled);
       }
     }
     .spectrum-Slider-buffer {

@@ -28,6 +28,7 @@
     outline: none;
   }
 
+  &.is-focused,
   &.is-selected,
   &:focus,
   &:hover {
@@ -189,6 +190,7 @@
     border-radius: var(--spectrum-card-quiet-border-radius);
     position: relative;
     transition: background-color var(--spectrum-global-animation-duration-100);
+    overflow: visible;
 
     /* Use a :before to show the selection outline so that the border doesn't
      * affect the layout of the content within the preview. */

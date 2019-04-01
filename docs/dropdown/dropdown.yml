@@ -4,7 +4,7 @@ markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 240px;">
     <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
+      <span class="spectrum-Dropdown-label is-placeholder">Select a Country with a very long label, too long in fact</span>
       <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
       </svg>

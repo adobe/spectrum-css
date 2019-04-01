@@ -18,3 +18,11 @@ gulp.task('build-lite',
     'build-docs'
   )
 );
+
+gulp.task('travis-build',
+  gulp.series(
+    'build',
+    'sass-compiling-validate',
+    'clean-sass-compile'
+  )
+);
