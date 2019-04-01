@@ -88,13 +88,13 @@ function getProcessors(keepVars = false) {
     }),
     require('postcss-nested'),
     require('postcss-inherit'),
-    keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
     require('postcss-custom-properties')({
       noValueNotifications: 'error',
       warnings: !keepVars
     }),
     require('./lib/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
+    keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
     require('postcss-svg'),
     require('postcss-functions')({
       functions: {
@@ -193,7 +193,7 @@ gulp.task('build-css:individual-components-multistops', function() {
     ])
       .pipe(plumb())
       .pipe(insert.prepend(`\n@import '../colorStops/spectrum-${colorStop}.css';\n.spectrum--${colorStop} {\n`))
-      .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+      .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
       // Fix a nested + inherit bug
@@ -216,7 +216,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
   return gulp.src(globs)
     .pipe(plumb())
     .pipe(insert.prepend(`@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
     .pipe(insert.append(appendString))
     // Any stray & in colorstops should just apply to .spectrum
     .pipe(postcss(processors.concat([notnested({ replace: '.spectrum' })])))
@@ -261,7 +261,7 @@ gulp.task('build-css:all-components-multistops', function() {
     '!src/spectrum-core.css'
   ])
     .pipe(plumb())
-    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
 });
@@ -365,7 +365,6 @@ gulp.task('build-css:individual-components-vars', function() {
     return gulp.src(`src/${component}/{index,skin}.css`)
       .pipe(plumb())
       .pipe(concat('vars.css'))
-      .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
       .pipe(postcss(getProcessors(true)))
       .pipe(rename(function(path) {
         path.dirname += '/' + component;
@@ -403,9 +402,7 @@ gulp.task('build-css',
       'build-css:page-component-colorstops',
       'build-css:all-components-multistops',
       'build-css:core-md-multistops',
-      'build-css:core-lg-multistops',
-      'build-css:individual-components-vars',
-      'build-css:unique-vars'
+      'build-css:core-lg-multistops'
     ),
     gulp.parallel(
       'build-css:individual-components-diffscale',
@@ -414,7 +411,9 @@ gulp.task('build-css',
       'build-css:build-multistops'
     ),
     gulp.parallel(
-      'build-css:concat-core-diff'
+      'build-css:concat-core-diff',
+      'build-css:individual-components-vars',
+      'build-css:unique-vars'
     )
   )
 );

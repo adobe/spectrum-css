@@ -101,11 +101,12 @@ function getVariableMappings(themes) {
 
 let themes = getVariableMappings(['dark', 'darkest', 'light', 'lightest', 'middark', 'midlight']);
 let scales = getVariableMappings(['large', 'medium']);
+let globals = getVars('vars/spectrum-global.css');
 
 exports.themes = themes.vars;
 exports.scales = scales.vars;
 exports.mapping = Object.assign({}, themes.mapping, scales.mapping);
-exports.static = Object.assign({}, themes.static, scales.static);
+exports.static = Object.assign({}, themes.static, scales.static, globals);
 
 exports.generate = function generate(theme, vars) {
   return `.spectrum--${theme} {\n${Object.keys(vars).map(v => `  ${v}: ${vars[v]};`).join('\n')}\n}`;
