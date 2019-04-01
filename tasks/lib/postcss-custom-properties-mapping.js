@@ -13,7 +13,7 @@ module.exports = postcss.plugin('postcss-custom-properties-mapping', function ()
           let value = valueParser(decl.value);
 
           value.walk((node, index, nodes) => {
-            if (node.type === 'function' && node.value === 'var' && node.nodes.length === 1) {
+            if (node.type === 'function' && node.value === 'var') {
               let v = node.nodes[0].value;
 
               // If the value is static, replace the variable with the value.
