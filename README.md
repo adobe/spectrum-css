@@ -35,6 +35,8 @@ Locally clone the `spectrum-css-deps` repo. This repo contains internal, non ope
 
 Spectrum CSS can be consumed as whole or in part with two distinct methods of applying colorstops.
 
+To install Spectrum CSS, run `npm install @adobe/spectrum-css` from your project's root directory. You will be able to find everything you need for both strategies in the `node_modules` folder.
+
 ### Multi-stop Strategy
 
 The first method of applying colorstops, *multistop*, makes it possible to have any number of colorstops on the same page. This method results in slightly larger CSS files with more selectors, but is the method most products will use as dark and light colorstops are commonly mixed in Spectrum designs.
