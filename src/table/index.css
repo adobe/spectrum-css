@@ -136,7 +136,7 @@
   position: relative;
 
   &:focus-ring,
-  .is-focused {
+  td.is-focused {
     outline: none;
 
     &::before {
