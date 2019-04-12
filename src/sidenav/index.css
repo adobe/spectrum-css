@@ -55,6 +55,10 @@
     border: var(--spectrum-tabs-focus-ring-size) solid transparent;
     border-radius: var(--spectrum-sidenav-item-border-radius);
   }
+
+  .spectrum-SideNav-itemIcon {
+    margin-right: 8px;
+  }
 }
 
 
