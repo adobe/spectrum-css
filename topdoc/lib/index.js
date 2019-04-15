@@ -137,7 +137,6 @@ function template(topDocument) {
           if (typeof component.components[subComponentId] === 'string') {
             // Shorthand
             subComponent.markup = component.components[subComponentId];
-            subComponent.highlightedMarkup = processMarkup(subComponent.markup);
             subComponent.id = subComponentId;
           }
           else {
@@ -145,6 +144,9 @@ function template(topDocument) {
             subComponent = component.components[subComponentId];
             subComponent.id = subComponent.id || subComponentId;
           }
+
+          // Highlight markup
+          subComponent.highlightedMarkup = processMarkup(subComponent.markup);
 
           // Gather DNA data
           subComponent.description = subComponent.description || '';
