@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var merge = require('merge-stream');
 var plumb = require('./lib/plumb.js');
 var notnested = require('./lib/postcss-notnested');
+var fs = require('fs');
 
 var colorStops = [
   'darkest',
@@ -16,103 +17,109 @@ var colorStops = [
   'lightest'
 ];
 
-var processors = [
-  require('postcss-import'),
-  require('postcss-mixins')({
-    mixins: {
-      typography: function(mixin, name, tokenName, textTransformIgnore) {
-        if(!tokenName) {
-          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
-          tokenName = tokenName.replace('.spectrum--', '');
-        }
-        var output = '';
-        var propMap = {
-          'font-size': 'text-size',
-          'font-weight': 'text-font-weight',
-          'line-height': 'text-line-height',
-          'font-style': 'text-font-style',
-          'letter-spacing': 'text-letter-spacing',
-          'text-transform': 'text-transform',
-        };
-        function buildProperties (tokeString) {
-          var ruleString = '';
-          Object.keys(propMap).forEach((key) => {
-            if(!textTransformIgnore || key != 'text-transform') {
-              ruleString += `  ${key}: var(--spectrum-${tokeString}-${propMap[key]});\n`;
+function getProcessors(keepVars = false) {
+  return [
+    require('postcss-import'),
+    require('postcss-mixins')({
+      mixins: {
+        typography: function(mixin, name, tokenName, textTransformIgnore) {
+          if(!tokenName) {
+            tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+            tokenName = tokenName.replace('.spectrum--', '');
+          }
+          var output = '';
+          var propMap = {
+            'font-size': 'text-size',
+            'font-weight': 'text-font-weight',
+            'line-height': 'text-line-height',
+            'font-style': 'text-font-style',
+            'letter-spacing': 'text-letter-spacing',
+            'text-transform': 'text-transform',
+          };
+          function buildProperties (tokeString) {
+            var ruleString = '';
+            Object.keys(propMap).forEach((key) => {
+              if(!textTransformIgnore || key != 'text-transform') {
+                ruleString += `  ${key}: var(--spectrum-${tokeString}-${propMap[key]});\n`;
+              }
+            });
+            ruleString += '  margin-top: 0;\n  margin-bottom: 0;\n';
+            return ruleString;
+          }
+          output = `${name} {
+          ${buildProperties(tokenName)}
+            em {
+              ${buildProperties(`${tokenName}-emphasis`)}
             }
-          });
-          ruleString += '  margin-top: 0;\n  margin-bottom: 0;\n';
-          return ruleString;
-        }
-        output = `${name} {
-        ${buildProperties(tokenName)}
-          em {
-            ${buildProperties(`${tokenName}-emphasis`)}
+            strong {
+              ${buildProperties(`${tokenName}-strong`)}
+            }
+          }`;
+          var nodes = postcssReal.parse(output);
+          nodes.nodes[0].append(mixin.nodes);
+          mixin.replaceWith(nodes);
+        },
+        typographyColor: function(mixin, name, tokenName) {
+          if(!tokenName) {
+            tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+            tokenName = tokenName.replace('.spectrum--', '');
           }
-          strong {
-            ${buildProperties(`${tokenName}-strong`)}
+          var output = `${name} {
+            color: var(--spectrum-${tokenName}-text-color);
+          }`;
+          var nodes = postcssReal.parse(output);
+          nodes.nodes[0].append(mixin.nodes);
+          mixin.replaceWith(nodes);
+        },
+        typographyMargins: function(mixin, name, tokenName) {
+          if(!tokenName) {
+            tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+            tokenName = tokenName.replace('.spectrum--', '');
           }
-        }`;
-        var nodes = postcssReal.parse(output);
-        nodes.nodes[0].append(mixin.nodes);
-        mixin.replaceWith(nodes);
-      },
-      typographyColor: function(mixin, name, tokenName) {
-        if(!tokenName) {
-          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
-          tokenName = tokenName.replace('.spectrum--', '');
-        }
-        var output = `${name} {
-          color: var(--spectrum-${tokenName}-text-color);
-        }`;
-        var nodes = postcssReal.parse(output);
-        nodes.nodes[0].append(mixin.nodes);
-        mixin.replaceWith(nodes);
-      },
-      typographyMargins: function(mixin, name, tokenName) {
-        if(!tokenName) {
-          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
-          tokenName = tokenName.replace('.spectrum--', '');
-        }
-        var output = `${name} {
-          margin-top: var(--spectrum-${tokenName}-margin-top);
-          margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
-        }`;
-        var nodes = postcssReal.parse(output);
-        nodes.nodes[0].append(mixin.nodes);
-        mixin.replaceWith(nodes);
-      },
-    }
-  }),
-  require('postcss-nested'),
-  require('postcss-inherit'),
-  require('postcss-custom-properties')({
-    noValueNotifications: 'error'
-  }),
-  require('./lib/postcss-custom-properties-passthrough')(),
-  require('postcss-calc'),
-  require('postcss-svg'),
-  require('postcss-functions')({
-    functions: {
-      noscale: function(value) {
-        return value.toString().toUpperCase();
-      },
-      percent: function(value) {
-        return parseInt(value, 10) / 100;
+          var output = `${name} {
+            margin-top: var(--spectrum-${tokenName}-margin-top);
+            margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+          }`;
+          var nodes = postcssReal.parse(output);
+          nodes.nodes[0].append(mixin.nodes);
+          mixin.replaceWith(nodes);
+        },
       }
-    }
-  }),
-  require('postcss-focus-ring'),
-  require('autoprefixer')({
-    'browsers': [
-      'IE >= 10',
-      'last 2 Chrome versions',
-      'last 2 Firefox versions',
-      'last 2 Safari versions',
-      'last 2 iOS versions'
-    ]
-  })
-];
+    }),
+    require('postcss-nested'),
+    require('postcss-inherit'),
+    require('postcss-custom-properties')({
+      noValueNotifications: 'error',
+      warnings: !keepVars
+    }),
+    require('./lib/postcss-custom-properties-passthrough')(),
+    require('postcss-calc'),
+    keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
+    require('postcss-svg'),
+    require('postcss-functions')({
+      functions: {
+        noscale: function(value) {
+          return value.toString().toUpperCase();
+        },
+        percent: function(value) {
+          return parseInt(value, 10) / 100;
+        }
+      }
+    }),
+    require('postcss-focus-ring'),
+    require('autoprefixer')({
+      'browsers': [
+        'IE >= 10',
+        'last 2 Chrome versions',
+        'last 2 Firefox versions',
+        'last 2 Safari versions',
+        'last 2 iOS versions'
+      ]
+    })
+  ].filter(Boolean);
+}
+
+var processors = getProcessors();
 
 /**
   Builds individual components (dimensions only)
@@ -186,7 +193,7 @@ gulp.task('build-css:individual-components-multistops', function() {
     ])
       .pipe(plumb())
       .pipe(insert.prepend(`\n@import '../colorStops/spectrum-${colorStop}.css';\n.spectrum--${colorStop} {\n`))
-      .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+      .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
       .pipe(insert.append('}\n'))
       .pipe(postcss(processors))
       // Fix a nested + inherit bug
@@ -209,7 +216,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
   return gulp.src(globs)
     .pipe(plumb())
     .pipe(insert.prepend(`@import '../colorStops/spectrum-${colorStop}.css';${prependString}`))
-    .pipe(insert.prepend('@import "../../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../../vars/spectrum-global.css";\n'))
     .pipe(insert.append(appendString))
     // Any stray & in colorstops should just apply to .spectrum
     .pipe(postcss(processors.concat([notnested({ replace: '.spectrum' })])))
@@ -254,7 +261,7 @@ gulp.task('build-css:all-components-multistops', function() {
     '!src/spectrum-core.css'
   ])
     .pipe(plumb())
-    .pipe(insert.prepend('@import "../dist/vars/spectrum-global.css";\n'))
+    .pipe(insert.prepend('@import "../vars/spectrum-global.css";\n'))
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
 });
@@ -350,6 +357,40 @@ gulp.task('build-css:concat-core-diff', function() {
     .pipe(gulp.dest('dist/'));
 });
 
+/**
+ * Builds a version of each component that uses native CSS variables. Relies on the unique variables extracted from DNA.
+ */
+gulp.task('build-css:individual-components-vars', function() {
+  function buildComponent(component) {
+    return gulp.src(`src/${component}/{index,skin}.css`)
+      .pipe(plumb())
+      .pipe(concat('index-vars.css'))
+      .pipe(postcss(getProcessors(true)))
+      .pipe(rename(function(path) {
+        path.dirname += '/' + component;
+      }))
+      .pipe(gulp.dest('dist/components'));
+  }
+
+  return merge.apply(this, fs.readdirSync('src').map(buildComponent));
+});
+
+/**
+ * Builds a list of unique variables from DNA for each theme and scale.
+ */
+gulp.task('build-css:unique-vars', function(cb) {
+  let vars = require('./lib/vars');
+  for (let theme in vars.themes) {
+    fs.writeFileSync(`dist/vars/spectrum-${theme}-unique.css`, vars.generate(theme, vars.themes[theme]));
+  }
+
+  for (let scale in vars.scales) {
+    fs.writeFileSync(`dist/vars/spectrum-${scale}-unique.css`, vars.generate(scale, vars.scales[scale]));
+  }
+
+  cb();
+});
+
 
 gulp.task('build-css',
   gulp.series(
@@ -370,7 +411,9 @@ gulp.task('build-css',
       'build-css:build-multistops'
     ),
     gulp.parallel(
-      'build-css:concat-core-diff'
+      'build-css:concat-core-diff',
+      'build-css:individual-components-vars',
+      'build-css:unique-vars'
     )
   )
 );
