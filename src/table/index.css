@@ -136,7 +136,7 @@
   position: relative;
 
   &:focus-ring,
-  td.is-focused {
+  &.is-focused {
     outline: none;
 
     &::before {
@@ -158,7 +158,7 @@
 
 .spectrum-Table-headCell {
   &:focus-ring,
-  .is-focused {
+  &.is-focused {
     &::before {
       top: var(--spectrum-table-border-size);
       right: var(--spectrum-table-border-size);
