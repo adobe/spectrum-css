@@ -364,7 +364,7 @@ gulp.task('build-css:individual-components-vars', function() {
   function buildComponent(component) {
     return gulp.src(`src/${component}/{index,skin}.css`)
       .pipe(plumb())
-      .pipe(concat('vars.css'))
+      .pipe(concat('index-vars.css'))
       .pipe(postcss(getProcessors(true)))
       .pipe(rename(function(path) {
         path.dirname += '/' + component;
