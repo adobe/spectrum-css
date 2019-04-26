@@ -57,7 +57,7 @@
   }
 
   .spectrum-SideNav-itemIcon {
-    margin-right: 8px;
+    margin-right: var(--spectrum-sidenav-icon-gap);
   }
 }
 
