@@ -265,6 +265,15 @@ a.spectrum-ActionButton {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .spectrum-ClearButton {
+    > .spectrum-Icon {
+      /* @ie11 Workaround for regression caused by fix for https://bugs.webkit.org/show_bug.cgi?id=169700 */
+      margin: 0
+    }
+  }
+}
+
 .spectrum-ClearButton--small {
   width: var(--spectrum-clearbutton-small-width);
   height: var(--spectrum-clearbutton-small-height);
