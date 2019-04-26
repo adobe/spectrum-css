@@ -1,6 +1,6 @@
 ---
 id: table
-name: Table - Divs Quiet Multi-Select with Actionbar
+name: Table - Divs Quiet Multi-Select with ActionBar
 description: The quiet multi-select div table with an action bar pop over from the bottom of the table.
 markup: |
   <div class="spectrum-Table spectrum-Table--quiet" role="grid">
@@ -168,8 +168,8 @@ markup: |
         <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Jake</div>
         <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Jake</div>
       </div>
-      <div class="spectrum-Actionbar-tableContainer">
-        <div class="spectrum-Popover is-open spectrum-Actionbar">
+      <div class="spectrum-ActionBar-tableContainer">
+        <div class="spectrum-Popover is-open spectrum-ActionBar">
           <label class="spectrum-Checkbox is-indeterminate">
             <input type="checkbox" class="spectrum-Checkbox-input">
             <span class="spectrum-Checkbox-box">

@@ -13,7 +13,7 @@
 /* topdoc
 {{ actionbar/actionbar.yml }}
 */
-.spectrum-Actionbar {
+.spectrum-ActionBar {
   align-items: center;
   flex-direction: initial;
   justify-content: space-between;
@@ -28,7 +28,7 @@
 /* topdoc
 {{ actionbar/table-actionbar.yml }}
 */
-.spectrum-Actionbar-tableContainer {
+.spectrum-ActionBar-tableContainer {
   margin: 0 var(--spectrum-actionbar-margin-x);
 
   position: sticky;
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: space-between;
 
-  .spectrum-Actionbar {
+  .spectrum-ActionBar {
     &.is-open {
        transform: translateY(calc(-1*(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-offset-y))));
     }
