@@ -1,6 +1,17 @@
 .spectrum-Breadcrumbs-item {
   color: var(--spectrum-breadcrumb-text-color);
 
+  &.is-dragged {
+    .spectrum-Breadcrumbs-itemLink {
+      color: var(--spectrum-breadcrumb-item-text-color-drop);
+      background-color: var(--spectrum-breadcrumb-item-background-color-drop);
+
+      &:before {
+        border-color: var(--spectrum-breadcrumb-item-border-color-drop);
+      }
+    }
+  }
+
   .spectrum-Breadcrumbs-itemSeparator {
     color: var(--spectrum-breadcrumb-ui-icon-color);
   }
@@ -13,10 +24,12 @@
     }
 
     &:focus-ring {
-      color: var(--spectrum-alias-text-color-key-focus);
+      color: var(--spectrum-breadcrumb-text-color-key-focus);
 
       &:before {
+        /* Nate: this color is wrong in DNA */
         border-color: var(--spectrum-alias-border-color-focus);
+        /*border-color: var(--spectrum-breadcrumb-border-color-key-focus);*/
       }
     }
 
@@ -41,6 +54,17 @@
       &:focus-ring {
         color: var(--spectrum-breadcrumb-text-color-down);
         border-bottom: 0;
+      }
+    }
+  }
+}
+
+.spectrum-Breadcrumbs--multiline,
+.spectrum-Breadcrumbs--compact {
+  .spectrum-Breadcrumbs-item {
+    &.is-dragged {
+      .spectrum-Breadcrumbs-itemLink:before {
+        border-color: transparent;
       }
     }
   }

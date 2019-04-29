@@ -26,6 +26,30 @@ components:
         </ul>
       </nav>
 
+  dragged:
+    status: Verified
+    description: Dragged
+    markup: |
+      <nav>
+        <ul class="spectrum-Breadcrumbs">
+          <li class="spectrum-Breadcrumbs-item">
+            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item is-dragged">
+            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trend</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+          </li>
+        </ul>
+      </nav>
+
   nested:
     status: Verified
     description: Nested root
@@ -107,6 +131,30 @@ components:
             </svg>
           </li>
           <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+          </li>
+        </ul>
+      </nav>
+
+  multiline-dragged:
+    status: Verified
+    name: Multiline (dragged)
+    markup: |
+      <nav>
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
+          <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item is-dragged">
             <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
