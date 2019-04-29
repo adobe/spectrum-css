@@ -27,9 +27,7 @@
       color: var(--spectrum-breadcrumb-text-color-key-focus);
 
       &:before {
-        /* Nate: this color is wrong in DNA */
-        border-color: var(--spectrum-alias-border-color-focus);
-        /*border-color: var(--spectrum-breadcrumb-border-color-key-focus);*/
+        border-color: var(--spectrum-breadcrumb-item-border-color-key-focus);
       }
     }
 
