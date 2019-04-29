@@ -57,17 +57,6 @@
   }
 }
 
-.spectrum-Breadcrumbs--multiline,
-.spectrum-Breadcrumbs--compact {
-  .spectrum-Breadcrumbs-item {
-    &.is-dragged {
-      .spectrum-Breadcrumbs-itemLink:before {
-        border-color: transparent;
-      }
-    }
-  }
-}
-
 /* topdoc
 {{ breadcrumb/breadcrumb.yml }}
 */
