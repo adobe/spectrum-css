@@ -1,0 +1,11 @@
+---
+name: Bar Loader - Indeterminate
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-BarLoader spectrum-BarLoader--indeterminate">
+      <div class="spectrum-BarLoader-track">
+        <div class="spectrum-BarLoader-fill"></div>
+      </div>
+      <div class="spectrum-BarLoader-label" hidden=""></div>
+    </div>
+  </div>
