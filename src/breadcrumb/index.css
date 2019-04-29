@@ -129,6 +129,8 @@
       line-height: var(--spectrum-breadcrumb-multiline-title-text-line-height);
 
       .spectrum-Breadcrumbs-itemLink {
+        height: auto;
+
         text-decoration: none;
       }
     }
