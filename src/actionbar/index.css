@@ -28,19 +28,26 @@
 /* topdoc
 {{ actionbar/table-actionbar.yml }}
 */
-.spectrum-ActionBar-tableContainer {
+.spectrum-ActionBar-container {
   margin: 0 var(--spectrum-actionbar-margin-x);
 
-  position: sticky;
   bottom: 0;
   z-index: 1;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   .spectrum-ActionBar {
     &.is-open {
        transform: translateY(calc(-1*(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-offset-y))));
     }
+  }
+
+  &.spectrum-ActionBar-sticky {
+    position: sticky;
+  }
+
+  &.spectrum-ActionBar-fixed {
+    position: fixed;
   }
 }
