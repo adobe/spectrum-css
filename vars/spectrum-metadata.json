@@ -1,5 +1,5 @@
 {
-  "dna-version": "5.12.0",
+  "dna-version": "5.13.0",
   "spectrum-accordion-name": "Accordion (Default)",
   "spectrum-accordion-description": "The default variant of accordion",
   "spectrum-accordion-status": "Precursor",
@@ -88,6 +88,10 @@
   "spectrum-barloader-small-description": "The small variant of Bar Loader. A bar loader shows the progression of an operation.",
   "spectrum-barloader-small-status": "Canon",
   "spectrum-barloader-small-version": "5.0.0",
+  "spectrum-barloader-small-indeterminate-name": "Bar Loader (Small Indeterminate)",
+  "spectrum-barloader-small-indeterminate-description": "Indeterminate variant of Bar Loader. An indeterminate bar loader shows the progression without a known total (time or size).",
+  "spectrum-barloader-small-indeterminate-status": "Canon",
+  "spectrum-barloader-small-indeterminate-version": "5.0.0",
   "spectrum-barloader-small-over-background-name": "Bar Loader (Small Over Color)",
   "spectrum-barloader-small-over-background-description": "The small, over color variant of a Bar Loader. A bar loader shows the progression of an operation.",
   "spectrum-barloader-small-over-background-status": "Canon",

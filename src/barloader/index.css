@@ -1,8 +1,5 @@
 @import '../commons/index.css';
 
-:root {
-}
-
 /* topdoc
 {{ barloader/barloader-large.yml }}
 */
@@ -48,13 +45,13 @@
   width: auto;
 
   .spectrum-BarLoader-label {
-    margin-right: var(--spectrum-barloader-large-label-gap-right);
+    margin-right: var(--spectrum-barloader-large-label-gap-x);
     margin-bottom: 0;
   }
   .spectrum-BarLoader-percentage {
     order: 3;
     text-align: right;
-    margin-left: var(--spectrum-barloader-large-label-gap-right);
+    margin-left: var(--spectrum-barloader-large-label-gap-x);
     margin-bottom: 0;
   }
 }
@@ -87,11 +84,14 @@
 /* topdoc
 {{ barloader/barloader-large-indeterminate.yml }}
 */
+/* topdoc
+{{ barloader/barloader-small-indeterminate.yml }}
+*/
 .spectrum-BarLoader--indeterminate .spectrum-BarLoader-fill {
   width: var(--spectrum-barloader-large-indeterminate-fill-width);
   position: relative;
-  animation: indeterminate-loop var(--spectrum-barloader-large-indeterminate-fill-animation-duration) infinite;
-  animation-timing-function: var(--spectrum-barloader-large-indeterminate-fill-animation-ease);
+  animation: indeterminate-loop var(--spectrum-barloader-large-indeterminate-duration) infinite;
+  animation-timing-function: var(--spectrum-barloader-large-indeterminate-animation-ease);
   left: calc(-1 * var(--spectrum-barloader-large-indeterminate-fill-width));
   will-change: transform;
 }

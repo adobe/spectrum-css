@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.12.0 */
+/* generated from dna-version: 5.13.0 */
 :root {
   --spectrum-global-color-celery-400: rgb(75, 195, 95);
   --spectrum-global-color-celery-500: rgb(81, 210, 103);
@@ -334,6 +334,11 @@
   --spectrum-barloader-small-track-fill-color: rgb(75, 156, 245);
   --spectrum-barloader-small-track-color-disabled: rgb(87, 87, 87);
   --spectrum-barloader-small-track-fill-color-disabled: rgb(87, 87, 87);
+  --spectrum-barloader-small-indeterminate-text-color: rgb(245, 245, 245);
+  --spectrum-barloader-small-indeterminate-track-color: rgb(87, 87, 87);
+  --spectrum-barloader-small-indeterminate-track-fill-color: rgb(75, 156, 245);
+  --spectrum-barloader-small-indeterminate-track-color-disabled: rgb(87, 87, 87);
+  --spectrum-barloader-small-indeterminate-track-fill-color-disabled: rgb(87, 87, 87);
   --spectrum-barloader-small-over-background-text-color: rgb(255, 255, 255);
   --spectrum-barloader-small-over-background-track-color: rgba(255,255,255,0.2);
   --spectrum-barloader-small-over-background-track-fill-color: rgb(255, 255, 255);
@@ -351,7 +356,7 @@
   --spectrum-breadcrumb-compact-item-background-color-down: rgba(0, 0, 0, 0);
   --spectrum-breadcrumb-compact-item-text-color-down: rgb(255, 255, 255);
   --spectrum-breadcrumb-compact-item-underline-color-down: rgb(255, 255, 255);
-  --spectrum-breadcrumb-compact-item-border-color-key-focus: rgba(0, 0, 0, 0);
+  --spectrum-breadcrumb-compact-item-border-color-key-focus: rgb(55, 142, 240);
   --spectrum-breadcrumb-compact-item-background-color-key-focus: rgba(0, 0, 0, 0);
   --spectrum-breadcrumb-compact-item-text-color-key-focus: rgb(255, 255, 255);
   --spectrum-breadcrumb-compact-item-underline-color-key-focus: rgb(255, 255, 255);
@@ -381,7 +386,7 @@
   --spectrum-breadcrumb-item-text-color-down: rgb(255, 255, 255);
   --spectrum-breadcrumb-item-underline-color-down: rgb(255, 255, 255);
   --spectrum-breadcrumb-text-color-down: rgb(255, 255, 255);
-  --spectrum-breadcrumb-item-border-color-key-focus: rgba(0, 0, 0, 0);
+  --spectrum-breadcrumb-item-border-color-key-focus: rgb(55, 142, 240);
   --spectrum-breadcrumb-item-background-color-key-focus: rgba(0, 0, 0, 0);
   --spectrum-breadcrumb-item-text-color-key-focus: rgb(255, 255, 255);
   --spectrum-breadcrumb-item-underline-color-key-focus: rgb(255, 255, 255);
@@ -408,7 +413,7 @@
   --spectrum-breadcrumb-multiline-item-background-color-down: rgba(0, 0, 0, 0);
   --spectrum-breadcrumb-multiline-item-text-color-down: rgb(255, 255, 255);
   --spectrum-breadcrumb-multiline-item-underline-color-down: rgb(255, 255, 255);
-  --spectrum-breadcrumb-multiline-item-border-color-key-focus: rgba(0, 0, 0, 0);
+  --spectrum-breadcrumb-multiline-item-border-color-key-focus: rgb(55, 142, 240);
   --spectrum-breadcrumb-multiline-item-background-color-key-focus: rgba(0, 0, 0, 0);
   --spectrum-breadcrumb-multiline-item-text-color-key-focus: rgb(255, 255, 255);
   --spectrum-breadcrumb-multiline-item-underline-color-key-focus: rgb(255, 255, 255);

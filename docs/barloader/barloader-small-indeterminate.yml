@@ -1,8 +1,8 @@
 ---
-name: Bar Loader - Indeterminate
+name: Bar Loader - Indeterminate Small
 markup: |
   <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-BarLoader spectrum-BarLoader--indeterminate">
+    <div class="spectrum-BarLoader spectrum-BarLoader--small spectrum-BarLoader--indeterminate">
       <div class="spectrum-BarLoader-track">
         <div class="spectrum-BarLoader-fill"></div>
       </div>
@@ -10,7 +10,7 @@ markup: |
     </div>
   </div>
   <div style="margin: 20px 0;">
-    <div class="spectrum-BarLoader spectrum-BarLoader--indeterminate">
+    <div class="spectrum-BarLoader spectrum-BarLoader--small spectrum-BarLoader--indeterminate">
       <div class="spectrum-BarLoader-label">Loading</div>
       <div class="spectrum-BarLoader-track">
         <div class="spectrum-BarLoader-fill"></div>
