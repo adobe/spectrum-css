@@ -19,6 +19,7 @@
   width: var(--spectrum-barloader-large-width);
   height: var(--spectrum-barloader-large-height);
   border-radius: var(--spectrum-barloader-large-border-radius);
+  z-index: 1; /* to fix a weird webkit bug with rounded corners and masking */
 }
 
 .spectrum-BarLoader-fill {
