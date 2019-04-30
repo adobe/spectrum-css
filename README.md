@@ -58,7 +58,7 @@ Start by including the base set of variables:
 
 <!-- Include index-vars.css for all components you need -->
 <link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/components/icon/index-vars.css">
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.10.0/dist/components/button/index-vars.css">
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/components/button/index-vars.css">
 ```
 
 Then, make sure you've included the relevant classes to choose which scale and colorstop you want:
