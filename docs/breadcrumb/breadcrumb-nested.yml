@@ -52,7 +52,7 @@ components:
 
   nested:
     status: Verified
-    description: Nested root
+    description: Nested
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -86,7 +86,7 @@ components:
 
   nested-root-visible:
     status: Verified
-    description: Nested root
+    description: Nested (root visible)
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
