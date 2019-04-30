@@ -126,7 +126,10 @@
 
       font-size: var(--spectrum-breadcrumb-multiline-title-text-size);
       font-weight: var(--spectrum-breadcrumb-multiline-title-text-font-weight);
-      line-height: var(--spectrum-breadcrumb-multiline-title-text-line-height);
+
+      /* Nate: DNA value is wrong, 1.3 matches design */
+      line-height: 1.3;
+      /*line-height: var(--spectrum-breadcrumb-multiline-title-text-line-height);*/
 
       .spectrum-Breadcrumbs-itemLink {
         height: auto;
