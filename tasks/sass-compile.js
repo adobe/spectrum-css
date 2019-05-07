@@ -13,9 +13,12 @@ var gulp = require('gulp');
 var dartSass = require('gulp-dart-sass');
 var del = require('del');
 
-gulp.task('sass-compiling-validate', function () {
+gulp.task('sass-compiling-validate', function (done) {
   return gulp.src(['dist/**/*.css', '!dist/docs/**/*.css'])
-    .pipe(dartSass().on('error', dartSass.logError))
+    .pipe(dartSass().on('error', function(error) {
+      dartSass.logError(error);
+      done(error);
+    }))
     .pipe(gulp.dest('dist/css'));
 });
 
