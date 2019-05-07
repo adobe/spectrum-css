@@ -2,14 +2,20 @@
 
 The goal of this project is to provide a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
+1. [Show me a demo](#show-me-a-demo)
 1. [Where is the JavaScript?](#where-is-the-javascript)
 1. [Organization](#organization)
-2. [Using Spectrum CSS](#using-spectrum-css)
+1. [Using Spectrum CSS](#using-spectrum-css)
+    1. [CSS Custom Properties Strategy](#css-custom-properties-strategy)
     1. [Multi-stop Strategy](#multi-stop-strategy)
-    2. [Single-stop Strategy](#single-stop-strategy)
-3. [Building](#building)
-4. [Testing](#testing-with-the-visual-regression-tools)
-5. [Contributing](#contributing)
+    1. [Single-stop Strategy](#single-stop-strategy)
+1. [Building](#building)
+1. [Testing](#testing-with-the-visual-regression-tools)
+1. [Contributing](#contributing)
+
+## Show me a demo
+
+Check out [the documentation here](http://opensource.adobe.com/spectrum-css/), which shows every Spectrum CSS component and all of its variations on the same page.
 
 ## Where is the JavaScript?
 
@@ -17,7 +23,9 @@ We have found that JavaScript is where a framework or library quickly becomes op
 
 ## Organization
 
-The Spectrum CSS project can build both a 'multi-stop' and 'single-stop' version of the CSS. This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
+Spectrum CSS builds output that uses custom properties so it can support multiple scales (medium, large) and color stops (light, dark, etc) with the same base CSS. This version of the output should be used, unless you need to support older browsers (IE 11).
+
+It also builds 'multi-stop' and 'single-stop' versions of the CSS for older browsers (IE 11). This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
 
 Spectrum CSS organizes the CSS source files in the `src` folder. Each Spectrum element has it's own folder. That folder contains an `index.css` file for the basic structual CSS for all variants of an element. There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
 
@@ -25,17 +33,46 @@ The CSS source files also contain [Topdoc](https://github.com/Topdoc/topdoc) com
 
 A successful build will create a `dist` folder. The `dist/docs` folder is where the Topdoc output and related template files will end up.
 
-### Updating internal dependencies
-
-*Internal-to-Adobe only - for now*
-
-Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by Spectrum CSS. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
-
 ## Using Spectrum CSS
 
-Spectrum CSS can be consumed as whole or in part with two distinct methods of applying colorstops.
+Spectrum CSS can be consumed as whole or in part with three distinct methods of applying colorstops.
 
-To install Spectrum CSS, run `npm install @adobe/spectrum-css` from your project's root directory. You will be able to find everything you need for both strategies in the `node_modules` folder.
+To install Spectrum CSS, run `npm install @adobe/spectrum-css` from your project's root directory. You will be able to find everything you need for both strategies in the `node_modules/@adobe/spectrum-css/` folder.
+
+### CSS Custom Properties Strategy
+
+Spectrum CSS includes build output that uses CSS custom properties to change themes and scales. This is the preferred approach due to its simplicity and smaller file size, but it does not work in IE 11.
+
+Start by including the base set of variables:
+
+```html
+<!-- Include global variables first -->
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-global.css">
+
+<!-- Include only the scales and colorstops your application needs, be sure to use the *-unique.css files -->
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-medium-unique.css">
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-large-unique.css">
+
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-light-unique.css">
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-dark-unique.css">
+
+<!-- Include index-vars.css for all components you need -->
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/components/icon/index-vars.css">
+<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/components/button/index-vars.css">
+```
+
+Then, make sure you've included the relevant classes to choose which scale and colorstop you want:
+
+```html
+<body class="spectrum spectrum--medium spectrum--light">
+```
+
+Then you can use components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
+
+One advantage of this approach is you can infinitely nest different color stops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
+
+Additionally, you can override variables and customize Spectrum CSS' look and feel by re-defining the custom properties in context, [like so](https://codepen.io/lazd/pen/ROvOPO). See the source in `index-vars.css` to determine which custom properties you can override.
+
 
 ### Multi-stop Strategy
 
@@ -128,7 +165,7 @@ Note that the Spectrum CSS UI icons must change as well, see below for a full ex
 
 ### Importing Icons
 
-To get icons, you'll need to use the `loadIcons()` function. This function lives in the `icons/loadIcons.js` file and has the following signature:
+To get icons, you'll need to use the `loadIcons()` function. This function lives in the [`loadicons` project](https://www.npmjs.com/package/loadicons) as well as `icons/loadIcons.js` and has the following signature:
 
 ```js
 loadIcons(svgURL {String}, callback {Function});
@@ -140,13 +177,13 @@ The callback function has the following signature:
 function(error {Error}, svg {SVGElement})
 ```
 
-First, you'll need the Spectrum CSS UI icons, which come in two flavors:
+First, you'll need the Spectrum CSS UI icons, which come in multiple flavors:
 
 * `icons/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs
 * `icons/spectrum-css-icons-medium.svg` - Medium icons only, for desktop display
 * `icons/spectrum-css-icons-large.svg` - Large icons only, for mobile display
 
-Import the icon set for the scale you're using:
+For most use cases, you'll want to use `spectrum-css-icons.svg` so you have support for both scales:
 
 ```js
 loadIcons('icons/spectrum-css-icons.svg');
@@ -162,47 +199,6 @@ loadIcons('icons/spectrum-icons.svg');
 
 You can then use the icons in your app. Visit the [Spectrum CSS workflow icon list](http://opensource.adobe.com/spectrum-css/icons/) and click on any icon to get the markup.
 
-### Swapping out icons sets for scaling
-
-If you're using different scales, you'll need to import the proper icon set to match. Note that both of the files have the same SVG IDs, so for a responsive site using `index-diff.css` for each component, you'll need to remove the SVG element from the DOM when switching scales:
-
-```js
-var mediumIcons;
-var largeIcons;
-
-// Call when you switch scale
-function switchScale(scale) {
-  var otherScale = scale === 'large' ? 'medium' : 'large';
-
-  // Remove the old icons from the DOM
-  try {
-    document.head.removeChild(scale === 'large' ? mediumIcons : largeIcons);
-  }
-  catch (err) {
-    console.error(err);
-  }
-
-  // Add the new icons
-  document.head.appendChild(scale === 'large' ? largeIcons : mediumIcons);
-
-  // Switch the outer class if you're using index-diff.css to support both medium and large
-  document.documentElement.classList.toggle('spectrum--' + scale, true);
-  document.documentElement.classList.toggle('spectrum--' + otherScale, false);
-}
-
-// Load medium icons
-loadIcons('../icons/spectrum-css-icons-medium.svg', function(err, svg) {
-  mediumIcons = svg;
-});
-
-// Load large icons
-loadIcons('../icons/spectrum-css-icons-large.svg', function(err, svg) {
-  largeIcons = svg;
-
-  // Immediately remove from the DOM -- it will be added back when we switch scale
-  document.head.removeChild(largeIcons);
-});
-```
 
 ### Lang support
 
@@ -285,6 +281,12 @@ To note: the JenkinsCI server will almost always have a green check mark in the 
 Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
+
+### Updating internal dependencies
+
+*Internal-to-Adobe only - for now*
+
+Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by Spectrum CSS. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
 
 ## Releasing
 
