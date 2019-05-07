@@ -10,12 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var dartSass = require('gulp-dart-sass');
 var del = require('del');
 
 gulp.task('sass-compiling-validate', function () {
   return gulp.src(['dist/**/*.css', '!dist/docs/**/*.css'])
-    .pipe(sass().on('error', sass.logError))
+    .pipe(dartSass().on('error', dartSass.logError))
     .pipe(gulp.dest('dist/css'));
 });
 
