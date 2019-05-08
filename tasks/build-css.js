@@ -131,6 +131,7 @@ function getProcessors(keepVars = false) {
 }
 
 var processors = getProcessors();
+var varsProcessors = getProcessors(true);
 
 /**
   Builds individual components (dimensions only)
@@ -373,17 +374,25 @@ gulp.task('build-css:concat-core-diff', function() {
  */
 gulp.task('build-css:individual-components-vars', function() {
   function buildComponent(component) {
-    return gulp.src(`src/${component}/{index,skin}.css`)
+    return gulp.src([
+      `src/${component}/index.css`,
+      `src/${component}/skin.css`
+    ], {
+      allowEmpty: true // Allow missing skin.css
+    })
       .pipe(plumb())
       .pipe(concat('index-vars.css'))
-      .pipe(postcss(getProcessors(true)))
+      .pipe(postcss(varsProcessors))
       .pipe(rename(function(path) {
         path.dirname += '/' + component;
       }))
       .pipe(gulp.dest('dist/components'));
   }
 
-  return merge.apply(this, fs.readdirSync('src').map(buildComponent));
+  return merge.apply(merge, fs.readdirSync('src').filter(name => {
+    // Skip anything that's not a component directory
+    return fs.statSync(`src/${name}`).isDirectory();
+  }).map(buildComponent));
 });
 
 /**
@@ -423,9 +432,9 @@ gulp.task('build-css',
     ),
     gulp.parallel(
       'build-css:concat-core-diff',
-      'build-css:individual-components-vars',
       'build-css:unique-vars'
-    )
+    ),
+    'build-css:individual-components-vars'
   )
 );
 
