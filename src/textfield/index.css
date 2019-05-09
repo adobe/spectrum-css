@@ -54,9 +54,7 @@
   /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
   /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
   -moz-appearance: textfield;
-
-  /* Normalize is adding a specific selector that resets this, so be important */
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
 
   &::placeholder {
     font-weight: var(--spectrum-textfield-placeholder-text-font-weight);

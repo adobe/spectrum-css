@@ -1,3 +1,14 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var postcssReal = require('postcss');
@@ -95,6 +106,7 @@ function getProcessors(keepVars = false) {
     require('./lib/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
     keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
+    keepVars ? notnested({ replace: '.spectrum' }) : null,
     require('postcss-svg'),
     require('postcss-functions')({
       functions: {
@@ -120,6 +132,7 @@ function getProcessors(keepVars = false) {
 }
 
 var processors = getProcessors();
+var varsProcessors = getProcessors(true);
 
 /**
   Builds individual components (dimensions only)
@@ -362,17 +375,25 @@ gulp.task('build-css:concat-core-diff', function() {
  */
 gulp.task('build-css:individual-components-vars', function() {
   function buildComponent(component) {
-    return gulp.src(`src/${component}/{index,skin}.css`)
+    return gulp.src([
+      `src/${component}/index.css`,
+      `src/${component}/skin.css`
+    ], {
+      allowEmpty: true // Allow missing skin.css
+    })
       .pipe(plumb())
       .pipe(concat('index-vars.css'))
-      .pipe(postcss(getProcessors(true)))
+      .pipe(postcss(varsProcessors))
       .pipe(rename(function(path) {
         path.dirname += '/' + component;
       }))
       .pipe(gulp.dest('dist/components'));
   }
 
-  return merge.apply(this, fs.readdirSync('src').map(buildComponent));
+  return merge.apply(merge, fs.readdirSync('src').filter(name => {
+    // Skip anything that's not a component directory
+    return fs.statSync(`src/${name}`).isDirectory();
+  }).map(buildComponent));
 });
 
 /**
@@ -412,9 +433,9 @@ gulp.task('build-css',
     ),
     gulp.parallel(
       'build-css:concat-core-diff',
-      'build-css:individual-components-vars',
       'build-css:unique-vars'
-    )
+    ),
+    'build-css:individual-components-vars'
   )
 );
 

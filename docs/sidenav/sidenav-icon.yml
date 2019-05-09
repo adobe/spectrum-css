@@ -1,0 +1,34 @@
+---
+id: sidenav
+name: SideNav - Icon
+status: Verified
+markup: |
+  <nav>
+    <ul class="spectrum-SideNav">
+      <li class="spectrum-SideNav-item is-selected">
+        <a href="#" class="spectrum-SideNav-itemLink" aria-current="page">
+          <svg class="spectrum-Icon spectrum-UIIcon-Star spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Star" />
+          </svg>
+          Section Title 1
+        </a>
+      </li>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">
+          <svg class="spectrum-Icon spectrum-UIIcon-Star spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Star" />
+          </svg>
+          Section Title 2
+        </a>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">
+          <svg class="spectrum-Icon spectrum-UIIcon-Star spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Star" />
+          </svg>
+          Section Title 3
+        </a>
+      </li>
+    </ul>
+  </nav>
