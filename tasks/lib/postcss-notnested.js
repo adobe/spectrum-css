@@ -15,7 +15,7 @@ module.exports = postcss.plugin('postcss-notnested', function (opts) {
   opts = opts || {};
 
   // Match ampersands at the start of a given selector
-  var re = /^&.*/;
+  var re = /^&/;
 
   return function (root, result) {
     root.walkRules((rule, ruleIndex) => {
@@ -25,6 +25,11 @@ module.exports = postcss.plugin('postcss-notnested', function (opts) {
           var selectors = rule.selectors.map(selector => {
             if (re.test(selector)) {
               replaced = true;
+              // Handle special case where the replacement selector === the existing selector
+              if (selector.replace(re, '') === opts.replace) {
+                return opts.replace;
+              }
+
               return selector.replace(re, opts.replace);
             }
             else {
@@ -33,6 +38,11 @@ module.exports = postcss.plugin('postcss-notnested', function (opts) {
           });
 
           if (replaced) {
+            // De-dupe selectors
+            selectors = selectors.filter((selector, index) => {
+              return selectors.indexOf(selector) === index;
+            });
+
             rule.selectors = selectors;
           }
         }
