@@ -168,8 +168,8 @@ markup: |
         <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Jake</div>
         <div class="spectrum-Table-cell" style="flex: 1" role="gridcell">Row Item Jake</div>
       </div>
-      <div class="spectrum-ActionBar-container spectrum-ActionBar-sticky">
-        <div class="spectrum-Popover is-open spectrum-ActionBar">
+      <div class="spectrum-ActionBar spectrum-ActionBar--sticky">
+        <div class="spectrum-Popover is-open spectrum-ActionBar-popover">
           <label class="spectrum-Checkbox is-indeterminate">
             <input type="checkbox" class="spectrum-Checkbox-input">
             <span class="spectrum-Checkbox-box">

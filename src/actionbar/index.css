@@ -13,7 +13,36 @@
 /* topdoc
 {{ actionbar/actionbar.yml }}
 */
+
+
+/* topdoc
+{{ actionbar/table-actionbar.yml }}
+*/
 .spectrum-ActionBar {
+  margin: 0 var(--spectrum-actionbar-margin-x);
+
+  bottom: 0;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+
+  .spectrum-ActionBar-popover {
+    &.is-open {
+       transform: translateY(calc(-1*(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-offset-y))));
+    }
+  }
+}
+
+.spectrum-ActionBar--sticky {
+   position: sticky;
+}
+
+.spectrum-ActionBar--fixed {
+   position: fixed;
+}
+
+.spectrum-ActionBar-popover {
   align-items: center;
   flex-direction: initial;
   justify-content: space-between;
@@ -23,31 +52,4 @@
   min-width: var(--spectrum-actionbar-min-width);
   max-width: var(--spectrum-actionbar-max-width);
   width: 100%;
-}
-
-/* topdoc
-{{ actionbar/table-actionbar.yml }}
-*/
-.spectrum-ActionBar-container {
-  margin: 0 var(--spectrum-actionbar-margin-x);
-
-  bottom: 0;
-  z-index: 1;
-
-  display: flex;
-  justify-content: center;
-
-  .spectrum-ActionBar {
-    &.is-open {
-       transform: translateY(calc(-1*(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-offset-y))));
-    }
-  }
-
-  &.spectrum-ActionBar-sticky {
-    position: sticky;
-  }
-
-  &.spectrum-ActionBar-fixed {
-    position: fixed;
-  }
 }
