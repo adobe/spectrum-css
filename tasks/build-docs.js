@@ -16,6 +16,7 @@ var fs = require('fs');
 var path = require('path');
 var rename = require('gulp-rename');
 var plumb = require('./lib/plumb.js');
+var concat = require('gulp-concat');
 
 gulp.task('build-docs:topdoc', function(cb) {
   var exePath = path.resolve('node_modules', '.bin', 'topdoc');
@@ -29,8 +30,9 @@ gulp.task('build-docs:topdoc', function(cb) {
 
 gulp.task('build-docs:inject-topdoc', function() {
   return gulp.src([
-    'dist/standalone/spectrum-light.css'
+    'src/**/*.css'
   ])
+    .pipe(concat('spectrum-css.css'))
     .pipe(plumb())
     .pipe(replace(/\{\{\s*(.*?)\s*\}}/g, function(match, docPath) {
       var filePath = path.resolve('docs', docPath);
