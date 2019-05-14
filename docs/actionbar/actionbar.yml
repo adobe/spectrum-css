@@ -1,10 +1,10 @@
 ---
 name: Action Bar
-description: Explorations of a floating action bar appearing in selection mode.
+description: Floating action bar that appears in selection mode.
 markup: |
-  <div style="position: relative; margin-top: 64px;">
-    <div class="spectrum-ActionBar">
-      <div class="spectrum-Popover is-open spectrum-ActionBar-popover">
+  <div style="position: relative;">
+    <div class="spectrum-ActionBar is-open">
+      <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
         <label class="spectrum-Checkbox is-indeterminate">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
           <span class="spectrum-Checkbox-box">
@@ -32,11 +32,9 @@ markup: |
     </div>
   </div>
 
-  <br><br>
-
-  <div style="position: relative; margin-top: 64px;">
-    <div class="spectrum-ActionBar">
-      <div class="spectrum-Popover is-open spectrum-ActionBar-popover">
+  <div style="position: relative;">
+    <div class="spectrum-ActionBar is-open">
+      <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
         <label class="spectrum-Checkbox is-indeterminate">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
           <span class="spectrum-Checkbox-box">
@@ -73,11 +71,9 @@ markup: |
     </div>
   </div>
 
-  <br><br>
-
-  <div style="position: relative; margin-top: 64px;">
-    <div class="spectrum-ActionBar">
-      <div class="spectrum-Popover is-open spectrum-ActionBar-popover">
+  <div style="position: relative;">
+    <div class="spectrum-ActionBar is-open">
+      <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
         <label class="spectrum-Checkbox is-indeterminate">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
           <span class="spectrum-Checkbox-box">
@@ -111,11 +107,9 @@ markup: |
     </div>
   </div>
 
-  <br><br>
-
-  <div style="position: relative; margin-top: 64px; width: 280px;">
-    <div class="spectrum-ActionBar">
-      <div class="spectrum-Popover is-open spectrum-ActionBar-popover">
+  <div style="position: relative; width: 312px;">
+    <div class="spectrum-ActionBar is-open">
+      <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
         <label class="spectrum-Checkbox is-indeterminate">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
           <span class="spectrum-Checkbox-box">
