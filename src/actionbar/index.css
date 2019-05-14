@@ -7,35 +7,57 @@
   --spectrum-actionbar-offset-y: var(--spectrum-global-dimension-size-200);
 
   --spectrum-actionbar-min-width: 280px;
-  --spectrum-actionbar-max-width: 1280px;
+  --spectrum-actionbar-max-width: 960px;
 }
 
 /* topdoc
 {{ actionbar/actionbar.yml }}
 */
 
-
 /* topdoc
 {{ actionbar/table-actionbar.yml }}
 */
 .spectrum-ActionBar {
-  margin: 0 var(--spectrum-actionbar-margin-x);
+  display: flex;
+  justify-content: center;
 
   bottom: 0;
   z-index: 1;
 
-  display: flex;
-  justify-content: center;
+  /* Account for fixed width */
+  box-sizing: border-box;
 
-  .spectrum-ActionBar-popover {
-    &.is-open {
-       transform: translateY(calc(-1*(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-offset-y))));
-    }
+  /* Restrict the width of the child popover */
+  padding: 0 var(--spectrum-actionbar-margin-x);
+
+  /* Take up no space when not open */
+  height: 0;
+  opacity: 0;
+
+  /* Clip anything outside of us, whether we're open or not. This makes the animation smooth */
+  overflow: hidden;
+
+  /* Let clicks in blank space fall through */
+  pointer-events: none;
+
+  transition: height var(--spectrum-global-animation-duration-100) ease-in-out,
+              opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  /*
+    Toggle .is-open to show/hide the ActionBar.
+    Make sure the Popover has .is-open before you do this, and only remove .is-open from the popover once the animation is complete (if at all)
+  */
+  &.is-open {
+    /* Take up space in the table only when open */
+    height: calc(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-margin-x) * 2);
+    opacity: 1;
   }
 }
 
 .spectrum-ActionBar--sticky {
-   position: sticky;
+  left: 0;
+  right: 0;
+  position: sticky;
 }
 
 .spectrum-ActionBar--fixed {
@@ -43,13 +65,21 @@
 }
 
 .spectrum-ActionBar-popover {
-  align-items: center;
-  flex-direction: initial;
-  justify-content: space-between;
+  /* Be relative so our width can be restricted */
+  position: relative;
 
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
   height: var(--spectrum-actionbar-height);
-  padding: 0 var(--spectrum-actionbar-padding-x);
   min-width: var(--spectrum-actionbar-min-width);
   max-width: var(--spectrum-actionbar-max-width);
-  width: 100%;
+  padding: 0 var(--spectrum-actionbar-padding-x);
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Let clicks do their thing */
+  pointer-events: auto;
 }
