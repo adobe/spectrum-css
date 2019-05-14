@@ -164,9 +164,8 @@ a.spectrum-ActionButton {
 
 .spectrum-ActionButton-label,
 .spectrum-Button-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-self: center;
+  justify-self: center;
 
   /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
   width: 100%;
