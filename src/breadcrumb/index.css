@@ -62,10 +62,6 @@
   padding: 0 var(--spectrum-breadcrumb-item-padding-x);
   height: var(--spectrum-breadcrumb-list-height);
 
-  /* Nate: Adding top padding breaks design for multiline */
-  /*padding-top: var(--spectrum-breadcrumb-multiline-list-padding-top);*/
-
-  /* Nate: Including margin-left makes things not match the design */
   margin-right: var(--spectrum-breadcrumb-item-margin-right);
 
   border-radius: var(--spectrum-breadcrumb-item-border-radius);
