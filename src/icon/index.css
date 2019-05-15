@@ -211,9 +211,8 @@
   height: var(--spectrum-icon-doublegripper-height);
 }
 .spectrum-UIIcon-FolderBreadcrumb {
-  /* Hacky: Use star vars for now */
-  width: var(--spectrum-icon-star-width);
-  height: var(--spectrum-icon-star-height);
+  width: var(--spectrum-icon-folderbreadcrumb-width);
+  height: var(--spectrum-icon-folderbreadcrumb-height);
 }
 .spectrum-UIIcon-HelpMedium {
   width: var(--spectrum-icon-info-medium-width);

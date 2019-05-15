@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.13.0 */
+/* generated from dna-version: 5.15.0 */
 :root {
   --spectrum-global-color-celery-400: rgb(61, 167, 78);
   --spectrum-global-color-celery-500: rgb(55, 153, 71);
@@ -103,6 +103,7 @@
   --spectrum-alias-track-color-disabled: rgb(202, 202, 202);
   --spectrum-alias-track-color-over-background: rgba(255,255,255,0.2);
   --spectrum-alias-icon-color: rgb(97, 97, 97);
+  --spectrum-alias-icon-color-over-background: rgb(255, 255, 255);
   --spectrum-alias-icon-color-hover: rgb(25, 25, 25);
   --spectrum-alias-icon-color-down: rgb(25, 25, 25);
   --spectrum-alias-icon-color-focus: rgb(25, 25, 25);
@@ -2513,6 +2514,52 @@
   --spectrum-tool-border-color-selected-disabled: rgba(0, 0, 0, 0);
   --spectrum-tool-icon-color-selected-disabled: rgb(180, 180, 180);
   --spectrum-tool-hold-icon-color-selected-disabled: rgb(180, 180, 180);
+  --spectrum-tool-high-emphasis-text-color: rgb(60, 60, 60);
+  --spectrum-tool-high-emphasis-icon-color: rgb(97, 97, 97);
+  --spectrum-tool-high-emphasis-background-color: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-border-color: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-hold-icon-color: rgb(97, 97, 97);
+  --spectrum-tool-high-emphasis-text-color-hover: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-icon-color-hover: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-background-color-hover: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-border-color-hover: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-hold-icon-color-hover: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-text-color-down: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-icon-color-down: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-background-color-down: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-border-color-down: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-hold-icon-color-down: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-text-color-key-focus: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-icon-color-key-focus: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-border-color-key-focus: rgb(20, 115, 230);
+  --spectrum-tool-high-emphasis-background-color-key-focus: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-hold-icon-color-key-focus: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-text-color-mouse-focus: rgb(25, 25, 25);
+  --spectrum-tool-high-emphasis-text-color-disabled: rgb(160, 160, 160);
+  --spectrum-tool-high-emphasis-icon-color-disabled: rgb(180, 180, 180);
+  --spectrum-tool-high-emphasis-background-color-disabled: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-border-color-disabled: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-hold-icon-color-disabled: rgb(180, 180, 180);
+  --spectrum-tool-high-emphasis-icon-color-selected: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-hold-icon-color-selected: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-background-color-selected: rgb(20, 115, 230);
+  --spectrum-tool-high-emphasis-border-color-selected: rgb(20, 115, 230);
+  --spectrum-tool-high-emphasis-icon-color-selected-hover: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-hold-icon-color-selected-hover: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-background-color-selected-hover: rgb(13, 102, 208);
+  --spectrum-tool-high-emphasis-border-color-selected-hover: rgb(13, 102, 208);
+  --spectrum-tool-high-emphasis-icon-color-selected-down: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-hold-icon-color-selected-down: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-background-color-selected-down: rgb(13, 102, 208);
+  --spectrum-tool-high-emphasis-border-color-selected-down: rgb(13, 102, 208);
+  --spectrum-tool-high-emphasis-icon-color-selected-key-focus: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-hold-icon-color-selected-key-focus: rgb(255, 255, 255);
+  --spectrum-tool-high-emphasis-background-color-selected-key-focus: rgb(13, 102, 208);
+  --spectrum-tool-high-emphasis-border-color-selected-key-focus: rgb(20, 115, 230);
+  --spectrum-tool-high-emphasis-background-color-selected-disabled: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-border-color-selected-disabled: rgba(0, 0, 0, 0);
+  --spectrum-tool-high-emphasis-icon-color-selected-disabled: rgb(180, 180, 180);
+  --spectrum-tool-high-emphasis-hold-icon-color-selected-disabled: rgb(180, 180, 180);
   --spectrum-tooltip-text-color: rgb(255, 255, 255);
   --spectrum-tooltip-icon-color: rgb(255, 255, 255);
   --spectrum-tooltip-background-color: rgb(116, 116, 116);

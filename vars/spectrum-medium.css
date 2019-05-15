@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.13.0 */
+/* generated from dna-version: 5.15.0 */
 :root {
   --spectrum-global-dimension-scale-factor: 1;
   --spectrum-global-dimension-size-0: 0px;
@@ -1405,6 +1405,8 @@
   --spectrum-icon-dash-small-height: 10px;
   --spectrum-icon-doublegripper-width: 16px;
   --spectrum-icon-doublegripper-height: 4px;
+  --spectrum-icon-folderbreadcrumb-width: 18px;
+  --spectrum-icon-folderbreadcrumb-height: 18px;
   --spectrum-icon-info-medium-width: 18px;
   --spectrum-icon-info-medium-height: 18px;
   --spectrum-icon-info-small-width: 14px;
@@ -2814,6 +2816,33 @@
   --spectrum-tool-border-size-key-focus: 2px;
   --spectrum-tool-border-size-disabled: 1px;
   --spectrum-tool-border-size-selected-key-focus: 2px;
+  --spectrum-tool-high-emphasis-text-font-family: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-tool-high-emphasis-text-font-style: normal;
+  --spectrum-tool-high-emphasis-text-font-weight: 400;
+  --spectrum-tool-high-emphasis-text-line-height: 1.5;
+  --spectrum-tool-high-emphasis-text-letter-spacing: 0;
+  --spectrum-tool-high-emphasis-text-transform: none;
+  --spectrum-tool-high-emphasis-text-size: 14px;
+  --spectrum-tool-high-emphasis-icon-size: 18px;
+  --spectrum-tool-high-emphasis-text-baseline: 12px;
+  --spectrum-tool-high-emphasis-height: 32px;
+  --spectrum-tool-high-emphasis-min-width: 32px;
+  --spectrum-tool-high-emphasis-border-radius: 4px;
+  --spectrum-tool-high-emphasis-text-padding-x: 12px;
+  --spectrum-tool-high-emphasis-icon-padding-x: 7px;
+  --spectrum-tool-high-emphasis-icon-padding-y: 7px;
+  --spectrum-tool-high-emphasis-hold-icon-padding-bottom: 3px;
+  --spectrum-tool-high-emphasis-hold-icon-padding-right: 3px;
+  --spectrum-tool-high-emphasis-hold-icon-size: 5px;
+  --spectrum-tool-high-emphasis-touch-hit-x: 8px;
+  --spectrum-tool-high-emphasis-touch-hit-y: 8px;
+  --spectrum-tool-high-emphasis-border-size: 1px;
+  --spectrum-tool-high-emphasis-border-size-hover: 1px;
+  --spectrum-tool-high-emphasis-border-size-down: 1px;
+  --spectrum-tool-high-emphasis-border-size-key-focus: 2px;
+  --spectrum-tool-high-emphasis-border-size-disabled: 1px;
+  --spectrum-tool-high-emphasis-border-size-selected-key-focus: 2px;
+  --spectrum-tool-high-emphasis-border-offset-selected-key-focus: 2px;
   --spectrum-toolgroup-button-gap-y: 8px;
   --spectrum-toolgroup-button-gap-x: 8px;
   --spectrum-toolgroup-icon-button-gap-y: 8px;
