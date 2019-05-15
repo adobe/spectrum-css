@@ -30,7 +30,8 @@ gulp.task('build-docs:topdoc', function(cb) {
 
 gulp.task('build-docs:inject-topdoc', function() {
   return gulp.src([
-    'src/**/*.css'
+    'src/components.css',
+    'src/component-skins.css'
   ])
     .pipe(concat('spectrum-css.css'))
     .pipe(plumb())
