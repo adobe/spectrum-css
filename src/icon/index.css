@@ -222,6 +222,10 @@ governing permissions and limitations under the License.
   width: var(--spectrum-icon-doublegripper-width);
   height: var(--spectrum-icon-doublegripper-height);
 }
+.spectrum-UIIcon-FolderBreadcrumb {
+  width: var(--spectrum-icon-folderbreadcrumb-width);
+  height: var(--spectrum-icon-folderbreadcrumb-height);
+}
 .spectrum-UIIcon-HelpMedium {
   width: var(--spectrum-icon-info-medium-width);
   height: var(--spectrum-icon-info-medium-height);

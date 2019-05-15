@@ -13,13 +13,23 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs-item {
   color: var(--spectrum-breadcrumb-text-color);
 
+  &.is-dragged {
+    .spectrum-Breadcrumbs-itemLink {
+      color: var(--spectrum-breadcrumb-item-text-color-drop);
+      background-color: var(--spectrum-breadcrumb-item-background-color-drop);
+
+      &:before {
+        border-color: var(--spectrum-breadcrumb-item-border-color-drop);
+      }
+    }
+  }
+
   .spectrum-Breadcrumbs-itemSeparator {
     color: var(--spectrum-breadcrumb-ui-icon-color);
   }
 
   .spectrum-Breadcrumbs-itemLink {
     color: inherit;
-    text-decoration: none;
 
     &:hover {
       color: var(--spectrum-breadcrumb-text-color-hover);
@@ -27,8 +37,10 @@ governing permissions and limitations under the License.
 
     &:focus-ring {
       color: var(--spectrum-breadcrumb-text-color-key-focus);
-      outline: 0;
-      border-bottom: 2px solid var(--spectrum-breadcrumb-text-color-key-focus);
+
+      &:before {
+        border-color: var(--spectrum-breadcrumb-item-border-color-key-focus);
+      }
     }
 
     &:active {
@@ -59,8 +71,4 @@ governing permissions and limitations under the License.
 
 /* topdoc
 {{ breadcrumb/breadcrumb.yml }}
-*/
-
-/* topdoc
-{{ breadcrumb/breadcrumb-title.yml }}
 */
