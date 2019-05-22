@@ -98,7 +98,7 @@ governing permissions and limitations under the License.
       border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
     }
   }
-  /** Datetime Range **/
+  /* Datetime Range */
   &.spectrum-Datepicker--datetimeRange {
     /* Inputs */
     .spectrum-InputGroup-field {

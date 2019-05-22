@@ -118,6 +118,7 @@ function getProcessors(keepVars = false) {
         }
       }
     }),
+    require('./lib/postcss-strip-comments')({ preserveTopdoc: false }),
     require('postcss-focus-ring'),
     require('autoprefixer')({
       'browsers': [
