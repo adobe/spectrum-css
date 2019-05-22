@@ -3,14 +3,16 @@ description: A study of truncation across a number of components
 components:
   actionbutton:
     name: Action Button (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <button class="spectrum-ActionButton" style="width: 128px">
         <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
       </button>
   actionbutton-icon:
     name: Action Button with Icon (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <button class="spectrum-ActionButton" style="width: 128px">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Settings">
@@ -20,14 +22,16 @@ components:
       </button>
   actionbutton-quiet:
     name: Action Button (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet" style="width: 128px">
         <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
       </button>
   actionbutton-quiet-icon:
     name: Action Button with Icon (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet" style="width: 128px">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Settings">
@@ -38,7 +42,8 @@ components:
 
   quickactions:
     name: Quick Actions (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <div class="spectrum-QuickActions-overlay" style="padding: 40px;">
         <div class="spectrum-QuickActions is-open" style="width: 150px;">
@@ -55,7 +60,8 @@ components:
 
   tag:
     name: Tag (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <div class="spectrum-Tags-item" role="listitem" tabindex="0" style="width: 168px;">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="GraphPie">
@@ -66,7 +72,8 @@ components:
 
   tabs-too-many:
     name: Tabs (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 212px">
           <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
@@ -80,9 +87,10 @@ components:
         <div class="spectrum-Tabs-selectionIndicator" style="left: 8px; right: 8px;"></div>
       </div>
 
-   combobox:
+  combobox:
     name: Combobox (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <div class="spectrum-InputGroup">
         <input type="text" placeholder="Type here" name="field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="spectrum-Textfield spectrum-InputGroup-field">
@@ -93,9 +101,10 @@ components:
         </button>
       </div>
 
-   dropdown:
+  dropdown:
     name: Dropdown (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <div class="spectrum-Dropdown" style="width: 240px;">
         <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
@@ -106,22 +115,9 @@ components:
         </button>
       </div>
 
-   dropdown:
-    name: Dropdown (truncated)
-    ignoreDNA: true
-    markup: |
-      <div class="spectrum-Dropdown" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-          <span class="spectrum-Dropdown-label is-placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
-          </svg>
-        </button>
-      </div>
-
-   textfield:
+  textfield:
     name: Textfield (truncated)
-    ignoreDNA: true
+    status: null
+    description: null
     markup: |
       <input type="text" placeholder="Enter your name" name="field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="spectrum-Textfield">
-
