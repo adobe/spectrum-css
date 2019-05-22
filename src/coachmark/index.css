@@ -62,9 +62,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CoachMarkPopover-step {
+  align-self: start;
+
   font-size: var(--spectrum-coachmark-step-text-size);
   font-weight: var(--spectrum-coachmark-step-text-font-weight);
   line-height: var(--spectrum-coachmark-step-text-line-height);
+  white-space: nowrap;
 }
 
 .spectrum-CoachMarkPopover-content {

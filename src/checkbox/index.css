@@ -12,13 +12,18 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
+:root {
+  /* Hardcoded for wrapping study */
+  --spectrum-checkbox-label-margin-top: var(--spectrum-global-dimension-size-75);
+}
+
 .spectrum-Checkbox {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 
   position: relative;
 
-  height: var(--spectrum-checkbox-height);
+  min-height: var(--spectrum-checkbox-height);
   max-width: 100%;
 
   margin-right: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
@@ -94,10 +99,7 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-checkbox-text-font-weight);
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 
-  white-space: nowrap;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-top: var(--spectrum-checkbox-label-margin-top);
 }
 
 .spectrum-Checkbox-box {
@@ -105,6 +107,9 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   width: var(--spectrum-checkbox-box-size);
   height: var(--spectrum-checkbox-box-size);
+
+  /* Fix vertical alignment when not wrapping since we're flex-start */
+  margin: calc((var(--spectrum-checkbox-height) - var(--spectrum-checkbox-box-size)) / 2) 0;
 
   flex-grow: 0;
   flex-shrink: 0;
