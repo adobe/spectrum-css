@@ -34,9 +34,7 @@ directory: <%= file.dirname %>
 filename: <%= file.stem %>
 */`))
     .pipe(gulp.dest('temp/topdoc/'))
-    .pipe(gulpExec(`${topdoc} -d temp/examples -t ./topdoc <%= file.path %> -a false`))
-    .pipe(gulpExec.reporter())
-    .pipe(gulpExec('mkdir -p dist/docs && mv temp/examples/index.html dist/docs/<%= file.stem %>.html'))
+    .pipe(gulpExec(`${topdoc} -d temp/examples/<%= file.stem %> -t ./topdoc <%= file.path %> -a false && mv temp/examples/<%= file.stem %>/index.html dist/docs/<%= file.stem %>.html`))
     .pipe(gulpExec.reporter());
 });
 
