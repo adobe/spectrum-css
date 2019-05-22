@@ -9,6 +9,7 @@ components:
       <button class="spectrum-ActionButton" style="width: 128px">
         <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
       </button>
+
   actionbutton-icon:
     name: Action Button with Icon (truncated)
     status: null
@@ -20,6 +21,7 @@ components:
         </svg>
         <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
       </button>
+
   actionbutton-quiet:
     name: Action Button (truncated)
     status: null
@@ -28,6 +30,7 @@ components:
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet" style="width: 128px">
         <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
       </button>
+
   actionbutton-quiet-icon:
     name: Action Button with Icon (truncated)
     status: null
