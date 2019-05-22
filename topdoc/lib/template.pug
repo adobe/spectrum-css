@@ -19,8 +19,20 @@ html.spectrum--medium
     script(src='../icons/loadIcons.js')
     script(src='js/docs.js')
     script(src='js/vendor/focus-ring-polyfill.js')
+    script(src='js/vendor/typekit.js')
 
   body.spectrum.spectrum--light
+    div.spectrum.spectrum--light#loader
+      div.spectrum-CircleLoader.spectrum-CircleLoader--indeterminate.spectrum-CircleLoader--large
+        div.spectrum-CircleLoader-track
+        div.spectrum-CircleLoader-fills
+          div.spectrum-CircleLoader-fillMask1
+            div.spectrum-CircleLoader-fillSubMask1
+              div.spectrum-CircleLoader-fill
+          div.spectrum-CircleLoader-fillMask2
+            div.spectrum-CircleLoader-fillSubMask2
+              div.spectrum-CircleLoader-fill
+
     .sdldocs-outer
       header.sdldocs-header
         h2.spectrum-Heading--pageTitle
@@ -135,5 +147,3 @@ html.spectrum--medium
                         code.language-markup!=component.highlightedMarkup
 
           div.spectrum-Underlay#spectrum-underlay
-
-    script(type="text/javascript", src='js/vendor/typekit.js')
