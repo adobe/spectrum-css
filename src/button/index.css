@@ -190,6 +190,13 @@ a.spectrum-ActionButton {
   }
 }
 
+
+.spectrum-ActionButton-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .spectrum-ActionButton--quiet {
   border-width: var(--spectrum-actionbutton-quiet-border-size);
   border-radius: var(--spectrum-actionbutton-quiet-border-radius);
