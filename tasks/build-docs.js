@@ -15,7 +15,30 @@ var replace = require('gulp-replace');
 var fs = require('fs');
 var path = require('path');
 var rename = require('gulp-rename');
+var wrap = require('gulp-wrap');
+var gulpExec = require('gulp-exec');
 var plumb = require('./lib/plumb.js');
+
+gulp.task('build-docs:examples', function() {
+  var topdoc = path.resolve('node_modules', '.bin', 'topdoc');
+
+  return gulp.src([
+    'docs/examples/*'
+  ])
+    .pipe(rename(function(path) {
+      path.extname = '.css';
+    }))
+    .pipe(wrap(`/* topdoc
+<%= contents %>
+directory: <%= file.dirname %>
+filename: <%= file.stem %>
+*/`))
+    .pipe(gulp.dest('temp/topdoc/'))
+    .pipe(gulpExec(`${topdoc} -d temp/examples -t ./topdoc <%= file.path %> -a false`))
+    .pipe(gulpExec.reporter())
+    .pipe(gulpExec('mkdir -p dist/docs && mv temp/examples/index.html dist/docs/<%= file.stem %>.html'))
+    .pipe(gulpExec.reporter());
+});
 
 gulp.task('build-docs:topdoc', function(cb) {
   var exePath = path.resolve('node_modules', '.bin', 'topdoc');
@@ -25,7 +48,6 @@ gulp.task('build-docs:topdoc', function(cb) {
     cb(err);
   });
 });
-
 
 gulp.task('build-docs:inject-topdoc', function() {
   return gulp.src([
@@ -97,7 +119,8 @@ gulp.task('build-docs',
       'build-docs:copy-site-resources',
       'build-docs:copy-prism-resources',
       'build-docs:copy-polyfill',
-      'build-docs:copy-spectrum-icons'
+      'build-docs:copy-spectrum-icons',
+      'build-docs:examples'
     ),
     'build-docs:rewrite-spectrum-icons'
   )

@@ -55,12 +55,13 @@ html.spectrum--medium
               use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
 
       section.sdldocs-splitview.spectrum-SplitView.spectrum-SplitView--horizontal
-        .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-nav
-          nav.spectrum.spectrum--light
-            ul.spectrum-SideNav
-              each component in document.components
-                li.spectrum-SideNav-item
-                  a.spectrum-SideNav-itemLink(href='#'+component.slug)= component.name
+        if document.components.length > 1
+          .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-nav
+            nav.spectrum.spectrum--light
+              ul.spectrum-SideNav
+                each component in document.components
+                  li.spectrum-SideNav-item
+                    a.spectrum-SideNav-itemLink(href='#'+component.slug)= component.name
 
         .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-components
           .spectrum.spectrum--light

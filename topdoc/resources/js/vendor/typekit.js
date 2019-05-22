@@ -9,7 +9,7 @@
      I WILL NOT REUSE THE TYPEKIT ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT
      I WILL NOT REUSE THE TYPEKIT ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT
      See https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up right. */
-    kitId: 'pbi5ojv',
+    kitId: document.querySelector('[lang]') !== null ? 'pbi5ojv' : 'ugb8kwy',
     scriptTimeout: 3000
   };
 
