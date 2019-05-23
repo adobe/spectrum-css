@@ -12,10 +12,13 @@ window.addEventListener('DOMContentLoaded', function() {
     kitId: document.querySelector('[lang]') !== null ? 'pbi5ojv' : 'ruf7eed',
     scriptTimeout: 3000,
     active: function() {
-      setTimeout(function() {
-        // Hide the loader
-        document.getElementById('loader').style.display = 'none';
-      }, 125);
+      var loader = document.getElementById('loader');
+      if (loader) {
+        setTimeout(function() {
+          // Hide the loader
+          loader.style.display = 'none';
+        }, 125);
+      }
     }
   };
 
