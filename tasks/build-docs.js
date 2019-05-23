@@ -23,7 +23,7 @@ gulp.task('build-docs:examples', function() {
   var topdoc = path.resolve('node_modules', '.bin', 'topdoc');
 
   return gulp.src([
-    'docs/examples/*'
+    'docs/examples/*.yml'
   ])
     .pipe(rename(function(path) {
       path.extname = '.css';
@@ -36,6 +36,13 @@ filename: <%= file.stem %>
     .pipe(gulp.dest('temp/topdoc/'))
     .pipe(gulpExec(`${topdoc} -d temp/examples/<%= file.stem %> -t ./topdoc <%= file.path %> -a false && mv temp/examples/<%= file.stem %>/index.html dist/docs/<%= file.stem %>.html`))
     .pipe(gulpExec.reporter());
+});
+
+gulp.task('build-docs:standalone-examples', function() {
+  return gulp.src([
+    'docs/examples/*.html'
+  ])
+    .pipe(gulp.dest('dist/docs/'));
 });
 
 gulp.task('build-docs:topdoc', function(cb) {
@@ -118,6 +125,7 @@ gulp.task('build-docs',
       'build-docs:copy-prism-resources',
       'build-docs:copy-polyfill',
       'build-docs:copy-spectrum-icons',
+      'build-docs:standalone-examples',
       'build-docs:examples'
     ),
     'build-docs:rewrite-spectrum-icons'

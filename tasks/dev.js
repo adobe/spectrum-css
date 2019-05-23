@@ -54,10 +54,19 @@ function serve(done) {
 function watch() {
   gulp.watch([
     'docs/**/*.yml',
+    '!examples/*.yml',
     'topdoc/lib/template.pug',
     'topdoc/lib/index.js',
     'topdoc/resources/js/*.js'
   ], gulp.series('reload-docs'));
+
+  gulp.watch([
+    'docs/examples/*.yml'
+  ], gulp.series('reload-docs-examples'));
+
+  gulp.watch([
+    'docs/examples/*.html'
+  ], gulp.series('reload-docs-standalone-examples'));
 
   gulp.watch([
     'topdoc/resources/css/*.css'
@@ -80,6 +89,8 @@ gulp.task('reload-css', gulp.series('build-css', injectCSS));
 gulp.task('reload-docs-css', gulp.series('build-docs:copy-site-resources', injectDocsResources));
 
 gulp.task('reload-docs', gulp.series('build-docs', reload));
+gulp.task('reload-docs-examples', gulp.series('build-docs:examples', reload));
+gulp.task('reload-docs-standalone-examples', gulp.series('build-docs:standalone-examples', reload));
 gulp.task('reload-icons', gulp.series('icons', reload));
 
 gulp.task('dev', gulp.series('build', serve, gulp.parallel(watch, watchCSSLite)));
