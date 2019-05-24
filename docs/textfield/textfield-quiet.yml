@@ -14,5 +14,3 @@ markup: |
   <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield spectrum-Textfield--quiet" pattern="[\d]+" required>
 
   <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield spectrum-Textfield--quiet is-invalid" disabled>
-
-  <input type="text" lang="ja" placeholder="電子メールアドレスを入力" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
