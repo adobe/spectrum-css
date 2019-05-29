@@ -64,7 +64,7 @@ components:
       <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible is-open cssdocs-Dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Disclaimer</h2>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton">
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" onclick="closeDialog(this.closest('.spectrum-Dialog'))">
             <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CrossLarge" />
             </svg>
@@ -234,7 +234,7 @@ components:
     status: Unverified
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
     markup: |
-      <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Scrolling Dialog</button>
+      <button class="spectrum-Button spectrum-Button--overBackground cssdocs-Overlay-showButton" onclick="openDialog(this.nextElementSibling)">Open Scrolling Dialog</button>
 
       <div class="spectrum-Dialog">
         <div class="spectrum-Dialog-header">
@@ -261,7 +261,7 @@ components:
     status: Unverified
     description: A fullscreen dialog will automatically fill almost all of the available screen space.
     markup: |
-      <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
+      <button variant="primary" class="spectrum-Button spectrum-Button--overBackground cssdocs-Overlay-showButton" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
 
       <div class="spectrum-Dialog spectrum-Dialog--fullscreen">
         <div class="spectrum-Dialog-header">
@@ -289,7 +289,7 @@ components:
     status: Unverified
     description: A fullscreen takeover dialog will fill all of the available screen space.
     markup: |
-      <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover Dialog</button>
+      <button class="spectrum-Button spectrum-Button--overBackground cssdocs-Overlay-showButton" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover Dialog</button>
 
       <div class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover">
         <div class="spectrum-Dialog-header">

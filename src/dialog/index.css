@@ -32,6 +32,7 @@ governing permissions and limitations under the License.
   --spectrum-dialog-max-width: 90vw;
   --spectrum-dialog-max-height: 90vh;
   --spectrum-dialog-hero-height: var(--spectrum-global-dimension-size-1600);
+  --spectrum-dialog-alert-width: var(--spectrum-dialog-medium-width);
 }
 
 /* topdoc
@@ -202,10 +203,11 @@ governing permissions and limitations under the License.
   outline: none; /* Hide focus outline */
 }
 
-/** @deprecated use .spectrum-Dialog--small instead */
+/** @deprecated use .spectrum-Dialog--medium instead */
 .spectrum-Dialog--alert {
   /* Smaller dialog for alerts */
-  width: var(--spectrum-dialog-width);
+  width: var(--spectrum-dialog-alert-width);
+  max-width: var(--spectrum-dialog-alert-width);
 }
 
 /** @unofficial */
