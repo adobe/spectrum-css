@@ -113,6 +113,14 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Dialog--noDivider {
+  .spectrum-Dialog-header {
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .spectrum-Dialog--dismissible {
   .spectrum-Dialog-footer {
     /* You cannot have buttons in a dismissible dialog */
