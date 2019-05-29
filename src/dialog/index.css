@@ -31,6 +31,7 @@ governing permissions and limitations under the License.
   --spectrum-dialog-large-width: 640px;
   --spectrum-dialog-max-width: 90vw;
   --spectrum-dialog-max-height: 90vh;
+  --spectrum-dialog-hero-height: var(--spectrum-global-dimension-size-1600);
 }
 
 /* topdoc
@@ -85,6 +86,21 @@ governing permissions and limitations under the License.
 
 .spectrum-Dialog--large {
   max-width: var(--spectrum-dialog-large-width);
+}
+
+.spectrum-Dialog-hero {
+  height: var(--spectrum-dialog-hero-height);
+
+  margin-left: calc(-1 * var(--spectrum-dialog-padding));
+  margin-right: calc(-1 * var(--spectrum-dialog-padding));
+  margin-top: calc(-1 * var(--spectrum-dialog-padding));
+  margin-bottom: var(--spectrum-dialog-padding);
+
+  border-top-left-radius: var(--spectrum-dialog-border-radius);
+  border-top-right-radius: var(--spectrum-dialog-border-radius);
+
+  background-size: cover;
+  background-position: center center;
 }
 
 .spectrum-Dialog-header {
