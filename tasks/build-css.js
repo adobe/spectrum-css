@@ -452,7 +452,9 @@ gulp.task('build-css-lite',
       'build-css:build-multistops'
     ),
     gulp.parallel(
-      'build-css:concat-core-diff'
-    )
+      'build-css:concat-core-diff',
+      'build-css:unique-vars'
+    ),
+    'build-css:individual-components-vars'
   )
 );
