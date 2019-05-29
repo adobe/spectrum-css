@@ -102,3 +102,11 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+.spectrum-Tabs-dropdown {
+  &:focus-ring {
+    &::before {
+       border-color: var(--spectrum-tabs-focus-ring-color);
+     }
+  }
+}

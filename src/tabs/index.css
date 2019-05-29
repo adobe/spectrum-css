@@ -87,6 +87,25 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Tabs-dropdown {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+
+    box-sizing: border-box;
+
+    height: var(--spectrum-tabs-focus-ring-height);
+    margin-top: calc(calc(var(--spectrum-tabs-focus-ring-height) / -2) + calc(var(--spectrum-tabs-rule-height) / 2));
+    left: calc(-1 * var(--spectrum-tabs-focus-ring-padding-x));
+    right: calc(-1 * var(--spectrum-tabs-focus-ring-padding-x));
+    border: var(--spectrum-tabs-focus-ring-size) solid transparent;
+    border-radius: var(--spectrum-tabs-focus-ring-border-radius);
+
+    pointer-events: none;
+ }
+}
+
 .spectrum-Tabs-itemLabel {
   cursor: pointer;
   vertical-align: top;
