@@ -75,6 +75,10 @@ governing permissions and limitations under the License.
 
     transform: translate(-50%, -50%);
   }
+
+  .spectrum-Dialog-closeButton {
+    display: none;
+  }
 }
 
 .spectrum-Dialog--small {
@@ -130,6 +134,52 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Dialog-wrapper {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+
+  align-items: center;
+  justify-content: center;
+
+  /* Appear above underlay */
+  z-index: 2;
+
+  &.is-open {
+    display: flex;
+  }
+
+  .spectrum-Dialog {
+    position: static;
+    transform: translateY(var(--spectrum-dialog-animation-distance));
+
+    &.is-open {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media
+only screen and (max-device-width: 500px),
+only screen and (max-device-height: 375px) {
+  .spectrum-Dialog-wrapper {
+    padding: 0;
+
+    .spectrum-Dialog {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 0;
+    }
+  }
+}
+
 .spectrum-Dialog--noDivider {
   .spectrum-Dialog-header {
     &::after {
@@ -142,6 +192,10 @@ governing permissions and limitations under the License.
   .spectrum-Dialog-footer {
     /* You cannot have buttons in a dismissible dialog */
     display: none;
+  }
+
+  .spectrum-Dialog-closeButton {
+    display: initial;
   }
 }
 
@@ -164,14 +218,18 @@ governing permissions and limitations under the License.
 
   flex: 1 1 auto;
 
-  /* Temporary IE 11 fix */
-  max-height: 70vh;
-
   outline: none; /* Hide focus outline */
 
   font-size: var(--spectrum-dialog-content-text-size);
   font-weight: var(--spectrum-dialog-content-text-font-weight);
   line-height: var(--spectrum-dialog-content-text-line-height);
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .spectrum-Dialog-content{
+    /* Temporary IE 11 fix */
+    max-height: 70vh;
+  }
 }
 
 .spectrum-Dialog-footer {
