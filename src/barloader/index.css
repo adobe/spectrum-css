@@ -48,7 +48,15 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-fieldlabel-text-line-height);
   text-align: left;
   margin-bottom: var(--spectrum-barloader-large-label-gap-y);
+}
 
+.spectrum-BarLoader-label {
+  flex: 1;
+}
+
+.spectrum-BarLoader-percentage {
+  align-self: flex-start;
+  margin-left: var(--spectrum-barloader-small-label-gap-x);
 }
 
 .spectrum-BarLoader--sideLabel {

@@ -160,10 +160,15 @@ function template(topDocument) {
           subComponent.highlightedMarkup = processMarkup(subComponent.markup);
 
           // Gather DNA data
-          subComponent.description = subComponent.description || '';
-          var subComponentDNADescription = dnaVars['spectrum-' + subComponent.id + '-description'];
-          if (subComponentDNADescription && !subComponent.ignoreDNA) {
-            subComponent.description = subComponentDNADescription + '\n\n' + subComponent.description;
+          if (subComponent.description === null) {
+            subComponent.description = '';
+          }
+          else {
+            subComponent.description = subComponent.description || '';
+            var subComponentDNADescription = dnaVars['spectrum-' + subComponent.id + '-description'];
+            if (subComponentDNADescription && !subComponent.ignoreDNA) {
+              subComponent.description = subComponentDNADescription + '\n\n' + subComponent.description;
+            }
           }
 
           subComponent.name = subComponent.name || dnaVars['spectrum-' + subComponent.id + '-name'];
@@ -176,10 +181,12 @@ function template(topDocument) {
             subComponent.details = markdown.toHTML(subComponent.details);
           }
 
-          subComponent.cssStatus = getCSSStatus(subComponent.id, subComponent.status);
-          subComponent.cssColor = getLabelColor(subComponent.cssStatus);
-          subComponent.dnaStatus = getDNAStatus(subComponent.id, dnaVars['spectrum-' + subComponent.id + '-status'] || subComponent.dnaStatus, subComponent.cssStatus);
-          subComponent.dnaColor = getLabelColor(subComponent.dnaStatus);
+          if (subComponent.status !== null) {
+            subComponent.cssStatus = getCSSStatus(subComponent.id, subComponent.status);
+            subComponent.cssColor = getLabelColor(subComponent.cssStatus);
+            subComponent.dnaStatus = getDNAStatus(subComponent.id, dnaVars['spectrum-' + subComponent.id + '-status'] || subComponent.dnaStatus, subComponent.cssStatus);
+            subComponent.dnaColor = getLabelColor(subComponent.dnaStatus);
+          }
 
           // Store the object back
           component.components[subComponentId] = subComponent;

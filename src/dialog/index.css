@@ -145,11 +145,6 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-dialog-title-text-font-weight);
   line-height: var(--spectrum-dialog-title-text-line-height);
 
-  /* Truncate text when it's too long to fit */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
   outline: none; /* Hide focus outline */
 }
 
