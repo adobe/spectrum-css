@@ -12,6 +12,7 @@ components:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
+        <div class="spectrum-Tab-item">
           <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected spectrum-Tabs-dropdown" aria-haspopup="true">
               <span class="spectrum-Dropdown-label">Tab 1</span>
@@ -20,11 +21,13 @@ components:
               </svg>
             </button>
           </div>
+        </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
+        <div class="spectrum-Tab-item">
           <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected spectrum-Tabs-dropdown" aria-haspopup="true">
               <span class="spectrum-Dropdown-label">Tab 1</span>
@@ -33,6 +36,7 @@ components:
               </svg>
             </button>
           </div>
+        </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
       <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
@@ -65,6 +69,7 @@ components:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
+        <div class="spectrum-Tab-item">
           <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected spectrum-Tabs-dropdown" aria-haspopup="true">
               <span class="spectrum-Dropdown-label">Tab 1</span>
@@ -73,11 +78,13 @@ components:
               </svg>
             </button>
           </div>
+        </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
+        <div class="spectrum-Tab-item">
           <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected spectrum-Tabs-dropdown" aria-haspopup="true">
               <span class="spectrum-Dropdown-label">Tab 1</span>
@@ -86,6 +93,7 @@ components:
               </svg>
             </button>
           </div>
+        </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
       <br>

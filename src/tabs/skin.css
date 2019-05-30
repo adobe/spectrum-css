@@ -105,6 +105,10 @@ governing permissions and limitations under the License.
 
 .spectrum-Tabs-dropdown {
   &:focus-ring {
+    &.is-selected {
+       box-shadow: none;
+    }
+     
     &::before {
        border-color: var(--spectrum-tabs-focus-ring-color);
      }
