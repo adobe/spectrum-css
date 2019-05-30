@@ -33,6 +33,8 @@ governing permissions and limitations under the License.
   --spectrum-dialog-max-height: 90vh;
   --spectrum-dialog-hero-height: var(--spectrum-global-dimension-size-1600);
   --spectrum-dialog-alert-width: var(--spectrum-dialog-medium-width);
+
+  --spectrum-dialog-vertical-offset: -2%;
 }
 
 /* topdoc
@@ -49,7 +51,7 @@ governing permissions and limitations under the License.
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%) translateY(var(--spectrum-dialog-animation-distance));
+  transform: translateX(-50%) translateY(var(--spectrum-dialog-animation-distance));
 
   /* Appear above underlay */
   z-index: 2;
@@ -73,7 +75,7 @@ governing permissions and limitations under the License.
   &.is-open {
     @inherit: %spectrum-overlay--open;
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + var(--spectrum-dialog-vertical-offset)));
   }
 
   .spectrum-Dialog-closeButton {
@@ -82,15 +84,15 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Dialog--small {
-  max-width: var(--spectrum-dialog-small-width);
+  width: var(--spectrum-dialog-small-width);
 }
 
 .spectrum-Dialog--medium {
-  max-width: var(--spectrum-dialog-medium-width);
+  width: var(--spectrum-dialog-medium-width);
 }
 
 .spectrum-Dialog--large {
-  max-width: var(--spectrum-dialog-large-width);
+  width: var(--spectrum-dialog-large-width);
 }
 
 .spectrum-Dialog-hero {
@@ -134,6 +136,7 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Used to position the dialog */
 .spectrum-Dialog-wrapper {
   display: none;
   position: fixed;
@@ -142,7 +145,6 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 10%;
 
   align-items: center;
   justify-content: center;
@@ -157,6 +159,7 @@ governing permissions and limitations under the License.
   .spectrum-Dialog {
     position: static;
     transform: translateY(var(--spectrum-dialog-animation-distance));
+    margin-top: var(--spectrum-dialog-vertical-offset);
 
     &.is-open {
       transform: translateY(0);
@@ -164,19 +167,16 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Responsive Dialogs will fill the screen on small viewports */
 @media
-only screen and (max-device-width: 500px),
-only screen and (max-device-height: 375px) {
-  .spectrum-Dialog-wrapper {
-    padding: 0;
-
-    .spectrum-Dialog {
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      max-height: 100%;
-      border-radius: 0;
-    }
+only screen and (max-device-width: 400px),
+only screen and (max-device-height: 350px) {
+  .spectrum-Dialog--responsive {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
   }
 }
 
@@ -264,7 +264,6 @@ only screen and (max-device-height: 375px) {
 /* Alert Dialog is a specific type of Dialog */
 .spectrum-Dialog--alert {
   width: var(--spectrum-dialog-alert-width);
-  max-width: var(--spectrum-dialog-alert-width);
 }
 
 /** @unofficial */
