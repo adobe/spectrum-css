@@ -18,15 +18,18 @@ governing permissions and limitations under the License.
 
   --spectrum-radio-labelbelow-label-margin: var(--spectrum-global-dimension-size-40) 0 0 0;
   --spectrum-radio-labelbelow-height: auto;
+
+  /* Hardcoded for wrapping study */
+  --spectrum-radio-label-margin-top: var(--spectrum-global-dimension-size-75);
 }
 
 .spectrum-Radio {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 
   position: relative;
 
-  height: var(--spectrum-radio-height);
+  min-height: var(--spectrum-radio-height);
   max-width: 100%;
 
   margin-right: calc(var(--spectrum-radio-cursor-hit-x) * 2);
@@ -79,10 +82,8 @@ governing permissions and limitations under the License.
 
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 
-  white-space: nowrap;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* Hardcoded as no good way to calculate this */
+  margin-top: var(--spectrum-radio-label-margin-top);
 }
 
 .spectrum-Radio-button {
@@ -90,6 +91,9 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   width: var(--spectrum-radio-circle-diameter);
   height: var(--spectrum-radio-circle-diameter);
+
+  /* Fix vertical alignment when not wrapping since we're flex-start */
+  margin: calc((var(--spectrum-radio-height) - var(--spectrum-radio-circle-diameter)) / 2) 0;
 
   flex-grow: 0;
   flex-shrink: 0;

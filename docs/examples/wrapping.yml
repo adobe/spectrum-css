@@ -1,0 +1,389 @@
+name: Wrapping
+description: A study of wrapping across a number of components
+components:
+  link:
+    name: Link (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div style="width: 146px">
+        See our <a href="#" class="spectrum-Link">Privacy Policy</a> for more details or <a href="#" class="spectrum-Link">opt-out at any time</a>.
+      </div>
+
+  toast:
+    name: Toast (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-Toast" style="width: 280px;">
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">
+            All documents in this folder have been archived
+          </div>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
+            <svg class="spectrum-Icon spectrum-UIIcon-CrossMedium focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CrossMedium" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+  toast-icon:
+    name: Toast with Icon and Button (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-Toast spectrum-Toast--info" style="width: 318px;">
+        <svg class="spectrum-Icon spectrum-UIIcon-InfoMedium spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">
+            A new version of Lightroom Classic is now available
+          </div>
+          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+            <span class="spectrum-Button-label">Update</span>
+          </button>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
+            <svg class="spectrum-Icon spectrum-UIIcon-CrossMedium focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CrossMedium" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+  tooltip-info:
+    name: Tooltip (wrapping)
+    status: null
+    description: null
+    markup: |
+      <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+        <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+        <span class="spectrum-Tooltip-tip"></span>
+      </span>
+
+  tooltip-positive:
+    name: Tooltip with Icon (wrapping)
+    status: null
+    description: null
+    markup: |
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
+        <svg class="spectrum-Icon spectrum-UIIcon-SuccessSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-SuccessSmall" />
+        </svg>
+        <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+        <span class="spectrum-Tooltip-tip"></span>
+      </span>
+
+  coachmark:
+    name: Coach Mark (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-CoachMarkPopover" style="width: 226px">
+        <img src="img/example-ava.jpg" class="spectrum-CoachMarkPopover-image" />
+
+        <div class="spectrum-CoachMarkPopover-header">
+          <div class="spectrum-CoachMarkPopover-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="spectrum-CoachMarkPopover-step">3 of 100</div>
+        </div>
+        <div class="spectrum-CoachMarkPopover-content">
+          Smart filters are nondestructive and will preserve your original images.
+        </div>
+        <div class="spectrum-CoachMarkPopover-footer">
+          <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--quiet">
+            <span>Skip Tour</span>
+          </button>
+          <button class="spectrum-Button spectrum-Button--primary">
+            <span>Next</span>
+          </button>
+        </div>
+      </div>
+
+  dialog:
+    name: Dialog (wrapping)
+    status: null
+    description: null
+    demoClassName: cssdocs-Overlay-example
+    markup: |
+      <button class="spectrum-Button spectrum-Button--overBackground cssdocs-Overlay-showButton" onclick="openDialog(this.nextElementSibling)">Open Configuration Dialog</button>
+
+      <!-- cssdocs-Dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--alert is-open cssdocs-Dialog" style="width: 300px">
+        <div class="spectrum-Dialog-header">
+          <h2 class="spectrum-Dialog-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          Smart filters are nondestructive and will preserve your original images.
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+          <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Enable</button>
+        </div>
+      </div>
+
+  button:
+    name: Button (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div style="max-width: 168px; margin: 0 0 10px 0">
+        <button class="spectrum-Button spectrum-Button--cta">
+          <span class="spectrum-Button-label">Informationen über Creative Cloud</span>
+        </button>
+      </div>
+      <div style="max-width: 168px; margin: 0 0 10px 0">
+        <button class="spectrum-Button spectrum-Button--primary">
+          <span class="spectrum-Button-label">Informationen über Creative Cloud</span>
+        </button>
+      </div>
+      <div style="max-width: 168px; margin: 0 0 10px 0">
+        <button class="spectrum-Button spectrum-Button--secondary">
+          <span class="spectrum-Button-label">Informationen über Creative Cloud</span>
+        </button>
+      </div>
+
+  menu:
+    name: Menu (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-Popover is-open" style="position: relative; width: 176px">
+        <ul class="spectrum-Menu" role="menu">
+          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Canada</span>
+          </li>
+          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Congo, Democratic Republic of the</span>
+          </li>
+          <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">Mexico</span>
+          </li>
+          <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+            <span class="spectrum-Menu-itemLabel">United States</span>
+          </li>
+        </ul>
+      </div>
+
+  menu-icons:
+    name: Menu with Icons (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-Popover is-open" style="position: relative; width: 176px">
+        <ul class="spectrum-Menu" role="menu">
+          <li class="spectrum-Menu-item" role="menuitem" aria-disabled="true">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="AfterEffects">
+              <use xlink:href="#spectrum-icon-18-AfterEffects"></use>
+            </svg>
+            <span class="spectrum-Menu-itemLabel">After Effects</span>
+          </li>
+          <li class="spectrum-Menu-item" role="menuitem" aria-disabled="true">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Flash">
+              <use xlink:href="#spectrum-icon-18-Flash"></use>
+            </svg>
+            <span class="spectrum-Menu-itemLabel">Flash Builder Premium Edition</span>
+          </li>
+          <li class="spectrum-Menu-item" role="menuitem" aria-disabled="true">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Illustrator">
+              <use xlink:href="#spectrum-icon-18-Illustrator"></use>
+            </svg>
+            <span class="spectrum-Menu-itemLabel">Illustrator</span>
+          </li>
+          <li class="spectrum-Menu-item" role="menuitem" aria-disabled="true">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Photoshop">
+              <use xlink:href="#spectrum-icon-18-Photoshop"></use>
+            </svg>
+            <span class="spectrum-Menu-itemLabel">Photoshop</span>
+          </li>
+        </ul>
+      </div>
+
+  sidenav:
+    name: Side Navigation (wrapping)
+    status: null
+    description: null
+    markup: |
+      <nav style="width: 170px;">
+        <ul class="spectrum-SideNav">
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">Privatsphäre</a>
+          </li>
+          <li class="spectrum-SideNav-item is-selected">
+            <a href="#" class="spectrum-SideNav-itemLink">Benutzerprofileinstellungen</a>
+          </li>
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">Hilfe & Unterstützung</a>
+          </li>
+        </ul>
+      </nav>
+
+  checkbox:
+    name: Checkbox (wrapping)
+    status: null
+    description: null
+    markup: |
+      <label class="spectrum-Checkbox">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+        <span class="spectrum-Checkbox-box">
+          <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+          </svg>
+          <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-DashSmall" />
+          </svg>
+        </span>
+        <span class="spectrum-Checkbox-label">Add Adobe Stock. Get one month free.*</span>
+      </label>
+      <br>
+      <label class="spectrum-Checkbox" style="width: 149px">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+        <span class="spectrum-Checkbox-box">
+          <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+          </svg>
+          <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-DashSmall" />
+          </svg>
+        </span>
+        <span class="spectrum-Checkbox-label">Add Adobe Stock. Get one month free.*</span>
+      </label>
+
+  radio:
+    name: Radio (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-Radio">
+        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+        <span class="spectrum-Radio-button"></span>
+        <label class="spectrum-Radio-label" for="radio-0">Add Adobe Stock. Get one month free.*</label>
+      </div>
+      <br>
+      <div class="spectrum-Radio" style="width: 149px">
+        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" checked>
+        <span class="spectrum-Radio-button"></span>
+        <label class="spectrum-Radio-label" for="radio-0">Add Adobe Stock. Get one month free.*</label>
+      </div>
+
+  switch:
+    name: Switch (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-ToggleSwitch">
+        <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0">
+        <span class="spectrum-ToggleSwitch-switch"></span>
+        <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-0">Add Adobe Stock. Get one month free.*</label>
+      </div>
+      <br>
+      <div class="spectrum-ToggleSwitch" style="width: 170px">
+        <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0">
+        <span class="spectrum-ToggleSwitch-switch"></span>
+        <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-0">Add Adobe Stock. Get one month free.*</label>
+      </div>
+
+  barloader:
+    name: Barloader (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div style="margin: 20px 0; width: 168px">
+        <div class="spectrum-BarLoader" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
+          <div class="spectrum-BarLoader-label">Laden ihrer Creative Cloud dateien</div>
+          <div class="spectrum-BarLoader-percentage">26%</div>
+          <div class="spectrum-BarLoader-track">
+            <div class="spectrum-BarLoader-fill" style="width: 26%;"></div>
+          </div>
+        </div>
+      </div>
+
+  meter:
+    name: Meter (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div style="margin: 20px 0;">
+        <div class="spectrum-BarLoader is-positive" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
+          <div class="spectrum-BarLoader-label">Creative Cloud datennutzung insgesamt</div>
+          <div class="spectrum-BarLoader-percentage">26%</div>
+          <div class="spectrum-BarLoader-track">
+            <div class="spectrum-BarLoader-fill" style="width: 26%;"></div>
+          </div>
+        </div>
+      </div>
+
+  combobox:
+    name: Combobox (wrapping label)
+    status: null
+    description: null
+    markup: |
+      <div style="width: 160px">
+        <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+        <div class="spectrum-InputGroup">
+          <input type="text" placeholder="Type here" name="field" value="" id="spectrum-combobox-instance" class="spectrum-Textfield spectrum-InputGroup-field">
+          <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+  dropdown:
+    name: Dropdown (wrapping label)
+    status: null
+    description: null
+    markup: |
+      <div style="width: 160px">
+        <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+        <div class="spectrum-Dropdown" style="width: 195px;">
+          <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+            <span class="spectrum-Dropdown-label is-placeholder">Select an option</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+  textfield:
+    name: Textfield (wrapping label)
+    status: null
+    description: null
+    markup: |
+      <div style="width: 160px">
+        <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+      <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
+      </div>
+
+  slider:
+    name: Slider (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--filled" style="width: 208px">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-8">
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+      </div>
+
+  statuslight:
+    name: Status Light (wrapping)
+    status: null
+    description: null
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--positive">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--positive" style="width: 157px">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
