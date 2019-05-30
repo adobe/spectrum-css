@@ -233,6 +233,7 @@ components:
     dnaStatus: Precursor
     status: Unverified
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
+    demoClassName: cssdocs-Overlay-example
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground cssdocs-Overlay-showButton" onclick="openDialog(this.nextElementSibling)">Open Scrolling Dialog</button>
 
@@ -260,6 +261,7 @@ components:
     name: Dialog - Fullscreen
     status: Unverified
     description: A fullscreen dialog will automatically fill almost all of the available screen space.
+    demoClassName: cssdocs-Overlay-example
     markup: |
       <button variant="primary" class="spectrum-Button spectrum-Button--overBackground cssdocs-Overlay-showButton" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
 
@@ -288,6 +290,7 @@ components:
     name: Dialog - Fullscreen Takeover
     status: Unverified
     description: A fullscreen takeover dialog will fill all of the available screen space.
+    demoClassName: cssdocs-Overlay-example
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground cssdocs-Overlay-showButton" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover Dialog</button>
 

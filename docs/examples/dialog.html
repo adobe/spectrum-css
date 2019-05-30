@@ -16,69 +16,11 @@
     <script src="js/vendor/focus-ring-polyfill.js"></script>
     <script src="js/vendor/typekit.js"></script>
     <script src="js/Switcher.js"></script>
+    <script src="js/kbSwitcher.js"></script>
+    <script src="js/dialog.js"></script>
     <script>
       loadIcons('../icons/spectrum-css-icons.svg');
       loadIcons('../icons/spectrum-icons.svg');
-
-      var switcher = new Switcher({
-        method: 'vars'
-      });
-      document.addEventListener('DOMContentLoaded', function() {
-
-        switcher.theme = 'light';
-        switcher.scale = 'medium';
-
-        var themeKeys = {
-          '1': 'lightest',
-          '2': 'light',
-          '3': 'dark',
-          '4': 'darkest',
-        };
-        var scaleKeys = {
-          'm': 'medium',
-          'l': 'large'
-        };
-        document.addEventListener('keydown', function(event) {
-          if (event.ctrlKey) {
-            if (themeKeys[event.key]) {
-              switcher.theme = themeKeys[event.key];
-            }
-            else if (scaleKeys[event.key]) {
-              switcher.scale = scaleKeys[event.key];
-            }
-          }
-        });
-
-        document.getElementById('spectrum-underlay').addEventListener('click', closeCurrentDialog);
-      });
-
-      var currentDialog = null;
-
-      function openDialog(dialog, withOverlay) {
-        if (withOverlay !== false) {
-          document.getElementById('spectrum-underlay').classList.add('is-open');
-        }
-
-        dialog.classList.add('is-open');
-
-        currentDialog = dialog;
-      }
-
-      function closeDialog(dialog) {
-        document.getElementById('spectrum-underlay').classList.remove('is-open');
-        dialog.classList.remove('is-open');
-
-        if (dialog === currentDialog) {
-          currentDialog = null;
-        }
-      }
-
-      function closeCurrentDialog() {
-        if (currentDialog) {
-          closeDialog(currentDialog);
-        }
-      }
-
     </script>
   </head>
   <body class="spectrum spectrum--light spectrum--medium">

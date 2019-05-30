@@ -35,6 +35,7 @@ governing permissions and limitations under the License.
   --spectrum-dialog-alert-width: var(--spectrum-dialog-medium-width);
 
   --spectrum-dialog-vertical-offset: -2%;
+  --spectrum-dialog-button-margin: var(--spectrum-global-dimension-size-200);
 }
 
 /* topdoc
@@ -178,6 +179,11 @@ only screen and (max-device-height: 350px) {
     max-height: 100%;
     border-radius: 0;
   }
+  .spectrum-Dialog-wrapper {
+    .spectrum-Dialog--responsive {
+      margin-top: 0; /* Prevent the vertical offset bit */
+    }
+  }
 }
 
 .spectrum-Dialog--noDivider {
@@ -226,7 +232,7 @@ only screen and (max-device-height: 350px) {
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .spectrum-Dialog-content{
+  .spectrum-Dialog-content {
     /* Temporary IE 11 fix */
     max-height: 70vh;
   }
@@ -234,14 +240,24 @@ only screen and (max-device-height: 350px) {
 
 .spectrum-Dialog-footer {
   border-radius: 0 0 var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius);
-  margin-top: var(--spectrum-dialog-content-margin-bottom);
+  padding-top: calc(var(--spectrum-dialog-content-margin-bottom) - var(--spectrum-dialog-button-margin));
 
   flex: 0 1 auto;
+  flex-wrap: wrap;
 
   display: flex;
   justify-content: flex-end;
 
   outline: none; /* Hide focus outline */
+
+  margin: calc(-1 * var(--spectrum-dialog-button-margin) / 2);
+  margin-top: 0;
+
+  /* Both selectors are required to override the button + button rule */
+  > *,
+  > .spectrum-Button + .spectrum-Button {
+    margin: calc(var(--spectrum-dialog-button-margin) / 2);
+  }
 }
 
 .spectrum-Dialog-title {
