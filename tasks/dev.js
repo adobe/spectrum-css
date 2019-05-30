@@ -19,7 +19,10 @@ function reload(done) {
 }
 
 function injectCSS() {
-  return gulp.src('dist/*.css')
+  return gulp.src([
+    'dist/*.css',
+    'dist/components/*/index-vars.css'
+  ])
     .pipe(browserSync.stream());
 }
 
