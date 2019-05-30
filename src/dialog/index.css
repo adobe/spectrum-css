@@ -36,6 +36,7 @@ governing permissions and limitations under the License.
 
   --spectrum-dialog-vertical-offset: -2%;
   --spectrum-dialog-button-margin: var(--spectrum-global-dimension-size-200);
+  --spectrum-dialog-content-margin-bottom: var(--spectrum-global-dimension-size-450);
 }
 
 /* topdoc
@@ -240,7 +241,7 @@ only screen and (max-device-height: 350px) {
 
 .spectrum-Dialog-footer {
   border-radius: 0 0 var(--spectrum-dialog-border-radius) var(--spectrum-dialog-border-radius);
-  padding-top: calc(var(--spectrum-dialog-content-margin-bottom) - var(--spectrum-dialog-button-margin));
+  padding-top: calc(var(--spectrum-dialog-content-margin-bottom) - var(--spectrum-dialog-button-margin) / 2);
 
   flex: 0 1 auto;
   flex-wrap: wrap;
