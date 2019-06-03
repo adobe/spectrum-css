@@ -189,10 +189,9 @@ governing permissions and limitations under the License.
 
     position: static;
     transform: translateY(var(--spectrum-dialog-entry-animation-distance));
-    margin-top: var(--spectrum-dialog-vertical-offset);
 
     &.is-open {
-      transform: translateY(0);
+      transform: translateY(var(--spectrum-dialog-vertical-offset));
     }
   }
 }
