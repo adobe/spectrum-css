@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
   --spectrum-dialog-hero-height: var(--spectrum-global-dimension-size-1600);
   --spectrum-dialog-alert-width: var(--spectrum-dialog-medium-width);
 
-  --spectrum-dialog-vertical-offset: -2%;
+  --spectrum-dialog-vertical-offset: -2vh;
   --spectrum-dialog-button-margin: var(--spectrum-global-dimension-size-200);
   --spectrum-dialog-content-margin-bottom: var(--spectrum-global-dimension-size-450);
 
@@ -189,9 +189,10 @@ governing permissions and limitations under the License.
 
     position: static;
     transform: translateY(var(--spectrum-dialog-entry-animation-distance));
+    margin-top: var(--spectrum-dialog-vertical-offset);
 
     &.is-open {
-      transform: translateY(var(--spectrum-dialog-vertical-offset));
+      transform: translateY(0);
     }
   }
 }
