@@ -184,7 +184,7 @@ governing permissions and limitations under the License.
     visibility: visible;
   }
 
-  .spectrum-Dialog {
+  .spectrum-Dialog:not(.spectrum-Dialog--fullscreen):not(.spectrum-Dialog--fullscreenTakeover) {
     pointer-events: auto;
 
     position: static;
