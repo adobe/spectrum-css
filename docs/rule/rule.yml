@@ -15,3 +15,23 @@ components:
     <h4 class="spectrum-Heading--subtitle3">Small</h4>
     <hr class="spectrum-Rule spectrum-Rule--small">
     <p class="spectrum-Body">Divide like-elements (tables, tool groups, elements within a panel, etc.)</p>
+  rule-vertical:
+    name: Rule (vertical)
+    markup: |
+      <div style="display: flex; flex-direction: row; height: 32px">
+        <div class="spectrum-ButtonGroup">
+          <button class="spectrum-Tool">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+              <use xlink:href="#spectrum-icon-18-Properties" />
+            </svg>
+          </button>
+        </div>
+        <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
+        <div class="spectrum-ButtonGroup">
+          <button class="spectrum-Tool">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+              <use xlink:href="#spectrum-icon-18-Select" />
+            </svg>
+          </button>
+        </div>
+      </div>
