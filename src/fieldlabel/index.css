@@ -15,6 +15,7 @@ governing permissions and limitations under the License.
 :root {
   --spectrum-tableform-border-spacing: 0 var(--spectrum-global-dimension-size-300);
   --spectrum-tableform-margin: calc(var(--spectrum-global-dimension-size-250) * -1) 0;
+  --spectrum-fieldlabel-margin: var(--spectrum-global-dimension-size-100);
 }
 
 /* topdoc
@@ -88,4 +89,19 @@ governing permissions and limitations under the License.
 
 .spectrum-Form-itemField {
   display: table-cell;
+}
+
+.spectrum-Form--labelsAbove {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spectrum-tableform-margin);
+
+  .spectrum-Form-item {
+    display: flex;
+    flex-direction: column;
+
+    & + .spectrum-Form-item {
+      margin-top: var(--spectrum-fieldlabel-margin);
+    }
+  }
 }
