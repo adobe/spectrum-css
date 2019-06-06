@@ -16,6 +16,8 @@ governing permissions and limitations under the License.
 {{ rule/rule.yml }}
 */
 .spectrum-Rule {
+  width: 100%;
+
   /* Show the overflow for hr in Edge and IE. */
   overflow: visible;
 
@@ -40,4 +42,20 @@ governing permissions and limitations under the License.
   height: var(--spectrum-rule-small-height);
 
   border-radius: var(--spectrum-rule-small-border-radius);
+}
+
+.spectrum-Rule--vertical {
+  height: 100%;
+
+  &.spectrum-Rule--large {
+    width: var(--spectrum-rule-large-height);
+  }
+
+  &.spectrum-Rule--medium {
+    width: var(--spectrum-rule-medium-height);
+  }
+
+  &.spectrum-Rule--small {
+    width: var(--spectrum-rule-small-height);
+  }
 }
