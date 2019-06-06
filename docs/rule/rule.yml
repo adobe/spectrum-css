@@ -58,20 +58,14 @@ components:
   rule-vertical-large:
     name: Rule (vertical, large)
     markup: |
-      <div style="display: flex; flex-direction: row; height: 32px">
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-Tool">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
-              <use xlink:href="#spectrum-icon-18-Properties" />
-            </svg>
-          </button>
+      <div style="display: flex; flex-direction: row; height: 200px">
+        <div style="margin-right: 16px; flex: 1">
+          <h1 class="spectrum-Heading1">Lorem Ipsum Dolor</h1>
+          <p class="spectrum-Body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia.</p>
         </div>
         <div class="spectrum-Rule spectrum-Rule--large spectrum-Rule--vertical"></div>
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-Tool">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
-              <use xlink:href="#spectrum-icon-18-Select" />
-            </svg>
-          </button>
+        <div style="margin-left: 16px; flex: 1">
+          <h1 class="spectrum-Heading1">Aliquet Mauris Eu</h1>
+          <p class="spectrum-Body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia.</p>
         </div>
       </div>
