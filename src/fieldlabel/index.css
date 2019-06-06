@@ -94,7 +94,7 @@ governing permissions and limitations under the License.
 .spectrum-Form--labelsAbove {
   display: flex;
   flex-direction: column;
-  margin: var(--spectrum-tableform-margin);
+  margin: 0;
 
   .spectrum-Form-item {
     display: flex;
