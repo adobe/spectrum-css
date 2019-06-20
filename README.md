@@ -1,4 +1,4 @@
-# Spectrum CSS
+# Spectrum CSS [![Build Status](https://travis-ci.org/jianliao/spectrum-css.svg?branch=master)](https://travis-ci.org/jianliao/spectrum-css)
 
 The goal of this project is to provide a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
