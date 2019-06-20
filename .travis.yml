@@ -3,4 +3,8 @@ node_js:
   - "lts/*"
 before_script:
   - npm install -g gulp-cli
-script: gulp travis-build
+script:
+  # This script should be the first that runs to reduce the risk of
+  # executing a script from a compromised NPM package.
+  - audit-ci --moderate
+  - gulp travis-build
