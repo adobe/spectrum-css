@@ -1,8 +1,16 @@
-@import '../commons/index.css';
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-:root {
-  --spectrum-loader-bar-label-margin-side: 12px;
-}
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import '../commons/index.css';
 
 /* topdoc
 {{ barloader/barloader-large.yml }}
@@ -23,6 +31,7 @@
   width: var(--spectrum-barloader-large-width);
   height: var(--spectrum-barloader-large-height);
   border-radius: var(--spectrum-barloader-large-border-radius);
+  z-index: 1; /* to fix a weird webkit bug with rounded corners and masking */
 }
 
 .spectrum-BarLoader-fill {
@@ -39,7 +48,15 @@
   line-height: var(--spectrum-fieldlabel-text-line-height);
   text-align: left;
   margin-bottom: var(--spectrum-barloader-large-label-gap-y);
+}
 
+.spectrum-BarLoader-label {
+  flex: 1;
+}
+
+.spectrum-BarLoader-percentage {
+  align-self: flex-start;
+  margin-left: var(--spectrum-barloader-small-label-gap-x);
 }
 
 .spectrum-BarLoader--sideLabel {
@@ -49,13 +66,13 @@
   width: auto;
 
   .spectrum-BarLoader-label {
-    margin-right: var(--spectrum-loader-bar-label-margin-side);
+    margin-right: var(--spectrum-barloader-large-label-gap-x);
     margin-bottom: 0;
   }
   .spectrum-BarLoader-percentage {
     order: 3;
     text-align: right;
-    margin-left: var(--spectrum-loader-bar-label-margin-side);
+    margin-left: var(--spectrum-barloader-large-label-gap-x);
     margin-bottom: 0;
   }
 }
@@ -85,3 +102,25 @@
 /* topdoc
 {{ barloader/barloader-meter.yml }}
 */
+/* topdoc
+{{ barloader/barloader-large-indeterminate.yml }}
+*/
+/* topdoc
+{{ barloader/barloader-small-indeterminate.yml }}
+*/
+.spectrum-BarLoader--indeterminate .spectrum-BarLoader-fill {
+  width: var(--spectrum-barloader-large-indeterminate-fill-width);
+  position: relative;
+  animation: indeterminate-loop var(--spectrum-barloader-large-indeterminate-duration) infinite;
+  animation-timing-function: var(--spectrum-barloader-large-indeterminate-animation-ease);
+  left: calc(-1 * var(--spectrum-barloader-large-indeterminate-fill-width));
+  will-change: transform;
+}
+@keyframes indeterminate-loop {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(calc(var(--spectrum-barloader-large-width) + var(--spectrum-barloader-large-indeterminate-fill-width)));
+  }
+}

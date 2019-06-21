@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spectrum CSS Dialogs Example</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+
+    <link rel="stylesheet" href="../components/page/index-vars.css">
+    <link rel="stylesheet" href="../components/typography/index-vars.css">
+    <link rel="stylesheet" href="../components/icon/index-vars.css">
+    <link rel="stylesheet" href="../components/button/index-vars.css">
+    <link rel="stylesheet" href="../components/dialog/index-vars.css">
+    <link rel="stylesheet" href="../components/underlay/index-vars.css">
+
+    <script src="../icons/loadIcons.js"></script>
+    <script src="js/vendor/focus-ring-polyfill.js"></script>
+    <script src="js/vendor/typekit.js"></script>
+    <script src="js/Switcher.js"></script>
+    <script src="js/kbSwitcher.js"></script>
+    <script src="js/dialog.js"></script>
+    <script>
+      loadIcons('../icons/spectrum-css-icons.svg');
+      loadIcons('../icons/spectrum-icons.svg');
+    </script>
+  </head>
+  <body class="spectrum spectrum--light spectrum--medium">
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Small Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--small">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Disclaimer</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Medium Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--medium">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Disclaimer</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Large Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--large">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Disclaimer</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dismissible Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Disclaimer</h2>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" onclick="closeDialog(this.closest('.spectrum-Dialog'))">
+          <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-CrossLarge" />
+          </svg>
+        </button>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open No Divider Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible spectrum-Dialog--noDivider">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Disclaimer</h2>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" onclick="closeDialog(this.closest('.spectrum-Dialog'))">
+          <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-CrossLarge" />
+          </svg>
+        </button>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Hero Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible spectrum-Dialog--noDivider">
+      <div class="spectrum-Dialog-hero" style="background-image: url(img/example-card-portrait.jpg)"></div>
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Disclaimer</h2>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" onclick="closeDialog(this.closest('.spectrum-Dialog'))">
+          <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-CrossLarge" />
+          </svg>
+        </button>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Configuration Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--alert">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Enable Smart Filters?</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Smart filters are nondestructive and will preserve your original images.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Enable</button>
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Information Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--alert">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Connect to WiFi</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Please connect to WiFi to sync your projects or go to Settings to change your preferences.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Continue</button>
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Destructive Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--alert">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Delete 3 Documents</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Are you sure you want to delete the 3 selected documents?
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--warning" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Delete</button>
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--alert">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Unable to Share</h2>
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+      </div>
+      <div class="spectrum-Dialog-content">
+        An error occurred while sharing your project. Please verify the email address and try again.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">OK</button>
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open 3 Button Dialog</button>
+
+
+    <div class="spectrum-Dialog spectrum-Dialog--alert">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Rate This App</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        If you enjoy our app, would you mind taking a moment to rate it?
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">No, Thanks</button>
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Remind Me Later</button>
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Rate Now</button>
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Scrolling Dialog</button>
+
+    <div class="spectrum-Dialog">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">EULA</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Decline</button>
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Accept</button>
+      </div>
+    </div>
+
+
+    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
+
+    <div class="spectrum-Dialog spectrum-Dialog--fullscreen">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Default Dialog - Fullscreen</h2>
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+      </div>
+      <div class="spectrum-Dialog-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+      </div>
+      <div class="spectrum-Dialog-footer">
+        Anything in the footer is sticky and aligned right.
+      </div>
+    </div>
+
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover Dialog</button>
+
+    <div class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Fullscreen Takeover</h2>
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+      </div>
+      <div class="spectrum-Dialog-content">
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+      </div>
+      <div class="spectrum-Dialog-footer">
+        Anything in the footer is sticky and aligned right.
+      </div>
+    </div>
+
+    <div class="spectrum-Underlay" id="spectrum-underlay"></div>
+  </body>
+</html>

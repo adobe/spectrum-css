@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.4.0 */
+/* generated from dna-version: 5.15.0 */
 :root {
   --spectrum-global-color-static-black: rgb(0, 0, 0);
   --spectrum-global-color-static-white: rgb(255, 255, 255);
@@ -30,6 +30,22 @@
   --spectrum-global-color-static-green-500: rgb(45, 157, 120);
   --spectrum-global-color-static-green-600: rgb(38, 142, 108);
   --spectrum-global-color-static-green-700: rgb(18, 128, 92);
+  --spectrum-global-color-opacity-100: 1;
+  --spectrum-global-color-opacity-90: 0.9;
+  --spectrum-global-color-opacity-80: 0.8;
+  --spectrum-global-color-opacity-60: 0.6;
+  --spectrum-global-color-opacity-50: 0.5;
+  --spectrum-global-color-opacity-40: 0.4;
+  --spectrum-global-color-opacity-30: 0.3;
+  --spectrum-global-color-opacity-25: 0.25;
+  --spectrum-global-color-opacity-20: 0.2;
+  --spectrum-global-color-opacity-15: 0.15;
+  --spectrum-global-color-opacity-10: 0.1;
+  --spectrum-global-color-opacity-8: 0.08;
+  --spectrum-global-color-opacity-7: 0.07;
+  --spectrum-global-color-opacity-6: 0.06;
+  --spectrum-global-color-opacity-5: 0.05;
+  --spectrum-global-color-opacity-4: 0.04;
   --spectrum-global-font-family-base: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
   --spectrum-global-font-family-serif: adobe-clean-serif, 'Source Serif Pro', Georgia, serif;
   --spectrum-global-font-family-code: 'Source Code Pro', Monaco, monospace;
@@ -53,6 +69,7 @@
   --spectrum-global-font-line-height-small: 1.3;
   --spectrum-global-font-multiplier-25: 0.25em;
   --spectrum-global-font-multiplier-75: 0.75em;
+  --spectrum-global-dimension-static-size-0: 0px;
   --spectrum-global-dimension-static-size-10: 1px;
   --spectrum-global-dimension-static-size-25: 2px;
   --spectrum-global-dimension-static-size-50: 4px;
@@ -79,6 +96,7 @@
   --spectrum-global-dimension-static-size-1200: 96px;
   --spectrum-global-dimension-static-size-1700: 136px;
   --spectrum-global-dimension-static-size-2400: 192px;
+  --spectrum-global-dimension-static-size-2600: 208px;
   --spectrum-global-dimension-static-size-3400: 272px;
   --spectrum-global-dimension-static-size-3600: 288px;
   --spectrum-global-dimension-static-size-4600: 368px;
@@ -97,6 +115,8 @@
   --spectrum-global-dimension-static-font-size-800: 32px;
   --spectrum-global-dimension-static-font-size-900: 36px;
   --spectrum-global-dimension-static-font-size-1000: 40px;
+  --spectrum-global-dimension-static-percent-50: 50%;
+  --spectrum-global-dimension-static-percent-100: 100%;
   --spectrum-global-dimension-static-breakpoint-xsmall: 304px;
   --spectrum-global-dimension-static-breakpoint-small: 768px;
   --spectrum-global-dimension-static-breakpoint-medium: 1280px;
@@ -105,6 +125,7 @@
   --spectrum-global-dimension-static-grid-columns: 12;
   --spectrum-global-dimension-static-grid-fluid-width: 100%;
   --spectrum-global-dimension-static-grid-fixed-max-width: 1280px;
+  --spectrum-global-animation-duration-0: 0ms;
   --spectrum-global-animation-duration-100: 130ms;
   --spectrum-global-animation-duration-200: 160ms;
   --spectrum-global-animation-duration-300: 190ms;
@@ -115,6 +136,8 @@
   --spectrum-global-animation-duration-800: 400ms;
   --spectrum-global-animation-duration-900: 450ms;
   --spectrum-global-animation-duration-1000: 500ms;
+  --spectrum-global-animation-duration-2000: 1000ms;
+  --spectrum-global-animation-duration-4000: 2000ms;
   --spectrum-global-animation-ease-in-out: (.45, 0, .40, 1);
   --spectrum-global-animation-ease-in: (.50, 0, 1, 1);
   --spectrum-global-animation-ease-out: (0, 0, 0.40, 1);

@@ -1,27 +1,42 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 @import '../commons/index.css';
+
+:root {
+  /* Hardcoded for wrapping study */
+  --spectrum-switch-label-margin-top: var(--spectrum-global-dimension-size-75);
+}
 
 /* topdoc
 {{ toggle/toggle-onoffdefault.yml }}
 */
 .spectrum-ToggleSwitch {
-  display: inline-block;
+  display: inline-flex;
+  align-items: flex-start;
+
   position: relative;
-  font-size: 0;
-  height: var(--spectrum-switch-height);
-  line-height: var(--spectrum-switch-height);
+
+  min-height: var(--spectrum-switch-height);
+  max-width: 100%;
+
+  margin-right: calc(var(--spectrum-switch-cursor-hit-x) * 2);
+
+  vertical-align: top;
 }
 
 .spectrum-ToggleSwitch-input {
-  /* Change the font styles in all browsers for input. */
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-
   /* Remove the margin for input in Firefox and Safari. */
   margin: 0;
-
-  /* Show the overflow for input in Edge. */
-  overflow: visible;
 
   /* Add the correct box sizing for [type="checkbox"] in IE 10-. */
   box-sizing: border-box;
@@ -54,8 +69,9 @@
 .spectrum-ToggleSwitch-label {
   margin: 0 var(--spectrum-switch-text-gap);
   font-size: var(--spectrum-switch-text-size);
-  vertical-align: middle;
   transition: color var(--spectrum-global-animation-duration-200) ease-in-out;
+
+  margin-top: var(--spectrum-switch-label-margin-top);
 }
 
 .spectrum-ToggleSwitch-switch {
@@ -65,6 +81,12 @@
 
   height: var(--spectrum-switch-track-height);
   width: var(--spectrum-switch-track-width);
+
+  /* Fix vertical alignment when not wrapping since we're flex-start */
+  margin: calc((var(--spectrum-switch-height) - var(--spectrum-switch-track-height)) / 2) 0;
+
+  flex-grow: 0;
+  flex-shrink: 0;
 
   vertical-align: middle;
 

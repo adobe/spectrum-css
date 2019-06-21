@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spectrum CSS Dialogs Example</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+
+    <link rel="stylesheet" href="../components/page/index-vars.css">
+    <link rel="stylesheet" href="../components/typography/index-vars.css">
+    <link rel="stylesheet" href="../components/icon/index-vars.css">
+    <link rel="stylesheet" href="../components/button/index-vars.css">
+    <link rel="stylesheet" href="../components/checkbox/index-vars.css">
+    <link rel="stylesheet" href="../components/dialog/index-vars.css">
+    <link rel="stylesheet" href="../components/underlay/index-vars.css">
+
+    <script src="../icons/loadIcons.js"></script>
+    <script src="js/vendor/focus-ring-polyfill.js"></script>
+    <script src="js/vendor/typekit.js"></script>
+    <script src="js/Switcher.js"></script>
+    <script src="js/kbSwitcher.js"></script>
+    <script src="js/dialog.js"></script>
+    <script>
+      loadIcons('../icons/spectrum-css-icons.svg');
+      loadIcons('../icons/spectrum-icons.svg');
+    </script>
+
+    <style>
+      .spectrum-File {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .spectrum-File-label {
+        margin-left: 8px;
+      }
+    </style>
+  </head>
+  <body class="spectrum spectrum--light spectrum--medium">
+
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(document.querySelector('#spectrumDialog'))" style="position: fixed; top: 50%; left: 50%; margin-left: -80px;">Open Small Dialog</button>
+
+    <div class="spectrum-Dialog-wrapper is-open">
+      <div class="spectrum-Dialog spectrum-Dialog--responsive spectrum-Dialog--medium is-open" id="spectrumDialog">
+        <div class="spectrum-Dialog-header">
+          <h2 class="spectrum-Dialog-title">Do you want to launch an application?</h2>
+        </div>
+        <div class="spectrum-Dialog-content">
+          This plugin need to launch an external application, the following application will be launched if you accept this request:
+
+          <br><br>
+
+          <div class="spectrum-File">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Illustrator">
+              <use xlink:href="#spectrum-icon-18-Illustrator"></use>
+            </svg>
+            <span class="spectrum-File-label">Illustrator</span>
+          </div>
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <label class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-DashSmall" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Don't ask me again</span>
+          </label>
+
+          <div style="flex: 2"></div>
+
+          <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+          <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Launch</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="spectrum-Underlay is-open" id="spectrum-underlay"></div>
+  </body>
+</html>

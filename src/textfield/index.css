@@ -1,3 +1,15 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 @import '../commons/index.css';
 
 :root {
@@ -54,9 +66,7 @@
   /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
   /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
   -moz-appearance: textfield;
-
-  /* Normalize is adding a specific selector that resets this, so be important */
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
 
   &::placeholder {
     font-weight: var(--spectrum-textfield-placeholder-text-font-weight);

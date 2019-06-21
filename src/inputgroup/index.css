@@ -1,3 +1,15 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 @import '../commons/index.css';
 
 /* topdoc
@@ -12,12 +24,23 @@
 /* topdoc
 {{ inputgroup/datepicker-quiet.yml }}
 */
+/* topdoc
+{{ inputgroup/datepicker-range.yml }}
+*/
+/* topdoc
+{{ inputgroup/datepicker-range-quiet.yml }}
+*/
 
 :root {
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
   --spectrum-combobox-field-border-width-right: 0;
   --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
+  --spectrum-datepicker-input-width: calc(var(--spectrum-global-dimension-size-1600) -  2 * var(--spectrum-padding));
+  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-700) - var(--spectrum-global-dimension-static-font-size-100) / 2);
+  --spectrum-datepicker-range-dash-margin-left: calc(-0.5 * var(--spectrum-global-dimension-static-font-size-100));
+  --spectrum-datepicker-range-dash-padding-top: 0;
+  --spectrum-datepicker-range-dash-line-height: calc(var(--spectrum-textfield-height) - var(--spectrum-global-dimension-size-100));
 }
 
 .spectrum-InputGroup {
@@ -26,6 +49,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: var(--spectrum-component-single-line-width);
+  border-radius: var(--spectrum-border-radius);
 
   .spectrum-FieldButton {
     padding: 0 var(--spectrum-dropdown-padding-x);
@@ -42,6 +66,7 @@
 }
 
 .spectrum-InputGroup--quiet {
+  border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
   .spectrum-FieldButton {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
@@ -61,5 +86,86 @@
 
   .spectrum-InputGroup-icon {
     right: 0;
+  }
+}
+
+.spectrum-Datepicker--range {
+  border-radius: var(--spectrum-border-radius);
+  /* Input Group */
+  &.spectrum-InputGroup--quiet {
+    border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+    .spectrum-FieldButton {
+      border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+    }
+  }
+  /* Datetime Range */
+  &.spectrum-Datepicker--datetimeRange {
+    /* Inputs */
+    .spectrum-InputGroup-field {
+      width: var(--spectrum-datepicker-datetime-input-width);
+      min-width: var(--spectrum-datepicker-datetime-input-width);
+    }
+  }
+  /* Inputs */
+  .spectrum-InputGroup-field {
+    width: var(--spectrum-datepicker-input-width);
+    min-width: var(--spectrum-datepicker-input-width);
+    flex: initial;
+    &.spectrum-Datepicker-startField {
+      border-right: 0;
+      padding-right: var(--spectrum-padding);
+      &.is-invalid,
+      &:invalid {
+        background-image: none;
+        padding-right: var(--spectrum-padding);
+      }
+    }
+    &.spectrum-Datepicker-endField {
+      border-left: 0;
+      border-radius: 0;
+      padding-left: var(--spectrum-padding);
+    }
+  }
+  /* Em dash */
+  .spectrum-Datepicker--rangeDash {
+    line-height: var(--spectrum-datepicker-range-dash-line-height);
+    padding-top: var(--spectrum-datepicker-range-dash-padding-top);
+    flex: initial;
+    width: 0;
+    z-index: 1;
+    &:before {
+      content: '—';
+      display: inline-block;
+      margin: 0 var(--spectrum-datepicker-range-dash-margin-left);
+      overflow: hidden;
+      text-align: center;
+      vertical-align: middle;
+      width: var(--spectrum-global-dimension-static-font-size-100);
+    }
+  }
+  /* Focus ring */
+  &.is-focused {
+    .spectrum-Datepicker-focusRing {
+      position: absolute;
+      border-radius: var(--spectrum-border-radius);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+  &.spectrum-InputGroup--quiet {
+    &.is-focused {
+      .spectrum-Datepicker-focusRing {
+        border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+        top: auto;
+      }
+    }
+    .spectrum-Datepicker--rangeDash {
+      &:before {
+        margin-left: var(--spectrum-datepicker-range-dash-margin-left);
+      }
+    }
   }
 }

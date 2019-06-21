@@ -1,12 +1,29 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 @import '../commons/index.css';
+
+:root {
+  /* Hardcoded for wrapping study */
+  --spectrum-checkbox-label-margin-top: var(--spectrum-global-dimension-size-75);
+}
 
 .spectrum-Checkbox {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 
   position: relative;
 
-  height: var(--spectrum-checkbox-height);
+  min-height: var(--spectrum-checkbox-height);
   max-width: 100%;
 
   margin-right: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
@@ -82,10 +99,7 @@
   font-weight: var(--spectrum-checkbox-text-font-weight);
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 
-  white-space: nowrap;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-top: var(--spectrum-checkbox-label-margin-top);
 }
 
 .spectrum-Checkbox-box {
@@ -93,6 +107,9 @@
   box-sizing: border-box;
   width: var(--spectrum-checkbox-box-size);
   height: var(--spectrum-checkbox-box-size);
+
+  /* Fix vertical alignment when not wrapping since we're flex-start */
+  margin: calc((var(--spectrum-checkbox-height) - var(--spectrum-checkbox-box-size)) / 2) 0;
 
   flex-grow: 0;
   flex-shrink: 0;
