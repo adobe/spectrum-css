@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Button {
   &:focus-ring {
-    box-shadow: 0 0 0 var(--spectrum-button-primary-border-size-increase-key-focus) var(--spectrum-button-primary-border-color-key-focus);
+    box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-button-primary-focus-ring-color-key-focus);
   }
 
   &:active {
@@ -206,7 +206,7 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-button-over-background-background-color-key-focus);
     border-color: var(--spectrum-button-over-background-border-color-key-focus);
     color: inherit;
-    box-shadow: 0 0 0 var(--spectrum-button-primary-border-size-increase-key-focus) var(--spectrum-button-over-background-border-color-key-focus);
+    box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-button-primary-focus-ring-color-key-focus);
   }
 
   &:active {

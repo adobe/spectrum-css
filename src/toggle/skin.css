@@ -148,12 +148,11 @@ governing permissions and limitations under the License.
   }
 }
 /* Key Focus */
-.spectrum-ToggleSwitch, .spectrum-ToggleSwitch:hover, .spectrum-ToggleSwitch--quiet, .spectrum-ToggleSwitch--quiet:hover {
+.spectrum-ToggleSwitch, .spectrum-ToggleSwitch:hover {
   .spectrum-ToggleSwitch-input:focus-ring {
     & + .spectrum-ToggleSwitch-switch {
-      &::after {
-        border-color: var(--spectrum-switch-handle-border-color-key-focus);
-        box-shadow: 0 0 0 1px var(--spectrum-switch-handle-border-color-key-focus);
+      &::before {
+        box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-switch-handle-border-color-key-focus);
       }
     }
     & ~ .spectrum-ToggleSwitch-label {
@@ -164,10 +163,38 @@ governing permissions and limitations under the License.
       & + .spectrum-ToggleSwitch-switch {
         &::before {
           background-color: var(--spectrum-switch-track-color-selected-key-focus);
+          box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-switch-handle-border-color-key-focus);
         }
         &::after {
           border-color: var(--spectrum-switch-handle-border-color-selected-key-focus);
-          box-shadow: 0 0 0 1px var(--spectrum-switch-handle-border-color-selected-key-focus);
+        }
+      }
+      & ~ .spectrum-ToggleSwitch-label {
+        color: var(--spectrum-switch-text-color-selected-key-focus);
+      }
+    }
+  }
+}
+
+.spectrum-ToggleSwitch--quiet, .spectrum-ToggleSwitch--quiet:hover {
+  .spectrum-ToggleSwitch-input:focus-ring {
+    & + .spectrum-ToggleSwitch-switch {
+      &::before {
+        box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-switch-handle-border-color-key-focus);
+      }
+    }
+    & ~ .spectrum-ToggleSwitch-label {
+      color: var(--spectrum-switch-text-color-key-focus);
+    }
+    /* Selected Key Focus */
+    &:checked {
+      & + .spectrum-ToggleSwitch-switch {
+        &::before {
+          background-color: var(--spectrum-switch-track-color-selected-key-focus);
+          box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-switch-handle-border-color-key-focus);
+        }
+        &::after {
+          border-color: var(--spectrum-switch-handle-border-color-selected-key-focus);
         }
       }
       & ~ .spectrum-ToggleSwitch-label {
@@ -197,10 +224,8 @@ governing permissions and limitations under the License.
     &:focus-ring {
       &:checked + .spectrum-ToggleSwitch-switch {
         &::before {
+          box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-switch-handle-border-color-key-focus);
           background-color: var(--spectrum-switch-track-color);
-        }
-        &::after {
-          border-color: var(--spectrum-switch-handle-border-color-key-focus);
         }
       }
     }

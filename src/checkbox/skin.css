@@ -26,8 +26,15 @@ governing permissions and limitations under the License.
 
 /* Indetermiate is basically a checked state, so handle colors for checked state here */
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
-.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box{
   border-color: var(--spectrum-checkbox-box-border-color-selected);
+}
+
+.spectrum-Checkbox-input:checked:focus-ring  + .spectrum-Checkbox-box {
+  border-color: var(--spectrum-checkbox-box-border-color-selected-key-focus) !important;
+}
+.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:focus-ring + .spectrum-Checkbox-box {
+  border-color: var(--spectrum-checkbox-box-border-color-indeterminate-key-focus) !important;
 }
 
 .spectrum-Checkbox:hover {
@@ -92,8 +99,7 @@ governing permissions and limitations under the License.
   &:focus-ring + .spectrum-Checkbox-box {
     /* Since the specificity of .focus-ring is less than :hover, we need important */
     border-color: var(--spectrum-checkbox-box-border-color-key-focus) !important;
-
-    box-shadow: 0 0 0 1px var(--spectrum-checkbox-box-border-color-key-focus) !important;
+    box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-checkbox-focus-ring-color-key-focus) !important;
   }
 
   &:focus-ring ~ .spectrum-Checkbox-label {
@@ -154,5 +160,14 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-label {
       color: var(--spectrum-checkbox-text-color-error-down);
     }
+  }
+  &:focus-ring + .spectrum-Checkbox-box {
+    /* Since the specificity of .focus-ring is less than :hover, we need important */
+    border-color: var(--spectrum-checkbox-box-border-color-error-key-focus) !important;
+    box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-checkbox-focus-ring-color-key-focus) !important;
+  }
+
+  &:focus-ring ~ .spectrum-Checkbox-label {
+    color: var(--spectrum-checkbox-text-color-key-focus) !important;
   }
 }
