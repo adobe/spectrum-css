@@ -1,0 +1,30 @@
+{
+  "name": "@spectrum-css/build",
+  "version": "0.0.0",
+  "description": "The Spectrum CSS component builder",
+  "author": "",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "dependencies": {
+    "@spectrum-css/vars": "0.0.0",
+    "autoprefixer": "^6.5.3",
+    "browser-sync": "^2.26.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.0",
+    "postcss-calc": "^6.0.0",
+    "postcss-custom-properties": "^6.0.1",
+    "postcss-focus-ring": "^1.0.0",
+    "postcss-functions": "^3.0.0",
+    "postcss-import": "^10.0.0",
+    "postcss-inherit": "^4.0.3",
+    "postcss-nested": "^3.0.0"
+  }
+}

@@ -1,6 +1,6 @@
-/dist
-/node_modules
-/temp
+dist
+node_modules
+temp
 .npmrc*
 .tmp
 npm-debug.log*
@@ -9,4 +9,5 @@ npm-debug.log*
 /backstop_data/bitmaps_test/
 /backstop_data/build_data/
 /backstop_data/html_report/
-/.idea
+.idea
+lerna-debug.log

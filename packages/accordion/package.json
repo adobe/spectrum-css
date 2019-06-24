@@ -1,0 +1,22 @@
+{
+  "name": "@spectrum-css/accordion",
+  "version": "0.0.0",
+  "description": "The Spectrum CSS accordion component",
+  "author": "",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "@spectrum-css/build": "0.0.0",
+    "@spectrum-css/vars": "0.0.0"
+  }
+}
