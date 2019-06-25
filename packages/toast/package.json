@@ -14,9 +14,13 @@
   "scripts": {
     "build": "gulp"
   },
+  "dependencies": {
+    "@spectrum-css/vars": "0.0.0",
+    "@spectrum-css/icons": "0.0.0",
+    "@spectrum-css/button": "0.0.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.0",
-    "@spectrum-css/build": "0.0.0",
-    "@spectrum-css/vars": "0.0.0"
+    "@spectrum-css/build": "0.0.0"
   }
 }

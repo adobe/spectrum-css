@@ -14,9 +14,7 @@ gulp.task('build-prepare', function(cb) {
   cb();
 });
 
-/**
- * Builds a list of unique variables from DNA for each theme and scale.
- */
+// Builds a list of unique variables from DNA for each theme and scale.
 gulp.task('build-vars', function(cb) {
   let vars = require('./');
   for (let theme in vars.themes) {
@@ -30,4 +28,16 @@ gulp.task('build-vars', function(cb) {
   cb();
 });
 
-gulp.task('default', gulp.series('clean', 'build-prepare', 'build-vars'));
+gulp.task('copy-metadata', function() {
+  return gulp.src('vars/spectrum-metadata.json')
+    .pipe(gulp.dest('dist/'))
+});
+
+gulp.task('default',
+  gulp.series('clean', 'build-prepare',
+    gulp.parallel(
+      'build-vars',
+      'copy-metadata'
+    )
+  )
+);

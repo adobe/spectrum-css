@@ -1,1 +1,0 @@
-require('@spectrum-css/build');

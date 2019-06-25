@@ -14,8 +14,8 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-loadIcons('../icons/spectrum-css-icons.svg');
-loadIcons('../icons/spectrum-icons.svg');
+loadIcons('dependencies/icons/spectrum-css-icons.svg');
+loadIcons('dependencies/icons/spectrum-icons.svg');
 
 var curColorstop = 'light';
 function changeCSS(colorStop) {
@@ -70,60 +70,6 @@ document.addEventListener('click', function(event) {
   }
 });
 
-var currentTitle = null;
-var titles;
-function setHashFromScroll() {
-  var scrollTop = document.querySelector('.sdldocs-components').scrollTop;
-  var minTitleCloseness = Infinity;
-  var closestTitle = null;
-  for (var i = 0; i < titles.length; i++) {
-    var title = titles[i];
-    var titleCloseness = Math.abs(scrollTop - title.offsetTop);
-    if (titleCloseness < minTitleCloseness) {
-      minTitleCloseness = titleCloseness;
-      closestTitle = title;
-    }
-
-    if (closestTitle !== null && titleCloseness > minTitleCloseness) {
-      // We're not finding closer titles now
-      break;
-    }
-  }
-  if (closestTitle && currentTitle !== closestTitle) {
-    selectNavItem(closestTitle.getAttribute('href'));
-    currentTitle = closestTitle;
-  }
-}
-
-var selectedNavItem = null;
-var nav;
-function selectNavItem(href) {
-  var navLink = document.querySelector('.sdldocs-nav [href="' + href + '"]');
-  if (navLink) {
-    var navItem = navLink.parentElement;
-
-    if (navItem != selectedNavItem) {
-      if (selectedNavItem) {
-        selectedNavItem.classList.remove('is-selected');
-      }
-      navItem.classList.add('is-selected');
-
-      if (navItem.offsetTop + navItem.offsetHeight > nav.scrollTop + nav.offsetHeight) {
-        // Scroll down to the item
-        nav.scrollTop = navItem.offsetTop - nav.offsetHeight + navItem.offsetHeight;
-      }
-      else if (navItem.offsetTop < nav.scrollTop) {
-        // Scroll up to the item
-        nav.scrollTop = navItem.offsetTop;
-      }
-
-      selectedNavItem = navItem;
-    }
-  }
-}
-
-window.ignoreScroll = false;
-
 var curScale = 'medium';
 var curMethod = 'standalone';
 var scaleAbbreviations = {
@@ -153,21 +99,6 @@ function changeScale(scale, method, noState) {
   });
   document.body.classList.add('spectrum--' + scale);
 
-  // Scroll to the same place we were before
-  if (currentTitle) {
-    var count = 0;
-    window.ignoreScroll = true;
-    document.querySelector('.sdldocs-components').scrollTop = currentTitle.offsetTop;
-    var interval = window.setInterval(function() {
-      document.querySelector('.sdldocs-components').scrollTop = currentTitle.offsetTop;
-      count++;
-      if (count > 50) {
-        clearInterval(interval);
-        window.ignoreScroll = false;
-      }
-    }, 10);
-  }
-
   curScale = scale;
   curMethod = method;
 
@@ -189,8 +120,6 @@ function setURLParams(hash) {
 
 window.addEventListener('DOMContentLoaded', function() {
   // Get elements once
-  titles = document.getElementsByClassName('js-hashtitle');
-  nav = document.querySelector('.sdldocs-nav');
   scaleDropdown = document.querySelector('#scale');
   colorstopDropdown = document.querySelector('#colorstop');
 
@@ -206,30 +135,6 @@ window.addEventListener('DOMContentLoaded', function() {
     changeCSS(curColorstop);
     changeScale(curScale, curMethod, true);
   }
-
-  if (window.location.hash) {
-    // Scroll to the hash
-    // This is required for refreshes when the size is changed
-    var el = document.querySelector(window.location.hash);
-    if (el) {
-      document.querySelector('.sdldocs-components').scrollTop = el.offsetTop;
-    }
-  }
-  else {
-    // Make it #official
-    setHashFromScroll();
-  }
-
-  // Set the hash while scrolling
-  var scrollTimeDelay = 100;
-  var hashTimeout;
-  document.querySelector('.sdldocs-components').addEventListener('scroll', function() {
-    clearTimeout(hashTimeout);
-    if (window.ignoreScroll) {
-      return;
-    }
-    hashTimeout = setTimeout(setHashFromScroll, scrollTimeDelay);
-  });
 });
 
 function changeLoader(loader, value, submask1, submask2) {

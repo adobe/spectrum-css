@@ -1,0 +1,10 @@
+---
+name: Button - CTA
+status: Verified
+markup: |
+  <button class="spectrum-Button spectrum-Button--cta">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
+  <button class="spectrum-Button spectrum-Button--cta" disabled>
+    <span class="spectrum-Button-label">Button</span>
+  </button>

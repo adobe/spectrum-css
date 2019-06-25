@@ -1,0 +1,196 @@
+-
+  const labelColors = {
+    'Deprecated': 'red',
+
+    'Beta Precursor': 'orange',
+
+    'Precursor': 'yellow',
+    'CSS Unverified': 'yellow',
+
+    'Canon': 'green',
+    'CSS Verified': 'green'
+  };
+
+  const dnaStatusTranslation = {
+    'Released': 'Canon',
+    'Beta': 'Precursor'
+  };
+
+  const cssStatusTranslation = {
+    'Beta': 'CSS Unverified',
+    'Verified': 'CSS Verified'
+  };
+
+  function getLabelColor(status) {
+    return labelColors[status] || 'grey';
+  }
+
+  function getDNAStatus(dnaComponentId, dnaStatus, cssStatus) {
+    if (cssStatus === 'Deprecated') {
+      dnaStatus = 'Deprecated';
+    }
+
+    if (cssStatus === 'CSS Verified') {
+      if (dnaStatus !== 'Released') {
+        console.log(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
+        dnaStatus = 'Canon';
+      }
+    }
+
+    if (!dnaStatus) {
+      console.log(`${dnaComponentId} has no DNA status`);
+      dnaStatus = 'Beta Precursor';
+    }
+
+    return dnaStatusTranslation[dnaStatus] || dnaStatus;
+  }
+
+  function getCSSStatus(dnaComponentId, cssStatus) {
+    if (cssStatus === 'Released' || !cssStatus) {
+      cssStatus = 'CSS Unverified';
+    }
+    return cssStatusTranslation[cssStatus] || cssStatus;
+  }
+
+  function populateDNAInfo(component) {
+    // Get DNA information
+    var dnaComponentId = component.id || component.name.toLowerCase();
+
+    // Get info based on component variation first, then component name second
+    var dnaComponentTitle = dnaVars['spectrum-' + dnaComponentId + '-name'];
+
+    var dnaDescription = dnaVars['spectrum-' + dnaComponentId + '-description'];
+
+    var cssStatus = getCSSStatus(dnaComponentId, component.status);
+    var dnaStatus = getDNAStatus(dnaComponentId, dnaVars['spectrum-' + dnaComponentId + '-status'] || component.dnaStatus, cssStatus);
+
+    // Store the info
+    component.name = component.name || dnaComponentTitle;
+    component.cssStatus = cssStatus;
+    component.dnaStatus = dnaStatus;
+    component.cssColor = getLabelColor(component.cssStatus);
+    component.dnaColor = getLabelColor(component.dnaStatus);
+
+    // Add other data
+    component.id = dnaComponentId;
+
+    component.slug = getSlug(component.name);
+  }
+
+  // Backwards compatibility with old components array
+  component.examples = component.examples || component.components;
+
+  // Arrange examples for processing
+  var examples;
+  if (!component.examples) {
+    // Only one top-level example
+    examples = [component];
+  }
+  else {
+    // Multiple child examples
+    examples = component.examples;
+  }
+
+  // Get the list of all of the deps so we can include them
+  var deps = [];
+  for (var package in pkg.dependencies) {
+    if (package.indexOf('@spectrum-css') === 0) {
+      if (package !== '@spectrum-css/vars') {
+        deps.push(package.split('/').pop());
+      }
+    }
+  }
+
+  // Get DNA data
+  populateDNAInfo(component);
+
+  if (component.examples) {
+    for (id in component.examples) {
+      component.examples[id].id = id;
+      populateDNAInfo(component.examples[id]);
+    }
+  }
+
+doctype html
+html
+  head
+    meta(charset = 'utf-8')
+    meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+    title #{component.name} - Spectrum CSS
+    meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
+
+    link(rel='stylesheet', type='text/css', href='css/vendor/prism.css', data-prism)
+
+    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-lightest.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-light.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-dark.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-darkest.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-medium.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-large.css')
+
+    each dep in deps
+      link(rel='stylesheet', type='text/css', href='dependencies/' + dep + '/index.css')
+
+    // Include the actual component
+    link(rel='stylesheet', type='text/css', href='../index.css')
+
+    link(rel='stylesheet', type='text/css', href='css/docs.css')
+
+    script(src='dependencies/loadicons/index.js')
+    script(src='dependencies/@adobe/focus-ring-polyfill/index.js')
+
+    script(src='js/docs.js')
+    script(src='js/enhancement.js')
+    script(src='js/polyfills.js')
+    script(src='js/vendor/typekit.js')
+
+  body.spectrum.spectrum--light.spectrum--medium
+    .spectrum.spectrum--light
+      -
+      article.cssdocs-component
+        header.row.middle-sm(id=component.slug)
+          a(href=`#${component.slug}`).sdldocs-subtleLink.js-hashtitle
+            h2.sdldocs-component-name.spectrum-Heading--pageTitle #{component.name} v#{pkg.version}
+
+        if component.description
+          section.sdldocs-component-description.spectrum-Body!= component.description
+
+
+        each example in examples
+          -
+            example.slug = getSlug(component.name, example.name);
+
+          article.cssdocs-subComponent
+            if example != component
+              header.row.middle-sm(id=example.slug)
+                a(href=`#${example.slug}`).sdldocs-subtleLink.js-hashtitle
+                  h4.sdldocs-subComponent-name.spectrum-Heading--subtitle3 #{example.name}
+                if example.cssStatus != 'n/a'
+                  .u-tooltip-showOnHover
+                    div(class=`sdldocs-dnaStatus spectrum-Label spectrum-Label--${example.dnaColor}`).
+                      #{example.dnaStatus}
+                    if example.dnaStatus != 'Deprecated'
+                      div(class=`sdldocs-cssStatus spectrum-Label spectrum-Label--${example.cssColor}`).
+                        #{example.cssStatus}
+                    if example.details
+                      .spectrum-Tooltip.spectrum-Tooltip--right
+                        .spectrum-Tooltip-label!= example.details
+                        .spectrum-Tooltip-tip
+
+
+              if example.description
+                section.sdldocs-component-description.spectrum-Body!= example.description
+
+            if example.markup
+              -
+                example.highlightedMarkup = Prism.highlight(example.markup, Prism.languages.markup, 'markup');
+
+              section.cssdocs-example.spectrum
+                .cssdocs-example-demo(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
+                .cssdocs-example-markup
+                  if example.markup.split('\n').length > 2
+                    a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
+                  pre
+                    code.language-markup!=example.highlightedMarkup
+
+      div.spectrum-Underlay#spectrum-underlay
