@@ -14,23 +14,8 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-// Polyfill closest() on IE 11
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-}
-
-if (!Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
-    var el = this;
-    var ancestor = this;
-    if (!document.documentElement.contains(el)) return null;
-    do {
-      if (ancestor.matches(s)) return ancestor;
-      ancestor = ancestor.parentElement;
-    } while (ancestor !== null);
-    return null;
-  };
-}
+loadIcons('../icons/spectrum-css-icons.svg');
+loadIcons('../icons/spectrum-icons.svg');
 
 var curColorstop = 'light';
 function changeCSS(colorStop) {
@@ -84,40 +69,6 @@ document.addEventListener('click', function(event) {
     toggleMarkupVisibility(event);
   }
 });
-
-window.addEventListener('click', function(event) {
-  var isDisabled = event.target.closest('.spectrum-TreeView-item') !== null &&
-    event.target.closest('.spectrum-TreeView-item').classList.contains('is-disabled');
-  var el;
-  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null && !isDisabled) {
-    el.classList.toggle('is-open');
-    event.preventDefault();
-  }
-});
-
-// Display InputGroup focus style
-function toggleInputGroupFocus(event) {
-  var classList = event.target.classList;
-  var closestSelector;
-  // target within InputGroup
-  if (classList.contains('spectrum-InputGroup-field') ||
-      classList.contains('spectrum-FieldButton')) {
-    closestSelector = '.spectrum-InputGroup';
-  }
-  // target within a Slider
-  else if (classList.contains('spectrum-Slider-input')) {
-    closestSelector = '.spectrum-Slider-handle';
-  }
-  else {
-    return;
-  }
-  var func = event.type === 'focus' ? 'add' : 'remove';
-  var closestElement = event.target.closest(closestSelector);
-  closestElement.classList[func]('is-focused');
-}
-
-document.addEventListener('focus', toggleInputGroupFocus, true);
-document.addEventListener('blur', toggleInputGroupFocus, true);
 
 var currentTitle = null;
 var titles;
@@ -198,9 +149,9 @@ function changeScale(scale, method, noState) {
   }
 
   Object.keys(scaleAbbreviations).forEach(function(otherScale) {
-    document.documentElement.classList.remove('spectrum--' + otherScale);
+    document.body.classList.remove('spectrum--' + otherScale);
   });
-  document.documentElement.classList.add('spectrum--' + scale);
+  document.body.classList.add('spectrum--' + scale);
 
   // Scroll to the same place we were before
   if (currentTitle) {
@@ -281,21 +232,6 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Load and store references to icon SVGs
-// var mediumIcons;
-// var largeIcons;
-// AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-medium.svg', function(err, svg) {
-//   mediumIcons = svg;
-// });
-// AdobeSpectrum.loadIcons('../icons/spectrum-css-icons-large.svg', function(err, svg) {
-//   largeIcons = svg;
-
-//   // Immediately remove from the DOM -- it will be added back when we switch scale
-//   largeIcons.parentElement.removeChild(largeIcons);
-// });
-loadIcons('../icons/spectrum-css-icons.svg');
-loadIcons('../icons/spectrum-icons.svg');
-
 function changeLoader(loader, value, submask1, submask2) {
   submask1 = submask1 || loader.querySelector('.spectrum-CircleLoader-fillSubMask1');
   submask2 = submask2 || loader.querySelector('.spectrum-CircleLoader-fillSubMask2');
@@ -311,183 +247,3 @@ function changeLoader(loader, value, submask1, submask2) {
     submask2.style.transform = 'rotate('+angle+'deg)';
   }
 }
-
-function makeDoubleSlider(slider) {
-  var tracks = slider.querySelectorAll('.spectrum-Slider-track');
-  var leftTrack = tracks[0];
-  var middleTrack = tracks[1];
-  var rightTrack = tracks[2];
-  var handles = slider.querySelectorAll('.spectrum-Slider-handle');
-  var leftHandle = handles[0];
-  var rightHandle = handles[1];
-
-  var handle = null;
-  function onMouseDown(e, sliderHandle) {
-    if (e.target.classList.contains('spectrum-Slider-handle')) {
-      handle = e.target;
-      window.addEventListener('mouseup', onMouseUp);
-      window.addEventListener('mousemove', onMouseMove);
-    }
-  }
-  function onMouseUp(e, sliderHandle) {
-    window.removeEventListener('mouseup', onMouseUp);
-    window.removeEventListener('mousemove', onMouseMove);
-    handle = null;
-  }
-  function onMouseMove(e, sliderHandle) {
-    if (!handle) {
-      return;
-    }
-
-    var sliderOffsetWidth = slider.offsetWidth;
-    var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
-
-    var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
-    var percent = (x / sliderOffsetWidth) * 100;
-
-    if (handle === leftHandle) {
-      if (percent < parseFloat(rightHandle.style.left)) {
-        handle.style.left = percent + '%';
-        leftTrack.style.width = percent + '%';
-      }
-    }
-    else {
-      if (percent > parseFloat(leftHandle.style.left)) {
-        handle.style.left = percent + '%';
-        rightTrack.style.width = (100 - percent) + '%';
-      }
-    }
-    middleTrack.style.left = leftHandle.style.left;
-    middleTrack.style.right = (100 - parseFloat(rightHandle.style.left)) + '%';
-  }
-
-  // Set initial track position
-  var startPercent = parseFloat(leftHandle.style.left);
-  var endPercent = parseFloat(rightHandle.style.left);
-  leftTrack.style.width = startPercent + '%';
-  middleTrack.style.left = startPercent + '%';
-  middleTrack.style.right = (100 - endPercent) + '%';
-  rightTrack.style.width = (100 - endPercent) + '%';
-
-  if (!slider.classList.contains('is-disabled')) {
-    slider.addEventListener('mousedown', onMouseDown);
-  }
-}
-
-function makeSlider(slider) {
-  var tracks = slider.querySelectorAll('.spectrum-Slider-track');
-  var leftTrack = tracks[0];
-  var rightTrack = tracks[1];
-  var handles = slider.querySelectorAll('.spectrum-Slider-handle');
-  var handle = handles[0];
-  var isColor = slider.classList.contains('spectrum-Slider--color');
-  var fill = slider.querySelector('.spectrum-Slider-fill');
-
-  if (handles.length > 1) {
-    makeDoubleSlider(slider);
-    return;
-  }
-
-  var buffers = slider.querySelectorAll('.spectrum-Slider-buffer');
-  if (buffers.length) {
-    var leftBuffer = buffers[0];
-    var rightBuffer = buffers[1];
-    var bufferedAmount = parseInt(handle.style.left, 10) + parseInt(rightBuffer.style.width, 10);
-  }
-
-  function onMouseDown(e, sliderHandle) {
-    window.addEventListener('mouseup', onMouseUp);
-    window.addEventListener('mousemove', onMouseMove);
-  }
-  function onMouseUp(e, sliderHandle) {
-    window.removeEventListener('mouseup', onMouseUp);
-    window.removeEventListener('mousemove', onMouseMove);
-  }
-  function onMouseMove(e, sliderHandle) {
-    var sliderOffsetWidth = slider.offsetWidth;
-    var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
-
-    var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
-    var percent = (x / sliderOffsetWidth) * 100;
-    if (leftTrack && rightTrack && !isColor) {
-      leftTrack.style.width = percent + '%';
-      rightTrack.style.width = (100 - percent) + '%';
-    }
-    handle.style.left = percent + '%';
-
-    if (buffers.length) {
-      if (percent >= bufferedAmount) {
-        // Don't show right buffer bar
-        rightBuffer.style.width = 0;
-        rightBuffer.style.left = 'auto';
-        rightBuffer.style.right = 'auto';
-        leftBuffer.style.width = bufferedAmount + '%';
-      }
-      else {
-        leftBuffer.style.width = percent + '%';
-        rightBuffer.style.width = 'auto';
-        rightBuffer.style.left = percent + '%';
-        rightBuffer.style.right = (100 - bufferedAmount) + '%';
-      }
-    }
-
-    if (fill) {
-      fill.style.left = (percent < 50 ? percent : 50) + '%';
-      fill.style.width = (percent < 50 ? 50 - percent : percent - 50) + '%';
-      if (percent > 50) {
-        fill.classList.add('spectrum-Slider-fill--right');
-      }
-      else {
-        fill.classList.remove('spectrum-Slider-fill--right');
-      }
-    }
-  }
-
-  // Set initial track position
-  var percent = parseInt(handle.style.left, 10);
-  if (leftTrack && rightTrack && !isColor) {
-    leftTrack.style.width = percent + '%';
-    rightTrack.style.width = (100 - percent) + '%';
-  }
-
-  if (!slider.classList.contains('is-disabled')) {
-    slider.addEventListener('mousedown', onMouseDown);
-  }
-}
-
-function makeDial(dial) {
-  var dialOffsetWidth = dial.offsetWidth;
-  var dialOffsetLeft = dial.offsetLeft + dial.offsetParent.offsetLeft;
-  var input = dial.querySelector('input');
-  var handle = dial.querySelector('.spectrum-Dial-handle');
-  var min = -45;
-  var max = 225;
-  function onMouseDown(e, sliderHandle) {
-    window.addEventListener('mouseup', onMouseUp);
-    window.addEventListener('mousemove', onMouseMove);
-  }
-  function onMouseUp(e, sliderHandle) {
-    window.removeEventListener('mouseup', onMouseUp);
-    window.removeEventListener('mousemove', onMouseMove);
-  }
-  function onMouseMove(e, sliderHandle) {
-    var x = Math.max(Math.min(e.x - dialOffsetLeft, dialOffsetWidth), 0);
-    var percent = (x / dialOffsetWidth) * 100;
-
-    var deg = percent * 0.01 * (max - min) + min;
-    handle.style.transform = 'rotate('+ deg + 'deg'+')';
-  }
-
-  if (!dial.classList.contains('is-disabled')) {
-    dial.addEventListener('mousedown', onMouseDown);
-  }
-}
-
-window.addEventListener('DOMContentLoaded', function() {
-  Array.prototype.forEach.call(document.querySelectorAll('.spectrum-Slider'), function(slider) {
-    makeSlider(slider);
-  });
-  Array.prototype.forEach.call(document.querySelectorAll('.spectrum-Dial'), function(dial) {
-    makeDial(dial);
-  });
-});

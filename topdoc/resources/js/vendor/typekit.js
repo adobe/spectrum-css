@@ -1,6 +1,6 @@
 /* global Typekit, document */
 /* jshint -W033,-W116 */
-(function(window, undefined) {
+window.addEventListener('DOMContentLoaded', function() {
   "use strict"
 
   var config = {
@@ -9,8 +9,17 @@
      I WILL NOT REUSE THE TYPEKIT ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT
      I WILL NOT REUSE THE TYPEKIT ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT
      See https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up right. */
-    kitId: 'pbi5ojv',
-    scriptTimeout: 3000
+    kitId: document.querySelector('[lang]') !== null ? 'pbi5ojv' : 'ruf7eed',
+    scriptTimeout: 3000,
+    active: function() {
+      var loader = document.getElementById('loader');
+      if (loader) {
+        setTimeout(function() {
+          // Hide the loader
+          loader.style.display = 'none';
+        }, 125);
+      }
+    }
   };
 
   if (!window.Typekit) { // we load the typescript only once
@@ -41,5 +50,4 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(tk, s);
   }
-
-}(this));
+});

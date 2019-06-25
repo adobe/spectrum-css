@@ -18,6 +18,10 @@ governing permissions and limitations under the License.
   --spectrum-fieldbutton-disabled-border-size: 0;
   --spectrum-fieldbutton-quiet-margin: 0;
   --spectrum-fieldbutton-quiet-padding: 0;
+
+  /* Hardcoded for wrapping study, needs to be in DNA */
+  --spectrum-button-padding-y: var(--spectrum-global-dimension-size-50);
+  --spectrum-button-line-height: 1.3;
 }
 
 %spectrum-BaseButton {
@@ -34,7 +38,6 @@ governing permissions and limitations under the License.
   margin: 0;
 
   border-style: solid;
-  white-space: nowrap;
 
   /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
   text-transform: none;
@@ -55,6 +58,8 @@ governing permissions and limitations under the License.
 
   text-decoration: none;
   font-family: var(--spectrum-font-family-base);
+
+  line-height: var(--spectrum-button-line-height);
 
   cursor: pointer;
 
@@ -98,16 +103,18 @@ governing permissions and limitations under the License.
   border-style: solid;
   border-radius: var(--spectrum-button-primary-border-radius);
 
-  height: var(--spectrum-button-primary-height);
+  min-height: var(--spectrum-button-primary-height);
+  height: auto;
   min-width: var(--spectrum-button-primary-min-width);
 
-  padding: 0 calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size)) 0;
+  padding: var(--spectrum-button-padding-y) calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size));
+
+  /* @hack: fix button text vertical alignment at 14px */
+  padding-bottom: calc(var(--spectrum-button-padding-y) + 0.5px);
+  padding-top: calc(var(--spectrum-button-padding-y) - 0.5px);
 
   font-size: var(--spectrum-button-primary-text-size);
   font-weight: var(--spectrum-button-primary-text-font-weight);
-
-  /* Prevent vertical text alignment mismatch between anchor and button in Chrome */
-  line-height: 0;
 
   &:hover,
   &:active {
@@ -185,6 +192,13 @@ a.spectrum-ActionButton {
   &:empty {
     display: none;
   }
+}
+
+
+.spectrum-ActionButton-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .spectrum-ActionButton--quiet {

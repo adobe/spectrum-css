@@ -12,23 +12,34 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
+:root {
+  --spectrum-statuslight-padding-y: var(--spectrum-global-dimension-size-75);
+}
+
 /* topdoc
 {{ statuslight/statuslight-semantic.yml }}
 */
 .spectrum-StatusLight {
-  height: var(--spectrum-statuslight-height);
+  min-height: var(--spectrum-statuslight-height);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 
-  line-height: var(--spectrum-statuslight-height);
+  padding: var(--spectrum-statuslight-padding-y) 0px;
+  box-sizing: border-box;
+
   font-size: var(--spectrum-statuslight-text-size);
   font-weight: var(--spectrum-statuslight-text-font-weight);
 
   &::before {
     content: '';
+    flex-grow: 0;
+    flex-shrink: 0;
     display: inline-block;
     width: var(--spectrum-statuslight-dot-size);
     height: var(--spectrum-statuslight-dot-size);
     border-radius: 50%;
-    margin: 0 var(--spectrum-statuslight-text-gap);
+    margin: var(--spectrum-statuslight-padding-y) var(--spectrum-statuslight-text-gap);
   }
 }
 

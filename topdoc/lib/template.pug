@@ -1,5 +1,5 @@
 doctype html
-html.spectrum--medium
+html
   head
     meta(charset = 'utf-8')
     meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
@@ -9,18 +9,32 @@ html.spectrum--medium
     link(rel='stylesheet', type='text/css', href='css/vendor/prism.css', data-prism)
     link(rel='stylesheet', type='text/css', href='../spectrum-core.css', data-spectrum-core)
     link(rel='stylesheet', type='text/css', href='', data-spectrum-core-diff)
-    link(rel='stylesheet', type='text/css', href='../spectrum-lightest.css')
-    link(rel='stylesheet', type='text/css', href='../spectrum-light.css')
-    link(rel='stylesheet', type='text/css', href='../spectrum-dark.css')
-    link(rel='stylesheet', type='text/css', href='../spectrum-darkest.css')
+    link(rel='stylesheet', type='text/css', href='../spectrum-lightest.css' data-spectrum-lightest)
+    link(rel='stylesheet', type='text/css', href='../spectrum-light.css' data-spectrum-light)
+    link(rel='stylesheet', type='text/css', href='../spectrum-dark.css' data-spectrum-dark)
+    link(rel='stylesheet', type='text/css', href='../spectrum-darkest.css' data-spectrum-darkest)
 
     link(rel='stylesheet', type='text/css', href='css/docs.css')
 
     script(src='../icons/loadIcons.js')
     script(src='js/docs.js')
+    script(src='js/enhancement.js')
+    script(src='js/polyfills.js')
     script(src='js/vendor/focus-ring-polyfill.js')
+    script(src='js/vendor/typekit.js')
 
-  body.spectrum.spectrum--light
+  body.spectrum.spectrum--light.spectrum--medium
+    div.spectrum.spectrum--light#loader
+      div.spectrum-CircleLoader.spectrum-CircleLoader--indeterminate.spectrum-CircleLoader--large
+        div.spectrum-CircleLoader-track
+        div.spectrum-CircleLoader-fills
+          div.spectrum-CircleLoader-fillMask1
+            div.spectrum-CircleLoader-fillSubMask1
+              div.spectrum-CircleLoader-fill
+          div.spectrum-CircleLoader-fillMask2
+            div.spectrum-CircleLoader-fillSubMask2
+              div.spectrum-CircleLoader-fill
+
     .sdldocs-outer
       header.sdldocs-header
         h2.spectrum-Heading--pageTitle
@@ -55,12 +69,13 @@ html.spectrum--medium
               use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
 
       section.sdldocs-splitview.spectrum-SplitView.spectrum-SplitView--horizontal
-        .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-nav
-          nav.spectrum.spectrum--light
-            ul.spectrum-SideNav
-              each component in document.components
-                li.spectrum-SideNav-item
-                  a.spectrum-SideNav-itemLink(href='#'+component.slug)= component.name
+        if document.components.length > 1
+          .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-nav
+            nav.spectrum.spectrum--light
+              ul.spectrum-SideNav
+                each component in document.components
+                  li.spectrum-SideNav-item
+                    a.spectrum-SideNav-itemLink(href='#'+component.slug)= component.name
 
         .sdldocs-scrollable.spectrum-SplitView-pane.sdldocs-components
           .spectrum.spectrum--light
@@ -134,5 +149,3 @@ html.spectrum--medium
                         code.language-markup!=component.highlightedMarkup
 
           div.spectrum-Underlay#spectrum-underlay
-
-    script(type="text/javascript", src='js/vendor/typekit.js')

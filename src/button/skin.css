@@ -195,6 +195,7 @@ governing permissions and limitations under the License.
   background-color: var(--spectrum-button-over-background-background-color);
   border-color: var(--spectrum-button-over-background-border-color);
   color: var(--spectrum-button-over-background-text-color);
+  position: relative;
 
   &:hover {
     background-color: var(--spectrum-button-over-background-background-color-hover);
@@ -203,10 +204,22 @@ governing permissions and limitations under the License.
   }
 
   &:focus-ring {
-    background-color: var(--spectrum-button-over-background-background-color-key-focus);
-    border-color: var(--spectrum-button-over-background-border-color-key-focus);
+    /* background-color: var(--spectrum-button-over-background-background-color-key-focus);
+    border-color: var(--spectrum-button-over-background-border-color-key-focus); */
+    background-color: var(--spectrum-button-over-background-background-color-hover);
+    border-color: var(--spectrum-button-over-background-border-color-hover);
     color: inherit;
-    box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-button-primary-focus-ring-color-key-focus);
+    box-shadow: none;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--spectrum-button-over-background-border-color-key-focus);
+      padding: 6px;
+      position: absolute;
+      top: -8px;
+      border-radius: 22px;
+    }
   }
 
   &:active {
@@ -239,11 +252,30 @@ governing permissions and limitations under the License.
     color: var(--spectrum-button-quiet-over-background-text-color-hover);
   }
 
-  &:focus-ring {
+  /* &:focus-ring {
     background-color: var(--spectrum-button-quiet-over-background-background-color-key-focus);
     border-color: var(--spectrum-button-quiet-over-background-border-color-key-focus);
     color: inherit;
     box-shadow: 0 0 0 var(--spectrum-button-primary-border-size-increase-key-focus) var(--spectrum-button-quiet-over-background-border-color-key-focus);
+  } */
+
+  &:focus-ring {
+    /* background-color: var(--spectrum-button-over-background-background-color-key-focus);
+    border-color: var(--spectrum-button-over-background-border-color-key-focus); */
+    background-color: var(--spectrum-button-quiet-over-background-background-color-hover);
+    border-color: var(--spectrum-button-quiet-over-background-border-color-hover);
+    color: var(--spectrum-button-quiet-over-background-text-color-hover);
+    box-shadow: none;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--spectrum-button-over-background-border-color-key-focus);
+      padding: 6px;
+      position: absolute;
+      top: -8px;
+      border-radius: 22px;
+    }
   }
 
   &:active {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spectrum CSS Example</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="../spectrum-core.css" data-spectrum-core>
+    <link rel="stylesheet" type="text/css" href="" data-spectrum-core-diff>
+    <link rel="stylesheet" type="text/css" href="../spectrum-lightest.css">
+    <link rel="stylesheet" type="text/css" href="../spectrum-light.css">
+    <link rel="stylesheet" type="text/css" href="../spectrum-dark.css">
+    <link rel="stylesheet" type="text/css" href="../spectrum-darkest.css">
+    <link rel="stylesheet" type="text/css" href="css/docs.css">
+    <script src="../icons/loadIcons.js"></script>
+    <script src="js/vendor/focus-ring-polyfill.js"></script>
+    <script src="js/vendor/typekit.js"></script>
+    <script src="js/Switcher.js"></script>
+    <script>
+      loadIcons('../icons/spectrum-css-icons.svg');
+      loadIcons('../icons/spectrum-icons.svg');
+
+      var switcher = new Switcher();
+      var themeKeys = {
+        '1': 'lightest',
+        '2': 'light',
+        '3': 'dark',
+        '4': 'darkest',
+      };
+      var scaleKeys = {
+        'm': 'medium',
+        'l': 'large'
+      };
+      document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey) {
+          if (themeKeys[event.key]) {
+            switcher.theme = themeKeys[event.key];
+          }
+          else if (scaleKeys[event.key]) {
+            switcher.scale = scaleKeys[event.key];
+          }
+        }
+      });
+    </script>
+  </head>
+  <body class="spectrum spectrum--light spectrum--medium">
+
+  </body>
+</html>

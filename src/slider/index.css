@@ -273,6 +273,10 @@ governing permissions and limitations under the License.
   cursor: default;
 }
 
+.spectrum-Slider-value {
+  margin-left: var(--spectrum-slider-label-gap-x);
+}
+
 .spectrum-Slider-ticks {
   display: flex;
   justify-content: space-between;
