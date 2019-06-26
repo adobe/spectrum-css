@@ -2,7 +2,7 @@
   "name": "@adobe/spectrum-css",
   "version": "2.13.0",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "npx lerna bootstrap --hoist",
     "build": "gulp",
     "dev": "gulp dev",
     "start": "npm run dev",
