@@ -94,4 +94,4 @@ gulp.task('build', function(cb) {
   processPackage();
 });
 
-gulp.task('default', gulp.series('build');
+gulp.task('default', gulp.series('build'));
