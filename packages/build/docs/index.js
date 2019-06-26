@@ -12,27 +12,35 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const fs = require('fs');
 const path = require('path');
-const pug = require('gulp-pug');
+const pug = require('pug');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const yaml = require('js-yaml');
 const merge = require('merge-stream');
+const through = require('through2');
+const ext = require('replace-ext');
 
 gulp.task('build-docs:html', function() {
-  return gulp.src(`${__dirname}/template.pug`)
-    .pipe(data(function() {
-      return {
-        component: yaml.safeLoad(fs.readFileSync('docs.yml', 'utf8'))
-      };
+  var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  var pkgname = pkg.name.split('/').pop();
+
+  return gulp.src(
+    [
+      'docs.yml',
+      'docs/*.yml'
+    ], {
+      allowEmpty: true
+    }
+  )
+    .pipe(rename(function(file) {
+      if (file.basename === 'docs' || file.basename === pkgname) {
+        file.basename = 'index';
+      }
     }))
     .pipe(data(function() {
       return {
-        pkg: JSON.parse(fs.readFileSync('package.json', 'utf8'))
-      };
-    }))
-    .pipe(pug({
-      locals: {
         dnaVars: JSON.parse(fs.readFileSync(path.join(path.dirname(require.resolve('@spectrum-css/vars')), 'dist', 'spectrum-metadata.json'), 'utf8')),
+        pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,
         Prisim: require('prismjs'),
         getSlug: function(name, subName) {
@@ -41,9 +49,23 @@ gulp.task('build-docs:html', function() {
           }
           return name.toLowerCase().replace(/[^a-z\-]/g, '');
         }
-      }
+      };
     }))
-    .pipe(rename('index.html'))
+    .pipe(through.obj(function compilePug(file, enc, cb) {
+        let data = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
+
+        file.path = ext(file.path, '.html');
+
+        try {
+          const templatePath = `${__dirname}/template.pug`;
+          let compiled = pug.renderFile(templatePath, data);
+          file.contents = Buffer.from(compiled);
+        } catch (e) {
+          return cb(e);
+        }
+        cb(null, file);
+      })
+    )
     .pipe(gulp.dest('dist/docs/'));
 });
 
