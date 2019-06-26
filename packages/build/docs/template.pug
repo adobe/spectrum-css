@@ -52,6 +52,13 @@
     return cssStatusTranslation[cssStatus] || cssStatus;
   }
 
+  function getSlug(name, subName) {
+    if (subName) {
+      name += `-${subName}`;
+    }
+    return name.toLowerCase().replace(/[^a-z\-]/g, '');
+  }
+
   function populateDNAInfo(component) {
     // Get DNA information
     var dnaComponentId = component.id || component.name.toLowerCase();

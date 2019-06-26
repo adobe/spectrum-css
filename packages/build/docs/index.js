@@ -42,13 +42,7 @@ gulp.task('build-docs:html', function() {
         dnaVars: JSON.parse(fs.readFileSync(path.join(path.dirname(require.resolve('@spectrum-css/vars')), 'dist', 'spectrum-metadata.json'), 'utf8')),
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,
-        Prisim: require('prismjs'),
-        getSlug: function(name, subName) {
-          if (subName) {
-            name += `-${subName}`;
-          }
-          return name.toLowerCase().replace(/[^a-z\-]/g, '');
-        }
+        Prisim: require('prismjs')
       };
     }))
     .pipe(through.obj(function compilePug(file, enc, cb) {
