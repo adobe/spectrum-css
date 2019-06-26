@@ -39,6 +39,7 @@ gulp.task('build-docs:html', function() {
     }))
     .pipe(data(function() {
       return {
+        util: require('./util'),
         dnaVars: JSON.parse(fs.readFileSync(path.join(process.cwd(), 'node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,

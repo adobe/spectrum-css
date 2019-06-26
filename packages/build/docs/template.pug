@@ -1,89 +1,4 @@
 -
-  const labelColors = {
-    'Deprecated': 'red',
-
-    'Beta Precursor': 'orange',
-
-    'Precursor': 'yellow',
-    'CSS Unverified': 'yellow',
-
-    'Canon': 'green',
-    'CSS Verified': 'green'
-  };
-
-  const dnaStatusTranslation = {
-    'Released': 'Canon',
-    'Beta': 'Precursor'
-  };
-
-  const cssStatusTranslation = {
-    'Beta': 'CSS Unverified',
-    'Verified': 'CSS Verified'
-  };
-
-  function getLabelColor(status) {
-    return labelColors[status] || 'grey';
-  }
-
-  function getDNAStatus(dnaComponentId, dnaStatus, cssStatus) {
-    if (cssStatus === 'Deprecated') {
-      dnaStatus = 'Deprecated';
-    }
-
-    if (cssStatus === 'CSS Verified') {
-      if (dnaStatus !== 'Released') {
-        console.log(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
-        dnaStatus = 'Canon';
-      }
-    }
-
-    if (!dnaStatus) {
-      console.log(`${dnaComponentId} has no DNA status`);
-      dnaStatus = 'Beta Precursor';
-    }
-
-    return dnaStatusTranslation[dnaStatus] || dnaStatus;
-  }
-
-  function getCSSStatus(dnaComponentId, cssStatus) {
-    if (cssStatus === 'Released' || !cssStatus) {
-      cssStatus = 'CSS Unverified';
-    }
-    return cssStatusTranslation[cssStatus] || cssStatus;
-  }
-
-  function getSlug(name, subName) {
-    if (subName) {
-      name += `-${subName}`;
-    }
-    return name.toLowerCase().replace(/[^a-z\-]/g, '');
-  }
-
-  function populateDNAInfo(component) {
-    // Get DNA information
-    var dnaComponentId = component.id || component.name.toLowerCase();
-
-    // Get info based on component variation first, then component name second
-    var dnaComponentTitle = dnaVars['spectrum-' + dnaComponentId + '-name'];
-
-    var dnaDescription = dnaVars['spectrum-' + dnaComponentId + '-description'];
-
-    var cssStatus = getCSSStatus(dnaComponentId, component.status);
-    var dnaStatus = getDNAStatus(dnaComponentId, dnaVars['spectrum-' + dnaComponentId + '-status'] || component.dnaStatus, cssStatus);
-
-    // Store the info
-    component.name = component.name || dnaComponentTitle;
-    component.cssStatus = cssStatus;
-    component.dnaStatus = dnaStatus;
-    component.cssColor = getLabelColor(component.cssStatus);
-    component.dnaColor = getLabelColor(component.dnaStatus);
-
-    // Add other data
-    component.id = dnaComponentId;
-
-    component.slug = getSlug(component.name);
-  }
-
   // Backwards compatibility with old components array
   component.examples = component.examples || component.components;
 
@@ -109,7 +24,7 @@
   }
 
   // Get DNA data
-  populateDNAInfo(component);
+  util.populateDNAInfo(component, dnaVars);
 
   if (component.examples) {
     for (id in component.examples) {
@@ -123,7 +38,7 @@
         component.examples[id] = example;
       }
       example.id = id;
-      populateDNAInfo(example);
+      util.populateDNAInfo(example, dnaVars);
     }
   }
 
@@ -174,7 +89,7 @@ html
 
         each example in examples
           -
-            example.slug = getSlug(component.name, example.name);
+            example.slug = util.getSlug(component.name, example.name);
 
           article.cssdocs-subComponent
             if example != component
