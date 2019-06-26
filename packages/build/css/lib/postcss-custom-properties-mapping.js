@@ -11,7 +11,9 @@ governing permissions and limitations under the License.
 */
 var postcss = require('postcss');
 var valueParser = require('postcss-value-parser');
-var {mapping, static} = require('@spectrum-css/vars');
+
+// Get the local copy of vars
+var {mapping, static} = require(`${process.cwd()}/node_modules/@spectrum-css/vars`);
 
 // match custom property inclusions
 const customPropertiesRegExp = /(^|[^\w-])var\([\W\w]+\)/;
