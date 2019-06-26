@@ -20,6 +20,41 @@ const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 
+// Build a list of dependencies
+var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+var packageName = pkg.name.split('/').pop();
+
+var dependencies = [];
+if (pkg.dependencies) {
+  for (let depPkg in pkg.dependencies) {
+    let deps = [];
+    if (depPkg.indexOf('@spectrum-css') === 0) {
+      let dependencyName = depPkg.split('/').pop();
+      dependencies.push(dependencyName);
+    }
+  }
+}
+
+// Dependencies that are required for docs to render
+var docDependencies = [];
+var buildPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../', 'package.json'), 'utf8'));
+if (buildPkg.dependencies) {
+  for (let depPkg in buildPkg.dependencies) {
+    let deps = [];
+    if (depPkg.indexOf('@spectrum-css') === 0) {
+      let dependencyName = depPkg.split('/').pop();
+      docDependencies.push(dependencyName);
+    }
+  }
+}
+
+docDependencies.forEach(function(docDep) {
+  // Drop dupes, and don't include the package itself if that's what we're building
+  if (docDep !== packageName && dependencies.indexOf(docDep) === -1) {
+    dependencies.push(docDep);
+  }
+});
+
 gulp.task('build-docs:html', function() {
   var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   var pkgname = pkg.name.split('/').pop();
@@ -40,6 +75,7 @@ gulp.task('build-docs:html', function() {
     .pipe(data(function() {
       return {
         util: require('./util'),
+        dependencies: dependencies,
         dnaVars: JSON.parse(fs.readFileSync(path.join(process.cwd(), 'node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,
@@ -71,24 +107,18 @@ gulp.task('build-docs:resources', function() {
 
 gulp.task('build-docs:copyDeps', function() {
   function copyDep(dep) {
-    return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*`)
-      .pipe(gulp.dest(`dist/docs/dependencies/${dep}/`));
+    return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*.css`)
+      .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
   }
-
-  var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-
-  if (pkg.dependencies) {
-    var dependencies = [];
-    for (var package in pkg.dependencies) {
-      var deps = [];
-      if (package.indexOf('@spectrum-css') === 0) {
-        var packageName = package.split('/').pop();
-        dependencies.push(packageName);
-      }
-    }
-  }
-
   return merge.apply(merge, dependencies.map(copyDep));
+});
+
+gulp.task('build-docs:copyDocDeps', function() {
+  function copyDep(dep) {
+    return gulp.src(`${__dirname}/../node_modules/@spectrum-css/${dep}/dist/index.css`)
+      .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
+  }
+  return merge.apply(merge, docDependencies.map(copyDep));
 });
 
 gulp.task('build-docs:loadicons', function() {
@@ -115,5 +145,6 @@ gulp.task('build-docs', gulp.parallel(
   'build-docs:focus-ring-polyfill',
   'build-docs:prism',
   'build-docs:copyDeps',
+  'build-docs:copyDocDeps',
   'build-docs:html'
 ));

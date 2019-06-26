@@ -10,11 +10,31 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+.spectrum {
+  font-family: var(--spectrum-font-family-base);
+  font-size: var(--spectrum-text-size);
 
-& {
-  font-size: var(--spectrum-body-4-text-size);
-  font-weight: var(--spectrum-body-4-text-font-weight);
-  line-height: var(--spectrum-body-4-text-line-height);
-  font-style: var(--spectrum-body-4-text-font-style);
+  &:lang(ar) {
+    font-family: var(--spectrum-font-family-ar);
+  }
+
+  &:lang(he) {
+    font-family: var(--spectrum-font-family-he);
+  }
+
+  &:lang(zh-Hans) {
+    font-family: var(--spectrum-font-family-zhhans);
+  }
+
+  &:lang(zh) {
+    font-family: var(--spectrum-font-family-zh);
+  }
+
+  &:lang(ko) {
+    font-family: var(--spectrum-font-family-ko);
+  }
+
+  &:lang(ja) {
+    font-family: var(--spectrum-font-family-ja);
+  }
 }

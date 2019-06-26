@@ -14,45 +14,106 @@ const postcssReal = require('postcss');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 
-function getProcessors(keepVars = false) {
-  return [
-    require('postcss-import'),
-    require('postcss-nested'),
-    require('postcss-inherit'),
-    require('postcss-custom-properties')({
-      noValueNotifications: 'error',
-      warnings: !keepVars
-    }),
-    require('./lib/postcss-custom-properties-passthrough')(),
-    require('postcss-calc'),
-    keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
-    keepVars ? require('./lib/postcss-notnested')({ replace: '.spectrum' }) : null,
-    require('postcss-functions')({
-      functions: {
-        noscale: function(value) {
-          return value.toString().toUpperCase();
-        },
-        percent: function(value) {
-          return parseInt(value, 10) / 100;
+var processors = [
+  require('postcss-import'),
+  require('postcss-mixins')({
+    mixins: {
+      typography: function(mixin, name, tokenName, textTransformIgnore) {
+        if(!tokenName) {
+          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+          tokenName = tokenName.replace('.spectrum--', '');
         }
+        var output = '';
+        var propMap = {
+          'font-size': 'text-size',
+          'font-weight': 'text-font-weight',
+          'line-height': 'text-line-height',
+          'font-style': 'text-font-style',
+          'letter-spacing': 'text-letter-spacing',
+          'text-transform': 'text-transform',
+        };
+        function buildProperties (tokeString) {
+          var ruleString = '';
+          Object.keys(propMap).forEach((key) => {
+            if(!textTransformIgnore || key != 'text-transform') {
+              ruleString += `  ${key}: var(--spectrum-${tokeString}-${propMap[key]});\n`;
+            }
+          });
+          ruleString += '  margin-top: 0;\n  margin-bottom: 0;\n';
+          return ruleString;
+        }
+        output = `${name} {
+        ${buildProperties(tokenName)}
+          em {
+            ${buildProperties(`${tokenName}-emphasis`)}
+          }
+          strong {
+            ${buildProperties(`${tokenName}-strong`)}
+          }
+        }`;
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
+      },
+      typographyColor: function(mixin, name, tokenName) {
+        if(!tokenName) {
+          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+          tokenName = tokenName.replace('.spectrum--', '');
+        }
+        var output = `${name} {
+          color: var(--spectrum-${tokenName}-text-color);
+        }`;
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
+      },
+      typographyMargins: function(mixin, name, tokenName) {
+        if(!tokenName) {
+          tokenName = name.replace(/\.?([A-Z]|[0-9])/g, function (x,y) { return '-' + y.toLowerCase(); }).replace(/^-/, '');
+          tokenName = tokenName.replace('.spectrum--', '');
+        }
+        var output = `${name} {
+          margin-top: var(--spectrum-${tokenName}-margin-top);
+          margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+        }`;
+        var nodes = postcssReal.parse(output);
+        nodes.nodes[0].append(mixin.nodes);
+        mixin.replaceWith(nodes);
       }
-    }),
-    require('./lib/postcss-strip-comments')({ preserveTopdoc: false }),
-    require('postcss-focus-ring'),
-    require('autoprefixer')({
-      'browsers': [
-        'IE >= 10',
-        'last 2 Chrome versions',
-        'last 2 Firefox versions',
-        'last 2 Safari versions',
-        'last 2 iOS versions'
-      ]
-    })
-  ].filter(Boolean);
-}
-
-var processors = getProcessors();
-var varsProcessors = getProcessors(true);
+    }
+  }),
+  require('postcss-nested'),
+  require('postcss-inherit'),
+  require('postcss-custom-properties')({
+    noValueNotifications: 'error',
+    warnings: false
+  }),
+  require('./lib/postcss-custom-properties-passthrough')(),
+  require('postcss-calc'),
+  require('./lib/postcss-custom-properties-mapping'),
+  require('./lib/postcss-notnested')({ replace: '.spectrum' }),
+  require('postcss-functions')({
+    functions: {
+      noscale: function(value) {
+        return value.toString().toUpperCase();
+      },
+      percent: function(value) {
+        return parseInt(value, 10) / 100;
+      }
+    }
+  }),
+  require('./lib/postcss-strip-comments')({ preserveTopdoc: false }),
+  require('postcss-focus-ring'),
+  require('autoprefixer')({
+    'browsers': [
+      'IE >= 10',
+      'last 2 Chrome versions',
+      'last 2 Firefox versions',
+      'last 2 Safari versions',
+      'last 2 iOS versions'
+    ]
+  })
+];
 
 /**
  * Builds a version of each component that uses native CSS variables. Relies on the unique variables extracted from DNA.
@@ -65,7 +126,7 @@ gulp.task('build-css:vars', function() {
     allowEmpty: true // Allow missing skin.css
   })
     .pipe(concat('index.css'))
-    .pipe(postcss(varsProcessors))
+    .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
 });
 
@@ -75,3 +136,5 @@ gulp.task('build-css:vars', function() {
 gulp.task('build-css', gulp.parallel(
   'build-css:vars'
 ));
+
+exports.processors = processors;

@@ -12,8 +12,8 @@ governing permissions and limitations under the License.
 
 const gulp = require('gulp');
 
-require('./css');
-require('./docs');
+exports.css = require('./css');
+exports.docs = require('./docs');
 
 gulp.task('build', gulp.parallel(
   'build-css',

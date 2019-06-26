@@ -13,15 +13,10 @@
     examples = component.examples;
   }
 
-  // Get the list of all of the deps so we can include them
-  var deps = [];
-  for (var package in pkg.dependencies) {
-    if (package.indexOf('@spectrum-css') === 0) {
-      if (package !== '@spectrum-css/vars') {
-        deps.push(package.split('/').pop());
-      }
-    }
-  }
+  // Fitler the list of deps since we already include vars
+  var deps = dependencies.filter(function(dep) {
+    return dep !== 'vars';
+  });
 
   // Get DNA data
   util.populateDNAInfo(component, dnaVars);
@@ -52,15 +47,15 @@ html
 
     link(rel='stylesheet', type='text/css', href='css/vendor/prism.css', data-prism)
 
-    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-lightest.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-light.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-dark.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-darkest.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-medium.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/vars/spectrum-large.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-lightest.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-light.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-dark.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-darkest.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-medium.css')
+    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-large.css')
 
     each dep in deps
-      link(rel='stylesheet', type='text/css', href='dependencies/' + dep + '/index.css')
+      link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/' + dep + '/index.css')
 
     // Include the actual component
     link(rel='stylesheet', type='text/css', href='../index.css')

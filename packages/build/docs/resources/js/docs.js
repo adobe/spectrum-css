@@ -14,8 +14,10 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-loadIcons('dependencies/icons/spectrum-css-icons.svg');
-loadIcons('dependencies/icons/spectrum-icons.svg');
+loadIcons('dependencies/@spectrum-css/icons/spectrum-css-icons.svg');
+
+// Workflow icons disabled for now
+// loadIcons('dependencies/@spectrum-css/icons/spectrum-icons.svg');
 
 var curColorstop = 'light';
 function changeCSS(colorStop) {
