@@ -2,6 +2,7 @@
   "name": "@adobe/spectrum-css",
   "version": "2.13.0",
   "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
     "build": "gulp",
     "dev": "gulp dev",
     "start": "npm run dev",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "lerna": "^2.0.0"
+  }
 }
