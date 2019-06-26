@@ -39,7 +39,7 @@ gulp.task('build-docs:html', function() {
     }))
     .pipe(data(function() {
       return {
-        dnaVars: JSON.parse(fs.readFileSync(path.join(path.dirname(require.resolve('@spectrum-css/vars')), 'dist', 'spectrum-metadata.json'), 'utf8')),
+        dnaVars: JSON.parse(fs.readFileSync(path.join(process.cwd(), 'node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,
         Prisim: require('prismjs')
