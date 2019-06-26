@@ -14,7 +14,13 @@
   "scripts": {
     "build": "gulp"
   },
-  "devDependencies": {
+  "dependencies": {
     "@spectrum-css/vars": "0.0.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/build": "0.0.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-svgstore": "^7.0.1"
   }
 }

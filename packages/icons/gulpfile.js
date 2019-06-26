@@ -1,5 +1,3 @@
-require('@spectrum-css/build');
-
 /*
 Copyright 2019 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -14,6 +12,8 @@ governing permissions and limitations under the License.
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
+
+require('@spectrum-css/build');
 
 gulp.task('generate-svgsprite', function() {
   return gulp.src('combined/*.svg')
