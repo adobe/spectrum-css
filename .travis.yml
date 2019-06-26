@@ -3,6 +3,7 @@ node_js:
   - "lts/*"
 before_script:
   - npm install -g gulp-cli
+  - npm run bootstrap
 script:
   # This script should be the first that runs to reduce the risk of
   # executing a script from a compromised NPM package.
