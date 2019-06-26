@@ -17,16 +17,32 @@ const gulp = require('gulp');
 gulp.task('build', function(cb) {
   const packageDir = './packages';
 
+  // Dependencies that are required for docs to render
+  var docDependencies = [];
+  var buildPkg = JSON.parse(fs.readFileSync(path.join(__dirname, 'packages/build', 'package.json'), 'utf8'));
+  if (buildPkg.dependencies) {
+    for (let depPkg in buildPkg.dependencies) {
+      let deps = [];
+      if (depPkg.indexOf('@spectrum-css') === 0) {
+        let dependencyName = depPkg.split('/').pop();
+        docDependencies.push(dependencyName);
+      }
+    }
+  }
+
   // Get list of all packages
   var packages = fs.readdirSync(packageDir).filter(function(package) {
     // Drop vars from the list, we need to do it first
-    if (package === 'vars') {
+    if (package === 'vars' || docDependencies.indexOf(package) !== -1) {
       return false;
     }
 
     var stats = fs.statSync(path.join(packageDir, package));
     return stats.isDirectory();
   });
+
+  // Build documentation dependencies first
+  packages = docDependencies.concat(packages);
 
   // Add vars up in there first
   packages.unshift('vars');
@@ -78,4 +94,4 @@ gulp.task('build', function(cb) {
   processPackage();
 });
 
-gulp.task('default', gulp.series('build'));
+gulp.task('default', gulp.series('build');
