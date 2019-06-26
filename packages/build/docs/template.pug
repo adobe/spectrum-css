@@ -113,8 +113,17 @@
 
   if (component.examples) {
     for (id in component.examples) {
-      component.examples[id].id = id;
-      populateDNAInfo(component.examples[id]);
+      let example = component.examples[id];
+      if (typeof example === 'string') {
+        // Handle markup only examples
+        example = {
+          id: id,
+          markup: example
+        };
+        component.examples[id] = example;
+      }
+      example.id = id;
+      populateDNAInfo(example);
     }
   }
 
