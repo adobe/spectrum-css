@@ -52,7 +52,9 @@ gulp.task('icons', gulp.parallel(
   )
 ));
 
-gulp.task('default', gulp.parallel(
+gulp.task('build', gulp.parallel(
   'icons',
   'build-css'
 ));
+
+gulp.task('default', gulp.series('build'));
