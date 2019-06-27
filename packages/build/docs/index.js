@@ -20,44 +20,51 @@ const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 
-// Build a list of dependencies
-var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-var packageName = pkg.name.split('/').pop();
+var dependencies;
+var docDependencies;
+function getDependencies() {
+  // Build a list of dependencies
+  var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  var packageName = pkg.name.split('/').pop();
 
-var dependencies = [];
-if (pkg.dependencies) {
-  for (let depPkg in pkg.dependencies) {
-    let deps = [];
-    if (depPkg.indexOf('@spectrum-css') === 0) {
-      let dependencyName = depPkg.split('/').pop();
-      dependencies.push(dependencyName);
+  dependencies = [];
+  if (pkg.dependencies) {
+    for (let depPkg in pkg.dependencies) {
+      let deps = [];
+      if (depPkg.indexOf('@spectrum-css') === 0) {
+        let dependencyName = depPkg.split('/').pop();
+        dependencies.push(dependencyName);
+      }
     }
   }
-}
 
-// Dependencies that are required for docs to render
-var docDependencies = [];
-var buildPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../', 'package.json'), 'utf8'));
-if (buildPkg.dependencies) {
-  for (let depPkg in buildPkg.dependencies) {
-    let deps = [];
-    if (depPkg.indexOf('@spectrum-css') === 0) {
-      let dependencyName = depPkg.split('/').pop();
-      docDependencies.push(dependencyName);
+  // Dependencies that are required for docs to render
+  docDependencies = [];
+  var buildPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../', 'package.json'), 'utf8'));
+  if (buildPkg.dependencies) {
+    for (let depPkg in buildPkg.dependencies) {
+      let deps = [];
+      if (depPkg.indexOf('@spectrum-css') === 0) {
+        let dependencyName = depPkg.split('/').pop();
+        docDependencies.push(dependencyName);
+      }
     }
   }
-}
 
-docDependencies.forEach(function(docDep) {
-  // Drop dupes, and don't include the package itself if that's what we're building
-  if (docDep !== packageName && dependencies.indexOf(docDep) === -1) {
-    dependencies.push(docDep);
-  }
-});
+  docDependencies.forEach(function(docDep) {
+    // Drop dupes, and don't include the package itself if that's what we're building
+    if (docDep !== packageName && dependencies.indexOf(docDep) === -1) {
+      dependencies.push(docDep);
+    }
+  });
+}
 
 gulp.task('build-docs:html', function() {
   var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   var pkgname = pkg.name.split('/').pop();
+
+  // This must be called per-task, or top level build won't know the right deps
+  getDependencies();
 
   return gulp.src(
     [
@@ -106,6 +113,9 @@ gulp.task('build-docs:resources', function() {
 });
 
 gulp.task('build-docs:copyDeps', function() {
+  // This must be called per-task, or top level build won't know the right deps
+  getDependencies();
+
   function copyDep(dep) {
     return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*.css`)
       .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
@@ -114,6 +124,9 @@ gulp.task('build-docs:copyDeps', function() {
 });
 
 gulp.task('build-docs:copyDocDeps', function() {
+  // This must be called per-task, or top level build won't know the right deps
+  getDependencies();
+
   function copyDep(dep) {
     return gulp.src(`${__dirname}/../node_modules/@spectrum-css/${dep}/dist/index.css`)
       .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
