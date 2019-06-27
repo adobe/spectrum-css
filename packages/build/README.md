@@ -8,11 +8,9 @@ This package uses gulp to compile CSS and build documentation for Spectrum CSS c
 The following tasks are defined
 
 * `gulp build` - Build everything
-* `gulp build-css` - Build CSS only
-* `gulp build-docs` - Build documentation only
+* `gulp buildCSS` - Build CSS only
+* `gulp buildDocs` - Build documentation only
 
-## API
+## Accessing PostCSS preprocessors
 
-When imported as a module, this packages exports the following:
-
-* `exports.css.processors` - The list of postcss pre-processors used to build Spectrum CSS components
+You can pull the list of preprocessors with `require('@spectrum-css/css/processors')`, but it'll probably break unless there's a local copy of `@spectrum-css/vars` in the current working directory's `node_modules` folder...
