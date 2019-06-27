@@ -27,6 +27,6 @@ function buildVars() {
     .pipe(gulp.dest('dist/'));
 }
 
-module.exports = gulp.parallel(
+exports.buildCSS = gulp.parallel(
   buildVars
 );

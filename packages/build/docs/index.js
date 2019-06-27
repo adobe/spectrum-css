@@ -163,7 +163,7 @@ function buildDocs_prism() {
     .pipe(gulp.dest('dist/docs/css/vendor/'));
 }
 
-module.exports = gulp.parallel(
+let buildDocs = gulp.parallel(
   buildDocs_resources,
   buildDocs_loadicons,
   buildDocs_focusPolyfill,
@@ -172,3 +172,6 @@ module.exports = gulp.parallel(
   buildDocs_copyDocDeps,
   buildDocs_html
 );
+
+exports.buildDocs = buildDocs;
+exports.buildDocs_html = gulp.series(buildDocs_html);

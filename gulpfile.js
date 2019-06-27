@@ -284,7 +284,7 @@ function startWatch() {
       'packages/*/docs/*.yml',
       'packages/*/docs.yml'
     ],
-    'buildDocs',
+    'buildDocs_html',
     '*/*.html'
   );
 
