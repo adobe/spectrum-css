@@ -38,7 +38,18 @@ function getDependencies() {
     }
   }
 
-  // Dependencies that are required for docs to render
+  // Add dev deps: these are dependencies required to render examples in the docs for this specific component
+  if (pkg.devDependencies) {
+    for (let depPkg in pkg.devDependencies) {
+      let deps = [];
+      if (depPkg.indexOf('@spectrum-css') === 0 && depPkg !== '@spectrum-css/build') {
+        let dependencyName = depPkg.split('/').pop();
+        dependencies.push(dependencyName);
+      }
+    }
+  }
+
+  // Add dependencies of build: these are dependencies that are required to render the docs in general
   docDependencies = [];
   var buildPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../', 'package.json'), 'utf8'));
   if (buildPkg.dependencies) {
