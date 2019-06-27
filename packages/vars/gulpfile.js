@@ -40,8 +40,11 @@ gulp.task('build-vars', function(cb) {
   cb();
 });
 
-gulp.task('copy-metadata', function() {
-  return gulp.src('vars/spectrum-metadata.json')
+gulp.task('copy-sources', function() {
+  return gulp.src([
+    'vars/spectrum-metadata.json',
+    'vars/spectrum-global.css'
+  ])
     .pipe(gulp.dest('dist/'))
 });
 
@@ -49,7 +52,7 @@ gulp.task('build',
   gulp.series('clean', 'build-prepare',
     gulp.parallel(
       'build-vars',
-      'copy-metadata'
+      'copy-sources'
     )
   )
 );
