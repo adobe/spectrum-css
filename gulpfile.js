@@ -282,7 +282,7 @@ function startWatch() {
   watchWithinPackages(
     [
       'packages/*/docs/*.yml',
-      'packages/*/docs/docs.yml'
+      'packages/*/docs.yml'
     ],
     'buildDocs',
     '*/*.html'
