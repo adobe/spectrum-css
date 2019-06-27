@@ -13,8 +13,12 @@ governing permissions and limitations under the License.
 const fs = require('fs');
 const path = require('path');
 const gulp = require('gulp');
+const ext = require('replace-ext');
+const yaml = require('js-yaml');
+const through = require('through2');
+const pug = require('gulp-pug');
 
-gulp.task('build', function(cb) {
+gulp.task('build-packages', function(cb) {
   const packageDir = './packages';
 
   // Dependencies that are required for docs to render
@@ -86,6 +90,10 @@ gulp.task('build', function(cb) {
     }
     else {
       console.log('Build complete!');
+
+      // Go back to the root dir, otherwise tasks will break
+      process.chdir(__dirname);
+
       cb();
     }
   }
@@ -93,5 +101,86 @@ gulp.task('build', function(cb) {
   // Kick off a gulp build for each package
   processPackage();
 });
+
+
+var data = {
+  nav: [],
+  pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8'))
+};
+
+gulp.task('build-docs:getData', function(done) {
+  return gulp.src([
+    'packages/*/docs.yml',
+    'packages/*/docs/*.yml'
+  ])
+  .pipe(through.obj(function compilePug(file, enc, cb) {
+    let componentData;
+    try {
+      componentData = yaml.safeLoad(String(file.contents));
+    } catch (e) {
+      return cb(e);
+    }
+
+    var packageName = file.dirname.replace('/docs', '').split('/').pop();
+
+    var fileName = ext(file.basename, '.html');
+    if (fileName === 'docs.html' || fileName === `${packageName}.html`) {
+      fileName = 'index.html';
+    }
+
+    data.nav.push({
+      name: componentData.name,
+      url: `packages/${packageName}/dist/docs/${fileName}`
+    });
+
+    cb(null, file);
+  }))
+  .on('end', function() {
+    data.nav = data.nav.sort(function(a, b) {
+      return a.name <= b.name ? -1 : 1;
+    });
+    done();
+  });
+});
+
+gulp.task('build-docs:copyPackages', function() {
+  return gulp.src('packages/*/dist/**')
+    .pipe(gulp.dest('dist/docs/packages/'));
+});
+
+gulp.task('build-docs:copyResources', function() {
+  return gulp.src('site/resources/**')
+    .pipe(gulp.dest('dist/docs/'));
+});
+
+gulp.task('build-docs:html', function buildHtml() {
+  return gulp.src('./site/*.pug')
+    .pipe(pug({
+      locals: data
+    }))
+    .pipe(gulp.dest('dist/docs/'));
+});
+
+gulp.task('build-docs:site',
+  gulp.parallel(
+    'build-docs:copyResources',
+    gulp.series(
+      'build-docs:getData',
+      'build-docs:html'
+    )
+  )
+);
+
+gulp.task('build-docs',
+  gulp.parallel(
+    'build-docs:copyPackages',
+    'build-docs:site'
+  )
+);
+
+gulp.task('build', gulp.series(
+  'build-packages',
+  'build-docs'
+));
 
 gulp.task('default', gulp.series('build'));

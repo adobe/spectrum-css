@@ -26,6 +26,10 @@
   "devDependencies": {
     "audit-ci": "^2.0.1",
     "gulp": "^4.0.0",
-    "lerna": "^3.15.0"
+    "gulp-pug": "^4.0.1",
+    "js-yaml": "^3.13.1",
+    "lerna": "^3.15.0",
+    "replace-ext": "^1.0.0",
+    "through2": "^3.0.1"
   }
 }
