@@ -70,51 +70,48 @@ html
     script(src='js/polyfills.js')
     script(src='js/vendor/typekit.js')
 
-  body.spectrum.spectrum--light.spectrum--medium
-    article.cssdocs-component
-      header.row.middle-sm(id=component.slug)
-        a(href=`#${component.slug}`).sdldocs-subtleLink.js-hashtitle
-          h2.sdldocs-component-name.spectrum-Heading--pageTitle #{component.name} v#{pkg.version}
+  body.spectrum.spectrum--lightest.spectrum--medium
+
+    article.spectrum-CSSComponent
+
+      header(id=component.slug).spectrum-CSSComponent-heading
+        a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
+          h2.spectrum-Heading1--display #{component.name}
+        .spectrum-CSSComponent-version.spectrum-Body Version #{pkg.version}
 
       if component.description
-        section.sdldocs-component-description.spectrum-Body!= component.description
-
+        section.spectrum-Body!= markdown.toHTML(component.description)
 
       each example in examples
-        -
-          example.slug = util.getSlug(component.name, example.name);
-
-        article.cssdocs-subComponent
+        article.spectrum-CSSExample
           if example != component
-            header.row.middle-sm(id=example.slug)
-              a(href=`#${example.slug}`).sdldocs-subtleLink.js-hashtitle
-                h4.sdldocs-subComponent-name.spectrum-Heading--subtitle3 #{example.name}
+            header.row(id=example.slug)
+              a(href=`#${util.getSlug(component.name, example.name)}`).spectrum-CSSExample-link
+                h4.spectrum-Heading--subtitle3 #{example.name}
               if example.cssStatus != 'n/a'
                 .u-tooltip-showOnHover
-                  div(class=`sdldocs-dnaStatus spectrum-Label spectrum-Label--${example.dnaColor}`).
+                  div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
                     #{example.dnaStatus}
                   if example.dnaStatus != 'Deprecated'
-                    div(class=`sdldocs-cssStatus spectrum-Label spectrum-Label--${example.cssColor}`).
+                    div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
                       #{example.cssStatus}
                   if example.details
                     .spectrum-Tooltip.spectrum-Tooltip--right
-                      .spectrum-Tooltip-label!= example.details
+                      .spectrum-Tooltip-label!= markdown.toHTML(example.details)
                       .spectrum-Tooltip-tip
 
 
             if example.description
-              section.sdldocs-component-description.spectrum-Body!= example.description
+              section.spectrum-Body!= markdown.toHTML(example.description)
 
           if example.markup
-            -
-              example.highlightedMarkup = Prism.highlight(example.markup, Prism.languages.markup, 'markup');
 
-            section.cssdocs-example.spectrum
-              .cssdocs-example-demo(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-              .cssdocs-example-markup
+            section.spectrum-CSSExample-container
+              .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
+              .spectrum-CSSExample-markup
                 if example.markup.split('\n').length > 2
-                  a.js-markup-toggle.cssdocs-example-markupToggle.spectrum-Link(href="#") Show Markup
+                  a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
                 pre
-                  code.language-markup!=example.highlightedMarkup
+                  code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')
 
       div.spectrum-Underlay#spectrum-underlay

@@ -117,7 +117,7 @@ gulp.task('build-docs:copyDeps', function() {
   getDependencies();
 
   function copyDep(dep) {
-    return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*.css`)
+    return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*`)
       .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
   }
   return merge.apply(merge, dependencies.map(copyDep));
@@ -128,7 +128,7 @@ gulp.task('build-docs:copyDocDeps', function() {
   getDependencies();
 
   function copyDep(dep) {
-    return gulp.src(`${__dirname}/../node_modules/@spectrum-css/${dep}/dist/index.css`)
+    return gulp.src(`${__dirname}/../node_modules/@spectrum-css/${dep}/dist/*`)
       .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
   }
   return merge.apply(merge, docDependencies.map(copyDep));

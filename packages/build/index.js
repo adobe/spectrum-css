@@ -11,14 +11,24 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require('gulp');
+const del = require('del');
 
 exports.css = require('./css');
 exports.docs = require('./docs');
 
-gulp.task('build', gulp.parallel(
-  'build-css',
-  'build-docs'
-));
+gulp.task('clean', function() {
+  return del('dist/*');
+});
+
+gulp.task('build',
+  gulp.series(
+    'clean',
+    gulp.parallel(
+      'build-css',
+      'build-docs'
+    )
+  )
+);
 
 gulp.task('default', gulp.parallel(
   'build'

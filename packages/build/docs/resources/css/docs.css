@@ -6,35 +6,21 @@ html {
   visibility: hidden;
 }
 
-#loader {
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: visible !important;
-
-  opacity: 1;
-  transition: opacity 125ms ease-in-out;
-}
-
 .wf-active {
   visibility: visible;
 }
 
-.wf-active #loader {
-  opacity: 0;
+.spectrum-CSSComponent {
+  max-width: 1080px;
+  margin: 40px auto;
+  padding: 0 40px;
 }
 
-.cssdocs-component {
-  max-width: 1288px;
-  margin: 0 auto 6rem;
-  padding: 0 12px;
+.spectrum-CSSExample {
+  margin-bottom: 40px;
 }
 
-.cssdocs-example {
+.spectrum-CSSExample-container {
   margin: 1rem -4px;
 
   display: flex;
@@ -46,19 +32,46 @@ html {
   box-shadow: 0 0 18px rgba(0,0,0,.15);
 }
 
+.spectrum-CSSComponent-heading {
+  margin-bottom: 12px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.spectrum-CSSComponent-title {
+  flex-grow: 1;
+}
+
+.spectrum-CSSExample-status {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+
+.spectrum-CSSExample-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.spectrum-CSSExample-link:hover {
+  text-decoration: underline;
+}
+
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .cssdocs-example {
+  .spectrum-CSSExample-example {
     /* Fix example layout in IE11 */
     display: block;
   }
 }
 
-.cssdocs-example-demo,
-.cssdocs-example-markup {
+.spectrum-CSSExample-example,
+.spectrum-CSSExample-markup {
   box-sizing: border-box;
 }
 
-.cssdocs-example-demo {
+.spectrum-CSSExample-example {
   flex: 1;
 
   padding: 3rem 4rem;
@@ -66,7 +79,7 @@ html {
   border-radius: 6px 6px 0 0;
 }
 
-.cssdocs-example-markup {
+.spectrum-CSSExample-markup {
   position: relative;
   max-width: 100%;
   max-height: 100px;
@@ -81,51 +94,51 @@ html {
   overflow: hidden;
 }
 
-.cssdocs-example-markup.is-open {
+.spectrum-CSSExample-markup.is-open {
   max-height: 100%;
 }
 
-.cssdocs-example-markup.is-open .cssdocs-example-markupToggle {
+.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
   background-color: transparent;
 }
-.cssdocs-example-markup.is-open .cssdocs-example-markupToggle::before {
+.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle::before {
   display: none;
 }
 
-.cssdocs-example-markupToggle + pre {
+.spectrum-CSSExample-markupToggle + pre {
   padding-bottom: 1rem;
 }
 
-.spectrum--dark .cssdocs-example,
-.spectrum--darkest .cssdocs-example {
+.spectrum--dark .spectrum-CSSExample-example,
+.spectrum--darkest .spectrum-CSSExample-example {
   box-shadow: 0 0 18px rgba(240, 240, 240, .20);
 }
 
-.spectrum--dark .cssdocs-example,
-.spectrum--dark .cssdocs-example-markup {
+.spectrum--dark .spectrum-CSSExample-example,
+.spectrum--dark .spectrum-CSSExample-markup {
   border-color: rgb(80, 80, 80);
 }
 
-.spectrum--dark .cssdocs-example-markup {
+.spectrum--dark .spectrum-CSSExample-markup {
   background-color: rgb(40, 40, 40);
 }
 
-.spectrum--darkest .cssdocs-example,
-.spectrum--darkest .cssdocs-example-markup {
+.spectrum--darkest .spectrum-CSSExample-example,
+.spectrum--darkest .spectrum-CSSExample-markup {
   border-color: rgb(60, 60, 60);
 }
 
-.spectrum--darkest .cssdocs-example-markup {
+.spectrum--darkest .spectrum-CSSExample-markup {
   background-color: rgb(15, 15, 15);
 }
 
-.cssdocs-Overlay-example {
+.spectrum-CSSExample-Overlay-example {
   position: relative;
   background: rgba(0,0,0,0.4);
   color: rgba(0,0,0,0.4);
 }
 
-.cssdocs-Dialog {
+.spectrum-CSSExample-dialog {
   position: relative !important;
   transform: none !important;
   margin-left: auto;
@@ -136,7 +149,7 @@ html {
   transition: none;
 }
 
-.cssdocs-Overlay-showButton {
+.spectrum-CSSExample-overlayShowButton {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -162,7 +175,7 @@ code[class*="language-"], pre[class*="language-"] {
   font-size: 12px;
 }
 
-.cssdocs-example-markupToggle {
+.spectrum-CSSExample-markupToggle {
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -177,7 +190,7 @@ code[class*="language-"], pre[class*="language-"] {
   text-align: center;
 }
 
-.cssdocs-example-markupToggle::before {
+.spectrum-CSSExample-markupToggle::before {
   content: '';
 
   position: absolute;
@@ -192,86 +205,16 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 
-.spectrum--dark .cssdocs-example-markupToggle,
-.spectrum--darkest .cssdocs-example-markupToggle {
+.spectrum--dark .spectrum-CSSExample-markupToggle,
+.spectrum--darkest .spectrum-CSSExample-markupToggle {
   background: rgb(40, 40, 40);
 }
-.spectrum--dark .cssdocs-example-markupToggle::before,
-.spectrum--darkest .cssdocs-example-markupToggle::before {
+.spectrum--dark .spectrum-CSSExample-markupToggle::before,
+.spectrum--darkest .spectrum-CSSExample-markupToggle::before {
   background: linear-gradient(to bottom, rgba(40,40,40,0) 10%,rgba(40,40,40,1) 100%);
 }
 
-/** **/
-
-.sdldocs-outer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.sdldocs-scrollable {
-  overflow-x: hidden;
-
-  -webkit-overflow-scrolling: touch;
-}
-
-.sdldocs-splitview {
-  height: 100%;
-  margin: 8px;
-}
-
-.sdldocs-splitview > * {
-  height: 100%;
-  overflow-y: auto;
-  position: relative;
-}
-
-.sdldocs-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 1rem;
-}
-
-.sdldocs-spectrumVersion {
-  padding-left: 1rem;
-}
-
-.sdldocs-dnaStatus {
-  margin-right: 0.5rem;
-  margin-left: 1rem;
-}
-
-.sdl-switcher {
-  flex: 1;
-  text-align: right;
-}
-
-.sdl-switcher .spectrum-Dropdown + .spectrum-FieldLabel {
-  margin-left: 2rem;
-}
-
-.sdl-switcher .spectrum-Dropdown {
-  width: 124px !important;
-}
-
-.sdldocs-main-content {
-  margin: 0 auto;
-}
-
-.sdldocs-header-title {
-  margin-left: 12px;
-}
-
-.sdldocs-component {
-  margin: 0 0 5rem 0;
-}
-
-.sdldocs-subtleLink {
+.spectrum-BigSubtleLink {
   display: inline-block;
   text-decoration: none;
   color: inherit;
@@ -279,46 +222,8 @@ code[class*="language-"], pre[class*="language-"] {
   vertical-align: middle;
 }
 
-.sdldocs-subtleLink:focus {
+.spectrum-BigSubtleLink:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(38, 128, 235);
-}
-
-.sdldocs-component-name {
-  margin: 0;
-}
-
-.sdldocs-subComponent {
-  margin: 2rem 0;
-}
-
-.sdldocs-subComponent-name {
-  margin: 0;
-  height: 24px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sdldocs-subComponent-header {
-  margin: 1rem 0 0 0;
-}
-
-.sdldocs-subComponent-header + .sdldocs-subComponent-example {
-  margin-top: 1rem;
-}
-
-.sdldocs-subComponent-example {
-  margin-top: 1.25rem;
-  margin-bottom: 1rem;
-  padding-left: 2rem;
-}
-
-.sdldocs-component-description {
-}
-
-.sdldocs-component-description p {
-  max-width: 90ch;
 }
 
 pre.html {
@@ -327,72 +232,12 @@ pre.html {
   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
 }
 
-.sdldocs-header-logo-image {
-  vertical-align: middle;
-  width: 32px;
-  height: 27px;
-}
-
-.sdldocs-floating {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 0;
-}
-
-.sdldocs-nav {
-  display: none;
-}
-.sdldocs-components {
-  flex: 1;
-}
-
 .row {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-@media (min-width: 48em) {
-  .sdldocs-nav {
-    display: block;
-  }
-  .sdldocs-nav-item {
-    border: none;
-  }
-  .sdldocs-nav-link {
-    font-size: 1.125rem;
-    line-height: 24px;
-  }
-}
-
-
-.sdldocs-badge {
-  display: inline-flex;
-  height: 20px;
-
-  line-height: 20px;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: white;
-  font-weight: 300;
-  text-shadow: 0 1px 0 rgb(0,0,0,0.3);
-}
-.sdldocs-badge-label,
-.sdldocs-badge-version {
-  padding: 0 8px;
-  border-radius: 3px;
-}
-.sdldocs-badge-label {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  background-color: #4B4B4B;
-}
-.sdldocs-badge-version {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: #1473E6;
-}
 
 /* For documentation beautification only - DO NOT COPY */
 .dummy-spacing {

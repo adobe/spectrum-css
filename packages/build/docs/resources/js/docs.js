@@ -52,14 +52,14 @@ function closeDialog(dialog) {
   document.getElementById('spectrum-underlay').classList.remove('is-open');
   dialog.classList.remove('is-open');
   setTimeout(function() {
-    dialog.classList.remove('cssdocs-Dialog');
+    dialog.classList.remove('spectrum-CSSExample-dialog');
   }, 10);
 }
 
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
   event.preventDefault();
-  var exampleMarkup = event.target.closest('.cssdocs-example-markup');
+  var exampleMarkup = event.target.closest('.spectrum-CSSExample-markup');
   var style = window.getComputedStyle(exampleMarkup);
   var isOpen = exampleMarkup.classList.contains('is-open');
   event.target.innerHTML = isOpen ? 'Show Markup' : 'Hide Markup';
