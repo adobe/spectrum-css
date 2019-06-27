@@ -251,7 +251,6 @@ function watchWithinPackages(glob, task, files) {
       gulp.src(`packages/${package}/dist/${files}`)
         .pipe(gulp.dest(`dist/docs/packages/${package}/dist/`))
         .on('end', function() {
-
           // Inject
           gulp.src(`dist/docs/packages/${package}/dist/${files}`)
             .pipe(browserSync.stream());
@@ -268,6 +267,7 @@ function watchWithinPackages(glob, task, files) {
 
   let changedFile = null;
   watcher.on('change', (filePath) => {
+    logger.debug(`Got change for ${filePath}`);
     if (changedFile === null) {
       changedFile = filePath;
     }
