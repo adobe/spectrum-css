@@ -6,12 +6,12 @@ components:
     name: Dialog - Small
     status: Verified
     description: A small dialog
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Small Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--small is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--small is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Disclaimer</h2>
         </div>
@@ -23,12 +23,12 @@ components:
     name: Dialog - Medium
     status: Verified
     description: A medium dialog
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Medium Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--medium is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--medium is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Disclaimer</h2>
         </div>
@@ -40,12 +40,12 @@ components:
     name: Dialog - Large
     status: Verified
     description: A large dialog
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Large Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--large is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--large is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Disclaimer</h2>
         </div>
@@ -57,12 +57,12 @@ components:
     name: Dialog - Dismissible
     status: Verified
     description: A dialog that can be dismissed without taking an action. Dismissible dialogs should never have buttons.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Dismissible Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Disclaimer</h2>
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" onclick="closeDialog(this.closest('.spectrum-Dialog'))">
@@ -79,12 +79,12 @@ components:
     name: Dialog - No Divider
     status: Verified
     description: Dialogs can forgo the divider if they have content that spans the entire width of the dialog.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open No Divider Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible spectrum-Dialog--noDivider is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible spectrum-Dialog--noDivider is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Disclaimer</h2>
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" onclick="closeDialog(this.closest('.spectrum-Dialog'))">
@@ -101,12 +101,12 @@ components:
     name: Dialog - Hero
     status: Verified
     description: Dialogs can have a hero header.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Hero Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible spectrum-Dialog--noDivider is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissible spectrum-Dialog--noDivider is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-hero" style="background-image: url(img/example-card-portrait.jpg)"></div>
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Disclaimer</h2>
@@ -124,12 +124,12 @@ components:
     name: Dialog - Alert Confirmation
     status: Verified
     description: A confirmation alert dialog has specific button styles that should be used.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Configuration Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--alert is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--alert is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Enable Smart Filters?</h2>
         </div>
@@ -145,12 +145,12 @@ components:
     name: Dialog - Alert Information
     status: Verified
     description: An information alert dialog has specific button styles that should be used.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Information Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--alert is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--alert is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Connect to WiFi</h2>
         </div>
@@ -166,12 +166,12 @@ components:
     name: Dialog - Alert Destructive
     status: Verified
     description: An destructive alert dialog has specific button styles that should be used.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Destructive Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--alert is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--alert is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Delete 3 Documents</h2>
         </div>
@@ -187,12 +187,12 @@ components:
     name: Dialog - Alert Error
     status: Verified
     description: An error alert dialog has an error icon in the header.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--alert is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--alert is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Unable to Share</h2>
           <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
@@ -210,12 +210,12 @@ components:
     name: Dialog - Alert 3 buttons
     status: Verified
     description: An alert dialog can have up to 3 buttons.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open 3 Button Dialog</button>
 
-      <!-- cssdocs-Dialog class is included for demo purposes only -->
-      <div class="spectrum-Dialog spectrum-Dialog--alert is-open cssdocs-Dialog">
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--alert is-open spectrum-CSSExample-dialog">
         <div class="spectrum-Dialog-header">
           <h2 class="spectrum-Dialog-title">Rate This App</h2>
         </div>
@@ -234,7 +234,7 @@ components:
     dnaStatus: Precursor
     status: Unverified
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Scrolling Dialog</button>
 
@@ -262,7 +262,7 @@ components:
     name: Dialog - Fullscreen
     status: Unverified
     description: A fullscreen dialog will automatically fill almost all of the available screen space.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button variant="primary" class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
 
@@ -291,7 +291,7 @@ components:
     name: Dialog - Fullscreen Takeover
     status: Unverified
     description: A fullscreen takeover dialog will fill all of the available screen space.
-    demoClassName: cssdocs-Overlay-example
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover Dialog</button>
 
