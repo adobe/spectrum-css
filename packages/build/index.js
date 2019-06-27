@@ -13,23 +13,23 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const del = require('del');
 
-exports.css = require('./css');
-exports.docs = require('./docs');
+const buildCSS = require('./css');
+const buildDocs = require('./docs');
 
-gulp.task('clean', function() {
+function clean() {
   return del('dist/*');
-});
+};
 
-gulp.task('build',
-  gulp.series(
-    'clean',
-    gulp.parallel(
-      'build-css',
-      'build-docs'
-    )
+const build = gulp.series(
+  clean,
+  gulp.parallel(
+    buildCSS,
+    buildDocs
   )
 );
 
-gulp.task('default', gulp.parallel(
-  'build'
-));
+exports.default = build;
+exports.build = build;
+exports.clean = clean;
+exports.buildCSS = buildCSS;
+exports.buildDocs = buildDocs;

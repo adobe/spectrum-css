@@ -33,7 +33,7 @@ packagejson='{
   }
 }'
 
-gulpfile="require('@spectrum-css/build');"
+gulpfile="module.exports = require('@spectrum-css/build');"
 
 # packages=$(ls packages/)
 packages="accordion   checkbox    fieldlabel    rule      stepper
@@ -67,22 +67,22 @@ for package in $packages; do
 
   # Set up package.json
   # echo "$packagejson" | sed "s/PACKAGE/$package/g" > $CWD/packages/$package/package.json
-  # echo "$gulpfile" > $CWD/packages/$package/gulpfile.js
+  echo "$gulpfile" > $CWD/packages/$package/gulpfile.js
 
   # move yml
-  if [ -d packages/$package/docs ]; then
-    docCount=`ls -1 packages/$package/docs | wc -l`
-    # echo "Got me a nice lil doc folder for $package with $docCount items"
-    if [ $docCount == "1" ]; then
-      echo "Moving and renaming singular docs file..."
-      mv packages/$package/docs/*.yml packages/$package/docs.yml
-    fi
+  # if [ -d packages/$package/docs ]; then
+  #   docCount=`ls -1 packages/$package/docs | wc -l`
+  #   # echo "Got me a nice lil doc folder for $package with $docCount items"
+  #   if [ $docCount == "1" ]; then
+  #     echo "Moving and renaming singular docs file..."
+  #     mv packages/$package/docs/*.yml packages/$package/docs.yml
+  #   fi
 
-    if [ $docCount == "0" ]; then
-      echo "Deleting empty docs folder..."
-      rm -rf packages/$package/docs/
-    fi
-  fi
+  #   if [ $docCount == "0" ]; then
+  #     echo "Deleting empty docs folder..."
+  #     rm -rf packages/$package/docs/
+  #   fi
+  # fi
 
   # Remove commons includes
 done

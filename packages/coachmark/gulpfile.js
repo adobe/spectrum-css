@@ -1,1 +1,1 @@
-require('@spectrum-css/build');
+module.exports = require('@spectrum-css/build');

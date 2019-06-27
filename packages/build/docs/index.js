@@ -70,7 +70,7 @@ function getDependencies() {
   });
 }
 
-gulp.task('build-docs:html', function() {
+function buildDocs_html() {
   var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   var pkgname = pkg.name.split('/').pop();
 
@@ -116,14 +116,14 @@ gulp.task('build-docs:html', function() {
       })
     )
     .pipe(gulp.dest('dist/docs/'));
-});
+}
 
-gulp.task('build-docs:resources', function() {
+function buildDocs_resources() {
   return gulp.src(`${__dirname}/resources/**`)
     .pipe(gulp.dest('dist/docs/'));
-});
+}
 
-gulp.task('build-docs:copyDeps', function() {
+function buildDocs_copyDeps() {
   // This must be called per-task, or top level build won't know the right deps
   getDependencies();
 
@@ -132,9 +132,9 @@ gulp.task('build-docs:copyDeps', function() {
       .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
   }
   return merge.apply(merge, dependencies.map(copyDep));
-});
+}
 
-gulp.task('build-docs:copyDocDeps', function() {
+function buildDocs_copyDocDeps() {
   // This must be called per-task, or top level build won't know the right deps
   getDependencies();
 
@@ -143,32 +143,32 @@ gulp.task('build-docs:copyDocDeps', function() {
       .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
   }
   return merge.apply(merge, docDependencies.map(copyDep));
-});
+}
 
-gulp.task('build-docs:loadicons', function() {
+function buildDocs_loadicons() {
   return gulp.src(require.resolve('loadicons'))
     .pipe(gulp.dest('dist/docs/dependencies/loadicons/'));
-});
+}
 
-gulp.task('build-docs:focus-ring-polyfill', function() {
+function buildDocs_focusPolyfill() {
   return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
     .pipe(gulp.dest('dist/docs/dependencies/@adobe/focus-ring-polyfill/'));
-});
+}
 
-gulp.task('build-docs:prism', function() {
+function buildDocs_prism() {
   return gulp.src([
     `${path.dirname(require.resolve('prismjs'))}/themes/prism.css`,
     `${path.dirname(require.resolve('prismjs'))}/themes/prism-tomorrow.css`
   ])
     .pipe(gulp.dest('dist/docs/css/vendor/'));
-});
+}
 
-gulp.task('build-docs', gulp.parallel(
-  'build-docs:resources',
-  'build-docs:loadicons',
-  'build-docs:focus-ring-polyfill',
-  'build-docs:prism',
-  'build-docs:copyDeps',
-  'build-docs:copyDocDeps',
-  'build-docs:html'
-));
+module.exports = gulp.parallel(
+  buildDocs_resources,
+  buildDocs_loadicons,
+  buildDocs_focusPolyfill,
+  buildDocs_prism,
+  buildDocs_copyDeps,
+  buildDocs_copyDocDeps,
+  buildDocs_html
+);

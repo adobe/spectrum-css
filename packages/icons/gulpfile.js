@@ -13,9 +13,9 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
 
-require('@spectrum-css/build');
+var tasks = require('@spectrum-css/build');
 
-gulp.task('generate-svgsprite', function() {
+function generateSVGSprite() {
   return gulp.src('combined/*.svg')
     .pipe(rename(function(filePath) {
       filePath.basename = 'spectrum-css-icon-' + filePath.basename;
@@ -25,10 +25,10 @@ gulp.task('generate-svgsprite', function() {
     }))
     .pipe(rename('spectrum-css-icons.svg'))
     .pipe(gulp.dest('dist/'));
-});
+}
 
 function getSVGSpriteTask(size) {
-  return function() {
+  return function generateSVGSprite() {
     return gulp.src(`${size}/*.svg`)
       .pipe(rename(function(filePath) {
         filePath.basename = 'spectrum-css-icon-' + filePath.basename.replace(/S_UI(.*?)_.*/, '$1');
@@ -41,20 +41,19 @@ function getSVGSpriteTask(size) {
   };
 }
 
-gulp.task('generate-svgsprite-medium', getSVGSpriteTask('medium'));
-gulp.task('generate-svgsprite-large', getSVGSpriteTask('large'));
+let generateSVGSpriteMedium = getSVGSpriteTask('medium');
+let generateSVGSpriteLarge = getSVGSpriteTask('large');
 
-gulp.task('icons', gulp.parallel(
-  'generate-svgsprite-medium',
-  'generate-svgsprite-large',
-  gulp.series(
-    'generate-svgsprite'
-  )
-));
+let buildIcons = gulp.parallel(
+  generateSVGSpriteMedium,
+  generateSVGSpriteLarge,
+  generateSVGSprite
+);
 
-gulp.task('build', gulp.parallel(
-  'icons',
-  'build-css'
-));
+let build = gulp.parallel(
+  buildIcons,
+  tasks.buildCSS
+);
 
-gulp.task('default', gulp.series('build'));
+exports.build = build;
+exports.default = build;

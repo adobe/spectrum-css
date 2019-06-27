@@ -3,7 +3,7 @@
   "version": "2.13.0",
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist",
-    "build": "gulp",
+    "build": "gulp -LL",
     "dev": "gulp dev",
     "start": "npm run dev",
     "ci-all": "npm run build",
@@ -25,11 +25,17 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "audit-ci": "^2.0.1",
+    "browser-sync": "^2.26.7",
+    "colors": "^1.3.3",
     "gulp": "^4.0.0",
     "gulp-pug": "^4.0.1",
+    "gulplog": "^1.0.0",
     "js-yaml": "^3.13.1",
     "lerna": "^3.15.0",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.1"
+  },
+  "dependencies": {
+    "gulp-print": "^5.0.2"
   }
 }

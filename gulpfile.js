@@ -13,12 +13,53 @@ governing permissions and limitations under the License.
 const fs = require('fs');
 const path = require('path');
 const gulp = require('gulp');
+const logger = require('gulplog');
 const ext = require('replace-ext');
 const yaml = require('js-yaml');
 const through = require('through2');
 const pug = require('gulp-pug');
+const colors = require('colors');
+const browserSync = require('browser-sync');
 
-gulp.task('build-packages', function(cb) {
+/*
+  Run the specified gulp task for the given package
+*/
+function runPackageTask(package, task, callback) {
+  var gulpfile = path.join(__dirname, 'packages', package, 'gulpfile.js');
+
+  logger.warn(`Starting '${package.yellow}:${task.yellow}'...`);
+
+  let packageDir = path.join(__dirname, 'packages', package)
+  logger.debug(`Working directory changed to ${packageDir.magenta}`);
+  process.chdir(packageDir);
+  var tasks = require(`${gulpfile}`);
+
+  if (tasks[task]) {
+    tasks[task](function(err) {
+      process.chdir(__dirname);
+      logger.debug(`Working directory changed to ${__dirname.magenta}`);
+
+      if (err) {
+        logger.error(`Error running '${package.yellow}:${task.yellow}': ${err}`);
+
+        callback(err);
+      }
+      else {
+        logger.warn(`Finished '${package.yellow}:${task.yellow}'`);
+
+        callback();
+      }
+    });
+  }
+  else {
+    process.chdir(__dirname);
+  }
+}
+
+/*
+  Build all packages
+*/
+function buildPackages(done) {
   const packageDir = './packages';
 
   // Dependencies that are required for docs to render
@@ -51,6 +92,10 @@ gulp.task('build-packages', function(cb) {
   // Add vars up in there first
   packages.unshift('vars');
 
+  packages = packages.filter((package) => {
+    return package !== 'build';
+  });
+
   function getNextPackage() {
     return packages.shift();
   }
@@ -59,56 +104,26 @@ gulp.task('build-packages', function(cb) {
     var package = getNextPackage();
 
     if (package) {
-      var gulpfile = path.join(__dirname, packageDir, package, 'gulpfile.js');
-      if (fs.existsSync(gulpfile)) {
-        process.chdir(path.join(__dirname, packageDir, package));
-
-        require(`${gulpfile}`);
-
-        console.log(`Running build for ${package}...`);
-
-        if (gulp.task('build')) {
-          gulp.task('build')(function(err) {
-            console.log(`Done building ${package}`);
-            if (err) {
-              throw err;
-            }
-            else {
-              processPackage();
-            }
-          });
-        }
-        else {
-          console.error(`Could not find build task for ${package}`);
-        }
-      }
-      else {
-        console.error(`Could not find gulpfile for ${package} at ${gulpfile}, skipping...`);
-
+      runPackageTask(package, 'build', function(err) {
         processPackage();
-      }
+      });
     }
     else {
-      console.log('Build complete!');
-
-      // Go back to the root dir, otherwise tasks will break
-      process.chdir(__dirname);
-
-      cb();
+      logger.warn('Build complete!'.bold.green);
+      done();
     }
   }
 
   // Kick off a gulp build for each package
   processPackage();
-});
-
+};
 
 var data = {
   nav: [],
   pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8'))
 };
 
-gulp.task('build-docs:getData', function(done) {
+function buildSite_getData(done) {
   return gulp.src([
     'packages/*/docs.yml',
     'packages/*/docs/*.yml'
@@ -141,46 +156,147 @@ gulp.task('build-docs:getData', function(done) {
     });
     done();
   });
-});
+};
 
-gulp.task('build-docs:copyPackages', function() {
-  return gulp.src('packages/*/dist/**')
+function buildSite_copyPackages() {
+  // Todo: don't copy common resources
+  return gulp.src([
+    'packages/*/dist/**'
+  ])
     .pipe(gulp.dest('dist/docs/packages/'));
-});
+};
 
-gulp.task('build-docs:copyResources', function() {
+function buildSite_copyResources() {
   return gulp.src('site/resources/**')
     .pipe(gulp.dest('dist/docs/'));
-});
+};
 
-gulp.task('build-docs:html', function buildHtml() {
+function buildSite_html() {
   return gulp.src('./site/*.pug')
     .pipe(pug({
       locals: data
     }))
     .pipe(gulp.dest('dist/docs/'));
-});
+};
 
-gulp.task('build-docs:site',
-  gulp.parallel(
-    'build-docs:copyResources',
+let buildSite_pages = gulp.series(
+  buildSite_getData,
+  buildSite_html
+);
+
+let buildSite_site = gulp.parallel(
+  buildSite_copyResources,
+  buildSite_pages
+);
+
+let buildSite = gulp.parallel(
+  buildSite_copyPackages,
+  buildSite_site
+);
+
+let build = gulp.series(
+  buildPackages,
+  buildSite
+);
+
+// dev
+function serve() {
+  browserSync({
+    startPath: 'docs/index.html',
+    server: './dist/'
+  });
+}
+
+function watchSite() {
+  gulp.watch(
+    'site/*.pug',
     gulp.series(
-      'build-docs:getData',
-      'build-docs:html'
+      buildSite_pages,
+      browserSync.reload
     )
-  )
+  );
+
+  gulp.watch(
+    [
+      'site/resources/css/*.css',
+      'site/resources/js/*.js',
+    ],
+    gulp.series(
+      buildSite_copyResources,
+      function injectSiteResources() {
+        return gulp.src([
+          'dist/docs/css/**/*.css',
+          'dist/docs/js/**/*.js'
+        ])
+          .pipe(browserSync.stream());
+      }
+    )
+  );
+}
+
+/*
+  Watch for changes to globs matching files within packages, execute task for that package, and copy/inject specified files
+*/
+function watchWithinPackages(glob, task, files) {
+  var watcher = gulp.watch(glob, function handleChanged(done) {
+    if (!changedFile) {
+      done();
+      return;
+    }
+
+    var package = changedFile.match(/packages\/(.*?)\//)[1];
+
+    runPackageTask(package, task, function() {
+      // Copy files
+      gulp.src(`packages/${package}/dist/${files}`)
+        .pipe(gulp.dest(`dist/docs/packages/${package}/dist/`))
+        .on('end', function() {
+
+          // Inject
+          gulp.src(`dist/docs/packages/${package}/dist/${files}`)
+            .pipe(browserSync.stream());
+
+          changedFile = null;
+          done();
+        })
+        .on('error', function(err) {
+          changedFile = null;
+          done(err);
+        });
+    });
+  });
+
+  let changedFile = null;
+  watcher.on('change', (filePath) => {
+    if (changedFile === null) {
+      changedFile = filePath;
+    }
+  });
+}
+
+function startWatch() {
+  serve();
+
+  watchWithinPackages('packages/*/*.css', 'buildCSS', '*.css');
+
+  watchWithinPackages(
+    [
+      'packages/*/docs/*.yml',
+      'packages/*/docs/docs.yml'
+    ],
+    'buildDocs',
+    '*/*.html'
+  );
+
+  watchSite();
+};
+
+exports.dev = gulp.series(
+  build,
+  startWatch
 );
 
-gulp.task('build-docs',
-  gulp.parallel(
-    'build-docs:copyPackages',
-    'build-docs:site'
-  )
-);
-
-gulp.task('build', gulp.series(
-  'build-packages',
-  'build-docs'
-));
-
-gulp.task('default', gulp.series('build'));
+exports.watch = startWatch;
+exports.buildAll = buildPackages;
+exports.build = build;
+exports.default = build;

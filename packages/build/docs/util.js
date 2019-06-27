@@ -1,3 +1,5 @@
+const logger = require('gulplog');
+
 const labelColors = {
   'Deprecated': 'red',
 
@@ -31,13 +33,13 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
 
   if (cssStatus === 'CSS Verified') {
     if (dnaStatus !== 'Released') {
-      console.log(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
+      logger.debug(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
       dnaStatus = 'Canon';
     }
   }
 
   if (!dnaStatus) {
-    console.log(`${dnaComponentId} has no DNA status`);
+    logger.debug(`${dnaComponentId} has no DNA status`);
     dnaStatus = 'Beta Precursor';
   }
 

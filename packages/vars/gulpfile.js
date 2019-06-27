@@ -14,20 +14,20 @@ const gulp = require('gulp');
 const fs = require('fs');
 const del = require('del');
 
-gulp.task('clean', function() {
+function clean() {
   return del('dist/*');
-});
+}
 
-gulp.task('build-prepare', function(cb) {
+function prepareBuild(cb) {
   var dir = 'dist';
   if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
   }
   cb();
-});
+}
 
 // Builds a list of unique variables from DNA for each theme and scale.
-gulp.task('build-vars', function(cb) {
+function buildVars(cb) {
   let vars = require('./');
   for (let theme in vars.themes) {
     fs.writeFileSync(`dist/spectrum-${theme}.css`, vars.generate(theme, vars.themes[theme]));
@@ -38,23 +38,24 @@ gulp.task('build-vars', function(cb) {
   }
 
   cb();
-});
+}
 
-gulp.task('copy-sources', function() {
+function copySources() {
   return gulp.src([
     'vars/spectrum-metadata.json',
     'vars/spectrum-global.css'
   ])
     .pipe(gulp.dest('dist/'))
-});
+}
 
-gulp.task('build',
-  gulp.series('clean', 'build-prepare',
-    gulp.parallel(
-      'build-vars',
-      'copy-sources'
-    )
+let build = gulp.series(
+  clean,
+  prepareBuild,
+  gulp.parallel(
+    buildVars,
+    copySources
   )
 );
 
-gulp.task('default', gulp.series('build'));
+exports.default = build;
+exports.build = build;
