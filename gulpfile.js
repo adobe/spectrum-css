@@ -124,6 +124,8 @@ var data = {
 };
 
 function buildSite_getData(done) {
+  data.nav = [];
+
   return gulp.src([
     'packages/*/docs.yml',
     'packages/*/docs/*.yml'
