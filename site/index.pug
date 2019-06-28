@@ -21,6 +21,7 @@ html
 
     link(rel='stylesheet', type='text/css', href='css/site.css')
 
+    script(src='js/site.js')
     script(src='js/typekit.js')
 
   body.spectrum.spectrum--light.spectrum--medium
@@ -43,7 +44,7 @@ html
                 ul.spectrum-SideNav.spectrum-SideNav--multiLevel
                   each component in nav
                     li.spectrum-SideNav-item
-                      a.spectrum-SideNav-itemLink(href=component.url, target='mainContainer')= component.name
+                      a.spectrum-SideNav-itemLink.js-componentLink(href=component.url, target='mainContainer', data-component=component.component, data-example=component.example)= component.name
 
           nav.spectrum-Site-bottomNav
             ul.spectrum-SideNav

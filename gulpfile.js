@@ -145,6 +145,8 @@ function buildSite_getData(done) {
 
     data.nav.push({
       name: componentData.name,
+      component: packageName,
+      example: path.basename(fileName, '.html'),
       url: `packages/${packageName}/dist/docs/${fileName}`
     });
 
@@ -172,7 +174,7 @@ function buildSite_copyResources() {
 };
 
 function buildSite_html() {
-  return gulp.src('./site/*.pug')
+  return gulp.src('site/*.pug')
     .pipe(pug({
       locals: data
     }))
@@ -212,7 +214,10 @@ function watchSite() {
     'site/*.pug',
     gulp.series(
       buildSite_pages,
-      browserSync.reload
+      function reload(cb) {
+        browserSync.reload();
+        cb();
+      }
     )
   );
 
