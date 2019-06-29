@@ -53,6 +53,21 @@ card      fieldgroup    rating      steplist"
 migratedPackages=()
 packagesWithoutDocs=()
 
+buildFiles="index.css
+index-diff.css
+index-lg.css
+index-vars.css
+colorStops/light.css
+colorStops/lightest.css
+colorStops/dark.css
+colorStops/darkest.css
+multiStops/light.css
+multiStops/lightest.css
+multiStops/dark.css
+multiStops/darkest.css"
+
+oldCSSDir="/Users/lawdavis/repos/old-spectrum-css"
+
 for package in $packages; do
   echo "Processing $package..."
   # if [ -d "docs/$package" ]; then
@@ -67,7 +82,7 @@ for package in $packages; do
 
   # Set up package.json
   # echo "$packagejson" | sed "s/PACKAGE/$package/g" > $CWD/packages/$package/package.json
-  echo "$gulpfile" > $CWD/packages/$package/gulpfile.js
+  # echo "$gulpfile" > $CWD/packages/$package/gulpfile.js
 
   # move yml
   # if [ -d packages/$package/docs ]; then
@@ -84,7 +99,27 @@ for package in $packages; do
   #   fi
   # fi
 
-  # Remove commons includes
+  # Combine docs?
+
+  # Diff against old build
+  packageIdentical="1"
+  for buildFile in $buildFiles; do
+    oldFile="$oldCSSDir/dist/components/$package/$buildFile"
+    newFile="packages/$package/dist/$buildFile"
+    if [ -f $oldFile ]; then
+      diff -b $oldFile $newFile > /dev/null
+
+      if [ $? == "1" ]; then
+        packageIdentical="0"
+        echo "$newFile does not match!"
+        diff -b $oldFile $newFile
+        diff -b -y $oldFile $newFile | less
+      fi
+    fi
+  done
+  if [ $packageIdentical == "0" ]; then
+    echo "$package is not identical! Please investigate."
+  fi
 done
 
 echo $migratedPackages
