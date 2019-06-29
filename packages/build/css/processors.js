@@ -90,7 +90,7 @@ function getProcessors(keepVars = false) {
     require('./lib/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
     keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
-    keepVars ? require('./lib/postcss-notnested')({ replace: '.spectrum' }) : null,
+    require('./lib/postcss-notnested')({ replace: '.spectrum' }),
     require('postcss-svg'),
     require('postcss-functions')({
       functions: {
