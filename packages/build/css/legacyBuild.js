@@ -18,7 +18,8 @@ const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
 
-const processors = require('./processors').legacyProcessors;
+const processors = require('./processors');
+const legacyProcessors = processors.legacyProcessors;
 
 var colorStops = [
   'darkest',
@@ -37,7 +38,7 @@ function buildMedium() {
   return gulp.src('index.css')
     .pipe(insert.prepend(`@import "${varDir}vars/spectrum-global.css";
 @import "${varDir}vars/spectrum-medium.css";`))
-    .pipe(postcss(processors))
+    .pipe(postcss(processors.getProcessors(false, false)))
     .pipe(gulp.dest('dist/'));
 }
 
@@ -48,7 +49,7 @@ function buildLarge() {
   return gulp.src('index.css')
     .pipe(insert.prepend(`@import "${varDir}vars/spectrum-global.css";
 @import "${varDir}vars/spectrum-large.css";`))
-    .pipe(postcss(processors))
+    .pipe(postcss(processors.getProcessors(false, false)))
     .pipe(rename(function(path) {
       path.basename += '-lg';
     }))
@@ -68,7 +69,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
 @import '${commonsDir}skin.css';
 ${prependString}\n`))
     .pipe(insert.append(appendString))
-    .pipe(postcss(processors))
+    .pipe(postcss(legacyProcessors))
     .pipe(rename(function(path) {
       path.dirname += '/colorStops';
       path.basename = colorStop;
@@ -100,7 +101,7 @@ function buildMultiStops() {
 @import '${commonsDir}skin.css';
 .spectrum--${colorStop} {\n`))
       .pipe(insert.append('}\n'))
-      .pipe(postcss(processors))
+      .pipe(postcss(legacyProcessors))
       // Fix a nested + inherit bug
       .pipe(replace(`.spectrum--${colorStop} .spectrum--${colorStop}`, `.spectrum--${colorStop}`))
       .pipe(rename(function(path) {
@@ -117,23 +118,20 @@ function buildMultiStops() {
   Create a file that only includes statements that are affected by variables
 */
 function buildDiff() {
+  var varsProcessors = processors.getProcessors(false, false, false);
+  varsProcessors.unshift(require('./lib/postcss-varsonly')());
+
   return gulp.src('index.css')
-    // Get var statements only
-    .pipe(postcss([
-      require('./lib/postcss-varsonly')()
-    ]))
     // Use large variables
-    .pipe(insert.prepend(`@import "${varDir}vars/spectrum-large.css";`))
-    .pipe(insert.prepend(`@import "${varDir}vars/spectrum-global.css";\n`))
-    // Build
-    .pipe(postcss(processors))
-    // Wrap in large
+    .pipe(insert.prepend(`@import "${varDir}vars/spectrum-global.css";
+@import "${varDir}vars/spectrum-large.css";`))
+    .pipe(postcss(varsProcessors))
+    // Process again, but wrapped
     .pipe(insert.prepend('.spectrum--large {\n'))
     .pipe(insert.append('\n}\n'))
-    // Stay as pixels
     .pipe(postcss([
       require('postcss-nested'),
-      require('postcss-discard-empty')
+      require('postcss-discard-empty') // kill empty wraps
     ]))
     .pipe(rename(function(path) {
       path.basename += '-diff';

@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 const postcssReal = require('postcss');
 
-function getProcessors(keepVars = false) {
+function getProcessors(keepVars = false, notNested = true, secondNotNested = true) {
   return [
     require('postcss-import'),
     require('postcss-mixins')({
@@ -90,7 +90,7 @@ function getProcessors(keepVars = false) {
     require('./lib/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
     keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
-    require('./lib/postcss-notnested')({ replace: '.spectrum' }),
+    notNested ? require('./lib/postcss-notnested')({ replace: '.spectrum' }) : null,
     require('postcss-svg'),
     require('postcss-functions')({
       functions: {
@@ -104,6 +104,8 @@ function getProcessors(keepVars = false) {
     }),
     require('./lib/postcss-strip-comments')({ preserveTopdoc: false }),
     require('postcss-focus-ring'),
+    secondNotNested ? require('./lib/postcss-notnested')() : null, // Second one to catch all stray &
+    require('postcss-discard-empty'),
     require('autoprefixer')({
       'browsers': [
         'IE >= 10',
@@ -116,5 +118,6 @@ function getProcessors(keepVars = false) {
   ].filter(Boolean);
 }
 
+exports.getProcessors = getProcessors;
 exports.processors = getProcessors(true);
 exports.legacyProcessors = getProcessors();

@@ -11,10 +11,3 @@ governing permissions and limitations under the License.
 */
 
 @import '../commons/index.css';
-
-& {
-  font-size: var(--spectrum-body-4-text-size);
-  font-weight: var(--spectrum-body-4-text-font-weight);
-  line-height: var(--spectrum-body-4-text-line-height);
-  font-style: var(--spectrum-body-4-text-font-style);
-}
