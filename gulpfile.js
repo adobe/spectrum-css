@@ -266,6 +266,8 @@ function buildCombined_getDependencyOrder(done) {
     data.dependencyOrder = data.dependencyOrder.filter(function(dep) {
       return dep !== '@spectrum-css/vars';
     });
+
+    logger.debug(`Dependency order: \n${data.dependencyOrder.join('\n')}`);
     done();
   });
 };
