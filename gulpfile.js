@@ -245,7 +245,7 @@ function watchSite() {
   Watch for changes to globs matching files within packages, execute task for that package, and copy/inject specified files
 */
 function watchWithinPackages(glob, task, files) {
-  var watcher = gulp.watch(glob, function handleChanged(done) {
+  var watcher = gulp.watch(glob, { followSymlinks: false }, function handleChanged(done) {
     if (!changedFile) {
       done();
       return;
