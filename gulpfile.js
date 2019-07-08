@@ -13,13 +13,20 @@ governing permissions and limitations under the License.
 const fs = require('fs');
 const path = require('path');
 const gulp = require('gulp');
+const del = require('del');
 const logger = require('gulplog');
 const ext = require('replace-ext');
 const yaml = require('js-yaml');
 const through = require('through2');
 const pug = require('gulp-pug');
+const concat = require('gulp-concat');
 const colors = require('colors');
 const browserSync = require('browser-sync');
+const depSolver = require('dependency-solver');
+
+function clean() {
+  return del('dist/*');
+};
 
 /*
   Run the specified gulp task for the given package
@@ -120,7 +127,8 @@ function buildPackages(done) {
 
 var data = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8'))
+  pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8')),
+  dependencyOrder: []
 };
 
 function buildSite_getData(done) {
@@ -198,9 +206,105 @@ let buildSite = gulp.parallel(
   buildSite_site
 );
 
+// Combined
+function concatPackageFiles(taskName, input, output, directory) {
+  let func = function() {
+    let glob;
+    if (Array.isArray(input)) {
+      glob = [];
+
+      data.dependencyOrder.forEach(function(dep) {
+        let depName = dep.split('/').pop();
+        input.forEach(function(file) {
+          glob.push(`packages/${depName}/dist/${file}`);
+        });
+      });
+    }
+    else {
+      glob = data.dependencyOrder.map(function(dep) {
+        return `packages/${dep.split('/').pop()}/dist/${input}`;
+      });
+    }
+
+    return gulp.src(glob, { allowEmpty: true })
+      .pipe(concat(output))
+      .pipe(gulp.dest(`dist/${directory || ''}`));
+  };
+
+  Object.defineProperty(func, 'name', { value: taskName, writable: false });
+
+  return func;
+}
+
+function buildCombined_getDependencyOrder(done) {
+  data.dependencyOrder = [];
+
+  let dependencies = {};
+
+  return gulp.src([
+    'packages/*/package.json',
+    '!packages/vars/package.json',
+    '!packages/commons/package.json',
+    '!packages/build/package.json'
+  ])
+  .pipe(through.obj(function readPackage(file, enc, cb) {
+    let pkg;
+    try {
+      pkg = JSON.parse(String(file.contents));
+    } catch (e) {
+      return cb(e);
+    }
+
+    dependencies[pkg.name] = Object.keys(pkg.dependencies).filter(function(dep) {
+      return dep.indexOf('@spectrum-css') === 0;
+    });
+
+    cb(null, file);
+  }))
+  .on('end', function() {
+    data.dependencyOrder = depSolver.solve(dependencies);
+    data.dependencyOrder = data.dependencyOrder.filter(function(dep) {
+      return dep !== '@spectrum-css/vars';
+    });
+    done();
+  });
+};
+
+let buildCombined = gulp.series(
+  buildCombined_getDependencyOrder,
+  gulp.parallel(
+    concatPackageFiles('buildCombined_core', 'index.css', 'spectrum-core.css'),
+    concatPackageFiles('buildCombined_large', 'index-lg.css', 'spectrum-core-lg.css'),
+    concatPackageFiles('buildCombined_diff', 'index-diff.css', 'spectrum-core-diff.css'),
+    concatPackageFiles('buildCombined_light', 'multiStops/light.css', 'spectrum-light.css'),
+    concatPackageFiles('buildCombined_lightest', 'multiStops/lightest.css', 'spectrum-lightest.css'),
+    concatPackageFiles('buildCombined_dark', 'multiStops/dark.css', 'spectrum-dark.css'),
+    concatPackageFiles('buildCombined_darkest', 'multiStops/darkest.css', 'spectrum-darkest.css')
+  )
+);
+
+let buildStandalone = gulp.series(
+  buildCombined_getDependencyOrder,
+  gulp.parallel(
+    concatPackageFiles('buildStandalone_light', ['index.css', 'colorStops/light.css' ], 'spectrum-light.css', 'standalone/'),
+    concatPackageFiles('buildStandalone_lightest', ['index.css', 'colorStops/lightest.css' ], 'spectrum-lightest.css', 'standalone/'),
+    concatPackageFiles('buildStandalone_dark', ['index.css', 'colorStops/dark.css' ], 'spectrum-dark.css', 'standalone/'),
+    concatPackageFiles('buildStandalone_darkest', ['index.css', 'colorStops/darkest.css' ], 'spectrum-darkest.css', 'standalone/'),
+    concatPackageFiles('buildStandalone_lightLarge', ['index-lg.css', 'colorStops/light.css' ], 'spectrum-light-lg.css', 'standalone/'),
+    concatPackageFiles('buildStandalone_lightestLarge', ['index-lg.css', 'colorStops/lightest.css' ], 'spectrum-lightest-lg.css', 'standalone/'),
+    concatPackageFiles('buildStandalone_darkLarge', ['index-lg.css', 'colorStops/dark.css' ], 'spectrum-dark-lg.css', 'standalone/'),
+    concatPackageFiles('buildStandalone_darkestLarge', ['index-lg.css', 'colorStops/darkest.css' ], 'spectrum-darkest-lg.css', 'standalone/'),
+  )
+);
+
 let build = gulp.series(
+  clean,
   buildPackages,
-  buildSite
+  gulp.parallel(
+    buildCombined,
+    buildStandalone,
+    buildSite
+  )
 );
 
 // dev
@@ -303,6 +407,9 @@ exports.dev = gulp.series(
   startWatch
 );
 
+exports.buildCombined = buildCombined;
+exports.buildStandalone = buildStandalone;
+exports.clean = clean;
 exports.watch = startWatch;
 exports.buildAll = buildPackages;
 exports.build = build;
