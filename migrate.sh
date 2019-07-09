@@ -7,6 +7,8 @@ function arrlen() {
   echo "${arr[@]}" | wc -w
 }
 
+npmignore='/dist/docs/'
+
 packagejson='{
   "name": "@spectrum-css/PACKAGE",
   "version": "0.0.0",
@@ -102,24 +104,27 @@ for package in $packages; do
   # Combine docs?
 
   # Diff against old build
-  packageIdentical="1"
-  for buildFile in $buildFiles; do
-    oldFile="$oldCSSDir/dist/components/$package/$buildFile"
-    newFile="packages/$package/dist/$buildFile"
-    if [ -f $oldFile ]; then
-      diff -b $oldFile $newFile > /dev/null
+  # packageIdentical="1"
+  # for buildFile in $buildFiles; do
+  #   oldFile="$oldCSSDir/dist/components/$package/$buildFile"
+  #   newFile="packages/$package/dist/$buildFile"
+  #   if [ -f $oldFile ]; then
+  #     diff -b $oldFile $newFile > /dev/null
 
-      if [ $? == "1" ]; then
-        packageIdentical="0"
-        echo "$newFile does not match!"
-        diff -b $oldFile $newFile
-        diff -b -y $oldFile $newFile | less
-      fi
-    fi
-  done
-  if [ $packageIdentical == "0" ]; then
-    echo "$package is not identical! Please investigate."
-  fi
+  #     if [ $? == "1" ]; then
+  #       packageIdentical="0"
+  #       echo "$newFile does not match!"
+  #       diff -b $oldFile $newFile
+  #       diff -b -y $oldFile $newFile | less
+  #     fi
+  #   fi
+  # done
+  # if [ $packageIdentical == "0" ]; then
+  #   echo "$package is not identical! Please investigate."
+  # fi
+
+  # copy npmignore
+  echo $npmignore > $CWD/packages/$package/.npmignore
 done
 
 echo $migratedPackages
