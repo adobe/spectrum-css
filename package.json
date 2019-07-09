@@ -1,14 +1,15 @@
 {
   "name": "@adobe/spectrum-css",
   "version": "2.13.0",
+  "private": true,
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist",
     "build": "gulp -LL",
     "dev": "gulp dev",
     "start": "npm run dev",
     "ci-all": "npm run build",
-    "bump": "node scripts/prepare-release",
-    "prepare-artifactory": "node scripts/prepare-artifactory-release"
+    "release": "npx lerna publish --git-remote git@git.corp.adobe.com:lawdavis/spectrum-css-lerna-test.git",
+    "version": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -37,8 +38,5 @@
     "lerna": "^3.15.0",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.1"
-  },
-  "dependencies": {
-    "gulp-print": "^5.0.2"
   }
 }

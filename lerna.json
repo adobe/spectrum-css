@@ -2,6 +2,6 @@
   "packages": [
     "packages/*"
   ],
-  "hoist": "{gulp}",
-  "version": "0.0.0"
+  "version": "independent",
+  "hoist": "{gulp}"
 }
