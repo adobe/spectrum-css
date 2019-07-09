@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/label",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "The Spectrum CSS label component",
   "author": "",
   "license": "Apache-2.0",
@@ -15,11 +15,11 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/vars": "0.0.0",
-    "@spectrum-css/icons": "0.0.0"
+    "@spectrum-css/vars": "^1.0.0-alpha.0",
+    "@spectrum-css/icons": "^1.0.0-alpha.0"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
-    "@spectrum-css/build": "0.0.0"
+    "@spectrum-css/build": "^1.0.0-alpha.0"
   }
 }
