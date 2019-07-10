@@ -15,13 +15,14 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/vars": "^1.0.0-alpha.0",
-    "@spectrum-css/icons": "^1.0.0-alpha.0",
+    "@spectrum-css/assetlist": "^1.0.0-alpha.0",
     "@spectrum-css/checkbox": "^1.0.0-alpha.0",
-    "@spectrum-css/assetlist": "^1.0.0-alpha.0"
+    "@spectrum-css/icons": "^1.0.0-alpha.0",
+    "@spectrum-css/vars": "^1.0.0-alpha.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "@spectrum-css/build": "^1.0.0-alpha.0"
-  }
+    "@spectrum-css/build": "^1.0.0-alpha.0",
+    "gulp": "^4.0.0"
+  },
+  "gitHead": "bc9be09cc6bf48e5b40a94c8c30c8e5a9f22708c"
 }
