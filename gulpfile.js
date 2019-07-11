@@ -26,6 +26,7 @@ const depSolver = require('dependency-solver');
 const cp = require('child_process');
 const inq = require('inquirer');
 const semver = require('semver');
+const rename = require('gulp-rename');
 
 function clean() {
   return del('dist/*');
@@ -425,11 +426,16 @@ function bumpVersion(cb) {
 function release_copyPackages() {
   // Todo: don't copy common resources
   return gulp.src([
-    'packages/*/dist/**',
+    'packages/*/dist/*',
     '!packages/*/dist/docs/**'
   ])
+    .pipe(rename(function(file) {
+      file.dirname = file.dirname.replace('/dist', '');
+    }))
     .pipe(gulp.dest('dist/components/'));
 };
+
+exports.release_copyPackages = release_copyPackages;
 
 let release = gulp.series(
   bumpVersion,
