@@ -437,38 +437,44 @@ function bumpVersion(cb) {
 
 let releaseBackwardsCompatCleanup = exports.releaseBackwardsCompatCleanup = function releaseBackwardsCompatCleanup() {
   return del([
+    // Don't bother deleting dist/icons, we want it in gh-pages output
     'icons',
     'vars'
   ]);
 };
 
 let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
-  releaseBackwardsCompatCleanup,
+  gulp.series(
+    releaseBackwardsCompatCleanup,
 
-  function releaseBackwardsCompat_copyWorkflowIcons() {
-    return gulp.src([
-      'node_modules/@spectrum/spectrum-icons/dist/svg/**',
-      'node_modules/@spectrum/spectrum-icons/dist/lib/**'
-    ])
-      .pipe(gulp.dest('dist/icons/'));
-  },
-  function releaseBackwardsCompat_copyUIIcons() {
-    return gulp.src(
-      'packages/icons/{medium,large,combined}/**'
+    // Install icons locally -- this will fail for non-Adobe people
+    execTask('installIcons', `npm install @spectrum/spectrum-icons --no-save`),
+
+    gulp.parallel(
+      function releaseBackwardsCompat_copyWorkflowIcons() {
+        return gulp.src([
+          'node_modules/@spectrum/spectrum-icons/dist/svg/**',
+          'node_modules/@spectrum/spectrum-icons/dist/lib/**'
+        ])
+          .pipe(gulp.dest('dist/icons/'));
+      },
+      function releaseBackwardsCompat_copyUIIcons() {
+        return gulp.src(
+          'packages/icons/{medium,large,combined}/**'
+        )
+          .pipe(gulp.dest('icons/'));
+      },
+      function releaseBackwardsCompat_copyVars() {
+        return gulp.src(
+          'packages/vars/vars/**'
+        )
+          .pipe(gulp.dest('vars/'));
+      }
     )
-      .pipe(gulp.dest('icons/'));
-  },
-  function releaseBackwardsCompat_copyVars() {
-    return gulp.src(
-      'packages/vars/vars/**'
-    )
-      .pipe(gulp.dest('vars/'));
-  }
+  )
 );
 
 let release = gulp.series(
-  // Install icons locally -- this will fail for non-Adobe people
-  execTask('installIcons', `npm install @spectrum/spectrum-icons --no-save`),
   bumpVersion,
   // build happens automatically after the version bump with npm scripts
   // push tag
