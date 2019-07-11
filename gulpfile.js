@@ -23,6 +23,9 @@ const concat = require('gulp-concat');
 const colors = require('colors');
 const browserSync = require('browser-sync');
 const depSolver = require('dependency-solver');
+const cp = require('child_process');
+const inq = require('inquirer');
+const semver = require('semver');
 
 function clean() {
   return del('dist/*');
@@ -309,6 +312,144 @@ let build = gulp.series(
   )
 );
 
+// release
+function execTask(taskName, command) {
+  // return a function
+  var func = function(cb) {
+    exec(command, cb);
+  };
+
+  Object.defineProperty(func, 'name', { value: taskName, writable: false });
+
+  return func;
+}
+
+
+function exec(command, cb) {
+  // Execute immediately
+  return cp.exec(command, handleExec(cb));
+}
+
+function handleExec(cb) {
+  return function(err, stdout, stderr) {
+    logger.info(stdout);
+
+    if (err) {
+      logger.error(stderr);
+      return cb(err);
+    }
+
+    cb();
+  }
+}
+
+// The version we'll actually release
+let releaseVersion = null;
+
+function bumpVersion(cb) {
+  function getPackage() {
+    return JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  }
+
+  function doVersionBump() {
+    exec(`npm version ${releaseVersion}`, cb);
+  }
+
+  let package = getPackage();
+
+  // Potential versions
+  let patchVersion = semver.inc(package.version, 'patch');
+  let minorVersion = semver.inc(package.version, 'minor');
+  let majorVersion = semver.inc(package.version, 'major');
+  let preVersion = semver.inc(package.version, 'prerelease', 'alpha');
+  let preMajorVersion = semver.inc(package.version, 'premajor', 'alpha');
+  let preMinorVersion = semver.inc(package.version, 'preminor', 'alpha');
+  let prePatchVersion = semver.inc(package.version, 'prepatch', 'alpha');
+
+  let choices = [
+    {
+      name: 'patch - ' + patchVersion,
+      value: patchVersion
+    },
+    {
+      name: 'minor - ' + minorVersion,
+      value: minorVersion
+    },
+    {
+      name: 'major - ' + majorVersion,
+      value: majorVersion
+    }
+  ];
+
+  if (package.version.match('-beta')) {
+    choices = [
+      {
+        name: 'prerelease - ' + preVersion,
+        value: preVersion
+      },
+      {
+        name: 'release - ' + patchVersion,
+        value: patchVersion
+      }
+    ];
+  }
+
+  choices = choices.concat([
+    {
+      name: 'prepatch - ' + prePatchVersion,
+      value: prePatchVersion
+    },
+    {
+      name: 'preminor - ' + preMinorVersion,
+      value: preMinorVersion
+    },
+    {
+      name: 'premajor - ' + preMajorVersion,
+      value: preMajorVersion
+    }
+  ]);
+
+  inq.prompt([{
+    type: 'list',
+    name: 'version',
+    message: 'What version would you like?',
+    choices: choices
+  }])
+  .then(function(res) {
+    releaseVersion = res.version;
+
+    doVersionBump();
+  });
+}
+
+let release = gulp.series(
+  bumpVersion,
+  // perform build
+  // build,
+  gulp.parallel(
+    buildCombined,
+    buildStandalone,
+    buildSite
+  ),
+  // push tag
+  function pushTag(cb) {
+    exec(`git push origin v${releaseVersion}`, cb);
+  },
+  // push current branch
+  execTask('pushBranch', 'git push origin HEAD'),
+  // publish to npm
+  execTask('npmPublish', 'npm publish'),
+  // handle gh-pages
+  execTask('pagesCheckout', `git checkout gh-pages`),
+  function pagesCopy(cb) {
+    exec(`cp -r dist ${releaseVersion}`, cb);
+  },
+  // update gh-pages index files
+  // ?
+  // Go back
+  execTask('checkoutBranch', `git checkout -`)
+);
+
 // dev
 function serve() {
   browserSync({
@@ -409,6 +550,7 @@ exports.dev = gulp.series(
   startWatch
 );
 
+exports.release = release;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.clean = clean;
