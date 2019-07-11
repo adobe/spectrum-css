@@ -467,6 +467,8 @@ let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
 );
 
 let release = gulp.series(
+  // Install icons locally -- this will fail for non-Adobe people
+  execTask('installIcons', `npm install @spectrum/spectrum-icons --no-save`),
   bumpVersion,
   // build happens automatically after the version bump with npm scripts
   // push tag
