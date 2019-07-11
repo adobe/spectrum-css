@@ -305,7 +305,7 @@ let buildStandalone = gulp.series(
 
 function release_copyPackages() {
   return gulp.src([
-    'packages/*/dist/*',
+    'packages/*/dist/**',
     '!packages/*/dist/docs/**'
   ])
     .pipe(rename(function(file) {
