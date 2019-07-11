@@ -424,7 +424,6 @@ function bumpVersion(cb) {
 }
 
 function release_copyPackages() {
-  // Todo: don't copy common resources
   return gulp.src([
     'packages/*/dist/*',
     '!packages/*/dist/docs/**'
