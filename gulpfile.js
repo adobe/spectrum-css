@@ -438,8 +438,7 @@ exports.release_copyPackages = release_copyPackages;
 
 let release = gulp.series(
   bumpVersion,
-  // perform build
-  // build,
+  // build happens automatically after the version bump with npm scripts
   gulp.parallel(
     buildCombined,
     buildStandalone,
