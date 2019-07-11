@@ -394,7 +394,7 @@ function bumpVersion(cb) {
     }
   ];
 
-  if (package.version.match('-beta')) {
+  if (package.version.match('-alpha')) {
     choices = [
       {
         name: 'prerelease - ' + preVersion,
