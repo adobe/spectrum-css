@@ -436,16 +436,20 @@ let release = gulp.series(
     exec(`git push origin v${releaseVersion}`, cb);
   },
   // push current branch
-  execTask('pushBranch', 'git push origin HEAD'),
+  execTask('pushBranch', 'git push'),
   // publish to npm
   execTask('npmPublish', 'npm publish'),
   // handle gh-pages
-  execTask('pagesCheckout', `git checkout gh-pages`),
-  function pagesCopy(cb) {
+  execTask('checkoutPages', `git checkout gh-pages`),
+  function copyPages(cb) {
     exec(`cp -r dist ${releaseVersion}`, cb);
   },
-  // update gh-pages index files
+  // update gh-pages index files if not alpha release
   // ?
+  function commitPages(cb) {
+    exec(`git commit ${releaseVersion} -m "Deploy version ${releaseVersion}"`, cb);
+  },
+  execTask('pushPages', 'git push'),
   // Go back
   execTask('checkoutBranch', `git checkout -`)
 );
