@@ -435,14 +435,35 @@ function bumpVersion(cb) {
   });
 }
 
-let releaseBackwardsCompatCleanup = exports.releaseBackwardsCompatCleanup = gulp.series(
-  execTask('releaseBackwardsCompatCleanup', 'rm -rf icons vars'),
-);
+let releaseBackwardsCompatCleanup = exports.releaseBackwardsCompatCleanup = function releaseBackwardsCompatCleanup() {
+  return del([
+    'icons',
+    'vars'
+  ]);
+};
 
-let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.series(
+let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
   releaseBackwardsCompatCleanup,
-  execTask('releaseBackwardsCompat_copyIcons', 'mkdir icons; cp -r packages/icons/medium icons/medium; cp -r packages/icons/large icons/large; cp -r packages/icons/combined icons/combined;'),
-  execTask('releaseBackwardsCompat_copyVars', 'cp -r packages/vars/vars vars'),
+
+  function releaseBackwardsCompat_copyWorkflowIcons() {
+    return gulp.src([
+      'node_modules/@spectrum/spectrum-icons/dist/svg/**',
+      'node_modules/@spectrum/spectrum-icons/dist/lib/**'
+    ])
+      .pipe(gulp.dest('dist/icons/'));
+  },
+  function releaseBackwardsCompat_copyUIIcons() {
+    return gulp.src(
+      'packages/icons/{medium,large,combined}/**'
+    )
+      .pipe(gulp.dest('icons/'));
+  },
+  function releaseBackwardsCompat_copyVars() {
+    return gulp.src(
+      'packages/vars/vars/**'
+    )
+      .pipe(gulp.dest('vars/'));
+  }
 );
 
 let release = gulp.series(
