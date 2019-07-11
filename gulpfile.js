@@ -435,6 +435,16 @@ function bumpVersion(cb) {
   });
 }
 
+let releaseBackwardsCompatCleanup = exports.releaseBackwardsCompatCleanup = gulp.series(
+  execTask('releaseBackwardsCompatCleanup', 'rm -rf icons vars'),
+);
+
+let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.series(
+  releaseBackwardsCompatCleanup,
+  execTask('releaseBackwardsCompat_copyIcons', 'mkdir icons; cp -r packages/icons/medium icons/medium; cp -r packages/icons/large icons/large; cp -r packages/icons/combined icons/combined;'),
+  execTask('releaseBackwardsCompat_copyVars', 'cp -r packages/vars/vars vars'),
+);
+
 let release = gulp.series(
   bumpVersion,
   // build happens automatically after the version bump with npm scripts
@@ -444,6 +454,8 @@ let release = gulp.series(
   },
   // push current branch
   execTask('pushBranch', 'git push'),
+  // Backwards compat
+  releaseBackwardsCompat,
   // publish to npm
   function npmPublish(cb) {
     let npmTag = '';
@@ -452,6 +464,8 @@ let release = gulp.series(
     }
     exec(`npm publish ${npmTag}`, cb);
   },
+  // Clean up artifacts from backwards compat
+  releaseBackwardsCompatCleanup,
   // handle gh-pages
   execTask('checkoutPages', `git checkout gh-pages`),
   function copyPages(cb) {
