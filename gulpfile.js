@@ -422,6 +422,15 @@ function bumpVersion(cb) {
   });
 }
 
+function release_copyPackages() {
+  // Todo: don't copy common resources
+  return gulp.src([
+    'packages/*/dist/**',
+    '!packages/*/dist/docs/**'
+  ])
+    .pipe(gulp.dest('dist/components/'));
+};
+
 let release = gulp.series(
   bumpVersion,
   // perform build
@@ -429,7 +438,8 @@ let release = gulp.series(
   gulp.parallel(
     buildCombined,
     buildStandalone,
-    buildSite
+    buildSite,
+    release_copyPackages
   ),
   // push tag
   function pushTag(cb) {
