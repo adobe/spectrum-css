@@ -1,6 +1,6 @@
 /src
 /docs
-node_modules/
+/node_modules
 /tasks
 /topdoc
 /backstop_data
@@ -10,3 +10,6 @@ node_modules/
 npm-debug.log
 /.github
 /dist/docs/
+/packages/*/node_modules
+/packages/*/dist/
+/site

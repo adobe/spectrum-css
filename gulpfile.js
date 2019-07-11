@@ -303,13 +303,25 @@ let buildStandalone = gulp.series(
   )
 );
 
+function release_copyPackages() {
+  return gulp.src([
+    'packages/*/dist/*',
+    '!packages/*/dist/docs/**'
+  ])
+    .pipe(rename(function(file) {
+      file.dirname = file.dirname.replace('/dist', '');
+    }))
+    .pipe(gulp.dest('dist/components/'));
+};
+
 let build = gulp.series(
   clean,
   buildPackages,
   gulp.parallel(
     buildCombined,
     buildStandalone,
-    buildSite
+    buildSite,
+    release_copyPackages
   )
 );
 
@@ -423,28 +435,9 @@ function bumpVersion(cb) {
   });
 }
 
-function release_copyPackages() {
-  return gulp.src([
-    'packages/*/dist/*',
-    '!packages/*/dist/docs/**'
-  ])
-    .pipe(rename(function(file) {
-      file.dirname = file.dirname.replace('/dist', '');
-    }))
-    .pipe(gulp.dest('dist/components/'));
-};
-
-exports.release_copyPackages = release_copyPackages;
-
 let release = gulp.series(
   bumpVersion,
   // build happens automatically after the version bump with npm scripts
-  gulp.parallel(
-    buildCombined,
-    buildStandalone,
-    buildSite,
-    release_copyPackages
-  ),
   // push tag
   function pushTag(cb) {
     exec(`git push origin v${releaseVersion}`, cb);
