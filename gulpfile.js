@@ -340,15 +340,15 @@ function execTask(taskName, command) {
 
 function exec(command, cb) {
   // Execute immediately
-  return cp.exec(command, handleExec(cb));
+  let commandProcess = cp.exec(command, handleExec(cb));
+  commandProcess.stdout.pipe(process.stdout);
+  commandProcess.stderr.pipe(process.stderr);
+  return commandProcess;
 }
 
 function handleExec(cb) {
   return function(err, stdout, stderr) {
-    logger.info(stdout);
-
     if (err) {
-      logger.error(stderr);
       return cb(err);
     }
 
@@ -457,7 +457,7 @@ let release = gulp.series(
     exec(`git add ${releaseVersion}`, cb);
   },
   function commitPages(cb) {
-    exec(`git commit -m "Deploy version ${releaseVersion}"`, cb);
+    exec(`git commit -q -m "Deploy version ${releaseVersion}"`, cb);
   },
   execTask('pushPages', 'git push'),
   // Go back
