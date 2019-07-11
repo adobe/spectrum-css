@@ -447,9 +447,6 @@ let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
   gulp.series(
     releaseBackwardsCompatCleanup,
 
-    // Install icons locally -- this will fail for non-Adobe people
-    execTask('installIcons', `npm install @spectrum/spectrum-icons --no-save`),
-
     gulp.parallel(
       function releaseBackwardsCompat_copyWorkflowIcons() {
         return gulp.src([
