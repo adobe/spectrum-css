@@ -453,8 +453,11 @@ let release = gulp.series(
   },
   // update gh-pages index files if not alpha release
   // ?
+  function addPages(cb) {
+    exec(`git add ${releaseVersion}`, cb);
+  },
   function commitPages(cb) {
-    exec(`git commit ${releaseVersion} -m "Deploy version ${releaseVersion}"`, cb);
+    exec(`git commit -m "Deploy version ${releaseVersion}"`, cb);
   },
   execTask('pushPages', 'git push'),
   // Go back

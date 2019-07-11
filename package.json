@@ -7,7 +7,8 @@
     "dev": "gulp dev",
     "start": "npm run dev",
     "ci-all": "npm run build",
-    "release": "npx lerna publish --contents dist",
+    "release-all": "npx lerna publish --contents dist",
+    "release": "gulp release",
     "version": "npm run build"
   },
   "repository": {
