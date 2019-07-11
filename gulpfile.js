@@ -445,7 +445,13 @@ let release = gulp.series(
   // push current branch
   execTask('pushBranch', 'git push'),
   // publish to npm
-  execTask('npmPublish', 'npm publish'),
+  function npmPublish(cb) {
+    let npmTag = '';
+    if (releaseVersion.indexOf('alpha') !== -1) {
+      npmTag = '--tag alpha';
+    }
+    exec(`npm publish ${npmTag}`, cb);
+  },
   // handle gh-pages
   execTask('checkoutPages', `git checkout gh-pages`),
   function copyPages(cb) {
