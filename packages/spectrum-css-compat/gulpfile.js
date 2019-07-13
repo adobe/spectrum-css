@@ -32,103 +32,6 @@ function clean() {
   return del('dist/*');
 };
 
-/*
-  Run the specified gulp task for the given package
-*/
-function runPackageTask(package, task, callback) {
-  var gulpfile = path.join(__dirname, 'packages', package, 'gulpfile.js');
-
-  logger.warn(`Starting '${package.yellow}:${task.yellow}'...`);
-
-  let packageDir = path.join(__dirname, 'packages', package)
-  logger.debug(`Working directory changed to ${packageDir.magenta}`);
-  process.chdir(packageDir);
-  var tasks = require(`${gulpfile}`);
-
-  if (tasks[task]) {
-    tasks[task](function(err) {
-      process.chdir(__dirname);
-      logger.debug(`Working directory changed to ${__dirname.magenta}`);
-
-      if (err) {
-        logger.error(`Error running '${package.yellow}:${task.yellow}': ${err}`);
-
-        callback(err);
-      }
-      else {
-        logger.warn(`Finished '${package.yellow}:${task.yellow}'`);
-
-        callback();
-      }
-    });
-  }
-  else {
-    process.chdir(__dirname);
-  }
-}
-
-/*
-  Build all packages
-*/
-function buildPackages(done) {
-  const packageDir = './packages';
-
-  // Dependencies that are required for docs to render
-  var docDependencies = [];
-  var buildPkg = JSON.parse(fs.readFileSync(path.join(__dirname, 'packages/build', 'package.json'), 'utf8'));
-  if (buildPkg.dependencies) {
-    for (let depPkg in buildPkg.dependencies) {
-      let deps = [];
-      if (depPkg.indexOf('@spectrum-css') === 0) {
-        let dependencyName = depPkg.split('/').pop();
-        docDependencies.push(dependencyName);
-      }
-    }
-  }
-
-  // Get list of all packages
-  var packages = fs.readdirSync(packageDir).filter(function(package) {
-    // Drop vars from the list, we need to do it first
-    if (package === 'vars' || docDependencies.indexOf(package) !== -1) {
-      return false;
-    }
-
-    var stats = fs.statSync(path.join(packageDir, package));
-    return stats.isDirectory();
-  });
-
-  // Build documentation dependencies first
-  packages = docDependencies.concat(packages);
-
-  // Add vars up in there first
-  packages.unshift('vars');
-
-  packages = packages.filter((package) => {
-    return package !== 'build';
-  });
-
-  function getNextPackage() {
-    return packages.shift();
-  }
-
-  function processPackage() {
-    var package = getNextPackage();
-
-    if (package) {
-      runPackageTask(package, 'build', function(err) {
-        processPackage();
-      });
-    }
-    else {
-      logger.warn('Build complete!'.bold.green);
-      done();
-    }
-  }
-
-  // Kick off a gulp build for each package
-  processPackage();
-};
-
 var data = {
   nav: [],
   pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8')),
@@ -139,8 +42,8 @@ function buildSite_getData(done) {
   data.nav = [];
 
   return gulp.src([
-    'packages/*/docs.yml',
-    'packages/*/docs/*.yml'
+    'node_modules/@spectrum-css/*/docs.yml',
+    'node_modules/@spectrum-css/*/docs/*.yml'
   ])
   .pipe(through.obj(function compilePug(file, enc, cb) {
     let componentData;
@@ -152,16 +55,15 @@ function buildSite_getData(done) {
 
     var packageName = file.dirname.replace('/docs', '').split('/').pop();
 
-    var fileName = ext(file.basename, '.html');
-    if (fileName === 'docs.html' || fileName === `${packageName}.html`) {
-      fileName = 'index.html';
+    if (path.basename(file.basename) === 'docs.yml') {
+      file.basename = packageName;
     }
 
+    var fileName = ext(file.basename, '.json');
     data.nav.push({
       name: componentData.name,
       component: packageName,
-      example: path.basename(fileName, '.html'),
-      url: `packages/${packageName}/dist/docs/${fileName}`
+      example: path.basename(fileName, '.json')
     });
 
     cb(null, file);
@@ -172,14 +74,6 @@ function buildSite_getData(done) {
     });
     done();
   });
-};
-
-function buildSite_copyPackages() {
-  // Todo: don't copy common resources
-  return gulp.src([
-    'packages/*/dist/**'
-  ])
-    .pipe(gulp.dest('dist/docs/packages/'));
 };
 
 function buildSite_copyResources() {
@@ -196,6 +90,7 @@ function buildSite_html() {
 };
 
 let buildSite_pages = gulp.series(
+  buildCombined_getDependencyOrder,
   buildSite_getData,
   buildSite_html
 );
@@ -206,7 +101,6 @@ let buildSite_site = gulp.parallel(
 );
 
 let buildSite = gulp.parallel(
-  buildSite_copyPackages,
   buildSite_site
 );
 
@@ -220,13 +114,13 @@ function concatPackageFiles(taskName, input, output, directory) {
       data.dependencyOrder.forEach(function(dep) {
         let depName = dep.split('/').pop();
         input.forEach(function(file) {
-          glob.push(`packages/${depName}/dist/${file}`);
+          glob.push(`node_modules/@spectrum-css/${depName}/dist/${file}`);
         });
       });
     }
     else {
       glob = data.dependencyOrder.map(function(dep) {
-        return `packages/${dep.split('/').pop()}/dist/${input}`;
+        return `node_modules/@spectrum-css/${dep.split('/').pop()}/dist/${input}`;
       });
     }
 
@@ -246,10 +140,8 @@ function buildCombined_getDependencyOrder(done) {
   let dependencies = {};
 
   return gulp.src([
-    'packages/*/package.json',
-    '!packages/vars/package.json',
-    '!packages/commons/package.json',
-    '!packages/build/package.json'
+    'node_modules/@spectrum-css/*/package.json',
+    '!node_modules/@spectrum-css/vars/package.json'
   ])
   .pipe(through.obj(function readPackage(file, enc, cb) {
     let pkg;
@@ -305,8 +197,8 @@ let buildStandalone = gulp.series(
 
 function release_copyPackages() {
   return gulp.src([
-    'packages/*/dist/**',
-    '!packages/*/dist/docs/**'
+    'node_modules/@spectrum-css/*/dist/**',
+    '!node_modules/@spectrum-css/*/dist/docs/**'
   ])
     .pipe(rename(function(file) {
       file.dirname = file.dirname.replace('/dist', '');
@@ -316,7 +208,6 @@ function release_copyPackages() {
 
 let build = gulp.series(
   clean,
-  buildPackages,
   gulp.parallel(
     buildCombined,
     buildStandalone,
@@ -434,30 +325,49 @@ function bumpVersion(cb) {
   });
 }
 
-let release = gulp.series(
-  bumpVersion,
-  // build happens automatically after the version bump with npm scripts
-  // push tag
-  function pushTag(cb) {
-    exec(`git push origin v${releaseVersion}`, cb);
-  },
-  // push current branch
-  execTask('pushBranch', 'git push'),
-  // publish to npm
-  function npmPublish(cb) {
-    let npmTag = '';
-    if (releaseVersion.indexOf('alpha') !== -1) {
-      npmTag = '--tag alpha';
-    }
-    exec(`npm publish ${npmTag}`, cb);
-  },
-  // handle gh-pages
+let releaseBackwardsCompatCleanup = exports.releaseBackwardsCompatCleanup = function releaseBackwardsCompatCleanup() {
+  return del([
+    // Don't bother deleting dist/icons, we want it in gh-pages output
+    'icons',
+    'vars'
+  ]);
+};
+
+let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
+  gulp.series(
+    releaseBackwardsCompatCleanup,
+
+    gulp.parallel(
+      function releaseBackwardsCompat_copyWorkflowIcons() {
+        return gulp.src([
+          'node_modules/@spectrum/spectrum-icons/dist/svg/**',
+          'node_modules/@spectrum/spectrum-icons/dist/lib/**'
+        ])
+          .pipe(gulp.dest('dist/icons/'));
+      },
+      function releaseBackwardsCompat_copyUIIcons() {
+        return gulp.src(
+          'node_modules/@spectrum-css/icons/{medium,large,combined}/**'
+        )
+          .pipe(gulp.dest('icons/'));
+      },
+      function releaseBackwardsCompat_copyVars() {
+        return gulp.src(
+          'node_modules/@spectrum-css/vars/vars/**'
+        )
+          .pipe(gulp.dest('vars/'));
+      }
+    )
+  )
+);
+
+// These tasks assume they're being run in the root and will copy and publish github pages
+let ghPages = gulp.series(
   execTask('checkoutPages', `git checkout gh-pages`),
   function copyPages(cb) {
     exec(`cp -r dist ${releaseVersion}`, cb);
   },
-  // update gh-pages index files if not alpha release
-  // ?
+  // todo: update gh-pages index files if not alpha release
   function addPages(cb) {
     exec(`git add ${releaseVersion}`, cb);
   },
@@ -467,6 +377,30 @@ let release = gulp.series(
   execTask('pushPages', 'git push'),
   // Go back
   execTask('checkoutBranch', `git checkout -`)
+);
+
+// Stand in release task we probably won't use
+let release = gulp.series(
+  bumpVersion,
+  // build happens automatically after the version bump with npm scripts
+  // push tag
+  function pushTag(cb) {
+    exec(`git push origin v${releaseVersion}`, cb);
+  },
+  // push current branch
+  execTask('pushBranch', 'git push'),
+  // Backwards compat
+  releaseBackwardsCompat,
+  // publish to npm
+  function npmPublish(cb) {
+    let npmTag = '';
+    if (releaseVersion.indexOf('alpha') !== -1) {
+      npmTag = '--tag alpha';
+    }
+    exec(`npm publish ${npmTag}`, cb);
+  },
+  releaseBackwardsCompatCleanup,
+  ghPages
 );
 
 // dev
@@ -507,66 +441,29 @@ function watchSite() {
   );
 }
 
-/*
-  Watch for changes to globs matching files within packages, execute task for that package, and copy/inject specified files
-*/
-function watchWithinPackages(glob, task, files) {
-  var watcher = gulp.watch(glob, { followSymlinks: false }, function handleChanged(done) {
-    if (!changedFile) {
-      done();
-      return;
-    }
-
-    var package = changedFile.match(/packages\/(.*?)\//)[1];
-
-    runPackageTask(package, task, function() {
-      // Copy files
-      gulp.src(`packages/${package}/dist/${files}`)
-        .pipe(gulp.dest(`dist/docs/packages/${package}/dist/`))
-        .on('end', function() {
-          // Inject
-          gulp.src(`dist/docs/packages/${package}/dist/${files}`)
-            .pipe(browserSync.stream());
-
-          changedFile = null;
-          done();
-        })
-        .on('error', function(err) {
-          changedFile = null;
-          done(err);
-        });
-    });
-  });
-
-  let changedFile = null;
-  watcher.on('change', (filePath) => {
-    logger.debug(`Got change for ${filePath}`);
-    if (changedFile === null) {
-      changedFile = filePath;
-    }
-  });
-}
-
 function startWatch() {
   serve();
-
-  watchWithinPackages('packages/*/*.css', 'buildCSS', '*.css');
-
-  watchWithinPackages(
-    [
-      'packages/*/docs/*.yml',
-      'packages/*/docs.yml'
-    ],
-    'buildDocs_html',
-    '*/*.html'
-  );
 
   watchSite();
 };
 
+let buildDocs = exports.buildDocs = require('./docs');
+
 exports.dev = gulp.series(
-  build,
+  buildSite,
+  buildDocs,
   startWatch
+);
+
+exports.prePack = gulp.series(
+  build,
+  releaseBackwardsCompat
+);
+
+exports.postPublish = gulp.series(
+  releaseBackwardsCompatCleanup,
+  // Disabled for now until we decide where to publish docs
+  // ghPages
 );
 
 exports.release = release;
@@ -574,6 +471,5 @@ exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.clean = clean;
 exports.watch = startWatch;
-exports.buildAll = buildPackages;
 exports.build = build;
 exports.default = build;

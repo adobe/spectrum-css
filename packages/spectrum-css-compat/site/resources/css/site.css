@@ -1,0 +1,110 @@
+.spectrum-Site {
+  --spectrum-site-background-color: var(--spectrum-global-color-gray-100);
+  --spectrum-site-scrollbar-track-color: var(--spectrum-site-background-color);
+  --spectrum-site-scrollbar-thumb-color: var(--spectrum-global-color-gray-400);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.spectrum-Site {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.spectrum-Site-sideBar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  background-color: var(--spectrum-site-background-color);
+}
+
+.spectrum-Site-header {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: var(--spectrum-global-dimension-size-300);
+
+  text-decoration: none;
+}
+
+.spectrum-Site-logo {
+  margin-right: var(--spectrum-global-dimension-size-100);
+}
+
+.spectrum-Site-nav {
+  flex-grow: 1;
+
+  padding: 0px var(--spectrum-global-dimension-static-size-300) var(--spectrum-global-dimension-static-size-500);
+}
+
+.spectrum-Site-bottomNav {
+  margin-top: var(--spectrum-global-dimension-static-size-1000);
+}
+
+.spectrum-Site-mainContainer {
+  flex-grow: 1;
+  border: none;
+}
+
+.spectrum-Page {
+  padding: 40px 52px 24px 52px;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.spectrum-Hero {
+  max-width: 75%;
+  margin: auto;
+}
+
+.spectrum-Hero-heading {
+  margin-bottom: 16px;
+}
+
+.spectrum-Hero-image {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+.u-scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.u-scrollable::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.u-scrollable::-webkit-scrollbar-track,
+.u-scrollable::-webkit-scrollbar-track-piece {
+  background: var(--spectrum-site-scrollbar-track-color);
+}
+
+.u-scrollable::-webkit-scrollbar-thumb {
+  background-color: var(--spectrum-site-scrollbar-track-color);
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+.u-scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: var(--spectrum-site-scrollbar-thumb-color);
+}
+

@@ -1,0 +1,77 @@
+-
+  // Backwards compatibility with old components array
+  component.examples = component.examples || component.components;
+
+  // Arrange examples for processing
+  var examples;
+  if (!component.examples) {
+    // Only one top-level example
+    examples = [component];
+  }
+  else {
+    // Multiple child examples
+    examples = component.examples;
+  }
+
+  // Get DNA data
+  util.populateDNAInfo(component, dnaVars);
+
+  if (component.examples) {
+    for (id in component.examples) {
+      let example = component.examples[id];
+      if (typeof example === 'string') {
+        // Handle markup only examples
+        example = {
+          id: id,
+          markup: example
+        };
+        component.examples[id] = example;
+      }
+      example.id = id;
+      util.populateDNAInfo(example, dnaVars);
+    }
+  }
+
+article.spectrum-CSSComponent
+
+  header(id=component.slug).spectrum-CSSComponent-heading
+    a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
+      h2.spectrum-Heading1--display #{component.name}
+    .spectrum-CSSComponent-version.spectrum-Body Version #{pkg.version}
+
+  if component.description
+    section.spectrum-Body!= markdown.toHTML(component.description)
+
+  each example in examples
+    article.spectrum-CSSExample
+      if example != component
+        header.row(id=example.slug)
+          a(href=`#${util.getSlug(component.name, example.name)}`).spectrum-CSSExample-link
+            h4.spectrum-Heading--subtitle3 #{example.name}
+          if example.cssStatus != 'n/a'
+            .u-tooltip-showOnHover
+              div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
+                #{example.dnaStatus}
+              if example.dnaStatus != 'Deprecated'
+                div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
+                  #{example.cssStatus}
+              if example.details
+                .spectrum-Tooltip.spectrum-Tooltip--right
+                  .spectrum-Tooltip-label!= markdown.toHTML(example.details)
+                  .spectrum-Tooltip-tip
+
+
+        if example.description
+          section.spectrum-Body!= markdown.toHTML(example.description)
+
+      if example.markup
+
+        section.spectrum-CSSExample-container
+          .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
+          .spectrum-CSSExample-markup
+            if example.markup.split('\n').length > 2
+              a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
+            pre
+              code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')
+
+  div.spectrum-Underlay#spectrum-underlay
