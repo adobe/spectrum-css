@@ -23,46 +23,18 @@ const ext = require('replace-ext');
 const depSolver = require('dependency-solver');
 const logger = require('gulplog');
 
-var templateData = {
+let minimumDeps = [
+  'label',
+  'link',
+  'page',
+  'tooltip',
+  'typography',
+  'sidenav'
+];
+
+let templateData = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8')),
-  dependencyOrder: []
-};
-
-function getDependencyOrder(done) {
-  templateData.dependencyOrder = [];
-
-  let dependencies = {};
-
-  return gulp.src([
-    'node_modules/@spectrum-css/*/package.json'
-  ])
-  .pipe(through.obj(function readPackage(file, enc, cb) {
-    let pkg;
-    try {
-      pkg = JSON.parse(String(file.contents));
-    } catch (e) {
-      return cb(e);
-    }
-
-    dependencies[pkg.name] = [];
-    if (pkg.dependencies) {
-      dependencies[pkg.name] = Object.keys(pkg.dependencies).filter(function(dep) {
-        return dep.indexOf('@spectrum-css') === 0;
-      });
-    }
-
-    cb(null, file);
-  }))
-  .on('end', function() {
-    templateData.dependencyOrder = depSolver.solve(dependencies);
-    templateData.dependencyOrder = templateData.dependencyOrder.map(function(dep) {
-      return dep.split('/').pop();
-    });
-
-    logger.debug(`Dependency order: \n${templateData.dependencyOrder.join('\n')}`);
-    done();
-  });
+  pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8'))
 };
 
 function buildDocs_html(dep) {
@@ -89,14 +61,7 @@ function buildDocs_html(dep) {
 
       packageDeps.push(dep);
 
-      let minimumDeps = [
-        'label',
-        'link',
-        'page',
-        'tooltip',
-        'typography',
-        'sidenav'
-      ].concat(packageDeps);
+      let docsDeps = minimumDeps.concat(packageDeps);
 
       return Object.assign({}, {
         util: require('./util'),
@@ -106,7 +71,7 @@ function buildDocs_html(dep) {
         Prisim: require('prismjs')
       }, templateData, {
         pageURL: path.basename(file.basename, '.yml') + '.html',
-        dependencyOrder: minimumDeps
+        dependencyOrder: docsDeps
       });
     }))
     .pipe(through.obj(function compilePug(file, enc, cb) {
@@ -129,7 +94,17 @@ function buildDocs_html(dep) {
 
 // Combined
 function buildDocs_individualPackages() {
-  return merge.apply(merge, templateData.dependencyOrder.map(buildDocs_html));
+  let pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+
+  let unsortedDependencies = Object.keys(pkg.devDependencies)
+    .filter(function(dep) {
+      return dep.indexOf('@spectrum-css') === 0;
+    })
+    .map(function(dep) {
+      return dep.split('/').pop();
+    });
+
+  return merge.apply(merge, unsortedDependencies.map(buildDocs_html));
 }
 
 function buildSite_getData(done) {
@@ -179,7 +154,8 @@ function buildSite_html() {
   return gulp.src('site/*.pug')
     .pipe(data(function(file) {
       return {
-        pageURL: path.basename(file.basename, '.pug') + '.html'
+        pageURL: path.basename(file.basename, '.pug') + '.html',
+        dependencyOrder: minimumDeps
       };
     }))
     .pipe(pug({
@@ -207,7 +183,6 @@ function buildDocs_prism() {
 }
 
 let buildSite_pages = exports.buildSite_pages = gulp.series(
-  getDependencyOrder,
   buildSite_getData,
   buildSite_html
 );
@@ -219,12 +194,9 @@ exports.buildSite = gulp.parallel(
   buildSite_pages
 );
 
-exports.buildDocs = gulp.series(
-  getDependencyOrder,
-  gulp.parallel(
-    buildDocs_individualPackages,
-    buildDocs_loadicons,
-    buildDocs_focusPolyfill,
-    buildDocs_prism
-  )
+exports.buildDocs = gulp.parallel(
+  buildDocs_individualPackages,
+  buildDocs_loadicons,
+  buildDocs_focusPolyfill,
+  buildDocs_prism
 );
