@@ -82,7 +82,7 @@ function buildDocs_html(dep) {
         file.basename = dep;
       }
     }))
-    .pipe(data(function() {
+    .pipe(data(function(file) {
       let packageDeps = Object.keys(pkg.dependencies)
         .filter((dep) => dep.indexOf('@spectrum-css') === 0)
         .map((dep) => dep.split('/').pop());
@@ -105,6 +105,7 @@ function buildDocs_html(dep) {
         markdown: require('markdown').markdown,
         Prisim: require('prismjs')
       }, templateData, {
+        pageURL: path.basename(file.basename, '.yml') + '.html',
         dependencyOrder: minimumDeps
       });
     }))
@@ -176,6 +177,11 @@ function buildSite_copyResources() {
 
 function buildSite_html() {
   return gulp.src('site/*.pug')
+    .pipe(data(function(file) {
+      return {
+        pageURL: path.basename(file.basename, '.pug') + '.html'
+      };
+    }))
     .pipe(pug({
       locals: templateData
     }))

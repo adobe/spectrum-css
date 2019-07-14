@@ -13,15 +13,16 @@ governing permissions and limitations under the License.
 /* global document, window, Element, loadIcons, URLSearchParams */
 
 window.addEventListener('DOMContentLoaded', function() {
-  var selectedNavItem = null;
-  function selectNavItem(example) {
-    var navItem = document.querySelector('[data-example="' + example + '"]');
-    if (navItem) {
-      if (selectedNavItem) {
-        selectedNavItem.classList.remove('is-selected');
-      }
+  function selectNavItem(href) {
+    var selectedNavItem = document.querySelector('.spectrum-SideNav-item.is-selected')
+    if (selectedNavItem) {
+      selectedNavItem.classList.remove('is-selected');
+    }
+
+    var navLink = document.querySelector('[href="' + href + '"]');
+    if (navLink && navLink.parentNode.classList.contains('spectrum-SideNav-item')) {
+      var navItem = navLink.parentNode;
       navItem.classList.add('is-selected');
-      selectedNavItem = navItem;
     }
   }
 
