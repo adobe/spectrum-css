@@ -66,8 +66,8 @@ function getDependencyOrder(done) {
 };
 
 function buildDocs_html(dep) {
-  var dirName = `node_modules/@spectrum-css/${dep}`;
-  var pkg = JSON.parse(fs.readFileSync(`${dirName}/package.json`, 'utf8'));
+  let dirName = `node_modules/@spectrum-css/${dep}`;
+  let pkg = JSON.parse(fs.readFileSync(`${dirName}/package.json`, 'utf8'));
 
   return gulp.src(
     [
@@ -83,6 +83,20 @@ function buildDocs_html(dep) {
       }
     }))
     .pipe(data(function() {
+      let packageDeps = Object.keys(pkg.dependencies)
+        .filter((dep) => dep.indexOf('@spectrum-css') === 0)
+        .map((dep) => dep.split('/').pop());
+
+      packageDeps.push(dep);
+
+      let minimumDeps = [
+        'label',
+        'link',
+        'page',
+        'tooltip',
+        'typography',
+        'sidenav'
+      ].concat(packageDeps);
 
       return Object.assign({}, {
         util: require('./util'),
@@ -90,7 +104,9 @@ function buildDocs_html(dep) {
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,
         Prisim: require('prismjs')
-      }, templateData);
+      }, templateData, {
+        dependencyOrder: minimumDeps
+      });
     }))
     .pipe(through.obj(function compilePug(file, enc, cb) {
         let templateData = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
@@ -166,6 +182,24 @@ function buildSite_html() {
     .pipe(gulp.dest('dist/docs/'));
 };
 
+function buildDocs_loadicons() {
+  return gulp.src(require.resolve('loadicons'))
+    .pipe(gulp.dest('dist/docs/js/loadicons/'));
+}
+
+function buildDocs_focusPolyfill() {
+  return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
+    .pipe(gulp.dest('dist/docs/js/focus-ring-polyfill/'));
+}
+
+function buildDocs_prism() {
+  return gulp.src([
+    `${path.dirname(require.resolve('prismjs'))}/themes/prism.css`,
+    `${path.dirname(require.resolve('prismjs'))}/themes/prism-tomorrow.css`
+  ])
+    .pipe(gulp.dest('dist/docs/css/prisim/'));
+}
+
 let buildSite_pages = exports.buildSite_pages = gulp.series(
   getDependencyOrder,
   buildSite_getData,
@@ -181,5 +215,10 @@ exports.buildSite = gulp.parallel(
 
 exports.buildDocs = gulp.series(
   getDependencyOrder,
-  buildDocs_individualPackages
+  gulp.parallel(
+    buildDocs_individualPackages,
+    buildDocs_loadicons,
+    buildDocs_focusPolyfill,
+    buildDocs_prism
+  )
 );
