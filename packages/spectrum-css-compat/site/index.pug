@@ -14,10 +14,7 @@ html
     link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-medium.css')
     link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-large.css')
 
-    each dep in dependencyOrder
-      -
-        var depName = dep.split('/').pop();
-      link(rel='stylesheet', type='text/css', href='../components/' + depName + '/index-vars.css')
+    include dependencies.pug
 
     link(rel='stylesheet', type='text/css', href='css/site.css')
     link(rel='stylesheet', type='text/css', href='css/docs.css')
@@ -27,29 +24,12 @@ html
 
   body.spectrum.spectrum--light.spectrum--medium
     .spectrum-Site
-      .spectrum-Site-sideBar
-        a.spectrum-Site-header(href='home.html',target='mainContainer')
-          img.spectrum-Site-logo(src='img/spectrum_logo_light.svg', alt='Spectrum Logo')
-          h2.spectrum-Site-title.spectrum-Heading3 Spectrum CSS
-          // #{pkg.version}
-
-        .u-scrollable.spectrum-Site-nav
-          nav
-            ul.spectrum-SideNav.spectrum-SideNav--multiLevel
-              li.spectrum-SideNav-item
-                a.spectrum-SideNav-itemLink(href='getting-started.html', target='mainContainer') Getting Started
-              li.spectrum-SideNav-item
-                a.spectrum-SideNav-itemLink(href='https://github.com/adobe/spectrum-css', target='_blank') Github
-              li.spectrum-SideNav-item
-                a.spectrum-SideNav-itemLink(href='#') Components
-                ul.spectrum-SideNav.spectrum-SideNav--multiLevel
-                  each component in nav
-                    li.spectrum-SideNav-item
-                      a.spectrum-SideNav-itemLink.js-componentLink(href='#', target='mainContainer', data-component=component.component, data-example=component.example)= component.name
-
-          nav.spectrum-Site-bottomNav
-            ul.spectrum-SideNav
-              li.spectrum-SideNav-item
-                a.spectrum-SideNav-itemLink(href='http://opensource.adobe.com/spectrum', target='_blank') Spectrum
+      include sidebar.pug
 
       .spectrum-Site-mainContainer
+        .spectrum-Page
+          .spectrum-Hero
+            .spectrum-Article.spectrum-Hero-heading
+              h1.spectrum-Heading1--display Meet Spectrum CSS, the CSS implementation of Spectrum
+            p.spectrum-Body1 That's right, there's CSS for all those pretty components.
+            img.spectrum-Hero-image(src='img/spectrum_illustration_2x.png', alt='Spectrum Illustration')

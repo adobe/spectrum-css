@@ -12,7 +12,8 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const fs = require('fs');
 const path = require('path');
-const pug = require('pug');
+const pugCompiler = require('pug');
+const pug = require('gulp-pug');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const yaml = require('js-yaml');
@@ -22,10 +23,14 @@ const ext = require('replace-ext');
 const depSolver = require('dependency-solver');
 const logger = require('gulplog');
 
-let dependencyOrder = null;
+var templateData = {
+  nav: [],
+  pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8')),
+  dependencyOrder: []
+};
 
 function getDependencyOrder(done) {
-  dependencyOrder = [];
+  templateData.dependencyOrder = [];
 
   let dependencies = {};
 
@@ -50,12 +55,12 @@ function getDependencyOrder(done) {
     cb(null, file);
   }))
   .on('end', function() {
-    dependencyOrder = depSolver.solve(dependencies);
-    dependencyOrder = dependencyOrder.map(function(dep) {
+    templateData.dependencyOrder = depSolver.solve(dependencies);
+    templateData.dependencyOrder = templateData.dependencyOrder.map(function(dep) {
       return dep.split('/').pop();
     });
 
-    logger.debug(`Dependency order: \n${dependencyOrder.join('\n')}`);
+    logger.debug(`Dependency order: \n${templateData.dependencyOrder.join('\n')}`);
     done();
   });
 };
@@ -78,28 +83,24 @@ function buildDocs_html(dep) {
       }
     }))
     .pipe(data(function() {
-      return {
+
+      return Object.assign({}, {
         util: require('./util'),
         dnaVars: JSON.parse(fs.readFileSync(path.join('node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,
         Prisim: require('prismjs')
-      };
+      }, templateData);
     }))
     .pipe(through.obj(function compilePug(file, enc, cb) {
-        let data = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
+        let templateData = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
 
-        file.path = ext(file.path, '.json');
+        file.path = ext(file.path, '.html');
 
         try {
           const templatePath = `${__dirname}/template.pug`;
-          let compiled = pug.renderFile(templatePath, data);
-          let json = JSON.stringify({
-            name: dep,
-            version: pkg.version,
-            markup: compiled
-          });
-          file.contents = Buffer.from(json);
+          let compiled = pugCompiler.renderFile(templatePath, templateData);
+          file.contents = Buffer.from(compiled);
         } catch (e) {
           return cb(e);
         }
@@ -110,11 +111,75 @@ function buildDocs_html(dep) {
 }
 
 // Combined
-function buildDocs() {
-  return merge.apply(merge, dependencyOrder.map(buildDocs_html));
+function buildDocs_individualPackages() {
+  return merge.apply(merge, templateData.dependencyOrder.map(buildDocs_html));
 }
 
-module.exports = gulp.series(
+function buildSite_getData(done) {
+  templateData.nav = [];
+
+  return gulp.src([
+    'node_modules/@spectrum-css/*/docs.yml',
+    'node_modules/@spectrum-css/*/docs/*.yml'
+  ])
+  .pipe(through.obj(function compilePug(file, enc, cb) {
+    let componentData;
+    try {
+      componentData = yaml.safeLoad(String(file.contents));
+    } catch (e) {
+      return cb(e);
+    }
+
+    var packageName = file.dirname.replace('/docs', '').split('/').pop();
+
+    if (path.basename(file.basename) === 'docs.yml') {
+      file.basename = packageName;
+    }
+
+    var fileName = ext(file.basename, '.html');
+    templateData.nav.push({
+      name: componentData.name,
+      component: packageName,
+      href: fileName
+    });
+
+    cb(null, file);
+  }))
+  .on('end', function() {
+    templateData.nav = templateData.nav.sort(function(a, b) {
+      return a.name <= b.name ? -1 : 1;
+    });
+    done();
+  });
+};
+
+function buildSite_copyResources() {
+  return gulp.src('site/resources/**')
+    .pipe(gulp.dest('dist/docs/'));
+};
+
+function buildSite_html() {
+  return gulp.src('site/*.pug')
+    .pipe(pug({
+      locals: templateData
+    }))
+    .pipe(gulp.dest('dist/docs/'));
+};
+
+let buildSite_pages = exports.buildSite_pages = gulp.series(
   getDependencyOrder,
-  buildDocs
+  buildSite_getData,
+  buildSite_html
+);
+
+exports.buildSite_copyResources = buildSite_copyResources;
+
+exports.buildSite = gulp.parallel(
+  buildSite_copyResources,
+  buildSite_pages
+);
+
+exports.buildDocs = gulp.series(
+  getDependencyOrder,
+  buildDocs_individualPackages
 );

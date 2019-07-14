@@ -1,0 +1,2 @@
+each dep in dependencyOrder.filter((dep) => dep != 'vars' )
+  link(rel='stylesheet', type='text/css', href='../components/' + dep + '/index-vars.css', data-dependency=dep)

@@ -11,45 +11,41 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  function loadExample(example) {
+  function loadPage(href) {
     function handleLoad() {
-      var data;
-      try {
-        data = JSON.parse(this.responseText);
-      }
-      catch (err) {
-        console.error('Could not load example ' + example + ': ' + err);
-        return;
-      }
+      var template = document.createElement('template');
+      template.innerHTML = this.responseText;
 
-      document.querySelector('.spectrum-Site-mainContainer').innerHTML = data.markup;
+      var newMainContainer = template.content.querySelector('.spectrum-Site-mainContainer');
+
+      if (newMainContainer) {
+        var oldMainContainer = document.querySelector('.spectrum-Site-mainContainer');
+        oldMainContainer.parentNode.insertBefore(newMainContainer, oldMainContainer);
+        oldMainContainer.parentNode.removeChild(oldMainContainer);
+      }
+      else {
+        console.error('Could not find main container within loaded HTML file');
+      }
     }
 
     var req = new XMLHttpRequest();
     req.addEventListener('load', handleLoad);
-    req.open('GET', './' + example + '.json');
+    req.open('GET', './' + href);
     req.send();
   }
 
-  function navigate(example) {
-    const params = new URLSearchParams(location.search);
-    params.set('example', example);
-    window.history.replaceState({}, '', `${location.pathname}?${params}`);
+  function navigate(href) {
+    window.history.replaceState({}, '', href);
 
-    selectNavItem(example);
+    selectNavItem(href);
 
-    loadExample(example);
-  }
-
-  if (window.location.search) {
-    const params = new URLSearchParams(location.search);
-    navigate(params.get('example'));
+    loadPage(href);
   }
 
   document.addEventListener('click', function(event) {
-    var target = event.target;
-    if (target.classList.contains('js-componentLink')) {
-      navigate(target.getAttribute('data-example'));
+    var target = event.target.closest('a');
+    if (target && target.classList.contains('js-fastLoad')) {
+      navigate(target.getAttribute('href'));
       event.preventDefault();
     }
   });

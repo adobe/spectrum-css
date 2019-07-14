@@ -32,46 +32,75 @@
     }
   }
 
-article.spectrum-CSSComponent
+doctype html
+html
+  head
+    meta(charset = 'utf-8')
+    meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
+    title Spectrum CSS
+    meta(name='viewport', content='user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0')
 
-  header(id=component.slug).spectrum-CSSComponent-heading
-    a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
-      h2.spectrum-Heading1--display #{component.name}
-    .spectrum-CSSComponent-version.spectrum-Body Version #{pkg.version}
+    link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-global.css')
+    link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-lightest.css')
+    link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-light.css')
+    link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-dark.css')
+    link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-darkest.css')
+    link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-medium.css')
+    link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-large.css')
 
-  if component.description
-    section.spectrum-Body!= markdown.toHTML(component.description)
+    include ../site/dependencies.pug
 
-  each example in examples
-    article.spectrum-CSSExample
-      if example != component
-        header.row(id=example.slug)
-          a(href=`#${util.getSlug(component.name, example.name)}`).spectrum-CSSExample-link
-            h4.spectrum-Heading--subtitle3 #{example.name}
-          if example.cssStatus != 'n/a'
-            .u-tooltip-showOnHover
-              div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
-                #{example.dnaStatus}
-              if example.dnaStatus != 'Deprecated'
-                div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
-                  #{example.cssStatus}
-              if example.details
-                .spectrum-Tooltip.spectrum-Tooltip--right
-                  .spectrum-Tooltip-label!= markdown.toHTML(example.details)
-                  .spectrum-Tooltip-tip
+    link(rel='stylesheet', type='text/css', href='css/site.css')
+    link(rel='stylesheet', type='text/css', href='css/docs.css')
+
+    script(src='js/site.js')
+    script(src='js/typekit.js')
+
+  body.spectrum.spectrum--light.spectrum--medium
+    .spectrum-Site
+      include ../site/sidebar.pug
+
+      .spectrum-Site-mainContainer
+
+        article.spectrum-CSSComponent
+          header(id=component.slug).spectrum-CSSComponent-heading
+            a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
+              h2.spectrum-Heading1--display #{component.name}
+            .spectrum-CSSComponent-version.spectrum-Body Version #{pkg.version}
+
+          if component.description
+            section.spectrum-Body!= markdown.toHTML(component.description)
+
+          each example in examples
+            article.spectrum-CSSExample
+              if example != component
+                header.row(id=example.slug)
+                  a(href=`#${util.getSlug(component.name, example.name)}`).spectrum-CSSExample-link
+                    h4.spectrum-Heading--subtitle3 #{example.name}
+                  if example.cssStatus != 'n/a'
+                    .u-tooltip-showOnHover
+                      div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
+                        #{example.dnaStatus}
+                      if example.dnaStatus != 'Deprecated'
+                        div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
+                          #{example.cssStatus}
+                      if example.details
+                        .spectrum-Tooltip.spectrum-Tooltip--right
+                          .spectrum-Tooltip-label!= markdown.toHTML(example.details)
+                          .spectrum-Tooltip-tip
 
 
-        if example.description
-          section.spectrum-Body!= markdown.toHTML(example.description)
+                if example.description
+                  section.spectrum-Body!= markdown.toHTML(example.description)
 
-      if example.markup
+              if example.markup
 
-        section.spectrum-CSSExample-container
-          .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-          .spectrum-CSSExample-markup
-            if example.markup.split('\n').length > 2
-              a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
-            pre
-              code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
+                  .spectrum-CSSExample-markup
+                    if example.markup.split('\n').length > 2
+                      a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
+                    pre
+                      code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')
 
-  div.spectrum-Underlay#spectrum-underlay
+          div.spectrum-Underlay#spectrum-underlay
