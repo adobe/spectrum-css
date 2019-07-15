@@ -106,6 +106,14 @@ window.addEventListener('DOMContentLoaded', function() {
     loadPage(href);
   }
 
+  window.addEventListener('popstate', function(event) {
+    var href = window.location.pathname.split('/').pop();
+
+    selectNavItem(href);
+
+    loadPage(href);
+  });
+
   document.addEventListener('click', function(event) {
     var target = event.target.closest('a');
     if (target && target.classList.contains('js-fastLoad')) {
