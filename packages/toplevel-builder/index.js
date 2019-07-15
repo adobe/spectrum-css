@@ -182,7 +182,7 @@ function bumpVersion(cb) {
   }
 
   function doVersionBump() {
-    exec(`npm version ${releaseVersion}`, cb);
+    exec(`npm version --no-git-tag-version ${releaseVersion}`, cb);
   }
 
   let package = getPackage();
@@ -310,6 +310,12 @@ let ghPages = gulp.series(
 let release = gulp.series(
   bumpVersion,
   // build happens automatically after the version bump with npm scripts
+  function commitPackage(cb) {
+    exec(`git commit package.json -m "v${releaseVersion}"`, cb);
+  },
+  function addTag(cb) {
+    exec(`git tag v${releaseVersion}`, cb);
+  },
   // push tag
   function pushTag(cb) {
     exec(`git push origin v${releaseVersion}`, cb);
