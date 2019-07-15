@@ -28,6 +28,7 @@ const semver = require('semver');
 const rename = require('gulp-rename');
 
 let cwd = process.cwd();
+let topLevel = path.resolve(cwd, '..');
 let builderDir = __dirname;
 
 function clean() {
@@ -291,11 +292,11 @@ let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
 let ghPages = gulp.series(
   execTask('checkoutPages', `git checkout gh-pages`),
   function copyPages(cb) {
-    exec(`cp -r dist ${releaseVersion}`, cb);
+    exec(`cp -r dist ${topLevel}/${releaseVersion}`, cb);
   },
   // todo: update gh-pages index files if not alpha release
   function addPages(cb) {
-    exec(`git add ${releaseVersion}`, cb);
+    exec(`git add ${topLevel}/${releaseVersion}`, cb);
   },
   function commitPages(cb) {
     exec(`git commit -q -m "Deploy version ${releaseVersion}"`, cb);
@@ -426,6 +427,7 @@ exports.prePack = gulp.series(
   releaseBackwardsCompat
 );
 
+exports.releaseBackwardsCompatCleanup = releaseBackwardsCompatCleanup;
 exports.postPublish = gulp.series(
   releaseBackwardsCompatCleanup,
   ghPages

@@ -19,6 +19,9 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
+  "optionalDependencies": {
+    "@spectrum/spectrum-icons": "^2.3.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.0",
     "@spectrum-css/toplevel-builder": "^1.0.0-alpha.0",
