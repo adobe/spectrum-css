@@ -55,8 +55,9 @@ function buildDocs_html(dep) {
       }
     }))
     .pipe(data(function(file) {
-      let packageDeps = Object.keys(pkg.dependencies)
+      let packageDeps = Object.keys(pkg.dependencies).concat(Object.keys(pkg.devDependencies))
         .filter((dep) => dep.indexOf('@spectrum-css') === 0)
+        .filter((dep) => dep !== 'build')
         .map((dep) => dep.split('/').pop());
 
       packageDeps.push(dep);
