@@ -428,8 +428,7 @@ exports.prePack = gulp.series(
 
 exports.postPublish = gulp.series(
   releaseBackwardsCompatCleanup,
-  // Disabled for now until we decide where to publish docs
-  // ghPages
+  ghPages
 );
 
 exports.buildDocs_individualPackages = docs.buildDocs_individualPackages;
