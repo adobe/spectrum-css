@@ -29,35 +29,63 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   function loadPage(href) {
+    console.log('⚡️ Fast-loading ' + href);
+
     function handleLoad() {
+      function handleLinkOnload(dependencyName, event) {
+        console.log('    ✅ ' + dependencyName + ' loaded...');
+        loadingDependencies.splice(loadingDependencies.indexOf(dependencyName), 1);
+
+        if (loadingDependencies.length === 0) {
+          changeContent();
+        }
+      }
+
+      function changeContent() {
+        // Change title
+        document.querySelector('title').innerHTML = template.content.querySelector('title').innerHTML;
+
+        // Change content
+        var oldMainContainer = document.querySelector('.spectrum-Site-mainContainer');
+        oldMainContainer.parentNode.insertBefore(newMainContainer, oldMainContainer);
+        oldMainContainer.parentNode.removeChild(oldMainContainer);
+
+        console.log('  ✅ ' + href + ' loaded');
+      }
+
       var template = document.createElement('template');
       template.innerHTML = this.responseText;
 
       var newMainContainer = template.content.querySelector('.spectrum-Site-mainContainer');
 
       if (newMainContainer) {
-        // Change content
-        var oldMainContainer = document.querySelector('.spectrum-Site-mainContainer');
-        oldMainContainer.parentNode.insertBefore(newMainContainer, oldMainContainer);
-        oldMainContainer.parentNode.removeChild(oldMainContainer);
-
-        // Change title
-        document.querySelector('title').innerHTML = template.content.querySelector('title').innerHTML;
-
         // Load in extra deps before last link
         var currentDependenciesNodeList = document.querySelectorAll('[data-dependency]');
         var currentDependencies = Array.prototype.slice.call(currentDependenciesNodeList).map(function(link) {
           return link.getAttribute('data-dependency');
         });
 
-        var newDependencies = template.content.querySelectorAll('[data-dependency]');
-        var beforeLink = currentDependenciesNodeList[currentDependenciesNodeList.length - 1];
-        Array.prototype.forEach.call(newDependencies, function(link) {
-          if (currentDependencies.indexOf(link.getAttribute('data-dependency')) === -1) {
+        var newDependencies = Array.prototype.slice.call(template.content.querySelectorAll('[data-dependency]')).filter(function(link) {
+          return currentDependencies.indexOf(link.getAttribute('data-dependency')) === -1;
+        });
+
+        if (newDependencies.length) {
+          var loadingDependencies = Array.prototype.slice.call(newDependencies).map(function(link) {
+            return link.getAttribute('data-dependency');
+          });
+
+          console.log('  ⏳ Loading ' + loadingDependencies.length + ' new dependencies...');
+
+          var beforeLink = currentDependenciesNodeList[currentDependenciesNodeList.length - 1];
+          newDependencies.forEach(function(link) {
+            link.onload = handleLinkOnload.bind(link, link.getAttribute('data-dependency'));
             document.head.insertBefore(link, beforeLink.nextElementSibling);
             beforeLink = link;
-          }
-        });
+          });
+        }
+        else {
+          changeContent();
+        }
       }
       else {
         console.error('Could not find main container within loaded HTML file');
