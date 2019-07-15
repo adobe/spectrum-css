@@ -15,6 +15,7 @@ governing permissions and limitations under the License.
 'use strict';
 
 loadIcons('../components/icons/spectrum-css-icons.svg');
+loadIcons('../icons/spectrum-icons.svg');
 
 // Workflow icons disabled for now
 // loadIcons('components/icons/spectrum-icons.svg');

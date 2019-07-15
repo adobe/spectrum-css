@@ -260,18 +260,21 @@ let releaseBackwardsCompatCleanup = exports.releaseBackwardsCompatCleanup = func
   ]);
 };
 
+
+let releaseBackwardsCompat_copyWorkflowIcons = exports.releaseBackwardsCompat_copyWorkflowIcons = function () {
+  return gulp.src([
+    `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/svg/**`,
+    `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/lib/**`
+  ])
+    .pipe(gulp.dest('dist/icons/'));
+};
+
 let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
   gulp.series(
     releaseBackwardsCompatCleanup,
 
     gulp.parallel(
-      function releaseBackwardsCompat_copyWorkflowIcons() {
-        return gulp.src([
-          `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/svg/**`,
-          `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/lib/**`
-        ])
-          .pipe(gulp.dest('dist/icons/'));
-      },
+      releaseBackwardsCompat_copyWorkflowIcons,
       function releaseBackwardsCompat_copyUIIcons() {
         return gulp.src(
           `${cwd}/node_modules/@spectrum-css/icons/{medium,large,combined}/**`
@@ -418,6 +421,7 @@ function startWatch() {
 let build = exports.build = gulp.series(
   clean,
   gulp.parallel(
+    releaseBackwardsCompat_copyWorkflowIcons,
     buildCombined,
     buildStandalone,
     docs.build,
@@ -428,6 +432,7 @@ let build = exports.build = gulp.series(
 exports.dev = gulp.series(
   clean,
   gulp.parallel(
+    releaseBackwardsCompat_copyWorkflowIcons,
     docs.build,
     release_copyPackages,
   ),
