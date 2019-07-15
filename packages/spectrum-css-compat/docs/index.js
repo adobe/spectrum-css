@@ -194,6 +194,8 @@ exports.buildSite = gulp.parallel(
   buildSite_pages
 );
 
+exports.buildSite_html = buildSite_html;
+
 exports.buildDocs = gulp.parallel(
   buildDocs_individualPackages,
   buildDocs_loadicons,

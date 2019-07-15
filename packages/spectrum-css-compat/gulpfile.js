@@ -345,6 +345,33 @@ function watchSite() {
   );
 
   gulp.watch(
+    'site/includes/*.pug',
+    gulp.series(
+      gulp.parallel(
+        docs.buildSite_html,
+        docs.buildDocs
+      ),
+      function reload(cb) {
+        browserSync.reload();
+        cb();
+      }
+    )
+  );
+
+  gulp.watch(
+    'docs/template.pug',
+    gulp.series(
+      gulp.parallel(
+        docs.buildDocs
+      ),
+      function reload(cb) {
+        browserSync.reload();
+        cb();
+      }
+    )
+  );
+
+  gulp.watch(
     [
       'site/resources/css/*.css',
       'site/resources/js/*.js',
