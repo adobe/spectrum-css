@@ -36,11 +36,15 @@ window.addEventListener('DOMContentLoaded', function() {
       var newMainContainer = template.content.querySelector('.spectrum-Site-mainContainer');
 
       if (newMainContainer) {
+        // Change content
         var oldMainContainer = document.querySelector('.spectrum-Site-mainContainer');
         oldMainContainer.parentNode.insertBefore(newMainContainer, oldMainContainer);
         oldMainContainer.parentNode.removeChild(oldMainContainer);
 
-        // Load in extra depsbeforeLink
+        // Change title
+        document.querySelector('title').innerHTML = template.content.querySelector('title').innerHTML;
+
+        // Load in extra deps before last link
         var currentDependenciesNodeList = document.querySelectorAll('[data-dependency]');
         var currentDependencies = Array.prototype.slice.call(currentDependenciesNodeList).map(function(link) {
           return link.getAttribute('data-dependency');

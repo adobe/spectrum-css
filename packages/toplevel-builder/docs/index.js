@@ -40,75 +40,132 @@ let templateData = {
   pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8'))
 };
 
-function buildDocs_html(dep) {
-  let dirName = `node_modules/@spectrum-css/${dep}`;
-  let pkg = JSON.parse(fs.readFileSync(`${dirName}/package.json`, 'utf8'));
+function buildDocs_getDependencyOrder(dep) {
+  return new Promise((resolve, reject) => {
+    let dirName = `node_modules/@spectrum-css/${dep}`;
+    let pkg = JSON.parse(fs.readFileSync(`${dirName}/package.json`, 'utf8'));
 
-  return gulp.src(
-    [
-      `${dirName}/docs.yml`,
-      `${dirName}/docs/*.yml`
-    ], {
-      allowEmpty: true
+    if (!pkg.dependencies) {
+      return resolve([]);
     }
-  )
-    .pipe(rename(function(file) {
-      if (file.basename === 'docs') {
-        file.basename = dep;
-      }
-    }))
-    .pipe(data(function(file) {
-      let packageDeps = Object.keys(pkg.dependencies).concat(Object.keys(pkg.devDependencies))
-        .filter((dep) => dep.indexOf('@spectrum-css') === 0)
-        .filter((dep) => dep !== '@spectrum-css/build')
-        .map((dep) => dep.split('/').pop());
 
-      packageDeps.push(dep);
+    let flatPackageDeps = Object.keys(pkg.dependencies).concat(Object.keys(pkg.devDependencies))
+      .filter((dep) => dep.indexOf('@spectrum-css') === 0)
+      .filter((dep) => dep !== '@spectrum-css/build');
 
-      let docsDeps = minimumDeps.concat(packageDeps);
+    let dependencyOrder = [];
+    let dependencies = {};
 
-      return Object.assign({}, {
-        util: require('./util'),
-        dnaVars: JSON.parse(fs.readFileSync(path.join('node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
-        markdown: require('markdown').markdown,
-        Prisim: require('prismjs')
-      }, templateData, {
-        pageURL: path.basename(file.basename, '.yml') + '.html',
-        dependencyOrder: docsDeps,
-        pkg: JSON.parse(fs.readFileSync(path.join('node_modules', `@spectrum-css/${dep}`, 'package.json'), 'utf8'))
-      });
-    }))
-    .pipe(through.obj(function compilePug(file, enc, cb) {
-        let templateData = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
-
-        file.path = ext(file.path, '.html');
-
-        try {
-          const templatePath = `${__dirname}/template.pug`;
-          let compiled = pugCompiler.renderFile(templatePath, templateData);
-          file.contents = Buffer.from(compiled);
-        } catch (e) {
-          return cb(e);
-        }
-        cb(null, file);
-      })
+    gulp.src(
+      flatPackageDeps.map((subDep) => `${cwd}/node_modules/${subDep}/package.json`)
     )
-    .pipe(gulp.dest('dist/docs/'));
+    .pipe(through.obj(function readPackage(file, enc, cb) {
+      let pkg;
+      try {
+        pkg = JSON.parse(String(file.contents));
+      } catch (e) {
+        return cb(e);
+      }
+
+      if (pkg.dependencies) {
+        dependencies[pkg.name] = Object.keys(pkg.dependencies).filter(function(dep) {
+          return dep.indexOf('@spectrum-css') === 0;
+        });
+      }
+
+      cb(null, file);
+    }))
+    .on('finish', function() {
+      dependencyOrder = depSolver.solve(dependencies);
+      dependencyOrder = dependencyOrder.filter(function(dep) {
+        return dep !== '@spectrum-css/vars';
+      });
+
+      logger.debug(`Dependency order: \n${dependencyOrder.join('\n')}`);
+
+      resolve(dependencyOrder);
+    })
+    .on('error', function(err) {
+      reject(err);
+    });
+  });
+}
+
+
+async function buildDocs_html(dep) {
+  var dependencyOrder = await buildDocs_getDependencyOrder(dep);
+
+  let dirName = `node_modules/@spectrum-css/${dep}`;
+
+  return new Promise((resolve, reject) => {
+    gulp.src(
+      [
+        `${dirName}/docs.yml`,
+        `${dirName}/docs/*.yml`
+      ], {
+        allowEmpty: true
+      }
+    )
+      .pipe(rename(function(file) {
+        if (file.basename === 'docs') {
+          file.basename = dep;
+        }
+      }))
+      .pipe(data(function(file) {
+        let packageDeps = dependencyOrder.map((dep) => dep.split('/').pop());
+        packageDeps.push(dep);
+
+        let docsDeps = minimumDeps.concat(packageDeps);
+
+        return Object.assign({}, {
+          util: require('./util'),
+          dnaVars: JSON.parse(fs.readFileSync(path.join('node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
+          markdown: require('markdown').markdown,
+          Prisim: require('prismjs')
+        }, templateData, {
+          pageURL: path.basename(file.basename, '.yml') + '.html',
+          dependencyOrder: docsDeps,
+          pkg: JSON.parse(fs.readFileSync(path.join('node_modules', `@spectrum-css/${dep}`, 'package.json'), 'utf8'))
+        });
+      }))
+      .pipe(through.obj(function compilePug(file, enc, cb) {
+          let templateData = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
+
+          file.path = ext(file.path, '.html');
+
+          try {
+            const templatePath = `${__dirname}/template.pug`;
+            let compiled = pugCompiler.renderFile(templatePath, templateData);
+            file.contents = Buffer.from(compiled);
+          } catch (e) {
+            return cb(e);
+          }
+          cb(null, file);
+        })
+      )
+      .pipe(gulp.dest('dist/docs/'))
+      .on('end', resolve)
+      .on('error', reject);
+  });
 }
 
 // Combined
 function buildDocs_individualPackages() {
-  let pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  let pkg = JSON.parse(fs.readFileSync(`${cwd}/package.json`, 'utf8'));
 
   let unsortedDependencies = Object.keys(pkg.devDependencies)
     .filter(function(dep) {
-      return dep.indexOf('@spectrum-css') === 0;
+      return (
+        dep.indexOf('@spectrum-css') === 0 &&
+        dep !== '@spectrum-css/toplevel-builder' &&
+        dep !== '@spectrum-css/vars'
+      );
     })
     .map(function(dep) {
       return dep.split('/').pop();
     });
 
-  return merge.apply(merge, unsortedDependencies.map(buildDocs_html));
+  return Promise.all(unsortedDependencies.map(buildDocs_html));
 }
 
 function buildSite_getData(done) {
@@ -199,6 +256,8 @@ exports.buildSite = gulp.parallel(
 );
 
 exports.buildSite_html = buildSite_html;
+
+exports.buildDocs_individualPackages = buildDocs_individualPackages;
 
 let buildDocs = exports.buildDocs = gulp.series(
   buildSite_getData,

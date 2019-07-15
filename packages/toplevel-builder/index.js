@@ -432,6 +432,8 @@ exports.postPublish = gulp.series(
   // ghPages
 );
 
+exports.buildDocs_individualPackages = docs.buildDocs_individualPackages;
+
 exports.release = release;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
