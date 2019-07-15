@@ -28,7 +28,7 @@ const semver = require('semver');
 const rename = require('gulp-rename');
 
 let cwd = process.cwd();
-let topLevel = path.resolve(cwd, '..');
+let topLevel = path.resolve(cwd, '..', '..');
 let builderDir = __dirname;
 
 function clean() {
@@ -169,7 +169,7 @@ function handleExec(cb) {
       return cb(err);
     }
 
-    cb();
+    cb(null, stdout, stderr);
   }
 }
 
@@ -290,6 +290,15 @@ let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
 
 // These tasks assume they're being run in the root and will copy and publish github pages
 let ghPages = gulp.series(
+  function getVersion(cb) {
+    exec(`git describe --tags`, function(err, stdout, stderr) {
+      if (err) {
+         return cb(err);
+      }
+      releaseVersion = stdout.trim().substr(1);
+      cb();
+    });
+  },
   execTask('checkoutPages', `git checkout gh-pages`),
   function copyPages(cb) {
     exec(`cp -r dist ${topLevel}/${releaseVersion}`, cb);
@@ -332,8 +341,7 @@ let release = gulp.series(
     }
     exec(`npm publish ${npmTag}`, cb);
   },
-  releaseBackwardsCompatCleanup,
-  ghPages
+  releaseBackwardsCompatCleanup
 );
 
 // dev
@@ -434,6 +442,7 @@ exports.prePack = gulp.series(
 );
 
 exports.releaseBackwardsCompatCleanup = releaseBackwardsCompatCleanup;
+exports.ghPages = ghPages;
 exports.postPublish = gulp.series(
   releaseBackwardsCompatCleanup,
   ghPages
