@@ -23,6 +23,9 @@ const ext = require('replace-ext');
 const depSolver = require('dependency-solver');
 const logger = require('gulplog');
 
+let cwd = process.cwd();
+let builderDir = path.resolve(__dirname, '..');
+
 let minimumDeps = [
   'label',
   'link',
@@ -57,7 +60,7 @@ function buildDocs_html(dep) {
     .pipe(data(function(file) {
       let packageDeps = Object.keys(pkg.dependencies).concat(Object.keys(pkg.devDependencies))
         .filter((dep) => dep.indexOf('@spectrum-css') === 0)
-        .filter((dep) => dep !== 'build')
+        .filter((dep) => dep !== '@spectrum-css/build')
         .map((dep) => dep.split('/').pop());
 
       packageDeps.push(dep);
@@ -109,7 +112,7 @@ function buildDocs_individualPackages() {
 }
 
 function buildSite_getData(done) {
-  templateData.nav = [];
+  let nav = [];
 
   return gulp.src([
     'node_modules/@spectrum-css/*/docs.yml',
@@ -130,7 +133,7 @@ function buildSite_getData(done) {
     }
 
     var fileName = ext(file.basename, '.html');
-    templateData.nav.push({
+    nav.push({
       name: componentData.name,
       component: packageName,
       href: fileName
@@ -139,7 +142,7 @@ function buildSite_getData(done) {
     cb(null, file);
   }))
   .on('end', function() {
-    templateData.nav = templateData.nav.sort(function(a, b) {
+    templateData.nav = nav.sort(function(a, b) {
       return a.name <= b.name ? -1 : 1;
     });
     done();
@@ -147,12 +150,12 @@ function buildSite_getData(done) {
 };
 
 function buildSite_copyResources() {
-  return gulp.src('site/resources/**')
+  return gulp.src(`${builderDir}/site/resources/**`)
     .pipe(gulp.dest('dist/docs/'));
 };
 
 function buildSite_html() {
-  return gulp.src('site/*.pug')
+  return gulp.src(`${builderDir}/site/*.pug`)
     .pipe(data(function(file) {
       return {
         pageURL: path.basename(file.basename, '.pug') + '.html',
@@ -197,9 +200,21 @@ exports.buildSite = gulp.parallel(
 
 exports.buildSite_html = buildSite_html;
 
-exports.buildDocs = gulp.parallel(
-  buildDocs_individualPackages,
-  buildDocs_loadicons,
-  buildDocs_focusPolyfill,
-  buildDocs_prism
+let buildDocs = exports.buildDocs = gulp.series(
+  buildSite_getData,
+  gulp.parallel(
+    buildDocs_individualPackages,
+    buildDocs_loadicons,
+    buildDocs_focusPolyfill,
+    buildDocs_prism
+  )
+);
+
+exports.build = gulp.series(
+  buildSite_getData,
+  gulp.parallel(
+    buildDocs,
+    buildSite_copyResources,
+    buildSite_html
+  )
 );

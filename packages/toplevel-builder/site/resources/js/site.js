@@ -13,6 +13,8 @@ governing permissions and limitations under the License.
 /* global document, window, Element, loadIcons, URLSearchParams */
 
 window.addEventListener('DOMContentLoaded', function() {
+  var switcher = new SpectrumSwitcher();
+
   function selectNavItem(href) {
     var selectedNavItem = document.querySelector('.spectrum-SideNav-item.is-selected')
     if (selectedNavItem) {
@@ -65,7 +67,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   function navigate(href) {
-    window.history.replaceState({}, '', href);
+    window.history.pushState({}, '', href);
 
     selectNavItem(href);
 
