@@ -267,8 +267,8 @@ let releaseBackwardsCompat = exports.releaseBackwardsCompat = gulp.parallel(
     gulp.parallel(
       function releaseBackwardsCompat_copyWorkflowIcons() {
         return gulp.src([
-          `${cwd}/node_modules/@spectrum/spectrum-icons/dist/svg/**`,
-          `${cwd}/node_modules/@spectrum/spectrum-icons/dist/lib/**`
+          `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/svg/**`,
+          `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/lib/**`
         ])
           .pipe(gulp.dest('dist/icons/'));
       },
