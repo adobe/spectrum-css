@@ -53,7 +53,7 @@ html
           header(id=component.slug).spectrum-CSSComponent-heading
             a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
               h2.spectrum-Heading1--display #{component.name}
-            .spectrum-CSSComponent-version.spectrum-Body Version #{pkg.version}
+            .spectrum-CSSComponent-version.spectrum-Body #{pkg.name}@#{pkg.version}
 
           if component.description
             section.spectrum-Body!= markdown.toHTML(component.description)

@@ -66,12 +66,12 @@ function buildDocs_html(dep) {
       return Object.assign({}, {
         util: require('./util'),
         dnaVars: JSON.parse(fs.readFileSync(path.join('node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
-        pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
         markdown: require('markdown').markdown,
         Prisim: require('prismjs')
       }, templateData, {
         pageURL: path.basename(file.basename, '.yml') + '.html',
-        dependencyOrder: docsDeps
+        dependencyOrder: docsDeps,
+        pkg: JSON.parse(fs.readFileSync(path.join('node_modules', `@spectrum-css/${dep}`, 'package.json'), 'utf8'))
       });
     }))
     .pipe(through.obj(function compilePug(file, enc, cb) {
