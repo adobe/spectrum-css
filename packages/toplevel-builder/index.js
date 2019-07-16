@@ -28,8 +28,8 @@ const semver = require('semver');
 const rename = require('gulp-rename');
 
 let cwd = process.cwd();
-let topLevel = path.resolve(cwd, '..', '..');
 let builderDir = __dirname;
+let topLevel = path.resolve(builderDir, '..', '..');
 
 function clean() {
   return del('dist/*');
@@ -260,8 +260,7 @@ let releaseBackwardsCompatCleanup = exports.releaseBackwardsCompatCleanup = func
   ]);
 };
 
-
-let releaseBackwardsCompat_copyWorkflowIcons = exports.releaseBackwardsCompat_copyWorkflowIcons = function () {
+let releaseBackwardsCompat_copyWorkflowIcons = exports.releaseBackwardsCompat_copyWorkflowIcons = function releaseBackwardsCompat_copyWorkflowIcons() {
   return gulp.src([
     `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/svg/**`,
     `${topLevel}/node_modules/@spectrum/spectrum-icons/dist/lib/**`
