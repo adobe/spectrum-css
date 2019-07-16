@@ -48,26 +48,6 @@ function getDependencies() {
       }
     }
   }
-
-  // Add dependencies of build: these are dependencies that are required to render the docs in general
-  docDependencies = [];
-  var buildPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../', 'package.json'), 'utf8'));
-  if (buildPkg.dependencies) {
-    for (let depPkg in buildPkg.dependencies) {
-      let deps = [];
-      if (depPkg.indexOf('@spectrum-css') === 0) {
-        let dependencyName = depPkg.split('/').pop();
-        docDependencies.push(dependencyName);
-      }
-    }
-  }
-
-  docDependencies.forEach(function(docDep) {
-    // Drop dupes, and don't include the package itself if that's what we're building
-    if (docDep !== packageName && dependencies.indexOf(docDep) === -1) {
-      dependencies.push(docDep);
-    }
-  });
 }
 
 function buildDocs_html() {
@@ -92,7 +72,6 @@ function buildDocs_html() {
     }))
     .pipe(data(function() {
       return {
-        util: require('./util'),
         dependencies: dependencies,
         dnaVars: JSON.parse(fs.readFileSync(path.join(process.cwd(), 'node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
@@ -134,17 +113,6 @@ function buildDocs_copyDeps() {
   return merge.apply(merge, dependencies.map(copyDep));
 }
 
-function buildDocs_copyDocDeps() {
-  // This must be called per-task, or top level build won't know the right deps
-  getDependencies();
-
-  function copyDep(dep) {
-    return gulp.src(`${__dirname}/../node_modules/@spectrum-css/${dep}/dist/*`)
-      .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
-  }
-  return merge.apply(merge, docDependencies.map(copyDep));
-}
-
 function buildDocs_loadicons() {
   return gulp.src(require.resolve('loadicons'))
     .pipe(gulp.dest('dist/docs/dependencies/loadicons/'));
@@ -169,7 +137,6 @@ let buildDocs = gulp.parallel(
   buildDocs_focusPolyfill,
   buildDocs_prism,
   buildDocs_copyDeps,
-  buildDocs_copyDocDeps,
   buildDocs_html
 );
 

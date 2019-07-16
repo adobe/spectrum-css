@@ -18,9 +18,6 @@
     return dep !== 'vars';
   });
 
-  // Get DNA data
-  util.populateDNAInfo(component, dnaVars);
-
   if (component.examples) {
     for (id in component.examples) {
       let example = component.examples[id];
@@ -33,7 +30,6 @@
         component.examples[id] = example;
       }
       example.id = id;
-      util.populateDNAInfo(example, dnaVars);
     }
   }
 
@@ -65,10 +61,10 @@ html
     script(src='dependencies/loadicons/index.js')
     script(src='dependencies/@adobe/focus-ring-polyfill/index.js')
 
-    script(src='js/docs.js')
-    script(src='js/enhancement.js')
-    script(src='js/polyfills.js')
     script(src='js/vendor/typekit.js')
+
+    script.
+      loadIcons('dependencies/@spectrum-css/icons/spectrum-css-icons.svg');
 
   body.spectrum.spectrum--lightest.spectrum--medium
 
@@ -86,20 +82,7 @@ html
         article.spectrum-CSSExample
           if example != component
             header.row(id=example.slug)
-              a(href=`#${util.getSlug(component.name, example.name)}`).spectrum-CSSExample-link
-                h4.spectrum-Heading--subtitle3 #{example.name}
-              if example.cssStatus != 'n/a'
-                .u-tooltip-showOnHover
-                  div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
-                    #{example.dnaStatus}
-                  if example.dnaStatus != 'Deprecated'
-                    div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
-                      #{example.cssStatus}
-                  if example.details
-                    .spectrum-Tooltip.spectrum-Tooltip--right
-                      .spectrum-Tooltip-label!= markdown.toHTML(example.details)
-                      .spectrum-Tooltip-tip
-
+              h4.spectrum-Heading--subtitle3 #{example.name}
 
             if example.description
               section.spectrum-Body!= markdown.toHTML(example.description)
@@ -108,10 +91,5 @@ html
 
             section.spectrum-CSSExample-container
               .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-              .spectrum-CSSExample-markup
-                if example.markup.split('\n').length > 2
-                  a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
-                pre
-                  code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')
 
       div.spectrum-Underlay#spectrum-underlay
