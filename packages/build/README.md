@@ -5,8 +5,9 @@ This package uses gulp to compile CSS and build documentation for Spectrum CSS c
 
 ## CLI
 
-The following tasks are defined
+The following tasks are available:
 
+* `gulp clean` - Clean everything
 * `gulp build` - Build everything
 * `gulp buildCSS` - Build CSS only
 * `gulp buildDocs` - Build documentation only

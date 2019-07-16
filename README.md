@@ -10,7 +10,6 @@ The goal of this project is to provide a standard CSS implementation of the Spec
     1. [Multi-stop Strategy](#multi-stop-strategy)
     1. [Single-stop Strategy](#single-stop-strategy)
 1. [Building](#building)
-1. [Testing](#testing-with-the-visual-regression-tools)
 1. [Contributing](#contributing)
 
 ## Show me a demo
@@ -27,17 +26,39 @@ Spectrum CSS builds output that uses custom properties so it can support multipl
 
 It also builds 'multi-stop' and 'single-stop' versions of the CSS for older browsers (IE 11). This enables a consumer to either allow for multiple Spectrum colorstops in a single CSS file, or can limit the number of selectors to only those needed for a single colorstop.
 
-Spectrum CSS organizes the CSS source files in the `src` folder. Each Spectrum element has it's own folder. That folder contains an `index.css` file for the basic structual CSS for all variants of an element. There is also a `skin.css` file to hold the values that change when the colorstop of the element is specified.
-
-The CSS source files also contain [Topdoc](https://github.com/Topdoc/topdoc) comments with a placeholder for documentation values that are injected at build time. The source of those injected values is found in the YAML formatted files in the `docs` folder. A key part of the docs data is the `markup` node, which contains the HTML elements needed to apply the corresponding element selectors and render the elements as generated Topdoc output.
-
-A successful build will create a `dist` folder. The `dist/docs` folder is where the Topdoc output and related template files will end up.
+A successful build will create a `dist/` folder. The `dist/docs/` folder is where the documentation will end up.
 
 ## Using Spectrum CSS
 
 Spectrum CSS can be consumed as whole or in part with three distinct methods of applying colorstops.
 
-To install Spectrum CSS, run `npm install @adobe/spectrum-css` from your project's root directory. You will be able to find everything you need for both strategies in the `node_modules/@adobe/spectrum-css/` folder.
+## Individually versioned packages
+
+Each component is released on npm as a separate, individually versioned package inside of the [`@spectrum-css` org](https://www.npmjs.com/org/spectrum-css).
+
+To get started, install the following packages in addition to the components you require:
+
+```
+npm install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spectrum-css/icons
+```
+
+Installed components will be available in the `node_modules/@spectrum-css/` folder.
+
+Then, use one of the strategies outlined below to include the CSS files in your project.
+
+
+## Monolithic package
+
+For backwards compatibility purposes, a monolithic package is available with all components.
+
+To install it, run the following:
+
+```
+npm install @adobe/spectrum-css
+```
+
+The package will be installed to `node_modules/@adobe/spectrum-css/`. All of the same files included in the individually versioned releases are present, albeit within `dist/components/`.
+
 
 ### CSS Custom Properties Strategy
 
@@ -47,18 +68,19 @@ Start by including the base set of variables:
 
 ```html
 <!-- Include global variables first -->
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-global.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^1.0.0-alpha/dist/spectrum-global.css">
 
-<!-- Include only the scales and colorstops your application needs, be sure to use the *-unique.css files -->
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-medium-unique.css">
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-large-unique.css">
-
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-light-unique.css">
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/vars/spectrum-dark-unique.css">
+<!-- Include only the scales and colorstops your application needs -->
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^1.0.0-alpha/dist/spectrum-medium.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^1.0.0-alpha/dist/spectrum-large.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^1.0.0-alpha/dist/spectrum-light.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^1.0.0-alpha/dist/spectrum-dark.css">
 
 <!-- Include index-vars.css for all components you need -->
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/components/icon/index-vars.css">
-<link rel="stylesheet" href="https://unpkg.com/@adobe/spectrum-css@2.x/dist/components/button/index-vars.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/page@^1.0.0-alpha/dist/index-vars.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/typography@^1.0.0-alpha/dist/index-vars.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/icon@^1.0.0-alpha/dist/index-vars.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/button@^1.0.0-alpha/dist/index-vars.css">
 ```
 
 Then, make sure you've included the relevant classes to choose which scale and colorstop you want:
@@ -82,15 +104,15 @@ The first method of applying colorstops, *multistop*, makes it possible to have 
 
 2. To get only the CSS for components and colorstops you need, include the following to start:
 
-* `dist/components/page/index.css`
-* `dist/components/page/multiStops/COLORSTOP.css` for each colorstop
-* `dist/components/typography/index.css`
-* `dist/components/typography/multiStops/COLORSTOP.css` for each colorstop
+* `node_modules/@spectrum-css/page/dist/index.css`
+* `node_modules/@spectrum-css/page/dist/multiStops/COLORSTOP.css` for each colorstop
+* `node_modules/@spectrum-css/typography/dist/index.css`
+* `node_modules/@spectrum-css/typography/dist/multiStops/COLORSTOP.css` for each colorstop
 
 Then, for each component you need:
 
-* `dist/components/COMPONENT/index.css` for each component
-* `dist/components/COMPONENT/multiStops/COLORSTOP.css` for each colorstop
+* `node_modules/@spectrum-css/COMPONENT/dist/index.css` for each component
+* `node_modules/@spectrum-css/COMPONENT/dist/multiStops/COLORSTOP.css` for each colorstop
 
 Set `<body class="spectrum spectrum--light">` to skin the page with light colors, and add `<div class="spectrum--dark">` wherever you need dark styles, or any combination of the above.
 
@@ -118,15 +140,15 @@ The second method of applying colorstops, *singlestops*, makes it so it's only p
 
 2. To get only the CSS for components you need and a single colorstop, include the following to start:
 
-* `dist/components/page/index.css`
-* `dist/components/page/colorStops/COLORSTOP.css` for the single colorstop
-* `dist/components/typography/index.css`
-* `dist/components/typography/colorStops/COLORSTOP.css` for the single colorstop
+* `node_modules/@spectrum-css/page/dist/index.css`
+* `node_modules/@spectrum-css/page/dist/colorStops/COLORSTOP.css` for the single colorstop
+* `node_modules/@spectrum-css/typography/dist/index.css`
+* `node_modules/@spectrum-css/typography/dist/colorStops/COLORSTOP.css` for the single colorstop
 
 Then, for each component you need:
 
-* `dist/components/COMPONENT/index.css` for each component
-* `dist/components/COMPONENT/colorStops/COLORSTOP.css` for the single colorstop
+* `node_modules/@spectrum-css/COMPONENT/dist/index.css` for each component
+* `node_modules/@spectrum-css/COMPONENT/dist/colorStops/COLORSTOP.css` for the single colorstop
 
 As there is CSS for only one color stop present, simply set `<body class="spectrum">`. If mixing with individual components using the *multistop* strategy, you can add `class="spectrum--dark"` on `<body>` or anywhere else, but it only affects components whose colorstops were imported using the individual component multistop strategy.
 
@@ -206,9 +228,14 @@ To take advantage of locale specific change, for instance, placeholders not ital
 
 ## Project Structure
 
-In this project, there are three sets of source files.
-- `src/`: contains the source for element CSS selectors, with related attribute/value pairs.
-- `docs/`: this is the 'default' markup (in [Topdoc](topdoc-link) format) that aligns with the CSS generated by this project. Documentation is generated using the metadata stored here.
+The project is broken down into separate packages for each component inside of the `packages/` folder.
+
+Each package has the following files:
+
+* `index.css` - The scale-specific styles for the component -- basically dimensions, layout, etc (these change between scales)
+* `skin.css` - The theme-specific styles for the component -- basically colors (these change between color stops)
+* `docs.yml` - The markup examples and documentation for the component
+
 
 ## Building
 
@@ -217,64 +244,13 @@ Run the following commands:
 ```
 npm install -g gulp-cli
 npm install
-gulp
+npm run bootstrap
+gulp dev
 ```
 
-Your `dist/` folder should now have a local copy of the Spectrum CSS docs and ready-to-use CSS files.
+Your `dist/` folder should now have a local copy of the Spectrum CSS docs and ready-to-use CSS files, and your browser should be open with the project documentation. Editing any of the packages within the project will update the project documentation and live reload in your browser
 
 **Important:** Ensure you have NodeJS 10.x installed to build the CSS correctly (checkout [#61](https://github.com/adobe/spectrum-css/issues/61) for more information).
-
-## Testing with the Visual Regression Tools
-
-Under the hood, the visual regression tool is powered by a library called [BackstopJS](https://github.com/garris/BackstopJS). The idea is that by running some `gulp` tasks, the BackstopJS library will take a screenshot of every component described in the `docs/` folder using a headless chrome instance. This process is fairly intensive to run locally and has some quirks (eg, hanging chrome processes).
-
-### Local Testing
-
-Typical testing workflow:
-
-1. Build the `dist/` folder with `gulp build`
-2. `gulp test`
-3. Wait for results to finish (approx 7 mins)
-  * If this is the first run test, the results will be all failures since it has no reference pictures to compare against. Use `backstop approve` to make the screen shots taken in this run to become the new reference set.
-  * If you have an existing reference set, you will get a result of which components have changed. You may also choose to again `backstop approve` the new changes to set the new reference set or continue testing.
-4. Navigate to `backstop_data/html_report/index.html` to see the nicely formatted html report.
-
-To note: If you see your tests returning with a 'Tag Not Found' image, then it's usually because of a particular chrome instance that was taking that screen shot was left hanging and timed out. Try these commands and run the test again:
-MacOS and Linux:
-
-```
-pkill -f "(chrome)?(--headless)"
-```
-
-Windows PowerShell:
-
-```
-Get-CimInstance Win32_Process -Filter "Name = 'chrome.exe' AND CommandLine LIKE '%--headless%'" | %{Stop-Process $_.ProcessId}
-```
-
-### Testing Specific Components
-
-Instead of waiting around and testing all of the components, you may supply optional arguments to the `gulp test` command like so:
-
-```
-gulp test --component button
-gulp test --component button --component well
-```
-
-As long as the component name matches one of the folder names within `dist/components`, the `gulp test` command will find it and test it.
-
-### Remote Testing with the Test Server
-
-*Internal-to-Adobe only - for now. Follow progress on [this issue](https://github.com/adobe/spectrum-css/issues/23).*
-
-There's a Jenkins box that's connected to this repo and will build on any branch and commit so long as it has the `Jenkinsfile` in the project root. If all goes well, you should see your commit in the status page for the JenkinsCI: [https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity](https://spectrumci.ci.corp.adobe.com/blue/organizations/jenkins/spectrum-css/activity).
-
-Additonally, the Jenkins server will build the html report but will try to compare the test images against the last commit OR if the last commit's images cannot be found, it will compare against what's currently on `HEAD at master`. The html report lives under the `Artifacts` tab and is labeled `Spectrum CSS Visual Regression Report`.
-
-You may also view all of the screenshots taken so far by Jenkins in this repo: [https://git.corp.adobe.com/Spectrum/spectrum-css-visual-reports](https://git.corp.adobe.com/Spectrum/spectrum-css-visual-reports).
-
-To note: the JenkinsCI server will almost always have a green check mark in the commit message but should be taken with a grain a salt. The green check mark in this case means the project built succesfully BUT it does not mean the components aren't all mangled up or whatever. It is up to the developer who is committing to ensure that their commits are good and are using this tool to see how much visual change their commits are actually doing.
-
 
 ## Contributing
 
@@ -282,77 +258,4 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
 
-### Updating internal dependencies
-
-*Internal-to-Adobe only - for now*
-
-Locally clone the `spectrum-css-deps` repo. This repo contains internal, non open source dependencies needed by Spectrum CSS. Keep `spectrum-css-deps` as a sibling repo to `spectrum-css`. In `spectrum-css-deps`, run `npm run build` to generate the dependencies and `npm run copy` to copy the generated dependencies into `spectrum-css`. Then go ahead and review and commit any changes.
-
 ## Releasing
-
-We are currently releasing this package on `npm`. We are also releasing an internal version of this package for Adobe on an internal instance of Artifactory. 
-
-Before we get started, clean up your dependencies with the following command.
-
-```
-git checkout master
-rm -rf node_modules && npm install
-```
-
-Now prepare the package for release by bumping the version (minor version bump by default), committing the changes, tagging the repo, and pushing the changes and tags up to GitHub. Run the following script which does all of this for you. 
-
-```
-npm run bump (patch/minor/major)
-```
-
-This command takes an optional argument of the type of version increase you want. You can pass either patch, minor or major. If you don't supply an argument, the command will do a minor version bump by default. You could also pass a version you want the package to be. Ex: `npm run bump 5.0.0`.
-
-Now that we have prepared the repo for publishing, let's publish the package to `npm`! Run the following command. 
-
-```
-npm publish
-```
-
-Now let's prepare to release to artifactory. For legacy reasons, we need to update the scope from `@adobe` to `@spectrum` and add the internal only `@spectrum/spectrum-icons` dependency. We have a command that does this for you.
-
-```
-npm run prepare-artifactory
-```
-
-Now let's publish the package to artifactory. Run the following command.
-
-```
-npm publish --registry=https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release-local
-```
-
-Now that the package is published, let's revert the changes we did for artifactory by running the following command.
-
-```
-git checkout package.json package-lock.json
-```
-
-Now let's deploy the docs. We need to build the repo, make a copy of `dist` named after the release, checkout the `gh-pages` branch, add the new version of the docs and update references in the redirect files and commit. Run the following commands.
-
-```
-npm run build
-cp -r dist 2.7.2 (replace this with the version you are releasing)
-git checkout gh-pages
-git add 2.7.2 (replace this with the version you are releasing)
-```
-Manually update the old versions in `index.html` and `icons/index.html`. 
-
-Now do a quick sanity check of the docs by testing the docs site. Run the site in your browser with the `npm run start` command.
-
-If everything looks good, commit and push the docs.
-
-```
-git commit -am "Deploy version 2.7.0"
-git push https://github.com/adobe/spectrum-css.git gh-pages
-git checkout master
-```
-
-You are all done now! Clean up your working directory. 
-
-```
-rm -rf node_modules && npm install
-```
