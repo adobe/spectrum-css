@@ -2,11 +2,6 @@
   "name": "@spectrum-css/toplevel-builder",
   "version": "1.0.0-alpha.0",
   "description": "The Spectrum CSS top-level builder",
-  "scripts": {
-    "build": "gulp build",
-    "prepack": "gulp prePack",
-    "postpublish": "gulp postPublish"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git"
