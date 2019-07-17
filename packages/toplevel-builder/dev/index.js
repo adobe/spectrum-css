@@ -145,7 +145,7 @@ function watchSite() {
 function watch() {
   serve();
 
-  watchWithinPackages(`${dirs.packages}/*/{index,skin}.css`, 'buildVars', '*.css');
+  watchWithinPackages(`${dirs.packages}/*/{index,skin}.css`, 'buildLite', '*.css');
 
   watchWithinPackages(
     [
