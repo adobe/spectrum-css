@@ -20,11 +20,10 @@ const yaml = require('js-yaml');
 const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
-const depSolver = require('dependency-solver');
 const logger = require('gulplog');
 
-let cwd = process.cwd();
-let builderDir = path.resolve(__dirname, '..');
+const dirs = require('../lib/dirs');
+const depUtils = require('../lib/depUtils');
 
 let minimumDeps = [
   'label',
@@ -37,65 +36,16 @@ let minimumDeps = [
 
 let templateData = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync(path.join('package.json'), 'utf8'))
+  pkg: JSON.parse(fs.readFileSync(path.join(`${dirs.cwd}/package.json`), 'utf8'))
 };
 
-function buildDocs_getDependencyOrder(dep) {
-  return new Promise((resolve, reject) => {
-    let dirName = `node_modules/@spectrum-css/${dep}`;
-    let pkg = JSON.parse(fs.readFileSync(`${dirName}/package.json`, 'utf8'));
-
-    if (!pkg.dependencies) {
-      return resolve([]);
-    }
-
-    let flatPackageDeps = Object.keys(pkg.dependencies).concat(Object.keys(pkg.devDependencies))
-      .filter((dep) => dep.indexOf('@spectrum-css') === 0)
-      .filter((dep) => dep !== '@spectrum-css/build');
-
-    let dependencyOrder = [];
-    let dependencies = {};
-
-    gulp.src(
-      flatPackageDeps.map((subDep) => `${cwd}/node_modules/${subDep}/package.json`)
-    )
-    .pipe(through.obj(function readPackage(file, enc, cb) {
-      let pkg;
-      try {
-        pkg = JSON.parse(String(file.contents));
-      } catch (e) {
-        return cb(e);
-      }
-
-      if (pkg.dependencies) {
-        dependencies[pkg.name] = Object.keys(pkg.dependencies).filter(function(dep) {
-          return dep.indexOf('@spectrum-css') === 0;
-        });
-      }
-
-      cb(null, file);
-    }))
-    .on('finish', function() {
-      dependencyOrder = depSolver.solve(dependencies);
-      dependencyOrder = dependencyOrder.filter(function(dep) {
-        return dep !== '@spectrum-css/vars';
-      });
-
-      logger.debug(`Dependency order: \n${dependencyOrder.join('\n')}`);
-
-      resolve(dependencyOrder);
-    })
-    .on('error', function(err) {
-      reject(err);
-    });
-  });
-}
-
-
 async function buildDocs_html(dep) {
-  var dependencyOrder = await buildDocs_getDependencyOrder(dep);
+  // Drop package org
+  dep = dep.split('/').pop();
 
-  let dirName = `node_modules/@spectrum-css/${dep}`;
+  let dependencyOrder = await depUtils.getPackageDependencyOrder(path.join(dirs.packages, dep));
+
+  let dirName = `${dirs.packages}/${dep}`;
 
   return new Promise((resolve, reject) => {
     gulp.src(
@@ -119,13 +69,13 @@ async function buildDocs_html(dep) {
 
         return Object.assign({}, {
           util: require('./util'),
-          dnaVars: JSON.parse(fs.readFileSync(path.join('node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
+          dnaVars: JSON.parse(fs.readFileSync(path.join(dirs.packages, 'vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
           markdown: require('markdown').markdown,
           Prisim: require('prismjs')
         }, templateData, {
           pageURL: path.basename(file.basename, '.yml') + '.html',
           dependencyOrder: docsDeps,
-          pkg: JSON.parse(fs.readFileSync(path.join('node_modules', `@spectrum-css/${dep}`, 'package.json'), 'utf8'))
+          pkg: JSON.parse(fs.readFileSync(path.join(dirs.packages, dep, 'package.json'), 'utf8'))
         });
       }))
       .pipe(through.obj(function compilePug(file, enc, cb) {
@@ -150,30 +100,18 @@ async function buildDocs_html(dep) {
 }
 
 // Combined
-function buildDocs_individualPackages() {
-  let pkg = JSON.parse(fs.readFileSync(`${cwd}/package.json`, 'utf8'));
+async function buildDocs_individualPackages() {
+  let dependencies = await depUtils.getFolderDependencyOrder(dirs.packages);
 
-  let unsortedDependencies = Object.keys(pkg.devDependencies)
-    .filter(function(dep) {
-      return (
-        dep.indexOf('@spectrum-css') === 0 &&
-        dep !== '@spectrum-css/toplevel-builder' &&
-        dep !== '@spectrum-css/vars'
-      );
-    })
-    .map(function(dep) {
-      return dep.split('/').pop();
-    });
-
-  return Promise.all(unsortedDependencies.map(buildDocs_html));
+  return Promise.all(dependencies.map(buildDocs_html));
 }
 
 function buildSite_getData(done) {
   let nav = [];
 
   return gulp.src([
-    'node_modules/@spectrum-css/*/docs.yml',
-    'node_modules/@spectrum-css/*/docs/*.yml'
+    `${dirs.packages}/*/docs.yml`,
+    `${dirs.packages}/*/docs/*.yml`
   ])
   .pipe(through.obj(function compilePug(file, enc, cb) {
     let componentData;
@@ -207,12 +145,12 @@ function buildSite_getData(done) {
 };
 
 function buildSite_copyResources() {
-  return gulp.src(`${builderDir}/site/resources/**`)
+  return gulp.src(`${dirs.builder}/site/resources/**`)
     .pipe(gulp.dest('dist/docs/'));
 };
 
 function buildSite_html() {
-  return gulp.src(`${builderDir}/site/*.pug`)
+  return gulp.src(`${dirs.builder}/site/*.pug`)
     .pipe(data(function(file) {
       return {
         pageURL: path.basename(file.basename, '.pug') + '.html',
@@ -243,23 +181,17 @@ function buildDocs_prism() {
     .pipe(gulp.dest('dist/docs/css/prisim/'));
 }
 
-let buildSite_pages = exports.buildSite_pages = gulp.series(
+let buildSite_pages = gulp.series(
   buildSite_getData,
   buildSite_html
 );
-
-exports.buildSite_copyResources = buildSite_copyResources;
 
 exports.buildSite = gulp.parallel(
   buildSite_copyResources,
   buildSite_pages
 );
 
-exports.buildSite_html = buildSite_html;
-
-exports.buildDocs_individualPackages = buildDocs_individualPackages;
-
-let buildDocs = exports.buildDocs = gulp.series(
+let buildDocs = gulp.series(
   buildSite_getData,
   gulp.parallel(
     buildDocs_individualPackages,
@@ -269,7 +201,7 @@ let buildDocs = exports.buildDocs = gulp.series(
   )
 );
 
-exports.build = gulp.series(
+let build = gulp.series(
   buildSite_getData,
   gulp.parallel(
     buildDocs,
@@ -277,3 +209,9 @@ exports.build = gulp.series(
     buildSite_html
   )
 );
+
+exports.buildSite_copyResources = buildSite_copyResources;
+exports.buildSite_pages = buildSite_pages;
+exports.buildSite_html = buildSite_html;
+exports.buildDocs = buildDocs;
+exports.build = build;

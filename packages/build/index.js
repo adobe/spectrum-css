@@ -40,6 +40,7 @@ exports.build = build;
 exports.clean = clean;
 
 exports.buildCSS = css.buildCSS;
+exports.buildVars = css.buildVars;
 
 exports.buildDocs = docs.buildDocs;
 exports.buildDocs_html = docs.buildDocs_html;

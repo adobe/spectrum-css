@@ -30,6 +30,8 @@ function buildVars() {
     .pipe(gulp.dest('dist/'));
 }
 
+exports.buildVars = gulp.series(buildVars);
+
 exports.buildCSS = gulp.parallel(
   buildVars,
   legacyBuild.buildDiff,
