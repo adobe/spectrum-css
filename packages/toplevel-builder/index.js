@@ -24,10 +24,16 @@ const subrunner = require('./subrunner');
 const release = require('./release');
 
 function clean() {
-  return del([
-    'dist/*',
-    `${dirs.packages}/*/dist/*`
-  ]);
+  let globs = [
+    'dist/*'
+  ];
+
+  // Don't delete the dist folder inside of installed packages
+  if (dirs.cwd === dirs.topLevel) {
+    globs.push(`${dirs.packages}/*/dist/*`);
+  }
+
+  return del(globs);
 };
 
 // Combined
@@ -138,18 +144,34 @@ let build = gulp.series(
   buildIfTopLevel()
 );
 
-let devTask = gulp.series(
-  clean,
-  function buildPackagesLite() {
-    return subrunner.runTaskOnAllPackages('buildLite');
-  },
-  gulp.parallel(
-    docs.build,
-    copyIcons,
-    copyPackages
-  ),
-  dev.watch
-);
+let devTask;
+if (dirs.cwd === dirs.topLevel) {
+  // Build all packages if at the top level
+  devTask = gulp.series(
+    clean,
+    function buildPackagesLite() {
+      return subrunner.runTaskOnAllPackages('buildLite');
+    },
+    gulp.parallel(
+      docs.build,
+      copyIcons,
+      copyPackages
+    ),
+    dev.watch
+  );
+}
+else {
+  // Otherwise, just start watching
+  devTask = gulp.series(
+    clean,
+    gulp.parallel(
+      docs.build,
+      copyIcons,
+      copyPackages
+    ),
+    dev.watch
+  );
+}
 
 exports.prePack = gulp.series(
   build,
