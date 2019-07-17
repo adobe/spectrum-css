@@ -24,7 +24,10 @@ const subrunner = require('./subrunner');
 const release = require('./release');
 
 function clean() {
-  return del('dist/*');
+  return del([
+    'dist/*',
+    `${dirs.packages}/*/dist/*`
+  ]);
 };
 
 // Combined
@@ -137,6 +140,9 @@ let build = gulp.series(
 
 let devTask = gulp.series(
   clean,
+  function buildPackagesLite() {
+    return subrunner.runTaskOnAllPackages('buildLite');
+  },
   gulp.parallel(
     docs.build,
     copyIcons,

@@ -55,5 +55,5 @@ let build = gulp.parallel(
   tasks.buildCSS
 );
 
-exports.build = build;
+exports.build = exports.buildLite = build;
 exports.default = build;

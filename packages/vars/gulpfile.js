@@ -57,5 +57,6 @@ let build = gulp.series(
   )
 );
 
+exports.clean = clean;
 exports.default = build;
-exports.build = build;
+exports.build = exports.buildLite = build;

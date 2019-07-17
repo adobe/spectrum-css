@@ -66,9 +66,10 @@ function runPackageTask(package, task, callback) {
 /*
   Build all packages
 */
-async function buildPackages() {
+async function runTaskOnAllPackages(task) {
   return new Promise(async (resolve, reject) => {
     let packages = await depUtils.getFolderDependencyOrder(dirs.packages);
+    let packageCount = packages.length;
 
     function getNextPackage() {
       return packages.shift();
@@ -78,12 +79,12 @@ async function buildPackages() {
       var package = getNextPackage();
 
       if (package) {
-        runPackageTask(package, 'build', function(err) {
+        runPackageTask(package, task, function(err) {
           processPackage();
         });
       }
       else {
-        logger.warn('Build complete!'.bold.green);
+        logger.warn(`${task} ran on ${packageCount} packages!`.bold.green);
         resolve();
       }
     }
@@ -93,5 +94,13 @@ async function buildPackages() {
   });
 }
 
+/*
+  Build all packages
+*/
+function buildPackages() {
+  return runTaskOnAllPackages
+}
+
 exports.buildPackages = buildPackages;
 exports.runPackageTask = runPackageTask;
+exports.runTaskOnAllPackages = runTaskOnAllPackages;

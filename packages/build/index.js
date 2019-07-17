@@ -21,22 +21,22 @@ function clean() {
   return del('dist/*');
 }
 
-function copyPackage() {
-  return gulp.src('package.json')
-    .pipe(gulp.dest('dist/'));
-}
-
 const build = gulp.series(
   clean,
-  copyPackage,
   gulp.parallel(
     css.buildCSS,
     docs.buildDocs
   )
 );
 
+const buildLite = gulp.series(
+  clean,
+  css.buildVars
+);
+
 exports.default = build;
 exports.build = build;
+exports.buildLite = buildLite;
 exports.clean = clean;
 
 exports.buildCSS = css.buildCSS;
