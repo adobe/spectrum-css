@@ -66,29 +66,31 @@ function runPackageTask(package, task, callback) {
 /*
   Build all packages
 */
-async function buildPackages(done) {
-  let packages = await depUtils.getFolderDependencyOrder(dirs.packages);
+async function buildPackages() {
+  return new Promise(async (resolve, reject) => {
+    let packages = await depUtils.getFolderDependencyOrder(dirs.packages);
 
-  function getNextPackage() {
-    return packages.shift();
-  }
-
-  function processPackage() {
-    var package = getNextPackage();
-
-    if (package) {
-      runPackageTask(package, 'build', function(err) {
-        processPackage();
-      });
+    function getNextPackage() {
+      return packages.shift();
     }
-    else {
-      logger.warn('Build complete!'.bold.green);
-      done();
-    }
-  }
 
-  // Kick off a gulp build for each package
-  processPackage();
+    function processPackage() {
+      var package = getNextPackage();
+
+      if (package) {
+        runPackageTask(package, 'build', function(err) {
+          processPackage();
+        });
+      }
+      else {
+        logger.warn('Build complete!'.bold.green);
+        resolve();
+      }
+    }
+
+    // Kick off a gulp build for each package
+    processPackage();
+  });
 }
 
 exports.buildPackages = buildPackages;

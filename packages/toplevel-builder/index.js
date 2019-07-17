@@ -109,48 +109,60 @@ function copyIcons() {
     .pipe(gulp.dest('dist/icons/'));
 };
 
-let build = exports.build = gulp.series(
-  clean,
-  gulp.parallel(
+function buildIfTopLevel() {
+  let builtTasks = gulp.parallel(
     docs.build,
     buildCombined,
     buildStandalone,
     copyIcons,
     copyPackages
-  )
+  );
+
+  if (dirs.cwd === dirs.topLevel) {
+    // Run a build for all packages first
+    return gulp.series(
+      subrunner.buildPackages,
+      builtTasks
+    );
+  }
+
+  // They're already built, just include the output
+  return builtTasks;
+}
+
+let build = gulp.series(
+  clean,
+  buildIfTopLevel()
 );
 
-exports.dev = gulp.series(
+let devTask = gulp.series(
   clean,
   gulp.parallel(
     docs.build,
     copyIcons,
-    copyPackages,
+    copyPackages
   ),
   dev.watch
 );
 
-exports.watch = dev.watch;
-
-/*
-const release = require('./release');
-
 exports.prePack = gulp.series(
   build,
-  releaseBackwardsCompat
+  release.releaseBackwardsCompat
 );
 
-exports.ghPages = ghPages;
+exports.ghPages = release.ghPages;
 exports.postPublish = gulp.series(
-  releaseBackwardsCompatCleanup,
-  ghPages
+  release.releaseBackwardsCompatCleanup,
+  release.ghPages
 );
-*/
-// exports.release = release;
+
+exports.release = release.release;
 
 exports.buildPackages = subrunner.buildPackages;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
+exports.dev = devTask;
 exports.clean = clean;
+exports.build = build;
 exports.watch = dev.watch;
 exports.default = build;

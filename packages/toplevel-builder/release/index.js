@@ -170,6 +170,7 @@ let release = gulp.series(
   releaseBackwardsCompatCleanup
 );
 
+exports.ghPages = ghPages;
 exports.releaseBackwardsCompat = releaseBackwardsCompat;
 exports.releaseBackwardsCompatCleanup = releaseBackwardsCompatCleanup;
 exports.release = release;
