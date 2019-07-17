@@ -17,7 +17,6 @@ const pug = require('gulp-pug');
 const data = require('gulp-data');
 const rename = require('gulp-rename');
 const yaml = require('js-yaml');
-const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 const logger = require('gulplog');
@@ -39,7 +38,7 @@ let templateData = {
   pkg: JSON.parse(fs.readFileSync(path.join(`${dirs.cwd}/package.json`), 'utf8'))
 };
 
-async function buildDocs_html(dep) {
+async function buildDocs_forDep(dep) {
   // Drop package org
   dep = dep.split('/').pop();
 
@@ -87,8 +86,8 @@ async function buildDocs_html(dep) {
             const templatePath = `${__dirname}/template.pug`;
             let compiled = pugCompiler.renderFile(templatePath, templateData);
             file.contents = Buffer.from(compiled);
-          } catch (e) {
-            return cb(e);
+          } catch (err) {
+            return cb(err);
           }
           cb(null, file);
         })
@@ -103,22 +102,21 @@ async function buildDocs_html(dep) {
 async function buildDocs_individualPackages() {
   let dependencies = await depUtils.getFolderDependencyOrder(dirs.packages);
 
-  return Promise.all(dependencies.map(buildDocs_html));
+  return Promise.all(dependencies.map(buildDocs_forDep));
 }
 
-function buildSite_getData(done) {
+function buildSite_getData() {
   let nav = [];
-
   return gulp.src([
     `${dirs.packages}/*/docs.yml`,
     `${dirs.packages}/*/docs/*.yml`
   ])
-  .pipe(through.obj(function compilePug(file, enc, cb) {
+  .pipe(through.obj(function readYML(file, enc, cb) {
     let componentData;
     try {
       componentData = yaml.safeLoad(String(file.contents));
-    } catch (e) {
-      return cb(e);
+    } catch (err) {
+      return cb(err);
     }
 
     var packageName = file.dirname.replace('/docs', '').split('/').pop();
@@ -140,8 +138,7 @@ function buildSite_getData(done) {
     templateData.nav = nav.sort(function(a, b) {
       return a.name <= b.name ? -1 : 1;
     });
-    done();
-  });
+  })
 };
 
 function buildSite_copyResources() {
@@ -210,8 +207,10 @@ let build = gulp.series(
   )
 );
 
+exports.buildSite_getData = buildSite_getData;
 exports.buildSite_copyResources = buildSite_copyResources;
 exports.buildSite_pages = buildSite_pages;
 exports.buildSite_html = buildSite_html;
+exports.buildDocs_forDep = buildDocs_forDep;
 exports.buildDocs = buildDocs;
 exports.build = build;

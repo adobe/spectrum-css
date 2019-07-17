@@ -25,13 +25,18 @@ function serve() {
   });
 }
 
+function getPackageFromPath(filePath) {
+  return filePath.match(`${dirs.packages}\/(.*?)\/`)[1];
+}
+
 /*
   Watch for changes to globs matching files within packages, execute task for that package, and copy/inject specified files
 */
 function watchWithinPackages(glob, task, files) {
   logger.debug(`Watching ${glob}, will run ${task} and stream ${files}`);
 
-  var watcher = gulp.watch(glob, {
+  let watcher = gulp.watch(glob, {
+    // Otherwise we get infinite loops because chokidar gets all crazy with symlinked deps
     followSymlinks: false
   }, function handleChanged(done) {
     if (!changedFile) {
@@ -39,32 +44,37 @@ function watchWithinPackages(glob, task, files) {
       return;
     }
 
-    var package = changedFile.match(`${dirs.packages}\/(.*?)\/`)[1];
+    let package = getPackageFromPath(changedFile);
 
-    subrunner.runPackageTask(package, task, (err) => {
-      if (err) {
-        changedFile = null;
-        return done(err);
-      }
-
-      // Copy files
-      gulp.src(`${dirs.packages}/${package}/dist/${files}`)
-        .pipe(gulp.dest(`dist/components/${package}/`))
-        .on('end', () => {
-          // Inject
-          gulp.src(`dist/components/${package}/${files}`)
-            .pipe(browserSync.stream());
-
+    if (typeof task === 'function') {
+      task(changedFile, package, done);
+    }
+    else {
+      subrunner.runPackageTask(package, task, (err) => {
+        if (err) {
           changedFile = null;
+          return done(err);
+        }
 
-          done();
-        })
-        .on('error', (err) => {
-          changedFile = null;
+        // Copy files
+        gulp.src(`${dirs.packages}/${package}/dist/${files}`)
+          .pipe(gulp.dest(`dist/components/${package}/`))
+          .on('end', () => {
+            // Inject
+            gulp.src(`dist/components/${package}/${files}`)
+              .pipe(browserSync.stream());
 
-          done(err);
-        });
-    });
+            changedFile = null;
+
+            done();
+          })
+          .on('error', (err) => {
+            changedFile = null;
+
+            done(err);
+          });
+      });
+    }
   });
 
   let changedFile = null;
@@ -79,7 +89,9 @@ function watchWithinPackages(glob, task, files) {
 
 function reload(cb) {
   browserSync.reload();
-  cb();
+  if (cb) {
+    cb();
+  }
 }
 
 function watchSite() {
@@ -135,15 +147,26 @@ function watch() {
 
   watchWithinPackages(`${dirs.packages}/*/{index,skin}.css`, 'buildVars', '*.css');
 
-  // Todo: figure out how to build individual docs when things change
-  // watchWithinPackages(
-  //   [
-  //     `${dirs.packages}/*/docs/*.yml`,
-  //     `${dirs.packages}/*/docs.yml`
-  //   ],
-  //   'buildDocs_html',
-  //   '*/*.html'
-  // );
+  watchWithinPackages(
+    [
+      `${dirs.packages}/*/docs/*.yml`,
+      `${dirs.packages}/*/docs.yml`
+    ],
+    (changedFile, package, done) => {
+      // Do this as gulp tasks to avoid premature stream termenation
+      gulp.series(
+        // Get data first so nav builds
+        docs.buildSite_getData,
+        function buildDocs_forDep() {
+          return docs.buildDocs_forDep(package)
+            .finally(() => {
+              done();
+              reload();
+            });
+        }
+      )();
+    }
+  );
 
   watchSite();
 }
