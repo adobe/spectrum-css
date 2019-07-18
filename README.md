@@ -213,15 +213,15 @@ gulp dev
 
 3 separate types of releases must be done:
 
-## Individual package releses
+### Individual package releses
 
 Run `npm run release-all` to release changed individual packages.
 
-## Monolithic latest release
+### Monolithic latest release
 
 Run `npm run release` to release the latest monolithic package. Ensure that you update the major version number in the top level `package.json` if any of the individual packages have had a major version bump.
 
-## Monolithic backwards-compatible release
+### Monolithic backwards-compatible release
 
 Assuming proper version ranges have been employed, and `npm run bootstrap` has been ran, you can simply run the following:
 
