@@ -198,11 +198,11 @@ gulp dev
 
 ## Individual package releses
 
-Run `npx lerna release` to release changed individual packages.
+Run `npm run release-all` to release changed individual packages.
 
 ## Monolithic latest release
 
-Run `npm release` to release the latest monolithic package. Ensure that you update the major version number in the top level `package.json` if any of the individual packages have had a major version bump.
+Run `npm run release` to release the latest monolithic package. Ensure that you update the major version number in the top level `package.json` if any of the individual packages have had a major version bump.
 
 ## Monolithic backwards-compatible release
 
@@ -210,5 +210,5 @@ Assuming proper version ranges have been employed, and `npm run bootstrap` has b
 
 ```
 cd packages/spectrum-css-compat
-gulp release
+npm run release
 ```
