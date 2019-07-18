@@ -3,6 +3,14 @@
 
 This package builds a monolithic 2.x compatible package with the versions of components specific in your project `package.json`.
 
+## Docs
+
+See the [docs generation documentation](docs/README.md) for details on documentation generation.
+
+## Site
+
+See the [site generation documentation](site/README.md) for details on site generation as well as editing and updating the site.
+
 ## Usage
 
 Install the package:

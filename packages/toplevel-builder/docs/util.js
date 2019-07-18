@@ -3,9 +3,9 @@ const logger = require('gulplog');
 const labelColors = {
   'Deprecated': 'red',
 
-  'Beta Precursor': 'orange',
+  'Beta Contribution': 'orange',
 
-  'Precursor': 'yellow',
+  'Contribution': 'yellow',
   'CSS Unverified': 'yellow',
 
   'Canon': 'green',
@@ -14,7 +14,8 @@ const labelColors = {
 
 const dnaStatusTranslation = {
   'Released': 'Canon',
-  'Beta': 'Precursor'
+  'Beta': 'Contribution',
+  'Precursor': 'Contribution'
 };
 
 const cssStatusTranslation = {
@@ -40,7 +41,7 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
 
   if (!dnaStatus) {
     logger.debug(`${dnaComponentId} has no DNA status`);
-    dnaStatus = 'Beta Precursor';
+    dnaStatus = 'Beta Contribution';
   }
 
   return dnaStatusTranslation[dnaStatus] || dnaStatus;

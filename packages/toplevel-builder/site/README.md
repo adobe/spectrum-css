@@ -76,4 +76,4 @@ See the [internationalized typography example page](typography-i18n.html) for Ja
 
 ## Adding and editing resources
 
-You can add and edit site resources to the `resoureces/` folder. These are copied directly into the root of the site and can be included as necessary. Editing existing resources while `gulp dev` is running will inject the new resources.
+You can add and edit site resources to the `resources/` folder. These are copied directly into the root of the site and can be included as necessary. Editing existing resources while `gulp dev` is running will inject the new resources.

@@ -231,7 +231,7 @@ components:
   dialog-scrolling:
     name: Dialog - Scrolling
     ignoreDNA: true
-    dnaStatus: Precursor
+    dnaStatus: Contribution
     status: Unverified
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
     demoClassName: spectrum-CSSExample-example--overlay
