@@ -37,7 +37,7 @@ See the [site documentation](../site/README.md) for details on dependency lazy-l
 
 ## Editing documentation
 
-1. Run `gulp dev` at the top level of the project
+1. Run `gulp dev` at the top level of the project.
 2. Edit the `docs.yml` and `docs/*.yml` files within each component package and the site will live reload with your changes.
 
 ## Adding a one-off example page

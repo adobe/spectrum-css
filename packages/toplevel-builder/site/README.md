@@ -39,12 +39,12 @@ Because the dependencies included in the component example pages are sorted in t
 
 ## Editing content
 
-1. Run `gulp dev` at the top level of the project
+1. Run `gulp dev` at the top level of the project.
 2. Edit the `*.pug` files in this folder as well as `includes/*.pug` and the site will live reload with your changes.
 
 ## Adding a new page
 
-1. Run `gulp dev` at the top level of the project
+1. Run `gulp dev` at the top level of the project.
 2. Create the Pug template file for the page in this folder by copying an existing page:
 
 ```shell
