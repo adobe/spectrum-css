@@ -177,6 +177,23 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
 
+### Editing an existing component
+
+1. Run `gulp dev` in the root of the project to begin developing.
+2. Edit `packages/$COMPONENT/index.css` and `packages/$COMPONENT/skin.css` with dimensions and color properties respectively. The documentation will live reload with your changes.
+3. Edit the markup examples within `packages/$COMPONENT/docs.yml` accordingly. The documentation will live reload with your changes.
+
+**Note:** If you add dependencies, be sure to re-run `npm run bootstrap` so they are linked appropriately.
+
+### Adding a new component
+
+1. Copy the directory for a smiliar component from `packages/` and rename it for your new component.
+2. Edit the `package.json`, resetting the verison number to `1.0.0-alpha.0`.
+3. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `vars`, and most rely on `icons`.
+4. Run `gulp dev` in the root of the project to begin developing.
+5. Edit `index.css` and `skin.css` with dimensions and color properties respectively.
+6. Edit `docs.yml` to add markup examples for each of the variants of your component.
+
 ## Testing
 
 To perform manual testing of the latest version of each component:
