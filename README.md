@@ -135,13 +135,13 @@ Each package has the following files:
 * `docs.yml` - The markup examples and documentation for the component
 * `docs/*.yml` - Additional examples that appear separately in the navigation
 
+See [documentation generation](packages/toplevel-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
+
 ### Documentation site
 
-The source for the documentation website lives within `packages/toplevel-builder/site/*`. Separate templates with shared includes are used for each page on the website, and the documentation pages for each component are build with `packages/toplevel-builder/docs/template.pug`.
+Building the project will build and launch the project documentation site in your browser automatically.
 
-The files located in `packages/toplevel-builder/site/resources` will be copied directly into the root of the site.
-
-When running `gulp dev`, you can edit any of the templates or resources and the documentation site will live reload.
+See [site generation](packages/toplevel-builder/site/README.md) and [documentation generation](packages/toplevel-builder/docs/README.md) documentation for more information.
 
 ## Building
 
