@@ -3,8 +3,8 @@ function Search(el) {
   this.el = el;
 
   this.el.innerHTML = `
-<form class="spectrum-Search js-form">
-  <input type="search" placeholder="Search" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input">
+<form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
+  <input type="search" placeholder="Search" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="listbox" aria-owns="search-results-listbox" aria-label="Search">
   <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
     <use xlink:href="#spectrum-css-icon-Magnifier" />
   </svg>
@@ -30,9 +30,11 @@ function Search(el) {
 
   this.popover.addEventListener('keyup', this.handlePopoverNavigation.bind(this));
   this.popover.addEventListener('click', this.hideResults.bind(this));
+
   this.el.addEventListener('focusout', function(e) {
     if (!this.el.contains(e.relatedTarget)) {
-      this.hideResults();
+      // Don't do this right away or Safari gets all pissy
+      setTimeout(this.hideResults.bind(this), 100);
     }
   }.bind(this));
 
@@ -108,10 +110,12 @@ Search.prototype.showHideClear = function(event) {
 };
 
 Search.prototype.hideResults = function(event) {
+  this.form.setAttribute('aria-expanded', 'false');
   this.popover.classList.remove('is-open');
 };
 
 Search.prototype.showResults = function(event) {
+  this.form.setAttribute('aria-expanded', 'true');
   var inputRect = this.input.getBoundingClientRect();
   this.popover.style.top = `${inputRect.bottom + 10}px`;
   this.popover.style.left = `${inputRect.left}px`;
@@ -130,11 +134,15 @@ Search.prototype.handlePopoverNavigation = function(e) {
     else if (e.key === 'ArrowUp') {
       newItemIndex = currentItemIndex - 1 >= 0 ? currentItemIndex - 1 : items.length - 1;
     }
-    else if (e.key === 'home') {
+    else if (e.key === 'Home') {
       newItemIndex = 0;
     }
-    else if (e.key === 'end') {
+    else if (e.key === 'End') {
       newItemIndex = items.length - 1;
+    }
+    else if (e.key === 'Escape') {
+      this.input.focus();
+      this.hideResults();
     }
     if (newItemIndex !== -1) {
       items[newItemIndex].focus();
@@ -211,7 +219,7 @@ Search.prototype.search = function(val) {
       <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
     </div>
     ` : `
-    <ul class="spectrum-Menu" role="listbox">
+    <ul class="spectrum-Menu" id="search-results-listbox" role="listbox" aria-label="Search">
       ${
         Search.Categories.map(function(category) {
           return results[category].length ?
