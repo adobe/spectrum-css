@@ -84,6 +84,7 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-selectlist-option-text-size);
   font-weight: var(--spectrum-selectlist-option-text-font-weight);
   font-style: normal;
+  text-decoration: none;
 
   &:focus {
     outline: none;
