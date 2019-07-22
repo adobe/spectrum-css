@@ -25,7 +25,7 @@ function handleExec(cb) {
 function task(taskName, command) {
   // return a function
   var func = function(cb) {
-    exec(command, cb);
+    runCommand(command, cb);
   };
 
   Object.defineProperty(func, 'name', { value: taskName, writable: false });
@@ -33,7 +33,7 @@ function task(taskName, command) {
   return func;
 }
 
-function command(command, cb) {
+function runCommand(command, cb) {
   // Execute immediately
   let commandProcess = cp.exec(command, handleExec(cb));
   commandProcess.stdout.pipe(process.stdout);
@@ -41,5 +41,5 @@ function command(command, cb) {
   return commandProcess;
 }
 
-exports.command = command;
+exports.command = runCommand;
 exports.task = task;
