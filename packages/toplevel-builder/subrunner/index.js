@@ -98,7 +98,7 @@ async function runTaskOnAllPackages(task) {
   Build all packages
 */
 function buildPackages() {
-  return runTaskOnAllPackages
+  return runTaskOnAllPackages('build');
 }
 
 exports.buildPackages = buildPackages;
