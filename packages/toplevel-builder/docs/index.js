@@ -20,17 +20,25 @@ const yaml = require('js-yaml');
 const through = require('through2');
 const ext = require('replace-ext');
 const logger = require('gulplog');
+const lunr = require('lunr');
 
 const dirs = require('../lib/dirs');
 const depUtils = require('../lib/depUtils');
 
 let minimumDeps = [
+  'icons',
   'label',
   'link',
   'page',
-  'tooltip',
   'typography',
-  'sidenav'
+  'tooltip',
+  'sidenav',
+  'button',
+  'textfield',
+  'search',
+  'menu',
+  'popover',
+  'illustratedmessage'
 ];
 
 let templateData = {
@@ -105,6 +113,79 @@ async function buildDocs_individualPackages() {
   return Promise.all(dependencies.map(buildDocs_forDep));
 }
 
+function buildSite_generateIndex() {
+  return gulp.src([
+    `${dirs.packages}/*/docs.yml`,
+    `${dirs.packages}/*/docs/*.yml`
+  ])
+  .pipe(function() {
+    let docs = [];
+    let store = {};
+    let latestFile = null;
+    function readYML(file, enc, cb) {
+      let componentData;
+      try {
+        componentData = yaml.safeLoad(String(file.contents));
+      } catch (err) {
+        return cb(err);
+      }
+
+      var packageName = file.dirname.replace('/docs', '').split('/').pop();
+
+      if (path.basename(file.basename) === 'docs.yml') {
+        file.basename = packageName;
+      }
+
+      var fileName = ext(file.basename, '.html');
+
+      docs.push({
+        href: fileName,
+        name: componentData.name,
+        description: componentData.description
+      });
+
+      store[fileName] = {
+        href: fileName,
+        name: componentData.name,
+        package: packageName,
+        description: componentData.description
+      };
+
+      latestFile = file;
+
+      cb();
+    }
+
+    function endStream(cb) {
+      let indexFile = latestFile.clone({contents: false});
+      indexFile.path = path.join(latestFile.base, 'index.json');
+
+      let index = lunr(function() {
+        this.ref('href');
+        this.field('name', { boost: 2 });
+        this.field('description');
+
+        docs.forEach(function(doc) {
+          this.add(doc);
+        }, this);
+      });
+
+      indexFile.contents = Buffer.from(JSON.stringify(index));
+      this.push(indexFile);
+
+      let storeFile = latestFile.clone({contents: false});
+      storeFile.path = path.join(latestFile.base, 'store.json');
+      storeFile.contents = Buffer.from(JSON.stringify(store));
+      this.push(storeFile);
+
+      cb();
+    }
+
+    return through.obj(readYML, endStream);
+  }())
+  .pipe(gulp.dest('dist/docs/'));
+};
+
 function buildSite_getData() {
   let nav = [];
   return gulp.src([
@@ -129,7 +210,8 @@ function buildSite_getData() {
     nav.push({
       name: componentData.name,
       component: packageName,
-      href: fileName
+      href: fileName,
+      description: componentData.description
     });
 
     cb(null, file);
@@ -144,7 +226,7 @@ function buildSite_getData() {
 function buildSite_copyResources() {
   return gulp.src(`${dirs.builder}/site/resources/**`)
     .pipe(gulp.dest('dist/docs/'));
-};
+}
 
 function buildSite_html() {
   return gulp.src(`${dirs.builder}/site/*.pug`)
@@ -158,7 +240,7 @@ function buildSite_html() {
       locals: templateData
     }))
     .pipe(gulp.dest('dist/docs/'));
-};
+}
 
 function buildDocs_loadicons() {
   return gulp.src(require.resolve('loadicons'))
@@ -168,6 +250,11 @@ function buildDocs_loadicons() {
 function buildDocs_focusPolyfill() {
   return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
     .pipe(gulp.dest('dist/docs/js/focus-ring-polyfill/'));
+}
+
+function buildDocs_lunr() {
+  return gulp.src(require.resolve('lunr'))
+    .pipe(gulp.dest('dist/docs/js/lunr/'));
 }
 
 function buildDocs_prism() {
@@ -191,9 +278,11 @@ exports.buildSite = gulp.parallel(
 let buildDocs = gulp.series(
   buildSite_getData,
   gulp.parallel(
+    buildSite_generateIndex,
     buildDocs_individualPackages,
     buildDocs_loadicons,
     buildDocs_focusPolyfill,
+    buildDocs_lunr,
     buildDocs_prism
   )
 );

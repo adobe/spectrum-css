@@ -119,6 +119,10 @@ window.addEventListener('DOMContentLoaded', function() {
     if (target && target.classList.contains('js-fastLoad')) {
       navigate(target.getAttribute('href'));
       event.preventDefault();
+      event.stopPropagation();
     }
   });
+
+  // Search
+  window.search = new Search(document.querySelector('#site-search'))
 });

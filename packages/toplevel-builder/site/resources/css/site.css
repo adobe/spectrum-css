@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .spectrum-Site {
   height: 100%;
   display: flex;
@@ -38,6 +42,30 @@ body {
   padding: var(--spectrum-global-dimension-size-400);
 
   text-decoration: none;
+}
+
+.spectrum-Site-header:focus {
+  outline: none;
+}
+
+.spectrum-Site-header:focus h2 {
+  text-decoration: underline;
+}
+
+.spectrum-Site-search {
+  padding: 0 var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
+}
+
+.spectrum-Site-searchResults {
+  max-height: calc(90vh - 120px);
+  z-index: 10;
+  position: absolute;
+
+  overflow-y: auto;
+}
+
+.spectrum-Site-noSearchResults {
+  padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
 }
 
 .spectrum-Site-logo {
