@@ -58,8 +58,8 @@ html
           each example in examples
             article.spectrum-CSSExample
               if example != component
-                header.row(id=example.slug)
-                  a(href=`#${util.getSlug(component.name, example.name)}`).spectrum-CSSExample-link
+                header.row(id=util.getSlug(example.name))
+                  a(href=`#${util.getSlug(example.name)}`).spectrum-CSSExample-link
                     h4.spectrum-Heading--subtitle3 #{example.name}
                   if example.cssStatus != 'n/a'
                     .u-tooltip-showOnHover
