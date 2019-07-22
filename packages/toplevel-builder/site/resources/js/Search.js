@@ -28,7 +28,7 @@ function Search(el) {
   this.el.addEventListener('reset', this.showHideClear.bind(this));
   this.input.addEventListener('keyup', this.handleKey.bind(this));
 
-  this.popover.addEventListener('keyup', this.handlePopoverNavigation.bind(this));
+  this.popover.addEventListener('keydown', this.handlePopoverNavigation.bind(this));
   this.popover.addEventListener('click', this.hideResults.bind(this));
 
   this.el.addEventListener('focusout', function(e) {
@@ -146,6 +146,9 @@ Search.prototype.handlePopoverNavigation = function(e) {
     }
     if (newItemIndex !== -1) {
       items[newItemIndex].focus();
+
+      // Don't scroll the list
+      e.preventDefault();
     }
   }
 };
