@@ -2,6 +2,7 @@ const fs = require('fs');
 const inq = require('inquirer');
 const semver = require('semver');
 const gulp = require('gulp');
+const del = require('del');
 
 const exec = require('../lib/exec');
 const dirs = require('../lib/dirs');
