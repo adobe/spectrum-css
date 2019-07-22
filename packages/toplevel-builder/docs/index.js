@@ -162,7 +162,7 @@ function buildSite_generateIndex() {
 
       let index = lunr(function() {
         this.ref('href');
-        this.field('name', { boost: 2 });
+        this.field('name', { boost: 10 });
         this.field('description');
 
         docs.forEach(function(doc) {
