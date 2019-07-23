@@ -31,6 +31,10 @@ function Search(el) {
   this.popover.addEventListener('keydown', this.handlePopoverNavigation.bind(this));
   this.popover.addEventListener('click', this.hideResults.bind(this));
 
+  this.popover.addEventListener('focusin', this.handleListInteraction.bind(this));
+  this.popover.addEventListener('mouseenter', this.handleListInteraction.bind(this));
+  this.popover.addEventListener('keydown', this.handleListInteraction.bind(this));
+
   this.el.addEventListener('focusout', function(e) {
     if (!this.el.contains(e.relatedTarget)) {
       // Don't do this right away or Safari gets all pissy
@@ -120,6 +124,19 @@ Search.prototype.showResults = function(event) {
   this.popover.style.top = `${inputRect.bottom + 10}px`;
   this.popover.style.left = `${inputRect.left}px`;
   this.popover.classList.add('is-open');
+
+  let firstItem = this.popover.querySelector('.spectrum-Menu-item');
+  if (firstItem) {
+    // Provide some visual indication that we will navigate here on enter
+    firstItem.classList.add('is-highlighted');
+  }
+};
+
+Search.prototype.handleListInteraction = function(e) {
+  let firstItem = this.popover.querySelector('.spectrum-Menu-item');
+  if (firstItem) {
+    firstItem.classList.remove('is-highlighted');
+  }
 };
 
 Search.prototype.handlePopoverNavigation = function(e) {
@@ -157,6 +174,7 @@ Search.prototype.handleKey = function(e) {
   if (e.key === 'ArrowDown') {
     let firstItem = this.popover.querySelector('.spectrum-Menu-item');
     if (firstItem) {
+      this.showResults();
       firstItem.focus();
     }
   }
@@ -166,6 +184,9 @@ Search.prototype.handleKey = function(e) {
       firstItem.click();
       this.hideResults();
     }
+  }
+  else if (e.key === 'Escape') {
+    this.hideResults();
   }
   else {
     this.showHideClear();
@@ -187,11 +208,11 @@ Search.prototype.search = function(val) {
 
   let components = [];
 
-  let results = [];
+  let r = [];
   if (val.length > 2) {
     let searchParam = val.trim().split(' ').map((term) => `+${term}*`).join(' ');
     try {
-      results = this.index.search(searchParam);
+      r = this.index.search(searchParam);
     }
     catch (err) {
       this.popover.innerHTML = `
@@ -205,49 +226,47 @@ Search.prototype.search = function(val) {
     }
   }
 
-  results = {
-    length: results.length,
-    components: results.map(function(result) {
+  let results = {
+    length: r.length,
+    components: r.map(function(result) {
       return this.store[result.ref];
     }, this)
   };
 
   let markup = `
-<div>
-  ${
-    results.length === 0 ?
-    `
-    <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
-      <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">No results found</h2>
-      <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
-    </div>
-    ` : `
-    <ul class="spectrum-Menu" id="search-results-listbox" role="listbox" aria-label="Search">
-      ${
-        Search.Categories.map(function(category) {
-          return results[category].length ?
-            `
-            <li role="group" aria-labelledby="searchResults-${category}">
-              <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${Search.CategoryNames[category]}</span>
-              <ul class="spectrum-Menu" role="presentation">
-                ${
-                  results[category].map(function(result, i) {
-                    return `
-                    <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
-                      <span class="spectrum-Menu-itemLabel">${result.name}</span>
-                    </a>
-                    `
-                  }).join('\n')
-                }
-              </ul>
-            </li>
-            ` : ''
-        }).join('\n')
-      }
-    </ul>
-    `
-  }
-</div>
+${
+  results.length === 0 ?
+  `
+  <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
+    <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">No results found</h2>
+    <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
+  </div>
+  ` : `
+  <ul class="spectrum-Menu" id="search-results-listbox" role="listbox" aria-label="Search">
+    ${
+      Search.Categories.map(function(category) {
+        return results[category].length ?
+          `
+          <li role="group" aria-labelledby="searchResults-${category}">
+            <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${Search.CategoryNames[category]}</span>
+            <ul class="spectrum-Menu" role="presentation">
+              ${
+                results[category].map(function(result, i) {
+                  return `
+                  <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
+                    <span class="spectrum-Menu-itemLabel">${result.name}</span>
+                  </a>
+                  `
+                }).join('\n')
+              }
+            </ul>
+          </li>
+          ` : ''
+      }).join('\n')
+    }
+  </ul>
+  `
+}
 `;
 
   this.popover.innerHTML = markup;

@@ -170,6 +170,8 @@ function buildSite_generateIndex() {
         }, this);
       });
 
+      // Note: could merge main index here using technique from https://www.garysieling.com/blog/building-a-full-text-index-in-javascript
+
       indexFile.contents = Buffer.from(JSON.stringify(index));
       this.push(indexFile);
 
