@@ -49,6 +49,8 @@ window.addEventListener('DOMContentLoaded', function() {
         oldMainContainer.parentNode.insertBefore(newMainContainer, oldMainContainer);
         oldMainContainer.parentNode.removeChild(oldMainContainer);
 
+        currentHREF = href;
+
         console.log('  ✅ ' + href + ' loaded');
       }
 
@@ -105,12 +107,20 @@ window.addEventListener('DOMContentLoaded', function() {
     loadPage(href);
   }
 
+
+  function getHREF() {
+    return window.location.pathname.split('/').pop();
+  }
+
+  let currentHREF = getHREF();
   window.addEventListener('popstate', function(event) {
-    var href = window.location.pathname.split('/').pop();
+    var href = getHREF();
 
-    selectNavItem(href);
+    if (href !== currentHREF) {
+      selectNavItem(href);
 
-    loadPage(href);
+      loadPage(href);
+    }
   });
 
   document.addEventListener('click', function(event) {
