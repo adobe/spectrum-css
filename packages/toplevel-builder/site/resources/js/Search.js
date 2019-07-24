@@ -212,7 +212,7 @@ Search.prototype.search = function(val) {
 
   let r = [];
   if (val.length > 2) {
-    let searchParam = val.trim().split(' ').map((term) => `+${term}*`).join(' ');
+    let searchParam = val.trim().split(' ').map((term) => `${term}* ${term}`).join(' ');
     try {
       r = this.index.search(searchParam);
     }
