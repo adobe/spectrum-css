@@ -1,17 +1,36 @@
----
-id: textfield
-name: Text Area
-description: A Spectrum text area - (a multiline text field)
-ignoreDNA: true
-markup: |
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline">
-  </textarea>
+name: Text area
+description: A multi-line text field.
+status: Verified
+examples:
+  textarea:
+    id: textfield
+    name: Text area
+    markup: |
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline">
+      </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
-  </textarea>
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
+      </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline is-valid" required>
-  </textarea>
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline is-valid" required>
+      </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline is-invalid" required>
-  </textarea>
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline is-invalid" required>
+      </textarea>
+
+  textarea-quiet:
+    id: textfield-quiet
+    name: Quiet
+    markup: |
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
+      </textarea>
+
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+      </textarea>
+
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid" required>
+        A valid Text Area
+      </textarea>
+
+      <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid" required>
+      </textarea>

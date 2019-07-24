@@ -19,24 +19,3 @@ markup: |
     <button class="spectrum-Button spectrum-Button--cta">Button</button>
   </div>
   <br><br>
-
-  <div class="spectrum-Dropdown" style="width: 220px;">
-    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-label">Ballard</span>
-      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
-      </svg>
-    </button>
-  </div>
-  <br><br>
-
-  <div class="spectrum--large">
-    <div class="spectrum-Dropdown" style="width: 220px;">
-      <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-        <span class="spectrum-Dropdown-label">Ballard</span>
-        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
-        </svg>
-      </button>
-    </div>
-  </div>

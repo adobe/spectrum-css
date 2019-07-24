@@ -17,22 +17,6 @@ governing permissions and limitations under the License.
 loadIcons('../components/icons/spectrum-css-icons.svg');
 loadIcons('../icons/spectrum-icons.svg');
 
-function openDialog(dialog, withOverlay) {
-  if (withOverlay !== false) {
-    document.getElementById('spectrum-underlay').classList.add('is-open');
-  }
-
-  dialog.classList.add('is-open');
-}
-
-function closeDialog(dialog) {
-  document.getElementById('spectrum-underlay').classList.remove('is-open');
-  dialog.classList.remove('is-open');
-  setTimeout(function() {
-    dialog.classList.remove('spectrum-CSSExample-dialog');
-  }, 10);
-}
-
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
   event.preventDefault();

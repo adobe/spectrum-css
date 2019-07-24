@@ -99,7 +99,7 @@ exports.populateDNAInfo = function(component, dnaVars) {
         component.examples[id] = example;
       }
       else {
-        example.id = id;
+        example.id = example.id || id;
       }
 
       // All examples are verified if the outer component is verified

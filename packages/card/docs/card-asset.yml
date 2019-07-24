@@ -1,6 +1,5 @@
 name: Card - Asset preview
-description: Standard cards will full-sized asset previews are not supported, don't do this.
-status: Unsupported
+description: A standard cards with a full-sized asset preview.
 markup: |
   <div style="width: 208px;">
     <div class="spectrum-Card" tabindex="0" role="figure">

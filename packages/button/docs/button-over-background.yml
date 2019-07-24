@@ -1,14 +1,27 @@
----
 name: Button - Over Background
-description: A Spectrum button that's meant to be placed over a non-standard color. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.
-status: Verified
-markup: |
-  <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
-    <button class="spectrum-Button spectrum-Button--overBackground">
-      <span class="spectrum-Button-label">Button</span>
-    </button>
+description: When a button needs to be placed on top of a colored background or a visual, use the over background button. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.
+examples:
+  button-overbackground:
+    name: Over background
+    markup: |
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
+        <button class="spectrum-Button spectrum-Button--overBackground">
+          <span class="spectrum-Button-label">Button</span>
+        </button>
 
-    <button class="spectrum-Button spectrum-Button--overBackground" disabled>
-      <span class="spectrum-Button-label">Button</span>
-    </button>
-  </div>
+        <button class="spectrum-Button spectrum-Button--overBackground" disabled>
+          <span class="spectrum-Button-label">Button</span>
+        </button>
+      </div>
+  button-quiet-overbackground:
+    name: Over Background (quiet)
+    markup: |
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
+        <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <span class="spectrum-Button-label">Button</span>
+        </button>
+
+        <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet" disabled>
+          <span class="spectrum-Button-label">Button</span>
+        </button>
+      </div>

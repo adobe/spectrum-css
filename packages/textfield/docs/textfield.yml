@@ -1,16 +1,34 @@
----
 name: Text Field
 description: A Spectrum text field
 status: Verified
-markup: |
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
+examples:
+  textfield:
+    name: Standard
+    markup: |
+      <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
 
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
+      <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
 
-  <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield is-valid" pattern="[\w\s]+" required>
+      <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield is-valid" pattern="[\w\s]+" required>
 
-  <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield is-valid" pattern="[\w\s]+" required disabled>
+      <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield is-valid" pattern="[\w\s]+" required disabled>
 
-  <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield" pattern="[\d]+" required>
+      <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield" pattern="[\d]+" required>
 
-  <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield is-invalid" disabled>
+      <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield is-invalid" disabled>
+
+  textfield-quiet:
+    name: Text Field - Quiet
+    description: A Spectrum text field - quiet
+    markup: |
+      <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
+
+      <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
+
+      <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield spectrum-Textfield--quiet is-valid" pattern="[\w\s]+" required>
+
+      <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield spectrum-Textfield--quiet is-valid" pattern="[\w\s]+" required disabled>
+
+      <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield spectrum-Textfield--quiet" pattern="[\d]+" required>
+
+      <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield spectrum-Textfield--quiet is-invalid" disabled>
