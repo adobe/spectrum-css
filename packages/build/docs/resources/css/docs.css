@@ -28,8 +28,6 @@ html {
 
   border-radius: 6px;
   border: 1px solid rgb(200, 200, 200);
-
-  box-shadow: 0 0 18px rgba(0,0,0,.15);
 }
 
 .spectrum-CSSComponent-heading {
@@ -107,11 +105,6 @@ html {
 
 .spectrum-CSSExample-markupToggle + pre {
   padding-bottom: 1rem;
-}
-
-.spectrum--dark .spectrum-CSSExample-example,
-.spectrum--darkest .spectrum-CSSExample-example {
-  box-shadow: 0 0 18px rgba(240, 240, 240, .20);
 }
 
 .spectrum--dark .spectrum-CSSExample-example,

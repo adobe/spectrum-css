@@ -2,6 +2,9 @@
   // Backwards compatibility with old components array
   component.examples = component.examples || component.components;
 
+  // Get DNA data
+  util.populateDNAInfo(component, dnaVars);
+
   // Arrange examples for processing
   var examples;
   if (!component.examples) {
@@ -11,25 +14,6 @@
   else {
     // Multiple child examples
     examples = component.examples;
-  }
-
-  // Get DNA data
-  util.populateDNAInfo(component, dnaVars);
-
-  if (component.examples) {
-    for (id in component.examples) {
-      let example = component.examples[id];
-      if (typeof example === 'string') {
-        // Handle markup only examples
-        example = {
-          id: id,
-          markup: example
-        };
-        component.examples[id] = example;
-      }
-      example.id = id;
-      util.populateDNAInfo(example, dnaVars);
-    }
   }
 
 doctype html
@@ -53,34 +37,48 @@ html(lang='en-US')
 
           article.spectrum-CSSComponent
             header(id=component.slug).spectrum-CSSComponent-heading
-              a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
-                h2.spectrum-Heading1--display #{component.name}
+              h2.spectrum-CSSComponent-title.spectrum-Article.spectrum-Heading1--display
+                a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
+
+              if !component.examples
+                .spectrum-CSSComponent-statusContainer.u-tooltip-showOnHover
+                  div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.dnaStatus)}`).
+                    #{component.dnaStatus}
+                  if component.dnaStatus != 'Deprecated'
+                    div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.cssStatus)}`).
+                      #{component.cssStatus}
+                  if component.details
+                    .spectrum-Tooltip.spectrum-Tooltip--right
+                      .spectrum-Tooltip-label!= markdown.toHTML(component.details)
+                      .spectrum-Tooltip-tip
+
               .spectrum-CSSComponent-version.spectrum-Body #{pkg.name}@#{pkg.version}
 
             if component.description
-              section.spectrum-Body!= markdown.toHTML(component.description)
+              section.spectrum-CSSComponent-description.spectrum-Body2!= markdown.toHTML(component.description)
 
             each example in examples
               article.spectrum-CSSExample
                 if example != component
-                  header.row(id=util.getSlug(example.name))
-                    a(href=`#${util.getSlug(example.name)}`).spectrum-CSSExample-link
-                      h4.spectrum-Heading--subtitle3 #{example.name}
-                    if example.cssStatus != 'n/a'
-                      .u-tooltip-showOnHover
-                        div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
-                          #{example.dnaStatus}
-                        if example.dnaStatus != 'Deprecated'
-                          div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
-                            #{example.cssStatus}
-                        if example.details
-                          .spectrum-Tooltip.spectrum-Tooltip--right
-                            .spectrum-Tooltip-label!= markdown.toHTML(example.details)
-                            .spectrum-Tooltip-tip
+                  header.spectrum-CSSExample-header(id=example.slug)
+                    h4.spectrum-Heading3
+                      a(href=`#${example.slug}`).spectrum-CSSExample-link #{example.name}
+                      if example.cssStatus != 'n/a'
+                        .spectrum-CSSComponent-statusContainer.u-tooltip-showOnHover
+                          div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(example.dnaStatus)}`).
+                            #{example.dnaStatus}
+                          if example.dnaStatus != 'Deprecated'
+                            div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(example.cssStatus)}`).
+                              #{example.cssStatus}
+                          if example.details
+                            .spectrum-Tooltip.spectrum-Tooltip--right
+                              .spectrum-Tooltip-label!= markdown.toHTML(example.details)
+                              .spectrum-Tooltip-tip
 
+                        hr.spectrum-Rule.spectrum-Rule--large
 
                   if example.description
-                    section.spectrum-Body!= markdown.toHTML(example.description)
+                    section.spectrum-CSSExample-description.spectrum-Body2!= markdown.toHTML(example.description)
 
                 if example.markup
 

@@ -49,7 +49,7 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
 
 exports.getCSSStatus = function(dnaComponentId, cssStatus) {
   if (cssStatus === 'Released' || !cssStatus) {
-    cssStatus = 'CSS Unverified';
+    cssStatus = 'Beta';
   }
   return cssStatusTranslation[cssStatus] || cssStatus;
 };
@@ -77,11 +77,42 @@ exports.populateDNAInfo = function(component, dnaVars) {
   component.name = component.name || dnaComponentTitle;
   component.cssStatus = cssStatus;
   component.dnaStatus = dnaStatus;
-  component.cssColor = this.getLabelColor(component.cssStatus);
-  component.dnaColor = this.getLabelColor(component.dnaStatus);
 
   // Add other data
   component.id = dnaComponentId;
-
   component.slug = this.getSlug(component.name);
+
+  // Assume it's canon if we're verified
+  if (component.status === 'Verified') {
+    component.dnaStatus = 'Canon';
+  }
+
+  if (component.examples) {
+    for (id in component.examples) {
+      let example = component.examples[id];
+      if (typeof example === 'string') {
+        // Handle markup only examples
+        example = {
+          id: id,
+          markup: example
+        };
+        component.examples[id] = example;
+      }
+      else {
+        example.id = id;
+      }
+
+      // All examples are verified if the outer component is verified
+      if (component.status === 'Verified') {
+        example.status = 'Verified';
+      }
+
+      // The example is canon if the component is Canon and Verified
+      if (component.dnaStatus === 'Canon' && component.status === 'Verified') {
+        example.dnaStatus = 'Canon';
+      }
+
+      this.populateDNAInfo(example, dnaVars);
+    }
+  }
 };

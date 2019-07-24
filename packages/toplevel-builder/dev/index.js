@@ -115,7 +115,10 @@ function watchSite() {
   );
 
   gulp.watch(
-    `${dirs.builder}/docs/template.pug`,
+    [
+      `${dirs.builder}/docs/template.pug`,
+      `${dirs.builder}/docs/util.js`
+    ],
     gulp.series(
       gulp.parallel(
         docs.buildDocs
