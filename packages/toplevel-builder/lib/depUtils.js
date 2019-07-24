@@ -24,7 +24,17 @@ const depSolver = require('dependency-solver');
 async function getDependencies(package) {
   let pkg = JSON.parse(await fsp.readFile(path.join(package, 'package.json')));
 
-  let dependencies = pkg.dependencies ? Object.keys(pkg.dependencies).filter((dep) => dep.indexOf('@spectrum-css') === 0) : [];
+  let dependencies = [];
+
+  if (pkg.dependencies) {
+    dependencies = Object.keys(pkg.dependencies);
+  }
+
+  if (pkg.devDependencies) {
+    dependencies = dependencies.concat(Object.keys(pkg.devDependencies));
+  }
+
+  dependencies = dependencies.filter((dep) => dep.indexOf('@spectrum-css') === 0 && dep !== '@spectrum-css/build');
 
   return { name: pkg.name, dependencies: dependencies };
 }
@@ -82,6 +92,7 @@ async function getFolderDependencyOrder(packagesDir) {
   // Get list of all packages
   let packages = (await fsp.readdir(packagesDir, { withFileTypes: true }))
     .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .filter((dirent) => dirent.name !== 'build' && dirent.name !== 'toplevel-builder' && dirent.name !== 'spectrum-css-compat')
     .map((dirent) => path.join(packagesDir, dirent.name));
 
   return solveDependencies(packages);
