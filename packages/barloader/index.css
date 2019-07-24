@@ -81,7 +81,6 @@ governing permissions and limitations under the License.
 {{ barloader/barloader-small.yml }}
 */
 .spectrum-BarLoader--small {
-  height: var(--spectrum-barloader-small-height);
   min-width: var(--spectrum-barloader-small-width);
 
   .spectrum-BarLoader-fill {
