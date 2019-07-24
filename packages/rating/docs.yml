@@ -2,7 +2,7 @@ name: Rating
 status: Verified
 components:
   rating:
-    name: Default
+    name: Standard
     markup: |
       <div class="spectrum-Rating">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating">

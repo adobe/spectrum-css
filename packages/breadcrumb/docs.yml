@@ -1,10 +1,8 @@
----
 name: Breadcrumbs
-ignoreDNA: true
 components:
   default:
     status: Verified
-    name: Default
+    name: Standard
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
