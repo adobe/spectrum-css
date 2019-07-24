@@ -19,13 +19,13 @@ function SpectrumSwitcher(options) {
   document.addEventListener('keydown', function(event) {
     if (event.ctrlKey) {
       if (SpectrumSwitcher.ThemeKeys[event.key]) {
-        SpectrumSwitcher.theme = SpectrumSwitcher.ThemeKeys[event.key];
+        this.theme = SpectrumSwitcher.ThemeKeys[event.key];
       }
       else if (SpectrumSwitcher.ScaleKeys[event.key]) {
-        SpectrumSwitcher.scale = SpectrumSwitcher.ScaleKeys[event.key];
+        this.scale = SpectrumSwitcher.ScaleKeys[event.key];
       }
     }
-  });
+  }.bind(this));
 }
 
 SpectrumSwitcher.Scales = [
@@ -34,10 +34,10 @@ SpectrumSwitcher.Scales = [
 ];
 
 SpectrumSwitcher.ColorStops = [
-  'spectrum--lightest',
-  'spectrum--light',
-  'spectrum--dark',
-  'spectrum--darkest'
+  'lightest',
+  'light',
+  'dark',
+  'darkest'
 ];
 
 SpectrumSwitcher.ThemeKeys = {

@@ -33,7 +33,7 @@
   }
 
 doctype html
-html
+html(lang='en-US')
   head
     title #{component.name} - Spectrum CSS
 
@@ -42,49 +42,52 @@ html
   body.spectrum.spectrum--light.spectrum--medium
 
     .spectrum-Site
-      include ../site/includes/sidebar.pug
 
-      .spectrum-Site-mainContainer
+      include ../site/includes/header.pug
 
-        article.spectrum-CSSComponent
-          header(id=component.slug).spectrum-CSSComponent-heading
-            a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
-              h2.spectrum-Heading1--display #{component.name}
-            .spectrum-CSSComponent-version.spectrum-Body #{pkg.name}@#{pkg.version}
+      .spectrum-Site-content
 
-          if component.description
-            section.spectrum-Body!= markdown.toHTML(component.description)
+        include ../site/includes/sidebar.pug
 
-          each example in examples
-            article.spectrum-CSSExample
-              if example != component
-                header.row(id=util.getSlug(example.name))
-                  a(href=`#${util.getSlug(example.name)}`).spectrum-CSSExample-link
-                    h4.spectrum-Heading--subtitle3 #{example.name}
-                  if example.cssStatus != 'n/a'
-                    .u-tooltip-showOnHover
-                      div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
-                        #{example.dnaStatus}
-                      if example.dnaStatus != 'Deprecated'
-                        div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
-                          #{example.cssStatus}
-                      if example.details
-                        .spectrum-Tooltip.spectrum-Tooltip--right
-                          .spectrum-Tooltip-label!= markdown.toHTML(example.details)
-                          .spectrum-Tooltip-tip
+        .spectrum-Site-mainContainer
+
+          article.spectrum-CSSComponent
+            header(id=component.slug).spectrum-CSSComponent-heading
+              a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
+                h2.spectrum-Heading1--display #{component.name}
+              .spectrum-CSSComponent-version.spectrum-Body #{pkg.name}@#{pkg.version}
+
+            if component.description
+              section.spectrum-Body!= markdown.toHTML(component.description)
+
+            each example in examples
+              article.spectrum-CSSExample
+                if example != component
+                  header.row(id=util.getSlug(example.name))
+                    a(href=`#${util.getSlug(example.name)}`).spectrum-CSSExample-link
+                      h4.spectrum-Heading--subtitle3 #{example.name}
+                    if example.cssStatus != 'n/a'
+                      .u-tooltip-showOnHover
+                        div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.dnaColor}`).
+                          #{example.dnaStatus}
+                        if example.dnaStatus != 'Deprecated'
+                          div(class=`spectrum-CSSExample-status spectrum-Label spectrum-Label--${example.cssColor}`).
+                            #{example.cssStatus}
+                        if example.details
+                          .spectrum-Tooltip.spectrum-Tooltip--right
+                            .spectrum-Tooltip-label!= markdown.toHTML(example.details)
+                            .spectrum-Tooltip-tip
 
 
-                if example.description
-                  section.spectrum-Body!= markdown.toHTML(example.description)
+                  if example.description
+                    section.spectrum-Body!= markdown.toHTML(example.description)
 
-              if example.markup
+                if example.markup
 
-                section.spectrum-CSSExample-container
-                  .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-                  .spectrum-CSSExample-markup
-                    if example.markup.split('\n').length > 2
-                      a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
-                    pre
-                      code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')
-
-          div.spectrum-Underlay#spectrum-underlay
+                  section.spectrum-CSSExample-container
+                    .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
+                    .spectrum-CSSExample-markup
+                      if example.markup.split('\n').length > 2
+                        a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
+                      pre
+                        code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')

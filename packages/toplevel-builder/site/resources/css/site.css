@@ -1,5 +1,11 @@
 .spectrum-Site {
-  --spectrum-site-background-color: var(--spectrum-global-color-gray-100);
+  --spectrum-site-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-site-content-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-site-header-border-color: var(--spectrum-global-color-gray-300);
+  --spectrum-site-header-background-color: var(--spectrum-site-content-background-color);
+  --spectrum-site-header-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-site-header-padding: var(--spectrum-global-dimension-size-100);
+  --spectrum-site-sidebar-background-color: var(--spectrum-site-background-color);
   --spectrum-site-scrollbar-track-color: var(--spectrum-site-background-color);
   --spectrum-site-scrollbar-thumb-color: var(--spectrum-global-color-gray-400);
 }
@@ -20,7 +26,26 @@ body {
 .spectrum-Site {
   height: 100%;
   display: flex;
+  flex-direction: column;
+
+  background-color: var(--spectrum-site-content-background-color);
+}
+
+.spectrum-Site-content {
+  display: flex;
   flex-direction: row;
+}
+
+.spectrum-Site-header {
+  display: none;
+
+  box-sizing: border-box;
+  height: var(--spectrum-site-header-height);
+  padding: var(--spectrum-site-header-padding);
+
+  border-bottom: 1px solid var(--spectrum-site-header-border-color);
+
+  background-color: var(--spectrum-site-header-background-color);
 }
 
 .spectrum-Site-sideBar {
@@ -29,10 +54,35 @@ body {
   flex-grow: 0;
   flex-shrink: 0;
 
-  background-color: var(--spectrum-site-background-color);
+  background-color: var(--spectrum-site-sidebar-background-color);
 }
 
-.spectrum-Site-header {
+#spectrum-underlay {
+  z-index: 99;
+}
+
+@media screen and (max-width: 960px) {
+  .spectrum-Site-sideBar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    transform: translateX(-100%);
+    transition: transform var(--spectrum-global-animation-duration-300) ease-in-out;
+  }
+
+  .spectrum-Site-sideBar.is-open {
+    transform: translateX(0);
+  }
+
+  .spectrum-Site-header {
+    display: block;
+  }
+}
+
+.spectrum-Site-sideBarHeader {
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
@@ -89,6 +139,8 @@ body {
 
   height: 100%;
   overflow-y: auto;
+
+  background: var(--spectrum-site-content-background-color);
 }
 
 .spectrum-Page {

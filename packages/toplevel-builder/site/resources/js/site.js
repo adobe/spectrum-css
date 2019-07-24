@@ -13,8 +13,7 @@ governing permissions and limitations under the License.
 /* global document, window, Element, loadIcons, URLSearchParams */
 
 window.addEventListener('DOMContentLoaded', function() {
-  var switcher = new SpectrumSwitcher();
-
+  // Navigation
   function selectNavItem(href) {
     var selectedNavItem = document.querySelector('.spectrum-SideNav-item.is-selected')
     if (selectedNavItem) {
@@ -118,8 +117,36 @@ window.addEventListener('DOMContentLoaded', function() {
     var target = event.target.closest('a');
     if (target && target.classList.contains('js-fastLoad')) {
       navigate(target.getAttribute('href'));
+      hideSideBar();
       event.preventDefault();
       event.stopPropagation();
+    }
+  });
+
+  // Switcher
+  var switcher = new SpectrumSwitcher();
+
+  // Sidebar
+  var sideBar = document.querySelector('.spectrum-Site-sideBar');
+  var underlay = document.querySelector('#spectrum-underlay');
+  function showSideBar() {
+    underlay.addEventListener('click', hideSideBar);
+    sideBar.classList.add('is-open');
+    underlay.classList.add('is-open');
+  }
+
+  function hideSideBar() {
+    underlay.removeEventListener('click', hideSideBar);
+    sideBar.classList.remove('is-open');
+    underlay.classList.remove('is-open');
+  }
+
+  document.querySelector('#site-menu').addEventListener('click', function(event) {
+    if (sideBar.classList.contains('is-open')) {
+      hideSideBar();
+    }
+    else {
+      showSideBar();
     }
   });
 

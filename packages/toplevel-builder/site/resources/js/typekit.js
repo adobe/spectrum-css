@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
      I WILL NOT REUSE THE TYPEKIT ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT
      I WILL NOT REUSE THE TYPEKIT ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT
      See https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up right. */
-    kitId: document.querySelector('[lang]') !== null ? 'pbi5ojv' : 'ruf7eed',
+    kitId: document.querySelector('[lang]:not([lang="en-US"])') !== null ? 'pbi5ojv' : 'ruf7eed',
     scriptTimeout: 3000,
     active: function() {
       var loader = document.getElementById('loader');

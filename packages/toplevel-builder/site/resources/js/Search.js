@@ -3,18 +3,20 @@ function Search(el) {
   this.el = el;
 
   this.el.innerHTML = `
-<form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
-  <input type="search" placeholder="Search" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="listbox" aria-owns="search-results-listbox" aria-label="Search">
-  <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
-    <use xlink:href="#spectrum-css-icon-Magnifier" />
-  </svg>
-  <button type="reset" value="Reset" class="spectrum-ClearButton js-clearButton" tabindex="-1" hidden>
-    <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-CrossSmall" />
+<div class="spectrum-Site-search" role="search">
+  <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
+    <input type="search" placeholder="Search" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="listbox" aria-owns="search-results-listbox" aria-label="Search">
+    <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-Magnifier" />
     </svg>
-  </button>
-</form>
-<div class="spectrum-Popover spectrum-Site-searchResults js-popover">
+    <button type="reset" value="Reset" class="spectrum-ClearButton js-clearButton" tabindex="-1" hidden>
+      <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CrossSmall" />
+      </svg>
+    </button>
+  </form>
+  <div class="spectrum-Popover spectrum-Site-searchResults js-popover">
+  </div>
 </div>
 `;
 

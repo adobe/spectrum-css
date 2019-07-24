@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang='en-US')
   head
     title Spectrum CSS
 
@@ -9,12 +9,16 @@ html
 
     .spectrum-Site
 
-      include includes/sidebar.pug
+      include includes/header.pug
 
-      .spectrum-Site-mainContainer
-        .spectrum-Page
-          .spectrum-Hero
-            .spectrum-Article.spectrum-Hero-heading
-              h1.spectrum-Heading1--display Meet Spectrum CSS, the CSS implementation of Spectrum
-            p.spectrum-Body1 That's right, there's CSS for all those pretty components.
-            img.spectrum-Hero-image(src='img/spectrum_illustration_2x.png', alt='Spectrum Illustration')
+      .spectrum-Site-content
+
+        include includes/sidebar.pug
+
+        .spectrum-Site-mainContainer
+          .spectrum-Page
+            .spectrum-Hero
+              .spectrum-Article.spectrum-Hero-heading
+                h1.spectrum-Heading1--display Meet Spectrum CSS, the CSS implementation of Spectrum
+              p.spectrum-Body1 That's right, there's CSS for all those pretty components.
+              img.spectrum-Hero-image(src='img/spectrum_illustration_2x.png', alt='Spectrum Illustration')
