@@ -1,5 +1,6 @@
 function Search(el) {
   this.index = null;
+  this.hasResults = false;
   this.el = el;
 
   this.el.innerHTML = `
@@ -22,13 +23,15 @@ function Search(el) {
 
   this.form = this.el.querySelector('.js-form');
   this.popover = this.el.querySelector('.js-popover');
+  document.body.appendChild(this.popover);
+
   this.input = this.el.querySelector('.js-input');
   this.clearButton = this.el.querySelector('.js-clearButton');
 
   this.clearButton.addEventListener('click', this.hideResults.bind(this));
   this.el.addEventListener('submit', this.handleSubmit.bind(this));
   this.el.addEventListener('reset', this.showHideClear.bind(this));
-  this.input.addEventListener('keyup', this.handleKey.bind(this));
+  this.input.addEventListener('keypress', this.handleKey.bind(this));
 
   this.popover.addEventListener('keydown', this.handlePopoverNavigation.bind(this));
   this.popover.addEventListener('click', this.hideResults.bind(this));
@@ -38,7 +41,7 @@ function Search(el) {
   this.popover.addEventListener('keydown', this.handleListInteraction.bind(this));
 
   this.el.addEventListener('focusout', function(e) {
-    if (!this.el.contains(e.relatedTarget)) {
+    if (!this.el.contains(e.relatedTarget) && !this.popover.contains(e.relatedTarget)) {
       // Don't do this right away or Safari gets all pissy
       setTimeout(this.hideResults.bind(this), 100);
     }
@@ -48,6 +51,9 @@ function Search(el) {
     if (this.input.value.length) {
       this.doSearch();
     }
+
+    var event = new Event('SearchFocused');
+    window.dispatchEvent(event);
   }.bind(this));
 
   document.addEventListener('keydown', function(e) {
@@ -185,6 +191,7 @@ Search.prototype.handleKey = function(e) {
     let firstItem = this.popover.querySelector('.spectrum-Menu-item');
     if (firstItem) {
       firstItem.click();
+      this.input.blur();
       this.hideResults();
     }
   }
@@ -235,6 +242,8 @@ Search.prototype.search = function(val) {
       return this.store[result.ref];
     }, this)
   };
+
+  this.hasResults = !!r.length;
 
   let markup = `
 ${

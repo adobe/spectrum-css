@@ -169,18 +169,28 @@ window.addEventListener('DOMContentLoaded', function() {
   var switcher = new SpectrumSwitcher();
 
   // Sidebar
-  var sideBar = document.querySelector('.spectrum-Site-sideBar');
-  var underlay = document.querySelector('#spectrum-underlay');
+  var sideBar = document.querySelector('#site-sidebar');
+  var overlay = document.querySelector('#site-overlay');
+  let mql = window.matchMedia('(max-width: 960px)');
+  mql.addEventListener('change', function() {
+    if (!mql.matches) {
+      // Get rid of the overlay if we resize while the sidebar is open
+      hideSideBar();
+    }
+  });
+
   function showSideBar() {
-    underlay.addEventListener('click', hideSideBar);
-    sideBar.classList.add('is-open');
-    underlay.classList.add('is-open');
+    if (mql.matches) {
+      overlay.addEventListener('click', hideSideBar);
+      sideBar.classList.add('is-open');
+      overlay.classList.add('is-open');
+    }
   }
 
   function hideSideBar() {
-    underlay.removeEventListener('click', hideSideBar);
+    overlay.removeEventListener('click', hideSideBar);
     sideBar.classList.remove('is-open');
-    underlay.classList.remove('is-open');
+    overlay.classList.remove('is-open');
   }
 
   document.querySelector('#site-menu').addEventListener('click', function(event) {
@@ -194,4 +204,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // Search
   window.search = new Search(document.querySelector('#site-search'))
+  window.addEventListener('SearchFocused', function() {
+    showSideBar();
+
+    // Immediately hide results, otherwise they show up in the wrong position since we're in the middle of animation
+    search.hideResults();
+
+    // Show them after we're done animating
+    setTimeout(function() {
+      if (search.hasResults) {
+        search.showResults();
+      }
+    }.bind(this), 190);
+  });
 });

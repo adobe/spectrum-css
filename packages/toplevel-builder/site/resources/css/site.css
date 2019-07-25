@@ -56,26 +56,79 @@ body {
   flex-shrink: 0;
 
   background-color: var(--spectrum-site-sidebar-background-color);
+  transition: none;
 }
 
-#spectrum-underlay {
-  z-index: 99;
+.spectrum-Site-overlay {
+  --spectrum-site-overlay-background-entry-animation-delay: 0ms;
+  --spectrum-site-overlay-background-exit-animation-delay: 0ms;
+  --spectrum-site-overlay-background-entry-animation-duration: var(--spectrum-global-animation-duration-200);
+  --spectrum-site-overlay-background-exit-animation-duration: var(--spectrum-global-animation-duration-200);
+  --spectrum-site-overlay-background-exit-animation-easing: ease-out;
+  --spectrum-site-overlay-background-entry-animation-easing: ease-in;
+
+  --spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Kill the overlay without animating when the page is resized */
+.spectrum-Site-overlay {
+  display: none;
 }
 
 @media screen and (max-width: 960px) {
+  .spectrum-Site-overlay {
+    display: block;
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Float above things by default */
+    z-index: 99;
+
+    overflow: hidden;
+
+    /* Exit animations */
+    transition: opacity var(--spectrum-site-overlay-background-exit-animation-duration) var(--spectrum-site-overlay-background-exit-animation-easing) var(--spectrum-site-overlay-background-exit-animation-delay),
+                visibility 0ms linear calc(var(--spectrum-site-overlay-background-exit-animation-delay) + var(--spectrum-site-overlay-background-exit-animation-duration));
+
+    background: var(--spectrum-site-overlay-underlay-background-color);
+  }
+
+  .spectrum-Site-overlay.is-open {
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    /* Entry animations */
+    transition: opacity var(--spectrum-site-overlay-background-entry-animation-duration) var(--spectrum-site-overlay-background-entry-animation-easing) var(--spectrum-site-overlay-background-entry-animation-delay);
+  }
+
+  .spectrum-Site-overlay {
+    visibility: visible;
+  }
+
   .spectrum-Site-sideBar {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    right: 100%;
     z-index: 100;
 
-    transform: translateX(-100%);
-    transition: transform var(--spectrum-global-animation-duration-300) ease-in-out;
+    transform: translateX(0);
+    transition: transform var(--spectrum-global-animation-duration-200) ease-in-out;
   }
 
   .spectrum-Site-sideBar.is-open {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
 
   .spectrum-Site-header {
@@ -95,11 +148,11 @@ body {
   text-decoration: none;
 }
 
-.spectrum-Site-header:focus {
+.spectrum-Site-sideBarHeader:focus {
   outline: none;
 }
 
-.spectrum-Site-header:focus h2 {
+.spectrum-Site-sideBarHeader:focus h2 {
   text-decoration: underline;
 }
 
@@ -109,7 +162,7 @@ body {
 
 .spectrum-Site-searchResults {
   max-height: calc(90vh - 120px);
-  z-index: 10;
+  z-index: 101;
   position: absolute;
 
   overflow-y: auto;
