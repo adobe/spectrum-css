@@ -89,20 +89,23 @@ async function buildDocs_forDep(dep) {
         });
       }))
       .pipe(through.obj(function compilePug(file, enc, cb) {
-          let templateData = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
+        let component = yaml.safeLoad(String(file.contents));
+        if (!component.id) {
+          component.id = dep;
+        }
+        let templateData = Object.assign({}, { component: component }, file.data || {});
 
-          file.path = ext(file.path, '.html');
+        file.path = ext(file.path, '.html');
 
-          try {
-            const templatePath = `${__dirname}/template.pug`;
-            let compiled = pugCompiler.renderFile(templatePath, templateData);
-            file.contents = Buffer.from(compiled);
-          } catch (err) {
-            return cb(err);
-          }
-          cb(null, file);
-        })
-      )
+        try {
+          const templatePath = `${__dirname}/template.pug`;
+          let compiled = pugCompiler.renderFile(templatePath, templateData);
+          file.contents = Buffer.from(compiled);
+        } catch (err) {
+          return cb(err);
+        }
+        cb(null, file);
+      }))
       .pipe(gulp.dest('dist/docs/'))
       .on('end', resolve)
       .on('error', reject);
