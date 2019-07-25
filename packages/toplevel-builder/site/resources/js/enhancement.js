@@ -21,6 +21,22 @@ window.addEventListener('click', function(event) {
   }
 });
 
+// Cyclebutton
+window.addEventListener('click', function(event) {
+  var button = event.target.closest('.spectrum-CycleButton');
+  if (button) {
+    var icons = button.querySelectorAll('.spectrum-Icon');
+    var currentIcon = button.querySelector('.spectrum-Icon.is-selected');
+    var currentIconIndex = Array.prototype.slice.call(icons).indexOf(currentIcon);
+    if (currentIcon) {
+      currentIcon.classList.remove('is-selected');
+
+      var newIndex = currentIconIndex + 1 < icons.length ? currentIconIndex + 1 : 0;
+      icons[newIndex].classList.add('is-selected');
+    }
+  }
+})
+
 // Display InputGroup focus style
 function toggleInputGroupFocus(event) {
   var classList = event.target.classList;
@@ -246,8 +262,6 @@ function animateCircleLoaders() {
   }, 500);
 }
 
-animateCircleLoaders();
-
 function changeLoaders(nodeList, value) {
   Array.prototype.slice.call(nodeList).forEach(function(loader) {
     changeLoader(loader, value);
@@ -270,11 +284,16 @@ function changeLoader(loader, value, submask1, submask2) {
   }
 }
 
-window.addEventListener('DOMContentLoaded', function() {
+function enhanceAll() {
   Array.prototype.forEach.call(document.querySelectorAll('.spectrum-Slider'), function(slider) {
     makeSlider(slider);
   });
+
   Array.prototype.forEach.call(document.querySelectorAll('.spectrum-Dial'), function(dial) {
     makeDial(dial);
   });
-});
+}
+
+animateCircleLoaders();
+window.addEventListener('PageFastLoaded', enhanceAll);
+window.addEventListener('DOMContentLoaded', enhanceAll);

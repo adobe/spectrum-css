@@ -52,6 +52,13 @@ window.addEventListener('DOMContentLoaded', function() {
         currentHREF = href;
 
         console.log('  ✅ ' + href + ' loaded');
+
+        var event = new Event('PageFastLoaded', {
+          detail: {
+            href: href
+          }
+        });
+        window.dispatchEvent(event);
       }
 
       var template = document.createElement('template');
