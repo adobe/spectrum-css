@@ -75,6 +75,7 @@ async function buildDocs_forDep(dep) {
         packageDeps.push(dep);
 
         let docsDeps = minimumDeps.concat(packageDeps);
+        docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
 
         return Object.assign({}, {
           util: require('./util'),
