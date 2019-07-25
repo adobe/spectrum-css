@@ -34,9 +34,8 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
   }
 
   if (cssStatus === 'CSS Verified') {
-    if (dnaStatus !== 'Released') {
+    if (dnaStatusTranslation[dnaStatus] !== 'Canon') {
       logger.debug(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
-      dnaStatus = 'Canon';
     }
   }
 
@@ -82,11 +81,6 @@ exports.populateDNAInfo = function(component, dnaVars) {
   // Add other data
   component.id = dnaComponentId;
   component.slug = this.getSlug(component.name);
-
-  // Assume it's canon if we're verified
-  if (component.status === 'Verified') {
-    component.dnaStatus = 'Canon';
-  }
 
   if (component.examples) {
     for (id in component.examples) {

@@ -1,6 +1,6 @@
 name: Breadcrumbs
 components:
-  default:
+  breadcrumb:
     status: Verified
     name: Standard
     markup: |
@@ -24,7 +24,8 @@ components:
         </ul>
       </nav>
 
-  dragged:
+  breadcrumb-dragged:
+    id: breadcrumb
     status: Verified
     name: Dragged
     markup: |
@@ -48,7 +49,8 @@ components:
         </ul>
       </nav>
 
-  nested:
+  breadcrumb-nested:
+    id: breadcrumb
     status: Verified
     name: Nested
     markup: |
@@ -83,6 +85,7 @@ components:
       </nav>
 
   nested-root-visible:
+    id: breadcrumb
     status: Verified
     name: Nested (root visible)
     markup: |
@@ -116,7 +119,7 @@ components:
         </ul>
       </nav>
 
-  multiline:
+  breadcrumb-multiline:
     status: Verified
     name: Multiline
     markup: |
@@ -140,7 +143,8 @@ components:
         </ul>
       </nav>
 
-  multiline-dragged:
+  breadcrumb-multiline-dragged:
+    id: breadcrumb-multiline
     status: Verified
     name: Multiline (dragged)
     markup: |
@@ -164,7 +168,8 @@ components:
         </ul>
       </nav>
 
-  multiline-nested:
+  breadcrumb-multiline-nested:
+    id: breadcrumb-multiline
     status: Verified
     name: Multiline Nested
     markup: |
@@ -198,7 +203,8 @@ components:
         </ul>
       </nav>
 
-  multiline-nested-rootvisible:
+  breadcrumb-multiline-nested-rootvisible:
+    id: breadcrumb-multiline
     status: Verified
     name: Multiline Nested (root visible)
     markup: |
@@ -232,7 +238,7 @@ components:
         </ul>
       </nav>
 
-  compact:
+  breadcrumb-compact:
     status: Verified
     name: Compact
     markup: |
@@ -256,7 +262,8 @@ components:
         </ul>
       </nav>
 
-  compact-nested:
+  breadcrumb-compact-nested:
+    id: breadcrumb-compact
     status: Verified
     name: Compact Nested
     markup: |
@@ -290,7 +297,8 @@ components:
         </ul>
       </nav>
 
-  compact-nested-rootvisible:
+  breadcrumb-compact-nested-rootvisible:
+    id: breadcrumb-compact
     status: Verified
     name: Compact Nested (root visible)
     markup: |
@@ -324,9 +332,10 @@ components:
         </ul>
       </nav>
 
-  title:
-    status: Deprecated
+  breadcrumb-title:
     name: Title
+    status: Deprecated
+    details: Use the `multiline` variant instead
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
