@@ -44,7 +44,8 @@ Then you can use the commands below inside of your project to build and release 
 The following tasks are available:
 
 * `gulp clean` - Clean everything
-* `gulp build` - Build documentation and copy build output into the `dist/` folder
+* `gulp build` - Build every component, generate the documentation site, and copy build output into the `dist/` folder
+* `gulp buildLite` - Build only the custom properties for every component, generate the documentation site, and copy build output into the `dist/` folder
 * `gulp dev` - Perform a build, start a server, and watch `toplevel-builder` for changes
 * `gulp watch` - If a build as already been performed, start a server and watch `toplevel-builder` for changes
 * `gulp release` - Perform a release

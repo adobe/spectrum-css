@@ -144,19 +144,23 @@ let build = gulp.series(
   buildIfTopLevel()
 );
 
+let buildLite = gulp.series(
+  clean,
+  function buildPackagesLite() {
+    return subrunner.runTaskOnAllPackages('buildLite');
+  },
+  gulp.parallel(
+    docs.build,
+    copyIcons,
+    copyPackages
+  )
+);
+
 let devTask;
 if (dirs.cwd === dirs.topLevel) {
   // Build all packages if at the top level
   devTask = gulp.series(
-    clean,
-    function buildPackagesLite() {
-      return subrunner.runTaskOnAllPackages('buildLite');
-    },
-    gulp.parallel(
-      docs.build,
-      copyIcons,
-      copyPackages
-    ),
+    buildLite,
     dev.watch
   );
 }
@@ -189,6 +193,7 @@ exports.release = release.release;
 exports.buildPackages = subrunner.buildPackages;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
+exports.buildLite = buildLite;
 exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;

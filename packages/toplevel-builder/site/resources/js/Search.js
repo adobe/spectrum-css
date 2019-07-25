@@ -54,6 +54,7 @@ function Search(el) {
     if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
       this.input.focus();
       this.input.classList.add('focus-ring');
+      this.input.setSelectionRange(0, this.input.value.length);
       e.preventDefault();
     }
   }.bind(this));
@@ -211,7 +212,7 @@ Search.prototype.search = function(val) {
   let components = [];
 
   let r = [];
-  if (val.length > 2) {
+  if (val.length > 1) {
     let searchParam = val.trim().split(' ').map((term) => `${term}* ${term}`).join(' ');
     try {
       r = this.index.search(searchParam);
