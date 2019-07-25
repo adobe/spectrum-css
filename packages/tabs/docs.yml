@@ -22,7 +22,7 @@ components:
 
   tabs-icon:
     name: Tabs with icons
-    status: Contribution
+    status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -74,7 +74,7 @@ components:
 
   tabs-quiet-icon:
     name: Quiet tabs with icons
-    status: Contribution
+    status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -124,7 +124,7 @@ components:
         <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
       </div>
 
-  tabs-compact-quiet-icon:
+  tabs-quiet-compact-icon:
     name: Compact tabs with icons and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--compact">
@@ -156,6 +156,7 @@ components:
       </div>
 
   tabs-compact-quiet-icon-only:
+    id: tabs-quiet-compact-icon
     name: Compact tabs with icons
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--compact">

@@ -1,7 +1,8 @@
 name: Button - Over Background
+status: Verified
 description: When a button needs to be placed on top of a colored background or a visual, use the over background button. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.
 examples:
-  button-overbackground:
+  button-over-background:
     name: Over background
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
@@ -13,7 +14,7 @@ examples:
           <span class="spectrum-Button-label">Button</span>
         </button>
       </div>
-  button-quiet-overbackground:
+  button-quiet-over-background:
     name: Over Background (quiet)
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">

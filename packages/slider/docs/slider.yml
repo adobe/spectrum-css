@@ -53,7 +53,7 @@ examples:
         </div>
       </div>
 
-  slider-filled:
+  slider-fill:
     name: Filled
     description: With fill.
     markup: |
@@ -85,6 +85,7 @@ examples:
       </div>
 
   slider-filled-offset:
+    id: slider-fill
     name: Filled-Offset
     description: With fill and offset.
     markup: |
@@ -219,6 +220,7 @@ examples:
       </div>
 
   slider-tick-label:
+    id: slider-tick
     name: Tick with Labels
     description: Spectrum tick slider with labels
     markup: |
@@ -289,7 +291,7 @@ examples:
         </div>
       </div>
 
-  slider-video:
+  slider-player:
     name: Video Player
     description: Displays a buffer for video players.
     markup: |

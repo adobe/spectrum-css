@@ -27,14 +27,6 @@ components:
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
 
-  statuslight-active:
-    name: Active
-    description: The active variant of Status Light
-    details: Use the `info` variant instead
-    status: Deprecated
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
-
   statuslight-info:
     name: Info
     status: Verified
@@ -66,3 +58,12 @@ components:
     status: Verified
     markup: |
       <div class="spectrum-StatusLight is-disabled">Disabled</div>
+
+  statuslight-active:
+    name: Active
+    description: The active variant of Status Light
+    details: Use the `info` variant instead
+    status: Deprecated
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
+

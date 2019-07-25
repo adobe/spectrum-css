@@ -11,6 +11,7 @@ examples:
       <input id="lifestory2" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield" disabled>
 
   fieldlabel-left:
+    id: fieldlabel-side
     name: Left
     description: A left aligned field label.
     markup: |
@@ -19,6 +20,7 @@ examples:
       <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
 
   fieldlabel-right:
+    id: fieldlabel-side
     name: Right
     description: A right aligned field label.
     markup: |
@@ -27,6 +29,7 @@ examples:
       <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
 
   fieldlabel-required:
+    id: fieldlabel
     name: Required
     description: Field label for a required field.
     markup: |

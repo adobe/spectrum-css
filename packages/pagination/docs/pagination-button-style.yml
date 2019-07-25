@@ -1,6 +1,7 @@
 name: Pagination - Button Style
 components:
   pagination-button-style-cta:
+    id: pagination-button
     name: CTA
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">
@@ -18,6 +19,7 @@ components:
       </nav>
 
   pagination-button-style-primary:
+    id: pagination-button
     name: Primary
     ignoreDNA: true
     markup: |
@@ -36,6 +38,7 @@ components:
       </nav>
 
   pagination-button-style-secondary:
+    id: pagination-button
     name: Secondary
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">

@@ -89,7 +89,9 @@ examples:
            </table>
          </div>
       </div>
+
   calendar-disabled:
+    id: calendar
     name: Disabled
     markup: |
       <div class="spectrum-Calendar">
@@ -178,7 +180,9 @@ examples:
            </table>
          </div>
       </div>
+
   calendar-focused:
+    id: calendar
     name: Focused
     markup: |
       <div class="spectrum-Calendar">
@@ -267,7 +271,9 @@ examples:
            </table>
         </div>
       </div>
+
   calendar-range:
+    id: calendar
     name: Range Selection
     description: |
       A calendar with a range selected.

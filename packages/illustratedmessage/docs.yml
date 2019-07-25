@@ -1,6 +1,7 @@
 name: Illustrated Message
 examples:
   illustrated-message:
+    id: illustratedmessage-default
     name: Standard
     description: Used for status and errors.
     markup: |
@@ -11,6 +12,7 @@ examples:
       </div>
 
   illustrated-message-cta:
+    id: illustratedmessage-default
     name: CTA
     description: Used for instruction/call to action.
     markup: |
