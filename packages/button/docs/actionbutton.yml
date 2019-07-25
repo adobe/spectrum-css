@@ -1,7 +1,7 @@
 name: Action Button
 status: Verified
 examples:
-  standard:
+  actionbutton:
     name: Standard
     markup: |
       <button class="spectrum-ActionButton">
@@ -188,7 +188,7 @@ examples:
         </svg>
         <span class="spectrum-ActionButton-label">Button</span>
       </button>
-  quiet:
+  actionbutton-quiet:
     name: Quiet
     markup: |
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
