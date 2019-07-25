@@ -14,12 +14,15 @@
   "scripts": {
     "build": "gulp"
   },
-  "dependencies": {
-    "@spectrum-css/icons": "^1.0.0-alpha.0",
+  "peerDependencies": {
+    "@spectrum-css/link": "^1.0.0-alpha.0",
     "@spectrum-css/illustratedmessage": "^1.0.0-alpha.0",
     "@spectrum-css/vars": "^1.0.0-alpha.0"
   },
   "devDependencies": {
+    "@spectrum-css/link": "^1.0.0-alpha.0",
+    "@spectrum-css/illustratedmessage": "^1.0.0-alpha.0",
+    "@spectrum-css/vars": "^1.0.0-alpha.0",
     "@spectrum-css/build": "^1.0.0-alpha.0",
     "gulp": "^4.0.0"
   },

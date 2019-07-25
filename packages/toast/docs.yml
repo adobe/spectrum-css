@@ -1,6 +1,7 @@
 name: Toast
 components:
   toast:
+    name: Default
     status: Verified
     markup: |
       <div class="spectrum-Toast">
@@ -20,6 +21,7 @@ components:
       </div>
 
   toast-info:
+    name: Info
     status: Verified
     markup: |
       <div class="spectrum-Toast spectrum-Toast--info">
@@ -39,6 +41,7 @@ components:
       </div>
 
   toast-negative:
+    name: Negative
     status: Verified
     markup: |
       <div class="spectrum-Toast spectrum-Toast--negative">
@@ -61,6 +64,7 @@ components:
       </div>
 
   toast-positive:
+    name: Positive
     status: Verified
     markup: |
       <div class="spectrum-Toast spectrum-Toast--positive">
@@ -83,7 +87,7 @@ components:
       </div>
 
   toast-wrapping:
-    name: Toast Wrapping Behavior
+    name: Wrapping
     status: Verified
     markup: |
 
@@ -170,6 +174,7 @@ components:
       </div>
 
   toast-error:
+    name: Error
     details: Use `negative` variant instead
     markup: |
       <div class="spectrum-Toast spectrum-Toast--error">
@@ -192,6 +197,7 @@ components:
       </div>
 
   toast-warning:
+    name: Warning
     details: Use `negative` variant instead
     status: Deprecated
     markup: |
@@ -215,6 +221,7 @@ components:
       </div>
 
   toast-success:
+    name: Success
     details: Use `positive` variant instead
     markup: |
       <div class="spectrum-Toast spectrum-Toast--success">
@@ -237,7 +244,7 @@ components:
       </div>
 
   toast-oldmarkup:
-    name: Deprecated Markup
+    name: Old markup
     status: Deprecated
     description: The old markup for Toast (no `.spectrum-Toast-body` and both buttons inside of `.spectrum-Toast-buttons`) still works, but will be removed in the next major version.
     markup: |

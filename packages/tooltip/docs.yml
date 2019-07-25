@@ -1,7 +1,7 @@
 name: Tooltip
 components:
   tooltip-neutral:
-    name: Tooltip - Neutral
+    name: Neutral
     status: Verified
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
@@ -14,7 +14,7 @@ components:
       </span>
 
   tooltip-info:
-    name: Tooltip - Informative
+    name: Informative
     status: Verified
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
@@ -41,7 +41,7 @@ components:
       </span>
 
   tooltip-positive:
-    name: Tooltip - Positive
+    name: Positive
     status: Verified
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--positive is-open">
@@ -68,7 +68,7 @@ components:
       </span>
 
   tooltip-negative:
-    name: Tooltip - Negative
+    name: Negative
     status: Verified
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--negative is-open">
@@ -95,7 +95,7 @@ components:
       </span>
 
   tooltip-directions:
-    name: Tooltip - Directions
+    name: Directions
     status: Verified
     description: Tooltips can be top, bottom, left, or right.
     markup: |
@@ -126,7 +126,7 @@ components:
       </span>
 
   tooltip-success:
-    name: Tooltip - Success
+    name: Success
     status: Deprecated
     details: Use `positive` instead.
     markup: |
@@ -136,7 +136,7 @@ components:
       </span>
 
   tooltip-error:
-    name: Tooltip - Error
+    name: Error
     status: Deprecated
     details: Use `negative` instead.
     markup: |
@@ -146,7 +146,7 @@ components:
       </span>
 
   tooltip-help:
-    name: Tooltip - Help
+    name: Help
     status: Deprecated
     description: An informative tooltip with a help icon.
     details: Use `info`
@@ -160,7 +160,7 @@ components:
       </span>
 
   tooltip-showOnHover:
-    name: Tooltip - Show on hover
+    name: Show on hover
     status: Unverified
     description: A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping.
     markup: |

@@ -14,11 +14,14 @@
   "scripts": {
     "build": "gulp"
   },
-  "dependencies": {
-    "@spectrum-css/icons": "^1.0.0-alpha.0",
-    "@spectrum-css/vars": "^1.0.0-alpha.0"
+  "peerDependencies": {
+    "@spectrum-css/vars": "^1.0.0-alpha.0",
+    "@spectrum-css/dropdown": "^1.0.0-alpha.0",
+    "@spectrum-css/menu": "^1.0.0-alpha.0"
   },
   "devDependencies": {
+    "@spectrum-css/icons": "^1.0.0-alpha.0",
+    "@spectrum-css/vars": "^1.0.0-alpha.0",
     "@spectrum-css/menu": "^1.0.0-alpha.0",
     "@spectrum-css/dropdown": "^1.0.0-alpha.0",
     "@spectrum-css/build": "^1.0.0-alpha.0",
