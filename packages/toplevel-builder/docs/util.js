@@ -20,6 +20,7 @@ const dnaStatusTranslation = {
 
 const cssStatusTranslation = {
   'Beta': 'CSS Unverified',
+  'Unverified': 'CSS Unverified',
   'Verified': 'CSS Verified'
 };
 
