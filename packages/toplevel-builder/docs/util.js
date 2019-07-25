@@ -48,7 +48,7 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
 };
 
 exports.getCSSStatus = function(dnaComponentId, cssStatus) {
-  if (cssStatus === 'Released' || !cssStatus) {
+  if (!cssStatus) {
     cssStatus = 'Beta';
   }
   return cssStatusTranslation[cssStatus] || cssStatus;

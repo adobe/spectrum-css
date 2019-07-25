@@ -1,6 +1,6 @@
 name: Button Group
 examples:
-  horizontal:
+  buttongroup:
     name: Horizontal
     markup: |
       <div class="spectrum-ButtonGroup">
@@ -112,7 +112,9 @@ examples:
           </svg>
         </button>
       </div>
+
   buttongroup-vertical:
+    id: buttongroup
     name: Vertical
     markup: |
 

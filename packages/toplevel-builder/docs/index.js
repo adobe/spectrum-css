@@ -91,7 +91,14 @@ async function buildDocs_forDep(dep) {
       .pipe(through.obj(function compilePug(file, enc, cb) {
         let component = yaml.safeLoad(String(file.contents));
         if (!component.id) {
-          component.id = dep;
+          if (file.basename === 'docs.yml') {
+            // Use the package name
+            component.id = dep;
+          }
+          else {
+            // Use the example file name
+            component.id = path.basename(file.basename, '.yml');
+          }
         }
         let templateData = Object.assign({}, { component: component }, file.data || {});
 

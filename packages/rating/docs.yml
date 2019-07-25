@@ -54,6 +54,7 @@ components:
       </div>
 
   rating-selected:
+    id: rating
     name: Selected
     markup: |
       <div class="spectrum-Rating">
@@ -106,6 +107,7 @@ components:
       </div>
 
   rating-readonly:
+    id: rating
     name: Read-only
     description: A non-interactive rating.
     markup: |
@@ -211,6 +213,7 @@ components:
       </div>
 
   rating-quiet-selected:
+    id: rating-quiet
     name: Quiet (selected)
     markup: |
       <div class="spectrum-Rating spectrum-Rating--quiet">
@@ -263,6 +266,7 @@ components:
       </div>
 
   rating-quiet-readonly:
+    id: rating-quiet
     name: Quiet (read-only)
     markup: |
       <div class="spectrum-Rating spectrum-Rating--quiet is-readOnly">
@@ -315,6 +319,7 @@ components:
       </div>
 
   rating-disabled:
+    id: rating
     name: Disabled
     markup: |
       <div class="spectrum-Rating is-disabled">

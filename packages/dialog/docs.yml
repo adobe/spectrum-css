@@ -2,6 +2,7 @@ name: Dialog
 description: In order to avoid blurry Dialogs, wrap them in `<div class="spectrum-Dialog-wrapper">` and apply `.is-open` to both the Wrapper and the Dialog at the same time. See [this example](dialogAlert.html) for a working demonstration.
 components:
   dialog-small:
+    id: dialog
     name: Dialog - Small
     status: Verified
     description: A small dialog
@@ -18,7 +19,9 @@ components:
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
         </div>
       </div>
+
   dialog-medium:
+    id: dialog
     name: Dialog - Medium
     status: Verified
     description: A medium dialog
@@ -35,7 +38,9 @@ components:
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
         </div>
       </div>
+
   dialog-large:
+    id: dialog
     name: Dialog - Large
     status: Verified
     description: A large dialog
@@ -52,7 +57,9 @@ components:
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
         </div>
       </div>
+
   dialog-dismissible:
+    id: dialog
     name: Dialog - Dismissible
     status: Verified
     description: A dialog that can be dismissed without taking an action. Dismissible dialogs should never have buttons.
@@ -74,7 +81,9 @@ components:
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
         </div>
       </div>
+
   dialog-nodivider:
+    id: dialog
     name: Dialog - No Divider
     status: Verified
     description: Dialogs can forgo the divider if they have content that spans the entire width of the dialog.
@@ -96,7 +105,9 @@ components:
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
         </div>
       </div>
+
   dialog-hero:
+    id: dialog
     name: Dialog - Hero
     status: Verified
     description: Dialogs can have a hero header.
@@ -119,7 +130,9 @@ components:
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
         </div>
       </div>
+
   dialog-alert-confirmation:
+    id: dialog-error
     name: Dialog - Alert Confirmation
     status: Verified
     description: A confirmation alert dialog has specific button styles that should be used.
@@ -140,7 +153,9 @@ components:
           <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Enable</button>
         </div>
       </div>
+
   dialog-alert-information:
+    id: dialog-error
     name: Dialog - Alert Information
     status: Verified
     description: An information alert dialog has specific button styles that should be used.
@@ -161,7 +176,9 @@ components:
           <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Continue</button>
         </div>
       </div>
+
   dialog-alert-destructive:
+    id: dialog-error
     name: Dialog - Alert Destructive
     status: Verified
     description: An destructive alert dialog has specific button styles that should be used.
@@ -182,7 +199,9 @@ components:
           <button class="spectrum-Button spectrum-Button--warning" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Delete</button>
         </div>
       </div>
+
   dialog-alert-error:
+    id: dialog-error
     name: Dialog - Alert Error
     status: Verified
     description: An error alert dialog has an error icon in the header.
@@ -205,7 +224,9 @@ components:
           <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">OK</button>
         </div>
       </div>
+
   dialog-alert-3buttons:
+    id: dialog-error
     name: Dialog - Alert 3 buttons
     status: Verified
     description: An alert dialog can have up to 3 buttons.
@@ -227,9 +248,9 @@ components:
           <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Rate Now</button>
         </div>
       </div>
+
   dialog-scrolling:
     name: Dialog - Scrolling
-    ignoreDNA: true
     dnaStatus: Contribution
     status: Unverified
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
@@ -257,6 +278,7 @@ components:
           <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Accept</button>
         </div>
       </div>
+
   dialog-fullscreen:
     name: Dialog - Fullscreen
     status: Unverified
@@ -286,7 +308,9 @@ components:
           Anything in the footer is sticky and aligned right.
         </div>
       </div>
+
   dialog-fullscreentakeover:
+    id: dialog-fullscreen
     name: Dialog - Fullscreen Takeover
     status: Unverified
     description: A fullscreen takeover dialog will fill all of the available screen space.

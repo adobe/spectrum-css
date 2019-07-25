@@ -210,7 +210,7 @@ examples:
 
   card-small:
     name: Small
-    description: A small card.
+    description: A small card. Small cards should not be used without `--quiet`.
     markup: |
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--small" tabindex="0" role="figure">

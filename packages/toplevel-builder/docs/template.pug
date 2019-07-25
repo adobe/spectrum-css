@@ -41,16 +41,17 @@ html(lang='en-US')
                 a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
 
               if !component.examples
-                .spectrum-CSSComponent-statusContainer.u-tooltip-showOnHover
-                  div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.dnaStatus)}`).
-                    #{component.dnaStatus}
-                  if component.dnaStatus != 'Deprecated'
-                    div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.cssStatus)}`).
-                      #{component.cssStatus}
-                  if component.details
-                    .spectrum-Tooltip.spectrum-Tooltip--right
-                      .spectrum-Tooltip-label!= markdown.toHTML(component.details)
-                      .spectrum-Tooltip-tip
+                if component.cssStatus != 'n/a'
+                  .spectrum-CSSComponent-statusContainer.u-tooltip-showOnHover
+                    div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.dnaStatus)}`).
+                      #{component.dnaStatus}
+                    if component.dnaStatus != 'Deprecated'
+                      div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.cssStatus)}`).
+                        #{component.cssStatus}
+                    if component.details
+                      .spectrum-Tooltip.spectrum-Tooltip--right
+                        .spectrum-Tooltip-label!= markdown.toHTML(component.details)
+                        .spectrum-Tooltip-tip
 
               .spectrum-CSSComponent-version.spectrum-Body #{pkg.name}@#{pkg.version}
 

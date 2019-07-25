@@ -1,6 +1,7 @@
 name: Bar Loader
 examples:
   barloader:
+    id: barloader-small
     name: Standard
     markup: |
       <div style="width: 200px; height: 25px; padding-top: 10px;">
@@ -61,7 +62,8 @@ examples:
         </div>
       </div>
 
-  barloader-overbackground:
+  barloader-over-background:
+    id: barloader-small-over-background
     name: Over Background
     markup: |
       <div style="width: 400px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
@@ -85,6 +87,7 @@ examples:
       </div>
 
   barloader-indeterminate:
+    id: barloader-small
     name: Indeterminate
     markup: |
       <div style="width: 200px; height: 25px; padding-top: 10px;">

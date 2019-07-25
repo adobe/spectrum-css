@@ -1,6 +1,6 @@
 name: Tooltip
 components:
-  tooltip-neutral:
+  tooltip:
     name: Neutral
     status: Verified
     markup: |
@@ -95,6 +95,7 @@ components:
       </span>
 
   tooltip-directions:
+    id: tooltip
     name: Directions
     status: Verified
     description: Tooltips can be top, bottom, left, or right.

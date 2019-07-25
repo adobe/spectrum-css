@@ -2,10 +2,10 @@ name: Typography
 description: English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples.
 components:
   typography:
+    id: heading-1
     name: Typography
     description: Typography elements paired to display clear content hierarchies.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum-Typography">
         <div style="max-width: 600px;">
@@ -48,10 +48,10 @@ components:
       </div>
 
   heading-1:
+    id: heading-1
     name: Heading
     description: Headings for typography.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1">Heading1 <em>Heading1 Emphasis</em> <strong>Heading1 Strong</strong>.</p>
@@ -70,10 +70,10 @@ components:
       </div>
 
   heading-strong:
+    id: heading-1
     name: Heading (Strong)
     description: Strong headings for typography.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--strong">Heading1 <em>Heading1 Emphasis</em> <strong>Heading1 Strong</strong>.</p>
@@ -86,10 +86,10 @@ components:
       </div>
 
   heading-quiet:
+    id: heading-1
     name: Heading (Quiet)
     description: Quiet headings for typography.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--quiet">Heading1 <em>Heading1 Emphasis</em> <strong>Heading1 Strong</strong>.</p>
@@ -102,10 +102,10 @@ components:
       </div>
 
   display-1:
+    id: heading-1
     name: Display
     description: Display headings for typography.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--display">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -118,10 +118,10 @@ components:
       </div>
 
   display-strong:
+    id: heading-1
     name: Display (Strong)
     description: Strong display headings for typography.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--display spectrum-Heading1--strong">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -129,10 +129,10 @@ components:
       </div>
 
   display-quiet:
+    id: heading-1
     name: Display (Quiet)
     description: Quiet display headings for typography.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--display spectrum-Heading1--quiet">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -145,10 +145,10 @@ components:
       </div>
 
   body-1:
+    id: heading-1
     name: Body
     description: Default body text sizes.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum">
         <p class="spectrum-Body1">Body1 Text <em>Body1 Emphasis</em> <strong>Body1 Strong</strong>.</p>
@@ -167,10 +167,10 @@ components:
       </div>
 
   body-article-1:
+    id: heading-1
     name: Article
     description: Typography elements paired to display clear content hierarchies in long form articles.
     status: Verified
-    ignoreDNA: true
     markup: |
       <div class="spectrum-Article">
         <h1 class="spectrum-Heading1">Heading 1</h1>
@@ -190,10 +190,10 @@ components:
       </div>
 
   code-1:
+    id: heading-1
     name: Typography - Code
     description: Typographic styles for computer code.
     status: Verified
-    ignoreDNA: true
     markup: |
       <code class="spectrum-Code1">Code1 Text <strong>Strong</strong></code>
       <code class="spectrum-Code2">Code2 Text <strong>Strong</strong></code>
