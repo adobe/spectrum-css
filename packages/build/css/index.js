@@ -13,10 +13,10 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
-
 const processors = require('./processors').processors;
 
 const legacyBuild = require('./legacyBuild');
+const vars = require('./vars');
 
 function buildVars() {
   return gulp.src([
@@ -33,6 +33,7 @@ function buildVars() {
 exports.buildVars = gulp.series(buildVars);
 
 exports.buildCSS = gulp.parallel(
+  vars.bakeVars,
   buildVars,
   legacyBuild.buildDiff,
   legacyBuild.buildMedium,
