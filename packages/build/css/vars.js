@@ -32,9 +32,7 @@ var scales = [
 
 var gatherVars = postcssReal.plugin('gather-vars', function(variableList) {
   return function (root, result) {
-    // Process each rule
     root.walkRules((rule, ruleIndex) => {
-      // Check every declaration
       rule.walkDecls((decl) => {
         let matches = decl.value.match(/var\(.*?\)/g);
         if (matches) {
@@ -52,9 +50,7 @@ var gatherVars = postcssReal.plugin('gather-vars', function(variableList) {
 
 var gatherVarValues = postcssReal.plugin('gather-var-values', function(variables) {
   return function (root, result) {
-    // Process each rule
     root.walkRules((rule, ruleIndex) => {
-      // Check every declaration
       rule.walkDecls((decl) => {
         variables[decl.prop] = decl.value;
       });
@@ -85,8 +81,6 @@ function getVarValues(css) {
 }
 
 async function getVariables(colorStop) {
-  // Read in variables from @spectrum-css/vars
-  // Filter by list of required vars
   const varDir = path.join('node_modules', '@spectrum-css', 'vars');
   let css = await fsp.readFile(path.join(varDir, 'vars', `spectrum-${colorStop}.css`));
   let vars = await getVarValues(css);
