@@ -6,7 +6,7 @@ function Search(el) {
   this.el.innerHTML = `
 <div class="spectrum-Site-search" role="search">
   <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
-    <input type="search" placeholder="Search" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="listbox" aria-owns="search-results-listbox" aria-label="Search">
+    <input type="search" placeholder="Search" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="list" aria-owns="search-results-listbox" aria-label="Search">
     <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-Magnifier" />
     </svg>
@@ -17,16 +17,25 @@ function Search(el) {
     </button>
   </form>
   <div class="spectrum-Popover spectrum-Site-searchResults js-popover">
+    <ul class="spectrum-Menu js-searchResults" id="search-results-listbox" role="listbox" aria-label="Search">
+    </ul>
+    <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults js-searchError">
+      <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
+        <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">No results found</h2>
+        <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
   this.form = this.el.querySelector('.js-form');
   this.popover = this.el.querySelector('.js-popover');
-  document.body.appendChild(this.popover);
-
   this.input = this.el.querySelector('.js-input');
+  this.searchResults = this.el.querySelector('.js-searchResults');
+  this.searchError = this.el.querySelector('.js-searchError');
   this.clearButton = this.el.querySelector('.js-clearButton');
+  document.body.appendChild(this.popover);
 
   this.clearButton.addEventListener('click', this.hideResults.bind(this));
   this.el.addEventListener('submit', this.handleSubmit.bind(this));
@@ -245,43 +254,43 @@ Search.prototype.search = function(val) {
 
   this.hasResults = !!r.length;
 
-  let markup = `
-${
-  results.length === 0 ?
-  `
-  <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
-    <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">No results found</h2>
-    <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
-  </div>
-  ` : `
-  <ul class="spectrum-Menu" id="search-results-listbox" role="listbox" aria-label="Search">
-    ${
-      Search.Categories.map(function(category) {
-        return results[category].length ?
-          `
-          <li role="group" aria-labelledby="searchResults-${category}">
-            <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${Search.CategoryNames[category]}</span>
-            <ul class="spectrum-Menu" role="presentation">
-              ${
-                results[category].map(function(result, i) {
-                  return `
-                  <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
-                    <span class="spectrum-Menu-itemLabel">${result.name}</span>
-                  </a>
-                  `
-                }).join('\n')
-              }
-            </ul>
-          </li>
-          ` : ''
-      }).join('\n')
-    }
-  </ul>
-  `
-}
-`;
+  if (results.length) {
+    this.searchError.hidden = true;
+    this.searchResults.hidden = false;
 
-  this.popover.innerHTML = markup;
+    let markup = `
+<ul class="spectrum-Menu" id="search-results-listbox" role="listbox" aria-label="Search">
+  ${
+    Search.Categories.map(function(category) {
+      return results[category].length ?
+        `
+        <li role="group" aria-labelledby="searchResults-${category}">
+          <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${Search.CategoryNames[category]}</span>
+          <ul class="spectrum-Menu" role="presentation">
+            ${
+              results[category].map(function(result, i) {
+                return `
+                <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
+                  <span class="spectrum-Menu-itemLabel">${result.name}</span>
+                </a>
+                `
+              }).join('\n')
+            }
+          </ul>
+        </li>
+        ` : ''
+    }).join('\n')
+  }
+</ul>
+`;
+    this.searchResults.innerHTML = markup;
+
+  }
+  else {
+    this.searchError.hidden = false;
+    this.searchResults.hidden = true;
+  }
+
   this.showResults();
 };
 
