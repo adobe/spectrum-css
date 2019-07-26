@@ -172,12 +172,21 @@ window.addEventListener('DOMContentLoaded', function() {
   var sideBar = document.querySelector('#site-sidebar');
   var overlay = document.querySelector('#site-overlay');
   let mql = window.matchMedia('(max-width: 960px)');
-  mql.addEventListener('change', function() {
-    if (!mql.matches) {
+  function handleMQLChange() {
+    if (mql.matches) {
+      switcher.scale = 'large';
+    }
+    else {
+      switcher.scale = 'medium';
+
       // Get rid of the overlay if we resize while the sidebar is open
       hideSideBar();
     }
-  });
+  }
+
+  mql.addListener(handleMQLChange);
+
+  handleMQLChange();
 
   function showSideBar() {
     if (mql.matches) {
