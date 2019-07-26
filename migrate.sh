@@ -31,14 +31,14 @@ packagejson='{
   },
   "devDependencies": {
     "gulp": "^4.0.0",
-    "@spectrum-css/build": "0.0.0"
+    "@spectrum-css/component-builder": "0.0.0"
   }
 }'
 
-gulpfile="module.exports = require('@spectrum-css/build');"
+gulpfile="module.exports = require('@spectrum-css/component-builder');"
 
-# packages=$(ls packages/)
-packages="accordion   checkbox    fieldlabel    rule      stepper
+# components=$(ls components/)
+components="accordion   checkbox    fieldlabel    rule      stepper
 actionbar   circleloader        search      table
 actionmenu    coachmark   illustratedmessage  searchwithin    tabs
 alert        inputgroup    sidenav     tags
@@ -53,7 +53,7 @@ buttongroup   dropindicator   quickaction   splitview   well
 calendar    dropzone    radio     statuslight
 card      fieldgroup    rating      steplist"
 migratedPackages=()
-packagesWithoutDocs=()
+componentsWithoutDocs=()
 
 buildFiles="index.css
 index-diff.css
@@ -70,34 +70,34 @@ multiStops/darkest.css"
 
 oldCSSDir="/Users/lawdavis/repos/old-spectrum-css"
 
-for package in $packages; do
+for package in $components; do
   echo "Processing $package..."
   # if [ -d "docs/$package" ]; then
   #   echo "$package has docs, let's migrate them"
   #   migratedPackages+=("$package")
-  #   mkdir packages/$package/docs
-  #   mv docs/$package/* packages/$package/docs/
+  #   mkdir components/$package/docs
+  #   mv docs/$package/* components/$package/docs/
   # else
   #   echo "$package does NOT have docs, why?"
-  #   packagesWithoutDocs+=("$package")
+  #   componentsWithoutDocs+=("$package")
   # fi
 
   # Set up package.json
-  # echo "$packagejson" | sed "s/PACKAGE/$package/g" > $CWD/packages/$package/package.json
-  # echo "$gulpfile" > $CWD/packages/$package/gulpfile.js
+  # echo "$packagejson" | sed "s/PACKAGE/$package/g" > $CWD/components/$package/package.json
+  # echo "$gulpfile" > $CWD/components/$package/gulpfile.js
 
   # move yml
-  # if [ -d packages/$package/docs ]; then
-  #   docCount=`ls -1 packages/$package/docs | wc -l`
+  # if [ -d components/$package/docs ]; then
+  #   docCount=`ls -1 components/$package/docs | wc -l`
   #   # echo "Got me a nice lil doc folder for $package with $docCount items"
   #   if [ $docCount == "1" ]; then
   #     echo "Moving and renaming singular docs file..."
-  #     mv packages/$package/docs/*.yml packages/$package/docs.yml
+  #     mv components/$package/docs/*.yml components/$package/docs.yml
   #   fi
 
   #   if [ $docCount == "0" ]; then
   #     echo "Deleting empty docs folder..."
-  #     rm -rf packages/$package/docs/
+  #     rm -rf components/$package/docs/
   #   fi
   # fi
 
@@ -107,7 +107,7 @@ for package in $packages; do
   # packageIdentical="1"
   # for buildFile in $buildFiles; do
   #   oldFile="$oldCSSDir/dist/components/$package/$buildFile"
-  #   newFile="packages/$package/dist/$buildFile"
+  #   newFile="components/$package/dist/$buildFile"
   #   if [ -f $oldFile ]; then
   #     diff -b $oldFile $newFile > /dev/null
 
@@ -124,10 +124,10 @@ for package in $packages; do
   # fi
 
   # copy npmignore
-  echo $npmignore > $CWD/packages/$package/.npmignore
+  echo $npmignore > $CWD/components/$package/.npmignore
 done
 
 echo $migratedPackages
 
 echo "Migrated: `arrlen "${migratedPackages[@]}"`"
-echo "Missing docs: `arrlen "${packagesWithoutDocs[@]}"`"
+echo "Missing docs: `arrlen "${componentsWithoutDocs[@]}"`"

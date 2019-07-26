@@ -1,1 +1,1 @@
-module.exports = require('./packages/toplevel-builder');
+module.exports = require('./tools/bundle-builder');

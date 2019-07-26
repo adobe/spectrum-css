@@ -1,0 +1,52 @@
+{
+  "name": "@spectrum-css/component-builder",
+  "version": "1.0.0-alpha.0",
+  "description": "The Spectrum CSS component builder",
+  "author": "",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "publishConfig": {
+    "directory": "./"
+  },
+  "dependencies": {
+    "@adobe/focus-ring-polyfill": "0.1.5",
+    "autoprefixer": "^6.5.3",
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-exec": "^3.0.2",
+    "gulp-insert": "^0.5.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulplog": "^1.0.0",
+    "inquirer": "^6.5.0",
+    "js-yaml": "^3.13.1",
+    "loadicons": "^1.0.0",
+    "markdown": "^0.5.0",
+    "merge-stream": "^2.0.0",
+    "postcss-calc": "^6.0.0",
+    "postcss-custom-properties": "^6.0.1",
+    "postcss-discard-empty": "^4.0.1",
+    "postcss-focus-ring": "^1.0.0",
+    "postcss-functions": "^3.0.0",
+    "postcss-import": "^10.0.0",
+    "postcss-inherit": "^4.0.3",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-svg": "^3.0.0",
+    "prismjs": "^1.15.0",
+    "pug": "^2.0.4",
+    "replace-ext": "^1.0.0",
+    "through2": "^3.0.1"
+  },
+  "gitHead": "bc9be09cc6bf48e5b40a94c8c30c8e5a9f22708c"
+}

@@ -27,11 +27,11 @@ The preferred method of using Spectrum CSS relies on custom properties to swap o
 
 To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
 
-## Installing packages
+## Installing components
 
 Each component is released on npm as a separate, individually versioned package inside of the [`@spectrum-css` org](https://www.npmjs.com/org/spectrum-css).
 
-To get started, install the following packages:
+To get started, install the following components:
 
 ```
 npm install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spectrum-css/icons @spectrum-css/button
@@ -80,7 +80,7 @@ Then you can use components by copy/pasting their code from [the documentation](
 
 With the magic of CSS custom properties, you can infinitely nest different color stops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
 
-Additionally, you can override variables and customize Spectrum CSS' look and feel by re-defining the custom properties in context, [like so](https://codepen.io/lazd/pen/ROvOPO). See the source in `packages/*/index-vars.css` to determine which custom properties you can override.
+Additionally, you can override variables and customize Spectrum CSS' look and feel by re-defining the custom properties in context, [like so](https://codepen.io/lazd/pen/ROvOPO). See the source in `components/*/index-vars.css` to determine which custom properties you can override.
 
 ### Importing UI icons
 
@@ -126,7 +126,7 @@ To take advantage of locale specific changes such as placeholders not italicizin
 
 ## Project structure
 
-The project is broken down into separate packages for each component inside of the `packages/` folder.
+The project is broken down into separate components for each component inside of the `components/` folder.
 
 Each package has the following files:
 
@@ -135,13 +135,13 @@ Each package has the following files:
 * `docs.yml` - The markup examples and documentation for the component
 * `docs/*.yml` - Additional examples that appear separately in the navigation
 
-See [documentation generation](packages/toplevel-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
+See [documentation generation](tools/bundle-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
 
 ### Documentation site
 
 Building the project will build and launch the project documentation site in your browser automatically.
 
-See [site generation](packages/toplevel-builder/site/README.md) and [documentation generation](packages/toplevel-builder/docs/README.md) documentation for more information.
+See [site generation](tools/bundle-builder/site/README.md) and [documentation generation](tools/bundle-builder/docs/README.md) documentation for more information.
 
 ## Building
 
@@ -153,7 +153,7 @@ npm install
 gulp dev
 ```
 
-Your `dist/` folder should now have a local copy of the Spectrum CSS docs and minimal CSS files, and your browser should be open with the project documentation. Editing any of the `.css` or `.yml` files in `packages/*` will update the project documentation and live reload in your browser.
+Your `dist/` folder should now have a local copy of the Spectrum CSS docs and minimal CSS files, and your browser should be open with the project documentation. Editing any of the `.css` or `.yml` files in `components/*` will update the project documentation and live reload in your browser.
 
 **Important:** Ensure you have Node.js > 10.10 installed or the build system will not run. Node.js > 12.x is preferred.
 
@@ -161,11 +161,11 @@ Your `dist/` folder should now have a local copy of the Spectrum CSS docs and mi
 
 The following tasks are available:
 
-- `gulp build` - Performs a build of all packages and the top level package
-- `gulp buildPackages` - Performs a build of all packages
-- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching packages and website files
-- `gulp clean` - Cleans all output files for the project and all packages
-- `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching packages and website files
+- `gulp build` - Performs a build of all components and the top level package
+- `gulp buildComponents` - Performs a build of all components
+- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files
+- `gulp clean` - Cleans all output files for the project and all components
+- `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files
 - `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
 - `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
 - `gulp release` - Performs a release of the top-level package
@@ -180,14 +180,14 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 ### Editing an existing component
 
 1. Run `gulp dev` in the root of the project to begin developing.
-2. Edit `packages/$COMPONENT/index.css` and `packages/$COMPONENT/skin.css` with dimensions and color properties respectively. The documentation will live reload with your changes.
-3. Edit the markup examples within `packages/$COMPONENT/docs.yml` accordingly. The documentation will live reload with your changes.
+2. Edit `components/$COMPONENT/index.css` and `components/$COMPONENT/skin.css` with dimensions and color properties respectively. The documentation will live reload with your changes.
+3. Edit the markup examples within `components/$COMPONENT/docs.yml` accordingly. The documentation will live reload with your changes.
 
 **Note:** If you add dependencies, be sure to re-run `npm run bootstrap` so they are linked appropriately.
 
 ### Adding a new component
 
-1. Copy the directory for a smiliar component from `packages/` and rename it for your new component.
+1. Copy the directory for a smiliar component from `components/` and rename it for your new component.
 2. Edit the `package.json`, resetting the verison number to `1.0.0-alpha.0`.
 3. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `vars`, and most rely on `icons`.
 4. Run `gulp dev` in the root of the project to begin developing.
@@ -202,10 +202,10 @@ To perform manual testing of the latest version of each component:
 gulp dev
 ```
 
-To perform manual testing of the backwards-compatible monolithic package:
+To perform manual testing of the backwards-compatible monolithic bundle:
 
 ```
-cd packages/spectrum-css-compat
+cd bundles/spectrum-css-compat
 gulp dev
 ```
 
@@ -215,17 +215,17 @@ gulp dev
 
 ### Individual package releses
 
-Run `npm run release-all` to release changed individual packages.
+Run `npm run release-all` to release changed individual components.
 
 ### Monolithic latest release
 
-Run `npm run release` to release the latest monolithic package. Ensure that you update the major version number in the top level `package.json` if any of the individual packages have had a major version bump.
+Run `npm run release` to release the latest monolithic bundle. Ensure that you update the major version number in the top level `package.json` if any of the individual components have had a major version bump.
 
 ### Monolithic backwards-compatible release
 
 Assuming proper version ranges have been employed, and `npm run bootstrap` has been ran, you can simply run the following:
 
 ```
-cd packages/spectrum-css-compat
+cd bundles/spectrum-css-compat
 npm run release
 ```
