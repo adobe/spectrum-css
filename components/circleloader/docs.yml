@@ -5,7 +5,7 @@ examples:
     id: circleloader-small
     name: Standard
     markup: |
-      <div style="width: 300px; height: 150px; display: flex; align-items: center; justify-content: space-around;" id="standard-loaders">
+      <div style="width: 250px; height: 150px; display: flex; align-items: center; justify-content: space-around;" id="standard-loaders">
         <div class="spectrum-CircleLoader spectrum-CircleLoader--small">
           <div class="spectrum-CircleLoader-track"></div>
           <div class="spectrum-CircleLoader-fills">
@@ -59,7 +59,7 @@ examples:
     id: circleloader-small-over-background
     name: Over Background
     markup: |
-      <div style="width: 300px; height: 150px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: space-around;" id="ob-loaders">
+      <div style="width: 250px; height: 150px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: space-around;" id="ob-loaders">
         <div class="spectrum-CircleLoader spectrum-CircleLoader--small spectrum-CircleLoader--overBackground">
           <div class="spectrum-CircleLoader-track"></div>
           <div class="spectrum-CircleLoader-fills">
@@ -113,7 +113,7 @@ examples:
     id: circleloader-small
     name: Indeterminate
     markup: |
-      <div style="width: 300px; height: 150px; display: flex; align-items: center; justify-content: space-around;">
+      <div style="width: 250px; height: 150px; display: flex; align-items: center; justify-content: space-around;">
         <div class="spectrum-CircleLoader spectrum-CircleLoader--indeterminate spectrum-CircleLoader--small">
           <div class="spectrum-CircleLoader-track"></div>
           <div class="spectrum-CircleLoader-fills">

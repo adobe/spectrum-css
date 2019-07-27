@@ -22,12 +22,43 @@
   --spectrum-cssexample-markup-padding-y: var(--spectrum-global-dimension-size-125);
   --spectrum-cssexample-markup-toggle-height: var(--spectrum-global-dimension-size-400);
   --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-75);
+
+  --spectrum-cssexample-padding-x: var(--spectrum-global-dimension-size-500);
+  --spectrum-cssexample-padding-y: var(--spectrum-global-dimension-size-400);
 }
 
 .spectrum-CSSComponent {
   max-width: var(--spectrum-csscomponent-max-width);
   margin: var(--spectrum-csscomponent-margin) auto;
   padding: 0 var(--spectrum-csscomponent-padding);
+}
+
+
+@media screen and (max-width: 960px) {
+  .spectrum-CSSComponent {
+    --spectrum-csscomponent-padding: var(--spectrum-global-dimension-size-150);
+    --spectrum-csscomponent-margin: var(--spectrum-global-dimension-size-100);
+    --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-150);
+  }
+
+  .spectrum-CSSExample {
+    --spectrum-cssexample-padding-x: var(--spectrum-global-dimension-size-200);
+    --spectrum-cssexample-padding-y: var(--spectrum-global-dimension-size-200);
+    --spectrum-cssexample-header-margin-bottom: var(--spectrum-global-dimension-size-150);
+    --spectrum-cssexample-margin-bottom: var(--spectrum-global-dimension-size-200);
+  }
+
+  .spectrum-CSSComponent-description {
+    --spectrum-body-2-text-size: var(--spectrum-global-dimension-font-size-100);
+  }
+
+  .spectrum-CSSComponent-statusContainer,
+  .spectrum-CSSComponent-version {
+    display: none;
+  }
+  .spectrum-CSSComponent-title {
+    font-size: var(--spectrum-global-dimension-font-size-700);
+  }
 }
 
 .spectrum-CSSComponent-heading {
@@ -100,7 +131,7 @@
 .spectrum-CSSExample-example {
   flex: 1;
 
-  padding: 3rem 4rem;
+  padding: var(--spectrum-cssexample-padding-y) var(--spectrum-cssexample-padding-x);
 
   border-radius: var(--spectrum-cssexample-border-radius) var(--spectrum-cssexample-border-radius) 0 0;
 
@@ -119,6 +150,8 @@
 
   background: var(--spectrum-cssexample-markup-background-color);
 
+  font-size: var(--spectrum-global-dimension-font-size-25);
+
   overflow: hidden;
 }
 
@@ -134,7 +167,7 @@
 }
 
 .spectrum-CSSExample-markupToggle + pre {
-  padding-bottom: 1rem;
+  padding-bottom: var(--spectrum-global-dimension-size-100);
 }
 
 .spectrum-CSSExample-example--overlay {
@@ -177,7 +210,7 @@ pre {
 
 code[class*="language-"], pre[class*="language-"] {
   text-shadow: none;
-  font-size: 12px;
+  font-size: inherit;
 }
 
 .spectrum-CSSExample-markupToggle {
@@ -192,6 +225,7 @@ code[class*="language-"], pre[class*="language-"] {
 
   background: white;
 
+  font-size: var(--spectrum-global-dimension-font-size-100);
   text-align: center;
 }
 
