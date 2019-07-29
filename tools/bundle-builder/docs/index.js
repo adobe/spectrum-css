@@ -56,6 +56,8 @@ async function buildDocs_forDep(dep) {
 
   let dirName = `${dirs.components}/${dep}`;
 
+  logger.debug(`Will build docs for package in ${dirs.components}/${dep}`);
+
   return new Promise((resolve, reject) => {
     gulp.src(
       [

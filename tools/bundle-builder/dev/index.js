@@ -47,7 +47,10 @@ function watchWithinPackages(glob, task, files) {
     let package = getPackageFromPath(changedFile);
 
     if (typeof task === 'function') {
-      task(changedFile, package, done);
+      task(changedFile, package, (err) => {
+        done(err);
+        changedFile = null;
+      });
     }
     else {
       subrunner.runComponentTask(package, task, (err) => {
@@ -60,6 +63,8 @@ function watchWithinPackages(glob, task, files) {
         gulp.src(`${dirs.components}/${package}/dist/${files}`)
           .pipe(gulp.dest(`dist/components/${package}/`))
           .on('end', () => {
+            logger.debug(`Injecting files from ${package}/:\n  ${files.join('\n  ')}`);
+
             // Inject
             gulp.src(`dist/components/${package}/${files}`)
               .pipe(browserSync.stream());
@@ -161,6 +166,7 @@ function watch() {
         // Get data first so nav builds
         docs.buildSite_getData,
         function buildDocs_forDep() {
+          logger.debug(`Building docs for ${package}`);
           return docs.buildDocs_forDep(package)
             .finally(() => {
               done();
