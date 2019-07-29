@@ -76,67 +76,6 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 960px) {
-  .spectrum-Site-overlay {
-    display: block;
-    visibility: hidden;
-
-    opacity: 0;
-
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    /* Float above things by default */
-    z-index: 99;
-
-    overflow: hidden;
-
-    /* Exit animations */
-    transition: opacity var(--spectrum-site-overlay-background-exit-animation-duration) var(--spectrum-site-overlay-background-exit-animation-easing) var(--spectrum-site-overlay-background-exit-animation-delay),
-                visibility 0ms linear calc(var(--spectrum-site-overlay-background-exit-animation-delay) + var(--spectrum-site-overlay-background-exit-animation-duration));
-
-    background: var(--spectrum-site-overlay-underlay-background-color);
-  }
-
-  .spectrum-Site-overlay.is-open {
-    visibility: visible;
-
-    opacity: 1;
-
-    pointer-events: auto;
-
-    /* Entry animations */
-    transition: opacity var(--spectrum-site-overlay-background-entry-animation-duration) var(--spectrum-site-overlay-background-entry-animation-easing) var(--spectrum-site-overlay-background-entry-animation-delay);
-  }
-
-  .spectrum-Site-overlay {
-    visibility: visible;
-  }
-
-  .spectrum-Site-sideBar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 100%;
-    z-index: 100;
-
-    transform: translateX(0);
-    transition: transform var(--spectrum-global-animation-duration-200) ease-in-out;
-  }
-
-  .spectrum-Site-sideBar.is-open {
-    transform: translateX(100%);
-  }
-
-  .spectrum-Site-header {
-    display: block;
-  }
-}
-
 .spectrum-Site-sideBarHeader {
   flex-grow: 0;
   flex-shrink: 0;
@@ -216,6 +155,80 @@ body {
 .spectrum-Hero-image {
   margin-top: 40px;
   max-width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .spectrum-Site-overlay {
+    display: block;
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Float above things by default */
+    z-index: 99;
+
+    overflow: hidden;
+
+    /* Exit animations */
+    transition: opacity var(--spectrum-site-overlay-background-exit-animation-duration) var(--spectrum-site-overlay-background-exit-animation-easing) var(--spectrum-site-overlay-background-exit-animation-delay),
+                visibility 0ms linear calc(var(--spectrum-site-overlay-background-exit-animation-delay) + var(--spectrum-site-overlay-background-exit-animation-duration));
+
+    background: var(--spectrum-site-overlay-underlay-background-color);
+  }
+
+  .spectrum-Site-overlay.is-open {
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    /* Entry animations */
+    transition: opacity var(--spectrum-site-overlay-background-entry-animation-duration) var(--spectrum-site-overlay-background-entry-animation-easing) var(--spectrum-site-overlay-background-entry-animation-delay);
+  }
+
+  .spectrum-Site-overlay {
+    visibility: visible;
+  }
+
+  .spectrum-Site-sideBar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    z-index: 100;
+
+    transform: translateX(0);
+    transition: transform var(--spectrum-global-animation-duration-200) ease-in-out;
+  }
+
+  .spectrum-Site-sideBar.is-open {
+    transform: translateX(100%);
+  }
+
+  .spectrum-Site-header {
+    display: block;
+  }
+
+  .spectrum-Page {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .spectrum-Site-hero {
+    max-width: 100%;
+  }
+
+  .spectrum-Hero-heading h1.spectrum-Heading1--display {
+    font-size: var(--spectrum-global-dimension-font-size-900);
+  }
 }
 
 .u-scrollable {
