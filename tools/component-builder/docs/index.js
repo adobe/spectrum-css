@@ -20,6 +20,8 @@ const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 
+const bundleBuilderPath = path.join(__dirname, '..', 'node_modules', '@spectrum-css', 'bundle-builder');
+
 var dependencies;
 var docDependencies;
 function getDependencies() {
@@ -98,7 +100,7 @@ function buildDocs_html() {
 }
 
 function buildDocs_resources() {
-  return gulp.src(`${__dirname}/resources/**`)
+  return gulp.src(`${bundleBuilderPath}/site/resources/**`)
     .pipe(gulp.dest('dist/docs/'));
 }
 
@@ -115,27 +117,18 @@ function buildDocs_copyDeps() {
 
 function buildDocs_loadicons() {
   return gulp.src(require.resolve('loadicons'))
-    .pipe(gulp.dest('dist/docs/dependencies/loadicons/'));
+    .pipe(gulp.dest('dist/docs/js/loadicons/'));
 }
 
 function buildDocs_focusPolyfill() {
   return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
-    .pipe(gulp.dest('dist/docs/dependencies/@adobe/focus-ring-polyfill/'));
-}
-
-function buildDocs_prism() {
-  return gulp.src([
-    `${path.dirname(require.resolve('prismjs'))}/themes/prism.css`,
-    `${path.dirname(require.resolve('prismjs'))}/themes/prism-tomorrow.css`
-  ])
-    .pipe(gulp.dest('dist/docs/css/vendor/'));
+    .pipe(gulp.dest('dist/docs/js/focus-ring-polyfill/'));
 }
 
 let buildDocs = gulp.parallel(
   buildDocs_resources,
   buildDocs_loadicons,
   buildDocs_focusPolyfill,
-  buildDocs_prism,
   buildDocs_copyDeps,
   buildDocs_html
 );

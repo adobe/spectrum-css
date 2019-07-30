@@ -41,8 +41,6 @@ html(lang='en-US')
     title #{component.name} - Spectrum CSS
     meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
 
-    link(rel='stylesheet', type='text/css', href='css/vendor/prism.css', data-prism)
-
     link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-lightest.css')
     link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-light.css')
     link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-dark.css')
@@ -56,17 +54,24 @@ html(lang='en-US')
     // Include the actual component
     link(rel='stylesheet', type='text/css', href='../index-vars.css')
 
+    link(rel='stylesheet', type='text/css', href='css/site.css')
     link(rel='stylesheet', type='text/css', href='css/docs.css')
 
-    script(src='dependencies/loadicons/index.js')
-    script(src='dependencies/@adobe/focus-ring-polyfill/index.js')
-
-    script(src='js/vendor/typekit.js')
+    script(src='js/loadicons/index.js')
+    script(src='js/focus-ring-polyfill/index.js')
+    script(src='js/typekit.js')
+    script(src='js/SpectrumSwitcher.js')
 
     script.
       loadIcons('dependencies/@spectrum-css/icons/spectrum-css-icons.svg');
+      var switcher = new SpectrumSwitcher();
 
-  body.spectrum.spectrum--lightest.spectrum--medium
+    style(type='text/css').
+      .spectrum-CSSExample-example {
+        border-radius: 0;
+      }
+
+  body.spectrum.spectrum--light.spectrum--medium
 
     article.spectrum-CSSComponent
 
@@ -92,4 +97,4 @@ html(lang='en-US')
             section.spectrum-CSSExample-container
               .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
 
-      div.spectrum-Underlay#spectrum-underlay
+    div.spectrum-Underlay#spectrum-underlay
