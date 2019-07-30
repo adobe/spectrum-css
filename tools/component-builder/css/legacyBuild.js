@@ -19,6 +19,7 @@ const replace = require('gulp-replace');
 const merge = require('merge-stream');
 
 const processors = require('./processors');
+const mutateselectors = require('./lib/postcss-mutateselectors')
 const legacyProcessors = processors.legacyProcessors;
 
 var colorStops = [
@@ -66,7 +67,6 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
   })
     .pipe(insert.prepend(`@import "${varDir}vars/spectrum-global.css";
 @import '${varDir}vars/spectrum-${colorStop}.css';
-@import '${commonsDir}skin.css';
 ${prependString}\n`))
     .pipe(insert.append(appendString))
     .pipe(postcss(legacyProcessors))
@@ -97,11 +97,13 @@ function buildMultiStops() {
       allowEmpty: true // Allow missing skin.css
     })
     .pipe(insert.prepend(`@import "${varDir}vars/spectrum-global.css";
-@import '${varDir}vars/spectrum-${colorStop}.css';
-@import '${commonsDir}skin.css';
-.spectrum--${colorStop} {\n`))
-      .pipe(insert.append('}\n'))
+@import '${varDir}vars/spectrum-${colorStop}.css';`))
       .pipe(postcss(legacyProcessors))
+      .pipe(postcss([
+          mutateselectors((selector) => {
+          return `.spectrum-${colorStop} ${selector}`;
+        })
+      ]))
       // Fix a nested + inherit bug
       .pipe(replace(`.spectrum--${colorStop} .spectrum--${colorStop}`, `.spectrum--${colorStop}`))
       .pipe(rename(function(path) {

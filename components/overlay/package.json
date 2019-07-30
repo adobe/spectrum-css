@@ -1,7 +1,7 @@
 {
-  "name": "@spectrum-css/commons",
+  "name": "@spectrum-css/overlay",
   "version": "1.0.0-alpha.0",
-  "description": "Common mixins and variables for Spectrum CSS components",
+  "description": "Overlay mixin",
   "author": "",
   "license": "Apache-2.0",
   "repository": {
@@ -13,6 +13,5 @@
   },
   "scripts": {
     "build": "echo 'No build required'"
-  },
-  "gitHead": "bc9be09cc6bf48e5b40a94c8c30c8e5a9f22708c"
+  }
 }

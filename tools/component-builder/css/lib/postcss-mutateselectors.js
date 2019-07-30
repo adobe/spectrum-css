@@ -9,12 +9,12 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+var postcss = require('postcss');
 
-:root {
-  --spectrum-padding: var(--spectrum-global-dimension-size-150);
-  --spectrum-margin: var(--spectrum-padding);
-  --spectrum-border-radius: var(--spectrum-global-dimension-size-50);
-
-  --spectrum-component-single-line-height: var(--spectrum-alias-single-line-height);
-  --spectrum-component-single-line-width: var(--spectrum-alias-single-line-width);
-}
+module.exports = postcss.plugin('postcss-mutateselectors', function(mutate) {
+  return (root, result) => {
+    root.walkRules((rule, ruleIndex) => {
+      rule.selector = rule.selector.split(',').map((selector) => selector.trim()).map(mutate).join(',\n');
+    });
+  }
+});

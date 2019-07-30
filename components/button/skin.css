@@ -10,6 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  --spectrum-button-primary-border-size-increase-key-focus: 1px;
+  --spectrum-actionbutton-quiet-border-size-key-focus: 1px;
+}
+
 .spectrum-Button {
   &:focus-ring {
     box-shadow: 0 0 0 var(--spectrum-button-primary-border-size-increase-key-focus) var(--spectrum-button-primary-border-color-key-focus);
