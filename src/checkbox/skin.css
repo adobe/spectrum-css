@@ -69,11 +69,9 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Checkbox {
-  .spectrum-Checkbox-checkmark,
-  .spectrum-Checkbox-partialCheckmark {
-    color: var(--spectrum-checkbox-checkmark-color);
-  }
+.spectrum-Checkbox .spectrum-Checkbox-checkmark,
+.spectrum-Checkbox .spectrum-Checkbox-partialCheckmark {
+  color: var(--spectrum-checkbox-checkmark-color);
 }
 
 .spectrum-Checkbox-input {
