@@ -12,102 +12,137 @@ governing permissions and limitations under the License.
 
 const gulp = require('gulp');
 const through = require('through2');
-const postcssReal = require('postcss');
+const postcss = require('postcss');
+const logger = require('gulplog');
 const fsp = require('fs').promises;
 const path = require('path');
 const concat = require('gulp-concat');
 
 // Todo: get these values from a common place?
-var colorStops = [
+let colorStops = [
   'darkest',
   'dark',
   'light',
   'lightest'
 ];
 
-var scales = [
+let scales = [
   'medium',
   'large'
 ];
 
-var gatherVars = postcssReal.plugin('gather-vars', function(variableList) {
-  return function (root, result) {
-    root.walkRules((rule, ruleIndex) => {
-      rule.walkDecls((decl) => {
-        let matches = decl.value.match(/var\(.*?\)/g);
-        if (matches) {
-          matches.forEach(function(match) {
-            if (variableList.indexOf(match) === -1) {
-              let varName = match.replace(/var\((--[\w\-]+),?\s*([\w\-]*)\)/, '$1').trim();
-              variableList.push(varName);
-            }
-          });
-        }
-      });
-    });
-  }
-});
-
-var gatherVarValues = postcssReal.plugin('gather-var-values', function(variables) {
-  return function (root, result) {
-    root.walkRules((rule, ruleIndex) => {
-      rule.walkDecls((decl) => {
-        variables[decl.prop] = decl.value;
-      });
-    });
-  }
-});
-
 function getVars(css) {
-  return new Promise((resolve, reject) => {
-    var variableList = [];
-    postcssReal(gatherVars(variableList))
-      .process(css)
-      .then(() => {
-        resolve(variableList);
-      });
+  let variableList = [];
+  let root = postcss.parse(css);
+
+  root.walkRules((rule, ruleIndex) => {
+    rule.walkDecls((decl) => {
+      let matches = decl.value.match(/var\(.*?\)/g);
+      if (matches) {
+        matches.forEach(function(match) {
+          if (variableList.indexOf(match) === -1) {
+            let varName = match.replace(/var\((--[\w\-]+),?\s*([\w\-]*)\)/, '$1').trim();
+            variableList.push(varName);
+          }
+        });
+      }
+    });
   });
+  return variableList;
 }
 
 function getVarValues(css) {
-  return new Promise((resolve, reject) => {
-    var variables = {};
-    postcssReal(gatherVarValues(variables))
-      .process(css)
-      .then(() => {
-        resolve(variables);
-      });
+  let root = postcss.parse(css);
+  let variables = {};
+
+  root.walkRules((rule, ruleIndex) => {
+    rule.walkDecls((decl) => {
+      variables[decl.prop] = decl.value;
+    });
   });
+
+  return variables;
+}
+
+function getClassNames(contents, pkgName) {
+  let root = postcss.parse(contents);
+  let classNames = [];
+
+
+  function addClassname(className) {
+    if (classNames.indexOf(className) === -1) {
+      classNames.push(className);
+    }
+  }
+
+  let result = root.walkRules((rule, ruleIndex) => {
+    let selector = rule.selectors[0];
+
+    if (pkgName === 'page') {
+      className = '';
+      return 'false';
+    }
+
+    rule.selectors.forEach((fullSelector) => {
+      // Skip compound selectors, they may not start with the component itself
+      if (fullSelector.match(/~|\+/)) {
+        return true;
+      }
+
+      let selector = fullSelector.split(' ').shift();
+
+      if (rule.type === 'rule') {
+        let matches = selector.match(/^\.spectrum-[\w]+/);
+        if (matches) {
+          let modSelector = matches[0]
+          addClassname(modSelector);
+        }
+      }
+    });
+  });
+
+  if (classNames.length === 0) {
+    logger.error(`Could not find classNames for ${pkgName}, assuming no classNames`);
+    classNames.push('');
+  }
+
+  logger.debug(`Found classNames ${classNames.join(', ')} for ${pkgName}`);
+
+  return classNames;
 }
 
 async function getVariables(colorStop) {
-  const varDir = path.join('node_modules', '@spectrum-css', 'vars');
+  const varDir = path.join(process.cwd(), 'node_modules', '@spectrum-css', 'vars');
   let css = await fsp.readFile(path.join(varDir, 'vars', `spectrum-${colorStop}.css`));
-  let vars = await getVarValues(css);
+  let vars = getVarValues(css);
   return { colorStop: colorStop, vars: vars };
 }
 
-function getVariableDeclarations(component, modifier, vars) {
-  return `
-.spectrum--${modifier} {
-${Object.keys(vars).map((varName) => `  ${varName}: ${vars[varName]};`).join('\n')}
+function getVariableDeclarations(classNames, modifier, vars) {
+  let varNames = Object.keys(vars);
+  if (varNames.length) {
+    return `
+${classNames.map((className) => `.spectrum--${modifier} ${className}`).join(',\n')} {
+${varNames.map((varName) => `  ${varName}: ${vars[varName]};`).join('\n')}
 }
 `;
+  }
+
+  return '';
 }
 
-async function bakeVars() {
-  let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
-
+function bakeVars() {
   return gulp.src([
-    'index.css',
-    'skin.css'
-  ], {
-    allowEmpty: true // Allow missing skin.css
-  })
+    'dist/index-vars.css'
+  ])
   .pipe(concat('all.css'))
   .pipe(through.obj(async function doBake(file, enc, cb) {
+    let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
+    let pkgName = pkg.name.split('/').pop();
+    let classNames = getClassNames(file.contents, pkgName);
+
     // Find all custom properties used in the component
-    let variableList = await getVars(file.contents);
+    let variableList = getVars(file.contents);
 
     // For each color stop and scale, filter the variables for those matching the component
     let vars = await Promise.all(colorStops.concat(scales).map(getVariables));
@@ -121,7 +156,7 @@ async function bakeVars() {
         }
       }
 
-      var contents = getVariableDeclarations(pkg.name.split('/').pop(), colorStop, usedVars);
+      let contents = getVariableDeclarations(classNames, colorStop, usedVars);
       let newFile = file.clone({contents: false});
       newFile.path = path.join(file.base, `spectrum-${colorStop}.css`);
       newFile.contents = Buffer.from(contents);

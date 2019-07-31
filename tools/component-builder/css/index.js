@@ -18,7 +18,7 @@ const processors = require('./processors').processors;
 const legacyBuild = require('./legacyBuild');
 const vars = require('./vars');
 
-function buildVars() {
+function buildIndexVars() {
   return gulp.src([
     'index.css',
     'skin.css'
@@ -30,10 +30,14 @@ function buildVars() {
     .pipe(gulp.dest('dist/'));
 }
 
-exports.buildVars = gulp.series(buildVars);
+let buildVars = gulp.series(
+  buildIndexVars,
+  vars.bakeVars
+);
+
+exports.buildVars = buildVars;
 
 exports.buildCSS = gulp.parallel(
-  vars.bakeVars,
   buildVars,
   legacyBuild.buildDiff,
   legacyBuild.buildMedium,

@@ -58,6 +58,10 @@ governing permissions and limitations under the License.
     -ms-user-select: none;
     user-select: none;
   }
+
+  p {
+    margin: 0;
+  }
 }
 
 .spectrum-Tooltip-tip {
