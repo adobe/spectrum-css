@@ -16,7 +16,6 @@ const postcss = require('postcss');
 const logger = require('gulplog');
 const fsp = require('fs').promises;
 const path = require('path');
-const concat = require('gulp-concat');
 
 // Todo: get these values from a common place?
 let colorStops = [
@@ -40,8 +39,8 @@ function getVars(css) {
       let matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
         matches.forEach(function(match) {
-          if (variableList.indexOf(match) === -1) {
-            let varName = match.replace(/var\((--[\w\-]+),?\s*([\w\-]*)\)/, '$1').trim();
+          let varName = match.replace(/var\((--[\w\-]+),?\s*(.*)\)/, '$1').trim();
+          if (variableList.indexOf(varName) === -1) {
             variableList.push(varName);
           }
         });
@@ -67,7 +66,6 @@ function getVarValues(css) {
 function getClassNames(contents, pkgName) {
   let root = postcss.parse(contents);
   let classNames = [];
-
 
   function addClassname(className) {
     if (classNames.indexOf(className) === -1) {
@@ -135,7 +133,6 @@ function bakeVars() {
   return gulp.src([
     'dist/index-vars.css'
   ])
-  .pipe(concat('all.css'))
   .pipe(through.obj(async function doBake(file, enc, cb) {
     let pkg = JSON.parse(await fsp.readFile(path.join('package.json')));
     let pkgName = pkg.name.split('/').pop();
