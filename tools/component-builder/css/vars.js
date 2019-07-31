@@ -149,6 +149,9 @@ function bakeVars() {
       let usedVars = {};
       for (let varName in vars) {
         if (variableList.indexOf(varName) !== -1) {
+          if (varName.indexOf('spectrum-global') !== -1) {
+            logger.warn(`${pkg.name} directly uses global variable ${varName}`);
+          }
           usedVars[varName] = vars[varName];
         }
       }
