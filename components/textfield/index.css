@@ -24,8 +24,9 @@ governing permissions and limitations under the License.
   --spectrum-textfield-multiline-height: auto;
   --spectrum-textfield-multiline-min-height: var(--spectrum-global-dimension-size-700);
 
-  --spectrum-textfield-multiline-padding-y: var(--spectrum-global-dimension-size-50);
-  --spectrum-textfield-multiline-padding-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-textfield-multiline-padding-x: var(--spectrum-textfield-padding-x);
+  --spectrum-textfield-multiline-padding-top: var(--spectrum-textfield-padding-top);
+  --spectrum-textfield-multiline-padding-bottom: var(--spectrum-textfield-padding-bottom);
 
   /* Todo: DNA uses incorrect font family "Adobe Clean" */;
   --spectrum-textfield-text-font-family-fixed: adobe-clean, Helvetica, Arial, sans-serif;
@@ -153,7 +154,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield--multiline {
   height: var(--spectrum-textfield-multiline-height);
   min-height: var(--spectrum-textfield-multiline-min-height);
-  padding: var(--spectrum-textfield-multiline-padding-y) var(--spectrum-textfield-multiline-padding-x);
+  padding: var(--spectrum-textfield-multiline-padding-top) var(--spectrum-textfield-multiline-padding-x) var(--spectrum-textfield-multiline-padding-bottom) var(--spectrum-textfield-multiline-padding-x);
 
   /* Remove the default vertical scrollbar for textarea in IE. */
   overflow: auto;
