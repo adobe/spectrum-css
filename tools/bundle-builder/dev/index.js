@@ -63,7 +63,7 @@ function watchWithinPackages(glob, task, files) {
         gulp.src(`${dirs.components}/${package}/dist/${files}`)
           .pipe(gulp.dest(`dist/components/${package}/`))
           .on('end', () => {
-            logger.debug(`Injecting files from ${package}/:\n  ${files.join('\n  ')}`);
+            logger.debug(`Injecting files from ${package}/:\n  ${files}`);
 
             // Inject
             gulp.src(`dist/components/${package}/${files}`)
