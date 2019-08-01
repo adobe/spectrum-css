@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  --spectrum-textfield-padding-top: 3px;
-  --spectrum-textfield-padding-bottom: 5px;
+  --spectrum-textfield-padding-top: var(--spectrum-global-dimension-size-40);
+  --spectrum-textfield-padding-bottom: var(--spectrum-global-dimension-size-65);
 
   /* Todo fix in DNA */
   --spectrum-textfield-quiet-border-radius: 0;
@@ -22,9 +22,10 @@ governing permissions and limitations under the License.
   --spectrum-textfield-quiet-invalid-background-position: 100% 50%;
 
   --spectrum-textfield-multiline-height: auto;
+  --spectrum-textfield-multiline-min-height: var(--spectrum-global-dimension-size-700);
 
-  --spectrum-textfield-multiline-padding-y: 4px;
-  --spectrum-textfield-multiline-padding-x: 8px;
+  --spectrum-textfield-multiline-padding-y: var(--spectrum-global-dimension-size-50);
+  --spectrum-textfield-multiline-padding-x: var(--spectrum-global-dimension-size-100);
 
   /* Todo: DNA uses incorrect font family "Adobe Clean" */;
   --spectrum-textfield-text-font-family-fixed: adobe-clean, Helvetica, Arial, sans-serif;
@@ -56,17 +57,20 @@ governing permissions and limitations under the License.
   /* Change the input font styles in all browsers */
   font-family: var(--spectrum-textfield-text-font-family-fixed);
   font-size: var(--spectrum-textfield-text-size);
-  line-height: var(--spectrum-text-body-line-height);
+  line-height: var(--spectrum-textfield-text-line-height);
   text-overflow: ellipsis;
 
   transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 
   outline: none;
 
-  /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
-  /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
-  -moz-appearance: textfield;
   -webkit-appearance: none;
+  /*
+    Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
+    This has to come after -webkit-appearance or it gets overridden (#214)
+    Details: http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
+  */
+  -moz-appearance: textfield;
 
   &::placeholder {
     font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
@@ -148,6 +152,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Textfield--multiline {
   height: var(--spectrum-textfield-multiline-height);
+  min-height: var(--spectrum-textfield-multiline-min-height);
   padding: var(--spectrum-textfield-multiline-padding-y) var(--spectrum-textfield-multiline-padding-x);
 
   /* Remove the default vertical scrollbar for textarea in IE. */
