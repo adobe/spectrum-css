@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const logger = require('gulplog');
 const browserSync = require('browser-sync');
-const dirs = require('../lib/dirs')
+const dirs = require('../lib/dirs');
 
 const docs = require('../docs');
 const subrunner = require('../subrunner');

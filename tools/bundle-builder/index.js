@@ -22,6 +22,7 @@ const docs = require('./docs');
 const dev = require('./dev');
 const subrunner = require('./subrunner');
 const release = require('./release');
+const test = require('./test');
 
 function clean() {
   let globs = [
@@ -163,8 +164,7 @@ if (dirs.cwd === dirs.topLevel) {
     buildLite,
     dev.watch
   );
-}
-else {
+} else {
   // Otherwise, just start watching
   devTask = gulp.series(
     clean,
@@ -198,4 +198,6 @@ exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
+exports.serveTest = test.serveTest;
+exports.generateBackstopScenarios = test.generateBackstopScenarios;
 exports.default = build;

@@ -1,27 +1,31 @@
 {
-  "id": "backstop_default",
+  "id": "Spectrum CSS",
   "viewports": [
     {
-      "label": "phone",
-      "width": 320,
-      "height": 480
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
     }
   ],
-  "onBeforeScript": "chromy/onBefore.js",
-  "onReadyScript": "chromy/onReady.js",
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
-      "url": "./dist/docs/index.html",
+      "label": "Spectrum CSS",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
       "hoverSelector": "",
       "clickSelector": "",
-      "postInteractionWait": "",
+      "postInteractionWait": 0,
       "selectors": [],
-      "removeSelectors" :[".sdldocs-nav",".sdldocs-header"],
       "selectorExpansion": true,
+      "expect": 0,
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
     }
@@ -34,8 +38,10 @@
     "ci_report": "backstop_data/ci_report"
   },
   "report": ["browser"],
-  "engine": "chrome",
-  "engineFlags": [],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
   "asyncCaptureLimit": 5,
   "asyncCompareLimit": 50,
   "debug": false,
