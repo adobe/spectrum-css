@@ -126,6 +126,8 @@ let ghPages = gulp.series(
       cb();
     });
   },
+  // Stash changes (package.json is modified by Lerna)
+  exec.task('stash', `git stash`),
   exec.task('checkoutPages', `git checkout gh-pages`),
   function copyPages(cb) {
     exec.command(`cp -r dist ${dirs.topLevel}/${releaseVersion}`, cb);
@@ -139,7 +141,9 @@ let ghPages = gulp.series(
   },
   exec.task('pushPages', 'git push'),
   // Go back
-  exec.task('checkoutBranch', `git checkout -`)
+  exec.task('checkoutBranch', `git checkout -`),
+  // Pop changes to get Lerna's modification back
+  exec.task('stash', `git stash pop`)
 );
 
 // Stand in release task we probably won't use
