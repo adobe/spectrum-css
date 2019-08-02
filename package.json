@@ -10,7 +10,8 @@
     "release-all": "npx lerna publish",
     "release": "gulp release",
     "version": "npm run build",
-    "postinstall": "npm run bootstrap"
+    "postinstall": "npm run bootstrap",
+    "prepare": "gulp copySiteResources"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,14 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@adobe/focus-ring-polyfill": "^0.1.5",
     "audit-ci": "^2.0.1",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulplog": "^1.0.0",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.6",
+    "markdown": "^0.5.0",
+    "prismjs": "^1.17.1"
   },
   "optionalDependencies": {
     "@spectrum/spectrum-icons": "^2.3.0"

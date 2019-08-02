@@ -15,7 +15,6 @@ const del = require('del');
 
 const css = require('./css');
 const docs = require('./docs');
-const release = require('./release');
 
 function clean() {
   return del('dist/*');
@@ -44,12 +43,3 @@ exports.buildVars = css.buildVars;
 
 exports.buildDocs = docs.buildDocs;
 exports.buildDocs_html = docs.buildDocs_html;
-
-exports.release = gulp.series(
-  release.bumpVersion,
-  build,
-  release.publishRelease
-);
-
-exports.bumpVersion = release.bumpVersion;
-exports.publishRelease = release.publishRelease;

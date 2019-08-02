@@ -7,22 +7,25 @@ The site is built using [Pug templates](https://pugjs.org/api/getting-started.ht
 ```
 site/
 ├── getting-started.pug - instructions on getting started
+├── index.pug - main homepage
 ├── includes
 │   ├── dependencies.pug - dependencies common to all pages
 │   ├── nav.pug - the navigation (within the sidebar)
 │   └── sidebar.pug - the left sidebar
-├── index.pug - main homepage
-└── resources
-    ├── css
-    │   ├── docs.css - CSS related specifically to markup examples and component documentation
-    │   └── site.css - CSS common to the entire site
-    ├── img
-    └── js
-        ├── SpectrumSwitcher.js - A class that supports switching colorstops
-        ├── enhancement.js - Enhancements that make examples interactive
-        ├── polyfills.js - Polyfills for old browsers
-        ├── site.js - The actual site navigation code
-        └── typekit.js - Typekit that knows how to choose large/small kits based on the langage attribute
+├── resources
+│   ├── css
+│   │   ├── docs.css - CSS related specifically to markup examples and component documentation
+│   │   └── site.css - CSS common to the entire site
+│   ├── img
+│   └── js
+│       ├── SpectrumSwitcher.js - A class that supports switching colorstops
+│       ├── enhancement.js - Enhancements that make examples interactive
+│       ├── polyfills.js - Polyfills for old browsers
+│       ├── site.js - The actual site navigation code
+│       └── typekit.js - Typekit that knows how to choose large/small kits based on the langage attribute
+└── templates
+    ├── individualComponent.pug - template to build individual component packages
+    └── sidebsiteComponentar.pug - template to build docs for components in bundles
 ```
 
 ## Architecture
