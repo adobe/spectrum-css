@@ -127,7 +127,7 @@ let ghPages = gulp.series(
     exec.command(`git diff --exit-code > /dev/null`, function(err) {
       if (err) {
         stashRequired = true;
-        exec.command('git stash', cb);
+        exec.command('git stash > /dev/null', cb);
       }
       else {
         cb();
@@ -152,7 +152,7 @@ let ghPages = gulp.series(
   // Pop changes to get Lerna's modification back
   function popStash(cb) {
     if (stashRequired) {
-      exec.command(`git stash pop`, cb);
+      exec.command(`git stash pop > /dev/null`, cb);
     }
     else {
       cb();
