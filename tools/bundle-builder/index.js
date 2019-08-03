@@ -188,8 +188,6 @@ exports.postPublish = gulp.series(
   release.ghPages
 );
 
-exports.release = release.release;
-
 exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
