@@ -124,7 +124,7 @@ let ghPages = gulp.series(
     releaseVersion = pkg.version;
   },
   function checkStatus(cb) {
-    exec.command(`git diff --exit-code`, function(err) {
+    exec.command(`git diff --exit-code > /dev/null`, function(err) {
       if (err) {
         stashRequired = true;
         exec.command('git stash', cb);
@@ -152,13 +152,12 @@ let ghPages = gulp.series(
   // Pop changes to get Lerna's modification back
   function popStash(cb) {
     if (stashRequired) {
-      exec.command(`git commit -q -m "Deploy version ${releaseVersion}"`, cb);
+      exec.command(`git stash pop`, cb);
     }
     else {
       cb();
     }
-  },
-  exec.task('stash', `git stash pop"`)
+  }
 );
 
 // Stand in release task we probably won't use
