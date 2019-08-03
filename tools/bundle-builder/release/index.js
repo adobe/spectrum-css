@@ -1,4 +1,5 @@
 const fs = require('fs');
+const fsp = require('fs').promises;
 const inq = require('inquirer');
 const semver = require('semver');
 const gulp = require('gulp');
@@ -116,18 +117,24 @@ let releaseBackwardsCompat = gulp.parallel(
 );
 
 // These tasks assume they're being run in the root and will copy and publish github pages
+let stashRequired = false;
 let ghPages = gulp.series(
-  function getVersion(cb) {
-    exec.command(`git describe --tags`, function(err, stdout, stderr) {
+  async function getVersion(cb) {
+    let pkg = JSON.parse(await fsp.readFile(`${dirs.cwd}/package.json`));
+    releaseVersion = pkg.version;
+  },
+  function checkStatus(cb) {
+    exec.command(`git diff --exit-code`, function(err) {
       if (err) {
-         return cb(err);
+        stashRequired = true;
+        exec.command('git stash', cb);
       }
-      releaseVersion = stdout.trim().substr(1);
-      cb();
+      else {
+        cb();
+      }
     });
   },
   // Stash changes (package.json is modified by Lerna)
-  exec.task('stash', `git stash`),
   exec.task('checkoutPages', `git checkout gh-pages`),
   function copyPages(cb) {
     exec.command(`cp -r dist ${dirs.topLevel}/${releaseVersion}`, cb);
@@ -143,7 +150,15 @@ let ghPages = gulp.series(
   // Go back
   exec.task('checkoutBranch', `git checkout -`),
   // Pop changes to get Lerna's modification back
-  exec.task('stash', `git stash pop`)
+  function popStash(cb) {
+    if (stashRequired) {
+      exec.command(`git commit -q -m "Deploy version ${releaseVersion}"`, cb);
+    }
+    else {
+      cb();
+    }
+  },
+  exec.task('stash', `git stash pop"`)
 );
 
 // Stand in release task we probably won't use
