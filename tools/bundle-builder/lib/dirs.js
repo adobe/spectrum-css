@@ -22,5 +22,5 @@ if (exports.cwd === exports.topLevel) {
   exports.components = `${exports.cwd}/components`;
 }
 else {
-  exports.components = `${exports.cwd}/node_modules/@spectrum-css`;
+  exports.components = `${exports.topLevel}/node_modules/@spectrum-css`;
 }
