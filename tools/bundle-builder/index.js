@@ -46,13 +46,13 @@ function concatPackageFiles(taskName, input, output, directory) {
       dependencyOrder.forEach(function(dep) {
         let depName = dep.split('/').pop();
         input.forEach(function(file) {
-          glob.push(`${dirs.components}/${depName}/dist/${file}`);
+          glob.push(require.resolve(`@spectrum-css/${depName}`) + `/${depName}/dist/${file}`);
         });
       });
     }
     else {
       glob = dependencyOrder.map(function(dep) {
-        return `${dirs.components}/${dep.split('/').pop()}/dist/${input}`;
+        return require.resolve(`@spectrum-css/${dep.split('/').pop()}`) + `/dist/${input}`;
       });
     }
 
