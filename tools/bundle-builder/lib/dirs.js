@@ -17,10 +17,17 @@ exports.builder = path.resolve(__dirname, '..');
 exports.siteResources = path.resolve(__dirname, '..', 'node_modules', '@spectrum-css', 'site');
 exports.topLevel = path.resolve(exports.builder, '..', '..');
 exports.site = path.resolve(exports.topLevel, 'site');
+exports.resolve = function(component) {
+  return path.dirname(require.resolve(component, {
+    paths: [
+      path.join(process.cwd(), 'node_modules')
+    ]
+  }));
+}
 
 if (exports.cwd === exports.topLevel) {
-  exports.components = `${exports.cwd}/components`;
+  exports.components = path.join(exports.cwd, 'components');
 }
 else {
-  exports.components = `${exports.topLevel}/node_modules/@spectrum-css`;
+  exports.components = path.join(exports.cwd, 'node_modules', '@spectrum-css');
 }
