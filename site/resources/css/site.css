@@ -35,6 +35,7 @@ body {
 .spectrum-Site-content {
   display: flex;
   flex-direction: row;
+  max-height: 100%;
 }
 
 .spectrum-Site-header {
