@@ -15,7 +15,7 @@ const cp = require('child_process');
 function handleExec(cb) {
   return function(err, stdout, stderr) {
     if (err) {
-      return cb(err);
+      return cb(err, stdout, stderr);
     }
 
     cb(null, stdout, stderr);
@@ -33,11 +33,13 @@ function task(taskName, command) {
   return func;
 }
 
-function runCommand(command, cb) {
+function runCommand(command, cb, options = {}) {
   // Execute immediately
   let commandProcess = cp.exec(command, handleExec(cb));
-  commandProcess.stdout.pipe(process.stdout);
-  commandProcess.stderr.pipe(process.stderr);
+  if (!options.noPipe) {
+    commandProcess.stdout.pipe(process.stdout);
+    commandProcess.stderr.pipe(process.stderr);
+  }
   return commandProcess;
 }
 

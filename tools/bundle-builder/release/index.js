@@ -43,15 +43,15 @@ let ghPages = gulp.series(
     releaseVersion = pkg.version;
   },
   function checkStatus(cb) {
-    exec.command(`git diff --exit-code > /dev/null`, function(err) {
-      if (err) {
+    exec.command(`git diff --name-only`, function(err, stdout, stderr) {
+      if (stdout) {
         stashRequired = true;
-        exec.command('git stash > /dev/null', cb);
+        exec.command('git stash', cb, { noPipe: true });
       }
       else {
         cb();
       }
-    });
+    }, { noPipe: true });
   },
   // Stash changes (package.json is modified by Lerna)
   exec.task('checkoutPages', `git checkout gh-pages`),
@@ -71,7 +71,7 @@ let ghPages = gulp.series(
   // Pop changes to get Lerna's modification back
   function popStash(cb) {
     if (stashRequired) {
-      exec.command(`git stash pop > /dev/null`, cb);
+      exec.command(`git stash pop`, cb, { noPipe: true });
     }
     else {
       cb();
