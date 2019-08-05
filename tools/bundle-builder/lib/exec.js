@@ -33,13 +33,11 @@ function task(taskName, command) {
   return func;
 }
 
-function runCommand(command, cb, options = {}) {
+function runCommand(command, cb) {
   // Execute immediately
   let commandProcess = cp.exec(command, handleExec(cb));
-  if (options.pipe) {
-    commandProcess.stdout.pipe(process.stdout);
-    commandProcess.stderr.pipe(process.stderr);
-  }
+  commandProcess.stdout.pipe(process.stdout);
+  commandProcess.stderr.pipe(process.stderr);
   return commandProcess;
 }
 
