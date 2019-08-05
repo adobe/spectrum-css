@@ -1,15 +1,15 @@
 const scenarioConfigs = require('./backstop_scenarios');
 const scenarios = [];
+const excludedScenarios = ['circleloader', 'coachmark'];
 
 // Shared scenario configuration
 const baseScenarioConfig = {
-  cookiePath: 'backstop_data/engine_scripts/cookies.json',
   referenceUrl: '',
   readyEvent: '',
   readySelector: '',
   delay: 0,
   hideSelectors: [],
-  removeSelectors: ['.spectrum-Site-sideBar', '.spectrum-CSSComponent-description'],
+  removeSelectors: [],
   hoverSelector: '',
   clickSelector: '',
   postInteractionWait: 0,
@@ -27,10 +27,13 @@ if (rest.length > 0) {
     specificScenarioConfig.url = `http://localhost:3000/docs/${specificScenarioConfig.url}`;
     scenarios.push(Object.assign({...baseScenarioConfig}, specificScenarioConfig));
   });
-} else {
+}
+else {
   scenarioConfigs.map(specificScenarioConfig => {
     specificScenarioConfig.url = `http://localhost:3000/docs/${specificScenarioConfig.url}`;
-    scenarios.push(Object.assign({...baseScenarioConfig}, specificScenarioConfig));
+    if (!excludedScenarios.includes(specificScenarioConfig.label)) {
+      scenarios.push(Object.assign({...baseScenarioConfig}, specificScenarioConfig));
+    }
   });
 }
 
@@ -38,9 +41,9 @@ module.exports = {
   id: 'Spectrum CSS',
   viewports: [
     {
-      label: 'desktop',
-      width: 1440,
-      height: 1080
+      label: 'test',
+      width: 2048,
+      height: 40960
     }
   ],
   onBeforeScript: 'puppet/onBefore.js',

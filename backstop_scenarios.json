@@ -37,7 +37,8 @@
   },
   {
     "label": "barloader",
-    "url": "barloader.html"
+    "url": "barloader.html",
+    "removeSelectors": ["#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"]
   },
   {
     "label": "breadcrumb",
@@ -145,7 +146,8 @@
   },
   {
     "label": "getting-started",
-    "url": "getting-started.html"
+    "url": "getting-started.html",
+    "selectors": []
   },
   {
     "label": "illustratedmessage",
@@ -153,7 +155,8 @@
   },
   {
     "label": "index",
-    "url": "index.html"
+    "url": "index.html",
+    "selectors": []
   },
   {
     "label": "label",
@@ -297,7 +300,8 @@
   },
   {
     "label": "typography-international",
-    "url": "typography-international.html"
+    "url": "typography-international.html",
+    "delay": 3000
   },
   {
     "label": "typography",

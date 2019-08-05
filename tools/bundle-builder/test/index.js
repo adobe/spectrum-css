@@ -12,8 +12,6 @@ governing permissions and limitations under the License.
 
 const browserSync = require('browser-sync');
 const {cwd} = require('../lib/dirs');
-const {build} = require('../docs');
-const {series} = require('gulp');
 const {readdir, writeFileSync} = require('fs');
 const {extname} = require('path');
 
@@ -39,11 +37,5 @@ const serveWithoutNotify = () => {
   });
 };
 
-const serveTest = series(
-  build,
-  serveWithoutNotify
-);
-
 exports.serveWithoutNotify = serveWithoutNotify;
-exports.serveTest = serveTest;
 exports.generateBackstopScenarios = generateBackstopScenarios;

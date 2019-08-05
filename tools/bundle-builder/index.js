@@ -188,6 +188,12 @@ exports.postPublish = gulp.series(
   release.ghPages
 );
 
+exports.serveTest = gulp.series(
+  clean,
+  build,
+  test.serveWithoutNotify
+);
+
 exports.release = release.release;
 
 exports.buildComponents = subrunner.buildComponents;
@@ -198,6 +204,5 @@ exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
-exports.serveTest = test.serveTest;
 exports.generateBackstopScenarios = test.generateBackstopScenarios;
 exports.default = build;
