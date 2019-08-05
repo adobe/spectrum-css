@@ -36,7 +36,7 @@ function task(taskName, command) {
 function runCommand(command, cb, options = {}) {
   // Execute immediately
   let commandProcess = cp.exec(command, handleExec(cb));
-  if (!options.noPipe) {
+  if (options.pipe) {
     commandProcess.stdout.pipe(process.stdout);
     commandProcess.stderr.pipe(process.stderr);
   }
