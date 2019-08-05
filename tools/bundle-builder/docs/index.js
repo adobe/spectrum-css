@@ -80,10 +80,8 @@ async function buildDocs_forDep(dep) {
         docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
 
         return Object.assign({}, {
-          util: require('./util'),
-          dnaVars: JSON.parse(fs.readFileSync(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
-          markdown: require('markdown').markdown,
-          Prisim: require('prismjs')
+          util: require(`${dirs.site}/util`),
+          dnaVars: JSON.parse(fs.readFileSync(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json'), 'utf8'))
         }, templateData, {
           pageURL: path.basename(file.basename, '.yml') + '.html',
           dependencyOrder: docsDeps,
@@ -107,7 +105,7 @@ async function buildDocs_forDep(dep) {
         file.path = ext(file.path, '.html');
 
         try {
-          const templatePath = `${__dirname}/template.pug`;
+          const templatePath = `${dirs.site}/templates/siteComponent.pug`;
           let compiled = pugCompiler.renderFile(templatePath, templateData);
           file.contents = Buffer.from(compiled);
         } catch (err) {
@@ -241,12 +239,12 @@ function buildSite_getData() {
 };
 
 function buildSite_copyResources() {
-  return gulp.src(`${dirs.builder}/site/resources/**`)
+  return gulp.src(`${dirs.site}/dist/**`)
     .pipe(gulp.dest('dist/docs/'));
 }
 
 function buildSite_html() {
-  return gulp.src(`${dirs.builder}/site/*.pug`)
+  return gulp.src(`${dirs.site}/*.pug`)
     .pipe(data(function(file) {
       return {
         pageURL: path.basename(file.basename, '.pug') + '.html',
@@ -257,29 +255,6 @@ function buildSite_html() {
       locals: templateData
     }))
     .pipe(gulp.dest('dist/docs/'));
-}
-
-function buildDocs_loadicons() {
-  return gulp.src(require.resolve('loadicons'))
-    .pipe(gulp.dest('dist/docs/js/loadicons/'));
-}
-
-function buildDocs_focusPolyfill() {
-  return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
-    .pipe(gulp.dest('dist/docs/js/focus-ring-polyfill/'));
-}
-
-function buildDocs_lunr() {
-  return gulp.src(require.resolve('lunr'))
-    .pipe(gulp.dest('dist/docs/js/lunr/'));
-}
-
-function buildDocs_prism() {
-  return gulp.src([
-    `${path.dirname(require.resolve('prismjs'))}/themes/prism.css`,
-    `${path.dirname(require.resolve('prismjs'))}/themes/prism-tomorrow.css`
-  ])
-    .pipe(gulp.dest('dist/docs/css/prisim/'));
 }
 
 let buildSite_pages = gulp.series(
@@ -297,10 +272,7 @@ let buildDocs = gulp.series(
   gulp.parallel(
     buildSite_generateIndex,
     buildDocs_individualPackages,
-    buildDocs_loadicons,
-    buildDocs_focusPolyfill,
-    buildDocs_lunr,
-    buildDocs_prism
+    buildSite_copyResources
   )
 );
 
@@ -308,7 +280,6 @@ let build = gulp.series(
   buildSite_getData,
   gulp.parallel(
     buildDocs,
-    buildSite_copyResources,
     buildSite_html
   )
 );

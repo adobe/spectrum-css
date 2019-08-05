@@ -45,15 +45,14 @@ function concatPackageFiles(taskName, input, output, directory) {
       glob = [];
 
       dependencyOrder.forEach(function(dep) {
-        let depName = dep.split('/').pop();
         input.forEach(function(file) {
-          glob.push(`${dirs.components}/${depName}/dist/${file}`);
+          glob.push(dirs.resolve(dep) + `/${file}`);
         });
       });
     }
     else {
       glob = dependencyOrder.map(function(dep) {
-        return `${dirs.components}/${dep.split('/').pop()}/dist/${input}`;
+        return dirs.resolve(dep) + `/${input}`;
       });
     }
 
@@ -112,6 +111,7 @@ function copyPackages() {
 
 function copyIcons() {
   // lerna bug: require.resolve() won't find spectrum-icons within spectrum-css-compat, so we have to assume it's at the top level
+  // note: maybe it needs a package.main?
   return gulp.src([
     `${dirs.topLevel}/node_modules/@spectrum/spectrum-icons/dist/svg/**`,
     `${dirs.topLevel}/node_modules/@spectrum/spectrum-icons/dist/lib/**`

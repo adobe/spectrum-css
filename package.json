@@ -1,19 +1,21 @@
 {
-  "name": "@adobe/spectrum-css",
-  "version": "3.0.0-alpha.0",
+  "name": "spectrum-css-monorepo",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist",
     "build": "gulp -LL",
     "dev": "gulp dev",
+    "clean": "gulp clean",
     "start": "npm run dev",
     "ci-all": "npm run build",
-    "release-all": "npx lerna publish",
-    "release": "gulp release",
+    "release": "npx lerna publish",
     "version": "npm run build",
     "postinstall": "npm run bootstrap",
     "backstop:approve": "backstop approve --config=backstop_test.js",
     "backstop:test": "backstop test --config=backstop_test.js",
-    "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report"
+    "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
+    "prepare": "gulp copySiteResources"
   },
   "repository": {
     "type": "git",
@@ -29,9 +31,15 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@adobe/focus-ring-polyfill": "^0.1.5",
     "audit-ci": "^2.0.1",
     "backstopjs": "^4.1.12",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulplog": "^1.0.0",
+    "loadicons": "^1.0.0",
+    "lunr": "^2.3.6",
+    "markdown": "^0.5.0",
+    "prismjs": "^1.17.1"
   },
   "optionalDependencies": {
     "@spectrum/spectrum-icons": "^2.3.0"

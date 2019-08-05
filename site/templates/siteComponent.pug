@@ -21,17 +21,17 @@ html(lang='en-US')
   head
     title #{component.name} - Spectrum CSS
 
-    include ../site/includes/dependencies.pug
+    include ../includes/dependencies.pug
 
   body.spectrum.spectrum--light.spectrum--medium
 
     .spectrum-Site
 
-      include ../site/includes/header.pug
+      include ../includes/header.pug
 
       .spectrum-Site-content
 
-        include ../site/includes/sidebar.pug
+        include ../includes/sidebar.pug
 
         .spectrum-Site-mainContainer
 
@@ -50,13 +50,13 @@ html(lang='en-US')
                         #{component.cssStatus}
                     if component.details
                       .spectrum-Tooltip.spectrum-Tooltip--right
-                        .spectrum-Tooltip-label!= markdown.toHTML(component.details)
+                        .spectrum-Tooltip-label!= util.markdown.toHTML(component.details)
                         .spectrum-Tooltip-tip
 
               .spectrum-CSSComponent-version.spectrum-Body #{pkg.name}@#{pkg.version}
 
             if component.description
-              section.spectrum-CSSComponent-description.spectrum-Body2!= markdown.toHTML(component.description)
+              section.spectrum-CSSComponent-description.spectrum-Body2!= util.markdown.toHTML(component.description)
 
             each example in examples
               article.spectrum-CSSExample
@@ -73,13 +73,13 @@ html(lang='en-US')
                               #{example.cssStatus}
                           if example.details
                             .spectrum-Tooltip.spectrum-Tooltip--right
-                              .spectrum-Tooltip-label!= markdown.toHTML(example.details)
+                              .spectrum-Tooltip-label!= util.markdown.toHTML(example.details)
                               .spectrum-Tooltip-tip
 
                         hr.spectrum-Rule.spectrum-Rule--large
 
                   if example.description
-                    section.spectrum-CSSExample-description.spectrum-Body2!= markdown.toHTML(example.description)
+                    section.spectrum-CSSExample-description.spectrum-Body2!= util.markdown.toHTML(example.description)
 
                 if example.markup
 
@@ -89,6 +89,6 @@ html(lang='en-US')
                       if example.markup.split('\n').length > 2
                         a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
                       pre
-                        code.language-markup!= Prism.highlight(example.markup, Prism.languages.markup, 'markup')
+                        code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
 
-    include ../site/includes/footer.pug
+    include ../includes/footer.pug

@@ -11,3 +11,4 @@ governing permissions and limitations under the License.
 */
 
 module.exports = require('./tools/bundle-builder');
+Object.assign(module.exports, require('./site/gulpfile.js'));

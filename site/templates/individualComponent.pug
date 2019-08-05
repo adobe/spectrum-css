@@ -81,7 +81,7 @@ html(lang='en-US')
         .spectrum-CSSComponent-version.spectrum-Body Version #{pkg.version}
 
       if component.description
-        section.spectrum-CSSComponent-description.spectrum-Body2!= markdown.toHTML(component.description)
+        section.spectrum-CSSComponent-description.spectrum-Body2!= util.markdown.toHTML(component.description)
 
       each example in examples
         article.spectrum-CSSExample
@@ -90,7 +90,7 @@ html(lang='en-US')
               h4.spectrum-Heading--subtitle3 #{example.name}
 
             if example.description
-              section.spectrum-CSSExample-description.spectrum-Body2!= markdown.toHTML(example.description)
+              section.spectrum-CSSExample-description.spectrum-Body2!= util.markdown.toHTML(example.description)
 
           if example.markup
 

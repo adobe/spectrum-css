@@ -20,7 +20,7 @@ const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 
-const bundleBuilderPath = path.join(__dirname, '..', 'node_modules', '@spectrum-css', 'bundle-builder');
+const sitePath = path.join(__dirname, '..', '..', '..', 'site');
 
 var dependencies;
 var docDependencies;
@@ -77,8 +77,7 @@ function buildDocs_html() {
         dependencies: dependencies,
         dnaVars: JSON.parse(fs.readFileSync(path.join(process.cwd(), 'node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
         pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
-        markdown: require('markdown').markdown,
-        Prisim: require('prismjs')
+        util: require(`${sitePath}/util`)
       };
     }))
     .pipe(through.obj(function compilePug(file, enc, cb) {
@@ -87,7 +86,7 @@ function buildDocs_html() {
         file.path = ext(file.path, '.html');
 
         try {
-          const templatePath = `${__dirname}/template.pug`;
+          const templatePath = `${sitePath}/templates/individualComponent.pug`;
           let compiled = pug.renderFile(templatePath, data);
           file.contents = Buffer.from(compiled);
         } catch (e) {
@@ -100,7 +99,7 @@ function buildDocs_html() {
 }
 
 function buildDocs_resources() {
-  return gulp.src(`${bundleBuilderPath}/site/resources/**`)
+  return gulp.src(`${sitePath}/dist/**`)
     .pipe(gulp.dest('dist/docs/'));
 }
 
@@ -115,20 +114,8 @@ function buildDocs_copyDeps() {
   return merge.apply(merge, dependencies.map(copyDep));
 }
 
-function buildDocs_loadicons() {
-  return gulp.src(require.resolve('loadicons'))
-    .pipe(gulp.dest('dist/docs/js/loadicons/'));
-}
-
-function buildDocs_focusPolyfill() {
-  return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
-    .pipe(gulp.dest('dist/docs/js/focus-ring-polyfill/'));
-}
-
 let buildDocs = gulp.parallel(
   buildDocs_resources,
-  buildDocs_loadicons,
-  buildDocs_focusPolyfill,
   buildDocs_copyDeps,
   buildDocs_html
 );

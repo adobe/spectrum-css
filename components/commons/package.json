@@ -4,6 +4,7 @@
   "description": "Common mixins and variables for Spectrum CSS components",
   "author": "",
   "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git"
@@ -13,6 +14,5 @@
   },
   "scripts": {
     "build": "echo 'No build required'"
-  },
-  "gitHead": "bc9be09cc6bf48e5b40a94c8c30c8e5a9f22708c"
+  }
 }

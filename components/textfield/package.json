@@ -4,6 +4,7 @@
   "description": "The Spectrum CSS textfield component",
   "author": "",
   "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git"
@@ -21,6 +22,5 @@
     "@spectrum-css/component-builder": "^1.0.0-alpha.0",
     "@spectrum-css/vars": "^2.0.0-alpha.0",
     "gulp": "^4.0.0"
-  },
-  "gitHead": "bc9be09cc6bf48e5b40a94c8c30c8e5a9f22708c"
+  }
 }

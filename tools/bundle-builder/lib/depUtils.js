@@ -34,7 +34,13 @@ async function getDependencies(package) {
     dependencies = dependencies.concat(Object.keys(pkg.devDependencies));
   }
 
-  dependencies = dependencies.filter((dep) => dep.indexOf('@spectrum-css') === 0 && dep !== '@spectrum-css/component-builder');
+  dependencies = dependencies.filter((dep) => {
+    return (
+      dep.indexOf('@spectrum-css') === 0 &&
+      dep !== '@spectrum-css/bundle-builder' &&
+      dep !== '@spectrum-css/component-builder'
+    );
+  });
 
   return { name: pkg.name, dependencies: dependencies };
 }
