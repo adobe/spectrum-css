@@ -6,6 +6,7 @@
     "bootstrap": "npx lerna bootstrap --hoist",
     "build": "gulp -LL",
     "dev": "gulp dev",
+    "clean": "gulp clean",
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
