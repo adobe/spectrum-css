@@ -12,7 +12,8 @@
     "release": "npx lerna publish",
     "version": "npm run build",
     "postinstall": "npm run bootstrap",
-    "prepare": "gulp copySiteResources"
+    "prepare": "gulp copySiteResources",
+    "postpublish": "npx lerna run publishpages --concurrency=1"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,8 @@
   "scripts": {
     "build": "gulp build",
     "prepack": "gulp prePack",
-    "postpublish": "gulp postPublish"
+    "postpublish": "gulp postPublish",
+    "publishpages": "gulp ghPages"
   },
   "repository": {
     "type": "git",

@@ -183,10 +183,7 @@ exports.prePack = gulp.series(
 );
 
 exports.ghPages = release.ghPages;
-exports.postPublish = gulp.series(
-  release.releaseBackwardsCompatCleanup,
-  release.ghPages
-);
+exports.postPublish = release.releaseBackwardsCompatCleanup;
 
 exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
