@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/steplist",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "The Spectrum CSS steplist component",
   "author": "",
   "license": "Apache-2.0",
@@ -16,13 +16,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/icons": "^1.0.0-alpha.0",
-    "@spectrum-css/vars": "^1.0.0-alpha.0"
+    "@spectrum-css/icons": "^2.0.0-alpha.2",
+    "@spectrum-css/vars": "^2.0.0-alpha.1"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^1.0.0-alpha.1",
-    "@spectrum-css/icons": "^2.0.0-alpha.1",
-    "@spectrum-css/tooltip": "^2.0.0-alpha.1",
+    "@spectrum-css/component-builder": "^1.0.0-alpha.2",
+    "@spectrum-css/icons": "^2.0.0-alpha.2",
+    "@spectrum-css/tooltip": "^2.0.0-alpha.2",
     "@spectrum-css/vars": "^2.0.0-alpha.1",
     "gulp": "^4.0.0"
   }
