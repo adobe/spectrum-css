@@ -10,9 +10,9 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
-    "version": "npm run build",
+    "version": "gulp version",
     "postinstall": "npm run bootstrap",
-    "prepare": "gulp copySiteResources",
+    "prepare": "gulp prepare",
     "postpublish": "npx lerna run publishpages --concurrency=1"
   },
   "repository": {
