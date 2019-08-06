@@ -1,6 +1,8 @@
 const scenarioConfigs = require('./backstop_scenarios');
 const scenarios = [];
-const excludedScenarios = ['circleloader', 'coachmark'];
+const excludedScenarios = new Set(['circleloader', 'coachmark']);
+const themes = new Set();
+const scales = new Set();
 
 // Shared scenario configuration
 const baseScenarioConfig = {
@@ -20,20 +22,34 @@ const baseScenarioConfig = {
   requireSameDimensions: true
 };
 
-const [a, b, c, d, ...rest] = process.argv; // Only the argument after 4th matter
+const [_, __, ___, ____, ...rest] = process.argv;
 
-if (rest.length > 0) {
-  scenarioConfigs.filter(i => rest.includes(i.label)).map(specificScenarioConfig => {
-    specificScenarioConfig.url = `http://localhost:3000/docs/${specificScenarioConfig.url}`;
-    scenarios.push(Object.assign({...baseScenarioConfig}, specificScenarioConfig));
+const components = new Set(rest);
+
+(process.env.THEMES || 'light').split(',').forEach(t => themes.add(t));
+(process.env.SCALES || 'medium').split(',').forEach(s => scales.add(s));
+
+if (components.size > 0) {
+  scenarioConfigs.filter(i => components.has(i.label)).map(specificScenarioConfig => {
+    themes.forEach(t => {
+      scales.forEach(s => scenarios.push(Object.assign({...baseScenarioConfig}, {
+        label: `${specificScenarioConfig.label}-${t}-${s}`,
+        url: `http://localhost:3000/docs/${specificScenarioConfig.url}`,
+        scale: s,
+        theme: t
+      })));
+    });
   });
-}
-else {
-  scenarioConfigs.map(specificScenarioConfig => {
-    specificScenarioConfig.url = `http://localhost:3000/docs/${specificScenarioConfig.url}`;
-    if (!excludedScenarios.includes(specificScenarioConfig.label)) {
-      scenarios.push(Object.assign({...baseScenarioConfig}, specificScenarioConfig));
-    }
+} else {
+  scenarioConfigs.filter(i => !excludedScenarios.has(i.label)).map(specificScenarioConfig => {
+    themes.forEach(t => {
+      scales.forEach(s => scenarios.push(Object.assign({...baseScenarioConfig}, {
+        label: `${specificScenarioConfig.label}-${t}-${s}`,
+        url: `http://localhost:3000/docs/${specificScenarioConfig.url}`,
+        scale: s,
+        theme: t
+      })));
+    });
   });
 }
 
@@ -50,13 +66,13 @@ module.exports = {
   onReadyScript: 'puppet/onReady.js',
   scenarios,
   paths: {
-    bitmaps_reference: 'backstop_data/bitmaps_reference',
+    bitmaps_reference: `backstop_data/bitmaps_reference`,
     bitmaps_test: 'backstop_data/bitmaps_test',
     engine_scripts: 'backstop_data/engine_scripts',
     html_report: 'backstop_data/html_report',
     ci_report: 'backstop_data/ci_report'
   },
-  report: ['json'],
+  report: ['browser'],
   engine: 'puppeteer',
   engineOptions: {
     args: ['--no-sandbox']
