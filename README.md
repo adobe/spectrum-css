@@ -194,6 +194,13 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md)!
 5. Edit `index.css` and `skin.css` with dimensions and color properties respectively.
 6. Edit `docs.yml` to add markup examples for each of the variants of your component.
 
+Because we use scoped packages, before it can be published with Lerna, you must manually publish the new component as public:
+
+```
+cd components/newcomponent
+npm publish --access=public
+```
+
 ## Testing
 
 To perform manual testing of the latest version of each component:
