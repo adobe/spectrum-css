@@ -22,7 +22,7 @@ async function updatePeerDependencies() {
     .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
     .map((dirent) => path.join(packagesDir, dirent.name));
 
-  components.forEach(async (component) => {
+  await Promise.all(components.map(async (component) => {
     let package = await readPackage(component);
 
     if (package.peerDependencies) {
@@ -37,14 +37,13 @@ async function updatePeerDependencies() {
           }
         }
         else {
-          console.error(`${component} has ${dependency} in peerDependencies, but not devDependencies, fixing...`);
-          package.devDependencies[dependency] = peerDepVer;
+          throw new Error(`${component} has ${dependency} in peerDependencies, but not devDependencies!`);
         }
       });
 
       await writePackage(component, package);
     }
-  });
+  }));
 };
 
 exports.updatePeerDependencies = updatePeerDependencies;
