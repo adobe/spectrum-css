@@ -1,0 +1,33 @@
+{
+  "name": "@spectrum-css/fieldlabel",
+  "version": "2.0.0-alpha.2",
+  "description": "The Spectrum CSS fieldlabel component",
+  "author": "",
+  "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/icons": "^2.0.0-alpha.2",
+    "@spectrum-css/vars": "^2.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "@spectrum-css/checkbox": "^2.0.0-alpha.2",
+    "@spectrum-css/component-builder": "^1.0.0-alpha.2",
+    "@spectrum-css/dropdown": "^2.0.0-alpha.2",
+    "@spectrum-css/icons": "^2.0.0-alpha.2",
+    "@spectrum-css/radio": "^2.0.0-alpha.2",
+    "@spectrum-css/stepper": "^2.0.0-alpha.2",
+    "@spectrum-css/textfield": "^2.0.0-alpha.2",
+    "@spectrum-css/vars": "^2.0.0-alpha.1",
+    "gulp": "^4.0.0"
+  }
+}

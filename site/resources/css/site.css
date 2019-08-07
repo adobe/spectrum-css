@@ -1,0 +1,264 @@
+.spectrum-Site {
+  --spectrum-site-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-site-content-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-site-header-border-color: var(--spectrum-global-color-gray-300);
+  --spectrum-site-header-background-color: var(--spectrum-site-content-background-color);
+  --spectrum-site-header-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-site-header-padding: var(--spectrum-global-dimension-size-100);
+  --spectrum-site-sidebar-background-color: var(--spectrum-site-background-color);
+  --spectrum-site-scrollbar-track-color: var(--spectrum-site-background-color);
+  --spectrum-site-scrollbar-thumb-color: var(--spectrum-global-color-gray-400);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.spectrum-Site {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--spectrum-site-content-background-color);
+}
+
+.spectrum-Site-content {
+  display: flex;
+  flex-direction: row;
+  max-height: 100%;
+}
+
+.spectrum-Site-header {
+  display: none;
+
+  box-sizing: border-box;
+  height: var(--spectrum-site-header-height);
+  padding: var(--spectrum-site-header-padding);
+
+  border-bottom: 1px solid var(--spectrum-site-header-border-color);
+
+  background-color: var(--spectrum-site-header-background-color);
+}
+
+.spectrum-Site-sideBar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+
+  background-color: var(--spectrum-site-sidebar-background-color);
+  transition: none;
+}
+
+.spectrum-Site-overlay {
+  --spectrum-site-overlay-background-entry-animation-delay: 0ms;
+  --spectrum-site-overlay-background-exit-animation-delay: 0ms;
+  --spectrum-site-overlay-background-entry-animation-duration: var(--spectrum-global-animation-duration-200);
+  --spectrum-site-overlay-background-exit-animation-duration: var(--spectrum-global-animation-duration-200);
+  --spectrum-site-overlay-background-exit-animation-easing: ease-out;
+  --spectrum-site-overlay-background-entry-animation-easing: ease-in;
+
+  --spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Kill the overlay without animating when the page is resized */
+.spectrum-Site-overlay {
+  display: none;
+}
+
+.spectrum-Site-sideBarHeader {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: var(--spectrum-global-dimension-size-400);
+
+  text-decoration: none;
+}
+
+.spectrum-Site-sideBarHeader:focus {
+  outline: none;
+}
+
+.spectrum-Site-sideBarHeader:focus h2 {
+  text-decoration: underline;
+}
+
+.spectrum-Site-search {
+  padding: 0 var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
+}
+
+.spectrum-Site-searchResults {
+  max-height: calc(90vh - 120px);
+  z-index: 101;
+  position: absolute;
+
+  overflow-y: auto;
+}
+
+.spectrum-Site-noSearchResults {
+  padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
+}
+
+.spectrum-Site-logo {
+  margin-right: var(--spectrum-global-dimension-size-250);
+  width: var(--spectrum-global-dimension-size-500);
+}
+
+.spectrum-Site-nav {
+  flex-grow: 1;
+
+  padding: 0px var(--spectrum-global-dimension-static-size-300) var(--spectrum-global-dimension-static-size-500);
+}
+
+.spectrum-Site-bottomNav {
+  margin-top: var(--spectrum-global-dimension-static-size-1000);
+}
+
+.spectrum-Site-mainContainer {
+  flex-grow: 1;
+  border: none;
+
+  height: 100%;
+  overflow-y: auto;
+
+  background: var(--spectrum-site-content-background-color);
+}
+
+.spectrum-Page {
+  padding: 40px 52px 24px 52px;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.spectrum-Hero {
+  max-width: 75%;
+  margin: auto;
+}
+
+.spectrum-Hero-heading {
+  margin-bottom: 16px;
+}
+
+.spectrum-Hero-image {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .spectrum-Site-overlay {
+    display: block;
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Float above things by default */
+    z-index: 99;
+
+    overflow: hidden;
+
+    /* Exit animations */
+    transition: opacity var(--spectrum-site-overlay-background-exit-animation-duration) var(--spectrum-site-overlay-background-exit-animation-easing) var(--spectrum-site-overlay-background-exit-animation-delay),
+                visibility 0ms linear calc(var(--spectrum-site-overlay-background-exit-animation-delay) + var(--spectrum-site-overlay-background-exit-animation-duration));
+
+    background: var(--spectrum-site-overlay-underlay-background-color);
+  }
+
+  .spectrum-Site-overlay.is-open {
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    /* Entry animations */
+    transition: opacity var(--spectrum-site-overlay-background-entry-animation-duration) var(--spectrum-site-overlay-background-entry-animation-easing) var(--spectrum-site-overlay-background-entry-animation-delay);
+  }
+
+  .spectrum-Site-overlay {
+    visibility: visible;
+  }
+
+  .spectrum-Site-sideBar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    z-index: 100;
+
+    transform: translateX(0);
+    transition: transform var(--spectrum-global-animation-duration-200) ease-in-out;
+  }
+
+  .spectrum-Site-sideBar.is-open {
+    transform: translateX(100%);
+  }
+
+  .spectrum-Site-header {
+    display: block;
+  }
+
+  .spectrum-Page {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .spectrum-Site-hero {
+    max-width: 100%;
+  }
+
+  .spectrum-Hero-heading h1.spectrum-Heading1--display {
+    font-size: var(--spectrum-global-dimension-font-size-900);
+  }
+}
+
+.u-scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.u-scrollable::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.u-scrollable::-webkit-scrollbar-track,
+.u-scrollable::-webkit-scrollbar-track-piece {
+  background: var(--spectrum-site-scrollbar-track-color);
+}
+
+.u-scrollable::-webkit-scrollbar-thumb {
+  background-color: var(--spectrum-site-scrollbar-track-color);
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+.u-scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: var(--spectrum-site-scrollbar-thumb-color);
+}
+

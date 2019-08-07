@@ -1,31 +1,56 @@
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
+const gulp = require('gulp');
+const builder = require('./tools/bundle-builder');
+const site = require('./site/gulpfile.js');
+Object.assign(exports, builder);
+Object.assign(exports, site);
 
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
+const path = require('path');
+const fsp = require('fs').promises;
 
-var gulp = require('gulp');
+async function updatePeerDependencies() {
+  let packagesDir = './components';
 
-// Include all tasks
-require('./tasks/lint');
-require('./tasks/copy-vars');
-require('./tasks/copy-loadIcons');
-require('./tasks/icons');
-require('./tasks/build-css');
-require('./tasks/build-docs');
-require('./tasks/clean');
-require('./tasks/gh-pages');
-require('./tasks/sass-compile');
-require('./tasks/build');
-require('./tasks/dev');
-require('./tasks/build-backstop');
-require('./tasks/test-backstop');
-require('./tasks/test');
+  async function readPackage(component) {
+    return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
+  }
 
-gulp.task('default', gulp.series('build'));
+  async function writePackage(component, package) {
+    return await fsp.writeFile(path.join(component, 'package.json'), JSON.stringify(package, null, 2));
+  }
+
+  let components = (await fsp.readdir(packagesDir, { withFileTypes: true }))
+    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .map((dirent) => path.join(packagesDir, dirent.name));
+
+  await Promise.all(components.map(async (component) => {
+    let package = await readPackage(component);
+
+    if (package.peerDependencies) {
+      Object.keys(package.peerDependencies).forEach((dependency) => {
+        let devDepVer = package.devDependencies[dependency];
+        let peerDepVer = package.peerDependencies[dependency];
+        if (devDepVer) {
+          if (peerDepVer != devDepVer) {
+            package.peerDependencies[dependency] = devDepVer;
+
+            console.log(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, expected ${devDepVer})`);
+          }
+        }
+        else {
+          throw new Error(`${component} has ${dependency} in peerDependencies, but not devDependencies!`);
+        }
+      });
+
+      await writePackage(component, package);
+    }
+  }));
+};
+
+exports.updatePeerDependencies = updatePeerDependencies;
+
+exports.version = gulp.series(
+  updatePeerDependencies,
+  builder.build
+);
+
+exports.prepare = site.copySiteResources;
