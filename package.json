@@ -34,13 +34,15 @@
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "audit-ci": "^2.0.1",
+    "backstopjs": "^4.1.12",
     "gulp": "^4.0.0",
     "gulplog": "^1.0.0",
     "lerna": "^3.16.4",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",
-    "prismjs": "^1.17.1"
+    "prismjs": "^1.17.1",
+    "spectrum-css-test-asset": "^2.0.0-alpha.8"
   },
   "optionalDependencies": {
     "@spectrum/spectrum-icons": "^2.3.0"

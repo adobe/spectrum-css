@@ -57,7 +57,7 @@ module.exports = {
   onReadyScript: 'puppet/onReady.js',
   scenarios,
   paths: {
-    bitmaps_reference: `backstop_data/bitmaps_reference`,
+    bitmaps_reference: 'node_modules/spectrum-css-test-asset/bitmaps_reference',
     bitmaps_test: 'backstop_data/bitmaps_test',
     engine_scripts: 'backstop_data/engine_scripts',
     html_report: 'backstop_data/html_report',
