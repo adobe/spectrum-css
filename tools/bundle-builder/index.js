@@ -22,7 +22,6 @@ const docs = require('./docs');
 const dev = require('./dev');
 const subrunner = require('./subrunner');
 const release = require('./release');
-const test = require('./test');
 
 function clean() {
   let globs = [
@@ -164,7 +163,8 @@ if (dirs.cwd === dirs.topLevel) {
     buildLite,
     dev.watch
   );
-} else {
+}
+else {
   // Otherwise, just start watching
   devTask = gulp.series(
     clean,
@@ -183,18 +183,7 @@ exports.prePack = gulp.series(
 );
 
 exports.ghPages = release.ghPages;
-exports.postPublish = gulp.series(
-  release.releaseBackwardsCompatCleanup,
-  release.ghPages
-);
-
-exports.serveTest = gulp.series(
-  clean,
-  build,
-  test.serveWithoutNotify
-);
-
-exports.release = release.release;
+exports.postPublish = release.releaseBackwardsCompatCleanup;
 
 exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
@@ -204,5 +193,4 @@ exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
-exports.generateBackstopScenarios = test.generateBackstopScenarios;
 exports.default = build;

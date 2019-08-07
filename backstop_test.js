@@ -22,36 +22,27 @@ const baseScenarioConfig = {
   requireSameDimensions: true
 };
 
+(process.env.THEMES || 'light').split(',').forEach(t => themes.add(t));
+(process.env.SCALES || 'medium').split(',').forEach(s => scales.add(s));
+
 const [_, __, ___, ____, ...rest] = process.argv;
 
 const components = new Set(rest);
 
-(process.env.THEMES || 'light').split(',').forEach(t => themes.add(t));
-(process.env.SCALES || 'medium').split(',').forEach(s => scales.add(s));
+const allScenarios = components.size > 0 ? scenarioConfigs.filter(i => components.has(i.label)): scenarioConfigs.filter(i => !excludedScenarios.has(i.label));
 
-if (components.size > 0) {
-  scenarioConfigs.filter(i => components.has(i.label)).map(specificScenarioConfig => {
-    themes.forEach(t => {
-      scales.forEach(s => scenarios.push(Object.assign({...baseScenarioConfig}, {
-        label: `${specificScenarioConfig.label}-${t}-${s}`,
-        url: `http://localhost:3000/docs/${specificScenarioConfig.url}`,
-        scale: s,
-        theme: t
-      })));
+allScenarios.map(specificScenarioConfig => {
+  themes.forEach(t => {
+    scales.forEach(s => {
+      const config = {...specificScenarioConfig};
+      config.label = `${config.label}-${t}-${s}`;
+      config.url = `http://localhost:3000/docs/${config.url}`;
+      config.scale = s;
+      config.theme = t;
+      scenarios.push(Object.assign({...baseScenarioConfig}, config));
     });
   });
-} else {
-  scenarioConfigs.filter(i => !excludedScenarios.has(i.label)).map(specificScenarioConfig => {
-    themes.forEach(t => {
-      scales.forEach(s => scenarios.push(Object.assign({...baseScenarioConfig}, {
-        label: `${specificScenarioConfig.label}-${t}-${s}`,
-        url: `http://localhost:3000/docs/${specificScenarioConfig.url}`,
-        scale: s,
-        theme: t
-      })));
-    });
-  });
-}
+});
 
 module.exports = {
   id: 'Spectrum CSS',

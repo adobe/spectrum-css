@@ -21,7 +21,8 @@ const subrunner = require('../subrunner');
 function serve() {
   browserSync({
     startPath: 'docs/index.html',
-    server: `${dirs.cwd}/dist/`
+    server: `${dirs.cwd}/dist/`,
+    notify: process.env.BROWSERSYNC_NOTIFY !== 'false'
   });
 }
 
