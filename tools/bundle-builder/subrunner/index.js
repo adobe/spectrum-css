@@ -66,9 +66,16 @@ function runComponentTask(package, task, callback) {
 /*
   Build all packages
 */
-async function runTaskOnAllComponents(task) {
+function runTaskOnAllComponents(task) {
   return new Promise(async (resolve, reject) => {
-    let components = await depUtils.getFolderDependencyOrder(dirs.components);
+    let components;
+    try {
+      components = await depUtils.getFolderDependencyOrder(dirs.components);
+    }
+    catch (err) {
+      return reject(err);
+    }
+
     let packageCount = components.length;
 
     function getNextPackage() {

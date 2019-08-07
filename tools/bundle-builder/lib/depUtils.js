@@ -23,24 +23,15 @@ const depSolver = require('dependency-solver');
 */
 async function getDependencies(package) {
   let pkg = JSON.parse(await fsp.readFile(path.join(package, 'package.json')));
-
   let dependencies = [];
 
-  if (pkg.dependencies) {
-    dependencies = Object.keys(pkg.dependencies);
-  }
-
   if (pkg.devDependencies) {
-    dependencies = dependencies.concat(Object.keys(pkg.devDependencies));
+    dependencies = Object.keys(pkg.devDependencies).filter((dep) => {
+      return dep.indexOf('@spectrum-css') === 0 &&
+        dep !== '@spectrum-css/bundle-builder' &&
+        dep !== '@spectrum-css/component-builder';
+    });
   }
-
-  dependencies = dependencies.filter((dep) => {
-    return (
-      dep.indexOf('@spectrum-css') === 0 &&
-      dep !== '@spectrum-css/bundle-builder' &&
-      dep !== '@spectrum-css/component-builder'
-    );
-  });
 
   return { name: pkg.name, dependencies: dependencies };
 }

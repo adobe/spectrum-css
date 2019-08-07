@@ -12,18 +12,7 @@ governing permissions and limitations under the License.
 
 const cp = require('child_process');
 
-function handleExec(cb) {
-  return function(err, stdout, stderr) {
-    if (err) {
-      return cb(err, stdout, stderr);
-    }
-
-    cb(null, stdout, stderr);
-  }
-}
-
 function task(taskName, command) {
-  // return a function
   var func = function(cb) {
     runCommand(command, cb);
   };
@@ -34,9 +23,8 @@ function task(taskName, command) {
 }
 
 function runCommand(command, cb, options = {}) {
-  // Execute immediately
-  let commandProcess = cp.exec(command, handleExec(cb));
-  if (options.pipe) {
+  let commandProcess = cp.exec(command, cb);
+  if (options.pipe !== false) {
     commandProcess.stdout.pipe(process.stdout);
     commandProcess.stderr.pipe(process.stderr);
   }

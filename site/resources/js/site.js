@@ -174,7 +174,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // Sidebar
   var sideBar = document.querySelector('#site-sidebar');
   var overlay = document.querySelector('#site-overlay');
-  let mql = window.matchMedia('(max-width: 960px)');
+  let mql = window.matchMedia('(max-width: 768px)');
   function handleMQLChange() {
     if (mql.matches) {
       switcher.scale = 'large';

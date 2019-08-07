@@ -10,12 +10,13 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
-    "version": "npm run build",
+    "version": "gulp version",
     "postinstall": "npm run bootstrap",
     "backstop:approve": "backstop approve --config=backstop_test.js",
     "backstop:test": "backstop test --config=backstop_test.js",
     "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
-    "prepare": "gulp copySiteResources"
+    "prepare": "gulp prepare",
+    "postpublish": "npx lerna run publishpages --concurrency=1"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "backstopjs": "^4.1.12",
     "gulp": "^4.0.0",
     "gulplog": "^1.0.0",
+    "lerna": "^3.16.4",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",

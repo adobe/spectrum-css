@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 const gulp = require('gulp');
-const fs = require('fs');
+const fsp = require('fs').promises;
 const path = require('path');
 const pug = require('pug');
 const data = require('gulp-data');
@@ -21,81 +21,90 @@ const through = require('through2');
 const ext = require('replace-ext');
 
 const sitePath = path.join(__dirname, '..', '..', '..', 'site');
+const util = require(`${sitePath}/util`);
 
-var dependencies;
-var docDependencies;
-function getDependencies() {
-  // Build a list of dependencies
-  var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  var packageName = pkg.name.split('/').pop();
+async function readJSONFile(filepath) {
+  return JSON.parse(await fsp.readFile(filepath));
+}
 
-  dependencies = [];
-  if (pkg.dependencies) {
-    for (let depPkg in pkg.dependencies) {
-      let deps = [];
-      if (depPkg.indexOf('@spectrum-css') === 0) {
-        let dependencyName = depPkg.split('/').pop();
-        dependencies.push(dependencyName);
-      }
-    }
+async function getDependencies(packagePath = '') {
+  let package = await readJSONFile(path.join(packagePath, 'package.json'));
+
+  let dependencies = [];
+
+  if (package.devDependencies) {
+    dependencies = Object.keys(package.devDependencies);
+
+    dependencies = dependencies
+      .filter((dep) => {
+        return (
+          dep.indexOf('@spectrum-css') === 0 &&
+          dep !== '@spectrum-css/bundle-builder' &&
+          dep !== '@spectrum-css/component-builder'
+        );
+      })
+      .map((dep) => dep.split('/').pop());
   }
 
-  // Add dev deps: these are dependencies required to render examples in the docs for this specific component
-  if (pkg.devDependencies) {
-    for (let depPkg in pkg.devDependencies) {
-      let deps = [];
-      if (depPkg.indexOf('@spectrum-css') === 0 && depPkg !== '@spectrum-css/component-builder') {
-        let dependencyName = depPkg.split('/').pop();
-        dependencies.push(dependencyName);
-      }
-    }
-  }
+  return dependencies;
 }
 
 function buildDocs_html() {
-  var pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  var pkgname = pkg.name.split('/').pop();
-
-  // This must be called per-task, or top level build won't know the right deps
-  getDependencies();
-
-  return gulp.src(
-    [
-      'docs.yml',
-      'docs/*.yml'
-    ], {
-      allowEmpty: true
+  return new Promise(async (resolve, reject) => {
+    let dependencies;
+    let package;
+    try {
+      package = await readJSONFile('package.json');
+      dependencies = await getDependencies();
     }
-  )
-    .pipe(rename(function(file) {
-      if (file.basename === 'docs' || file.basename === pkgname) {
-        file.basename = 'index';
+    catch(err) {
+      return reject(err);
+    }
+
+    let packageName = package.name.split('/').pop();
+
+    let dnaVars = readJSONFile(path.join('node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'));
+
+    gulp.src(
+      [
+        'docs.yml',
+        'docs/*.yml'
+      ], {
+        allowEmpty: true
       }
-    }))
-    .pipe(data(function() {
-      return {
-        dependencies: dependencies,
-        dnaVars: JSON.parse(fs.readFileSync(path.join(process.cwd(), 'node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'), 'utf8')),
-        pkg: JSON.parse(fs.readFileSync('package.json', 'utf8')),
-        util: require(`${sitePath}/util`)
-      };
-    }))
-    .pipe(through.obj(function compilePug(file, enc, cb) {
-        let data = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
-
-        file.path = ext(file.path, '.html');
-
-        try {
-          const templatePath = `${sitePath}/templates/individualComponent.pug`;
-          let compiled = pug.renderFile(templatePath, data);
-          file.contents = Buffer.from(compiled);
-        } catch (e) {
-          return cb(e);
-        }
-        cb(null, file);
-      })
     )
-    .pipe(gulp.dest('dist/docs/'));
+      .pipe(rename(function(file) {
+        if (file.basename === 'docs' || file.basename === packageName) {
+          file.basename = 'index';
+        }
+      }))
+      .pipe(data(function() {
+        return {
+          dependencies: dependencies,
+          dnaVars: dnaVars,
+          pkg: package,
+          util: util
+        };
+      }))
+      .pipe(through.obj(function compilePug(file, enc, cb) {
+          let data = Object.assign({}, { component: yaml.safeLoad(String(file.contents)) }, file.data || {});
+
+          file.path = ext(file.path, '.html');
+
+          try {
+            const templatePath = `${sitePath}/templates/individualComponent.pug`;
+            let compiled = pug.renderFile(templatePath, data);
+            file.contents = Buffer.from(compiled);
+          } catch (e) {
+            return cb(e);
+          }
+          cb(null, file);
+        })
+      )
+      .pipe(gulp.dest('dist/docs/'))
+      .on('end', resolve)
+      .on('error', reject);
+  });
 }
 
 function buildDocs_resources() {
@@ -104,14 +113,25 @@ function buildDocs_resources() {
 }
 
 function buildDocs_copyDeps() {
-  // This must be called per-task, or top level build won't know the right deps
-  getDependencies();
+  return new Promise(async (resolve, reject) => {
+    let dependencies;
+    try {
+      dependencies = await getDependencies();
+    }
+    catch(err) {
+      return reject(err);
+    }
 
-  function copyDep(dep) {
-    return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*`)
-      .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
-  }
-  return merge.apply(merge, dependencies.map(copyDep));
+    function copyDep(dep) {
+      return gulp.src(`node_modules/@spectrum-css/${dep}/dist/*`)
+        .pipe(gulp.dest(`dist/docs/dependencies/@spectrum-css/${dep}/`));
+    }
+
+    return merge.apply(merge, dependencies.map(copyDep))
+      .resume()
+      .on('end', resolve)
+      .on('error', reject);
+  });
 }
 
 let buildDocs = gulp.parallel(
