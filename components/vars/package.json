@@ -13,6 +13,11 @@
   },
   "devDependencies": {
     "del": "^5.0.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulplog": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "@spectrum/spectrum-dna": "^5.15.0",
+    "@spectrum/balthazar": "^3.0.1"
   }
 }
