@@ -18,11 +18,18 @@
   "peerDependencies": {
     "@spectrum-css/vars": "^2.0.0-alpha.1"
   },
+  "optionalDependencies": {
+    "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0"
+  },
   "devDependencies": {
     "@spectrum-css/component-builder": "^1.0.0-alpha.2",
     "@spectrum-css/vars": "^2.0.0-alpha.1",
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-svgstore": "^7.0.1"
+    "gulp-svgstore": "^7.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sort": "^2.0.0",
+    "gulp-svgcombiner": "^1.0.1",
+    "gulp-svgmin": "^2.1.0"
   }
 }
