@@ -77,11 +77,13 @@ function makeDoubleSlider(slider) {
       handle = e.target;
       window.addEventListener('mouseup', onMouseUp);
       window.addEventListener('mousemove', onMouseMove);
+      document.body.classList.add('u-isGrabbing');
     }
   }
   function onMouseUp(e, sliderHandle) {
     window.removeEventListener('mouseup', onMouseUp);
     window.removeEventListener('mousemove', onMouseMove);
+    document.body.classList.remove('u-isGrabbing');
     handle = null;
   }
   function onMouseMove(e, sliderHandle) {
@@ -148,10 +150,12 @@ function makeSlider(slider) {
   function onMouseDown(e, sliderHandle) {
     window.addEventListener('mouseup', onMouseUp);
     window.addEventListener('mousemove', onMouseMove);
+    document.body.classList.add('u-isGrabbing');
   }
   function onMouseUp(e, sliderHandle) {
     window.removeEventListener('mouseup', onMouseUp);
     window.removeEventListener('mousemove', onMouseMove);
+    document.body.classList.remove('u-isGrabbing');
   }
   function onMouseMove(e, sliderHandle) {
     var sliderOffsetWidth = slider.offsetWidth;
@@ -215,10 +219,12 @@ function makeDial(dial) {
   function onMouseDown(e, sliderHandle) {
     window.addEventListener('mouseup', onMouseUp);
     window.addEventListener('mousemove', onMouseMove);
+    document.body.classList.add('u-isGrabbing');
   }
   function onMouseUp(e, sliderHandle) {
     window.removeEventListener('mouseup', onMouseUp);
     window.removeEventListener('mousemove', onMouseMove);
+    document.body.classList.remove('u-isGrabbing');
   }
   function onMouseMove(e, sliderHandle) {
     var x = Math.max(Math.min(e.x - dialOffsetLeft, dialOffsetWidth), 0);
