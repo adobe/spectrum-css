@@ -4,6 +4,7 @@
   "description": "The Spectrum CSS vars package",
   "author": "",
   "license": "Apache-2.0",
+  "main": "js/index.js",
   "scripts": {
     "update": "node ./tasks/update.js"
   },
