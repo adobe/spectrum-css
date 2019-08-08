@@ -4,6 +4,9 @@
   "description": "The Spectrum CSS vars package",
   "author": "",
   "license": "Apache-2.0",
+  "scripts": {
+    "update": "node ./tasks/update.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git"
@@ -14,7 +17,11 @@
   "devDependencies": {
     "del": "^5.0.0",
     "gulp": "^4.0.0",
-    "gulplog": "^1.0.0"
+    "gulplog": "^1.0.0",
+    "through2": "^3.0.1",
+    "gulp-replace": "^1.0.0",
+    "replace-ext": "^1.0.0",
+    "postcss": "^5.2.18"
   },
   "optionalDependencies": {
     "@spectrum/spectrum-dna": "^5.15.0",

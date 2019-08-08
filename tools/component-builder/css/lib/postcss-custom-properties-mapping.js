@@ -13,7 +13,7 @@ var postcss = require('postcss');
 var valueParser = require('postcss-value-parser');
 
 // Get the local copy of vars
-var {mapping, static} = require(`${process.cwd()}/node_modules/@spectrum-css/vars`);
+var {mapping, static} = require(`${process.cwd()}/node_modules/@spectrum-css/vars/generate.js`);
 
 // match custom property inclusions
 const customPropertiesRegExp = /(^|[^\w-])var\([\W\w]+\)/;
