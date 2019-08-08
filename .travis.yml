@@ -1,10 +1,14 @@
 language: node_js
 node_js:
   - "node"
+os: osx
 before_script:
   - npm install -g gulp-cli
+  - npm install -g http-server
 script:
   # This script should be the first that runs to reduce the risk of
   # executing a script from a compromised NPM package.
   - audit-ci --moderate
   - gulp build
+  - http-server -p 8080 -s ./dist/ &
+  - THEMES=lightest,light,dark,darkest SCALES=medium,large npm run backstop:test actionbar
