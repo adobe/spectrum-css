@@ -10,5 +10,6 @@ script:
   # executing a script from a compromised NPM package.
   - audit-ci --moderate
   - gulp build
-  - http-server -p 8080 -s ./dist/ &
+  - http-server -p 8080 ./dist/ &
+  - sleep 5
   - THEMES=lightest,light,dark,darkest SCALES=medium,large npm run backstop:test actionbar
