@@ -53,4 +53,9 @@ exports.version = gulp.series(
   builder.build
 );
 
+exports.dev = gulp.series(
+  exports.copySiteResources,
+  exports.dev
+);
+
 exports.prepare = site.copySiteResources;

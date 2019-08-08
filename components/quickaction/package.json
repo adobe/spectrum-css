@@ -16,9 +16,11 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^2.0.0-alpha.1"
+    "@spectrum-css/vars": "^2.0.0-alpha.1",
+    "@spectrum-css/checkbox": "^2.0.0-alpha.2"
   },
   "devDependencies": {
+    "@spectrum-css/checkbox": "^2.0.0-alpha.2",
     "@spectrum-css/button": "^2.0.0-alpha.2",
     "@spectrum-css/component-builder": "^1.0.0-alpha.2",
     "@spectrum-css/vars": "^2.0.0-alpha.1",

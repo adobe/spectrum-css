@@ -1,4 +1,4 @@
-/* generated from dna-version: 5.15.0 */
+/* generated from dna-version: 5.18.1 */
 :root {
   --spectrum-global-color-static-black: rgb(0, 0, 0);
   --spectrum-global-color-static-white: rgb(255, 255, 255);
@@ -30,6 +30,38 @@
   --spectrum-global-color-static-green-500: rgb(45, 157, 120);
   --spectrum-global-color-static-green-600: rgb(38, 142, 108);
   --spectrum-global-color-static-green-700: rgb(18, 128, 92);
+  --spectrum-global-color-static-celery-400: rgb(75, 195, 95);
+  --spectrum-global-color-static-celery-500: rgb(68, 181, 86);
+  --spectrum-global-color-static-celery-600: rgb(61, 167, 78);
+  --spectrum-global-color-static-celery-700: rgb(55, 153, 71);
+  --spectrum-global-color-static-chartreuse-400: rgb(142, 222, 73);
+  --spectrum-global-color-static-chartreuse-500: rgb(133, 208, 68);
+  --spectrum-global-color-static-chartreuse-600: rgb(124, 195, 63);
+  --spectrum-global-color-static-chartreuse-700: rgb(115, 181, 58);
+  --spectrum-global-color-static-yellow-400: rgb(237, 204, 0);
+  --spectrum-global-color-static-yellow-500: rgb(223, 191, 0);
+  --spectrum-global-color-static-yellow-600: rgb(210, 178, 0);
+  --spectrum-global-color-static-yellow-700: rgb(196, 166, 0);
+  --spectrum-global-color-static-magenta-400: rgb(226, 73, 157);
+  --spectrum-global-color-static-magenta-500: rgb(216, 55, 144);
+  --spectrum-global-color-static-magenta-600: rgb(202, 41, 130);
+  --spectrum-global-color-static-magenta-700: rgb(188, 28, 116);
+  --spectrum-global-color-static-fuchsia-400: rgb(207, 62, 220);
+  --spectrum-global-color-static-fuchsia-500: rgb(192, 56, 204);
+  --spectrum-global-color-static-fuchsia-600: rgb(177, 48, 189);
+  --spectrum-global-color-static-fuchsia-700: rgb(162, 40, 173);
+  --spectrum-global-color-static-purple-400: rgb(157, 100, 225);
+  --spectrum-global-color-static-purple-500: rgb(146, 86, 217);
+  --spectrum-global-color-static-purple-600: rgb(134, 76, 204);
+  --spectrum-global-color-static-purple-700: rgb(122, 66, 191);
+  --spectrum-global-color-static-indigo-400: rgb(117, 117, 241);
+  --spectrum-global-color-static-indigo-500: rgb(103, 103, 236);
+  --spectrum-global-color-static-indigo-600: rgb(92, 92, 224);
+  --spectrum-global-color-static-indigo-700: rgb(81, 81, 211);
+  --spectrum-global-color-static-seafoam-400: rgb(32, 163, 168);
+  --spectrum-global-color-static-seafoam-500: rgb(27, 149, 154);
+  --spectrum-global-color-static-seafoam-600: rgb(22, 135, 140);
+  --spectrum-global-color-static-seafoam-700: rgb(15, 121, 125);
   --spectrum-global-color-opacity-100: 1;
   --spectrum-global-color-opacity-90: 0.9;
   --spectrum-global-color-opacity-80: 0.8;

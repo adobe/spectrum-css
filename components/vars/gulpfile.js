@@ -11,8 +11,12 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require('gulp');
+const logger = require('gulplog');
 const fs = require('fs');
 const del = require('del');
+const path = require('path');
+const replace = require('gulp-replace');
+const Balthazar = require('@spectrum/balthazar');
 
 function clean() {
   return del('dist/*');
@@ -24,6 +28,32 @@ function prepareBuild(cb) {
     fs.mkdirSync(dir);
   }
   cb();
+}
+
+function generateDNA() {
+  const outputPath = path.resolve('vars');
+  const CSS_OUTPUT_TYPE = Balthazar.OUTPUT_TYPES.css;
+  // the api for convert is destination, type, path-to-json
+  // default path to json will look for node_modules/@spectrum/spectrum-dna locally
+  const dnaPath = path.join(path.dirname(require.resolve('@spectrum/spectrum-dna')), '..');
+  return Balthazar.convertVars(outputPath, CSS_OUTPUT_TYPE, dnaPath)
+    .then(files => {
+      logger.info('load-dna: All output has been generated!');
+      files.forEach(fileName => {
+        logger.info('  created:', fileName);
+      });
+    });
+};
+
+function postProcessDNA() {
+  return gulp.src([
+    'vars/spectrum-*.css',
+    '!vars/spectrum-medium.css',
+    '!vars/spectrum-large.css'
+  ])
+    // replace anything with a value of 'transparent' with an actual transparent color
+    .pipe(replace(/(.*?:) transparent;\n/g, '$1 rgba(0, 0, 0, 0);\n'))
+    .pipe(gulp.dest('vars/'));
 }
 
 // Builds a list of unique variables from DNA for each theme and scale.
@@ -48,6 +78,11 @@ function copySources() {
     .pipe(gulp.dest('dist/'))
 }
 
+let updateDNA = gulp.series(
+  generateDNA,
+  postProcessDNA
+);
+
 let build = gulp.series(
   clean,
   prepareBuild,
@@ -57,6 +92,7 @@ let build = gulp.series(
   )
 );
 
+exports.updateDNA = updateDNA;
 exports.clean = clean;
 exports.default = build;
 exports.build = exports.buildLite = build;
