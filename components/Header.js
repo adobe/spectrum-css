@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+const pathPrefix = process.env.NODE_ENV === 'production' ? '/spectrum-css' : '';
+
 const linkStyle = {
   marginRight: 15
 }
@@ -7,7 +9,7 @@ const linkStyle = {
 export default function Header() {
   return (
     <div>
-      <Link href="/">
+      <Link href={`${pathPrefix}/`}>
         <a style={linkStyle}>Home</a>
       </Link>
     </div>
