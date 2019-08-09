@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/component-builder",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "The Spectrum CSS component builder",
   "author": "",
   "license": "Apache-2.0",
@@ -30,6 +30,7 @@
     "js-yaml": "^3.13.1",
     "markdown": "^0.5.0",
     "merge-stream": "^2.0.0",
+    "postcss": "^5.2.18",
     "postcss-calc": "^6.0.0",
     "postcss-custom-properties": "^6.0.1",
     "postcss-discard-empty": "^4.0.1",

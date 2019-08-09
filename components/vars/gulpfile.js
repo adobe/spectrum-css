@@ -11,8 +11,10 @@ governing permissions and limitations under the License.
 */
 
 const gulp = require('gulp');
+const logger = require('gulplog');
 const fs = require('fs');
 const del = require('del');
+const path = require('path');
 
 function clean() {
   return del('dist/*');
@@ -28,7 +30,7 @@ function prepareBuild(cb) {
 
 // Builds a list of unique variables from DNA for each theme and scale.
 function buildVars(cb) {
-  let vars = require('./');
+  let vars = require('./generate');
   for (let theme in vars.themes) {
     fs.writeFileSync(`dist/spectrum-${theme}.css`, vars.generate(theme, vars.themes[theme]));
   }
@@ -42,8 +44,8 @@ function buildVars(cb) {
 
 function copySources() {
   return gulp.src([
-    'vars/spectrum-metadata.json',
-    'vars/spectrum-global.css'
+    'css/spectrum-metadata.json',
+    'css/spectrum-global.css'
   ])
     .pipe(gulp.dest('dist/'))
 }

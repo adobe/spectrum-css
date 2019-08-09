@@ -57,7 +57,7 @@ function getUniqueVars(vars) {
 function getVariableMappings(themes) {
   let themeVars = {};
   for (let theme of themes) {
-    let values = getVars(`vars/spectrum-${theme}.css`);
+    let values = getVars(`css/spectrum-${theme}.css`);
     let mappings = getUniqueVars(values);
     themeVars[theme] = {values, mappings};
   }
@@ -113,7 +113,7 @@ function getVariableMappings(themes) {
 
 let themes = getVariableMappings(['dark', 'darkest', 'light', 'lightest', 'middark', 'midlight']);
 let scales = getVariableMappings(['large', 'medium']);
-let globals = getVars('vars/spectrum-global.css');
+let globals = getVars('css/spectrum-global.css');
 
 exports.themes = themes.vars;
 exports.scales = scales.vars;
