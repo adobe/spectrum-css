@@ -5,7 +5,7 @@ const readdir = util.promisify(fs.readdir);
 
 module.exports = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/{spectrum-css}' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css' : '',
   webpack: function(config, { dev, defaultLoaders }) {
     config.module.rules.push({
       test: /\.ya?ml$/,

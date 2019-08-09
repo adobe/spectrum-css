@@ -1,7 +1,7 @@
 import Layout from '../components/MyLayout';
 import Link from 'next/link';
 
-const pathPrefix = process.env.NODE_ENV === 'production' ? '/{spectrum-css}' : '';
+const pathPrefix = process.env.NODE_ENV === 'production' ? '/spectrum-css' : '';
 
 function getPosts() {
   return [
