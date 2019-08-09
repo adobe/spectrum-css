@@ -4,7 +4,7 @@ const util = require("util")
 const readdir = util.promisify(fs.readdir);
 
 module.exports = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['js', 'jsx'],
   assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css' : '',
   webpack: function(config, { dev, defaultLoaders }) {
     config.module.rules.push({
@@ -16,17 +16,6 @@ module.exports = {
     config.node = {
       Buffer: false
     }
-
-    /*
-    if (dev) {
-      return config
-    }
-    config.resolve.alias = {
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat',
-      'preact-compat': 'preact-compat/dist/preact-compat'
-    }
-    */
 
     return config
   },

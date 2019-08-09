@@ -18,22 +18,19 @@ class Page extends React.Component {
     const node_env = process.env.NODE_ENV
     return {node_env}
   }
-  // componentWillReceiveProps(newProps) {
-  //   const oldProps = this.props
-  //   if(oldProps.router.query.id !== newProps.router.query.id) {
-  //     if(!window.location.hash) {
-  //       document.documentElement.scrollTop = document.body.scrollTop = 0;
-  //     }
-  //   }
-  // }
   render() {
     var examplesList = this.props.pageData.examples.map(function(example) {
       return <div key={example.slug}>
         <h3>{example.name}</h3>
+          <pre>
+            <code>
+              {example.markup}
+            </code>
+          </pre>
         <div dangerouslySetInnerHTML={{ __html: example.markup }}/>
       </div>
     })
-    return (<Layout>
+    return (<Layout className="spectrum spectrum--medium spectrum--light">
       <h1>{this.props.pageData.name}</h1>
       <p>{this.props.pageData.description}</p>
       <div>

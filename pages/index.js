@@ -6,7 +6,9 @@ const pathPrefix = process.env.NODE_ENV === 'production' ? '/spectrum-css' : '';
 function getPosts() {
   return [
     { id: 'checkbox', title: 'Checkbox' },
-    { id: 'barloader', title: 'Barloader' }
+    { id: 'barloader', title: 'Barloader' },
+    { id: 'accordion', title: 'Accordion' },
+    { id: 'button-primary', title: 'Button (Primary)' },
   ];
 }
 

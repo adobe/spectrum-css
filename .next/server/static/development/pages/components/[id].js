@@ -49,7 +49,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("../../../..//" + ({}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("../../../../" + ({}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -140,9 +140,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Header.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/garthdb/spectrum-css/components/Header.js";
 
 
+const pathPrefix =  false ? undefined : '';
 const linkStyle = {
   marginRight: 15
 };
@@ -150,21 +151,21 @@ function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
+    href: `${pathPrefix}/`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, "Home")));
@@ -185,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/MyLayout.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/garthdb/spectrum-css/components/MyLayout.js";
 
 
 const layoutStyle = {
@@ -220,13 +221,21 @@ function Layout(props) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./accordion.yml": [
+		"./data/accordion.yml",
+		0
+	],
 	"./barloader.yml": [
 		"./data/barloader.yml",
-		0
+		1
+	],
+	"./button-primary.yml": [
+		"./data/button-primary.yml",
+		2
 	],
 	"./checkbox.yml": [
 		"./data/checkbox.yml",
-		1
+		3
 	]
 };
 function webpackAsyncContext(req) {
@@ -931,7 +940,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/MyLayout.js */ "./components/MyLayout.js");
-var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/components/[id].js";
+var _jsxFileName = "/Users/garthdb/Spectrum/garthdb/spectrum-css/pages/components/[id].js";
 
 
 
@@ -955,15 +964,7 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     return {
       node_env
     };
-  } // componentWillReceiveProps(newProps) {
-  //   const oldProps = this.props
-  //   if(oldProps.router.query.id !== newProps.router.query.id) {
-  //     if(!window.location.hash) {
-  //       document.documentElement.scrollTop = document.body.scrollTop = 0;
-  //     }
-  //   }
-  // }
-
+  }
 
   render() {
     var examplesList = this.props.pageData.examples.map(function (example) {
@@ -971,54 +972,67 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         key: example.slug,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 24
         },
         __self: this
-      }, example.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, example.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, example.markup)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
           __html: example.markup
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 30
         },
         __self: this
       }));
     });
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      className: "spectrum spectrum--medium spectrum--light",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 33
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 34
       },
       __self: this
     }, this.props.pageData.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 35
       },
       __self: this
     }, this.props.pageData.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 36
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 37
       },
       __self: this
     }, "Examples"), examplesList));
@@ -1040,14 +1054,14 @@ Page.getInitialProps = async function (context) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!****************************************!*\
   !*** multi ./pages/components/[id].js ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/garthdb/Spectrum/spectrum-css/pages/components/[id].js */"./pages/components/[id].js");
+module.exports = __webpack_require__(/*! /Users/garthdb/Spectrum/garthdb/spectrum-css/pages/components/[id].js */"./pages/components/[id].js");
 
 
 /***/ }),
