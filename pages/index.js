@@ -1,6 +1,8 @@
 import Layout from '../components/MyLayout';
 import Link from 'next/link';
 
+const pathPrefix = process.env.NODE_ENV === 'production' ? '/{spectrum-css}' : '';
+
 function getPosts() {
   return [
     { id: 'checkbox', title: 'Checkbox' },
@@ -10,7 +12,7 @@ function getPosts() {
 
 const PostLink = ({ post }) => (
   <li>
-    <Link href="/components/[id]" as={`/components/${post.id}`}>
+    <Link href="/components/[id]" as={`${pathPrefix}/components/${post.id}`}>
       <a>{post.title}</a>
     </Link>
     <style jsx>{`
