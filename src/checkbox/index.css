@@ -97,7 +97,7 @@ governing permissions and limitations under the License.
   margin-left: var(--spectrum-checkbox-text-gap);
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
-  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
+  /* transition: color var(--spectrum-global-animation-duration-100) ease-in-out; */
 
   margin-top: var(--spectrum-checkbox-label-margin-top);
 }

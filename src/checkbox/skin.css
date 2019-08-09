@@ -10,10 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Checkbox-label {
+.spectrum-Checkbox {
   color: var(--spectrum-checkbox-text-color);
 }
-
 .spectrum-Checkbox-checkmark,
 .spectrum-Checkbox-partialCheckmark {
   color: var(--spectrum-checkbox-checkmark-color);
@@ -34,7 +33,6 @@ governing permissions and limitations under the License.
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: var(--spectrum-checkbox-box-border-color-selected-hover);
-
   }
 }
 
@@ -74,11 +72,10 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Checkbox-input {
+.spectrum-Checkbox .spectrum-Checkbox-input,
+.spectrum-Checkbox .spectrum-Checkbox-input:checked {
   &:disabled + .spectrum-Checkbox-box {
-    /* Use important to override hover states */
-    border-color: var(--spectrum-checkbox-box-border-color-disabled) !important;
-
+    border-color: var(--spectrum-checkbox-box-border-color-disabled);
     background-color: var(--spectrum-checkbox-box-background-color-disabled);
   }
 
@@ -91,16 +88,9 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-input {
   &:focus-ring + .spectrum-Checkbox-box {
     /* Since the specificity of .focus-ring is less than :hover, we need important */
-    border-color: var(--spectrum-checkbox-box-border-color-key-focus) !important;
-
-    box-shadow: 0 0 0 1px var(--spectrum-checkbox-box-border-color-key-focus) !important;
-  }
-
-  &:focus-ring ~ .spectrum-Checkbox-label {
-    color: var(--spectrum-checkbox-text-color-key-focus) !important;
+    box-shadow:  0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-checkbox-focus-ring-color-key-focus);
   }
 }
-
 /* topdoc
 {{ checkbox/checkbox-quiet.yml }}
 */
@@ -108,14 +98,12 @@ governing permissions and limitations under the License.
   .spectrum-Checkbox--quiet .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
   border-color: var(--spectrum-checkbox-quiet-box-border-color-selected);
 }
-
 .spectrum-Checkbox--quiet:hover {
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: var(--spectrum-checkbox-quiet-box-border-color-selected-hover);
   }
 }
-
 .spectrum-Checkbox--quiet:active {
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
