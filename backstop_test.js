@@ -1,8 +1,10 @@
 const scenarioConfigs = require('./backstop_scenarios');
 const scenarios = [];
 const excludedScenarios = new Set(['circleloader', 'coachmark']);
-const themes = new Set();
-const scales = new Set();
+const themes = new Set().add('light');
+const scales = new Set().add('medium');
+const components = new Set();
+let isDocker = false;
 
 // Shared scenario configuration
 const baseScenarioConfig = {
@@ -22,21 +24,31 @@ const baseScenarioConfig = {
   requireSameDimensions: true
 };
 
-(process.env.THEMES || 'light').split(',').forEach(t => themes.add(t));
-(process.env.SCALES || 'medium').split(',').forEach(s => scales.add(s));
+const [...rest] = process.argv.slice(3); // Exclude 'node', 'backstop' and backstop sub command like 'test/approve'
 
-const [_, __, ___, ____, ...rest] = process.argv;
+// Process the arguments
+rest.forEach(argv => {
+  if (argv === '--moby') {
+    isDocker = true;
+  } else if (argv.startsWith('themes=')) {
+    themes.clear();
+    argv.slice('themes='.length).split(',').forEach(t => themes.add(t));
+  } else if (argv.startsWith('scales=')) {
+    scales.clear();
+    argv.slice('scales='.length).split(',').forEach(s => scales.add(s));
+  } else if (!argv.startsWith('--')) {
+    components.add(argv);
+  }
+});
 
-const components = new Set(rest);
-
-const allScenarios = components.size > 0 ? scenarioConfigs.filter(i => components.has(i.label)): scenarioConfigs.filter(i => !excludedScenarios.has(i.label));
+const allScenarios = components.size > 0 ? scenarioConfigs.filter(i => components.has(i.label)) : scenarioConfigs.filter(i => !excludedScenarios.has(i.label));
 
 allScenarios.map(specificScenarioConfig => {
   themes.forEach(t => {
     scales.forEach(s => {
       const config = {...specificScenarioConfig};
       config.label = `${config.label}-${t}-${s}`;
-      config.url = `http://localhost:8080/docs/${config.url}`;
+      config.url = `http://${isDocker ? 'host.docker.internal' : 'localhost'}:3000/docs/${config.url}`;
       config.scale = s;
       config.theme = t;
       scenarios.push(Object.assign({...baseScenarioConfig}, config));

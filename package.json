@@ -15,6 +15,8 @@
     "backstop:approve": "backstop approve --config=backstop_test.js",
     "backstop:test": "backstop test --config=backstop_test.js",
     "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
+    "backstop:docker:approve": "backstop approve --docker --config=backstop_test.js",
+    "backstop:docker:test": "backstop test --docker --config=backstop_test.js",
     "prepare": "gulp prepare",
     "postpublish": "npx lerna run publishpages --concurrency=1"
   },
