@@ -15,6 +15,8 @@
     "backstop:approve": "backstop approve --config=backstop_test.js",
     "backstop:test": "backstop test --config=backstop_test.js",
     "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
+    "backstop:docker:approve": "backstop approve --docker --config=backstop_test.js",
+    "backstop:docker:test": "backstop test --docker --config=backstop_test.js",
     "prepare": "gulp prepare",
     "postpublish": "npx lerna run publishpages --concurrency=1"
   },
@@ -31,6 +33,9 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "license": "Apache-2.0",
+  "optionalDependencies": {
+    "@spectrum/spectrum-icons": "^2.3.0"
+  },
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "audit-ci": "^2.0.1",
@@ -41,9 +46,7 @@
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",
-    "prismjs": "^1.17.1"
-  },
-  "optionalDependencies": {
-    "@spectrum/spectrum-icons": "^2.3.0"
+    "prismjs": "^1.17.1",
+    "spectrum-css-test-asset": "^2.0.0-alpha.8"
   }
 }
