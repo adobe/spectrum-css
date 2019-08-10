@@ -11,3 +11,6 @@ script:
   # executing a script from a compromised NPM package.
   - audit-ci --moderate
   - gulp build
+  - http-server -s -p 3000 ./dist/
+  - sleep 5
+  - npm run backstop:docker:test themes=light scales=medium,large actionbar

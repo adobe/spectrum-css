@@ -148,7 +148,14 @@
   {
     "label": "getting-started",
     "url": "getting-started.html",
-    "selectors": []
+    "selectors": [],
+    "viewports": [
+      {
+        "label": "test",
+        "width": 1024,
+        "height": 768
+      }
+    ]
   },
   {
     "label": "illustratedmessage",
@@ -157,7 +164,14 @@
   {
     "label": "index",
     "url": "index.html",
-    "selectors": []
+    "selectors": [],
+    "viewports": [
+      {
+        "label": "test",
+        "width": 1024,
+        "height": 768
+      }
+    ]
   },
   {
     "label": "label",

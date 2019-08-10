@@ -34,9 +34,7 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "license": "Apache-2.0",
-  "optionalDependencies": {
-    "@spectrum/spectrum-icons": "^2.3.0"
-  },
+  "optionalDependencies": {},
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "audit-ci": "^2.0.1",
@@ -48,6 +46,6 @@
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",
     "prismjs": "^1.17.1",
-    "spectrum-css-test-asset": "^2.0.0-alpha.8"
+    "spectrum-css-test-asset": "^2.0.0-alpha.11"
   }
 }

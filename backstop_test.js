@@ -1,6 +1,6 @@
 const scenarioConfigs = require('./backstop_scenarios');
 const scenarios = [];
-const excludedScenarios = new Set(['circleloader', 'coachmark']);
+const excludedScenarios = new Set(['circleloader', 'coachmark', 'index', 'getting-started']);
 const themes = new Set().add('light');
 const scales = new Set().add('medium');
 const components = new Set();
@@ -75,7 +75,7 @@ module.exports = {
     html_report: 'backstop_data/html_report',
     ci_report: 'backstop_data/ci_report'
   },
-  report: ['browser'],
+  report: ['CI'],
   engine: 'puppeteer',
   engineOptions: {
     args: ['--no-sandbox']
