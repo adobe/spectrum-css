@@ -80,11 +80,6 @@ governing permissions and limitations under the License.
     margin-bottom: -2PX;
   }
 
-  /* Restore the focus styles unset by the previous rule. */
-  &:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
-
   &:disabled,
   &.is-disabled {
     cursor: default;
