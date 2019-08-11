@@ -124,13 +124,13 @@ governing permissions and limitations under the License.
 .spectrum-Menu-checkmark {
   display: none;
   align-self: flex-start;
-  margin-top: var(--spectrum-selectlist-option-icon-margin-top);
 }
 
 .spectrum-Menu-checkmark,
 .spectrum-Menu-chevron {
   flex-grow: 0;
   margin-left: var(--spectrum-selectlist-option-icon-padding-x);
+  margin-top: var(--spectrum-selectlist-option-icon-margin-top);
 }
 
 .spectrum-Menu-divider {
