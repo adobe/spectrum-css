@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "node"
+services:
+  - docker
 install:
   - npm config set package-lock false
   - npm install
