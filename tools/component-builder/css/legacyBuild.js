@@ -100,8 +100,8 @@ function buildMultiStops() {
 @import '${varDir}css/spectrum-${colorStop}.css';`))
       .pipe(postcss(legacyProcessors))
       .pipe(postcss([
-          mutateselectors((selector) => {
-          return `.spectrum-${colorStop} ${selector}`;
+        mutateselectors((selector) => {
+          return `.spectrum--${colorStop} ${selector}`;
         })
       ]))
       // Fix a nested + inherit bug
