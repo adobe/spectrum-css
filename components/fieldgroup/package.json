@@ -16,11 +16,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
+    "@spectrum-css/icons": "^2.0.0-alpha.3",
     "@spectrum-css/checkbox": "^2.0.0-alpha.3",
     "@spectrum-css/radio": "^2.0.0-alpha.3",
     "@spectrum-css/vars": "^2.0.0-alpha.2"
   },
   "devDependencies": {
+    "@spectrum-css/icons": "^2.0.0-alpha.3",
     "@spectrum-css/checkbox": "^2.0.0-alpha.3",
     "@spectrum-css/component-builder": "^1.0.0-alpha.3",
     "@spectrum-css/radio": "^2.0.0-alpha.3",
