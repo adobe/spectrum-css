@@ -84,5 +84,6 @@ module.exports = {
   asyncCaptureLimit: 5,
   asyncCompareLimit: 50,
   debug: false,
-  debugWindow: false
+  debugWindow: false,
+  dockerCommandTemplate: 'docker run --rm -it --mount type=bind,source="{cwd}",target=/src --network host backstopjs/backstopjs:{version} {backstopCommand} {args}'
 };
