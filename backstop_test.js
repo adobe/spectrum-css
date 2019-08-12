@@ -48,7 +48,8 @@ allScenarios.map(specificScenarioConfig => {
     scales.forEach(s => {
       const config = {...specificScenarioConfig};
       config.label = `${config.label}-${t}-${s}`;
-      config.url = `http://${isDocker ? 'host.docker.internal' : 'localhost'}:3000/docs/${config.url}`;
+      // config.url = `http://${isDocker ? 'host.docker.internal' : 'localhost'}:3000/docs/${config.url}`;
+      config.url = `http://localhost:3000/docs/${config.url}`;
       config.scale = s;
       config.theme = t;
       scenarios.push(Object.assign({...baseScenarioConfig}, config));
