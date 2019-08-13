@@ -209,6 +209,9 @@ window.addEventListener('DOMContentLoaded', function() {
     overlay.removeEventListener('click', hideSideBar);
     sideBar.classList.remove('is-open');
     overlay.classList.remove('is-open');
+    if (window.search) {
+      window.search.hideResults();
+    }
   }
 
   document.querySelector('#site-menu').addEventListener('click', function(event) {
@@ -227,12 +230,5 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Immediately hide results, otherwise they show up in the wrong position since we're in the middle of animation
     search.hideResults();
-
-    // Show them after we're done animating
-    setTimeout(function() {
-      if (search.hasResults) {
-        search.showResults();
-      }
-    }.bind(this), 190);
   });
 });

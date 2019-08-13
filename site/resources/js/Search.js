@@ -39,8 +39,9 @@ function Search(el) {
 
   this.clearButton.addEventListener('click', this.hideResults.bind(this));
   this.el.addEventListener('submit', this.handleSubmit.bind(this));
-  this.el.addEventListener('reset', this.showHideClear.bind(this));
-  this.input.addEventListener('keypress', this.handleKey.bind(this));
+  this.el.addEventListener('reset', this.handleReset.bind(this));
+  this.input.addEventListener('keydown', this.handleKeyDown.bind(this));
+  this.input.addEventListener('keypress', this.handleKeyPress.bind(this));
 
   this.popover.addEventListener('keydown', this.handlePopoverNavigation.bind(this));
   this.popover.addEventListener('click', this.hideResults.bind(this));
@@ -57,9 +58,9 @@ function Search(el) {
   }.bind(this));
 
   this.input.addEventListener('focus', function() {
-    if (this.input.value.length) {
-      this.doSearch();
-    }
+    // if (this.input.value.length) {
+    //   this.doSearch();
+    // }
 
     var event = new Event('SearchFocused');
     window.dispatchEvent(event);
@@ -67,9 +68,9 @@ function Search(el) {
 
   document.addEventListener('keydown', function(e) {
     if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
-      this.input.focus();
       this.input.classList.add('focus-ring');
       this.input.setSelectionRange(0, this.input.value.length);
+      setTimeout(this.input.focus.bind(this.input), 100);
       e.preventDefault();
     }
   }.bind(this));
@@ -123,7 +124,9 @@ Search.prototype.handleSubmit = function(event) {
 };
 
 Search.prototype.handleReset = function(event) {
+  this.hasResults = false;
   this.hideResults();
+  this.input.value = '';
   this.showHideClear();
 };
 
@@ -177,7 +180,6 @@ Search.prototype.handlePopoverNavigation = function(e) {
     }
     else if (e.key === 'Escape') {
       this.input.focus();
-      this.hideResults();
     }
     if (newItemIndex !== -1) {
       items[newItemIndex].focus();
@@ -188,7 +190,7 @@ Search.prototype.handlePopoverNavigation = function(e) {
   }
 };
 
-Search.prototype.handleKey = function(e) {
+Search.prototype.handleKeyDown = function(e) {
   if (e.key === 'ArrowDown') {
     let firstItem = this.popover.querySelector('.spectrum-Menu-item');
     if (firstItem) {
@@ -196,7 +198,13 @@ Search.prototype.handleKey = function(e) {
       firstItem.focus();
     }
   }
-  else if (e.key === 'Enter') {
+  else if (e.key === 'Escape') {
+    this.handleReset();
+  }
+};
+
+Search.prototype.handleKeyPress = function(e) {
+  if (e.key === 'Enter') {
     let firstItem = this.popover.querySelector('.spectrum-Menu-item');
     if (firstItem) {
       firstItem.click();
@@ -204,13 +212,10 @@ Search.prototype.handleKey = function(e) {
       this.hideResults();
     }
   }
-  else if (e.key === 'Escape') {
-    this.hideResults();
-  }
-  else {
+  else if (e.key !== 'Escape') {
     this.showHideClear();
     if (this.input.value.length === 0) {
-      this.hideResults();
+      this.handleReset();
     }
     else {
       this.doSearch();
