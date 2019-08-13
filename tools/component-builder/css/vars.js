@@ -111,7 +111,7 @@ function getClassNames(contents, pkgName) {
 
 async function getVariables(colorStop) {
   const varDir = path.join(process.cwd(), 'node_modules', '@spectrum-css', 'vars');
-  let css = await fsp.readFile(path.join(varDir, 'vars', `spectrum-${colorStop}.css`));
+  let css = await fsp.readFile(path.join(varDir, 'css', `spectrum-${colorStop}.css`));
   let vars = getVarValues(css);
   return { colorStop: colorStop, vars: vars };
 }

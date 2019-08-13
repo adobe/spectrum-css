@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/icons",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.4",
   "description": "The Spectrum CSS icon component",
   "author": "",
   "license": "Apache-2.0",
@@ -16,20 +16,20 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^2.0.0-alpha.1"
+    "@spectrum-css/vars": "^2.0.0-alpha.2"
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^1.0.0-alpha.2",
-    "@spectrum-css/vars": "^2.0.0-alpha.1",
+    "@spectrum-css/component-builder": "^1.0.0-alpha.4",
+    "@spectrum-css/vars": "^2.0.0-alpha.2",
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-svgstore": "^7.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-sort": "^2.0.0",
     "gulp-svgcombiner": "^1.0.1",
-    "gulp-svgmin": "^2.1.0"
+    "gulp-svgmin": "^2.1.0",
+    "gulp-svgstore": "^7.0.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/card",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.4",
   "description": "The Spectrum CSS card component",
   "author": "",
   "license": "Apache-2.0",
@@ -16,21 +16,21 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/asset": "^2.0.0-alpha.2",
-    "@spectrum-css/button": "^2.0.0-alpha.2",
-    "@spectrum-css/checkbox": "^2.0.0-alpha.2",
-    "@spectrum-css/icons": "^2.0.0-alpha.2",
-    "@spectrum-css/quickaction": "^2.0.0-alpha.2",
-    "@spectrum-css/vars": "^2.0.0-alpha.1"
+    "@spectrum-css/asset": "^2.0.0-alpha.4",
+    "@spectrum-css/button": "^2.0.0-alpha.4",
+    "@spectrum-css/checkbox": "^2.0.0-alpha.4",
+    "@spectrum-css/icons": "^2.0.0-alpha.4",
+    "@spectrum-css/quickaction": "^2.0.0-alpha.4",
+    "@spectrum-css/vars": "^2.0.0-alpha.2"
   },
   "devDependencies": {
-    "@spectrum-css/asset": "^2.0.0-alpha.2",
-    "@spectrum-css/button": "^2.0.0-alpha.2",
-    "@spectrum-css/checkbox": "^2.0.0-alpha.2",
-    "@spectrum-css/component-builder": "^1.0.0-alpha.2",
-    "@spectrum-css/icons": "^2.0.0-alpha.2",
-    "@spectrum-css/quickaction": "^2.0.0-alpha.2",
-    "@spectrum-css/vars": "^2.0.0-alpha.1",
+    "@spectrum-css/asset": "^2.0.0-alpha.4",
+    "@spectrum-css/button": "^2.0.0-alpha.4",
+    "@spectrum-css/checkbox": "^2.0.0-alpha.4",
+    "@spectrum-css/component-builder": "^1.0.0-alpha.4",
+    "@spectrum-css/icons": "^2.0.0-alpha.4",
+    "@spectrum-css/quickaction": "^2.0.0-alpha.4",
+    "@spectrum-css/vars": "^2.0.0-alpha.2",
     "gulp": "^4.0.0"
   }
 }
