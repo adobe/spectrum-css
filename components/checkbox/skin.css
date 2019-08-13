@@ -14,11 +14,6 @@ governing permissions and limitations under the License.
   color: var(--spectrum-checkbox-text-color);
 }
 
-.spectrum-Checkbox-checkmark,
-.spectrum-Checkbox-partialCheckmark {
-  color: var(--spectrum-checkbox-checkmark-color);
-}
-
 .spectrum-Checkbox-box {
   border-color: var(--spectrum-checkbox-box-border-color);
   background-color: var(--spectrum-checkbox-box-background-color);
@@ -71,6 +66,11 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-label {
       color: var(--spectrum-checkbox-text-color-down);
     }
+  }
+
+  .spectrum-Checkbox-checkmark,
+  .spectrum-Checkbox-partialCheckmark {
+    color: var(--spectrum-checkbox-checkmark-color);
   }
 }
 
