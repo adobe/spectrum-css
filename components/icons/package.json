@@ -13,7 +13,8 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "update": "gulp updateIcons"
   },
   "peerDependencies": {
     "@spectrum-css/vars": "^2.0.0-alpha.2"
