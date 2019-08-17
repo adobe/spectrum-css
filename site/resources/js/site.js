@@ -174,25 +174,31 @@ window.addEventListener('DOMContentLoaded', function() {
   // Sidebar
   var sideBar = document.querySelector('#site-sidebar');
   var overlay = document.querySelector('#site-overlay');
-  let mql = window.matchMedia('(max-width: 768px)');
-  function handleMQLChange() {
-    if (mql.matches) {
+  let scaleMQL = window.matchMedia('(max-width: 768px)');
+  function handleScaleMQLChange() {
+    if (scaleMQL.matches) {
       switcher.scale = 'large';
     }
     else {
       switcher.scale = 'medium';
+    }
+  }
+  scaleMQL.addListener(handleScaleMQLChange);
 
+  let sidebarMQL = window.matchMedia('(max-width: 960px)');
+  function handleSidebarMQLChange() {
+    if (!sidebarMQL.matches) {
       // Get rid of the overlay if we resize while the sidebar is open
       hideSideBar();
     }
   }
+  sidebarMQL.addListener(handleSidebarMQLChange);
 
-  mql.addListener(handleMQLChange);
-
-  handleMQLChange();
+  handleScaleMQLChange();
+  handleSidebarMQLChange();
 
   function showSideBar() {
-    if (mql.matches) {
+    if (sidebarMQL.matches) {
       overlay.addEventListener('click', hideSideBar);
       sideBar.classList.add('is-open');
       overlay.classList.add('is-open');
@@ -203,6 +209,9 @@ window.addEventListener('DOMContentLoaded', function() {
     overlay.removeEventListener('click', hideSideBar);
     sideBar.classList.remove('is-open');
     overlay.classList.remove('is-open');
+    if (window.search) {
+      window.search.hideResults();
+    }
   }
 
   document.querySelector('#site-menu').addEventListener('click', function(event) {
@@ -221,12 +230,5 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Immediately hide results, otherwise they show up in the wrong position since we're in the middle of animation
     search.hideResults();
-
-    // Show them after we're done animating
-    setTimeout(function() {
-      if (search.hasResults) {
-        search.showResults();
-      }
-    }.bind(this), 190);
   });
 });

@@ -4,7 +4,6 @@ node_js:
 services:
   - docker
 install:
-  - npm config set package-lock false
   - npm install
 before_script:
   - npm install -g gulp-cli
@@ -16,4 +15,4 @@ script:
   - gulp build
   - http-server -s -p 3000 ./dist/ &
   - sleep 5
-  - npm run backstop:docker:test themes=lightest,light,dark,darkest scales=medium,large accordion
+  - npm run backstop:ci:test --themes=lightest,light,dark,darkest --scales=medium,large accordion

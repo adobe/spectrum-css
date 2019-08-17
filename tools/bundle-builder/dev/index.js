@@ -139,7 +139,7 @@ function watchSite() {
       `${dirs.site}/resources/js/*.js`
     ],
     gulp.series(
-      docs.buildSite_copyResources,
+      docs.buildSite_copyFreshResources,
       function injectSiteResources() {
         return gulp.src([
           'dist/docs/css/**/*.css',

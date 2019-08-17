@@ -243,6 +243,11 @@ function buildSite_copyResources() {
     .pipe(gulp.dest('dist/docs/'));
 }
 
+function buildSite_copyFreshResources() {
+  return gulp.src(`${dirs.site}/resources/**`)
+    .pipe(gulp.dest('dist/docs/'));
+}
+
 function buildSite_html() {
   return gulp.src(`${dirs.site}/*.pug`)
     .pipe(data(function(file) {
@@ -286,6 +291,7 @@ let build = gulp.series(
 
 exports.buildSite_getData = buildSite_getData;
 exports.buildSite_copyResources = buildSite_copyResources;
+exports.buildSite_copyFreshResources = buildSite_copyFreshResources;
 exports.buildSite_pages = buildSite_pages;
 exports.buildSite_html = buildSite_html;
 exports.buildDocs_forDep = buildDocs_forDep;

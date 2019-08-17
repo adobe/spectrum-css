@@ -5,6 +5,9 @@ const themes = new Set().add('light');
 const scales = new Set().add('medium');
 const components = new Set();
 let isDocker = false;
+let env = 'local';
+let host = 'host.docker.internal';
+let report = 'ci';
 
 // Shared scenario configuration
 const baseScenarioConfig = {
@@ -30,16 +33,30 @@ const [...rest] = process.argv.slice(3); // Exclude 'node', 'backstop' and backs
 rest.forEach(argv => {
   if (argv === '--moby') {
     isDocker = true;
+  } else if (argv.startsWith('--env=')) {
+    env = argv.slice('--env='.length);
   } else if (argv.startsWith('themes=')) {
     themes.clear();
     argv.slice('themes='.length).split(',').forEach(t => themes.add(t));
   } else if (argv.startsWith('scales=')) {
     scales.clear();
     argv.slice('scales='.length).split(',').forEach(s => scales.add(s));
-  } else if (!argv.startsWith('--')) {
+  }  else if (!argv.startsWith('--')) {
     components.add(argv);
   }
 });
+
+if (isDocker === true) {
+  host = (env === 'local' ? 'host.docker.internal' : '127.0.0.1');
+} else {
+  host = '127.0.0.1';
+}
+
+if (env === 'local') {
+  report = 'browser';
+} else {
+  report = 'CI';
+}
 
 const allScenarios = components.size > 0 ? scenarioConfigs.filter(i => components.has(i.label)) : scenarioConfigs.filter(i => !excludedScenarios.has(i.label));
 
@@ -48,8 +65,7 @@ allScenarios.map(specificScenarioConfig => {
     scales.forEach(s => {
       const config = {...specificScenarioConfig};
       config.label = `${config.label}-${t}-${s}`;
-      // config.url = `http://${isDocker ? 'host.docker.internal' : 'localhost'}:3000/docs/${config.url}`;
-      config.url = `http://127.0.0.1:3000/docs/${config.url}`;
+      config.url = `http://${host}:3000/docs/${config.url}`;
       config.scale = s;
       config.theme = t;
       scenarios.push(Object.assign({...baseScenarioConfig}, config));
@@ -76,7 +92,7 @@ module.exports = {
     html_report: 'backstop_data/html_report',
     ci_report: 'backstop_data/ci_report'
   },
-  report: ['CI'],
+  report: [`${report}`],
   engine: 'puppeteer',
   engineOptions: {
     args: ['--no-sandbox']
