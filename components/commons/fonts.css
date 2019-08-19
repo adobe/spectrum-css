@@ -27,7 +27,7 @@ governing permissions and limitations under the License.
   --spectrum-font-family-condensed: adobe-clean-condensed, var(--spectrum-font-family-base);
   */
 
-  --spectrum-font-family-base: adobe-clean, "Source Sans Pro", var(--spectrum-font-fallbacks-sans);
+  --spectrum-font-family-base: adobe-clean-ux, adobe-clean, "Source Sans Pro", var(--spectrum-font-fallbacks-sans);
   --spectrum-font-family-han: adobe-clean-han-japanese, var(--spectrum-font-fallbacks-sans);
   --spectrum-font-family-ar: myriad-arabic, var(--spectrum-font-fallbacks-sans);
   --spectrum-font-family-he: var(--spectrum-font-fallbacks-sans);
