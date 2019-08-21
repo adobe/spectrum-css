@@ -155,9 +155,6 @@ governing permissions and limitations under the License.
         box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-switch-handle-border-color-key-focus);
       }
     }
-    & ~ .spectrum-ToggleSwitch-label {
-      color: var(--spectrum-switch-text-color-key-focus);
-    }
     /* Selected Key Focus */
     &:checked {
       & + .spectrum-ToggleSwitch-switch {
@@ -168,9 +165,6 @@ governing permissions and limitations under the License.
         &::after {
           border-color: var(--spectrum-switch-handle-border-color-selected-key-focus);
         }
-      }
-      & ~ .spectrum-ToggleSwitch-label {
-        color: var(--spectrum-switch-text-color-selected-key-focus);
       }
     }
   }
@@ -183,9 +177,6 @@ governing permissions and limitations under the License.
         box-shadow: 0 0 0 2px var(--spectrum-global-color-gray-75), 0 0 0 4px var(--spectrum-switch-handle-border-color-key-focus);
       }
     }
-    & ~ .spectrum-ToggleSwitch-label {
-      color: var(--spectrum-switch-text-color-key-focus);
-    }
     /* Selected Key Focus */
     &:checked {
       & + .spectrum-ToggleSwitch-switch {
@@ -196,9 +187,6 @@ governing permissions and limitations under the License.
         &::after {
           border-color: var(--spectrum-switch-handle-border-color-selected-key-focus);
         }
-      }
-      & ~ .spectrum-ToggleSwitch-label {
-        color: var(--spectrum-switch-text-color-selected-key-focus);
       }
     }
   }
