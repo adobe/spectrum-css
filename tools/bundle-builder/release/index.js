@@ -27,7 +27,7 @@ let releaseBackwardsCompat = gulp.parallel(
       },
       function releaseBackwardsCompat_copyVars() {
         return gulp.src(
-          `${dirs.components}/vars/vars/**`
+          `${dirs.components}/vars/css/**`
         )
           .pipe(gulp.dest('vars/'));
       }
