@@ -26,6 +26,10 @@ governing permissions and limitations under the License.
     font-family: var(--spectrum-font-family-zhhans);
   }
 
+  &:lang(zh-Hant) {
+    font-family: var(--spectrum-font-family-zhhant);
+  }
+
   &:lang(zh) {
     font-family: var(--spectrum-font-family-zh);
   }
