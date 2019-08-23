@@ -32,7 +32,7 @@ function buildIndexVars() {
 
 let buildVars = gulp.series(
   buildIndexVars,
-  vars.bakeVars
+  // vars.bakeVars // Don't bake vars yet; we need to redo the way we get vars from DNA
 );
 
 exports.buildVars = buildVars;
