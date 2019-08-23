@@ -114,7 +114,8 @@ function copyIcons() {
   return gulp.src([
     `${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/**`,
     `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/18/**`,
-    `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/24/**`
+    `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/24/**`,
+    `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/color/**`
   ])
     .pipe(gulp.dest('dist/icons/'));
 };
