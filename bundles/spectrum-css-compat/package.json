@@ -20,10 +20,8 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "optionalDependencies": {
-    "@spectrum/spectrum-icons": "^2.3.0"
-  },
   "devDependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.3",
     "@spectrum-css/accordion": "^2.0.0-alpha.4",
     "@spectrum-css/actionbar": "^2.0.0-alpha.4",
     "@spectrum-css/actionmenu": "^2.0.0-alpha.4",
