@@ -1,0 +1,30 @@
+{
+  "name": "@spectrum-css/tags",
+  "version": "2.0.0-alpha.4",
+  "description": "The Spectrum CSS tags component",
+  "author": "",
+  "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/button": "^2.0.0-alpha.4",
+    "@spectrum-css/vars": "^2.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "@spectrum-css/avatar": "^2.0.0-alpha.4",
+    "@spectrum-css/button": "^2.0.0-alpha.4",
+    "@spectrum-css/component-builder": "^1.0.0-alpha.4",
+    "@spectrum-css/icons": "^2.0.0-alpha.4",
+    "@spectrum-css/vars": "^2.0.0-alpha.2",
+    "gulp": "^4.0.0"
+  }
+}

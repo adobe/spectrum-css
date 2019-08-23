@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "components/*",
+    "tools/*",
+    "bundles/*"
+  ],
+  "version": "independent",
+  "hoist": "{gulp}"
+}
