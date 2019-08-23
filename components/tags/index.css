@@ -25,16 +25,9 @@ governing permissions and limitations under the License.
   margin: 0;
   padding: 0;
   list-style: none;
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 .spectrum-Tags-item {
-  float: left;
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;

@@ -25,11 +25,17 @@ let releaseBackwardsCompat = gulp.parallel(
         )
           .pipe(gulp.dest('icons/'));
       },
-      function releaseBackwardsCompat_copyVars() {
+      function releaseBackwardsCompat_copyRootVars() {
         return gulp.src(
-          `${dirs.components}/vars/vars/**`
+          `${dirs.components}/vars/css/**`
         )
           .pipe(gulp.dest('vars/'));
+      },
+      function releaseBackwardsCompat_copyDistVars() {
+        return gulp.src(
+          `${dirs.components}/vars/dist/*`
+        )
+          .pipe(gulp.dest('dist/vars/'));
       }
     )
   )

@@ -32,11 +32,11 @@ function prepareBuild(cb) {
 function buildVars(cb) {
   let vars = require('./generate');
   for (let theme in vars.themes) {
-    fs.writeFileSync(`dist/spectrum-${theme}.css`, vars.generate(theme, vars.themes[theme]));
+    fs.writeFileSync(`dist/spectrum-${theme}-unique.css`, vars.generate(theme, vars.themes[theme]));
   }
 
   for (let scale in vars.scales) {
-    fs.writeFileSync(`dist/spectrum-${scale}.css`, vars.generate(scale, vars.scales[scale]));
+    fs.writeFileSync(`dist/spectrum-${scale}-unique.css`, vars.generate(scale, vars.scales[scale]));
   }
 
   cb();
@@ -45,7 +45,7 @@ function buildVars(cb) {
 function copySources() {
   return gulp.src([
     'css/spectrum-metadata.json',
-    'css/spectrum-global.css'
+    'css/*.css'
   ])
     .pipe(gulp.dest('dist/'))
 }

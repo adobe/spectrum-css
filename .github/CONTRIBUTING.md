@@ -47,7 +47,7 @@ git push -u origin my-awesome-new-feature
 git remote add upstream git@github.com:adobe/spectrum-css.git
 ```
 
-Install dependencies:
+Install dependencies (`npm ci` won't work unless you're inside the Adobe network):
 
 ```
 npm install
