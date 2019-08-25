@@ -1,12 +1,18 @@
 language: node_js
 node_js:
   - "node"
+services:
+  - docker
 install:
   - npm install
 before_script:
   - npm install -g gulp-cli
+  - npm install -g http-server
 script:
   # This script should be the first that runs to reduce the risk of
   # executing a script from a compromised NPM package.
   - audit-ci --moderate
   - gulp build
+  - http-server -s -p 3000 ./dist/ &
+  - sleep 5
+  - npm run backstop:ci:test --themes=lightest,light,dark,darkest --scales=medium,large accordion
