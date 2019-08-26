@@ -34,7 +34,7 @@
   }
 
 doctype html
-html(lang='en-US')
+html(lang='en-US').spectrum.spectrum--light.spectrum--medium
   head
     meta(charset = 'utf-8')
     meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
@@ -75,7 +75,7 @@ html(lang='en-US')
         border-radius: 0;
       }
 
-  body.spectrum.spectrum--light.spectrum--medium
+  body
 
     article.spectrum-CSSComponent
 
@@ -90,7 +90,7 @@ html(lang='en-US')
       each example in examples
         article.spectrum-CSSExample
           if example != component
-            header.row(id=example.slug)
+            header(id=example.slug)
               h4.spectrum-Heading--subtitle3 #{example.name}
 
             if example.description

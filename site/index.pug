@@ -1,11 +1,11 @@
 doctype html
-html(lang='en-US')
+html(lang='en-US').spectrum.spectrum--light.spectrum--medium
   head
     title Spectrum CSS
 
     include includes/dependencies.pug
 
-  body.spectrum.spectrum--light.spectrum--medium
+  body
 
     .spectrum-Site
 
@@ -16,11 +16,11 @@ html(lang='en-US')
         include includes/sidebar.pug
 
         .spectrum-Site-mainContainer
-          .spectrum-Page
-            .spectrum-Hero
-              .spectrum-Article.spectrum-Hero-heading
+          .spectrum-Site-page
+            .spectrum-Site-hero
+              .spectrum-Article.spectrum-Site-heroHeading
                 h1.spectrum-Heading1--display Meet Spectrum CSS, Adobe's design system in CSS
               p.spectrum-Body1 That's right, there's CSS for all those pretty components.
-              img.spectrum-Hero-image(src='img/spectrum_illustration_2x.png', alt='Spectrum Illustration')
+              img.spectrum-Site-heroImage(src='img/spectrum_illustration_2x.png', alt='Spectrum Illustration')
 
     include includes/footer.pug

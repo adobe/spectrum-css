@@ -30,6 +30,7 @@ let minimumDeps = [
   'label',
   'link',
   'page',
+  'site',
   'typography',
   'tooltip',
   'sidenav',

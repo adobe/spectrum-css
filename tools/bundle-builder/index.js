@@ -156,6 +156,18 @@ let buildLite = gulp.series(
   )
 );
 
+let buildHeavy = gulp.series(
+  clean,
+  function buildComponentsLite() {
+    return subrunner.runTaskOnAllComponents('buildHeavy');
+  },
+  gulp.parallel(
+    docs.build,
+    copyIcons,
+    copyPackages
+  )
+);
+
 let devTask;
 if (dirs.cwd === dirs.topLevel) {
   // Build all packages if at the top level
@@ -176,6 +188,11 @@ else {
     dev.watch
   );
 }
+
+exports.devHeavy = gulp.series(
+  buildHeavy,
+  dev.watch
+);
 
 exports.prePack = gulp.series(
   build,
