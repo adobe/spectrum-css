@@ -37,6 +37,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
+    "@spectrum-css/spectrum-css-vr-test-asset": "^1.0.0",
     "audit-ci": "^2.0.1",
     "backstopjs": "^4.1.12",
     "gulp": "^4.0.0",
@@ -45,8 +46,7 @@
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",
-    "prismjs": "^1.17.1",
-    "spectrum-css-test-asset": "^2.0.0-alpha.11"
+    "prismjs": "^1.17.1"
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0",
