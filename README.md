@@ -89,7 +89,7 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 ```js
 <script src="https://unpkg.com/loadicons@1.0.0/index.js"></script>
 <script>
-  loadIcons('https://unpkg.com/@spectrum-css/icon@^1.0.0-alpha/dist/spectrum-css-icons.svg');
+  loadIcons('https://unpkg.com/@spectrum-css/icon@^2.0.0-alpha/dist/spectrum-css-icons.svg');
 </script>
 ```
 
@@ -144,7 +144,7 @@ Your `dist/` folder should now have a local copy of the Spectrum CSS docs and mi
 
 Building the project will build and launch the project documentation site in your browser automatically.
 
-See [site generation](tools/bundle-builder/site/README.md) and [documentation generation](tools/bundle-builder/docs/README.md) for more information.
+See [site generation](site/README.md) and [documentation generation](tools/bundle-builder/docs/README.md) for more information.
 
 ### CLI
 

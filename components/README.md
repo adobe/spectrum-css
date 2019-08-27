@@ -43,4 +43,4 @@ npm publish --access=public
 
 Any change to a component or a component's dependencies results in a release of that component and all associated bundles. Component releases cannot be done ala carte and must be done from the top-level, managed by lerna.
 
-See [Releaseing](/README.md#Releasing) for more information.
+See [Releasing](/README.md#Releasing) for more information.
