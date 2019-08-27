@@ -17,7 +17,7 @@
     "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
     "backstop:docker:approve": "backstop approve --docker --config=backstop_test.js --env=local",
     "backstop:docker:test": "backstop test --docker --config=backstop_test.js --env=local",
-    "backstop:ci:test": "backstop test --docker --config=backstop_test.js --env=ci --shm-size 512m",
+    "backstop:ci:test": "backstop test --docker --config=backstop_test.js --env=ci",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepare": "gulp prepare",
     "postpublish": "npx lerna run publishpages --concurrency=1"
