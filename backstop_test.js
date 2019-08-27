@@ -98,7 +98,7 @@ module.exports = {
     args: ['--no-sandbox']
   },
   asyncCaptureLimit: 5,
-  asyncCompareLimit: 10,
+  asyncCompareLimit: 1,
   debug: false,
   debugWindow: false,
   dockerCommandTemplate: 'docker run --rm -it --mount type=bind,source="{cwd}",target=/src --network host --shm-size 512m backstopjs/backstopjs:{version} {backstopCommand} {args}'
