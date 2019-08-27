@@ -26,7 +26,7 @@ const dirs = require('../lib/dirs');
 const depUtils = require('../lib/depUtils');
 
 let minimumDeps = [
-  'icons',
+  'icon',
   'label',
   'link',
   'page',

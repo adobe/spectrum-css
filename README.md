@@ -32,7 +32,7 @@ Each component is released on npm as a separate, individually versioned package 
 To get started, install the following components:
 
 ```
-npm install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spectrum-css/icons @spectrum-css/button
+npm install @spectrum-css/vars @spectrum-css/typography @spectrum-css/page @spectrum-css/icon @spectrum-css/button
 ```
 
 Installed components will be available in the `node_modules/@spectrum-css/` folder.
@@ -64,7 +64,7 @@ If you're targeting modern browsers, start by including the base set of variable
 <!-- Include index-vars.css for all components you need -->
 <link rel="stylesheet" href="https://unpkg.com/@spectrum-css/page@^2.0.0-alpha/dist/index-vars.css">
 <link rel="stylesheet" href="https://unpkg.com/@spectrum-css/typography@^2.0.0-alpha/dist/index-vars.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/icons@^2.0.0-alpha/dist/index-vars.css">
+<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/icon@^2.0.0-alpha/dist/index-vars.css">
 <link rel="stylesheet" href="https://unpkg.com/@spectrum-css/button@^2.0.0-alpha/dist/index-vars.css">
 ```
 
@@ -89,15 +89,15 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 ```js
 <script src="https://unpkg.com/loadicons@1.0.0/index.js"></script>
 <script>
-  loadIcons('https://unpkg.com/@spectrum-css/icons@^1.0.0-alpha/dist/spectrum-css-icons.svg');
+  loadIcons('https://unpkg.com/@spectrum-css/icon@^1.0.0-alpha/dist/spectrum-css-icons.svg');
 </script>
 ```
 
 Based on which scales you'll be using, you can choose to load different files:
 
-* `@spectrum-css/icons/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
-* `@spectrum-css/icons/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
-* `@spectrum-css/icons/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
+* `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
+* `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
+* `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
 
 
 **Note:** If you're using `spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
