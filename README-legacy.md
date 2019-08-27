@@ -4,25 +4,29 @@ In order to enable graceful change to individual components, and to let you cons
 
 Though these were necessary moves, we didn't want to leave existing users stranded while making them. As such, we still support the following legacy usage and distribution methods detailed below.
 
-## Monolithic package
+## Bundle packages
 
-A monolithic package with all of the Spectrum CSS components is available for existing consumers that aren't yet ready to move to individually versioned components. This package WILL NOT get updates to components that have had breaking changes, so it should be used only as a stand-in until your team has time to move to individually versioned components.
+Bundle packages with all of the Spectrum CSS components are available for existing consumers that aren't yet ready to move to individually versioned components. All of the same files included in the individually versioned releases are present, albeit within `dist/components/`.
 
-To install the monolithic, backwards-compatible package:
+**Avoid the bundle packages if you're starting fresh with Spectrum CSS, and instead [install only the components you need](README.md#using-spectrum-css).**
 
-```
-npm install @adobe/spectrum-css@2.x
-```
+### Backwards-compatible bundle
 
-To install the monolithic packages with the latest components:
+This package WILL NOT get updates to components that have had breaking changes, so it should be used only as a stand-in until your team has time to move to individually versioned components.
+
+To install the backwards-compatible bundle:
 
 ```
 npm install @adobe/spectrum-css
 ```
 
-The package will be installed to `node_modules/@adobe/spectrum-css/`. All of the same files included in the individually versioned releases are present, albeit within `dist/components/`.
+### Latest bundle
 
-**Avoid the monolithic package if you're starting fresh with Spectrum CSS, and instead [install only the components you need](README.md#using-spectrum-css).**
+To install the bundle with the latest components:
+
+```
+npm install @spectrum-css/spectrum-css
+```
 
 ## Legacy usage
 

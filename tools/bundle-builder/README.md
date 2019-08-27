@@ -1,7 +1,7 @@
 # @spectrum-css/bundle-builder
-> Build system for monolithic Spectrum CSS packages
+> Build system for Spectrum CSS bundle packages
 
-This package builds a monolithic 2.x compatible package with the versions of components specific in your project `package.json`.
+This package builds a bundle packages with the versions of components specific in your the bundle's `package.json`.
 
 ## Docs
 
@@ -37,7 +37,7 @@ Add the following scripts to `package.json`:
 }
 ```
 
-Then you can use the commands below inside of your project to build and release a monolithic Spectrum CSS package.
+Then you can use the commands below inside of your project to build and release a Spectrum CSS bundle package.
 
 ## CLI
 
