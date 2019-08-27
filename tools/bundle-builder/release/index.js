@@ -21,7 +21,7 @@ let releaseBackwardsCompat = gulp.parallel(
     gulp.parallel(
       function releaseBackwardsCompat_copyUIIcons() {
         return gulp.src(
-          `${dirs.components}/icons/{medium,large,combined}/**`
+          `${dirs.components}/icon/{medium,large,combined}/**`
         )
           .pipe(gulp.dest('icons/'));
       },

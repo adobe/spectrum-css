@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-loadIcons('../components/icons/spectrum-css-icons.svg');
+loadIcons('../components/icon/spectrum-css-icons.svg');
 loadIcons('../icons/spectrum-icons.svg');
 
 // Show and hide code samples

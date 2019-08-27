@@ -1,7 +1,7 @@
 # @adobe/spectrum-css@2.x
-> Monolithic 2.x-compatible package
+> 2.x-compatible bundle package
 
-This package builds a monolithic 2.x compatible package containing backwards-compatible versions of all Spectrum CSS components.
+This package builds a 2.x compatible bundle package containing backwards-compatible versions of all Spectrum CSS components.
 
 This package should be used by teams that are unable to migrate to individually versioned components at this time, but still want to get updates to Spectrum CSS as long as they can.
 

@@ -1,7 +1,7 @@
 # @adobe/spectrum-css@latest
-> Monolithic package
+> Bundle package
 
-This package builds a monolithic package containing the latest versions of all Spectrum CSS components.
+This package builds a bundle package containing the latest versions of all Spectrum CSS components.
 
 This package should be used by teams that are in the progress of migrating to individually versioned components, who want to pick up breaking changes, but do not yet want to switch to individually versioned components.
 
