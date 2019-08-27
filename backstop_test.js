@@ -8,6 +8,7 @@ let isDocker = false;
 let env = 'local';
 let host = 'host.docker.internal';
 let report = 'ci';
+let captureLimit = 1;
 
 // Shared scenario configuration
 const baseScenarioConfig = {
@@ -54,6 +55,7 @@ if (isDocker === true) {
 
 if (env === 'local') {
   report = 'browser';
+  captureLimit = 5;
 } else {
   report = 'CI';
 }
@@ -97,7 +99,7 @@ module.exports = {
   engineOptions: {
     args: ['--no-sandbox']
   },
-  asyncCaptureLimit: 1,
+  asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
