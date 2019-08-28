@@ -56,8 +56,9 @@ examples:
         <p class="spectrum-Heading3">Heading3 <em>Heading3 Emphasis</em> <strong>Heading3 Strong</strong>.</p>
         <p class="spectrum-Heading4">Heading4 <em>Heading4 Emphasis</em> <strong>Heading4 Strong</strong>.</p>
         <p class="spectrum-Heading5">Heading5 <em>Heading5 Emphasis</em> <strong>Heading5 Strong</strong>.</p>
+        <p class="spectrum-Subheading">Subheading <em>Subheading Emphasis</em> <strong>Subheading Strong</strong>.</p>
       </div>
-
+      <br/>
       <div class="spectrum-Article">
         <p class="spectrum-Heading1">Article Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2">Article Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -74,7 +75,7 @@ examples:
         <p class="spectrum-Heading1--strong">Heading1 <em>Heading1 Emphasis</em> <strong>Heading1 Strong</strong>.</p>
         <p class="spectrum-Heading2--strong">Heading2 <em>Heading2 Emphasis</em> <strong>Heading2 Strong</strong>.</p>
       </div>
-
+      <br/>
       <div class="spectrum-Article">
         <p class="spectrum-Heading1--strong">Article Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2--strong">Article Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -88,7 +89,7 @@ examples:
         <p class="spectrum-Heading1--quiet">Heading1 <em>Heading1 Emphasis</em> <strong>Heading1 Strong</strong>.</p>
         <p class="spectrum-Heading2--quiet">Heading2 <em>Heading2 Emphasis</em> <strong>Heading2 Strong</strong>.</p>
       </div>
-
+      <br/>
       <div class="spectrum-Article">
         <p class="spectrum-Heading1--quiet">Article Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2--quiet">Article Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -102,7 +103,7 @@ examples:
         <p class="spectrum-Heading1--display">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2--display">Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
-
+      <br/>
       <div class="spectrum-Article">
         <p class="spectrum-Heading1--display">Article Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2--display">Article Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -125,7 +126,7 @@ examples:
         <p class="spectrum-Heading1--display spectrum-Heading1--quiet">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2--display spectrum-Heading2--quiet">Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
-
+      <br/>
       <div class="spectrum-Article">
         <p class="spectrum-Heading1--display spectrum-Heading1--quiet">Article Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2--display spectrum-Heading2--quiet">Article Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -141,14 +142,16 @@ examples:
         <p class="spectrum-Body3">Body3 Text <em>Body3 Emphasis</em> <strong>Body3 Strong</strong>.</p>
         <p class="spectrum-Body4">Body4 Text <em>Body4 Emphasis</em> <strong>Body4 Strong</strong>.</p>
         <p class="spectrum-Body5">Body5 Text <em>Body5 Emphasis</em> <strong>Body5 Strong</strong>.</p>
+        <p class="spectrum-Detail">Detail Text <em>Body5 Emphasis</em> <strong>Body5 Strong</strong>.</p>
       </div>
-
+      <br/>
       <div class="spectrum-Article">
         <p class="spectrum-Body1">Article Body1 Text <em>Article Body1 Emphasis</em> <strong>Article Body1 Strong</strong>.</p>
         <p class="spectrum-Body2">Article Body2 text <em>Article Body2 Emphasis</em> <strong>Article Body2 Strong</strong>.</p>
         <p class="spectrum-Body3">Article Body3 Text <em>Article Body3 Emphasis</em> <strong>Article Body3 Strong</strong>.</p>
         <p class="spectrum-Body4">Article Body4 Text <em>Article Body4 Emphasis</em> <strong>Article Body4 Strong</strong>.</p>
         <p class="spectrum-Body5">Article Body5 Text <em>Article Body5 Emphasis</em> <strong>Article Body5 Strong</strong>.</p>
+        <p class="spectrum-Detail">Detail Text <em>Body5 Emphasis</em> <strong>Body5 Strong</strong>.</p>
       </div>
   - id: heading-1
     name: Article
