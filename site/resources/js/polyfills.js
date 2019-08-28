@@ -29,3 +29,64 @@ if (!Element.prototype.closest) {
     return null;
   };
 }
+
+(function() {
+  // IE 11 compat
+  let stops = [
+    'light',
+    'lightest',
+    'dark',
+    'darkest'
+  ];
+
+  function makeCompatibleLinks(link) {
+    let component = link.getAttribute('data-dependency');
+
+    let links = [
+      createLink('../components/' + component + '/index.css', component),
+      createLink('../components/' + component + '/index-diff.css', component),
+    ];
+
+    if (component !== 'icons') {
+      links = links.concat(stops.map(function(stop) {
+        return createLink('../components/' + component + '/multiStops/' + stop + '.css', component);
+      }));
+    }
+
+    links.forEach(insertLink.bind(this, link));
+
+    // Remove the replaced link
+    link.parentNode.removeChild(link);
+  }
+
+  function createLink(href, component) {
+    let link = document.createElement('link');
+    link.href = href;
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.setAttribute('data-dependency', component);
+    return link;
+  }
+
+  function insertLink(where, link) {
+    console.log('  Inserting new link: ' + link.href.substr(link.href.lastIndexOf('components/')));
+    where.parentNode.insertBefore(link, where);
+  }
+
+  function convertVarsToMultistops(root) {
+    // Read in each link tag with index-vars.css
+    let links = root.querySelectorAll('[data-dependency]');
+
+    // Replace with index.css + index-diff.css + multiStops/*.css
+    Array.prototype.slice.call(links).forEach(function(link) {
+      console.log('🔗 Found link ' + link.getAttribute('data-dependency'));
+      makeCompatibleLinks(link);
+    });
+  }
+
+  // Only run for browsers that don't support CSS custom properties
+  if (!window.CSS || !CSS.supports('color', 'var(--primary)')) {
+    convertVarsToMultistops(document);
+    window.fastLoadDisabled = true;
+  }
+}());

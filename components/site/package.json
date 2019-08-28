@@ -1,0 +1,26 @@
+{
+  "name": "@spectrum-css/site",
+  "version": "1.0.0-alpha.0",
+  "description": "The Spectrum CSS Site component",
+  "author": "",
+  "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/vars": "^2.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder": "^1.0.0-alpha.4",
+    "@spectrum-css/vars": "^2.0.0-alpha.2",
+    "gulp": "^4.0.0"
+  }
+}

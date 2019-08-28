@@ -33,9 +33,15 @@ const buildLite = gulp.series(
   css.buildVars
 );
 
+const buildHeavy = gulp.series(
+  clean,
+  css.buildCSS
+);
+
 exports.default = build;
 exports.build = build;
 exports.buildLite = buildLite;
+exports.buildHeavy = buildHeavy;
 exports.clean = clean;
 
 exports.buildCSS = css.buildCSS;

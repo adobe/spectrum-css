@@ -55,9 +55,9 @@ SpectrumSwitcher.ScaleKeys = {
 Object.defineProperty(SpectrumSwitcher.prototype, 'theme', {
   set: function(theme) {
     SpectrumSwitcher.ColorStops.forEach(function(otherTheme) {
-      document.body.classList.remove('spectrum--' + otherTheme);
+      document.documentElement.classList.remove('spectrum--' + otherTheme);
     });
-    document.body.classList.add('spectrum--' + theme);
+    document.documentElement.classList.add('spectrum--' + theme);
 
     this._theme = theme;
   },
@@ -69,9 +69,9 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'theme', {
 Object.defineProperty(SpectrumSwitcher.prototype, 'scale', {
   set: function(scale) {
     SpectrumSwitcher.Scales.forEach(function(otherScale) {
-      document.body.classList.remove('spectrum--' + otherScale);
+      document.documentElement.classList.remove('spectrum--' + otherScale);
     });
-    document.body.classList.add('spectrum--' + scale);
+    document.documentElement.classList.add('spectrum--' + scale);
 
     this._scale = scale;
   },
