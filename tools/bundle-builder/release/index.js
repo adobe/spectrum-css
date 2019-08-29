@@ -36,6 +36,12 @@ let releaseBackwardsCompat = gulp.parallel(
         )
           .pipe(gulp.dest('icons/'));
       },
+      function releaseBackwardsCompat_copyUIIconSprites() {
+        return gulp.src(
+          `${dirs.components}/icon/dist/spectrum-css-icons*.svg`
+        )
+          .pipe(gulp.dest('dist/icons/'));
+      },
       function releaseBackwardsCompat_copyRootVars() {
         return gulp.src(
           `${dirs.components}/vars/css/**`
