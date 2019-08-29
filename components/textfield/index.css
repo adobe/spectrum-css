@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  --spectrum-textfield-padding-top: var(--spectrum-global-dimension-size-40);
-  --spectrum-textfield-padding-bottom: var(--spectrum-global-dimension-size-65);
+  --spectrum-textfield-padding-top: 3px;
+  --spectrum-textfield-padding-bottom: 5px;
 
   /* Todo fix in DNA */
   --spectrum-textfield-quiet-border-radius: 0;
