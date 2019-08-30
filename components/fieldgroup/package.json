@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/fieldgroup",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0-alpha.5",
   "description": "The Spectrum CSS fieldgroup component",
   "author": "",
   "license": "Apache-2.0",
@@ -16,17 +16,17 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/checkbox": "^2.0.0-alpha.4",
-    "@spectrum-css/icon": "^2.0.0-alpha.4",
-    "@spectrum-css/radio": "^2.0.0-alpha.4",
-    "@spectrum-css/vars": "^2.0.0-alpha.2"
+    "@spectrum-css/checkbox": "^2.0.0-alpha.5",
+    "@spectrum-css/icon": "^2.0.0-alpha.5",
+    "@spectrum-css/radio": "^2.0.0-alpha.5",
+    "@spectrum-css/vars": "^2.0.0-alpha.3"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^2.0.0-alpha.4",
-    "@spectrum-css/component-builder": "^1.0.0-alpha.4",
-    "@spectrum-css/icon": "^2.0.0-alpha.4",
-    "@spectrum-css/radio": "^2.0.0-alpha.4",
-    "@spectrum-css/vars": "^2.0.0-alpha.2",
+    "@spectrum-css/checkbox": "^2.0.0-alpha.5",
+    "@spectrum-css/component-builder": "^1.0.0-alpha.5",
+    "@spectrum-css/icon": "^2.0.0-alpha.5",
+    "@spectrum-css/radio": "^2.0.0-alpha.5",
+    "@spectrum-css/vars": "^2.0.0-alpha.3",
     "gulp": "^4.0.0"
   }
 }

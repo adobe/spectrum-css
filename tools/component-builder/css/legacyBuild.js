@@ -101,6 +101,10 @@ function buildMultiStops() {
       .pipe(postcss(legacyProcessors))
       .pipe(postcss([
         mutateselectors((selector) => {
+          if (selector === '.spectrum') {
+            // This is a special exception for the Page component: it shouldn't be nested
+            selector = '';
+          }
           return `.spectrum--${colorStop} ${selector}`;
         })
       ]))
