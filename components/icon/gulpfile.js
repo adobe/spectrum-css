@@ -137,5 +137,5 @@ let build = gulp.parallel(
 );
 
 exports.updateIcons = updateIcons;
-exports.build = exports.buildLite = build;
+exports.build = exports.buildLite = exports.buildHeavy = build;
 exports.default = build;

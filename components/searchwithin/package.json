@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/searchwithin",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0-alpha.5",
   "description": "The Spectrum CSS searchwithin component",
   "author": "",
   "license": "Apache-2.0",
@@ -16,15 +16,15 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/button": "^2.0.0-alpha.4",
-    "@spectrum-css/dropdown": "^2.0.0-alpha.4",
-    "@spectrum-css/icon": "^2.0.0-alpha.4",
-    "@spectrum-css/textfield": "^2.0.0-alpha.4",
-    "@spectrum-css/vars": "^2.0.0-alpha.2"
+    "@spectrum-css/button": "^2.0.0-alpha.5",
+    "@spectrum-css/dropdown": "^2.0.0-alpha.5",
+    "@spectrum-css/icon": "^2.0.0-alpha.5",
+    "@spectrum-css/textfield": "^2.0.0-alpha.5",
+    "@spectrum-css/vars": "^2.0.0-alpha.3"
   },
   "devDependencies": {
     "@spectrum-css/button": "^1.0.0-alpha.0",
-    "@spectrum-css/component-builder": "^1.0.0-alpha.4",
+    "@spectrum-css/component-builder": "^1.0.0-alpha.5",
     "@spectrum-css/dropdown": "^1.0.0-alpha.0",
     "@spectrum-css/icon": "^1.0.0-alpha.0",
     "@spectrum-css/textfield": "^1.0.0-alpha.0",

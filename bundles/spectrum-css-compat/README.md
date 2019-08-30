@@ -31,9 +31,4 @@ npm run release
 
 ## CLI
 
-The following tasks are available:
-
-* `gulp clean` - Clean everything
-* `gulp build` - Build documentation and copy build output into the `dist/` folder
-* `gulp dev` - Perform a build, start a server, and watch `bundle-builder` for changes
-* `gulp watch` - If a build as already been performed, start a server and watch `bundle-builder` for changes
+See [`bundle-builder` CLI](/tools/bundle-builder#cli).

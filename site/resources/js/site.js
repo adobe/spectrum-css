@@ -31,6 +31,9 @@ window.addEventListener('DOMContentLoaded', function() {
     console.log('⚡️ Fast-loading ' + href);
 
     function handleLoad() {
+      var template;
+      var newMainContainer;
+
       function handleLinkOnload(dependencyName, event) {
         console.log('    ✅ ' + dependencyName + ' loaded...');
         loadingDependencies.splice(loadingDependencies.indexOf(dependencyName), 1);
@@ -62,10 +65,10 @@ window.addEventListener('DOMContentLoaded', function() {
       }
 
       if (req.status === 200) {
-        var template = document.createElement('template');
+        template = document.createElement('template');
         template.innerHTML = this.responseText;
 
-        var newMainContainer = template.content.querySelector('.spectrum-Site-mainContainer');
+        newMainContainer = template.content.querySelector('.spectrum-Site-mainContainer');
 
         if (newMainContainer) {
           // Load in extra deps before last link
@@ -98,7 +101,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         else {
           console.error('Could not find main container within loaded HTML file');
-          handleError('Content not found', `The page loaded successfully, but doesn't contain documentation content.`, 204);
+          handleError('Content not found', 'The page loaded successfully, but doesn\'t contain documentation content.', 204);
         }
       }
       else {
@@ -110,18 +113,18 @@ window.addEventListener('DOMContentLoaded', function() {
       var mainContainer = document.querySelector('.spectrum-Site-mainContainer');
       statusCode = statusCode || req.status;
       text = text || req.statusText;
-      message = message || `An error occurred loading ${href}`;
+      message = message || 'An error occurred loading ' + href;
       if (req.status === 404) {
-        message = `This page isn't available. Try checking the URL or visit a different page.`;
+        message = 'This page isn\'t available. Try checking the URL or visit a different page.';
       }
-      let title = `Error${statusCode ? ` ${statusCode}` : ''}: ${text}`;
-      mainContainer.innerHTML = `
-<div class="spectrum-IllustratedMessage">
-  <svg class="spectrum-IllustratedMessage-illustration" xmlns="http://www.w3.org/2000/svg" width="200" height="98" viewBox="0 0 199 97.7"><defs><style>.cls-1,.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;}.cls-1{stroke-width:3px;}.cls-2{stroke-width:2px;}</style></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="illustrations"><path class="cls-1" d="M110.53,85.66,100.26,95.89a1.09,1.09,0,0,1-1.52,0L88.47,85.66"/><line class="cls-1" x1="99.5" y1="95.5" x2="99.5" y2="58.5"/><path class="cls-1" d="M105.5,73.5h19a2,2,0,0,0,2-2v-43"/><path class="cls-1" d="M126.5,22.5h-19a2,2,0,0,1-2-2V1.5h-31a2,2,0,0,0-2,2v68a2,2,0,0,0,2,2h19"/><line class="cls-1" x1="105.5" y1="1.5" x2="126.5" y2="22.5"/><path class="cls-2" d="M47.93,50.49a5,5,0,1,0-4.83-5A4.93,4.93,0,0,0,47.93,50.49Z"/><path class="cls-2" d="M36.6,65.93,42.05,60A2.06,2.06,0,0,1,45,60l12.68,13.2"/><path class="cls-2" d="M3.14,73.23,22.42,53.76a1.65,1.65,0,0,1,2.38,0l19.05,19.7"/><path class="cls-1" d="M139.5,36.5H196A1.49,1.49,0,0,1,197.5,38V72A1.49,1.49,0,0,1,196,73.5H141A1.49,1.49,0,0,1,139.5,72V32A1.49,1.49,0,0,1,141,30.5H154a2.43,2.43,0,0,1,1.67.66l6,5.66"/><rect class="cls-1" x="1.5" y="34.5" width="58" height="39" rx="2" ry="2"/></g></g></svg>
-  <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">${title}</h2>
-  <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description">${message}</p>
-</div>
-`;
+      let title = 'Error' + (statusCode ? ' ' + statusCode : '') + ': ' + text;
+      mainContainer.innerHTML = '\
+<div class="spectrum-IllustratedMessage">\
+  <svg class="spectrum-IllustratedMessage-illustration" xmlns="http://www.w3.org/2000/svg" width="200" height="98" viewBox="0 0 199 97.7"><defs><style>.cls-1,.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;}.cls-1{stroke-width:3px;}.cls-2{stroke-width:2px;}</style></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="illustrations"><path class="cls-1" d="M110.53,85.66,100.26,95.89a1.09,1.09,0,0,1-1.52,0L88.47,85.66"/><line class="cls-1" x1="99.5" y1="95.5" x2="99.5" y2="58.5"/><path class="cls-1" d="M105.5,73.5h19a2,2,0,0,0,2-2v-43"/><path class="cls-1" d="M126.5,22.5h-19a2,2,0,0,1-2-2V1.5h-31a2,2,0,0,0-2,2v68a2,2,0,0,0,2,2h19"/><line class="cls-1" x1="105.5" y1="1.5" x2="126.5" y2="22.5"/><path class="cls-2" d="M47.93,50.49a5,5,0,1,0-4.83-5A4.93,4.93,0,0,0,47.93,50.49Z"/><path class="cls-2" d="M36.6,65.93,42.05,60A2.06,2.06,0,0,1,45,60l12.68,13.2"/><path class="cls-2" d="M3.14,73.23,22.42,53.76a1.65,1.65,0,0,1,2.38,0l19.05,19.7"/><path class="cls-1" d="M139.5,36.5H196A1.49,1.49,0,0,1,197.5,38V72A1.49,1.49,0,0,1,196,73.5H141A1.49,1.49,0,0,1,139.5,72V32A1.49,1.49,0,0,1,141,30.5H154a2.43,2.43,0,0,1,1.67.66l6,5.66"/><rect class="cls-1" x="1.5" y="34.5" width="58" height="39" rx="2" ry="2"/></g></g></svg>\
+  <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">' + title + '</h2>\
+  <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description">' + message + '</p>\
+</div>\
+';
       document.querySelector('title').innerHTML = title;
     }
 
@@ -142,7 +145,6 @@ window.addEventListener('DOMContentLoaded', function() {
     loadPage(href);
   }
 
-
   function getHREF() {
     return window.location.pathname.split('/').pop();
   }
@@ -159,6 +161,10 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   document.addEventListener('click', function(event) {
+    if (window.fastLoadDisabled) {
+      return;
+    }
+
     var target = event.target.closest('a');
     if (target && target.classList.contains('js-fastLoad')) {
       navigate(target.getAttribute('href'));
@@ -223,8 +229,11 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Search
-  window.search = new Search(document.querySelector('#site-search'))
+  // Search isn't supported on IE 11
+  if (typeof Search !== 'undefined') {
+    window.search = new Search(document.querySelector('#site-search'))
+  }
+
   window.addEventListener('SearchFocused', function() {
     showSideBar();
 

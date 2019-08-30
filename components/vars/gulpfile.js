@@ -61,4 +61,4 @@ let build = gulp.series(
 
 exports.clean = clean;
 exports.default = build;
-exports.build = exports.buildLite = build;
+exports.build = exports.buildLite = exports.buildHeavy = build;
