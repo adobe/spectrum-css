@@ -263,6 +263,11 @@ function buildSite_html() {
     .pipe(gulp.dest('dist/docs/'));
 }
 
+function copySiteWorkflowIcons() {
+  return gulp.src('node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg')
+    .pipe(gulp.dest('dist/docs/'));
+}
+
 let buildSite_pages = gulp.series(
   buildSite_getData,
   buildSite_html
@@ -278,7 +283,8 @@ let buildDocs = gulp.series(
   gulp.parallel(
     buildSite_generateIndex,
     buildDocs_individualPackages,
-    buildSite_copyResources
+    buildSite_copyResources,
+    copySiteWorkflowIcons
   )
 );
 
