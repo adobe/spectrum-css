@@ -109,7 +109,7 @@ If your app has any level of complexity, you'll need "workflow" icons to indicat
 These icons are released within in the bundle package as `@spectrum-css/spectrum-css/dist/icons/spectrum-icons.svg`. You can import the entire set of icons in all sizes as follows:
 
 ```js
-loadIcons('https://unpkg.com/@adobe/spectrum-css@^2.14.0-alpha/dist/icons/spectrum-icons.svg');
+loadIcons('https://unpkg.com/@adobe/spectrum-css-workflow-icons@1.0.0-beta.6/dist/spectrum-icons.svg');
 ```
 
 You can then use the icons in your app. Visit the [Spectrum CSS workflow icon list](http://opensource.adobe.com/spectrum-css/icons/) and click on any icon to get the markup.
