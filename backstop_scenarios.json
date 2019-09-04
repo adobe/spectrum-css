@@ -1,149 +1,192 @@
 [
   {
     "label": "accordion",
-    "url": "accordion.html"
+    "url": "accordion.html",
+    "package": "@spectrum-css/accordion"
   },
   {
     "label": "actionbar",
     "url": "actionbar.html",
-    "delay": 3000
+    "delay": 3000,
+    "package": "@spectrum-css/actionbar"
   },
   {
     "label": "actionbutton",
-    "url": "actionbutton.html"
+    "url": "actionbutton.html",
+    "package": "@spectrum-css/actionbutton"
   },
   {
     "label": "actionmenu",
-    "url": "actionmenu.html"
+    "url": "actionmenu.html",
+    "package": "@spectrum-css/actionmenu"
   },
   {
     "label": "alert",
-    "url": "alert.html"
+    "url": "alert.html",
+    "package": "@spectrum-css/alert"
   },
   {
     "label": "asset",
-    "url": "asset.html"
+    "url": "asset.html",
+    "package": "@spectrum-css/asset"
   },
   {
     "label": "assetlist",
-    "url": "assetlist.html"
+    "url": "assetlist.html",
+    "package": "@spectrum-css/assetlist"
   },
   {
     "label": "avatar",
-    "url": "avatar.html"
+    "url": "avatar.html",
+    "package": "@spectrum-css/avatar"
   },
   {
     "label": "banner",
-    "url": "banner.html"
+    "url": "banner.html",
+    "package": "@spectrum-css/banner"
   },
   {
     "label": "barloader",
     "url": "barloader.html",
-    "removeSelectors": ["#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"]
+    "removeSelectors": [
+      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
+    ],
+    "package": "@spectrum-css/barloader"
   },
   {
     "label": "breadcrumb",
-    "url": "breadcrumb.html"
+    "url": "breadcrumb.html",
+    "package": "@spectrum-css/breadcrumb"
   },
   {
     "label": "button-cta",
-    "url": "button-cta.html"
+    "url": "button-cta.html",
+    "package": "@spectrum-css/button"
   },
   {
     "label": "button-over-background",
-    "url": "button-over-background.html"
+    "url": "button-over-background.html",
+    "package": "@spectrum-css/button"
   },
   {
     "label": "button-primary",
-    "url": "button-primary.html"
+    "url": "button-primary.html",
+    "package": "@spectrum-css/button"
   },
   {
     "label": "button-secondary",
-    "url": "button-secondary.html"
+    "url": "button-secondary.html",
+    "package": "@spectrum-css/button"
   },
   {
     "label": "button-warning",
-    "url": "button-warning.html"
+    "url": "button-warning.html",
+    "package": "@spectrum-css/button"
   },
   {
     "label": "buttongroup",
-    "url": "buttongroup.html"
+    "url": "buttongroup.html",
+    "package": "@spectrum-css/buttongroup"
   },
   {
     "label": "calendar",
-    "url": "calendar.html"
-  },
-  {
-    "label": "card-asset",
-    "url": "card-asset.html"
-  },
-  {
-    "label": "card-gallery",
-    "url": "card-gallery.html"
+    "url": "calendar.html",
+    "package": "@spectrum-css/calendar"
   },
   {
     "label": "card",
-    "url": "card.html"
+    "url": "card.html",
+    "package": "@spectrum-css/card"
+  },
+  {
+    "label": "card-asset",
+    "url": "card-asset.html",
+    "package": "@spectrum-css/card"
+  },
+  {
+    "label": "card-gallery",
+    "url": "card-gallery.html",
+    "package": "@spectrum-css/card"
   },
   {
     "label": "checkbox",
-    "url": "checkbox.html"
+    "url": "checkbox.html",
+    "package": "@spectrum-css/checkbox"
   },
   {
     "label": "circleloader",
-    "url": "circleloader.html"
+    "url": "circleloader.html",
+    "package": "@spectrum-css/circleloader"
   },
   {
     "label": "clearbutton",
-    "url": "clearbutton.html"
+    "url": "clearbutton.html",
+    "package": "@spectrum-css/clearbutton"
   },
   {
     "label": "coachmark",
-    "url": "coachmark.html"
+    "url": "coachmark.html",
+    "package": "@spectrum-css/coachmark"
   },
   {
     "label": "combobox",
-    "url": "combobox.html"
+    "url": "combobox.html",
+    "package": "@spectrum-css/combobox"
   },
   {
     "label": "cyclebutton",
-    "url": "cyclebutton.html"
+    "url": "cyclebutton.html",
+    "package": "@spectrum-css/cyclebutton"
   },
   {
     "label": "datepicker",
-    "url": "datepicker.html"
+    "url": "datepicker.html",
+    "package": "@spectrum-css/datepicker"
   },
   {
     "label": "decoratedtextfield",
-    "url": "decoratedtextfield.html"
+    "url": "decoratedtextfield.html",
+    "package": "@spectrum-css/decoratedtextfield"
   },
   {
     "label": "dial",
-    "url": "dial.html"
+    "url": "dial.html",
+    "package": "@spectrum-css/dial"
   },
   {
     "label": "dialog",
-    "url": "dialog.html"
+    "url": "dialog.html",
+    "package": "@spectrum-css/dialog"
   },
   {
     "label": "dropdown",
-    "url": "dropdown.html"
+    "url": "dropdown.html",
+    "package": "@spectrum-css/dropdown"
   },
   {
     "label": "dropindicator",
-    "url": "dropindicator.html"
+    "url": "dropindicator.html",
+    "package": "@spectrum-css/dropindicator"
   },
   {
     "label": "dropzone",
-    "url": "dropzone.html"
+    "url": "dropzone.html",
+    "package": "@spectrum-css/dropzone"
   },
   {
     "label": "fieldgroup",
-    "url": "fieldgroup.html"
+    "url": "fieldgroup.html",
+    "package": "@spectrum-css/fieldgroup"
   },
   {
     "label": "fieldlabel",
-    "url": "fieldlabel.html"
+    "url": "fieldlabel.html",
+    "package": "@spectrum-css/fieldlabel"
+  },
+  {
+    "label": "form",
+    "url": "form.html",
+    "package": "@spectrum-css/form"
   },
   {
     "label": "getting-started",
@@ -159,7 +202,8 @@
   },
   {
     "label": "illustratedmessage",
-    "url": "illustratedmessage.html"
+    "url": "illustratedmessage.html",
+    "package": "@spectrum-css/illustratedmessage"
   },
   {
     "label": "index",
@@ -175,155 +219,193 @@
   },
   {
     "label": "label",
-    "url": "label.html"
+    "url": "label.html",
+    "package": "@spectrum-css/label"
   },
   {
     "label": "link",
-    "url": "link.html"
+    "url": "link.html",
+    "package": "@spectrum-css/link"
   },
   {
     "label": "logicbutton",
-    "url": "logicbutton.html"
+    "url": "logicbutton.html",
+    "package": "@spectrum-css/logicbutton"
   },
   {
     "label": "menu",
-    "url": "menu.html"
+    "url": "menu.html",
+    "package": "@spectrum-css/menu"
   },
   {
     "label": "meter",
-    "url": "meter.html"
+    "url": "meter.html",
+    "package": "@spectrum-css/meter"
   },
   {
     "label": "miller",
-    "url": "miller.html"
+    "url": "miller.html",
+    "package": "@spectrum-css/miller"
   },
   {
     "label": "page",
-    "url": "page.html"
+    "url": "page.html",
+    "package": "@spectrum-css/page"
   },
   {
     "label": "pagination-button-style",
-    "url": "pagination-button-style.html"
+    "url": "pagination-button-style.html",
+    "package": "@spectrum-css/pagination"
   },
   {
     "label": "pagination-explicit",
-    "url": "pagination-explicit.html"
+    "url": "pagination-explicit.html",
+    "package": "@spectrum-css/pagination"
   },
   {
     "label": "pagination-listing",
-    "url": "pagination-listing.html"
+    "url": "pagination-listing.html",
+    "package": "@spectrum-css/pagination"
   },
   {
     "label": "popover",
-    "url": "popover.html"
+    "url": "popover.html",
+    "package": "@spectrum-css/popover"
   },
   {
     "label": "quickaction",
-    "url": "quickaction.html"
+    "url": "quickaction.html",
+    "package": "@spectrum-css/quickaction"
   },
   {
     "label": "radio",
-    "url": "radio.html"
+    "url": "radio.html",
+    "package": "@spectrum-css/radio"
   },
   {
     "label": "rating",
-    "url": "rating.html"
+    "url": "rating.html",
+    "package": "@spectrum-css/rating"
   },
   {
     "label": "rule",
-    "url": "rule.html"
+    "url": "rule.html",
+    "package": "@spectrum-css/rule"
   },
   {
     "label": "search",
-    "url": "search.html"
+    "url": "search.html",
+    "package": "@spectrum-css/search"
   },
   {
     "label": "searchwithin",
-    "url": "searchwithin.html"
+    "url": "searchwithin.html",
+    "package": "@spectrum-css/searchwithin"
   },
   {
     "label": "sidenav",
-    "url": "sidenav.html"
+    "url": "sidenav.html",
+    "package": "@spectrum-css/sidenav"
   },
   {
     "label": "slider",
-    "url": "slider.html"
+    "url": "slider.html",
+    "package": "@spectrum-css/slider"
   },
   {
     "label": "splitbutton",
-    "url": "splitbutton.html"
+    "url": "splitbutton.html",
+    "package": "@spectrum-css/splitbutton"
   },
   {
     "label": "splitview",
-    "url": "splitview.html"
+    "url": "splitview.html",
+    "package": "@spectrum-css/splitview"
   },
   {
     "label": "statuslight",
-    "url": "statuslight.html"
+    "url": "statuslight.html",
+    "package": "@spectrum-css/statuslight"
   },
   {
     "label": "steplist",
-    "url": "steplist.html"
+    "url": "steplist.html",
+    "package": "@spectrum-css/steplist"
   },
   {
     "label": "stepper",
-    "url": "stepper.html"
+    "url": "stepper.html",
+    "package": "@spectrum-css/stepper"
   },
   {
     "label": "table",
-    "url": "table.html"
+    "url": "table.html",
+    "package": "@spectrum-css/table"
   },
   {
     "label": "tabs",
-    "url": "tabs.html"
+    "url": "tabs.html",
+    "package": "@spectrum-css/tabs"
   },
   {
     "label": "tags",
-    "url": "tags.html"
+    "url": "tags.html",
+    "package": "@spectrum-css/tags"
   },
   {
     "label": "textarea",
-    "url": "textarea.html"
+    "url": "textarea.html",
+    "package": "@spectrum-css/textarea"
   },
   {
     "label": "textfield",
-    "url": "textfield.html"
+    "url": "textfield.html",
+    "package": "@spectrum-css/textfield"
   },
   {
     "label": "toast",
-    "url": "toast.html"
+    "url": "toast.html",
+    "package": "@spectrum-css/toast"
   },
   {
     "label": "toggle",
-    "url": "toggle.html"
+    "url": "toggle.html",
+    "package": "@spectrum-css/toggle"
   },
   {
     "label": "tool",
-    "url": "tool.html"
+    "url": "tool.html",
+    "package": "@spectrum-css/tool"
   },
   {
     "label": "tooltip",
-    "url": "tooltip.html"
+    "url": "tooltip.html",
+    "package": "@spectrum-css/tooltip"
   },
   {
     "label": "treeview",
-    "url": "treeview.html"
+    "url": "treeview.html",
+    "package": "@spectrum-css/treeview"
+  },
+  {
+    "label": "typography",
+    "url": "typography.html",
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "typography-deprecated",
-    "url": "typography-deprecated.html"
+    "url": "typography-deprecated.html",
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "typography-international",
     "url": "typography-international.html",
-    "delay": 3000
-  },
-  {
-    "label": "typography",
-    "url": "typography.html"
+    "delay": 3000,
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "well",
-    "url": "well.html"
+    "url": "well.html",
+    "package": "@spectrum-css/well"
   }
 ]

@@ -60,7 +60,17 @@ if (env === 'local') {
   report = 'CI';
 }
 
-const allScenarios = components.size > 0 ? scenarioConfigs.filter(i => components.has(i.label)) : scenarioConfigs.filter(i => !excludedScenarios.has(i.label));
+const allScenarios = [];
+
+if (components.size > 0) {
+  scenarioConfigs.forEach(s => {
+    if(components.has(s.label.split('-')[0])) {
+      allScenarios.push(s);
+    }
+  });
+} else {
+  allScenarios.concat(scenarioConfigs.filter(i => !excludedScenarios.has(i.label)));
+}
 
 allScenarios.map(specificScenarioConfig => {
   themes.forEach(t => {
@@ -88,7 +98,7 @@ module.exports = {
   onReadyScript: 'puppet/onReady.js',
   scenarios,
   paths: {
-    bitmaps_reference: 'node_modules/spectrum-css-test-asset/bitmaps_reference',
+    bitmaps_reference: 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference',
     bitmaps_test: 'backstop_data/bitmaps_test',
     engine_scripts: 'backstop_data/engine_scripts',
     html_report: 'backstop_data/html_report',
