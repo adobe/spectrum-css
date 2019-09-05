@@ -1,9 +1,11 @@
 const scenarioConfigs = require('./backstop_scenarios');
 const scenarios = [];
-const excludedScenarios = new Set(['circleloader', 'coachmark', 'index', 'getting-started']);
+const excludedScenarios = new Set(['@spectrum-css/circleloader', '@spectrum-css/coachmark', 'index', 'getting-started']);
 const themes = new Set().add('light');
 const scales = new Set().add('medium');
-const components = new Set();
+const packageNameSet = new Set();
+const packageDependentMap = new Map(require('./packageDependentMap'));
+
 let isDocker = false;
 let env = 'local';
 let host = 'host.docker.internal';
@@ -42,11 +44,13 @@ rest.forEach(argv => {
   } else if (argv.startsWith('scales=')) {
     scales.clear();
     argv.slice('scales='.length).split(',').forEach(s => scales.add(s));
-  }  else if (!argv.startsWith('--')) {
-    components.add(argv);
+  } else if (!argv.startsWith('--')) {
+    packageNameSet.add(`@spectrum-css/${argv}`);
+    packageDependentMap.get(`@spectrum-css/${argv}`).forEach(i => packageNameSet.add(i));
   }
 });
 
+// Identify the runtime environment and setup hostname, etc
 if (isDocker === true) {
   host = (env === 'local' ? 'host.docker.internal' : '127.0.0.1');
 } else {
@@ -60,19 +64,21 @@ if (env === 'local') {
   report = 'CI';
 }
 
-const allScenarios = [];
+// Generate vr testing scenarios
+let testingScenarios = [];
 
-if (components.size > 0) {
+if (packageNameSet.size > 0) {
   scenarioConfigs.forEach(s => {
-    if(components.has(s.label.split('-')[0])) {
-      allScenarios.push(s);
+    if(packageNameSet.has(s.package)) {
+      testingScenarios.push(s);
     }
   });
+  testingScenarios = testingScenarios.filter(i => !(excludedScenarios.has(i.package) || excludedScenarios.has(i.label)));
 } else {
-  allScenarios.concat(scenarioConfigs.filter(i => !excludedScenarios.has(i.label)));
+  testingScenarios = scenarioConfigs.filter(i => !(excludedScenarios.has(i.package) || excludedScenarios.has(i.label)));
 }
 
-allScenarios.map(specificScenarioConfig => {
+testingScenarios.map(specificScenarioConfig => {
   themes.forEach(t => {
     scales.forEach(s => {
       const config = {...specificScenarioConfig};
@@ -113,5 +119,5 @@ module.exports = {
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
-  dockerCommandTemplate: 'docker run --rm -it --mount type=bind,source="{cwd}",target=/src --network host --shm-size 512m backstopjs/backstopjs:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -it --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m backstopjs/backstopjs:{version} {backstopCommand} {args}'
 };
