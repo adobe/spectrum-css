@@ -15,7 +15,6 @@
     "backstop:approve": "backstop approve --config=backstop_data/backstop_test.js",
     "backstop:test": "backstop test --config=backstop_data/backstop_test.js --env=local",
     "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
-    "backstop:docker:approve": "backstop approve --docker --config=backstop_data/backstop_test.js --env=local",
     "backstop:docker:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=local",
     "backstop:ci:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
