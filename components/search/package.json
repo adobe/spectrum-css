@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/search",
-  "version": "2.0.0-alpha.6",
+  "version": "2.0.0-alpha.7",
   "description": "The Spectrum CSS search component",
   "author": "",
   "license": "Apache-2.0",
@@ -16,15 +16,15 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/button": "^2.0.0-alpha.5",
-    "@spectrum-css/icon": "^2.0.0-alpha.5",
+    "@spectrum-css/button": "^2.0.0-alpha.6",
+    "@spectrum-css/icon": "^2.0.0-alpha.6",
     "@spectrum-css/textfield": "^2.0.0-alpha.5",
     "@spectrum-css/vars": "^2.0.0-alpha.3"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^2.0.0-alpha.5",
+    "@spectrum-css/button": "^2.0.0-alpha.6",
     "@spectrum-css/component-builder": "^1.0.0-alpha.5",
-    "@spectrum-css/icon": "^2.0.0-alpha.5",
+    "@spectrum-css/icon": "^2.0.0-alpha.6",
     "@spectrum-css/textfield": "^2.0.0-alpha.5",
     "@spectrum-css/vars": "^2.0.0-alpha.3",
     "gulp": "^4.0.0"
