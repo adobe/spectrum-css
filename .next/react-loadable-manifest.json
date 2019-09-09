@@ -1,18 +1,10 @@
 {
-  "./barloader.yml": [
+  "./dev/noop": [
     {
-      "id": "b7OR",
-      "name": "./data/barloader.yml",
-      "file": "static/chunks/7.4fa2e966a6b38de74c8d.js",
-      "publicPath": "static/chunks/7.4fa2e966a6b38de74c8d.js"
-    }
-  ],
-  "./checkbox.yml": [
-    {
-      "id": "s5dA",
-      "name": "./data/checkbox.yml",
-      "file": "static/chunks/8.13c48e19dedfcc42c8f0.js",
-      "publicPath": "static/chunks/8.13c48e19dedfcc42c8f0.js"
+      "id": "./node_modules/next/dist/client/dev/noop.js",
+      "name": "./node_modules/next/dist/client/dev/noop.js",
+      "file": "static/chunks/0.js",
+      "publicPath": "static/chunks/0.js"
     }
   ]
 }

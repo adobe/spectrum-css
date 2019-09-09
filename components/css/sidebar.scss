@@ -1,0 +1,74 @@
+:local(.appHeader) {
+  height:48px;
+  border-bottom: 1px solid var(--spectrum-global-color-gray-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  background-color: var(--spectrum-global-color-gray-50);
+  top:0px;
+  right:0px;
+  left:0px;
+  padding-left:8px;
+  z-index: 10;
+  @media screen and (min-width: 960px) {
+    display: none;
+  }
+ 
+}
+:local(.overlay) {
+  background-color: var(--spectrum-alias-background-color-modal-overlay);
+  opacity: 0.5;
+  position: fixed;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  &:local(.menuClosed) {
+    display:none;
+  }
+  z-index:11;
+}
+:local(.sideBar) {
+  z-index:12;
+  position: fixed;
+  left:0px;
+  top:0px;
+  bottom:0px;
+  width:248px;
+  @media screen and (max-width: 960px) {
+    left: -248px;
+    opacity:0;
+    transition: left 100ms ease-in-out;
+    &:local(.menuOpen) {
+      left:0px;
+      opacity:1;
+      transition: left 100ms ease-in-out;
+    }
+  }
+}
+:local(.spectrumSidebar) {
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--spectrum-global-color-gray-75);
+}
+
+:local(.header) {
+
+  padding: 24px;
+  width: 248px;
+
+}
+:local(.logo) {
+
+  display: block;
+}
+:local(.navigation) {
+  padding:0px 24px;
+  flex:1;
+  flex-grow: 1;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y:auto;
+}

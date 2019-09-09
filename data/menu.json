@@ -1,0 +1,26 @@
+{
+  "menu": [{
+    "title": "WebsiteMenu",
+    "url": "header-WebsiteMenu",
+    "linkType": "group",
+    "parent": "top-level-menu-item",
+    "children": [{
+      "title": "Components",
+      "url": "header-Components",
+      "linkType": "group",
+      "parent": "top-level-menu-item,WebsiteMenu",
+      "children": []
+    }]
+  }],
+  "key": [{
+    "title": "WebsiteMenu",
+    "url": "header-WebsiteMenu",
+    "linkType": "group",
+    "parent": "top-level-menu-item"
+  }, {
+    "title": "Components",
+    "url": "header-Components",
+    "linkType": "group",
+    "parent": "top-level-menu-item,WebsiteMenu"
+  }]
+}
