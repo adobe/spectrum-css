@@ -30,9 +30,12 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "audit-ci": "^2.0.1",
     "gulp": "^4.0.0",
     "gulplog": "^1.0.0",
+    "husky": "^3.0.5",
     "lerna": "^3.16.4",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
@@ -44,5 +47,10 @@
     "@spectrum/balthazar": "^3.0.1",
     "@spectrum/spectrum-dna": "^5.15.0",
     "@spectrum/spectrum-icons": "^2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

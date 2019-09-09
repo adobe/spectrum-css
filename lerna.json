@@ -5,5 +5,13 @@
     "bundles/*"
   ],
   "version": "independent",
-  "hoist": "{gulp}"
+  "hoist": "{gulp}",
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    },
+    "version": {
+      "message": "chore(release): release"
+    }
+  }
 }
