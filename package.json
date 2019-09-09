@@ -19,6 +19,7 @@
     "backstop:ci:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepare": "gulp prepare",
+    "prepublishOnly": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
     "postpublish": "npx lerna run publishpages --concurrency=1"
   },
   "repository": {
@@ -38,7 +39,7 @@
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@spectrum-css/spectrum-css-vr-test-asset": "^1.0.1",
     "audit-ci": "^2.0.1",
-    "backstopjs": "^4.1.12",
+    "backstopjs": "^4.3.2",
     "gulp": "^4.0.0",
     "gulplog": "^1.0.0",
     "lerna": "^3.16.4",
