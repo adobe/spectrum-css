@@ -11,11 +11,19 @@ governing permissions and limitations under the License.
 */
 
 module.exports = function (page, scenario) {
-  console.log(`Inject Spectrum CSS color theme class: spectrum--${scenario.theme}`);
+  page.evaluate(`window._spectrumScale = '${scenario.scale}'`);
   page.evaluate(`window._spectrumTheme = '${scenario.theme}'`);
   page.evaluate(() => {
+    const SCALES = ['medium', 'large'];
     const THEMES = ['lightest', 'light', 'dark', 'darkest'];
     const bodyElm = document.body;
+    if (window._spectrumScale && !bodyElm.classList.contains(window._spectrumScale)) {
+      // Remove all the theme class
+      SCALES.forEach(t => {
+        bodyElm.classList.remove(`spectrum--${t}`);
+      });
+      bodyElm.classList.toggle(`spectrum--${window._spectrumScale}`);
+    }
     if (window._spectrumTheme && !bodyElm.classList.contains(window._spectrumTheme)) {
       // Remove all the theme class
       THEMES.forEach(t => {
@@ -24,6 +32,4 @@ module.exports = function (page, scenario) {
       bodyElm.classList.toggle(`spectrum--${window._spectrumTheme}`);
     }
   });
-
-  console.log(`Spectrum CSS color theme class: spectrum--${scenario.theme} injected for ${scenario.label}`);
 };

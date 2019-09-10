@@ -18,9 +18,12 @@ const scales = new Set().add('medium');
 const packageNameSet = new Set();
 const packageDependentMap = new Map(require('./packageDependentMap'));
 
+const LOCALHOST_MAC = 'host.docker.internal';
+const LOCALHOST_LINUX = '127.0.0.1';
+
 let isDocker = false;
 let env = 'local';
-let host = 'host.docker.internal';
+let host = LOCALHOST_MAC;
 let report = 'ci';
 let captureLimit = 1;
 
@@ -64,9 +67,9 @@ rest.forEach(argv => {
 
 // Identify the runtime environment and setup hostname, etc
 if (isDocker === true) {
-  host = (env === 'local' ? 'host.docker.internal' : '127.0.0.1');
+  host = (env === 'local' ? LOCALHOST_MAC : LOCALHOST_LINUX);
 } else {
-  host = '127.0.0.1';
+  host = LOCALHOST_LINUX;
 }
 
 if (env === 'local') {
@@ -112,7 +115,6 @@ module.exports = {
       height: 40960
     }
   ],
-  onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
   scenarios,
   paths: {
