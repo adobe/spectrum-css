@@ -259,7 +259,7 @@ function (_React$Component) {
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/guideline?id=home",
-        as: "/",
+        as: "".concat(pathPrefix, "/"),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 79

@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -354,7 +354,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/guideline?id=home",
-      as: "/",
+      as: `${pathPrefix}/`,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 79
@@ -2232,7 +2232,7 @@ Page.getInitialProps = async function (context) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!****************************************!*\
   !*** multi ./pages/components/[id].js ***!
   \****************************************/
