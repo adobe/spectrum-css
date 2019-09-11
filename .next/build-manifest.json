@@ -1,50 +1,37 @@
 {
-  "devFiles": [
-<<<<<<< HEAD
-    "static/development/dll/dll_9e2a3f9838424feeb96c.js",
-    "static/development/dll/dll_9e2a3f9838424feeb96c.js.map"
-=======
-    "static/development/dll/dll_397dc449097af0b4e992.js",
-    "static/development/dll/dll_397dc449097af0b4e992.js.map"
->>>>>>> ab9182cf98a919eecb17cddd13d33edcd077bbb9
-  ],
+  "devFiles": [],
   "pages": {
     "/": [
-      "static/runtime/webpack.js",
-<<<<<<< HEAD
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-=======
->>>>>>> ab9182cf98a919eecb17cddd13d33edcd077bbb9
-      "static/runtime/main.js"
+      "static/runtime/webpack-36f19ee534d14c764845.js",
+      "static/css/commons.42ba266c.chunk.css",
+      "static/chunks/commons.e379e0afd24422a64df0.js",
+      "static/runtime/main-1ffb68ba05ed43b38043.js"
     ],
     "/_app": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-36f19ee534d14c764845.js",
+      "static/css/commons.42ba266c.chunk.css",
+      "static/chunks/commons.e379e0afd24422a64df0.js",
+      "static/runtime/main-1ffb68ba05ed43b38043.js"
     ],
     "/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-<<<<<<< HEAD
-    ],
-    "/index": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
-    ],
-    "/next/dist/pages/_error": [
-      "static/runtime/webpack.js",
-=======
+      "static/runtime/webpack-36f19ee534d14c764845.js",
+      "static/css/commons.42ba266c.chunk.css",
+      "static/chunks/commons.e379e0afd24422a64df0.js",
+      "static/runtime/main-1ffb68ba05ed43b38043.js"
     ],
     "/components/[id]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-36f19ee534d14c764845.js",
+      "static/css/commons.42ba266c.chunk.css",
+      "static/chunks/commons.e379e0afd24422a64df0.js",
+      "static/css/styles.26c3862a.chunk.css",
+      "static/chunks/styles.1d69e4b713b844d0547f.js",
+      "static/runtime/main-1ffb68ba05ed43b38043.js"
     ],
     "/index": [
-      "static/runtime/webpack.js",
->>>>>>> ab9182cf98a919eecb17cddd13d33edcd077bbb9
-      "static/runtime/main.js"
+      "static/runtime/webpack-36f19ee534d14c764845.js",
+      "static/css/commons.42ba266c.chunk.css",
+      "static/chunks/commons.e379e0afd24422a64df0.js",
+      "static/runtime/main-1ffb68ba05ed43b38043.js"
     ]
   }
 }

@@ -9,7 +9,6 @@ import styles from './css/sidebar.scss';
 import SiteSearch from './SiteSearch';
 import getConfig from 'next/config';
 import {withRouter} from 'next/router'
-const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -50,7 +49,7 @@ class Sidebar extends React.Component {
   }
   navigate = (slug,type) => {
     if(type === 'Internal') {
-      Router.push(`/guideline?id=${slug}`,`/page/${slug}`);
+      Router.push(`/guideline?id=${slug}`,`/components/${slug}`);
       this.setState({
         menuOpen: false
       })

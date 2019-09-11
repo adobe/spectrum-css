@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ "./data/checkbox.yml":
-/*!***************************!*\
-  !*** ./data/checkbox.yml ***!
-  \***************************/
+/***/ "./data/yml/checkbox.yml":
+/*!*******************************!*\
+  !*** ./data/yml/checkbox.yml ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

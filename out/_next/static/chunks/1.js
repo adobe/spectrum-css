@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
-/***/ "./data/barloader.yml":
-/*!****************************!*\
-  !*** ./data/barloader.yml ***!
-  \****************************/
+/***/ "./data/yml/barloader.yml":
+/*!********************************!*\
+  !*** ./data/yml/barloader.yml ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

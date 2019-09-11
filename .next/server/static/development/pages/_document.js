@@ -466,7 +466,7 @@ Document.childContextTypes = {
   _documentProps: _propTypes.default.any,
   _devOnlyInvalidateCacheQueryString: _propTypes.default.string
   /**
-  * `getInitialProps` hook returns the context object with the addition of `renderPage`. `
+  * `getInitialProps` hook returns the context object with the addition of `renderPage`.
   * `renderPage` callback executes `React` rendering logic synchronously to support server-rendering wrappers
   */
 
@@ -606,8 +606,7 @@ class Head extends _react.Component {
     } = this.context;
     const {
       page,
-      buildId,
-      dynamicBuildId
+      buildId
     } = __NEXT_DATA__;
     let {
       head
@@ -719,13 +718,13 @@ class Head extends _react.Component {
       href: canonicalBase + getAmpPath(ampPath, dangerousAsPath)
     }), page !== '/_error' && _react.default.createElement("link", {
       rel: "preload",
-      href: assetPrefix + getOptionalModernScriptVariant(dynamicBuildId ? "/_next/static/client/pages" + getPageFile(page, buildId) : "/_next/static/" + buildId + "/pages" + getPageFile(page)) + _devOnlyInvalidateCacheQueryString,
+      href: assetPrefix + getOptionalModernScriptVariant("/_next/static/" + buildId + "/pages" + getPageFile(page)) + _devOnlyInvalidateCacheQueryString,
       as: "script",
       nonce: this.props.nonce,
       crossOrigin: this.props.crossOrigin || undefined
     }), _react.default.createElement("link", {
       rel: "preload",
-      href: assetPrefix + getOptionalModernScriptVariant(dynamicBuildId ? "/_next/static/client/pages/_app." + buildId + ".js" : "/_next/static/" + buildId + "/pages/_app.js") + _devOnlyInvalidateCacheQueryString,
+      href: assetPrefix + getOptionalModernScriptVariant("/_next/static/" + buildId + "/pages/_app.js") + _devOnlyInvalidateCacheQueryString,
       as: "script",
       nonce: this.props.nonce,
       crossOrigin: this.props.crossOrigin || undefined
@@ -887,8 +886,7 @@ class NextScript extends _react.Component {
 
     const {
       page,
-      buildId,
-      dynamicBuildId
+      buildId
     } = __NEXT_DATA__;
 
     if (true) {
@@ -897,16 +895,16 @@ class NextScript extends _react.Component {
 
     const pageScript = [_react.default.createElement("script", (0, _extends2.default)({
       async: true,
-      id: "__NEXT_PAGE__" + page,
+      "data-next-page": page,
       key: page,
-      src: assetPrefix + (dynamicBuildId ? "/_next/static/client/pages" + getPageFile(page, buildId) : "/_next/static/" + buildId + "/pages" + getPageFile(page)) + _devOnlyInvalidateCacheQueryString,
+      src: assetPrefix + ("/_next/static/" + buildId + "/pages" + getPageFile(page)) + _devOnlyInvalidateCacheQueryString,
       nonce: this.props.nonce,
       crossOrigin: this.props.crossOrigin || undefined
     },  false ? undefined : {})),  false && false];
     const appScript = [_react.default.createElement("script", (0, _extends2.default)({
       async: true,
-      id: "__NEXT_PAGE__/_app",
-      src: assetPrefix + (dynamicBuildId ? "/_next/static/client/pages/_app." + buildId + ".js" : "/_next/static/" + buildId + "/pages/_app.js") + _devOnlyInvalidateCacheQueryString,
+      "data-next-page": "/_app",
+      src: assetPrefix + ("/_next/static/" + buildId + "/pages/_app.js") + _devOnlyInvalidateCacheQueryString,
       key: "_app",
       nonce: this.props.nonce,
       crossOrigin: this.props.crossOrigin || undefined

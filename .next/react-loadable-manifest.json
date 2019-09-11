@@ -1,47 +1,18 @@
 {
-<<<<<<< HEAD
-  "./dev/noop": [
-    {
-=======
-  "./accordion.yml": [
-    {
-      "id": "./data/accordion.yml",
-      "name": "./data/accordion.yml",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    }
-  ],
   "./barloader.yml": [
     {
-      "id": "./data/barloader.yml",
-      "name": "./data/barloader.yml",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    }
-  ],
-  "./button-primary.yml": [
-    {
-      "id": "./data/button-primary.yml",
-      "name": "./data/button-primary.yml",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "id": "inr8",
+      "name": "./data/yml/barloader.yml",
+      "file": "static/chunks/8.c8decd7b1b2ba9e34622.js",
+      "publicPath": "static/chunks/8.c8decd7b1b2ba9e34622.js"
     }
   ],
   "./checkbox.yml": [
     {
-      "id": "./data/checkbox.yml",
-      "name": "./data/checkbox.yml",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    }
-  ],
-  "./dev/noop": [
-    {
->>>>>>> ab9182cf98a919eecb17cddd13d33edcd077bbb9
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "name": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js",
-      "publicPath": "static/chunks/0.js"
+      "id": "gjy9",
+      "name": "./data/yml/checkbox.yml",
+      "file": "static/chunks/9.51688c6d9c0c933a275b.js",
+      "publicPath": "static/chunks/9.51688c6d9c0c933a275b.js"
     }
   ]
 }

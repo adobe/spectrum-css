@@ -324,8 +324,7 @@ const singletonRouter = {
 
 }; // Create public properties and methods of the router in the singletonRouter
 
-const urlPropertyFields = ['pathname', 'route', 'query', 'asPath'];
-const propertyFields = ['components'];
+const urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
 const routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 const coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
@@ -335,7 +334,7 @@ const coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'befo
   }
 
 });
-propertyFields.concat(urlPropertyFields).forEach(field => {
+urlPropertyFields.forEach(field => {
   // Here we need to use Object.defineProperty because, we need to return
   // the property assigned to the actual router
   // The value might get changed as we change routes and this is the
@@ -431,18 +430,6 @@ function makePublicRouterInstance(router) {
 
 
   instance.events = _router2.default.events;
-  propertyFields.forEach(field => {
-    // Here we need to use Object.defineProperty because, we need to return
-    // the property assigned to the actual router
-    // The value might get changed as we change routes and this is the
-    // proper way to access it
-    (0, _defineProperty.default)(instance, field, {
-      get() {
-        return _router[field];
-      }
-
-    });
-  });
   coreMethodFields.forEach(field => {
     instance[field] = function () {
       return _router[field](...arguments);
@@ -581,13 +568,12 @@ class App extends _react.default.Component {
       pageProps
     } = this.props;
     const url = createUrl(router);
-    return _react.default.createElement(Container, null, _react.default.createElement(Component, (0, _extends2.default)({}, pageProps, {
+    return _react.default.createElement(Component, (0, _extends2.default)({}, pageProps, {
       url: url
-    })));
+    }));
   }
 
-} // @deprecated noop for now until removal
-
+}
 
 exports.default = App;
 App.childContextTypes = {
@@ -595,16 +581,23 @@ App.childContextTypes = {
 };
 App.origGetInitialProps = appGetInitialProps;
 App.getInitialProps = appGetInitialProps;
+let warnContainer;
+let warnUrl;
+
+if (true) {
+  warnContainer = (0, _utils.execOnce)(() => {
+    console.warn("Warning: the `Container` in `_app` has been deprecated and should be removed. https://err.sh/zeit/next.js/app-container-deprecated");
+  });
+  warnUrl = (0, _utils.execOnce)(() => {
+    console.error("Warning: the 'url' property is deprecated. https://err.sh/zeit/next.js/url-deprecated");
+  });
+} // @deprecated noop for now until removal
+
 
 function Container(p) {
+  if (true) warnContainer();
   return p.children;
 }
-
-const warnUrl = (0, _utils.execOnce)(() => {
-  if (true) {
-    console.error("Warning: the 'url' property is deprecated. https://err.sh/zeit/next.js/url-deprecated");
-  }
-});
 
 function createUrl(router) {
   // This is to make sure we don't references the router object at call time
@@ -615,40 +608,40 @@ function createUrl(router) {
   } = router;
   return {
     get query() {
-      warnUrl();
+      if (true) warnUrl();
       return query;
     },
 
     get pathname() {
-      warnUrl();
+      if (true) warnUrl();
       return pathname;
     },
 
     get asPath() {
-      warnUrl();
+      if (true) warnUrl();
       return asPath;
     },
 
     back: () => {
-      warnUrl();
+      if (true) warnUrl();
       router.back();
     },
     push: (url, as) => {
-      warnUrl();
+      if (true) warnUrl();
       return router.push(url, as);
     },
     pushTo: (href, as) => {
-      warnUrl();
+      if (true) warnUrl();
       const pushRoute = as ? href : '';
       const pushUrl = as || href;
       return router.push(pushRoute, pushUrl);
     },
     replace: (url, as) => {
-      warnUrl();
+      if (true) warnUrl();
       return router.replace(url, as);
     },
     replaceTo: (href, as) => {
-      warnUrl();
+      if (true) warnUrl();
       const replaceRoute = as ? href : '';
       const replaceUrl = as || href;
       return router.replace(replaceRoute, replaceUrl);

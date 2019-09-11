@@ -18,9 +18,13 @@ module.exports = withCSS({
   exportTrailingSlash: true,
   pageExtensions: ['js', 'jsx'],
   assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css' : '',
-  webpack: (config, { dev, defaultLoaders, isServer }) => {
-    if(process.env.NODE_ENV === 'production') {
-      config.externals = [ '@react', '@spectrum', '@adcloud'];
+  webpack: (config, {
+    dev,
+    defaultLoaders,
+    isServer
+  }) => {
+    if (process.env.NODE_ENV === 'production') {
+      config.externals = ['@react', '@spectrum', '@adcloud'];
     }
     const originalEntry = config.entry;
     config.entry = async () => {
@@ -50,24 +54,19 @@ module.exports = withCSS({
       postcssLoaderOptions: {},
       dev,
       isServer,
-      loaders: [
-        {
-          loader: 'sass-loader',
-          options: {}
-        }
-      ]
+      loaders: [{
+        loader: 'sass-loader',
+        options: {}
+      }]
     });
 
-    config.module.rules.push(
-      {
-        test: /\.scss$/,
-        use: defaultLoaders.sass
-      },
-      {
-        test: /\.sass$/,
-        use: defaultLoaders.sass
-      }
-    );
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: defaultLoaders.sass
+    }, {
+      test: /\.sass$/,
+      use: defaultLoaders.sass
+    });
 
     config.plugins.push(
       new webpack.DefinePlugin({
@@ -84,16 +83,27 @@ module.exports = withCSS({
   },
   exportPathMap: async function() {
     const paths = {
-      '/': { page: '/' }
+      '/': {
+        page: '/'
+      }
     };
     const components = await readdir('data/yml')
-    const menuJSON = await readFile('data/menu.json', {encoding: 'utf8'});
+    const menuJSON = await readFile('data/menu.json', {
+      encoding: 'utf8'
+    });
     let menu = JSON.parse(menuJSON);
     components.forEach(component => {
-      const componentYaml = fs.readFileSync(`data/yml/${component}`, {encoding: 'utf8'});
+      const componentYaml = fs.readFileSync(`data/yml/${component}`, {
+        encoding: 'utf8'
+      });
       const componentData = yaml.safeLoad(componentYaml);
       const slug = path.basename(component, '.yml');
-      paths[`/components/${slug}`] = { page: '/components/[id]', query: {id: slug} };
+      paths[`/components/${slug}`] = {
+        page: '/components/[id]',
+        query: {
+          id: slug
+        }
+      };
       const menuComponentData = {
         "title": componentData.name,
         "url": slug,
