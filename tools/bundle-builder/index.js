@@ -199,6 +199,8 @@ exports.prePack = gulp.series(
   release.releaseBackwardsCompat
 );
 
+exports.updateDeps = require('./release/updateDeps');
+
 exports.ghPages = release.ghPages;
 exports.postPublish = release.releaseBackwardsCompatCleanup;
 
