@@ -76,7 +76,7 @@ class Sidebar extends React.Component {
     <div className={classNames(styles.sideBar, this.state.menuOpen?styles.menuOpen:styles.menuClosed)}>
     <div className={classNames(styles.spectrumSidebar)}>
         <div className={styles.header}>
-          <Link href="/guideline?id=home" as="/"><a><img src="/static/logo.png" alt="Spectrum Logo" srcSet="/static/logo@2x.png 2x" className={styles.logo} onClick={() => this.navigate('home', "Internal")}/></a></Link>
+          <Link href="/guideline?id=home" as="/"><a><img src={`${pathPrefix}/static/logo.png`} alt="Spectrum Logo" srcSet={`${pathPrefix}/static/logo@2x.png 2x`} className={styles.logo} onClick={() => this.navigate('home', "Internal")}/></a></Link>
           <SiteSearch/>
         </div>
         <div className={styles.navigation}>
