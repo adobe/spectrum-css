@@ -1,1 +1,1 @@
-module.exports = require('@spectrum-css/bundle-builder');
+module.exports = require('../../tools/bundle-builder');
