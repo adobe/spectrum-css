@@ -19,12 +19,7 @@ exports.topLevel = path.resolve(exports.builder, '..', '..');
 exports.isTopLevel = (exports.cwd === exports.topLevel);
 exports.site = path.resolve(exports.topLevel, 'site');
 
-if (exports.isTopLevel) {
-  exports.components = path.join(exports.cwd, 'components');
-}
-else {
-  exports.components = path.join(exports.cwd, 'node_modules', '@spectrum-css');
-}
+exports.components = path.join(exports.topLevel, 'components');
 
 exports.resolve = function(component) {
   if (exports.isTopLevel) {

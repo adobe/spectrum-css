@@ -17,6 +17,7 @@ const insert = require('gulp-insert');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const merge = require('merge-stream');
+const path = require('path');
 
 const processors = require('./processors');
 const mutateselectors = require('./lib/postcss-mutateselectors')
@@ -29,7 +30,7 @@ var colorStops = [
   'lightest'
 ];
 
-const varDir = `${process.cwd()}/node_modules/@spectrum-css/vars/`;
+const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..') + '/';
 const commonsDir = `${process.cwd()}/../commons/`;
 
 /**

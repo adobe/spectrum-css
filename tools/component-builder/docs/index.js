@@ -63,7 +63,7 @@ function buildDocs_html() {
 
     let packageName = package.name.split('/').pop();
 
-    let dnaVars = readJSONFile(path.join('node_modules', '@spectrum-css/vars', 'dist', 'spectrum-metadata.json'));
+    let dnaVars = readJSONFile(path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..', 'dist', 'spectrum-metadata.json'));
 
     gulp.src(
       [
