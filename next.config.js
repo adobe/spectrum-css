@@ -21,7 +21,7 @@ module.exports = withCSS({
   },
   exportTrailingSlash: true,
   pageExtensions: ['js', 'jsx'],
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css' : '',
   webpack(config, options) {
     const { dev, isServer } = options;
     // Next.js externalizes all code in node_modules. Override to include
