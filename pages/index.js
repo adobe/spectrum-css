@@ -9,12 +9,6 @@ const pathPrefix = process.env.NODE_ENV === 'production'
   ? '/spectrum-css'
   : '';
 
-const PostLink = ({post}) => (<li>
-  <Link href="/components/[id]" as={`${pathPrefix}/components/${post.id}`}>
-    <a>{post.title}</a>
-  </Link>
-</li>);
-
 
 export default function Blog() {
   return (<Layout>
