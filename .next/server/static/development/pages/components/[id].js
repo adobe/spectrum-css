@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -249,10 +249,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-const {
-  serverRuntimeConfig,
-  publicRuntimeConfig
-} = next_config__WEBPACK_IMPORTED_MODULE_11___default()();
+const pathPrefix =  false ? undefined : '';
 
 class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
@@ -272,7 +269,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "navigate", (slug, type) => {
       if (type === 'Internal') {
-        next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/guideline?id=${slug}`, `/components/${slug}`);
+        next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/guideline?id=${slug}`, `${pathPrefix}/components/${slug}/`);
         this.setState({
           menuOpen: false
         });
@@ -308,14 +305,14 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.closeMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 69
       },
       __self: this
     }), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.appHeader,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 73
       },
       __self: this
     }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -323,7 +320,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_4___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 74
         },
         __self: this
       }),
@@ -331,28 +328,28 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.openMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 74
       },
       __self: this
     })), __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuClosed),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 76
       },
       __self: this
     }, __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.spectrumSidebar),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 77
       },
       __self: this
     }, __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.header,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 78
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -360,37 +357,37 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       as: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 79
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 79
       },
       __self: this
     }, __jsx("img", {
-      src: "/static/logo.png",
+      src: `${pathPrefix}/static/logo.png`,
       alt: "Spectrum Logo",
-      srcSet: "/static/logo@2x.png 2x",
+      srcSet: `${pathPrefix}/static/logo@2x.png 2x`,
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logo,
       onClick: () => this.navigate('home', "Internal"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 79
       },
       __self: this
     }))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_10__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 80
       },
       __self: this
     })), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.navigation,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 82
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNav"], {
@@ -402,7 +399,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       variant: "multiLevel",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 84
       },
       __self: this
     }, _data_newmenu__WEBPACK_IMPORTED_MODULE_8__.menu[0].children.map((item, i) => {
@@ -416,7 +413,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 89
         },
         __self: this
       }, item.children && item.children.map((mi, i) => {
@@ -434,7 +431,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           ref: this.props.router.query.id === mi.url ? this.selectedItem : undefined,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 94
           },
           __self: this
         }, mi.linkType === 'group' && mi.children.map((mi3, i) => {
@@ -448,7 +445,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 106
+              lineNumber: 109
             },
             __self: this
           });
@@ -461,7 +458,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 123
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNavItem"], {
@@ -473,7 +470,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 124
       },
       __self: this
     }, "Contributions"))))));
@@ -2235,7 +2232,7 @@ Page.getInitialProps = async function (context) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!****************************************!*\
   !*** multi ./pages/components/[id].js ***!
   \****************************************/

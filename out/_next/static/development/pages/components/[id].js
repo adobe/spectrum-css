@@ -135,10 +135,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
 
-
-var _getConfig = next_config__WEBPACK_IMPORTED_MODULE_17___default()(),
-    serverRuntimeConfig = _getConfig.serverRuntimeConfig,
-    publicRuntimeConfig = _getConfig.publicRuntimeConfig;
+var pathPrefix =  false ? undefined : '';
 
 var Sidebar =
 /*#__PURE__*/
@@ -166,7 +163,7 @@ function (_React$Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "navigate", function (slug, type) {
       if (type === 'Internal') {
-        next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push("/guideline?id=".concat(slug), "/components/".concat(slug));
+        next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push("/guideline?id=".concat(slug), "".concat(pathPrefix, "/components/").concat(slug, "/"));
 
         _this.setState({
           menuOpen: false
@@ -211,14 +208,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 69
         },
         __self: this
       }), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.appHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 73
         },
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -226,7 +223,7 @@ function (_React$Component) {
         icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_10___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 71
+            lineNumber: 74
           },
           __self: this
         }),
@@ -236,28 +233,28 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 74
         },
         __self: this
       })), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_13___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 76
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_13___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 77
         },
         __self: this
       }, __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 78
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -265,39 +262,39 @@ function (_React$Component) {
         as: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 79
         },
         __self: this
       }, __jsx("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 79
         },
         __self: this
       }, __jsx("img", {
-        src: "/static/logo.png",
+        src: "".concat(pathPrefix, "/static/logo.png"),
         alt: "Spectrum Logo",
-        srcSet: "/static/logo@2x.png 2x",
+        srcSet: "".concat(pathPrefix, "/static/logo@2x.png 2x"),
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.logo,
         onClick: function onClick() {
           return _this2.navigate('home', "Internal");
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 79
         },
         __self: this
       }))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_16__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 80
         },
         __self: this
       })), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_15___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 82
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_11__["SideNav"], {
@@ -309,7 +306,7 @@ function (_React$Component) {
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 84
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_14__.menu[0].children.map(function (item, i) {
@@ -323,7 +320,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 86
+            lineNumber: 89
           },
           __self: this
         }, item.children && item.children.map(function (mi, i) {
@@ -341,7 +338,7 @@ function (_React$Component) {
             ref: _this2.props.router.query.id === mi.url ? _this2.selectedItem : undefined,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 91
+              lineNumber: 94
             },
             __self: this
           }, mi.linkType === 'group' && mi.children.map(function (mi3, i) {
@@ -357,7 +354,7 @@ function (_React$Component) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 106
+                lineNumber: 109
               },
               __self: this
             });
@@ -370,7 +367,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 123
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_11__["SideNavItem"], {
@@ -382,7 +379,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 124
         },
         __self: this
       }, "Contributions"))))));
@@ -22950,18 +22947,7 @@ function () {
 
 /***/ }),
 
-/***/ 2:
-/*!*******************************!*\
-  !*** ./lib/locales (ignored) ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 28:
+/***/ 1:
 /*!*********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcomponents%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2F%5Bid%5D.js ***!
   \*********************************************************************************************************************************************************************/
@@ -22970,6 +22956,17 @@ function () {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcomponents%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2F%5Bid%5D.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2F%5Bid%5D.js!./");
 
+
+/***/ }),
+
+/***/ 2:
+/*!*******************************!*\
+  !*** ./lib/locales (ignored) ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 
@@ -22984,5 +22981,5 @@ module.exports = dll_129a35c7ec57967eb265;
 
 /***/ })
 
-},[[28,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=[id].js.map

@@ -53,7 +53,7 @@ class Sidebar extends React.Component {
   }
   navigate = (slug,type) => {
     if(type === 'Internal') {
-      Router.push(`/guideline?id=${slug}`,`${pathPrefix}/components/${slug}`);
+      Router.push(`/guideline?id=${slug}`,`${pathPrefix}/components/${slug}/`);
       this.setState({
         menuOpen: false
       })
