@@ -10,6 +10,10 @@ import SiteSearch from './SiteSearch';
 import getConfig from 'next/config';
 import {withRouter} from 'next/router'
 
+const pathPrefix = process.env.NODE_ENV === 'production'
+  ? '/spectrum-css'
+  : '';
+
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
@@ -49,7 +53,7 @@ class Sidebar extends React.Component {
   }
   navigate = (slug,type) => {
     if(type === 'Internal') {
-      Router.push(`/guideline?id=${slug}`,`/components/${slug}`);
+      Router.push(`/guideline?id=${slug}`,`${pathPrefix}/components/${slug}`);
       this.setState({
         menuOpen: false
       })
