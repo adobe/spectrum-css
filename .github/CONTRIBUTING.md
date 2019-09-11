@@ -47,16 +47,22 @@ git push -u origin my-awesome-new-feature
 git remote add upstream git@github.com:adobe/spectrum-css.git
 ```
 
-Install dependencies (`npm ci` won't work unless you're inside the Adobe network):
+Install [yarn](https://yarnpkg.com/en/docs/install#mac-stable):
 
 ```
-npm install
+brew install yarn || curl -o- -L https://yarnpkg.com/install.sh | bash
 ```
 
 Make sure the [gulp-cli](https://github.com/gulpjs/gulp-cli) is installed globally:
 
 ```
 npm install -g gulp-cli
+```
+
+Install dependencies:
+
+```
+yarn install
 ```
 
 Build the project, open a livereloading browser window, and watch for changes:

@@ -42,6 +42,7 @@ async function analyzeComponents(bundlePackage, lastTag) {
 
   for (let [depName, requiredDepVersion] of Object.entries(bundlePackage.devDependencies)) {
     if (depName.startsWith('@spectrum-css/')) {
+      // Don't require.resolve here, we want to check what's actually in the repo
       let depPath = path.join('..', '..', 'components', depName.replace('@spectrum-css/', ''));
 
       let depPackage = await getPackage(depPath);
@@ -85,29 +86,38 @@ function findUpdates() {
     });
 }
 
-function updateDeps() {
-  return findUpdates()
+async function updateDep(dependency) {
+  let pkg = await getPackage();
+  pkg.devDependencies[dependency.name] = dependency.version;
+  return fsp.writeFile('package.json', JSON.stringify(pkg, null, 2));
+}
+
+async function updateDeps() {
+  let tasks = await findUpdates()
     .then(changedDependencies => {
-      let promises = [];
+      let tasks = [];
       for (let dependency of changedDependencies.filter(Boolean)) {
-        let message = `${dependency.type}: update ${dependency.name} to ${dependency.version}`;
+        // Update each dep, and create one commit per update
+        let task = () => {
+          let message = `${dependency.type}: update ${dependency.name} to ${dependency.version}`;
+          return updateDep(dependency)
+            .then(() => {
+              return exec.promise(`git commit package.json -m "${message}"`);
+            });
+        };
 
-        let promise = exec.promise(`rm -rf package-lock.json`)
-          .then(() => {
-            return exec.promise(`npm install --save-dev ${dependency.name}@${dependency.version}`);
-          })
-          .then(() => {
-            return exec.promise(`rm -rf package-lock.json`);
-          })
-          .then(() => {
-            return exec.promise(`git commit package.json -m "${message}"`);
-          });
-
-        promises.push(promise);
+        tasks.push(task);
       }
-
-      return Promise.all(promises);
+      return tasks;
     });
+
+  function runTask() {
+    if (tasks.length) {
+      tasks.shift()().then(runTask );
+    }
+  }
+
+  runTask();
 }
 
 module.exports = updateDeps;

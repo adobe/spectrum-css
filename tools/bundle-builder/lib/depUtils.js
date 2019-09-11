@@ -75,7 +75,7 @@ async function solveDependencies(packages) {
 async function getPackageDependencyOrder(packageDir) {
   let { name, dependencies } = await getDependencies(packageDir);
 
-  return solveDependencies(dependencies.map((dep) => `${packageDir}/node_modules/${dep}`));
+  return solveDependencies(dependencies.map((dep) => path.join(path.dirname(require.resolve(dep)), '..')));
 }
 
 /*

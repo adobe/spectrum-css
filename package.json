@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "bootstrap": "npx lerna bootstrap --hoist",
     "build": "gulp -LL",
     "dev": "gulp dev",
     "clean": "gulp clean",
@@ -11,7 +10,6 @@
     "ci-all": "npm run build",
     "release": "npx lerna publish",
     "version": "gulp version",
-    "postinstall": "npm run bootstrap",
     "prepare": "gulp prepare",
     "postpublish": "npx lerna run publishpages --concurrency=1"
   },
@@ -29,6 +27,7 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
@@ -48,6 +47,10 @@
     "@spectrum/spectrum-dna": "^5.15.0",
     "@spectrum/spectrum-icons": "^2.3.0"
   },
+  "workspaces": [
+    "components/*",
+    "tools/*"
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
