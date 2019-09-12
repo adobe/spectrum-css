@@ -107,7 +107,7 @@ async function updateDeps() {
       type = update.releaseType;
     }
     updateDep(pkg, update);
-    let messageString = ` - ${update.type}: update ${update.name} from ${update.oldVersion} to ${update.version}\n`;
+    let messageString = `${update.releaseType === 'major' ? 'BREAKING CHANGE' : update.type}: update ${update.name} from ${update.oldVersion} to ${update.version}\n`;
 
     if (update.releaseType === 'major') {
       breaking += messageString;
