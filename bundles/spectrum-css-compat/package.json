@@ -6,7 +6,8 @@
     "build": "gulp build",
     "prepack": "gulp prePack",
     "postpublish": "gulp postPublish",
-    "publishpages": "gulp ghPages"
+    "publishpages": "gulp ghPages",
+    "release": "gulp updateDeps && yarn install && gulp build && npm publish && gulp ghPages"
   },
   "repository": {
     "type": "git",
