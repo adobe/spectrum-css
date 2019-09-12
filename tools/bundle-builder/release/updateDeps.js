@@ -74,6 +74,10 @@ function updateDep(pkg, update) {
   pkg.devDependencies[update.name] = `^${update.version}`;
 }
 
+function isPrerelease(version) {
+  return version.match(/-(alpha)|(beta)/);
+}
+
 let typePriority = {
   'patch': 0,
   'minor': 1,
@@ -92,7 +96,12 @@ async function updateDeps() {
   let type = 'patch';
   let message = '';
   let breaking = '';
+  let hasPreDeps = false;
   for (let update of updates) {
+    if (isPrerelease(update.version)) {
+      hasPreDeps = true;
+    }
+
     // Release commit should have the type of the most impactful change
     if (typePriority[update.releaseType] > typePriority[type]) {
       type = update.releaseType;
@@ -108,14 +117,22 @@ async function updateDeps() {
     }
   }
 
-  // Increment the version of the package
-  let increment = type;
-
-  if (pkg.version.match(/-(alpha)|(beta)/)) {
-    increment = 'prerelease';
+  if (isPrerelease(pkg.version) && !hasPreDeps) {
+    let newVersion = `${semver.major(pkg.version)}.${semver.minor(pkg.version)}.${semver.patch(pkg.version)}`;
+    console.log(`Current release ${pkg.version} is a pre-release, but all components are proper! Bumping to ${newVersion}...`);
+    pkg.version = newVersion;
   }
+  else {
+    // Increment the version of the package
+    let increment = type;
 
-  pkg.version = semver.inc(pkg.version, increment);
+    // Do a pre-release if the existing release is a pre-release
+    if (isPrerelease(pkg.version) && hasPreDeps) {
+      increment = 'prerelease';
+    }
+
+    pkg.version = semver.inc(pkg.version, increment);
+  }
 
   message = `chore(release): release ${pkg.name}@${pkg.version}\n\n${breaking}${message}`;
 
