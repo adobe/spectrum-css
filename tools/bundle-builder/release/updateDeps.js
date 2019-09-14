@@ -3,6 +3,7 @@ const path = require('path');
 const fsp = require('fs').promises;
 const gulp = require('gulp');
 const exec = require('../lib/exec');
+const conventionalChangelog = require('gulp-conventional-changelog');
 
 async function readPackage(dir) {
   return JSON.parse(await fsp.readFile(path.join(dir || '' , 'package.json')));
@@ -84,6 +85,59 @@ let typePriority = {
   'major': 2
 };
 
+function generateChangelog() {
+  return new Promise(async (resolve, reject) => {
+    let pkg = await readPackage();
+
+    gulp.src('CHANGELOG.md', { allowEmpty: true })
+      .pipe(conventionalChangelog({
+        preset: 'spectrum',
+        lernaPackage: '@adobe/spectrum-css',
+        transform: function (commit, cb, stream) {
+          // Break release commits into their requisite features
+          if (commit.type === 'chore' && commit.scope === 'release') {
+            let commits = commit.body.split('\n');
+            commits.map(string => {
+              let [type, header] = string.split(': ');
+              let subject = header;
+
+              // Replace version numbers with changelogs
+              subject = subject.replace(/^update (.*?) from (.*?) to (.*?)$/, (match, package, from, to) => {
+                let componentName = package.replace('@spectrum-css/', '');
+                return `update [${package}](/components/${componentName}) from [${from}](/components/${componentName}/CHANGELOG.md#${from}) to [${to}](/components/${componentName}/CHANGELOG.md#${to})`;
+              });
+
+              return Object.assign({}, commit, {
+                type: type,
+                scope: null,
+                subject: null,
+                header: subject,
+                body: subject
+              });
+            }).forEach((subCommit) => {
+              // Each new commit we broke out should get pushed onto the stream
+              this.push(subCommit);
+            });
+          }
+          cb(null);
+        }
+      }, {
+        // context goes here
+        docsLink: `http://opensource.adobe.com/spectrum-css/${pkg.version}`
+      }, {
+        // git-raw-commits options go here
+        path: process.cwd()
+      }, {
+        // conventional-commits-parser options go here
+      }, {
+        // conventional-changelog-writer options go here
+      }))
+      .pipe(gulp.dest('./'))
+      .on('finish', resolve)
+      .on('error', reject);
+  });
+}
+
 async function updateDeps() {
   let pkg = await readPackage();
   let updates = (await analyzeComponents(pkg)).filter(Boolean);
@@ -138,8 +192,11 @@ async function updateDeps() {
 
   await writePackage(pkg);
 
+  await generateChangelog(pkg);
+
   await exec.promise(`git commit package.json -m "${message}"`);
   await exec.promise(`git tag "${pkg.name}@${pkg.version}"`);
 }
 
-module.exports = updateDeps;
+exports.generateChangelog = generateChangelog;
+exports.updateDeps = updateDeps;
