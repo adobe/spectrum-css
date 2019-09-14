@@ -22,7 +22,6 @@ const docs = require('./docs');
 const dev = require('./dev');
 const subrunner = require('./subrunner');
 const release = require('./release');
-const conventionalChangelog = require('gulp-conventional-changelog');
 
 function clean() {
   let globs = [
@@ -35,14 +34,6 @@ function clean() {
   }
 
   return del(globs);
-}
-
-function generateChangelog () {
-  return gulp.src('CHANGELOG.md')
-    .pipe(conventionalChangelog({
-      preset: 'angular'
-    }))
-    .pipe(gulp.dest('./'));
 }
 
 // Combined
@@ -206,13 +197,11 @@ exports.devHeavy = gulp.series(
 
 exports.prePack = gulp.series(
   build,
-  generateChangelog,
   release.releaseBackwardsCompat
 );
 
-exports.updateDeps = require('./release/updateDeps');
-
-exports.generateChangelog = generateChangelog;
+exports.updateDeps = release.updateDeps;
+exports.generateChangelog = release.generateChangelog;
 exports.ghPages = release.ghPages;
 exports.postPublish = release.releaseBackwardsCompatCleanup;
 

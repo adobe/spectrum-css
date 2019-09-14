@@ -1,0 +1,27 @@
+{{#if isPatch~}}
+  ##
+{{~else~}}
+  #
+{{~/if}} {{#if @root.linkCompare~}}
+  <a id="{{version}}" aria-hidden="true">[{{version}}](
+  {{~#if @root.repository~}}
+    {{~#if @root.host}}
+      {{~@root.host}}/
+    {{~/if}}
+    {{~#if @root.owner}}
+      {{~@root.owner}}/
+    {{~/if}}
+    {{~@root.repository}}
+  {{~else}}
+    {{~@root.repoUrl}}
+  {{~/if~}}
+  /compare/{{previousTag}}...{{currentTag}})</a>
+{{~else}}
+  <a id="{{version}}" aria-hidden="true">{{~version}}</a>
+{{~/if}}
+{{~#if title}} "{{title}}"
+{{/if}}
+{{~#if date}}
+
+> {{date}}
+{{~/if}}
