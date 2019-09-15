@@ -2,8 +2,18 @@
   ##
 {{~else~}}
   #
-{{~/if}} {{#if @root.linkCompare~}}
-  <a id="{{version}}" aria-hidden="true">[{{version}}](
+{{~/if}} {{version}} <a id="{{version}}"></a>
+{{~#if title}} "{{title}}"
+{{/if}}
+{{~#if date}}
+
+🗓 {{date}}
+{{~/if}}
+{{#if docsLink}}
+ • 📑 [Documentation]({{docsLink}})
+{{~/if}}
+{{#if @root.linkCompare}}
+ • 📝 [Commits](
   {{~#if @root.repository~}}
     {{~#if @root.host}}
       {{~@root.host}}/
@@ -15,13 +25,5 @@
   {{~else}}
     {{~@root.repoUrl}}
   {{~/if~}}
-  /compare/{{previousTag}}...{{currentTag}})</a>
-{{~else}}
-  <a id="{{version}}" aria-hidden="true">{{~version}}</a>
-{{~/if}}
-{{~#if title}} "{{title}}"
-{{/if}}
-{{~#if date}}
-
-> {{date}}
+  /compare/{{previousTag}}...{{currentTag}})
 {{~/if}}

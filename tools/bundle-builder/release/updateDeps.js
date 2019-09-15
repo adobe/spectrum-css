@@ -92,7 +92,7 @@ function generateChangelog() {
     gulp.src('CHANGELOG.md', { allowEmpty: true })
       .pipe(conventionalChangelog({
         preset: 'spectrum',
-        lernaPackage: '@adobe/spectrum-css',
+        lernaPackage: pkg.name,
         transform: function (commit, cb, stream) {
           // Break release commits into their requisite features
           if (commit.type === 'chore' && commit.scope === 'release') {
@@ -104,7 +104,7 @@ function generateChangelog() {
               // Replace version numbers with changelogs
               subject = subject.replace(/^update (.*?) from (.*?) to (.*?)$/, (match, package, from, to) => {
                 let componentName = package.replace('@spectrum-css/', '');
-                return `update [${package}](/components/${componentName}) from [${from}](/components/${componentName}/CHANGELOG.md#${from}) to [${to}](/components/${componentName}/CHANGELOG.md#${to})`;
+                return `update [${package}](/components/${componentName}) from [${from}](/components/${componentName}/CHANGELOG.md#user-content-${from}) to [${to}](/components/${componentName}/CHANGELOG.md#user-content-${to})`;
               });
 
               return Object.assign({}, commit, {
@@ -192,9 +192,13 @@ async function updateDeps() {
 
   await writePackage(pkg);
 
-  await generateChangelog(pkg);
-
   await exec.promise(`git commit package.json -m "${message}"`);
+
+  await generateChangelog();
+
+  await exec.promise(`git add CHANGELOG.md`);
+  await exec.promise(`git commit --amend --no-edit`);
+
   await exec.promise(`git tag "${pkg.name}@${pkg.version}"`);
 }
 
