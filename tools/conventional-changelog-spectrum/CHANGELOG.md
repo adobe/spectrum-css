@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+##   <a id="1.0.1" aria-hidden="true">1.0.1</a>
+> 2019-09-15<a name="1.0.1" aria-hidden="true"></a>
+
+**Note:** Version bump only for package conventional-changelog-spectrum
+
+
+
+
+
 ## [5.0.3](https://github.com/conventional-changelog/conventional-changelog/compare/conventional-changelog-angular@5.0.2...conventional-changelog-angular@5.0.3) (2019-02-14)
 
 
