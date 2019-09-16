@@ -2,8 +2,9 @@ const semver = require('semver');
 const path = require('path');
 const fsp = require('fs').promises;
 const gulp = require('gulp');
-const exec = require('../lib/exec');
+const logger = require('gulplog');
 const conventionalChangelog = require('gulp-conventional-changelog');
+const exec = require('../lib/exec');
 
 async function readPackage(dir) {
   return JSON.parse(await fsp.readFile(path.join(dir || '' , 'package.json')));
@@ -51,7 +52,7 @@ async function analyzeComponents(bundlePackage) {
             commitType = 'feat';
           }
 
-          console.log(`Updating ${depPackage.name} to ${depPackage.version} due to ${commitType} commit (release type ${releaseType})!`);
+          logger.info(`Updating ${depPackage.name} to ${depPackage.version} due to ${commitType} commit (release type ${releaseType})!`);
 
           updates.push({
             name: depPackage.name,
@@ -63,7 +64,7 @@ async function analyzeComponents(bundlePackage) {
         }
       }
       else {
-        console.error(`Skipping ${depName}: found ${depPackage.version} in monorepo, but bundle requires ${requiredDepVersion}`);
+        logger.warn(`Skipping ${depName}: found ${depPackage.version} in monorepo, but bundle requires ${requiredDepVersion}`);
       }
     }
   }
@@ -88,8 +89,11 @@ let typePriority = {
 function generateChangelog() {
   return new Promise(async (resolve, reject) => {
     let pkg = await readPackage();
+    logger.info(`Generating changelog for ${pkg.name}@${pkg.version}...`);
 
-    gulp.src('CHANGELOG.md', { allowEmpty: true })
+    await exec.promise(`touch CHANGELOG.md`);
+
+    gulp.src('CHANGELOG.md')
       .pipe(conventionalChangelog({
         preset: 'spectrum',
         lernaPackage: pkg.name,
@@ -123,7 +127,7 @@ function generateChangelog() {
         }
       }, {
         // context goes here
-        docsLink: `http://opensource.adobe.com/spectrum-css/${pkg.version}`
+        docsLink: `${pkg.homepage}${pkg.version}/docs/`
       }, {
         // git-raw-commits options go here
         path: process.cwd()
@@ -143,10 +147,15 @@ async function updateDeps() {
   let updates = (await analyzeComponents(pkg)).filter(Boolean);
 
   if (!updates.length) {
-    console.log(`Not updating dependencies for ${pkg.name}, no changes since last release`);
+    logger.warn(`Not updating dependencies for ${pkg.name}, no changes since last release`);
     return;
   }
 
+  let count = {
+    'major': 0,
+    'minor': 0,
+    'patch': 1
+  };
   let type = 'patch';
   let message = '';
   let breaking = '';
@@ -163,6 +172,8 @@ async function updateDeps() {
     updateDep(pkg, update);
     let messageString = `${update.releaseType === 'major' ? 'BREAKING CHANGE' : update.type}: update ${update.name} from ${update.oldVersion} to ${update.version}\n`;
 
+    count[update.releaseType]++;
+
     if (update.releaseType === 'major') {
       breaking += messageString;
     }
@@ -171,9 +182,11 @@ async function updateDeps() {
     }
   }
 
+  logger.info(`Found ${count.patch} fixes, ${count.minor} features, and ${count.major} breaking changes`);
+
   if (isPrerelease(pkg.version) && !hasPreDeps) {
     let newVersion = `${semver.major(pkg.version)}.${semver.minor(pkg.version)}.${semver.patch(pkg.version)}`;
-    console.log(`Current release ${pkg.version} is a pre-release, but all components are proper! Bumping to ${newVersion}...`);
+    logger.info(`Current release ${pkg.version} is a pre-release, but all components are proper! Bumping to ${newVersion}...`);
     pkg.version = newVersion;
   }
   else {
@@ -186,6 +199,7 @@ async function updateDeps() {
     }
 
     pkg.version = semver.inc(pkg.version, increment);
+    logger.info(`Bumping to ${pkg.version} (${increment})...`);
   }
 
   message = `chore(release): release ${pkg.name}@${pkg.version}\n\n${breaking}${message}`;
@@ -200,6 +214,7 @@ async function updateDeps() {
   await exec.promise(`git commit --amend --no-edit`);
 
   await exec.promise(`git tag "${pkg.name}@${pkg.version}"`);
+  logger.info(`Created tag ${pkg.version}...`);
 }
 
 exports.generateChangelog = generateChangelog;
