@@ -98,7 +98,6 @@ let buildStandalone = gulp.series(
 );
 
 function copyPackages() {
-  // todo: require.resolve
   return gulp.src([
     `${dirs.components}/*/dist/**`,
     `!${dirs.components}/*/dist/docs/**`
