@@ -205,6 +205,7 @@ exports.release = gulp.series(
   exec.task('yarnInstall', 'yarn install --frozen-lockfile'),
   build,
   exec.task('npmPublish', 'npm publish'),
+  exec.task('gitPush', 'git push'),
   release.ghPages
 );
 
