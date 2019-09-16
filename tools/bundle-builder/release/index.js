@@ -106,7 +106,8 @@ let ghPages = gulp.series(
   }
 );
 
-Object.assign(exports, require('./updateDeps'));
+const updateDeps = require('./updateDeps');
+Object.assign(exports, updateDeps);
 
 exports.ghPages = ghPages;
 exports.releaseBackwardsCompat = releaseBackwardsCompat;

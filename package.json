@@ -9,9 +9,10 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
+    "release-bundles": "npx lerna run release",
     "version": "gulp version",
     "prepare": "gulp prepare",
-    "postpublish": "npx lerna run publishpages --concurrency=1"
+    "publishpages": "npx lerna run publishpages --concurrency=1"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,6 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",

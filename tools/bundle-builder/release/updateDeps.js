@@ -153,7 +153,7 @@ function generateChangelog() {
   });
 }
 
-async function updateDeps() {
+async function updateAndTagRelease() {
   let pkg = await readPackage();
   let updates = (await analyzeComponents(pkg)).filter(Boolean);
 
@@ -229,4 +229,4 @@ async function updateDeps() {
 }
 
 exports.generateChangelog = generateChangelog;
-exports.updateDeps = updateDeps;
+exports.updateAndTagRelease = updateAndTagRelease;
