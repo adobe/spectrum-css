@@ -22,7 +22,7 @@ function serve() {
   browserSync({
     startPath: 'docs/index.html',
     server: `${dirs.cwd}/dist/`,
-    notify: process.env.BROWSERSYNC_NOTIFY !== 'false'
+    notify: 'false'
   });
 }
 
