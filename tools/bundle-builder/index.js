@@ -16,6 +16,7 @@ const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 
 const depUtils = require('./lib/depUtils');
+const exec = require('./lib/exec');
 const dirs = require('./lib/dirs');
 
 const docs = require('./docs');
@@ -199,7 +200,14 @@ exports.prePack = gulp.series(
   release.releaseBackwardsCompat
 );
 
-exports.updateDeps = release.updateDeps;
+exports.release = gulp.series(
+  release.updateAndTagRelease,
+  exec.task('yarnInstall', 'yarn install --frozen-lockfile'),
+  build,
+  exec.task('npmPublish', 'npm publish'),
+  release.ghPages
+);
+
 exports.generateChangelog = release.generateChangelog;
 exports.ghPages = release.ghPages;
 exports.postPublish = release.releaseBackwardsCompatCleanup;
