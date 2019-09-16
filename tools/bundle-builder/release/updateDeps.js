@@ -119,7 +119,7 @@ function generateChangelog() {
               // Replace version numbers with changelogs
               subject = subject.replace(/^update (.*?) from (.*?) to (.*?)$/, (match, package, from, to) => {
                 let componentName = package.replace('@spectrum-css/', '');
-                return `update [${package}](/components/${componentName}) from [${from}](/components/${componentName}/CHANGELOG.md#user-content-${from}) to [${to}](/components/${componentName}/CHANGELOG.md#user-content-${to})`;
+                return `**${componentName}**: update [${package}](/components/${componentName}) from [${from}](/components/${componentName}/CHANGELOG.md#user-content-${from}) to [${to}](/components/${componentName}/CHANGELOG.md#user-content-${to})`;
               });
 
               return Object.assign({}, commit, {
