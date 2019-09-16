@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - "node"
 install:
-  - yarn --ignore-optional
+  - yarn
 before_script:
-  - npm install -g gulp-cli
+  - yarn global add gulp-cli
 script:
   # This script should be the first that runs to reduce the risk of
   # executing a script from a compromised NPM package.
