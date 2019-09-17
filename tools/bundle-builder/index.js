@@ -30,7 +30,7 @@ function clean() {
   ];
 
   // Don't delete the dist folder inside of installed packages
-  if (dirs.cwd === dirs.topLevel) {
+  if (process.cwd() === dirs.topLevel) {
     globs.push(`${dirs.components}/*/dist/*`);
   }
 
@@ -128,7 +128,7 @@ function buildIfTopLevel() {
     copyPackages
   );
 
-  if (dirs.cwd === dirs.topLevel) {
+  if (process.cwd() === dirs.topLevel) {
     // Run a build for all packages first
     return gulp.series(
       subrunner.buildComponents,
@@ -170,7 +170,7 @@ let buildHeavy = gulp.series(
 );
 
 let devTask;
-if (dirs.cwd === dirs.topLevel) {
+if (process.cwd() === dirs.topLevel) {
   // Build all packages if at the top level
   devTask = gulp.series(
     buildLite,

@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const builder = require('./tools/bundle-builder');
 const site = require('./site/gulpfile.js');
+const subrunner = require('./tools/bundle-builder/subrunner');
+
 Object.assign(exports, builder);
 Object.assign(exports, site);
 
@@ -46,6 +48,16 @@ async function updatePeerDependencies() {
   }));
 };
 
+async function releaseBundles() {
+  let bundlesDir = './bundles';
+
+  let bundles = (await fsp.readdir(bundlesDir, { withFileTypes: true }))
+    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .map((dirent) => path.join(process.cwd(), bundlesDir, dirent.name));
+
+  await subrunner.runTaskOnPackages('release', bundles);
+};
+
 exports.updatePeerDependencies = updatePeerDependencies;
 
 exports.version = gulp.series(
@@ -57,5 +69,7 @@ exports.dev = gulp.series(
   exports.copySiteResources,
   exports.dev
 );
+
+exports.releaseBundles = releaseBundles;
 
 exports.prepare = site.copySiteResources;
