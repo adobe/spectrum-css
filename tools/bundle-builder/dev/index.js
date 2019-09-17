@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const logger = require('gulplog');
 const browserSync = require('browser-sync');
+const path = require('path');
 const dirs = require('../lib/dirs')
 
 const docs = require('../docs');
@@ -21,7 +22,7 @@ const subrunner = require('../subrunner');
 function serve() {
   browserSync({
     startPath: 'docs/index.html',
-    server: `${dirs.cwd}/dist/`
+    server: `${process.cwd()}/dist/`
   });
 }
 
@@ -45,7 +46,7 @@ function watchWithinPackages(glob, task, files) {
     }
 
     let packageName = getPackageFromPath(changedFile);
-    let packageDir = path.join(dirs.components, package);
+    let packageDir = path.join(dirs.components, packageName);
 
     if (typeof task === 'function') {
       task(changedFile, packageName, (err) => {
