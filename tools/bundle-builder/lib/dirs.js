@@ -12,18 +12,17 @@ governing permissions and limitations under the License.
 
 const path = require('path');
 
-exports.cwd = process.cwd();
 exports.builder = path.resolve(__dirname, '..');
 exports.siteResources = path.resolve(__dirname, '..', 'node_modules', '@spectrum-css', 'site');
 exports.topLevel = path.resolve(exports.builder, '..', '..');
-exports.isTopLevel = (exports.cwd === exports.topLevel);
+exports.isTopLevel = (process.cwd() === exports.topLevel);
 exports.site = path.resolve(exports.topLevel, 'site');
 
 if (exports.isTopLevel) {
   exports.components = path.join(exports.topLevel, 'components');
 }
 else {
-  exports.components = path.join(exports.cwd, 'node_modules', '@spectrum-css');
+  exports.components = path.join(process.cwd(), 'node_modules', '@spectrum-css');
 }
 
 exports.resolve = function(component) {

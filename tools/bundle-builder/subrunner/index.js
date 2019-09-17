@@ -24,74 +24,84 @@ function chdir(dir) {
 /*
   Run the specified gulp task for the given package
 */
-function runComponentTask(package, task, callback) {
+function runComponentTask(packageDir, task, callback) {
   // Drop org
-  package = package.split('/').pop();
+  packageName = packageDir.split('/').pop();
 
-  let componentsDir = path.join(dirs.components, package)
-  var gulpfile = path.join(componentsDir, 'gulpfile.js');
+  var gulpfile = path.join(packageDir, 'gulpfile.js');
 
-  chdir(componentsDir);
+  let cwd = process.cwd();
+
+  chdir(packageDir);
 
   var tasks = require(`${gulpfile}`);
 
   if (tasks[task]) {
-    logger.warn(`Starting '${package.yellow}:${task.yellow}'...`);
+    logger.warn(`Starting '${packageName.yellow}:${task.yellow}'...`);
 
     tasks[task](function(err) {
-      chdir(dirs.topLevel);
+      chdir(cwd);
 
       if (err) {
-        logger.error(`Error running '${package.yellow}:${task.yellow}': ${err}`);
+        logger.error(`Error running '${packageName.yellow}:${task.yellow}': ${err}`);
 
         callback(err);
       }
       else {
-        logger.warn(`Finished '${package.yellow}:${task.yellow}'`);
+        logger.warn(`Finished '${packageName.yellow}:${task.yellow}'`);
 
         callback();
       }
     });
   }
   else {
-    var err = new Error(`Task '${package.yellow}:${task.yellow}' not found!`);
+    var err = new Error(`Task '${packageName.yellow}:${task.yellow}' not found!`);
     logger.error(err);
 
-    chdir(dirs.topLevel);
+    chdir(cwd);
 
     callback(err);
   }
 }
 
 /*
-  Build all packages
+  Run a task on every component in dependency order
 */
-function runTaskOnAllComponents(task) {
-  return new Promise(async (resolve, reject) => {
-    let components;
-    try {
-      components = await depUtils.getFolderDependencyOrder(dirs.components);
-    }
-    catch (err) {
-      return reject(err);
-    }
+async function runTaskOnAllComponents(task) {
+  let components;
+  try {
+    components = await depUtils.getFolderDependencyOrder(dirs.components);
+  }
+  catch (err) {
+    return reject(err);
+  }
 
-    let packageCount = components.length;
+  components = components.map(component => path.join(dirs.components, component.split('/').pop()));
+
+  return runTaskOnPackages(task, components);
+}
+
+/*
+  Run a task on every package
+*/
+function runTaskOnPackages(task, packages) {
+  return new Promise(async (resolve, reject) => {
+    let packageCount = packages.length;
 
     function getNextPackage() {
-      return components.shift();
+      return packages.shift();
     }
 
     function processPackage() {
-      var package = getNextPackage();
+      var packageDir = getNextPackage();
 
-      if (package) {
-        runComponentTask(package, task, function(err) {
+      if (packageDir) {
+        runComponentTask(packageDir, task, function(err) {
           processPackage();
         });
       }
       else {
-        logger.warn(`${task} ran on ${packageCount} components!`.bold.green);
+        logger.warn(`${task} ran on ${packageCount} packages!`.bold.green);
         resolve();
       }
     }
@@ -100,6 +110,7 @@ function runTaskOnAllComponents(task) {
     processPackage();
   });
 }
+
 
 /*
   Build all components
@@ -110,4 +121,5 @@ function buildComponents() {
 
 exports.buildComponents = buildComponents;
 exports.runComponentTask = runComponentTask;
+exports.runTaskOnPackages = runTaskOnPackages;
 exports.runTaskOnAllComponents = runTaskOnAllComponents;

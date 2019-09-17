@@ -62,7 +62,7 @@ let stashRequired = false;
 let releaseVersion = null;
 let ghPages = gulp.series(
   async function getVersion(cb) {
-    let pkg = JSON.parse(await fsp.readFile(`${dirs.cwd}/package.json`));
+    let pkg = JSON.parse(await fsp.readFile(`${process.cwd()}/package.json`));
     releaseVersion = pkg.version;
   },
   // Stash changes (package.json is modified by Lerna)
