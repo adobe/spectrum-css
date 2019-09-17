@@ -1,5 +1,5 @@
 ---
-name: "🐛 Bug report"
+name: "🐛Bug report"
 about: Report a problem with Spectrum CSS
 title: ''
 labels: bug

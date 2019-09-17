@@ -1,5 +1,5 @@
 ---
-name: "📚 Documentation issue"
+name: "📚Documentation issue"
 about: Report an issue with the project documentation
 title: ''
 labels: documentation
