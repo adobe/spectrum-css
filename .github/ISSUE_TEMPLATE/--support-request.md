@@ -1,6 +1,6 @@
 ---
-name: "📚Support request"
-about: Questions and requests for support
+name: "📚 Support request"
+about: Ask for help with using Spectrum CSS
 title: ''
 labels: question
 assignees: ''
@@ -8,17 +8,18 @@ assignees: ''
 ---
 
 ## Description
-<!-- Describe the problem you're having -->
+<!-- Describe the problem you're having and paste any error messages you received -->
 
 
 ## Screenshots
-<!-- If applicable, add screenshots to illustrate your request -->
+<!-- If applicable, add screenshots to show what you need help with -->
 
 
 ## Environment
- - Spectrum CSS version: [e.g. 2.13.0]
- - OS: [e.g. iOS, macOS, Windows 10]
- - Browser: [e.g. Chrome  75.0.3770.142 , Safari 12.1.2]
+ - Spectrum CSS version: <!-- 2.13.0 -->
+ - OS: <!-- iOS, macOS, Windows 10 -->
+ - Browser(s): <!-- Chrome 75.0.3770.142, Safari 12.1.2 -->
 
 ## Additional context
-<!-- Add any other context about the problem -->
+<!-- Provide any additional information that might help us understand your request -->
+

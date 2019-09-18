@@ -1,5 +1,5 @@
 ---
-name: "🐛Bug report"
+name: "🐛 Bug report"
 about: Report a problem with Spectrum CSS
 title: ''
 labels: bug
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ## Description
-<!-- A clear and concise description of what the bug is. -->
+<!-- Describe the problem you're having and paste any error messages you received -->
 
 
 ## Steps to reproduce
@@ -19,7 +19,7 @@ assignees: ''
 
 
 ## Expected behavior
-<!-- A clear and concise description of what you expected to happen -->
+<!-- Describe what you expected to happen -->
 
 
 ## Screenshots
@@ -27,10 +27,11 @@ assignees: ''
 
 
 ## Environment
- - Spectrum CSS version: [e.g. 2.13.0]
- - OS: [e.g. iOS, macOS, Windows 10]
- - Browser: [e.g. Chrome  75.0.3770.142 , Safari 12.1.2]
+ - Spectrum CSS version: <!-- 2.13.0 -->
+ - OS: <!-- iOS, macOS, Windows 10 -->
+ - Browser(s): <!-- Chrome 75.0.3770.142, Safari 12.1.2 -->
 
 
 ## Additional context
-<!-- Add any other context about the problem -->
+<!-- Provide any additional information that might help us debug the issue -->
+

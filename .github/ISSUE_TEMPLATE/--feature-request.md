@@ -1,19 +1,20 @@
 ---
-name: "✨Feature request"
-about: Suggest a feature or new component
+name: "✨ Feature request"
+about: Suggest a new feature or component
 title: ''
 labels: enhancement
 assignees: ''
 
 ---
 
-## Describe the feature in detail and any related problems it solves
-<!-- A clear and concise description of what the feature should be and what problems it solves -->
+## Description
+<!-- Describe your suggested feature in detail -->
 
 
-## Describe alternatives or workarounds
-<!-- If there's a workaround or already a way to accomplish your problem, describe it here-->
+## Why do you need this feature or component?
+<!-- Tell us what this solves or why this is important to your use case -->
 
 
 ## Additional context
-<!-- Add any other context or screenshots about the feature request here -->
+<!-- Add any other context, workarounds, or screenshots about your request -->
+
