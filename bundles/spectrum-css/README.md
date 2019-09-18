@@ -13,14 +13,20 @@ If breaking changes are made to any components, this package's major version num
 
 ## Release process
 
-1. Run the release script in the root of the project:
+1. Run the release script in the root of the project to release individual components:
 
 ```
 npm run release
 ```
 
-2. Run the release script in the bundle itself. Version numbers will be updated automatically, the package will be published, and the documentation site will be deployed.
+2. Run the release script. Version numbers will be updated automatically, the package will be published, and the documentation site will be deployed.
 
+To release all bundles:
+```
+npm run release-bundles
+```
+
+To release only this bundle:
 ```
 cd bundles/spectrum-css
 npm run release
@@ -28,9 +34,4 @@ npm run release
 
 ## CLI
 
-The following tasks are available:
-
-* `gulp clean` - Clean everything
-* `gulp build` - Build documentation and copy build output into the `dist/` folder
-* `gulp dev` - Perform a build, start a server, and watch `bundle-builder` for changes
-* `gulp watch` - If a build as already been performed, start a server and watch `bundle-builder` for changes
+See [`bundle-builder` CLI](/tools/bundle-builder#cli).

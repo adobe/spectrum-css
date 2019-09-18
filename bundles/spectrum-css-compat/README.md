@@ -13,19 +13,24 @@ If breaking changes are made to any components included in `package.json`, that 
 
 ## Release process
 
-1. Run the release script in the root of the project:
+1. Run the release script in the root of the project to release individual components:
 
 ```
 npm run release
 ```
 
-2. Run the release script in the bundle itself. Version numbers will be updated automatically, the package will be published, and the documentation site will be deployed.
+2. Run the release script. Version numbers will be updated automatically, the package will be published, and the documentation site will be deployed.
 
+To release all bundles:
 ```
-cd bundles/spectrum-css
+npm run release-bundles
+```
+
+To release only this bundle:
+```
+cd bundles/spectrum-css-compat
 npm run release
 ```
-
 
 ## CLI
 

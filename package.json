@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
-    "release-bundles": "npx lerna run release",
+    "release-bundles": "gulp releaseBundles",
     "version": "gulp version",
     "prepare": "gulp prepare"
   },

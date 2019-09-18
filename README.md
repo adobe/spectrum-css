@@ -191,11 +191,10 @@ Version numbers are automatically determined, changelogs generated, and packages
 
 ### Releasing bundles
 
-Currently, bundles are not released when a top-level `npm run release` is executed. To release a bundle:
+Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
 
 ```
-cd bundles/spectrum-css
-npm run release
+npm run release-bundles
 ```
 
 Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.

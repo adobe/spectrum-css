@@ -8,8 +8,9 @@ Object.assign(exports, site);
 
 const path = require('path');
 const fsp = require('fs').promises;
+const semver = require('semver');
 
-async function updatePeerDependencies() {
+async function checkPeerDependencies() {
   let packagesDir = './components';
 
   async function readPackage(component) {
@@ -32,10 +33,8 @@ async function updatePeerDependencies() {
         let devDepVer = package.devDependencies[dependency];
         let peerDepVer = package.peerDependencies[dependency];
         if (devDepVer) {
-          if (peerDepVer != devDepVer) {
-            package.peerDependencies[dependency] = devDepVer;
-
-            console.log(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, expected ${devDepVer})`);
+          if (!semver.satisfies(peerDepVer, devDepVer)) {
+            throw new Error(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, does not satisfy ${devDepVer})`);
           }
         }
         else {
@@ -58,10 +57,10 @@ async function releaseBundles() {
   await subrunner.runTaskOnPackages('release', bundles);
 };
 
-exports.updatePeerDependencies = updatePeerDependencies;
+exports.checkPeerDependencies = checkPeerDependencies;
 
 exports.version = gulp.series(
-  updatePeerDependencies,
+  checkPeerDependencies,
   builder.build
 );
 
