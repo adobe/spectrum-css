@@ -56,7 +56,7 @@ brew install yarn || curl -o- -L https://yarnpkg.com/install.sh | bash
 Make sure the [gulp-cli](https://github.com/gulpjs/gulp-cli) is installed globally:
 
 ```
-yarn global all gulp-cli
+yarn global add gulp-cli
 ```
 
 Install dependencies:
