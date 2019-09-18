@@ -51,15 +51,19 @@ const [...rest] = process.argv.slice(3); // Exclude 'node', 'backstop' and backs
 rest.forEach(argv => {
   if (argv === '--moby') {
     isDocker = true;
-  } else if (argv.startsWith('--env=')) {
+  }
+  else if (argv.startsWith('--env=')) {
     env = argv.slice('--env='.length);
-  } else if (argv.startsWith('themes=')) {
+  }
+  else if (argv.startsWith('themes=')) {
     themes.clear();
     argv.slice('themes='.length).split(',').forEach(t => themes.add(t));
-  } else if (argv.startsWith('scales=')) {
+  }
+  else if (argv.startsWith('scales=')) {
     scales.clear();
     argv.slice('scales='.length).split(',').forEach(s => scales.add(s));
-  } else if (!argv.startsWith('--')) {
+  }
+  else if (!argv.startsWith('--')) {
     packageNameSet.add(`@spectrum-css/${argv}`);
     packageDependentMap.get(`@spectrum-css/${argv}`).forEach(i => packageNameSet.add(i));
   }
@@ -86,7 +90,7 @@ let testingScenarios = [];
 
 if (packageNameSet.size > 0) {
   scenarioConfigs.forEach(s => {
-    if(packageNameSet.has(s.package)) {
+    if (packageNameSet.has(s.package)) {
       testingScenarios.push(s);
     }
   });
