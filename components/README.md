@@ -39,6 +39,46 @@ cd components/newcomponent
 npm publish --access=public
 ```
 
+### Component dependencies
+
+1. If your component requires another component in order to render, it should be declared in both `devDependencies` and `peerDependencies`.
+    1. The version range included in `peerDependencies` must satisfy the version included in `devDependencies`.
+    1. If a component appears in `peerDependencies`, it must also appear in `devDependencies`.
+    1. This goes for every class used to render the component; even if the class comes from a component that's a dependency of another component you already have a dependency on.
+    1. For instance, if your component requires a button with an icon inside of it, you must explicitly include both `icon` and `button` in both `devDependencies` and `peerDependencies`.
+2. If your component has an example that uses another component, but the component isn't required to render your component, it should be declared in `devDependencies` only.
+    1. For instance, if your component is commonly used with a table and includes an example where it is used with a table, but doesn't require table to render itself, you should declare `table` in `devDependencies` only.
+
+
+For example, `actionbar` gets its tokens from `vars`, and requires `button`, `checkbox`, `icon`, and `popover` to render, but also has an example where the component is used with a `table`. Its dependencies should be declared as follows:
+
+```json
+{
+  "name": "@spectrum-css/actionbar",
+  "peerDependencies": {
+    "@spectrum-css/button": "^2.0.0",
+    "@spectrum-css/checkbox": "^2.0.0",
+    "@spectrum-css/icon": "^2.0.0",
+    "@spectrum-css/popover": "^2.0.0",
+    "@spectrum-css/vars": "^2.0.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/button": "^2.0.0",
+    "@spectrum-css/checkbox": "^2.0.0",
+    "@spectrum-css/component-builder": "^1.0.0",
+    "@spectrum-css/icon": "^2.0.0",
+    "@spectrum-css/popover": "^2.0.0",
+    "@spectrum-css/table": "^2.0.0",
+    "@spectrum-css/vars": "^2.0.0"
+  }
+}
+```
+
+The release will error out if:
+
+1. A package is specified in `peerDependencies` that does not appear in `devDependencies`
+2. The version of a package is specified in `devDependencies` satisfy the range defined for that package in `peerDependencies`
+
 ### Releasing components
 
 Any change to a component or a component's dependencies results in a release of that component and all associated bundles. Component releases cannot be done ala carte and must be done from the top-level, managed by lerna.
