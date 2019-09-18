@@ -13,7 +13,7 @@ Each component has the following files:
 * `docs.yml` - The markup examples and documentation for the component, appearing as a single entry in the site navigation
 * `docs/*.yml` - Additional examples that appear separately in the site navigation
 
-See [documentation generation](tools/bundle-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
+See [documentation generation](/tools/bundle-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
 
 ### Editing an existing component
 
