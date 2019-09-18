@@ -11,8 +11,7 @@
     "release": "npx lerna publish",
     "release-bundles": "npx lerna run release",
     "version": "gulp version",
-    "prepare": "gulp prepare",
-    "publishpages": "npx lerna run publishpages --concurrency=1"
+    "prepare": "gulp prepare"
   },
   "repository": {
     "type": "git",

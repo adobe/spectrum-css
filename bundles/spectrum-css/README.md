@@ -1,4 +1,4 @@
-# @adobe/spectrum-css@latest
+# @spectrum-css/spectrum-css@latest
 > Bundle package
 
 This package builds a bundle package containing the latest versions of all Spectrum CSS components.
@@ -13,21 +13,18 @@ If breaking changes are made to any components, this package's major version num
 
 ## Release process
 
-1. Add any newly created components to `package.json` with the version of `*`.
-
-2. Run the bootstrap script in the root of the project:
-
-```
-npm run bootstrap
-```
-
-3. Run the release script in the root of the project:
+1. Run the release script in the root of the project:
 
 ```
 npm run release
 ```
 
-4. Choose the appropriate version for each package according to semver. The rest of the release process will happen automatically, with github pages and npm packages being published accordingly.
+2. Run the release script in the bundle itself. Version numbers will be updated automatically, the package will be published, and the documentation site will be deployed.
+
+```
+cd bundles/spectrum-css
+npm run release
+```
 
 ## CLI
 
