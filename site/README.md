@@ -30,7 +30,7 @@ site/
 
 ## Architecture
 
-The site build process generates separate `.html` files for each of the `*.pug` files in the `site/` folder, as well as `.html` pages for each of the component examples within each package (`docs.yml` and `docs/*.yml`). The navigation on the left is generated from the list of examples + the hardcoded pages in the menu, and is injected at build time. All of the generated `.html` files are standalone documents with the same navigation and common dependencies, with component example pages adding only the additional dependencies that are required to render its examples.
+The site build process generates separate `.html` files for each of the `*.pug` files in the `site/` folder, as well as `.html` pages for each of the component examples within each package (`metadata.yml` and `metadata/*.yml`). The navigation on the left is generated from the list of examples + the hardcoded pages in the menu, and is injected at build time. All of the generated `.html` files are standalone documents with the same navigation and common dependencies, with component example pages adding only the additional dependencies that are required to render its examples.
 
 When clicking an item in the nav or using the browser history, instead of simply navigating to the new page, the page is requested with `XMLHTTPRequest`, parsed, and the content is extracted and injected. Additionally, the dependencies included on the page (any `link` tag with the `data-dependecy="$NAME"`) are diffed with the existing dependencies on the page, and the new dependencies are asynchronously loaded before the page content so as to prevent FOUC (flash of unstyled content). Finally, the corresponding item in the side nav is selected.
 

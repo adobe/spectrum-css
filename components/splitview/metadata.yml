@@ -1,0 +1,70 @@
+name: SplitView
+examples:
+  - id: splitview
+    name: Horizontal
+    markup: |
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+        <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
+        <div class="spectrum-SplitView-splitter"></div>
+        <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+      </div>
+  - id: splitview-horizontal
+    name: Horizontally resizable
+    markup: |
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+        <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
+        <div class="spectrum-SplitView-splitter is-draggable">
+          <div class="spectrum-SplitView-gripper"></div>
+        </div>
+        <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+      </div>
+  - id: splitview-left
+    name: Horizontal collapsed left
+    markup: |
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+        <div class="spectrum-SplitView-pane" style="width: 0">Left</div>
+        <div class="spectrum-SplitView-splitter is-draggable is-collapsed-start">
+          <div class="spectrum-SplitView-gripper"></div>
+        </div>
+        <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+      </div>
+  - id: splitview-right
+    name: Horizontal collapsed right
+    markup: |
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+        <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>
+        <div class="spectrum-SplitView-splitter is-draggable is-collapsed-end">
+          <div class="spectrum-SplitView-gripper"></div>
+        </div>
+        <div class="spectrum-SplitView-pane" style="width: 0">Right</div>
+      </div>
+  - id: splitview-vertical
+    name: Vertically resizable
+    markup: |
+      <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+        <div class="spectrum-SplitView-pane" style="height: 50px">Left</div>
+        <div class="spectrum-SplitView-splitter is-draggable">
+          <div class="spectrum-SplitView-gripper"></div>
+        </div>
+        <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+      </div>
+  - id: splitview-vertical-top
+    name: Vertical collapsed top
+    markup: |
+      <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+        <div class="spectrum-SplitView-pane" style="height: 0">Left</div>
+        <div class="spectrum-SplitView-splitter is-draggable is-collapsed-start">
+          <div class="spectrum-SplitView-gripper"></div>
+        </div>
+        <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+      </div>
+  - id: splitview-vertical-bottom
+    name: Vertical collapsed bottom
+    markup: |
+      <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+        <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>
+        <div class="spectrum-SplitView-splitter is-draggable is-collapsed-end">
+          <div class="spectrum-SplitView-gripper"></div>
+        </div>
+        <div class="spectrum-SplitView-pane" style="height: 0">Right</div>
+      </div>
