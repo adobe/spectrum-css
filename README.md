@@ -173,7 +173,7 @@ The reference bitmaps are hosted in a adobe internal repo and published as [@spe
 
 ### Start dev server with Browsersync notification turnoff
 
-`BROWSERSYNC_NOTIFY=false gulp dev`
+`gulp dev`
 
 ### Testing CLI targets
 

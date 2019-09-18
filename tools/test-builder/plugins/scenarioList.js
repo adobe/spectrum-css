@@ -48,7 +48,7 @@ module.exports = () => {
       .sort(sortByLabel);
 
     const combinedScenarioList = scenarios.reduce((acc, current) => {
-      if(!acc.find(i => current.label === i.label)) {
+      if (!acc.find(i => current.label === i.label)) {
         acc.push(current);
       }
       return acc;

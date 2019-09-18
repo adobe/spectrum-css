@@ -68,14 +68,16 @@ rest.forEach(argv => {
 // Identify the runtime environment and setup hostname, etc
 if (isDocker === true) {
   host = (env === 'local' ? LOCALHOST_MAC : LOCALHOST_LINUX);
-} else {
+}
+else {
   host = LOCALHOST_LINUX;
 }
 
 if (env === 'local') {
   report = 'browser';
   captureLimit = 5;
-} else {
+}
+else {
   report = 'CI';
 }
 
@@ -89,7 +91,8 @@ if (packageNameSet.size > 0) {
     }
   });
   testingScenarios = testingScenarios.filter(i => !(excludedScenarios.has(i.package) || excludedScenarios.has(i.label)));
-} else {
+}
+else {
   testingScenarios = scenarioConfigs.filter(i => !(excludedScenarios.has(i.package) || excludedScenarios.has(i.label)));
 }
 
