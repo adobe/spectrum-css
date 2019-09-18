@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ## Description
-<!-- What do you need help with? -->
+<!-- Describe the problem you're having -->
 
 
 ## Screenshots

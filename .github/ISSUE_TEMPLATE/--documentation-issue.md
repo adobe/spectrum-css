@@ -8,11 +8,11 @@ assignees: ''
 ---
 
 ## Description
-<!-- What's missing? What's unclear? What's incorrect? -->
+<!-- Describe what's missing, unclear, or incorrect? -->
 
 
 ## Link to documentation
-<!-- Provide a link to the documentation in which the issue exists -->
+<!-- Provide a link to the document in which the issue exists -->
 
 
 ## Additional context
