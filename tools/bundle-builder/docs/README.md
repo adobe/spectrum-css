@@ -25,9 +25,9 @@ Documentation is built by parsing `.yml` files within component packages that co
 
 The dependencies for the component's documentation page are determined by parsing the `package.json` and building a dependency graph which is then topologically sorted using [`dependency-solver`](https://www.npmjs.com/package/dependency-solver). This means that all dependencies and dependencies of dependencies will be included in the documentation pages for the component automatically.
 
-Within each component package, the `docs.yml` file contains all of the examples that should appear on the main page for a given component. These examples will be printed one after another on the page for that component.
+Within each component package, the `metadata.yml` file contains all of the examples that should appear on the main page for a given component. These examples will be printed one after another on the page for that component.
 
-Additional examples that should appear in the navigation independent of the main component page can be added as `docs/*.yml`. These are treated as a separate documentation page completely, but they share the same dependencies as the main page.
+Additional examples that should appear in the navigation independent of the main component page can be added as `metadata/*.yml`. These are treated as a separate documentation page completely, but they share the same dependencies as the main page.
 
 See the [site documentation](../site/README.md) for details on dependency lazy-loading when navigating.
 
@@ -38,7 +38,7 @@ See the [site documentation](../site/README.md) for details on dependency lazy-l
 ## Editing documentation
 
 1. Run `gulp dev` at the top level of the project.
-2. Edit the `docs.yml` and `docs/*.yml` files within each component package and the site will live reload with your changes.
+2. Edit the `metadata.yml` and `metadata/*.yml` files within each component package and the site will live reload with your changes.
 
 ## Adding a one-off example page
 

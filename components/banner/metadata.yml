@@ -1,0 +1,33 @@
+name: Banner
+examples:
+  - id: banner-error
+    name: Error
+    markup: |
+      <div class="spectrum-Banner spectrum-Banner--error">
+        <div class="spectrum-Banner-header">Purchase Soon</div>
+        <div class="spectrum-Banner-content">Trial expires in 2 days</div>
+      </div>
+  - id: banner-info
+    name: Info
+    markup: |
+      <div class="spectrum-Banner spectrum-Banner--info">
+        <div class="spectrum-Banner-header">Most Popular</div>
+        <div class="spectrum-Banner-content">Includes Illustrator CC</div>
+      </div>
+  - id: banner-warning
+    name: Warning
+    markup: |
+      <div class="spectrum-Banner spectrum-Banner--warning">
+        <div class="spectrum-Banner-header">Purchase Soon</div>
+        <div class="spectrum-Banner-content">Your trial is about to expire</div>
+      </div>
+  - id: banner-corner
+    name: Corner Placement
+    description: The Spectrum banner 'corner placement'
+    markup: |
+      <div style="width: 255px; height: 325px; background-color: #ccc; position: relative;">
+        <div class="spectrum-Banner spectrum-Banner--info spectrum-Banner--corner">
+          <div class="spectrum-Banner-header">Most Popular</div>
+          <div class="spectrum-Banner-content">Includes Illustrator CC</div>
+        </div>
+      </div>

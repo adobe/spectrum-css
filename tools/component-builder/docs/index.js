@@ -67,8 +67,8 @@ function buildDocs_html() {
 
     gulp.src(
       [
-        'docs.yml',
-        'docs/*.yml'
+        'metadata.yml',
+        'metadata/*.yml'
       ], {
         allowEmpty: true
       }
