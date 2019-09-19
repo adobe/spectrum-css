@@ -3,6 +3,8 @@ node_js:
   - "node"
 services:
   - docker
+before_install:
+  - npm install -g yarn
 install:
   - yarn
 before_script:
