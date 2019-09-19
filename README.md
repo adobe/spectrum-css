@@ -162,18 +162,37 @@ The following tasks are available:
 
 ## Testing
 
-To perform manual testing of the latest version of each component:
+Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). In order to avoid browser rendering inconsistent issue on different environments, the test needs to run inside of docker container.
 
-```
-gulp dev
-```
+### Setup docker
 
-To perform manual testing of the backwards-compatible bundle package:
+Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64)
 
-```
-cd bundles/spectrum-css-compat
-gulp dev
-```
+### Backstop reference bitmap
+
+The reference bitmaps are hosted in a adobe internal repo and published as [@spectrum-css/spectrum-css-vr-test-asset](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-asset). All the reference bitmaps are generated within docker instance. If you want to run test with native environment, you have to regenerate the reference yourself.
+
+### Start dev server with Browsersync notification turnoff
+
+`gulp dev`
+
+### Testing CLI targets
+
+The following npm scripts are available for testing:
+
+- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes) 
+- `npm run backstop:test` - Run test in your local native environment
+- `npm run backstop:clean` - Clean up all the testing reports and test images
+- `npm run backstop:docker:test` - Run test in your local docker container
+- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
+- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
+
+Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
+
+- `npm run backstop:docker:test` - Run test for all the components with color stop as `light` and scale as `medium`.
+- `npm run backstop:docker:test button` - Run test for `button` and its dependents components like action bar, toast etc with color stop as `light` and scale as `medium`.
+- `npm run backstop:docker:test themes=lightest,light scales=medium,large radio` - Run test for `radio` and its dependents components with color stop as `lightest` and `light` and scale as `medium` and `large`. It means that a single scenario will run 4 times.
+- `npm run backstop:docker:test themes=lightest,light,dark,darkest scales=medium,large` - Run test for all the components with all the color and scale combinations. It means that a single scenario will be run 8 times.
 
 ## Releasing
 
