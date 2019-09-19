@@ -1,0 +1,12 @@
+const colorGlobals = require('../colorGlobals.js');
+const dimensionGlobals = require('../dimensionGlobals.js');
+const large = require('../large.js');
+const staticAliases = require('../staticAliases.js');
+const darkest = require('../darkest.js');
+exports["text-color"] = colorGlobals["static-white"];
+exports["border-radius"] = dimensionGlobals["size-100"];
+exports["padding-y"] = dimensionGlobals["size-50"];
+exports["padding-x"] = dimensionGlobals["size-100"];
+exports["text-size"] = large["font-size-75"];
+exports["text-line-height"] = staticAliases["heading-text-line-height"];
+exports["background-color"] = darkest["colorSemantics"]["notice-color-default"];

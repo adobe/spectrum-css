@@ -1,0 +1,14 @@
+const colorGlobals = require('../colorGlobals.js');
+const darkest = require('../darkest.js');
+const large = require('../large.js');
+const animationGlobals = require('../animationGlobals.js');
+exports["text-color"] = colorGlobals["static-white"];
+exports["track-color"] = darkest["track-color-over-background"];
+exports["track-fill-color"] = colorGlobals["static-white"];
+exports["track-color-disabled"] = darkest["track-color-over-background"];
+exports["track-fill-color-disabled"] = darkest["background-color-transparent"];
+exports["height"] = large["size-200"];
+exports["width"] = large["size-200"];
+exports["border-size"] = "3px";
+exports["spin-animation-duration"] = animationGlobals["duration-2000"];
+exports["spin-animation-ease"] = animationGlobals["ease-in-out"];

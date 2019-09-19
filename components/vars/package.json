@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "main": "js/index.js",
   "scripts": {
-    "update": "node ./tasks/update.js"
+    "update": "gulp update"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   "devDependencies": {
     "del": "^5.0.0",
     "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-replace": "^1.0.0",
     "gulplog": "^1.0.0",
     "postcss": "^5.2.18",

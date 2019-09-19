@@ -23,8 +23,6 @@ The package exports a tree-shakable object containing all DNA variables.
   lightest: { ... }
   medium: { ... }
   metadata: { ... }
-  middark: { ... }
-  midlight: { ... }
 }
 ```
 

@@ -1,0 +1,17 @@
+exports["duration-0"] = "0ms";
+exports["duration-100"] = "130ms";
+exports["duration-200"] = "160ms";
+exports["duration-300"] = "190ms";
+exports["duration-400"] = "220ms";
+exports["duration-500"] = "250ms";
+exports["duration-600"] = "300ms";
+exports["duration-700"] = "350ms";
+exports["duration-800"] = "400ms";
+exports["duration-900"] = "450ms";
+exports["duration-1000"] = "500ms";
+exports["duration-2000"] = "1000ms";
+exports["duration-4000"] = "2000ms";
+exports["ease-in-out"] = "(.45, 0, .40, 1)";
+exports["ease-in"] = "(.50, 0, 1, 1)";
+exports["ease-out"] = "(0, 0, 0.40, 1)";
+exports["linear"] = "(0, 0, 1, 1)";

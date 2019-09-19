@@ -1,0 +1,15 @@
+const darkest = require('../darkest.js');
+const staticAliases = require('../staticAliases.js');
+const fontGlobals = require('../fontGlobals.js');
+const large = require('../large.js');
+exports["text-color"] = darkest["text-color"];
+exports["text-font-family"] = staticAliases["font-family-zh"];
+exports["text-font-style"] = fontGlobals["style-regular"];
+exports["text-font-weight"] = staticAliases["han-detail-text-font-weight-strong"];
+exports["text-line-height"] = staticAliases["body-han-text-line-height"];
+exports["text-letter-spacing"] = fontGlobals["letter-spacing-han"];
+exports["text-transform"] = "none";
+exports["margin-top"] = "0px";
+exports["margin-bottom-multiplier"] = staticAliases["body-margin-bottom"];
+exports["text-size"] = large["font-size-50"];
+exports["margin-bottom"] = large["size-100"];

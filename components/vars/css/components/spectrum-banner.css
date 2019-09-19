@@ -1,0 +1,11 @@
+:root {
+  --spectrum-banner-text-color: var(--spectrum-global-color-static-white);
+  --spectrum-banner-border-radius: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-banner-padding-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-banner-padding-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-banner-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-banner-text-line-height: var(--spectrum-alias-heading-text-line-height);
+  --spectrum-banner-error-background-color: var(--spectrum-semantic-negative-color-default);
+  --spectrum-banner-info-background-color: var(--spectrum-semantic-informative-color-default);
+  --spectrum-banner-warning-background-color: var(--spectrum-semantic-notice-color-default);
+}

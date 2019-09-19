@@ -1,0 +1,17 @@
+const darkest = require('../darkest.js');
+const colorGlobals = require('../colorGlobals.js');
+const large = require('../large.js');
+exports["page-button-background-color-hover"] = darkest["background-color-hover-overlay"];
+exports["page-button-border-color-key-focus"] = darkest["focus-color"];
+exports["page-button-background-color-down"] = darkest["gray-800"];
+exports["page-button-text-color-down"] = colorGlobals["static-white"];
+exports["textfield-width"] = large["size-600"];
+exports["counter-height"] = large["size-400"];
+exports["counter-margin-left"] = large["size-65"];
+exports["direction-button-text-size"] = large["pill-button-text-size"];
+exports["page-button-width"] = large["size-400"];
+exports["page-button-line-height"] = "32px";
+exports["page-button-margin-horizontal"] = large["size-65"];
+exports["page-button-border-size"] = large["size-25"];
+exports["icon-width"] = large["size-75"];
+exports["icon-height"] = large["size-125"];

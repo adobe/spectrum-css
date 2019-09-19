@@ -1,0 +1,14 @@
+const darkest = require('../darkest.js');
+const large = require('../large.js');
+exports["bar-color"] = darkest["gray-400"];
+exports["track-color"] = darkest["gray-200"];
+exports["bar-color-hover"] = darkest["gray-600"];
+exports["track-color-hover"] = darkest["background-color-transparent"];
+exports["bar-color-down"] = darkest["gray-600"];
+exports["track-color-down"] = darkest["background-color-transparent"];
+exports["bar-width"] = large["size-50"];
+exports["bar-border-radius"] = large["border-radius-small"];
+exports["track-width"] = large["size-50"];
+exports["track-border-radius"] = large["border-radius-small"];
+exports["bar-color-quiet"] = darkest["gray-400"];
+exports["track-color-quiet"] = darkest["background-color-transparent"];

@@ -1,0 +1,15 @@
+const darkest = require('../darkest.js');
+const dimensionGlobals = require('../dimensionGlobals.js');
+const large = require('../large.js');
+const fontGlobals = require('../fontGlobals.js');
+exports["border-color"] = darkest["appframe-border-color"];
+exports["background-color"] = darkest["gray-100"];
+exports["header-text-color"] = darkest["gray-800"];
+exports["border-size"] = dimensionGlobals["size-10"];
+exports["padding-x"] = large["size-300"];
+exports["padding-y"] = "0";
+exports["header-gap-x"] = large["size-150"];
+exports["header-height"] = large["size-600"];
+exports["header-text-size"] = large["font-size-100"];
+exports["header-text-font-weight"] = fontGlobals["weight-bold"];
+exports["content-padding-bottom"] = large["size-300"];

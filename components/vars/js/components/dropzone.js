@@ -1,0 +1,14 @@
+const darkest = require('../darkest.js');
+const large = require('../large.js');
+const staticAliases = require('../staticAliases.js');
+exports["border-color"] = darkest["gray-300"];
+exports["background-color"] = darkest["gray-100"];
+exports["icon-color"] = darkest["gray-500"];
+exports["border-color-selected-hover"] = darkest["blue-400"];
+exports["background-color-selected-hover"] = darkest["highlight-selected"];
+exports["icon-color-selected-hover"] = darkest["blue-500"];
+exports["padding"] = large["size-900"];
+exports["border-width"] = staticAliases["border-size-thick"];
+exports["border-radius"] = large["border-radius-regular"];
+exports["content-text-size"] = large["font-size-default"];
+exports["icon-margin-y"] = large["size-175"];

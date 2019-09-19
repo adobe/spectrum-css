@@ -1,0 +1,16 @@
+const darkest = require('../darkest.js');
+const large = require('../large.js');
+exports["text-color"] = darkest["text-color"];
+exports["track-color"] = darkest["track-color-default"];
+exports["track-fill-color"] = darkest["blue-500"];
+exports["track-color-positive"] = darkest["colorSemantics"]["positive-color-status"];
+exports["track-color-warning"] = darkest["colorSemantics"]["notice-color-status"];
+exports["track-color-critical"] = darkest["colorSemantics"]["negative-color-status"];
+exports["track-color-disabled"] = darkest["track-color-disabled"];
+exports["track-fill-color-disabled"] = darkest["track-color-disabled"];
+exports["width"] = large["size-2400"];
+exports["label-gap-x"] = large["size-150"];
+exports["height"] = large["size-50"];
+exports["border-radius"] = "3px";
+exports["fill-border-radius"] = "0";
+exports["label-gap-y"] = large["size-115"];

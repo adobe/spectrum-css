@@ -1034,19 +1034,6 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/spectrum-css-vr-test-asset/-/spectrum-css-vr-test-asset-1.0.1.tgz#2fa50af33b22fd7c846d37f970c6e3bf919b5d49"
   integrity sha512-2hUxoaztyjuKj4sjRmHhzv0JjzEVV2my0+UKYd05OQt3Gvt1X+9+bEz6s//nh8aYXBG4qrXZ0dWHsm27A9I+Aw==
 
-"@spectrum/balthazar@^3.0.1":
-  version "3.1.1"
-  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/@spectrum/balthazar/-/@spectrum/balthazar-3.1.1.tgz#3fbeb9b691c671826d0da57886fe09af707587cc"
-  integrity sha1-P765tpHGcYJtDaV4hv4Jr3B1h8w=
-  dependencies:
-    "@spectrum/kulcon" "^1.x"
-    any-promise "^1.x"
-    bluebird "^3.x"
-    fs-extra "^5.x"
-    globby "^6.x"
-    minimist "^1.x"
-    xtend "^4.x"
-
 "@spectrum/kulcon@^1.x":
   version "1.1.2"
   resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/@spectrum/kulcon/-/@spectrum/kulcon-1.1.2.tgz#8427cef3f74fe3618e5b9f22b21c1353e2b81814"
@@ -1055,7 +1042,7 @@
     chalk "^1.x"
     chalk-cli "^4.x"
 
-"@spectrum/spectrum-dna@^5.15.0":
+"@spectrum/spectrum-dna@^5.20":
   version "5.20.0"
   resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/@spectrum/spectrum-dna/-/@spectrum/spectrum-dna-5.20.0.tgz#d2cf4f76ab17be44c9331e4896c4ba21ca5c8a6e"
   integrity sha1-0s9PdqsXvkTJMx5IlsS6Icpcim4=
@@ -1302,7 +1289,7 @@ ansi-wrap@0.1.0, ansi-wrap@^0.1.0:
   resolved "https://registry.yarnpkg.com/ansi-wrap/-/ansi-wrap-0.1.0.tgz#a82250ddb0015e9a27ca82e82ea603bbfa45efaf"
   integrity sha1-qCJQ3bABXponyoLoLqYDu/pF768=
 
-any-promise@^1.0.0, any-promise@^1.x:
+any-promise@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
   integrity sha1-q8av7tzqUugJzcA3au0845Y10X8=
@@ -4111,15 +4098,6 @@ fs-extra@^4.x:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^5.x:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
-  integrity sha512-66Pm4RYbjzdyeuqudYqhFiNBbCIuI9kgRqLPSHIlXHidW8NIQtVdkM1yeZ4lXwuhbTETv3EUGMNHAAw6hiundQ==
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^4.0.0"
-    universalify "^0.1.0"
-
 fs-extra@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
@@ -6265,7 +6243,7 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@^1.1.3, minimist@^1.2.0, minimist@^1.x:
+minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
   integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=

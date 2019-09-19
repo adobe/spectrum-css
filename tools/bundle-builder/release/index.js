@@ -44,7 +44,7 @@ let releaseBackwardsCompat = gulp.parallel(
       },
       function releaseBackwardsCompat_copyRootVars() {
         return gulp.src(
-          `${dirs.components}/vars/css/**`
+          `${dirs.components}/vars/dist/*`
         )
           .pipe(gulp.dest('vars/'));
       },

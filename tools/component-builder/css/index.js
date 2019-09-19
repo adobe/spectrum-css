@@ -18,10 +18,14 @@ const processors = require('./processors').processors;
 const legacyBuild = require('./legacyBuild');
 const vars = require('./vars');
 
+// Read in all variables used
+// Read in all vars from recent DNA
+// Include definitions if they refer to a variable, static if not
+
 function buildIndexVars() {
   return gulp.src([
     'index.css',
-    'skin.css'
+    'skin.css',
   ], {
     allowEmpty: true // Allow missing skin.css
   })
@@ -32,7 +36,7 @@ function buildIndexVars() {
 
 let buildVars = gulp.series(
   buildIndexVars,
-  // vars.bakeVars // Don't bake vars yet; we need to redo the way we get vars from DNA
+  vars.bakeVars
 );
 
 exports.buildVars = buildVars;
