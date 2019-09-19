@@ -1,0 +1,92 @@
+-
+
+  // Get DNA data
+  util.populateDNAInfo(component, dnaVars);
+
+  // Arrange examples for processing
+  var examples;
+  if (!component.examples) {
+    // Only one top-level example
+    examples = [component];
+  }
+  else {
+    // Multiple child examples
+    examples = component.examples;
+  }
+
+doctype html
+html(lang='en-US').spectrum.spectrum--light.spectrum--medium
+  head
+    title #{component.name} - Spectrum CSS
+
+    include ../includes/dependencies.pug
+
+  body
+
+    .spectrum-Site
+
+      include ../includes/header.pug
+
+      .spectrum-Site-content
+
+        include ../includes/sidebar.pug
+
+        .spectrum-Site-mainContainer
+
+          article.spectrum-CSSComponent
+            header(id=component.slug).spectrum-CSSComponent-heading
+              h2.spectrum-CSSComponent-title.spectrum-Article.spectrum-Heading1--display
+                a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
+
+              if !component.examples
+                if component.cssStatus != 'n/a'
+                  .spectrum-CSSComponent-statusContainer.u-tooltip-showOnHover
+                    div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.dnaStatus)}`).
+                      #{component.dnaStatus}
+                    if component.dnaStatus != 'Deprecated'
+                      div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(component.cssStatus)}`).
+                        #{component.cssStatus}
+                    if component.details
+                      .spectrum-Tooltip.spectrum-Tooltip--right
+                        .spectrum-Tooltip-label!= util.markdown.toHTML(component.details)
+                        .spectrum-Tooltip-tip
+
+              .spectrum-CSSComponent-version.spectrum-Body #{pkg.name}@#{pkg.version}
+
+            if component.description
+              section.spectrum-CSSComponent-description.spectrum-Body2!= util.markdown.toHTML(component.description)
+
+            each example in examples
+              article.spectrum-CSSExample
+                if example != component
+                  header.spectrum-CSSExample-header(id=example.slug)
+                    h4.spectrum-Heading3
+                      a(href=`#${example.slug}`).spectrum-CSSExample-link #{example.name}
+                      if example.cssStatus != 'n/a'
+                        .spectrum-CSSComponent-statusContainer.u-tooltip-showOnHover
+                          div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(example.dnaStatus)}`).
+                            #{example.dnaStatus}
+                          if example.dnaStatus != 'Deprecated'
+                            div(class=`spectrum-CSSComponent-status spectrum-Label spectrum-Label--${util.getLabelColor(example.cssStatus)}`).
+                              #{example.cssStatus}
+                          if example.details
+                            .spectrum-Tooltip.spectrum-Tooltip--right
+                              .spectrum-Tooltip-label!= util.markdown.toHTML(example.details)
+                              .spectrum-Tooltip-tip
+
+                        hr.spectrum-Rule.spectrum-Rule--large
+
+                  if example.description
+                    section.spectrum-CSSExample-description.spectrum-Body2!= util.markdown.toHTML(example.description)
+
+                if example.markup
+
+                  section.spectrum-CSSExample-container
+                    .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
+                    .spectrum-CSSExample-markup
+                      if example.markup.split('\n').length > 2
+                        a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
+                      pre
+                        code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
+
+    include ../includes/footer.pug

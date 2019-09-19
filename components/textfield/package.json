@@ -1,0 +1,26 @@
+{
+  "name": "@spectrum-css/textfield",
+  "version": "2.0.0-alpha.5",
+  "description": "The Spectrum CSS textfield component",
+  "author": "",
+  "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/vars": "^2.0.0-alpha.3"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder": "^1.0.0-alpha.5",
+    "@spectrum-css/vars": "^2.0.0-alpha.3",
+    "gulp": "^4.0.0"
+  }
+}

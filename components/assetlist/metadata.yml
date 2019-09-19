@@ -1,0 +1,58 @@
+id: miller-column
+name: Asset List
+description: 'A selectable list of Assets, often used inside of Miller Columns.'
+examples:
+  - id: miller-column
+    name: Standard
+    markup: |
+      <ul class="spectrum-AssetList">
+        <li class="spectrum-AssetList-item is-selectable" tabindex="0">
+          <label class="spectrum-Checkbox spectrum-AssetList-itemSelector">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" tabindex="-1">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              </svg>
+            </span>
+          </label>
+          <img src="img/example-ava.jpg" class="spectrum-AssetList-itemThumbnail">
+          <span class="spectrum-AssetList-itemLabel">Shantanu.jpg</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+          </svg>
+        </li>
+        <li class="spectrum-AssetList-item is-selectable" tabindex="0">
+          <label class="spectrum-Checkbox spectrum-AssetList-itemSelector">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" tabindex="-1">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              </svg>
+            </span>
+          </label>
+          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-AssetList-itemThumbnail" focusable="false" aria-hidden="true" aria-label="FileCSV">
+            <use xlink:href="#spectrum-icon-24-FileCSV"></use>
+          </svg>
+          <span class="spectrum-AssetList-itemLabel">Resource Allocation.csv</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+          </svg>
+        </li>
+        <li class="spectrum-AssetList-item is-branch is-selectable is-selected" tabindex="0">
+          <label class="spectrum-Checkbox spectrum-AssetList-itemSelector">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" tabindex="-1" checked>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              </svg>
+            </span>
+          </label>
+          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-AssetList-itemThumbnail" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-24-Folder"></use>
+          </svg>
+          <span class="spectrum-AssetList-itemLabel">Frontend Projects</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-AssetList-itemChildIndicator" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+          </svg>
+        </li>
+      </ul>
