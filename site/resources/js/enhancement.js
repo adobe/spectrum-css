@@ -195,6 +195,19 @@ window.addEventListener('click', function(event) {
   }
 });
 
+// Accordion
+window.addEventListener('click', function(event) {
+  let heading = event.target.closest('.spectrum-Accordion-itemHeading');
+  if (heading) {
+    let item = event.target.closest('.spectrum-Accordion-item');
+    let isDisabled = item.classList.contains('is-disabled');
+    if (!isDisabled) {
+      item.classList.toggle('is-open');
+      event.preventDefault();
+    }
+  }
+});
+
 // Cyclebutton
 window.addEventListener('click', function(event) {
   var button = event.target.closest('.spectrum-CycleButton');
@@ -209,7 +222,7 @@ window.addEventListener('click', function(event) {
       icons[newIndex].classList.add('is-selected');
     }
   }
-})
+});
 
 // Display InputGroup focus style
 function toggleInputGroupFocus(event) {
