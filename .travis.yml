@@ -15,4 +15,4 @@ script:
   - gulp build
   - http-server -s -p 3000 ./dist/ &
   - sleep 5
-  - npm run backstop:ci:test themes=light scales=medium
+  - yarn run backstop:ci:test themes=light scales=medium
