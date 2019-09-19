@@ -7,12 +7,11 @@ install:
   - yarn
 before_script:
   - yarn global add gulp-cli
-  - yarn global add http-server
 script:
   # This script should be the first that runs to reduce the risk of
   # executing a script from a compromised NPM package.
   - audit-ci --moderate
   - gulp build
-  - http-server -s -p 3000 ./dist/ &
+  - gulp dev &
   - sleep 5
   - yarn run backstop:ci:test themes=light scales=medium
