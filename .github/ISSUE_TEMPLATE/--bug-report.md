@@ -28,9 +28,7 @@ assignees: ''
 
 ## Environment
  - Spectrum CSS version: <!-- 2.13.0 -->
- - OS: <!-- iOS, macOS, Windows 10 -->
- - Browser(s): <!-- Chrome 75.0.3770.142, Safari 12.1.2 -->
-
+ - Browser(s) and OS(s): <!-- Chrome 75.0.3770.142 on Win 10 -->
 
 ## Additional context
 <!-- Provide any additional information that might help us debug the issue -->
