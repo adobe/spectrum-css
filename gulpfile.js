@@ -2,14 +2,17 @@ const gulp = require('gulp');
 const builder = require('./tools/bundle-builder');
 const test = require('./tools/test-builder');
 const site = require('./site/gulpfile.js');
+const subrunner = require('./tools/bundle-builder/subrunner');
+
 Object.assign(exports, builder);
 Object.assign(exports, test);
 Object.assign(exports, site);
 
 const path = require('path');
 const fsp = require('fs').promises;
+const semver = require('semver');
 
-async function updatePeerDependencies() {
+async function checkPeerDependencies() {
   let packagesDir = './components';
 
   async function readPackage(component) {
@@ -32,10 +35,8 @@ async function updatePeerDependencies() {
         let devDepVer = package.devDependencies[dependency];
         let peerDepVer = package.peerDependencies[dependency];
         if (devDepVer) {
-          if (peerDepVer != devDepVer) {
-            package.peerDependencies[dependency] = devDepVer;
-
-            console.log(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, expected ${devDepVer})`);
+          if (!semver.satisfies(peerDepVer, devDepVer)) {
+            throw new Error(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, does not satisfy ${devDepVer})`);
           }
         }
         else {
@@ -48,10 +49,20 @@ async function updatePeerDependencies() {
   }));
 };
 
-exports.updatePeerDependencies = updatePeerDependencies;
+async function releaseBundles() {
+  let bundlesDir = './bundles';
+
+  let bundles = (await fsp.readdir(bundlesDir, { withFileTypes: true }))
+    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .map((dirent) => path.join(process.cwd(), bundlesDir, dirent.name));
+
+  await subrunner.runTaskOnPackages('release', bundles);
+};
+
+exports.checkPeerDependencies = checkPeerDependencies;
 
 exports.version = gulp.series(
-  updatePeerDependencies,
+  checkPeerDependencies,
   builder.build
 );
 
@@ -59,5 +70,7 @@ exports.dev = gulp.series(
   exports.copySiteResources,
   exports.dev
 );
+
+exports.releaseBundles = releaseBundles;
 
 exports.prepare = site.copySiteResources;

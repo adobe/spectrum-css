@@ -49,30 +49,31 @@ If you're targeting modern browsers, start by including the base set of variable
 
 ```html
 <!-- Include global variables first -->
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^2.0.0-alpha/dist/spectrum-global.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
 
 <!-- Include only the scales your application needs -->
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^2.0.0-alpha/dist/spectrum-medium-unique.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^2.0.0-alpha/dist/spectrum-large-unique.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium-unique.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-large-unique.css">
 
 <!-- Include only the colorstops your application needs -->
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^2.0.0-alpha/dist/spectrum-lightest.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^2.0.0-alpha/dist/spectrum-light.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^2.0.0-alpha/dist/spectrum-dark.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars@^2.0.0-alpha/dist/spectrum-darkest.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-lightest.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-darkest.css">
 
 <!-- Include index-vars.css for all components you need -->
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/page@^2.0.0-alpha/dist/index-vars.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/typography@^2.0.0-alpha/dist/index-vars.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/icon@^2.0.0-alpha/dist/index-vars.css">
-<link rel="stylesheet" href="https://unpkg.com/@spectrum-css/button@^2.0.0-alpha/dist/index-vars.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/icon/dist/index-vars.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
 ```
 
 Then, make sure you've included the relevant classes to choose which scale and colorstop you want:
-
 ```html
-<body class="spectrum spectrum--medium spectrum--light">
+<html class="spectrum spectrum--medium spectrum--light">
 ```
+
+**Note:**  If you are importing SVG icon sprite sheets, the `.spectrum--medium`/`.spectrum--large` classes should be added to the `<html>` element so UI icons render in the correct size in IE 11. For browsers that support custom properties, or if you're not using SVG sprite sheets for UI icons and are manually managing icon sizing in your implementation, `.spectrum--medium`/`.spectrum--large` can be added to the `<body>` or other element.
 
 Then you can use components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
 
@@ -87,9 +88,9 @@ Some components require certain "UI icons" to render. To get these icons, you'll
 For most use cases, you'll want to use `spectrum-css-icons.svg` so you have support for both scales:
 
 ```js
-<script src="https://unpkg.com/loadicons@1.0.0/index.js"></script>
+<script src="node_modules/loadicons/index.js"></script>
 <script>
-  loadIcons('https://unpkg.com/@spectrum-css/icon@^2.0.0-alpha/dist/spectrum-css-icons.svg');
+  loadIcons('node_modules/@spectrum-css/icon/dist/spectrum-css-icons.svg');
 </script>
 ```
 
@@ -109,7 +110,7 @@ If your app has any level of complexity, you'll need "workflow" icons to indicat
 These icons are released within in the bundle package as `@spectrum-css/spectrum-css/dist/icons/spectrum-icons.svg`. You can import the entire set of icons in all sizes as follows:
 
 ```js
-loadIcons('https://unpkg.com/@adobe/spectrum-css-workflow-icons@1.0.0-beta.6/dist/spectrum-icons.svg');
+loadIcons('node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg');
 ```
 
 You can then use the icons in your app. Visit the [Spectrum CSS workflow icon list](http://opensource.adobe.com/spectrum-css/icons/) and click on any icon to get the markup.
@@ -195,7 +196,9 @@ Both `backstop:test` and `backstop:docker:test` accept arguments to customize yo
 
 ## Releasing
 
-Releasing is handled by Lerna. When any component or its dependencies change, Lerna will queue that component (and all of its dependents) up for a release. Additionally, if any component included by a bundle changes, the bundle will be queued up for a release.
+### Releasing individual components
+
+Releasing individual components is handled by Lerna. When any component or its dependencies change, Lerna will queue that component (and all of its dependents) up for a release.
 
 To release everything that has changed, simply run:
 
@@ -203,4 +206,14 @@ To release everything that has changed, simply run:
 npm run release
 ```
 
-After you enter version numbers for all changed components and bundles, Lerna and npm scripts will handle the rest, including deployed documentation sites.
+Version numbers are automatically determined, changelogs generated, and packages published.
+
+### Releasing bundles
+
+Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
+
+```
+npm run release-bundles
+```
+
+Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.

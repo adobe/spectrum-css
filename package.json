@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "bootstrap": "npx lerna bootstrap --hoist",
     "build": "gulp -LL",
     "dev": "gulp dev",
     "clean": "gulp clean",
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
+    "release-bundles": "gulp releaseBundles",
     "version": "gulp version",
     "postinstall": "npm run bootstrap",
     "backstop:approve": "backstop approve --config=backstop_data/backstop_test.js",
@@ -18,9 +18,9 @@
     "backstop:docker:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=local",
     "backstop:ci:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
-    "prepare": "gulp prepare",
     "prepublishOnly": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
-    "postpublish": "npx lerna run publishpages --concurrency=1"
+    "postpublish": "npx lerna run publishpages --concurrency=1",
+    "prepare": "gulp prepare"
   },
   "repository": {
     "type": "git",
@@ -36,12 +36,16 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@spectrum-css/spectrum-css-vr-test-asset": "^1.0.1",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "audit-ci": "^2.0.1",
     "backstopjs": "^4.3.2",
     "gulp": "^4.0.0",
     "gulplog": "^1.0.0",
+    "husky": "^3.0.5",
     "lerna": "^3.16.4",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
@@ -53,5 +57,14 @@
     "@spectrum/balthazar": "^3.0.1",
     "@spectrum/spectrum-dna": "^5.15.0",
     "@spectrum/spectrum-icons": "^2.3.0"
+  },
+  "workspaces": [
+    "components/*",
+    "tools/*"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

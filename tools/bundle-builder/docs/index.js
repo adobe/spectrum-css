@@ -46,7 +46,7 @@ let minimumDeps = [
 
 let templateData = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync(path.join(`${dirs.cwd}/package.json`), 'utf8'))
+  pkg: JSON.parse(fs.readFileSync(path.join(`${process.cwd()}/package.json`), 'utf8'))
 };
 
 async function buildDocs_forDep(dep) {
@@ -62,14 +62,14 @@ async function buildDocs_forDep(dep) {
   return new Promise((resolve, reject) => {
     gulp.src(
       [
-        `${dirName}/docs.yml`,
-        `${dirName}/docs/*.yml`
+        `${dirName}/metadata.yml`,
+        `${dirName}/metadata/*.yml`
       ], {
         allowEmpty: true
       }
     )
       .pipe(rename(function(file) {
-        if (file.basename === 'docs') {
+        if (file.basename === 'metadata') {
           file.basename = dep;
         }
       }))
@@ -92,7 +92,7 @@ async function buildDocs_forDep(dep) {
       .pipe(through.obj(function compilePug(file, enc, cb) {
         let component = yaml.safeLoad(String(file.contents));
         if (!component.id) {
-          if (file.basename === 'docs.yml') {
+          if (file.basename === 'metadata.yml') {
             // Use the component's name
             component.id = dep;
           }
@@ -129,8 +129,8 @@ async function buildDocs_individualPackages() {
 
 function buildSite_generateIndex() {
   return gulp.src([
-    `${dirs.components}/*/docs.yml`,
-    `${dirs.components}/*/docs/*.yml`
+    `${dirs.components}/*/metadata.yml`,
+    `${dirs.components}/*/metadata/*.yml`
   ])
   .pipe(function() {
     let docs = [];
@@ -144,9 +144,9 @@ function buildSite_generateIndex() {
         return cb(err);
       }
 
-      var componentName = file.dirname.replace('/docs', '').split('/').pop();
+      var componentName = file.dirname.replace('/metadata', '').split('/').pop();
 
-      if (path.basename(file.basename) === 'docs.yml') {
+      if (path.basename(file.basename) === 'metadata.yml') {
         file.basename = componentName;
       }
 
@@ -205,8 +205,8 @@ function buildSite_generateIndex() {
 function buildSite_getData() {
   let nav = [];
   return gulp.src([
-    `${dirs.components}/*/docs.yml`,
-    `${dirs.components}/*/docs/*.yml`
+    `${dirs.components}/*/metadata.yml`,
+    `${dirs.components}/*/metadata/*.yml`
   ])
   .pipe(through.obj(function readYML(file, enc, cb) {
     let componentData;
@@ -216,9 +216,9 @@ function buildSite_getData() {
       return cb(err);
     }
 
-    var componentName = file.dirname.replace('/docs', '').split('/').pop();
+    var componentName = file.dirname.replace('/metadata', '').split('/').pop();
 
-    if (path.basename(file.basename) === 'docs.yml') {
+    if (path.basename(file.basename) === 'metadata.yml') {
       file.basename = componentName;
     }
 

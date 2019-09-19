@@ -16,6 +16,7 @@ const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 
 const depUtils = require('./lib/depUtils');
+const exec = require('./lib/exec');
 const dirs = require('./lib/dirs');
 
 const docs = require('./docs');
@@ -29,12 +30,12 @@ function clean() {
   ];
 
   // Don't delete the dist folder inside of installed packages
-  if (dirs.cwd === dirs.topLevel) {
+  if (process.cwd() === dirs.topLevel) {
     globs.push(`${dirs.components}/*/dist/*`);
   }
 
   return del(globs);
-};
+}
 
 // Combined
 function concatPackageFiles(taskName, input, output, directory) {
@@ -127,7 +128,7 @@ function buildIfTopLevel() {
     copyPackages
   );
 
-  if (dirs.cwd === dirs.topLevel) {
+  if (process.cwd() === dirs.topLevel) {
     // Run a build for all packages first
     return gulp.series(
       subrunner.buildComponents,
@@ -169,7 +170,7 @@ let buildHeavy = gulp.series(
 );
 
 let devTask;
-if (dirs.cwd === dirs.topLevel) {
+if (process.cwd() === dirs.topLevel) {
   // Build all packages if at the top level
   devTask = gulp.series(
     buildLite,
@@ -199,6 +200,16 @@ exports.prePack = gulp.series(
   release.releaseBackwardsCompat
 );
 
+exports.release = gulp.series(
+  release.updateAndTagRelease,
+  exec.task('yarnInstall', 'yarn install --frozen-lockfile'),
+  build,
+  exec.task('npmPublish', 'npm publish'),
+  exec.task('gitPush', 'git push'),
+  release.ghPages
+);
+
+exports.generateChangelog = release.generateChangelog;
 exports.ghPages = release.ghPages;
 exports.postPublish = release.releaseBackwardsCompatCleanup;
 

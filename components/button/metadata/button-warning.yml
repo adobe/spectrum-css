@@ -1,0 +1,24 @@
+name: Button - Warning
+status: Verified
+description: The negative button is for high emphasis of negative or destructive actions.
+examples:
+  - id: button-warning
+    name: Warning
+    markup: |
+      <button class="spectrum-Button spectrum-Button--warning">
+        <span class="spectrum-Button-label">Button</span>
+      </button>
+
+      <button class="spectrum-Button spectrum-Button--warning" disabled>
+        <span class="spectrum-Button-label">Button</span>
+      </button>
+  - id: button-quiet-warning
+    name: Warning (quiet)
+    markup: |
+      <button class="spectrum-Button spectrum-Button--warning spectrum-Button--quiet">
+        <span class="spectrum-Button-label">Button</span>
+      </button>
+
+      <button class="spectrum-Button spectrum-Button--warning spectrum-Button--quiet" disabled>
+        <span class="spectrum-Button-label">Button</span>
+      </button>

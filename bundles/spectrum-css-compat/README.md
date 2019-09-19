@@ -13,21 +13,24 @@ If breaking changes are made to any components included in `package.json`, that 
 
 ## Release process
 
-1. Update any version numbers for updated components in `package.json`. Generally, version ranges will do this for you.
-
-2. Run the bootstrap script in the root of the project:
-
-```
-npm run bootstrap
-```
-
-3. Run the release script in the root of the project:
+1. Run the release script in the root of the project to release individual components:
 
 ```
 npm run release
 ```
 
-4. Choose the appropriate version for each package according to semver. The rest of the release process will happen automatically, with github pages and npm packages being published accordingly.
+2. Run the release script. Version numbers will be updated automatically, the package will be published, and the documentation site will be deployed.
+
+To release all bundles:
+```
+npm run release-bundles
+```
+
+To release only this bundle:
+```
+cd bundles/spectrum-css-compat
+npm run release
+```
 
 ## CLI
 
