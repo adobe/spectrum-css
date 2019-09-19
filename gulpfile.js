@@ -71,6 +71,11 @@ exports.dev = gulp.series(
   exports.dev
 );
 
+exports.devHeavy = gulp.series(
+  exports.copySiteResources,
+  exports.devHeavy
+);
+
 exports.releaseBundles = releaseBundles;
 
 exports.prepare = site.copySiteResources;
