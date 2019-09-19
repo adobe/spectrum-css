@@ -6,7 +6,8 @@
     "build": "gulp build",
     "prepack": "gulp prePack",
     "postpublish": "gulp postPublish",
-    "publishpages": "gulp ghPages"
+    "publishpages": "gulp ghPages",
+    "release": "gulp release"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,9 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "optionalDependencies": {
-    "@spectrum/spectrum-icons": "^2.3.0"
-  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "license": "Apache-2.0",
   "devDependencies": {
-    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
     "@spectrum-css/accordion": "^2.0.0-alpha.6",
     "@spectrum-css/actionbar": "^2.0.0-alpha.6",
     "@spectrum-css/actionmenu": "^2.0.0-alpha.6",
@@ -35,7 +34,6 @@
     "@spectrum-css/banner": "^2.0.0-alpha.5",
     "@spectrum-css/barloader": "^2.0.0-alpha.5",
     "@spectrum-css/breadcrumb": "^2.0.0-alpha.6",
-    "@spectrum-css/bundle-builder": "^1.0.0-alpha.4",
     "@spectrum-css/button": "^2.0.0-alpha.6",
     "@spectrum-css/buttongroup": "^2.0.0-alpha.6",
     "@spectrum-css/calendar": "^2.0.0-alpha.6",

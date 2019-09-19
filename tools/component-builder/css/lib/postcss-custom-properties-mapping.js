@@ -9,11 +9,12 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+const path = require('path');
 var postcss = require('postcss');
 var valueParser = require('postcss-value-parser');
 
 // Get the local copy of vars
-var {mapping, static} = require(`${process.cwd()}/node_modules/@spectrum-css/vars/generate.js`);
+var {mapping, static} = require(path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..', 'generate.js'));
 
 // match custom property inclusions
 const customPropertiesRegExp = /(^|[^\w-])var\([\W\w]+\)/;

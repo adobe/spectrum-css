@@ -13,7 +13,8 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const logger = require('gulplog');
 const browserSync = require('browser-sync');
-const dirs = require('../lib/dirs');
+const path = require('path');
+const dirs = require('../lib/dirs')
 
 const docs = require('../docs');
 const subrunner = require('../subrunner');
@@ -21,7 +22,7 @@ const subrunner = require('../subrunner');
 function serve() {
   browserSync({
     startPath: 'docs/index.html',
-    server: `${dirs.cwd}/dist/`
+    server: `${process.cwd()}/dist/`
   });
 }
 
@@ -44,29 +45,30 @@ function watchWithinPackages(glob, task, files) {
       return;
     }
 
-    let package = getPackageFromPath(changedFile);
+    let packageName = getPackageFromPath(changedFile);
+    let packageDir = path.join(dirs.components, packageName);
 
     if (typeof task === 'function') {
-      task(changedFile, package, (err) => {
+      task(changedFile, packageName, (err) => {
         done(err);
         changedFile = null;
       });
     }
     else {
-      subrunner.runComponentTask(package, task, (err) => {
+      subrunner.runComponentTask(packageDir, task, (err) => {
         if (err) {
           changedFile = null;
           return done(err);
         }
 
         // Copy files
-        gulp.src(`${dirs.components}/${package}/dist/${files}`)
-          .pipe(gulp.dest(`dist/components/${package}/`))
+        gulp.src(`${dirs.components}/${packageName}/dist/${files}`)
+          .pipe(gulp.dest(`dist/components/${packageName}/`))
           .on('end', () => {
-            logger.debug(`Injecting files from ${package}/:\n  ${files}`);
+            logger.debug(`Injecting files from ${packageName}/:\n  ${files}`);
 
             // Inject
-            gulp.src(`dist/components/${package}/${files}`)
+            gulp.src(`dist/components/${packageName}/${files}`)
               .pipe(browserSync.stream());
 
             changedFile = null;

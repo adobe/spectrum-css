@@ -177,7 +177,9 @@ gulp dev
 
 ## Releasing
 
-Releasing is handled by Lerna. When any component or its dependencies change, Lerna will queue that component (and all of its dependents) up for a release. Additionally, if any component included by a bundle changes, the bundle will be queued up for a release.
+### Releasing individual components
+
+Releasing individual components is handled by Lerna. When any component or its dependencies change, Lerna will queue that component (and all of its dependents) up for a release.
 
 To release everything that has changed, simply run:
 
@@ -185,4 +187,14 @@ To release everything that has changed, simply run:
 npm run release
 ```
 
-After you enter version numbers for all changed components and bundles, Lerna and npm scripts will handle the rest, including deployed documentation sites.
+Version numbers are automatically determined, changelogs generated, and packages published.
+
+### Releasing bundles
+
+Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
+
+```
+npm run release-bundles
+```
+
+Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.

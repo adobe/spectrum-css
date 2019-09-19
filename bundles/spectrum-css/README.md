@@ -1,4 +1,4 @@
-# @adobe/spectrum-css@latest
+# @spectrum-css/spectrum-css@latest
 > Bundle package
 
 This package builds a bundle package containing the latest versions of all Spectrum CSS components.
@@ -13,27 +13,25 @@ If breaking changes are made to any components, this package's major version num
 
 ## Release process
 
-1. Add any newly created components to `package.json` with the version of `*`.
-
-2. Run the bootstrap script in the root of the project:
-
-```
-npm run bootstrap
-```
-
-3. Run the release script in the root of the project:
+1. Run the release script in the root of the project to release individual components:
 
 ```
 npm run release
 ```
 
-4. Choose the appropriate version for each package according to semver. The rest of the release process will happen automatically, with github pages and npm packages being published accordingly.
+2. Run the release script. Version numbers will be updated automatically, the package will be published, and the documentation site will be deployed.
+
+To release all bundles:
+```
+npm run release-bundles
+```
+
+To release only this bundle:
+```
+cd bundles/spectrum-css
+npm run release
+```
 
 ## CLI
 
-The following tasks are available:
-
-* `gulp clean` - Clean everything
-* `gulp build` - Build documentation and copy build output into the `dist/` folder
-* `gulp dev` - Perform a build, start a server, and watch `bundle-builder` for changes
-* `gulp watch` - If a build as already been performed, start a server and watch `bundle-builder` for changes
+See [`bundle-builder` CLI](/tools/bundle-builder#cli).

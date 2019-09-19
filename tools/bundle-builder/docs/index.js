@@ -46,7 +46,7 @@ let minimumDeps = [
 
 let templateData = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync(path.join(`${dirs.cwd}/package.json`), 'utf8'))
+  pkg: JSON.parse(fs.readFileSync(path.join(`${process.cwd()}/package.json`), 'utf8'))
 };
 
 async function buildDocs_forDep(dep) {

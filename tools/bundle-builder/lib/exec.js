@@ -22,6 +22,19 @@ function task(taskName, command) {
   return func;
 }
 
+function promise(command, options) {
+  return new Promise((resolve, reject) => {
+    runCommand(command, (err) => {
+      if (err) {
+        reject(err);
+      }
+      else {
+        resolve();
+      }
+    }, options);
+  });
+}
+
 function runCommand(command, cb, options = {}) {
   let commandProcess = cp.exec(command, cb);
   if (options.pipe !== false) {
@@ -31,5 +44,6 @@ function runCommand(command, cb, options = {}) {
   return commandProcess;
 }
 
+exports.promise = promise;
 exports.command = runCommand;
 exports.task = task;
