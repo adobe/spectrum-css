@@ -13,12 +13,8 @@ governing permissions and limitations under the License.
 const gulp = require('gulp');
 const logger = require('gulplog');
 const browserSync = require('browser-sync');
-<<<<<<< HEAD
-const dirs = require('../lib/dirs');
-=======
 const path = require('path');
 const dirs = require('../lib/dirs')
->>>>>>> build: fix site preview due to missing dirs.cwd, path
 
 const docs = require('../docs');
 const subrunner = require('../subrunner');
