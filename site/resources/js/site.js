@@ -191,19 +191,25 @@ window.addEventListener('DOMContentLoaded', function() {
   }
   scaleMQL.addListener(handleScaleMQLChange);
 
-  var scaleSwitcher = document.querySelector('#switcher-scale');
-  if (scaleSwitcher) {
-    scaleSwitcher.addEventListener('change', function(event) {
+  document.body.addEventListener('change', function(event) {
+    if (event.target.id === 'switcher-scale') {
       switcher.scale = event.detail.value;
-    });
-  }
-
-  var themeSwitcher = document.querySelector('#switcher-theme');
-  if (themeSwitcher) {
-    themeSwitcher.addEventListener('change', function(event) {
+    }
+    else if (event.target.id === 'switcher-theme') {
       switcher.theme = event.detail.value;
-    });
-  }
+    }
+  });
+
+  window.addEventListener('PageFastLoaded', function updateScaleDropdowns() {
+    let scaleDropdown = document.querySelector('#switcher-scale');
+    let themeDropdown = document.querySelector('#switcher-theme');
+    if (scaleDropdown) {
+      setDropdownValue(scaleDropdown, switcher.scale);
+    }
+    if (themeDropdown) {
+      setDropdownValue(themeDropdown, switcher.theme);
+    }
+  });
 
   var sidebarMQL = window.matchMedia('(max-width: 960px)');
   function handleSidebarMQLChange() {

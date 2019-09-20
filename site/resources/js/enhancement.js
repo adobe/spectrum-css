@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
           closeAndFocusDropdown(dropdown);
         }
         else if (event.key === 'Enter') {
-          handleMenuChange(menu, menuItem, items[menuItemIndex].getAttribute('value'));
+          handleMenuChange(menu, menuItem);
 
           var dropdown = event.target.closest('.spectrum-Dropdown');
           closeAndFocusDropdown(dropdown);
@@ -100,34 +100,49 @@ governing permissions and limitations under the License.
   });
 
   function setDropdownValue(dropdown, value, label) {
-    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
-    dropdown.setAttribute('value', value);
-    var event = new CustomEvent('change', {
-      detail: {
-        label: label,
-        value: value
-      }
-    });
-    dropdown.dispatchEvent(event);
+    var menu = dropdown.querySelector('.spectrum-Menu');
+    var menuItem = dropdown.querySelector('.spectrum-Menu-item[value="'+value+'"]');
 
+    if (menuItem) {
+      var selectedMenuItem = menu.querySelector('.spectrum-Menu-item.is-selected');
+      if (selectedMenuItem) {
+        selectedMenuItem.classList.remove('is-selected');
+        selectedMenuItem.removeAttribute('aria-selected');
+      }
+
+      menuItem.classList.add('is-selected');
+      menuItem.setAttribute('aria-selected', 'true');
+
+      if (!label) {
+        var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
+        if (menuLabel) {
+          label = menuLabel.innerHTML;
+        }
+      }
+    }
+
+    dropdown.setAttribute('value', value);
+    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
     if (fieldButton && label) {
       var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
       if (dropdownLabel) {
         dropdownLabel.innerHTML = label;
       }
     }
+
+    var event = new CustomEvent('change', {
+      bubbles: true,
+      detail: {
+        label: label,
+        value: value
+      }
+    });
+
+    dropdown.dispatchEvent(event);
   }
 
-  function handleMenuChange(menu, menuItem, value) {
-    var selectedMenuItem = menu.querySelector('.spectrum-Menu-item.is-selected');
-    if (selectedMenuItem) {
-      selectedMenuItem.classList.remove('is-selected');
-      selectedMenuItem.removeAttribute('aria-selected');
-    }
-
-    menuItem.classList.add('is-selected');
-    menuItem.setAttribute('aria-selected', 'true');
-
+  function handleMenuChange(menu, menuItem) {
+    var value = menuItem.getAttribute('value');
     var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
     var label = menuLabel.innerHTML;
 
@@ -154,7 +169,7 @@ governing permissions and limitations under the License.
             dropdownLabel.innerHTML = menuLabel.innerHTML;
 
             event.stopPropagation();
-            handleMenuChange(menuItem.parentElement, menuItem, menuItem.getAttribute('value'));
+            handleMenuChange(menuItem.parentElement, menuItem);
           }
         }
       }
@@ -165,6 +180,8 @@ governing permissions and limitations under the License.
       }
     }
   });
+
+  window.setDropdownValue = setDropdownValue;
 }());
 
 // Treeview
