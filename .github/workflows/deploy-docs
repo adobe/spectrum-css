@@ -1,7 +1,7 @@
 name: Deploy Docs
 on:
   release:
-    types: [published, unpublished]
+    types: [published, unpublished, created, deleted]
 
 jobs:
   build:
