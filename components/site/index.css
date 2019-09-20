@@ -333,12 +333,14 @@ governing permissions and limitations under the License.
 /* cards */
 .spectrum-CSSComponent-resources {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: var(--spectrum-global-dimension-size-700);
 }
 
-.spectrum-CSSComponent-resources .spectrum-Card + .spectrum-Card {
-  margin-left: var(--spectrum-global-dimension-size-300);
+.spectrum-CSSComponent-resources .spectrum-Card {
+  margin-right: var(--spectrum-global-dimension-size-300);
+  margin-bottom: var(--spectrum-global-dimension-size-300);
 }
 
 .spectrum-CSSComponent-resource--adobe {
@@ -370,10 +372,10 @@ governing permissions and limitations under the License.
 .spectrum-CSSComponent-switcher {
 }
 
-.spectrum-CSSComponent-switcher .spectrum-FieldLabel {
+.spectrum-CSS-switcherContainer {
   margin-left: var(--spectrum-global-dimension-size-400);
+  white-space: nowrap;
 }
-
 
 /* CSS Example */
 .spectrum-CSSExample {
