@@ -268,7 +268,8 @@ governing permissions and limitations under the License.
 
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .spectrum-CSSComponent-link {
@@ -356,6 +357,14 @@ governing permissions and limitations under the License.
 .spectrum-CSSComponent-cardImage {
   text-decoration: none;
 }
+
+.spectrum-CSSComponent-switcher {
+}
+
+.spectrum-CSSComponent-switcher .spectrum-FieldLabel {
+  margin-left: var(--spectrum-global-dimension-size-400);
+}
+
 
 /* CSS Example */
 .spectrum-CSSExample {

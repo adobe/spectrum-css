@@ -40,6 +40,8 @@ let minimumDeps = [
   'textfield',
   'search',
   'menu',
+  'fieldlabel',
+  'dropdown',
   'popover',
   'underlay',
   'card',

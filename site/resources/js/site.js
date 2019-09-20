@@ -180,7 +180,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // Sidebar
   var sideBar = document.querySelector('#site-sidebar');
   var overlay = document.querySelector('#site-overlay');
-  let scaleMQL = window.matchMedia('(max-width: 768px)');
+  var scaleMQL = window.matchMedia('(max-width: 768px)');
   function handleScaleMQLChange() {
     if (scaleMQL.matches) {
       switcher.scale = 'large';
@@ -191,7 +191,21 @@ window.addEventListener('DOMContentLoaded', function() {
   }
   scaleMQL.addListener(handleScaleMQLChange);
 
-  let sidebarMQL = window.matchMedia('(max-width: 960px)');
+  var scaleSwitcher = document.querySelector('#switcher-scale');
+  if (scaleSwitcher) {
+    scaleSwitcher.addEventListener('change', function(event) {
+      switcher.scale = event.detail.value;
+    });
+  }
+
+  var themeSwitcher = document.querySelector('#switcher-theme');
+  if (themeSwitcher) {
+    themeSwitcher.addEventListener('change', function(event) {
+      switcher.theme = event.detail.value;
+    });
+  }
+
+  var sidebarMQL = window.matchMedia('(max-width: 960px)');
   function handleSidebarMQLChange() {
     if (!sidebarMQL.matches) {
       // Get rid of the overlay if we resize while the sidebar is open
