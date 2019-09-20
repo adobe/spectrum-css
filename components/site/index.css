@@ -243,8 +243,8 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Site-page {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: var(--spectrum-global-dimension-size-200);
+    padding-right: var(--spectrum-global-dimension-size-200);
   }
 
   .spectrum-Site-hero {
