@@ -1,6 +1,6 @@
 name: Tooltip
-components:
-  tooltip:
+examples:
+  - id: tooltip
     name: Neutral
     status: Verified
     markup: |
@@ -12,7 +12,7 @@ components:
         <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-info:
+  - id: tooltip-info
     name: Informative
     status: Verified
     markup: |
@@ -38,7 +38,7 @@ components:
         <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-positive:
+  - id: tooltip-positive
     name: Positive
     status: Verified
     markup: |
@@ -64,7 +64,7 @@ components:
         <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-negative:
+  - id: tooltip-negative
     name: Negative
     status: Verified
     markup: |
@@ -90,8 +90,7 @@ components:
         <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-directions:
-    id: tooltip
+  - id: tooltip
     name: Directions
     status: Verified
     description: 'Tooltips can be top, bottom, left, or right.'
@@ -121,7 +120,7 @@ components:
         <span class="spectrum-Tooltip-label">Label</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-success:
+  - id: tooltip-success
     name: Success
     status: Deprecated
     details: Use `positive` instead.
@@ -130,7 +129,7 @@ components:
         <span class="spectrum-Tooltip-label">Label</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-error:
+  - id: tooltip-error
     name: Error
     status: Deprecated
     details: Use `negative` instead.
@@ -139,11 +138,11 @@ components:
         <span class="spectrum-Tooltip-label">Label</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-help:
+  - id: tooltip-help
     name: Help
     status: Deprecated
-    description: An informative tooltip with a help icon.
     details: Use `info`
+    description: An informative tooltip with a help icon.
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
         <svg class="spectrum-Icon spectrum-UIIcon-HelpSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
@@ -152,7 +151,7 @@ components:
         <span class="spectrum-Tooltip-label">Help</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
-  tooltip-showOnHover:
+  - id: tooltip-showOnHover
     name: Show on hover
     status: Unverified
     description: A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping.
@@ -185,4 +184,3 @@ components:
           <span class="spectrum-Tooltip-tip"></span>
         </div>
       </span>
-id: tooltip

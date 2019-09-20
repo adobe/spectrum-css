@@ -1,0 +1,12 @@
+name: Button - CTA
+status: Verified
+description: The call to action button communicates strong emphasis and is reserved for encouraging critical actions.
+examples:
+  - name: Standard
+    markup: |
+      <button class="spectrum-Button spectrum-Button--cta">
+        <span class="spectrum-Button-label">Button</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--cta" disabled>
+        <span class="spectrum-Button-label">Button</span>
+      </button>

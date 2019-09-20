@@ -1,7 +1,7 @@
 name: Rating
 status: Verified
-components:
-  rating:
+examples:
+  - id: rating
     name: Standard
     markup: |
       <div class="spectrum-Rating">
@@ -52,8 +52,7 @@ components:
           </svg>
         </span>
       </div>
-  rating-selected:
-    id: rating
+  - id: rating
     name: Selected
     markup: |
       <div class="spectrum-Rating">
@@ -104,8 +103,7 @@ components:
           </svg>
         </span>
       </div>
-  rating-readonly:
-    id: rating
+  - id: rating
     name: Read-only
     description: A non-interactive rating.
     markup: |
@@ -157,7 +155,7 @@ components:
           </svg>
         </span>
       </div>
-  rating-quiet:
+  - id: rating-quiet
     name: Quiet
     markup: |
       <div class="spectrum-Rating spectrum-Rating--quiet">
@@ -208,8 +206,7 @@ components:
           </svg>
         </span>
       </div>
-  rating-quiet-selected:
-    id: rating-quiet
+  - id: rating-quiet
     name: Quiet (selected)
     markup: |
       <div class="spectrum-Rating spectrum-Rating--quiet">
@@ -260,8 +257,7 @@ components:
           </svg>
         </span>
       </div>
-  rating-quiet-readonly:
-    id: rating-quiet
+  - id: rating-quiet
     name: Quiet (read-only)
     markup: |
       <div class="spectrum-Rating spectrum-Rating--quiet is-readOnly">
@@ -312,8 +308,7 @@ components:
           </svg>
         </span>
       </div>
-  rating-disabled:
-    id: rating
+  - id: rating
     name: Disabled
     markup: |
       <div class="spectrum-Rating is-disabled">
@@ -364,4 +359,3 @@ components:
           </svg>
         </span>
       </div>
-id: rating

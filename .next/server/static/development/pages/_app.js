@@ -159,10 +159,28 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "navigate", (slug, type) => {
       if (type === 'Internal') {
-        next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/guideline?id=${slug}`, `${pathPrefix}/components/${slug}/`);
-        this.setState({
-          menuOpen: false
-        });
+        if (slug === 'home') {
+          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`${pathPrefix}/`);
+          this.setState({
+            menuOpen: false
+          });
+        } else {
+          console.log({
+            slug,
+            type
+          });
+          console.log({
+            pathname: `${pathPrefix}/components/${slug}/`,
+            query: slug
+          });
+          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push({
+            pathname: `${pathPrefix}/components/${slug}/`,
+            query: slug
+          });
+          this.setState({
+            menuOpen: false
+          });
+        }
       } else {
         window.open(slug, '_blank');
       }
@@ -195,14 +213,14 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.closeMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 78
       },
       __self: this
     }), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.appHeader,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 82
       },
       __self: this
     }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -210,7 +228,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_4___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 83
         },
         __self: this
       }),
@@ -218,42 +236,42 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.openMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 83
       },
       __self: this
     })), __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuClosed),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 85
       },
       __self: this
     }, __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.spectrumSidebar),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 86
       },
       __self: this
     }, __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.header,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 87
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/guideline?id=home",
+      href: "/",
       as: `${pathPrefix}/`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 88
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 88
       },
       __self: this
     }, __jsx("img", {
@@ -261,23 +279,26 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       alt: "Spectrum Logo",
       srcSet: `${pathPrefix}/static/logo@2x.png 2x`,
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logo,
-      onClick: () => this.navigate('home', "Internal"),
+      onClick: e => {
+        this.navigate('home', "Internal");
+        e.preventDefault();
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 88
       },
       __self: this
     }))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_10__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 89
       },
       __self: this
     })), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.navigation,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 91
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNav"], {
@@ -289,7 +310,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       variant: "multiLevel",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 93
       },
       __self: this
     }, _data_newmenu__WEBPACK_IMPORTED_MODULE_8__.menu[0].children.map((item, i) => {
@@ -303,7 +324,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 98
         },
         __self: this
       }, item.children && item.children.map((mi, i) => {
@@ -311,8 +332,10 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           value: mi.url,
           label: mi.title,
           key: i,
-          onClick: () => {
+          onClick: e => {
             mi.linkType !== 'group' ? this.navigate(mi.url, mi.linkType) : undefined; // mi.url ? this.navigate(mi.url, 'Internal'): undefined
+
+            e.preventDefault();
           },
           style: {
             width: '200px'
@@ -321,7 +344,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           ref: this.props.router.query.id === mi.url ? this.selectedItem : undefined,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94
+            lineNumber: 103
           },
           __self: this
         }, mi.linkType === 'group' && mi.children.map((mi3, i) => {
@@ -335,7 +358,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 109
+              lineNumber: 119
             },
             __self: this
           });
@@ -348,7 +371,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 133
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNavItem"], {
@@ -360,7 +383,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 124
+        lineNumber: 134
       },
       __self: this
     }, "Contributions"))))));
@@ -1141,7 +1164,7 @@ module.exports = {
 /*! exports provided: menu, key, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"menu\":[{\"title\":\"WebsiteMenu\",\"url\":\"header-WebsiteMenu\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item\",\"children\":[{\"title\":\"Components\",\"url\":\"header-Components\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item,WebsiteMenu\",\"children\":[{\"title\":\"Accordion\",\"url\":\"accordion\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Menu\",\"url\":\"actionmenu\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Asset List\",\"url\":\"assetlist\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Avatar\",\"url\":\"avatar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Bar Loader\",\"url\":\"barloader\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Breadcrumbs\",\"url\":\"breadcrumb\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Checkbox\",\"url\":\"checkbox\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Coach Mark\",\"url\":\"coachmark\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Cycle Button\",\"url\":\"cyclebutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dialog\",\"url\":\"dialog\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Drop Indicator\",\"url\":\"dropindicator\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dropzone\",\"url\":\"dropzone\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Link\",\"url\":\"link\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Miller Columns\",\"url\":\"miller\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Page\",\"url\":\"page\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Quick Actions\",\"url\":\"quickaction\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Radio\",\"url\":\"radio\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rating\",\"url\":\"rating\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rule\",\"url\":\"rule\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Search Within\",\"url\":\"searchwithin\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Status Light\",\"url\":\"statuslight\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tabs\",\"url\":\"tabs\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Toast\",\"url\":\"toast\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tooltip\",\"url\":\"tooltip\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Well\",\"url\":\"well\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"}]}]}],\"key\":[{\"title\":\"WebsiteMenu\",\"url\":\"header-WebsiteMenu\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item\"},{\"title\":\"Components\",\"url\":\"header-Components\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item,WebsiteMenu\"},{\"title\":\"Accordion\",\"url\":\"accordion\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Menu\",\"url\":\"actionmenu\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Asset List\",\"url\":\"assetlist\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Avatar\",\"url\":\"avatar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Bar Loader\",\"url\":\"barloader\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Breadcrumbs\",\"url\":\"breadcrumb\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Checkbox\",\"url\":\"checkbox\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Coach Mark\",\"url\":\"coachmark\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Cycle Button\",\"url\":\"cyclebutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dialog\",\"url\":\"dialog\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Drop Indicator\",\"url\":\"dropindicator\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dropzone\",\"url\":\"dropzone\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Link\",\"url\":\"link\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Miller Columns\",\"url\":\"miller\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Page\",\"url\":\"page\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Quick Actions\",\"url\":\"quickaction\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Radio\",\"url\":\"radio\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rating\",\"url\":\"rating\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rule\",\"url\":\"rule\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Search Within\",\"url\":\"searchwithin\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Status Light\",\"url\":\"statuslight\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tabs\",\"url\":\"tabs\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Toast\",\"url\":\"toast\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tooltip\",\"url\":\"tooltip\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Well\",\"url\":\"well\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"}]}");
+module.exports = JSON.parse("{\"menu\":[{\"title\":\"WebsiteMenu\",\"url\":\"header-WebsiteMenu\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item\",\"children\":[{\"title\":\"Components\",\"url\":\"header-Components\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item,WebsiteMenu\",\"children\":[{\"title\":\"Accordion\",\"url\":\"accordion\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Bar\",\"url\":\"actionbar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Button\",\"url\":\"actionbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Menu\",\"url\":\"actionmenu\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Alert\",\"url\":\"alert\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Asset\",\"url\":\"asset\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Asset List\",\"url\":\"assetlist\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Avatar\",\"url\":\"avatar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Banner\",\"url\":\"banner\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Bar Loader\",\"url\":\"barloader\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Breadcrumbs\",\"url\":\"breadcrumb\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - CTA\",\"url\":\"button-cta\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Over Background\",\"url\":\"button-over-background\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Primary\",\"url\":\"button-primary\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Secondary\",\"url\":\"button-secondary\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Warning\",\"url\":\"button-warning\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button Group\",\"url\":\"buttongroup\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Calendar\",\"url\":\"calendar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Card - Asset preview\",\"url\":\"card-asset\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Card - Gallery\",\"url\":\"card-gallery\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Card\",\"url\":\"card\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Checkbox\",\"url\":\"checkbox\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Circle Loader\",\"url\":\"circleloader\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Clear Button\",\"url\":\"clearbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Coach Mark\",\"url\":\"coachmark\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Combobox\",\"url\":\"combobox\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Cycle Button\",\"url\":\"cyclebutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Date Picker\",\"url\":\"datepicker\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Text Field - Decorated\",\"url\":\"decoratedtextfield\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dial\",\"url\":\"dial\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dialog\",\"url\":\"dialog\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dropdown\",\"url\":\"dropdown\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Drop Indicator\",\"url\":\"dropindicator\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dropzone\",\"url\":\"dropzone\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Field Group\",\"url\":\"fieldgroup\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Field Label\",\"url\":\"fieldlabel\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Form\",\"url\":\"form\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Illustrated Message\",\"url\":\"illustratedmessage\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Label\",\"url\":\"label\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Link\",\"url\":\"link\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Logic Button\",\"url\":\"logicbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Menu\",\"url\":\"menu\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Meter\",\"url\":\"meter\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Miller Columns\",\"url\":\"miller\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Page\",\"url\":\"page\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Pagination - Button Style\",\"url\":\"pagination-button-style\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Pagination - Explicit\",\"url\":\"pagination-explicit\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Pagination - Page\",\"url\":\"pagination-listing\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Popover\",\"url\":\"popover\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Quick Actions\",\"url\":\"quickaction\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Radio\",\"url\":\"radio\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rating\",\"url\":\"rating\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rule\",\"url\":\"rule\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Search\",\"url\":\"search\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Search Within\",\"url\":\"searchwithin\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Side Navigation\",\"url\":\"sidenav\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Slider\",\"url\":\"slider\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Split Button\",\"url\":\"splitbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"SplitView\",\"url\":\"splitview\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Status Light\",\"url\":\"statuslight\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Steplist\",\"url\":\"steplist\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Stepper\",\"url\":\"stepper\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Table\",\"url\":\"table\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tabs\",\"url\":\"tabs\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tags\",\"url\":\"tags\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Text area\",\"url\":\"textarea\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Text Field\",\"url\":\"textfield\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Toast\",\"url\":\"toast\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Switch\",\"url\":\"toggle\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tool\",\"url\":\"tool\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tooltip\",\"url\":\"tooltip\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tree View\",\"url\":\"treeview\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Typography (Deprecated)\",\"url\":\"typography-deprecated\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Typography (Internationalized)\",\"url\":\"typography-international\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Typography\",\"url\":\"typography\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Well\",\"url\":\"well\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"}]}]}],\"key\":[{\"title\":\"WebsiteMenu\",\"url\":\"header-WebsiteMenu\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item\"},{\"title\":\"Components\",\"url\":\"header-Components\",\"linkType\":\"group\",\"parent\":\"top-level-menu-item,WebsiteMenu\"},{\"title\":\"Accordion\",\"url\":\"accordion\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Bar\",\"url\":\"actionbar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Button\",\"url\":\"actionbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Action Menu\",\"url\":\"actionmenu\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Alert\",\"url\":\"alert\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Asset\",\"url\":\"asset\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Asset List\",\"url\":\"assetlist\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Avatar\",\"url\":\"avatar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Banner\",\"url\":\"banner\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Bar Loader\",\"url\":\"barloader\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Breadcrumbs\",\"url\":\"breadcrumb\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - CTA\",\"url\":\"button-cta\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Over Background\",\"url\":\"button-over-background\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Primary\",\"url\":\"button-primary\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Secondary\",\"url\":\"button-secondary\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button - Warning\",\"url\":\"button-warning\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Button Group\",\"url\":\"buttongroup\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Calendar\",\"url\":\"calendar\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Card - Asset preview\",\"url\":\"card-asset\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Card - Gallery\",\"url\":\"card-gallery\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Card\",\"url\":\"card\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Checkbox\",\"url\":\"checkbox\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Circle Loader\",\"url\":\"circleloader\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Clear Button\",\"url\":\"clearbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Coach Mark\",\"url\":\"coachmark\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Combobox\",\"url\":\"combobox\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Cycle Button\",\"url\":\"cyclebutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Date Picker\",\"url\":\"datepicker\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Text Field - Decorated\",\"url\":\"decoratedtextfield\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dial\",\"url\":\"dial\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dialog\",\"url\":\"dialog\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dropdown\",\"url\":\"dropdown\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Drop Indicator\",\"url\":\"dropindicator\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Dropzone\",\"url\":\"dropzone\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Field Group\",\"url\":\"fieldgroup\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Field Label\",\"url\":\"fieldlabel\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Form\",\"url\":\"form\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Illustrated Message\",\"url\":\"illustratedmessage\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Label\",\"url\":\"label\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Link\",\"url\":\"link\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Logic Button\",\"url\":\"logicbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Menu\",\"url\":\"menu\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Meter\",\"url\":\"meter\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Miller Columns\",\"url\":\"miller\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Page\",\"url\":\"page\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Pagination - Button Style\",\"url\":\"pagination-button-style\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Pagination - Explicit\",\"url\":\"pagination-explicit\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Pagination - Page\",\"url\":\"pagination-listing\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Popover\",\"url\":\"popover\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Quick Actions\",\"url\":\"quickaction\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Radio\",\"url\":\"radio\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rating\",\"url\":\"rating\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Rule\",\"url\":\"rule\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Search\",\"url\":\"search\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Search Within\",\"url\":\"searchwithin\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Side Navigation\",\"url\":\"sidenav\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Slider\",\"url\":\"slider\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Split Button\",\"url\":\"splitbutton\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"SplitView\",\"url\":\"splitview\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Status Light\",\"url\":\"statuslight\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Steplist\",\"url\":\"steplist\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Stepper\",\"url\":\"stepper\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Table\",\"url\":\"table\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tabs\",\"url\":\"tabs\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tags\",\"url\":\"tags\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Text area\",\"url\":\"textarea\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Text Field\",\"url\":\"textfield\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Toast\",\"url\":\"toast\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Switch\",\"url\":\"toggle\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tool\",\"url\":\"tool\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tooltip\",\"url\":\"tooltip\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Tree View\",\"url\":\"treeview\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Typography (Deprecated)\",\"url\":\"typography-deprecated\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Typography (Internationalized)\",\"url\":\"typography-international\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Typography\",\"url\":\"typography\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"},{\"title\":\"Well\",\"url\":\"well\",\"linkType\":\"Internal\",\"parent\":\"top-level-menu-item,WebsiteMenu,Components\"}]}");
 
 /***/ }),
 

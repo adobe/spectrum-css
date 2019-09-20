@@ -53,10 +53,19 @@ class Sidebar extends React.Component {
   }
   navigate = (slug,type) => {
     if(type === 'Internal') {
-      Router.push(`/guideline?id=${slug}`,`${pathPrefix}/components/${slug}/`);
-      this.setState({
-        menuOpen: false
-      })
+      if (slug === 'home') {
+        Router.push(`${pathPrefix}/`);
+        this.setState({
+          menuOpen: false
+        })
+      } else {
+        console.log({slug,type})
+        console.log({pathname: `${pathPrefix}/components/${slug}/`, query: slug})
+        Router.push({pathname: `${pathPrefix}/components/${slug}/`, query: slug});
+        this.setState({
+          menuOpen: false
+        })
+      }
     } else {
       window.open(slug, '_blank');
     }
@@ -76,7 +85,7 @@ class Sidebar extends React.Component {
     <div className={classNames(styles.sideBar, this.state.menuOpen?styles.menuOpen:styles.menuClosed)}>
     <div className={classNames(styles.spectrumSidebar)}>
         <div className={styles.header}>
-          <Link href="/guideline?id=home" as={`${pathPrefix}/`}><a><img src={`${pathPrefix}/static/logo.png`} alt="Spectrum Logo" srcSet={`${pathPrefix}/static/logo@2x.png 2x`} className={styles.logo} onClick={() => this.navigate('home', "Internal")}/></a></Link>
+          <Link href="/" as={`${pathPrefix}/`}><a><img src={`${pathPrefix}/static/logo.png`} alt="Spectrum Logo" srcSet={`${pathPrefix}/static/logo@2x.png 2x`} className={styles.logo} onClick={(e) => {this.navigate('home', "Internal"); e.preventDefault();}}/></a></Link>
           <SiteSearch/>
         </div>
         <div className={styles.navigation}>
@@ -92,10 +101,11 @@ class Sidebar extends React.Component {
                   {item.children && item.children.map((mi, i)=>{
                     return (
                       <SideNavItem value={mi.url} label={mi.title} key={i}
-                          onClick={() => {
+                          onClick={(e) => {
                             mi.linkType !== 'group' ?
                             this.navigate(mi.url, mi.linkType): undefined
                             // mi.url ? this.navigate(mi.url, 'Internal'): undefined
+                            e.preventDefault();
                           }
 
                           }

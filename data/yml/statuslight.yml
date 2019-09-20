@@ -1,7 +1,6 @@
 name: Status Light
-components:
-  statuslight-colors:
-    id: statuslight
+examples:
+  - id: statuslight
     name: Colors
     status: Verified
     markup: |-
@@ -13,43 +12,41 @@ components:
       <div class="spectrum-StatusLight spectrum-StatusLight--chartreuse">Chartreuse Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--magenta">Magenta Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--purple">Purple Status</div>
-  statuslight-neutral:
+  - id: statuslight-neutral
     name: Neutral
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
-  statuslight-info:
+  - id: statuslight-info
     name: Info
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--info">Active</div>
-  statuslight-positive:
+  - id: statuslight-positive
     name: Positive
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
-  statuslight-notice:
+  - id: statuslight-notice
     name: Notice
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
-  statuslight-negative:
+  - id: statuslight-negative
     name: Negative
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
-  statuslight-disabled:
-    id: statuslight
+  - id: statuslight
     name: Disabled
-    description: The disabled state of Status Light.
     status: Verified
+    description: The disabled state of Status Light.
     markup: |
       <div class="spectrum-StatusLight is-disabled">Disabled</div>
-  statuslight-active:
+  - id: statuslight-active
     name: Active
-    description: The active variant of Status Light
-    details: Use the `info` variant instead
     status: Deprecated
+    details: Use the `info` variant instead
+    description: The active variant of Status Light
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
-id: statuslight

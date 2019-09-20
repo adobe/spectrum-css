@@ -1,7 +1,6 @@
 name: Miller Columns
-components:
-  miller-column-branch-selectable:
-    id: miller-column
+examples:
+  - id: miller-column
     name: Miller Columns (Branches Selectable)
     description: Miller columns that allow both files and folders to be selected.
     markup: |
@@ -101,8 +100,7 @@ components:
           </ul>
         </div>
       </div>
-  miller-column-file-selectable:
-    id: miller-column
+  - id: miller-column
     name: Miller Columns (Files Selectable)
     description: Miller columns that only allow files to be selected.
     markup: |
@@ -180,4 +178,3 @@ components:
           </ul>
         </div>
       </div>
-id: miller

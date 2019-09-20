@@ -1,6 +1,6 @@
 name: Toast
-components:
-  toast:
+examples:
+  - id: toast
     name: Default
     status: Verified
     markup: |
@@ -19,7 +19,7 @@ components:
           </button>
         </div>
       </div>
-  toast-info:
+  - id: toast-info
     name: Info
     status: Verified
     markup: |
@@ -38,7 +38,7 @@ components:
           </button>
         </div>
       </div>
-  toast-negative:
+  - id: toast-negative
     name: Negative
     status: Verified
     markup: |
@@ -60,7 +60,7 @@ components:
           </button>
         </div>
       </div>
-  toast-positive:
+  - id: toast-positive
     name: Positive
     status: Verified
     markup: |
@@ -82,8 +82,7 @@ components:
           </button>
         </div>
       </div>
-  toast-wrapping:
-    id: toast
+  - id: toast
     name: Wrapping
     status: Verified
     markup: |
@@ -169,7 +168,7 @@ components:
           </button>
         </div>
       </div>
-  toast-error:
+  - id: toast-error
     name: Error
     details: Use `negative` variant instead
     markup: |
@@ -191,10 +190,10 @@ components:
           </button>
         </div>
       </div>
-  toast-warning:
+  - id: toast-warning
     name: Warning
-    details: Use `negative` variant instead
     status: Deprecated
+    details: Use `negative` variant instead
     markup: |
       <div class="spectrum-Toast spectrum-Toast--warning">
         <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -214,7 +213,7 @@ components:
           </button>
         </div>
       </div>
-  toast-success:
+  - id: toast-success
     name: Success
     details: Use `positive` variant instead
     markup: |
@@ -236,7 +235,7 @@ components:
           </button>
         </div>
       </div>
-  toast-oldmarkup:
+  - id: toast-oldmarkup
     name: Old markup
     status: Deprecated
     description: 'The old markup for Toast (no `.spectrum-Toast-body` and both buttons inside of `.spectrum-Toast-buttons`) still works, but will be removed in the next major version.'
@@ -273,4 +272,3 @@ components:
           </button>
         </div>
       </div>
-id: toast

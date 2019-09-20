@@ -1,8 +1,8 @@
 name: Breadcrumbs
-components:
-  breadcrumb:
-    status: Verified
+examples:
+  - id: breadcrumb
     name: Standard
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -23,10 +23,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-dragged:
-    id: breadcrumb
-    status: Verified
+  - id: breadcrumb
     name: Dragged
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -47,10 +46,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-nested:
-    id: breadcrumb
-    status: Verified
+  - id: breadcrumb
     name: Nested
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -81,10 +79,9 @@ components:
           </li>
         </ul>
       </nav>
-  nested-root-visible:
-    id: breadcrumb
-    status: Verified
+  - id: breadcrumb
     name: Nested (root visible)
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs">
@@ -115,9 +112,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-multiline:
-    status: Verified
+  - id: breadcrumb-multiline
     name: Multiline
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -138,10 +135,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-multiline-dragged:
-    id: breadcrumb-multiline
-    status: Verified
+  - id: breadcrumb-multiline
     name: Multiline (dragged)
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -162,10 +158,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-multiline-nested:
-    id: breadcrumb-multiline
-    status: Verified
+  - id: breadcrumb-multiline
     name: Multiline Nested
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -196,10 +191,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-multiline-nested-rootvisible:
-    id: breadcrumb-multiline
-    status: Verified
+  - id: breadcrumb-multiline
     name: Multiline Nested (root visible)
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
@@ -230,9 +224,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-compact:
-    status: Verified
+  - id: breadcrumb-compact
     name: Compact
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
@@ -253,10 +247,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-compact-nested:
-    id: breadcrumb-compact
-    status: Verified
+  - id: breadcrumb-compact
     name: Compact Nested
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
@@ -287,10 +280,9 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-compact-nested-rootvisible:
-    id: breadcrumb-compact
-    status: Verified
+  - id: breadcrumb-compact
     name: Compact Nested (root visible)
+    status: Verified
     markup: |
       <nav>
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
@@ -321,7 +313,7 @@ components:
           </li>
         </ul>
       </nav>
-  breadcrumb-title:
+  - id: breadcrumb-title
     name: Title
     status: Deprecated
     details: Use the `multiline` variant instead
@@ -347,4 +339,3 @@ components:
           </li>
         </ul>
       </nav>
-id: breadcrumb

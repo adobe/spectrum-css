@@ -10,6 +10,10 @@ const webpack = require('webpack');
 const yaml = require('js-yaml');
 //const nodeExternals = require('webpack-node-externals');
 
+const pathPrefix = process.env.NODE_ENV === 'production'
+  ? '/spectrum-css'
+  : '';
+
 if (typeof require !== "undefined") {
   require.extensions[".css"] = (file) => {};
 }
@@ -94,7 +98,7 @@ module.exports = withCSS({
   },
   exportPathMap: async function() {
     const paths = {
-      '/': {
+      '${pathPrefix}/': {
         page: '/'
       }
     };
@@ -109,7 +113,7 @@ module.exports = withCSS({
       });
       const componentData = yaml.safeLoad(componentYaml);
       const slug = path.basename(component, '.yml');
-      paths[`/components/${slug}/`] = {
+      paths[`${pathPrefix}/components/${slug}/`] = {
         page: '/components/[id]',
         query: {
           id: slug

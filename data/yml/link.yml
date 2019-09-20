@@ -1,15 +1,15 @@
 name: Link
-components:
-  link:
+examples:
+  - id: link
     status: Verified
     markup: |
       <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
-  link-quiet:
+  - id: link-quiet
     name: Link - Quiet
     status: Verified
     markup: |
       <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
-  link-over-background:
+  - id: link-over-background
     name: Link - Over Background
     status: Verified
     markup: |
@@ -18,16 +18,15 @@ components:
           Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--overBackground"> spectrum-Link--overBackground</a>. This is just filler text, but if you keep reading maybe something good will happen.
         </p>
       </div>
-  link-disabled:
+  - id: link-disabled
     name: Link - Disabled
-    details: Do not use disabled links.
     status: Deprecated
+    details: Do not use disabled links.
     markup: |
       <p>This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>
-  link-subtle:
+  - id: link-subtle
     name: Link - Subtle
-    details: Use `quiet` instead.
     status: Deprecated
+    details: Use `quiet` instead.
     markup: |
       <p> This uses <a href="#" class="spectrum-Link spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
-id: link

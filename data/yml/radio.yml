@@ -1,7 +1,7 @@
 name: Radio
 status: Verified
-components:
-  radio:
+examples:
+  - id: radio
     markup: |
       <form>
         <div class="spectrum-Radio">
@@ -44,7 +44,7 @@ components:
         <span class="spectrum-Radio-button"></span>
         <label class="spectrum-Radio-label" for="radio-3">Radio with an extrordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>
-  radio-quiet:
+  - id: radio-quiet
     markup: |
       <form>
         <div class="spectrum-Radio spectrum-Radio--quiet">
@@ -87,4 +87,3 @@ components:
         <span class="spectrum-Radio-button"></span>
         <label class="spectrum-Radio-label" for="radio-4">Radio with an extrordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>
-id: radio
