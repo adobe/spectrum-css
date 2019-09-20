@@ -1,31 +1,76 @@
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
+const gulp = require('gulp');
+const builder = require('./tools/bundle-builder');
+const test = require('./tools/test-builder');
+const site = require('./site/gulpfile.js');
+const subrunner = require('./tools/bundle-builder/subrunner');
 
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
+Object.assign(exports, builder);
+Object.assign(exports, test);
+Object.assign(exports, site);
 
-var gulp = require('gulp');
+const path = require('path');
+const fsp = require('fs').promises;
+const semver = require('semver');
 
-// Include all tasks
-require('./tasks/lint');
-require('./tasks/copy-vars');
-require('./tasks/copy-loadIcons');
-require('./tasks/icons');
-require('./tasks/build-css');
-require('./tasks/build-docs');
-require('./tasks/clean');
-require('./tasks/gh-pages');
-require('./tasks/sass-compile');
-require('./tasks/build');
-require('./tasks/dev');
-require('./tasks/build-backstop');
-require('./tasks/test-backstop');
-require('./tasks/test');
+async function checkPeerDependencies() {
+  let packagesDir = './components';
 
-gulp.task('default', gulp.series('build'));
+  async function readPackage(component) {
+    return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
+  }
+
+  async function writePackage(component, package) {
+    return await fsp.writeFile(path.join(component, 'package.json'), JSON.stringify(package, null, 2));
+  }
+
+  let components = (await fsp.readdir(packagesDir, { withFileTypes: true }))
+    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .map((dirent) => path.join(packagesDir, dirent.name));
+
+  await Promise.all(components.map(async (component) => {
+    let package = await readPackage(component);
+
+    if (package.peerDependencies) {
+      Object.keys(package.peerDependencies).forEach((dependency) => {
+        let devDepVer = package.devDependencies[dependency];
+        let peerDepVer = package.peerDependencies[dependency];
+        if (devDepVer) {
+          if (!semver.satisfies(peerDepVer, devDepVer)) {
+            throw new Error(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, does not satisfy ${devDepVer})`);
+          }
+        }
+        else {
+          throw new Error(`${component} has ${dependency} in peerDependencies, but not devDependencies!`);
+        }
+      });
+
+      await writePackage(component, package);
+    }
+  }));
+};
+
+async function releaseBundles() {
+  let bundlesDir = './bundles';
+
+  let bundles = (await fsp.readdir(bundlesDir, { withFileTypes: true }))
+    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .map((dirent) => path.join(process.cwd(), bundlesDir, dirent.name));
+
+  await subrunner.runTaskOnPackages('release', bundles);
+};
+
+exports.checkPeerDependencies = checkPeerDependencies;
+
+exports.version = gulp.series(
+  checkPeerDependencies,
+  builder.build
+);
+
+exports.dev = gulp.series(
+  exports.copySiteResources,
+  exports.dev
+);
+
+exports.releaseBundles = releaseBundles;
+
+exports.prepare = site.copySiteResources;
