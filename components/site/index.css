@@ -277,8 +277,10 @@ governing permissions and limitations under the License.
   align-items: center;
   color: inherit;
   text-decoration: none;
+  outline: none;
 }
 
+.spectrum-CSSComponent-link:focus-ring,
 .spectrum-CSSComponent-link:hover {
   text-decoration: underline;
 }
