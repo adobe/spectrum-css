@@ -168,6 +168,16 @@ governing permissions and limitations under the License.
   max-width: 100%;
 }
 
+.spectrum-Site-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.spectrum-Site-footerContent {
+}
+.spectrum-Site-footerCopyright {
+}
+
 /* Kill the overlay without animating when the page is resized */
 .spectrum-Site-overlay {
   display: none;
