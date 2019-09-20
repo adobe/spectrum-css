@@ -343,15 +343,24 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSComponent-resource--adobe {
   color: rgb(255, 2, 1) !important;
+  background-color: rgba(255, 2, 1, 0.1) !important;
 }
 
 .spectrum-CSSComponent-resource--github {
-  background-color: rgb(234, 234, 234) !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
   color: black;
 }
 
+.spectrum--dark,
+.spectrum--darkest {
+  .spectrum-CSSComponent-resource--github {
+    background-color: rgba(245, 245, 245, 0.1) !important;
+    color: rgb(245, 245, 245);
+  }
+}
+
 .spectrum-CSSComponent-resource--npm {
-  background-color: rgb(253, 233, 234) !important;
+  background-color: rgba(203, 56, 55, 0.1) !important;
 }
 
 .spectrum-CSSComponent-cardImage {
