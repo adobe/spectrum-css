@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 const gulp = require('gulp');
 const fs = require('fs');
+const fsp = fs.promises;
 const path = require('path');
 const pugCompiler = require('pug');
 const pug = require('gulp-pug');
@@ -23,11 +24,12 @@ const logger = require('gulplog');
 const lunr = require('lunr');
 
 const dirs = require('../lib/dirs');
+const exec = require('../lib/exec');
 const depUtils = require('../lib/depUtils');
 
 let minimumDeps = [
   'icon',
-  'label',
+  'statuslight',
   'link',
   'page',
   'site',
@@ -46,12 +48,14 @@ let minimumDeps = [
 
 let templateData = {
   nav: [],
-  pkg: JSON.parse(fs.readFileSync(path.join(`${process.cwd()}/package.json`), 'utf8'))
+  pkg: JSON.parse(fs.readFileSync('package.json', 'utf8'))
 };
 
 async function buildDocs_forDep(dep) {
   // Drop package org
   dep = dep.split('/').pop();
+
+  let metadata = JSON.parse(await fsp.readFile(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json')));
 
   let dependencyOrder = await depUtils.getPackageDependencyOrder(path.join(dirs.components, dep));
 
@@ -73,20 +77,33 @@ async function buildDocs_forDep(dep) {
           file.basename = dep;
         }
       }))
-      .pipe(data(function(file) {
+      .pipe(data(async function(file) {
         let componentDeps = dependencyOrder.map((dep) => dep.split('/').pop());
         componentDeps.push(dep);
+
+        let pkg = JSON.parse(await fsp.readFile(path.join(dirs.components, dep, 'package.json')));
 
         let docsDeps = minimumDeps.concat(componentDeps);
         docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
 
+        let date;
+        try {
+          date = await exec.promise(`git log -1 --format=%ai ${pkg.name}@${pkg.version}`, { pipe: false });
+
+          date = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+        catch (err) {
+          logger.error(`Could not determine date of release for ${pkg.name}@${pkg.version}`);
+        }
+
         return Object.assign({}, {
           util: require(`${dirs.site}/util`),
-          dnaVars: JSON.parse(fs.readFileSync(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json'), 'utf8'))
+          dnaVars: metadata
         }, templateData, {
           pageURL: path.basename(file.basename, '.yml') + '.html',
           dependencyOrder: docsDeps,
-          pkg: JSON.parse(fs.readFileSync(path.join(dirs.components, dep, 'package.json'), 'utf8'))
+          releaseDate: date,
+          pkg: pkg
         });
       }))
       .pipe(through.obj(function compilePug(file, enc, cb) {
