@@ -370,6 +370,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSComponent-switcher {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .spectrum-CSS-switcherContainer {
