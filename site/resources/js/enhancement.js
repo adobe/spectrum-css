@@ -10,6 +10,163 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Dropdown
+(function() {
+  var openDropdown = null;
+
+  function toggleOpen(dropdown, force) {
+    var isOpen = force !== undefined ? force : !dropdown.classList.contains('is-open');
+    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+    var popover = dropdown.querySelector('.spectrum-Dropdown-popover');
+
+    dropdown[isOpen ? 'setAttribute' : 'removeAttribute']('aria-expanded', 'true');
+    dropdown.classList.toggle('is-open', isOpen);
+    fieldButton.classList.toggle('is-selected', isOpen);
+
+    if (popover) {
+      popover.style.zIndex = 1;
+      popover.classList.toggle('is-open', isOpen);
+    }
+
+    if (isOpen) {
+      openDropdown = dropdown;
+    }
+  }
+
+  function closeAndFocusDropdown(dropdown) {
+    if (dropdown) {
+      toggleOpen(dropdown, false);
+      var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+      if (fieldButton) {
+        fieldButton.focus();
+      }
+    }
+  }
+
+  window.addEventListener('keydown', function(event) {
+    var menuItem = event.target.closest('.spectrum-Menu-item');
+    if (menuItem) {
+      var menu = menuItem.closest('.spectrum-Menu');
+      if (menuItem.classList.contains('spectrum-Menu-item')) {
+        var items = Array.prototype.slice.call(menu.querySelectorAll('.spectrum-Menu-item:not(.is-disabled)'));
+        var menuItemIndex = items.indexOf(menuItem);
+        var newItemIndex = -1;
+        if (event.key === 'ArrowDown') {
+          newItemIndex = menuItemIndex + 1 < items.length ? menuItemIndex + 1 : 0;
+        }
+        else if (event.key === 'ArrowUp') {
+          newItemIndex = menuItemIndex - 1 >= 0 ? menuItemIndex - 1 : items.length - 1;
+        }
+        else if (event.key === 'Home') {
+          newItemIndex = 0;
+        }
+        else if (event.key === 'End') {
+          newItemIndex = items.length - 1;
+        }
+        else if (event.key === 'Escape') {
+          var dropdown = event.target.closest('.spectrum-Dropdown');
+          closeAndFocusDropdown(dropdown);
+        }
+        else if (event.key === 'Enter') {
+          handleMenuChange(menu, menuItem, items[menuItemIndex].getAttribute('value'));
+
+          var dropdown = event.target.closest('.spectrum-Dropdown');
+          closeAndFocusDropdown(dropdown);
+          event.preventDefault();
+        }
+        if (newItemIndex !== -1) {
+          items[newItemIndex].focus();
+
+          // Don't scroll the list
+          event.preventDefault();
+        }
+      }
+    }
+    else {
+      if (event.key === 'ArrowDown') {
+        var dropdown = event.target.closest('.spectrum-Dropdown');
+        if (dropdown) {
+          var menu = dropdown.querySelector('.spectrum-Menu');
+          if (menu) {
+            var menuItem = menu.querySelector('.spectrum-Menu-item');
+            if (menuItem) {
+              event.preventDefault();
+              menuItem.focus();
+            }
+          }
+        }
+      }
+    }
+  });
+
+  function setDropdownValue(dropdown, value, label) {
+    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+    dropdown.setAttribute('value', value);
+    var event = new CustomEvent('change', {
+      detail: {
+        label: label,
+        value: value
+      }
+    });
+    dropdown.dispatchEvent(event);
+
+    if (fieldButton && label) {
+      var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
+      if (dropdownLabel) {
+        dropdownLabel.innerHTML = label;
+      }
+    }
+  }
+
+  function handleMenuChange(menu, menuItem, value) {
+    var selectedMenuItem = menu.querySelector('.spectrum-Menu-item.is-selected');
+    if (selectedMenuItem) {
+      selectedMenuItem.classList.remove('is-selected');
+      selectedMenuItem.removeAttribute('aria-selected');
+    }
+
+    menuItem.classList.add('is-selected');
+    menuItem.setAttribute('aria-selected', 'true');
+
+    var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
+    var label = menuLabel.innerHTML;
+
+    var dropdown = menu.closest('.spectrum-Dropdown');
+    if (dropdown) {
+      toggleOpen(dropdown, false);
+      setDropdownValue(dropdown, value, label);
+    }
+  }
+
+  window.addEventListener('click', function(event) {
+    var dropdown = event.target.closest('.spectrum-Dropdown');
+
+    if (dropdown) {
+      toggleOpen(dropdown);
+
+      var menuItem = event.target.closest('.spectrum-Menu-item');
+      if (menuItem) {
+        var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+        var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
+        if (menuLabel) {
+          var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
+          if (dropdownLabel) {
+            dropdownLabel.innerHTML = menuLabel.innerHTML;
+
+            event.stopPropagation();
+            handleMenuChange(menuItem.parentElement, menuItem, menuItem.getAttribute('value'));
+          }
+        }
+      }
+    }
+    else {
+      if (openDropdown) {
+        toggleOpen(openDropdown, false);
+      }
+    }
+  });
+}());
+
 // Treeview
 window.addEventListener('click', function(event) {
   var isDisabled = event.target.closest('.spectrum-TreeView-item') !== null &&
@@ -55,7 +212,9 @@ function toggleInputGroupFocus(event) {
   }
   var func = event.type === 'focus' ? 'add' : 'remove';
   var closestElement = event.target.closest(closestSelector);
-  closestElement.classList[func]('is-focused');
+  if (closestElement) {
+    closestElement.classList[func]('is-focused');
+  }
 }
 
 document.addEventListener('focus', toggleInputGroupFocus, true);
