@@ -129,7 +129,9 @@ governing permissions and limitations under the License.
   /* Selected state */
   &.is-selected {
     /* Focus */
-    &:focus {
+    &:focus,
+    &.is-focused,
+    *:focus {
       outline: none;
     }
     .spectrum-Steplist-marker {
