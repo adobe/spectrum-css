@@ -68,13 +68,7 @@ function runComponentTask(packageDir, task, callback) {
   Run a task on every component in dependency order
 */
 async function runTaskOnAllComponents(task) {
-  let components;
-  try {
-    components = await depUtils.getFolderDependencyOrder(dirs.components);
-  }
-  catch (err) {
-    return reject(err);
-  }
+  let components = await depUtils.getFolderDependencyOrder(dirs.components);
 
   components = components.map(component => path.join(dirs.components, component.split('/').pop()));
 
