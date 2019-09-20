@@ -1,10 +1,9 @@
 name: Steplist
 examples:
   - id: steplist-current
-    name: Standard
+    name: Standard (static)
     description: A basic steplist.
     markup: |
-      <h3 class="spectrum-Heading spectrum-Heading--subtitle2">Static variant</h3>
       <div class="spectrum-Steplist spectrum-Steplist--small" role="list">
         <div class="spectrum-Steplist-item is-complete" role="listitem" aria-posinset="1" aria-setsize="4" aria-label="Step 1">
           <span class="spectrum-Steplist-markerContainer">
@@ -32,8 +31,10 @@ examples:
           <span class="spectrum-Steplist-segment"></span>
         </div>
       </div>
-
-      <h3 class="spectrum-Heading spectrum-Heading--subtitle2">Interactive variant</h3>
+  - id: steplist-current
+    name: Standard (interactive)
+    description: A basic interactive steplist.
+    markup: |
       <div class="spectrum-Steplist spectrum-Steplist--small spectrum-Steplist--interactive" role="list">
         <div class="spectrum-Steplist-item is-complete" role="listitem" aria-posinset="1" aria-setsize="4">
           <a class="spectrum-Steplist-link is-complete" role="link" tabindex="-1" aria-label="Step 1">
@@ -70,11 +71,9 @@ examples:
         </div>
       </div>
   - id: steplist-current
-    name: With label
-    description: A steplist with labels.
+    name: With label (static)
+    description: A static steplist with labels.
     markup: |
-      <h3 class="spectrum-Heading spectrum-Heading--subtitle2">Static variant</h3>
-
       <div class="spectrum-Steplist" role="list">
         <div class="spectrum-Steplist-item is-complete" role="listitem" aria-posinset="1" aria-setsize="4">
           <span class="spectrum-Steplist-label">Step 1</span>
@@ -105,9 +104,10 @@ examples:
           <span class="spectrum-Steplist-segment"></span>
         </div>
       </div>
-
-      <h3 class="spectrum-Heading spectrum-Heading--subtitle2">Interactive variant</h3>
-
+  - id: steplist-current
+    name: With label (interactive)
+    description: An interactive steplist with labels.
+    markup: |
       <div class="spectrum-Steplist spectrum-Steplist--interactive" role="list">
         <div class="spectrum-Steplist-item is-complete" role="listitem" aria-posinset="1" aria-setsize="4">
           <a class="spectrum-Steplist-link is-complete" role="link" tabindex="-1">
@@ -147,8 +147,8 @@ examples:
         </div>
       </div>
   - id: steplist-current
-    name: With tooltip
-    description: A steplist with tooltips.
+    name: With tooltip (static)
+    description: A static steplist with tooltips.
     markup: |
       <h3 class="spectrum-Heading spectrum-Heading--subtitle2">Static variant</h3>
 
@@ -206,9 +206,10 @@ examples:
           </span>
         </div>
       </div>
-
-      <h3 class="spectrum-Heading spectrum-Heading--subtitle2">Interactive variant</h3>
-
+  - id: steplist-current
+    name: With tooltip (interactive)
+    description: An interactive steplist with tooltips.
+    markup: |
       <div class="spectrum-Steplist spectrum-Steplist--interactive" role="list">
         <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete" role="listitem" aria-posinset="1" aria-setsize="4">
           <a class="spectrum-Steplist-link is-complete" role="link" tabindex="-1">
