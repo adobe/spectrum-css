@@ -42,6 +42,7 @@ let minimumDeps = [
   'menu',
   'popover',
   'underlay',
+  'card',
   'rule',
   'illustratedmessage'
 ];

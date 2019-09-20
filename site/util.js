@@ -15,16 +15,16 @@ const logger = require('gulplog');
 exports.markdown = require('markdown').markdown;
 exports.Prism = require('prismjs');
 
-const labelColors = {
-  'Deprecated': 'red',
+const statusLightVariants = {
+  'Deprecated': 'negative',
 
-  'Beta Contribution': 'orange',
+  'Beta Contribution': 'notice',
 
-  'Contribution': 'yellow',
-  'CSS Unverified': 'yellow',
+  'Contribution': 'notice',
+  'Unverified': 'notice',
 
-  'Canon': 'green',
-  'CSS Verified': 'green'
+  'Canon': 'positive',
+  'Verified': 'positive'
 };
 
 const dnaStatusTranslation = {
@@ -34,13 +34,13 @@ const dnaStatusTranslation = {
 };
 
 const cssStatusTranslation = {
-  'Beta': 'CSS Unverified',
-  'Unverified': 'CSS Unverified',
-  'Verified': 'CSS Verified'
+  'Contribution': 'Unverified',
+  'Unverified': 'Unverified',
+  'Verified': 'Verified'
 };
 
-exports.getLabelColor = function(status) {
-  return labelColors[status] || 'grey';
+exports.getStatusLightVariant = function(status) {
+  return statusLightVariants[status] || 'neutral';
 };
 
 exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
@@ -48,7 +48,7 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
     dnaStatus = 'Deprecated';
   }
 
-  if (cssStatus === 'CSS Verified') {
+  if (cssStatus === 'Verified') {
     if (dnaStatusTranslation[dnaStatus] !== 'Canon') {
       logger.debug(`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`);
     }
@@ -56,7 +56,7 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
 
   if (!dnaStatus) {
     logger.debug(`${dnaComponentId} has no DNA status`);
-    dnaStatus = 'Beta Contribution';
+    dnaStatus = 'Contribution';
   }
 
   return dnaStatusTranslation[dnaStatus] || dnaStatus;
@@ -64,7 +64,7 @@ exports.getDNAStatus = function(dnaComponentId, dnaStatus, cssStatus) {
 
 exports.getCSSStatus = function(dnaComponentId, cssStatus) {
   if (!cssStatus) {
-    cssStatus = 'Beta';
+    cssStatus = 'Contribution';
   }
   return cssStatusTranslation[cssStatus] || cssStatus;
 };
