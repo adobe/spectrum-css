@@ -41,9 +41,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* topdoc
-{{ checkbox/checkbox.yml }}
-*/
 .spectrum-Checkbox {
   border-color: var(--spectrum-checkbox-box-border-color);
 
@@ -101,9 +98,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* topdoc
-{{ checkbox/checkbox-quiet.yml }}
-*/
 .spectrum-Checkbox--quiet.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox--quiet .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
   border-color: var(--spectrum-checkbox-quiet-box-border-color-selected);

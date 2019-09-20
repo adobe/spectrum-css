@@ -19,9 +19,6 @@ governing permissions and limitations under the License.
   --spectrum-tooltip-tip-width: var(--spectrum-tooltip-tip-height);
 }
 
-/* topdoc
-{{ tooltip/tooltip.yml }}
-*/
 .spectrum-Tooltip {
   @inherit: %spectrum-overlay;
 
