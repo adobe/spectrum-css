@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
-/* topdoc
-{{ barloader/barloader-large.yml }}
-*/
 .spectrum-BarLoader {
   position: relative;
   display: inline-flex;
@@ -77,9 +74,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* topdoc
-{{ barloader/barloader-small.yml }}
-*/
 .spectrum-BarLoader--small {
   min-width: var(--spectrum-barloader-small-width);
 
@@ -92,21 +86,6 @@ governing permissions and limitations under the License.
     border-radius: var(--spectrum-barloader-small-border-radius);
   }
 }
-/* topdoc
-{{ barloader/barloader-large-over-background.yml }}
-*/
-/* topdoc
-{{ barloader/barloader-small-over-background.yml }}
-*/
-/* topdoc
-{{ barloader/barloader-meter.yml }}
-*/
-/* topdoc
-{{ barloader/barloader-large-indeterminate.yml }}
-*/
-/* topdoc
-{{ barloader/barloader-small-indeterminate.yml }}
-*/
 .spectrum-BarLoader--indeterminate .spectrum-BarLoader-fill {
   width: var(--spectrum-barloader-large-indeterminate-fill-width);
   position: relative;

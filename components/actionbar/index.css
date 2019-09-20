@@ -21,13 +21,6 @@ governing permissions and limitations under the License.
   --spectrum-actionbar-max-width: 960px;
 }
 
-/* topdoc
-{{ actionbar/actionbar.yml }}
-*/
-
-/* topdoc
-{{ actionbar/table-actionbar.yml }}
-*/
 .spectrum-ActionBar {
   display: flex;
   justify-content: center;

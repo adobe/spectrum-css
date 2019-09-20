@@ -302,9 +302,6 @@ a.spectrum-ActionButton {
   height: var(--spectrum-clearbutton-small-height);
 }
 
-/* topdoc
-{{ button/tool.yml }}
-*/
 .spectrum-Tool {
   @inherit: .spectrum-ActionButton;
   @inherit: .spectrum-ActionButton--quiet;

@@ -42,9 +42,6 @@ governing permissions and limitations under the License.
   --spectrum-dialog-exit-animation-delay: 0ms;
 }
 
-/* topdoc
-{{ dialog/dialog.yml }}
-*/
 .spectrum-Dialog {
   @inherit: %spectrum-overlay;
 
