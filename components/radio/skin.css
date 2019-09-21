@@ -25,9 +25,6 @@ governing permissions and limitations under the License.
   border-color: var(--spectrum-radio-circle-border-color);
 }
 
-/* topdoc
-{{ radio/radio.yml }}
-*/
 .spectrum-Radio {
   &:hover {
     .spectrum-Radio-button {

@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
-/* topdoc
-{{ treeview/treeview.yml }}
-*/
 .spectrum-TreeView {
   display: block;
   list-style: none;
@@ -115,9 +112,6 @@ governing permissions and limitations under the License.
   visibility: hidden;
 }
 
-/* topdoc
-{{ treeview/treeview-flat.yml }}
-*/
 .spectrum-TreeView-item--indent1 {
   padding-left: var(--spectrum-treeview-item-indent);
 }
@@ -157,11 +151,3 @@ governing permissions and limitations under the License.
 .spectrum-TreeView-item--indent10 {
   padding-left: calc(10 * var(--spectrum-treeview-item-indent));
 }
-
-/* topdoc
-{{ treeview/treeview-icons.yml }}
-*/
-
-/* topdoc
-{{ treeview/treeview-disabled.yml }}
-*/
