@@ -19,7 +19,8 @@
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepublishOnly": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
     "postpublish": "npx lerna run publishpages --concurrency=1",
-    "prepare": "gulp prepare"
+    "prepare": "gulp prepare",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
