@@ -18,13 +18,6 @@ governing permissions and limitations under the License.
   --spectrum-fieldlabel-margin: var(--spectrum-global-dimension-size-100);
 }
 
-/* topdoc
-{{ fieldlabel/fieldlabel.yml }}
-*/
-
-/* topdoc
-{{ fieldlabel/fieldlabel-required.yml }}
-*/
 .spectrum-FieldLabel {
   display: block;
 
@@ -47,9 +40,6 @@ governing permissions and limitations under the License.
   margin: var(--spectrum-fieldlabel-asterisk-margin-y) 0 0 var(--spectrum-fieldlabel-asterisk-gap);
 }
 
-/* topdoc
-{{ fieldlabel/fieldlabel-left.yml }}
-*/
 .spectrum-FieldLabel--left {
   display: inline-block;
   padding: var(--spectrum-fieldlabel-side-padding-top) var(--spectrum-fieldlabel-side-padding-x) 0 0;
@@ -59,18 +49,12 @@ governing permissions and limitations under the License.
   }
 }
 
-/* topdoc
-{{ fieldlabel/fieldlabel-right.yml }}
-*/
 .spectrum-FieldLabel--right {
   display: inline-block;
   text-align: right;
   padding: var(--spectrum-fieldlabel-side-padding-top) var(--spectrum-fieldlabel-side-padding-x) 0 0;
 }
 
-/* topdoc
-{{ form/index.yml }}
-*/
 .spectrum-Form {
   display: table;
   border-collapse: separate;
