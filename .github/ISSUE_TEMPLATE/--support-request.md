@@ -16,8 +16,8 @@ assignees: ''
 
 
 ## Environment
- - Spectrum CSS version: <!-- 2.13.0 -->
- - Browser and OS: <!-- Chrome 75.0.3770.142 on Win 10 -->
+ - **Spectrum CSS version:** <!-- 2.13.0 -->
+ - **Browser(s) and OS(s):** <!-- Chrome 75.0.3770.142 on Win 10 -->
 
 ## Additional context
 <!-- Provide any additional information that might help us understand your request -->

@@ -10,9 +10,8 @@
 
 
 ## How and where has this been tested?
-
- - How this was tested: <!-- Using steps in issue #000 -->
- - Browser(s) and OS(s) this was tested with: <!-- Chrome 75.0.3770.142 on Win 10 -->
+ - **How this was tested:** <!-- Using steps in issue #000 -->
+ - **Browser(s) and OS(s) this was tested with:** <!-- Chrome 75.0.3770.142 on Win 10 -->
 
 ## Screenshots
 <!-- If applicable, add screenshots to show what you changed -->
