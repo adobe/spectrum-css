@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "node"
+services:
+  - docker
+before_install:
+  - npm install -g yarn
+install:
+  - yarn
+before_script:
+  - yarn global add gulp-cli
+script:
+  # This script should be the first that runs to reduce the risk of
+  # executing a script from a compromised NPM package.
+  - audit-ci --moderate
+  - gulp build
+  - gulp dev &
+  - sleep 5
+  - yarn run backstop:ci:test themes=light scales=medium

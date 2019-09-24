@@ -165,18 +165,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
             menuOpen: false
           });
         } else {
-          console.log({
-            slug,
-            type
-          });
-          console.log({
-            pathname: `${pathPrefix}/components/${slug}/`,
-            query: slug
-          });
-          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push({
-            pathname: `${pathPrefix}/components/${slug}/`,
-            query: slug
-          });
+          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`${pathPrefix}/components/[id]?id=${slug}`, `${pathPrefix}/components/${slug}`);
           this.setState({
             menuOpen: false
           });
@@ -213,14 +202,14 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.closeMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 76
       },
       __self: this
     }), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.appHeader,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 80
       },
       __self: this
     }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -228,7 +217,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_4___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 81
         },
         __self: this
       }),
@@ -236,28 +225,28 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.openMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 81
       },
       __self: this
     })), __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuClosed),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 83
       },
       __self: this
     }, __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.spectrumSidebar),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 84
       },
       __self: this
     }, __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.header,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 85
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -265,13 +254,13 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       as: `${pathPrefix}/`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 86
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 86
       },
       __self: this
     }, __jsx("img", {
@@ -285,20 +274,20 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 86
       },
       __self: this
     }))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_10__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 87
       },
       __self: this
     })), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.navigation,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 89
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNav"], {
@@ -310,7 +299,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       variant: "multiLevel",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 91
       },
       __self: this
     }, _data_newmenu__WEBPACK_IMPORTED_MODULE_8__.menu[0].children.map((item, i) => {
@@ -324,7 +313,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 96
         },
         __self: this
       }, item.children && item.children.map((mi, i) => {
@@ -344,7 +333,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           ref: this.props.router.query.id === mi.url ? this.selectedItem : undefined,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 103
+            lineNumber: 101
           },
           __self: this
         }, mi.linkType === 'group' && mi.children.map((mi3, i) => {
@@ -358,7 +347,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 119
+              lineNumber: 117
             },
             __self: this
           });
@@ -371,7 +360,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 131
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNavItem"], {
@@ -383,7 +372,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 132
       },
       __self: this
     }, "Contributions"))))));

@@ -1,0 +1,16 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[70],{
+
+/***/ "./data/yml/tool.yml":
+/*!***************************!*\
+  !*** ./data/yml/tool.yml ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const doc = [({"name":"Tool", "status":"Verified", "description":"The tool button.", "examples":[({"name":"Standard", "markup":"<button class=\"spectrum-Tool\">\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n</button>\n\n<button class=\"spectrum-Tool is-selected\">\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n</button>\n\n<button class=\"spectrum-Tool\" disabled>\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n</button>\n\n<button class=\"spectrum-Tool is-selected\" disabled>\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n</button>\n\n<br><br>\n\n<button class=\"spectrum-Tool\">\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n  <svg class=\"spectrum-Icon spectrum-UIIcon-CornerTriangle spectrum-Tool-hold\" focusable=\"false\" aria-hidden=\"true\">\n    <use xlink:href=\"#spectrum-css-icon-CornerTriangle\" />\n  </svg>\n</button>\n\n<button class=\"spectrum-Tool is-selected\">\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n  <svg class=\"spectrum-Icon spectrum-UIIcon-CornerTriangle spectrum-Tool-hold\" focusable=\"false\" aria-hidden=\"true\">\n    <use xlink:href=\"#spectrum-css-icon-CornerTriangle\" />\n  </svg>\n</button>\n\n<button class=\"spectrum-Tool\" disabled>\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n  <svg class=\"spectrum-Icon spectrum-UIIcon-CornerTriangle spectrum-Tool-hold\" focusable=\"false\" aria-hidden=\"true\">\n    <use xlink:href=\"#spectrum-css-icon-CornerTriangle\" />\n  </svg>\n</button>\n\n<button class=\"spectrum-Tool is-selected\" disabled>\n  <svg class=\"spectrum-Icon spectrum-Icon--sizeS\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"Brush\">\n    <use xlink:href=\"#spectrum-icon-18-Brush\" />\n  </svg>\n  <svg class=\"spectrum-Icon spectrum-UIIcon-CornerTriangle spectrum-Tool-hold\" focusable=\"false\" aria-hidden=\"true\">\n    <use xlink:href=\"#spectrum-css-icon-CornerTriangle\" />\n  </svg>\n</button>\n"})]})];
+module.exports = doc.length <= 1 ? doc[0] : doc;
+
+/***/ })
+
+}]);
+//# sourceMappingURL=70.js.map

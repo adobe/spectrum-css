@@ -59,9 +59,7 @@ class Sidebar extends React.Component {
           menuOpen: false
         })
       } else {
-        console.log({slug,type})
-        console.log({pathname: `${pathPrefix}/components/${slug}/`, query: slug})
-        Router.push({pathname: `${pathPrefix}/components/${slug}/`, query: slug});
+        Router.push(`${pathPrefix}/components/[id]?id=${slug}`, `${pathPrefix}/components/${slug}`);
         this.setState({
           menuOpen: false
         })

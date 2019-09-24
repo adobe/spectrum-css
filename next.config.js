@@ -97,11 +97,15 @@ module.exports = withCSS({
     return config;
   },
   exportPathMap: async function() {
-    const paths = {
-      '${pathPrefix}/': {
+    const paths = (process.env.NODE_ENV === 'production') ? {
+      '/spectrum-css/': {
         page: '/'
       }
-    };
+    } : {
+      '/': {
+        page: '/'
+      }
+    }
     const components = await readdir('data/yml')
     const menuJSON = await readFile('data/menu.json', {
       encoding: 'utf8'
@@ -113,8 +117,8 @@ module.exports = withCSS({
       });
       const componentData = yaml.safeLoad(componentYaml);
       const slug = path.basename(component, '.yml');
-      paths[`${pathPrefix}/components/${slug}/`] = {
-        page: '/components/[id]',
+      paths[`components/${slug}/`] = {
+        page: `components/[id]`,
         query: {
           id: slug
         }
