@@ -93,7 +93,7 @@ function (_React$Component) {
             menuOpen: false
           });
         } else {
-          next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push("".concat(pathPrefix, "/components/[id]?id=").concat(slug), "".concat(pathPrefix, "/components/").concat(slug));
+          next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push("/components/[id]?id=".concat(slug), "/components/".concat(slug));
 
           _this.setState({
             menuOpen: false
@@ -190,7 +190,7 @@ function (_React$Component) {
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
-        as: "".concat(pathPrefix, "/"),
+        as: '/',
         __source: {
           fileName: _jsxFileName,
           lineNumber: 86

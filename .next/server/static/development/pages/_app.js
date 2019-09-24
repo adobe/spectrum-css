@@ -165,7 +165,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
             menuOpen: false
           });
         } else {
-          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`${pathPrefix}/components/[id]?id=${slug}`, `${pathPrefix}/components/${slug}`);
+          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/components/[id]?id=${slug}`, `/components/${slug}`);
           this.setState({
             menuOpen: false
           });
@@ -251,7 +251,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/",
-      as: `${pathPrefix}/`,
+      as: '/',
       __source: {
         fileName: _jsxFileName,
         lineNumber: 86

@@ -10,10 +10,6 @@ const webpack = require('webpack');
 const yaml = require('js-yaml');
 //const nodeExternals = require('webpack-node-externals');
 
-const pathPrefix = process.env.NODE_ENV === 'production'
-  ? '/spectrum-css'
-  : '';
-
 if (typeof require !== "undefined") {
   require.extensions[".css"] = (file) => {};
 }
