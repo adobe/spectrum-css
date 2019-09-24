@@ -97,11 +97,7 @@ module.exports = withCSS({
     return config;
   },
   exportPathMap: async function() {
-    const paths = (process.env.NODE_ENV === 'production') ? {
-      '/spectrum-css/': {
-        page: '/'
-      }
-    } : {
+    const paths = {
       '/': {
         page: '/'
       }
