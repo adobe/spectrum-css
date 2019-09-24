@@ -160,7 +160,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "navigate", (slug, type) => {
       if (type === 'Internal') {
         if (slug === 'home') {
-          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`${pathPrefix}/`);
+          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/`);
           this.setState({
             menuOpen: false
           });
@@ -251,7 +251,6 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/",
-      as: '/',
       __source: {
         fileName: _jsxFileName,
         lineNumber: 86

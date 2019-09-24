@@ -54,7 +54,7 @@ class Sidebar extends React.Component {
   navigate = (slug,type) => {
     if(type === 'Internal') {
       if (slug === 'home') {
-        Router.push(`${pathPrefix}/`);
+        Router.push(`/`);
         this.setState({
           menuOpen: false
         })
@@ -83,7 +83,7 @@ class Sidebar extends React.Component {
     <div className={classNames(styles.sideBar, this.state.menuOpen?styles.menuOpen:styles.menuClosed)}>
     <div className={classNames(styles.spectrumSidebar)}>
         <div className={styles.header}>
-          <Link href="/" as={'/'}><a><img src={`${pathPrefix}/static/logo.png`} alt="Spectrum Logo" srcSet={`${pathPrefix}/static/logo@2x.png 2x`} className={styles.logo} onClick={(e) => {this.navigate('home', "Internal"); e.preventDefault();}}/></a></Link>
+          <Link href="/"><a><img src={`${pathPrefix}/static/logo.png`} alt="Spectrum Logo" srcSet={`${pathPrefix}/static/logo@2x.png 2x`} className={styles.logo} onClick={(e) => {this.navigate('home', "Internal"); e.preventDefault();}}/></a></Link>
           <SiteSearch/>
         </div>
         <div className={styles.navigation}>

@@ -87,7 +87,7 @@ function (_React$Component) {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "navigate", function (slug, type) {
       if (type === 'Internal') {
         if (slug === 'home') {
-          next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push("".concat(pathPrefix, "/"));
+          next_router__WEBPACK_IMPORTED_MODULE_12___default.a.push("/");
 
           _this.setState({
             menuOpen: false
@@ -190,7 +190,6 @@ function (_React$Component) {
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
-        as: '/',
         __source: {
           fileName: _jsxFileName,
           lineNumber: 86
