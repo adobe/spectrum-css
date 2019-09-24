@@ -192,6 +192,9 @@ Search.prototype.handlePopoverNavigation = function(e) {
     else if (e.key === 'Escape') {
       this.input.focus();
     }
+    else if (e.key === 'Enter') {
+      currentItem.click();
+    }
     if (newItemIndex !== -1) {
       items[newItemIndex].focus();
 
@@ -275,7 +278,6 @@ Search.prototype.search = function(val) {
     this.searchResults.hidden = false;
 
     let markup = `
-<ul class="spectrum-Menu" id="search-results-listbox" role="listbox" aria-label="Search">
   ${
     Search.Categories.map(function(category) {
       return results[category].length ?
@@ -297,7 +299,6 @@ Search.prototype.search = function(val) {
         ` : ''
     }).join('\n')
   }
-</ul>
 `;
     this.searchResults.innerHTML = markup;
 
