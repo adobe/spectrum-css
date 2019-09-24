@@ -24,8 +24,9 @@ const LOCALHOST_LINUX = '127.0.0.1';
 let isDocker = false;
 let env = 'local';
 let host = LOCALHOST_MAC;
-let report = 'ci';
+let report = 'CI';
 let captureLimit = 1;
+let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference';
 
 // Shared scenario configuration
 const baseScenarioConfig = {
@@ -62,6 +63,9 @@ rest.forEach(argv => {
   else if (argv.startsWith('scales=')) {
     scales.clear();
     argv.slice('scales='.length).split(',').forEach(s => scales.add(s));
+  }
+  else if (argv.startsWith('reference=')) {
+    bitmapsRef = argv.slice('reference='.length);
   }
   else if (!argv.startsWith('--')) {
     packageNameSet.add(`@spectrum-css/${argv}`);
@@ -125,7 +129,7 @@ module.exports = {
   onReadyScript: 'puppet/onReady.js',
   scenarios,
   paths: {
-    bitmaps_reference: 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference',
+    bitmaps_reference: bitmapsRef,
     bitmaps_test: 'backstop_data/bitmaps_test',
     engine_scripts: 'backstop_data/engine_scripts',
     html_report: 'backstop_data/html_report',
