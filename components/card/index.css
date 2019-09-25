@@ -151,6 +151,12 @@ governing permissions and limitations under the License.
   justify-content: flex-end;
 }
 
+.spectrum-Card--quiet {
+  .spectrum-Card-preview {
+    min-height: var(--spectrum-card-quiet-min-size);
+  }
+}
+
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
   width: 100%;
@@ -163,7 +169,6 @@ governing permissions and limitations under the License.
   .spectrum-Card-preview {
     width: 100%;
     flex: 1;
-    min-height: var(--spectrum-card-quiet-min-size);
     padding: var(--spectrum-card-quiet-preview-padding);
     margin: 0 auto;
     box-sizing: border-box;
