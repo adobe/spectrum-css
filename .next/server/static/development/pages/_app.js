@@ -139,7 +139,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-const pathPrefix =  false ? undefined : '';
 
 class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
@@ -160,12 +159,12 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "navigate", (slug, type) => {
       if (type === 'Internal') {
         if (slug === 'home') {
-          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/`);
+          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`${""}/`, `${""}/`);
           this.setState({
             menuOpen: false
           });
         } else {
-          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`/components/[id]?id=${slug}`, `/components/${slug}`);
+          next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push(`${""}/components/[id]?id=${slug}`, `${""}/components/${slug}`);
           this.setState({
             menuOpen: false
           });
@@ -202,14 +201,14 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.closeMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 72
       },
       __self: this
     }), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.appHeader,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 76
       },
       __self: this
     }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -217,7 +216,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_4___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 77
         },
         __self: this
       }),
@@ -225,68 +224,59 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.openMenu(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 77
       },
       __self: this
     })), __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.menuClosed),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 79
       },
       __self: this
     }, __jsx("div", {
       className: classnames__WEBPACK_IMPORTED_MODULE_7___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.spectrumSidebar),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 80
       },
       __self: this
     }, __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.header,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 81
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: "/",
+      as: `${""}/`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
-      },
-      __self: this
-    }, __jsx("a", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 82
       },
       __self: this
     }, __jsx("img", {
-      src: `${pathPrefix}/static/logo.png`,
+      src: `${""}/static/logo.png`,
       alt: "Spectrum Logo",
-      srcSet: `${pathPrefix}/static/logo@2x.png 2x`,
+      srcSet: `${""}/static/logo@2x.png 2x`,
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logo,
-      onClick: e => {
-        this.navigate('home', "Internal");
-        e.preventDefault();
-      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 82
       },
       __self: this
-    }))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    })), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_10__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 83
       },
       __self: this
     })), __jsx("div", {
       className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_9___default.a.navigation,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 85
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNav"], {
@@ -298,7 +288,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       variant: "multiLevel",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 87
       },
       __self: this
     }, _data_newmenu__WEBPACK_IMPORTED_MODULE_8__.menu[0].children.map((item, i) => {
@@ -312,7 +302,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 92
         },
         __self: this
       }, item.children && item.children.map((mi, i) => {
@@ -320,19 +310,41 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
           value: mi.url,
           label: mi.title,
           key: i,
-          onClick: e => {
-            mi.linkType !== 'group' ? this.navigate(mi.url, mi.linkType) : undefined; // mi.url ? this.navigate(mi.url, 'Internal'): undefined
-
-            e.preventDefault();
-          },
           style: {
             width: '200px'
           },
           defaultExpanded: this.state.selectedParents.includes(item.title),
           ref: this.props.router.query.id === mi.url ? this.selectedItem : undefined,
+          renderLink: props => {
+            if (mi.linkType !== 'group') {
+              return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+                href: `/components/[id]?id=${mi.url}`,
+                as: "/components/" + mi.url,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 102
+                },
+                __self: this
+              }, __jsx("a", {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 102
+                },
+                __self: this
+              }, mi.title));
+            } else {
+              return __jsx("div", {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 104
+                },
+                __self: this
+              }, "a group");
+            }
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101
+            lineNumber: 97
           },
           __self: this
         }, mi.linkType === 'group' && mi.children.map((mi3, i) => {
@@ -346,7 +358,7 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 117
+              lineNumber: 111
             },
             __self: this
           });
@@ -359,22 +371,22 @@ class Sidebar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 125
       },
       __self: this
     }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_5__["SideNavItem"], {
-      value: "Contributions",
+      value: "Spectrum",
       target: "_blank",
-      href: "https://spectrum-contributions.corp.adobe.com",
+      href: "#",
       style: {
         width: '200px'
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 126
       },
       __self: this
-    }, "Contributions"))))));
+    }, "Spectrum"))))));
   }
 
 }

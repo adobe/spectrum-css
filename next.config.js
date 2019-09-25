@@ -21,7 +21,7 @@ module.exports = withCSS({
   },
   exportTrailingSlash: true,
   pageExtensions: ['js', 'jsx'],
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css/' : '',
   webpack(config, options) {
     const { dev, isServer } = options;
     // Next.js externalizes all code in node_modules. Override to include
@@ -110,7 +110,7 @@ module.exports = withCSS({
       const componentData = yaml.safeLoad(componentYaml);
       const slug = path.basename(component, '.yml');
       paths[`/components/${slug}/`] = {
-        page: `/components/[id]`,
+        page: `/components/id`,
         query: {
           id: slug
         }
