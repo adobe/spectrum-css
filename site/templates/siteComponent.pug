@@ -131,17 +131,18 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                 tr!= util.markdown.toHTML(component.details)
 
             div.spectrum-CSSComponent-resources
-              a.spectrum-Card.spectrum-Card--small.spectrum-Card--horizontal(href=`${spectrumURL || 'https://spectrum.corp.adobe.com/'+pkg.name.split('/').pop()}` target="_blank")
-                .spectrum-Card-preview.spectrum-CSSComponent-resource--adobe
-                  svg(class="spectrum-Icon spectrum-Icon--sizeL" viewBox="0 0 36 36" focusable="false" aria-hidden="true" aria-label="AdobeLogo")
-                    path(d="M22.175 4H34v28L22.175 4zm-8.336 0H2v28L13.839 4zm4.165 10.317l7.538 17.682h-4.939l-2.258-5.632h-5.517l5.176-12.05z")
-                .spectrum-Card-body
-                  .spectrum-Card-header
-                    .spectrum-Card-title.
-                      View guidelines
-                  .spectrum-Card-content
-                    .spectrum-Card-description.
-                      Spectrum website
+              //-
+                a.spectrum-Card.spectrum-Card--small.spectrum-Card--horizontal(href=`${spectrumURL || 'https://spectrum.corp.adobe.com/'+pkg.name.split('/').pop()}` target="_blank")
+                  .spectrum-Card-preview.spectrum-CSSComponent-resource--adobe
+                    svg(class="spectrum-Icon spectrum-Icon--sizeL" viewBox="0 0 36 36" focusable="false" aria-hidden="true" aria-label="AdobeLogo")
+                      path(d="M22.175 4H34v28L22.175 4zm-8.336 0H2v28L13.839 4zm4.165 10.317l7.538 17.682h-4.939l-2.258-5.632h-5.517l5.176-12.05z")
+                  .spectrum-Card-body
+                    .spectrum-Card-header
+                      .spectrum-Card-title.
+                        View guidelines
+                    .spectrum-Card-content
+                      .spectrum-Card-description.
+                        Spectrum website
               a.spectrum-Card.spectrum-Card--small.spectrum-Card--horizontal(href=`https://github.com/adobe/spectrum-css/tree/master/components/${pkg.name.split('/').pop()}` target="_blank")
                 .spectrum-Card-preview.spectrum-CSSComponent-resource--github
                   svg(class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true" aria-label="GitHub" viewBox="0 0 36 36")
