@@ -126,12 +126,37 @@ ${varNames.map((varName) => `  ${varName}: ${vars[varName]};`).join('\n')}
   return '';
 }
 
+function getAllVars() {
+  return new Promise((resolve, reject) => {
+    let variableList;
+
+    gulp.src([
+      `${varDir}/css/themes/*.css`,
+      `${varDir}/css/scales/*.css`,
+      `${varDir}/css/components/*.css`,
+      `${varDir}/css/globals/*.css`
+    ])
+      .pipe(concat('everything.css'))
+      .pipe(through.obj(function getAllVars(file, enc, cb) {
+        variableList = getVarValues(file.contents.toString());
+
+        cb(null, file);
+      }))
+      .on('finish', () => {
+        resolve(variableList);
+      })
+      .on('error', reject);
+  });
+}
+
 function getAllComponentVars() {
   return new Promise((resolve, reject) => {
     let variableList;
-    let componentsGlob = path.join(varDir, 'css', 'components', '*.css');
 
-    gulp.src(componentsGlob)
+    gulp.src([
+      `${varDir}/css/components/*.css`,
+      `${varDir}/css/globals/*.css`
+    ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
         variableList = getVarValues(file.contents.toString());
@@ -146,6 +171,7 @@ function getAllComponentVars() {
 }
 
 exports.getAllComponentVars = getAllComponentVars;
+exports.getAllVars = getAllVars;
 exports.getVarsFromCSS = getVarsFromCSS;
 exports.getVarValues = getVarValues;
 exports.getClassNames = getClassNames;

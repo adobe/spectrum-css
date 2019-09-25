@@ -45,8 +45,10 @@ function bakeVars() {
     let variableList = varUtils.getVarsFromCSS(file.contents);
 
     // Get vars in ALL components
-    // Note: This is missing overridden variables, so we're incorrectly getting "uses undefined variable" warnings
     let vars = await varUtils.getAllComponentVars();
+
+    // Get literally all of the possible vars (even overridden vars that are different between themes/scales)
+    let allVars = await varUtils.getAllVars();
 
     // For each color stop and scale, filter the variables for those matching the component
     let usedVars = {};
@@ -54,7 +56,7 @@ function bakeVars() {
       if (varName.indexOf('spectrum-global') !== -1) {
         logger.warn(`${pkg.name} directly uses global variable ${varName}`);
       }
-      if (!vars[varName]) {
+      else if (!allVars[varName]) {
         logger.warn(`${pkg.name} uses undefined variable ${varName}`);
       }
       else {
