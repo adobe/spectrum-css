@@ -47,7 +47,7 @@ function getUsedVars() {
 }
 
 const varDir = path.join(dirs.components, 'vars', 'dist');
-const componentCSSDir = path.join(varDir, 'components', 'index.css');
+const componentCSSDir = path.join(varDir, 'spectrum-components.css');
 function buildUnique() {
   return new Promise(async (resolve, reject) => {
     // Read in all variables from components

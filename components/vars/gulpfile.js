@@ -70,19 +70,16 @@ function copySources() {
 
 const insert = require('gulp-insert');
 
-function concatAll() {
+function concatGlobals() {
   return gulp.src([
-    'css/globals/*.css',
-    'css/scales/spectrum-medium.css',
-    'css/themes/spectrum-light.css',
-    'css/components/*.css'
+    'css/globals/*.css'
   ])
     .pipe(replace(/:root {/, function(match) {
       return `  /* ${path.basename(this.file.path)} */`;
     }))
     .pipe(replace(/}/, ''))
-    .pipe(concat('index.css'))
-    .pipe(insert.prepend(':root {'))
+    .pipe(concat('spectrum-global.css'))
+    .pipe(insert.prepend('.spectrum {'))
     .pipe(insert.append('}\n'))
     .pipe(gulp.dest('dist/'));
 }
@@ -95,10 +92,10 @@ function concatComponents() {
       return `/* ${path.basename(this.file.path)} */`;
     }))
     .pipe(replace(/}/, ''))
-    .pipe(concat('index.css'))
-    .pipe(insert.prepend(':root {'))
+    .pipe(concat('spectrum-components.css'))
+    .pipe(insert.prepend('.spectrum {'))
     .pipe(insert.append('}\n'))
-    .pipe(gulp.dest('dist/components/'));
+    .pipe(gulp.dest('dist/'));
 }
 
 function copyMetadata() {
@@ -116,7 +113,7 @@ let build = gulp.series(
     copySources
   ),
   gulp.parallel(
-    concatAll,
+    concatGlobals,
     concatComponents
   )
 );

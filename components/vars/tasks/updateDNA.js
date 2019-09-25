@@ -267,7 +267,7 @@ function generateDNAFiles() {
 
       let generateFiles = (sections, fileName, folder = '') => {
         generateCSSFile(sections, fileName, `css/${folder}`);
-        generateJSFile(sections, fileName, `js/${folder}`);
+        // generateJSFile(sections, fileName, `js/${folder}`);
       };
 
       let data = JSON.parse(String(file.contents));
@@ -293,7 +293,7 @@ function generateDNAFiles() {
 
       // Globals
       flatVars.forEach(key => {
-        generateJSFile([dnaData[key]], key, 'js/globals');
+        // generateJSFile([dnaData[key]], key, 'js/globals');
         generateCSSFile([dnaData[key]], key, 'css/globals');
       });
 
@@ -416,10 +416,10 @@ function generateDNAFiles() {
         ], elementName, 'css/components');
         cssFilesGenerated[elementName] = true;
 
-        generateJSFile([
-          jsElementVariables[elementName]
-        ], elementName, 'js/components');
-        generateJSIndexFile(dnaModules, 'js/');
+        // generateJSFile([
+        //   jsElementVariables[elementName]
+        // ], elementName, 'js/components');
+        // generateJSIndexFile(dnaModules, 'js/');
       }
 
       pushFile(JSON.stringify(metadata, null, 2), 'spectrum-metadata.json', 'json/');

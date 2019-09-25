@@ -107,12 +107,6 @@ function resolveValue(value, vars) {
 
 const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..');
 
-async function getAllDNAVariables() {
-  let css = await fsp.readFile(path.join(varDir, 'dist', 'index.css'));
-  let vars = getVarValues(css);
-  return vars;
-}
-
 async function readDNAVariables(file) {
   let css = await fsp.readFile(path.join(varDir, 'css', file));
   let vars = getVarValues(css);
@@ -156,6 +150,5 @@ exports.getVarsFromCSS = getVarsFromCSS;
 exports.getVarValues = getVarValues;
 exports.getClassNames = getClassNames;
 exports.resolveValue = resolveValue;
-exports.getAllDNAVariables = getAllDNAVariables;
 exports.readDNAVariables = readDNAVariables;
 exports.getVariableDeclarations = getVariableDeclarations;
