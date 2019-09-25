@@ -33,14 +33,7 @@ var colorStops = [
 const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..') + '/';
 
 const baseImports = `
-@import "${varDir}css/globals/spectrum-dimensionGlobals.css";
-@import "${varDir}css/globals/spectrum-animationGlobals.css";
-@import "${varDir}css/globals/spectrum-fontGlobals.css";
-@import "${varDir}css/globals/spectrum-colorGlobals.css";
-@import "${varDir}css/globals/spectrum-staticAliases.css";
-@import "${varDir}css/globals/spectrum-colorAliases.css";
-@import "${varDir}css/globals/spectrum-colorSemantics.css";
-@import "${varDir}css/globals/spectrum-dimensionAliases.css";
+@import "${varDir}css/globals/index.css";
 `;
 
 /**
@@ -50,7 +43,7 @@ function buildMedium() {
   return gulp.src('index.css')
     .pipe(insert.prepend(`${baseImports}
 @import "${varDir}css/scales/spectrum-medium.css";
-@import "${varDir}dist/components/index.css";`))
+@import "${varDir}css/components/index.css";`))
     .pipe(postcss(processors.getProcessors(false, false)))
     .pipe(gulp.dest('dist/'));
 }
@@ -62,7 +55,7 @@ function buildLarge() {
   return gulp.src('index.css')
     .pipe(insert.prepend(`${baseImports}
 @import "${varDir}css/scales/spectrum-large.css";
-@import "${varDir}dist/components/index.css";`))
+@import "${varDir}css/components/index.css";`))
     .pipe(postcss(processors.getProcessors(false, false)))
     .pipe(rename(function(path) {
       path.basename += '-lg';
@@ -80,7 +73,7 @@ function buildSkinFiles(colorStop, globs, prependString, appendString, dest) {
   })
     .pipe(insert.prepend(`${baseImports}
 @import "${varDir}css/themes/spectrum-${colorStop}.css";
-@import "${varDir}dist/components/index.css";
+@import "${varDir}css/components/index.css";
 ${prependString}\n`))
     .pipe(insert.append(appendString))
     .pipe(postcss(legacyProcessors))
@@ -112,7 +105,7 @@ function buildMultiStops() {
     })
     .pipe(insert.prepend(`${baseImports}
 @import "${varDir}css/themes/spectrum-${colorStop}.css";
-@import "${varDir}dist/components/index.css";`))
+@import "${varDir}css/components/index.css";`))
       .pipe(postcss(legacyProcessors))
       .pipe(postcss([
         mutateselectors((selector) => {
@@ -146,7 +139,7 @@ function buildDiff() {
     // Use large variables
     .pipe(insert.prepend(`${baseImports}
 @import "${varDir}css/scales/spectrum-large.css";
-@import "${varDir}dist/components/index.css";`))
+@import "${varDir}css/components/index.css";`))
     .pipe(postcss(varsProcessors))
     // Process again, but wrapped
     .pipe(insert.prepend('.spectrum--large {\n'))
