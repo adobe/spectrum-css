@@ -172,14 +172,14 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
             if component.description
               header.spectrum-CSSComponent-sectionHeading(id="usage")
                 h4.spectrum-Heading3
-                  a(href="usage").spectrum-BigSubtleLink Usage notes
+                  a(href="#usage").spectrum-BigSubtleLink Usage notes
                 hr.spectrum-Rule.spectrum-Rule--large
                 section.spectrum-CSSComponent-description.spectrum-Body3!= util.markdown.toHTML(component.description)
 
             if examples.length
               header.spectrum-CSSComponent-sectionHeading(id="variants")
                 h4.spectrum-Heading3
-                  a(href="variants").spectrum-BigSubtleLink Variants
+                  a(href="#variants").spectrum-BigSubtleLink Variants
                 hr.spectrum-Rule.spectrum-Rule--large
               each example in examples
                 include ../includes/example.pug
