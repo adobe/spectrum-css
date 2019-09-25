@@ -510,6 +510,32 @@ function generateDNAFiles() {
     .pipe(gulp.dest('./'))
 }
 
+function generateIndex(source, dest) {
+  return function generateIndex() {
+    let lastFile;
+    let componentFilenames = [];
+    return gulp.src(source)
+     .pipe(through.obj(
+      function(file, enc, cb) {
+        lastFile = file;
+        componentFilenames.push(path.basename(file.path));
+        cb(null);
+      },
+      function(cb) {
+        let vinylFile = lastFile.clone({ contents: false });
+        vinylFile.path = path.join(lastFile.base, 'index.css');
+        vinylFile.contents = Buffer.from(componentFilenames.map(fileName => `@import '${fileName}';`).join('\n'));
+        this.push(vinylFile);
+        cb();
+      }
+    ))
+     .pipe(gulp.dest(dest));
+  }
+}
+
+let generateComponentIndex = generateIndex('css/components/*.css', 'css/components/');
+let generateGlobalsIndex = generateIndex('css/globals/*.css', 'css/globals/');
+
 function clean() {
   return del([
     'css/*',
@@ -519,5 +545,9 @@ function clean() {
 
 exports.updateDNA = gulp.series(
   clean,
-  generateDNAFiles
+  generateDNAFiles,
+  gulp.parallel(
+    generateComponentIndex,
+    generateGlobalsIndex
+  )
 );

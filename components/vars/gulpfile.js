@@ -84,18 +84,10 @@ function concatGlobals() {
     .pipe(gulp.dest('dist/'));
 }
 
-function concatComponents() {
-  return gulp.src([
-    'css/components/*.css'
-  ])
-    .pipe(replace(/:root {/, function(match) {
-      return `/* ${path.basename(this.file.path)} */`;
-    }))
-    .pipe(replace(/}/, ''))
-    .pipe(concat('spectrum-components.css'))
-    .pipe(insert.prepend('.spectrum {'))
-    .pipe(insert.append('}\n'))
-    .pipe(gulp.dest('dist/'));
+function copyComponents() {
+  return gulp.src('css/components/*.css')
+    .pipe(replace(/:root/, '.spectrum'))
+    .pipe(gulp.dest('dist/components/'));
 }
 
 function copyMetadata() {
@@ -114,7 +106,7 @@ let build = gulp.series(
   ),
   gulp.parallel(
     concatGlobals,
-    concatComponents
+    copyComponents
   )
 );
 
