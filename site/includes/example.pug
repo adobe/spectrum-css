@@ -15,6 +15,6 @@ article.spectrum-CSSExample
       .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
       .spectrum-CSSExample-markup
         if example.markup.split('\n').length > 2
-          a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show Markup
+          a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show markup
         pre
           code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')

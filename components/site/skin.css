@@ -25,7 +25,7 @@ governing permissions and limitations under the License.
 
   /* .spectrum-CSSExample */
   --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-75);
-  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-200);
+  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-100);
 }
 
 /* Site */
@@ -78,7 +78,7 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-markupToggle {
   z-index: 1;
 
-  background: white;
+  background: var(--spectrum-cssexample-markup-background-color);
 }
 
 .spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
@@ -88,18 +88,4 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-example--overlay {
   background: rgba(0,0,0,0.4);
   color: rgba(0,0,0,0.4);
-}
-
-.spectrum-CSSExample-markupToggle::before {
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,rgba(255,255,255,1) 100%);
-}
-
-.spectrum--dark .spectrum-CSSExample-markupToggle,
-.spectrum--darkest .spectrum-CSSExample-markupToggle {
-  background: rgb(40, 40, 40);
-}
-
-.spectrum--dark .spectrum-CSSExample-markupToggle::before,
-.spectrum--darkest .spectrum-CSSExample-markupToggle::before {
-  background: linear-gradient(to bottom, rgba(40,40,40,0) 10%, rgba(40,40,40,1) 100%);
 }

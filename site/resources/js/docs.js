@@ -23,7 +23,7 @@ function toggleMarkupVisibility(event) {
   var exampleMarkup = event.target.closest('.spectrum-CSSExample-markup');
   var style = window.getComputedStyle(exampleMarkup);
   var isOpen = exampleMarkup.classList.contains('is-open');
-  event.target.innerHTML = isOpen ? 'Show Markup' : 'Hide Markup';
+  event.target.innerHTML = isOpen ? 'Show markup' : 'Hide markup';
   exampleMarkup.classList.toggle('is-open');
 }
 
