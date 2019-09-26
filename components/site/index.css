@@ -304,6 +304,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSComponent-detailsTable {
+  border-spacing: 0;
   margin-top: var(--spectrum-csscomponent-detailstable-margin-top);
   margin-bottom: var(--spectrum-csscomponent-detailstable-margin-bottom);
 }
