@@ -4,7 +4,8 @@ status: Deprecated
 details: These styles can be replicated using new Typography classes
 description: Legacy typography elements.
 examples:
-  - name: Standard
+  - id: heading-display
+    name: Standard
     markup: |
       <h1 class="spectrum-Heading--display">Display (h1)</h1>
       <h2 class="spectrum-Heading--pageTitle">Page Title (h2)</h2>

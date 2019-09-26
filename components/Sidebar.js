@@ -47,24 +47,6 @@ class Sidebar extends React.Component {
       menuOpen: false
     })
   }
-  navigate = (slug,type) => {
-    if(type === 'Internal') {
-      if (slug === 'home') {
-        Router.push(`${process.env.BACKEND_URL}/`,`${process.env.BACKEND_URL}/`);
-        this.setState({
-          menuOpen: false
-        })
-      } else {
-        Router.push(`${process.env.BACKEND_URL}/components/id?id=${slug}`, `${process.env.BACKEND_URL}/components/${slug}`);
-        this.setState({
-          menuOpen: false
-        })
-      }
-    } else {
-      window.open(slug, '_blank');
-    }
-  }
-
 
   render() {
     return (
@@ -112,7 +94,7 @@ class Sidebar extends React.Component {
                         {mi.linkType === 'group' && mi.children.map((mi3, i)=>{
                           return (
 
-                            <SideNavItem value={mi3.url} key={i} label={mi3.title} onClick={() => this.navigate(mi3.url, mi3.linkType)} style={{width: '200px'}}>
+                            <SideNavItem value={mi3.url} key={i} label={mi3.title} style={{width: '200px'}}>
 
                             </SideNavItem>
                           )

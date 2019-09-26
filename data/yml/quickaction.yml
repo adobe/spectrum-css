@@ -3,7 +3,8 @@ name: Quick Actions
 status: Verified
 description: 'Note that the `.spectrum-QuickActions-overlay` class should be placed on the container where the Quick Actions are displayed, and the `.spectrum-QuickActions--textOnly` class should be applied when the buttons have text only.'
 examples:
-  - name: Standard
+  - id: quickactions
+    name: Standard
     markup: |
       <div class="spectrum-QuickActions-overlay" style="padding: 40px;">
 

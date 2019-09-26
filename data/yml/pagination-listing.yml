@@ -1,7 +1,8 @@
 name: Pagination - Page
 dnaStatus: Contribution
 examples:
-  - name: Standard
+  - id: pagination-listing
+    name: Standard
     markup: |
       <nav class="spectrum-Pagination spectrum-Pagination--listing">
         <a href="#" class="spectrum-Button spectrum-Button--primary spectrum-Button--quiet spectrum-Pagination-prevButton"><span class="spectrum-Button-label">Prev</span></a>

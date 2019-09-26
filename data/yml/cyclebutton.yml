@@ -1,6 +1,7 @@
 name: Cycle Button
 examples:
-  - name: Standard
+  - id: cyclebutton
+    name: Standard
     markup: |
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-CycleButton">
         <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-CycleButton-item is-selected" focusable="false" aria-hidden="true" aria-label="Play">

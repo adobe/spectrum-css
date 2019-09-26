@@ -1,7 +1,8 @@
 name: Search Within
 description: Override the width of the component where necessary.
 examples:
-  - name: Standard
+  - id: searchwithin
+    name: Standard
     markup: |
       <h4>Default</h4>
       <form class="spectrum-SearchWithin">

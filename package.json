@@ -31,7 +31,7 @@
   "devDependencies": {
     "@adcloud/adcloud-flexbox-grid": "^0.1.3",
     "@babel/plugin-transform-runtime": "^7.4.3",
-    "@react/react-spectrum": "^2.19.1",
+    "@react/react-spectrum": "file:react-react-spectrum-2.25.0.tgz",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "babel-core": "^6.26.3",
@@ -40,11 +40,15 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "glob": "^7.1.4",
     "lunr": "^2.3.6",
     "node-sass": "^4.12.0",
     "react-helmet": "^5.2.1",
     "webpack": "^4.39.3",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-node-externals": "^1.7.2"
+  },
+  "resolutions": {
+    "@react/collection-view": "file:react-collection-view-4.1.5.tgz"
   }
 }

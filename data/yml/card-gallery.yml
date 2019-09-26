@@ -2,7 +2,8 @@ name: Card - Gallery
 status: Beta
 description: A gallery card for an image.
 examples:
-  - name: Standard
+  - id: card-gallery
+    name: Standard
     markup: |
       <div style="width: 532px; height: 224px;">
         <div class="spectrum-Card spectrum-Card--gallery" tabindex="0" role="figure">

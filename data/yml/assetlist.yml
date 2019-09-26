@@ -2,7 +2,8 @@ id: miller-column
 name: Asset List
 description: 'A selectable list of Assets, often used inside of Miller Columns.'
 examples:
-  - name: Standard
+  - id: miller-column
+    name: Standard
     markup: |
       <ul class="spectrum-AssetList">
         <li class="spectrum-AssetList-item is-selectable" tabindex="0">

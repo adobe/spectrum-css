@@ -1,8 +1,8 @@
-id: meter-small
 name: Meter
 description: Meter is implemented using the BarLoader component.
 examples:
-  - name: Standard
+  - id: meter-small
+    name: Standard
     markup: |
       <div style="margin: 20px 0;">
         <div class="spectrum-BarLoader is-positive" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">

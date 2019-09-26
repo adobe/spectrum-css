@@ -2,7 +2,8 @@ id: avatar-small
 name: Avatar
 status: Verified
 examples:
-  - name: Standard
+  - id: avatar-small
+    name: Standard
     markup: |
       <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
       <img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg" alt="Disabled Avatar">

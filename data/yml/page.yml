@@ -5,7 +5,8 @@ description: |
   If using multistops, a parent tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
   Finally, if scaling to large with the diff strategy, a parent tag should have the `.spectrum--large` class.
 examples:
-  - name: Standard
+  - id: page
+    name: Standard
     markup: |
       Text here!<br>
       <br><br>

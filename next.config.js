@@ -8,8 +8,28 @@ const withCSS = require('@zeit/next-css');
 const cssLoaderConfig = require('@zeit/next-css/css-loader-config');
 const webpack = require('webpack');
 const yaml = require('js-yaml');
-//const nodeExternals = require('webpack-node-externals');
+const glob = require('glob');
 
+// Using git checkout origin/master -- `git ls-tree origin/master -r --name-only | grep ".yml"`
+// Using git checkout adobe/master -- `git ls-tree adobe/master -r --name-only | grep ".yml"`
+// Get all the yml files from master
+function gatherYML() {
+  glob("components/**/*.yml", {}, (er, files) => {
+    files.forEach((file) => {
+      const filename = path.basename(file);
+      fs.renameSync(file,path.join('data','yml',filename))
+      try {
+        fs.rmdirSync(path.dirname(file));
+        fs.rmdirSync(path.dirname(path.dirname(file)));
+      }
+      catch(err) {
+        // ignore not empty file
+      }
+    })
+  });
+}
+
+//const nodeExternals = require('webpack-node-externals');
 if (typeof require !== "undefined") {
   require.extensions[".css"] = (file) => {};
 }
@@ -96,8 +116,12 @@ module.exports = withCSS({
     const paths = {
       '/': {
         page: '/'
+      },
+      '/getting-started': {
+        page: '/getting-started'
       }
     }
+    gatherYML();
     const components = await readdir('data/yml')
     const menuJSON = await readFile('data/menu.json', {
       encoding: 'utf8'
@@ -121,7 +145,7 @@ module.exports = withCSS({
         "linkType": "Internal",
         "parent": "top-level-menu-item,WebsiteMenu,Components"
       };
-      menu.menu[0].children[0].children.push(menuComponentData);
+      menu.menu[0].children[1].children.push(menuComponentData);
       menu.key.push(menuComponentData);
     })
     await writeFile('data/newmenu.json', JSON.stringify(menu));

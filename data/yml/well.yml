@@ -1,6 +1,7 @@
 name: Well
 examples:
-  - name: Standard
+  - id: well
+    name: Standard
     markup: |
       <h3 class="spectrum-Heading--subtitle2">Well Label (Optional)</h3>
       <span class="spectrum-Well">

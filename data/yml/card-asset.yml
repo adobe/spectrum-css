@@ -1,7 +1,8 @@
 name: Card - Asset preview
 description: A standard cards with a full-sized asset preview.
 examples:
-  - name: Standard
+  - id: card-asset
+    name: Standard
     markup: |
       <div style="width: 208px;">
         <div class="spectrum-Card" tabindex="0" role="figure">

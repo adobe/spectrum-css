@@ -5,6 +5,11 @@
     "linkType": "group",
     "parent": "top-level-menu-item",
     "children": [{
+      "title": "Get started",
+      "url": "get-started",
+      "linkType": "Internal",
+      "parent": "top-level-menu-item,WebsiteMenu"
+    }, {
       "title": "Components",
       "url": "header-Components",
       "linkType": "group",
@@ -17,6 +22,11 @@
     "url": "header-WebsiteMenu",
     "linkType": "group",
     "parent": "top-level-menu-item"
+  }, {
+    "title": "Get started",
+    "url": "get-started",
+    "linkType": "Internal",
+    "parent": "top-level-menu-item,WebsiteMenu"
   }, {
     "title": "Components",
     "url": "header-Components",

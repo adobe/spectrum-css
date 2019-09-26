@@ -1,6 +1,7 @@
 name: Link
 examples:
   - id: link
+    name: Standard
     status: Verified
     markup: |
       <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
