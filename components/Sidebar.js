@@ -71,36 +71,38 @@ class Sidebar extends React.Component {
     <>
     <div
       className={classNames(styles.overlay, this.state.menuOpen?styles.menuOpen:styles.menuClosed)}
-      onClick={()=>this.closeMenu()}
-    ></div>
+      onClick={()=>this.closeMenu()}/>
     <div className={styles.appHeader}>
       <Button variant="tool" icon={<ShowMenu />} aria-label="Show" onClick={() => this.openMenu()} />
     </div>
     <div className={classNames(styles.sideBar, this.state.menuOpen?styles.menuOpen:styles.menuClosed)}>
     <div className={classNames(styles.spectrumSidebar)}>
         <div className={styles.header}>
-          <Link href="/" as={`${process.env.BACKEND_URL}/`}><a><img src={`${process.env.BACKEND_URL}/static/logo.png`} alt="Spectrum Logo" srcSet={`${process.env.BACKEND_URL}/static/logo@2x.png 2x`} className={styles.logo}/></a></Link>
+          <Link href="/" as={`${process.env.BACKEND_URL}/`}>
+            <a>
+              <img src={`${process.env.BACKEND_URL}/static/logo.png`} alt="Spectrum Logo" srcSet={`${process.env.BACKEND_URL}/static/logo@2x.png 2x`} className={styles.logo}/>
+            </a>
+          </Link>
           <SiteSearch/>
         </div>
         <div className={styles.navigation}>
-
-            <SideNav defaultValue={this.props.router.query.id} style={{width: '200px',marginBottom:80}} variant="multiLevel">
-
+          <SideNav defaultValue={this.props.router.query.id} style={{width: '200px',marginBottom:80}} variant="multiLevel">
             {menuData.menu[0].children.map((item, i)=>{
               return(
-
                 <SideNavItem
-                  defaultExpanded =  {this.state.selectedParents.includes(item.title) ? true :false}
+                  defaultExpanded={this.state.selectedParents.includes(item.title) ? true :false}
                   value={item.url} label={item.title} key={i} style={{width: '200px'}}>
                   {item.children && item.children.map((mi, i)=>{
                     return (
                       <SideNavItem value={mi.url} label={mi.title} key={i}
                           style={{width: '200px'}}
-                          defaultExpanded =  {this.state.selectedParents.includes(item.title)}
-                          ref={this.props.router.query.id === mi.url ?  this.selectedItem : undefined} renderLink={(props) => {
+                          defaultExpanded={this.state.selectedParents.includes(item.title)}
+                          ref={this.props.router.query.id === mi.url ?  this.selectedItem : undefined}
+                          renderLink={(props) => {
                             if(mi.linkType !== 'group') {
+                              delete props.href
                               return(<Link href={`/components/id?id=${mi.url}`} as={`${process.env.BACKEND_URL}/components/${mi.url}`}>
-                                <a tabindex="-1" class="spectrum-SideNav-itemLink" id="react-spectrum-4" role="treeitem" aria-selected="false" aria-level="2" target="_self">{mi.title}</a>
+                                <a {...props}>{mi.title}</a>
                                 </Link>)
                             } else {
                               return(<div>a group</div>)
