@@ -10,6 +10,180 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Dropdown
+(function() {
+  var openDropdown = null;
+
+  function toggleOpen(dropdown, force) {
+    var isOpen = force !== undefined ? force : !dropdown.classList.contains('is-open');
+    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+    var popover = dropdown.querySelector('.spectrum-Dropdown-popover');
+
+    dropdown[isOpen ? 'setAttribute' : 'removeAttribute']('aria-expanded', 'true');
+    dropdown.classList.toggle('is-open', isOpen);
+    fieldButton.classList.toggle('is-selected', isOpen);
+
+    if (popover) {
+      popover.style.zIndex = 1;
+      popover.classList.toggle('is-open', isOpen);
+    }
+
+    if (isOpen) {
+      openDropdown = dropdown;
+    }
+  }
+
+  function closeAndFocusDropdown(dropdown) {
+    if (dropdown) {
+      toggleOpen(dropdown, false);
+      var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+      if (fieldButton) {
+        fieldButton.focus();
+      }
+    }
+  }
+
+  window.addEventListener('keydown', function(event) {
+    var menuItem = event.target.closest('.spectrum-Menu-item');
+    if (menuItem) {
+      var menu = menuItem.closest('.spectrum-Menu');
+      if (menuItem.classList.contains('spectrum-Menu-item')) {
+        var items = Array.prototype.slice.call(menu.querySelectorAll('.spectrum-Menu-item:not(.is-disabled)'));
+        var menuItemIndex = items.indexOf(menuItem);
+        var newItemIndex = -1;
+        if (event.key === 'ArrowDown') {
+          newItemIndex = menuItemIndex + 1 < items.length ? menuItemIndex + 1 : 0;
+        }
+        else if (event.key === 'ArrowUp') {
+          newItemIndex = menuItemIndex - 1 >= 0 ? menuItemIndex - 1 : items.length - 1;
+        }
+        else if (event.key === 'Home') {
+          newItemIndex = 0;
+        }
+        else if (event.key === 'End') {
+          newItemIndex = items.length - 1;
+        }
+        else if (event.key === 'Escape') {
+          var dropdown = event.target.closest('.spectrum-Dropdown');
+          closeAndFocusDropdown(dropdown);
+        }
+        else if (event.key === 'Enter') {
+          handleMenuChange(menu, menuItem);
+
+          var dropdown = event.target.closest('.spectrum-Dropdown');
+          closeAndFocusDropdown(dropdown);
+          event.preventDefault();
+        }
+        if (newItemIndex !== -1) {
+          items[newItemIndex].focus();
+
+          // Don't scroll the list
+          event.preventDefault();
+        }
+      }
+    }
+    else {
+      if (event.key === 'ArrowDown') {
+        var dropdown = event.target.closest('.spectrum-Dropdown');
+        if (dropdown) {
+          var menu = dropdown.querySelector('.spectrum-Menu');
+          if (menu) {
+            var menuItem = menu.querySelector('.spectrum-Menu-item');
+            if (menuItem) {
+              event.preventDefault();
+              menuItem.focus();
+            }
+          }
+        }
+      }
+    }
+  });
+
+  function setDropdownValue(dropdown, value, label) {
+    var menu = dropdown.querySelector('.spectrum-Menu');
+    var menuItem = dropdown.querySelector('.spectrum-Menu-item[value="'+value+'"]');
+
+    if (menuItem) {
+      var selectedMenuItem = menu.querySelector('.spectrum-Menu-item.is-selected');
+      if (selectedMenuItem) {
+        selectedMenuItem.classList.remove('is-selected');
+        selectedMenuItem.removeAttribute('aria-selected');
+      }
+
+      menuItem.classList.add('is-selected');
+      menuItem.setAttribute('aria-selected', 'true');
+
+      if (!label) {
+        var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
+        if (menuLabel) {
+          label = menuLabel.innerHTML;
+        }
+      }
+    }
+
+    dropdown.setAttribute('value', value);
+    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+    if (fieldButton && label) {
+      var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
+      if (dropdownLabel) {
+        dropdownLabel.innerHTML = label;
+      }
+    }
+
+    var event = new CustomEvent('change', {
+      bubbles: true,
+      detail: {
+        label: label,
+        value: value
+      }
+    });
+
+    dropdown.dispatchEvent(event);
+  }
+
+  function handleMenuChange(menu, menuItem) {
+    var value = menuItem.getAttribute('value');
+    var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
+    var label = menuLabel.innerHTML;
+
+    var dropdown = menu.closest('.spectrum-Dropdown');
+    if (dropdown) {
+      toggleOpen(dropdown, false);
+      setDropdownValue(dropdown, value, label);
+    }
+  }
+
+  window.addEventListener('click', function(event) {
+    var dropdown = event.target.closest('.spectrum-Dropdown');
+
+    if (dropdown) {
+      toggleOpen(dropdown);
+
+      var menuItem = event.target.closest('.spectrum-Menu-item');
+      if (menuItem) {
+        var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+        var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
+        if (menuLabel) {
+          var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
+          if (dropdownLabel) {
+            dropdownLabel.innerHTML = menuLabel.innerHTML;
+
+            event.stopPropagation();
+            handleMenuChange(menuItem.parentElement, menuItem);
+          }
+        }
+      }
+    }
+    else {
+      if (openDropdown) {
+        toggleOpen(openDropdown, false);
+      }
+    }
+  });
+
+  window.setDropdownValue = setDropdownValue;
+}());
+
 // Treeview
 window.addEventListener('click', function(event) {
   var isDisabled = event.target.closest('.spectrum-TreeView-item') !== null &&
@@ -18,6 +192,19 @@ window.addEventListener('click', function(event) {
   if ((el = event.target.closest('.spectrum-TreeView-item')) !== null && !isDisabled) {
     el.classList.toggle('is-open');
     event.preventDefault();
+  }
+});
+
+// Accordion
+window.addEventListener('click', function(event) {
+  let heading = event.target.closest('.spectrum-Accordion-itemHeading');
+  if (heading) {
+    let item = event.target.closest('.spectrum-Accordion-item');
+    let isDisabled = item.classList.contains('is-disabled');
+    if (!isDisabled) {
+      item.classList.toggle('is-open');
+      event.preventDefault();
+    }
   }
 });
 
@@ -35,7 +222,7 @@ window.addEventListener('click', function(event) {
       icons[newIndex].classList.add('is-selected');
     }
   }
-})
+});
 
 // Display InputGroup focus style
 function toggleInputGroupFocus(event) {
@@ -55,7 +242,9 @@ function toggleInputGroupFocus(event) {
   }
   var func = event.type === 'focus' ? 'add' : 'remove';
   var closestElement = event.target.closest(closestSelector);
-  closestElement.classList[func]('is-focused');
+  if (closestElement) {
+    closestElement.classList[func]('is-focused');
+  }
 }
 
 document.addEventListener('focus', toggleInputGroupFocus, true);

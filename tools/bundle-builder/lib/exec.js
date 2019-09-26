@@ -24,12 +24,12 @@ function task(taskName, command) {
 
 function promise(command, options) {
   return new Promise((resolve, reject) => {
-    runCommand(command, (err) => {
+    runCommand(command, (err, stdout, stderr) => {
       if (err) {
         reject(err);
       }
       else {
-        resolve();
+        resolve(stdout);
       }
     }, options);
   });

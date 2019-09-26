@@ -17,7 +17,7 @@ function Search(el) {
   this.el.innerHTML = `
 <div class="spectrum-Site-search" role="search">
   <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
-    <input type="search" placeholder="Search" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="list" aria-owns="search-results-listbox" aria-label="Search">
+    <input type="search" placeholder="Search for components" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="list" aria-owns="search-results-listbox" aria-label="Search">
     <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-Magnifier" />
     </svg>
@@ -78,7 +78,7 @@ function Search(el) {
   }.bind(this));
 
   document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+    if (e.key === '/' && document.activeElement === document.body) {
       this.input.classList.add('focus-ring');
       this.input.setSelectionRange(0, this.input.value.length);
       setTimeout(this.input.focus.bind(this.input), 100);
@@ -192,6 +192,9 @@ Search.prototype.handlePopoverNavigation = function(e) {
     else if (e.key === 'Escape') {
       this.input.focus();
     }
+    else if (e.key === 'Enter') {
+      currentItem.click();
+    }
     if (newItemIndex !== -1) {
       items[newItemIndex].focus();
 
@@ -275,7 +278,6 @@ Search.prototype.search = function(val) {
     this.searchResults.hidden = false;
 
     let markup = `
-<ul class="spectrum-Menu" id="search-results-listbox" role="listbox" aria-label="Search">
   ${
     Search.Categories.map(function(category) {
       return results[category].length ?
@@ -297,7 +299,6 @@ Search.prototype.search = function(val) {
         ` : ''
     }).join('\n')
   }
-</ul>
 `;
     this.searchResults.innerHTML = markup;
 
