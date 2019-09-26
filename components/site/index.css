@@ -416,9 +416,12 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-example {
   flex: 1 0 auto;
 
+  /*
+  // this breaks layout for some examples, we'll need to fix later
   display: flex;
   align-items: center;
   justify-content: center;
+  */
 
   min-height: var(--spectrum-cssexample-min-height);
 
