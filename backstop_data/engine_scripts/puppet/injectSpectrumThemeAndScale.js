@@ -16,7 +16,7 @@ module.exports = function (page, scenario) {
   page.evaluate(() => {
     const SCALES = ['medium', 'large'];
     const THEMES = ['lightest', 'light', 'dark', 'darkest'];
-    const bodyElm = document.body;
+    const bodyElm = document.documentElement;
     if (window._spectrumScale && !bodyElm.classList.contains(window._spectrumScale)) {
       // Remove all the theme class
       SCALES.forEach(t => {
