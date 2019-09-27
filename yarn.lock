@@ -1030,9 +1030,9 @@
     universal-user-agent "^4.0.0"
 
 "@spectrum-css/spectrum-css-vr-test-asset@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/spectrum-css-vr-test-asset/-/spectrum-css-vr-test-asset-1.0.1.tgz#2fa50af33b22fd7c846d37f970c6e3bf919b5d49"
-  integrity sha512-2hUxoaztyjuKj4sjRmHhzv0JjzEVV2my0+UKYd05OQt3Gvt1X+9+bEz6s//nh8aYXBG4qrXZ0dWHsm27A9I+Aw==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/spectrum-css-vr-test-asset/-/spectrum-css-vr-test-asset-1.0.2.tgz#fc6881501008937802e18379a62a7af566e13264"
+  integrity sha512-fEVtt8HyQWHSQNe/mGlCQGzVH/nVb9q24PZCrrzHXIcRoG5PaIzRCRqw8IVtI8zpo3254SefoIUhNMVjavAivg==
 
 "@spectrum/kulcon@^1.x":
   version "1.1.2"
@@ -4648,10 +4648,10 @@ gulplog@^1.0.0:
   dependencies:
     glogg "^1.0.0"
 
-handlebars@^4.1.2:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.2.0.tgz#57ce8d2175b9bbb3d8b3cf3e4217b1aec8ddcb2e"
-  integrity sha512-Kb4xn5Qh1cxAKvQnzNWZ512DhABzyFNmsaJf3OAkWNa4NkaqWcNI8Tao8Tasi0/F4JD9oyG0YxuFyvyR57d+Gw==
+handlebars@^4.1.2, handlebars@^4.3.0:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.3.3.tgz#56dd05fe33d6bd8a7d797351c39a0cdcfd576be5"
+  integrity sha512-VupOxR91xcGojfINrzMqrvlyYbBs39sXIrWa7YdaQWeBudOlvKEGvCczMfJPgnuwHE/zyH1M6J+IUP6cgDVyxg==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
