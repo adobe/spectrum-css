@@ -160,6 +160,7 @@ The following tasks are available:
 - `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
 - `gulp release` - Performs a release of the top-level package
 - `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
+- `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
 
 ## Testing
 

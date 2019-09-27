@@ -13,16 +13,16 @@ const path = require('path');
 const fsp = require('fs').promises;
 const semver = require('semver');
 
+async function readPackage(component) {
+  return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
+}
+
+async function writePackage(component, package) {
+  return await fsp.writeFile(path.join(component, 'package.json'), JSON.stringify(package, null, 2));
+}
+
 async function checkPeerDependencies() {
   let packagesDir = './components';
-
-  async function readPackage(component) {
-    return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
-  }
-
-  async function writePackage(component, package) {
-    return await fsp.writeFile(path.join(component, 'package.json'), JSON.stringify(package, null, 2));
-  }
 
   let components = (await fsp.readdir(packagesDir, { withFileTypes: true }))
     .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
@@ -101,6 +101,33 @@ function packageLint() {
     .pipe(gulp.dest('components/'));
 }
 
+async function readmeLint() {
+  let packagesDir = './components';
+
+  let components = (await fsp.readdir(packagesDir, { withFileTypes: true }))
+    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .map((dirent) => path.join(packagesDir, dirent.name));
+
+  await Promise.all(components.map(async(component) => {
+    let hasReadme = await fsp.access(path.join(component, 'README.md')).then(v => true).catch(e => false);
+
+    let package = await readPackage(component);
+    if (!hasReadme) {
+      console.log(`${package.name}: writing README...`);
+      let content = `# ${package.name}
+> ${package.description}
+
+This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
+
+See the [Spectrum CSS documentation](https://opensource.adobe.com/spectrum-css/) and [Spectrum CSS on GitHub](https://github.com/adobe/spectrum-css) for details.
+`;
+
+      await fsp.writeFile(path.join(component, 'README.md'), content);
+    }
+  }));
+}
+
+exports.readmeLint = readmeLint;
 exports.packageLint = packageLint;
 
 exports.checkPeerDependencies = checkPeerDependencies;
