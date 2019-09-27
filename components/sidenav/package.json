@@ -2,12 +2,12 @@
   "name": "@spectrum-css/sidenav",
   "version": "2.0.0-alpha.6",
   "description": "The Spectrum CSS sidenav component",
-  "author": "",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/sidenav"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
@@ -23,5 +23,9 @@
     "@spectrum-css/icon": "^2.0.0-alpha.6",
     "@spectrum-css/vars": "^2.0.0-alpha.3",
     "gulp": "^4.0.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }

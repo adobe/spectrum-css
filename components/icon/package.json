@@ -2,12 +2,12 @@
   "name": "@spectrum-css/icon",
   "version": "2.0.0-alpha.6",
   "description": "The Spectrum CSS icon component",
-  "author": "",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/icon"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
@@ -29,5 +29,9 @@
     "gulp-svgcombiner": "^1.0.1",
     "gulp-svgmin": "^2.1.0",
     "gulp-svgstore": "^7.0.1"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }

@@ -2,12 +2,12 @@
   "name": "@spectrum-css/dropzone",
   "version": "2.0.0-alpha.5",
   "description": "The Spectrum CSS dropzone component",
-  "author": "",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/dropzone"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
@@ -26,5 +26,9 @@
     "@spectrum-css/link": "^2.0.0-alpha.5",
     "@spectrum-css/vars": "^2.0.0-alpha.3",
     "gulp": "^4.0.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }

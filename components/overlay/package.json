@@ -2,17 +2,21 @@
   "name": "@spectrum-css/overlay",
   "version": "2.0.0-alpha.1",
   "description": "Overlay mixin",
-  "author": "",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/overlay"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
     "build": "echo 'No build required'"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }

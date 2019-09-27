@@ -1,19 +1,17 @@
 {
   "name": "@spectrum-css/test-builder",
   "version": "1.0.0-alpha.1",
-  "description": "The Spectrum CSS component builder",
-  "author": "",
-  "license": "Apache-2.0",
+  "private": true,
+  "description": "The Spectrum CSS text builder",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "tools/test-builder"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "publishConfig": {
-    "directory": "./"
-  },
+  "license": "Apache-2.0",
   "dependencies": {
     "del": "^5.0.0",
     "gulp": "^4.0.0",

@@ -3,6 +3,7 @@ const builder = require('./tools/bundle-builder');
 const test = require('./tools/test-builder');
 const site = require('./site/gulpfile.js');
 const subrunner = require('./tools/bundle-builder/subrunner');
+const through = require('through2');
 
 Object.assign(exports, builder);
 Object.assign(exports, test);
@@ -12,16 +13,16 @@ const path = require('path');
 const fsp = require('fs').promises;
 const semver = require('semver');
 
+async function readPackage(component) {
+  return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
+}
+
+async function writePackage(component, package) {
+  return await fsp.writeFile(path.join(component, 'package.json'), JSON.stringify(package, null, 2));
+}
+
 async function checkPeerDependencies() {
   let packagesDir = './components';
-
-  async function readPackage(component) {
-    return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
-  }
-
-  async function writePackage(component, package) {
-    return await fsp.writeFile(path.join(component, 'package.json'), JSON.stringify(package, null, 2));
-  }
 
   let components = (await fsp.readdir(packagesDir, { withFileTypes: true }))
     .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
@@ -58,6 +59,76 @@ async function releaseBundles() {
 
   await subrunner.runTaskOnPackages('release', bundles);
 };
+
+function packageLint() {
+  return gulp.src('components/*/package.json')
+   .pipe(through.obj(function translateJSON(file, enc, cb) {
+      let data = JSON.parse(String(file.contents));
+
+      if (!data.license) {
+        data.license = 'Apache-2.0';
+        console.log(`${data.name}: Adding license=${data.license}`);
+      }
+
+      if (!data.publishConfig || data.publishConfig.access != 'public') {
+        console.log(`${data.name}: Adding publishConfig.access=public`);
+        data.publishConfig = data.publishConfig || {};
+        data.publishConfig.access = 'public';
+      }
+
+      if (!data.repository) {
+        console.error(`${data.name}: missing repository field!`);
+      }
+      else if (!data.repository.directory) {
+        data.repository.directory = 'components/' + data.name.split('/').pop();
+        console.log(`${data.name}: Adding missing repository.directory=${data.repository.directory}`);
+      }
+
+      if (data.author === '') {
+        console.log(`${data.name}: author field empty, deleting`);
+        delete data.author;
+      }
+
+      if (!data.homepage) {
+        data.homepage = 'https://opensource.adobe.com/spectrum-css/';
+        console.log(`${data.name}: Adding homepage=${data.homepage}`);
+      }
+
+      file.contents = Buffer.from(JSON.stringify(data, null, 2));
+
+      cb(null, file);
+    }))
+    .pipe(gulp.dest('components/'));
+}
+
+async function readmeLint() {
+  let packagesDir = './components';
+
+  let components = (await fsp.readdir(packagesDir, { withFileTypes: true }))
+    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+    .map((dirent) => path.join(packagesDir, dirent.name));
+
+  await Promise.all(components.map(async(component) => {
+    let hasReadme = await fsp.access(path.join(component, 'README.md')).then(v => true).catch(e => false);
+
+    let package = await readPackage(component);
+    if (!hasReadme) {
+      console.log(`${package.name}: writing README...`);
+      let content = `# ${package.name}
+> ${package.description}
+
+This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
+
+See the [Spectrum CSS documentation](https://opensource.adobe.com/spectrum-css/) and [Spectrum CSS on GitHub](https://github.com/adobe/spectrum-css) for details.
+`;
+
+      await fsp.writeFile(path.join(component, 'README.md'), content);
+    }
+  }));
+}
+
+exports.readmeLint = readmeLint;
+exports.packageLint = packageLint;
 
 exports.checkPeerDependencies = checkPeerDependencies;
 
