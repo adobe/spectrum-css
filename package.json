@@ -36,11 +36,11 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
     "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@spectrum-css/spectrum-css-vr-test-asset": "^1.0.1",
+    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
+    "@spectrum-css/spectrum-css-vr-test-asset": "^1.0.1",
     "audit-ci": "^2.0.1",
     "backstopjs": "^4.3.2",
     "gulp": "^4.0.0",
@@ -50,7 +50,8 @@
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",
-    "prismjs": "^1.17.1"
+    "prismjs": "^1.17.1",
+    "through2": "^3.0.1"
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0",

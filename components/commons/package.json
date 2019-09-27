@@ -2,17 +2,21 @@
   "name": "@spectrum-css/commons",
   "version": "2.0.0-alpha.2",
   "description": "Common mixins and variables for Spectrum CSS components",
-  "author": "",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/commons"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "scripts": {
     "build": "echo 'No build required'"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }

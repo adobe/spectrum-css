@@ -159,6 +159,7 @@ The following tasks are available:
 - `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
 - `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
 - `gulp release` - Performs a release of the top-level package
+- `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
 
 ## Testing
 

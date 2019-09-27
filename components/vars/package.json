@@ -2,7 +2,6 @@
   "name": "@spectrum-css/vars",
   "version": "2.0.0-alpha.3",
   "description": "The Spectrum CSS vars package",
-  "author": "",
   "license": "Apache-2.0",
   "main": "js/index.js",
   "scripts": {
@@ -10,7 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git"
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/vars"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
@@ -23,5 +23,9 @@
     "postcss": "^5.2.18",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.1"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
 }
