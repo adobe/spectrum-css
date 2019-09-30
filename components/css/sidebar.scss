@@ -14,7 +14,7 @@
   @media screen and (min-width: 960px) {
     display: none;
   }
- 
+
 }
 :local(.overlay) {
   background-color: var(--spectrum-alias-background-color-modal-overlay);
@@ -61,8 +61,15 @@
 
 }
 :local(.logo) {
-
-  display: block;
+  width: 30px;
+  margin-right: 18px;
+}
+:local(.logoLink) {
+  text-decoration: none;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(44,44,44)
 }
 :local(.navigation) {
   padding:0px 24px;

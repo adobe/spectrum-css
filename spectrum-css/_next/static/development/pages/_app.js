@@ -178,32 +178,38 @@ function (_React$Component) {
         },
         __self: this
       }, __jsx("a", {
+        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.logoLink,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 64
         },
         __self: this
       }, __jsx("img", {
-        src: "".concat("", "/static/logo.png"),
-        alt: "Spectrum Logo",
-        srcSet: "".concat("", "/static/logo@2x.png 2x"),
+        src: "".concat("", "/static/adobe-logo.svg"),
+        alt: "Adobe Logo",
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.logo,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 65
         },
         __self: this
-      }))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 66
+        },
+        __self: this
+      }, "Spectrum CSS"))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
         },
         __self: this
       })), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 71
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNav"], {
@@ -215,7 +221,7 @@ function (_React$Component) {
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 72
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_15__.menu[0].children.map(function (item, i) {
@@ -229,7 +235,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74
+            lineNumber: 75
           },
           __self: this
         }, item.children && item.children.map(function (mi, i) {
@@ -250,13 +256,13 @@ function (_React$Component) {
                   as: "".concat("", "/components/").concat(mi.url),
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 86
+                    lineNumber: 87
                   },
                   __self: this
                 }, __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 87
+                    lineNumber: 88
                   },
                   __self: this
                 }), mi.title));
@@ -264,7 +270,7 @@ function (_React$Component) {
                 return __jsx("div", {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 90
+                    lineNumber: 91
                   },
                   __self: this
                 }, "a group");
@@ -272,7 +278,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 79
+              lineNumber: 80
             },
             __self: this
           }, mi.linkType === 'group' && mi.children.map(function (mi3, i) {
@@ -285,7 +291,7 @@ function (_React$Component) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 97
+                lineNumber: 98
               },
               __self: this
             });
@@ -298,7 +304,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 112
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNavItem"], {
@@ -310,7 +316,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 113
         },
         __self: this
       }, "Spectrum"))))));
@@ -23071,7 +23077,7 @@ function (_App) {
       }), __jsx("link", {
         rel: "icon",
         type: "image/x-icon",
-        href: "/static/favicon.png",
+        href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 51

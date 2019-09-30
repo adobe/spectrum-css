@@ -48,7 +48,7 @@ export default class MyApp extends App {
 
         <Helmet>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport"/>
-            <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
+            <link rel="icon" type="image/x-icon" href={`${process.env.BACKEND_URL}/static/favicon.ico`} />
             <link type="text/css" rel="stylesheet" href="https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
         </Helmet>
         <Provider theme="light" scale={this.state.scale} typekitId="uma8ayv">

@@ -61,8 +61,9 @@ class Sidebar extends React.Component {
     <div className={classNames(styles.spectrumSidebar)}>
         <div className={styles.header}>
           <Link href="/" as={`${process.env.BACKEND_URL}/`}>
-            <a>
-              <img src={`${process.env.BACKEND_URL}/static/logo.png`} alt="Spectrum Logo" srcSet={`${process.env.BACKEND_URL}/static/logo@2x.png 2x`} className={styles.logo}/>
+            <a className={styles.logoLink}>
+              <img src={`${process.env.BACKEND_URL}/static/adobe-logo.svg`} alt="Adobe Logo" className={styles.logo}/>
+              <span>Spectrum CSS</span>
             </a>
           </Link>
           <SiteSearch/>
