@@ -63,7 +63,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 32:
+/***/ 31:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js ***!
   \********************************************************************************************************************************/
@@ -86,5 +86,5 @@ module.exports = dll_129a35c7ec57967eb265;
 
 /***/ })
 
-},[[32,"static/runtime/webpack.js"]]]);
+},[[31,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

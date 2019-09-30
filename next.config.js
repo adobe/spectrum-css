@@ -133,7 +133,7 @@ module.exports = withCSS({
       });
       const componentData = yaml.safeLoad(componentYaml);
       const slug = path.basename(component, '.yml');
-      paths[`/components/${slug}/`] = {
+      paths[`/components/${slug}`] = {
         page: `/components/id`,
         query: {
           id: slug
