@@ -52,8 +52,8 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
 
 <!-- Include only the scales your application needs -->
-<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium-unique.css">
-<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-large-unique.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-large.css">
 
 <!-- Include only the colorstops your application needs -->
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-lightest.css">
