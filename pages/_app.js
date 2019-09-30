@@ -3,14 +3,8 @@ import App, { Container } from 'next/app'
 import Sidebar from '../components/Sidebar';
 import Provider from '@react/react-spectrum/Provider';
 import styles from '../css/main.scss';
-//import '../data/dna/spectrum-global.css';
 
-// import  '@adcloud/adcloud-flexbox-grid/dist/adcloud-flexbox-grid.min.css';
-// import '@spectrum/spectrum-css/dist/components/page/index.css';
-// import '@spectrum/spectrum-css/dist/components/page/colorStops/light.css';
-// import '@spectrum/spectrum-css/dist/components/typography/index.css';
-// import '@spectrum/spectrum-css/dist/components/typography/colorStops/light.css';
-// import '../data/dna/spectrum-light.css';
+import '@adobe/spectrum-css/dist/standalone/spectrum-light.css';
 
 import classNames from 'classnames';
 import {Helmet} from "react-helmet";

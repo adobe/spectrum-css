@@ -48,7 +48,7 @@ module.exports = withCSS({
     // react-spectrum
 
     if(process.env.NODE_ENV === 'production') {
-      config.externals = [ '@react', '@spectrum', '@adcloud'];
+      config.externals = [ '@react', '@spectrum', '@adobe' , '@adcloud'];
     }
 
     const originalEntry = config.entry;
