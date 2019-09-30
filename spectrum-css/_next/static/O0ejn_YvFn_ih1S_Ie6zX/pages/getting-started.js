@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[88],{ARpD:function(n,t,e){"use strict";e.r(t);var i=e("q1tI"),u=e.n(i).a.createElement;t.default=function(){return u("div",null,"Getting Started Content")}},pxKX:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/getting-started",function(){var n=e("ARpD");return{page:n.default||n}}])}},[["pxKX",1,0]]]);
