@@ -25,7 +25,7 @@ const vars = require('./vars');
 function buildIndexVars() {
   return gulp.src([
     'index.css',
-    'skin.css',
+    'skin.css'
   ], {
     allowEmpty: true // Allow missing skin.css
   })
