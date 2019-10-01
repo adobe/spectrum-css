@@ -38,12 +38,11 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-calendar-title-text-size);
   font-weight: bold;
 
-  box-sizing: border-box;
-  width: 100%;
   line-height: var(--spectrum-calendar-title-height);
   margin: 0;
   padding: 0 var(--spectrum-calendar-title-height);
   order: 1;
+  flex-grow: 1;
 
   text-align: center;
   overflow: hidden;
@@ -52,12 +51,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Calendar-prevMonth {
-  left: 3px;
+  margin-left: 3px;
   order: 0;
 }
 
 .spectrum-Calendar-nextMonth {
-  right: 3px;
+  margin-right: 3px;
   order: 2;
 }
 
