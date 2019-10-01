@@ -188,6 +188,9 @@ window.addEventListener('DOMContentLoaded', function() {
     else {
       switcher.scale = 'medium';
     }
+    if (scaleDropdown) {
+      setDropdownValue(scaleDropdown, switcher.scale);
+    }
   }
   scaleMQL.addListener(handleScaleMQLChange);
 
@@ -200,9 +203,11 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  let scaleDropdown = document.querySelector('#switcher-scale');
+  let themeDropdown = document.querySelector('#switcher-theme');
   window.addEventListener('PageFastLoaded', function updateScaleDropdowns() {
-    let scaleDropdown = document.querySelector('#switcher-scale');
-    let themeDropdown = document.querySelector('#switcher-theme');
+    scaleDropdown = document.querySelector('#switcher-scale');
+    themeDropdown = document.querySelector('#switcher-theme');
     if (scaleDropdown) {
       setDropdownValue(scaleDropdown, switcher.scale);
     }
