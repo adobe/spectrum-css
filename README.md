@@ -132,8 +132,8 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start
 Run the following commands:
 
 ```
-npm install -g gulp-cli
-npm install
+yarn global add gulp-cli
+yarn install
 gulp dev
 ```
 
