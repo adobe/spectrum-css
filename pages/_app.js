@@ -1,8 +1,9 @@
 import React from 'react'
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import Sidebar from '../components/Sidebar';
 import Provider from '@react/react-spectrum/Provider';
 import styles from '../css/main.scss';
+import {withRouter, Router} from 'next/router';
 
 import '@adobe/spectrum-css/dist/standalone/spectrum-light.css';
 
@@ -18,12 +19,21 @@ class Layout extends React.Component {
   }
 }
 
-export default class MyApp extends App {
+class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
       scale: 'medium'
     }
+    Router.events.on('routeChangeComplete', () => {
+      digitalData._set('page.pageInfo.pageName', arguments[0].pageProps.pageData.name);
+      digitalData._set('page.pageInfo.siteSection', `${arguments[0].router.query.id} Page`);
+      digitalData._set('page.pageInfo.language', 'en-US');
+      digitalData._set('page.pageInfo.geoRegion', 'US');
+      digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
+      _satellite.track('state', {digitalData: digitalData._snapshot()});
+      console.log('======', digitalData._get('page.pageInfo.pageName'));
+    });
 
   }
   componentDidMount() {
@@ -35,8 +45,6 @@ export default class MyApp extends App {
       this.setState((state, props) => { return {
         scale: window.innerWidth < 768 ? 'large' : 'medium'
        }});
-
-
   }
 
   render () {
@@ -44,12 +52,42 @@ export default class MyApp extends App {
     //console.log(pageProps);
     return (
 
-      <Container>
+      <div>
 
         <Helmet>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport"/>
             <link rel="icon" type="image/x-icon" href={`${process.env.BACKEND_URL}/static/favicon.ico`} />
             <link type="text/css" rel="stylesheet" href="https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
+              <script dangerouslySetInnerHTML={{
+              __html: `
+              window.marketingtech = {
+                adobe: {
+                  launch: {
+                    property: 'global',
+                    environment: '${process.env.analyticsEnv}'
+                  },
+                  target: false,
+                  audienceManager: false
+                }
+              };
+              `
+            }}>
+            </script>
+            <script src="https://www.adobe.com/marketingtech/main.min.js"></script>
+            <script dangerouslySetInnerHTML={{
+              __html: `
+                //dom is ready, window.onload fires later
+                digitalData._set('page.pageInfo.siteSection', 'Spectrum Document Site Page');
+                digitalData._set('page.pageInfo.template', 'default template');
+                digitalData._set('page.pageInfo.language', 'en-US');
+                digitalData._set('page.pageInfo.geoRegion', 'US');
+                digitalData._set('page.pageInfo.issueDate', '2018-03-02');
+                digitalData._set('page.pageInfo.breadCrumbs', ["Home"]);
+                digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
+                digitalData._set('page.pageInfo.productName', 'Spectrum Design System');
+              `
+            }}>
+            </script>
         </Helmet>
         <Provider theme="light" scale={this.state.scale} typekitId="uma8ayv">
           <div className={styles.flexContainer}>
@@ -59,9 +97,9 @@ export default class MyApp extends App {
           </Layout>
           </div>
         </Provider>
-      </Container>
-
-
+      </div>
     )
   }
 }
+
+export default withRouter(MyApp)

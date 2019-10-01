@@ -145,7 +145,7 @@ module.exports = withCSS({
         "linkType": "Internal",
         "parent": "top-level-menu-item,WebsiteMenu,Components"
       };
-      menu.menu[0].children[1].children.push(menuComponentData);
+      menu.menu[0].children[2].children.push(menuComponentData); // TODO: this is brittle
       menu.key.push(menuComponentData);
     })
     await writeFile('data/newmenu.json', JSON.stringify(menu));
