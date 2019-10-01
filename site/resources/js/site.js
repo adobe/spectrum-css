@@ -188,6 +188,10 @@ window.addEventListener('DOMContentLoaded', function() {
     else {
       switcher.scale = 'medium';
     }
+    let scaleDropdown = document.querySelector('#switcher-scale');
+    if (scaleDropdown) {
+      setDropdownValue(scaleDropdown, switcher.scale);
+    }
   }
   scaleMQL.addListener(handleScaleMQLChange);
 
