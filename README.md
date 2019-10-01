@@ -132,8 +132,13 @@ Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start
 Run the following commands:
 
 ```
+# install lerna and gulp globally (only necessary the first time)
+npm install --g lerna
 npm install -g gulp-cli
-npm install
+```
+
+```
+lerna bootstrap
 gulp dev
 ```
 

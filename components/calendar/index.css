@@ -28,17 +28,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Calendar-header {
-  position: relative;
+  display: flex;
   box-sizing: border-box;
   width: 100%;
   height: var(--spectrum-calendar-title-height);
 }
 
 .spectrum-Calendar-title {
-  position: absolute;
-  left: 0;
-  top: 0;
-
   font-size: var(--spectrum-calendar-title-text-size);
   font-weight: bold;
 
@@ -47,6 +43,7 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-calendar-title-height);
   margin: 0;
   padding: 0 var(--spectrum-calendar-title-height);
+  order: 1;
 
   text-align: center;
   overflow: hidden;
@@ -54,18 +51,14 @@ governing permissions and limitations under the License.
   text-overflow: ellipsis;
 }
 
-.spectrum-Calendar-prevMonth,
-.spectrum-Calendar-nextMonth {
-  position: absolute;
-
-}
-
 .spectrum-Calendar-prevMonth {
   left: 3px;
+  order: 0;
 }
 
 .spectrum-Calendar-nextMonth {
   right: 3px;
+  order: 2;
 }
 
 .spectrum-Calendar-dayOfWeek {
