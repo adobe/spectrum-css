@@ -26,13 +26,14 @@ class MyApp extends App {
       scale: 'medium'
     }
     Router.events.on('routeChangeComplete', () => {
-      digitalData._set('page.pageInfo.pageName', arguments[0].pageProps.pageData.name);
-      digitalData._set('page.pageInfo.siteSection', `${arguments[0].router.query.id} Page`);
-      digitalData._set('page.pageInfo.language', 'en-US');
-      digitalData._set('page.pageInfo.geoRegion', 'US');
-      digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
-      _satellite.track('state', {digitalData: digitalData._snapshot()});
-      console.log('======', digitalData._get('page.pageInfo.pageName'));
+      console.log(arguments[0])
+      // digitalData._set('page.pageInfo.pageName', arguments[0].pageProps.pageData.name);
+      // digitalData._set('page.pageInfo.siteSection', `${arguments[0].router.query.id} Page`);
+      // digitalData._set('page.pageInfo.language', 'en-US');
+      // digitalData._set('page.pageInfo.geoRegion', 'US');
+      // digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
+      // _satellite.track('state', {digitalData: digitalData._snapshot()});
+      // console.log('======', digitalData._get('page.pageInfo.pageName'));
     });
 
   }
@@ -77,7 +78,7 @@ class MyApp extends App {
             <script dangerouslySetInnerHTML={{
               __html: `
                 //dom is ready, window.onload fires later
-                digitalData._set('page.pageInfo.siteSection', 'Spectrum Document Site Page');
+                digitalData._set('page.pageInfo.siteSection', 'Spectrum CSS Site Page');
                 digitalData._set('page.pageInfo.template', 'default template');
                 digitalData._set('page.pageInfo.language', 'en-US');
                 digitalData._set('page.pageInfo.geoRegion', 'US');
@@ -91,10 +92,11 @@ class MyApp extends App {
         </Helmet>
         <Provider theme="light" scale={this.state.scale} typekitId="uma8ayv">
           <div className={styles.flexContainer}>
-          <Sidebar {...pageProps}/>
-          <Layout>
-            <Component {...pageProps}/>
-          </Layout>
+            <Sidebar {...pageProps}/>
+            <Layout>
+              <div>switcher</div>
+              <Component {...pageProps}/>
+            </Layout>
           </div>
         </Provider>
       </div>
