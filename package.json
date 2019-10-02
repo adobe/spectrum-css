@@ -16,9 +16,8 @@
     "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
     "backstop:docker:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=local",
     "backstop:ci:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
+    "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
-    "prepublishOnly": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
-    "postpublish": "npx lerna run publishpages --concurrency=1",
     "prepare": "gulp prepare",
     "watch": "gulp watch"
   },
@@ -51,6 +50,7 @@
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",
     "prismjs": "^1.17.1",
+    "semver": "^6.3.0",
     "through2": "^3.0.1"
   },
   "optionalDependencies": {

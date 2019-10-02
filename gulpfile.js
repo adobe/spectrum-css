@@ -34,7 +34,7 @@ async function checkPeerDependencies() {
     if (package.peerDependencies) {
       Object.keys(package.peerDependencies).forEach((dependency) => {
         let devDepVer = package.devDependencies[dependency];
-        let peerDepVer = package.peerDependencies[dependency];
+        let peerDepVer = package.peerDependencies[dependency].replace('^', '');
         if (devDepVer) {
           if (!semver.satisfies(peerDepVer, devDepVer)) {
             throw new Error(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, does not satisfy ${devDepVer})`);
@@ -59,6 +59,33 @@ async function releaseBundles() {
 
   await subrunner.runTaskOnPackages('release', bundles);
 };
+
+function graduatePeerDeps() {
+  function isPrerelease(version) {
+    return version.match(/-(alpha)|(beta)/);
+  }
+
+  return gulp.src('components/*/package.json')
+   .pipe(through.obj(function translateJSON(file, enc, cb) {
+      let data = JSON.parse(String(file.contents));
+
+      if (data.peerDependencies) {
+        for (let [peerDep, version] of Object.entries(data.peerDependencies)) {
+          if (isPrerelease(version)) {
+            version = version.replace('^', '');
+            let newVersion = `^${semver.major(version)}.${semver.minor(version)}.${semver.patch(version)}`;
+            console.log(`${data.name}: Graduating ${peerDep} to ${newVersion}`);
+            data.peerDependencies[peerDep] = newVersion;
+          }
+        }
+      }
+
+      file.contents = Buffer.from(JSON.stringify(data, null, 2));
+
+      cb(null, file);
+    }))
+    .pipe(gulp.dest('components/'));
+}
 
 function packageLint() {
   return gulp.src('components/*/package.json')
@@ -127,6 +154,7 @@ See the [Spectrum CSS documentation](https://opensource.adobe.com/spectrum-css/)
   }));
 }
 
+exports.graduatePeerDeps = graduatePeerDeps;
 exports.readmeLint = readmeLint;
 exports.packageLint = packageLint;
 
