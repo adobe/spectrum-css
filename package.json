@@ -50,6 +50,7 @@
     "lunr": "^2.3.6",
     "markdown": "^0.5.0",
     "prismjs": "^1.17.1",
+    "semver": "^6.3.0",
     "through2": "^3.0.1"
   },
   "optionalDependencies": {
@@ -69,8 +70,5 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "dependencies": {
-    "semver": "^6.3.0"
   }
 }
