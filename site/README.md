@@ -22,10 +22,10 @@ site/
 │       ├── enhancement.js - Enhancements that make examples interactive
 │       ├── polyfills.js - Polyfills for old browsers
 │       ├── site.js - The actual site navigation code
-│       └── typekit.js - Typekit that knows how to choose large/small kits based on the langage attribute
+│       └── typekit.js - Typekit that knows how to choose large/small kits based on the language attribute
 └── templates
     ├── individualComponent.pug - template to build individual component packages
-    └── sidebsiteComponentar.pug - template to build docs for components in bundles
+    └── siteComponent.pug - template to build docs for components in bundles
 ```
 
 ## Architecture
@@ -34,7 +34,7 @@ The site build process generates separate `.html` files for each of the `*.pug` 
 
 When clicking an item in the nav or using the browser history, instead of simply navigating to the new page, the page is requested with `XMLHTTPRequest`, parsed, and the content is extracted and injected. Additionally, the dependencies included on the page (any `link` tag with the `data-dependecy="$NAME"`) are diffed with the existing dependencies on the page, and the new dependencies are asynchronously loaded before the page content so as to prevent FOUC (flash of unstyled content). Finally, the corresponding item in the side nav is selected.
 
-Because the dependencies included in the component example pages are sorted in topological order with [`dependency-solver`](https://www.npmjs.com/package/dependency-solver), it is not possible for dependencies to be loaded out of order, even if navigating between pages in a different order -- only the new dependencies will be added to the end of the list of dependencies, so precidence will be preserved.
+Because the dependencies included in the component example pages are sorted in topological order with [`dependency-solver`](https://www.npmjs.com/package/dependency-solver), it is not possible for dependencies to be loaded out of order, even if navigating between pages in a different order -- only the new dependencies will be added to the end of the list of dependencies, so precedence will be preserved.
 
 ## Viewing the site
 

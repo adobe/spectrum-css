@@ -94,10 +94,10 @@ that consumers of rendered markdown will not be able to use a URL that
 has been constructed to contain a version number anchor tag reference,
 since the anchor tag won't exist in the rendered markdown.
 
-It's stronly recomended consumers use the full URL path to the release
-page for a given version, as that URL is a permalink to that verison,
-contains all relavent release information, and does not, otherwise, rely
-on the anchor tag being excessible from the current page view.
+It's strongly recommended consumers use the full URL path to the release
+page for a given version, as that URL is a permalink to that version,
+contains all relevant release information, and does not, otherwise, rely
+on the anchor tag being accessible from the current page view.
 
 As an example, for version `2.0.0` of a GitHub project, the following
 URL should be used:
