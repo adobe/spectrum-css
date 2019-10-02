@@ -96,6 +96,6 @@ At this point you're waiting on us. We do our best to keep on top of all the pul
 
 Some things that will increase the chance that your pull request is accepted:
 
-- Write a good pull request description, include screenshots, and test your changes across all evergreen browsers (and IE 11, sadly)
+- Write a good pull request description, include screenshots, and test your changes across all evergreen browsers (and IE 11, sadly).
 - Make sure the PR merges cleanly with the latest master.
 - Describe your feature/bugfix and why it's needed/important in the pull request description.

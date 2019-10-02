@@ -2,12 +2,12 @@
 
 Spectrum CSS provides a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
-1. [Show me a demo](#show-me-a-demo)
-1. [Where is the JavaScript?](#where-is-the-javascript)
-1. [Using Spectrum CSS](#using-spectrum-css)
-1. [Contributing](#contributing)
-1. [Testing](#testing)
-1. [Releasing](#releasing)
+1. [Show me a demo](#show-me-a-demo).
+1. [Where is the JavaScript?](#where-is-the-javascript).
+1. [Using Spectrum CSS](#using-spectrum-css).
+1. [Contributing](#contributing).
+1. [Testing](#testing).
+1. [Releasing](#releasing).
 
 ## Show me a demo
 
@@ -21,7 +21,7 @@ Adobe maintains separate JavaScript libraries written with React, Angular, and w
 
 ## Using Spectrum CSS
 
-The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
+The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11.
 
 To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
 
@@ -96,9 +96,9 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 
 Based on which scales you'll be using, you can choose to load different files:
 
-* `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
-* `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
-* `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
+* `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`.
+* `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only.
+* `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only.
 
 
 **Note:** If you're using `spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
@@ -151,16 +151,16 @@ See [site generation](site/README.md) and [documentation generation](tools/bundl
 
 The following tasks are available:
 
-- `gulp build` - Performs a build of all components and the top level package
-- `gulp buildComponents` - Performs a build of all components
-- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files
-- `gulp clean` - Cleans all output files for the project and all components
-- `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files
-- `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
-- `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
-- `gulp release` - Performs a release of the top-level package
-- `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
-- `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
+- `gulp build` - Performs a build of all components and the top level package.
+- `gulp buildComponents` - Performs a build of all components.
+- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files.
+- `gulp clean` - Cleans all output files for the project and all components.
+- `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files.
+- `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`).
+- `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`).
+- `gulp release` - Performs a release of the top-level package.
+- `gulp packageLint` - Lint the `package.json` file for each component in the monorepo.
+- `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo.
 
 ## Testing
 
@@ -168,7 +168,7 @@ Visual regression testing is implemented by [BackstopJS](https://github.com/garr
 
 ### Setup docker
 
-Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64)
+Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64).
 
 ### Backstop reference bitmap
 
@@ -182,12 +182,12 @@ The reference bitmaps are hosted in a adobe internal repo and published as [@spe
 
 The following npm scripts are available for testing:
 
-- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes) 
-- `npm run backstop:test` - Run test in your local native environment
-- `npm run backstop:clean` - Clean up all the testing reports and test images
-- `npm run backstop:docker:test` - Run test in your local docker container
-- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
-- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
+- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes).
+- `npm run backstop:test` - Run test in your local native environment.
+- `npm run backstop:clean` - Clean up all the testing reports and test images.
+- `npm run backstop:docker:test` - Run test in your local docker container.
+- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css).
+- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine.
 
 Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
 
