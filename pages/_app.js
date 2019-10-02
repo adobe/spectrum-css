@@ -48,17 +48,43 @@ class MyApp extends App {
        }});
   }
 
-  render () {
-    const { Component, pageProps } = this.props
-    //console.log(pageProps);
-    return (
+  // calling SVG injector after script has been loaded
+  // solution: https://github.com/nfl/react-helmet/issues/146#issuecomment-271552211
+  handleScriptInject = ({ scriptTags }) => {
+    if (scriptTags) {
+      const scriptTag = scriptTags[0];
+      scriptTag.onload = this.handleOnLoad;
+    }
+  }
 
-      <div>
+  handleOnLoad = () => {
+    window.onload = loadIcons('/static/images/svg/spectrum-css-icons.svg', function (err, svg) {
+      if (err) {
+        console.error('Everything failed because ' + error);
+      }
+    });
+  }
+
+
+  render () {
+    const { Component, pageProps } = this.props;
+
+    return (
+      <>
+
+        {/* SVG iconfile loadscript */}
+        <Helmet
+            script={[{ src: '/static/javascript/loadicons/index.js' }]}
+            onChangeClientState={(newState, addedTags) => this.handleScriptInject(addedTags)}
+        />
 
         <Helmet>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport"/>
             <link rel="icon" type="image/x-icon" href={`${process.env.BACKEND_URL}/static/favicon.ico`} />
             <link type="text/css" rel="stylesheet" href="https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
+            
+            {/* required classname for Spectrum UI icons to show up */}
+            <html className="spectrum--medium" />
               <script dangerouslySetInnerHTML={{
               __html: `
               window.marketingtech = {
@@ -99,7 +125,7 @@ class MyApp extends App {
             </Layout>
           </div>
         </Provider>
-      </div>
+      </>
     )
   }
 }
