@@ -52,8 +52,8 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
 
 <!-- Include only the scales your application needs -->
-<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium-unique.css">
-<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-large-unique.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+<link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-large.css">
 
 <!-- Include only the colorstops your application needs -->
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-lightest.css">
@@ -122,6 +122,19 @@ To take advantage of locale specific changes such as placeholders not italicizin
 ```html
 <html lang="ja">
 ```
+
+### Variable fallbacks
+
+Each component has a `dist/vars.css` file that contains declarations for each component-level variable used by the component. The CSS in `dist/index-vars.css` references these variables, but has fallbacks for the global variables or hardcoded value that that the component-level variables resolve to.
+
+As such, **you do not need to include `dist/vars.css`** unless:
+
+1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-rule-medium-height`)
+2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/rule`) and do not want to update the component-level variables used by that component
+
+When this file is imported, if in updated version of `@spectrum-css/vars` changed global varaibles (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
+
+In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
 ## Contributing
 

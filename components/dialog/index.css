@@ -77,7 +77,7 @@ governing permissions and limitations under the License.
   outline: none; /* Firefox shows outline */
 
   /* Exit animations */
-  transition: opacity var(--spectrum-dialog-exit-animation-duration) cubic-bezier(0.5, 0, 1, 1) var(--spectrum-dialog-exit-animation-delay),
+  transition: opacity var(--spectrum-dialog-exit-animation-duration) var(--spectrum-global-animation-ease-in) var(--spectrum-dialog-exit-animation-delay),
               visibility 0ms linear calc(var(--spectrum-dialog-exit-animation-delay) + var(--spectrum-dialog-exit-animation-duration)),
               transform 0ms linear calc(var(--spectrum-dialog-exit-animation-delay) + var(--spectrum-dialog-exit-animation-duration));
 
@@ -85,8 +85,8 @@ governing permissions and limitations under the License.
     @inherit: %spectrum-overlay--open;
 
     /* Entry animations */
-    transition: transform var(--spectrum-dialog-entry-animation-duration) cubic-bezier(0, 0, 0.40, 1) var(--spectrum-dialog-entry-animation-delay),
-                opacity var(--spectrum-dialog-entry-animation-duration) cubic-bezier(0, 0, 0.40, 1) var(--spectrum-dialog-entry-animation-delay);
+    transition: transform var(--spectrum-dialog-entry-animation-duration) var(--spectrum-global-animation-ease-out) var(--spectrum-dialog-entry-animation-delay),
+                opacity var(--spectrum-dialog-entry-animation-duration) var(--spectrum-global-animation-ease-out) var(--spectrum-dialog-entry-animation-delay);
 
     transform: translate(-50%, calc(-50% + var(--spectrum-dialog-vertical-offset)));
   }

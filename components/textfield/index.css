@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
   /* box */
   box-sizing: border-box;
   border: var(--spectrum-textfield-border-size) solid;
-  border-radius: var(--spectrum-border-radius);
+  border-radius: var(--spectrum-textfield-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
   padding: var(--spectrum-textfield-padding-top) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) var(--spectrum-textfield-padding-x);

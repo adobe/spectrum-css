@@ -28,6 +28,22 @@ To install the bundle with the latest components:
 npm install @spectrum-css/spectrum-css
 ```
 
+### CSS variables in bundles
+
+Since bundles know exactly which components they're using, they ship with a set of files that contain only the variables used by the components in the bundle.
+
+In the `dist/vars/` folder, you'll find the following files:
+
+* `spectrum-dark-unique.css`
+* `spectrum-darkest-unique.css`
+* `spectrum-global-unique.css`
+* `spectrum-large-unique.css`
+* `spectrum-light-unique.css`
+* `spectrum-lightest-unique.css`
+* `spectrum-medium-unique.css`
+
+These files can be imported instead of their non `-unique` counterparts for a slightly smaller bundle size.
+
 ## Legacy usage
 
 The following are legacy methods for using Spectrum CSS. The [CSS custom properties method](README.md#using-spectrum-css) is preferred.
