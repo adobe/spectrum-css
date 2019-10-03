@@ -2,10 +2,16 @@ import React from 'react'
 import App from 'next/app'
 import Sidebar from '../components/Sidebar';
 import Provider from '@react/react-spectrum/Provider';
+import Select from '@react/react-spectrum/Select';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import styles from '../css/main.scss';
 import {withRouter, Router} from 'next/router';
 
-import '@adobe/spectrum-css/dist/standalone/spectrum-light.css';
+import '@adobe/spectrum-css/dist/spectrum-core.css';
+import '@adobe/spectrum-css/dist/spectrum-lightest.css';
+import '@adobe/spectrum-css/dist/spectrum-dark.css';
+import '@adobe/spectrum-css/dist/spectrum-darkest.css';
+import '@adobe/spectrum-css/dist/spectrum-light.css';
 
 import classNames from 'classnames';
 import {Helmet} from "react-helmet";
@@ -23,7 +29,8 @@ class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
-      scale: 'medium'
+      scale: 'medium',
+      theme: 'light'
     }
     Router.events.on('routeChangeComplete', () => {
       console.log(arguments[0])
@@ -39,13 +46,18 @@ class MyApp extends App {
   }
   componentDidMount() {
     this.updateDimensions();
+    this.updateTheme();
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
   updateDimensions =() => {
-
-      this.setState((state, props) => { return {
-        scale: window.innerWidth < 768 ? 'large' : 'medium'
-       }});
+    this.setState((state, props) => { return {
+      scale: window.innerWidth < 768 ? 'large' : 'medium'
+     }});
+  }
+  updateTheme = (e = 'light') => {
+    this.setState((state, props) => { return {
+      theme: e
+    }})
   }
 
   render () {
@@ -53,7 +65,7 @@ class MyApp extends App {
     //console.log(pageProps);
     return (
 
-      <div>
+      <div className={`spectrum--${this.state.theme}`}>
 
         <Helmet>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport"/>
@@ -90,11 +102,45 @@ class MyApp extends App {
             }}>
             </script>
         </Helmet>
-        <Provider theme="light" scale={this.state.scale} typekitId="uma8ayv">
+        <Provider theme={this.state.theme} scale={this.state.scale} typekitId="uma8ayv">
           <div className={styles.flexContainer}>
             <Sidebar {...pageProps}/>
-            <Layout>
-              <div>switcher</div>
+              <Layout>
+                <div style={{display: 'flex'}}>
+                  <FieldLabel label="Theme" labelFor="theme-selector" position="left">
+                    <Select
+                      onChange={this.updateTheme}
+                      id="theme-selector"
+                      aria-label="Theme selector"
+                      options={[
+                        {label: 'Lightest', value: 'lightest'},
+                        {label: 'Light', value: 'light'},
+                        {label: 'Dark', value: 'dark'},
+                        {label: 'Darkest', value: 'darkest'}
+                      ]}
+                      defaultValue="light"
+                      quiet
+                      style={{marginRight: '37px'}}
+                      />
+                  </FieldLabel>
+                  <FieldLabel label="Scale" labelFor="theme-selector" position="left">
+                    <Select
+                      onChange={e => {
+                          this.setState((state, props) => { return {
+                            scale: e
+                        }})
+                        console.log(e);
+                        }
+                      }
+                      aria-label="Scale selector"
+                      options={[
+                        {label: 'Medium', value: 'medium'},
+                        {label: 'Large',value: 'large'}
+                      ]}
+                      quiet
+                      />
+                  </FieldLabel>
+                </div>
               <Component {...pageProps}/>
             </Layout>
           </div>

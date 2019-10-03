@@ -81,7 +81,6 @@ module.exports = withCSS({
         }
       ]
     });
-
     config.module.rules.push(
       {
         test: /\.scss$/,
@@ -105,9 +104,9 @@ module.exports = withCSS({
         'process.env.SCALE_MEDIUM': 'true',
         'process.env.SCALE_LARGE': 'true',
         'process.env.THEME_LIGHT': 'true',
-        'process.env.THEME_LIGHTEST': 'false',
-        'process.env.THEME_DARK': 'false',
-        'process.env.THEME_DARKEST': 'false'
+        'process.env.THEME_LIGHTEST': 'true',
+        'process.env.THEME_DARK': 'true',
+        'process.env.THEME_DARKEST': 'true'
       })
     );
     return config;
