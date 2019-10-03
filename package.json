@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next export -o spectrum-css",
+    "export": "next build && next export -o spectrum-css",
     "prep": "npm run build && npm run export && touch spectrum-css/.nojekyll",
     "deploy": "git subtree push --prefix spectrum-css origin gh-pages"
   },

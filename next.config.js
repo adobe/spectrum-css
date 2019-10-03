@@ -37,7 +37,8 @@ console.log(process.env.NODE_ENV);
 console.log(process.env.BUILD);
 module.exports = withCSS({
   env: {
-    build: process.env.BUILD
+    build: process.env.BUILD,
+    adobeLaunchEnv: process.env.ADOBE_LAUNCH_ENV
   },
   exportTrailingSlash: true,
   pageExtensions: ['js', 'jsx'],
