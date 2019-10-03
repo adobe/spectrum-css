@@ -68,12 +68,12 @@ governing permissions and limitations under the License.
 
   width: var(--spectrum-calendar-day-width);
 
-  border-bottom: none !important; /* override abbr styling from normalize.css */
+  border-bottom: none; 
 
   font-size: var(--spectrum-calendar-day-title-text-size);
   font-weight: var(--spectrum-calendar-day-title-text-font-weight);
   text-transform: uppercase;
-  text-decoration: none !important; /* override abbr styling from normalize.css */
+  text-decoration: none;
 
   cursor: default;
 
