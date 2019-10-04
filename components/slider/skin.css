@@ -263,7 +263,7 @@ governing permissions and limitations under the License.
 
     &.spectrum-Slider--color {
       .spectrum-Slider-track {
-        background: var(--spectrum-slider-color-track-color-disabled) !important;
+        background: var(--spectrum-slider-color-track-color-disabled);
         box-shadow: none;
       }
       .spectrum-Slider-handle {
