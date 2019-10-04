@@ -105,11 +105,11 @@ governing permissions and limitations under the License.
 
 .spectrum-Radio-input {
   &:disabled + .spectrum-Radio-button {
-    border-color: var(--spectrum-radio-circle-border-color-disabled) !important;
+    border-color: var(--spectrum-radio-circle-border-color-disabled);
   }
 
   &:disabled ~ .spectrum-Radio-label {
-    color: var(--spectrum-radio-text-color-disabled) !important;
+    color: var(--spectrum-radio-text-color-disabled);
   }
 }
 
