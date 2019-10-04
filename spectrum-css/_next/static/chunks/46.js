@@ -1,0 +1,16 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[46],{
+
+/***/ "./data/yml/pagination-button-style.yml":
+/*!**********************************************!*\
+  !*** ./data/yml/pagination-button-style.yml ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const doc = [({"name":"Pagination - Button Style", "examples":[({"id":"pagination-button", "name":"CTA", "markup":"<nav class=\"spectrum-SplitButton spectrum-SplitButton--left\">\n  <a href=\"#\" class=\"spectrum-Button spectrum-Button--cta spectrum-SplitButton-trigger\">\n    <svg class=\"spectrum-Icon spectrum-UIIcon-ChevronLeftMedium\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"ChevronLeft\">\n      <use xlink:href=\"#spectrum-css-icon-ChevronLeftMedium\"></use>\n    </svg>\n  </a>\n  <a href=\"#\" class=\"spectrum-Button spectrum-Button--cta spectrum-SplitButton-action\">\n    <span class=\"spectrum-Button-label\">Next</span>\n    <svg class=\"spectrum-Icon spectrum-UIIcon-ChevronRightMedium\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"ChevronLeft\">\n      <use xlink:href=\"#spectrum-css-icon-ChevronRightMedium\"></use>\n    </svg>\n  </a>\n</nav>\n"}), ({"id":"pagination-button", "name":"Primary", "markup":"<nav class=\"spectrum-SplitButton spectrum-SplitButton--left\">\n  <a href=\"#\" class=\"spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger\">\n    <svg class=\"spectrum-Icon spectrum-UIIcon-ChevronLeftMedium\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"ChevronLeft\">\n      <use xlink:href=\"#spectrum-css-icon-ChevronLeftMedium\"></use>\n    </svg>\n  </a>\n  <a href=\"#\" class=\"spectrum-Button spectrum-Button--primary spectrum-SplitButton-action\">\n    <span class=\"spectrum-Button-label\">Next</span>\n    <svg class=\"spectrum-Icon spectrum-UIIcon-ChevronRightMedium\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"ChevronLeft\">\n      <use xlink:href=\"#spectrum-css-icon-ChevronRightMedium\"></use>\n    </svg>\n  </a>\n</nav>\n"}), ({"id":"pagination-button", "name":"Secondary", "markup":"<nav class=\"spectrum-SplitButton spectrum-SplitButton--left\">\n  <a href=\"#\" class=\"spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger\">\n    <svg class=\"spectrum-Icon spectrum-UIIcon-ChevronLeftMedium\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"ChevronLeft\">\n      <use xlink:href=\"#spectrum-css-icon-ChevronLeftMedium\"></use>\n    </svg>\n  </a>\n  <a href=\"#\" class=\"spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action\">\n    <span class=\"spectrum-Button-label\">Next</span>\n    <svg class=\"spectrum-Icon spectrum-UIIcon-ChevronRightMedium\" focusable=\"false\" aria-hidden=\"true\" aria-label=\"ChevronLeft\">\n      <use xlink:href=\"#spectrum-css-icon-ChevronRightMedium\"></use>\n    </svg>\n  </a>\n</nav>\n"})]})];
+module.exports = doc.length <= 1 ? doc[0] : doc;
+
+/***/ })
+
+}]);
+//# sourceMappingURL=46.js.map
