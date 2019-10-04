@@ -46,7 +46,7 @@ var _data_newmenu__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__webpa
 
 
 
-var _jsxFileName = "/Users/jianliao/Work/scm/github/spectrum-css-garth/components/Sidebar.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Sidebar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
@@ -376,7 +376,7 @@ var _data_search_index__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__
 
 
 
-var _jsxFileName = "/Users/jianliao/Work/scm/github/spectrum-css-garth/components/SiteSearch.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/SiteSearch.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 
@@ -24974,12 +24974,12 @@ module.exports = function(module) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -25361,6 +25361,201 @@ module.exports = function shimAssign() {
 
 /***/ }),
 
+/***/ "./node_modules/process/browser.js":
+/*!*****************************************!*\
+  !*** ./node_modules/process/browser.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+
 /***/ "./node_modules/prop-types-exact/build/helpers/isPlainObject.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/prop-types-exact/build/helpers/isPlainObject.js ***!
@@ -25653,12 +25848,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_129a35c7ec57967eb265 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -26293,12 +26488,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_129a35c7ec57967eb265 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -27044,12 +27239,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -30863,12 +31058,12 @@ exports.classNamesShape = classNamesShape;
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -32519,7 +32714,7 @@ module.exports = warning;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
@@ -32564,7 +32759,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/jianliao/Work/scm/github/spectrum-css-garth/pages/_app.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
 
@@ -32605,7 +32800,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
         },
         __self: this
       }, children);
@@ -32652,17 +32847,13 @@ function (_App) {
       theme: 'light'
     };
     next_router__WEBPACK_IMPORTED_MODULE_15__["Router"].events.on('routeChangeComplete', function () {
-      digitalData._set('page.pageInfo.siteSection', "".concat(_arguments[0].router.query.id, " Page"));
-
-      digitalData._set('page.pageInfo.language', 'en-US');
-
-      digitalData._set('page.pageInfo.geoRegion', 'US');
-
-      digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
-
-      _satellite.track('state', {
-        digitalData: digitalData._snapshot()
-      });
+      console.log(_arguments[0]); // digitalData._set('page.pageInfo.pageName', arguments[0].pageProps.pageData.name);
+      // digitalData._set('page.pageInfo.siteSection', `${arguments[0].router.query.id} Page`);
+      // digitalData._set('page.pageInfo.language', 'en-US');
+      // digitalData._set('page.pageInfo.geoRegion', 'US');
+      // digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
+      // _satellite.track('state', {digitalData: digitalData._snapshot()});
+      // console.log('======', digitalData._get('page.pageInfo.pageName'));
     });
     return _this;
   }
@@ -32687,13 +32878,13 @@ function (_App) {
         className: "spectrum--".concat(this.state.theme),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 68
         },
         __self: this
       }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_22__["Helmet"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 70
         },
         __self: this
       }, __jsx("meta", {
@@ -32702,7 +32893,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 71
         },
         __self: this
       }), __jsx("link", {
@@ -32711,7 +32902,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 72
         },
         __self: this
       }), __jsx("link", {
@@ -32720,7 +32911,32 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 73
+        },
+        __self: this
+      }), __jsx("script", {
+        dangerouslySetInnerHTML: {
+          __html: "\n              window.marketingtech = {\n                adobe: {\n                  launch: {\n                    property: 'global',\n                    environment: '".concat(process.env.analyticsEnv, "'\n                  },\n                  target: false,\n                  audienceManager: false\n                }\n              };\n              ")
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        },
+        __self: this
+      }), __jsx("script", {
+        src: "https://www.adobe.com/marketingtech/main.min.js",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      }), __jsx("script", {
+        dangerouslySetInnerHTML: {
+          __html: "\n                //dom is ready, window.onload fires later\n                digitalData._set('page.pageInfo.siteSection', 'Spectrum CSS Site Page');\n                digitalData._set('page.pageInfo.template', 'default template');\n                digitalData._set('page.pageInfo.language', 'en-US');\n                digitalData._set('page.pageInfo.geoRegion', 'US');\n                digitalData._set('page.pageInfo.issueDate', '2018-03-02');\n                digitalData._set('page.pageInfo.breadCrumbs', [\"Home\"]);\n                digitalData._set('page.pageInfo.legacyMarketSegment', 'com');\n                digitalData._set('page.pageInfo.productName', 'Spectrum Design System');\n              "
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
         },
         __self: this
       })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -32729,26 +32945,26 @@ function (_App) {
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 105
         },
         __self: this
       }, __jsx("div", {
         className: _css_main_scss__WEBPACK_IMPORTED_MODULE_14___default.a.flexContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 106
         },
         __self: this
       }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 107
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 108
         },
         __self: this
       }, __jsx("div", {
@@ -32757,7 +32973,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 109
         },
         __self: this
       }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -32766,7 +32982,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 110
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -32793,7 +33009,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 111
         },
         __self: this
       })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -32802,7 +33018,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 126
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -32826,13 +33042,13 @@ function (_App) {
         quiet: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 127
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 144
         },
         __self: this
       }))))));
@@ -32843,6 +33059,7 @@ function (_App) {
 }(next_app__WEBPACK_IMPORTED_MODULE_9___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_15__["withRouter"])(MyApp));
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -32857,14 +33074,14 @@ function (_App) {
 
 /***/ }),
 
-/***/ "dll-reference dll_01f9a3fa864a7b7414d8":
+/***/ "dll-reference dll_129a35c7ec57967eb265":
 /*!*******************************************!*\
-  !*** external "dll_01f9a3fa864a7b7414d8" ***!
+  !*** external "dll_129a35c7ec57967eb265" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_01f9a3fa864a7b7414d8;
+module.exports = dll_129a35c7ec57967eb265;
 
 /***/ })
 
