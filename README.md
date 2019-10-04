@@ -132,7 +132,7 @@ As such, **you do not need to include `dist/vars.css`** unless:
 1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-rule-medium-height`)
 2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/rule`) and do not want to update the component-level variables used by that component
 
-When this file is imported, if in updated version of `@spectrum-css/vars` changed global varaibles (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
+When this file is imported, if in updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
@@ -199,7 +199,7 @@ The following npm scripts are available for testing:
 - `npm run backstop:test` - Run test in your local native environment
 - `npm run backstop:clean` - Clean up all the testing reports and test images
 - `npm run backstop:docker:test` - Run test in your local docker container
-- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
+- `npm run backstop:ci:test` - Run test in a continous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
 - `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
 
 Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
