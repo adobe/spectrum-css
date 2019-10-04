@@ -132,7 +132,7 @@ governing permissions and limitations under the License.
 .spectrum-Site-logo {
   margin-right: var(--spectrum-global-dimension-size-175);
   width: var(--spectrum-global-dimension-size-400);
-  color: rgb(255, 2, 1) !important;
+  color: rgb(255, 2, 1);
 }
 
 .spectrum-Site-nav {
@@ -316,12 +316,12 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSExample-status,
 .spectrum-CSSComponent-status {
-  padding: 0 !important;
-  min-height: 0 !important;
+  padding: 0;
+  min-height: 0;
 }
 
 .spectrum-CSSComponent-status::before {
-  margin-left: 0 !important;
+  margin-left: 0;
 }
 
 .spectrum-CSSExample-status {
@@ -352,25 +352,25 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSComponent-resource--adobe {
-  color: rgb(255, 2, 1) !important;
-  background-color: rgba(255, 2, 1, 0.1) !important;
+  color: rgb(255, 2, 1);
+  background-color: rgba(255, 2, 1, 0.1);
 }
 
 .spectrum-CSSComponent-resource--github {
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.1);
   color: black;
 }
 
 .spectrum--dark,
 .spectrum--darkest {
   .spectrum-CSSComponent-resource--github {
-    background-color: rgba(245, 245, 245, 0.1) !important;
+    background-color: rgba(245, 245, 245, 0.1);
     color: rgb(245, 245, 245);
   }
 }
 
 .spectrum-CSSComponent-resource--npm {
-  background-color: rgba(203, 56, 55, 0.1) !important;
+  background-color: rgba(203, 56, 55, 0.1);
 }
 
 .spectrum-CSSComponent-cardImage {
@@ -407,7 +407,7 @@ governing permissions and limitations under the License.
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: var(--spectrum-cssexample-heading-margin-bottom) !important;
+  margin-bottom: var(--spectrum-cssexample-heading-margin-bottom);
 }
 
 .spectrum-CSSExample-example,
@@ -465,8 +465,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Dialog.spectrum-CSSExample-dialog {
-  position: relative !important;
-  transform: none !important;
+  position: relative;
+  transform: none;
   margin-left: auto;
   margin-right: auto;
   left: 0;
