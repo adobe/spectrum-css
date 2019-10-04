@@ -118,7 +118,7 @@ governing permissions and limitations under the License.
 .spectrum-Datepicker--range {
   .spectrum-InputGroup-field {
     &:focus-ring {
-      box-shadow: none !important;
+      box-shadow: none;
     }
     &[disabled] {
       ~ .spectrum-Datepicker--rangeDash {
@@ -145,7 +145,7 @@ governing permissions and limitations under the License.
 
   &.is-invalid {
     .spectrum-InputGroup-field {
-      border-color: var(--spectrum-dropdown-border-color-error) !important;
+      border-color: var(--spectrum-dropdown-border-color-error);
     }
 
     /* Focus ring: When one of the inputs or the button has keyboard focus, render the focus ring border around the entire input group by styling an adjacent descendant element. */
