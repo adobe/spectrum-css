@@ -158,8 +158,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip {
     position: absolute;
     white-space: nowrap;
-    /* Required for animations to work, !important for diff scaling to work */
-    visibility: visible !important;
+    visibility: visible;
     transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
     top: -100%;
   }

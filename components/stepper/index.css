@@ -53,14 +53,14 @@ governing permissions and limitations under the License.
   padding-right: var(--spectrum-stepper-padding);
 
   /* Avoid margin added by adjacent buttons */
-  margin: 0 !important;
+  margin: 0;
 
   border-width: var(--spectrum-stepper-border-size-default);
   border-right-width: var(--spectrum-stepper-border-size-reset);
   border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
 
   .spectrum-Icon {
-    margin: 0 !important;
+    margin: 0;
     opacity: 1;
   }
 }
