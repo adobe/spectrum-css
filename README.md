@@ -164,16 +164,16 @@ See [site generation](site/README.md) and [documentation generation](tools/bundl
 
 The following tasks are available:
 
-- `gulp build` - Performs a build of all components and the top level package
-- `gulp buildComponents` - Performs a build of all components
-- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files
-- `gulp clean` - Cleans all output files for the project and all components
-- `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files
-- `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
-- `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`)
-- `gulp release` - Performs a release of the top-level package
-- `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
-- `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
+- `gulp build` - Performs a build of all components and the top level package.
+- `gulp buildComponents` - Performs a build of all components.
+- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files.
+- `gulp clean` - Cleans all output files for the project and all components.
+- `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files.
+- `gulp buildCombined` - Builds the combined output files. (`dist/spectrum-*.css`)
+- `gulp buildStandalone` - Builds the standalone output files. (`dist/standalone/spectrum-*.css`)
+- `gulp release` - Performs a release of the top-level package.
+- `gulp packageLint` - Lint the `package.json` file for each component in the monorepo.
+- `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo.
 
 ## Testing
 
@@ -195,12 +195,12 @@ The reference bitmaps are hosted in a adobe internal repo and published as [@spe
 
 The following npm scripts are available for testing:
 
-- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes) 
-- `npm run backstop:test` - Run test in your local native environment
-- `npm run backstop:clean` - Clean up all the testing reports and test images
-- `npm run backstop:docker:test` - Run test in your local docker container
-- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
-- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
+- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes). 
+- `npm run backstop:test` - Run test in your local native environment.
+- `npm run backstop:clean` - Clean up all the testing reports and test images.
+- `npm run backstop:docker:test` - Run test in your local docker container.
+- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css).
+- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine.
 
 Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
 
