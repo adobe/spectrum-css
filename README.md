@@ -13,7 +13,7 @@ Spectrum CSS provides a standard CSS implementation of the Spectrum design langu
 
 Check out [the documentation site](http://opensource.adobe.com/spectrum-css/) for a demo of every component included in Spectrum CSS.
 
-## Where is the JavaScript?
+## Where is JavaScript?
 
 Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. Thus, Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, textfields, etc.
 
