@@ -45,7 +45,6 @@ governing permissions and limitations under the License.
   order: 1;
   flex-grow: 1;
 
-  padding: 0 var(--spectrum-calendar-button-gap);
 
   text-align: center;
   overflow: hidden;
@@ -53,13 +52,16 @@ governing permissions and limitations under the License.
   text-overflow: ellipsis;
 }
 
+.spectrum-Calendar-prevMonth,
+.spectrum-Calendar-nextMonth {
+  margin: 0 var(--spectrum-calendar-button-gap) !important; /* override adjacent sibling selector from ActionButton */
+}
+
 .spectrum-Calendar-prevMonth {
-  margin: 0 !important; /* override adjacent sibling selector from ActionButton */
   order: 0;
 }
 
 .spectrum-Calendar-nextMonth {
-  margin: 0 !important; /* override adjacent sibling selector from ActionButton */
   order: 2;
 }
 
