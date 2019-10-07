@@ -18,6 +18,7 @@ governing permissions and limitations under the License.
   --spectrum-calendar-margin-y: 24px;
   --spectrum-calendar-margin-x: 32px;
   --spectrum-calendar-width: calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7);
+  --spectrum-calendar-button-gap: var(--spectrum-global-dimension-size-40);
 }
 
 .spectrum-Calendar {
@@ -44,6 +45,8 @@ governing permissions and limitations under the License.
   order: 1;
   flex-grow: 1;
 
+  padding: 0 var(--spectrum-calendar-button-gap);
+
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
@@ -51,12 +54,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Calendar-prevMonth {
-  margin-left: 3px;
+  margin: 0 !important; /* override adjacent sibling selector from ActionButton */
   order: 0;
 }
 
 .spectrum-Calendar-nextMonth {
-  margin-right: 3px;
+  margin: 0 !important; /* override adjacent sibling selector from ActionButton */
   order: 2;
 }
 
