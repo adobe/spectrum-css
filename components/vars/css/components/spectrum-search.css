@@ -62,7 +62,7 @@
   --spectrum-search-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-search-text-transform: none;
   --spectrum-search-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-search-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-search-height: var(--spectrum-alias-single-line-height);
   --spectrum-search-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-search-padding-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-padding-top: var(--spectrum-global-dimension-size-75);
@@ -151,7 +151,7 @@
   --spectrum-search-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-search-quiet-text-transform: none;
   --spectrum-search-quiet-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-search-quiet-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-search-quiet-height: var(--spectrum-alias-single-line-height);
   --spectrum-search-quiet-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-search-quiet-padding-x: 0;
   --spectrum-search-quiet-padding-top: var(--spectrum-global-dimension-size-75);
