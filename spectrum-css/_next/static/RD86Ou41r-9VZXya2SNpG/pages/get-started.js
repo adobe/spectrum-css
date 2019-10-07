@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[88],{Enfu:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/get-started",function(){var n=e("kIQt");return{page:n.default||n}}])},kIQt:function(n,t,e){"use strict";e.r(t);var u=e("q1tI"),a=e.n(u).a.createElement;t.default=function(){return a("div",null,"Get Started Content")}}},[["Enfu",1,0]]]);

@@ -117,8 +117,8 @@ module.exports = withCSS({
       '/': {
         page: '/'
       },
-      '/getting-started': {
-        page: '/getting-started'
+      '/get-started': {
+        page: '/get-started'
       }
     }
     gatherYML();

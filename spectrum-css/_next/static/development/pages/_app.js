@@ -61,6 +61,26 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
 
 
+var createLinkProps = function createLinkProps(item) {
+  if (item.linkType === 'External') {
+    return {
+      href: item.url
+    };
+  }
+
+  if (item.parent.split(',').includes('Components')) {
+    return {
+      href: "/components/id?id=".concat(item.url),
+      as: "".concat("", "/components/").concat(item.url)
+    };
+  }
+
+  return {
+    href: "/".concat(item.url),
+    as: "".concat("", "/").concat(item.url)
+  };
+};
+
 var Sidebar =
 /*#__PURE__*/
 function (_React$Component) {
@@ -86,12 +106,8 @@ function (_React$Component) {
     });
 
     _this.selectedItem = react__WEBPACK_IMPORTED_MODULE_8___default.a.createRef();
-    var selected = _data_newmenu__WEBPACK_IMPORTED_MODULE_15__.key.find(function (item) {
-      return item.url === props.router.query.id;
-    });
     _this.state = {
-      menuOpen: false,
-      selectedParents: selected ? selected.parent.split(',') : new Array()
+      menuOpen: false
     };
     return _this;
   }
@@ -99,14 +115,22 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Sidebar, [{
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
-      //console.log(nextProps.router.query.id);
       var selected = _data_newmenu__WEBPACK_IMPORTED_MODULE_15__.key.find(function (item) {
         return item.url === nextProps.router.query.id;
       });
-      this.setState({
-        selectedParents: selected ? selected.parent.split(',') : new Array()
-      }); //Perform some operation
-      //this.setState({someState: someValue });
+
+      if (selected) {
+        var selectedParentSlug = selected.parent.split(',').find(function (item) {
+          return item !== 'top-level-menu-item' && item !== 'WebsiteMenu';
+        });
+        var selectedParent = _data_newmenu__WEBPACK_IMPORTED_MODULE_15__.key.find(function (item) {
+          return item.title === selectedParentSlug;
+        });
+
+        if (selectedParent) {
+          selectedParent.defaultExpanded = true;
+        }
+      }
     }
   }, {
     key: "render",
@@ -120,14 +144,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 62
         },
         __self: this
       }), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.appHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 65
         },
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -135,7 +159,7 @@ function (_React$Component) {
         icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_11___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 66
           },
           __self: this
         }),
@@ -145,28 +169,28 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 66
         },
         __self: this
       })), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 68
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 69
         },
         __self: this
       }, __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 70
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -174,14 +198,14 @@ function (_React$Component) {
         as: "".concat("", "/"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 71
         },
         __self: this
       }, __jsx("a", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.logoLink,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 72
         },
         __self: this
       }, __jsx("img", {
@@ -190,26 +214,26 @@ function (_React$Component) {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.logo,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 73
         },
         __self: this
       }), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 74
         },
         __self: this
       }, "Spectrum CSS"))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 77
         },
         __self: this
       })), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 79
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNav"], {
@@ -221,82 +245,88 @@ function (_React$Component) {
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 80
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_15__.menu[0].children.map(function (item, i) {
-        return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNavItem"], {
-          defaultExpanded: _this2.state.selectedParents.includes(item.title) ? true : false,
-          value: item.url,
-          label: item.title,
-          key: i,
-          style: {
-            width: '200px'
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 75
-          },
-          __self: this
-        }, item.children && item.children.map(function (mi, i) {
+        if (!item.children || item.children.length == 0) {
           return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNavItem"], {
-            value: mi.url,
-            label: mi.title,
+            value: item.url,
+            label: item.title,
             key: i,
             style: {
               width: '200px'
             },
-            defaultExpanded: _this2.state.selectedParents.includes(item.title),
-            ref: _this2.props.router.query.id === mi.url ? _this2.selectedItem : undefined,
+            ref: item.url === _this2.props.router.query.id ? _this2.selectedItem : undefined,
             renderLink: function renderLink(props) {
-              if (mi.linkType !== 'group') {
-                delete props.href;
-                return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
-                  href: "/components/id?id=".concat(mi.url),
-                  as: "".concat("", "/components/").concat(mi.url),
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 87
-                  },
-                  __self: this
-                }, __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 88
-                  },
-                  __self: this
-                }), mi.title));
-              } else {
-                return __jsx("div", {
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 91
-                  },
-                  __self: this
-                }, "a group");
-              }
+              delete props.href;
+              return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 89
+                },
+                __self: this
+              }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 90
+                },
+                __self: this
+              }), item.title));
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 80
+              lineNumber: 84
             },
             __self: this
-          }, mi.linkType === 'group' && mi.children.map(function (mi3, i) {
+          });
+        } else {
+          return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNavItem"], {
+            value: item.url,
+            label: item.title,
+            key: i,
+            defaultExpanded: item.defaultExpanded,
+            style: {
+              width: '200px'
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 97
+            },
+            __self: this
+          }, item.children && item.children.map(function (childItem, childI) {
             return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNavItem"], {
-              value: mi3.url,
-              key: i,
-              label: mi3.title,
+              value: childItem.url,
+              label: childItem.title,
+              key: childI,
               style: {
                 width: '200px'
               },
+              ref: childItem.url === _this2.props.router.query.id ? _this2.selectedItem : undefined,
+              renderLink: function renderLink(props) {
+                delete props.href;
+                return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 107
+                  },
+                  __self: this
+                }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 108
+                  },
+                  __self: this
+                }), childItem.title));
+              },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 98
+                lineNumber: 102
               },
               __self: this
             });
           }));
-        }));
+        }
       })), __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNav"], {
         style: {
           width: '200px',
@@ -304,7 +334,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 120
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNavItem"], {
@@ -316,7 +346,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 121
         },
         __self: this
       }, "Spectrum"))))));
@@ -25361,201 +25391,6 @@ module.exports = function shimAssign() {
 
 /***/ }),
 
-/***/ "./node_modules/process/browser.js":
-/*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-
-/***/ }),
-
 /***/ "./node_modules/prop-types-exact/build/helpers/isPlainObject.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/prop-types-exact/build/helpers/isPlainObject.js ***!
@@ -32714,7 +32549,7 @@ module.exports = warning;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
@@ -32800,7 +32635,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 25
         },
         __self: this
       }, children);
@@ -32847,13 +32682,17 @@ function (_App) {
       theme: 'light'
     };
     next_router__WEBPACK_IMPORTED_MODULE_15__["Router"].events.on('routeChangeComplete', function () {
-      console.log(_arguments[0]); // digitalData._set('page.pageInfo.pageName', arguments[0].pageProps.pageData.name);
-      // digitalData._set('page.pageInfo.siteSection', `${arguments[0].router.query.id} Page`);
-      // digitalData._set('page.pageInfo.language', 'en-US');
-      // digitalData._set('page.pageInfo.geoRegion', 'US');
-      // digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
-      // _satellite.track('state', {digitalData: digitalData._snapshot()});
-      // console.log('======', digitalData._get('page.pageInfo.pageName'));
+      digitalData._set('page.pageInfo.siteSection', "".concat(_arguments[0].router.query.id, " Page"));
+
+      digitalData._set('page.pageInfo.language', 'en-US');
+
+      digitalData._set('page.pageInfo.geoRegion', 'US');
+
+      digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
+
+      _satellite.track('state', {
+        digitalData: digitalData._snapshot()
+      });
     });
     return _this;
   }
@@ -32878,13 +32717,13 @@ function (_App) {
         className: "spectrum--".concat(this.state.theme),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 72
         },
         __self: this
       }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_22__["Helmet"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 74
         },
         __self: this
       }, __jsx("meta", {
@@ -32893,7 +32732,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 75
         },
         __self: this
       }), __jsx("link", {
@@ -32902,7 +32741,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 76
         },
         __self: this
       }), __jsx("link", {
@@ -32911,32 +32750,7 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: this
-      }), __jsx("script", {
-        dangerouslySetInnerHTML: {
-          __html: "\n              window.marketingtech = {\n                adobe: {\n                  launch: {\n                    property: 'global',\n                    environment: '".concat(process.env.analyticsEnv, "'\n                  },\n                  target: false,\n                  audienceManager: false\n                }\n              };\n              ")
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 74
-        },
-        __self: this
-      }), __jsx("script", {
-        src: "https://www.adobe.com/marketingtech/main.min.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 89
-        },
-        __self: this
-      }), __jsx("script", {
-        dangerouslySetInnerHTML: {
-          __html: "\n                //dom is ready, window.onload fires later\n                digitalData._set('page.pageInfo.siteSection', 'Spectrum CSS Site Page');\n                digitalData._set('page.pageInfo.template', 'default template');\n                digitalData._set('page.pageInfo.language', 'en-US');\n                digitalData._set('page.pageInfo.geoRegion', 'US');\n                digitalData._set('page.pageInfo.issueDate', '2018-03-02');\n                digitalData._set('page.pageInfo.breadCrumbs', [\"Home\"]);\n                digitalData._set('page.pageInfo.legacyMarketSegment', 'com');\n                digitalData._set('page.pageInfo.productName', 'Spectrum Design System');\n              "
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 77
         },
         __self: this
       })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -32945,26 +32759,26 @@ function (_App) {
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 80
         },
         __self: this
       }, __jsx("div", {
         className: _css_main_scss__WEBPACK_IMPORTED_MODULE_14___default.a.flexContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 81
         },
         __self: this
       }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 82
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 83
         },
         __self: this
       }, __jsx("div", {
@@ -32973,7 +32787,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 84
         },
         __self: this
       }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -32982,7 +32796,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 85
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -33009,7 +32823,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 86
         },
         __self: this
       })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -33018,7 +32832,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 101
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -33042,13 +32856,13 @@ function (_App) {
         quiet: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 102
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 121
         },
         __self: this
       }))))));
@@ -33059,7 +32873,6 @@ function (_App) {
 }(next_app__WEBPACK_IMPORTED_MODULE_9___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_15__["withRouter"])(MyApp));
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
