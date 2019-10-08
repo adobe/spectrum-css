@@ -17,9 +17,12 @@ governing permissions and limitations under the License.
   --spectrum-calendar-border-width-reset: 0;
   --spectrum-calendar-margin-y: 24px;
   --spectrum-calendar-margin-x: 32px;
+  --spectrum-calendar-width: calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7);
+  --spectrum-calendar-button-gap: var(--spectrum-global-dimension-size-40);
 }
 
 .spectrum-Calendar {
+  width: var(--spectrum-calendar-width);
   display: inline-block;
 }
 
@@ -29,9 +32,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Calendar-header {
   display: flex;
-  box-sizing: border-box;
   width: 100%;
-  height: var(--spectrum-calendar-title-height);
+  align-items: center;
 }
 
 .spectrum-Calendar-title {
@@ -40,9 +42,9 @@ governing permissions and limitations under the License.
 
   line-height: var(--spectrum-calendar-title-height);
   margin: 0;
-  padding: 0 var(--spectrum-calendar-title-height);
   order: 1;
   flex-grow: 1;
+
 
   text-align: center;
   overflow: hidden;
@@ -50,13 +52,18 @@ governing permissions and limitations under the License.
   text-overflow: ellipsis;
 }
 
+.spectrum-Calendar {
+  .spectrum-Calendar-prevMonth,
+  .spectrum-Calendar-nextMonth {
+    margin: 0 var(--spectrum-calendar-button-gap);
+  }
+}
+
 .spectrum-Calendar-prevMonth {
-  margin-left: 3px;
   order: 0;
 }
 
 .spectrum-Calendar-nextMonth {
-  margin-right: 3px;
   order: 2;
 }
 
