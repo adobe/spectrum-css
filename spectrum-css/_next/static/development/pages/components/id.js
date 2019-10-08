@@ -335,6 +335,277 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
+/***/ "./node_modules/@adobe/spectrum-css/dist/components lazy recursive ^\\.\\/.*\\/index\\-vars\\.css$":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/@adobe/spectrum-css/dist/components lazy ^\.\/.*\/index\-vars\.css$ namespace object ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./accordion/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/accordion/index-vars.css",
+		"styles"
+	],
+	"./actionbar/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/actionbar/index-vars.css",
+		"styles"
+	],
+	"./actionmenu/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/actionmenu/index-vars.css",
+		"styles"
+	],
+	"./alert/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/alert/index-vars.css",
+		"styles"
+	],
+	"./asset/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/asset/index-vars.css",
+		"styles"
+	],
+	"./assetlist/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/assetlist/index-vars.css",
+		"styles"
+	],
+	"./avatar/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/avatar/index-vars.css",
+		"styles"
+	],
+	"./banner/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/banner/index-vars.css",
+		"styles"
+	],
+	"./barloader/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/barloader/index-vars.css",
+		"styles"
+	],
+	"./breadcrumb/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/breadcrumb/index-vars.css",
+		"styles"
+	],
+	"./button/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/button/index-vars.css",
+		"styles"
+	],
+	"./buttongroup/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/buttongroup/index-vars.css",
+		"styles"
+	],
+	"./calendar/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/calendar/index-vars.css",
+		"styles"
+	],
+	"./card/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/card/index-vars.css",
+		"styles"
+	],
+	"./checkbox/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/checkbox/index-vars.css",
+		"styles"
+	],
+	"./circleloader/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/circleloader/index-vars.css",
+		"styles"
+	],
+	"./coachmark/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/coachmark/index-vars.css",
+		"styles"
+	],
+	"./cyclebutton/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/cyclebutton/index-vars.css",
+		"styles"
+	],
+	"./decoratedtextfield/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/decoratedtextfield/index-vars.css",
+		"styles"
+	],
+	"./dialog/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/dialog/index-vars.css",
+		"styles"
+	],
+	"./dropdown/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/dropdown/index-vars.css",
+		"styles"
+	],
+	"./dropindicator/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/dropindicator/index-vars.css",
+		"styles"
+	],
+	"./dropzone/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/dropzone/index-vars.css",
+		"styles"
+	],
+	"./fieldgroup/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/fieldgroup/index-vars.css",
+		"styles"
+	],
+	"./fieldlabel/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/fieldlabel/index-vars.css",
+		"styles"
+	],
+	"./icon/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/icon/index-vars.css",
+		"styles"
+	],
+	"./illustratedmessage/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/illustratedmessage/index-vars.css",
+		"styles"
+	],
+	"./inputgroup/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/inputgroup/index-vars.css",
+		"styles"
+	],
+	"./label/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/label/index-vars.css",
+		"styles"
+	],
+	"./link/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css",
+		"styles"
+	],
+	"./menu/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/menu/index-vars.css",
+		"styles"
+	],
+	"./miller/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/miller/index-vars.css",
+		"styles"
+	],
+	"./page/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/page/index-vars.css",
+		"styles"
+	],
+	"./pagination/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/pagination/index-vars.css",
+		"styles"
+	],
+	"./popover/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/popover/index-vars.css",
+		"styles"
+	],
+	"./quickaction/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/quickaction/index-vars.css",
+		"styles"
+	],
+	"./radio/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/radio/index-vars.css",
+		"styles"
+	],
+	"./rating/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/rating/index-vars.css",
+		"styles"
+	],
+	"./rule/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/rule/index-vars.css",
+		"styles"
+	],
+	"./search/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/search/index-vars.css",
+		"styles"
+	],
+	"./searchwithin/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/searchwithin/index-vars.css",
+		"styles"
+	],
+	"./sidenav/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/sidenav/index-vars.css",
+		"styles"
+	],
+	"./site/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css",
+		"styles"
+	],
+	"./slider/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/slider/index-vars.css",
+		"styles"
+	],
+	"./splitbutton/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/splitbutton/index-vars.css",
+		"styles"
+	],
+	"./splitview/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/splitview/index-vars.css",
+		"styles"
+	],
+	"./statuslight/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/statuslight/index-vars.css",
+		"styles"
+	],
+	"./steplist/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/steplist/index-vars.css",
+		"styles"
+	],
+	"./stepper/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/stepper/index-vars.css",
+		"styles"
+	],
+	"./table/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/table/index-vars.css",
+		"styles"
+	],
+	"./tabs/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/tabs/index-vars.css",
+		"styles"
+	],
+	"./tags/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/tags/index-vars.css",
+		"styles"
+	],
+	"./textfield/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/textfield/index-vars.css",
+		"styles"
+	],
+	"./toast/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/toast/index-vars.css",
+		"styles"
+	],
+	"./toggle/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/toggle/index-vars.css",
+		"styles"
+	],
+	"./tooltip/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/tooltip/index-vars.css",
+		"styles"
+	],
+	"./treeview/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/treeview/index-vars.css",
+		"styles"
+	],
+	"./typography/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/typography/index-vars.css",
+		"styles"
+	],
+	"./underlay/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/underlay/index-vars.css",
+		"styles"
+	],
+	"./well/index-vars.css": [
+		"./node_modules/@adobe/spectrum-css/dist/components/well/index-vars.css",
+		"styles"
+	]
+};
+function webpackAsyncContext(req) {
+	if(!__webpack_require__.o(map, req)) {
+		return Promise.resolve().then(function() {
+			var e = new Error("Cannot find module '" + req + "'");
+			e.code = 'MODULE_NOT_FOUND';
+			throw e;
+		});
+	}
+
+	var ids = map[req], id = ids[0];
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__.t(id, 7);
+	});
+}
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = "./node_modules/@adobe/spectrum-css/dist/components lazy recursive ^\\.\\/.*\\/index\\-vars\\.css$";
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
@@ -9146,8 +9417,10 @@ function _loadData() {
 
           case 2:
             data = _context3.sent;
+            _context3.next = 5;
+            return __webpack_require__("./node_modules/@adobe/spectrum-css/dist/components lazy recursive ^\\.\\/.*\\/index\\-vars\\.css$")("./".concat(id, "/index-vars.css"));
 
-          case 3:
+          case 5:
           case "end":
             return _context3.stop();
         }
@@ -9171,33 +9444,33 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Page, [{
     key: "render",
     value: function render() {
-      var examplesList = 'no examples';
+      var examplesList = "no examples";
 
-      if (this.props.pageData.hasOwnProperty('examples')) {
+      if (this.props.pageData.hasOwnProperty("examples")) {
         examplesList = this.props.pageData.examples.map(function (example) {
           return __jsx("div", {
             key: example.slug,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 24
+              lineNumber: 26
             },
             __self: this
           }, __jsx("h3", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 25
+              lineNumber: 27
             },
             __self: this
           }, example.name), __jsx("pre", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 26
+              lineNumber: 28
             },
             __self: this
           }, __jsx("code", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 27
+              lineNumber: 29
             },
             __self: this
           }, example.markup)), __jsx("div", {
@@ -9216,20 +9489,20 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 41
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 42
         },
         __self: this
       }, __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_11___default()('afg-container-fluid', _css_main_scss__WEBPACK_IMPORTED_MODULE_10___default.a.mainContainer),
+        className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("afg-container-fluid", _css_main_scss__WEBPACK_IMPORTED_MODULE_10___default.a.mainContainer),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 43
         },
         __self: this
       }, __jsx("header", {
@@ -9237,14 +9510,14 @@ function (_React$Component) {
         id: "accordion",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 46
         },
         __self: this
       }, __jsx("h2", {
         "class": "spectrum-CSSComponent-title spectrum-Article spectrum-Heading1--display",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 47
         },
         __self: this
       }, __jsx("a", {
@@ -9252,178 +9525,178 @@ function (_React$Component) {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 48
         },
         __self: this
       }, this.props.pageData.name))), __jsx("table", {
         "class": "spectrum-CSSComponent-detailsTable",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 53
         },
         __self: this
       }, __jsx("tbody", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 54
         },
         __self: this
       }, __jsx("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 55
         },
         __self: this
       }, __jsx("th", {
         "class": "spectrum-Body--secondary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 56
         },
         __self: this
       }, "Component status"), __jsx("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 57
         },
         __self: this
       }, __jsx("div", {
         "class": "spectrum-StatusLight spectrum-CSSComponent-status spectrum-StatusLight--notice",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 58
         },
         __self: this
       }, "Contribution"))), __jsx("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 63
         },
         __self: this
       }, __jsx("th", {
         "class": "spectrum-Body--secondary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 64
         },
         __self: this
       }, "Last released"), __jsx("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 65
         },
         __self: this
       }, "September 5, 2019")), __jsx("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 67
         },
         __self: this
       }, __jsx("th", {
         "class": "spectrum-Body--secondary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 68
         },
         __self: this
       }, "Current version"), __jsx("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 69
         },
         __self: this
       }, "@spectrum-css/accordion@2.0.0-alpha.6")))), __jsx("div", {
-        classname: "spectrum-CSSComponent-resources",
+        className: "spectrum-CSSComponent-resources",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 73
         },
         __self: this
       }, __jsx("a", {
-        classname: "spectrum-Card spectrum-Card--small spectrum-Card--horizontal",
+        className: "spectrum-Card spectrum-Card--small spectrum-Card--horizontal",
         href: "https://github.com/adobe/spectrum-css/tree/master/components/accordion",
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 74
         },
         __self: this
       }, __jsx("div", {
-        classname: "spectrum-Card-preview spectrum-CSSComponent-resource--github",
+        className: "spectrum-Card-preview spectrum-CSSComponent-resource--github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 79
         },
         __self: this
       }, __jsx("svg", {
-        classname: "spectrum-Icon spectrum-Icon--sizeL",
+        className: "spectrum-Icon spectrum-Icon--sizeL",
         focusable: "false",
         "aria-hidden": "true",
         "aria-label": "GitHub",
         viewBox: "0 0 36 36",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 80
         },
         __self: this
       }, __jsx("path", {
         d: "M17.988 2a16.291 16.291 0 0 0-5.147 31.747c.814.149 1.111-.354 1.111-.786 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184a4.32 4.32 0 0 0-1.809-2.383c-1.479-1.01.112-.99.112-.99a3.42 3.42 0 0 1 2.495 1.679 3.468 3.468 0 0 0 4.741 1.353 3.482 3.482 0 0 1 1.034-2.177C11.4 25.078 7.6 23.68 7.6 17.438a6.3 6.3 0 0 1 1.677-4.371 5.863 5.863 0 0 1 .16-4.311s1.368-.438 4.479 1.67a15.451 15.451 0 0 1 8.157 0c3.109-2.108 4.475-1.67 4.475-1.67a5.857 5.857 0 0 1 .162 4.311 6.286 6.286 0 0 1 1.674 4.371c0 6.258-3.808 7.635-7.437 8.038a3.888 3.888 0 0 1 1.106 3.017c0 2.177-.02 3.934-.02 4.468 0 .436.293.943 1.12.784A16.292 16.292 0 0 0 17.988 2z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 87
         },
         __self: this
       }))), __jsx("div", {
-        classname: "spectrum-Card-body",
+        className: "spectrum-Card-body",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 90
         },
         __self: this
       }, __jsx("div", {
-        classname: "spectrum-Card-header",
+        className: "spectrum-Card-header",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 91
         },
         __self: this
       }, __jsx("div", {
-        classname: "spectrum-Card-title",
+        className: "spectrum-Card-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 92
         },
         __self: this
       }, "View repository")), __jsx("div", {
-        classname: "spectrum-Card-content",
+        className: "spectrum-Card-content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 94
         },
         __self: this
       }, __jsx("div", {
-        classname: "spectrum-Card-description",
+        className: "spectrum-Card-description",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 95
         },
         __self: this
       }, "Github"))))), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 100
         },
         __self: this
       }, this.props.pageData.description), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 101
         },
         __self: this
       }, __jsx("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 102
         },
         __self: this
       }, "Examples"), examplesList))));

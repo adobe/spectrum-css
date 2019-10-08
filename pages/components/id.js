@@ -6,6 +6,7 @@ import classNames from "classnames";
 
 async function loadData(id) {
   let data = await import(`../../data/yml/${id}.yml`);
+  await import(`@adobe/spectrum-css/dist/components/${id}/index-vars.css`)
 }
 
 class Page extends React.Component {
