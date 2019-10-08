@@ -87,10 +87,10 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
       noValueNotifications: 'error',
       warnings: !keepVars
     }),
-    require('./lib/postcss-custom-properties-passthrough')(),
+    require('./plugins/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
-    keepVars ? require('./lib/postcss-custom-properties-mapping') : null,
-    notNested ? require('./lib/postcss-notnested')({ replace: '.spectrum' }) : null,
+    keepVars ? require('./plugins/postcss-custom-properties-mapping') : null,
+    notNested ? require('./plugins/postcss-notnested')({ replace: '.spectrum' }) : null,
     require('postcss-svg'),
     require('postcss-functions')({
       functions: {
@@ -102,9 +102,9 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
         }
       }
     }),
-    require('./lib/postcss-strip-comments')({ preserveTopdoc: false }),
+    require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
     require('postcss-focus-ring'),
-    secondNotNested ? require('./lib/postcss-notnested')() : null, // Second one to catch all stray &
+    secondNotNested ? require('./plugins/postcss-notnested')() : null, // Second one to catch all stray &
     require('postcss-discard-empty'),
     require('autoprefixer')({
       'browsers': [

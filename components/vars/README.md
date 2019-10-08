@@ -8,26 +8,6 @@ The files within the `css/` folder are unprocessed DNA output. These contain ALL
 
 The files within the `dist/css/` folder contain processed DNA output, with references to only the DNA variables that change between color stops and scales. These should be if CSS custom properties are being used in-browser.
 
-## JS Usage
-
-The package exports a tree-shakable object containing all DNA variables.
-
-```
-> require('@spectrum-css/vars');
-{
-  dark: { ... }
-  darkest: { ... }
-  global: { ... }
-  large: { ... }
-  light: { ... }
-  lightest: { ... }
-  medium: { ... }
-  metadata: { ... }
-  middark: { ... }
-  midlight: { ... }
-}
-```
-
 ## Updating from DNA
 
 To update from DNA:

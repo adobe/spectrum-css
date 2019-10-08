@@ -23,6 +23,7 @@ const docs = require('./docs');
 const dev = require('./dev');
 const subrunner = require('./subrunner');
 const release = require('./release');
+const vars = require('./vars');
 
 function clean() {
   let globs = [
@@ -142,7 +143,8 @@ function buildIfTopLevel() {
 
 let build = gulp.series(
   clean,
-  buildIfTopLevel()
+  buildIfTopLevel(),
+  vars.copyVars
 );
 
 let buildLite = gulp.series(
@@ -195,6 +197,8 @@ exports.devHeavy = gulp.series(
   dev.watch
 );
 
+exports.copyVars = vars.copyVars;
+
 exports.prePack = gulp.series(
   build,
   release.releaseBackwardsCompat
@@ -210,6 +214,8 @@ exports.release = gulp.series(
 );
 
 exports.generateChangelog = release.generateChangelog;
+exports.buildUniqueVars = vars.buildUnique;
+
 exports.ghPages = release.ghPages;
 exports.postPublish = release.releaseBackwardsCompatCleanup;
 

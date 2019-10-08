@@ -46,7 +46,10 @@ let minimumDeps = [
   'underlay',
   'card',
   'rule',
-  'illustratedmessage'
+  'illustratedmessage',
+  'fieldlabel',
+  'accordion',
+  'decoratedtextfield'
 ];
 
 let templateData = {
