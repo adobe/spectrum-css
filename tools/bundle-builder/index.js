@@ -101,6 +101,7 @@ let buildStandalone = gulp.series(
 
 function copyPackages() {
   return gulp.src([
+    `${dirs.components}/*/package.json`,
     `${dirs.components}/*/dist/**`,
     `!${dirs.components}/*/dist/docs/**`
   ])
