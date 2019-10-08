@@ -182,6 +182,8 @@ Visual regression testing is implemented by [BackstopJS](https://github.com/garr
 ### Setup docker
 
 Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64)
+`see  more detail on how to install docker [here](https://docs.docker.com/docker-for-windows/install/)`
+
 
 ### Backstop reference bitmap
 
