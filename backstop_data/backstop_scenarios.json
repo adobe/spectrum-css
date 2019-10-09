@@ -390,7 +390,8 @@
   {
     "label": "typography",
     "url": "typography.html",
-    "package": "@spectrum-css/typography"
+    "package": "@spectrum-css/typography",
+    "misMatchThreshold": 0.11
   },
   {
     "label": "typography-deprecated",
@@ -402,7 +403,7 @@
     "url": "typography-international.html",
     "delay": 3000,
     "package": "@spectrum-css/typography",
-    "misMatchThreshold": 0.12
+    "misMatchThreshold": 0.11
   },
   {
     "label": "well",
