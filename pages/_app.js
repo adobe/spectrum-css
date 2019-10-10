@@ -64,13 +64,34 @@ class MyApp extends App {
     })
   }
 
+    // calling SVG injector after script has been loaded
+  // solution: https://github.com/nfl/react-helmet/issues/146#issuecomment-271552211
+  handleScriptInject = ({ scriptTags }) => {
+    if (scriptTags) {
+      const scriptTag = scriptTags[0];
+      scriptTag.onload = this.handleOnLoad;
+    }
+  }
+
+  handleOnLoad = () => {
+    window.onload = loadIcons('/static/images/svg/spectrum-css-icons.svg', function (err, svg) {
+      if (err) {
+        console.error('Everything failed because ' + error);
+      }
+    });
+  }
+
   render() {
     const {Component, pageProps} = this.props
     //console.log(pageProps);
     return (
 
-      <div className={`spectrum--${this.state.theme}`}>
-
+      <div className={`spectrum--${this.state.theme} spectrum--medium`}>
+        {/* SVG iconfile loadscript */}
+        <Helmet
+            script={[{ src: '/static/javascript/loadicons/index.js' }]}
+            onChangeClientState={(newState, addedTags) => this.handleScriptInject(addedTags)}
+        />
         <Helmet>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport"/>
           <link rel="icon" type="image/x-icon" href={`${process.env.BACKEND_URL}/static/favicon.ico`}/>

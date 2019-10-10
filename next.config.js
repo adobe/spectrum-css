@@ -6,6 +6,7 @@ const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 const withCSS = require('@zeit/next-css');
 const cssLoaderConfig = require('@zeit/next-css/css-loader-config');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const yaml = require('js-yaml');
 const glob = require('glob');
@@ -53,6 +54,23 @@ module.exports = withCSS({
     }
 
     const originalEntry = config.entry;
+
+    // copying Spectrum CSS SVG sprite to /static/images/svg
+    // and copying loadicons script to /static/javascript/loadicons
+    // so the Spectrum UI icons can be used with NextJS
+    config.plugins.push(
+      new CopyWebpackPlugin([
+        {
+          from: path.join(__dirname, 'node_modules/@adobe/spectrum-css-workflow-icons/dist/sites/spectrum-css/spectrum-css-icons.svg'),
+          to: path.join(__dirname, 'static/images/svg/')
+        },
+        {
+          from: path.join(__dirname, 'node_modules/loadicons/index.js'),
+          to: path.join(__dirname, 'static/javascript/loadicons/')
+        }
+      ])
+    );
+
     config.entry = async () => {
       const entries = await originalEntry();
       if (entries['main.js'] && !entries['main.js'].includes('./polyfills.js')) {
