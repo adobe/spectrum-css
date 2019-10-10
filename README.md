@@ -21,7 +21,7 @@ Adobe maintains separate JavaScript libraries written with React, Angular, and w
 
 ## Using Spectrum CSS
 
-The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
+The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11.
 
 To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
 
@@ -96,9 +96,9 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 
 Based on which scales you'll be using, you can choose to load different files:
 
-* `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
-* `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
-* `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
+* `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`.
+* `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only.
+* `@spectrum-css/icon/dist/spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only.
 
 
 **Note:** If you're using `spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
@@ -129,10 +129,10 @@ Each component has a `dist/vars.css` file that contains declarations for each co
 
 As such, **you do not need to include `dist/vars.css`** unless:
 
-1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-rule-medium-height`)
-2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/rule`) and do not want to update the component-level variables used by that component
+1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-rule-medium-height`).
+2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/rule`) and do not want to update the component-level variables used by that component.
 
-When this file is imported, if in updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
+When this file is imported, if in updated version of `@spectrum-css/vars` changed global varaibles (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
@@ -169,8 +169,8 @@ The following tasks are available:
 - `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files.
 - `gulp clean` - Cleans all output files for the project and all components.
 - `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files.
-- `gulp buildCombined` - Builds the combined output files. (`dist/spectrum-*.css`)
-- `gulp buildStandalone` - Builds the standalone output files. (`dist/standalone/spectrum-*.css`)
+- `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`).
+- `gulp buildStandalone` - Builds the standalone output files (`dist/standalone/spectrum-*.css`).
 - `gulp release` - Performs a release of the top-level package.
 - `gulp packageLint` - Lint the `package.json` file for each component in the monorepo.
 - `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo.
@@ -181,7 +181,7 @@ Visual regression testing is implemented by [BackstopJS](https://github.com/garr
 
 ### Setup docker
 
-Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64)
+Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64).
 
 ### Backstop reference bitmap
 
@@ -195,20 +195,12 @@ The reference bitmaps are hosted in a adobe internal repo and published as [@spe
 
 The following npm scripts are available for testing:
 
-
 - `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes). 
 - `npm run backstop:test` - Run test in your local native environment.
 - `npm run backstop:clean` - Clean up all the testing reports and test images.
 - `npm run backstop:docker:test` - Run test in your local docker container.
 - `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css).
 - `npm run kill-zombies` - Kill zombies Chromium instances on your local machine.
-- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes) 
-- `npm run backstop:test` - Run test in your local native environment
-- `npm run backstop:clean` - Clean up all the testing reports and test images
-- `npm run backstop:docker:test` - Run test in your local docker container
-- `npm run backstop:ci:test` - Run test in a continous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
-- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
-
 
 Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
 
