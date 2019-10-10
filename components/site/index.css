@@ -133,6 +133,19 @@ governing permissions and limitations under the License.
   margin-right: var(--spectrum-global-dimension-size-175);
   width: var(--spectrum-global-dimension-size-400);
   color: rgb(255, 2, 1);
+  color: rgb(225, 37, 27);
+}
+
+.spectrum--medium {
+  .spectrum-Site-logo {
+    height: 31px;
+  }
+}
+
+.spectrum--large {
+  .spectrum-Site-logo {
+    height: 39px;
+  }
 }
 
 .spectrum-Site-nav {

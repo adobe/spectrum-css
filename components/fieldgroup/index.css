@@ -15,6 +15,7 @@ governing permissions and limitations under the License.
 .spectrum-FieldGroup {
   display: flex;
   vertical-align: top;
+  flex-wrap: wrap;
 }
 
 .spectrum-FieldGroup--vertical {

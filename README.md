@@ -195,12 +195,20 @@ The reference bitmaps are hosted in a adobe internal repo and published as [@spe
 
 The following npm scripts are available for testing:
 
+
 - `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes). 
 - `npm run backstop:test` - Run test in your local native environment.
 - `npm run backstop:clean` - Clean up all the testing reports and test images.
 - `npm run backstop:docker:test` - Run test in your local docker container.
 - `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css).
 - `npm run kill-zombies` - Kill zombies Chromium instances on your local machine.
+- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes) 
+- `npm run backstop:test` - Run test in your local native environment
+- `npm run backstop:clean` - Clean up all the testing reports and test images
+- `npm run backstop:docker:test` - Run test in your local docker container
+- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
+- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
+
 
 Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
 

@@ -38,6 +38,7 @@
   --spectrum-alias-body-text-line-height: var(--spectrum-global-font-line-height-medium);
   --spectrum-alias-body-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-alias-body-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-button-text-line-height: var(--spectrum-global-font-line-height-small);
   --spectrum-alias-heading-han-text-line-height: var(--spectrum-global-font-line-height-medium);
   --spectrum-alias-heading-text-line-height: var(--spectrum-global-font-line-height-small);
   --spectrum-alias-heading-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
@@ -50,6 +51,7 @@
   --spectrum-alias-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-serif-text-font-family: var(--spectrum-global-font-family-serif);
   --spectrum-alias-article-text-font-family: var(--spectrum-global-font-family-serif);
   --spectrum-alias-article-body-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-alias-article-body-text-font-weight-strong: var(--spectrum-global-font-weight-black);
@@ -68,9 +70,15 @@
   --spectrum-alias-han-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-light);
   --spectrum-alias-han-heading-text-font-weight-quiet-emphasis: var(--spectrum-global-font-weight-regular);
   --spectrum-alias-han-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-han-heading-text-font-weight-light: var(--spectrum-global-font-weight-light);
+  --spectrum-alias-han-heading-text-font-weight-light-emphasis: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-han-heading-text-font-weight-light-strong: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-han-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-han-heading-text-font-weight-strong-emphasis: var(--spectrum-global-font-weight-black);
   --spectrum-alias-han-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-heavy: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-heavy-emphasis: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-heavy-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-han-body-text-font-weight-regular: var(--spectrum-global-font-weight-regular);
   --spectrum-alias-han-body-text-font-weight-emphasis: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-han-body-text-font-weight-strong: var(--spectrum-global-font-weight-black);

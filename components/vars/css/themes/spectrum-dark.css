@@ -89,6 +89,15 @@
   --spectrum-colorwheel-border-color-key-focus: rgba(255,255,255,0.1);
   --spectrum-miller-column-item-background-color-selected: rgba(55,142,240,0.1);
   --spectrum-miller-column-item-background-color-selected-hover: rgba(55,142,240,0.2);
+  --spectrum-tabs-compact-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-emphasized-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-well-background-color: rgba(227,227,227,0.02);
   --spectrum-well-border-color: rgba(255,255,255,0.05);
 }
