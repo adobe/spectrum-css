@@ -1,14 +1,16 @@
-const path = require('path')
-const fs = require('fs')
-const util = require("util")
+const path = require('path');
+const fs = require('fs');
+const util = require("util");
 const readdir = util.promisify(fs.readdir);
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 const withCSS = require('@zeit/next-css');
 const cssLoaderConfig = require('@zeit/next-css/css-loader-config');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const yaml = require('js-yaml');
 const glob = require('glob');
+const lunr = require('lunr');
 
 // Using git checkout origin/master -- `git ls-tree origin/master -r --name-only | grep ".yml"`
 // Using git checkout adobe/master -- `git ls-tree adobe/master -r --name-only | grep ".yml"`
@@ -26,6 +28,42 @@ function gatherYML() {
         // ignore not empty file
       }
     })
+  });
+}
+
+function generateSearchIndex() {
+  glob('data/yml/**/*.yml', {}, (er, files) => {
+    const metaDataDocs = [];
+    const store = {};
+    files.forEach(file => {
+      let componentData = yaml.safeLoad(String(fs.readFileSync(file, {encoding: 'utf8'})));
+      let fileName = `${path.basename(file, '.yml')}`;
+      metaDataDocs.push({
+        href: fileName,
+        name: componentData.name,
+        description: componentData.description
+      });
+
+      store[fileName] = {
+        href: fileName,
+        name: componentData.name,
+        component: fileName,
+        description: componentData.description,
+        slug: fileName,
+        type: 'page',
+        pageType: 'Component'
+      };
+    });
+
+    const index = lunr(function() {
+      this.ref('href');
+      this.field('name', { boost: 10 });
+      this.field('description');
+      metaDataDocs.forEach(doc => this.add(doc), this);
+    });
+
+    fs.writeFileSync('data/search_index.json', JSON.stringify(index));
+    fs.writeFileSync('data/search_store.json', JSON.stringify(store));
   });
 }
 
@@ -53,6 +91,23 @@ module.exports = withCSS({
     }
 
     const originalEntry = config.entry;
+
+    // copying Spectrum CSS SVG sprite to /static/images/svg
+    // and copying loadicons script to /static/javascript/loadicons
+    // so the Spectrum UI icons can be used with NextJS
+    config.plugins.push(
+      new CopyWebpackPlugin([
+        {
+          from: path.join(__dirname, 'node_modules/@adobe/spectrum-css-workflow-icons/dist/sites/spectrum-css/spectrum-css-icons.svg'),
+          to: path.join(__dirname, 'static/images/svg/')
+        },
+        {
+          from: path.join(__dirname, 'node_modules/loadicons/index.js'),
+          to: path.join(__dirname, 'static/javascript/loadicons/')
+        }
+      ])
+    );
+
     config.entry = async () => {
       const entries = await originalEntry();
       if (entries['main.js'] && !entries['main.js'].includes('./polyfills.js')) {
@@ -149,6 +204,8 @@ module.exports = withCSS({
       menu.key.push(menuComponentData);
     })
     await writeFile('data/newmenu.json', JSON.stringify(menu));
+
+    generateSearchIndex();
     return paths;
   }
 })

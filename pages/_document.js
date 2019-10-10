@@ -25,18 +25,18 @@ class MyDocument extends Document {
             `
           }}>
           </script>
-          <script src="https://www.adobe.com/marketingtech/main.min.js"></script>
+          <script src="//www.adobe.com/marketingtech/main.min.js"></script>
           <script dangerouslySetInnerHTML={{
             __html: `
               //dom is ready, window.onload fires later
-              digitalData._set('page.pageInfo.siteSection', 'Spectrum Document Site Page');
+              digitalData._set('page.pageInfo.siteSection', 'Spectrum CSS Document Site');
               digitalData._set('page.pageInfo.template', 'default template');
               digitalData._set('page.pageInfo.language', 'en-US');
               digitalData._set('page.pageInfo.geoRegion', 'US');
               digitalData._set('page.pageInfo.issueDate', '2018-03-02');
               digitalData._set('page.pageInfo.breadCrumbs', ["Home"]);
               digitalData._set('page.pageInfo.legacyMarketSegment', 'com');
-              digitalData._set('page.pageInfo.productName', 'Spectrum Design System');
+              digitalData._set('page.pageInfo.productName', 'Spectrum CSS');
             `
           }}>
           </script>

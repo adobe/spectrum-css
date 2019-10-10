@@ -105,7 +105,8 @@ class SiteSearch extends React.Component {
 
     let q = query ? `#${query.replace(/ /g,"-")}` : '#';
     if(type === 'Internal') {
-      Router.push(`/page/${slug}${q}`);
+      // Router.push(`/components/${slug}${q}`);
+      Router.push(`/components/${slug}`);
       this.setState({
         menuOpen: false
       })
