@@ -4,7 +4,7 @@ examples:
   - id: rating
     name: Standard
     markup: |
-      <div class="spectrum-Rating">
+      <button class="spectrum-Rating">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating">
 
         <span class="spectrum-Rating-icon">
@@ -51,11 +51,11 @@ examples:
             <use xlink:href="#spectrum-css-icon-StarOutline"></use>
           </svg>
         </span>
-      </div>
+      </button>
   - id: rating
     name: Selected
     markup: |
-      <div class="spectrum-Rating">
+      <button class="spectrum-Rating">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
@@ -102,12 +102,12 @@ examples:
             <use xlink:href="#spectrum-css-icon-StarOutline"></use>
           </svg>
         </span>
-      </div>
+      </button>
   - id: rating
     name: Read-only
     description: A non-interactive rating.
     markup: |
-      <div class="spectrum-Rating is-readOnly">
+      <button class="spectrum-Rating is-readOnly">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" readOnly aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
@@ -154,11 +154,11 @@ examples:
             <use xlink:href="#spectrum-css-icon-StarOutline"></use>
           </svg>
         </span>
-      </div>
+      </button>
   - id: rating-quiet
     name: Quiet
     markup: |
-      <div class="spectrum-Rating spectrum-Rating--quiet">
+      <button class="spectrum-Rating spectrum-Rating--quiet">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating">
 
         <span class="spectrum-Rating-icon">
@@ -205,11 +205,11 @@ examples:
             <use xlink:href="#spectrum-css-icon-StarOutline"></use>
           </svg>
         </span>
-      </div>
+      </button>
   - id: rating-quiet
     name: Quiet (selected)
     markup: |
-      <div class="spectrum-Rating spectrum-Rating--quiet">
+      <button class="spectrum-Rating spectrum-Rating--quiet">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
@@ -256,11 +256,11 @@ examples:
             <use xlink:href="#spectrum-css-icon-StarOutline"></use>
           </svg>
         </span>
-      </div>
+      </button>
   - id: rating-quiet
     name: Quiet (read-only)
     markup: |
-      <div class="spectrum-Rating spectrum-Rating--quiet is-readOnly">
+      <button class="spectrum-Rating spectrum-Rating--quiet is-readOnly">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" readOnly aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
@@ -307,11 +307,11 @@ examples:
             <use xlink:href="#spectrum-css-icon-StarOutline"></use>
           </svg>
         </span>
-      </div>
+      </button>
   - id: rating
     name: Disabled
     markup: |
-      <div class="spectrum-Rating is-disabled">
+      <button class="spectrum-Rating is-disabled">
         <input class="spectrum-Rating-input" disabled type="range" min="0" max="5" value="0" aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
@@ -358,4 +358,4 @@ examples:
             <use xlink:href="#spectrum-css-icon-StarOutline"></use>
           </svg>
         </span>
-      </div>
+      </button>
