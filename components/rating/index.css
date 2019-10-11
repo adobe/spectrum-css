@@ -33,7 +33,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rating {
+  display: inline-block;
+
+  line-height: 0;
+
   cursor: pointer;
+
+  width: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
 
   &.is-disabled,
   &.is-readOnly {
@@ -53,8 +59,6 @@ governing permissions and limitations under the License.
   position: relative;
   display: inline-flex;
   flex: 0 0 auto;
-
-  width: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
 
   border-radius: var(--spectrum-rating-border-radius);
 }
