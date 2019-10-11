@@ -33,30 +33,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rating {
-  position: relative;
-  display: inline-flex;
-  flex: 0 0 auto;
-
-  width: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
-
-  background: transparent;
-  
-  border: 0;
-  border-radius: var(--spectrum-rating-border-radius);
-  outline: 0;
-
-  margin: 0;
-  padding: 0;
-
-  /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  /* Font smoothing for Firefox */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Correct the inability to style clickable types in iOS and Safari. */
-  -webkit-appearance: button;
-
   cursor: pointer;
 
   &.is-disabled,
@@ -71,6 +47,16 @@ governing permissions and limitations under the License.
       @extend %spectrum-Rating-filledStar;
     }
   }
+}
+
+.spectrum-Rating-containter {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+
+  width: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
+
+  border-radius: var(--spectrum-rating-border-radius);
 }
 
 .spectrum-Rating-input {
