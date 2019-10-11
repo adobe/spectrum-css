@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Rating-containter {
+.spectrum-Rating-container {
   .focus-ring + & {
     box-shadow: 0 0 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-rating-focus-ring-color);
   }
