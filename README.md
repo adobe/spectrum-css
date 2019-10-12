@@ -15,13 +15,13 @@ Check out [the documentation site](http://opensource.adobe.com/spectrum-css/) fo
 
 ## Where is the JavaScript?
 
-Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. Thus, Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, textfields, etc.
+Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. Thus, Spectrum CSS should only be used by implementations of Spectrum or very simple applications that only need things like typography, checkboxes, text fields, etc.
 
-Adobe maintains separate JavaScript libraries written with React, Angular, and web components that use Spectrum CSS to create fully interactive Spectrum components. These libraries will be open sourced soon.
+Adobe maintains separate JavaScript libraries written with React, Angular, and web components that use Spectrum CSS to create fully interactive Spectrum components. These libraries will be open-sourced soon.
 
 ## Using Spectrum CSS
 
-The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
+The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and color-stops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
 
 To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
 
@@ -105,7 +105,7 @@ Based on which scales you'll be using, you can choose to load different files:
 
 ### Importing workflow icons
 
-If your app has any level of complexity, you'll need "workflow" icons to indicate actions. These icons are not required to render the base components, and instead are used within buttons or menu items for actions like share, play, justify, save, etc.
+If your app has any level of complexity, you'll need "workflow" icons to indicate actions. These icons are not required to render the base components and instead, are used within buttons or menu items for actions like share, play, justify, save, etc.
 
 These icons are released within in the bundle package as `@spectrum-css/spectrum-css/dist/icons/spectrum-icons.svg`. You can import the entire set of icons in all sizes as follows:
 
@@ -117,7 +117,7 @@ You can then use the icons in your app. Visit the [Spectrum CSS workflow icon li
 
 ### Language support
 
-To take advantage of locale specific changes such as placeholders not italicizing Japanese, your application should specify a [`Content-Language` response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language) or set the [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang).
+To take advantage of locale-specific changes such as placeholders not italicizing Japanese, your application should specify a [`Content-Language` response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language) or set the [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang).
 
 ```html
 <html lang="ja">
@@ -125,14 +125,14 @@ To take advantage of locale specific changes such as placeholders not italicizin
 
 ### Variable fallbacks
 
-Each component has a `dist/vars.css` file that contains declarations for each component-level variable used by the component. The CSS in `dist/index-vars.css` references these variables, but has fallbacks for the global variables or hardcoded value that that the component-level variables resolve to.
+Each component has a `dist/vars.css` file that contains declarations for each component-level variable used by the component. The CSS in `dist/index-vars.css` references these variables, but has fallbacks for the global variables or hardcoded value that the component-level variables resolve to.
 
 As such, **you do not need to include `dist/vars.css`** unless:
 
 1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-rule-medium-height`)
 2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/rule`) and do not want to update the component-level variables used by that component
 
-When this file is imported, if in updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
+When this file is imported, if in the updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
@@ -164,7 +164,7 @@ See [site generation](site/README.md) and [documentation generation](tools/bundl
 
 The following tasks are available:
 
-- `gulp build` - Performs a build of all components and the top level package
+- `gulp build` - Performs a build of all components and the top-level package
 - `gulp buildComponents` - Performs a build of all components
 - `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files
 - `gulp clean` - Cleans all output files for the project and all components
@@ -177,7 +177,7 @@ The following tasks are available:
 
 ## Testing
 
-Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). In order to avoid browser rendering inconsistent issue on different environments, the test needs to run inside of docker container.
+Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). To avoid browser rendering inconsistent issue in different environments, the test needs to run inside of the docker container.
 
 ### Setup docker
 
@@ -185,7 +185,7 @@ Install docker on your machine [Download Docker](https://hub.docker.com/search/?
 
 ### Backstop reference bitmap
 
-The reference bitmaps are hosted in a adobe internal repo and published as [@spectrum-css/spectrum-css-vr-test-asset](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-asset). All the reference bitmaps are generated within docker instance. If you want to run test with native environment, you have to regenerate the reference yourself.
+The reference bitmaps are hosted in an adobe internal repo and published as [@spectrum-css/spectrum-css-vr-test-asset](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-asset). All the reference bitmaps are generated within the docker instance. If you want to run a test with the native environment, you have to regenerate the reference yourself.
 
 ### Start dev server with Browsersync notification turnoff
 
@@ -202,10 +202,10 @@ The following npm scripts are available for testing:
 - `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
 - `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
 
-Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
+Both `backstop:test` and `backstop:docker:test` accepts arguments to customize your test run:
 
-- `npm run backstop:docker:test` - Run test for all the components with color stop as `light` and scale as `medium`.
-- `npm run backstop:docker:test button` - Run test for `button` and its dependents components like action bar, toast etc with color stop as `light` and scale as `medium`.
+- `npm run backstop:docker:test` - Run test for all the components with color-stop as `light` and scale as `medium`.
+- `npm run backstop:docker:test button` - Run test for `button` and its dependents components like action bar, toast, etc with color stop as `light` and scale as `medium`.
 - `npm run backstop:docker:test themes=lightest,light scales=medium,large radio` - Run test for `radio` and its dependents components with color stop as `lightest` and `light` and scale as `medium` and `large`. It means that a single scenario will run 4 times.
 - `npm run backstop:docker:test themes=lightest,light,dark,darkest scales=medium,large` - Run test for all the components with all the color and scale combinations. It means that a single scenario will be run 8 times.
 
@@ -225,7 +225,7 @@ Version numbers are automatically determined, changelogs generated, and packages
 
 ### Releasing bundles
 
-Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
+Bundles are released with a separate command, intended to run after individual components are released. To release bundles, simply run:
 
 ```
 npm run release-bundles
