@@ -1,6 +1,6 @@
 # Contributing
 
-We love pull requests from everyone.
+We love pull requests from everyone. 
 
 The following are a set of guidelines to follow when contributing to this project.
 
@@ -23,7 +23,7 @@ Security issues shouldn't be reported on this issue tracker. Instead, [file an i
 ## Contributor license agreement
 
 All third-party contributions to this project must be accompanied by a signed contributor
-license agreement. This gives Adobe permission to redistribute your contributions
+license agreement. This permits Adobe to redistribute your contributions
 as part of the project. [Sign our CLA](http://opensource.adobe.com/cla.html). You
 only need to submit an Adobe CLA one time, so if you have submitted one previously,
 you are good to go!
@@ -65,7 +65,7 @@ Install dependencies:
 yarn install
 ```
 
-Build the project, open a livereloading browser window, and watch for changes:
+Build the project, open a live reloading browser window, and watch for changes:
 
 ```
 gulp dev
@@ -92,7 +92,7 @@ git push origin
 
 [Submit a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
-At this point you're waiting on us. We do our best to keep on top of all the pull requests. We may suggest some changes, improvements or alternatives.
+At this point, you're waiting on us. We do our best to keep on top of all the pull requests. We may suggest some changes, improvements or alternatives.
 
 Some things that will increase the chance that your pull request is accepted:
 
