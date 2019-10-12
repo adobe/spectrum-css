@@ -15,13 +15,13 @@ Check out [the documentation site](http://opensource.adobe.com/spectrum-css/) fo
 
 ## Where is the JavaScript?
 
-Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. Thus, Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, textfields, etc.
+Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. Thus, Spectrum CSS should only be used by implementations of Spectrum or very simple applications that only need things like typography, checkboxes, textfields, etc.
 
-Adobe maintains separate JavaScript libraries written with React, Angular, and web components that use Spectrum CSS to create fully interactive Spectrum components. These libraries will be open sourced soon.
+Adobe maintains separate JavaScript libraries written with React, Angular, and web components that use Spectrum CSS to create fully interactive Spectrum components. These libraries will be open-sourced soon.
 
 ## Using Spectrum CSS
 
-The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
+The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage but is incompatible with < IE 11
 
 To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
 
@@ -41,7 +41,7 @@ If you are an existing user of Spectrum CSS and rely on the previous bundle pack
 
 ### Using components
 
-Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. This has the lowest bundle size and the simplest usage, but is incompatible with IE 11.
+Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. This has the lowest bundle size and the simplest usage but is incompatible with IE 11.
 
 To use Spectrum CSS with IE 11, see the [legacy usage documentation](README-legacy.md).
 
@@ -73,7 +73,7 @@ Then, make sure you've included the relevant classes to choose which scale and c
 <html class="spectrum spectrum--medium spectrum--light">
 ```
 
-**Note:**  If you are importing SVG icon sprite sheets, the `.spectrum--medium`/`.spectrum--large` classes should be added to the `<html>` element so UI icons render in the correct size in IE 11. For browsers that support custom properties, or if you're not using SVG sprite sheets for UI icons and are manually managing icon sizing in your implementation, `.spectrum--medium`/`.spectrum--large` can be added to the `<body>` or other element.
+**Note:**  If you are importing SVG icon sprite sheets, the `.spectrum--medium`/`.spectrum--large` classes should be added to the `<html>` element so UI icons render in the correct size in IE 11. For browsers that support custom properties, or if you're not using SVG sprite sheets for UI icons and are manually managing icon sizing in your implementation, `.spectrum--medium`/`.spectrum--large` can be added to the `<body>` or other elements.
 
 Then you can use components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
 
@@ -117,7 +117,7 @@ You can then use the icons in your app. Visit the [Spectrum CSS workflow icon li
 
 ### Language support
 
-To take advantage of locale specific changes such as placeholders not italicizing Japanese, your application should specify a [`Content-Language` response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language) or set the [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang).
+To take advantage of locale-specific changes such as placeholders not italicizing Japanese, your application should specify a [`Content-Language` response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language) or set the [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang).
 
 ```html
 <html lang="ja">
@@ -125,14 +125,14 @@ To take advantage of locale specific changes such as placeholders not italicizin
 
 ### Variable fallbacks
 
-Each component has a `dist/vars.css` file that contains declarations for each component-level variable used by the component. The CSS in `dist/index-vars.css` references these variables, but has fallbacks for the global variables or hardcoded value that that the component-level variables resolve to.
+Each component has a `dist/vars.css` file that contains declarations for each component-level variable used by the component. The CSS in `dist/index-vars.css` references these variables, but has fallbacks for the global variables or hardcoded value that the component-level variables resolve to.
 
 As such, **you do not need to include `dist/vars.css`** unless:
 
 1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-rule-medium-height`)
 2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/rule`) and do not want to update the component-level variables used by that component
 
-When this file is imported, if in updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
+When this file is imported, if in an updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
@@ -166,7 +166,7 @@ The following tasks are available:
 
 - `gulp build` - Performs a build of all components and the top level package
 - `gulp buildComponents` - Performs a build of all components
-- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files
+- `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then start watching components and website files
 - `gulp clean` - Cleans all output files for the project and all components
 - `gulp watch` - Assuming a build has already been performed, immediately opens your browser with the documentation site, then starts watching components and website files
 - `gulp buildCombined` - Builds the combined output files (`dist/spectrum-*.css`)
@@ -177,7 +177,7 @@ The following tasks are available:
 
 ## Testing
 
-Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). In order to avoid browser rendering inconsistent issue on different environments, the test needs to run inside of docker container.
+Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). To avoid browser rendering inconsistent issues on different environments, the test needs to run inside of the docker container.
 
 ### Setup docker
 
@@ -185,7 +185,7 @@ Install docker on your machine [Download Docker](https://hub.docker.com/search/?
 
 ### Backstop reference bitmap
 
-The reference bitmaps are hosted in a adobe internal repo and published as [@spectrum-css/spectrum-css-vr-test-asset](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-asset). All the reference bitmaps are generated within docker instance. If you want to run test with native environment, you have to regenerate the reference yourself.
+The reference bitmaps are hosted in an adobe internal repo and published as [@spectrum-css/spectrum-css-vr-test-asset](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-asset). All the reference bitmaps are generated within docker instance. If you want to run a test with the native environment, you have to regenerate the reference yourself.
 
 ### Start dev server with Browsersync notification turnoff
 
@@ -225,7 +225,7 @@ Version numbers are automatically determined, changelogs generated, and packages
 
 ### Releasing bundles
 
-Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
+Bundles are released with a separate command, intended to run after individual components are released. To release bundles, simply run:
 
 ```
 npm run release-bundles
