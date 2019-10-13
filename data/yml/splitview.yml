@@ -2,16 +2,18 @@ name: SplitView
 examples:
   - id: splitview
     name: Horizontal
-    markup: |
-      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    markup: >
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal"
+      style="height: 200px">
         <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
         <div class="spectrum-SplitView-splitter"></div>
         <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
       </div>
   - id: splitview-horizontal
     name: Horizontally resizable
-    markup: |
-      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    markup: >
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal"
+      style="height: 200px">
         <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
         <div class="spectrum-SplitView-splitter is-draggable">
           <div class="spectrum-SplitView-gripper"></div>
@@ -20,8 +22,9 @@ examples:
       </div>
   - id: splitview-left
     name: Horizontal collapsed left
-    markup: |
-      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    markup: >
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal"
+      style="height: 200px">
         <div class="spectrum-SplitView-pane" style="width: 0">Left</div>
         <div class="spectrum-SplitView-splitter is-draggable is-collapsed-start">
           <div class="spectrum-SplitView-gripper"></div>
@@ -30,8 +33,9 @@ examples:
       </div>
   - id: splitview-right
     name: Horizontal collapsed right
-    markup: |
-      <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    markup: >
+      <div class="spectrum-SplitView spectrum-SplitView--horizontal"
+      style="height: 200px">
         <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>
         <div class="spectrum-SplitView-splitter is-draggable is-collapsed-end">
           <div class="spectrum-SplitView-gripper"></div>
@@ -40,8 +44,9 @@ examples:
       </div>
   - id: splitview-vertical
     name: Vertically resizable
-    markup: |
-      <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+    markup: >
+      <div class="spectrum-SplitView spectrum-SplitView--vertical"
+      style="height: 200px">
         <div class="spectrum-SplitView-pane" style="height: 50px">Left</div>
         <div class="spectrum-SplitView-splitter is-draggable">
           <div class="spectrum-SplitView-gripper"></div>
@@ -50,8 +55,9 @@ examples:
       </div>
   - id: splitview-vertical-top
     name: Vertical collapsed top
-    markup: |
-      <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+    markup: >
+      <div class="spectrum-SplitView spectrum-SplitView--vertical"
+      style="height: 200px">
         <div class="spectrum-SplitView-pane" style="height: 0">Left</div>
         <div class="spectrum-SplitView-splitter is-draggable is-collapsed-start">
           <div class="spectrum-SplitView-gripper"></div>
@@ -60,11 +66,206 @@ examples:
       </div>
   - id: splitview-vertical-bottom
     name: Vertical collapsed bottom
-    markup: |
-      <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+    markup: >
+      <div class="spectrum-SplitView spectrum-SplitView--vertical"
+      style="height: 200px">
         <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>
         <div class="spectrum-SplitView-splitter is-draggable is-collapsed-end">
           <div class="spectrum-SplitView-gripper"></div>
         </div>
         <div class="spectrum-SplitView-pane" style="height: 0">Right</div>
       </div>
+packageName: splitview
+indexCSS: >
+  .spectrum-SplitView {
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+  }
+
+
+  .spectrum-SplitView-pane {
+    height: 100%;
+  }
+
+
+  .spectrum-SplitView-gripper {
+    content: '';
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-radius: var(--spectrum-rail-gripper-border-radius, var(--spectrum-alias-border-radius-small));
+
+    top: 50%;
+    transform: translate(0, -50%);
+    left: calc((var(--spectrum-rail-gripper-width, var(--spectrum-global-dimension-static-size-50)) + 2 * var(--spectrum-rail-gripper-border-width-horizontal, 3px) - var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25))) / 2 * -1);
+    width: var(--spectrum-rail-gripper-width, var(--spectrum-global-dimension-static-size-50));
+    height: var(--spectrum-rail-gripper-height, var(--spectrum-global-dimension-static-size-200));
+    border-width: var(--spectrum-rail-gripper-border-width-vertical, 4px) var(--spectrum-rail-gripper-border-width-horizontal, 3px);
+  }
+
+
+  .spectrum-SplitView-splitter {
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    width: var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25));
+    height: 100%;
+    z-index: 1;
+  }
+
+
+  .spectrum-SplitView-splitter.is-collapsed-start
+  .spectrum-SplitView-gripper:before,
+  .spectrum-SplitView-splitter.is-collapsed-end
+  .spectrum-SplitView-gripper:before {
+          content: '';
+          position: absolute;
+
+          top: 0;
+          left: calc(50% - var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25)) / 2);
+          width: var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25));
+          height: 100%;
+        }
+
+  .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper {
+        left: 0;
+      }
+
+  .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper {
+        right: 0;
+        left: auto;
+      }
+
+  .spectrum-SplitView--vertical {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+
+
+  .spectrum-SplitView--vertical .spectrum-SplitView-pane {
+      height: auto;
+      width: 100%;
+    }
+
+  .spectrum-SplitView--vertical .spectrum-SplitView-gripper {
+      top: calc((var(--spectrum-rail-gripper-width, var(--spectrum-global-dimension-static-size-50)) + 2 * var(--spectrum-rail-gripper-border-width-horizontal, 3px) - var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25))) / 2 * -1);
+
+      transform: translate(-50%, 0);
+      left: 50%;
+      width: var(--spectrum-rail-gripper-height, var(--spectrum-global-dimension-static-size-200));
+      height: var(--spectrum-rail-gripper-width, var(--spectrum-global-dimension-static-size-50));
+      border-width: var(--spectrum-rail-gripper-border-width-horizontal, 3px) var(--spectrum-rail-gripper-border-width-vertical, 4px);
+    }
+
+  .spectrum-SplitView--vertical .spectrum-SplitView-splitter {
+      width: 100%;
+      height: var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25));
+    }
+
+  .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start
+  .spectrum-SplitView-gripper, .spectrum-SplitView--vertical
+  .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper {
+          left: 50%;
+        }
+
+  .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start
+  .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical
+  .spectrum-SplitView-splitter.is-collapsed-end
+  .spectrum-SplitView-gripper:before {
+            top: calc(50% - var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25)) / 2);
+            left: 0;
+            width: 100%;
+            height: var(--spectrum-rail-handle-width, var(--spectrum-global-dimension-static-size-25));
+          }
+
+  .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start
+  .spectrum-SplitView-gripper {
+          top: 0;
+        }
+
+  .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end
+  .spectrum-SplitView-gripper {
+          top: auto;
+          bottom: 0;
+        }
+
+  .spectrum-SplitView-pane {
+    background-color: var(--spectrum-rail-content-background-color, var(--spectrum-global-color-gray-100));
+  }
+
+
+  .spectrum-SplitView-splitter {
+    background-color: var(--spectrum-rail-handle-background-color, var(--spectrum-global-color-gray-300));
+  }
+
+
+  .spectrum-SplitView-gripper {
+    border-color: var(--spectrum-rail-handle-background-color, var(--spectrum-global-color-gray-300));
+  }
+
+
+  .spectrum-SplitView-gripper:before {
+      background-color: var(--spectrum-rail-handle-background-color, var(--spectrum-global-color-gray-300));
+    }
+
+  .spectrum-SplitView-splitter.is-draggable:hover,
+      .spectrum-SplitView-splitter.is-draggable.is-hovered {
+        background-color: var(--spectrum-rail-handle-background-color-hover, var(--spectrum-global-color-gray-400));
+      }
+
+  .spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper,
+  .spectrum-SplitView-splitter.is-draggable.is-hovered
+  .spectrum-SplitView-gripper {
+          border-color: var(--spectrum-rail-handle-background-color-hover, var(--spectrum-global-color-gray-400));
+        }
+
+  .spectrum-SplitView-splitter.is-draggable:hover
+  .spectrum-SplitView-gripper:before,
+  .spectrum-SplitView-splitter.is-draggable.is-hovered
+  .spectrum-SplitView-gripper:before {
+            background-color: var(--spectrum-rail-handle-background-color-hover, var(--spectrum-global-color-gray-400));
+          }
+
+  .spectrum-SplitView-splitter.is-draggable:active,
+      .spectrum-SplitView-splitter.is-draggable.is-active {
+        background-color: var(--spectrum-rail-handle-background-color-down, var(--spectrum-global-color-gray-800));
+      }
+
+  .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper,
+  .spectrum-SplitView-splitter.is-draggable.is-active
+  .spectrum-SplitView-gripper {
+          border-color: var(--spectrum-rail-handle-background-color-down, var(--spectrum-global-color-gray-800));
+        }
+
+  .spectrum-SplitView-splitter.is-draggable:active
+  .spectrum-SplitView-gripper:before,
+  .spectrum-SplitView-splitter.is-draggable.is-active
+  .spectrum-SplitView-gripper:before {
+            background-color: var(--spectrum-rail-handle-background-color-down, var(--spectrum-global-color-gray-800));
+          }
+
+  .spectrum-SplitView-splitter.is-draggable:focus {
+        outline: none;
+      }
+
+  .spectrum-SplitView-splitter.is-draggable.focus-ring {
+        background-color: var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+      }
+
+  .spectrum-SplitView-splitter.is-draggable.focus-ring
+  .spectrum-SplitView-gripper {
+          border-color: var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+          box-shadow: 0 0 0 1px var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+        }
+
+  .spectrum-SplitView-splitter.is-draggable.focus-ring
+  .spectrum-SplitView-gripper:before {
+            background-color: var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+          }
+peerDependencies:
+  '@spectrum-css/vars': ^2.0.0
+peerCSS: ''

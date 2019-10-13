@@ -1,5 +1,128 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_app.js"],{
 
+/***/ "./components/Logo.js":
+/*!****************************!*\
+  !*** ./components/Logo.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _css_logo_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./css/logo.scss */ "./components/css/logo.scss");
+/* harmony import */ var _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_css_logo_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_10__);
+
+
+
+
+
+
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Logo.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
+
+
+
+var Logo =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Logo, _React$Component);
+
+  function Logo(props) {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Logo);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Logo).call(this, props));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Logo, [{
+    key: "render",
+    value: function render() {
+      var _jsx;
+
+      return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/",
+        as: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, __jsx("a", {
+        className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.headerLink,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logoContainer,
+        tabIndex: "-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.title,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, __jsx("img", (_jsx = {
+        className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.svgLogo,
+        src: "/static/adobe_logo-2.svg",
+        alt: "Adobe Logo"
+      }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "className", _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logo), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "__source", {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "__self", this), _jsx)), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, __jsx("h2", {
+        className: classnames__WEBPACK_IMPORTED_MODULE_8___default()(_css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.titleText, "spectrum-Site-title", "spectrum-Heading3"),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, "Spectrum"), undefined === "internal" || undefined === "both" ? __jsx("div", {
+        className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.internal,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, "ADOBE INTERNAL") : undefined)))));
+    }
+  }]);
+
+  return Logo;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_10__["withRouter"])(Logo));
+
+/***/ }),
+
 /***/ "./components/Sidebar.js":
 /*!*******************************!*\
   !*** ./components/Sidebar.js ***!
@@ -36,8 +159,9 @@ var _data_newmenu__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__webpa
 /* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./css/sidebar.scss */ "./components/css/sidebar.scss");
 /* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16__);
 /* harmony import */ var _SiteSearch__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./SiteSearch */ "./components/SiteSearch.js");
-/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! next/config */ "./node_modules/next-server/dist/lib/runtime-config.js");
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! next/config */ "./node_modules/next/dist/next-server/lib/runtime-config.js");
 /* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Logo */ "./components/Logo.js");
 
 
 
@@ -49,6 +173,7 @@ var _data_newmenu__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__webpa
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Sidebar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+
 
 
 
@@ -144,14 +269,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 66
         },
         __self: this
       }), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.appHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 73
         },
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -159,7 +284,7 @@ function (_React$Component) {
         icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_11___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 76
           },
           __self: this
         }),
@@ -169,71 +294,47 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 74
         },
         __self: this
       })), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 81
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 87
         },
         __self: this
       }, __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
-        },
-        __self: this
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
-        href: "/",
-        as: "".concat("", "/"),
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 88
         },
         __self: this
-      }, __jsx("a", {
-        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.logoLink,
+      }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_19__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 89
         },
         __self: this
-      }, __jsx("img", {
-        src: "".concat("", "/static/adobe-logo.svg"),
-        alt: "Adobe Logo",
-        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.logo,
+      }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
-        },
-        __self: this
-      }), __jsx("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 95
-        },
-        __self: this
-      }, "Spectrum CSS"))), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_17__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 91
         },
         __self: this
       })), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_16___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 94
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNav"], {
@@ -245,7 +346,7 @@ function (_React$Component) {
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 95
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_15__.menu[0].children.map(function (item, i) {
@@ -263,20 +364,20 @@ function (_React$Component) {
               return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 122
+                  lineNumber: 116
                 },
                 __self: this
               }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 123
+                  lineNumber: 117
                 },
                 __self: this
               }), item.title));
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 109
+              lineNumber: 103
             },
             __self: this
           });
@@ -291,7 +392,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 131
+              lineNumber: 125
             },
             __self: this
           }, item.children && item.children.map(function (childItem, childI) {
@@ -308,20 +409,20 @@ function (_React$Component) {
                 return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 154
+                    lineNumber: 148
                   },
                   __self: this
                 }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 155
+                    lineNumber: 149
                   },
                   __self: this
                 }), childItem.title));
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 141
+                lineNumber: 135
               },
               __self: this
             });
@@ -334,7 +435,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167
+          lineNumber: 161
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_12__["SideNavItem"], {
@@ -346,7 +447,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 168
+          lineNumber: 162
         },
         __self: this
       }, "Spectrum"))))));
@@ -395,8 +496,6 @@ __webpack_require__.r(__webpack_exports__);
 var _data_search_store__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/search_store */ "./data/search_store.json", 1);
 /* harmony import */ var _data_search_index__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../data/search_index */ "./data/search_index.json");
 var _data_search_index__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/search_index */ "./data/search_index.json", 1);
-/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! next/config */ "./node_modules/next-server/dist/lib/runtime-config.js");
-/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_17__);
 
 
 
@@ -409,7 +508,6 @@ var _data_search_index__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/SiteSearch.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
-
 
 
 
@@ -442,7 +540,7 @@ function (_React$Component) {
         contributions: [],
         resources: [],
         tutorials: [],
-        searchVal: '',
+        searchVal: "",
         numResults: 0,
         kbSelectedIndex: 1,
         kbSelectedLink: undefined,
@@ -469,11 +567,15 @@ function (_React$Component) {
             break;
 
           case "Enter":
-            _this.navigate(_this.selectedSlug, _this.selectedSlugType, _this.selectedQuery);
+            if (_this.selectedSlug) {
+              // console.log(`${this.selectedSlug} - ${this.selectedSlugType} = ${this.selectedQuery}`   )
+              _this.navigate(_this.selectedSlug, _this.selectedSlugType, _this.selectedQuery);
 
-            _this.resetSearch();
+              _this.resetSearch();
 
-            document.activeElement.blur();
+              document.activeElement.blur();
+            }
+
             break;
 
           default: // do nothing
@@ -483,25 +585,25 @@ function (_React$Component) {
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "navigate", function (slug, type, query) {
-      var q = query ? "#".concat(query.replace(/ /g, "-")) : '#';
+      var q = query ? "#".concat(query.replace(/ /g, "-")) : "#";
 
-      if (type === 'Internal') {
+      if (type === "Internal") {
         next_router__WEBPACK_IMPORTED_MODULE_11___default.a.push("/page/".concat(slug).concat(q));
 
         _this.setState({
           menuOpen: false
         });
-      } else if (type === 'File') {
+      } else if (type === "File") {
         window.open(slug);
       } else {
-        window.open(slug, '_blank');
+        window.open(slug, "_blank");
       }
 
       _this.search("");
 
       _this.setState({
         menuOpen: false,
-        searchVal: ''
+        searchVal: ""
       });
     });
 
@@ -522,35 +624,37 @@ function (_React$Component) {
 
       if (val.length > 2) {
         var searchParam = "".concat(val.trim(), " ").concat(val.trim(), "*");
-        r = _this.idx.search(searchParam + '*');
+        r = _this.idx.search(searchParam + "*");
+        console.log(r);
       }
 
       var length = 0;
       r.forEach(function (item, i) {
         var storeItem = _data_search_store__WEBPACK_IMPORTED_MODULE_15__[item.ref];
 
-        if (storeItem.type == 'usageGuideline') {
+        if (storeItem.type == "usageGuideline") {
           length++;
           usageGuidelines.push(storeItem);
-        } else if (storeItem.type == 'page' && storeItem.pageType === 'Component') {
+        } else if (storeItem.type === "page" && storeItem.pageType === "Component") {
           length++;
           components.push(storeItem);
-        } else if (storeItem.type == 'Behavior') {
+        } else if (storeItem.type === "Behavior") {
           length++;
           behaviors.push(storeItem);
-        } else if (storeItem.type == 'page' && storeItem.pageType === 'Foundation') {
+        } else if (storeItem.type === "page" && storeItem.pageType === "Foundation") {
           length++;
           foundation.push(storeItem);
-        } else if (storeItem.type == 'page' && storeItem.pageType === 'Resources') {
+        } else if (storeItem.type === "page" && storeItem.pageType === "Resources") {
           length++;
           resources.push(storeItem);
-        } else if (storeItem.type === 'Tutorial') {
+        } else if (storeItem.type === "Tutorial") {
           length++;
           tutorials.push(storeItem);
-        } else if (storeItem.type === 'xd') {
+        } else if (storeItem.type === "xd") {
           length++;
+          console.log(storeItem);
           files.push(storeItem);
-        } else if (storeItem.type === 'contribution') {
+        } else if (storeItem.type === "contribution") {
           length++;
           contributions.push(storeItem);
         }
@@ -606,7 +710,7 @@ function (_React$Component) {
       contributions: [],
       resources: [],
       tutorials: [],
-      searchVal: '',
+      searchVal: "",
       numResults: 0,
       kbSelectedIndex: 1,
       kbSelectedLink: undefined,
@@ -616,7 +720,7 @@ function (_React$Component) {
     };
     _this.selectedSlug = undefined;
     _this.selectedQuery = undefined;
-    _this.selectedSlugType = 'Internal'; //const res = await fetch(`${publicRuntimeConfig.API}/getSearchIndex`)
+    _this.selectedSlugType = "Internal"; //const res = await fetch(`${publicRuntimeConfig.API}/getSearchIndex`)
     //const data = await res.json();
 
     _this.idx = lunr__WEBPACK_IMPORTED_MODULE_14___default.a.Index.load(_data_search_index__WEBPACK_IMPORTED_MODULE_16__); //console.log(search_index);
@@ -665,22 +769,23 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.searchContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 211
+          lineNumber: 221
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlay,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 222
         },
         __self: this
       }), __jsx(_react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_10___default.a, {
+        "aria-label": "search",
         placeholder: "Search",
         defaultValue: "",
         value: this.state.searchVal,
         style: {
-          width: '100%'
+          width: "100%"
         },
         onChange: function onChange(e) {
           _this3.search(e);
@@ -694,7 +799,7 @@ function (_React$Component) {
         disabled: !this.state.searchLoaded,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 223
         },
         __self: this
       }), __jsx("div", {
@@ -704,170 +809,44 @@ function (_React$Component) {
         className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlay, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlayOpen : undefined),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 224
+          lineNumber: 240
         },
         __self: this
       }), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.results, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.open : undefined),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 225
+          lineNumber: 251
         },
         __self: this
       }, this.state.numResults === 0 ? __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResultsContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 228
+          lineNumber: 260
         },
         __self: this
       }, __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Heading2--quiet', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResults),
+        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Heading2--quiet", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResults),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229
+          lineNumber: 261
         },
         __self: this
       }, "No results found"), __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResulsSub),
+        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResulsSub),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230
+          lineNumber: 269
         },
         __self: this
       }, __jsx("em", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230
+          lineNumber: 270
         },
         __self: this
       }, "Try another search term."))) : undefined, this.state.foundation.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 234
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 235
-        },
-        __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 235
-        },
-        __self: this
-      }, "Foundation")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 236
-        },
-        __self: this
-      }, this.state.foundation.map(function (result, i) {
-        return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
-          key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, 'Internal')),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, 'Internal');
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 238
-          },
-          __self: this
-        }, result.name);
-      }))) : undefined, this.state.components.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 248
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 249
-        },
-        __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 249
-        },
-        __self: this
-      }, "Components")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 250
-        },
-        __self: this
-      }, this.state.components.map(function (result, i) {
-        return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
-          key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, 'Internal')),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, 'Internal');
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 252
-          },
-          __self: this
-        }, result.name);
-      }))) : undefined, this.state.resources.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 263
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 264
-        },
-        __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 264
-        },
-        __self: this
-      }, "Resources")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 265
-        },
-        __self: this
-      }, this.state.resources.map(function (result, i) {
-        return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
-          key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, 'Internal')),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, 'Internal');
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 267
-          },
-          __self: this
-        }, result.name);
-      }))) : undefined, this.state.usageGuidelines.length ? __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
@@ -885,40 +864,166 @@ function (_React$Component) {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 278
+          lineNumber: 279
+        },
+        __self: this
+      }, "Foundation")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 281
+        },
+        __self: this
+      }, this.state.foundation.map(function (result, i) {
+        return __jsx("li", {
+          id: "".concat(searchIndex++, "_search"),
+          key: i,
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal")),
+          onClick: function onClick() {
+            _this3.navigate(result.slug, "Internal");
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 283
+          },
+          __self: this
+        }, result.name);
+      }))) : undefined, this.state.components.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 304
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 305
+        },
+        __self: this
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 306
+        },
+        __self: this
+      }, "Components")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 308
+        },
+        __self: this
+      }, this.state.components.map(function (result, i) {
+        return __jsx("li", {
+          id: "".concat(searchIndex++, "_search"),
+          key: i,
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal")),
+          onClick: function onClick() {
+            _this3.navigate(result.slug, "Internal");
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 310
+          },
+          __self: this
+        }, result.name);
+      }))) : undefined, this.state.resources.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 332
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 333
+        },
+        __self: this
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 334
+        },
+        __self: this
+      }, "Resources")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 336
+        },
+        __self: this
+      }, this.state.resources.map(function (result, i) {
+        return __jsx("li", {
+          id: "".concat(searchIndex++, "_search"),
+          key: i,
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal")),
+          onClick: function onClick() {
+            _this3.navigate(result.slug, "Internal");
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 338
+          },
+          __self: this
+        }, result.name);
+      }))) : undefined, this.state.usageGuidelines.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 359
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 360
+        },
+        __self: this
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 361
         },
         __self: this
       }, "Usage Guidelines")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 279
+          lineNumber: 365
         },
         __self: this
       }, this.state.usageGuidelines.map(function (result, i) {
         return __jsx("li", {
           id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, 'Internal', result.query)),
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal", result.query)),
           onClick: function onClick() {
-            _this3.navigate(result.slug, 'Internal', result.query);
+            _this3.navigate(result.slug, "Internal", result.query);
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 282
+            lineNumber: 367
           },
           __self: this
         }, __jsx("div", {
           className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.subHeader),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 283
+            lineNumber: 384
           },
           __self: this
         }, result.pageType, " > ", result.name), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 284
+            lineNumber: 389
           },
           __self: this
         }, result.display_description));
@@ -926,54 +1031,54 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 399
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 400
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 401
         },
         __self: this
       }, "Behaviors")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 403
         },
         __self: this
       }, this.state.behaviors.map(function (result, i) {
         return __jsx("li", {
           id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, 'Internal', result.query)),
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal", result.query)),
           onClick: function onClick() {
-            _this3.navigate(result.slug, 'Internal', result.query);
+            _this3.navigate(result.slug, "Internal", result.query);
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 298
+            lineNumber: 405
           },
           __self: this
         }, __jsx("div", {
           className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.subHeader),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 299
+            lineNumber: 422
           },
           __self: this
         }, result.pageType, " > ", result.name), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 300
+            lineNumber: 427
           },
           __self: this
         }, result.display_description));
@@ -981,62 +1086,62 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 437
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 310
+          lineNumber: 438
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 310
+          lineNumber: 439
         },
         __self: this
       }, "Downloads")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 311
+          lineNumber: 441
         },
         __self: this
       }, this.state.files.map(function (result, i) {
         return __jsx("li", {
           id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, "https://spectrum-resources.corp.adobe.com/resources/Latest/".concat(result.slug), 'File')),
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, "/static/resources/Latest/".concat(result.slug), "File")),
           onClick: function onClick() {
-            _this3.navigate("https://spectrum-resources.corp.adobe.com/resources/Latest/".concat(result.slug), 'File');
+            _this3.navigate("/static/resources/Latest/".concat(result.slug), "File");
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 314
+            lineNumber: 443
           },
           __self: this
         }, __jsx("div", {
           className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.file,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 315
+            lineNumber: 462
           },
           __self: this
         }, __jsx("div", {
           className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.icon,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 316
+            lineNumber: 463
           },
           __self: this
         }, __jsx("img", {
           src: "/static/icon_xd_small@2x.png",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 316
+            lineNumber: 464
           },
           __self: this
         })), result.slug));
@@ -1044,41 +1149,41 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 326
+          lineNumber: 476
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 327
+          lineNumber: 477
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 327
+          lineNumber: 478
         },
         __self: this
       }, "Tutorials")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 328
+          lineNumber: 480
         },
         __self: this
       }, this.state.tutorials.map(function (result, i) {
         return __jsx("li", {
           id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, 'External')),
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "External")),
           onClick: function onClick() {
-            _this3.navigate(result.slug, 'External');
+            _this3.navigate(result.slug, "External");
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 331
+            lineNumber: 482
           },
           __self: this
         }, result.name);
@@ -1086,47 +1191,47 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 339
+          lineNumber: 503
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 340
+          lineNumber: 504
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 340
+          lineNumber: 505
         },
         __self: this
       }, "Contributions")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 341
+          lineNumber: 507
         },
         __self: this
       }, this.state.contributions.map(function (result, i) {
         return __jsx("li", {
           id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Body4', _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, "https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), 'External')),
+          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, "https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), "External")),
           onClick: function onClick() {
-            _this3.navigate("https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), 'External');
+            _this3.navigate("https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), "External");
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 344
+            lineNumber: 509
           },
           __self: this
         }, __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 345
+            lineNumber: 528
           },
           __self: this
         }, result.description));
@@ -1159,7 +1264,7 @@ module.exports = JSON.parse("{\"menu\":[{\"title\":\"WebsiteMenu\",\"url\":\"hea
 /*! exports provided: version, fields, fieldVectors, invertedIndex, pipeline, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"version\":\"2.3.6\",\"fields\":[\"description\"],\"fieldVectors\":[[\"description/0\",[0,5.432,1,5.809]],[\"description/1\",[2,5.455,3,4.404,4,3.69]],[\"description/2\",[5,1.883,6,3.601,7,3.036,8,4.229,9,2.547]],[\"description/3\",[10,7.682]],[\"description/4\",[11,3.768,12,4.58]],[\"description/5\",[13,5.151,14,5.432]],[\"description/6\",[15,6.38,16,4.58]],[\"description/7\",[17,6.38,18,5.809]],[\"description/8\",[19,6.38,20,3.048]],[\"description/9\",[21,6.38,22,5.151]],[\"description/10\",[20,2.276,23,3.42,24,2.666,25,3.847]],[\"description/11\",[26,5.809,27,6.38]],[\"description/12\",[28,6.38,29,5.151]],[\"description/13\",[20,3.048,30,6.38]],[\"description/14\",[31,7.682]],[\"description/15\",[22,5.151,32,4.203]],[\"description/16\",[33,6.38,34,4.927]],[\"description/17\",[35,7.682]],[\"description/18\",[7,3.42,36,4.057,37,4.765,38,4.765]],[\"description/19\",[39,7.682]],[\"description/20\",[40,6.38,41,4.44]],[\"description/21\",[41,4.44,42,6.38]],[\"description/22\",[20,3.048,43,5.809]],[\"description/23\",[44,6.38,45,4.315]],[\"description/24\",[46,4.967,47,4.967,48,5.455]],[\"description/25\",[45,3.69,49,4.645,50,4.053]],[\"description/26\",[4,3.69,45,3.69,51,4.404]],[\"description/27\",[24,3.57,52,4.315]],[\"description/28\",[20,2.276,43,4.338,53,4.057,54,4.765]],[\"description/29\",[45,4.315,55,3.351]],[\"description/30\",[9,3.842,13,5.151]],[\"description/31\",[49,4.645,56,3.796,57,5.455]],[\"description/32\",[49,5.432,56,4.44]],[\"description/33\",[5,2.429,13,4.404,58,5.455]],[\"description/34\",[47,3.85,59,4.229,60,4.229,61,3.85,62,3.266]],[\"description/35\",[50,3.142,63,3.601,64,4.229,65,4.229,66,4.229]],[\"description/36\",[4,4.315,12,4.58]],[\"description/37\",[67,7.682]],[\"description/38\",[7,3.42,45,3.223,68,4.338,69,4.765]],[\"description/39\",[70,6.994]],[\"description/40\",[7,2.479,62,4.182,71,4.931,72,2.336,73,3.453]],[\"description/41\",[74,6.994]],[\"description/42\",[75,7.682]],[\"description/43\",[76,7.682]],[\"description/44\",[41,2.403,46,4.931,51,2.788,77,3.453,78,3.144,79,2.788]],[\"description/45\",[80,7.682]],[\"description/46\",[81,6.38,82,6.38]],[\"description/47\",[83,5.432,84,5.809]],[\"description/48\",[3,5.151,29,5.151]],[\"description/49\",[85,6.38,86,5.432]],[\"description/50\",[87,7.682]],[\"description/51\",[3,5.151,88,6.38]],[\"description/52\",[89,6.38,90,6.38]],[\"description/53\",[41,3.316,62,3.679,91,4.338,92,4.765]],[\"description/54\",[62,4.213,93,5.455,94,4.967]],[\"description/55\",[20,3.048,95,6.38]],[\"description/56\",[23,3.916,29,4.404,96,4.645]],[\"description/57\",[7,3.036,97,6.326,98,4.229,99,2.6]],[\"description/58\",[25,4.404,72,3.69,100,5.455]],[\"description/59\",[101,7.682]],[\"description/60\",[102,4.74,103,4.927]],[\"description/61\",[104,5.809,105,5.809]],[\"description/62\",[7,3.036,106,3.85,107,4.229,108,3.601,109,4.229]],[\"description/63\",[36,5.432,110,4.74]],[\"description/64\",[111,6.38,112,6.38]],[\"description/65\",[113,5.151,114,6.38]],[\"description/66\",[70,5.809,115,6.38]],[\"description/67\",[36,5.432,116,6.38]],[\"description/68\",[79,5.151,99,3.922]],[\"description/69\",[99,3.922,117,3.57]],[\"description/70\",[96,5.432,118,4.58]],[\"description/71\",[0,5.432,119,5.809]],[\"description/72\",[120,7.682]],[\"description/73\",[121,6.38,122,6.38]],[\"description/74\",[123,5.432,124,6.38]],[\"description/75\",[123,5.432,125,6.38]],[\"description/76\",[126,6.38,127,6.38]],[\"description/77\",[11,2.814,12,3.42,128,4.765,129,3.679]],[\"description/78\",[110,4.74,130,6.38]],[\"description/79\",[9,3.285,131,4.404,132,5.455]],[\"description/80\",[13,5.151,133,6.38]],[\"description/81\",[32,3.594,53,4.645,86,4.645]],[\"description/82\",[134,6.38,135,6.38]],[\"description/83\",[22,5.151,136,6.38]],[\"description/84\",[23,4.58,24,3.57]],[\"description/85\",[96,6.541]],[\"description/86\",[137,7.682]],[\"description/87\",[26,5.809,68,5.809]],[\"description/88\",[41,4.44,138,6.38]],[\"description/89\",[50,4.74,139,6.38]],[\"description/90\",[41,4.44,140,4.927]],[\"description/91\",[117,3.052,141,4.967,142,5.455]],[\"description/92\",[20,2.276,55,2.502,143,4.765,144,3.063]],[\"description/93\",[145,4.008,146,5.151]],[\"description/94\",[56,4.44,147,5.809]],[\"description/95\",[148,7.682]],[\"description/96\",[102,2.825,123,6.047,149,3.802,150,2.936]],[\"description/97\",[4,3.69,151,5.455,152,4.645]],[\"description/98\",[52,3.69,146,4.404,153,5.455]],[\"description/99\",[29,5.151,113,5.151]],[\"description/100\",[9,3.842,113,5.151]],[\"description/101\",[20,3.048,113,5.151]],[\"description/102\",[52,3.69,154,5.455,155,4.967]],[\"description/103\",[5,2.841,156,6.38]],[\"description/104\",[16,4.58,146,5.151]],[\"description/105\",[9,3.842,16,4.58]],[\"description/106\",[20,3.048,157,5.809]],[\"description/107\",[0,4.645,119,4.967,158,5.455]],[\"description/108\",[159,6.38,160,4.927]],[\"description/109\",[20,2.276,161,3.316,162,4.765,163,3.679]],[\"description/110\",[55,2.865,146,4.404,150,4.213]],[\"description/111\",[164,6.541]],[\"description/112\",[117,4.299]],[\"description/113\",[117,3.052,165,2.639,166,4.404]],[\"description/114\",[167,7.682]],[\"description/115\",[117,3.57,168,5.809]],[\"description/116\",[169,6.38,170,6.38]],[\"description/117\",[20,2.606,55,2.865,145,3.427]],[\"description/118\",[5,2.429,145,3.427,171,2.745]],[\"description/119\",[20,2.02,55,2.221,144,2.719,145,2.657,171,2.128]],[\"description/120\",[145,4.008,172,4.927]],[\"description/121\",[20,2.276,55,2.502,145,2.993,173,4.765]],[\"description/122\",[24,2.127,55,1.997,144,2.444,145,2.389,174,3.461,175,3.461]],[\"description/123\",[24,2.366,145,2.657,175,3.85,176,3.142,177,3.601]],[\"description/124\",[61,6.994]],[\"description/125\",[5,2.122,9,4.16,178,2.993]],[\"description/126\",[9,2.869,178,2.993,179,3.847,180,3.063]],[\"description/127\",[5,2.122,9,2.869,171,2.398,178,2.993]],[\"description/128\",[9,2.869,178,2.993,181,3.54,182,3.223]],[\"description/129\",[9,2.869,178,2.993,183,3.54,184,2.993]],[\"description/130\",[9,1.757,178,1.833,184,1.833,185,2.484,186,2.484,187,3.295,188,2.356,189,2.484]],[\"description/131\",[9,2.547,178,2.657,190,3.601,191,3.415,192,2.943]],[\"description/132\",[5,1.299,9,2.851,178,1.833,193,2.094,194,2.484,195,2.356,196,2.168,197,2.356]],[\"description/133\",[12,4.58,129,4.927]],[\"description/134\",[179,5.151,180,4.102]],[\"description/135\",[5,2.841,171,3.211]],[\"description/136\",[12,3.036,20,2.02,23,3.036,129,3.266,198,3.142]],[\"description/137\",[32,4.203,199,6.38]],[\"description/138\",[32,3.594,200,4.967,201,4.967]],[\"description/139\",[32,3.594,201,4.967,202,4.967]],[\"description/140\",[203,6.38,204,6.38]],[\"description/141\",[183,4.74,184,4.008]],[\"description/142\",[102,3.54,103,3.679,205,3.679,206,3.42]],[\"description/143\",[207,7.682]],[\"description/144\",[190,4.645,191,4.404,192,3.796]],[\"description/145\",[12,2.479,129,2.667,193,2.479,194,2.94,195,2.788,196,2.565,197,2.788]],[\"description/146\",[20,3.67]],[\"description/147\",[180,4.102,208,4.927]],[\"description/148\",[179,5.151,180,4.102]],[\"description/149\",[5,2.841,171,3.211]],[\"description/150\",[20,2.606,144,3.507,171,2.745]],[\"description/151\",[20,2.02,209,1.863,210,4.229,211,3.601,212,4.229]],[\"description/152\",[20,2.02,144,2.719,213,3.036,214,4.229,215,3.85]],[\"description/153\",[14,3.601,20,2.02,144,2.719,176,3.142,216,4.229]],[\"description/154\",[206,5.515]],[\"description/155\",[5,2.429,209,2.402,217,4.645]],[\"description/156\",[209,2.402,218,4.967,219,4.967]],[\"description/157\",[117,3.052,165,2.639,220,5.455]],[\"description/158\",[24,3.052,209,2.402,221,5.455]],[\"description/159\",[24,2.366,209,1.863,222,4.229,223,3.601,224,4.229]],[\"description/160\",[32,2.786,196,3.142,225,3.266,226,4.229,227,4.229]],[\"description/161\",[45,4.315,56,4.44]],[\"description/162\",[72,5.196]],[\"description/163\",[187,4.44,228,6.38]],[\"description/164\",[74,6.994]],[\"description/165\",[163,4.927,229,5.432]],[\"description/166\",[230,6.38,231,6.38]],[\"description/167\",[232,5.932]],[\"description/168\",[5,2.841,171,3.211]],[\"description/169\",[181,4.74,182,4.315]],[\"description/170\",[233,6.541]],[\"description/171\",[209,2.402,232,4.213,234,4.967]],[\"description/172\",[161,4.44,232,4.927]],[\"description/173\",[140,4.927,235,6.38]],[\"description/174\",[236,5.809,237,5.809]],[\"description/175\",[238,7.682]],[\"description/176\",[239,6.38,240,4.927]],[\"description/177\",[187,4.44,241,6.38]],[\"description/178\",[242,5.432,243,5.432]],[\"description/179\",[165,2.046,213,3.036,242,3.601,243,3.601,244,3.601]],[\"description/180\",[245,6.38,246,6.38]],[\"description/181\",[1,5.809,56,4.44]],[\"description/182\",[165,2.639,247,5.455,248,5.455]],[\"description/183\",[56,4.44,71,5.809]],[\"description/184\",[56,4.44,147,5.809]],[\"description/185\",[52,5.196]],[\"description/186\",[249,5.932]],[\"description/187\",[52,4.315,171,3.211]],[\"description/188\",[5,2.841,171,3.211]],[\"description/189\",[52,4.315,250,5.809]],[\"description/190\",[52,2.572,165,1.839,209,1.674,223,3.237,251,3.802,252,3.802]],[\"description/191\",[52,4.315,253,5.432]],[\"description/192\",[24,3.052,209,2.402,254,4.967]],[\"description/193\",[24,3.052,165,2.639,209,2.402]],[\"description/194\",[4,4.315,84,5.809]],[\"description/195\",[11,3.222,23,3.916,99,3.354]],[\"description/196\",[11,2.814,99,2.929,179,3.847,180,3.063]],[\"description/197\",[5,2.122,11,2.814,99,2.929,171,2.398]],[\"description/198\",[11,2.814,99,2.929,183,3.54,184,2.993]],[\"description/199\",[11,1.723,99,1.794,184,1.833,185,2.484,186,2.484,187,3.295,188,2.356,189,2.484]],[\"description/200\",[11,2.245,99,2.337,102,2.825,103,2.936,205,2.936,206,2.729]],[\"description/201\",[11,2.498,99,2.6,180,2.719,255,4.229,256,3.85]],[\"description/202\",[11,2.498,99,2.6,190,3.601,191,3.415,192,2.943]],[\"description/203\",[11,1.868,23,2.27,99,1.944,193,2.27,194,2.693,195,2.554,196,2.35,197,2.554]],[\"description/204\",[257,7.682]],[\"description/205\",[110,4.74,258,5.432]],[\"description/206\",[110,4.053,165,2.639,166,4.404]],[\"description/207\",[240,4.927,259,4.44]],[\"description/208\",[260,7.682]],[\"description/209\",[24,3.052,209,2.402,261,5.455]],[\"description/210\",[176,4.053,262,5.455,263,5.455]],[\"description/211\",[24,3.052,165,2.639,240,4.213]],[\"description/212\",[187,4.44,188,5.151]],[\"description/213\",[264,7.682]],[\"description/214\",[117,4.299]],[\"description/215\",[249,5.932]],[\"description/216\",[5,2.841,265,6.38]],[\"description/217\",[5,2.841,164,5.432]],[\"description/218\",[83,4.645,266,5.455,267,5.455]],[\"description/219\",[104,5.809,268,6.38]],[\"description/220\",[269,6.994]],[\"description/221\",[270,5.432,271,3.842]],[\"description/222\",[5,2.429,171,2.745,271,3.285]],[\"description/223\",[270,4.645,271,3.285,272,3.796]],[\"description/224\",[184,4.008,271,3.842]],[\"description/225\",[193,4.58,273,5.151]],[\"description/226\",[5,2.841,171,3.211]],[\"description/227\",[180,3.507,209,2.402,254,4.967]],[\"description/228\",[205,4.213,206,3.916,274,4.967]],[\"description/229\",[5,1.883,205,3.266,258,3.601,275,3.85,276,4.229]],[\"description/230\",[55,1.997,193,2.729,213,2.729,273,3.07,277,3.802,278,3.802]],[\"description/231\",[160,3.679,209,2.098,279,4.338,280,3.54]],[\"description/232\",[281,6.38,282,5.809]],[\"description/233\",[14,2.94,55,1.814,165,1.671,209,1.521,282,3.144,283,3.453,284,3.453]],[\"description/234\",[55,1.997,193,2.729,273,3.07,285,3.237,286,3.461,287,3.802]],[\"description/235\",[55,1.814,141,3.144,165,1.671,197,2.788,288,3.453,289,3.453,290,3.453]],[\"description/236\",[211,5.432,291,5.809]],[\"description/237\",[45,3.69,271,3.285,272,3.796]],[\"description/238\",[5,2.429,171,2.745,271,3.285]],[\"description/239\",[45,2.861,271,2.547,272,4.402,292,3.266]],[\"description/240\",[184,4.008,271,3.842]],[\"description/241\",[293,6.38,294,6.38]],[\"description/242\",[244,4.645,295,3.916,296,5.455]],[\"description/243\",[79,3.415,165,2.046,244,3.601,295,3.036,297,3.601]],[\"description/244\",[94,3.85,295,3.036,298,4.229,299,3.85,300,4.229]],[\"description/245\",[24,2.666,295,3.42,297,4.057,301,4.765]],[\"description/246\",[24,2.366,79,3.415,165,2.046,295,3.036,297,3.601]],[\"description/247\",[165,2.639,295,3.916,302,5.455]],[\"description/248\",[165,2.639,295,3.916,303,5.455]],[\"description/249\",[145,4.008,304,6.38]],[\"description/250\",[24,4.299]],[\"description/251\",[6,5.432,117,3.57]],[\"description/252\",[155,4.967,180,3.507,208,4.213]],[\"description/253\",[108,5.432,305,4.927]],[\"description/254\",[140,2.936,178,2.389,305,2.936,306,3.237,307,3.237,308,3.237]],[\"description/255\",[11,3.222,117,3.052,225,4.213]],[\"description/256\",[229,6.541]],[\"description/257\",[63,4.057,213,3.42,309,4.765,310,3.847]],[\"description/258\",[131,3.847,213,3.42,310,3.847,311,4.338]],[\"description/259\",[131,3.415,209,1.863,310,3.415,312,3.85,313,3.415]],[\"description/260\",[176,4.053,213,3.916,314,5.455]],[\"description/261\",[165,2.305,209,2.098,315,4.765,316,4.765]],[\"description/262\",[18,4.338,209,2.098,317,3.679,318,4.338]],[\"description/263\",[7,2.729,182,2.572,209,1.674,319,3.802,320,3.802,321,3.802]],[\"description/264\",[271,3.285,272,3.796,292,4.213]],[\"description/265\",[3,3.07,86,3.237,209,1.674,271,2.29,272,2.646,292,2.936]],[\"description/266\",[209,1.521,271,2.08,272,2.403,292,2.667,322,3.453,323,3.144,324,3.453]],[\"description/267\",[50,5.707]],[\"description/268\",[117,3.57,325,5.809]],[\"description/269\",[208,4.927,326,6.38]],[\"description/270\",[140,2.936,178,2.389,305,2.936,306,3.237,307,3.237,308,3.237]],[\"description/271\",[11,3.222,117,3.052,225,4.213]],[\"description/272\",[91,4.338,209,2.098,327,4.765,328,4.765]],[\"description/273\",[329,6.203]],[\"description/274\",[160,4.927,280,4.74]],[\"description/275\",[249,5.932]],[\"description/276\",[32,4.203,329,5.151]],[\"description/277\",[330,6.994]],[\"description/278\",[176,4.053,240,4.213,331,5.455]],[\"description/279\",[51,3.415,157,3.85,164,3.601,209,1.863,332,4.229]],[\"description/280\",[165,2.046,209,1.863,333,4.229,334,4.229,335,4.229]],[\"description/281\",[176,4.053,191,4.404,192,3.796]],[\"description/282\",[131,3.415,209,1.863,310,3.415,312,3.85,313,3.415]],[\"description/283\",[5,1.883,209,1.863,313,3.415,336,4.229,337,4.229]],[\"description/284\",[165,2.305,180,3.063,338,4.765,339,4.765]],[\"description/285\",[205,3.679,215,4.338,340,4.765,341,4.765]],[\"description/286\",[165,2.639,209,2.402,342,5.455]],[\"description/287\",[5,2.122,165,2.305,343,4.765,344,4.765]],[\"description/288\",[345,6.203]],[\"description/289\",[209,2.098,275,4.338,345,3.847,346,4.765]],[\"description/290\",[62,4.213,347,5.455,348,5.455]],[\"description/291\",[349,6.38,350,6.38]],[\"description/292\",[110,4.74,351,6.38]],[\"description/293\",[110,4.053,165,2.639,166,4.404]],[\"description/294\",[117,3.052,165,2.639,352,5.455]],[\"description/295\",[240,4.927,259,4.44]],[\"description/296\",[106,5.809,165,3.086]],[\"description/297\",[259,3.316,299,4.338,353,3.679,354,4.338]],[\"description/298\",[163,4.927,355,5.432]],[\"description/299\",[5,2.841,171,3.211]],[\"description/300\",[25,4.404,209,2.402,256,4.967]],[\"description/301\",[5,2.429,163,4.213,355,4.645]],[\"description/302\",[356,6.38,357,6.38]],[\"description/303\",[358,5.707]],[\"description/304\",[83,4.057,195,3.847,358,5.131]],[\"description/305\",[41,3.796,358,5.65]],[\"description/306\",[102,3.54,166,3.847,358,5.131]],[\"description/307\",[358,5.131,359,4.765,360,4.338]],[\"description/308\",[20,2.606,358,5.65]],[\"description/309\",[20,3.048,198,4.74]],[\"description/310\",[5,2.841,171,3.211]],[\"description/311\",[181,4.74,182,4.315]],[\"description/312\",[233,6.541]],[\"description/313\",[20,1.816,196,2.825,198,2.825,209,1.674,361,3.802,362,3.802]],[\"description/314\",[20,2.276,144,3.063,184,2.993,198,3.54]],[\"description/315\",[363,6.994]],[\"description/316\",[145,4.827]],[\"description/317\",[187,2.943,360,3.85,364,4.229,365,4.229,366,4.229]],[\"description/318\",[367,7.682]],[\"description/319\",[34,4.927,117,3.57]],[\"description/320\",[208,4.927,368,6.38]],[\"description/321\",[108,5.432,305,4.927]],[\"description/322\",[140,2.936,178,2.389,305,2.936,306,3.237,307,3.237,308,3.237]],[\"description/323\",[183,4.74,184,4.008]],[\"description/324\",[11,3.222,117,3.052,225,4.213]],[\"description/325\",[56,5.346]],[\"description/326\",[4,4.315,152,5.432]],[\"description/327\",[180,4.102,208,4.927]],[\"description/328\",[5,2.841,171,3.211]],[\"description/329\",[165,2.305,180,3.063,369,4.765,370,4.765]],[\"description/330\",[209,2.402,274,4.967,371,5.455]],[\"description/331\",[206,5.515]],[\"description/332\",[209,2.402,218,4.967,219,4.967]],[\"description/333\",[24,2.366,78,3.85,103,3.266,209,1.863,223,3.601]],[\"description/334\",[4,2.861,5,1.883,24,2.366,103,3.266,372,4.229]],[\"description/335\",[25,4.404,209,2.402,311,4.967]],[\"description/336\",[102,3.54,253,4.057,373,4.338,374,4.765]],[\"description/337\",[32,5.061]],[\"description/338\",[280,4.74,375,6.38]],[\"description/339\",[280,4.74,376,6.38]],[\"description/340\",[213,5.515]],[\"description/341\",[323,6.994]],[\"description/342\",[160,3.679,217,4.057,280,5.131]],[\"description/343\",[160,3.679,280,5.131,377,4.765]],[\"description/344\",[249,5.932]],[\"description/345\",[32,4.203,329,5.151]],[\"description/346\",[161,5.346]],[\"description/347\",[5,2.841,171,3.211]],[\"description/348\",[181,4.74,182,4.315]],[\"description/349\",[233,6.541]],[\"description/350\",[161,3.796,209,2.402,234,4.967]],[\"description/351\",[20,2.606,161,3.796,198,4.053]],[\"description/352\",[161,4.44,232,4.927]],[\"description/353\",[144,3.063,161,3.316,174,4.338,184,2.993]],[\"description/354\",[378,7.682]],[\"description/355\",[187,4.44,379,6.38]],[\"description/356\",[34,5.932]],[\"description/357\",[177,5.432,182,4.315]],[\"description/358\",[5,2.841,171,3.211]],[\"description/359\",[183,4.74,184,4.008]],[\"description/360\",[184,2.169,185,2.94,186,2.94,187,3.769,188,2.788,189,2.94]],[\"description/361\",[5,1.883,196,3.142,285,3.601,380,4.229,381,4.229]],[\"description/362\",[182,2.572,269,3.461,279,3.461,382,3.802,383,3.802,384,3.802]],[\"description/363\",[182,3.69,385,5.455,386,5.455]],[\"description/364\",[387,6.203]],[\"description/365\",[387,5.151,388,6.38]],[\"description/366\",[217,5.432,387,5.151]],[\"description/367\",[181,4.74,182,4.315]],[\"description/368\",[259,2.943,313,3.415,389,4.229,390,4.229,391,4.229]],[\"description/369\",[22,5.151,72,4.315]],[\"description/370\",[192,4.44,317,4.927]],[\"description/371\",[50,3.142,192,2.943,317,3.266,353,3.266,392,4.229]],[\"description/372\",[192,3.316,259,3.316,317,3.679,393,4.765]],[\"description/373\",[55,3.351,150,4.927]],[\"description/374\",[20,2.606,55,2.865,171,2.745]],[\"description/375\",[5,2.122,24,2.666,181,3.54,259,3.316]],[\"description/376\",[55,2.502,63,4.057,353,3.679,394,4.765]],[\"description/377\",[55,2.502,105,4.338,150,3.679,209,2.098]],[\"description/378\",[55,2.865,165,2.639,395,5.455]],[\"description/379\",[16,5.515]],[\"description/380\",[5,2.841,171,3.211]],[\"description/381\",[16,3.916,144,3.507,171,2.745]],[\"description/382\",[55,2.865,285,4.645,396,5.455]],[\"description/383\",[16,3.036,144,2.719,373,3.85,397,4.229,398,4.229]],[\"description/384\",[41,5.346]],[\"description/385\",[172,5.932]],[\"description/386\",[5,2.841,171,3.211]],[\"description/387\",[249,5.932]],[\"description/388\",[200,4.967,202,4.967,399,5.455]],[\"description/389\",[400,6.38,401,6.38]],[\"description/390\",[24,2.666,172,3.679,209,2.098,402,4.765]],[\"description/391\",[206,5.515]],[\"description/392\",[165,2.305,168,4.338,258,4.057,403,4.765]],[\"description/393\",[55,2.221,165,2.046,172,3.266,353,3.266,404,4.229]],[\"description/394\",[72,5.196]],[\"description/395\",[5,2.841,171,3.211]],[\"description/396\",[20,2.606,144,3.507,171,2.745]],[\"description/397\",[72,3.69,209,2.402,318,4.967]],[\"description/398\",[72,3.69,165,2.639,253,4.645]],[\"description/399\",[118,5.515]],[\"description/400\",[5,2.841,171,3.211]],[\"description/401\",[72,4.315,118,4.58]],[\"description/402\",[177,6.541]],[\"description/403\",[4,2.572,51,3.07,118,2.729,259,2.646,353,2.936,354,3.461]],[\"description/404\",[206,5.515]],[\"description/405\",[53,3.601,55,2.221,225,3.266,259,2.943,405,4.229]],[\"description/406\",[55,2.502,165,2.305,183,3.54,406,4.765]],[\"description/407\",[118,4.58,407,6.38]],[\"description/408\",[118,4.58,250,5.809]],[\"description/409\",[286,5.809,408,6.38]],[\"description/410\",[345,5.151,409,6.38]],[\"description/411\",[20,3.67]],[\"description/412\",[20,2.606,55,2.865,145,3.427]],[\"description/413\",[45,3.69,271,3.285,272,3.796]],[\"description/414\",[271,3.285,272,3.796,292,4.213]],[\"description/415\",[193,4.58,273,5.151]],[\"description/416\",[6,5.432,117,3.57]],[\"description/417\",[34,4.927,117,3.57]],[\"description/418\",[117,3.57,325,5.809]],[\"description/419\",[12,4.58,129,4.927]],[\"description/420\",[72,5.196]],[\"description/421\",[192,4.44,317,4.927]],[\"description/422\",[11,3.222,23,3.916,99,3.354]],[\"description/423\",[345,6.203]],[\"description/424\",[270,5.432,271,3.842]],[\"description/425\",[55,3.351,150,4.927]],[\"description/426\",[20,3.048,198,4.74]],[\"description/427\",[387,6.203]],[\"description/428\",[4,4.315,152,5.432]],[\"description/429\",[34,5.932]],[\"description/430\",[163,4.927,355,5.432]],[\"description/431\",[232,5.932]],[\"description/432\",[229,6.541]],[\"description/433\",[52,5.196]],[\"description/434\",[16,5.515]],[\"description/435\",[5,2.122,9,4.16,178,2.993]],[\"description/436\",[118,5.515]],[\"description/437\",[145,4.827]],[\"description/438\",[172,5.932]],[\"description/439\",[161,5.346]],[\"description/440\",[117,4.299]],[\"description/441\",[330,6.994]],[\"description/442\",[211,5.432,291,5.809]],[\"description/443\",[363,6.994]],[\"description/444\",[236,5.809,237,5.809]],[\"description/445\",[242,5.432,243,5.432]],[\"description/446\",[32,5.061]],[\"description/447\",[329,6.203]],[\"description/448\",[50,5.707]]],\"invertedIndex\":[[\"\",{\"_index\":7,\"description\":{\"2\":{},\"18\":{},\"38\":{},\"40\":{},\"57\":{},\"62\":{},\"263\":{}}}],[\"1\",{\"_index\":65,\"description\":{\"35\":{}}}],[\"2\",{\"_index\":210,\"description\":{\"151\":{}}}],[\"accordion\",{\"_index\":35,\"description\":{\"17\":{}}}],[\"action\",{\"_index\":55,\"description\":{\"29\":{},\"92\":{},\"110\":{},\"117\":{},\"119\":{},\"121\":{},\"122\":{},\"230\":{},\"233\":{},\"234\":{},\"235\":{},\"373\":{},\"374\":{},\"376\":{},\"377\":{},\"378\":{},\"382\":{},\"393\":{},\"405\":{},\"406\":{},\"412\":{},\"425\":{}}}],[\"action(\",{\"_index\":224,\"description\":{\"159\":{}}}],[\"ad\",{\"_index\":334,\"description\":{\"280\":{}}}],[\"adjust\",{\"_index\":332,\"description\":{\"279\":{}}}],[\"adobe’\",{\"_index\":366,\"description\":{\"317\":{}}}],[\"advanc\",{\"_index\":33,\"description\":{\"16\":{}}}],[\"affect\",{\"_index\":162,\"description\":{\"109\":{}}}],[\"alert\",{\"_index\":22,\"description\":{\"9\":{},\"15\":{},\"83\":{},\"369\":{}}}],[\"align\",{\"_index\":213,\"description\":{\"152\":{},\"179\":{},\"230\":{},\"257\":{},\"258\":{},\"260\":{},\"340\":{}}}],[\"allow\",{\"_index\":285,\"description\":{\"234\":{},\"361\":{},\"382\":{}}}],[\"altern\",{\"_index\":265,\"description\":{\"216\":{}}}],[\"ambigu\",{\"_index\":377,\"description\":{\"343\":{}}}],[\"anatomi\",{\"_index\":57,\"description\":{\"31\":{}}}],[\"anim\",{\"_index\":249,\"description\":{\"186\":{},\"215\":{},\"275\":{},\"344\":{},\"387\":{}}}],[\"api\",{\"_index\":241,\"description\":{\"177\":{}}}],[\"appear\",{\"_index\":399,\"description\":{\"388\":{}}}],[\"applic\",{\"_index\":236,\"description\":{\"174\":{},\"444\":{}}}],[\"appropri\",{\"_index\":256,\"description\":{\"201\":{},\"300\":{}}}],[\"approv\",{\"_index\":261,\"description\":{\"209\":{}}}],[\"area\",{\"_index\":6,\"description\":{\"2\":{},\"251\":{},\"416\":{}}}],[\"artboard\",{\"_index\":137,\"description\":{\"86\":{}}}],[\"asset\",{\"_index\":42,\"description\":{\"21\":{}}}],[\"auto\",{\"_index\":408,\"description\":{\"409\":{}}}],[\"avail\",{\"_index\":391,\"description\":{\"368\":{}}}],[\"avatar\",{\"_index\":120,\"description\":{\"72\":{}}}],[\"avoid\",{\"_index\":373,\"description\":{\"336\":{},\"383\":{}}}],[\"badg\",{\"_index\":67,\"description\":{\"37\":{}}}],[\"banner\",{\"_index\":136,\"description\":{\"83\":{}}}],[\"bar\",{\"_index\":45,\"description\":{\"23\":{},\"25\":{},\"26\":{},\"29\":{},\"38\":{},\"161\":{},\"237\":{},\"239\":{},\"413\":{}}}],[\"base\",{\"_index\":214,\"description\":{\"152\":{}}}],[\"be\",{\"_index\":277,\"description\":{\"230\":{}}}],[\"behavior\",{\"_index\":305,\"description\":{\"253\":{},\"254\":{},\"270\":{},\"321\":{},\"322\":{}}}],[\"below\",{\"_index\":392,\"description\":{\"371\":{}}}],[\"bi\",{\"_index\":293,\"description\":{\"241\":{}}}],[\"blue\",{\"_index\":153,\"description\":{\"98\":{}}}],[\"bodi\",{\"_index\":275,\"description\":{\"229\":{},\"289\":{}}}],[\"box\",{\"_index\":12,\"description\":{\"4\":{},\"36\":{},\"77\":{},\"133\":{},\"136\":{},\"145\":{},\"419\":{}}}],[\"brand\",{\"_index\":351,\"description\":{\"292\":{}}}],[\"breadcrumb\",{\"_index\":74,\"description\":{\"41\":{},\"164\":{}}}],[\"bulk\",{\"_index\":396,\"description\":{\"382\":{}}}],[\"button\",{\"_index\":20,\"description\":{\"8\":{},\"10\":{},\"13\":{},\"22\":{},\"28\":{},\"55\":{},\"92\":{},\"101\":{},\"106\":{},\"109\":{},\"117\":{},\"119\":{},\"121\":{},\"136\":{},\"146\":{},\"150\":{},\"151\":{},\"152\":{},\"153\":{},\"308\":{},\"309\":{},\"313\":{},\"314\":{},\"351\":{},\"374\":{},\"396\":{},\"411\":{},\"412\":{},\"426\":{}}}],[\"calendar\",{\"_index\":31,\"description\":{\"14\":{}}}],[\"canva\",{\"_index\":81,\"description\":{\"46\":{}}}],[\"capit\",{\"_index\":191,\"description\":{\"131\":{},\"144\":{},\"202\":{},\"281\":{}}}],[\"card\",{\"_index\":41,\"description\":{\"20\":{},\"21\":{},\"44\":{},\"53\":{},\"88\":{},\"90\":{},\"305\":{},\"384\":{}}}],[\"carousel\",{\"_index\":70,\"description\":{\"39\":{},\"66\":{}}}],[\"case\",{\"_index\":219,\"description\":{\"156\":{},\"332\":{}}}],[\"chang\",{\"_index\":352,\"description\":{\"294\":{}}}],[\"chat\",{\"_index\":116,\"description\":{\"67\":{}}}],[\"checkbox\",{\"_index\":161,\"description\":{\"109\":{},\"172\":{},\"346\":{},\"350\":{},\"351\":{},\"352\":{},\"353\":{},\"439\":{}}}],[\"checkerboard\",{\"_index\":122,\"description\":{\"73\":{}}}],[\"checklist\",{\"_index\":87,\"description\":{\"50\":{}}}],[\"checkmark\",{\"_index\":302,\"description\":{\"247\":{}}}],[\"choos\",{\"_index\":255,\"description\":{\"201\":{}}}],[\"circl\",{\"_index\":292,\"description\":{\"239\":{},\"264\":{},\"265\":{},\"266\":{},\"414\":{}}}],[\"circular\",{\"_index\":327,\"description\":{\"272\":{}}}],[\"clear\",{\"_index\":217,\"description\":{\"155\":{},\"342\":{},\"366\":{}}}],[\"cloud\",{\"_index\":47,\"description\":{\"24\":{},\"34\":{}}}],[\"coach\",{\"_index\":273,\"description\":{\"225\":{},\"230\":{},\"234\":{},\"415\":{}}}],[\"color\",{\"_index\":117,\"description\":{\"69\":{},\"91\":{},\"112\":{},\"113\":{},\"115\":{},\"157\":{},\"214\":{},\"251\":{},\"255\":{},\"268\":{},\"271\":{},\"294\":{},\"319\":{},\"324\":{},\"416\":{},\"417\":{},\"418\":{},\"440\":{}}}],[\"column\",{\"_index\":18,\"description\":{\"7\":{},\"262\":{}}}],[\"combin\",{\"_index\":372,\"description\":{\"334\":{}}}],[\"combo\",{\"_index\":129,\"description\":{\"77\":{},\"133\":{},\"136\":{},\"145\":{},\"419\":{}}}],[\"comment\",{\"_index\":75,\"description\":{\"42\":{}}}],[\"common\",{\"_index\":394,\"description\":{\"376\":{}}}],[\"commun\",{\"_index\":168,\"description\":{\"115\":{},\"392\":{}}}],[\"compon\",{\"_index\":244,\"description\":{\"179\":{},\"242\":{},\"243\":{}}}],[\"composit\",{\"_index\":298,\"description\":{\"244\":{}}}],[\"concis\",{\"_index\":206,\"description\":{\"142\":{},\"154\":{},\"200\":{},\"228\":{},\"331\":{},\"391\":{},\"404\":{}}}],[\"condens\",{\"_index\":370,\"description\":{\"329\":{}}}],[\"confirm\",{\"_index\":288,\"description\":{\"235\":{}}}],[\"connect\",{\"_index\":143,\"description\":{\"92\":{}}}],[\"consist\",{\"_index\":254,\"description\":{\"192\":{},\"227\":{}}}],[\"contact\",{\"_index\":367,\"description\":{\"318\":{}}}],[\"content\",{\"_index\":215,\"description\":{\"152\":{},\"285\":{}}}],[\"context\",{\"_index\":384,\"description\":{\"362\":{}}}],[\"control\",{\"_index\":82,\"description\":{\"46\":{}}}],[\"cooldown\",{\"_index\":401,\"description\":{\"389\":{}}}],[\"copi\",{\"_index\":346,\"description\":{\"289\":{}}}],[\"correct\",{\"_index\":267,\"description\":{\"218\":{}}}],[\"creat\",{\"_index\":166,\"description\":{\"113\":{},\"206\":{},\"293\":{},\"306\":{}}}],[\"crop\",{\"_index\":106,\"description\":{\"62\":{},\"296\":{}}}],[\"crucial\",{\"_index\":403,\"description\":{\"392\":{}}}],[\"custom\",{\"_index\":389,\"description\":{\"368\":{}}}],[\"cycl\",{\"_index\":30,\"description\":{\"13\":{}}}],[\"dash\",{\"_index\":320,\"description\":{\"263\":{}}}],[\"data\",{\"_index\":310,\"description\":{\"257\":{},\"258\":{},\"259\":{},\"282\":{}}}],[\"date\",{\"_index\":97,\"description\":{\"57\":{}}}],[\"deep\",{\"_index\":374,\"description\":{\"336\":{}}}],[\"definit\",{\"_index\":156,\"description\":{\"103\":{}}}],[\"delay\",{\"_index\":202,\"description\":{\"139\":{},\"388\":{}}}],[\"depend\",{\"_index\":287,\"description\":{\"234\":{}}}],[\"deprec\",{\"_index\":304,\"description\":{\"249\":{}}}],[\"describ\",{\"_index\":402,\"description\":{\"390\":{}}}],[\"descript\",{\"_index\":371,\"description\":{\"330\":{}}}],[\"design\",{\"_index\":187,\"description\":{\"130\":{},\"163\":{},\"177\":{},\"199\":{},\"212\":{},\"317\":{},\"355\":{},\"360\":{}}}],[\"detail\",{\"_index\":127,\"description\":{\"76\":{}}}],[\"develop\",{\"_index\":409,\"description\":{\"410\":{}}}],[\"dexter\",{\"_index\":115,\"description\":{\"66\":{}}}],[\"dial\",{\"_index\":101,\"description\":{\"59\":{}}}],[\"dialog\",{\"_index\":72,\"description\":{\"40\":{},\"58\":{},\"162\":{},\"369\":{},\"394\":{},\"397\":{},\"398\":{},\"401\":{},\"420\":{}}}],[\"direct\",{\"_index\":300,\"description\":{\"244\":{}}}],[\"direction\",{\"_index\":294,\"description\":{\"241\":{}}}],[\"disabl\",{\"_index\":397,\"description\":{\"383\":{}}}],[\"dismiss\",{\"_index\":286,\"description\":{\"234\":{},\"409\":{}}}],[\"display\",{\"_index\":225,\"description\":{\"160\":{},\"255\":{},\"271\":{},\"324\":{},\"405\":{}}}],[\"divid\",{\"_index\":317,\"description\":{\"262\":{},\"370\":{},\"371\":{},\"372\":{},\"421\":{}}}],[\"don't\",{\"_index\":165,\"description\":{\"113\":{},\"157\":{},\"179\":{},\"182\":{},\"190\":{},\"193\":{},\"206\":{},\"211\":{},\"233\":{},\"235\":{},\"243\":{},\"246\":{},\"247\":{},\"248\":{},\"261\":{},\"280\":{},\"284\":{},\"286\":{},\"287\":{},\"293\":{},\"294\":{},\"296\":{},\"329\":{},\"378\":{},\"392\":{},\"393\":{},\"398\":{},\"406\":{}}}],[\"don’t\",{\"_index\":259,\"description\":{\"207\":{},\"295\":{},\"297\":{},\"368\":{},\"372\":{},\"375\":{},\"403\":{},\"405\":{}}}],[\"dot\",{\"_index\":114,\"description\":{\"65\":{}}}],[\"down\",{\"_index\":307,\"description\":{\"254\":{},\"270\":{},\"322\":{}}}],[\"drag\",{\"_index\":68,\"description\":{\"38\":{},\"87\":{}}}],[\"draggabl\",{\"_index\":28,\"description\":{\"12\":{}}}],[\"drop\",{\"_index\":26,\"description\":{\"11\":{},\"87\":{}}}],[\"dropdown\",{\"_index\":23,\"description\":{\"10\":{},\"56\":{},\"84\":{},\"136\":{},\"195\":{},\"203\":{},\"422\":{}}}],[\"dynam\",{\"_index\":133,\"description\":{\"80\":{}}}],[\"edit\",{\"_index\":388,\"description\":{\"365\":{}}}],[\"emphas\",{\"_index\":233,\"description\":{\"170\":{},\"312\":{},\"349\":{}}}],[\"emphasi\",{\"_index\":335,\"description\":{\"280\":{}}}],[\"en\",{\"_index\":319,\"description\":{\"263\":{}}}],[\"equival\",{\"_index\":268,\"description\":{\"219\":{}}}],[\"error\",{\"_index\":83,\"description\":{\"47\":{},\"218\":{},\"304\":{}}}],[\"exclus\",{\"_index\":362,\"description\":{\"313\":{}}}],[\"experi\",{\"_index\":46,\"description\":{\"24\":{},\"44\":{}}}],[\"explain\",{\"_index\":278,\"description\":{\"230\":{}}}],[\"featur\",{\"_index\":226,\"description\":{\"160\":{}}}],[\"field\",{\"_index\":9,\"description\":{\"2\":{},\"30\":{},\"79\":{},\"100\":{},\"105\":{},\"125\":{},\"126\":{},\"127\":{},\"128\":{},\"129\":{},\"130\":{},\"131\":{},\"132\":{},\"435\":{}}}],[\"file\",{\"_index\":111,\"description\":{\"64\":{}}}],[\"fill\",{\"_index\":263,\"description\":{\"210\":{}}}],[\"filter\",{\"_index\":58,\"description\":{\"33\":{}}}],[\"finger\",{\"_index\":308,\"description\":{\"254\":{},\"270\":{},\"322\":{}}}],[\"first\",{\"_index\":78,\"description\":{\"44\":{},\"333\":{}}}],[\"flexibl\",{\"_index\":208,\"description\":{\"147\":{},\"252\":{},\"269\":{},\"320\":{},\"327\":{}}}],[\"float\",{\"_index\":147,\"description\":{\"94\":{},\"184\":{}}}],[\"flow\",{\"_index\":94,\"description\":{\"54\":{},\"244\":{}}}],[\"fluid\",{\"_index\":154,\"description\":{\"102\":{}}}],[\"follow\",{\"_index\":190,\"description\":{\"131\":{},\"144\":{},\"202\":{}}}],[\"font\",{\"_index\":164,\"description\":{\"111\":{},\"217\":{},\"279\":{}}}],[\"footer\",{\"_index\":119,\"description\":{\"71\":{},\"107\":{}}}],[\"form\",{\"_index\":195,\"description\":{\"132\":{},\"145\":{},\"203\":{},\"304\":{}}}],[\"forum\",{\"_index\":138,\"description\":{\"88\":{}}}],[\"frame\",{\"_index\":237,\"description\":{\"174\":{},\"444\":{}}}],[\"framework\",{\"_index\":38,\"description\":{\"18\":{}}}],[\"full\",{\"_index\":71,\"description\":{\"40\":{},\"183\":{}}}],[\"fulli\",{\"_index\":343,\"description\":{\"287\":{}}}],[\"galleri\",{\"_index\":88,\"description\":{\"51\":{}}}],[\"gap\",{\"_index\":246,\"description\":{\"180\":{}}}],[\"ghost\",{\"_index\":85,\"description\":{\"49\":{}}}],[\"gray\",{\"_index\":359,\"description\":{\"307\":{}}}],[\"grid\",{\"_index\":243,\"description\":{\"178\":{},\"179\":{},\"445\":{}}}],[\"group\",{\"_index\":144,\"description\":{\"92\":{},\"119\":{},\"122\":{},\"150\":{},\"152\":{},\"153\":{},\"314\":{},\"353\":{},\"381\":{},\"383\":{},\"396\":{}}}],[\"guid\",{\"_index\":109,\"description\":{\"62\":{}}}],[\"handl\",{\"_index\":108,\"description\":{\"62\":{},\"253\":{},\"321\":{}}}],[\"header\",{\"_index\":50,\"description\":{\"25\":{},\"35\":{},\"89\":{},\"267\":{},\"371\":{},\"448\":{}}}],[\"height\",{\"_index\":155,\"description\":{\"102\":{},\"252\":{}}}],[\"help\",{\"_index\":269,\"description\":{\"220\":{},\"362\":{}}}],[\"hold\",{\"_index\":175,\"description\":{\"122\":{},\"123\":{}}}],[\"home\",{\"_index\":92,\"description\":{\"53\":{}}}],[\"hot\",{\"_index\":380,\"description\":{\"361\":{}}}],[\"hour\",{\"_index\":170,\"description\":{\"116\":{}}}],[\"hud\",{\"_index\":95,\"description\":{\"55\":{}}}],[\"hue\",{\"_index\":328,\"description\":{\"272\":{}}}],[\"icon\",{\"_index\":24,\"description\":{\"10\":{},\"27\":{},\"84\":{},\"122\":{},\"123\":{},\"158\":{},\"159\":{},\"192\":{},\"193\":{},\"209\":{},\"211\":{},\"245\":{},\"246\":{},\"250\":{},\"333\":{},\"334\":{},\"375\":{},\"390\":{}}}],[\"icon'\",{\"_index\":262,\"description\":{\"210\":{}}}],[\"iconographi\",{\"_index\":260,\"description\":{\"208\":{}}}],[\"illustr\",{\"_index\":110,\"description\":{\"63\":{},\"78\":{},\"205\":{},\"206\":{},\"292\":{},\"293\":{}}}],[\"imag\",{\"_index\":299,\"description\":{\"244\":{},\"297\":{}}}],[\"immedi\",{\"_index\":200,\"description\":{\"138\":{},\"388\":{}}}],[\"import\",{\"_index\":252,\"description\":{\"190\":{}}}],[\"includ\",{\"_index\":183,\"description\":{\"129\":{},\"141\":{},\"198\":{},\"323\":{},\"359\":{},\"406\":{}}}],[\"inclus\",{\"_index\":188,\"description\":{\"130\":{},\"199\":{},\"212\":{},\"360\":{}}}],[\"inconsist\",{\"_index\":283,\"description\":{\"233\":{}}}],[\"indent\",{\"_index\":342,\"description\":{\"286\":{}}}],[\"indic\",{\"_index\":160,\"description\":{\"108\":{},\"231\":{},\"274\":{},\"342\":{},\"343\":{}}}],[\"individu\",{\"_index\":296,\"description\":{\"242\":{}}}],[\"inform\",{\"_index\":258,\"description\":{\"205\":{},\"229\":{},\"392\":{}}}],[\"input\",{\"_index\":178,\"description\":{\"125\":{},\"126\":{},\"127\":{},\"128\":{},\"129\":{},\"130\":{},\"131\":{},\"132\":{},\"254\":{},\"270\":{},\"322\":{},\"435\":{}}}],[\"insid\",{\"_index\":404,\"description\":{\"393\":{}}}],[\"instal\",{\"_index\":134,\"description\":{\"82\":{}}}],[\"intern\",{\"_index\":379,\"description\":{\"355\":{}}}],[\"isol\",{\"_index\":173,\"description\":{\"121\":{}}}],[\"item\",{\"_index\":103,\"description\":{\"60\":{},\"142\":{},\"200\":{},\"333\":{},\"334\":{}}}],[\"justifi\",{\"_index\":344,\"description\":{\"287\":{}}}],[\"k9\",{\"_index\":49,\"description\":{\"25\":{},\"31\":{},\"32\":{}}}],[\"keep\",{\"_index\":205,\"description\":{\"142\":{},\"200\":{},\"228\":{},\"229\":{},\"285\":{}}}],[\"keyboard\",{\"_index\":104,\"description\":{\"61\":{},\"219\":{}}}],[\"kit\",{\"_index\":231,\"description\":{\"166\":{}}}],[\"label\",{\"_index\":184,\"description\":{\"129\":{},\"130\":{},\"141\":{},\"198\":{},\"199\":{},\"224\":{},\"240\":{},\"314\":{},\"323\":{},\"353\":{},\"359\":{},\"360\":{}}}],[\"larg\",{\"_index\":398,\"description\":{\"383\":{}}}],[\"launch\",{\"_index\":201,\"description\":{\"138\":{},\"139\":{}}}],[\"left\",{\"_index\":63,\"description\":{\"35\":{},\"257\":{},\"376\":{}}}],[\"length\",{\"_index\":368,\"description\":{\"320\":{}}}],[\"less\",{\"_index\":186,\"description\":{\"130\":{},\"199\":{},\"360\":{}}}],[\"level\",{\"_index\":223,\"description\":{\"159\":{},\"190\":{},\"333\":{}}}],[\"light\",{\"_index\":355,\"description\":{\"298\":{},\"301\":{},\"430\":{}}}],[\"limit\",{\"_index\":324,\"description\":{\"266\":{}}}],[\"line\",{\"_index\":21,\"description\":{\"9\":{}}}],[\"link\",{\"_index\":345,\"description\":{\"288\":{},\"289\":{},\"410\":{},\"423\":{}}}],[\"list\",{\"_index\":29,\"description\":{\"12\":{},\"48\":{},\"56\":{},\"99\":{}}}],[\"load\",{\"_index\":86,\"description\":{\"49\":{},\"81\":{},\"265\":{}}}],[\"loader\",{\"_index\":272,\"description\":{\"223\":{},\"237\":{},\"239\":{},\"264\":{},\"265\":{},\"266\":{},\"413\":{},\"414\":{}}}],[\"logic\",{\"_index\":19,\"description\":{\"8\":{}}}],[\"loup\",{\"_index\":306,\"description\":{\"254\":{},\"270\":{},\"322\":{}}}],[\"make\",{\"_index\":369,\"description\":{\"329\":{}}}],[\"manag\",{\"_index\":112,\"description\":{\"64\":{}}}],[\"mani\",{\"_index\":250,\"description\":{\"189\":{},\"408\":{}}}],[\"map\",{\"_index\":80,\"description\":{\"45\":{}}}],[\"mark\",{\"_index\":193,\"description\":{\"132\":{},\"145\":{},\"203\":{},\"225\":{},\"230\":{},\"234\":{},\"415\":{}}}],[\"maximum\",{\"_index\":212,\"description\":{\"151\":{}}}],[\"meet\",{\"_index\":364,\"description\":{\"317\":{}}}],[\"menu\",{\"_index\":102,\"description\":{\"60\":{},\"96\":{},\"142\":{},\"200\":{},\"306\":{},\"336\":{}}}],[\"messag\",{\"_index\":36,\"description\":{\"18\":{},\"63\":{},\"67\":{}}}],[\"meter\",{\"_index\":270,\"description\":{\"221\":{},\"223\":{},\"424\":{}}}],[\"miller\",{\"_index\":17,\"description\":{\"7\":{}}}],[\"mind\",{\"_index\":245,\"description\":{\"180\":{}}}],[\"minim\",{\"_index\":151,\"description\":{\"97\":{}}}],[\"minimum\",{\"_index\":179,\"description\":{\"126\":{},\"134\":{},\"148\":{},\"196\":{}}}],[\"minor\",{\"_index\":194,\"description\":{\"132\":{},\"145\":{},\"203\":{}}}],[\"mirror\",{\"_index\":295,\"description\":{\"242\":{},\"243\":{},\"244\":{},\"245\":{},\"246\":{},\"247\":{},\"248\":{}}}],[\"miss\",{\"_index\":321,\"description\":{\"263\":{}}}],[\"mix\",{\"_index\":181,\"description\":{\"128\":{},\"169\":{},\"311\":{},\"348\":{},\"367\":{},\"375\":{}}}],[\"mobil\",{\"_index\":51,\"description\":{\"26\":{},\"44\":{},\"279\":{},\"403\":{}}}],[\"modal\",{\"_index\":39,\"description\":{\"19\":{}}}],[\"mode\",{\"_index\":125,\"description\":{\"75\":{}}}],[\"modifi\",{\"_index\":247,\"description\":{\"182\":{}}}],[\"more\",{\"_index\":53,\"description\":{\"28\":{},\"81\":{},\"405\":{}}}],[\"motion\",{\"_index\":363,\"description\":{\"315\":{},\"443\":{}}}],[\"movement\",{\"_index\":301,\"description\":{\"245\":{}}}],[\"multi\",{\"_index\":128,\"description\":{\"77\":{}}}],[\"multilin\",{\"_index\":8,\"description\":{\"2\":{}}}],[\"multipl\",{\"_index\":407,\"description\":{\"407\":{}}}],[\"mutual\",{\"_index\":361,\"description\":{\"313\":{}}}],[\"name\",{\"_index\":284,\"description\":{\"233\":{}}}],[\"nav\",{\"_index\":64,\"description\":{\"35\":{}}}],[\"navig\",{\"_index\":4,\"description\":{\"1\":{},\"26\":{},\"36\":{},\"97\":{},\"194\":{},\"326\":{},\"334\":{},\"403\":{},\"428\":{}}}],[\"necessari\",{\"_index\":221,\"description\":{\"158\":{}}}],[\"need\",{\"_index\":381,\"description\":{\"361\":{}}}],[\"nest\",{\"_index\":253,\"description\":{\"191\":{},\"336\":{},\"398\":{}}}],[\"new\",{\"_index\":357,\"description\":{\"302\":{}}}],[\"notif\",{\"_index\":76,\"description\":{\"43\":{}}}],[\"number\",{\"_index\":313,\"description\":{\"259\":{},\"282\":{},\"283\":{},\"368\":{}}}],[\"numer\",{\"_index\":131,\"description\":{\"79\":{},\"258\":{},\"259\":{},\"282\":{}}}],[\"object\",{\"_index\":291,\"description\":{\"236\":{},\"442\":{}}}],[\"offic\",{\"_index\":169,\"description\":{\"116\":{}}}],[\"oldstyl\",{\"_index\":336,\"description\":{\"283\":{}}}],[\"on\",{\"_index\":405,\"description\":{\"405\":{}}}],[\"onboard\",{\"_index\":77,\"description\":{\"44\":{}}}],[\"opac\",{\"_index\":121,\"description\":{\"73\":{}}}],[\"option\",{\"_index\":196,\"description\":{\"132\":{},\"145\":{},\"160\":{},\"203\":{},\"313\":{},\"361\":{}}}],[\"order\",{\"_index\":216,\"description\":{\"153\":{}}}],[\"organ\",{\"_index\":60,\"description\":{\"34\":{}}}],[\"over\",{\"_index\":354,\"description\":{\"297\":{},\"403\":{}}}],[\"overflow\",{\"_index\":171,\"description\":{\"118\":{},\"119\":{},\"127\":{},\"135\":{},\"149\":{},\"150\":{},\"168\":{},\"187\":{},\"188\":{},\"197\":{},\"222\":{},\"226\":{},\"238\":{},\"299\":{},\"310\":{},\"328\":{},\"347\":{},\"358\":{},\"374\":{},\"380\":{},\"381\":{},\"386\":{},\"395\":{},\"396\":{},\"400\":{}}}],[\"overrid\",{\"_index\":220,\"description\":{\"157\":{}}}],[\"overus\",{\"_index\":393,\"description\":{\"372\":{}}}],[\"page\",{\"_index\":84,\"description\":{\"47\":{},\"194\":{}}}],[\"pagin\",{\"_index\":113,\"description\":{\"65\":{},\"99\":{},\"100\":{},\"101\":{}}}],[\"panel\",{\"_index\":56,\"description\":{\"31\":{},\"32\":{},\"94\":{},\"161\":{},\"181\":{},\"183\":{},\"184\":{},\"325\":{}}}],[\"paragraph\",{\"_index\":338,\"description\":{\"284\":{}}}],[\"partial\",{\"_index\":235,\"description\":{\"173\":{}}}],[\"pattern\",{\"_index\":139,\"description\":{\"89\":{}}}],[\"photo\",{\"_index\":15,\"description\":{\"6\":{}}}],[\"picker\",{\"_index\":99,\"description\":{\"57\":{},\"68\":{},\"69\":{},\"195\":{},\"196\":{},\"197\":{},\"198\":{},\"199\":{},\"200\":{},\"201\":{},\"202\":{},\"203\":{},\"422\":{}}}],[\"place\",{\"_index\":353,\"description\":{\"297\":{},\"371\":{},\"376\":{},\"393\":{},\"403\":{}}}],[\"placement\",{\"_index\":177,\"description\":{\"123\":{},\"357\":{},\"402\":{}}}],[\"platform\",{\"_index\":239,\"description\":{\"176\":{}}}],[\"player\",{\"_index\":90,\"description\":{\"52\":{}}}],[\"point\",{\"_index\":341,\"description\":{\"285\":{}}}],[\"pointer\",{\"_index\":135,\"description\":{\"82\":{}}}],[\"popov\",{\"_index\":32,\"description\":{\"15\":{},\"81\":{},\"137\":{},\"138\":{},\"139\":{},\"160\":{},\"276\":{},\"337\":{},\"345\":{},\"446\":{}}}],[\"positive/neg\",{\"_index\":386,\"description\":{\"363\":{}}}],[\"prefix\",{\"_index\":385,\"description\":{\"363\":{}}}],[\"presenc\",{\"_index\":142,\"description\":{\"91\":{}}}],[\"prevent\",{\"_index\":266,\"description\":{\"218\":{}}}],[\"principl\",{\"_index\":238,\"description\":{\"175\":{}}}],[\"product\",{\"_index\":158,\"description\":{\"107\":{}}}],[\"progress\",{\"_index\":271,\"description\":{\"221\":{},\"222\":{},\"223\":{},\"224\":{},\"237\":{},\"238\":{},\"239\":{},\"240\":{},\"264\":{},\"265\":{},\"266\":{},\"413\":{},\"414\":{},\"424\":{}}}],[\"provid\",{\"_index\":383,\"description\":{\"362\":{}}}],[\"quick\",{\"_index\":150,\"description\":{\"96\":{},\"110\":{},\"373\":{},\"377\":{},\"425\":{}}}],[\"radio\",{\"_index\":198,\"description\":{\"136\":{},\"309\":{},\"313\":{},\"314\":{},\"351\":{},\"426\":{}}}],[\"radiu\",{\"_index\":326,\"description\":{\"269\":{}}}],[\"rail\",{\"_index\":1,\"description\":{\"0\":{},\"181\":{}}}],[\"rang\",{\"_index\":98,\"description\":{\"57\":{}}}],[\"rate\",{\"_index\":387,\"description\":{\"364\":{},\"365\":{},\"366\":{},\"427\":{}}}],[\"reader\",{\"_index\":348,\"description\":{\"290\":{}}}],[\"rectangular\",{\"_index\":375,\"description\":{\"338\":{}}}],[\"redund\",{\"_index\":406,\"description\":{\"406\":{}}}],[\"relat\",{\"_index\":174,\"description\":{\"122\":{},\"353\":{}}}],[\"repres\",{\"_index\":297,\"description\":{\"243\":{},\"245\":{},\"246\":{}}}],[\"requir\",{\"_index\":197,\"description\":{\"132\":{},\"145\":{},\"203\":{},\"235\":{}}}],[\"respect\",{\"_index\":176,\"description\":{\"123\":{},\"153\":{},\"210\":{},\"260\":{},\"278\":{},\"281\":{}}}],[\"respons\",{\"_index\":242,\"description\":{\"178\":{},\"179\":{},\"445\":{}}}],[\"review\",{\"_index\":185,\"description\":{\"130\":{},\"199\":{},\"360\":{}}}],[\"right\",{\"_index\":311,\"description\":{\"258\":{},\"335\":{}}}],[\"rotat\",{\"_index\":107,\"description\":{\"62\":{}}}],[\"rtl\",{\"_index\":378,\"description\":{\"354\":{}}}],[\"rule\",{\"_index\":192,\"description\":{\"131\":{},\"144\":{},\"202\":{},\"281\":{},\"370\":{},\"371\":{},\"372\":{},\"421\":{}}}],[\"save\",{\"_index\":203,\"description\":{\"140\":{}}}],[\"scale\",{\"_index\":240,\"description\":{\"176\":{},\"207\":{},\"211\":{},\"278\":{},\"295\":{}}}],[\"scorecard\",{\"_index\":257,\"description\":{\"204\":{}}}],[\"screen\",{\"_index\":62,\"description\":{\"34\":{},\"40\":{},\"53\":{},\"54\":{},\"290\":{}}}],[\"scroll\",{\"_index\":44,\"description\":{\"23\":{}}}],[\"search\",{\"_index\":13,\"description\":{\"5\":{},\"30\":{},\"33\":{},\"80\":{}}}],[\"select\",{\"_index\":11,\"description\":{\"4\":{},\"77\":{},\"195\":{},\"196\":{},\"197\":{},\"198\":{},\"199\":{},\"200\":{},\"201\":{},\"202\":{},\"203\":{},\"255\":{},\"271\":{},\"324\":{},\"422\":{}}}],[\"sentenc\",{\"_index\":218,\"description\":{\"156\":{},\"332\":{}}}],[\"share\",{\"_index\":123,\"description\":{\"74\":{},\"75\":{},\"96\":{}}}],[\"sheet\",{\"_index\":124,\"description\":{\"74\":{}}}],[\"shell\",{\"_index\":48,\"description\":{\"24\":{}}}],[\"short\",{\"_index\":340,\"description\":{\"285\":{}}}],[\"shortcut\",{\"_index\":105,\"description\":{\"61\":{},\"377\":{}}}],[\"show\",{\"_index\":279,\"description\":{\"231\":{},\"362\":{}}}],[\"side\",{\"_index\":152,\"description\":{\"97\":{},\"326\":{},\"428\":{}}}],[\"size\",{\"_index\":157,\"description\":{\"106\":{},\"279\":{}}}],[\"skip\",{\"_index\":281,\"description\":{\"232\":{}}}],[\"slash\",{\"_index\":303,\"description\":{\"248\":{}}}],[\"slider\",{\"_index\":34,\"description\":{\"16\":{},\"319\":{},\"356\":{},\"417\":{},\"429\":{}}}],[\"small\",{\"_index\":322,\"description\":{\"266\":{}}}],[\"sourc\",{\"_index\":280,\"description\":{\"231\":{},\"274\":{},\"338\":{},\"339\":{},\"342\":{},\"343\":{}}}],[\"space\",{\"_index\":323,\"description\":{\"266\":{},\"341\":{}}}],[\"sparingli\",{\"_index\":318,\"description\":{\"262\":{},\"397\":{}}}],[\"spectrum\",{\"_index\":365,\"description\":{\"317\":{}}}],[\"split\",{\"_index\":43,\"description\":{\"22\":{},\"28\":{}}}],[\"squar\",{\"_index\":376,\"description\":{\"339\":{}}}],[\"standalon\",{\"_index\":234,\"description\":{\"171\":{},\"350\":{}}}],[\"standard\",{\"_index\":40,\"description\":{\"20\":{}}}],[\"star\",{\"_index\":390,\"description\":{\"368\":{}}}],[\"start\",{\"_index\":61,\"description\":{\"34\":{},\"124\":{}}}],[\"startscreen\",{\"_index\":130,\"description\":{\"78\":{}}}],[\"state\",{\"_index\":140,\"description\":{\"90\":{},\"173\":{},\"254\":{},\"270\":{},\"322\":{}}}],[\"statu\",{\"_index\":163,\"description\":{\"109\":{},\"165\":{},\"298\":{},\"301\":{},\"430\":{}}}],[\"steplist\",{\"_index\":148,\"description\":{\"95\":{}}}],[\"stepper\",{\"_index\":132,\"description\":{\"79\":{}}}],[\"string\",{\"_index\":337,\"description\":{\"283\":{}}}],[\"stripe\",{\"_index\":316,\"description\":{\"261\":{}}}],[\"structur\",{\"_index\":264,\"description\":{\"213\":{}}}],[\"style\",{\"_index\":211,\"description\":{\"151\":{},\"236\":{},\"442\":{}}}],[\"subsequ\",{\"_index\":227,\"description\":{\"160\":{}}}],[\"succinct\",{\"_index\":276,\"description\":{\"229\":{}}}],[\"suggest\",{\"_index\":204,\"description\":{\"140\":{}}}],[\"summari\",{\"_index\":126,\"description\":{\"76\":{}}}],[\"suppress\",{\"_index\":199,\"description\":{\"137\":{}}}],[\"switch\",{\"_index\":232,\"description\":{\"167\":{},\"171\":{},\"172\":{},\"352\":{},\"431\":{}}}],[\"system\",{\"_index\":360,\"description\":{\"307\":{},\"317\":{}}}],[\"tab\",{\"_index\":52,\"description\":{\"27\":{},\"98\":{},\"102\":{},\"185\":{},\"187\":{},\"189\":{},\"190\":{},\"191\":{},\"433\":{}}}],[\"tabl\",{\"_index\":229,\"description\":{\"165\":{},\"256\":{},\"432\":{}}}],[\"tabular\",{\"_index\":312,\"description\":{\"259\":{},\"282\":{}}}],[\"tag\",{\"_index\":16,\"description\":{\"6\":{},\"104\":{},\"105\":{},\"379\":{},\"381\":{},\"383\":{},\"434\":{}}}],[\"taken\",{\"_index\":290,\"description\":{\"235\":{}}}],[\"takeov\",{\"_index\":73,\"description\":{\"40\":{}}}],[\"taxonomi\",{\"_index\":37,\"description\":{\"18\":{}}}],[\"team\",{\"_index\":189,\"description\":{\"130\":{},\"199\":{},\"360\":{}}}],[\"templat\",{\"_index\":248,\"description\":{\"182\":{}}}],[\"text\",{\"_index\":5,\"description\":{\"2\":{},\"33\":{},\"103\":{},\"118\":{},\"125\":{},\"127\":{},\"132\":{},\"135\":{},\"149\":{},\"155\":{},\"168\":{},\"188\":{},\"197\":{},\"216\":{},\"217\":{},\"222\":{},\"226\":{},\"229\":{},\"238\":{},\"283\":{},\"287\":{},\"299\":{},\"301\":{},\"310\":{},\"328\":{},\"334\":{},\"347\":{},\"358\":{},\"361\":{},\"375\":{},\"380\":{},\"386\":{},\"395\":{},\"400\":{},\"435\":{}}}],[\"textual\",{\"_index\":309,\"description\":{\"257\":{}}}],[\"they'v\",{\"_index\":289,\"description\":{\"235\":{}}}],[\"thin\",{\"_index\":339,\"description\":{\"284\":{}}}],[\"think\",{\"_index\":347,\"description\":{\"290\":{}}}],[\"thumb\",{\"_index\":69,\"description\":{\"38\":{}}}],[\"thumbnail\",{\"_index\":96,\"description\":{\"56\":{},\"70\":{},\"85\":{}}}],[\"time\",{\"_index\":79,\"description\":{\"44\":{},\"68\":{},\"243\":{},\"246\":{}}}],[\"titl\",{\"_index\":274,\"description\":{\"228\":{},\"330\":{}}}],[\"toast\",{\"_index\":118,\"description\":{\"70\":{},\"399\":{},\"401\":{},\"403\":{},\"407\":{},\"408\":{},\"436\":{}}}],[\"token\",{\"_index\":228,\"description\":{\"163\":{}}}],[\"tone\",{\"_index\":350,\"description\":{\"291\":{}}}],[\"tool\",{\"_index\":145,\"description\":{\"93\":{},\"117\":{},\"118\":{},\"119\":{},\"120\":{},\"121\":{},\"122\":{},\"123\":{},\"249\":{},\"316\":{},\"412\":{},\"437\":{}}}],[\"tooltip\",{\"_index\":172,\"description\":{\"120\":{},\"385\":{},\"390\":{},\"393\":{},\"438\":{}}}],[\"top\",{\"_index\":222,\"description\":{\"159\":{}}}],[\"touch\",{\"_index\":159,\"description\":{\"108\":{}}}],[\"tour\",{\"_index\":282,\"description\":{\"232\":{},\"233\":{}}}],[\"track\",{\"_index\":91,\"description\":{\"53\":{},\"272\":{}}}],[\"transpar\",{\"_index\":167,\"description\":{\"114\":{}}}],[\"tray\",{\"_index\":329,\"description\":{\"273\":{},\"276\":{},\"345\":{},\"447\":{}}}],[\"tree\",{\"_index\":2,\"description\":{\"1\":{}}}],[\"truncat\",{\"_index\":207,\"description\":{\"143\":{}}}],[\"tutori\",{\"_index\":358,\"description\":{\"303\":{},\"304\":{},\"305\":{},\"306\":{},\"307\":{},\"308\":{}}}],[\"type\",{\"_index\":331,\"description\":{\"278\":{}}}],[\"typographi\",{\"_index\":330,\"description\":{\"277\":{},\"441\":{}}}],[\"ui\",{\"_index\":230,\"description\":{\"166\":{}}}],[\"underlin\",{\"_index\":333,\"description\":{\"280\":{}}}],[\"unifi\",{\"_index\":149,\"description\":{\"96\":{}}}],[\"unit\",{\"_index\":382,\"description\":{\"362\":{}}}],[\"up\",{\"_index\":66,\"description\":{\"35\":{}}}],[\"updat\",{\"_index\":146,\"description\":{\"93\":{},\"98\":{},\"104\":{},\"110\":{}}}],[\"upsel\",{\"_index\":93,\"description\":{\"54\":{}}}],[\"us\",{\"_index\":209,\"description\":{\"151\":{},\"155\":{},\"156\":{},\"158\":{},\"159\":{},\"171\":{},\"190\":{},\"192\":{},\"193\":{},\"209\":{},\"227\":{},\"231\":{},\"233\":{},\"259\":{},\"261\":{},\"262\":{},\"263\":{},\"265\":{},\"266\":{},\"272\":{},\"279\":{},\"280\":{},\"282\":{},\"283\":{},\"286\":{},\"289\":{},\"300\":{},\"313\":{},\"330\":{},\"332\":{},\"333\":{},\"335\":{},\"350\":{},\"377\":{},\"390\":{},\"397\":{}}}],[\"user\",{\"_index\":141,\"description\":{\"91\":{},\"235\":{}}}],[\"valu\",{\"_index\":182,\"description\":{\"128\":{},\"169\":{},\"263\":{},\"311\":{},\"348\":{},\"357\":{},\"362\":{},\"363\":{},\"367\":{}}}],[\"vari\",{\"_index\":251,\"description\":{\"190\":{}}}],[\"variant\",{\"_index\":54,\"description\":{\"28\":{}}}],[\"variat\",{\"_index\":25,\"description\":{\"10\":{},\"58\":{},\"300\":{},\"335\":{}}}],[\"vertic\",{\"_index\":314,\"description\":{\"260\":{}}}],[\"video\",{\"_index\":89,\"description\":{\"52\":{}}}],[\"view\",{\"_index\":3,\"description\":{\"1\":{},\"48\":{},\"51\":{},\"265\":{}}}],[\"voic\",{\"_index\":349,\"description\":{\"291\":{}}}],[\"warmup\",{\"_index\":400,\"description\":{\"389\":{}}}],[\"warn\",{\"_index\":100,\"description\":{\"58\":{}}}],[\"web\",{\"_index\":0,\"description\":{\"0\":{},\"71\":{},\"107\":{}}}],[\"well\",{\"_index\":10,\"description\":{\"3\":{}}}],[\"what'\",{\"_index\":356,\"description\":{\"302\":{}}}],[\"wheel\",{\"_index\":325,\"description\":{\"268\":{},\"418\":{}}}],[\"width\",{\"_index\":180,\"description\":{\"126\":{},\"134\":{},\"147\":{},\"148\":{},\"196\":{},\"201\":{},\"227\":{},\"252\":{},\"284\":{},\"327\":{},\"329\":{}}}],[\"within\",{\"_index\":14,\"description\":{\"5\":{},\"153\":{},\"233\":{}}}],[\"wrap\",{\"_index\":395,\"description\":{\"378\":{}}}],[\"xd\",{\"_index\":59,\"description\":{\"34\":{}}}],[\"zebra\",{\"_index\":315,\"description\":{\"261\":{}}}],[\"zone\",{\"_index\":27,\"description\":{\"11\":{}}}]],\"pipeline\":[\"stemmer\"]}");
+module.exports = JSON.parse("{\"version\":\"2.3.7\",\"fields\":[\"name\",\"description\"],\"fieldVectors\":[[\"name/accordion\",[0,40.116]],[\"description/accordion\",[0,1.295,1,1.489,2,1.489,3,1.489,4,1.489,5,1.489,6,1.489,7,1.168,8,1.489,9,2.541,10,1.489,11,1.489,12,1.489,13,1.489,14,1.489,15,1.489,16,1.489,17,1.295,18,1.489,19,1.295,20,1.489,21,1.168]],[\"name/actionbar\",[22,17.823,23,27.651]],[\"description/actionbar\",[22,1.768,23,2.743,24,3.495,25,3.495,26,2.52,27,3.495]],[\"name/actionbutton\",[22,17.823,28,11.006]],[\"description/actionbutton\",[]],[\"name/actionmenu\",[22,17.823,29,27.651]],[\"description/actionmenu\",[17,1.441,22,1.407,26,1.194,28,0.869,29,2.821,30,1.441,31,1.441,32,2.183,33,1.194,34,1.194,35,1.441,36,1.656,37,1.656,38,1.656,39,1.656]],[\"name/alert\",[40,46.095]],[\"description/alert\",[]],[\"name/asset\",[41,30.888]],[\"description/asset\",[]],[\"name/assetlist\",[41,23.608,42,23.608]],[\"description/assetlist\",[26,2.335,41,2.17,42,2.17,43,1.638,44,3.238,45,2.818,46,2.818]],[\"name/avatar\",[47,46.095]],[\"description/avatar\",[]],[\"name/banner\",[48,46.095]],[\"description/banner\",[]],[\"name/barloader\",[23,27.651,49,30.661]],[\"description/barloader\",[]],[\"name/breadcrumb\",[50,46.095]],[\"description/breadcrumb\",[]],[\"name/button-cta\",[28,11.006,51,35.231]],[\"description/button-cta\",[22,2.055,28,0.829,52,2.653,53,2.653,54,2.653,55,1.913,56,2.653,57,2.653,58,2.653]],[\"name/button-over-background\",[28,8.906,59,24.813,60,24.813]],[\"description/button-over-background\",[7,1.061,28,1.15,43,0.684,59,1.176,60,2.69,61,1.352,62,2.035,63,1.352,64,2.338,65,1.352,66,1.061,67,1.352,68,1.176,69,1.352,70,1.176,71,1.176,72,1.176,73,1.352,74,1.352]],[\"name/button-primary\",[28,11.006,75,30.661]],[\"description/button-primary\",[28,1.186,43,1.92,55,2.737,75,3.303,76,3.796]],[\"name/button-secondary\",[28,11.006,77,30.661]],[\"description/button-secondary\",[28,1.297,55,2.995,77,3.614,78,4.153]],[\"name/button-warning\",[28,11.006,79,35.231]],[\"description/button-warning\",[22,1.638,28,1.012,55,2.335,80,4.714,81,3.238,82,3.238]],[\"name/buttongroup\",[28,11.006,83,25.403]],[\"description/buttongroup\",[]],[\"name/calendar\",[84,46.095]],[\"description/calendar\",[]],[\"name/card-asset\",[41,19.105,85,19.105,86,24.813]],[\"description/card-asset\",[41,2.342,85,2.342,86,3.041,87,3.041,88,3.495,89,3.041]],[\"name/card-gallery\",[85,23.608,90,30.661]],[\"description/card-gallery\",[85,3.072,90,3.99,91,4.585]],[\"name/card\",[85,30.888]],[\"description/card\",[]],[\"name/checkbox\",[92,36.178]],[\"description/checkbox\",[21,1.678,26,2.473,42,1.433,92,1.678,93,2.138,94,2.138,95,4.295,96,3.43,97,1.861,98,2.138]],[\"name/circleloader\",[49,30.661,99,35.231]],[\"description/circleloader\",[]],[\"name/clearbutton\",[28,11.006,100,35.231]],[\"description/clearbutton\",[43,2.32,101,3.599,102,3.306]],[\"name/coachmark\",[97,30.661,103,35.231]],[\"description/coachmark\",[]],[\"name/combobox\",[104,46.095]],[\"description/combobox\",[]],[\"name/cyclebutton\",[28,11.006,105,35.231]],[\"description/cyclebutton\",[]],[\"name/datepicker\",[106,30.661,107,30.661]],[\"description/datepicker\",[28,0.829,43,1.342,83,1.913,106,2.309,107,2.309,108,2.082,109,2.082,110,2.309,111,1.173,112,2.653]],[\"name/decoratedtextfield\",[111,12.604,113,16.86,114,28.511]],[\"description/decoratedtextfield\",[66,1.859,89,2.061,111,1.047,113,1.4,115,1.708,116,2.368,117,3.72,118,2.368,119,2.368,120,2.061,121,2.368]],[\"name/dial\",[122,40.116]],[\"description/dial\",[122,3.614,123,4.153,124,4.153,125,4.153]],[\"name/dialog\",[126,36.178]],[\"description/dialog\",[34,1.194,35,1.441,66,1.3,72,1.441,126,2.821,127,1.656,128,1.656,129,1.656,130,1.656,131,1.656,132,2.781,133,1.441,134,1.656,135,1.441,136,1.656,137,1.656,138,1.656]],[\"name/dropdown\",[139,46.095]],[\"description/dropdown\",[]],[\"name/dropindicator\",[140,27.651,141,30.661]],[\"description/dropindicator\",[42,2.021,43,1.526,120,2.625,140,2.367,141,2.625,142,3.016,143,3.016,144,2.625]],[\"name/dropzone\",[145,46.095]],[\"description/dropzone\",[19,0.968,21,0.873,22,0.563,30,0.968,43,0.563,87,0.968,126,0.873,140,2.885,146,2.656,147,0.968,148,1.113,149,1.113,150,1.113,151,1.113,152,0.968,153,1.113,154,1.113,155,1.113,156,1.716,157,1.113,158,1.113,159,1.113,160,1.113,161,1.113,162,1.113,163,1.113]],[\"name/fieldgroup\",[83,25.403,111,15.575]],[\"description/fieldgroup\",[83,2.737,92,2.979,111,1.678,164,3.796,165,3.303]],[\"name/fieldlabel\",[111,15.575,166,27.651]],[\"description/fieldlabel\",[43,1.92,108,2.979,111,1.678,166,2.979,167,2.979]],[\"name/form\",[167,36.178]],[\"description/form\",[111,1.545,167,3.909,168,3.495,169,3.495,170,3.495]],[\"name/illustratedmessage\",[171,35.231,172,35.231]],[\"description/illustratedmessage\",[]],[\"name/label\",[166,36.178]],[\"description/label\",[]],[\"name/link\",[173,46.095]],[\"description/link\",[]],[\"name/logicbutton\",[28,11.006,174,35.231]],[\"description/logicbutton\",[28,1.186,175,3.796,176,3.796,177,3.796,178,3.796]],[\"name/menu\",[29,36.178]],[\"description/menu\",[]],[\"name/meter\",[179,40.116]],[\"description/meter\",[7,2.979,43,1.92,109,2.979,179,3.303,180,3.796]],[\"name/miller\",[45,30.661,46,30.661]],[\"description/miller\",[]],[\"name/page\",[181,36.178]],[\"description/page\",[33,2.235,43,0.955,68,0.922,70,2.222,102,1.841,115,2.235,133,0.922,156,0.922,181,0.831,182,1.059,183,0.922,184,1.059,185,1.059,186,1.059,187,1.059,188,1.059,189,1.059,190,0.922,191,1.059,192,1.059,193,1.888,194,1.059,195,1.059]],[\"name/pagination-button-style\",[28,8.906,196,22.377,197,24.813]],[\"description/pagination-button-style\",[]],[\"name/pagination-explicit\",[196,27.651,198,35.231]],[\"description/pagination-explicit\",[]],[\"name/pagination-listing\",[181,27.651,196,27.651]],[\"description/pagination-listing\",[]],[\"name/popover\",[31,40.116]],[\"description/popover\",[]],[\"name/quickaction\",[22,17.823,199,30.661]],[\"description/quickaction\",[22,0.944,28,0.583,32,1.465,33,2.215,34,1.346,62,1.625,110,1.625,113,1.104,115,2.215,183,1.625,199,1.625,200,3.072,201,1.867,202,1.867]],[\"name/radio\",[165,40.116]],[\"description/radio\",[]],[\"name/rating\",[203,46.095]],[\"description/rating\",[]],[\"name/rule\",[204,46.095]],[\"description/rule\",[]],[\"name/search\",[101,36.178]],[\"description/search\",[111,2.027,205,4.585,206,4.585]],[\"name/searchwithin\",[101,27.651,207,35.231]],[\"description/searchwithin\",[109,3.26,208,4.153,209,4.153,210,4.153]],[\"name/sidenav\",[211,35.231,212,35.231]],[\"description/sidenav\",[]],[\"name/slider\",[213,46.095]],[\"description/slider\",[]],[\"name/splitbutton\",[28,11.006,214,35.231]],[\"description/splitbutton\",[]],[\"name/splitview\",[215,46.095]],[\"description/splitview\",[]],[\"name/statuslight\",[190,30.661,216,35.231]],[\"description/statuslight\",[]],[\"name/steplist\",[217,46.095]],[\"description/steplist\",[]],[\"name/stepper\",[218,40.116]],[\"description/stepper\",[32,1.465,33,1.346,34,1.346,108,1.465,111,0.825,197,1.625,218,1.625,219,1.867,220,3.072,221,1.867,222,1.867,223,1.867,224,1.867,225,1.867,226,1.867,227,1.867]],[\"name/table\",[144,40.116]],[\"description/table\",[]],[\"name/tabs\",[228,46.095]],[\"description/tabs\",[]],[\"name/tags\",[102,33.237]],[\"description/tags\",[42,3.429,102,3.69]],[\"name/textarea\",[113,20.833,147,30.661]],[\"description/textarea\",[111,1.836,113,2.456,229,4.153,230,4.153]],[\"name/textfield\",[111,15.575,113,20.833]],[\"description/textfield\",[111,2.027,113,2.711,115,3.306]],[\"name/toast\",[231,46.095]],[\"description/toast\",[]],[\"name/toggle\",[232,46.095]],[\"description/toggle\",[]],[\"name/tool\",[233,40.116]],[\"description/tool\",[28,1.599,233,4.454]],[\"name/tooltip\",[234,46.095]],[\"description/tooltip\",[]],[\"name/treeview\",[235,35.231,236,35.231]],[\"description/treeview\",[]],[\"name/typography-deprecated\",[237,23.608,238,35.231]],[\"description/typography-deprecated\",[71,3.99,237,3.072,239,4.585]],[\"name/typography-international\",[237,23.608,240,35.231]],[\"description/typography-international\",[]],[\"name/typography\",[237,30.888]],[\"description/typography\",[135,2.178,152,4.142,237,2.602,241,2.503,242,2.503,243,2.503,244,2.503,245,2.503]],[\"name/well\",[246,46.095]],[\"description/well\",[]]],\"invertedIndex\":[[\"1.1\",{\"_index\":10,\"name\":{},\"description\":{\"accordion\":{}}}],[\"1.1/#accordion\",{\"_index\":14,\"name\":{},\"description\":{\"accordion\":{}}}],[\"11\",{\"_index\":125,\"name\":{},\"description\":{\"dial\":{}}}],[\"18px\",{\"_index\":119,\"name\":{},\"description\":{\"decoratedtextfield\":{}}}],[\"access\",{\"_index\":17,\"name\":{},\"description\":{\"accordion\":{},\"actionmenu\":{}}}],[\"accomplish\",{\"_index\":150,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"accordion\",{\"_index\":0,\"name\":{\"accordion\":{}},\"description\":{\"accordion\":{}}}],[\"action\",{\"_index\":22,\"name\":{\"actionbar\":{},\"actionbutton\":{},\"actionmenu\":{},\"quickaction\":{}},\"description\":{\"actionbar\":{},\"actionmenu\":{},\"button-cta\":{},\"button-warning\":{},\"dropzone\":{},\"quickaction\":{}}}],[\"actual\",{\"_index\":227,\"name\":{},\"description\":{\"stepper\":{}}}],[\"addit\",{\"_index\":116,\"name\":{},\"description\":{\"decoratedtextfield\":{}}}],[\"against\",{\"_index\":74,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"alert\",{\"_index\":40,\"name\":{\"alert\":{}},\"description\":{}}],[\"allow\",{\"_index\":93,\"name\":{},\"description\":{\"checkbox\":{}}}],[\"and/or\",{\"_index\":177,\"name\":{},\"description\":{\"logicbutton\":{}}}],[\"appear\",{\"_index\":25,\"name\":{},\"description\":{\"actionbar\":{}}}],[\"appli\",{\"_index\":34,\"name\":{},\"description\":{\"actionmenu\":{},\"dialog\":{},\"quickaction\":{},\"stepper\":{}}}],[\"arab\",{\"_index\":245,\"name\":{},\"description\":{\"typography\":{}}}],[\"area\",{\"_index\":147,\"name\":{\"textarea\":{}},\"description\":{\"dropzone\":{}}}],[\"aria\",{\"_index\":9,\"name\":{},\"description\":{\"accordion\":{}}}],[\"asset\",{\"_index\":41,\"name\":{\"asset\":{},\"assetlist\":{},\"card-asset\":{}},\"description\":{\"assetlist\":{},\"card-asset\":{}}}],[\"avatar\",{\"_index\":47,\"name\":{\"avatar\":{}},\"description\":{}}],[\"avoid\",{\"_index\":127,\"name\":{},\"description\":{\"dialog\":{}}}],[\"background\",{\"_index\":60,\"name\":{\"button-over-background\":{}},\"description\":{\"button-over-background\":{}}}],[\"backward\",{\"_index\":2,\"name\":{},\"description\":{\"accordion\":{}}}],[\"banner\",{\"_index\":48,\"name\":{\"banner\":{}},\"description\":{}}],[\"bar\",{\"_index\":23,\"name\":{\"actionbar\":{},\"barloader\":{}},\"description\":{\"actionbar\":{}}}],[\"barload\",{\"_index\":180,\"name\":{},\"description\":{\"meter\":{}}}],[\"below\",{\"_index\":221,\"name\":{},\"description\":{\"stepper\":{}}}],[\"better\",{\"_index\":15,\"name\":{},\"description\":{\"accordion\":{}}}],[\"between\",{\"_index\":176,\"name\":{},\"description\":{\"logicbutton\":{}}}],[\"blurri\",{\"_index\":128,\"name\":{},\"description\":{\"dialog\":{}}}],[\"both\",{\"_index\":133,\"name\":{},\"description\":{\"dialog\":{},\"page\":{}}}],[\"breadcrumb\",{\"_index\":50,\"name\":{\"breadcrumb\":{}},\"description\":{}}],[\"button\",{\"_index\":28,\"name\":{\"actionbutton\":{},\"button-cta\":{},\"button-over-background\":{},\"button-primary\":{},\"button-secondary\":{},\"button-warning\":{},\"buttongroup\":{},\"clearbutton\":{},\"cyclebutton\":{},\"logicbutton\":{},\"pagination-button-style\":{},\"splitbutton\":{}},\"description\":{\"actionmenu\":{},\"button-cta\":{},\"button-over-background\":{},\"button-primary\":{},\"button-secondary\":{},\"button-warning\":{},\"datepicker\":{},\"logicbutton\":{},\"quickaction\":{},\"tool\":{}}}],[\"calendar\",{\"_index\":84,\"name\":{\"calendar\":{}},\"description\":{}}],[\"call\",{\"_index\":52,\"name\":{},\"description\":{\"button-cta\":{}}}],[\"card\",{\"_index\":85,\"name\":{\"card-asset\":{},\"card-gallery\":{},\"card\":{}},\"description\":{\"card-asset\":{},\"card-gallery\":{}}}],[\"checkbox\",{\"_index\":92,\"name\":{\"checkbox\":{}},\"description\":{\"checkbox\":{},\"fieldgroup\":{}}}],[\"choos\",{\"_index\":163,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"circl\",{\"_index\":99,\"name\":{\"circleloader\":{}},\"description\":{}}],[\"class\",{\"_index\":33,\"name\":{},\"description\":{\"actionmenu\":{},\"page\":{},\"quickaction\":{},\"stepper\":{}}}],[\"class=\\\"spectrum\",{\"_index\":131,\"name\":{},\"description\":{\"dialog\":{}}}],[\"clear\",{\"_index\":100,\"name\":{\"clearbutton\":{}},\"description\":{}}],[\"cleari\",{\"_index\":206,\"name\":{},\"description\":{\"search\":{}}}],[\"click\",{\"_index\":178,\"name\":{},\"description\":{\"logicbutton\":{}}}],[\"coach\",{\"_index\":103,\"name\":{\"coachmark\":{}},\"description\":{}}],[\"color\",{\"_index\":64,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"colorstop\",{\"_index\":187,\"name\":{},\"description\":{\"page\":{}}}],[\"column\",{\"_index\":46,\"name\":{\"miller\":{}},\"description\":{\"assetlist\":{}}}],[\"combobox\",{\"_index\":104,\"name\":{\"combobox\":{}},\"description\":{}}],[\"commun\",{\"_index\":53,\"name\":{},\"description\":{\"button-cta\":{}}}],[\"compat\",{\"_index\":3,\"name\":{},\"description\":{\"accordion\":{}}}],[\"compon\",{\"_index\":109,\"name\":{},\"description\":{\"datepicker\":{},\"meter\":{},\"searchwithin\":{}}}],[\"contain\",{\"_index\":183,\"name\":{},\"description\":{\"page\":{},\"quickaction\":{}}}],[\"correct\",{\"_index\":224,\"name\":{},\"description\":{\"stepper\":{}}}],[\"correctli\",{\"_index\":121,\"name\":{},\"description\":{\"decoratedtextfield\":{}}}],[\"correspond\",{\"_index\":186,\"name\":{},\"description\":{\"page\":{}}}],[\"critic\",{\"_index\":58,\"name\":{},\"description\":{\"button-cta\":{}}}],[\"css\",{\"_index\":68,\"name\":{},\"description\":{\"button-over-background\":{},\"page\":{}}}],[\"cta\",{\"_index\":51,\"name\":{\"button-cta\":{}},\"description\":{}}],[\"cursor\",{\"_index\":226,\"name\":{},\"description\":{\"stepper\":{}}}],[\"cycl\",{\"_index\":105,\"name\":{\"cyclebutton\":{}},\"description\":{}}],[\"date\",{\"_index\":106,\"name\":{\"datepicker\":{}},\"description\":{\"datepicker\":{}}}],[\"decor\",{\"_index\":114,\"name\":{\"decoratedtextfield\":{}},\"description\":{}}],[\"demonstr\",{\"_index\":138,\"name\":{},\"description\":{\"dialog\":{}}}],[\"deprec\",{\"_index\":238,\"name\":{\"typography-deprecated\":{}},\"description\":{}}],[\"design\",{\"_index\":11,\"name\":{},\"description\":{\"accordion\":{}}}],[\"destruct\",{\"_index\":82,\"name\":{},\"description\":{\"button-warning\":{}}}],[\"dial\",{\"_index\":122,\"name\":{\"dial\":{}},\"description\":{\"dial\":{}}}],[\"dialog\",{\"_index\":126,\"name\":{\"dialog\":{}},\"description\":{\"dialog\":{},\"dropzone\":{}}}],[\"diff\",{\"_index\":194,\"name\":{},\"description\":{\"page\":{}}}],[\"differ\",{\"_index\":37,\"name\":{},\"description\":{\"actionmenu\":{}}}],[\"display\",{\"_index\":110,\"name\":{},\"description\":{\"datepicker\":{},\"quickaction\":{}}}],[\"div\",{\"_index\":130,\"name\":{},\"description\":{\"dialog\":{}}}],[\"don't\",{\"_index\":222,\"name\":{},\"description\":{\"stepper\":{}}}],[\"drag\",{\"_index\":149,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"drop\",{\"_index\":140,\"name\":{\"dropindicator\":{}},\"description\":{\"dropindicator\":{},\"dropzone\":{}}}],[\"dropdown\",{\"_index\":139,\"name\":{\"dropdown\":{}},\"description\":{}}],[\"dropzon\",{\"_index\":145,\"name\":{\"dropzone\":{}},\"description\":{}}],[\"effici\",{\"_index\":160,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"element\",{\"_index\":71,\"name\":{},\"description\":{\"button-over-background\":{},\"typography-deprecated\":{}}}],[\"emphasi\",{\"_index\":55,\"name\":{},\"description\":{\"button-cta\":{},\"button-primary\":{},\"button-secondary\":{},\"button-warning\":{}}}],[\"enabl\",{\"_index\":155,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"encourag\",{\"_index\":57,\"name\":{},\"description\":{\"button-cta\":{}}}],[\"english\",{\"_index\":241,\"name\":{},\"description\":{\"typography\":{}}}],[\"exampl\",{\"_index\":152,\"name\":{},\"description\":{\"dropzone\":{},\"typography\":{}}}],[\"example](dialogalert.html\",{\"_index\":136,\"name\":{},\"description\":{\"dialog\":{}}}],[\"explicit\",{\"_index\":198,\"name\":{\"pagination-explicit\":{}},\"description\":{}}],[\"field\",{\"_index\":111,\"name\":{\"decoratedtextfield\":{},\"fieldgroup\":{},\"fieldlabel\":{},\"textfield\":{}},\"description\":{\"datepicker\":{},\"decoratedtextfield\":{},\"fieldgroup\":{},\"fieldlabel\":{},\"form\":{},\"search\":{},\"stepper\":{},\"textarea\":{},\"textfield\":{}}}],[\"file\",{\"_index\":156,\"name\":{},\"description\":{\"dropzone\":{},\"page\":{}}}],[\"final\",{\"_index\":191,\"name\":{},\"description\":{\"page\":{}}}],[\"float\",{\"_index\":24,\"name\":{},\"description\":{\"actionbar\":{}}}],[\"focus\",{\"_index\":220,\"name\":{},\"description\":{\"stepper\":{}}}],[\"form\",{\"_index\":167,\"name\":{\"form\":{}},\"description\":{\"fieldlabel\":{},\"form\":{}}}],[\"full\",{\"_index\":88,\"name\":{},\"description\":{\"card-asset\":{}}}],[\"galleri\",{\"_index\":90,\"name\":{\"card-gallery\":{}},\"description\":{\"card-gallery\":{}}}],[\"group\",{\"_index\":83,\"name\":{\"buttongroup\":{},\"fieldgroup\":{}},\"description\":{\"datepicker\":{},\"fieldgroup\":{}}}],[\"han\",{\"_index\":244,\"name\":{},\"description\":{\"typography\":{}}}],[\"high\",{\"_index\":81,\"name\":{},\"description\":{\"button-warning\":{}}}],[\"i.\",{\"_index\":189,\"name\":{},\"description\":{\"page\":{}}}],[\"icon\",{\"_index\":117,\"name\":{},\"description\":{\"decoratedtextfield\":{}}}],[\"illustr\",{\"_index\":171,\"name\":{\"illustratedmessage\":{}},\"description\":{}}],[\"imag\",{\"_index\":91,\"name\":{},\"description\":{\"card-gallery\":{}}}],[\"implement\",{\"_index\":7,\"name\":{},\"description\":{\"accordion\":{},\"button-over-background\":{},\"meter\":{}}}],[\"indic\",{\"_index\":141,\"name\":{\"dropindicator\":{}},\"description\":{\"dropindicator\":{}}}],[\"individu\",{\"_index\":96,\"name\":{},\"description\":{\"checkbox\":{}}}],[\"input\",{\"_index\":108,\"name\":{},\"description\":{\"datepicker\":{},\"fieldlabel\":{},\"stepper\":{}}}],[\"insert\",{\"_index\":143,\"name\":{},\"description\":{\"dropindicator\":{}}}],[\"insid\",{\"_index\":44,\"name\":{},\"description\":{\"assetlist\":{}}}],[\"internation\",{\"_index\":240,\"name\":{\"typography-international\":{}},\"description\":{}}],[\"intuit\",{\"_index\":161,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"item\",{\"_index\":95,\"name\":{},\"description\":{\"checkbox\":{}}}],[\"japanes\",{\"_index\":243,\"name\":{},\"description\":{\"typography\":{}}}],[\"keyboard\",{\"_index\":18,\"name\":{},\"description\":{\"accordion\":{}}}],[\"label\",{\"_index\":166,\"name\":{\"fieldlabel\":{},\"label\":{}},\"description\":{\"fieldlabel\":{}}}],[\"larg\",{\"_index\":193,\"name\":{},\"description\":{\"page\":{}}}],[\"legaci\",{\"_index\":239,\"name\":{},\"description\":{\"typography-deprecated\":{}}}],[\"light\",{\"_index\":190,\"name\":{\"statuslight\":{}},\"description\":{\"page\":{}}}],[\"line\",{\"_index\":230,\"name\":{},\"description\":{\"textarea\":{}}}],[\"link\",{\"_index\":173,\"name\":{\"link\":{}},\"description\":{}}],[\"list\",{\"_index\":42,\"name\":{\"assetlist\":{}},\"description\":{\"assetlist\":{},\"checkbox\":{},\"dropindicator\":{},\"tags\":{}}}],[\"loader\",{\"_index\":49,\"name\":{\"barloader\":{},\"circleloader\":{}},\"description\":{}}],[\"logic\",{\"_index\":174,\"name\":{\"logicbutton\":{}},\"description\":{}}],[\"look\",{\"_index\":223,\"name\":{},\"description\":{\"stepper\":{}}}],[\"low\",{\"_index\":78,\"name\":{},\"description\":{\"button-secondary\":{}}}],[\"manual\",{\"_index\":219,\"name\":{},\"description\":{\"stepper\":{}}}],[\"mark\",{\"_index\":97,\"name\":{\"coachmark\":{}},\"description\":{\"checkbox\":{}}}],[\"markup\",{\"_index\":5,\"name\":{},\"description\":{\"accordion\":{}}}],[\"medium\",{\"_index\":76,\"name\":{},\"description\":{\"button-primary\":{}}}],[\"menu\",{\"_index\":29,\"name\":{\"actionmenu\":{},\"menu\":{}},\"description\":{\"actionmenu\":{}}}],[\"messag\",{\"_index\":172,\"name\":{\"illustratedmessage\":{}},\"description\":{}}],[\"meter\",{\"_index\":179,\"name\":{\"meter\":{}},\"description\":{\"meter\":{}}}],[\"miller\",{\"_index\":45,\"name\":{\"miller\":{}},\"description\":{\"assetlist\":{}}}],[\"mode\",{\"_index\":27,\"name\":{},\"description\":{\"actionbar\":{}}}],[\"more\",{\"_index\":159,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"multi\",{\"_index\":229,\"name\":{},\"description\":{\"textarea\":{}}}],[\"multipl\",{\"_index\":94,\"name\":{},\"description\":{\"checkbox\":{}}}],[\"multistop\",{\"_index\":185,\"name\":{},\"description\":{\"page\":{}}}],[\"navig\",{\"_index\":212,\"name\":{\"sidenav\":{}},\"description\":{}}],[\"necessari\",{\"_index\":210,\"name\":{},\"description\":{\"searchwithin\":{}}}],[\"need\",{\"_index\":61,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"neg\",{\"_index\":80,\"name\":{},\"description\":{\"button-warning\":{}}}],[\"next\",{\"_index\":112,\"name\":{},\"description\":{\"datepicker\":{}}}],[\"normal\",{\"_index\":39,\"name\":{},\"description\":{\"actionmenu\":{}}}],[\"note\",{\"_index\":32,\"name\":{},\"description\":{\"actionmenu\":{},\"quickaction\":{},\"stepper\":{}}}],[\"object\",{\"_index\":148,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"on\",{\"_index\":98,\"name\":{},\"description\":{\"checkbox\":{}}}],[\"open\",{\"_index\":35,\"name\":{},\"description\":{\"actionmenu\":{},\"dialog\":{}}}],[\"oper\",{\"_index\":157,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"order\",{\"_index\":66,\"name\":{},\"description\":{\"button-over-background\":{},\"decoratedtextfield\":{},\"dialog\":{}}}],[\"outer\",{\"_index\":182,\"name\":{},\"description\":{\"page\":{}}}],[\"over\",{\"_index\":59,\"name\":{\"button-over-background\":{}},\"description\":{\"button-over-background\":{}}}],[\"overlay\",{\"_index\":201,\"name\":{},\"description\":{\"quickaction\":{}}}],[\"overrid\",{\"_index\":208,\"name\":{},\"description\":{\"searchwithin\":{}}}],[\"page\",{\"_index\":181,\"name\":{\"page\":{},\"pagination-listing\":{}},\"description\":{\"page\":{}}}],[\"page](typography.html\",{\"_index\":242,\"name\":{},\"description\":{\"typography\":{}}}],[\"pagin\",{\"_index\":196,\"name\":{\"pagination-button-style\":{},\"pagination-explicit\":{},\"pagination-listing\":{}},\"description\":{}}],[\"parent\",{\"_index\":70,\"name\":{},\"description\":{\"button-over-background\":{},\"page\":{}}}],[\"pattern](https://www.w3.org/tr/wai\",{\"_index\":12,\"name\":{},\"description\":{\"accordion\":{}}}],[\"picker\",{\"_index\":107,\"name\":{\"datepicker\":{}},\"description\":{\"datepicker\":{}}}],[\"place\",{\"_index\":62,\"name\":{},\"description\":{\"button-over-background\":{},\"quickaction\":{}}}],[\"popov\",{\"_index\":31,\"name\":{\"popover\":{}},\"description\":{\"actionmenu\":{}}}],[\"posit\",{\"_index\":120,\"name\":{},\"description\":{\"decoratedtextfield\":{},\"dropindicator\":{}}}],[\"practic\",{\"_index\":13,\"name\":{},\"description\":{\"accordion\":{}}}],[\"preview\",{\"_index\":86,\"name\":{\"card-asset\":{}},\"description\":{\"card-asset\":{}}}],[\"primari\",{\"_index\":75,\"name\":{\"button-primary\":{}},\"description\":{\"button-primary\":{}}}],[\"properti\",{\"_index\":69,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"provid\",{\"_index\":168,\"name\":{},\"description\":{\"form\":{}}}],[\"quick\",{\"_index\":199,\"name\":{\"quickaction\":{}},\"description\":{\"quickaction\":{}}}],[\"quickact\",{\"_index\":200,\"name\":{},\"description\":{\"quickaction\":{}}}],[\"radio\",{\"_index\":165,\"name\":{\"radio\":{}},\"description\":{\"fieldgroup\":{}}}],[\"rate\",{\"_index\":203,\"name\":{\"rating\":{}},\"description\":{}}],[\"reader\",{\"_index\":20,\"name\":{},\"description\":{\"accordion\":{}}}],[\"recommend\",{\"_index\":4,\"name\":{},\"description\":{\"accordion\":{}}}],[\"remain\",{\"_index\":1,\"name\":{},\"description\":{\"accordion\":{}}}],[\"reserv\",{\"_index\":56,\"name\":{},\"description\":{\"button-cta\":{}}}],[\"role\",{\"_index\":36,\"name\":{},\"description\":{\"actionmenu\":{}}}],[\"rule\",{\"_index\":204,\"name\":{\"rule\":{}},\"description\":{}}],[\"same\",{\"_index\":72,\"name\":{},\"description\":{\"button-over-background\":{},\"dialog\":{}}}],[\"scale\",{\"_index\":192,\"name\":{},\"description\":{\"page\":{}}}],[\"screen\",{\"_index\":19,\"name\":{},\"description\":{\"accordion\":{},\"dropzone\":{}}}],[\"search\",{\"_index\":101,\"name\":{\"search\":{},\"searchwithin\":{}},\"description\":{\"clearbutton\":{}}}],[\"searchi\",{\"_index\":205,\"name\":{},\"description\":{\"search\":{}}}],[\"secondari\",{\"_index\":77,\"name\":{\"button-secondary\":{}},\"description\":{\"button-secondary\":{}}}],[\"see\",{\"_index\":135,\"name\":{},\"description\":{\"dialog\":{},\"typography\":{}}}],[\"select\",{\"_index\":26,\"name\":{},\"description\":{\"actionbar\":{},\"actionmenu\":{},\"assetlist\":{},\"checkbox\":{}}}],[\"set\",{\"_index\":67,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"show\",{\"_index\":142,\"name\":{},\"description\":{\"dropindicator\":{}}}],[\"side\",{\"_index\":211,\"name\":{\"sidenav\":{}},\"description\":{}}],[\"simpli\",{\"_index\":30,\"name\":{},\"description\":{\"actionmenu\":{},\"dropzone\":{}}}],[\"size\",{\"_index\":89,\"name\":{},\"description\":{\"card-asset\":{},\"decoratedtextfield\":{}}}],[\"slider\",{\"_index\":213,\"name\":{\"slider\":{}},\"description\":{}}],[\"small\",{\"_index\":118,\"name\":{},\"description\":{\"decoratedtextfield\":{}}}],[\"space\",{\"_index\":170,\"name\":{},\"description\":{\"form\":{}}}],[\"spectrum\",{\"_index\":115,\"name\":{},\"description\":{\"decoratedtextfield\":{},\"page\":{},\"quickaction\":{},\"textfield\":{}}}],[\"split\",{\"_index\":214,\"name\":{\"splitbutton\":{}},\"description\":{}}],[\"splitview\",{\"_index\":215,\"name\":{\"splitview\":{}},\"description\":{}}],[\"standalon\",{\"_index\":184,\"name\":{},\"description\":{\"page\":{}}}],[\"standard\",{\"_index\":87,\"name\":{},\"description\":{\"card-asset\":{},\"dropzone\":{}}}],[\"statu\",{\"_index\":216,\"name\":{\"statuslight\":{}},\"description\":{}}],[\"steplist\",{\"_index\":217,\"name\":{\"steplist\":{}},\"description\":{}}],[\"stepper\",{\"_index\":218,\"name\":{\"stepper\":{}},\"description\":{\"stepper\":{}}}],[\"strategi\",{\"_index\":195,\"name\":{},\"description\":{\"page\":{}}}],[\"strong\",{\"_index\":54,\"name\":{},\"description\":{\"button-cta\":{}}}],[\"stuctur\",{\"_index\":169,\"name\":{},\"description\":{\"form\":{}}}],[\"style\",{\"_index\":197,\"name\":{\"pagination-button-style\":{}},\"description\":{\"stepper\":{}}}],[\"support\",{\"_index\":16,\"name\":{},\"description\":{\"accordion\":{}}}],[\"switch\",{\"_index\":232,\"name\":{\"toggle\":{}},\"description\":{}}],[\"system\",{\"_index\":158,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"tab\",{\"_index\":228,\"name\":{\"tabs\":{}},\"description\":{}}],[\"tabl\",{\"_index\":144,\"name\":{\"table\":{}},\"description\":{\"dropindicator\":{}}}],[\"tag\",{\"_index\":102,\"name\":{\"tags\":{}},\"description\":{\"clearbutton\":{},\"page\":{},\"tags\":{}}}],[\"task\",{\"_index\":151,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"text\",{\"_index\":113,\"name\":{\"decoratedtextfield\":{},\"textarea\":{},\"textfield\":{}},\"description\":{\"decoratedtextfield\":{},\"quickaction\":{},\"textarea\":{},\"textfield\":{}}}],[\"textonli\",{\"_index\":202,\"name\":{},\"description\":{\"quickaction\":{}}}],[\"time\",{\"_index\":134,\"name\":{},\"description\":{\"dialog\":{}}}],[\"toast\",{\"_index\":231,\"name\":{\"toast\":{}},\"description\":{}}],[\"toggl\",{\"_index\":175,\"name\":{},\"description\":{\"logicbutton\":{}}}],[\"tool\",{\"_index\":233,\"name\":{\"tool\":{}},\"description\":{\"tool\":{}}}],[\"tooltip\",{\"_index\":234,\"name\":{\"tooltip\":{}},\"description\":{}}],[\"top\",{\"_index\":63,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"tree\",{\"_index\":235,\"name\":{\"treeview\":{}},\"description\":{}}],[\"turn\",{\"_index\":123,\"name\":{},\"description\":{\"dial\":{}}}],[\"typographi\",{\"_index\":237,\"name\":{\"typography-deprecated\":{},\"typography-international\":{},\"typography\":{}},\"description\":{\"typography-deprecated\":{},\"typography\":{}}}],[\"unless\",{\"_index\":225,\"name\":{},\"description\":{\"stepper\":{}}}],[\"up\",{\"_index\":124,\"name\":{},\"description\":{\"dial\":{}}}],[\"updat\",{\"_index\":6,\"name\":{},\"description\":{\"accordion\":{}}}],[\"upload\",{\"_index\":153,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"us\",{\"_index\":43,\"name\":{},\"description\":{\"assetlist\":{},\"button-over-background\":{},\"button-primary\":{},\"clearbutton\":{},\"datepicker\":{},\"dropindicator\":{},\"dropzone\":{},\"fieldlabel\":{},\"meter\":{},\"page\":{}}}],[\"user\",{\"_index\":21,\"name\":{},\"description\":{\"accordion\":{},\"checkbox\":{},\"dropzone\":{}}}],[\"usual\",{\"_index\":164,\"name\":{},\"description\":{\"fieldgroup\":{}}}],[\"util\",{\"_index\":162,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"valu\",{\"_index\":73,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"variant\",{\"_index\":188,\"name\":{},\"description\":{\"page\":{}}}],[\"view\",{\"_index\":236,\"name\":{\"treeview\":{}},\"description\":{}}],[\"visual\",{\"_index\":65,\"name\":{},\"description\":{\"button-over-background\":{}}}],[\"vs\",{\"_index\":38,\"name\":{},\"description\":{\"actionmenu\":{}}}],[\"wai\",{\"_index\":8,\"name\":{},\"description\":{\"accordion\":{}}}],[\"warn\",{\"_index\":79,\"name\":{\"button-warning\":{}},\"description\":{}}],[\"well\",{\"_index\":246,\"name\":{\"well\":{}},\"description\":{}}],[\"width\",{\"_index\":209,\"name\":{},\"description\":{\"searchwithin\":{}}}],[\"within\",{\"_index\":207,\"name\":{\"searchwithin\":{}},\"description\":{}}],[\"work\",{\"_index\":137,\"name\":{},\"description\":{\"dialog\":{}}}],[\"workflow\",{\"_index\":154,\"name\":{},\"description\":{\"dropzone\":{}}}],[\"wrap\",{\"_index\":129,\"name\":{},\"description\":{\"dialog\":{}}}],[\"wrapper\",{\"_index\":132,\"name\":{},\"description\":{\"dialog\":{}}}],[\"zone\",{\"_index\":146,\"name\":{},\"description\":{\"dropzone\":{}}}]],\"pipeline\":[\"stemmer\"]}");
 
 /***/ }),
 
@@ -1167,10 +1272,10 @@ module.exports = JSON.parse("{\"version\":\"2.3.6\",\"fields\":[\"description\"]
 /*!********************************!*\
   !*** ./data/search_store.json ***!
   \********************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, default */
+/*! exports provided: accordion, actionbar, actionbutton, actionmenu, alert, asset, assetlist, avatar, banner, barloader, breadcrumb, button-cta, button-over-background, button-primary, button-secondary, button-warning, buttongroup, calendar, card-asset, card-gallery, card, checkbox, circleloader, clearbutton, coachmark, combobox, cyclebutton, datepicker, decoratedtextfield, dial, dialog, dropdown, dropindicator, dropzone, fieldgroup, fieldlabel, form, illustratedmessage, label, link, logicbutton, menu, meter, miller, page, pagination-button-style, pagination-explicit, pagination-listing, popover, quickaction, radio, rating, rule, search, searchwithin, sidenav, slider, splitbutton, splitview, statuslight, steplist, stepper, table, tabs, tags, textarea, textfield, toast, toggle, tool, tooltip, treeview, typography-deprecated, typography-international, typography, well, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":0,\"name\":\"Web Rails\",\"slug\":\"web-rails\",\"description\":\"Web Rails\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":1,\"name\":\"Tree View Navigation\",\"slug\":\"tree-view-navigation\",\"description\":\"Tree View Navigation\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":2,\"name\":\"Text Areas & Multiline Fields\",\"slug\":\"text-areas-multiline-fields\",\"description\":\"Text Areas & Multiline Fields\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":3,\"name\":\"Wells\",\"slug\":\"wells\",\"description\":\"Wells\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":4,\"name\":\"Select Boxes\",\"slug\":\"select-boxes\",\"description\":\"Select Boxes\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":5,\"name\":\"Search Within\",\"slug\":\"search-within\",\"description\":\"Search Within\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":6,\"name\":\"Photo Tag\",\"slug\":\"photo-tag\",\"description\":\"Photo Tag\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":7,\"name\":\"Miller Columns\",\"slug\":\"miller-columns\",\"description\":\"Miller Columns\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":8,\"name\":\"Logic Button\",\"slug\":\"logic-button\",\"description\":\"Logic Button\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":9,\"name\":\"In-Line Alerts\",\"slug\":\"in-line-alerts\",\"description\":\"In-Line Alerts\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":10,\"name\":\"Dropdowns (Icon Button Variation)\",\"slug\":\"dropdowns-icon-button-variation\",\"description\":\"Dropdowns (Icon Button Variation)\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":11,\"name\":\"Drop Zone\",\"slug\":\"drop-zone\",\"description\":\"Drop Zone\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":12,\"name\":\"Draggable List\",\"slug\":\"draggable-list\",\"description\":\"Draggable List\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":13,\"name\":\"Cycle Button\",\"slug\":\"cycle-button\",\"description\":\"Cycle Button\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":14,\"name\":\"Calendar \",\"slug\":\"calendar\",\"description\":\"Calendar \",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":15,\"name\":\"Alert Popovers\",\"slug\":\"alert-popovers\",\"description\":\"Alert Popovers\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":16,\"name\":\"Advanced Sliders\",\"slug\":\"advanced-sliders\",\"description\":\"Advanced Sliders\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":17,\"name\":\"Accordion\",\"slug\":\"accordion\",\"description\":\"Accordion\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":18,\"name\":\"Messaging Taxonomy & Framework\",\"slug\":\"messaging-taxonomy-framework\",\"description\":\"Messaging Taxonomy & Framework\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":19,\"name\":\"Modals\",\"slug\":\"modals\",\"description\":\"Modals\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":20,\"name\":\"Standard Cards\",\"slug\":\"standard-cards\",\"description\":\"Standard Cards\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":21,\"name\":\"Asset Cards\",\"slug\":\"asset-cards\",\"description\":\"Asset Cards\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":22,\"name\":\"Split Button\",\"slug\":\"split-button\",\"description\":\"Split Button\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":23,\"name\":\"Scroll Bars\",\"slug\":\"scroll-bars\",\"description\":\"Scroll Bars\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":24,\"name\":\"Experience Cloud Shell\",\"slug\":\"experience-cloud-shell\",\"description\":\"Experience Cloud Shell\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":25,\"name\":\"K9 Header Bar\",\"slug\":\"k9-header-bar\",\"description\":\"K9 Header Bar\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":26,\"name\":\"Mobile Navigation Bars\",\"slug\":\"mobile-navigation-bars\",\"description\":\"Mobile Navigation Bars\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":27,\"name\":\"Icon-only Tabs\",\"slug\":\"icon-only-tabs\",\"description\":\"Icon-only Tabs\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":28,\"name\":\"Split Button (More Variant)\",\"slug\":\"split-button-more-variant\",\"description\":\"Split Button (More Variant)\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":29,\"name\":\"Action Bar\",\"slug\":\"action-bar\",\"description\":\"Action Bar\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":30,\"name\":\"Search Field\",\"slug\":\"search-field\",\"description\":\"Search Field\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":31,\"name\":\"K9 Panel Anatomy\",\"slug\":\"k9-panel-anatomy\",\"description\":\"K9 Panel Anatomy\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":32,\"name\":\"K9 Panel\",\"slug\":\"k9-panel\",\"description\":\"K9 Panel\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":33,\"name\":\"Search and Text Filters\",\"slug\":\"search-and-text-filters\",\"description\":\"Search and Text Filters\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":34,\"name\":\"XD Cloud organizer and start screen\",\"slug\":\"xd-cloud-organizer-and-start-screen\",\"description\":\"XD Cloud organizer and start screen\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":35,\"name\":\"Left Nav, Header, and 1-up\",\"slug\":\"left-nav-header-and-1-up\",\"description\":\"Left Nav, Header, and 1-up\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":36,\"name\":\"Navigation Boxes\",\"slug\":\"navigation-boxes\",\"description\":\"Navigation Boxes\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":37,\"name\":\"Badges\",\"slug\":\"badges\",\"description\":\"Badges\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":38,\"name\":\"Drag Bars & Thumbs\",\"slug\":\"drag-bars-thumbs\",\"description\":\"Drag Bars & Thumbs\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":39,\"name\":\"Carousel\",\"slug\":\"carousel\",\"description\":\"Carousel\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":40,\"name\":\"Full Screen Dialog & Full Screen Takeover\",\"slug\":\"full-screen-dialog-full-screen-takeover\",\"description\":\"Full Screen Dialog & Full Screen Takeover\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":41,\"name\":\"Breadcrumbs\",\"slug\":\"breadcrumbs\",\"description\":\"Breadcrumbs\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":42,\"name\":\"Commenting\",\"slug\":\"commenting\",\"description\":\"Commenting\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":43,\"name\":\"Notifications\",\"slug\":\"notifications\",\"description\":\"Notifications\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":44,\"name\":\"Mobile Onboarding Experience (First Time Experience Cards) \",\"slug\":\"mobile-onboarding-experience-first-time-experience-cards\",\"description\":\"Mobile Onboarding Experience (First Time Experience Cards) \",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":45,\"name\":\"Map\",\"slug\":\"map\",\"description\":\"Map\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":46,\"name\":\"On-Canvas Controls\",\"slug\":\"on-canvas-controls\",\"description\":\"On-Canvas Controls\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":47,\"name\":\"Error Pages\",\"slug\":\"error-pages\",\"description\":\"Error Pages\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":48,\"name\":\"List View\",\"slug\":\"list-view\",\"description\":\"List View\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":49,\"name\":\"Ghost Loading\",\"slug\":\"ghost-loading\",\"description\":\"Ghost Loading\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":50,\"name\":\"Checklist\",\"slug\":\"checklist\",\"description\":\"Checklist\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":51,\"name\":\"Gallery View\",\"slug\":\"gallery-view\",\"description\":\"Gallery View\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":52,\"name\":\"Video Player\",\"slug\":\"video-player\",\"description\":\"Video Player\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":53,\"name\":\"Tracking card in home screen\",\"slug\":\"tracking-card-in-home-screen\",\"description\":\"Tracking card in home screen\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":54,\"name\":\"Upsell flows and screens\",\"slug\":\"upsell-flows-and-screens\",\"description\":\"Upsell flows and screens\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":55,\"name\":\"HUD Button\",\"slug\":\"hud-button\",\"description\":\"HUD Button\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":56,\"name\":\"Dropdown Thumbnail List\",\"slug\":\"dropdown-thumbnail-list\",\"description\":\"Dropdown Thumbnail List\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":57,\"name\":\"Date & Date Range Picker\",\"slug\":\"date-date-range-picker\",\"description\":\"Date & Date Range Picker\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":58,\"name\":\"Dialog (Warning Variation)\",\"slug\":\"dialog-warning-variation\",\"description\":\"Dialog (Warning Variation)\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":59,\"name\":\"Dial\",\"slug\":\"dial\",\"description\":\"Dial\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":60,\"name\":\"Menu Items\",\"slug\":\"menu-items\",\"description\":\"Menu Items\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":61,\"name\":\"Keyboard Shortcuts\",\"slug\":\"keyboard-shortcuts\",\"description\":\"Keyboard Shortcuts\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":62,\"name\":\"Crop / Rotate Handles and Guides\",\"slug\":\"crop-rotate-handles-and-guides\",\"description\":\"Crop / Rotate Handles and Guides\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":63,\"name\":\"Illustrated Message\",\"slug\":\"illustrated-message\",\"description\":\"Illustrated Message\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":64,\"name\":\"File Management\",\"slug\":\"file-management\",\"description\":\"File Management\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":65,\"name\":\"Pagination Dots\",\"slug\":\"pagination-dots\",\"description\":\"Pagination Dots\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":66,\"name\":\"Carousel-Dexter\",\"slug\":\"carousel-dexter\",\"description\":\"Carousel-Dexter\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":67,\"name\":\"Chat messaging\",\"slug\":\"chat-messaging\",\"description\":\"Chat messaging\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":68,\"name\":\"Time Picker\",\"slug\":\"time-picker\",\"description\":\"Time Picker\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":69,\"name\":\"Color Picker\",\"slug\":\"color-picker\",\"description\":\"Color Picker\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":70,\"name\":\"Toast with Thumbnail\",\"slug\":\"toast-with-thumbnail\",\"description\":\"Toast with Thumbnail\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":71,\"name\":\"Web Footer\",\"slug\":\"web-footer\",\"description\":\"Web Footer\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":72,\"name\":\"Avatars\",\"slug\":\"avatars\",\"description\":\"Avatars\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":73,\"name\":\"Opacity Checkerboard\",\"slug\":\"opacity-checkerboard\",\"description\":\"Opacity Checkerboard\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":74,\"name\":\"Share Sheet\",\"slug\":\"share-sheet\",\"description\":\"Share Sheet\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":75,\"name\":\"Share Mode\",\"slug\":\"share-mode\",\"description\":\"Share Mode\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":76,\"name\":\"Summary Details\",\"slug\":\"summary-details\",\"description\":\"Summary Details\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":77,\"name\":\"Multi-select Combo Box\",\"slug\":\"multi-select-combo-box\",\"description\":\"Multi-select Combo Box\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":78,\"name\":\"Startscreen Illustrations\",\"slug\":\"startscreen-illustrations\",\"description\":\"Startscreen Illustrations\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":79,\"name\":\"Numeric Stepper Field\",\"slug\":\"numeric-stepper-field\",\"description\":\"Numeric Stepper Field\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":80,\"name\":\"Dynamic Search\",\"slug\":\"dynamic-search\",\"description\":\"Dynamic Search\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":81,\"name\":\"Popover Load More\",\"slug\":\"popover-load-more\",\"description\":\"Popover Load More\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":82,\"name\":\"Installer Pointer\",\"slug\":\"installer-pointer\",\"description\":\"Installer Pointer\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":83,\"name\":\"Banner Alerts\",\"slug\":\"banner-alerts\",\"description\":\"Banner Alerts\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":84,\"name\":\"Dropdown with Icons\",\"slug\":\"dropdown-with-icons\",\"description\":\"Dropdown with Icons\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":85,\"name\":\"Thumbnail\",\"slug\":\"thumbnail\",\"description\":\"Thumbnail\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":86,\"name\":\"Artboards\",\"slug\":\"artboards\",\"description\":\"Artboards\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":87,\"name\":\"Drag and Drop\",\"slug\":\"drag-and-drop\",\"description\":\"Drag and Drop\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":88,\"name\":\"Forum Cards\",\"slug\":\"forum-cards\",\"description\":\"Forum Cards\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":89,\"name\":\"Header Pattern\",\"slug\":\"header-pattern\",\"description\":\"Header Pattern\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":90,\"name\":\"Card States\",\"slug\":\"card-states\",\"description\":\"Card States\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":91,\"name\":\"User Presence Colors\",\"slug\":\"user-presence-colors\",\"description\":\"User Presence Colors\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":92,\"name\":\"Connected Action Button Group\",\"slug\":\"connected-action-button-group\",\"description\":\"Connected Action Button Group\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":93,\"name\":\"Tool Update\",\"slug\":\"tool-update\",\"description\":\"Tool Update\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":94,\"name\":\"Floating Panels\",\"slug\":\"floating-panels\",\"description\":\"Floating Panels\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":95,\"name\":\"Steplist\",\"slug\":\"steplist\",\"description\":\"Steplist\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":96,\"name\":\"Unified Sharing - Quick Share and Share Menu\",\"slug\":\"unified-sharing-quick-share-and-share-menu\",\"description\":\"Unified Sharing - Quick Share and Share Menu\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":97,\"name\":\"Minimized Side Navigation\",\"slug\":\"minimized-side-navigation\",\"description\":\"Minimized Side Navigation\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":98,\"name\":\"Blue Tabs Update\",\"slug\":\"blue-tabs-update\",\"description\":\"Blue Tabs Update\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":99,\"name\":\"Pagination List\",\"slug\":\"pagination-list\",\"description\":\"Pagination List\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":100,\"name\":\"Pagination Field\",\"slug\":\"pagination-field\",\"description\":\"Pagination Field\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":101,\"name\":\"Pagination Button\",\"slug\":\"pagination-button\",\"description\":\"Pagination Button\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":102,\"name\":\"Fluid Height Tabs\",\"slug\":\"fluid-height-tabs\",\"description\":\"Fluid Height Tabs\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":103,\"name\":\"Text With Definition\",\"slug\":\"text-with-definition\",\"description\":\"Text With Definition\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":104,\"name\":\"Tag Updates\",\"slug\":\"tag-updates\",\"description\":\"Tag Updates\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":105,\"name\":\"Tag Fields\",\"slug\":\"tag-fields\",\"description\":\"Tag Fields\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":106,\"name\":\"Button Sizes\",\"slug\":\"button-sizes\",\"description\":\"Button Sizes\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":107,\"name\":\"Footer (web products)\",\"slug\":\"footer-web-products\",\"description\":\"Footer (web products)\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":108,\"name\":\"Touch indicator\",\"slug\":\"touch-indicator\",\"description\":\"Touch indicator\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":109,\"name\":\"checkbox affects button status\",\"slug\":\"checkbox-affects-button-status\",\"description\":\"checkbox affects button status\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":110,\"name\":\"Quick actions update\",\"slug\":\"quick-actions-update\",\"description\":\"Quick actions update\",\"pageType\":\"contribution\",\"query\":\"\",\"type\":\"contribution\"},{\"id\":111,\"name\":\"Fonts\",\"slug\":\"fonts\",\"description\":\"Fonts \",\"pageType\":\"Resources\",\"query\":\"\",\"type\":\"page\"},{\"id\":112,\"name\":\"Color\",\"slug\":\"color\",\"description\":\"Color \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":113,\"name\":\"Color\",\"slug\":\"color\",\"description\":\"Don't create your own colors \",\"display_description\":\"Don't create your own colors\",\"pageType\":\"Foundation\",\"query\":\"Don't create your own colors\",\"type\":\"usageGuideline\"},{\"id\":114,\"name\":\"Color\",\"slug\":\"color\",\"description\":\"Transparency \",\"display_description\":\"Transparency\",\"pageType\":\"Foundation\",\"query\":\"Transparency\",\"type\":\"usageGuideline\"},{\"id\":115,\"name\":\"Color\",\"slug\":\"color\",\"description\":\"Communicating with color \",\"display_description\":\"Communicating with color\",\"pageType\":\"Foundation\",\"query\":\"Communicating with color\",\"type\":\"usageGuideline\"},{\"id\":116,\"name\":\"Office hours\",\"slug\":\"office-hours\",\"description\":\"Office hours \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":117,\"name\":\"Action button\",\"slug\":\"action-button\",\"description\":\"Action button tool\",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":118,\"name\":\"Action button\",\"slug\":\"action-button\",\"description\":\"Text overflow tool\",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":119,\"name\":\"Action button\",\"slug\":\"action-button\",\"description\":\"Action button group overflow tool\",\"display_description\":\"Action button group overflow\",\"pageType\":\"Component\",\"query\":\"Action button group overflow\",\"type\":\"Behavior\"},{\"id\":120,\"name\":\"Action button\",\"slug\":\"action-button\",\"description\":\"Tooltips tool\",\"display_description\":\"Tooltips\",\"pageType\":\"Component\",\"query\":\"Tooltips\",\"type\":\"usageGuideline\"},{\"id\":121,\"name\":\"Action button\",\"slug\":\"action-button\",\"description\":\"Isolated action buttons tool\",\"display_description\":\"Isolated action buttons\",\"pageType\":\"Component\",\"query\":\"Isolated action buttons\",\"type\":\"usageGuideline\"},{\"id\":122,\"name\":\"Action button\",\"slug\":\"action-button\",\"description\":\"Only group related actions with a hold icon tool\",\"display_description\":\"Only group related actions with a hold icon\",\"pageType\":\"Component\",\"query\":\"Only group related actions with a hold icon\",\"type\":\"usageGuideline\"},{\"id\":123,\"name\":\"Action button\",\"slug\":\"action-button\",\"description\":\"Respect hold icon placement tool\",\"display_description\":\"Respect hold icon placement\",\"pageType\":\"Component\",\"query\":\"Respect hold icon placement\",\"type\":\"usageGuideline\"},{\"id\":124,\"name\":\"Get started\",\"slug\":\"get-started\",\"description\":\"Get started \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":125,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Text field input field\",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":126,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Minimum width input field\",\"display_description\":\"Minimum width\",\"pageType\":\"Component\",\"query\":\"Minimum width\",\"type\":\"Behavior\"},{\"id\":127,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Text overflow input field\",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":128,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Mixed value input field\",\"display_description\":\"Mixed value\",\"pageType\":\"Component\",\"query\":\"Mixed value\",\"type\":\"Behavior\"},{\"id\":129,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Include a label input field\",\"display_description\":\"Include a label\",\"pageType\":\"Component\",\"query\":\"Include a label\",\"type\":\"usageGuideline\"},{\"id\":130,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Review label-less designs with Inclusive Design team input field\",\"display_description\":\"Review label-less designs with Inclusive Design team\",\"pageType\":\"Component\",\"query\":\"Review label-less designs with Inclusive Design team\",\"type\":\"usageGuideline\"},{\"id\":131,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Follow capitalization rules input field\",\"display_description\":\"Follow capitalization rules\",\"pageType\":\"Component\",\"query\":\"Follow capitalization rules\",\"type\":\"usageGuideline\"},{\"id\":132,\"name\":\"Text field\",\"slug\":\"text-field\",\"description\":\"Mark the minority of text fields in a form as optional or required input field\",\"display_description\":\"Mark the minority of text fields in a form as optional or required\",\"pageType\":\"Component\",\"query\":\"Mark the minority of text fields in a form as optional or required\",\"type\":\"usageGuideline\"},{\"id\":133,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Combo box \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":134,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Minimum width \",\"display_description\":\"Minimum width\",\"pageType\":\"Component\",\"query\":\"Minimum width\",\"type\":\"Behavior\"},{\"id\":135,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":136,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Combo box, dropdown, or radio buttons? \",\"display_description\":\"Combo box, dropdown, or radio buttons?\",\"pageType\":\"Component\",\"query\":\"Combo box, dropdown, or radio buttons?\",\"type\":\"usageGuideline\"},{\"id\":137,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Suppressing the popover \",\"display_description\":\"Suppressing the popover\",\"pageType\":\"Component\",\"query\":\"Suppressing the popover\",\"type\":\"usageGuideline\"},{\"id\":138,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Immediate popover launch \",\"display_description\":\"Immediate popover launch\",\"pageType\":\"Component\",\"query\":\"Immediate popover launch\",\"type\":\"usageGuideline\"},{\"id\":139,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Delayed popover launch \",\"display_description\":\"Delayed popover launch\",\"pageType\":\"Component\",\"query\":\"Delayed popover launch\",\"type\":\"usageGuideline\"},{\"id\":140,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Saving suggestions \",\"display_description\":\"Saving suggestions\",\"pageType\":\"Component\",\"query\":\"Saving suggestions\",\"type\":\"usageGuideline\"},{\"id\":141,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Include a label \",\"display_description\":\"Include a label\",\"pageType\":\"Component\",\"query\":\"Include a label\",\"type\":\"usageGuideline\"},{\"id\":142,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Keep menu items concise \",\"display_description\":\"Keep menu items concise\",\"pageType\":\"Component\",\"query\":\"Keep menu items concise\",\"type\":\"usageGuideline\"},{\"id\":143,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Truncation \",\"display_description\":\"Truncation\",\"pageType\":\"Component\",\"query\":\"Truncation\",\"type\":\"usageGuideline\"},{\"id\":144,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Follow capitalization rules \",\"display_description\":\"Follow capitalization rules\",\"pageType\":\"Component\",\"query\":\"Follow capitalization rules\",\"type\":\"usageGuideline\"},{\"id\":145,\"name\":\"Combo box\",\"slug\":\"combo-box\",\"description\":\"Mark the minority of combo boxes in a form as optional or required \",\"display_description\":\"Mark the minority of combo boxes in a form as optional or required\",\"pageType\":\"Component\",\"query\":\"Mark the minority of combo boxes in a form as optional or required\",\"type\":\"usageGuideline\"},{\"id\":146,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Button \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":147,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Flexible width \",\"display_description\":\"Flexible width\",\"pageType\":\"Component\",\"query\":\"Flexible width\",\"type\":\"Behavior\"},{\"id\":148,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Minimum width \",\"display_description\":\"Minimum width\",\"pageType\":\"Component\",\"query\":\"Minimum width\",\"type\":\"Behavior\"},{\"id\":149,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":150,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Button group overflow \",\"display_description\":\"Button group overflow\",\"pageType\":\"Component\",\"query\":\"Button group overflow\",\"type\":\"Behavior\"},{\"id\":151,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Use 2 button styles maximum \",\"display_description\":\"Use 2 button styles maximum\",\"pageType\":\"Component\",\"query\":\"Use 2 button styles maximum\",\"type\":\"usageGuideline\"},{\"id\":152,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Align button groups based on content \",\"display_description\":\"Align button groups based on content\",\"pageType\":\"Component\",\"query\":\"Align button groups based on content\",\"type\":\"usageGuideline\"},{\"id\":153,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Respect button order within a group \",\"display_description\":\"Respect button order within a group\",\"pageType\":\"Component\",\"query\":\"Respect button order within a group\",\"type\":\"usageGuideline\"},{\"id\":154,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Be concise \",\"display_description\":\"Be concise\",\"pageType\":\"Component\",\"query\":\"Be concise\",\"type\":\"usageGuideline\"},{\"id\":155,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Use clear text \",\"display_description\":\"Use clear text\",\"pageType\":\"Component\",\"query\":\"Use clear text\",\"type\":\"usageGuideline\"},{\"id\":156,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Use sentence case \",\"display_description\":\"Use sentence case\",\"pageType\":\"Component\",\"query\":\"Use sentence case\",\"type\":\"usageGuideline\"},{\"id\":157,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Don't override color \",\"display_description\":\"Don't override color\",\"pageType\":\"Component\",\"query\":\"Don't override color\",\"type\":\"usageGuideline\"},{\"id\":158,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Use icons only when necessary \",\"display_description\":\"Use icons only when necessary\",\"pageType\":\"Component\",\"query\":\"Use icons only when necessary\",\"type\":\"usageGuideline\"},{\"id\":159,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Use icons for top-level action(s) only \",\"display_description\":\"Use icons for top-level action(s) only\",\"pageType\":\"Component\",\"query\":\"Use icons for top-level action(s) only\",\"type\":\"usageGuideline\"},{\"id\":160,\"name\":\"Button\",\"slug\":\"button\",\"description\":\"Display a popover when featuring subsequent options \",\"display_description\":\"Display a popover when featuring subsequent options\",\"pageType\":\"Component\",\"query\":\"Display a popover when featuring subsequent options\",\"type\":\"usageGuideline\"},{\"id\":161,\"name\":\"Bar panel\",\"slug\":\"bar-panel\",\"description\":\"Bar panel \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":162,\"name\":\"Dialogs\",\"slug\":\"dialogs\",\"description\":\"Dialogs \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":163,\"name\":\"Design Tokens\",\"slug\":\"design-tokens\",\"description\":\"Design Tokens \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":164,\"name\":\"Breadcrumbs\",\"slug\":\"breadcrumbs\",\"description\":\"Breadcrumbs \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":165,\"name\":\"Status table\",\"slug\":\"status-table\",\"description\":\"Status table \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":166,\"name\":\"UI kits\",\"slug\":\"ui-kits\",\"description\":\"UI kits \",\"pageType\":\"Resources\",\"query\":\"\",\"type\":\"page\"},{\"id\":167,\"name\":\"Switch\",\"slug\":\"switch\",\"description\":\"Switch \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":168,\"name\":\"Switch\",\"slug\":\"switch\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":169,\"name\":\"Switch\",\"slug\":\"switch\",\"description\":\"Mixed value \",\"display_description\":\"Mixed value\",\"pageType\":\"Component\",\"query\":\"Mixed value\",\"type\":\"Behavior\"},{\"id\":170,\"name\":\"Switch\",\"slug\":\"switch\",\"description\":\"Emphasized or not? \",\"display_description\":\"Emphasized or not?\",\"pageType\":\"Component\",\"query\":\"Emphasized or not?\",\"type\":\"usageGuideline\"},{\"id\":171,\"name\":\"Switch\",\"slug\":\"switch\",\"description\":\"When to use a standalone switch? \",\"display_description\":\"When to use a standalone switch?\",\"pageType\":\"Component\",\"query\":\"When to use a standalone switch?\",\"type\":\"usageGuideline\"},{\"id\":172,\"name\":\"Switch\",\"slug\":\"switch\",\"description\":\"Switch or checkbox? \",\"display_description\":\"Switch or checkbox?\",\"pageType\":\"Component\",\"query\":\"Switch or checkbox?\",\"type\":\"usageGuideline\"},{\"id\":173,\"name\":\"Switch\",\"slug\":\"switch\",\"description\":\"No partial state \",\"display_description\":\"No partial state\",\"pageType\":\"Component\",\"query\":\"No partial state\",\"type\":\"usageGuideline\"},{\"id\":174,\"name\":\"Application frame\",\"slug\":\"application-frame\",\"description\":\"Application frame \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":175,\"name\":\"Principles\",\"slug\":\"principles\",\"description\":\"Principles \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":176,\"name\":\"Platform scale\",\"slug\":\"platform-scale\",\"description\":\"Platform scale \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":177,\"name\":\"Design API\",\"slug\":\"design-api\",\"description\":\"Design API \",\"pageType\":\"Search Exclude\",\"query\":\"\",\"type\":\"page\"},{\"id\":178,\"name\":\"Responsive grid\",\"slug\":\"responsive-grid\",\"description\":\"Responsive grid \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":179,\"name\":\"Responsive grid\",\"slug\":\"responsive-grid\",\"description\":\"Don't align every component to the responsive grid \",\"display_description\":\"Don't align every component to the responsive grid\",\"pageType\":\"Foundation\",\"query\":\"Don't align every component to the responsive grid\",\"type\":\"usageGuideline\"},{\"id\":180,\"name\":\"Responsive grid\",\"slug\":\"responsive-grid\",\"description\":\"Mind the gaps \",\"display_description\":\"Mind the gaps\",\"pageType\":\"Foundation\",\"query\":\"Mind the gaps\",\"type\":\"usageGuideline\"},{\"id\":181,\"name\":\"Responsive grid\",\"slug\":\"responsive-grid\",\"description\":\"Panels and rails \",\"display_description\":\"Panels and rails\",\"pageType\":\"Foundation\",\"query\":\"Panels and rails\",\"type\":\"usageGuideline\"},{\"id\":182,\"name\":\"Responsive grid\",\"slug\":\"responsive-grid\",\"description\":\"Don't modify the templates \",\"display_description\":\"Don't modify the templates\",\"pageType\":\"Foundation\",\"query\":\"Don't modify the templates\",\"type\":\"usageGuideline\"},{\"id\":183,\"name\":\"Full panel\",\"slug\":\"full-panel\",\"description\":\"Full panel \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":184,\"name\":\"Floating panel\",\"slug\":\"floating-panel\",\"description\":\"Floating panel \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":185,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Tabs \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":186,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Animation \",\"display_description\":\"Animation\",\"pageType\":\"Component\",\"query\":\"Animation\",\"type\":\"Behavior\"},{\"id\":187,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Tab overflow \",\"display_description\":\"Tab overflow\",\"pageType\":\"Component\",\"query\":\"Tab overflow\",\"type\":\"Behavior\"},{\"id\":188,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":189,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Too many tabs \",\"display_description\":\"Too many tabs\",\"pageType\":\"Component\",\"query\":\"Too many tabs\",\"type\":\"usageGuideline\"},{\"id\":190,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Don't use tabs for varying levels of importance \",\"display_description\":\"Don't use tabs for varying levels of importance\",\"pageType\":\"Component\",\"query\":\"Don't use tabs for varying levels of importance\",\"type\":\"usageGuideline\"},{\"id\":191,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Nested tabs \",\"display_description\":\"Nested tabs\",\"pageType\":\"Component\",\"query\":\"Nested tabs\",\"type\":\"usageGuideline\"},{\"id\":192,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Use icons consistently \",\"display_description\":\"Use icons consistently\",\"pageType\":\"Component\",\"query\":\"Use icons consistently\",\"type\":\"usageGuideline\"},{\"id\":193,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"Don't only use icons \",\"display_description\":\"Don't only use icons\",\"pageType\":\"Component\",\"query\":\"Don't only use icons\",\"type\":\"usageGuideline\"},{\"id\":194,\"name\":\"Tabs\",\"slug\":\"tabs\",\"description\":\"On-page navigation \",\"display_description\":\"On-page navigation\",\"pageType\":\"Component\",\"query\":\"On-page navigation\",\"type\":\"usageGuideline\"},{\"id\":195,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Dropdown select picker\",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":196,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Minimum width select picker\",\"display_description\":\"Minimum width\",\"pageType\":\"Component\",\"query\":\"Minimum width\",\"type\":\"Behavior\"},{\"id\":197,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Text overflow select picker\",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":198,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Include a label select picker\",\"display_description\":\"Include a label\",\"pageType\":\"Component\",\"query\":\"Include a label\",\"type\":\"usageGuideline\"},{\"id\":199,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Review label-less designs with Inclusive Design team select picker\",\"display_description\":\"Review label-less designs with Inclusive Design team\",\"pageType\":\"Component\",\"query\":\"Review label-less designs with Inclusive Design team\",\"type\":\"usageGuideline\"},{\"id\":200,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Keep menu items concise select picker\",\"display_description\":\"Keep menu items concise\",\"pageType\":\"Component\",\"query\":\"Keep menu items concise\",\"type\":\"usageGuideline\"},{\"id\":201,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Choose an appropriate width select picker\",\"display_description\":\"Choose an appropriate width\",\"pageType\":\"Component\",\"query\":\"Choose an appropriate width\",\"type\":\"usageGuideline\"},{\"id\":202,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Follow capitalization rules select picker\",\"display_description\":\"Follow capitalization rules\",\"pageType\":\"Component\",\"query\":\"Follow capitalization rules\",\"type\":\"usageGuideline\"},{\"id\":203,\"name\":\"Dropdown\",\"slug\":\"dropdown\",\"description\":\"Mark the minority of dropdowns in a form as optional or required select picker\",\"display_description\":\"Mark the minority of dropdowns in a form as optional or required\",\"pageType\":\"Component\",\"query\":\"Mark the minority of dropdowns in a form as optional or required\",\"type\":\"usageGuideline\"},{\"id\":204,\"name\":\"Scorecards\",\"slug\":\"scorecards\",\"description\":\"Scorecards \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":205,\"name\":\"Informational illustrations\",\"slug\":\"informational-illustrations\",\"description\":\"Informational illustrations \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":206,\"name\":\"Informational illustrations\",\"slug\":\"informational-illustrations\",\"description\":\"Don't create your own illustration \",\"display_description\":\"Don't create your own illustration\",\"pageType\":\"Foundation\",\"query\":\"Don't create your own illustration\",\"type\":\"usageGuideline\"},{\"id\":207,\"name\":\"Informational illustrations\",\"slug\":\"informational-illustrations\",\"description\":\"Don’t scale \",\"display_description\":\"Don’t scale\",\"pageType\":\"Foundation\",\"query\":\"Don’t scale\",\"type\":\"usageGuideline\"},{\"id\":208,\"name\":\"Iconography\",\"slug\":\"iconography\",\"description\":\"Iconography \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":209,\"name\":\"Iconography\",\"slug\":\"iconography\",\"description\":\"Use approved icons only \",\"display_description\":\"Use approved icons only\",\"pageType\":\"Foundation\",\"query\":\"Use approved icons only\",\"type\":\"usageGuideline\"},{\"id\":210,\"name\":\"Iconography\",\"slug\":\"iconography\",\"description\":\"Respect an icon's fill \",\"display_description\":\"Respect an icon's fill\",\"pageType\":\"Foundation\",\"query\":\"Respect an icon's fill\",\"type\":\"usageGuideline\"},{\"id\":211,\"name\":\"Iconography\",\"slug\":\"iconography\",\"description\":\"Don't scale icons \",\"display_description\":\"Don't scale icons\",\"pageType\":\"Foundation\",\"query\":\"Don't scale icons\",\"type\":\"usageGuideline\"},{\"id\":212,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Inclusive design \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":213,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Structure \",\"display_description\":\"Structure\",\"pageType\":\"Foundation\",\"query\":\"Structure\",\"type\":\"usageGuideline\"},{\"id\":214,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Color \",\"display_description\":\"Color\",\"pageType\":\"Foundation\",\"query\":\"Color\",\"type\":\"usageGuideline\"},{\"id\":215,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Animation \",\"display_description\":\"Animation\",\"pageType\":\"Foundation\",\"query\":\"Animation\",\"type\":\"usageGuideline\"},{\"id\":216,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Text alternatives \",\"display_description\":\"Text alternatives\",\"pageType\":\"Foundation\",\"query\":\"Text alternatives\",\"type\":\"usageGuideline\"},{\"id\":217,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Fonts and text \",\"display_description\":\"Fonts and text\",\"pageType\":\"Foundation\",\"query\":\"Fonts and text\",\"type\":\"usageGuideline\"},{\"id\":218,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Error prevention and correction \",\"display_description\":\"Error prevention and correction\",\"pageType\":\"Foundation\",\"query\":\"Error prevention and correction\",\"type\":\"usageGuideline\"},{\"id\":219,\"name\":\"Inclusive design\",\"slug\":\"inclusive-design\",\"description\":\"Keyboard equivalents \",\"display_description\":\"Keyboard equivalents\",\"pageType\":\"Foundation\",\"query\":\"Keyboard equivalents\",\"type\":\"usageGuideline\"},{\"id\":220,\"name\":\"How We Can Help\",\"slug\":\"how-we-can-help\",\"description\":\"How We Can Help \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":221,\"name\":\"Meter\",\"slug\":\"meter\",\"description\":\"Meter progress\",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":222,\"name\":\"Meter\",\"slug\":\"meter\",\"description\":\"Text overflow progress\",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":223,\"name\":\"Meter\",\"slug\":\"meter\",\"description\":\"Loader or meter? progress\",\"display_description\":\"Loader or meter?\",\"pageType\":\"Component\",\"query\":\"Loader or meter?\",\"type\":\"usageGuideline\"},{\"id\":224,\"name\":\"Meter\",\"slug\":\"meter\",\"description\":\"Labels progress\",\"display_description\":\"Labels\",\"pageType\":\"Component\",\"query\":\"Labels\",\"type\":\"usageGuideline\"},{\"id\":225,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Coach mark \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":226,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":227,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Use a consistent width \",\"display_description\":\"Use a consistent width\",\"pageType\":\"Component\",\"query\":\"Use a consistent width\",\"type\":\"usageGuideline\"},{\"id\":228,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Keep titles concise \",\"display_description\":\"Keep titles concise\",\"pageType\":\"Component\",\"query\":\"Keep titles concise\",\"type\":\"usageGuideline\"},{\"id\":229,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Keep body text succinct and informative \",\"display_description\":\"Keep body text succinct and informative\",\"pageType\":\"Component\",\"query\":\"Keep body text succinct and informative\",\"type\":\"usageGuideline\"},{\"id\":230,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Align coach marks with the action being explained \",\"display_description\":\"Align coach marks with the action being explained\",\"pageType\":\"Component\",\"query\":\"Align coach marks with the action being explained\",\"type\":\"usageGuideline\"},{\"id\":231,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Use an indicator to show the source \",\"display_description\":\"Use an indicator to show the source\",\"pageType\":\"Component\",\"query\":\"Use an indicator to show the source\",\"type\":\"usageGuideline\"},{\"id\":232,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Skip tour \",\"display_description\":\"Skip tour\",\"pageType\":\"Component\",\"query\":\"Skip tour\",\"type\":\"usageGuideline\"},{\"id\":233,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Don't use inconsistent action names within a tour \",\"display_description\":\"Don't use inconsistent action names within a tour\",\"pageType\":\"Component\",\"query\":\"Don't use inconsistent action names within a tour\",\"type\":\"usageGuideline\"},{\"id\":234,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Allow dismissal when a coach mark is depending on an action \",\"display_description\":\"Allow dismissal when a coach mark is depending on an action\",\"pageType\":\"Component\",\"query\":\"Allow dismissal when a coach mark is depending on an action\",\"type\":\"usageGuideline\"},{\"id\":235,\"name\":\"Coach mark\",\"slug\":\"coach-mark\",\"description\":\"Don't require users to confirm that they've taken an action \",\"display_description\":\"Don't require users to confirm that they've taken an action\",\"pageType\":\"Component\",\"query\":\"Don't require users to confirm that they've taken an action\",\"type\":\"usageGuideline\"},{\"id\":236,\"name\":\"Object styles\",\"slug\":\"object-styles\",\"description\":\"Object styles \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":237,\"name\":\"Bar loader\",\"slug\":\"bar-loader\",\"description\":\"Bar loader progress\",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":238,\"name\":\"Bar loader\",\"slug\":\"bar-loader\",\"description\":\"Text overflow progress\",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":239,\"name\":\"Bar loader\",\"slug\":\"bar-loader\",\"description\":\"Bar loader or circle loader? progress\",\"display_description\":\"Bar loader or circle loader?\",\"pageType\":\"Component\",\"query\":\"Bar loader or circle loader?\",\"type\":\"usageGuideline\"},{\"id\":240,\"name\":\"Bar loader\",\"slug\":\"bar-loader\",\"description\":\"Labels progress\",\"display_description\":\"Labels\",\"pageType\":\"Component\",\"query\":\"Labels\",\"type\":\"usageGuideline\"},{\"id\":241,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Bi-directionality \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":242,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Mirror individual components \",\"display_description\":\"Mirror individual components\",\"pageType\":\"Foundation\",\"query\":\"Mirror individual components\",\"type\":\"usageGuideline\"},{\"id\":243,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Don't mirror components that represent time \",\"display_description\":\"Don't mirror components that represent time\",\"pageType\":\"Foundation\",\"query\":\"Don't mirror components that represent time\",\"type\":\"usageGuideline\"},{\"id\":244,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Mirror composite images with directional flow \",\"display_description\":\"Mirror composite images with directional flow\",\"pageType\":\"Foundation\",\"query\":\"Mirror composite images with directional flow\",\"type\":\"usageGuideline\"},{\"id\":245,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Mirror icons that represent movement \",\"display_description\":\"Mirror icons that represent movement\",\"pageType\":\"Foundation\",\"query\":\"Mirror icons that represent movement\",\"type\":\"usageGuideline\"},{\"id\":246,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Don't mirror icons that represent time \",\"display_description\":\"Don't mirror icons that represent time\",\"pageType\":\"Foundation\",\"query\":\"Don't mirror icons that represent time\",\"type\":\"usageGuideline\"},{\"id\":247,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Don't mirror checkmarks \",\"display_description\":\"Don't mirror checkmarks\",\"pageType\":\"Foundation\",\"query\":\"Don't mirror checkmarks\",\"type\":\"usageGuideline\"},{\"id\":248,\"name\":\"Bi-directionality\",\"slug\":\"bi-directionality\",\"description\":\"Don't mirror slashes \",\"display_description\":\"Don't mirror slashes\",\"pageType\":\"Foundation\",\"query\":\"Don't mirror slashes\",\"type\":\"usageGuideline\"},{\"id\":249,\"name\":\"Tool (deprecated)\",\"slug\":\"tool\",\"description\":\"Tool (deprecated) \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":250,\"name\":\"Icons\",\"slug\":\"icons-dev\",\"description\":\"Icons \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":251,\"name\":\"Color area\",\"slug\":\"color-area\",\"description\":\"Color area \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":252,\"name\":\"Color area\",\"slug\":\"color-area\",\"description\":\"Flexible width and height \",\"display_description\":\"Flexible width and height\",\"pageType\":\"Component\",\"query\":\"Flexible width and height\",\"type\":\"Behavior\"},{\"id\":253,\"name\":\"Color area\",\"slug\":\"color-area\",\"description\":\"Handle behavior \",\"display_description\":\"Handle behavior\",\"pageType\":\"Component\",\"query\":\"Handle behavior\",\"type\":\"Behavior\"},{\"id\":254,\"name\":\"Color area\",\"slug\":\"color-area\",\"description\":\"Loupe behavior (down state, finger input) \",\"display_description\":\"Loupe behavior (down state, finger input)\",\"pageType\":\"Component\",\"query\":\"Loupe behavior (down state, finger input)\",\"type\":\"Behavior\"},{\"id\":255,\"name\":\"Color area\",\"slug\":\"color-area\",\"description\":\"Display color selection \",\"display_description\":\"Display color selection\",\"pageType\":\"Component\",\"query\":\"Display color selection\",\"type\":\"usageGuideline\"},{\"id\":256,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Table \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":257,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Left align textual data \",\"display_description\":\"Left align textual data\",\"pageType\":\"Component\",\"query\":\"Left align textual data\",\"type\":\"usageGuideline\"},{\"id\":258,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Right align numerical data \",\"display_description\":\"Right align numerical data\",\"pageType\":\"Component\",\"query\":\"Right align numerical data\",\"type\":\"usageGuideline\"},{\"id\":259,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Use tabular numbers for numerical data \",\"display_description\":\"Use tabular numbers for numerical data\",\"pageType\":\"Component\",\"query\":\"Use tabular numbers for numerical data\",\"type\":\"usageGuideline\"},{\"id\":260,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Respect vertical alignment \",\"display_description\":\"Respect vertical alignment\",\"pageType\":\"Component\",\"query\":\"Respect vertical alignment\",\"type\":\"usageGuideline\"},{\"id\":261,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Don't use zebra stripes \",\"display_description\":\"Don't use zebra stripes\",\"pageType\":\"Component\",\"query\":\"Don't use zebra stripes\",\"type\":\"usageGuideline\"},{\"id\":262,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Use column dividers sparingly \",\"display_description\":\"Use column dividers sparingly\",\"pageType\":\"Component\",\"query\":\"Use column dividers sparingly\",\"type\":\"usageGuideline\"},{\"id\":263,\"name\":\"Table\",\"slug\":\"table\",\"description\":\"Use an en dash (–) for missing values \",\"display_description\":\"Use an en dash (–) for missing values\",\"pageType\":\"Component\",\"query\":\"Use an en dash (–) for missing values\",\"type\":\"usageGuideline\"},{\"id\":264,\"name\":\"Circle loader\",\"slug\":\"circle-loader\",\"description\":\"Circle loader progress\",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":265,\"name\":\"Circle loader\",\"slug\":\"circle-loader\",\"description\":\"Use circle loaders for loading views progress\",\"display_description\":\"Use circle loaders for loading views\",\"pageType\":\"Component\",\"query\":\"Use circle loaders for loading views\",\"type\":\"usageGuideline\"},{\"id\":266,\"name\":\"Circle loader\",\"slug\":\"circle-loader\",\"description\":\"Use small circle loaders when space is limited progress\",\"display_description\":\"Use small circle loaders when space is limited\",\"pageType\":\"Component\",\"query\":\"Use small circle loaders when space is limited\",\"type\":\"usageGuideline\"},{\"id\":267,\"name\":\"Headers\",\"slug\":\"headers\",\"description\":\"Headers \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":268,\"name\":\"Color wheel\",\"slug\":\"color-wheel\",\"description\":\"Color wheel \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":269,\"name\":\"Color wheel\",\"slug\":\"color-wheel\",\"description\":\"Flexible radius \",\"display_description\":\"Flexible radius\",\"pageType\":\"Component\",\"query\":\"Flexible radius\",\"type\":\"Behavior\"},{\"id\":270,\"name\":\"Color wheel\",\"slug\":\"color-wheel\",\"description\":\"Loupe behavior (down state, finger input) \",\"display_description\":\"Loupe behavior (down state, finger input)\",\"pageType\":\"Component\",\"query\":\"Loupe behavior (down state, finger input)\",\"type\":\"Behavior\"},{\"id\":271,\"name\":\"Color wheel\",\"slug\":\"color-wheel\",\"description\":\"Display color selection \",\"display_description\":\"Display color selection\",\"pageType\":\"Component\",\"query\":\"Display color selection\",\"type\":\"usageGuideline\"},{\"id\":272,\"name\":\"Color wheel\",\"slug\":\"color-wheel\",\"description\":\"Use the circular track for hues only \",\"display_description\":\"Use the circular track for hues only\",\"pageType\":\"Component\",\"query\":\"Use the circular track for hues only\",\"type\":\"usageGuideline\"},{\"id\":273,\"name\":\"Trays\",\"slug\":\"trays\",\"description\":\"Trays \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":274,\"name\":\"Trays\",\"slug\":\"trays\",\"description\":\"Source indication \",\"display_description\":\"Source indication\",\"pageType\":\"Foundation\",\"query\":\"Source indication\",\"type\":\"Behavior\"},{\"id\":275,\"name\":\"Trays\",\"slug\":\"trays\",\"description\":\"Animation \",\"display_description\":\"Animation\",\"pageType\":\"Foundation\",\"query\":\"Animation\",\"type\":\"Behavior\"},{\"id\":276,\"name\":\"Trays\",\"slug\":\"trays\",\"description\":\"Trays or popovers? \",\"display_description\":\"Trays or popovers?\",\"pageType\":\"Foundation\",\"query\":\"Trays or popovers?\",\"type\":\"usageGuideline\"},{\"id\":277,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Typography \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":278,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Respect our type scale \",\"display_description\":\"Respect our type scale\",\"pageType\":\"Foundation\",\"query\":\"Respect our type scale\",\"type\":\"usageGuideline\"},{\"id\":279,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Use and adjust mobile font sizes \",\"display_description\":\"Use and adjust mobile font sizes\",\"pageType\":\"Foundation\",\"query\":\"Use and adjust mobile font sizes\",\"type\":\"usageGuideline\"},{\"id\":280,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Don't use underlines for adding emphasis \",\"display_description\":\"Don't use underlines for adding emphasis\",\"pageType\":\"Foundation\",\"query\":\"Don't use underlines for adding emphasis\",\"type\":\"usageGuideline\"},{\"id\":281,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Respect capitalization rules \",\"display_description\":\"Respect capitalization rules\",\"pageType\":\"Foundation\",\"query\":\"Respect capitalization rules\",\"type\":\"usageGuideline\"},{\"id\":282,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Use tabular numbers for numerical data \",\"display_description\":\"Use tabular numbers for numerical data\",\"pageType\":\"Foundation\",\"query\":\"Use tabular numbers for numerical data\",\"type\":\"usageGuideline\"},{\"id\":283,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Use oldstyle numbers in strings of text \",\"display_description\":\"Use oldstyle numbers in strings of text\",\"pageType\":\"Foundation\",\"query\":\"Use oldstyle numbers in strings of text\",\"type\":\"usageGuideline\"},{\"id\":284,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Don't let paragraph widths get too thin \",\"display_description\":\"Don't let paragraph widths get too thin\",\"pageType\":\"Foundation\",\"query\":\"Don't let paragraph widths get too thin\",\"type\":\"usageGuideline\"},{\"id\":285,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Keep content short and to the point \",\"display_description\":\"Keep content short and to the point\",\"pageType\":\"Foundation\",\"query\":\"Keep content short and to the point\",\"type\":\"usageGuideline\"},{\"id\":286,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Don't use indentation \",\"display_description\":\"Don't use indentation\",\"pageType\":\"Foundation\",\"query\":\"Don't use indentation\",\"type\":\"usageGuideline\"},{\"id\":287,\"name\":\"Typography\",\"slug\":\"typography\",\"description\":\"Don't fully-justify text \",\"display_description\":\"Don't fully-justify text\",\"pageType\":\"Foundation\",\"query\":\"Don't fully-justify text\",\"type\":\"usageGuideline\"},{\"id\":288,\"name\":\"Link\",\"slug\":\"link\",\"description\":\"Link \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":289,\"name\":\"Link\",\"slug\":\"link\",\"description\":\"Use links in body copy \",\"display_description\":\"Use links in body copy\",\"pageType\":\"Component\",\"query\":\"Use links in body copy\",\"type\":\"usageGuideline\"},{\"id\":290,\"name\":\"Link\",\"slug\":\"link\",\"description\":\"Think about screen readers \",\"display_description\":\"Think about screen readers\",\"pageType\":\"Component\",\"query\":\"Think about screen readers\",\"type\":\"usageGuideline\"},{\"id\":291,\"name\":\"Voice and tone\",\"slug\":\"voice-and-tone\",\"description\":\"Voice and tone \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":292,\"name\":\"Brand illustrations\",\"slug\":\"brand-illustrations\",\"description\":\"Brand illustrations \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":293,\"name\":\"Brand illustrations\",\"slug\":\"brand-illustrations\",\"description\":\"Don't create your own illustration \",\"display_description\":\"Don't create your own illustration\",\"pageType\":\"Foundation\",\"query\":\"Don't create your own illustration\",\"type\":\"usageGuideline\"},{\"id\":294,\"name\":\"Brand illustrations\",\"slug\":\"brand-illustrations\",\"description\":\"Don't change colors \",\"display_description\":\"Don't change colors\",\"pageType\":\"Foundation\",\"query\":\"Don't change colors\",\"type\":\"usageGuideline\"},{\"id\":295,\"name\":\"Brand illustrations\",\"slug\":\"brand-illustrations\",\"description\":\"Don’t scale \",\"display_description\":\"Don’t scale\",\"pageType\":\"Foundation\",\"query\":\"Don’t scale\",\"type\":\"usageGuideline\"},{\"id\":296,\"name\":\"Brand illustrations\",\"slug\":\"brand-illustrations\",\"description\":\"Don't crop \",\"display_description\":\"Don't crop\",\"pageType\":\"Foundation\",\"query\":\"Don't crop\",\"type\":\"usageGuideline\"},{\"id\":297,\"name\":\"Brand illustrations\",\"slug\":\"brand-illustrations\",\"description\":\"Don’t place over an image \",\"display_description\":\"Don’t place over an image\",\"pageType\":\"Foundation\",\"query\":\"Don’t place over an image\",\"type\":\"usageGuideline\"},{\"id\":298,\"name\":\"Status light\",\"slug\":\"status-light\",\"description\":\"Status light \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":299,\"name\":\"Status light\",\"slug\":\"status-light\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":300,\"name\":\"Status light\",\"slug\":\"status-light\",\"description\":\"Use the appropriate variation \",\"display_description\":\"Use the appropriate variation\",\"pageType\":\"Component\",\"query\":\"Use the appropriate variation\",\"type\":\"usageGuideline\"},{\"id\":301,\"name\":\"Status light\",\"slug\":\"status-light\",\"description\":\"Status light text \",\"display_description\":\"Status light text\",\"pageType\":\"Component\",\"query\":\"Status light text\",\"type\":\"usageGuideline\"},{\"id\":302,\"name\":\"What's new\",\"slug\":\"whats-new\",\"description\":\"What's new \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":303,\"name\":\"Tutorials\",\"slug\":\"tutorials\",\"description\":\"Tutorials \",\"pageType\":\"Search Exclude\",\"query\":\"\",\"type\":\"page\"},{\"id\":304,\"name\":\"Form errors\",\"slug\":\"https://xd.adobe.com/view/da1889a3-ed5e-4d8f-589e-59c98ff9786e-ac29/\",\"description\":\"Form errors tutorial tutorials\",\"pageType\":\"Tutorial\",\"query\":\"\",\"type\":\"Tutorial\"},{\"id\":305,\"name\":\"What is a card?\",\"slug\":\"https://xd.adobe.com/view/5822223b-9cc1-4a9a-6068-45d640aad59c-2e13/\",\"description\":\"What is a card? tutorial tutorials\",\"pageType\":\"Tutorial\",\"query\":\"\",\"type\":\"Tutorial\"},{\"id\":306,\"name\":\"Create a menu\",\"slug\":\"https://xd.adobe.com/view/25649b74-51dc-4a95-66b8-832c0c37b505-5355/\",\"description\":\"Create a menu tutorial tutorials\",\"pageType\":\"Tutorial\",\"query\":\"\",\"type\":\"Tutorial\"},{\"id\":307,\"name\":\"Gray system\",\"slug\":\"https://xd.adobe.com/view/79f3095c-9bee-4717-768f-629ad7f25997-0fc2/\",\"description\":\"Gray system tutorial tutorials\",\"pageType\":\"Tutorial\",\"query\":\"\",\"type\":\"Tutorial\"},{\"id\":308,\"name\":\"Buttons\",\"slug\":\"https://xd.adobe.com/view/b6b8b32a-d5db-4994-7db4-78b8d09cef4e-c089/\",\"description\":\"Buttons tutorial tutorials\",\"pageType\":\"Tutorial\",\"query\":\"\",\"type\":\"Tutorial\"},{\"id\":309,\"name\":\"Radio button\",\"slug\":\"radio-button\",\"description\":\"Radio button \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":310,\"name\":\"Radio button\",\"slug\":\"radio-button\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":311,\"name\":\"Radio button\",\"slug\":\"radio-button\",\"description\":\"Mixed value \",\"display_description\":\"Mixed value\",\"pageType\":\"Component\",\"query\":\"Mixed value\",\"type\":\"Behavior\"},{\"id\":312,\"name\":\"Radio button\",\"slug\":\"radio-button\",\"description\":\"Emphasized or not? \",\"display_description\":\"Emphasized or not?\",\"pageType\":\"Component\",\"query\":\"Emphasized or not?\",\"type\":\"usageGuideline\"},{\"id\":313,\"name\":\"Radio button\",\"slug\":\"radio-button\",\"description\":\"Use radio buttons for mutually exclusive options \",\"display_description\":\"Use radio buttons for mutually exclusive options\",\"pageType\":\"Component\",\"query\":\"Use radio buttons for mutually exclusive options\",\"type\":\"usageGuideline\"},{\"id\":314,\"name\":\"Radio button\",\"slug\":\"radio-button\",\"description\":\"Label groups of radio buttons \",\"display_description\":\"Label groups of radio buttons\",\"pageType\":\"Component\",\"query\":\"Label groups of radio buttons\",\"type\":\"usageGuideline\"},{\"id\":315,\"name\":\"Motion\",\"slug\":\"motion\",\"description\":\"Motion \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":316,\"name\":\"Tools\",\"slug\":\"tools\",\"description\":\"Tools \",\"pageType\":\"Resources\",\"query\":\"\",\"type\":\"page\"},{\"id\":317,\"name\":\"Meet Spectrum, Adobe’s design system\",\"slug\":\"home\",\"description\":\"Meet Spectrum, Adobe’s design system \",\"pageType\":\"Index\",\"query\":\"\",\"type\":\"page\"},{\"id\":318,\"name\":\"Contact us\",\"slug\":\"contact-us\",\"description\":\"Contact us \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":319,\"name\":\"Color slider\",\"slug\":\"color-slider\",\"description\":\"Color slider \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":320,\"name\":\"Color slider\",\"slug\":\"color-slider\",\"description\":\"Flexible length \",\"display_description\":\"Flexible length\",\"pageType\":\"Component\",\"query\":\"Flexible length\",\"type\":\"Behavior\"},{\"id\":321,\"name\":\"Color slider\",\"slug\":\"color-slider\",\"description\":\"Handle behavior \",\"display_description\":\"Handle behavior\",\"pageType\":\"Component\",\"query\":\"Handle behavior\",\"type\":\"Behavior\"},{\"id\":322,\"name\":\"Color slider\",\"slug\":\"color-slider\",\"description\":\"Loupe behavior (down state, finger input) \",\"display_description\":\"Loupe behavior (down state, finger input)\",\"pageType\":\"Component\",\"query\":\"Loupe behavior (down state, finger input)\",\"type\":\"Behavior\"},{\"id\":323,\"name\":\"Color slider\",\"slug\":\"color-slider\",\"description\":\"Include labels \",\"display_description\":\"Include labels\",\"pageType\":\"Component\",\"query\":\"Include labels\",\"type\":\"usageGuideline\"},{\"id\":324,\"name\":\"Color slider\",\"slug\":\"color-slider\",\"description\":\"Display color selection \",\"display_description\":\"Display color selection\",\"pageType\":\"Component\",\"query\":\"Display color selection\",\"type\":\"usageGuideline\"},{\"id\":325,\"name\":\"Panels\",\"slug\":\"panels\",\"description\":\"Panels \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":326,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Side navigation \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":327,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Flexible width \",\"display_description\":\"Flexible width\",\"pageType\":\"Component\",\"query\":\"Flexible width\",\"type\":\"Behavior\"},{\"id\":328,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":329,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Don't make the width too condensed \",\"display_description\":\"Don't make the width too condensed\",\"pageType\":\"Component\",\"query\":\"Don't make the width too condensed\",\"type\":\"usageGuideline\"},{\"id\":330,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Use descriptive titles \",\"display_description\":\"Use descriptive titles\",\"pageType\":\"Component\",\"query\":\"Use descriptive titles\",\"type\":\"usageGuideline\"},{\"id\":331,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Be concise \",\"display_description\":\"Be concise\",\"pageType\":\"Component\",\"query\":\"Be concise\",\"type\":\"usageGuideline\"},{\"id\":332,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Use sentence case \",\"display_description\":\"Use sentence case\",\"pageType\":\"Component\",\"query\":\"Use sentence case\",\"type\":\"usageGuideline\"},{\"id\":333,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Use icons in first-level items only \",\"display_description\":\"Use icons in first-level items only\",\"pageType\":\"Component\",\"query\":\"Use icons in first-level items only\",\"type\":\"usageGuideline\"},{\"id\":334,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Combining icon and text-only navigation items \",\"display_description\":\"Combining icon and text-only navigation items\",\"pageType\":\"Component\",\"query\":\"Combining icon and text-only navigation items\",\"type\":\"usageGuideline\"},{\"id\":335,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Use the right variation \",\"display_description\":\"Use the right variation\",\"pageType\":\"Component\",\"query\":\"Use the right variation\",\"type\":\"usageGuideline\"},{\"id\":336,\"name\":\"Side navigation\",\"slug\":\"side-navigation\",\"description\":\"Avoid deep nested menus \",\"display_description\":\"Avoid deep nested menus\",\"pageType\":\"Component\",\"query\":\"Avoid deep nested menus\",\"type\":\"usageGuideline\"},{\"id\":337,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Popovers \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":338,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Rectangular source \",\"display_description\":\"Rectangular source\",\"pageType\":\"Foundation\",\"query\":\"Rectangular source\",\"type\":\"Behavior\"},{\"id\":339,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Square source \",\"display_description\":\"Square source\",\"pageType\":\"Foundation\",\"query\":\"Square source\",\"type\":\"Behavior\"},{\"id\":340,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Alignment \",\"display_description\":\"Alignment\",\"pageType\":\"Foundation\",\"query\":\"Alignment\",\"type\":\"Behavior\"},{\"id\":341,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Spacing \",\"display_description\":\"Spacing\",\"pageType\":\"Foundation\",\"query\":\"Spacing\",\"type\":\"Behavior\"},{\"id\":342,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Source indication: clear source \",\"display_description\":\"Source indication: clear source\",\"pageType\":\"Foundation\",\"query\":\"Source indication: clear source\",\"type\":\"Behavior\"},{\"id\":343,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Source indication: ambiguous source \",\"display_description\":\"Source indication: ambiguous source\",\"pageType\":\"Foundation\",\"query\":\"Source indication: ambiguous source\",\"type\":\"Behavior\"},{\"id\":344,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Animation \",\"display_description\":\"Animation\",\"pageType\":\"Foundation\",\"query\":\"Animation\",\"type\":\"Behavior\"},{\"id\":345,\"name\":\"Popovers\",\"slug\":\"popovers\",\"description\":\"Popovers or trays? \",\"display_description\":\"Popovers or trays?\",\"pageType\":\"Foundation\",\"query\":\"Popovers or trays?\",\"type\":\"usageGuideline\"},{\"id\":346,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"Checkbox \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":347,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":348,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"Mixed value \",\"display_description\":\"Mixed value\",\"pageType\":\"Component\",\"query\":\"Mixed value\",\"type\":\"Behavior\"},{\"id\":349,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"Emphasized or not? \",\"display_description\":\"Emphasized or not?\",\"pageType\":\"Component\",\"query\":\"Emphasized or not?\",\"type\":\"usageGuideline\"},{\"id\":350,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"When to use a standalone checkbox? \",\"display_description\":\"When to use a standalone checkbox?\",\"pageType\":\"Component\",\"query\":\"When to use a standalone checkbox?\",\"type\":\"usageGuideline\"},{\"id\":351,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"Checkbox or radio button? \",\"display_description\":\"Checkbox or radio button?\",\"pageType\":\"Component\",\"query\":\"Checkbox or radio button?\",\"type\":\"usageGuideline\"},{\"id\":352,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"Checkbox or switch? \",\"display_description\":\"Checkbox or switch?\",\"pageType\":\"Component\",\"query\":\"Checkbox or switch?\",\"type\":\"usageGuideline\"},{\"id\":353,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"Label groups of related checkboxes \",\"display_description\":\"Label groups of related checkboxes\",\"pageType\":\"Component\",\"query\":\"Label groups of related checkboxes\",\"type\":\"usageGuideline\"},{\"id\":354,\"name\":\"Checkbox\",\"slug\":\"checkbox\",\"description\":\"RTL \",\"display_description\":\"RTL\",\"pageType\":\"Component\",\"query\":\"RTL\",\"type\":\"Behavior\"},{\"id\":355,\"name\":\"International design\",\"slug\":\"international-design\",\"description\":\"International design \",\"pageType\":\"Foundation\",\"query\":\"\",\"type\":\"page\"},{\"id\":356,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Slider \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":357,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Value placement \",\"display_description\":\"Value placement\",\"pageType\":\"Component\",\"query\":\"Value placement\",\"type\":\"Behavior\"},{\"id\":358,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":359,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Include a label \",\"display_description\":\"Include a label\",\"pageType\":\"Component\",\"query\":\"Include a label\",\"type\":\"usageGuideline\"},{\"id\":360,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Review label-less designs with Inclusive Design team \",\"display_description\":\"Review label-less designs with Inclusive Design team\",\"pageType\":\"Component\",\"query\":\"Review label-less designs with Inclusive Design team\",\"type\":\"usageGuideline\"},{\"id\":361,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Allow a hot text option when needed \",\"display_description\":\"Allow a hot text option when needed\",\"pageType\":\"Component\",\"query\":\"Allow a hot text option when needed\",\"type\":\"usageGuideline\"},{\"id\":362,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Show value units to help provide context \",\"display_description\":\"Show value units to help provide context\",\"pageType\":\"Component\",\"query\":\"Show value units to help provide context\",\"type\":\"usageGuideline\"},{\"id\":363,\"name\":\"Slider\",\"slug\":\"slider\",\"description\":\"Prefix positive/negative values \",\"display_description\":\"Prefix positive/negative values\",\"pageType\":\"Component\",\"query\":\"Prefix positive/negative values\",\"type\":\"usageGuideline\"},{\"id\":364,\"name\":\"Rating\",\"slug\":\"rating\",\"description\":\"Rating \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":365,\"name\":\"Rating\",\"slug\":\"rating\",\"description\":\"Editing rating \",\"display_description\":\"Editing rating\",\"pageType\":\"Component\",\"query\":\"Editing rating\",\"type\":\"Behavior\"},{\"id\":366,\"name\":\"Rating\",\"slug\":\"rating\",\"description\":\"Clearing rating \",\"display_description\":\"Clearing rating\",\"pageType\":\"Component\",\"query\":\"Clearing rating\",\"type\":\"Behavior\"},{\"id\":367,\"name\":\"Rating\",\"slug\":\"rating\",\"description\":\"Mixed value \",\"display_description\":\"Mixed value\",\"pageType\":\"Component\",\"query\":\"Mixed value\",\"type\":\"Behavior\"},{\"id\":368,\"name\":\"Rating\",\"slug\":\"rating\",\"description\":\"Don’t customize the number of stars available \",\"display_description\":\"Don’t customize the number of stars available\",\"pageType\":\"Component\",\"query\":\"Don’t customize the number of stars available\",\"type\":\"usageGuideline\"},{\"id\":369,\"name\":\"Alert Dialog\",\"slug\":\"alert-dialog\",\"description\":\"Alert Dialog \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":370,\"name\":\"Divider\",\"slug\":\"divider\",\"description\":\"Divider rule\",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":371,\"name\":\"Divider\",\"slug\":\"divider\",\"description\":\"Place a divider below a header rule\",\"display_description\":\"Place a divider below a header\",\"pageType\":\"Component\",\"query\":\"Place a divider below a header\",\"type\":\"usageGuideline\"},{\"id\":372,\"name\":\"Divider\",\"slug\":\"divider\",\"description\":\"Don’t overuse dividers rule\",\"display_description\":\"Don’t overuse dividers\",\"pageType\":\"Component\",\"query\":\"Don’t overuse dividers\",\"type\":\"usageGuideline\"},{\"id\":373,\"name\":\"Quick actions\",\"slug\":\"quick-actions\",\"description\":\"Quick actions \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":374,\"name\":\"Quick actions\",\"slug\":\"quick-actions\",\"description\":\"Action button overflow \",\"display_description\":\"Action button overflow\",\"pageType\":\"Component\",\"query\":\"Action button overflow\",\"type\":\"Behavior\"},{\"id\":375,\"name\":\"Quick actions\",\"slug\":\"quick-actions\",\"description\":\"Don’t mix icons and text \",\"display_description\":\"Don’t mix icons and text\",\"pageType\":\"Component\",\"query\":\"Don’t mix icons and text\",\"type\":\"usageGuideline\"},{\"id\":376,\"name\":\"Quick actions\",\"slug\":\"quick-actions\",\"description\":\"Place the most common actions to the left \",\"display_description\":\"Place the most common actions to the left\",\"pageType\":\"Component\",\"query\":\"Place the most common actions to the left\",\"type\":\"usageGuideline\"},{\"id\":377,\"name\":\"Quick actions\",\"slug\":\"quick-actions\",\"description\":\"Use quick actions as shortcuts only \",\"display_description\":\"Use quick actions as shortcuts only\",\"pageType\":\"Component\",\"query\":\"Use quick actions as shortcuts only\",\"type\":\"usageGuideline\"},{\"id\":378,\"name\":\"Quick actions\",\"slug\":\"quick-actions\",\"description\":\"Don't wrap actions \",\"display_description\":\"Don't wrap actions\",\"pageType\":\"Component\",\"query\":\"Don't wrap actions\",\"type\":\"usageGuideline\"},{\"id\":379,\"name\":\"Tag\",\"slug\":\"tag\",\"description\":\"Tag \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":380,\"name\":\"Tag\",\"slug\":\"tag\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":381,\"name\":\"Tag\",\"slug\":\"tag\",\"description\":\"Tag group overflow \",\"display_description\":\"Tag group overflow\",\"pageType\":\"Component\",\"query\":\"Tag group overflow\",\"type\":\"Behavior\"},{\"id\":382,\"name\":\"Tag\",\"slug\":\"tag\",\"description\":\"Allow bulk actions \",\"display_description\":\"Allow bulk actions\",\"pageType\":\"Component\",\"query\":\"Allow bulk actions\",\"type\":\"usageGuideline\"},{\"id\":383,\"name\":\"Tag\",\"slug\":\"tag\",\"description\":\"Avoid disabling a large group of tags \",\"display_description\":\"Avoid disabling a large group of tags\",\"pageType\":\"Component\",\"query\":\"Avoid disabling a large group of tags\",\"type\":\"usageGuideline\"},{\"id\":384,\"name\":\"Cards\",\"slug\":\"cards\",\"description\":\"Cards \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":385,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Tooltip \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":386,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":387,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Animation \",\"display_description\":\"Animation\",\"pageType\":\"Component\",\"query\":\"Animation\",\"type\":\"Behavior\"},{\"id\":388,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Immediate or delayed appearance \",\"display_description\":\"Immediate or delayed appearance\",\"pageType\":\"Component\",\"query\":\"Immediate or delayed appearance\",\"type\":\"Behavior\"},{\"id\":389,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Warmup and cooldown \",\"display_description\":\"Warmup and cooldown\",\"pageType\":\"Component\",\"query\":\"Warmup and cooldown\",\"type\":\"Behavior\"},{\"id\":390,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Use tooltips to describe icons \",\"display_description\":\"Use tooltips to describe icons\",\"pageType\":\"Component\",\"query\":\"Use tooltips to describe icons\",\"type\":\"usageGuideline\"},{\"id\":391,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Be concise \",\"display_description\":\"Be concise\",\"pageType\":\"Component\",\"query\":\"Be concise\",\"type\":\"usageGuideline\"},{\"id\":392,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Don't communicate crucial information \",\"display_description\":\"Don't communicate crucial information\",\"pageType\":\"Component\",\"query\":\"Don't communicate crucial information\",\"type\":\"usageGuideline\"},{\"id\":393,\"name\":\"Tooltip\",\"slug\":\"tooltip\",\"description\":\"Don't place actions inside a tooltip \",\"display_description\":\"Don't place actions inside a tooltip\",\"pageType\":\"Component\",\"query\":\"Don't place actions inside a tooltip\",\"type\":\"usageGuideline\"},{\"id\":394,\"name\":\"Dialog\",\"slug\":\"dialog\",\"description\":\"Dialog \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":395,\"name\":\"Dialog\",\"slug\":\"dialog\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":396,\"name\":\"Dialog\",\"slug\":\"dialog\",\"description\":\"Button group overflow \",\"display_description\":\"Button group overflow\",\"pageType\":\"Component\",\"query\":\"Button group overflow\",\"type\":\"Behavior\"},{\"id\":397,\"name\":\"Dialog\",\"slug\":\"dialog\",\"description\":\"Use dialogs sparingly \",\"display_description\":\"Use dialogs sparingly\",\"pageType\":\"Component\",\"query\":\"Use dialogs sparingly\",\"type\":\"usageGuideline\"},{\"id\":398,\"name\":\"Dialog\",\"slug\":\"dialog\",\"description\":\"Don't nest dialogs \",\"display_description\":\"Don't nest dialogs\",\"pageType\":\"Component\",\"query\":\"Don't nest dialogs\",\"type\":\"usageGuideline\"},{\"id\":399,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Toast \",\"pageType\":\"Component\",\"query\":\"\",\"type\":\"page\"},{\"id\":400,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Text overflow \",\"display_description\":\"Text overflow\",\"pageType\":\"Component\",\"query\":\"Text overflow\",\"type\":\"Behavior\"},{\"id\":401,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Toast or dialog? \",\"display_description\":\"Toast or dialog?\",\"pageType\":\"Component\",\"query\":\"Toast or dialog?\",\"type\":\"usageGuideline\"},{\"id\":402,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Placement \",\"display_description\":\"Placement\",\"pageType\":\"Component\",\"query\":\"Placement\",\"type\":\"usageGuideline\"},{\"id\":403,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Don’t place mobile toasts over navigation \",\"display_description\":\"Don’t place mobile toasts over navigation\",\"pageType\":\"Component\",\"query\":\"Don’t place mobile toasts over navigation\",\"type\":\"usageGuideline\"},{\"id\":404,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Be concise \",\"display_description\":\"Be concise\",\"pageType\":\"Component\",\"query\":\"Be concise\",\"type\":\"usageGuideline\"},{\"id\":405,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Don’t display more than one action \",\"display_description\":\"Don’t display more than one action\",\"pageType\":\"Component\",\"query\":\"Don’t display more than one action\",\"type\":\"usageGuideline\"},{\"id\":406,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Don't include a redundant action \",\"display_description\":\"Don't include a redundant action\",\"pageType\":\"Component\",\"query\":\"Don't include a redundant action\",\"type\":\"usageGuideline\"},{\"id\":407,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Multiple toasts \",\"display_description\":\"Multiple toasts\",\"pageType\":\"Component\",\"query\":\"Multiple toasts\",\"type\":\"usageGuideline\"},{\"id\":408,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Too many toasts \",\"display_description\":\"Too many toasts\",\"pageType\":\"Component\",\"query\":\"Too many toasts\",\"type\":\"usageGuideline\"},{\"id\":409,\"name\":\"Toast\",\"slug\":\"toast\",\"description\":\"Auto-dismiss \",\"display_description\":\"Auto-dismiss\",\"pageType\":\"Component\",\"query\":\"Auto-dismiss\",\"type\":\"usageGuideline\"},{\"id\":410,\"name\":\"Developer links\",\"slug\":\"developer-links\",\"description\":\"Developer links \",\"pageType\":\"Guidelines\",\"query\":\"\",\"type\":\"page\"},{\"id\":411,\"name\":\"Button\",\"slug\":\"Button-v5.1.0.xd\",\"description\":\"Button \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":412,\"name\":\"Action button\",\"slug\":\"Action-button-v5.2.0.xd\",\"description\":\"Action button tool\",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":413,\"name\":\"Bar loader\",\"slug\":\"Bar-loader-v5.1.0.xd\",\"description\":\"Bar loader progress\",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":414,\"name\":\"Circle loader\",\"slug\":\"Circle-loader-v5.0.0.xd\",\"description\":\"Circle loader progress\",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":415,\"name\":\"Coach mark\",\"slug\":\"Coach-mark-v5.1.0.xd\",\"description\":\"Coach mark \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":416,\"name\":\"Color area\",\"slug\":\"Color-area-v1.0.0.xd\",\"description\":\"Color area \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":417,\"name\":\"Color slider\",\"slug\":\"Color-slider-v1.0.0.xd\",\"description\":\"Color slider \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":418,\"name\":\"Color wheel\",\"slug\":\"Color-wheel-v1.0.0.xd\",\"description\":\"Color wheel \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":419,\"name\":\"Combo box\",\"slug\":\"Combo-box-v5.1.0.xd\",\"description\":\"Combo box \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":420,\"name\":\"Dialog\",\"slug\":\"Dialog-v5.1.0.xd\",\"description\":\"Dialog \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":421,\"name\":\"Divider\",\"slug\":\"Divider-v6.1.0.xd\",\"description\":\"Divider rule\",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":422,\"name\":\"Dropdown\",\"slug\":\"Dropdown-v5.1.0.xd\",\"description\":\"Dropdown select picker\",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":423,\"name\":\"Link\",\"slug\":\"Link-v6.0.0.xd\",\"description\":\"Link \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":424,\"name\":\"Meter\",\"slug\":\"Meter-v5.1.0.xd\",\"description\":\"Meter progress\",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":425,\"name\":\"Quick actions\",\"slug\":\"Quick-actions-v5.0.1.xd\",\"description\":\"Quick actions \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":426,\"name\":\"Radio button\",\"slug\":\"Radio-button-v6.1.0.xd\",\"description\":\"Radio button \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":427,\"name\":\"Rating\",\"slug\":\"Rating-v2.0.0.xd\",\"description\":\"Rating \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":428,\"name\":\"Side navigation\",\"slug\":\"Side-navigation-v5.0.1.xd\",\"description\":\"Side navigation \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":429,\"name\":\"Slider\",\"slug\":\"Slider-v5.1.0.xd\",\"description\":\"Slider \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":430,\"name\":\"Status light\",\"slug\":\"Status-light-v5.1.0.xd\",\"description\":\"Status light \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":431,\"name\":\"Switch\",\"slug\":\"Switch-v6.1.0.xd\",\"description\":\"Switch \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":432,\"name\":\"Table\",\"slug\":\"Table-v5.0.0.xd\",\"description\":\"Table \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":433,\"name\":\"Tabs\",\"slug\":\"Tabs-v5.1.0.xd\",\"description\":\"Tabs \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":434,\"name\":\"Tag\",\"slug\":\"Tag-v5.1.0.xd\",\"description\":\"Tag \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":435,\"name\":\"Text field\",\"slug\":\"Text-field-v5.1.0.xd\",\"description\":\"Text field input field\",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":436,\"name\":\"Toast\",\"slug\":\"Toast-v5.0.0.xd\",\"description\":\"Toast \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":437,\"name\":\"Tool\",\"slug\":\"Tool-v5.0.0.xd\",\"description\":\"Tool \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":438,\"name\":\"Tooltip\",\"slug\":\"Tooltip-v5.1.0.xd\",\"description\":\"Tooltip \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":439,\"name\":\"Checkbox\",\"slug\":\"Checkbox-v6.1.0.xd\",\"description\":\"Checkbox \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":440,\"name\":\"Color\",\"slug\":\"Color-v5.0.0.xd\",\"description\":\"Color \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":441,\"name\":\"Typography\",\"slug\":\"Typography-v5.0.0.xd\",\"description\":\"Typography \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":442,\"name\":\"Object styles\",\"slug\":\"Object-styles-v5.0.0.xd\",\"description\":\"Object styles \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":443,\"name\":\"Motion\",\"slug\":\"Motion-v5.0.0.xd\",\"description\":\"Motion \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":444,\"name\":\"Application frame\",\"slug\":\"Application-frame-v5.0.0.xd\",\"description\":\"Application frame \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":445,\"name\":\"Responsive grid\",\"slug\":\"Responsive-grid-v5.0.0.xd\",\"description\":\"Responsive grid \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":446,\"name\":\"Popovers\",\"slug\":\"Popovers-v5.0.0.xd\",\"description\":\"Popovers \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":447,\"name\":\"Trays\",\"slug\":\"Trays-v5.0.0.xd\",\"description\":\"Trays \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"},{\"id\":448,\"name\":\"Headers\",\"slug\":\"Headers-v1.0.0.xd\",\"description\":\"Headers \",\"pageType\":\"file\",\"query\":\"\",\"type\":\"xd\"}]");
+module.exports = JSON.parse("{\"accordion\":{\"href\":\"accordion\",\"name\":\"Accordion\",\"component\":\"accordion\",\"description\":\"While remaining backward compatible, the recommended markup has been updated to implement the [WAI-ARIA 1.1 Accordion design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) to better support accessibility for keyboard and screen reader users.\",\"slug\":\"accordion\",\"type\":\"page\",\"pageType\":\"Component\"},\"actionbar\":{\"href\":\"actionbar\",\"name\":\"Action Bar\",\"component\":\"actionbar\",\"description\":\"Floating action bar that appears in selection mode.\",\"slug\":\"actionbar\",\"type\":\"page\",\"pageType\":\"Component\"},\"actionbutton\":{\"href\":\"actionbutton\",\"name\":\"Action Button\",\"component\":\"actionbutton\",\"slug\":\"actionbutton\",\"type\":\"page\",\"pageType\":\"Component\"},\"actionmenu\":{\"href\":\"actionmenu\",\"name\":\"Action Menu\",\"component\":\"actionmenu\",\"description\":\"Simply an action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open. Also note the accessibility roles are different for an action menu vs a normal menu.\",\"slug\":\"actionmenu\",\"type\":\"page\",\"pageType\":\"Component\"},\"alert\":{\"href\":\"alert\",\"name\":\"Alert\",\"component\":\"alert\",\"slug\":\"alert\",\"type\":\"page\",\"pageType\":\"Component\"},\"asset\":{\"href\":\"asset\",\"name\":\"Asset\",\"component\":\"asset\",\"slug\":\"asset\",\"type\":\"page\",\"pageType\":\"Component\"},\"assetlist\":{\"href\":\"assetlist\",\"name\":\"Asset List\",\"component\":\"assetlist\",\"description\":\"A selectable list of Assets, often used inside of Miller Columns.\",\"slug\":\"assetlist\",\"type\":\"page\",\"pageType\":\"Component\"},\"avatar\":{\"href\":\"avatar\",\"name\":\"Avatar\",\"component\":\"avatar\",\"slug\":\"avatar\",\"type\":\"page\",\"pageType\":\"Component\"},\"banner\":{\"href\":\"banner\",\"name\":\"Banner\",\"component\":\"banner\",\"slug\":\"banner\",\"type\":\"page\",\"pageType\":\"Component\"},\"barloader\":{\"href\":\"barloader\",\"name\":\"Bar Loader\",\"component\":\"barloader\",\"slug\":\"barloader\",\"type\":\"page\",\"pageType\":\"Component\"},\"breadcrumb\":{\"href\":\"breadcrumb\",\"name\":\"Breadcrumbs\",\"component\":\"breadcrumb\",\"slug\":\"breadcrumb\",\"type\":\"page\",\"pageType\":\"Component\"},\"button-cta\":{\"href\":\"button-cta\",\"name\":\"Button - CTA\",\"component\":\"button-cta\",\"description\":\"The call to action button communicates strong emphasis and is reserved for encouraging critical actions.\",\"slug\":\"button-cta\",\"type\":\"page\",\"pageType\":\"Component\"},\"button-over-background\":{\"href\":\"button-over-background\",\"name\":\"Button - Over Background\",\"component\":\"button-over-background\",\"description\":\"When a button needs to be placed on top of a colored background or a visual, use the over background button. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.\",\"slug\":\"button-over-background\",\"type\":\"page\",\"pageType\":\"Component\"},\"button-primary\":{\"href\":\"button-primary\",\"name\":\"Button - Primary\",\"component\":\"button-primary\",\"description\":\"The primary button is used for medium emphasis.\",\"slug\":\"button-primary\",\"type\":\"page\",\"pageType\":\"Component\"},\"button-secondary\":{\"href\":\"button-secondary\",\"name\":\"Button - Secondary\",\"component\":\"button-secondary\",\"description\":\"The secondary button is for low emphasis.\",\"slug\":\"button-secondary\",\"type\":\"page\",\"pageType\":\"Component\"},\"button-warning\":{\"href\":\"button-warning\",\"name\":\"Button - Warning\",\"component\":\"button-warning\",\"description\":\"The negative button is for high emphasis of negative or destructive actions.\",\"slug\":\"button-warning\",\"type\":\"page\",\"pageType\":\"Component\"},\"buttongroup\":{\"href\":\"buttongroup\",\"name\":\"Button Group\",\"component\":\"buttongroup\",\"slug\":\"buttongroup\",\"type\":\"page\",\"pageType\":\"Component\"},\"calendar\":{\"href\":\"calendar\",\"name\":\"Calendar\",\"component\":\"calendar\",\"slug\":\"calendar\",\"type\":\"page\",\"pageType\":\"Component\"},\"card-asset\":{\"href\":\"card-asset\",\"name\":\"Card - Asset preview\",\"component\":\"card-asset\",\"description\":\"A standard cards with a full-sized asset preview.\",\"slug\":\"card-asset\",\"type\":\"page\",\"pageType\":\"Component\"},\"card-gallery\":{\"href\":\"card-gallery\",\"name\":\"Card - Gallery\",\"component\":\"card-gallery\",\"description\":\"A gallery card for an image.\",\"slug\":\"card-gallery\",\"type\":\"page\",\"pageType\":\"Component\"},\"card\":{\"href\":\"card\",\"name\":\"Card\",\"component\":\"card\",\"slug\":\"card\",\"type\":\"page\",\"pageType\":\"Component\"},\"checkbox\":{\"href\":\"checkbox\",\"name\":\"Checkbox\",\"component\":\"checkbox\",\"description\":\"Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.\",\"slug\":\"checkbox\",\"type\":\"page\",\"pageType\":\"Component\"},\"circleloader\":{\"href\":\"circleloader\",\"name\":\"Circle Loader\",\"component\":\"circleloader\",\"slug\":\"circleloader\",\"type\":\"page\",\"pageType\":\"Component\"},\"clearbutton\":{\"href\":\"clearbutton\",\"name\":\"Clear Button\",\"component\":\"clearbutton\",\"description\":\"Used in search and tags.\",\"slug\":\"clearbutton\",\"type\":\"page\",\"pageType\":\"Component\"},\"coachmark\":{\"href\":\"coachmark\",\"name\":\"Coach Mark\",\"component\":\"coachmark\",\"slug\":\"coachmark\",\"type\":\"page\",\"pageType\":\"Component\"},\"combobox\":{\"href\":\"combobox\",\"name\":\"Combobox\",\"component\":\"combobox\",\"slug\":\"combobox\",\"type\":\"page\",\"pageType\":\"Component\"},\"cyclebutton\":{\"href\":\"cyclebutton\",\"name\":\"Cycle Button\",\"component\":\"cyclebutton\",\"slug\":\"cyclebutton\",\"type\":\"page\",\"pageType\":\"Component\"},\"datepicker\":{\"href\":\"datepicker\",\"name\":\"Date Picker\",\"component\":\"datepicker\",\"description\":\"A date picker uses the input group component to display a field with a button next to it\",\"slug\":\"datepicker\",\"type\":\"page\",\"pageType\":\"Component\"},\"decoratedtextfield\":{\"href\":\"decoratedtextfield\",\"name\":\"Text Field - Decorated\",\"component\":\"decoratedtextfield\",\"description\":\"A Spectrum text field with an additional icon. The icon must be the Small size (18px) in order for it to be positioned correctly.\",\"slug\":\"decoratedtextfield\",\"type\":\"page\",\"pageType\":\"Component\"},\"dial\":{\"href\":\"dial\",\"name\":\"Dial\",\"component\":\"dial\",\"description\":\"A dial for turning it up to 11.\",\"slug\":\"dial\",\"type\":\"page\",\"pageType\":\"Component\"},\"dialog\":{\"href\":\"dialog\",\"name\":\"Dialog\",\"component\":\"dialog\",\"description\":\"In order to avoid blurry Dialogs, wrap them in `<div class=\\\"spectrum-Dialog-wrapper\\\">` and apply `.is-open` to both the Wrapper and the Dialog at the same time. See [this example](dialogAlert.html) for a working demonstration.\",\"slug\":\"dialog\",\"type\":\"page\",\"pageType\":\"Component\"},\"dropdown\":{\"href\":\"dropdown\",\"name\":\"Dropdown\",\"component\":\"dropdown\",\"slug\":\"dropdown\",\"type\":\"page\",\"pageType\":\"Component\"},\"dropindicator\":{\"href\":\"dropindicator\",\"name\":\"Drop Indicator\",\"component\":\"dropindicator\",\"description\":\"A Drop Indicator is used to show the insertion position into a list or table.\",\"slug\":\"dropindicator\",\"type\":\"page\",\"pageType\":\"Component\"},\"dropzone\":{\"href\":\"dropzone\",\"name\":\"Dropzone\",\"component\":\"dropzone\",\"description\":\"A Drop Zone is an area on the screen into a which an object can be dragged and dropped to accomplish a task. For example, a Drop Zone might be used in an upload workflow to enable the user to simply drop a file from their operating system into the Drop Zone, which is a more efficient and intuitive action, rather than utilize the standard \\\"Choose File\\\" dialog.\",\"slug\":\"dropzone\",\"type\":\"page\",\"pageType\":\"Component\"},\"fieldgroup\":{\"href\":\"fieldgroup\",\"name\":\"Field Group\",\"component\":\"fieldgroup\",\"description\":\"A group of fields, usually Radios or Checkboxes.\",\"slug\":\"fieldgroup\",\"type\":\"page\",\"pageType\":\"Component\"},\"fieldlabel\":{\"href\":\"fieldlabel\",\"name\":\"Field Label\",\"component\":\"fieldlabel\",\"description\":\"Field label for use with form inputs.\",\"slug\":\"fieldlabel\",\"type\":\"page\",\"pageType\":\"Component\"},\"form\":{\"href\":\"form\",\"name\":\"Form\",\"component\":\"form\",\"description\":\"Form provides stucture and spacing for your form fields.\",\"slug\":\"form\",\"type\":\"page\",\"pageType\":\"Component\"},\"illustratedmessage\":{\"href\":\"illustratedmessage\",\"name\":\"Illustrated Message\",\"component\":\"illustratedmessage\",\"slug\":\"illustratedmessage\",\"type\":\"page\",\"pageType\":\"Component\"},\"label\":{\"href\":\"label\",\"name\":\"Label\",\"component\":\"label\",\"slug\":\"label\",\"type\":\"page\",\"pageType\":\"Component\"},\"link\":{\"href\":\"link\",\"name\":\"Link\",\"component\":\"link\",\"slug\":\"link\",\"type\":\"page\",\"pageType\":\"Component\"},\"logicbutton\":{\"href\":\"logicbutton\",\"name\":\"Logic Button\",\"component\":\"logicbutton\",\"description\":\"A button that toggles between and/or when clicked.\",\"slug\":\"logicbutton\",\"type\":\"page\",\"pageType\":\"Component\"},\"menu\":{\"href\":\"menu\",\"name\":\"Menu\",\"component\":\"menu\",\"slug\":\"menu\",\"type\":\"page\",\"pageType\":\"Component\"},\"meter\":{\"href\":\"meter\",\"name\":\"Meter\",\"component\":\"meter\",\"description\":\"Meter is implemented using the BarLoader component.\",\"slug\":\"meter\",\"type\":\"page\",\"pageType\":\"Component\"},\"miller\":{\"href\":\"miller\",\"name\":\"Miller Columns\",\"component\":\"miller\",\"slug\":\"miller\",\"type\":\"page\",\"pageType\":\"Component\"},\"page\":{\"href\":\"page\",\"name\":\"Page\",\"component\":\"page\",\"description\":\"The outer page container. A parent tag should only have the `.spectrum` class if using a standalone CSS file.\\nIf using multistops, a parent tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.\\nFinally, if scaling to large with the diff strategy, a parent tag should have the `.spectrum--large` class.\\n\",\"slug\":\"page\",\"type\":\"page\",\"pageType\":\"Component\"},\"pagination-button-style\":{\"href\":\"pagination-button-style\",\"name\":\"Pagination - Button Style\",\"component\":\"pagination-button-style\",\"slug\":\"pagination-button-style\",\"type\":\"page\",\"pageType\":\"Component\"},\"pagination-explicit\":{\"href\":\"pagination-explicit\",\"name\":\"Pagination - Explicit\",\"component\":\"pagination-explicit\",\"slug\":\"pagination-explicit\",\"type\":\"page\",\"pageType\":\"Component\"},\"pagination-listing\":{\"href\":\"pagination-listing\",\"name\":\"Pagination - Page\",\"component\":\"pagination-listing\",\"slug\":\"pagination-listing\",\"type\":\"page\",\"pageType\":\"Component\"},\"popover\":{\"href\":\"popover\",\"name\":\"Popover\",\"component\":\"popover\",\"slug\":\"popover\",\"type\":\"page\",\"pageType\":\"Component\"},\"quickaction\":{\"href\":\"quickaction\",\"name\":\"Quick Actions\",\"component\":\"quickaction\",\"description\":\"Note that the `.spectrum-QuickActions-overlay` class should be placed on the container where the Quick Actions are displayed, and the `.spectrum-QuickActions--textOnly` class should be applied when the buttons have text only.\",\"slug\":\"quickaction\",\"type\":\"page\",\"pageType\":\"Component\"},\"radio\":{\"href\":\"radio\",\"name\":\"Radio\",\"component\":\"radio\",\"slug\":\"radio\",\"type\":\"page\",\"pageType\":\"Component\"},\"rating\":{\"href\":\"rating\",\"name\":\"Rating\",\"component\":\"rating\",\"slug\":\"rating\",\"type\":\"page\",\"pageType\":\"Component\"},\"rule\":{\"href\":\"rule\",\"name\":\"Rule\",\"component\":\"rule\",\"slug\":\"rule\",\"type\":\"page\",\"pageType\":\"Component\"},\"search\":{\"href\":\"search\",\"name\":\"Search\",\"component\":\"search\",\"description\":\"The searchy, cleary field.\",\"slug\":\"search\",\"type\":\"page\",\"pageType\":\"Component\"},\"searchwithin\":{\"href\":\"searchwithin\",\"name\":\"Search Within\",\"component\":\"searchwithin\",\"description\":\"Override the width of the component where necessary.\",\"slug\":\"searchwithin\",\"type\":\"page\",\"pageType\":\"Component\"},\"sidenav\":{\"href\":\"sidenav\",\"name\":\"Side Navigation\",\"component\":\"sidenav\",\"slug\":\"sidenav\",\"type\":\"page\",\"pageType\":\"Component\"},\"slider\":{\"href\":\"slider\",\"name\":\"Slider\",\"component\":\"slider\",\"slug\":\"slider\",\"type\":\"page\",\"pageType\":\"Component\"},\"splitbutton\":{\"href\":\"splitbutton\",\"name\":\"Split Button\",\"component\":\"splitbutton\",\"slug\":\"splitbutton\",\"type\":\"page\",\"pageType\":\"Component\"},\"splitview\":{\"href\":\"splitview\",\"name\":\"SplitView\",\"component\":\"splitview\",\"slug\":\"splitview\",\"type\":\"page\",\"pageType\":\"Component\"},\"statuslight\":{\"href\":\"statuslight\",\"name\":\"Status Light\",\"component\":\"statuslight\",\"slug\":\"statuslight\",\"type\":\"page\",\"pageType\":\"Component\"},\"steplist\":{\"href\":\"steplist\",\"name\":\"Steplist\",\"component\":\"steplist\",\"slug\":\"steplist\",\"type\":\"page\",\"pageType\":\"Component\"},\"stepper\":{\"href\":\"stepper\",\"name\":\"Stepper\",\"component\":\"stepper\",\"description\":\"Note that you must manually apply the `.is-focused` class, and that the `.is-focused` styles below don't look correct unless your cursor is actually in the stepper input field.\",\"slug\":\"stepper\",\"type\":\"page\",\"pageType\":\"Component\"},\"table\":{\"href\":\"table\",\"name\":\"Table\",\"component\":\"table\",\"slug\":\"table\",\"type\":\"page\",\"pageType\":\"Component\"},\"tabs\":{\"href\":\"tabs\",\"name\":\"Tabs\",\"component\":\"tabs\",\"slug\":\"tabs\",\"type\":\"page\",\"pageType\":\"Component\"},\"tags\":{\"href\":\"tags\",\"name\":\"Tags\",\"component\":\"tags\",\"description\":\"A list of tags.\",\"slug\":\"tags\",\"type\":\"page\",\"pageType\":\"Component\"},\"textarea\":{\"href\":\"textarea\",\"name\":\"Text area\",\"component\":\"textarea\",\"description\":\"A multi-line text field.\",\"slug\":\"textarea\",\"type\":\"page\",\"pageType\":\"Component\"},\"textfield\":{\"href\":\"textfield\",\"name\":\"Text Field\",\"component\":\"textfield\",\"description\":\"A Spectrum text field\",\"slug\":\"textfield\",\"type\":\"page\",\"pageType\":\"Component\"},\"toast\":{\"href\":\"toast\",\"name\":\"Toast\",\"component\":\"toast\",\"slug\":\"toast\",\"type\":\"page\",\"pageType\":\"Component\"},\"toggle\":{\"href\":\"toggle\",\"name\":\"Switch\",\"component\":\"toggle\",\"slug\":\"toggle\",\"type\":\"page\",\"pageType\":\"Component\"},\"tool\":{\"href\":\"tool\",\"name\":\"Tool\",\"component\":\"tool\",\"description\":\"The tool button.\",\"slug\":\"tool\",\"type\":\"page\",\"pageType\":\"Component\"},\"tooltip\":{\"href\":\"tooltip\",\"name\":\"Tooltip\",\"component\":\"tooltip\",\"slug\":\"tooltip\",\"type\":\"page\",\"pageType\":\"Component\"},\"treeview\":{\"href\":\"treeview\",\"name\":\"Tree View\",\"component\":\"treeview\",\"slug\":\"treeview\",\"type\":\"page\",\"pageType\":\"Component\"},\"typography-deprecated\":{\"href\":\"typography-deprecated\",\"name\":\"Typography (Deprecated)\",\"component\":\"typography-deprecated\",\"description\":\"Legacy typography elements.\",\"slug\":\"typography-deprecated\",\"type\":\"page\",\"pageType\":\"Component\"},\"typography-international\":{\"href\":\"typography-international\",\"name\":\"Typography (Internationalized)\",\"component\":\"typography-international\",\"slug\":\"typography-international\",\"type\":\"page\",\"pageType\":\"Component\"},\"typography\":{\"href\":\"typography\",\"name\":\"Typography\",\"component\":\"typography\",\"description\":\"English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples.\",\"slug\":\"typography\",\"type\":\"page\",\"pageType\":\"Component\"},\"well\":{\"href\":\"well\",\"name\":\"Well\",\"component\":\"well\",\"slug\":\"well\",\"type\":\"page\",\"pageType\":\"Component\"}}");
 
 /***/ }),
 
@@ -19393,7 +19498,7 @@ exports.hop = hop;
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
- * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 2.3.6
+ * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 2.3.7
  * Copyright (C) 2019 Oliver Nightingale
  * @license MIT
  */
@@ -19448,7 +19553,7 @@ var lunr = function (config) {
   return builder.build()
 }
 
-lunr.version = "2.3.6"
+lunr.version = "2.3.7"
 /*!
  * lunr.utils
  * Copyright (C) 2019 Oliver Nightingale
@@ -19818,7 +19923,7 @@ lunr.tokenizer = function (obj, metadata) {
     })
   }
 
-  var str = obj.toString().trim().toLowerCase(),
+  var str = obj.toString().toLowerCase(),
       len = str.length,
       tokens = []
 
@@ -20999,6 +21104,10 @@ lunr.TokenSet.fromString = function (str) {
 /**
  * Converts this TokenSet into an array of strings
  * contained within the TokenSet.
+ *
+ * This is not intended to be used on a TokenSet that
+ * contains wildcards, in these cases the results are
+ * undefined and are likely to cause an infinite loop.
  *
  * @returns {string[]}
  */
@@ -22861,10 +22970,646 @@ lunr.QueryParser.parseBoost = function (parser) {
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/mitt.js":
-/*!***************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/mitt.js ***!
-  \***************************************************/
+/***/ "./node_modules/next/app.js":
+/*!**********************************!*\
+  !*** ./node_modules/next/app.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
+
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js ***!
+  \*********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/_app", function() {
+      var mod = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
+      if(true) {
+        module.hot.accept(/*! private-next-pages/_app.js */ "./pages/_app.js", function() {
+          if(!next.router.components["/_app"]) return
+          var updatedPage = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
+          next.router.update("/_app", updatedPage)
+        })
+      }
+      return mod
+    }]);
+  
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/client/link.js":
+/*!***********************************************!*\
+  !*** ./node_modules/next/dist/client/link.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
+
+var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
+
+var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime-corejs2/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
+
+var _getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
+
+var _inherits = __webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports["default"] = void 0;
+
+var _map = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js"));
+
+var _url = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
+
+var _rewriteUrlForExport = __webpack_require__(/*! ../next-server/lib/router/rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js");
+
+var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+/* global __NEXT_DATA__ */
+
+
+function isLocal(href) {
+  var url = (0, _url.parse)(href, false, true);
+  var origin = (0, _url.parse)((0, _utils.getLocationOrigin)(), false, true);
+  return !url.host || url.protocol === origin.protocol && url.host === origin.host;
+}
+
+function memoizedFormatUrl(formatFunc) {
+  var lastHref = null;
+  var lastAs = null;
+  var lastResult = null;
+  return function (href, as) {
+    if (lastResult && href === lastHref && as === lastAs) {
+      return lastResult;
+    }
+
+    var result = formatFunc(href, as);
+    lastHref = href;
+    lastAs = as;
+    lastResult = result;
+    return result;
+  };
+}
+
+function formatUrl(url) {
+  return url && typeof url === 'object' ? (0, _utils.formatWithValidation)(url) : url;
+}
+
+var observer;
+var listeners = new _map["default"]();
+var IntersectionObserver = true ? window.IntersectionObserver : undefined;
+
+function getObserver() {
+  // Return shared instance of IntersectionObserver if already created
+  if (observer) {
+    return observer;
+  } // Only create shared IntersectionObserver if supported in browser
+
+
+  if (!IntersectionObserver) {
+    return undefined;
+  }
+
+  return observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!listeners.has(entry.target)) {
+        return;
+      }
+
+      var cb = listeners.get(entry.target);
+
+      if (entry.isIntersecting || entry.intersectionRatio > 0) {
+        observer.unobserve(entry.target);
+        listeners["delete"](entry.target);
+        cb();
+      }
+    });
+  }, {
+    rootMargin: '200px'
+  });
+}
+
+var listenToIntersections = function listenToIntersections(el, cb) {
+  var observer = getObserver();
+
+  if (!observer) {
+    return function () {};
+  }
+
+  observer.observe(el);
+  listeners.set(el, cb);
+  return function () {
+    try {
+      observer.unobserve(el);
+    } catch (err) {
+      console.error(err);
+    }
+
+    listeners["delete"](el);
+  };
+};
+
+var Link =
+/*#__PURE__*/
+function (_react$Component) {
+  _inherits(Link, _react$Component);
+
+  function Link(props) {
+    var _this;
+
+    _classCallCheck(this, Link);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Link).call(this, props));
+    _this.p = void 0;
+
+    _this.cleanUpListeners = function () {};
+
+    _this.formatUrls = memoizedFormatUrl(function (href, asHref) {
+      return {
+        href: formatUrl(href),
+        as: asHref ? formatUrl(asHref) : asHref
+      };
+    });
+
+    _this.linkClicked = function (e) {
+      // @ts-ignore target exists on currentTarget
+      var _e$currentTarget = e.currentTarget,
+          nodeName = _e$currentTarget.nodeName,
+          target = _e$currentTarget.target;
+
+      if (nodeName === 'A' && (target && target !== '_self' || e.metaKey || e.ctrlKey || e.shiftKey || e.nativeEvent && e.nativeEvent.which === 2)) {
+        // ignore click for new tab / new window behavior
+        return;
+      }
+
+      var _this$formatUrls = _this.formatUrls(_this.props.href, _this.props.as),
+          href = _this$formatUrls.href,
+          as = _this$formatUrls.as;
+
+      if (!isLocal(href)) {
+        // ignore click if it's outside our scope (e.g. https://google.com)
+        return;
+      }
+
+      var pathname = window.location.pathname;
+      href = (0, _url.resolve)(pathname, href);
+      as = as ? (0, _url.resolve)(pathname, as) : href;
+      e.preventDefault(); //  avoid scroll for urls with anchor refs
+
+      var scroll = _this.props.scroll;
+
+      if (scroll == null) {
+        scroll = as.indexOf('#') < 0;
+      } // replace state instead of push if prop is present
+
+
+      _router["default"][_this.props.replace ? 'replace' : 'push'](href, as, {
+        shallow: _this.props.shallow
+      }).then(function (success) {
+        if (!success) return;
+
+        if (scroll) {
+          window.scrollTo(0, 0);
+          document.body.focus();
+        }
+      });
+    };
+
+    if (true) {
+      if (props.prefetch) {
+        console.warn('Next.js auto-prefetches automatically based on viewport. The prefetch attribute is no longer needed. More: https://err.sh/zeit/next.js/prefetch-true-deprecated');
+      }
+    }
+
+    _this.p = props.prefetch !== false;
+    return _this;
+  }
+
+  _createClass(Link, [{
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.cleanUpListeners();
+    }
+  }, {
+    key: "handleRef",
+    value: function handleRef(ref) {
+      var _this2 = this;
+
+      if (this.p && IntersectionObserver && ref && ref.tagName) {
+        this.cleanUpListeners();
+        this.cleanUpListeners = listenToIntersections(ref, function () {
+          _this2.prefetch();
+        });
+      }
+    } // The function is memoized so that no extra lifecycles are needed
+    // as per https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
+
+  }, {
+    key: "prefetch",
+    value: function prefetch() {
+      if (!this.p || false) return; // Prefetch the JSON page if asked (only in the client)
+
+      var pathname = window.location.pathname;
+
+      var _this$formatUrls2 = this.formatUrls(this.props.href, this.props.as),
+          parsedHref = _this$formatUrls2.href;
+
+      var href = (0, _url.resolve)(pathname, parsedHref);
+
+      _router["default"].prefetch(href);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var children = this.props.children;
+
+      var _this$formatUrls3 = this.formatUrls(this.props.href, this.props.as),
+          href = _this$formatUrls3.href,
+          as = _this$formatUrls3.as; // Deprecated. Warning shown by propType check. If the children provided is a string (<Link>example</Link>) we wrap it in an <a> tag
+
+
+      if (typeof children === 'string') {
+        children = _react["default"].createElement("a", null, children);
+      } // This will return the first child, if multiple are provided it will throw an error
+
+
+      var child = _react.Children.only(children);
+
+      var props = {
+        ref: function ref(el) {
+          _this3.handleRef(el);
+
+          if (child && typeof child === 'object' && child.ref) {
+            if (typeof child.ref === 'function') child.ref(el);else if (typeof child.ref === 'object') {
+              child.ref.current = el;
+            }
+          }
+        },
+        onMouseEnter: function onMouseEnter(e) {
+          if (child.props && typeof child.props.onMouseEnter === 'function') {
+            child.props.onMouseEnter(e);
+          }
+
+          _this3.prefetch();
+        },
+        onClick: function onClick(e) {
+          if (child.props && typeof child.props.onClick === 'function') {
+            child.props.onClick(e);
+          }
+
+          if (!e.defaultPrevented) {
+            _this3.linkClicked(e);
+          }
+        } // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
+        // defined, we specify the current 'href', so that repetition is not needed by the user
+
+      };
+
+      if (this.props.passHref || child.type === 'a' && !('href' in child.props)) {
+        props.href = as || href;
+      } // Add the ending slash to the paths. So, we can serve the
+      // "<page>/index.html" directly.
+
+
+      if (true) {
+        if (props.href && typeof __NEXT_DATA__ !== 'undefined' && __NEXT_DATA__.nextExport) {
+          props.href = (0, _rewriteUrlForExport.rewriteUrlForNextExport)(props.href);
+        }
+      }
+
+      return _react["default"].cloneElement(child, props);
+    }
+  }]);
+
+  return Link;
+}(_react.Component);
+
+Link.propTypes = void 0;
+
+if (true) {
+  var warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
+
+  var exact = __webpack_require__(/*! prop-types-exact */ "./node_modules/prop-types-exact/build/index.js");
+
+  Link.propTypes = exact({
+    href: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].object]).isRequired,
+    as: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].object]),
+    prefetch: _propTypes["default"].bool,
+    replace: _propTypes["default"].bool,
+    shallow: _propTypes["default"].bool,
+    passHref: _propTypes["default"].bool,
+    scroll: _propTypes["default"].bool,
+    children: _propTypes["default"].oneOfType([_propTypes["default"].element, function (props, propName) {
+      var value = props[propName];
+
+      if (typeof value === 'string') {
+        warn("Warning: You're using a string directly inside <Link>. This usage has been deprecated. Please add an <a> tag as child of <Link>");
+      }
+
+      return null;
+    }]).isRequired
+  });
+}
+
+var _default = Link;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/client/router.js":
+/*!*************************************************!*\
+  !*** ./node_modules/next/dist/client/router.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _getIterator = __webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js");
+
+var _construct = __webpack_require__(/*! @babel/runtime-corejs2/helpers/construct */ "./node_modules/@babel/runtime-corejs2/helpers/construct.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.useRouter = useRouter;
+exports.makePublicRouterInstance = makePublicRouterInstance;
+exports.createRouter = exports.withRouter = exports["default"] = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
+
+var _defineProperty = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _router2 = _interopRequireWildcard(__webpack_require__(/*! ../next-server/lib/router/router */ "./node_modules/next/dist/next-server/lib/router/router.js"));
+
+exports.Router = _router2["default"];
+exports.NextRouter = _router2.NextRouter;
+
+var _routerContext = __webpack_require__(/*! ../next-server/lib/router-context */ "./node_modules/next/dist/next-server/lib/router-context.js");
+
+var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
+
+exports.withRouter = _withRouter["default"];
+/* global window */
+
+var singletonRouter = {
+  router: null,
+  // holds the actual router instance
+  readyCallbacks: [],
+  ready: function ready(cb) {
+    if (this.router) return cb();
+
+    if (true) {
+      this.readyCallbacks.push(cb);
+    }
+  }
+}; // Create public properties and methods of the router in the singletonRouter
+
+var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
+var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
+var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
+
+(0, _defineProperty["default"])(singletonRouter, 'events', {
+  get: function get() {
+    return _router2["default"].events;
+  }
+});
+urlPropertyFields.forEach(function (field) {
+  // Here we need to use Object.defineProperty because, we need to return
+  // the property assigned to the actual router
+  // The value might get changed as we change routes and this is the
+  // proper way to access it
+  (0, _defineProperty["default"])(singletonRouter, field, {
+    get: function get() {
+      var router = getRouter();
+      return router[field];
+    }
+  });
+});
+coreMethodFields.forEach(function (field) {
+  // We don't really know the types here, so we add them later instead
+  ;
+
+  singletonRouter[field] = function () {
+    var router = getRouter();
+    return router[field].apply(router, arguments);
+  };
+});
+routerEvents.forEach(function (event) {
+  singletonRouter.ready(function () {
+    _router2["default"].events.on(event, function () {
+      var eventField = "on" + event.charAt(0).toUpperCase() + event.substring(1);
+      var _singletonRouter = singletonRouter;
+
+      if (_singletonRouter[eventField]) {
+        try {
+          _singletonRouter[eventField].apply(_singletonRouter, arguments);
+        } catch (err) {
+          // tslint:disable-next-line:no-console
+          console.error("Error when running the Router event: " + eventField); // tslint:disable-next-line:no-console
+
+          console.error(err.message + "\n" + err.stack);
+        }
+      }
+    });
+  });
+});
+
+function getRouter() {
+  if (!singletonRouter.router) {
+    var message = 'No router instance found.\n' + 'You should only use "next/router" inside the client side of your app.\n';
+    throw new Error(message);
+  }
+
+  return singletonRouter.router;
+} // Export the singletonRouter and this is the public API.
+
+
+var _default = singletonRouter; // Reexport the withRoute HOC
+
+exports["default"] = _default;
+
+function useRouter() {
+  return _react["default"].useContext(_routerContext.RouterContext);
+} // INTERNAL APIS
+// -------------
+// (do not use following exports inside the app)
+// Create a router and assign it as the singleton instance.
+// This is used in client side when we are initilizing the app.
+// This should **not** use inside the server.
+
+
+var createRouter = function createRouter() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  singletonRouter.router = _construct(_router2["default"], args);
+  singletonRouter.readyCallbacks.forEach(function (cb) {
+    return cb();
+  });
+  singletonRouter.readyCallbacks = [];
+  return singletonRouter.router;
+}; // This function is used to create the `withRouter` router instance
+
+
+exports.createRouter = createRouter;
+
+function makePublicRouterInstance(router) {
+  var _router = router;
+  var instance = {};
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = _getIterator(urlPropertyFields), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var property = _step.value;
+
+      if (typeof _router[property] === 'object') {
+        instance[property] = (0, _extends2["default"])({}, _router[property]); // makes sure query is not stateful
+
+        continue;
+      }
+
+      instance[property] = _router[property];
+    } // Events is a static property on the router, the router doesn't have to be initialized to use it
+
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  instance.events = _router2["default"].events;
+  coreMethodFields.forEach(function (field) {
+    instance[field] = function () {
+      return _router[field].apply(_router, arguments);
+    };
+  });
+  return instance;
+}
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/client/with-router.js":
+/*!******************************************************!*\
+  !*** ./node_modules/next/dist/client/with-router.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
+
+var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
+
+var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime-corejs2/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
+
+var _getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
+
+var _inherits = __webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports["default"] = withRouter;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+function withRouter(ComposedComponent) {
+  var WithRouteWrapper =
+  /*#__PURE__*/
+  function (_react$default$Compon) {
+    _inherits(WithRouteWrapper, _react$default$Compon);
+
+    function WithRouteWrapper() {
+      var _this;
+
+      _classCallCheck(this, WithRouteWrapper);
+
+      _this = _possibleConstructorReturn(this, _getPrototypeOf(WithRouteWrapper).apply(this, arguments));
+      _this.context = void 0;
+      return _this;
+    }
+
+    _createClass(WithRouteWrapper, [{
+      key: "render",
+      value: function render() {
+        return _react["default"].createElement(ComposedComponent, (0, _extends2["default"])({
+          router: this.context.router
+        }, this.props));
+      }
+    }]);
+
+    return WithRouteWrapper;
+  }(_react["default"].Component);
+
+  WithRouteWrapper.displayName = void 0;
+  WithRouteWrapper.getInitialProps = void 0;
+  WithRouteWrapper.contextTypes = {
+    router: _propTypes["default"].object
+  };
+  WithRouteWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
+  ;
+  WithRouteWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
+
+  if (true) {
+    var name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
+    WithRouteWrapper.displayName = "withRouter(" + name + ")";
+  }
+
+  return WithRouteWrapper;
+}
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/mitt.js":
+/*!********************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/mitt.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22921,10 +23666,10 @@ exports["default"] = mitt;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/router-context.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router-context.js ***!
-  \*************************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/router-context.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router-context.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22953,10 +23698,10 @@ exports.RouterContext = React.createContext(null);
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/router/rewrite-url-for-export.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/rewrite-url-for-export.js ***!
-  \****************************************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22995,10 +23740,10 @@ exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/router/router.js":
-/*!************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/router.js ***!
-  \************************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/router/router.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/router.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23033,17 +23778,17 @@ _Object$defineProperty(exports, "__esModule", {
 
 var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
 
-var mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next-server/dist/lib/mitt.js"));
+var mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
 
-var utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next-server/dist/lib/utils.js");
+var utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
 
-var rewrite_url_for_export_1 = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next-server/dist/lib/router/rewrite-url-for-export.js");
+var rewrite_url_for_export_1 = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js");
 
-var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules/next-server/dist/lib/router/utils/route-matcher.js");
+var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js");
 
-var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next-server/dist/lib/router/utils/route-regex.js");
+var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
 
-var is_dynamic_1 = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next-server/dist/lib/router/utils/is-dynamic.js");
+var is_dynamic_1 = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
 
 function toRoute(path) {
   return path.replace(/\/$/, '') || '/';
@@ -23137,8 +23882,11 @@ function () {
     this.events = Router.events;
     this.pageLoader = pageLoader;
     this.pathname = pathname;
-    this.query = query;
-    this.asPath = as;
+    this.query = query; // if auto prerendered and dynamic route wait to update asPath
+    // until after mount to prevent hydration mismatch
+
+    this.asPath = // @ts-ignore this is temporarily global (attached to window)
+    is_dynamic_1.isDynamicRoute(pathname) && __NEXT_DATA__.nextExport ? pathname : as;
     this.sub = subscription;
     this.clc = null;
     this._wrapApp = wrapApp;
@@ -23171,7 +23919,8 @@ function () {
 
   _createClass(Router, [{
     key: "update",
-    value: function update(route, Component) {
+    value: function update(route, mod) {
+      var Component = mod["default"] || mod;
       var data = this.components[route];
 
       if (!data) {
@@ -23313,7 +24062,7 @@ function () {
           var routeMatch = route_matcher_1.getRouteMatcher(rr)(asPathname);
 
           if (!routeMatch) {
-            console.error("Your `<Link>`'s `as` value is incompatible with the `href` value. This is invalid.");
+            console.error('The provided `as` value is incompatible with the `href` value. This is invalid. https://err.sh/zeit/next.js/incompatible-href-as');
             return resolve(false);
           } // Merge params into `query`, overwriting any specified in search
 
@@ -23656,7 +24405,8 @@ function () {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee2(Component, ctx) {
-        var cancelled, cancel, App, props, status, url, AppTree, err;
+        var cancelled, cancel, App, props, status, _url_1$parse4, pathname, AppTree, err;
+
         return _regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -23676,31 +24426,19 @@ function () {
                   break;
                 }
 
-                url = ctx.asPath ? ctx.asPath : url_1.format({
-                  pathname: ctx.pathname,
-                  query: ctx.query
-                });
+                _url_1$parse4 = url_1.parse(ctx.asPath || ctx.pathname), pathname = _url_1$parse4.pathname;
                 _context2.next = 8;
-                return fetch(url, {
-                  headers: {
-                    'content-type': 'application/json'
-                  }
-                }).then(function (res) {
+                return fetch("/_next/data".concat(pathname, ".json")).then(function (res) {
                   if (!res.ok) {
                     status = res.status;
                     throw new Error('failed to load prerender data');
                   }
 
                   return res.json();
-                }).then(function (pageProps) {
-                  return {
-                    pageProps: pageProps
-                  };
                 })["catch"](function (err) {
-                  return {
-                    error: err.message,
-                    status: status
-                  };
+                  console.error("Failed to load data", status, err);
+                  window.location.href = pathname;
+                  return new _Promise(function () {});
                 });
 
               case 8:
@@ -23784,10 +24522,10 @@ exports["default"] = Router;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/router/utils/is-dynamic.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/utils/is-dynamic.js ***!
-  \**********************************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23811,10 +24549,10 @@ exports.isDynamicRoute = isDynamicRoute;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/router/utils/route-matcher.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/utils/route-matcher.js ***!
-  \*************************************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23857,10 +24595,10 @@ exports.getRouteMatcher = getRouteMatcher;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/router/utils/route-regex.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/utils/route-regex.js ***!
-  \***********************************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-regex.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23892,10 +24630,10 @@ exports.getRouteRegex = getRouteRegex;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/runtime-config.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/runtime-config.js ***!
-  \*************************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/runtime-config.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/runtime-config.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23922,10 +24660,10 @@ exports.setConfig = setConfig;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/utils.js":
-/*!****************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/utils.js ***!
-  \****************************************************/
+/***/ "./node_modules/next/dist/next-server/lib/utils.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/utils.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24060,7 +24798,7 @@ function _loadGetInitialProps() {
           case 15:
             if (true) {
               if (_Object$keys(props).length === 0 && !ctx.ctx) {
-                console.warn("".concat(getDisplayName(Component), " returned an empty object from `getInitialProps`. This de-optimizes and prevents automatic prerendering. https://err.sh/zeit/next.js/empty-object-getInitialProps"));
+                console.warn("".concat(getDisplayName(Component), " returned an empty object from `getInitialProps`. This de-optimizes and prevents automatic static optimization. https://err.sh/zeit/next.js/empty-object-getInitialProps"));
               }
             }
 
@@ -24096,635 +24834,6 @@ function formatWithValidation(url, options) {
 exports.formatWithValidation = formatWithValidation;
 exports.SUPPORTS_PERFORMANCE = typeof performance !== 'undefined';
 exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeof performance.mark === 'function' && typeof performance.measure === 'function';
-
-/***/ }),
-
-/***/ "./node_modules/next/app.js":
-/*!**********************************!*\
-  !*** ./node_modules/next/app.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
-
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./":
-/*!*********************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js ***!
-  \*********************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/_app", function() {
-      var page = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
-      if(true) {
-        module.hot.accept(/*! private-next-pages/_app.js */ "./pages/_app.js", function() {
-          if(!next.router.components["/_app"]) return
-          var updatedPage = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
-          next.router.update("/_app", updatedPage.default || updatedPage)
-        })
-      }
-      return { page: page.default || page }
-    }]);
-  
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/client/link.js":
-/*!***********************************************!*\
-  !*** ./node_modules/next/dist/client/link.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
-
-var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime-corejs2/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
-
-var _getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
-
-var _inherits = __webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports["default"] = void 0;
-
-var _map = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js"));
-
-var _url = __webpack_require__(/*! url */ "./node_modules/url/url.js");
-
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
-
-var _rewriteUrlForExport = __webpack_require__(/*! next-server/dist/lib/router/rewrite-url-for-export */ "./node_modules/next-server/dist/lib/router/rewrite-url-for-export.js");
-
-var _utils = __webpack_require__(/*! next-server/dist/lib/utils */ "./node_modules/next-server/dist/lib/utils.js");
-/* global __NEXT_DATA__ */
-
-
-function isLocal(href) {
-  var url = (0, _url.parse)(href, false, true);
-  var origin = (0, _url.parse)((0, _utils.getLocationOrigin)(), false, true);
-  return !url.host || url.protocol === origin.protocol && url.host === origin.host;
-}
-
-function memoizedFormatUrl(formatFunc) {
-  var lastHref = null;
-  var lastAs = null;
-  var lastResult = null;
-  return function (href, as) {
-    if (lastResult && href === lastHref && as === lastAs) {
-      return lastResult;
-    }
-
-    var result = formatFunc(href, as);
-    lastHref = href;
-    lastAs = as;
-    lastResult = result;
-    return result;
-  };
-}
-
-function formatUrl(url) {
-  return url && typeof url === 'object' ? (0, _utils.formatWithValidation)(url) : url;
-}
-
-var observer;
-var listeners = new _map["default"]();
-var IntersectionObserver = true ? window.IntersectionObserver : undefined;
-
-function getObserver() {
-  // Return shared instance of IntersectionObserver if already created
-  if (observer) {
-    return observer;
-  } // Only create shared IntersectionObserver if supported in browser
-
-
-  if (!IntersectionObserver) {
-    return undefined;
-  }
-
-  return observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!listeners.has(entry.target)) {
-        return;
-      }
-
-      var cb = listeners.get(entry.target);
-
-      if (entry.isIntersecting || entry.intersectionRatio > 0) {
-        observer.unobserve(entry.target);
-        listeners["delete"](entry.target);
-        cb();
-      }
-    });
-  }, {
-    rootMargin: '200px'
-  });
-}
-
-var listenToIntersections = function listenToIntersections(el, cb) {
-  var observer = getObserver();
-
-  if (!observer) {
-    return function () {};
-  }
-
-  observer.observe(el);
-  listeners.set(el, cb);
-  return function () {
-    observer.unobserve(el);
-    listeners["delete"](el);
-  };
-};
-
-var Link =
-/*#__PURE__*/
-function (_react$Component) {
-  _inherits(Link, _react$Component);
-
-  function Link(props) {
-    var _this;
-
-    _classCallCheck(this, Link);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Link).call(this, props));
-    _this.p = void 0;
-
-    _this.cleanUpListeners = function () {};
-
-    _this.formatUrls = memoizedFormatUrl(function (href, asHref) {
-      return {
-        href: formatUrl(href),
-        as: asHref ? formatUrl(asHref) : asHref
-      };
-    });
-
-    _this.linkClicked = function (e) {
-      // @ts-ignore target exists on currentTarget
-      var _e$currentTarget = e.currentTarget,
-          nodeName = _e$currentTarget.nodeName,
-          target = _e$currentTarget.target;
-
-      if (nodeName === 'A' && (target && target !== '_self' || e.metaKey || e.ctrlKey || e.shiftKey || e.nativeEvent && e.nativeEvent.which === 2)) {
-        // ignore click for new tab / new window behavior
-        return;
-      }
-
-      var _this$formatUrls = _this.formatUrls(_this.props.href, _this.props.as),
-          href = _this$formatUrls.href,
-          as = _this$formatUrls.as;
-
-      if (!isLocal(href)) {
-        // ignore click if it's outside our scope (e.g. https://google.com)
-        return;
-      }
-
-      var pathname = window.location.pathname;
-      href = (0, _url.resolve)(pathname, href);
-      as = as ? (0, _url.resolve)(pathname, as) : href;
-      e.preventDefault(); //  avoid scroll for urls with anchor refs
-
-      var scroll = _this.props.scroll;
-
-      if (scroll == null) {
-        scroll = as.indexOf('#') < 0;
-      } // replace state instead of push if prop is present
-
-
-      _router["default"][_this.props.replace ? 'replace' : 'push'](href, as, {
-        shallow: _this.props.shallow
-      }).then(function (success) {
-        if (!success) return;
-
-        if (scroll) {
-          window.scrollTo(0, 0);
-          document.body.focus();
-        }
-      });
-    };
-
-    if (true) {
-      if (props.prefetch) {
-        console.warn('Next.js auto-prefetches automatically based on viewport. The prefetch attribute is no longer needed. More: https://err.sh/zeit/next.js/prefetch-true-deprecated');
-      }
-    }
-
-    _this.p = props.prefetch !== false;
-    return _this;
-  }
-
-  _createClass(Link, [{
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.cleanUpListeners();
-    }
-  }, {
-    key: "handleRef",
-    value: function handleRef(ref) {
-      var _this2 = this;
-
-      if (this.p && IntersectionObserver && ref && ref.tagName) {
-        this.cleanUpListeners();
-        this.cleanUpListeners = listenToIntersections(ref, function () {
-          _this2.prefetch();
-        });
-      }
-    } // The function is memoized so that no extra lifecycles are needed
-    // as per https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
-
-  }, {
-    key: "prefetch",
-    value: function prefetch() {
-      if (!this.p || false) return; // Prefetch the JSON page if asked (only in the client)
-
-      var pathname = window.location.pathname;
-
-      var _this$formatUrls2 = this.formatUrls(this.props.href, this.props.as),
-          parsedHref = _this$formatUrls2.href;
-
-      var href = (0, _url.resolve)(pathname, parsedHref);
-
-      _router["default"].prefetch(href);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this3 = this;
-
-      var children = this.props.children;
-
-      var _this$formatUrls3 = this.formatUrls(this.props.href, this.props.as),
-          href = _this$formatUrls3.href,
-          as = _this$formatUrls3.as; // Deprecated. Warning shown by propType check. If the children provided is a string (<Link>example</Link>) we wrap it in an <a> tag
-
-
-      if (typeof children === 'string') {
-        children = _react["default"].createElement("a", null, children);
-      } // This will return the first child, if multiple are provided it will throw an error
-
-
-      var child = _react.Children.only(children);
-
-      var props = {
-        ref: function ref(el) {
-          _this3.handleRef(el);
-
-          if (child && typeof child === 'object' && child.ref) {
-            if (typeof child.ref === 'function') child.ref(el);else if (typeof child.ref === 'object') {
-              child.ref.current = el;
-            }
-          }
-        },
-        onMouseEnter: function onMouseEnter(e) {
-          if (child.props && typeof child.props.onMouseEnter === 'function') {
-            child.props.onMouseEnter(e);
-          }
-
-          _this3.prefetch();
-        },
-        onClick: function onClick(e) {
-          if (child.props && typeof child.props.onClick === 'function') {
-            child.props.onClick(e);
-          }
-
-          if (!e.defaultPrevented) {
-            _this3.linkClicked(e);
-          }
-        } // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
-        // defined, we specify the current 'href', so that repetition is not needed by the user
-
-      };
-
-      if (this.props.passHref || child.type === 'a' && !('href' in child.props)) {
-        props.href = as || href;
-      } // Add the ending slash to the paths. So, we can serve the
-      // "<page>/index.html" directly.
-
-
-      if (true) {
-        if (props.href && typeof __NEXT_DATA__ !== 'undefined' && __NEXT_DATA__.nextExport) {
-          props.href = (0, _rewriteUrlForExport.rewriteUrlForNextExport)(props.href);
-        }
-      }
-
-      return _react["default"].cloneElement(child, props);
-    }
-  }]);
-
-  return Link;
-}(_react.Component);
-
-Link.propTypes = void 0;
-
-if (true) {
-  var warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
-
-  var exact = __webpack_require__(/*! prop-types-exact */ "./node_modules/prop-types-exact/build/index.js");
-
-  Link.propTypes = exact({
-    href: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].object]).isRequired,
-    as: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].object]),
-    prefetch: _propTypes["default"].bool,
-    replace: _propTypes["default"].bool,
-    shallow: _propTypes["default"].bool,
-    passHref: _propTypes["default"].bool,
-    scroll: _propTypes["default"].bool,
-    children: _propTypes["default"].oneOfType([_propTypes["default"].element, function (props, propName) {
-      var value = props[propName];
-
-      if (typeof value === 'string') {
-        warn("Warning: You're using a string directly inside <Link>. This usage has been deprecated. Please add an <a> tag as child of <Link>");
-      }
-
-      return null;
-    }]).isRequired
-  });
-}
-
-var _default = Link;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/client/router.js":
-/*!*************************************************!*\
-  !*** ./node_modules/next/dist/client/router.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _getIterator = __webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js");
-
-var _construct = __webpack_require__(/*! @babel/runtime-corejs2/helpers/construct */ "./node_modules/@babel/runtime-corejs2/helpers/construct.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.useRouter = useRouter;
-exports.makePublicRouterInstance = makePublicRouterInstance;
-exports.createRouter = exports.withRouter = exports["default"] = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
-
-var _defineProperty = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _router2 = _interopRequireWildcard(__webpack_require__(/*! next-server/dist/lib/router/router */ "./node_modules/next-server/dist/lib/router/router.js"));
-
-exports.Router = _router2["default"];
-exports.NextRouter = _router2.NextRouter;
-
-var _routerContext = __webpack_require__(/*! next-server/dist/lib/router-context */ "./node_modules/next-server/dist/lib/router-context.js");
-
-var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
-
-exports.withRouter = _withRouter["default"];
-/* global window */
-
-var singletonRouter = {
-  router: null,
-  // holds the actual router instance
-  readyCallbacks: [],
-  ready: function ready(cb) {
-    if (this.router) return cb();
-
-    if (true) {
-      this.readyCallbacks.push(cb);
-    }
-  }
-}; // Create public properties and methods of the router in the singletonRouter
-
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
-var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
-var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
-
-(0, _defineProperty["default"])(singletonRouter, 'events', {
-  get: function get() {
-    return _router2["default"].events;
-  }
-});
-urlPropertyFields.forEach(function (field) {
-  // Here we need to use Object.defineProperty because, we need to return
-  // the property assigned to the actual router
-  // The value might get changed as we change routes and this is the
-  // proper way to access it
-  (0, _defineProperty["default"])(singletonRouter, field, {
-    get: function get() {
-      var router = getRouter();
-      return router[field];
-    }
-  });
-});
-coreMethodFields.forEach(function (field) {
-  // We don't really know the types here, so we add them later instead
-  ;
-
-  singletonRouter[field] = function () {
-    var router = getRouter();
-    return router[field].apply(router, arguments);
-  };
-});
-routerEvents.forEach(function (event) {
-  singletonRouter.ready(function () {
-    _router2["default"].events.on(event, function () {
-      var eventField = "on" + event.charAt(0).toUpperCase() + event.substring(1);
-      var _singletonRouter = singletonRouter;
-
-      if (_singletonRouter[eventField]) {
-        try {
-          _singletonRouter[eventField].apply(_singletonRouter, arguments);
-        } catch (err) {
-          // tslint:disable-next-line:no-console
-          console.error("Error when running the Router event: " + eventField); // tslint:disable-next-line:no-console
-
-          console.error(err.message + "\n" + err.stack);
-        }
-      }
-    });
-  });
-});
-
-function getRouter() {
-  if (!singletonRouter.router) {
-    var message = 'No router instance found.\n' + 'You should only use "next/router" inside the client side of your app.\n';
-    throw new Error(message);
-  }
-
-  return singletonRouter.router;
-} // Export the singletonRouter and this is the public API.
-
-
-var _default = singletonRouter; // Reexport the withRoute HOC
-
-exports["default"] = _default;
-
-function useRouter() {
-  return _react["default"].useContext(_routerContext.RouterContext);
-} // INTERNAL APIS
-// -------------
-// (do not use following exports inside the app)
-// Create a router and assign it as the singleton instance.
-// This is used in client side when we are initilizing the app.
-// This should **not** use inside the server.
-
-
-var createRouter = function createRouter() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  singletonRouter.router = _construct(_router2["default"], args);
-  singletonRouter.readyCallbacks.forEach(function (cb) {
-    return cb();
-  });
-  singletonRouter.readyCallbacks = [];
-  return singletonRouter.router;
-}; // This function is used to create the `withRouter` router instance
-
-
-exports.createRouter = createRouter;
-
-function makePublicRouterInstance(router) {
-  var _router = router;
-  var instance = {};
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = _getIterator(urlPropertyFields), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var property = _step.value;
-
-      if (typeof _router[property] === 'object') {
-        instance[property] = (0, _extends2["default"])({}, _router[property]); // makes sure query is not stateful
-
-        continue;
-      }
-
-      instance[property] = _router[property];
-    } // Events is a static property on the router, the router doesn't have to be initialized to use it
-
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  instance.events = _router2["default"].events;
-  coreMethodFields.forEach(function (field) {
-    instance[field] = function () {
-      return _router[field].apply(_router, arguments);
-    };
-  });
-  return instance;
-}
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/client/with-router.js":
-/*!******************************************************!*\
-  !*** ./node_modules/next/dist/client/with-router.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
-
-var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime-corejs2/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
-
-var _getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
-
-var _inherits = __webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports["default"] = withRouter;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-function withRouter(ComposedComponent) {
-  var WithRouteWrapper =
-  /*#__PURE__*/
-  function (_react$default$Compon) {
-    _inherits(WithRouteWrapper, _react$default$Compon);
-
-    function WithRouteWrapper() {
-      var _this;
-
-      _classCallCheck(this, WithRouteWrapper);
-
-      _this = _possibleConstructorReturn(this, _getPrototypeOf(WithRouteWrapper).apply(this, arguments));
-      _this.context = void 0;
-      return _this;
-    }
-
-    _createClass(WithRouteWrapper, [{
-      key: "render",
-      value: function render() {
-        return _react["default"].createElement(ComposedComponent, (0, _extends2["default"])({
-          router: this.context.router
-        }, this.props));
-      }
-    }]);
-
-    return WithRouteWrapper;
-  }(_react["default"].Component);
-
-  WithRouteWrapper.displayName = void 0;
-  WithRouteWrapper.getInitialProps = void 0;
-  WithRouteWrapper.contextTypes = {
-    router: _propTypes["default"].object
-  };
-  WithRouteWrapper.getInitialProps = ComposedComponent.getInitialProps;
-
-  if (true) {
-    var name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
-    WithRouteWrapper.displayName = "withRouter(" + name + ")";
-  }
-
-  return WithRouteWrapper;
-}
 
 /***/ }),
 
@@ -24765,7 +24874,7 @@ var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_mod
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
-var _utils = __webpack_require__(/*! next-server/dist/lib/utils */ "./node_modules/next-server/dist/lib/utils.js");
+var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
 
 exports.AppInitialProps = _utils.AppInitialProps;
 
@@ -25002,14 +25111,545 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
+;(function(root) {
+
+	/** Detect free variables */
+	var freeExports =  true && exports &&
+		!exports.nodeType && exports;
+	var freeModule =  true && module &&
+		!module.nodeType && module;
+	var freeGlobal = typeof global == 'object' && global;
+	if (
+		freeGlobal.global === freeGlobal ||
+		freeGlobal.window === freeGlobal ||
+		freeGlobal.self === freeGlobal
+	) {
+		root = freeGlobal;
+	}
+
+	/**
+	 * The `punycode` object.
+	 * @name punycode
+	 * @type Object
+	 */
+	var punycode,
+
+	/** Highest positive signed 32-bit float value */
+	maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
+
+	/** Bootstring parameters */
+	base = 36,
+	tMin = 1,
+	tMax = 26,
+	skew = 38,
+	damp = 700,
+	initialBias = 72,
+	initialN = 128, // 0x80
+	delimiter = '-', // '\x2D'
+
+	/** Regular expressions */
+	regexPunycode = /^xn--/,
+	regexNonASCII = /[^\x20-\x7E]/, // unprintable ASCII chars + non-ASCII chars
+	regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g, // RFC 3490 separators
+
+	/** Error messages */
+	errors = {
+		'overflow': 'Overflow: input needs wider integers to process',
+		'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
+		'invalid-input': 'Invalid input'
+	},
+
+	/** Convenience shortcuts */
+	baseMinusTMin = base - tMin,
+	floor = Math.floor,
+	stringFromCharCode = String.fromCharCode,
+
+	/** Temporary variable */
+	key;
+
+	/*--------------------------------------------------------------------------*/
+
+	/**
+	 * A generic error utility function.
+	 * @private
+	 * @param {String} type The error type.
+	 * @returns {Error} Throws a `RangeError` with the applicable error message.
+	 */
+	function error(type) {
+		throw new RangeError(errors[type]);
+	}
+
+	/**
+	 * A generic `Array#map` utility function.
+	 * @private
+	 * @param {Array} array The array to iterate over.
+	 * @param {Function} callback The function that gets called for every array
+	 * item.
+	 * @returns {Array} A new array of values returned by the callback function.
+	 */
+	function map(array, fn) {
+		var length = array.length;
+		var result = [];
+		while (length--) {
+			result[length] = fn(array[length]);
+		}
+		return result;
+	}
+
+	/**
+	 * A simple `Array#map`-like wrapper to work with domain name strings or email
+	 * addresses.
+	 * @private
+	 * @param {String} domain The domain name or email address.
+	 * @param {Function} callback The function that gets called for every
+	 * character.
+	 * @returns {Array} A new string of characters returned by the callback
+	 * function.
+	 */
+	function mapDomain(string, fn) {
+		var parts = string.split('@');
+		var result = '';
+		if (parts.length > 1) {
+			// In email addresses, only the domain name should be punycoded. Leave
+			// the local part (i.e. everything up to `@`) intact.
+			result = parts[0] + '@';
+			string = parts[1];
+		}
+		// Avoid `split(regex)` for IE8 compatibility. See #17.
+		string = string.replace(regexSeparators, '\x2E');
+		var labels = string.split('.');
+		var encoded = map(labels, fn).join('.');
+		return result + encoded;
+	}
+
+	/**
+	 * Creates an array containing the numeric code points of each Unicode
+	 * character in the string. While JavaScript uses UCS-2 internally,
+	 * this function will convert a pair of surrogate halves (each of which
+	 * UCS-2 exposes as separate characters) into a single code point,
+	 * matching UTF-16.
+	 * @see `punycode.ucs2.encode`
+	 * @see <https://mathiasbynens.be/notes/javascript-encoding>
+	 * @memberOf punycode.ucs2
+	 * @name decode
+	 * @param {String} string The Unicode input string (UCS-2).
+	 * @returns {Array} The new array of code points.
+	 */
+	function ucs2decode(string) {
+		var output = [],
+		    counter = 0,
+		    length = string.length,
+		    value,
+		    extra;
+		while (counter < length) {
+			value = string.charCodeAt(counter++);
+			if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
+				// high surrogate, and there is a next character
+				extra = string.charCodeAt(counter++);
+				if ((extra & 0xFC00) == 0xDC00) { // low surrogate
+					output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
+				} else {
+					// unmatched surrogate; only append this code unit, in case the next
+					// code unit is the high surrogate of a surrogate pair
+					output.push(value);
+					counter--;
+				}
+			} else {
+				output.push(value);
+			}
+		}
+		return output;
+	}
+
+	/**
+	 * Creates a string based on an array of numeric code points.
+	 * @see `punycode.ucs2.decode`
+	 * @memberOf punycode.ucs2
+	 * @name encode
+	 * @param {Array} codePoints The array of numeric code points.
+	 * @returns {String} The new Unicode string (UCS-2).
+	 */
+	function ucs2encode(array) {
+		return map(array, function(value) {
+			var output = '';
+			if (value > 0xFFFF) {
+				value -= 0x10000;
+				output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
+				value = 0xDC00 | value & 0x3FF;
+			}
+			output += stringFromCharCode(value);
+			return output;
+		}).join('');
+	}
+
+	/**
+	 * Converts a basic code point into a digit/integer.
+	 * @see `digitToBasic()`
+	 * @private
+	 * @param {Number} codePoint The basic numeric code point value.
+	 * @returns {Number} The numeric value of a basic code point (for use in
+	 * representing integers) in the range `0` to `base - 1`, or `base` if
+	 * the code point does not represent a value.
+	 */
+	function basicToDigit(codePoint) {
+		if (codePoint - 48 < 10) {
+			return codePoint - 22;
+		}
+		if (codePoint - 65 < 26) {
+			return codePoint - 65;
+		}
+		if (codePoint - 97 < 26) {
+			return codePoint - 97;
+		}
+		return base;
+	}
+
+	/**
+	 * Converts a digit/integer into a basic code point.
+	 * @see `basicToDigit()`
+	 * @private
+	 * @param {Number} digit The numeric value of a basic code point.
+	 * @returns {Number} The basic code point whose value (when used for
+	 * representing integers) is `digit`, which needs to be in the range
+	 * `0` to `base - 1`. If `flag` is non-zero, the uppercase form is
+	 * used; else, the lowercase form is used. The behavior is undefined
+	 * if `flag` is non-zero and `digit` has no uppercase form.
+	 */
+	function digitToBasic(digit, flag) {
+		//  0..25 map to ASCII a..z or A..Z
+		// 26..35 map to ASCII 0..9
+		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
+	}
+
+	/**
+	 * Bias adaptation function as per section 3.4 of RFC 3492.
+	 * https://tools.ietf.org/html/rfc3492#section-3.4
+	 * @private
+	 */
+	function adapt(delta, numPoints, firstTime) {
+		var k = 0;
+		delta = firstTime ? floor(delta / damp) : delta >> 1;
+		delta += floor(delta / numPoints);
+		for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
+			delta = floor(delta / baseMinusTMin);
+		}
+		return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
+	}
+
+	/**
+	 * Converts a Punycode string of ASCII-only symbols to a string of Unicode
+	 * symbols.
+	 * @memberOf punycode
+	 * @param {String} input The Punycode string of ASCII-only symbols.
+	 * @returns {String} The resulting string of Unicode symbols.
+	 */
+	function decode(input) {
+		// Don't use UCS-2
+		var output = [],
+		    inputLength = input.length,
+		    out,
+		    i = 0,
+		    n = initialN,
+		    bias = initialBias,
+		    basic,
+		    j,
+		    index,
+		    oldi,
+		    w,
+		    k,
+		    digit,
+		    t,
+		    /** Cached calculation results */
+		    baseMinusT;
+
+		// Handle the basic code points: let `basic` be the number of input code
+		// points before the last delimiter, or `0` if there is none, then copy
+		// the first basic code points to the output.
+
+		basic = input.lastIndexOf(delimiter);
+		if (basic < 0) {
+			basic = 0;
+		}
+
+		for (j = 0; j < basic; ++j) {
+			// if it's not a basic code point
+			if (input.charCodeAt(j) >= 0x80) {
+				error('not-basic');
+			}
+			output.push(input.charCodeAt(j));
+		}
+
+		// Main decoding loop: start just after the last delimiter if any basic code
+		// points were copied; start at the beginning otherwise.
+
+		for (index = basic > 0 ? basic + 1 : 0; index < inputLength; /* no final expression */) {
+
+			// `index` is the index of the next character to be consumed.
+			// Decode a generalized variable-length integer into `delta`,
+			// which gets added to `i`. The overflow checking is easier
+			// if we increase `i` as we go, then subtract off its starting
+			// value at the end to obtain `delta`.
+			for (oldi = i, w = 1, k = base; /* no condition */; k += base) {
+
+				if (index >= inputLength) {
+					error('invalid-input');
+				}
+
+				digit = basicToDigit(input.charCodeAt(index++));
+
+				if (digit >= base || digit > floor((maxInt - i) / w)) {
+					error('overflow');
+				}
+
+				i += digit * w;
+				t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
+
+				if (digit < t) {
+					break;
+				}
+
+				baseMinusT = base - t;
+				if (w > floor(maxInt / baseMinusT)) {
+					error('overflow');
+				}
+
+				w *= baseMinusT;
+
+			}
+
+			out = output.length + 1;
+			bias = adapt(i - oldi, out, oldi == 0);
+
+			// `i` was supposed to wrap around from `out` to `0`,
+			// incrementing `n` each time, so we'll fix that now:
+			if (floor(i / out) > maxInt - n) {
+				error('overflow');
+			}
+
+			n += floor(i / out);
+			i %= out;
+
+			// Insert `n` at position `i` of the output
+			output.splice(i++, 0, n);
+
+		}
+
+		return ucs2encode(output);
+	}
+
+	/**
+	 * Converts a string of Unicode symbols (e.g. a domain name label) to a
+	 * Punycode string of ASCII-only symbols.
+	 * @memberOf punycode
+	 * @param {String} input The string of Unicode symbols.
+	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
+	 */
+	function encode(input) {
+		var n,
+		    delta,
+		    handledCPCount,
+		    basicLength,
+		    bias,
+		    j,
+		    m,
+		    q,
+		    k,
+		    t,
+		    currentValue,
+		    output = [],
+		    /** `inputLength` will hold the number of code points in `input`. */
+		    inputLength,
+		    /** Cached calculation results */
+		    handledCPCountPlusOne,
+		    baseMinusT,
+		    qMinusT;
+
+		// Convert the input in UCS-2 to Unicode
+		input = ucs2decode(input);
+
+		// Cache the length
+		inputLength = input.length;
+
+		// Initialize the state
+		n = initialN;
+		delta = 0;
+		bias = initialBias;
+
+		// Handle the basic code points
+		for (j = 0; j < inputLength; ++j) {
+			currentValue = input[j];
+			if (currentValue < 0x80) {
+				output.push(stringFromCharCode(currentValue));
+			}
+		}
+
+		handledCPCount = basicLength = output.length;
+
+		// `handledCPCount` is the number of code points that have been handled;
+		// `basicLength` is the number of basic code points.
+
+		// Finish the basic string - if it is not empty - with a delimiter
+		if (basicLength) {
+			output.push(delimiter);
+		}
+
+		// Main encoding loop:
+		while (handledCPCount < inputLength) {
+
+			// All non-basic code points < n have been handled already. Find the next
+			// larger one:
+			for (m = maxInt, j = 0; j < inputLength; ++j) {
+				currentValue = input[j];
+				if (currentValue >= n && currentValue < m) {
+					m = currentValue;
+				}
+			}
+
+			// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
+			// but guard against overflow
+			handledCPCountPlusOne = handledCPCount + 1;
+			if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
+				error('overflow');
+			}
+
+			delta += (m - n) * handledCPCountPlusOne;
+			n = m;
+
+			for (j = 0; j < inputLength; ++j) {
+				currentValue = input[j];
+
+				if (currentValue < n && ++delta > maxInt) {
+					error('overflow');
+				}
+
+				if (currentValue == n) {
+					// Represent delta as a generalized variable-length integer
+					for (q = delta, k = base; /* no condition */; k += base) {
+						t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
+						if (q < t) {
+							break;
+						}
+						qMinusT = q - t;
+						baseMinusT = base - t;
+						output.push(
+							stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
+						);
+						q = floor(qMinusT / baseMinusT);
+					}
+
+					output.push(stringFromCharCode(digitToBasic(q, 0)));
+					bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
+					delta = 0;
+					++handledCPCount;
+				}
+			}
+
+			++delta;
+			++n;
+
+		}
+		return output.join('');
+	}
+
+	/**
+	 * Converts a Punycode string representing a domain name or an email address
+	 * to Unicode. Only the Punycoded parts of the input will be converted, i.e.
+	 * it doesn't matter if you call it on a string that has already been
+	 * converted to Unicode.
+	 * @memberOf punycode
+	 * @param {String} input The Punycoded domain name or email address to
+	 * convert to Unicode.
+	 * @returns {String} The Unicode representation of the given Punycode
+	 * string.
+	 */
+	function toUnicode(input) {
+		return mapDomain(input, function(string) {
+			return regexPunycode.test(string)
+				? decode(string.slice(4).toLowerCase())
+				: string;
+		});
+	}
+
+	/**
+	 * Converts a Unicode string representing a domain name or an email address to
+	 * Punycode. Only the non-ASCII parts of the domain name will be converted,
+	 * i.e. it doesn't matter if you call it with a domain that's already in
+	 * ASCII.
+	 * @memberOf punycode
+	 * @param {String} input The domain name or email address to convert, as a
+	 * Unicode string.
+	 * @returns {String} The Punycode representation of the given domain name or
+	 * email address.
+	 */
+	function toASCII(input) {
+		return mapDomain(input, function(string) {
+			return regexNonASCII.test(string)
+				? 'xn--' + encode(string)
+				: string;
+		});
+	}
+
+	/*--------------------------------------------------------------------------*/
+
+	/** Define the public API */
+	punycode = {
+		/**
+		 * A string representing the current Punycode.js version number.
+		 * @memberOf punycode
+		 * @type String
+		 */
+		'version': '1.4.1',
+		/**
+		 * An object of methods to convert from JavaScript's internal character
+		 * representation (UCS-2) to Unicode code points, and back.
+		 * @see <https://mathiasbynens.be/notes/javascript-encoding>
+		 * @memberOf punycode
+		 * @type Object
+		 */
+		'ucs2': {
+			'decode': ucs2decode,
+			'encode': ucs2encode
+		},
+		'decode': decode,
+		'encode': encode,
+		'toASCII': toASCII,
+		'toUnicode': toUnicode
+	};
+
+	/** Expose `punycode` */
+	// Some AMD build optimizers, like r.js, check for specific condition patterns
+	// like the following:
+	if (
+		true
+	) {
+		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+			return punycode;
+		}).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+
+}(this));
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/module.js */ "./node_modules/next/node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -25683,12 +26323,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -26323,543 +26963,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
-
-/***/ }),
-
-/***/ "./node_modules/punycode/punycode.js":
-/*!*******************************************!*\
-  !*** ./node_modules/punycode/punycode.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.3.2 by @mathias */
-;(function(root) {
-
-	/** Detect free variables */
-	var freeExports =  true && exports &&
-		!exports.nodeType && exports;
-	var freeModule =  true && module &&
-		!module.nodeType && module;
-	var freeGlobal = typeof global == 'object' && global;
-	if (
-		freeGlobal.global === freeGlobal ||
-		freeGlobal.window === freeGlobal ||
-		freeGlobal.self === freeGlobal
-	) {
-		root = freeGlobal;
-	}
-
-	/**
-	 * The `punycode` object.
-	 * @name punycode
-	 * @type Object
-	 */
-	var punycode,
-
-	/** Highest positive signed 32-bit float value */
-	maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
-
-	/** Bootstring parameters */
-	base = 36,
-	tMin = 1,
-	tMax = 26,
-	skew = 38,
-	damp = 700,
-	initialBias = 72,
-	initialN = 128, // 0x80
-	delimiter = '-', // '\x2D'
-
-	/** Regular expressions */
-	regexPunycode = /^xn--/,
-	regexNonASCII = /[^\x20-\x7E]/, // unprintable ASCII chars + non-ASCII chars
-	regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g, // RFC 3490 separators
-
-	/** Error messages */
-	errors = {
-		'overflow': 'Overflow: input needs wider integers to process',
-		'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
-		'invalid-input': 'Invalid input'
-	},
-
-	/** Convenience shortcuts */
-	baseMinusTMin = base - tMin,
-	floor = Math.floor,
-	stringFromCharCode = String.fromCharCode,
-
-	/** Temporary variable */
-	key;
-
-	/*--------------------------------------------------------------------------*/
-
-	/**
-	 * A generic error utility function.
-	 * @private
-	 * @param {String} type The error type.
-	 * @returns {Error} Throws a `RangeError` with the applicable error message.
-	 */
-	function error(type) {
-		throw RangeError(errors[type]);
-	}
-
-	/**
-	 * A generic `Array#map` utility function.
-	 * @private
-	 * @param {Array} array The array to iterate over.
-	 * @param {Function} callback The function that gets called for every array
-	 * item.
-	 * @returns {Array} A new array of values returned by the callback function.
-	 */
-	function map(array, fn) {
-		var length = array.length;
-		var result = [];
-		while (length--) {
-			result[length] = fn(array[length]);
-		}
-		return result;
-	}
-
-	/**
-	 * A simple `Array#map`-like wrapper to work with domain name strings or email
-	 * addresses.
-	 * @private
-	 * @param {String} domain The domain name or email address.
-	 * @param {Function} callback The function that gets called for every
-	 * character.
-	 * @returns {Array} A new string of characters returned by the callback
-	 * function.
-	 */
-	function mapDomain(string, fn) {
-		var parts = string.split('@');
-		var result = '';
-		if (parts.length > 1) {
-			// In email addresses, only the domain name should be punycoded. Leave
-			// the local part (i.e. everything up to `@`) intact.
-			result = parts[0] + '@';
-			string = parts[1];
-		}
-		// Avoid `split(regex)` for IE8 compatibility. See #17.
-		string = string.replace(regexSeparators, '\x2E');
-		var labels = string.split('.');
-		var encoded = map(labels, fn).join('.');
-		return result + encoded;
-	}
-
-	/**
-	 * Creates an array containing the numeric code points of each Unicode
-	 * character in the string. While JavaScript uses UCS-2 internally,
-	 * this function will convert a pair of surrogate halves (each of which
-	 * UCS-2 exposes as separate characters) into a single code point,
-	 * matching UTF-16.
-	 * @see `punycode.ucs2.encode`
-	 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-	 * @memberOf punycode.ucs2
-	 * @name decode
-	 * @param {String} string The Unicode input string (UCS-2).
-	 * @returns {Array} The new array of code points.
-	 */
-	function ucs2decode(string) {
-		var output = [],
-		    counter = 0,
-		    length = string.length,
-		    value,
-		    extra;
-		while (counter < length) {
-			value = string.charCodeAt(counter++);
-			if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
-				// high surrogate, and there is a next character
-				extra = string.charCodeAt(counter++);
-				if ((extra & 0xFC00) == 0xDC00) { // low surrogate
-					output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
-				} else {
-					// unmatched surrogate; only append this code unit, in case the next
-					// code unit is the high surrogate of a surrogate pair
-					output.push(value);
-					counter--;
-				}
-			} else {
-				output.push(value);
-			}
-		}
-		return output;
-	}
-
-	/**
-	 * Creates a string based on an array of numeric code points.
-	 * @see `punycode.ucs2.decode`
-	 * @memberOf punycode.ucs2
-	 * @name encode
-	 * @param {Array} codePoints The array of numeric code points.
-	 * @returns {String} The new Unicode string (UCS-2).
-	 */
-	function ucs2encode(array) {
-		return map(array, function(value) {
-			var output = '';
-			if (value > 0xFFFF) {
-				value -= 0x10000;
-				output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
-				value = 0xDC00 | value & 0x3FF;
-			}
-			output += stringFromCharCode(value);
-			return output;
-		}).join('');
-	}
-
-	/**
-	 * Converts a basic code point into a digit/integer.
-	 * @see `digitToBasic()`
-	 * @private
-	 * @param {Number} codePoint The basic numeric code point value.
-	 * @returns {Number} The numeric value of a basic code point (for use in
-	 * representing integers) in the range `0` to `base - 1`, or `base` if
-	 * the code point does not represent a value.
-	 */
-	function basicToDigit(codePoint) {
-		if (codePoint - 48 < 10) {
-			return codePoint - 22;
-		}
-		if (codePoint - 65 < 26) {
-			return codePoint - 65;
-		}
-		if (codePoint - 97 < 26) {
-			return codePoint - 97;
-		}
-		return base;
-	}
-
-	/**
-	 * Converts a digit/integer into a basic code point.
-	 * @see `basicToDigit()`
-	 * @private
-	 * @param {Number} digit The numeric value of a basic code point.
-	 * @returns {Number} The basic code point whose value (when used for
-	 * representing integers) is `digit`, which needs to be in the range
-	 * `0` to `base - 1`. If `flag` is non-zero, the uppercase form is
-	 * used; else, the lowercase form is used. The behavior is undefined
-	 * if `flag` is non-zero and `digit` has no uppercase form.
-	 */
-	function digitToBasic(digit, flag) {
-		//  0..25 map to ASCII a..z or A..Z
-		// 26..35 map to ASCII 0..9
-		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
-	}
-
-	/**
-	 * Bias adaptation function as per section 3.4 of RFC 3492.
-	 * http://tools.ietf.org/html/rfc3492#section-3.4
-	 * @private
-	 */
-	function adapt(delta, numPoints, firstTime) {
-		var k = 0;
-		delta = firstTime ? floor(delta / damp) : delta >> 1;
-		delta += floor(delta / numPoints);
-		for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
-			delta = floor(delta / baseMinusTMin);
-		}
-		return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
-	}
-
-	/**
-	 * Converts a Punycode string of ASCII-only symbols to a string of Unicode
-	 * symbols.
-	 * @memberOf punycode
-	 * @param {String} input The Punycode string of ASCII-only symbols.
-	 * @returns {String} The resulting string of Unicode symbols.
-	 */
-	function decode(input) {
-		// Don't use UCS-2
-		var output = [],
-		    inputLength = input.length,
-		    out,
-		    i = 0,
-		    n = initialN,
-		    bias = initialBias,
-		    basic,
-		    j,
-		    index,
-		    oldi,
-		    w,
-		    k,
-		    digit,
-		    t,
-		    /** Cached calculation results */
-		    baseMinusT;
-
-		// Handle the basic code points: let `basic` be the number of input code
-		// points before the last delimiter, or `0` if there is none, then copy
-		// the first basic code points to the output.
-
-		basic = input.lastIndexOf(delimiter);
-		if (basic < 0) {
-			basic = 0;
-		}
-
-		for (j = 0; j < basic; ++j) {
-			// if it's not a basic code point
-			if (input.charCodeAt(j) >= 0x80) {
-				error('not-basic');
-			}
-			output.push(input.charCodeAt(j));
-		}
-
-		// Main decoding loop: start just after the last delimiter if any basic code
-		// points were copied; start at the beginning otherwise.
-
-		for (index = basic > 0 ? basic + 1 : 0; index < inputLength; /* no final expression */) {
-
-			// `index` is the index of the next character to be consumed.
-			// Decode a generalized variable-length integer into `delta`,
-			// which gets added to `i`. The overflow checking is easier
-			// if we increase `i` as we go, then subtract off its starting
-			// value at the end to obtain `delta`.
-			for (oldi = i, w = 1, k = base; /* no condition */; k += base) {
-
-				if (index >= inputLength) {
-					error('invalid-input');
-				}
-
-				digit = basicToDigit(input.charCodeAt(index++));
-
-				if (digit >= base || digit > floor((maxInt - i) / w)) {
-					error('overflow');
-				}
-
-				i += digit * w;
-				t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-
-				if (digit < t) {
-					break;
-				}
-
-				baseMinusT = base - t;
-				if (w > floor(maxInt / baseMinusT)) {
-					error('overflow');
-				}
-
-				w *= baseMinusT;
-
-			}
-
-			out = output.length + 1;
-			bias = adapt(i - oldi, out, oldi == 0);
-
-			// `i` was supposed to wrap around from `out` to `0`,
-			// incrementing `n` each time, so we'll fix that now:
-			if (floor(i / out) > maxInt - n) {
-				error('overflow');
-			}
-
-			n += floor(i / out);
-			i %= out;
-
-			// Insert `n` at position `i` of the output
-			output.splice(i++, 0, n);
-
-		}
-
-		return ucs2encode(output);
-	}
-
-	/**
-	 * Converts a string of Unicode symbols (e.g. a domain name label) to a
-	 * Punycode string of ASCII-only symbols.
-	 * @memberOf punycode
-	 * @param {String} input The string of Unicode symbols.
-	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
-	 */
-	function encode(input) {
-		var n,
-		    delta,
-		    handledCPCount,
-		    basicLength,
-		    bias,
-		    j,
-		    m,
-		    q,
-		    k,
-		    t,
-		    currentValue,
-		    output = [],
-		    /** `inputLength` will hold the number of code points in `input`. */
-		    inputLength,
-		    /** Cached calculation results */
-		    handledCPCountPlusOne,
-		    baseMinusT,
-		    qMinusT;
-
-		// Convert the input in UCS-2 to Unicode
-		input = ucs2decode(input);
-
-		// Cache the length
-		inputLength = input.length;
-
-		// Initialize the state
-		n = initialN;
-		delta = 0;
-		bias = initialBias;
-
-		// Handle the basic code points
-		for (j = 0; j < inputLength; ++j) {
-			currentValue = input[j];
-			if (currentValue < 0x80) {
-				output.push(stringFromCharCode(currentValue));
-			}
-		}
-
-		handledCPCount = basicLength = output.length;
-
-		// `handledCPCount` is the number of code points that have been handled;
-		// `basicLength` is the number of basic code points.
-
-		// Finish the basic string - if it is not empty - with a delimiter
-		if (basicLength) {
-			output.push(delimiter);
-		}
-
-		// Main encoding loop:
-		while (handledCPCount < inputLength) {
-
-			// All non-basic code points < n have been handled already. Find the next
-			// larger one:
-			for (m = maxInt, j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-				if (currentValue >= n && currentValue < m) {
-					m = currentValue;
-				}
-			}
-
-			// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
-			// but guard against overflow
-			handledCPCountPlusOne = handledCPCount + 1;
-			if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
-				error('overflow');
-			}
-
-			delta += (m - n) * handledCPCountPlusOne;
-			n = m;
-
-			for (j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-
-				if (currentValue < n && ++delta > maxInt) {
-					error('overflow');
-				}
-
-				if (currentValue == n) {
-					// Represent delta as a generalized variable-length integer
-					for (q = delta, k = base; /* no condition */; k += base) {
-						t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-						if (q < t) {
-							break;
-						}
-						qMinusT = q - t;
-						baseMinusT = base - t;
-						output.push(
-							stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
-						);
-						q = floor(qMinusT / baseMinusT);
-					}
-
-					output.push(stringFromCharCode(digitToBasic(q, 0)));
-					bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
-					delta = 0;
-					++handledCPCount;
-				}
-			}
-
-			++delta;
-			++n;
-
-		}
-		return output.join('');
-	}
-
-	/**
-	 * Converts a Punycode string representing a domain name or an email address
-	 * to Unicode. Only the Punycoded parts of the input will be converted, i.e.
-	 * it doesn't matter if you call it on a string that has already been
-	 * converted to Unicode.
-	 * @memberOf punycode
-	 * @param {String} input The Punycoded domain name or email address to
-	 * convert to Unicode.
-	 * @returns {String} The Unicode representation of the given Punycode
-	 * string.
-	 */
-	function toUnicode(input) {
-		return mapDomain(input, function(string) {
-			return regexPunycode.test(string)
-				? decode(string.slice(4).toLowerCase())
-				: string;
-		});
-	}
-
-	/**
-	 * Converts a Unicode string representing a domain name or an email address to
-	 * Punycode. Only the non-ASCII parts of the domain name will be converted,
-	 * i.e. it doesn't matter if you call it with a domain that's already in
-	 * ASCII.
-	 * @memberOf punycode
-	 * @param {String} input The domain name or email address to convert, as a
-	 * Unicode string.
-	 * @returns {String} The Punycode representation of the given domain name or
-	 * email address.
-	 */
-	function toASCII(input) {
-		return mapDomain(input, function(string) {
-			return regexNonASCII.test(string)
-				? 'xn--' + encode(string)
-				: string;
-		});
-	}
-
-	/*--------------------------------------------------------------------------*/
-
-	/** Define the public API */
-	punycode = {
-		/**
-		 * A string representing the current Punycode.js version number.
-		 * @memberOf punycode
-		 * @type String
-		 */
-		'version': '1.3.2',
-		/**
-		 * An object of methods to convert from JavaScript's internal character
-		 * representation (UCS-2) to Unicode code points, and back.
-		 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-		 * @memberOf punycode
-		 * @type Object
-		 */
-		'ucs2': {
-			'decode': ucs2decode,
-			'encode': ucs2encode
-		},
-		'decode': decode,
-		'encode': encode,
-		'toASCII': toASCII,
-		'toUnicode': toUnicode
-	};
-
-	/** Expose `punycode` */
-	// Some AMD build optimizers, like r.js, check for specific condition patterns
-	// like the following:
-	if (
-		true
-	) {
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
-			return punycode;
-		}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-
-}(this));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../next/node_modules/webpack/buildin/module.js */ "./node_modules/next/node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -27074,12 +27183,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -30893,12 +31002,12 @@ exports.classNamesShape = classNamesShape;
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -31727,7 +31836,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 
 
-var punycode = __webpack_require__(/*! punycode */ "./node_modules/punycode/punycode.js");
+var punycode = __webpack_require__(/*! punycode */ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js");
 var util = __webpack_require__(/*! ./util */ "./node_modules/url/util.js");
 
 exports.parse = urlParse;
@@ -32561,35 +32670,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Sidebar */ "./components/Sidebar.js");
-/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @react/react-spectrum/Provider */ "./node_modules/@react/react-spectrum/Provider/index.js");
-/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @react/react-spectrum/Select */ "./node_modules/@react/react-spectrum/Select/index.js");
-/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @react/react-spectrum/FieldLabel */ "./node_modules/@react/react-spectrum/FieldLabel/index.js");
-/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../css/main.scss */ "./css/main.scss");
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/lib/Helmet.js");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/lib/Helmet.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Sidebar */ "./components/Sidebar.js");
+/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @react/react-spectrum/Provider */ "./node_modules/@react/react-spectrum/Provider/index.js");
+/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @react/react-spectrum/Select */ "./node_modules/@react/react-spectrum/Select/index.js");
+/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @react/react-spectrum/FieldLabel */ "./node_modules/@react/react-spectrum/FieldLabel/index.js");
+/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../css/main.scss */ "./css/main.scss");
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_24__);
 
 
 
@@ -32634,14 +32743,14 @@ function (_React$Component) {
     value: function render() {
       var children = this.props.children;
       return __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_23___default()('afg-container-fluid', _css_main_scss__WEBPACK_IMPORTED_MODULE_14___default.a.mainContainer),
+        className: classnames__WEBPACK_IMPORTED_MODULE_15___default()('afg-container-fluid', 'site-mainContainer'),
         style: {
           minHeight: '100vh',
           boxSizing: 'border-box'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, children);
@@ -32667,6 +32776,8 @@ function (_App) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "updateDimensions", function () {
       _this.setState(function (state, props) {
+        console.log(_this.scaleSelector.current);
+        _this.scaleSelector.current.state.value = window.innerWidth < 768 ? 'large' : 'medium';
         return {
           scale: window.innerWidth < 768 ? 'large' : 'medium'
         };
@@ -32683,11 +32794,29 @@ function (_App) {
       });
     });
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "handleScriptInject", function (_ref) {
+      var scriptTags = _ref.scriptTags;
+
+      if (scriptTags) {
+        var scriptTag = scriptTags[0];
+        scriptTag.onload = _this.handleOnLoad;
+      }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "handleOnLoad", function () {
+      window.onload = loadIcons('/static/images/svg/spectrum-css-icons.svg', function (err, svg) {
+        if (err) {
+          console.error('Everything failed because ' + error);
+        }
+      });
+    });
+
+    _this.scaleSelector = react__WEBPACK_IMPORTED_MODULE_8___default.a.createRef();
     _this.state = {
       scale: 'medium',
       theme: 'light'
     };
-    next_router__WEBPACK_IMPORTED_MODULE_15__["Router"].events.on('routeChangeComplete', function () {
+    next_router__WEBPACK_IMPORTED_MODULE_17__["Router"].events.on('routeChangeComplete', function () {
       digitalData._set('page.pageInfo.siteSection', "".concat(_arguments[0].router.query.id, " Page"));
 
       digitalData._set('page.pageInfo.language', 'en-US');
@@ -32720,16 +32849,21 @@ function (_App) {
           pageProps = _this$props.pageProps; //console.log(pageProps);
 
       return __jsx("div", {
-        className: "spectrum--".concat(this.state.theme),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 93
         },
         __self: this
-      }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_24__["Helmet"], {
+      }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_10__["Helmet"], {
+        script: [{
+          src: '/static/javascript/loadicons/index.js'
+        }],
+        onChangeClientState: function onChangeClientState(newState, addedTags) {
+          return _this2.handleScriptInject(addedTags);
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 95
         },
         __self: this
       }, __jsx("meta", {
@@ -32738,7 +32872,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 98
         },
         __self: this
       }), __jsx("link", {
@@ -32747,7 +32881,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 99
         },
         __self: this
       }), __jsx("link", {
@@ -32756,56 +32890,57 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 100
         },
         __self: this
-      })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12___default.a, {
         theme: this.state.theme,
         scale: this.state.scale,
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 103
         },
         __self: this
       }, __jsx("div", {
-        className: _css_main_scss__WEBPACK_IMPORTED_MODULE_14___default.a.flexContainer,
+        className: 'flexContainer',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 104
         },
         __self: this
-      }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+      }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_11__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 105
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 106
         },
         __self: this
       }, __jsx("div", {
         style: {
-          display: 'flex'
+          display: 'flex',
+          justifyContent: 'flex-end'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 107
         },
         __self: this
-      }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13___default.a, {
+      }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
         label: "Theme",
         labelFor: "theme-selector",
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 108
         },
         __self: this
-      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12___default.a, {
+      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
         onChange: this.updateTheme,
         id: "theme-selector",
         "aria-label": "Theme selector",
@@ -32827,21 +32962,24 @@ function (_App) {
         style: {
           marginRight: '37px'
         },
+        flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 109
         },
         __self: this
-      })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_13___default.a, {
+      })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
         label: "Scale",
-        labelFor: "theme-selector",
+        labelFor: "scale-selector",
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 125
         },
         __self: this
-      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_12___default.a, {
+      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
+        ref: this.scaleSelector,
+        id: "scale-selector",
         onChange: function onChange(e) {
           _this2.setState(function (state, props) {
             return {
@@ -32860,15 +32998,16 @@ function (_App) {
           value: 'large'
         }],
         quiet: true,
+        flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 126
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 148
         },
         __self: this
       }))))));
@@ -32878,7 +33017,7 @@ function (_App) {
   return MyApp;
 }(next_app__WEBPACK_IMPORTED_MODULE_9___default.a);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_15__["withRouter"])(MyApp));
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_17__["withRouter"])(MyApp));
 
 /***/ }),
 
@@ -32893,14 +33032,14 @@ function (_App) {
 
 /***/ }),
 
-/***/ "dll-reference dll_129a35c7ec57967eb265":
+/***/ "dll-reference dll_b35e09dc2ca94ac6d9c1":
 /*!*******************************************!*\
-  !*** external "dll_129a35c7ec57967eb265" ***!
+  !*** external "dll_b35e09dc2ca94ac6d9c1" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_129a35c7ec57967eb265;
+module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 

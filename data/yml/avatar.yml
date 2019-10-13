@@ -4,6 +4,34 @@ status: Verified
 examples:
   - id: avatar-small
     name: Standard
-    markup: |
+    markup: >
       <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-      <img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg" alt="Disabled Avatar">
+
+      <img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg"
+      alt="Disabled Avatar">
+packageName: avatar
+indexCSS: |
+  .spectrum-Avatar {
+    width: var(--spectrum-avatar-small-width, var(--spectrum-global-dimension-size-200));
+    height: var(--spectrum-avatar-small-height, var(--spectrum-global-dimension-size-200));
+
+    border-radius: var(--spectrum-avatar-small-border-radius, 50%);
+    border-style: none;
+
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  .spectrum-Avatar {
+    opacity: NaN;
+  }
+
+  .spectrum-Avatar.is-disabled {
+      opacity: NaN;
+    }
+peerDependencies:
+  '@spectrum-css/vars': ^2.0.0
+peerCSS: ''

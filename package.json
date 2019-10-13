@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/adobe/spectrum-css#readme",
   "dependencies": {
-    "@adobe/spectrum-css": "^2.14.0-alpha.16",
+    "@adobe/spectrum-css": "^2.14.0",
     "@adobe/spectrum-css-workflow-icons": "1.0.0-beta.6",
     "classnames": "^2.2.6",
     "isomorphic-unfetch": "^3.0.0",
@@ -30,7 +30,8 @@
     "next": "^9.0.5",
     "raw-loader": "^3.1.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "resolve": "^1.12.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.4.3",

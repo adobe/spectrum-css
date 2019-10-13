@@ -14,7 +14,7 @@
     display: none;
     max-height: calc(100vh - 200px);
     min-height: 220px;
-    overflow-y:scroll; 
+    overflow-y:scroll;
     box-shadow: 0 1px 4px var(--spectrum-alias-dropshadow-color);
 }
 :local(.overlay) {
@@ -36,7 +36,7 @@
     color: var(--spectrum-global-color-gray-800) !important;
     padding-bottom:6px;
     margin:0px;
-    
+
 
 }
 :local(.resultContainer) {
@@ -54,7 +54,7 @@
     cursor: pointer;
     transition: all 125ms ease-in-out;
     &:hover {
-      
+
         transition: all 125ms ease-in-out;
         background-color: var(--spectrum-alias-highlight-hover);
     }
@@ -85,7 +85,7 @@
         width:16px;
         height: 16px;
     }
-    
+
 }
 :local(.noResultsContainer) {
     display:flex;
