@@ -26,26 +26,26 @@ examples:
           <ul class="spectrum-Menu" role="listbox">
             <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Ballard</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Fremont</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Greenwood</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
               <span class="spectrum-Menu-itemLabel">United States of America</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
@@ -69,39 +69,39 @@ examples:
         <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover is-open" style="width: 100%">
           <ul class="spectrum-Menu" role="listbox">
             <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-Menu-itemLabel">Ballard</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-Menu-itemLabel">Fremont</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-Menu-itemLabel">Greenwood</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-Menu-itemLabel">United States of America</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
@@ -149,26 +149,26 @@ examples:
           <ul class="spectrum-Menu" role="listbox">
             <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Ballard</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Fremont</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Greenwood</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
               <span class="spectrum-Menu-itemLabel">United States of America</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
@@ -217,26 +217,26 @@ examples:
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Ballard</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Fremont</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Greenwood</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-divider" role="separator"></li>
           <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
             <span class="spectrum-Menu-itemLabel">United States of America</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
@@ -260,39 +260,39 @@ examples:
       <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="display: block;">
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
               <use xlink:href="#spectrum-icon-18-Image" />
             </svg>
             <span class="spectrum-Menu-itemLabel">Ballard</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
               <use xlink:href="#spectrum-icon-18-Image" />
             </svg>
             <span class="spectrum-Menu-itemLabel">Fremont</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
               <use xlink:href="#spectrum-icon-18-Image" />
             </svg>
             <span class="spectrum-Menu-itemLabel">Greenwood</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-divider" role="separator"></li>
           <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Image">
               <use xlink:href="#spectrum-icon-18-Image" />
             </svg>
             <span class="spectrum-Menu-itemLabel">United States of America</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
@@ -340,26 +340,26 @@ examples:
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Ballard</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Fremont</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Greenwood</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
           <li class="spectrum-Menu-divider" role="separator"></li>
           <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
             <span class="spectrum-Menu-itemLabel">United States of America</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
             </svg>
           </li>
