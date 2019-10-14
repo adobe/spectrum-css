@@ -1,20 +1,21 @@
 import React from 'react'
 import App from 'next/app'
+import { Helmet } from "react-helmet";
 import Sidebar from '../components/Sidebar';
 import Provider from '@react/react-spectrum/Provider';
 import Select from '@react/react-spectrum/Select';
 import FieldLabel from '@react/react-spectrum/FieldLabel';
-import styles from '../css/main.scss';
-import {withRouter, Router} from 'next/router';
-
-import '@adobe/spectrum-css/dist/spectrum-core.css';
-import '@adobe/spectrum-css/dist/spectrum-lightest.css';
-import '@adobe/spectrum-css/dist/spectrum-dark.css';
-import '@adobe/spectrum-css/dist/spectrum-darkest.css';
-import '@adobe/spectrum-css/dist/spectrum-light.css';
-
 import classNames from 'classnames';
-import {Helmet} from "react-helmet";
+import styles from '../css/main.scss';
+import { withRouter, Router } from 'next/router';
+
+import '@adobe/spectrum-css/dist/vars/spectrum-dark-unique.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-light-unique.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-large-unique.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-global.css';
 
 //import regeneratorRuntime from "regenerator-runtime";
 
@@ -22,7 +23,7 @@ import {Helmet} from "react-helmet";
 class Layout extends React.Component {
   render() {
     const {children} = this.props
-    return <div className={classNames('afg-container-fluid', styles.mainContainer)}
+    return <div className={classNames('afg-container-fluid', 'site-mainContainer')}
                 style={{minHeight: '100vh', boxSizing: 'border-box'}}>{children}</div>
   }
 }
@@ -30,6 +31,7 @@ class Layout extends React.Component {
 class MyApp extends App {
   constructor(props) {
     super(props);
+    this.scaleSelector = React.createRef();
     this.state = {
       scale: 'medium',
       theme: 'light'
@@ -51,6 +53,7 @@ class MyApp extends App {
 
   updateDimensions = () => {
     this.setState((state, props) => {
+      this.scaleSelector.current.state.value = window.innerWidth < 768 ? 'large' : 'medium';
       return {
         scale: window.innerWidth < 768 ? 'large' : 'medium'
       }
@@ -86,23 +89,21 @@ class MyApp extends App {
     //console.log(pageProps);
     return (
 
-      <div className={`spectrum--${this.state.theme} spectrum--medium`}>
+      <div>
         {/* SVG iconfile loadscript */}
         <Helmet
             script={[{ src: '/static/javascript/loadicons/index.js' }]}
-            onChangeClientState={(newState, addedTags) => this.handleScriptInject(addedTags)}
-        />
-        <Helmet>
+            onChangeClientState={(newState, addedTags) => this.handleScriptInject(addedTags)}>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport"/>
           <link rel="icon" type="image/x-icon" href={`${process.env.BACKEND_URL}/static/favicon.ico`}/>
           <link type="text/css" rel="stylesheet"
                 href="https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css"/>
         </Helmet>
         <Provider theme={this.state.theme} scale={this.state.scale} typekitId="uma8ayv">
-          <div className={styles.flexContainer}>
+          <div className={'flexContainer'}>
             <Sidebar {...pageProps}/>
             <Layout>
-              <div style={{display: 'flex'}}>
+              <div style={{display: 'flex', justifyContent: 'flex-end' }}>
                 <FieldLabel label="Theme" labelFor="theme-selector" position="left">
                   <Select
                     onChange={this.updateTheme}
@@ -117,10 +118,13 @@ class MyApp extends App {
                     defaultValue="light"
                     quiet
                     style={{marginRight: '37px'}}
+                    flexible
                   />
                 </FieldLabel>
-                <FieldLabel label="Scale" labelFor="theme-selector" position="left">
+                <FieldLabel label="Scale" labelFor="scale-selector" position="left">
                   <Select
+                    ref={this.scaleSelector}
+                    id="scale-selector"
                     onChange={e => {
                       this.setState((state, props) => {
                         return {
@@ -136,6 +140,7 @@ class MyApp extends App {
                       {label: 'Large', value: 'large'}
                     ]}
                     quiet
+                    flexible
                   />
                 </FieldLabel>
               </div>

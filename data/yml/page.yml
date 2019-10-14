@@ -1,9 +1,14 @@
 name: Page
 status: n/a
-description: |
-  The outer page container. A parent tag should only have the `.spectrum` class if using a standalone CSS file.
-  If using multistops, a parent tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
-  Finally, if scaling to large with the diff strategy, a parent tag should have the `.spectrum--large` class.
+description: >
+  The outer page container. A parent tag should only have the `.spectrum` class
+  if using a standalone CSS file.
+
+  If using multistops, a parent tag should have both the `.spectrum` class and
+  the corresponding colorstop variant class, i.e. `.spectrum--light`.
+
+  Finally, if scaling to large with the diff strategy, a parent tag should have
+  the `.spectrum--large` class.
 examples:
   - id: page
     name: Standard
@@ -21,3 +26,11 @@ examples:
         <button class="spectrum-Button spectrum-Button--cta">Button</button>
       </div>
       <br><br>
+packageName: page
+indexCSS: |
+  .spectrum {
+    background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+peerDependencies: {}
+peerCSS: ''

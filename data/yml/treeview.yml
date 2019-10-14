@@ -2,9 +2,11 @@ name: Tree View
 examples:
   - id: treeview
     name: Standard
-    description: |
+    description: >
       A nested tree view.
-      Because the tree view is nested, the visibility of child items is controlled by the open state of the parent item.
+
+      Because the tree view is nested, the visibility of child items is
+      controlled by the open state of the parent item.
     markup: |
       <ul class="spectrum-TreeView" style="width: 250px">
         <li class="spectrum-TreeView-item">
@@ -273,9 +275,12 @@ examples:
       </ul>
   - id: treeview
     name: Flat
-    description: |
-      A Spectrum tree view drawn without nesting, suitable for infinite scrolling.
-      With this version of the tree, you must manage the visibility of "child items" manually based on the open state of the "parent item."
+    description: >
+      A Spectrum tree view drawn without nesting, suitable for infinite
+      scrolling.
+
+      With this version of the tree, you must manage the visibility of "child
+      items" manually based on the open state of the "parent item."
     markup: |
       <ul class="spectrum-TreeView" style="width: 250px">
         <li class="spectrum-TreeView-item">
@@ -347,3 +352,455 @@ examples:
           </a>
         </li>
       </ul>
+packageName: treeview
+indexCSS: >
+  .spectrum-TreeView {
+    display: block;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    outline: none;
+  }
+
+
+  .spectrum-TreeView-item {
+    overflow: hidden;
+  }
+
+
+  .spectrum-TreeView-item.is-open > .spectrum-TreeView-itemLink >
+  .spectrum-TreeView-indicator {
+        transform: rotate(90deg);
+      }
+
+  .spectrum-TreeView-item.is-open > .spectrum-TreeView {
+        height: auto;
+        visibility: visible;
+      }
+
+  .spectrum-TreeView-itemLink {
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    padding: calc(var(--spectrum-treeview-item-margin-y, var(--spectrum-global-dimension-static-size-100)) / 2 + var(--spectrum-treeview-item-padding-y, var(--spectrum-global-dimension-static-size-100))) var(--spectrum-treeview-item-padding-x, 30px);
+
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  .spectrum-TreeView-itemLink:focus {
+      outline: none;
+    }
+
+  .spectrum-TreeView-itemLink .spectrum-Icon {
+      vertical-align: top;
+      margin-right: var(--spectrum-treeview-item-icon-gap, var(--spectrum-global-dimension-size-100));
+    }
+
+  .spectrum-TreeView-itemLink::before {
+      content: '';
+
+      position: absolute;
+      left: calc(0 + var(--spectrum-treeview-item-border-size, var(--spectrum-global-dimension-static-size-25)));
+      right: 0;
+      z-index: -1;
+      margin-top: calc(-1 * var(--spectrum-treeview-item-padding-y, var(--spectrum-global-dimension-static-size-100)));
+
+      height: var(--spectrum-treeview-item-height, var(--spectrum-global-dimension-size-450));
+
+      background-color: transparent;
+
+      border-radius: var(--spectrum-treeview-item-border-radius, var(--spectrum-alias-border-radius-regular));
+    }
+
+  .spectrum-TreeView-indicator {
+    display: block;
+
+    float: left;
+    position: relative;
+
+    left: var(--spectrum-global-dimension-size-125);
+    top: calc(-1 * var(--spectrum-global-dimension-size-65));
+    margin-left: calc(-1 * (var(--spectrum-global-dimension-size-400) + var(--spectrum-global-dimension-size-25)));
+    margin-bottom: calc(-1 * var(--spectrum-global-dimension-size-125));
+
+    padding: var(--spectrum-global-dimension-size-125);
+
+    transition: transform ease var(--spectrum-global-animation-duration-100, 130ms);
+
+    pointer-events: all !important;
+  }
+
+
+  .spectrum-TreeView .spectrum-TreeView {
+    position: static;
+
+    padding-left: var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350));
+    height: 0;
+    visibility: hidden;
+  }
+
+
+  .spectrum-TreeView-item--indent1 {
+    padding-left: var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350));
+  }
+
+
+  .spectrum-TreeView-item--indent2 {
+    padding-left: calc(2 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent3 {
+    padding-left: calc(3 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent4 {
+    padding-left: calc(4 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent5 {
+    padding-left: calc(5 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent6 {
+    padding-left: calc(6 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent7 {
+    padding-left: calc(7 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent8 {
+    padding-left: calc(8 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent9 {
+    padding-left: calc(9 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item--indent10 {
+    padding-left: calc(10 * var(--spectrum-treeview-item-indent, var(--spectrum-global-dimension-size-350)));
+  }
+
+
+  .spectrum-TreeView-item.is-disabled > .spectrum-TreeView-itemLink {
+        color: var(--spectrum-alias-text-color-disabled, var(--spectrum-global-color-gray-500));
+      }
+
+  .spectrum-TreeView-item.is-disabled > .spectrum-TreeView-itemLink
+  .spectrum-Icon {
+          color: var(--spectrum-alias-icon-color-disabled, var(--spectrum-global-color-gray-400));
+        }
+
+  .spectrum-TreeView-itemLink {
+    color: var(--spectrum-treeview-item-text-color, var(--spectrum-global-color-gray-800));
+  }
+
+
+  .spectrum-TreeView-itemLink:hover,
+    .spectrum-TreeView-itemLink.is-selected {
+      color: var(--spectrum-treeview-item-text-color-hover, var(--spectrum-global-color-gray-900));
+    }
+
+  .spectrum-TreeView-itemLink:hover::before,
+  .spectrum-TreeView-itemLink.is-selected::before {
+        background-color: var(--spectrum-treeview-item-background-color-hover, var(--spectrum-alias-background-color-hover-overlay));
+      }
+
+  .spectrum-TreeView-itemLink.focus-ring {
+      color: var(--spectrum-treeview-item-text-color-hover, var(--spectrum-global-color-gray-900));
+    }
+
+  .spectrum-TreeView-itemLink.focus-ring::before {
+        background-color: var(--spectrum-treeview-item-background-color-key-focus, var(--spectrum-alias-background-color-hover-overlay));
+        box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-item-border-color-key-focus, var(--spectrum-alias-focus-color)) inset;
+      }
+
+  .spectrum-TreeView-itemLink.is-drop-target::before {
+        background-color: var(--spectrum-alias-highlight-selected);
+        box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-item-border-color-key-focus, var(--spectrum-alias-focus-color)) inset;
+      }
+peerDependencies:
+  '@spectrum-css/icon': ^2.0.0
+  '@spectrum-css/vars': ^2.0.0
+peerCSS: |
+  .spectrum-Icon,
+  .spectrum-UIIcon {
+    display: inline-block;
+    color: inherit;
+    fill: currentColor;
+    pointer-events: none;
+  }
+
+  .spectrum-Icon:not(:root), .spectrum-UIIcon:not(:root) {
+      overflow: hidden;
+    }
+
+  .spectrum-Icon--sizeXXS,
+    .spectrum-Icon--sizeXXS img,
+    .spectrum-Icon--sizeXXS svg {
+      height: calc(var(--spectrum-alias-workflow-icon-size, var(--spectrum-global-dimension-size-225)) / 2);
+      width: calc(var(--spectrum-alias-workflow-icon-size, var(--spectrum-global-dimension-size-225)) / 2);
+    }
+
+  .spectrum-Icon--sizeXS,
+    .spectrum-Icon--sizeXS img,
+    .spectrum-Icon--sizeXS svg {
+      height: calc(var(--spectrum-global-dimension-size-300) / 2);
+      width: calc(var(--spectrum-global-dimension-size-300) / 2);
+    }
+
+  .spectrum-Icon--sizeS,
+    .spectrum-Icon--sizeS img,
+    .spectrum-Icon--sizeS svg {
+      height: var(--spectrum-alias-workflow-icon-size, var(--spectrum-global-dimension-size-225));
+      width: var(--spectrum-alias-workflow-icon-size, var(--spectrum-global-dimension-size-225));
+    }
+
+  .spectrum-Icon--sizeM,
+    .spectrum-Icon--sizeM img,
+    .spectrum-Icon--sizeM svg {
+      height: var(--spectrum-global-dimension-size-300);
+      width: var(--spectrum-global-dimension-size-300);
+    }
+
+  .spectrum-Icon--sizeL,
+    .spectrum-Icon--sizeL img,
+    .spectrum-Icon--sizeL svg {
+      height: calc(var(--spectrum-alias-workflow-icon-size, var(--spectrum-global-dimension-size-225)) * 2);
+      width: calc(var(--spectrum-alias-workflow-icon-size, var(--spectrum-global-dimension-size-225)) * 2);
+    }
+
+  .spectrum-Icon--sizeXL,
+    .spectrum-Icon--sizeXL img,
+    .spectrum-Icon--sizeXL svg {
+      height: calc(var(--spectrum-global-dimension-size-300) * 2);
+      width: calc(var(--spectrum-global-dimension-size-300) * 2);
+    }
+
+  .spectrum-Icon--sizeXXL,
+    .spectrum-Icon--sizeXXL img,
+    .spectrum-Icon--sizeXXL svg {
+      height: calc(var(--spectrum-global-dimension-size-300) * 3);
+      width: calc(var(--spectrum-global-dimension-size-300) * 3);
+    }
+
+  .spectrum--medium .spectrum-UIIcon--large {
+      display: none;
+    }
+
+  .spectrum--medium .spectrum-UIIcon--medium {
+      display: inline;
+    }
+
+  .spectrum--large .spectrum-UIIcon--medium {
+      display: none;
+    }
+
+  .spectrum--large .spectrum-UIIcon--large {
+      display: inline;
+    }
+
+  .spectrum--large {
+    --ui-icon-large-display: block;
+    --ui-icon-medium-display: none;
+  }
+
+  .spectrum--medium {
+    --ui-icon-medium-display: block;
+    --ui-icon-large-display: none;
+  }
+
+  .spectrum-UIIcon--large {
+    display: var(--ui-icon-large-display);
+  }
+
+  .spectrum-UIIcon--medium {
+    display: var(--ui-icon-medium-display);
+  }
+
+  .spectrum-UIIcon-AlertMedium {
+    width: var(--spectrum-icon-alert-medium-width, var(--spectrum-global-dimension-size-225));
+    height: var(--spectrum-icon-alert-medium-height, var(--spectrum-global-dimension-size-225));
+  }
+
+  .spectrum-UIIcon-AlertSmall {
+    width: var(--spectrum-icon-alert-small-width, var(--spectrum-global-dimension-size-175));
+    height: var(--spectrum-icon-alert-small-height, var(--spectrum-global-dimension-size-175));
+  }
+
+  .spectrum-UIIcon-ArrowDownSmall {
+    width: var(--spectrum-icon-arrow-down-small-width, var(--spectrum-global-dimension-size-100));
+    height: var(--spectrum-icon-arrow-down-small-height);
+  }
+
+  .spectrum-UIIcon-ArrowLeftMedium {
+    width: var(--spectrum-icon-arrow-left-medium-width, var(--spectrum-global-dimension-size-175));
+    height: var(--spectrum-icon-arrow-left-medium-height);
+  }
+
+  .spectrum-UIIcon-Asterisk {
+    width: var(--spectrum-fieldlabel-asterisk-size, var(--spectrum-global-dimension-size-100));
+    height: var(--spectrum-fieldlabel-asterisk-size, var(--spectrum-global-dimension-size-100));
+  }
+
+  .spectrum-UIIcon-CheckmarkMedium {
+    width: var(--spectrum-icon-checkmark-medium-width);
+    height: var(--spectrum-icon-checkmark-medium-height);
+  }
+
+  .spectrum-UIIcon-CheckmarkSmall {
+    width: var(--spectrum-icon-checkmark-small-width);
+    height: var(--spectrum-icon-checkmark-small-height);
+  }
+
+  .spectrum-UIIcon-ChevronDownMedium {
+    width: var(--spectrum-icon-chevron-down-medium-width);
+    height: var(--spectrum-icon-chevron-down-medium-height, var(--spectrum-global-dimension-size-75));
+  }
+
+  .spectrum-UIIcon-ChevronDownSmall {
+    width: var(--spectrum-icon-chevron-down-small-width, var(--spectrum-global-dimension-size-100));
+    height: var(--spectrum-icon-chevron-down-small-height, var(--spectrum-global-dimension-size-75));
+  }
+
+  .spectrum-UIIcon-ChevronLeftLarge {
+    width: var(--spectrum-icon-chevron-left-large-width);
+    height: var(--spectrum-icon-chevron-left-large-height, var(--spectrum-global-dimension-size-200));
+  }
+
+  .spectrum-UIIcon-ChevronLeftMedium {
+    width: var(--spectrum-icon-chevron-left-medium-width, var(--spectrum-global-dimension-size-75));
+    height: var(--spectrum-icon-chevron-left-medium-height);
+  }
+
+  .spectrum-UIIcon-ChevronRightLarge {
+    width: var(--spectrum-icon-chevron-right-large-width);
+    height: var(--spectrum-icon-chevron-right-large-height, var(--spectrum-global-dimension-size-200));
+  }
+
+  .spectrum-UIIcon-ChevronRightMedium {
+    width: var(--spectrum-icon-chevron-right-medium-width, var(--spectrum-global-dimension-size-75));
+    height: var(--spectrum-icon-chevron-right-medium-height);
+  }
+
+  .spectrum-UIIcon-ChevronRightSmall {
+    width: var(--spectrum-icon-chevron-right-small-width, var(--spectrum-global-dimension-size-75));
+    height: var(--spectrum-icon-chevron-right-small-height, var(--spectrum-global-dimension-size-100));
+  }
+
+  .spectrum-UIIcon-ChevronUpSmall {
+    width: var(--spectrum-icon-chevron-up-small-width, var(--spectrum-global-dimension-size-100));
+    height: var(--spectrum-icon-chevron-up-small-height, var(--spectrum-global-dimension-size-75));
+  }
+
+  .spectrum-UIIcon-CornerTriangle {
+    width: var(--spectrum-icon-cornertriangle-width, var(--spectrum-global-dimension-size-65));
+    height: var(--spectrum-icon-cornertriangle-height, var(--spectrum-global-dimension-size-65));
+  }
+
+  .spectrum-UIIcon-CrossLarge {
+    width: var(--spectrum-icon-cross-large-width);
+    height: var(--spectrum-icon-cross-large-height);
+  }
+
+  .spectrum-UIIcon-CrossMedium {
+    width: var(--spectrum-icon-cross-medium-width, var(--spectrum-global-dimension-size-100));
+    height: var(--spectrum-icon-cross-medium-height, var(--spectrum-global-dimension-size-100));
+  }
+
+  .spectrum-UIIcon-CrossSmall {
+    width: var(--spectrum-icon-cross-small-width, var(--spectrum-global-dimension-size-100));
+    height: var(--spectrum-icon-cross-small-height, var(--spectrum-global-dimension-size-100));
+  }
+
+  .spectrum-UIIcon-DashSmall {
+    width: var(--spectrum-icon-dash-small-width);
+    height: var(--spectrum-icon-dash-small-height);
+  }
+
+  .spectrum-UIIcon-DoubleGripper {
+    width: var(--spectrum-icon-doublegripper-width, var(--spectrum-global-dimension-size-200));
+    height: var(--spectrum-icon-doublegripper-height, var(--spectrum-global-dimension-size-50));
+  }
+
+  .spectrum-UIIcon-FolderBreadcrumb {
+    width: var(--spectrum-icon-folderbreadcrumb-width, var(--spectrum-global-dimension-size-225));
+    height: var(--spectrum-icon-folderbreadcrumb-height, var(--spectrum-global-dimension-size-225));
+  }
+
+  .spectrum-UIIcon-HelpMedium {
+    width: var(--spectrum-icon-info-medium-width, var(--spectrum-global-dimension-size-225));
+    height: var(--spectrum-icon-info-medium-height, var(--spectrum-global-dimension-size-225));
+  }
+
+  .spectrum-UIIcon-HelpSmall {
+    width: var(--spectrum-icon-info-small-width, var(--spectrum-global-dimension-size-175));
+    height: var(--spectrum-icon-info-small-height, var(--spectrum-global-dimension-size-175));
+  }
+
+  .spectrum-UIIcon-InfoMedium {
+    width: var(--spectrum-icon-info-medium-width, var(--spectrum-global-dimension-size-225));
+    height: var(--spectrum-icon-info-medium-height, var(--spectrum-global-dimension-size-225));
+  }
+
+  .spectrum-UIIcon-InfoSmall {
+    width: var(--spectrum-icon-info-small-width, var(--spectrum-global-dimension-size-175));
+    height: var(--spectrum-icon-info-small-height, var(--spectrum-global-dimension-size-175));
+  }
+
+  .spectrum-UIIcon-Magnifier {
+    width: var(--spectrum-icon-magnifier-width, var(--spectrum-global-dimension-size-200));
+    height: var(--spectrum-icon-magnifier-height, var(--spectrum-global-dimension-size-200));
+  }
+
+  .spectrum-UIIcon-SkipLeft {
+    width: var(--spectrum-icon-skip-left-width);
+    height: var(--spectrum-icon-skip-left-height);
+  }
+
+  .spectrum-UIIcon-SkipRight {
+    width: var(--spectrum-icon-skip-right-width);
+    height: var(--spectrum-icon-skip-right-height);
+  }
+
+  .spectrum-UIIcon-Star {
+    width: var(--spectrum-icon-star-width, var(--spectrum-global-dimension-size-225));
+    height: var(--spectrum-icon-star-height, var(--spectrum-global-dimension-size-225));
+  }
+
+  .spectrum-UIIcon-StarOutline {
+    width: var(--spectrum-icon-star-outline-width, var(--spectrum-global-dimension-size-225));
+    height: var(--spectrum-icon-star-outline-height, var(--spectrum-global-dimension-size-225));
+  }
+
+  .spectrum-UIIcon-SuccessMedium {
+    width: var(--spectrum-icon-success-medium-width, var(--spectrum-global-dimension-size-225));
+    height: var(--spectrum-icon-success-medium-height, var(--spectrum-global-dimension-size-225));
+  }
+
+  .spectrum-UIIcon-SuccessSmall {
+    width: var(--spectrum-icon-success-small-width, var(--spectrum-global-dimension-size-175));
+    height: var(--spectrum-icon-success-small-height, var(--spectrum-global-dimension-size-175));
+  }
+
+  .spectrum-UIIcon-TripleGripper {
+    width: var(--spectrum-icon-triplegripper-width);
+    height: var(--spectrum-icon-triplegripper-height, var(--spectrum-global-dimension-size-85));
+  }

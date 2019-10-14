@@ -25,8 +25,9 @@ examples:
   - id: popover
     name: Popover - Dialog style
     description: Spectrum Popovers are implemented using the Dialog's inner elements.
-    markup: |
-      <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--bottom is-open" style="max-width:320px">
+    markup: >
+      <div class="spectrum-Popover spectrum-Popover--dialog
+      spectrum-Popover--bottom is-open" style="max-width:320px">
         <div class="spectrum-Dialog-header">
           <div class="spectrum-Dialog-title">Popover Title</div>
         </div>
@@ -34,12 +35,17 @@ examples:
         <div class="spectrum-Popover-tip"></div>
       </div>
 
+
       <div class="dummy-spacing" style="height: 215px"></div>
 
-      <br>
+
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right is-open" style="max-width:320px">
+      <br>
+
+
+      <div class="spectrum-Popover spectrum-Popover--dialog
+      spectrum-Popover--right is-open" style="max-width:320px">
         <div class="spectrum-Dialog-header">
           <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
         </div>
@@ -47,12 +53,18 @@ examples:
         <div class="spectrum-Popover-tip"></div>
       </div>
 
+
       <div class="dummy-spacing" style="height: 215px"></div>
 
-      <br>
+
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
+      <br>
+
+
+      <div class="spectrum-Popover spectrum-Popover--dialog
+      spectrum-Popover--top spectrum-Dialog--success is-open"
+      style="max-width:320px">
         <div class="spectrum-Dialog-header">
           <div class="spectrum-Dialog-title">Success Popover</div>
           <div class="spectrum-Dialog-typeIcon"></div>
@@ -69,12 +81,18 @@ examples:
         <div class="spectrum-Popover-tip"></div>
       </div>
 
+
       <div class="dummy-spacing" style="height: 290px"></div>
 
-      <br>
+
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right spectrum-Dialog--error is-open" style="max-width:320px">
+      <br>
+
+
+      <div class="spectrum-Popover spectrum-Popover--dialog
+      spectrum-Popover--right spectrum-Dialog--error is-open"
+      style="max-width:320px">
         <div class="spectrum-Dialog-header">
           <div class="spectrum-Dialog-title">Very Long Error Message With Much Text</div>
           <div class="spectrum-Dialog-typeIcon"></div>
@@ -91,4 +109,165 @@ examples:
         <div class="spectrum-Popover-tip"></div>
       </div>
 
+
       <div class="dummy-spacing" style="height: 290px"></div>
+packageName: popover
+indexCSS: >
+  .spectrum-Popover {
+    visibility: hidden;
+
+    opacity: 0;
+
+    transition: transform var(--spectrum-global-animation-duration-100, 130ms) ease-in-out,
+                opacity var(--spectrum-global-animation-duration-100, 130ms) ease-in-out,
+                visibility 0ms linear var(--spectrum-global-animation-duration-100, 130ms);
+
+    pointer-events: none;
+  }
+
+
+  .spectrum-Popover.is-open {
+    visibility: visible;
+
+    opacity: 1;
+
+    transition-delay: 0ms;
+
+    pointer-events: auto;
+  }
+
+
+  .spectrum-Popover--bottom.is-open {
+    transform: translateY(var(--spectrum-dropdown-flyout-menu-offset-y, var(--spectrum-global-dimension-size-75)));
+  }
+
+
+  .spectrum-Popover--top.is-open {
+    transform: translateY(calc(-1 * var(--spectrum-dropdown-flyout-menu-offset-y, var(--spectrum-global-dimension-size-75))));
+  }
+
+
+  .spectrum-Popover--right.is-open {
+    transform: translateX(var(--spectrum-dropdown-flyout-menu-offset-y, var(--spectrum-global-dimension-size-75)));
+  }
+
+
+  .spectrum-Popover--left.is-open {
+    transform: translateX(calc(-1 * var(--spectrum-dropdown-flyout-menu-offset-y, var(--spectrum-global-dimension-size-75))));
+  }
+
+
+  .spectrum-Popover {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    box-sizing: border-box;
+
+    min-width: var(--spectrum-global-dimension-size-400);
+    min-height: var(--spectrum-global-dimension-size-400);
+
+    position: absolute;
+
+    border-style: solid;
+    border-width: var(--spectrum-popover-border-size, var(--spectrum-alias-border-size-thin));
+    border-radius: var(--spectrum-popover-border-radius, var(--spectrum-alias-border-radius-regular));
+
+    outline: none;
+  }
+
+
+  .spectrum-Popover-tip {
+    position: absolute;
+    overflow: hidden;
+    width: calc(var(--spectrum-popover-tip-width, var(--spectrum-global-dimension-size-250)) + 1px);
+    height: calc(var(--spectrum-popover-tip-width, var(--spectrum-global-dimension-size-250)) / 2 + var(--spectrum-popover-border-size, var(--spectrum-alias-border-size-thin)));
+  }
+
+
+  .spectrum-Popover-tip::after {
+      content: '';
+      width: var(--spectrum-popover-tip-width, var(--spectrum-global-dimension-size-250));
+      height: var(--spectrum-popover-tip-width, var(--spectrum-global-dimension-size-250));
+      border-width: var(--spectrum-popover-border-size, var(--spectrum-alias-border-size-thin));
+      border-style: solid;
+      position: absolute;
+      transform: rotate(45deg);
+      top: -18px;
+      left: -1px;
+    }
+
+  .spectrum-Popover--dialog {
+    min-width: 270px;
+    padding: 30px 29px;
+  }
+
+
+  .spectrum-Popover--left.spectrum-Popover--withTip {
+      margin-right: 13px;
+    }
+
+  .spectrum-Popover--left .spectrum-Popover-tip {
+      right: -16px;
+      transform: rotate(-90deg);
+    }
+
+  .spectrum-Popover--right.spectrum-Popover--withTip {
+      margin-left: 13px;
+    }
+
+  .spectrum-Popover--right .spectrum-Popover-tip {
+      left: -16px;
+      transform: rotate(90deg);
+    }
+
+  .spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--right
+  .spectrum-Popover-tip {
+      top: 50%;
+      margin-top: -6px;
+    }
+
+  .spectrum-Popover--bottom.spectrum-Popover--withTip {
+      margin-top: 13px;
+    }
+
+  .spectrum-Popover--bottom .spectrum-Popover-tip {
+      top: -11px;
+      transform: rotate(180deg);
+    }
+
+  .spectrum-Popover--top.spectrum-Popover--withTip {
+      margin-bottom: 13px;
+    }
+
+  .spectrum-Popover--top .spectrum-Popover-tip {
+      bottom: -11px;
+    }
+
+  .spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--top
+  .spectrum-Popover-tip {
+      left: 50%;
+      margin-left: -12px;
+    }
+
+  .spectrum-Popover {
+    background-color: var(--spectrum-popover-background-color, var(--spectrum-global-color-gray-50));
+    border-color: var(--spectrum-popover-border-color, var(--spectrum-alias-border-color-dark));
+    box-shadow: 0 1px 4px var(--spectrum-popover-shadow-color, var(--spectrum-alias-dropshadow-color));
+  }
+
+
+  .spectrum-Popover .spectrum-Dialog-header,
+    .spectrum-Popover .spectrum-Dialog-footer,
+    .spectrum-Popover .spectrum-Dialog-wrapper {
+      background-color: transparent;
+    }
+
+  .spectrum-Popover .spectrum-Popover-tip::after {
+      background-color: var(--spectrum-popover-background-color, var(--spectrum-global-color-gray-50));
+      border-color: var(--spectrum-popover-border-color, var(--spectrum-alias-border-color-dark));
+      box-shadow: -1px -1px 4px var(--spectrum-popover-shadow-color, var(--spectrum-alias-dropshadow-color));
+    }
+peerDependencies:
+  '@spectrum-css/vars': ^2.0.0
+peerCSS: ''

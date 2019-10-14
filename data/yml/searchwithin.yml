@@ -92,3 +92,47 @@ examples:
           </svg>
         </button>
       </form>
+packageName: searchwithin
+indexCSS: >
+  .spectrum-SearchWithin {
+    width: 250px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+  }
+
+
+  .spectrum-SearchWithin .spectrum-Dropdown {
+      width: auto;
+      min-width: 0;
+    }
+
+  .spectrum-SearchWithin .spectrum-Dropdown-trigger {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+  .spectrum-SearchWithin .spectrum-Dropdown-label {
+      min-width: 0;
+    }
+
+  .spectrum-SearchWithin .spectrum-Textfield {
+      -ms-flex: 1;
+          flex: 1;
+      margin-left: calc(-1 * var(--spectrum-textfield-border-size, var(--spectrum-alias-border-size-thin)));
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+  .spectrum-SearchWithin .spectrum-Textfield:hover, .spectrum-SearchWithin
+  .spectrum-Textfield:focus {
+        position: relative;
+      }
+
+  .spectrum-SearchWithin .spectrum-ClearButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+peerDependencies: {}
+peerCSS: ''
