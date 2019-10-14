@@ -45,7 +45,9 @@ module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/index.js";
+var _this = undefined,
+    _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/index.js";
+
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -56,14 +58,34 @@ var Home = function Home() {
       lineNumber: 4
     },
     __self: this
-  }, "Spectrum Homepage Content");
+  }, __jsx(Helmet, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx("meta", {
+    name: "Description",
+    content: _this.props.pageData.description,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }), __jsx("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Spectrum CSS")), "Spectrum Homepage Content");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
-/***/ 93:
+/***/ 104:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js ***!
   \********************************************************************************************************************************/
@@ -86,5 +108,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[93,"static/runtime/webpack.js"]]]);
+},[[104,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

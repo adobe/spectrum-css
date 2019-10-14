@@ -11,7 +11,7 @@ class Logo extends React.Component {
 
   render() {
     return (
-      <Link href="/" as="/">
+      <Link href="/" as={`${process.env.BACKEND_URL}/`}>
         <a className={styles.headerLink}>
           <div className={styles.logoContainer} tabIndex="-1">
 
@@ -19,7 +19,7 @@ class Logo extends React.Component {
 
             <img
               className={styles.svgLogo}
-              src="/static/adobe_logo-2.svg"
+              src={`${process.env.BACKEND_URL}/static/adobe_logo-2.svg`}
               alt="Adobe Logo"
               className={styles.logo}
             />

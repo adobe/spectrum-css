@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{RNiq:function(n,t,e){"use strict";e.r(t);var i=e("q1tI"),o=e.n(i).a.createElement;t.default=function(){return o("div",null,"Spectrum Homepage Content")}},vlRD:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/",function(){return e("RNiq")}])}},[["vlRD",1,0]]]);
