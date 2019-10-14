@@ -8,6 +8,7 @@ import menuData from "../data/newmenu";
 import styles from "./css/sidebar.scss";
 import SiteSearch from "./SiteSearch";
 import getConfig from "next/config";
+import Logo from "./Logo";
 import { withRouter } from "next/router";
 
 const createLinkProps = item => {
@@ -32,6 +33,9 @@ class Sidebar extends React.Component {
       menuOpen: false
     };
   }
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions.bind(this));
+  }
   componentWillReceiveProps(nextProps) {
     const selected = menuData.key.find(item => {
       return item.url === nextProps.router.query.id;
@@ -48,12 +52,17 @@ class Sidebar extends React.Component {
       }
     }
   }
-  openMenu = () => {
+  updateDimensions(e) {
+    if(this.state.menuOpen && window.innerWidth >= 960) {
+      this.closeMenu();
+    }
+  }
+  openMenu() {
     this.setState({
       menuOpen: true
     });
   };
-  closeMenu = () => {
+  closeMenu() {
     this.setState({
       menuOpen: false
     });
@@ -68,7 +77,7 @@ class Sidebar extends React.Component {
             this.state.menuOpen ? styles.menuOpen : styles.menuClosed
           )}
           onClick={() => this.closeMenu()}
-        />
+        ></div>
         <div className={styles.appHeader}>
           <Button
             variant="tool"
@@ -85,18 +94,11 @@ class Sidebar extends React.Component {
         >
           <div className={classNames(styles.spectrumSidebar)}>
             <div className={styles.header}>
-              <Link href="/" as={`${process.env.BACKEND_URL}/`}>
-                <a className={styles.logoLink}>
-                  <img
-                    src={`${process.env.BACKEND_URL}/static/adobe-logo.svg`}
-                    alt="Adobe Logo"
-                    className={styles.logo}
-                  />
-                  <span>Spectrum CSS</span>
-                </a>
-              </Link>
+              <Logo/>
+
               <SiteSearch />
             </div>
+
             <div className={styles.navigation}>
               <SideNav
                 defaultValue={this.props.router.query.id}

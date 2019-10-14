@@ -11,6 +11,7 @@ const webpack = require('webpack');
 const yaml = require('js-yaml');
 const glob = require('glob');
 const lunr = require('lunr');
+const resolve = require('resolve');
 
 // Using git checkout origin/master -- `git ls-tree origin/master -r --name-only | grep ".yml"`
 // Using git checkout adobe/master -- `git ls-tree adobe/master -r --name-only | grep ".yml"`
@@ -19,6 +20,25 @@ function gatherYML() {
   glob("components/**/*.yml", {}, (er, files) => {
     files.forEach((file) => {
       const filename = path.basename(file);
+      const componentYaml = fs.readFileSync(file, {
+        encoding: 'utf8'
+      });
+      const componentData = yaml.safeLoad(componentYaml);
+      componentData.packageName = path.basename(path.dirname(path.dirname(file)));
+      componentData.indexCSS = fs.readFileSync(resolve.sync(`@adobe/spectrum-css/dist/components/${componentData.packageName}/index-vars.css`), {
+        encoding: 'utf8'
+      });
+      componentData.peerDependencies = require(`@adobe/spectrum-css/dist/components/${componentData.packageName}/package.json`).peerDependencies || {};
+      componentData.peerCSS = '';
+      Object.keys(componentData.peerDependencies).forEach((dep) => {
+        const result = dep.split("/")[1];
+        if(result !== 'vars') {
+          componentData.peerCSS += fs.readFileSync(resolve.sync(`@adobe/spectrum-css/dist/components/${result}/index-vars.css`), {
+            encoding: 'utf8'
+          });
+        }
+      });
+      fs.writeFileSync(file, yaml.safeDump(componentData));
       fs.renameSync(file,path.join('data','yml',filename))
       try {
         fs.rmdirSync(path.dirname(file));

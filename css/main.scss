@@ -1,21 +1,31 @@
 * {
   box-sizing: border-box;
 }
-:local(.mainContainer) {
-  padding:40px 52px 24px 52px;
-  max-width: 1080px;
-  @media screen and (max-width: 768px) {
-    padding-left:32px;
-    padding-right:32px;
-  }
-  @media screen and (max-width: 960px) {
-    padding-top: 80px;
-  }
+
+// fixes bug in React Spectrum that sets `overflow: hidden`
+// on body tag when a tooltip appears
+// https://github.com/adobe/react-spectrum/issues/232
+body {
+  overflow: auto !important;
 }
-:local(.flexContainer) {
+
+
+:global(.flexContainer) {
   padding-left:248px;
   @media screen and (max-width: 960px) {
     padding-left: 0px;
+  }
+  :global(.site-mainContainer) {
+    padding:40px 52px 0px 52px;
+
+    max-width: 1080px;
+    @media screen and (max-width: 768px) {
+      padding-left:16px;
+      padding-right:16px;
+    }
+    @media screen and (max-width: 960px) {
+      padding-top: 80px;
+    }
   }
 }
 
@@ -45,12 +55,44 @@ p:global(.spectrum-Body3) {
   margin-bottom:8px;
 }
 :global(.well-box) {
-  background-color: rgba(45,45,45,0.02);
-  border: 1px solid rgba(45,45,45,0.05);
+  background-color: var(--spectrum-global-color-gray-75);
+  border: 1px solid var(--spectrum-global-color-gray-200);
   padding: 15px 16px;
   border-radius: 4px;
   display: inline-block;
   margin-top: 0px;
   margin-bottom:24px;
   font-size:16px;
+}
+
+:global(.spectrum) {
+  background-color: var(--spectrum-global-color-gray-50) !important;
+}
+
+
+//global footer styling
+:global(.footerContainer) {
+  padding-top:0px !important;
+  padding-bottom: 20px;
+  margin-top: 0px;
+}
+:global(.Footernav-region) {
+  visibility: hidden  !important;
+  height:0px;
+  overflow: hidden;
+  padding:0px;
+  margin:0px;
+}
+:global(.footerContainer) {
+  & a:hover {
+    text-decoration: underline !important;
+  }
+}
+:global(.Footernav-misc) {
+
+  padding: 8px !important;
+
+}
+:global(.site-footer-col) {
+  padding: 0px 8px !important;
 }

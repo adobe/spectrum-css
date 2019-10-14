@@ -15398,1380 +15398,6 @@ module.exports = __webpack_require__(/*! ./modules/_core */ "./node_modules/core
 
 /***/ }),
 
-/***/ "./node_modules/next-server/config.js":
-/*!********************************************!*\
-  !*** ./node_modules/next-server/config.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/lib/runtime-config */ "./node_modules/next-server/dist/lib/runtime-config.js")
-
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/data-manager-context.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/data-manager-context.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
-  result["default"] = mod;
-  return result;
-};
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-exports.DataManagerContext = React.createContext(null);
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/data-manager.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/data-manager.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Map = __webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js");
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var DataManager =
-/*#__PURE__*/
-function () {
-  function DataManager(data) {
-    _classCallCheck(this, DataManager);
-
-    this.data = new _Map(data);
-  }
-
-  _createClass(DataManager, [{
-    key: "getData",
-    value: function getData() {
-      return this.data;
-    }
-  }, {
-    key: "get",
-    value: function get(key) {
-      return this.data.get(key);
-    }
-  }, {
-    key: "set",
-    value: function set(key, value) {
-      this.data.set(key, value);
-    }
-  }, {
-    key: "overwrite",
-    value: function overwrite(data) {
-      this.data = new _Map(data);
-    }
-  }]);
-
-  return DataManager;
-}();
-
-exports.DataManager = DataManager;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/head-manager-context.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/head-manager-context.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
-  result["default"] = mod;
-  return result;
-};
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-exports.HeadManagerContext = React.createContext(null);
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/mitt.js":
-/*!***************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/mitt.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
-MIT License
-
-Copyright (c) Jason Miller (https://jasonformat.com/)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-
-var _Object$create = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function mitt() {
-  var all = _Object$create(null);
-
-  return {
-    on: function on(type, handler) {
-      ;
-      (all[type] || (all[type] = [])).push(handler);
-    },
-    off: function off(type, handler) {
-      if (all[type]) {
-        // tslint:disable-next-line:no-bitwise
-        all[type].splice(all[type].indexOf(handler) >>> 0, 1);
-      }
-    },
-    emit: function emit(type) {
-      for (var _len = arguments.length, evts = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        evts[_key - 1] = arguments[_key];
-      }
-
-      ;
-      (all[type] || []).slice().map(function (handler) {
-        handler.apply(void 0, evts);
-      });
-    }
-  };
-}
-
-exports["default"] = mitt;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/router-context.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router-context.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
-  result["default"] = mod;
-  return result;
-};
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-exports.RouterContext = React.createContext(null);
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/router/rewrite-url-for-export.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/rewrite-url-for-export.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _slicedToArray = __webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function rewriteUrlForNextExport(url) {
-  var _url$split = url.split('#'),
-      _url$split2 = _slicedToArray(_url$split, 2),
-      pathname = _url$split2[0],
-      hash = _url$split2[1]; // tslint:disable-next-line
-
-
-  var _pathname$split = pathname.split('?'),
-      _pathname$split2 = _slicedToArray(_pathname$split, 2),
-      path = _pathname$split2[0],
-      qs = _pathname$split2[1];
-
-  path = path.replace(/\/$/, ''); // Append a trailing slash if this path does not have an extension
-
-  if (!/\.[^/]+\/?$/.test(path)) path += "/";
-  if (qs) path += '?' + qs;
-  if (hash) path += '#' + hash;
-  return path;
-}
-
-exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/router/router.js":
-/*!************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/router.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-
-var _asyncToGenerator = __webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js");
-
-var _slicedToArray = __webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js");
-
-var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-
-var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
-
-var mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next-server/dist/lib/mitt.js"));
-
-var utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next-server/dist/lib/utils.js");
-
-var rewrite_url_for_export_1 = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next-server/dist/lib/router/rewrite-url-for-export.js");
-
-var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules/next-server/dist/lib/router/utils/route-matcher.js");
-
-var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next-server/dist/lib/router/utils/route-regex.js");
-
-var is_dynamic_1 = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next-server/dist/lib/router/utils/is-dynamic.js");
-
-function toRoute(path) {
-  return path.replace(/\/$/, '') || '/';
-}
-
-var Router =
-/*#__PURE__*/
-function () {
-  function Router(pathname, query, as, _ref) {
-    var _this = this;
-
-    var initialProps = _ref.initialProps,
-        pageLoader = _ref.pageLoader,
-        App = _ref.App,
-        wrapApp = _ref.wrapApp,
-        Component = _ref.Component,
-        err = _ref.err,
-        subscription = _ref.subscription;
-
-    _classCallCheck(this, Router);
-
-    this.onPopState = function (e) {
-      if (!e.state) {
-        // We get state as undefined for two reasons.
-        //  1. With older safari (< 8) and older chrome (< 34)
-        //  2. When the URL changed with #
-        //
-        // In the both cases, we don't need to proceed and change the route.
-        // (as it's already changed)
-        // But we can simply replace the state with the new changes.
-        // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
-        // So, doing the following for (1) does no harm.
-        var _pathname = _this.pathname,
-            _query = _this.query;
-
-        _this.changeState('replaceState', utils_1.formatWithValidation({
-          pathname: _pathname,
-          query: _query
-        }), utils_1.getURL());
-
-        return;
-      } // Make sure we don't re-render on initial load,
-      // can be caused by navigating back from an external site
-
-
-      if (e.state.options && e.state.options.fromExternal) {
-        return;
-      } // If the downstream application returns falsy, return.
-      // They will then be responsible for handling the event.
-
-
-      if (_this._bps && !_this._bps(e.state)) {
-        return;
-      }
-
-      var _e$state = e.state,
-          url = _e$state.url,
-          as = _e$state.as,
-          options = _e$state.options;
-
-      if (true) {
-        if (typeof url === 'undefined' || typeof as === 'undefined') {
-          console.warn('`popstate` event triggered but `event.state` did not have `url` or `as` https://err.sh/zeit/next.js/popstate-state-empty');
-        }
-      }
-
-      _this.replace(url, as, options);
-    }; // represents the current component key
-
-
-    this.route = toRoute(pathname); // set up the component cache (by route keys)
-
-    this.components = {}; // We should not keep the cache, if there's an error
-    // Otherwise, this cause issues when when going back and
-    // come again to the errored page.
-
-    if (pathname !== '/_error') {
-      this.components[this.route] = {
-        Component: Component,
-        props: initialProps,
-        err: err
-      };
-    }
-
-    this.components['/_app'] = {
-      Component: App
-    }; // Backwards compat for Router.router.events
-    // TODO: Should be remove the following major version as it was never documented
-    // @ts-ignore backwards compatibility
-
-    this.events = Router.events;
-    this.pageLoader = pageLoader;
-    this.pathname = pathname;
-    this.query = query;
-    this.asPath = as;
-    this.sub = subscription;
-    this.clc = null;
-    this._wrapApp = wrapApp;
-
-    if (true) {
-      // in order for `e.state` to work on the `onpopstate` event
-      // we have to register the initial route upon initialization
-      this.changeState('replaceState', utils_1.formatWithValidation({
-        pathname: pathname,
-        query: query
-      }), as);
-      window.addEventListener('popstate', this.onPopState);
-      window.addEventListener('unload', function () {
-        // Workaround for popstate firing on initial page load when
-        // navigating back from an external site
-        if (history.state) {
-          var _history$state = history.state,
-              url = _history$state.url,
-              _as2 = _history$state.as,
-              options = _history$state.options;
-
-          _this.changeState('replaceState', url, _as2, _Object$assign({}, options, {
-            fromExternal: true
-          }));
-        }
-      });
-    }
-  } // @deprecated backwards compatibility even though it's a private method.
-
-
-  _createClass(Router, [{
-    key: "update",
-    value: function update(route, Component) {
-      var data = this.components[route];
-
-      if (!data) {
-        throw new Error("Cannot update unavailable route: ".concat(route));
-      }
-
-      var newData = _Object$assign({}, data, {
-        Component: Component
-      });
-
-      this.components[route] = newData; // pages/_app.js updated
-
-      if (route === '/_app') {
-        this.notify(this.components[this.route]);
-        return;
-      }
-
-      if (route === this.route) {
-        this.notify(newData);
-      }
-    }
-  }, {
-    key: "reload",
-    value: function reload() {
-      window.location.reload();
-    }
-    /**
-     * Go back in history
-     */
-
-  }, {
-    key: "back",
-    value: function back() {
-      window.history.back();
-    }
-    /**
-     * Performs a `pushState` with arguments
-     * @param url of the route
-     * @param as masks `url` for the browser
-     * @param options object you can define `shallow` and other options
-     */
-
-  }, {
-    key: "push",
-    value: function push(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('pushState', url, as, options);
-    }
-    /**
-     * Performs a `replaceState` with arguments
-     * @param url of the route
-     * @param as masks `url` for the browser
-     * @param options object you can define `shallow` and other options
-     */
-
-  }, {
-    key: "replace",
-    value: function replace(url) {
-      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return this.change('replaceState', url, as, options);
-    }
-  }, {
-    key: "change",
-    value: function change(method, _url, _as, options) {
-      var _this2 = this;
-
-      return new _Promise(function (resolve, reject) {
-        // marking route changes as a navigation start entry
-        if (utils_1.SUPPORTS_PERFORMANCE_USER_TIMING) {
-          performance.mark('routeChange');
-        } // If url and as provided as an object representation,
-        // we'll format them into the string version here.
-
-
-        var url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
-        var as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
-        // "<page>/index.html" directly for the SSR page.
-
-        if (true) {
-          // @ts-ignore this is temporarily global (attached to window)
-          if (__NEXT_DATA__.nextExport) {
-            as = rewrite_url_for_export_1.rewriteUrlForNextExport(as);
-          }
-        }
-
-        _this2.abortComponentLoad(as); // If the url change is only related to a hash change
-        // We should not proceed. We should only change the state.
-        // WARNING: `_h` is an internal option for handing Next.js client-side
-        // hydration. Your app should _never_ use this property. It may change at
-        // any time without notice.
-
-
-        if (!options._h && _this2.onlyAHashChange(as)) {
-          _this2.asPath = as;
-          Router.events.emit('hashChangeStart', as);
-
-          _this2.changeState(method, url, as);
-
-          _this2.scrollToHash(as);
-
-          Router.events.emit('hashChangeComplete', as);
-          return resolve(true);
-        }
-
-        var _url_1$parse = url_1.parse(url, true),
-            pathname = _url_1$parse.pathname,
-            query = _url_1$parse.query,
-            protocol = _url_1$parse.protocol;
-
-        if (!pathname || protocol) {
-          if (true) {
-            throw new Error("Invalid href passed to router: ".concat(url, " https://err.sh/zeit/next.js/invalid-href-passed"));
-          }
-
-          return resolve(false);
-        } // If asked to change the current URL we should reload the current page
-        // (not location.reload() but reload getInitialProps and other Next.js stuffs)
-        // We also need to set the method = replaceState always
-        // as this should not go into the history (That's how browsers work)
-        // We should compare the new asPath to the current asPath, not the url
-
-
-        if (!_this2.urlIsNew(as)) {
-          method = 'replaceState';
-        } // @ts-ignore pathname is always a string
-
-
-        var route = toRoute(pathname);
-        var _options$shallow = options.shallow,
-            shallow = _options$shallow === void 0 ? false : _options$shallow;
-
-        if (is_dynamic_1.isDynamicRoute(route)) {
-          var _url_1$parse2 = url_1.parse(as),
-              asPathname = _url_1$parse2.pathname;
-
-          var rr = route_regex_1.getRouteRegex(route);
-          var routeMatch = route_matcher_1.getRouteMatcher(rr)(asPathname);
-
-          if (!routeMatch) {
-            console.error("Your `<Link>`'s `as` value is incompatible with the `href` value. This is invalid.");
-            return resolve(false);
-          } // Merge params into `query`, overwriting any specified in search
-
-
-          _Object$assign(query, routeMatch);
-        }
-
-        Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
-        // @ts-ignore pathname is always a string
-
-        _this2.getRouteInfo(route, pathname, query, as, shallow).then(function (routeInfo) {
-          var error = routeInfo.error;
-
-          if (error && error.cancelled) {
-            return resolve(false);
-          }
-
-          Router.events.emit('beforeHistoryChange', as);
-
-          _this2.changeState(method, url, as, options);
-
-          var hash = window.location.hash.substring(1);
-
-          if (true) {
-            var appComp = _this2.components['/_app'].Component;
-            window.next.isPrerendered = appComp.getInitialProps === appComp.origGetInitialProps && !routeInfo.Component.getInitialProps;
-          } // @ts-ignore pathname is always defined
-
-
-          _this2.set(route, pathname, query, as, _Object$assign({}, routeInfo, {
-            hash: hash
-          }));
-
-          if (error) {
-            Router.events.emit('routeChangeError', error, as);
-            throw error;
-          }
-
-          Router.events.emit('routeChangeComplete', as);
-          return resolve(true);
-        }, reject);
-      });
-    }
-  }, {
-    key: "changeState",
-    value: function changeState(method, url, as) {
-      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-
-      if (true) {
-        if (typeof window.history === 'undefined') {
-          console.error("Warning: window.history is not available.");
-          return;
-        } // @ts-ignore method should always exist on history
-
-
-        if (typeof window.history[method] === 'undefined') {
-          console.error("Warning: window.history.".concat(method, " is not available"));
-          return;
-        }
-      }
-
-      if (method !== 'pushState' || utils_1.getURL() !== as) {
-        // @ts-ignore method should always exist on history
-        window.history[method]({
-          url: url,
-          as: as,
-          options: options
-        }, null, as);
-      }
-    }
-  }, {
-    key: "getRouteInfo",
-    value: function getRouteInfo(route, pathname, query, as) {
-      var _this3 = this;
-
-      var shallow = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
-      var cachedRouteInfo = this.components[route]; // If there is a shallow route transition possible
-      // If the route is already rendered on the screen.
-
-      if (shallow && cachedRouteInfo && this.route === route) {
-        return _Promise.resolve(cachedRouteInfo);
-      }
-
-      return new _Promise(function (resolve, reject) {
-        if (cachedRouteInfo) {
-          return resolve(cachedRouteInfo);
-        }
-
-        _this3.fetchComponent(route).then(function (Component) {
-          return resolve({
-            Component: Component
-          });
-        }, reject);
-      }).then(function (routeInfo) {
-        var Component = routeInfo.Component;
-
-        if (true) {
-          var _require = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js"),
-              isValidElementType = _require.isValidElementType;
-
-          if (!isValidElementType(Component)) {
-            throw new Error("The default export is not a React Component in page: \"".concat(pathname, "\""));
-          }
-        }
-
-        return new _Promise(function (resolve, reject) {
-          // we provide AppTree later so this needs to be `any`
-          _this3.getInitialProps(Component, {
-            pathname: pathname,
-            query: query,
-            asPath: as
-          }).then(function (props) {
-            routeInfo.props = props;
-            _this3.components[route] = routeInfo;
-            resolve(routeInfo);
-          }, reject);
-        });
-      })["catch"](function (err) {
-        return new _Promise(function (resolve) {
-          if (err.code === 'PAGE_LOAD_ERROR') {
-            // If we can't load the page it could be one of following reasons
-            //  1. Page doesn't exists
-            //  2. Page does exist in a different zone
-            //  3. Internal error while loading the page
-            // So, doing a hard reload is the proper way to deal with this.
-            window.location.href = as; // Changing the URL doesn't block executing the current code path.
-            // So, we need to mark it as a cancelled error and stop the routing logic.
-
-            err.cancelled = true; // @ts-ignore TODO: fix the control flow here
-
-            return resolve({
-              error: err
-            });
-          }
-
-          if (err.cancelled) {
-            // @ts-ignore TODO: fix the control flow here
-            return resolve({
-              error: err
-            });
-          }
-
-          resolve(_this3.fetchComponent('/_error').then(function (Component) {
-            var routeInfo = {
-              Component: Component,
-              err: err
-            };
-            return new _Promise(function (resolve) {
-              _this3.getInitialProps(Component, {
-                err: err,
-                pathname: pathname,
-                query: query
-              }).then(function (props) {
-                routeInfo.props = props;
-                routeInfo.error = err;
-                resolve(routeInfo);
-              }, function (gipErr) {
-                console.error('Error in error page `getInitialProps`: ', gipErr);
-                routeInfo.error = err;
-                routeInfo.props = {};
-                resolve(routeInfo);
-              });
-            });
-          }));
-        });
-      });
-    }
-  }, {
-    key: "set",
-    value: function set(route, pathname, query, as, data) {
-      this.route = route;
-      this.pathname = pathname;
-      this.query = query;
-      this.asPath = as;
-      this.notify(data);
-    }
-    /**
-     * Callback to execute before replacing router state
-     * @param cb callback to be executed
-     */
-
-  }, {
-    key: "beforePopState",
-    value: function beforePopState(cb) {
-      this._bps = cb;
-    }
-  }, {
-    key: "onlyAHashChange",
-    value: function onlyAHashChange(as) {
-      if (!this.asPath) return false;
-
-      var _this$asPath$split = this.asPath.split('#'),
-          _this$asPath$split2 = _slicedToArray(_this$asPath$split, 2),
-          oldUrlNoHash = _this$asPath$split2[0],
-          oldHash = _this$asPath$split2[1];
-
-      var _as$split = as.split('#'),
-          _as$split2 = _slicedToArray(_as$split, 2),
-          newUrlNoHash = _as$split2[0],
-          newHash = _as$split2[1]; // Makes sure we scroll to the provided hash if the url/hash are the same
-
-
-      if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
-        return true;
-      } // If the urls are change, there's more than a hash change
-
-
-      if (oldUrlNoHash !== newUrlNoHash) {
-        return false;
-      } // If the hash has changed, then it's a hash only change.
-      // This check is necessary to handle both the enter and
-      // leave hash === '' cases. The identity case falls through
-      // and is treated as a next reload.
-
-
-      return oldHash !== newHash;
-    }
-  }, {
-    key: "scrollToHash",
-    value: function scrollToHash(as) {
-      var _as$split3 = as.split('#'),
-          _as$split4 = _slicedToArray(_as$split3, 2),
-          hash = _as$split4[1]; // Scroll to top if the hash is just `#` with no value
-
-
-      if (hash === '') {
-        window.scrollTo(0, 0);
-        return;
-      } // First we check if the element by id is found
-
-
-      var idEl = document.getElementById(hash);
-
-      if (idEl) {
-        idEl.scrollIntoView();
-        return;
-      } // If there's no element with the id, we check the `name` property
-      // To mirror browsers
-
-
-      var nameEl = document.getElementsByName(hash)[0];
-
-      if (nameEl) {
-        nameEl.scrollIntoView();
-      }
-    }
-  }, {
-    key: "urlIsNew",
-    value: function urlIsNew(asPath) {
-      return this.asPath !== asPath;
-    }
-    /**
-     * Prefetch `page` code, you may wait for the data during `page` rendering.
-     * This feature only works in production!
-     * @param url of prefetched `page`
-     */
-
-  }, {
-    key: "prefetch",
-    value: function prefetch(url) {
-      var _this4 = this;
-
-      return new _Promise(function (resolve, reject) {
-        var _url_1$parse3 = url_1.parse(url),
-            pathname = _url_1$parse3.pathname,
-            protocol = _url_1$parse3.protocol;
-
-        if (!pathname || protocol) {
-          if (true) {
-            throw new Error("Invalid href passed to router: ".concat(url, " https://err.sh/zeit/next.js/invalid-href-passed"));
-          }
-
-          return;
-        } // Prefetch is not supported in development mode because it would trigger on-demand-entries
-
-
-        if (true) return; // @ts-ignore pathname is always defined
-
-        var route = toRoute(pathname);
-
-        _this4.pageLoader.prefetch(route).then(resolve, reject);
-      });
-    }
-  }, {
-    key: "fetchComponent",
-    value: function () {
-      var _fetchComponent = _asyncToGenerator(
-      /*#__PURE__*/
-      _regeneratorRuntime.mark(function _callee(route) {
-        var cancelled, cancel, Component, error;
-        return _regeneratorRuntime.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                cancelled = false;
-
-                cancel = this.clc = function () {
-                  cancelled = true;
-                };
-
-                _context.next = 4;
-                return this.pageLoader.loadPage(route);
-
-              case 4:
-                Component = _context.sent;
-
-                if (!cancelled) {
-                  _context.next = 9;
-                  break;
-                }
-
-                error = new Error("Abort fetching component for route: \"".concat(route, "\""));
-                error.cancelled = true;
-                throw error;
-
-              case 9:
-                if (cancel === this.clc) {
-                  this.clc = null;
-                }
-
-                return _context.abrupt("return", Component);
-
-              case 11:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function fetchComponent(_x) {
-        return _fetchComponent.apply(this, arguments);
-      }
-
-      return fetchComponent;
-    }()
-  }, {
-    key: "getInitialProps",
-    value: function () {
-      var _getInitialProps = _asyncToGenerator(
-      /*#__PURE__*/
-      _regeneratorRuntime.mark(function _callee2(Component, ctx) {
-        var cancelled, cancel, App, props, status, url, AppTree, err;
-        return _regeneratorRuntime.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                cancelled = false;
-
-                cancel = function cancel() {
-                  cancelled = true;
-                };
-
-                this.clc = cancel;
-                App = this.components['/_app'].Component;
-
-                if (!( // @ts-ignore workaround for dead-code elimination
-                (self.__HAS_SPR || "development" !== 'production') && Component.__NEXT_SPR)) {
-                  _context2.next = 11;
-                  break;
-                }
-
-                url = ctx.asPath ? ctx.asPath : url_1.format({
-                  pathname: ctx.pathname,
-                  query: ctx.query
-                });
-                _context2.next = 8;
-                return fetch(url, {
-                  headers: {
-                    'content-type': 'application/json'
-                  }
-                }).then(function (res) {
-                  if (!res.ok) {
-                    status = res.status;
-                    throw new Error('failed to load prerender data');
-                  }
-
-                  return res.json();
-                }).then(function (pageProps) {
-                  return {
-                    pageProps: pageProps
-                  };
-                })["catch"](function (err) {
-                  return {
-                    error: err.message,
-                    status: status
-                  };
-                });
-
-              case 8:
-                props = _context2.sent;
-                _context2.next = 16;
-                break;
-
-              case 11:
-                AppTree = this._wrapApp(App);
-                ctx.AppTree = AppTree;
-                _context2.next = 15;
-                return utils_1.loadGetInitialProps(App, {
-                  AppTree: AppTree,
-                  Component: Component,
-                  router: this,
-                  ctx: ctx
-                });
-
-              case 15:
-                props = _context2.sent;
-
-              case 16:
-                if (cancel === this.clc) {
-                  this.clc = null;
-                }
-
-                if (!cancelled) {
-                  _context2.next = 21;
-                  break;
-                }
-
-                err = new Error('Loading initial props cancelled');
-                err.cancelled = true;
-                throw err;
-
-              case 21:
-                return _context2.abrupt("return", props);
-
-              case 22:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2, this);
-      }));
-
-      function getInitialProps(_x2, _x3) {
-        return _getInitialProps.apply(this, arguments);
-      }
-
-      return getInitialProps;
-    }()
-  }, {
-    key: "abortComponentLoad",
-    value: function abortComponentLoad(as) {
-      if (this.clc) {
-        var e = new Error('Route Cancelled');
-        e.cancelled = true;
-        Router.events.emit('routeChangeError', e, as);
-        this.clc();
-        this.clc = null;
-      }
-    }
-  }, {
-    key: "notify",
-    value: function notify(data) {
-      this.sub(data, this.components['/_app'].Component);
-    }
-  }], [{
-    key: "_rewriteUrlForNextExport",
-    value: function _rewriteUrlForNextExport(url) {
-      return rewrite_url_for_export_1.rewriteUrlForNextExport(url);
-    }
-  }]);
-
-  return Router;
-}();
-
-Router.events = mitt_1["default"]();
-exports["default"] = Router;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/router/utils/is-dynamic.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/utils/is-dynamic.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-}); // Identify /[param]/ in route string
-
-
-var TEST_ROUTE = /\/\[[^\/]+?\](?=\/|$)/;
-
-function isDynamicRoute(route) {
-  return TEST_ROUTE.test(route);
-}
-
-exports.isDynamicRoute = isDynamicRoute;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/router/utils/route-matcher.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/utils/route-matcher.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function getRouteMatcher(routeRegex) {
-  var re = routeRegex.re,
-      groups = routeRegex.groups;
-  return function (pathname) {
-    var routeMatch = re.exec(pathname);
-
-    if (!routeMatch) {
-      return false;
-    }
-
-    var params = {};
-
-    _Object$keys(groups).forEach(function (slugName) {
-      var m = routeMatch[groups[slugName]];
-
-      if (m !== undefined) {
-        params[slugName] = decodeURIComponent(m);
-      }
-    });
-
-    return params;
-  };
-}
-
-exports.getRouteMatcher = getRouteMatcher;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/router/utils/route-regex.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/router/utils/route-regex.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function getRouteRegex(normalizedRoute) {
-  // Escape all characters that could be considered RegEx
-  var escapedRoute = (normalizedRoute.replace(/\/$/, '') || '/').replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
-  var groups = {};
-  var groupIndex = 1;
-  var parameterizedRoute = escapedRoute.replace(/\/\\\[([^\/]+?)\\\](?=\/|$)/g, function (_, $1) {
-    return groups[$1 // Un-escape key
-    .replace(/\\([|\\{}()[\]^$+*?.-])/g, '$1')] = groupIndex++, '/([^/]+?)';
-  });
-  return {
-    re: new RegExp('^' + parameterizedRoute + '(?:/)?$', 'i'),
-    groups: groups
-  };
-}
-
-exports.getRouteRegex = getRouteRegex;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/runtime-config.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/runtime-config.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var runtimeConfig;
-
-exports["default"] = function () {
-  return runtimeConfig;
-};
-
-function setConfig(configValue) {
-  runtimeConfig = configValue;
-}
-
-exports.setConfig = setConfig;
-
-/***/ }),
-
-/***/ "./node_modules/next-server/dist/lib/utils.js":
-/*!****************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/utils.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _asyncToGenerator = __webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
-/**
- * Utils
- */
-
-
-function execOnce(fn) {
-  var _this = this;
-
-  var used = false;
-  return function () {
-    if (!used) {
-      used = true;
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      fn.apply(_this, args);
-    }
-  };
-}
-
-exports.execOnce = execOnce;
-
-function getLocationOrigin() {
-  var _window$location = window.location,
-      protocol = _window$location.protocol,
-      hostname = _window$location.hostname,
-      port = _window$location.port;
-  return "".concat(protocol, "//").concat(hostname).concat(port ? ':' + port : '');
-}
-
-exports.getLocationOrigin = getLocationOrigin;
-
-function getURL() {
-  var href = window.location.href;
-  var origin = getLocationOrigin();
-  return href.substring(origin.length);
-}
-
-exports.getURL = getURL;
-
-function getDisplayName(Component) {
-  return typeof Component === 'string' ? Component : Component.displayName || Component.name || 'Unknown';
-}
-
-exports.getDisplayName = getDisplayName;
-
-function isResSent(res) {
-  return res.finished || res.headersSent;
-}
-
-exports.isResSent = isResSent;
-
-function loadGetInitialProps(_x, _x2) {
-  return _loadGetInitialProps.apply(this, arguments);
-}
-
-function _loadGetInitialProps() {
-  _loadGetInitialProps = _asyncToGenerator(
-  /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee(Component, ctx) {
-    var message, res, props, _message;
-
-    return _regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            if (false) {}
-
-            if (!(Component.prototype && Component.prototype.getInitialProps)) {
-              _context.next = 4;
-              break;
-            }
-
-            message = "\"".concat(getDisplayName(Component), ".getInitialProps()\" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.");
-            throw new Error(message);
-
-          case 4:
-            // when called from _app `ctx` is nested in `ctx`
-            res = ctx.res || ctx.ctx && ctx.ctx.res;
-
-            if (Component.getInitialProps) {
-              _context.next = 7;
-              break;
-            }
-
-            return _context.abrupt("return", {});
-
-          case 7:
-            _context.next = 9;
-            return Component.getInitialProps(ctx);
-
-          case 9:
-            props = _context.sent;
-
-            if (!(res && isResSent(res))) {
-              _context.next = 12;
-              break;
-            }
-
-            return _context.abrupt("return", props);
-
-          case 12:
-            if (props) {
-              _context.next = 15;
-              break;
-            }
-
-            _message = "\"".concat(getDisplayName(Component), ".getInitialProps()\" should resolve to an object. But found \"").concat(props, "\" instead.");
-            throw new Error(_message);
-
-          case 15:
-            if (true) {
-              if (_Object$keys(props).length === 0 && !ctx.ctx) {
-                console.warn("".concat(getDisplayName(Component), " returned an empty object from `getInitialProps`. This de-optimizes and prevents automatic prerendering. https://err.sh/zeit/next.js/empty-object-getInitialProps"));
-              }
-            }
-
-            return _context.abrupt("return", props);
-
-          case 17:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-  return _loadGetInitialProps.apply(this, arguments);
-}
-
-exports.loadGetInitialProps = loadGetInitialProps;
-exports.urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pathname', 'port', 'protocol', 'query', 'search', 'slashes'];
-
-function formatWithValidation(url, options) {
-  if (true) {
-    if (url !== null && typeof url === 'object') {
-      _Object$keys(url).forEach(function (key) {
-        if (exports.urlObjectKeys.indexOf(key) === -1) {
-          console.warn("Unknown key passed via urlObject into url.format: ".concat(key));
-        }
-      });
-    }
-  }
-
-  return url_1.format(url, options);
-}
-
-exports.formatWithValidation = formatWithValidation;
-exports.SUPPORTS_PERFORMANCE = typeof performance !== 'undefined';
-exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeof performance.mark === 'function' && typeof performance.measure === 'function';
-
-/***/ }),
-
 /***/ "./node_modules/next/dist/client/dev/dev-build-watcher.js":
 /*!****************************************************************!*\
   !*** ./node_modules/next/dist/client/dev/dev-build-watcher.js ***!
@@ -18677,6 +17303,8 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/help
 exports.__esModule = true;
 exports["default"] = initializeBuildWatcher;
 
+var _parseInt2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js"));
+
 var _router = _interopRequireDefault(__webpack_require__(/*! ../router */ "./node_modules/next/dist/client/router.js"));
 
 function initializeBuildWatcher() {
@@ -18690,7 +17318,6 @@ function initializeBuildWatcher() {
   shadowHost.style.height = 0;
   shadowHost.style.zIndex = 99998;
   shadowHost.style.transition = 'all 100ms ease';
-  shadowHost.title = 'Click to hide for page';
   document.body.appendChild(shadowHost);
   var shadowRoot;
   var prefix = '';
@@ -18712,9 +17339,14 @@ function initializeBuildWatcher() {
   shadowRoot.appendChild(container); // CSS
 
   var css = createCss(prefix);
-  shadowRoot.appendChild(css); // State
+  shadowRoot.appendChild(css);
+  var expandEl = container.querySelector('a');
+  var closeEl = container.querySelector("#" + prefix + "close"); // State
 
-  var isVisible = window.__NEXT_DATA__.nextExport;
+  var dismissKey = '__NEXT_DISMISS_PRERENDER_INDICATOR';
+  var dismissUntil = (0, _parseInt2["default"])(window.localStorage.getItem(dismissKey), 10);
+  var dismissed = dismissUntil > new Date().getTime();
+  var isVisible = !dismissed && window.__NEXT_DATA__.nextExport;
 
   function updateContainer() {
     if (isVisible) {
@@ -18724,20 +17356,47 @@ function initializeBuildWatcher() {
     }
   }
 
-  shadowHost.addEventListener('click', function () {
-    shadowHost.style.opacity = 0;
-    shadowHost.style.pointerEvents = 'none';
+  var expandedClass = prefix + "expanded";
+  var toggleTimeout;
+
+  var toggleExpand = function toggleExpand(expand) {
+    if (expand === void 0) {
+      expand = true;
+    }
+
+    clearTimeout(toggleTimeout);
+    toggleTimeout = setTimeout(function () {
+      if (expand) {
+        expandEl.classList.add(expandedClass);
+        closeEl.style.display = 'flex';
+      } else {
+        expandEl.classList.remove(expandedClass);
+        closeEl.style.display = 'none';
+      }
+    }, 50);
+  };
+
+  closeEl.addEventListener('click', function () {
+    var oneHourAway = new Date().getTime() + 1 * 60 * 60 * 1000;
+    window.localStorage.setItem(dismissKey, oneHourAway + '');
+    isVisible = false;
+    updateContainer();
   });
-  shadowHost.addEventListener('mouseenter', function () {
-    container.classList.add(prefix + "expanded");
+  closeEl.addEventListener('mouseenter', function () {
+    return toggleExpand();
   });
-  shadowHost.addEventListener('mouseleave', function () {
-    container.classList.remove(prefix + "expanded");
+  closeEl.addEventListener('mouseleave', function () {
+    return toggleExpand(false);
+  });
+  expandEl.addEventListener('mouseenter', function () {
+    return toggleExpand();
+  });
+  expandEl.addEventListener('mouseleave', function () {
+    return toggleExpand(false);
   });
 
   _router["default"].events.on('routeChangeComplete', function () {
     isVisible = window.next.isPrerendered;
-    shadowHost.style.opacity = 1;
     updateContainer();
   });
 
@@ -18747,13 +17406,13 @@ function initializeBuildWatcher() {
 function createContainer(prefix) {
   var container = document.createElement('div');
   container.id = prefix + "container";
-  container.innerHTML = "\n    <div id=\"" + prefix + "icon-wrapper\">\n      <svg width=\"15\" height=\"20\" viewBox=\"0 0 60 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M36 3L30.74 41H8L36 3Z\" fill=\"black\"/>\n      <path d=\"M25 77L30.26 39H53L25 77Z\" fill=\"black\"/>\n      <path d=\"M13.5 33.5L53 39L47.5 46.5L7 41.25L13.5 33.5Z\" fill=\"black\"/>\n      </svg>\n      Prerendered Page\n    </div>\n  ";
+  container.innerHTML = "\n    <button id=\"" + prefix + "close\" title=\"Hide indicator for session\">\n      <span>\xD7</span>\n    </button>\n    <a href=\"https://nextjs.org/docs#automatic-static-optimization-indicator\" target=\"_blank\">\n      <div id=\"" + prefix + "icon-wrapper\">\n          <svg width=\"15\" height=\"20\" viewBox=\"0 0 60 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M36 3L30.74 41H8L36 3Z\" fill=\"black\"/>\n          <path d=\"M25 77L30.26 39H53L25 77Z\" fill=\"black\"/>\n          <path d=\"M13.5 33.5L53 39L47.5 46.5L7 41.25L13.5 33.5Z\" fill=\"black\"/>\n          </svg>\n          Prerendered Page\n      </div>\n    </a>\n  ";
   return container;
 }
 
 function createCss(prefix) {
   var css = document.createElement('style');
-  css.textContent = "\n    #" + prefix + "container {\n      position: absolute;\n      bottom: 10px;\n      right: 15px;\n      width: 15px;\n      height: 23px;\n      overflow: hidden;\n\n      border-radius: 3px;\n      background: #fff;\n      color: #000;\n      font: initial;\n      cursor: pointer;\n      letter-spacing: initial;\n      text-shadow: initial;\n      text-transform: initial;\n      visibility: initial;\n      font-size: 14px;\n      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n\n      padding: 4px 2px;\n      align-items: center;\n      box-shadow: 0 11px 40px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n\n      display: none;\n      opacity: 0;\n      transition: opacity 0.1s ease, bottom 0.1s ease, width 0.3s ease;\n      animation: " + prefix + "fade-in 0.1s ease-in-out;\n    }\n\n    #" + prefix + "icon-wrapper {\n      width: 140px;\n      height: 20px;\n      display: flex;\n      flex-shrink: 0;\n      align-items: center;\n    }\n\n    #" + prefix + "icon-wrapper svg {\n      flex-shrink: 0;\n      margin-right: 3px;\n    }\n\n    #" + prefix + "container." + prefix + "expanded {\n      width: 140px;\n    }\n\n    #" + prefix + "container." + prefix + "visible {\n      display: flex;\n      bottom: 10px;\n      opacity: 1;\n    }\n\n    @keyframes " + prefix + "fade-in {\n      from {\n        bottom: 0px;\n        opacity: 0;\n      }\n      to {\n        bottom: 10px;\n        opacity: 1;\n      }\n    }\n  ";
+  css.textContent = "\n    #" + prefix + "container {\n      position: absolute;\n      display: none;\n      bottom: 10px;\n      right: 15px;\n    }\n\n    #" + prefix + "close {\n      top: -10px;\n      right: -10px;\n      border: none;\n      width: 18px;\n      height: 18px;\n      color: #333333;\n      font-size: 16px;\n      cursor: pointer;\n      display: none;\n      position: absolute;\n      background: #ffffff;\n      border-radius: 100%;\n      align-items: center;\n      flex-direction: column;\n      justify-content: center;\n    }\n\n    #" + prefix + "container a {\n      color: inherit;\n      text-decoration: none;\n      width: 15px;\n      height: 23px;\n      overflow: hidden;\n\n      border-radius: 3px;\n      background: #fff;\n      color: #000;\n      font: initial;\n      cursor: pointer;\n      letter-spacing: initial;\n      text-shadow: initial;\n      text-transform: initial;\n      visibility: initial;\n      font-size: 14px;\n      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n\n      padding: 4px 2px;\n      align-items: center;\n      box-shadow: 0 11px 40px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n\n      display: flex;\n      transition: opacity 0.1s ease, bottom 0.1s ease, width 0.3s ease;\n      animation: " + prefix + "fade-in 0.1s ease-in-out;\n    }\n\n    #" + prefix + "icon-wrapper {\n      width: 140px;\n      height: 20px;\n      display: flex;\n      flex-shrink: 0;\n      align-items: center;\n      position: relative;\n    }\n\n    #" + prefix + "icon-wrapper svg {\n      flex-shrink: 0;\n      margin-right: 3px;\n    }\n\n    #" + prefix + "container a." + prefix + "expanded {\n      width: 135px;\n    }\n\n    #" + prefix + "container." + prefix + "visible {\n      display: flex;\n      bottom: 10px;\n      opacity: 1;\n    }\n\n    @keyframes " + prefix + "fade-in {\n      from {\n        bottom: 0px;\n        opacity: 0;\n      }\n      to {\n        bottom: 10px;\n        opacity: 1;\n      }\n    }\n  ";
   return css;
 }
 
@@ -19011,7 +17670,7 @@ var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-co
 
 var _promise = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js"));
 
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var _reactDom = _interopRequireDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
 
@@ -19019,25 +17678,25 @@ var _headManager = _interopRequireDefault(__webpack_require__(/*! ./head-manager
 
 var _router = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 
-var _mitt = _interopRequireDefault(__webpack_require__(/*! next-server/dist/lib/mitt */ "./node_modules/next-server/dist/lib/mitt.js"));
+var _mitt = _interopRequireDefault(__webpack_require__(/*! ../next-server/lib/mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
 
-var _utils = __webpack_require__(/*! next-server/dist/lib/utils */ "./node_modules/next-server/dist/lib/utils.js");
+var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
 
 var _pageLoader = _interopRequireDefault(__webpack_require__(/*! ./page-loader */ "./node_modules/next/dist/client/page-loader.js"));
 
-var envConfig = _interopRequireWildcard(__webpack_require__(/*! next-server/config */ "./node_modules/next-server/config.js"));
+var envConfig = _interopRequireWildcard(__webpack_require__(/*! ../next-server/lib/runtime-config */ "./node_modules/next/dist/next-server/lib/runtime-config.js"));
 
-var _headManagerContext = __webpack_require__(/*! next-server/dist/lib/head-manager-context */ "./node_modules/next-server/dist/lib/head-manager-context.js");
+var _headManagerContext = __webpack_require__(/*! ../next-server/lib/head-manager-context */ "./node_modules/next/dist/next-server/lib/head-manager-context.js");
 
-var _dataManagerContext = __webpack_require__(/*! next-server/dist/lib/data-manager-context */ "./node_modules/next-server/dist/lib/data-manager-context.js");
+var _dataManagerContext = __webpack_require__(/*! ../next-server/lib/data-manager-context */ "./node_modules/next/dist/next-server/lib/data-manager-context.js");
 
-var _routerContext = __webpack_require__(/*! next-server/dist/lib/router-context */ "./node_modules/next-server/dist/lib/router-context.js");
+var _routerContext = __webpack_require__(/*! ../next-server/lib/router-context */ "./node_modules/next/dist/next-server/lib/router-context.js");
 
-var _dataManager = __webpack_require__(/*! next-server/dist/lib/data-manager */ "./node_modules/next-server/dist/lib/data-manager.js");
+var _dataManager = __webpack_require__(/*! ../next-server/lib/data-manager */ "./node_modules/next/dist/next-server/lib/data-manager.js");
 
 var _querystring = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 
-var _isDynamic = __webpack_require__(/*! next-server/dist/lib/router/utils/is-dynamic */ "./node_modules/next-server/dist/lib/router/utils/is-dynamic.js");
+var _isDynamic = __webpack_require__(/*! ../next-server/lib/router/utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
 /* global location */
 // Polyfill Promise globally
 // This is needed because Webpack's dynamic loading(common chunks) code
@@ -19052,7 +17711,7 @@ if (!window.Promise) {
 
 var data = JSON.parse(document.getElementById('__NEXT_DATA__').textContent);
 window.__NEXT_DATA__ = data;
-var version = "9.0.5";
+var version = "9.1.1";
 exports.version = version;
 var props = data.props,
     err = data.err,
@@ -19079,9 +17738,9 @@ var asPath = (0, _utils.getURL)();
 var pageLoader = new _pageLoader["default"](buildId, prefix);
 
 var register = function register(_ref) {
-  var _ref6 = _slicedToArray(_ref, 2),
-      r = _ref6[0],
-      f = _ref6[1];
+  var _ref7 = _slicedToArray(_ref, 2),
+      r = _ref7[0],
+      f = _ref7[1];
 
   return pageLoader.registerPage(r, f);
 };
@@ -19101,7 +17760,7 @@ exports.router = router;
 var ErrorComponent;
 exports.ErrorComponent = ErrorComponent;
 var Component;
-var App;
+var App, onPerfEntry;
 
 var Container =
 /*#__PURE__*/
@@ -19174,29 +17833,46 @@ function () {
   var _ref2 = (0, _asyncToGenerator2["default"])(
   /*#__PURE__*/
   _regeneratorRuntime.mark(function _callee(_temp) {
-    var _ref7, passedWebpackHMR, initialErr, _require, isValidElementType, renderCtx;
+    var _ref8, passedWebpackHMR, _ref9, app, mod, initialErr, _require, isValidElementType, renderCtx;
 
     return _regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _ref7 = _temp === void 0 ? {} : _temp, passedWebpackHMR = _ref7.webpackHMR; // This makes sure this specific lines are removed in production
+            _ref8 = _temp === void 0 ? {} : _temp, passedWebpackHMR = _ref8.webpackHMR; // This makes sure this specific lines are removed in production
 
             if (true) {
               webpackHMR = passedWebpackHMR;
             }
 
             _context.next = 4;
-            return pageLoader.loadPage('/_app');
+            return pageLoader.loadPageScript('/_app');
 
           case 4:
-            App = _context.sent;
+            _ref9 = _context.sent;
+            app = _ref9.page;
+            mod = _ref9.mod;
+            App = app;
+
+            if (mod && mod.unstable_onPerformanceData) {
+              onPerfEntry = function onPerfEntry(_ref3) {
+                var name = _ref3.name,
+                    startTime = _ref3.startTime,
+                    value = _ref3.value;
+                mod.unstable_onPerformanceData({
+                  name: name,
+                  startTime: startTime,
+                  value: value
+                });
+              };
+            }
+
             initialErr = err;
-            _context.prev = 6;
-            _context.next = 9;
+            _context.prev = 10;
+            _context.next = 13;
             return pageLoader.loadPage(page);
 
-          case 9:
+          case 13:
             Component = _context.sent;
 
             if (false) {}
@@ -19204,32 +17880,32 @@ function () {
             _require = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js"), isValidElementType = _require.isValidElementType;
 
             if (isValidElementType(Component)) {
-              _context.next = 14;
+              _context.next = 18;
               break;
             }
 
             throw new Error("The default export is not a React Component in page: \"" + page + "\"");
 
-          case 14:
-            _context.next = 19;
+          case 18:
+            _context.next = 23;
             break;
 
-          case 16:
-            _context.prev = 16;
-            _context.t0 = _context["catch"](6);
+          case 20:
+            _context.prev = 20;
+            _context.t0 = _context["catch"](10);
             // This catches errors like throwing in the top level of a module
             initialErr = _context.t0;
 
-          case 19:
+          case 23:
             if (!window.__NEXT_PRELOADREADY) {
-              _context.next = 22;
+              _context.next = 26;
               break;
             }
 
-            _context.next = 22;
+            _context.next = 26;
             return window.__NEXT_PRELOADREADY(dynamicIds);
 
-          case 22:
+          case 26:
             exports.router = router = (0, _router.createRouter)(page, query, asPath, {
               initialProps: props,
               pageLoader: pageLoader,
@@ -19237,10 +17913,10 @@ function () {
               Component: Component,
               wrapApp: wrapApp,
               err: initialErr,
-              subscription: function subscription(_ref3, App) {
-                var Component = _ref3.Component,
-                    props = _ref3.props,
-                    err = _ref3.err;
+              subscription: function subscription(_ref4, App) {
+                var Component = _ref4.Component,
+                    props = _ref4.props,
+                    err = _ref4.err;
                 render({
                   App: App,
                   Component: Component,
@@ -19260,12 +17936,12 @@ function () {
             render(renderCtx);
             return _context.abrupt("return", emitter);
 
-          case 26:
+          case 30:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[6, 16]]);
+    }, _callee, null, [[10, 20]]);
   }));
 
   return function (_x) {
@@ -19425,6 +18101,10 @@ function renderReactElement(reactEl, domEl) {
   } else {
     _reactDom["default"].render(reactEl, domEl, markRenderComplete);
   }
+
+  if (onPerfEntry) {
+    performance.getEntriesByType('paint').forEach(onPerfEntry);
+  }
 }
 
 function markHydrateComplete() {
@@ -19433,6 +18113,12 @@ function markHydrateComplete() {
 
   performance.measure('Next.js-before-hydration', 'navigationStart', 'beforeRender');
   performance.measure('Next.js-hydration', 'beforeRender', 'afterHydrate');
+
+  if (onPerfEntry) {
+    performance.getEntriesByName('Next.js-hydration').forEach(onPerfEntry);
+    performance.getEntriesByName('beforeRender').forEach(onPerfEntry);
+  }
+
   clearMarks();
 }
 
@@ -19448,20 +18134,27 @@ function markRenderComplete() {
 
   performance.measure('Next.js-route-change-to-render', navStartEntries[0].name, 'beforeRender');
   performance.measure('Next.js-render', 'beforeRender', 'afterRender');
+
+  if (onPerfEntry) {
+    performance.getEntriesByName('Next.js-render').forEach(onPerfEntry);
+    performance.getEntriesByName('Next.js-route-change-to-render').forEach(onPerfEntry);
+  }
+
   clearMarks();
 }
 
 function clearMarks() {
-  performance.clearMarks();
-  /*
-  * TODO: uncomment the following line when we have a way to
-  * expose this to user code.
-  */
-  // performance.clearMeasures()
+  ;
+  ['beforeRender', 'afterHydrate', 'afterRender', 'routeChange'].forEach(function (mark) {
+    return performance.clearMarks(mark);
+  });
+  ['Next.js-before-hydration', 'Next.js-hydration', 'Next.js-route-change-to-render', 'Next.js-render'].forEach(function (measure) {
+    return performance.clearMeasures(measure);
+  });
 }
 
-function AppContainer(_ref4) {
-  var children = _ref4.children;
+function AppContainer(_ref5) {
+  var children = _ref5.children;
   return _react["default"].createElement(Container, {
     fn: function fn(error) {
       return renderError({
@@ -19471,15 +18164,13 @@ function AppContainer(_ref4) {
         return console.error('Error rendering page: ', err);
       });
     }
-  }, _react["default"].createElement(_react.Suspense, {
-    fallback: _react["default"].createElement("div", null, "Loading...")
   }, _react["default"].createElement(_routerContext.RouterContext.Provider, {
     value: (0, _router.makePublicRouterInstance)(router)
   }, _react["default"].createElement(_dataManagerContext.DataManagerContext.Provider, {
     value: dataManager
   }, _react["default"].createElement(_headManagerContext.HeadManagerContext.Provider, {
     value: headManager.updateHead
-  }, children)))));
+  }, children))));
 }
 
 var wrapApp = function wrapApp(App) {
@@ -19500,14 +18191,14 @@ function doRender(_x4) {
 function _doRender() {
   _doRender = (0, _asyncToGenerator2["default"])(
   /*#__PURE__*/
-  _regeneratorRuntime.mark(function _callee4(_ref5) {
+  _regeneratorRuntime.mark(function _callee4(_ref6) {
     var App, Component, props, err, _router2, pathname, _query, _asPath, AppTree, appCtx, appProps;
 
     return _regeneratorRuntime.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            App = _ref5.App, Component = _ref5.Component, props = _ref5.props, err = _ref5.err; // Usual getInitialProps fetching is handled in next/router
+            App = _ref6.App, Component = _ref6.Component, props = _ref6.props, err = _ref6.err; // Usual getInitialProps fetching is handled in next/router
             // this is for when ErrorComponent gets replaced by Component by HMR
 
             if (!(!props && Component && Component !== ErrorComponent && lastAppProps.Component === ErrorComponent)) {
@@ -19578,7 +18269,7 @@ function _doRender() {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(process) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
@@ -19619,8 +18310,22 @@ window.next = next;
   (0, _onDemandEntriesClient["default"])({
     assetPrefix: prefix
   });
-  (0, _devBuildWatcher["default"])();
-  (0, _prerenderIndicator["default"])();
+  if (true) (0, _devBuildWatcher["default"])();
+
+  if ( true && // disable by default in electron
+  !(typeof process !== 'undefined' && 'electron' in process.versions)) {
+    (0, _prerenderIndicator["default"])();
+  } // This is the fallback helper that removes Next.js' no-FOUC styles when
+  // CSS mode is enabled. This only really activates if you haven't created
+  // _any_ styles in your application yet.
+
+
+  ;
+  (window.requestAnimationFrame || setTimeout)(function () {
+    for (var x = document.querySelectorAll('[data-next-hide-fouc]'), i = x.length; i--;) {
+      x[i].parentNode.removeChild(x[i]);
+    }
+  });
   var lastScroll;
   emitter.on('before-reactdom-render', function (_ref) {
     var Component = _ref.Component,
@@ -19652,6 +18357,7 @@ window.next = next;
 })["catch"](function (err) {
   console.error('Error was not caught', err);
 });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -19680,7 +18386,7 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 
 var _promise = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js"));
 
-var _mitt = _interopRequireDefault(__webpack_require__(/*! next-server/dist/lib/mitt */ "./node_modules/next-server/dist/lib/mitt.js"));
+var _mitt = _interopRequireDefault(__webpack_require__(/*! ../next-server/lib/mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
 /* global document, window */
 
 
@@ -19698,7 +18404,7 @@ function preloadScript(url) {
   var link = document.createElement('link');
   link.rel = 'preload';
   link.crossOrigin = undefined;
-  link.href = url;
+  link.href = encodeURI(url);
   link.as = 'script';
   document.head.appendChild(link);
 }
@@ -19742,13 +18448,21 @@ function () {
   }, {
     key: "loadPage",
     value: function loadPage(route) {
+      return this.loadPageScript(route).then(function (v) {
+        return v.page;
+      });
+    }
+  }, {
+    key: "loadPageScript",
+    value: function loadPageScript(route) {
       var _this3 = this;
 
       route = this.normalizeRoute(route);
       return new _promise["default"](function (resolve, reject) {
         var fire = function fire(_ref) {
           var error = _ref.error,
-              page = _ref.page;
+              page = _ref.page,
+              mod = _ref.mod;
 
           _this3.pageRegisterEvents.off(route, fire);
 
@@ -19757,7 +18471,10 @@ function () {
           if (error) {
             reject(error);
           } else {
-            resolve(page);
+            resolve({
+              page: page,
+              mod: mod
+            });
           }
         }; // If there's a cached version of the page, let's use it.
 
@@ -19766,8 +18483,12 @@ function () {
 
         if (cachedPage) {
           var error = cachedPage.error,
-              page = cachedPage.page;
-          error ? reject(error) : resolve(page);
+              page = cachedPage.page,
+              mod = cachedPage.mod;
+          error ? reject(error) : resolve({
+            page: page,
+            mod: mod
+          });
           return;
         } // Register a listener to get the page
 
@@ -19826,7 +18547,7 @@ function () {
       if (false) {}
 
       script.crossOrigin = undefined;
-      script.src = url;
+      script.src = encodeURI(url);
 
       script.onerror = function () {
         var error = new Error("Error loading script " + url);
@@ -19847,19 +18568,14 @@ function () {
 
       var register = function register() {
         try {
-          var _regFn = regFn(),
-              error = _regFn.error,
-              page = _regFn.page;
-
-          _this5.pageCache[route] = {
-            error: error,
-            page: page
+          var mod = regFn();
+          var pageData = {
+            page: mod["default"] || mod,
+            mod: mod
           };
+          _this5.pageCache[route] = pageData;
 
-          _this5.pageRegisterEvents.emit(route, {
-            error: error,
-            page: page
-          });
+          _this5.pageRegisterEvents.emit(route, pageData);
         } catch (error) {
           _this5.pageCache[route] = {
             error: error
@@ -20031,12 +18747,12 @@ var _defineProperty = _interopRequireDefault(__webpack_require__(/*! @babel/runt
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var _router2 = _interopRequireWildcard(__webpack_require__(/*! next-server/dist/lib/router/router */ "./node_modules/next-server/dist/lib/router/router.js"));
+var _router2 = _interopRequireWildcard(__webpack_require__(/*! ../next-server/lib/router/router */ "./node_modules/next/dist/next-server/lib/router/router.js"));
 
 exports.Router = _router2["default"];
 exports.NextRouter = _router2.NextRouter;
 
-var _routerContext = __webpack_require__(/*! next-server/dist/lib/router-context */ "./node_modules/next-server/dist/lib/router-context.js");
+var _routerContext = __webpack_require__(/*! ../next-server/lib/router-context */ "./node_modules/next/dist/next-server/lib/router-context.js");
 
 var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
 
@@ -20256,7 +18972,9 @@ function withRouter(ComposedComponent) {
   WithRouteWrapper.contextTypes = {
     router: _propTypes["default"].object
   };
-  WithRouteWrapper.getInitialProps = ComposedComponent.getInitialProps;
+  WithRouteWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
+  ;
+  WithRouteWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
 
   if (true) {
     var name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
@@ -20265,6 +18983,1361 @@ function withRouter(ComposedComponent) {
 
   return WithRouteWrapper;
 }
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/data-manager-context.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/data-manager-context.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+exports.DataManagerContext = React.createContext(null);
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/data-manager.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/data-manager.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Map = __webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js");
+
+var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
+
+var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var DataManager =
+/*#__PURE__*/
+function () {
+  function DataManager(data) {
+    _classCallCheck(this, DataManager);
+
+    this.data = new _Map(data);
+  }
+
+  _createClass(DataManager, [{
+    key: "getData",
+    value: function getData() {
+      return this.data;
+    }
+  }, {
+    key: "get",
+    value: function get(key) {
+      return this.data.get(key);
+    }
+  }, {
+    key: "set",
+    value: function set(key, value) {
+      this.data.set(key, value);
+    }
+  }, {
+    key: "overwrite",
+    value: function overwrite(data) {
+      this.data = new _Map(data);
+    }
+  }]);
+
+  return DataManager;
+}();
+
+exports.DataManager = DataManager;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/head-manager-context.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/head-manager-context.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+exports.HeadManagerContext = React.createContext(null);
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/mitt.js":
+/*!********************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/mitt.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+MIT License
+
+Copyright (c) Jason Miller (https://jasonformat.com/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+var _Object$create = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function mitt() {
+  var all = _Object$create(null);
+
+  return {
+    on: function on(type, handler) {
+      ;
+      (all[type] || (all[type] = [])).push(handler);
+    },
+    off: function off(type, handler) {
+      if (all[type]) {
+        // tslint:disable-next-line:no-bitwise
+        all[type].splice(all[type].indexOf(handler) >>> 0, 1);
+      }
+    },
+    emit: function emit(type) {
+      for (var _len = arguments.length, evts = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        evts[_key - 1] = arguments[_key];
+      }
+
+      ;
+      (all[type] || []).slice().map(function (handler) {
+        handler.apply(void 0, evts);
+      });
+    }
+  };
+}
+
+exports["default"] = mitt;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/router-context.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router-context.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+exports.RouterContext = React.createContext(null);
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _slicedToArray = __webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js");
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function rewriteUrlForNextExport(url) {
+  var _url$split = url.split('#'),
+      _url$split2 = _slicedToArray(_url$split, 2),
+      pathname = _url$split2[0],
+      hash = _url$split2[1]; // tslint:disable-next-line
+
+
+  var _pathname$split = pathname.split('?'),
+      _pathname$split2 = _slicedToArray(_pathname$split, 2),
+      path = _pathname$split2[0],
+      qs = _pathname$split2[1];
+
+  path = path.replace(/\/$/, ''); // Append a trailing slash if this path does not have an extension
+
+  if (!/\.[^/]+\/?$/.test(path)) path += "/";
+  if (qs) path += '?' + qs;
+  if (hash) path += '#' + hash;
+  return path;
+}
+
+exports.rewriteUrlForNextExport = rewriteUrlForNextExport;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/router/router.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/router.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+
+var _asyncToGenerator = __webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js");
+
+var _slicedToArray = __webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js");
+
+var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+
+var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+
+var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
+
+var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+
+var mitt_1 = __importDefault(__webpack_require__(/*! ../mitt */ "./node_modules/next/dist/next-server/lib/mitt.js"));
+
+var utils_1 = __webpack_require__(/*! ../utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+
+var rewrite_url_for_export_1 = __webpack_require__(/*! ./rewrite-url-for-export */ "./node_modules/next/dist/next-server/lib/router/rewrite-url-for-export.js");
+
+var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js");
+
+var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
+
+var is_dynamic_1 = __webpack_require__(/*! ./utils/is-dynamic */ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js");
+
+function toRoute(path) {
+  return path.replace(/\/$/, '') || '/';
+}
+
+var Router =
+/*#__PURE__*/
+function () {
+  function Router(pathname, query, as, _ref) {
+    var _this = this;
+
+    var initialProps = _ref.initialProps,
+        pageLoader = _ref.pageLoader,
+        App = _ref.App,
+        wrapApp = _ref.wrapApp,
+        Component = _ref.Component,
+        err = _ref.err,
+        subscription = _ref.subscription;
+
+    _classCallCheck(this, Router);
+
+    this.onPopState = function (e) {
+      if (!e.state) {
+        // We get state as undefined for two reasons.
+        //  1. With older safari (< 8) and older chrome (< 34)
+        //  2. When the URL changed with #
+        //
+        // In the both cases, we don't need to proceed and change the route.
+        // (as it's already changed)
+        // But we can simply replace the state with the new changes.
+        // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
+        // So, doing the following for (1) does no harm.
+        var _pathname = _this.pathname,
+            _query = _this.query;
+
+        _this.changeState('replaceState', utils_1.formatWithValidation({
+          pathname: _pathname,
+          query: _query
+        }), utils_1.getURL());
+
+        return;
+      } // Make sure we don't re-render on initial load,
+      // can be caused by navigating back from an external site
+
+
+      if (e.state.options && e.state.options.fromExternal) {
+        return;
+      } // If the downstream application returns falsy, return.
+      // They will then be responsible for handling the event.
+
+
+      if (_this._bps && !_this._bps(e.state)) {
+        return;
+      }
+
+      var _e$state = e.state,
+          url = _e$state.url,
+          as = _e$state.as,
+          options = _e$state.options;
+
+      if (true) {
+        if (typeof url === 'undefined' || typeof as === 'undefined') {
+          console.warn('`popstate` event triggered but `event.state` did not have `url` or `as` https://err.sh/zeit/next.js/popstate-state-empty');
+        }
+      }
+
+      _this.replace(url, as, options);
+    }; // represents the current component key
+
+
+    this.route = toRoute(pathname); // set up the component cache (by route keys)
+
+    this.components = {}; // We should not keep the cache, if there's an error
+    // Otherwise, this cause issues when when going back and
+    // come again to the errored page.
+
+    if (pathname !== '/_error') {
+      this.components[this.route] = {
+        Component: Component,
+        props: initialProps,
+        err: err
+      };
+    }
+
+    this.components['/_app'] = {
+      Component: App
+    }; // Backwards compat for Router.router.events
+    // TODO: Should be remove the following major version as it was never documented
+    // @ts-ignore backwards compatibility
+
+    this.events = Router.events;
+    this.pageLoader = pageLoader;
+    this.pathname = pathname;
+    this.query = query; // if auto prerendered and dynamic route wait to update asPath
+    // until after mount to prevent hydration mismatch
+
+    this.asPath = // @ts-ignore this is temporarily global (attached to window)
+    is_dynamic_1.isDynamicRoute(pathname) && __NEXT_DATA__.nextExport ? pathname : as;
+    this.sub = subscription;
+    this.clc = null;
+    this._wrapApp = wrapApp;
+
+    if (true) {
+      // in order for `e.state` to work on the `onpopstate` event
+      // we have to register the initial route upon initialization
+      this.changeState('replaceState', utils_1.formatWithValidation({
+        pathname: pathname,
+        query: query
+      }), as);
+      window.addEventListener('popstate', this.onPopState);
+      window.addEventListener('unload', function () {
+        // Workaround for popstate firing on initial page load when
+        // navigating back from an external site
+        if (history.state) {
+          var _history$state = history.state,
+              url = _history$state.url,
+              _as2 = _history$state.as,
+              options = _history$state.options;
+
+          _this.changeState('replaceState', url, _as2, _Object$assign({}, options, {
+            fromExternal: true
+          }));
+        }
+      });
+    }
+  } // @deprecated backwards compatibility even though it's a private method.
+
+
+  _createClass(Router, [{
+    key: "update",
+    value: function update(route, mod) {
+      var Component = mod["default"] || mod;
+      var data = this.components[route];
+
+      if (!data) {
+        throw new Error("Cannot update unavailable route: ".concat(route));
+      }
+
+      var newData = _Object$assign({}, data, {
+        Component: Component
+      });
+
+      this.components[route] = newData; // pages/_app.js updated
+
+      if (route === '/_app') {
+        this.notify(this.components[this.route]);
+        return;
+      }
+
+      if (route === this.route) {
+        this.notify(newData);
+      }
+    }
+  }, {
+    key: "reload",
+    value: function reload() {
+      window.location.reload();
+    }
+    /**
+     * Go back in history
+     */
+
+  }, {
+    key: "back",
+    value: function back() {
+      window.history.back();
+    }
+    /**
+     * Performs a `pushState` with arguments
+     * @param url of the route
+     * @param as masks `url` for the browser
+     * @param options object you can define `shallow` and other options
+     */
+
+  }, {
+    key: "push",
+    value: function push(url) {
+      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.change('pushState', url, as, options);
+    }
+    /**
+     * Performs a `replaceState` with arguments
+     * @param url of the route
+     * @param as masks `url` for the browser
+     * @param options object you can define `shallow` and other options
+     */
+
+  }, {
+    key: "replace",
+    value: function replace(url) {
+      var as = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return this.change('replaceState', url, as, options);
+    }
+  }, {
+    key: "change",
+    value: function change(method, _url, _as, options) {
+      var _this2 = this;
+
+      return new _Promise(function (resolve, reject) {
+        // marking route changes as a navigation start entry
+        if (utils_1.SUPPORTS_PERFORMANCE_USER_TIMING) {
+          performance.mark('routeChange');
+        } // If url and as provided as an object representation,
+        // we'll format them into the string version here.
+
+
+        var url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
+        var as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
+        // "<page>/index.html" directly for the SSR page.
+
+        if (true) {
+          // @ts-ignore this is temporarily global (attached to window)
+          if (__NEXT_DATA__.nextExport) {
+            as = rewrite_url_for_export_1.rewriteUrlForNextExport(as);
+          }
+        }
+
+        _this2.abortComponentLoad(as); // If the url change is only related to a hash change
+        // We should not proceed. We should only change the state.
+        // WARNING: `_h` is an internal option for handing Next.js client-side
+        // hydration. Your app should _never_ use this property. It may change at
+        // any time without notice.
+
+
+        if (!options._h && _this2.onlyAHashChange(as)) {
+          _this2.asPath = as;
+          Router.events.emit('hashChangeStart', as);
+
+          _this2.changeState(method, url, as);
+
+          _this2.scrollToHash(as);
+
+          Router.events.emit('hashChangeComplete', as);
+          return resolve(true);
+        }
+
+        var _url_1$parse = url_1.parse(url, true),
+            pathname = _url_1$parse.pathname,
+            query = _url_1$parse.query,
+            protocol = _url_1$parse.protocol;
+
+        if (!pathname || protocol) {
+          if (true) {
+            throw new Error("Invalid href passed to router: ".concat(url, " https://err.sh/zeit/next.js/invalid-href-passed"));
+          }
+
+          return resolve(false);
+        } // If asked to change the current URL we should reload the current page
+        // (not location.reload() but reload getInitialProps and other Next.js stuffs)
+        // We also need to set the method = replaceState always
+        // as this should not go into the history (That's how browsers work)
+        // We should compare the new asPath to the current asPath, not the url
+
+
+        if (!_this2.urlIsNew(as)) {
+          method = 'replaceState';
+        } // @ts-ignore pathname is always a string
+
+
+        var route = toRoute(pathname);
+        var _options$shallow = options.shallow,
+            shallow = _options$shallow === void 0 ? false : _options$shallow;
+
+        if (is_dynamic_1.isDynamicRoute(route)) {
+          var _url_1$parse2 = url_1.parse(as),
+              asPathname = _url_1$parse2.pathname;
+
+          var rr = route_regex_1.getRouteRegex(route);
+          var routeMatch = route_matcher_1.getRouteMatcher(rr)(asPathname);
+
+          if (!routeMatch) {
+            console.error('The provided `as` value is incompatible with the `href` value. This is invalid. https://err.sh/zeit/next.js/incompatible-href-as');
+            return resolve(false);
+          } // Merge params into `query`, overwriting any specified in search
+
+
+          _Object$assign(query, routeMatch);
+        }
+
+        Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
+        // @ts-ignore pathname is always a string
+
+        _this2.getRouteInfo(route, pathname, query, as, shallow).then(function (routeInfo) {
+          var error = routeInfo.error;
+
+          if (error && error.cancelled) {
+            return resolve(false);
+          }
+
+          Router.events.emit('beforeHistoryChange', as);
+
+          _this2.changeState(method, url, as, options);
+
+          var hash = window.location.hash.substring(1);
+
+          if (true) {
+            var appComp = _this2.components['/_app'].Component;
+            window.next.isPrerendered = appComp.getInitialProps === appComp.origGetInitialProps && !routeInfo.Component.getInitialProps;
+          } // @ts-ignore pathname is always defined
+
+
+          _this2.set(route, pathname, query, as, _Object$assign({}, routeInfo, {
+            hash: hash
+          }));
+
+          if (error) {
+            Router.events.emit('routeChangeError', error, as);
+            throw error;
+          }
+
+          Router.events.emit('routeChangeComplete', as);
+          return resolve(true);
+        }, reject);
+      });
+    }
+  }, {
+    key: "changeState",
+    value: function changeState(method, url, as) {
+      var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+
+      if (true) {
+        if (typeof window.history === 'undefined') {
+          console.error("Warning: window.history is not available.");
+          return;
+        } // @ts-ignore method should always exist on history
+
+
+        if (typeof window.history[method] === 'undefined') {
+          console.error("Warning: window.history.".concat(method, " is not available"));
+          return;
+        }
+      }
+
+      if (method !== 'pushState' || utils_1.getURL() !== as) {
+        // @ts-ignore method should always exist on history
+        window.history[method]({
+          url: url,
+          as: as,
+          options: options
+        }, null, as);
+      }
+    }
+  }, {
+    key: "getRouteInfo",
+    value: function getRouteInfo(route, pathname, query, as) {
+      var _this3 = this;
+
+      var shallow = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+      var cachedRouteInfo = this.components[route]; // If there is a shallow route transition possible
+      // If the route is already rendered on the screen.
+
+      if (shallow && cachedRouteInfo && this.route === route) {
+        return _Promise.resolve(cachedRouteInfo);
+      }
+
+      return new _Promise(function (resolve, reject) {
+        if (cachedRouteInfo) {
+          return resolve(cachedRouteInfo);
+        }
+
+        _this3.fetchComponent(route).then(function (Component) {
+          return resolve({
+            Component: Component
+          });
+        }, reject);
+      }).then(function (routeInfo) {
+        var Component = routeInfo.Component;
+
+        if (true) {
+          var _require = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js"),
+              isValidElementType = _require.isValidElementType;
+
+          if (!isValidElementType(Component)) {
+            throw new Error("The default export is not a React Component in page: \"".concat(pathname, "\""));
+          }
+        }
+
+        return new _Promise(function (resolve, reject) {
+          // we provide AppTree later so this needs to be `any`
+          _this3.getInitialProps(Component, {
+            pathname: pathname,
+            query: query,
+            asPath: as
+          }).then(function (props) {
+            routeInfo.props = props;
+            _this3.components[route] = routeInfo;
+            resolve(routeInfo);
+          }, reject);
+        });
+      })["catch"](function (err) {
+        return new _Promise(function (resolve) {
+          if (err.code === 'PAGE_LOAD_ERROR') {
+            // If we can't load the page it could be one of following reasons
+            //  1. Page doesn't exists
+            //  2. Page does exist in a different zone
+            //  3. Internal error while loading the page
+            // So, doing a hard reload is the proper way to deal with this.
+            window.location.href = as; // Changing the URL doesn't block executing the current code path.
+            // So, we need to mark it as a cancelled error and stop the routing logic.
+
+            err.cancelled = true; // @ts-ignore TODO: fix the control flow here
+
+            return resolve({
+              error: err
+            });
+          }
+
+          if (err.cancelled) {
+            // @ts-ignore TODO: fix the control flow here
+            return resolve({
+              error: err
+            });
+          }
+
+          resolve(_this3.fetchComponent('/_error').then(function (Component) {
+            var routeInfo = {
+              Component: Component,
+              err: err
+            };
+            return new _Promise(function (resolve) {
+              _this3.getInitialProps(Component, {
+                err: err,
+                pathname: pathname,
+                query: query
+              }).then(function (props) {
+                routeInfo.props = props;
+                routeInfo.error = err;
+                resolve(routeInfo);
+              }, function (gipErr) {
+                console.error('Error in error page `getInitialProps`: ', gipErr);
+                routeInfo.error = err;
+                routeInfo.props = {};
+                resolve(routeInfo);
+              });
+            });
+          }));
+        });
+      });
+    }
+  }, {
+    key: "set",
+    value: function set(route, pathname, query, as, data) {
+      this.route = route;
+      this.pathname = pathname;
+      this.query = query;
+      this.asPath = as;
+      this.notify(data);
+    }
+    /**
+     * Callback to execute before replacing router state
+     * @param cb callback to be executed
+     */
+
+  }, {
+    key: "beforePopState",
+    value: function beforePopState(cb) {
+      this._bps = cb;
+    }
+  }, {
+    key: "onlyAHashChange",
+    value: function onlyAHashChange(as) {
+      if (!this.asPath) return false;
+
+      var _this$asPath$split = this.asPath.split('#'),
+          _this$asPath$split2 = _slicedToArray(_this$asPath$split, 2),
+          oldUrlNoHash = _this$asPath$split2[0],
+          oldHash = _this$asPath$split2[1];
+
+      var _as$split = as.split('#'),
+          _as$split2 = _slicedToArray(_as$split, 2),
+          newUrlNoHash = _as$split2[0],
+          newHash = _as$split2[1]; // Makes sure we scroll to the provided hash if the url/hash are the same
+
+
+      if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
+        return true;
+      } // If the urls are change, there's more than a hash change
+
+
+      if (oldUrlNoHash !== newUrlNoHash) {
+        return false;
+      } // If the hash has changed, then it's a hash only change.
+      // This check is necessary to handle both the enter and
+      // leave hash === '' cases. The identity case falls through
+      // and is treated as a next reload.
+
+
+      return oldHash !== newHash;
+    }
+  }, {
+    key: "scrollToHash",
+    value: function scrollToHash(as) {
+      var _as$split3 = as.split('#'),
+          _as$split4 = _slicedToArray(_as$split3, 2),
+          hash = _as$split4[1]; // Scroll to top if the hash is just `#` with no value
+
+
+      if (hash === '') {
+        window.scrollTo(0, 0);
+        return;
+      } // First we check if the element by id is found
+
+
+      var idEl = document.getElementById(hash);
+
+      if (idEl) {
+        idEl.scrollIntoView();
+        return;
+      } // If there's no element with the id, we check the `name` property
+      // To mirror browsers
+
+
+      var nameEl = document.getElementsByName(hash)[0];
+
+      if (nameEl) {
+        nameEl.scrollIntoView();
+      }
+    }
+  }, {
+    key: "urlIsNew",
+    value: function urlIsNew(asPath) {
+      return this.asPath !== asPath;
+    }
+    /**
+     * Prefetch `page` code, you may wait for the data during `page` rendering.
+     * This feature only works in production!
+     * @param url of prefetched `page`
+     */
+
+  }, {
+    key: "prefetch",
+    value: function prefetch(url) {
+      var _this4 = this;
+
+      return new _Promise(function (resolve, reject) {
+        var _url_1$parse3 = url_1.parse(url),
+            pathname = _url_1$parse3.pathname,
+            protocol = _url_1$parse3.protocol;
+
+        if (!pathname || protocol) {
+          if (true) {
+            throw new Error("Invalid href passed to router: ".concat(url, " https://err.sh/zeit/next.js/invalid-href-passed"));
+          }
+
+          return;
+        } // Prefetch is not supported in development mode because it would trigger on-demand-entries
+
+
+        if (true) return; // @ts-ignore pathname is always defined
+
+        var route = toRoute(pathname);
+
+        _this4.pageLoader.prefetch(route).then(resolve, reject);
+      });
+    }
+  }, {
+    key: "fetchComponent",
+    value: function () {
+      var _fetchComponent = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee(route) {
+        var cancelled, cancel, Component, error;
+        return _regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                cancelled = false;
+
+                cancel = this.clc = function () {
+                  cancelled = true;
+                };
+
+                _context.next = 4;
+                return this.pageLoader.loadPage(route);
+
+              case 4:
+                Component = _context.sent;
+
+                if (!cancelled) {
+                  _context.next = 9;
+                  break;
+                }
+
+                error = new Error("Abort fetching component for route: \"".concat(route, "\""));
+                error.cancelled = true;
+                throw error;
+
+              case 9:
+                if (cancel === this.clc) {
+                  this.clc = null;
+                }
+
+                return _context.abrupt("return", Component);
+
+              case 11:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function fetchComponent(_x) {
+        return _fetchComponent.apply(this, arguments);
+      }
+
+      return fetchComponent;
+    }()
+  }, {
+    key: "getInitialProps",
+    value: function () {
+      var _getInitialProps = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime.mark(function _callee2(Component, ctx) {
+        var cancelled, cancel, App, props, status, _url_1$parse4, pathname, AppTree, err;
+
+        return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                cancelled = false;
+
+                cancel = function cancel() {
+                  cancelled = true;
+                };
+
+                this.clc = cancel;
+                App = this.components['/_app'].Component;
+
+                if (!( // @ts-ignore workaround for dead-code elimination
+                (self.__HAS_SPR || "development" !== 'production') && Component.__NEXT_SPR)) {
+                  _context2.next = 11;
+                  break;
+                }
+
+                _url_1$parse4 = url_1.parse(ctx.asPath || ctx.pathname), pathname = _url_1$parse4.pathname;
+                _context2.next = 8;
+                return fetch("/_next/data".concat(pathname, ".json")).then(function (res) {
+                  if (!res.ok) {
+                    status = res.status;
+                    throw new Error('failed to load prerender data');
+                  }
+
+                  return res.json();
+                })["catch"](function (err) {
+                  console.error("Failed to load data", status, err);
+                  window.location.href = pathname;
+                  return new _Promise(function () {});
+                });
+
+              case 8:
+                props = _context2.sent;
+                _context2.next = 16;
+                break;
+
+              case 11:
+                AppTree = this._wrapApp(App);
+                ctx.AppTree = AppTree;
+                _context2.next = 15;
+                return utils_1.loadGetInitialProps(App, {
+                  AppTree: AppTree,
+                  Component: Component,
+                  router: this,
+                  ctx: ctx
+                });
+
+              case 15:
+                props = _context2.sent;
+
+              case 16:
+                if (cancel === this.clc) {
+                  this.clc = null;
+                }
+
+                if (!cancelled) {
+                  _context2.next = 21;
+                  break;
+                }
+
+                err = new Error('Loading initial props cancelled');
+                err.cancelled = true;
+                throw err;
+
+              case 21:
+                return _context2.abrupt("return", props);
+
+              case 22:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this);
+      }));
+
+      function getInitialProps(_x2, _x3) {
+        return _getInitialProps.apply(this, arguments);
+      }
+
+      return getInitialProps;
+    }()
+  }, {
+    key: "abortComponentLoad",
+    value: function abortComponentLoad(as) {
+      if (this.clc) {
+        var e = new Error('Route Cancelled');
+        e.cancelled = true;
+        Router.events.emit('routeChangeError', e, as);
+        this.clc();
+        this.clc = null;
+      }
+    }
+  }, {
+    key: "notify",
+    value: function notify(data) {
+      this.sub(data, this.components['/_app'].Component);
+    }
+  }], [{
+    key: "_rewriteUrlForNextExport",
+    value: function _rewriteUrlForNextExport(url) {
+      return rewrite_url_for_export_1.rewriteUrlForNextExport(url);
+    }
+  }]);
+
+  return Router;
+}();
+
+Router.events = mitt_1["default"]();
+exports["default"] = Router;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+}); // Identify /[param]/ in route string
+
+
+var TEST_ROUTE = /\/\[[^\/]+?\](?=\/|$)/;
+
+function isDynamicRoute(route) {
+  return TEST_ROUTE.test(route);
+}
+
+exports.isDynamicRoute = isDynamicRoute;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-matcher.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function getRouteMatcher(routeRegex) {
+  var re = routeRegex.re,
+      groups = routeRegex.groups;
+  return function (pathname) {
+    var routeMatch = re.exec(pathname);
+
+    if (!routeMatch) {
+      return false;
+    }
+
+    var params = {};
+
+    _Object$keys(groups).forEach(function (slugName) {
+      var m = routeMatch[groups[slugName]];
+
+      if (m !== undefined) {
+        params[slugName] = decodeURIComponent(m);
+      }
+    });
+
+    return params;
+  };
+}
+
+exports.getRouteMatcher = getRouteMatcher;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/router/utils/route-regex.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function getRouteRegex(normalizedRoute) {
+  // Escape all characters that could be considered RegEx
+  var escapedRoute = (normalizedRoute.replace(/\/$/, '') || '/').replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+  var groups = {};
+  var groupIndex = 1;
+  var parameterizedRoute = escapedRoute.replace(/\/\\\[([^\/]+?)\\\](?=\/|$)/g, function (_, $1) {
+    return groups[$1 // Un-escape key
+    .replace(/\\([|\\{}()[\]^$+*?.-])/g, '$1')] = groupIndex++, '/([^/]+?)';
+  });
+  return {
+    re: new RegExp('^' + parameterizedRoute + '(?:/)?$', 'i'),
+    groups: groups
+  };
+}
+
+exports.getRouteRegex = getRouteRegex;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/runtime-config.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/runtime-config.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var runtimeConfig;
+
+exports["default"] = function () {
+  return runtimeConfig;
+};
+
+function setConfig(configValue) {
+  runtimeConfig = configValue;
+}
+
+exports.setConfig = setConfig;
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/next-server/lib/utils.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/next/dist/next-server/lib/utils.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+
+var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+
+var _asyncToGenerator = __webpack_require__(/*! @babel/runtime-corejs2/helpers/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/asyncToGenerator.js");
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+/**
+ * Utils
+ */
+
+
+function execOnce(fn) {
+  var _this = this;
+
+  var used = false;
+  return function () {
+    if (!used) {
+      used = true;
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      fn.apply(_this, args);
+    }
+  };
+}
+
+exports.execOnce = execOnce;
+
+function getLocationOrigin() {
+  var _window$location = window.location,
+      protocol = _window$location.protocol,
+      hostname = _window$location.hostname,
+      port = _window$location.port;
+  return "".concat(protocol, "//").concat(hostname).concat(port ? ':' + port : '');
+}
+
+exports.getLocationOrigin = getLocationOrigin;
+
+function getURL() {
+  var href = window.location.href;
+  var origin = getLocationOrigin();
+  return href.substring(origin.length);
+}
+
+exports.getURL = getURL;
+
+function getDisplayName(Component) {
+  return typeof Component === 'string' ? Component : Component.displayName || Component.name || 'Unknown';
+}
+
+exports.getDisplayName = getDisplayName;
+
+function isResSent(res) {
+  return res.finished || res.headersSent;
+}
+
+exports.isResSent = isResSent;
+
+function loadGetInitialProps(_x, _x2) {
+  return _loadGetInitialProps.apply(this, arguments);
+}
+
+function _loadGetInitialProps() {
+  _loadGetInitialProps = _asyncToGenerator(
+  /*#__PURE__*/
+  _regeneratorRuntime.mark(function _callee(Component, ctx) {
+    var message, res, props, _message;
+
+    return _regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            if (false) {}
+
+            if (!(Component.prototype && Component.prototype.getInitialProps)) {
+              _context.next = 4;
+              break;
+            }
+
+            message = "\"".concat(getDisplayName(Component), ".getInitialProps()\" is defined as an instance method - visit https://err.sh/zeit/next.js/get-initial-props-as-an-instance-method for more information.");
+            throw new Error(message);
+
+          case 4:
+            // when called from _app `ctx` is nested in `ctx`
+            res = ctx.res || ctx.ctx && ctx.ctx.res;
+
+            if (Component.getInitialProps) {
+              _context.next = 7;
+              break;
+            }
+
+            return _context.abrupt("return", {});
+
+          case 7:
+            _context.next = 9;
+            return Component.getInitialProps(ctx);
+
+          case 9:
+            props = _context.sent;
+
+            if (!(res && isResSent(res))) {
+              _context.next = 12;
+              break;
+            }
+
+            return _context.abrupt("return", props);
+
+          case 12:
+            if (props) {
+              _context.next = 15;
+              break;
+            }
+
+            _message = "\"".concat(getDisplayName(Component), ".getInitialProps()\" should resolve to an object. But found \"").concat(props, "\" instead.");
+            throw new Error(_message);
+
+          case 15:
+            if (true) {
+              if (_Object$keys(props).length === 0 && !ctx.ctx) {
+                console.warn("".concat(getDisplayName(Component), " returned an empty object from `getInitialProps`. This de-optimizes and prevents automatic static optimization. https://err.sh/zeit/next.js/empty-object-getInitialProps"));
+              }
+            }
+
+            return _context.abrupt("return", props);
+
+          case 17:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _loadGetInitialProps.apply(this, arguments);
+}
+
+exports.loadGetInitialProps = loadGetInitialProps;
+exports.urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pathname', 'port', 'protocol', 'query', 'search', 'slashes'];
+
+function formatWithValidation(url, options) {
+  if (true) {
+    if (url !== null && typeof url === 'object') {
+      _Object$keys(url).forEach(function (key) {
+        if (exports.urlObjectKeys.indexOf(key) === -1) {
+          console.warn("Unknown key passed via urlObject into url.format: ".concat(key));
+        }
+      });
+    }
+  }
+
+  return url_1.format(url, options);
+}
+
+exports.formatWithValidation = formatWithValidation;
+exports.SUPPORTS_PERFORMANCE = typeof performance !== 'undefined';
+exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeof performance.mark === 'function' && typeof performance.measure === 'function';
 
 /***/ }),
 
@@ -20332,14 +20405,545 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
+;(function(root) {
+
+	/** Detect free variables */
+	var freeExports =  true && exports &&
+		!exports.nodeType && exports;
+	var freeModule =  true && module &&
+		!module.nodeType && module;
+	var freeGlobal = typeof global == 'object' && global;
+	if (
+		freeGlobal.global === freeGlobal ||
+		freeGlobal.window === freeGlobal ||
+		freeGlobal.self === freeGlobal
+	) {
+		root = freeGlobal;
+	}
+
+	/**
+	 * The `punycode` object.
+	 * @name punycode
+	 * @type Object
+	 */
+	var punycode,
+
+	/** Highest positive signed 32-bit float value */
+	maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
+
+	/** Bootstring parameters */
+	base = 36,
+	tMin = 1,
+	tMax = 26,
+	skew = 38,
+	damp = 700,
+	initialBias = 72,
+	initialN = 128, // 0x80
+	delimiter = '-', // '\x2D'
+
+	/** Regular expressions */
+	regexPunycode = /^xn--/,
+	regexNonASCII = /[^\x20-\x7E]/, // unprintable ASCII chars + non-ASCII chars
+	regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g, // RFC 3490 separators
+
+	/** Error messages */
+	errors = {
+		'overflow': 'Overflow: input needs wider integers to process',
+		'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
+		'invalid-input': 'Invalid input'
+	},
+
+	/** Convenience shortcuts */
+	baseMinusTMin = base - tMin,
+	floor = Math.floor,
+	stringFromCharCode = String.fromCharCode,
+
+	/** Temporary variable */
+	key;
+
+	/*--------------------------------------------------------------------------*/
+
+	/**
+	 * A generic error utility function.
+	 * @private
+	 * @param {String} type The error type.
+	 * @returns {Error} Throws a `RangeError` with the applicable error message.
+	 */
+	function error(type) {
+		throw new RangeError(errors[type]);
+	}
+
+	/**
+	 * A generic `Array#map` utility function.
+	 * @private
+	 * @param {Array} array The array to iterate over.
+	 * @param {Function} callback The function that gets called for every array
+	 * item.
+	 * @returns {Array} A new array of values returned by the callback function.
+	 */
+	function map(array, fn) {
+		var length = array.length;
+		var result = [];
+		while (length--) {
+			result[length] = fn(array[length]);
+		}
+		return result;
+	}
+
+	/**
+	 * A simple `Array#map`-like wrapper to work with domain name strings or email
+	 * addresses.
+	 * @private
+	 * @param {String} domain The domain name or email address.
+	 * @param {Function} callback The function that gets called for every
+	 * character.
+	 * @returns {Array} A new string of characters returned by the callback
+	 * function.
+	 */
+	function mapDomain(string, fn) {
+		var parts = string.split('@');
+		var result = '';
+		if (parts.length > 1) {
+			// In email addresses, only the domain name should be punycoded. Leave
+			// the local part (i.e. everything up to `@`) intact.
+			result = parts[0] + '@';
+			string = parts[1];
+		}
+		// Avoid `split(regex)` for IE8 compatibility. See #17.
+		string = string.replace(regexSeparators, '\x2E');
+		var labels = string.split('.');
+		var encoded = map(labels, fn).join('.');
+		return result + encoded;
+	}
+
+	/**
+	 * Creates an array containing the numeric code points of each Unicode
+	 * character in the string. While JavaScript uses UCS-2 internally,
+	 * this function will convert a pair of surrogate halves (each of which
+	 * UCS-2 exposes as separate characters) into a single code point,
+	 * matching UTF-16.
+	 * @see `punycode.ucs2.encode`
+	 * @see <https://mathiasbynens.be/notes/javascript-encoding>
+	 * @memberOf punycode.ucs2
+	 * @name decode
+	 * @param {String} string The Unicode input string (UCS-2).
+	 * @returns {Array} The new array of code points.
+	 */
+	function ucs2decode(string) {
+		var output = [],
+		    counter = 0,
+		    length = string.length,
+		    value,
+		    extra;
+		while (counter < length) {
+			value = string.charCodeAt(counter++);
+			if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
+				// high surrogate, and there is a next character
+				extra = string.charCodeAt(counter++);
+				if ((extra & 0xFC00) == 0xDC00) { // low surrogate
+					output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
+				} else {
+					// unmatched surrogate; only append this code unit, in case the next
+					// code unit is the high surrogate of a surrogate pair
+					output.push(value);
+					counter--;
+				}
+			} else {
+				output.push(value);
+			}
+		}
+		return output;
+	}
+
+	/**
+	 * Creates a string based on an array of numeric code points.
+	 * @see `punycode.ucs2.decode`
+	 * @memberOf punycode.ucs2
+	 * @name encode
+	 * @param {Array} codePoints The array of numeric code points.
+	 * @returns {String} The new Unicode string (UCS-2).
+	 */
+	function ucs2encode(array) {
+		return map(array, function(value) {
+			var output = '';
+			if (value > 0xFFFF) {
+				value -= 0x10000;
+				output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
+				value = 0xDC00 | value & 0x3FF;
+			}
+			output += stringFromCharCode(value);
+			return output;
+		}).join('');
+	}
+
+	/**
+	 * Converts a basic code point into a digit/integer.
+	 * @see `digitToBasic()`
+	 * @private
+	 * @param {Number} codePoint The basic numeric code point value.
+	 * @returns {Number} The numeric value of a basic code point (for use in
+	 * representing integers) in the range `0` to `base - 1`, or `base` if
+	 * the code point does not represent a value.
+	 */
+	function basicToDigit(codePoint) {
+		if (codePoint - 48 < 10) {
+			return codePoint - 22;
+		}
+		if (codePoint - 65 < 26) {
+			return codePoint - 65;
+		}
+		if (codePoint - 97 < 26) {
+			return codePoint - 97;
+		}
+		return base;
+	}
+
+	/**
+	 * Converts a digit/integer into a basic code point.
+	 * @see `basicToDigit()`
+	 * @private
+	 * @param {Number} digit The numeric value of a basic code point.
+	 * @returns {Number} The basic code point whose value (when used for
+	 * representing integers) is `digit`, which needs to be in the range
+	 * `0` to `base - 1`. If `flag` is non-zero, the uppercase form is
+	 * used; else, the lowercase form is used. The behavior is undefined
+	 * if `flag` is non-zero and `digit` has no uppercase form.
+	 */
+	function digitToBasic(digit, flag) {
+		//  0..25 map to ASCII a..z or A..Z
+		// 26..35 map to ASCII 0..9
+		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
+	}
+
+	/**
+	 * Bias adaptation function as per section 3.4 of RFC 3492.
+	 * https://tools.ietf.org/html/rfc3492#section-3.4
+	 * @private
+	 */
+	function adapt(delta, numPoints, firstTime) {
+		var k = 0;
+		delta = firstTime ? floor(delta / damp) : delta >> 1;
+		delta += floor(delta / numPoints);
+		for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
+			delta = floor(delta / baseMinusTMin);
+		}
+		return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
+	}
+
+	/**
+	 * Converts a Punycode string of ASCII-only symbols to a string of Unicode
+	 * symbols.
+	 * @memberOf punycode
+	 * @param {String} input The Punycode string of ASCII-only symbols.
+	 * @returns {String} The resulting string of Unicode symbols.
+	 */
+	function decode(input) {
+		// Don't use UCS-2
+		var output = [],
+		    inputLength = input.length,
+		    out,
+		    i = 0,
+		    n = initialN,
+		    bias = initialBias,
+		    basic,
+		    j,
+		    index,
+		    oldi,
+		    w,
+		    k,
+		    digit,
+		    t,
+		    /** Cached calculation results */
+		    baseMinusT;
+
+		// Handle the basic code points: let `basic` be the number of input code
+		// points before the last delimiter, or `0` if there is none, then copy
+		// the first basic code points to the output.
+
+		basic = input.lastIndexOf(delimiter);
+		if (basic < 0) {
+			basic = 0;
+		}
+
+		for (j = 0; j < basic; ++j) {
+			// if it's not a basic code point
+			if (input.charCodeAt(j) >= 0x80) {
+				error('not-basic');
+			}
+			output.push(input.charCodeAt(j));
+		}
+
+		// Main decoding loop: start just after the last delimiter if any basic code
+		// points were copied; start at the beginning otherwise.
+
+		for (index = basic > 0 ? basic + 1 : 0; index < inputLength; /* no final expression */) {
+
+			// `index` is the index of the next character to be consumed.
+			// Decode a generalized variable-length integer into `delta`,
+			// which gets added to `i`. The overflow checking is easier
+			// if we increase `i` as we go, then subtract off its starting
+			// value at the end to obtain `delta`.
+			for (oldi = i, w = 1, k = base; /* no condition */; k += base) {
+
+				if (index >= inputLength) {
+					error('invalid-input');
+				}
+
+				digit = basicToDigit(input.charCodeAt(index++));
+
+				if (digit >= base || digit > floor((maxInt - i) / w)) {
+					error('overflow');
+				}
+
+				i += digit * w;
+				t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
+
+				if (digit < t) {
+					break;
+				}
+
+				baseMinusT = base - t;
+				if (w > floor(maxInt / baseMinusT)) {
+					error('overflow');
+				}
+
+				w *= baseMinusT;
+
+			}
+
+			out = output.length + 1;
+			bias = adapt(i - oldi, out, oldi == 0);
+
+			// `i` was supposed to wrap around from `out` to `0`,
+			// incrementing `n` each time, so we'll fix that now:
+			if (floor(i / out) > maxInt - n) {
+				error('overflow');
+			}
+
+			n += floor(i / out);
+			i %= out;
+
+			// Insert `n` at position `i` of the output
+			output.splice(i++, 0, n);
+
+		}
+
+		return ucs2encode(output);
+	}
+
+	/**
+	 * Converts a string of Unicode symbols (e.g. a domain name label) to a
+	 * Punycode string of ASCII-only symbols.
+	 * @memberOf punycode
+	 * @param {String} input The string of Unicode symbols.
+	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
+	 */
+	function encode(input) {
+		var n,
+		    delta,
+		    handledCPCount,
+		    basicLength,
+		    bias,
+		    j,
+		    m,
+		    q,
+		    k,
+		    t,
+		    currentValue,
+		    output = [],
+		    /** `inputLength` will hold the number of code points in `input`. */
+		    inputLength,
+		    /** Cached calculation results */
+		    handledCPCountPlusOne,
+		    baseMinusT,
+		    qMinusT;
+
+		// Convert the input in UCS-2 to Unicode
+		input = ucs2decode(input);
+
+		// Cache the length
+		inputLength = input.length;
+
+		// Initialize the state
+		n = initialN;
+		delta = 0;
+		bias = initialBias;
+
+		// Handle the basic code points
+		for (j = 0; j < inputLength; ++j) {
+			currentValue = input[j];
+			if (currentValue < 0x80) {
+				output.push(stringFromCharCode(currentValue));
+			}
+		}
+
+		handledCPCount = basicLength = output.length;
+
+		// `handledCPCount` is the number of code points that have been handled;
+		// `basicLength` is the number of basic code points.
+
+		// Finish the basic string - if it is not empty - with a delimiter
+		if (basicLength) {
+			output.push(delimiter);
+		}
+
+		// Main encoding loop:
+		while (handledCPCount < inputLength) {
+
+			// All non-basic code points < n have been handled already. Find the next
+			// larger one:
+			for (m = maxInt, j = 0; j < inputLength; ++j) {
+				currentValue = input[j];
+				if (currentValue >= n && currentValue < m) {
+					m = currentValue;
+				}
+			}
+
+			// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
+			// but guard against overflow
+			handledCPCountPlusOne = handledCPCount + 1;
+			if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
+				error('overflow');
+			}
+
+			delta += (m - n) * handledCPCountPlusOne;
+			n = m;
+
+			for (j = 0; j < inputLength; ++j) {
+				currentValue = input[j];
+
+				if (currentValue < n && ++delta > maxInt) {
+					error('overflow');
+				}
+
+				if (currentValue == n) {
+					// Represent delta as a generalized variable-length integer
+					for (q = delta, k = base; /* no condition */; k += base) {
+						t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
+						if (q < t) {
+							break;
+						}
+						qMinusT = q - t;
+						baseMinusT = base - t;
+						output.push(
+							stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
+						);
+						q = floor(qMinusT / baseMinusT);
+					}
+
+					output.push(stringFromCharCode(digitToBasic(q, 0)));
+					bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
+					delta = 0;
+					++handledCPCount;
+				}
+			}
+
+			++delta;
+			++n;
+
+		}
+		return output.join('');
+	}
+
+	/**
+	 * Converts a Punycode string representing a domain name or an email address
+	 * to Unicode. Only the Punycoded parts of the input will be converted, i.e.
+	 * it doesn't matter if you call it on a string that has already been
+	 * converted to Unicode.
+	 * @memberOf punycode
+	 * @param {String} input The Punycoded domain name or email address to
+	 * convert to Unicode.
+	 * @returns {String} The Unicode representation of the given Punycode
+	 * string.
+	 */
+	function toUnicode(input) {
+		return mapDomain(input, function(string) {
+			return regexPunycode.test(string)
+				? decode(string.slice(4).toLowerCase())
+				: string;
+		});
+	}
+
+	/**
+	 * Converts a Unicode string representing a domain name or an email address to
+	 * Punycode. Only the non-ASCII parts of the domain name will be converted,
+	 * i.e. it doesn't matter if you call it with a domain that's already in
+	 * ASCII.
+	 * @memberOf punycode
+	 * @param {String} input The domain name or email address to convert, as a
+	 * Unicode string.
+	 * @returns {String} The Punycode representation of the given domain name or
+	 * email address.
+	 */
+	function toASCII(input) {
+		return mapDomain(input, function(string) {
+			return regexNonASCII.test(string)
+				? 'xn--' + encode(string)
+				: string;
+		});
+	}
+
+	/*--------------------------------------------------------------------------*/
+
+	/** Define the public API */
+	punycode = {
+		/**
+		 * A string representing the current Punycode.js version number.
+		 * @memberOf punycode
+		 * @type String
+		 */
+		'version': '1.4.1',
+		/**
+		 * An object of methods to convert from JavaScript's internal character
+		 * representation (UCS-2) to Unicode code points, and back.
+		 * @see <https://mathiasbynens.be/notes/javascript-encoding>
+		 * @memberOf punycode
+		 * @type Object
+		 */
+		'ucs2': {
+			'decode': ucs2decode,
+			'encode': ucs2encode
+		},
+		'decode': decode,
+		'encode': encode,
+		'toASCII': toASCII,
+		'toUnicode': toUnicode
+	};
+
+	/** Expose `punycode` */
+	// Some AMD build optimizers, like r.js, check for specific condition patterns
+	// like the following:
+	if (
+		true
+	) {
+		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+			return punycode;
+		}).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+
+}(this));
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/module.js */ "./node_modules/next/node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -20540,12 +21144,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -21180,543 +21784,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
-
-/***/ }),
-
-/***/ "./node_modules/punycode/punycode.js":
-/*!*******************************************!*\
-  !*** ./node_modules/punycode/punycode.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.3.2 by @mathias */
-;(function(root) {
-
-	/** Detect free variables */
-	var freeExports =  true && exports &&
-		!exports.nodeType && exports;
-	var freeModule =  true && module &&
-		!module.nodeType && module;
-	var freeGlobal = typeof global == 'object' && global;
-	if (
-		freeGlobal.global === freeGlobal ||
-		freeGlobal.window === freeGlobal ||
-		freeGlobal.self === freeGlobal
-	) {
-		root = freeGlobal;
-	}
-
-	/**
-	 * The `punycode` object.
-	 * @name punycode
-	 * @type Object
-	 */
-	var punycode,
-
-	/** Highest positive signed 32-bit float value */
-	maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
-
-	/** Bootstring parameters */
-	base = 36,
-	tMin = 1,
-	tMax = 26,
-	skew = 38,
-	damp = 700,
-	initialBias = 72,
-	initialN = 128, // 0x80
-	delimiter = '-', // '\x2D'
-
-	/** Regular expressions */
-	regexPunycode = /^xn--/,
-	regexNonASCII = /[^\x20-\x7E]/, // unprintable ASCII chars + non-ASCII chars
-	regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g, // RFC 3490 separators
-
-	/** Error messages */
-	errors = {
-		'overflow': 'Overflow: input needs wider integers to process',
-		'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
-		'invalid-input': 'Invalid input'
-	},
-
-	/** Convenience shortcuts */
-	baseMinusTMin = base - tMin,
-	floor = Math.floor,
-	stringFromCharCode = String.fromCharCode,
-
-	/** Temporary variable */
-	key;
-
-	/*--------------------------------------------------------------------------*/
-
-	/**
-	 * A generic error utility function.
-	 * @private
-	 * @param {String} type The error type.
-	 * @returns {Error} Throws a `RangeError` with the applicable error message.
-	 */
-	function error(type) {
-		throw RangeError(errors[type]);
-	}
-
-	/**
-	 * A generic `Array#map` utility function.
-	 * @private
-	 * @param {Array} array The array to iterate over.
-	 * @param {Function} callback The function that gets called for every array
-	 * item.
-	 * @returns {Array} A new array of values returned by the callback function.
-	 */
-	function map(array, fn) {
-		var length = array.length;
-		var result = [];
-		while (length--) {
-			result[length] = fn(array[length]);
-		}
-		return result;
-	}
-
-	/**
-	 * A simple `Array#map`-like wrapper to work with domain name strings or email
-	 * addresses.
-	 * @private
-	 * @param {String} domain The domain name or email address.
-	 * @param {Function} callback The function that gets called for every
-	 * character.
-	 * @returns {Array} A new string of characters returned by the callback
-	 * function.
-	 */
-	function mapDomain(string, fn) {
-		var parts = string.split('@');
-		var result = '';
-		if (parts.length > 1) {
-			// In email addresses, only the domain name should be punycoded. Leave
-			// the local part (i.e. everything up to `@`) intact.
-			result = parts[0] + '@';
-			string = parts[1];
-		}
-		// Avoid `split(regex)` for IE8 compatibility. See #17.
-		string = string.replace(regexSeparators, '\x2E');
-		var labels = string.split('.');
-		var encoded = map(labels, fn).join('.');
-		return result + encoded;
-	}
-
-	/**
-	 * Creates an array containing the numeric code points of each Unicode
-	 * character in the string. While JavaScript uses UCS-2 internally,
-	 * this function will convert a pair of surrogate halves (each of which
-	 * UCS-2 exposes as separate characters) into a single code point,
-	 * matching UTF-16.
-	 * @see `punycode.ucs2.encode`
-	 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-	 * @memberOf punycode.ucs2
-	 * @name decode
-	 * @param {String} string The Unicode input string (UCS-2).
-	 * @returns {Array} The new array of code points.
-	 */
-	function ucs2decode(string) {
-		var output = [],
-		    counter = 0,
-		    length = string.length,
-		    value,
-		    extra;
-		while (counter < length) {
-			value = string.charCodeAt(counter++);
-			if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
-				// high surrogate, and there is a next character
-				extra = string.charCodeAt(counter++);
-				if ((extra & 0xFC00) == 0xDC00) { // low surrogate
-					output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
-				} else {
-					// unmatched surrogate; only append this code unit, in case the next
-					// code unit is the high surrogate of a surrogate pair
-					output.push(value);
-					counter--;
-				}
-			} else {
-				output.push(value);
-			}
-		}
-		return output;
-	}
-
-	/**
-	 * Creates a string based on an array of numeric code points.
-	 * @see `punycode.ucs2.decode`
-	 * @memberOf punycode.ucs2
-	 * @name encode
-	 * @param {Array} codePoints The array of numeric code points.
-	 * @returns {String} The new Unicode string (UCS-2).
-	 */
-	function ucs2encode(array) {
-		return map(array, function(value) {
-			var output = '';
-			if (value > 0xFFFF) {
-				value -= 0x10000;
-				output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
-				value = 0xDC00 | value & 0x3FF;
-			}
-			output += stringFromCharCode(value);
-			return output;
-		}).join('');
-	}
-
-	/**
-	 * Converts a basic code point into a digit/integer.
-	 * @see `digitToBasic()`
-	 * @private
-	 * @param {Number} codePoint The basic numeric code point value.
-	 * @returns {Number} The numeric value of a basic code point (for use in
-	 * representing integers) in the range `0` to `base - 1`, or `base` if
-	 * the code point does not represent a value.
-	 */
-	function basicToDigit(codePoint) {
-		if (codePoint - 48 < 10) {
-			return codePoint - 22;
-		}
-		if (codePoint - 65 < 26) {
-			return codePoint - 65;
-		}
-		if (codePoint - 97 < 26) {
-			return codePoint - 97;
-		}
-		return base;
-	}
-
-	/**
-	 * Converts a digit/integer into a basic code point.
-	 * @see `basicToDigit()`
-	 * @private
-	 * @param {Number} digit The numeric value of a basic code point.
-	 * @returns {Number} The basic code point whose value (when used for
-	 * representing integers) is `digit`, which needs to be in the range
-	 * `0` to `base - 1`. If `flag` is non-zero, the uppercase form is
-	 * used; else, the lowercase form is used. The behavior is undefined
-	 * if `flag` is non-zero and `digit` has no uppercase form.
-	 */
-	function digitToBasic(digit, flag) {
-		//  0..25 map to ASCII a..z or A..Z
-		// 26..35 map to ASCII 0..9
-		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
-	}
-
-	/**
-	 * Bias adaptation function as per section 3.4 of RFC 3492.
-	 * http://tools.ietf.org/html/rfc3492#section-3.4
-	 * @private
-	 */
-	function adapt(delta, numPoints, firstTime) {
-		var k = 0;
-		delta = firstTime ? floor(delta / damp) : delta >> 1;
-		delta += floor(delta / numPoints);
-		for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
-			delta = floor(delta / baseMinusTMin);
-		}
-		return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
-	}
-
-	/**
-	 * Converts a Punycode string of ASCII-only symbols to a string of Unicode
-	 * symbols.
-	 * @memberOf punycode
-	 * @param {String} input The Punycode string of ASCII-only symbols.
-	 * @returns {String} The resulting string of Unicode symbols.
-	 */
-	function decode(input) {
-		// Don't use UCS-2
-		var output = [],
-		    inputLength = input.length,
-		    out,
-		    i = 0,
-		    n = initialN,
-		    bias = initialBias,
-		    basic,
-		    j,
-		    index,
-		    oldi,
-		    w,
-		    k,
-		    digit,
-		    t,
-		    /** Cached calculation results */
-		    baseMinusT;
-
-		// Handle the basic code points: let `basic` be the number of input code
-		// points before the last delimiter, or `0` if there is none, then copy
-		// the first basic code points to the output.
-
-		basic = input.lastIndexOf(delimiter);
-		if (basic < 0) {
-			basic = 0;
-		}
-
-		for (j = 0; j < basic; ++j) {
-			// if it's not a basic code point
-			if (input.charCodeAt(j) >= 0x80) {
-				error('not-basic');
-			}
-			output.push(input.charCodeAt(j));
-		}
-
-		// Main decoding loop: start just after the last delimiter if any basic code
-		// points were copied; start at the beginning otherwise.
-
-		for (index = basic > 0 ? basic + 1 : 0; index < inputLength; /* no final expression */) {
-
-			// `index` is the index of the next character to be consumed.
-			// Decode a generalized variable-length integer into `delta`,
-			// which gets added to `i`. The overflow checking is easier
-			// if we increase `i` as we go, then subtract off its starting
-			// value at the end to obtain `delta`.
-			for (oldi = i, w = 1, k = base; /* no condition */; k += base) {
-
-				if (index >= inputLength) {
-					error('invalid-input');
-				}
-
-				digit = basicToDigit(input.charCodeAt(index++));
-
-				if (digit >= base || digit > floor((maxInt - i) / w)) {
-					error('overflow');
-				}
-
-				i += digit * w;
-				t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-
-				if (digit < t) {
-					break;
-				}
-
-				baseMinusT = base - t;
-				if (w > floor(maxInt / baseMinusT)) {
-					error('overflow');
-				}
-
-				w *= baseMinusT;
-
-			}
-
-			out = output.length + 1;
-			bias = adapt(i - oldi, out, oldi == 0);
-
-			// `i` was supposed to wrap around from `out` to `0`,
-			// incrementing `n` each time, so we'll fix that now:
-			if (floor(i / out) > maxInt - n) {
-				error('overflow');
-			}
-
-			n += floor(i / out);
-			i %= out;
-
-			// Insert `n` at position `i` of the output
-			output.splice(i++, 0, n);
-
-		}
-
-		return ucs2encode(output);
-	}
-
-	/**
-	 * Converts a string of Unicode symbols (e.g. a domain name label) to a
-	 * Punycode string of ASCII-only symbols.
-	 * @memberOf punycode
-	 * @param {String} input The string of Unicode symbols.
-	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
-	 */
-	function encode(input) {
-		var n,
-		    delta,
-		    handledCPCount,
-		    basicLength,
-		    bias,
-		    j,
-		    m,
-		    q,
-		    k,
-		    t,
-		    currentValue,
-		    output = [],
-		    /** `inputLength` will hold the number of code points in `input`. */
-		    inputLength,
-		    /** Cached calculation results */
-		    handledCPCountPlusOne,
-		    baseMinusT,
-		    qMinusT;
-
-		// Convert the input in UCS-2 to Unicode
-		input = ucs2decode(input);
-
-		// Cache the length
-		inputLength = input.length;
-
-		// Initialize the state
-		n = initialN;
-		delta = 0;
-		bias = initialBias;
-
-		// Handle the basic code points
-		for (j = 0; j < inputLength; ++j) {
-			currentValue = input[j];
-			if (currentValue < 0x80) {
-				output.push(stringFromCharCode(currentValue));
-			}
-		}
-
-		handledCPCount = basicLength = output.length;
-
-		// `handledCPCount` is the number of code points that have been handled;
-		// `basicLength` is the number of basic code points.
-
-		// Finish the basic string - if it is not empty - with a delimiter
-		if (basicLength) {
-			output.push(delimiter);
-		}
-
-		// Main encoding loop:
-		while (handledCPCount < inputLength) {
-
-			// All non-basic code points < n have been handled already. Find the next
-			// larger one:
-			for (m = maxInt, j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-				if (currentValue >= n && currentValue < m) {
-					m = currentValue;
-				}
-			}
-
-			// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
-			// but guard against overflow
-			handledCPCountPlusOne = handledCPCount + 1;
-			if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
-				error('overflow');
-			}
-
-			delta += (m - n) * handledCPCountPlusOne;
-			n = m;
-
-			for (j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-
-				if (currentValue < n && ++delta > maxInt) {
-					error('overflow');
-				}
-
-				if (currentValue == n) {
-					// Represent delta as a generalized variable-length integer
-					for (q = delta, k = base; /* no condition */; k += base) {
-						t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-						if (q < t) {
-							break;
-						}
-						qMinusT = q - t;
-						baseMinusT = base - t;
-						output.push(
-							stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
-						);
-						q = floor(qMinusT / baseMinusT);
-					}
-
-					output.push(stringFromCharCode(digitToBasic(q, 0)));
-					bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
-					delta = 0;
-					++handledCPCount;
-				}
-			}
-
-			++delta;
-			++n;
-
-		}
-		return output.join('');
-	}
-
-	/**
-	 * Converts a Punycode string representing a domain name or an email address
-	 * to Unicode. Only the Punycoded parts of the input will be converted, i.e.
-	 * it doesn't matter if you call it on a string that has already been
-	 * converted to Unicode.
-	 * @memberOf punycode
-	 * @param {String} input The Punycoded domain name or email address to
-	 * convert to Unicode.
-	 * @returns {String} The Unicode representation of the given Punycode
-	 * string.
-	 */
-	function toUnicode(input) {
-		return mapDomain(input, function(string) {
-			return regexPunycode.test(string)
-				? decode(string.slice(4).toLowerCase())
-				: string;
-		});
-	}
-
-	/**
-	 * Converts a Unicode string representing a domain name or an email address to
-	 * Punycode. Only the non-ASCII parts of the domain name will be converted,
-	 * i.e. it doesn't matter if you call it with a domain that's already in
-	 * ASCII.
-	 * @memberOf punycode
-	 * @param {String} input The domain name or email address to convert, as a
-	 * Unicode string.
-	 * @returns {String} The Punycode representation of the given domain name or
-	 * email address.
-	 */
-	function toASCII(input) {
-		return mapDomain(input, function(string) {
-			return regexNonASCII.test(string)
-				? 'xn--' + encode(string)
-				: string;
-		});
-	}
-
-	/*--------------------------------------------------------------------------*/
-
-	/** Define the public API */
-	punycode = {
-		/**
-		 * A string representing the current Punycode.js version number.
-		 * @memberOf punycode
-		 * @type String
-		 */
-		'version': '1.3.2',
-		/**
-		 * An object of methods to convert from JavaScript's internal character
-		 * representation (UCS-2) to Unicode code points, and back.
-		 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-		 * @memberOf punycode
-		 * @type Object
-		 */
-		'ucs2': {
-			'decode': ucs2decode,
-			'encode': ucs2encode
-		},
-		'decode': decode,
-		'encode': encode,
-		'toASCII': toASCII,
-		'toUnicode': toUnicode
-	};
-
-	/** Expose `punycode` */
-	// Some AMD build optimizers, like r.js, check for specific condition patterns
-	// like the following:
-	if (
-		true
-	) {
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
-			return punycode;
-		}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-
-}(this));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../next/node_modules/webpack/buildin/module.js */ "./node_modules/next/node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -21931,12 +22004,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -22210,12 +22283,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_129a35c7ec57967eb265 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_129a35c7ec57967eb265 */ "dll-reference dll_129a35c7ec57967eb265"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -23045,7 +23118,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var punycode = __webpack_require__(/*! punycode */ "./node_modules/punycode/punycode.js");
+var punycode = __webpack_require__(/*! punycode */ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js");
 var util = __webpack_require__(/*! ./util */ "./node_modules/url/util.js");
 
 exports.parse = urlParse;
@@ -23814,14 +23887,14 @@ module.exports = __webpack_require__(/*! ./node_modules/next/dist/client/next-de
 
 /***/ }),
 
-/***/ "dll-reference dll_129a35c7ec57967eb265":
+/***/ "dll-reference dll_b35e09dc2ca94ac6d9c1":
 /*!*******************************************!*\
-  !*** external "dll_129a35c7ec57967eb265" ***!
+  !*** external "dll_b35e09dc2ca94ac6d9c1" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_129a35c7ec57967eb265;
+module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 

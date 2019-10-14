@@ -2,23 +2,29 @@ name: Rule
 status: Verified
 examples:
   - id: rule-large
-    name: 'Large'
+    name: Large
     markup: |
       <h2 class="spectrum-Heading--subtitle1">Large</h2>
       <hr class="spectrum-Rule spectrum-Rule--large">
       <p class="spectrum-Body">Page or Section Titles.</p>
   - id: rule-medium
-    name: 'Medium'
-    markup: |
+    name: Medium
+    markup: >
       <h3 class="spectrum-Heading--subtitle2">Medium</h3>
+
       <hr class="spectrum-Rule spectrum-Rule--medium">
-      <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
+
+      <p class="spectrum-Body">Divide subsections, or divide different groups of
+      elements (between panels, rails, etc.)</p>
   - id: rule-small
-    name: 'Small'
-    markup: |
+    name: Small
+    markup: >
       <h4 class="spectrum-Heading--subtitle3">Small</h4>
+
       <hr class="spectrum-Rule spectrum-Rule--small">
-      <p class="spectrum-Body">Divide like-elements (tables, tool groups, elements within a panel, etc.)</p>
+
+      <p class="spectrum-Body">Divide like-elements (tables, tool groups,
+      elements within a panel, etc.)</p>
   - id: rule-vertical-small
     name: 'Vertical, Small'
     markup: |
@@ -59,3 +65,61 @@ examples:
           </button>
         </div>
       </div>
+packageName: rule
+indexCSS: |
+  .spectrum-Rule {
+    width: 100%;
+    overflow: visible;
+
+    border: none;
+    border-width: var(--spectrum-rule-medium-height, var(--spectrum-global-dimension-static-size-25));
+    border-radius: var(--spectrum-rule-medium-height, var(--spectrum-global-dimension-static-size-25));
+  }
+
+  .spectrum-Rule--large {
+    height: var(--spectrum-rule-large-height, var(--spectrum-global-dimension-static-size-50));
+
+    border-radius: var(--spectrum-rule-large-border-radius, var(--spectrum-global-dimension-static-size-25));
+  }
+
+  .spectrum-Rule--medium {
+    height: var(--spectrum-rule-medium-height, var(--spectrum-global-dimension-static-size-25));
+
+    border-radius: var(--spectrum-rule-medium-border-radius, var(--spectrum-global-dimension-static-size-10));
+  }
+
+  .spectrum-Rule--small {
+    height: var(--spectrum-rule-small-height, var(--spectrum-global-dimension-static-size-10));
+
+    border-radius: var(--spectrum-rule-small-border-radius, var(--spectrum-global-dimension-static-size-10));
+  }
+
+  .spectrum-Rule--vertical {
+    height: 100%;
+  }
+
+  .spectrum-Rule--vertical.spectrum-Rule--large {
+      width: var(--spectrum-rule-large-height, var(--spectrum-global-dimension-static-size-50));
+    }
+
+  .spectrum-Rule--vertical.spectrum-Rule--medium {
+      width: var(--spectrum-rule-medium-height, var(--spectrum-global-dimension-static-size-25));
+    }
+
+  .spectrum-Rule--vertical.spectrum-Rule--small {
+      width: var(--spectrum-rule-small-height, var(--spectrum-global-dimension-static-size-10));
+    }
+
+  .spectrum-Rule--large {
+    background-color: var(--spectrum-rule-large-background-color, var(--spectrum-global-color-gray-800));
+  }
+
+  .spectrum-Rule--medium {
+    background-color: var(--spectrum-rule-medium-background-color, var(--spectrum-global-color-gray-300));
+  }
+
+  .spectrum-Rule--small {
+    background-color: var(--spectrum-rule-small-background-color, var(--spectrum-global-color-gray-300));
+  }
+peerDependencies: {}
+peerCSS: ''

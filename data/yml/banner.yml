@@ -24,10 +24,49 @@ examples:
   - id: banner-corner
     name: Corner Placement
     description: The Spectrum banner 'corner placement'
-    markup: |
-      <div style="width: 255px; height: 325px; background-color: #ccc; position: relative;">
+    markup: >
+      <div style="width: 255px; height: 325px; background-color: #ccc; position:
+      relative;">
         <div class="spectrum-Banner spectrum-Banner--info spectrum-Banner--corner">
           <div class="spectrum-Banner-header">Most Popular</div>
           <div class="spectrum-Banner-content">Includes Illustrator CC</div>
         </div>
       </div>
+packageName: banner
+indexCSS: |
+  .spectrum-Banner {
+    display: inline-block;
+    border-radius: var(--spectrum-banner-border-radius, var(--spectrum-global-dimension-static-size-100));
+    padding: var(--spectrum-banner-padding-y, var(--spectrum-global-dimension-static-size-50)) var(--spectrum-banner-padding-x, var(--spectrum-global-dimension-static-size-100));
+    font-size: var(--spectrum-banner-text-size, var(--spectrum-global-dimension-font-size-75));
+    line-height: var(--spectrum-banner-text-line-height, var(--spectrum-alias-heading-text-line-height));
+  }
+
+  .spectrum-Banner-header {
+    font-weight: bold;
+  }
+
+  .spectrum-Banner--corner {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+
+  .spectrum-Banner {
+    color: var(--spectrum-banner-text-color, var(--spectrum-global-color-static-white));
+  }
+
+  .spectrum-Banner--info {
+    background-color: var(--spectrum-banner-info-background-color, var(--spectrum-semantic-informative-color-default));
+  }
+
+  .spectrum-Banner--warning {
+    background-color: var(--spectrum-banner-warning-background-color, var(--spectrum-semantic-notice-color-default));
+  }
+
+  .spectrum-Banner--error {
+    background-color: var(--spectrum-banner-error-background-color, var(--spectrum-semantic-negative-color-default));
+  }
+peerDependencies:
+  '@spectrum-css/vars': ^2.0.0
+peerCSS: ''
