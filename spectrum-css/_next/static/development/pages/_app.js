@@ -57,7 +57,7 @@ function (_React$Component) {
 
       return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
         href: "/",
-        as: "/",
+        as: "".concat("", "/"),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
@@ -87,7 +87,7 @@ function (_React$Component) {
         __self: this
       }, __jsx("img", (_jsx = {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.svgLogo,
-        src: "/static/adobe_logo-2.svg",
+        src: "".concat("", "/static/adobe_logo-2.svg"),
         alt: "Adobe Logo"
       }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "className", _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logo), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "__source", {
         fileName: _jsxFileName,
@@ -32932,7 +32932,9 @@ function (_App) {
       }, __jsx("div", {
         style: {
           display: 'flex',
-          justifyContent: 'flex-end'
+          justifyContent: 'flex-end',
+          position: 'absolute',
+          right: 0
         },
         __source: {
           fileName: _jsxFileName,

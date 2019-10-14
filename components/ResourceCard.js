@@ -26,6 +26,15 @@ class ResourceCard extends React.Component {
             {
               props.type === 'react' ? <img src="/static/thumbnail_react@2x.png"/> : undefined
             }
+            {
+              props.type === 'Spectrum' ? <img src="/static/thumbnail_spectrum.svg"/> : undefined
+            }
+            {
+              props.type === 'GitHub' ? <img src="/static/thumbnail_github.svg"/> : undefined
+            }
+            {
+              props.type === 'NPM' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_npm.svg`}/> : undefined
+            }
 
           </div>
           <div className={styles.content}>
@@ -38,7 +47,7 @@ class ResourceCard extends React.Component {
           </div>
         </div>
         </button>
-     
+
     )
 
   }

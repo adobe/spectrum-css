@@ -1,0 +1,53 @@
+:local(.pageContainer) {
+    position: relative;
+  }
+  :local(.resources) {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  :local(.code) {
+    border:5px solid blue;
+  }
+  :local(.linkList) {
+    list-style: none;
+    margin:0;
+    padding:0;
+    li {
+      margin-bottom:6px;
+    }
+  }
+  :local(.headerRow) {
+    margin-bottom:40px;
+  }
+  :local(.cta) {
+    margin-top:32px;
+  }
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+  :local(.versionTable) {
+    width:100%;
+  }
+  :local(.resourceRow) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom:80px;
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
+  }
+  :local(.pageContainer) {
+    opacity: 0;
+    transition:  opacity 125ms ease-in-out;
+  }
+  
+  :global(.wf-active) {
+    & :local(.pageContainer) {
+      opacity: 1;
+    }
+  }
+
+  :global(.test1) {
+    border:1px solid red;
+  }
