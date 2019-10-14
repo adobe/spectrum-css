@@ -37,13 +37,10 @@
   bottom:0px;
   width:248px;
   @media screen and (max-width: 960px) {
-    left: -248px;
-    opacity:0;
-    transition: left 100ms ease-in-out;
+    transform: translate3d(-248px, 0, 0);
+    transition: transform 100ms ease-in-out;
     &:local(.menuOpen) {
-      left:0px;
-      opacity:1;
-      transition: left 100ms ease-in-out;
+      transform: translate3d(0, 0, 0);
     }
   }
 }

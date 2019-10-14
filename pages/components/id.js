@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { withRouter } from "next/router";
-import styles from "../../css/main.scss";
+import Prism from "prismjs";
+import 'prismjs/themes/prism.css';
 import classNames from "classnames";
 import StatusLight from '@react/react-spectrum/StatusLight';
+import styles from "../../css/main.scss";
 import ResourceCard from '../../components/ResourceCard';
 import "../../css/componentpage.css";
+import {Helmet} from "react-helmet";
+
 
 async function loadData(id) {
   let data = await import(`../../data/yml/${id}.yml`);
@@ -42,6 +46,10 @@ class Page extends React.Component {
     }
     return (
         <article className={classNames('spectrum-CSSComponent', "afg-container-fluid", styles.mainContainer)}>
+          <Helmet>
+            <meta name="Description" content={this.props.pageData.description}/>
+            <title> {this.props.pageData.name} - Spectrum CSS</title>
+          </Helmet>
           <style>{`${this.props.pageData.peerCSS}${this.props.pageData.indexCSS}`}</style>
           <header className="spectrum-CSSComponent-heading" id="banner">
             <h2 className="spectrum-CSSComponent-title spectrum-Article spectrum-Heading1--display">
@@ -172,7 +180,7 @@ class Page extends React.Component {
                       Show markup
                     </a>
                     <pre>
-                      <code className="language-markup">
+                      <code className="language-html language-markup">
                         {example.markup}
                       </code>
                     </pre>

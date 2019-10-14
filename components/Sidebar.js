@@ -33,6 +33,9 @@ class Sidebar extends React.Component {
       menuOpen: false
     };
   }
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions.bind(this));
+  }
   componentWillReceiveProps(nextProps) {
     const selected = menuData.key.find(item => {
       return item.url === nextProps.router.query.id;
@@ -49,12 +52,17 @@ class Sidebar extends React.Component {
       }
     }
   }
-  openMenu = () => {
+  updateDimensions(e) {
+    if(this.state.menuOpen && window.innerWidth >= 960) {
+      this.closeMenu();
+    }
+  }
+  openMenu() {
     this.setState({
       menuOpen: true
     });
   };
-  closeMenu = () => {
+  closeMenu() {
     this.setState({
       menuOpen: false
     });

@@ -53,7 +53,6 @@ class MyApp extends App {
 
   updateDimensions = () => {
     this.setState((state, props) => {
-      console.log(this.scaleSelector.current)
       this.scaleSelector.current.state.value = window.innerWidth < 768 ? 'large' : 'medium';
       return {
         scale: window.innerWidth < 768 ? 'large' : 'medium'
