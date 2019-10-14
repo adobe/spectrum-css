@@ -1,7 +1,7 @@
 # Spectrum CSS [![Build Status](https://travis-ci.org/adobe/spectrum-css.svg?branch=master)](https://travis-ci.org/adobe/spectrum-css)
 
 Spectrum CSS provides a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
-
+## What's in this Document
 1. [Show me a demo](#show-me-a-demo)
 1. [Where is the JavaScript?](#where-is-the-javascript)
 1. [Using Spectrum CSS](#using-spectrum-css)
