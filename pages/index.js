@@ -2,10 +2,9 @@ import React from 'react'
 import {Helmet} from "react-helmet";
 import PageHeader from '../components/PageHeader';
 import HeroImage from '../components/HeroImage';
-import styles from '../components/css/page.scss';
 
 const Home = () => (
-  <div style={{overflow: 'hidden'}} className={styles.pageContainer}>
+  <div style={{overflow: 'hidden', position: "relative"}}>
     <Helmet>
       <meta name="Description" content=""/>
       <title>Spectrum CSS</title>

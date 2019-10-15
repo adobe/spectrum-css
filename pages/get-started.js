@@ -8,10 +8,9 @@ import Highlight from 'react-highlight.js';
 import compStyles from '../components/css/componentPage.scss';
 import classNames from "classnames";
 import Markdown from '../components/Markdown';
-import styles from '../components/css/page.scss';
 
 const GetStarted = () => (
-  <div style={{overflow: 'hidden'}} className={styles.pageContainer}>
+  <div style={{overflow: 'hidden', position: "relative"}}>
     <Helmet>
       <meta name="Description" content=""/>
       <title>Get Started - Spectrum CSS</title>
