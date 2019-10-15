@@ -10,13 +10,13 @@ import classNames from 'classnames';
 import styles from '../css/main.scss';
 import { withRouter, Router } from 'next/router';
 
-import '@adobe/spectrum-css/dist/vars/spectrum-dark-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-light-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-large-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-global-unique.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-dark.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-darkest.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-light.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-lightest.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-large.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-medium.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-global.css';
 
 //import regeneratorRuntime from "regenerator-runtime";
 
