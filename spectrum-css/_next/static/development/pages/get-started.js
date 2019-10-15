@@ -1,5 +1,117 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/get-started.js"],{
 
+/***/ "./components/PageHeader.js":
+/*!**********************************!*\
+  !*** ./components/PageHeader.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/pageHeader.scss */ "./components/css/pageHeader.scss");
+/* harmony import */ var _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/PageHeader.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var PageHeader = function PageHeader(props) {
+  return __jsx("div", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('afg-row', _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_1___default.a.headerRow),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "afg-col-xs-9 spectrum-Article",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("h1", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('spectrum-Heading1--display', _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_1___default.a.pageHeading),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, props.title)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PageHeader);
+
+/***/ }),
+
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fget-started&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fget-started.js!./":
 /*!*********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fget-started&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fget-started.js ***!
@@ -2224,22 +2336,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/lib/Helmet.js");
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_PageHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/PageHeader */ "./components/PageHeader.js");
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/get-started.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 var GetStarted = function GetStarted() {
-  return __jsx("div", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: this
   }, __jsx("meta", {
@@ -2247,23 +2355,37 @@ var GetStarted = function GetStarted() {
     content: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     __self: this
   }), __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
-  }, "Spectrum CSS")), "Get Started Content");
+  }, "Get Started - Spectrum CSS")), __jsx(_components_PageHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "Get Started with Spectrum CSS",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }), __jsx("p", {
+    className: "spectrum-Body2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "Spectrum CSS is an open-source implementation of Spectrum, Adobe\u2019s design system. It includes components and resources to make applications more cohesive."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (GetStarted);
 
 /***/ }),
 
-/***/ 122:
+/***/ 125:
 /*!*************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fget-started&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fget-started.js ***!
   \*************************************************************************************************************************************************/
@@ -2286,5 +2408,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[122,"static/runtime/webpack.js"]]]);
+},[[125,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=get-started.js.map

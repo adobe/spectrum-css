@@ -105,7 +105,7 @@ function (_React$Component) {
           lineNumber: 27
         },
         __self: this
-      }, "Spectrum"), undefined === "internal" || undefined === "both" ? __jsx("div", {
+      }, "Spectrum CSS"), undefined === "internal" || undefined === "both" ? __jsx("div", {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.internal,
         __source: {
           fileName: _jsxFileName,

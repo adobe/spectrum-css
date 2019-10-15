@@ -34660,7 +34660,7 @@ exports.EVENTS = {
     They should probably be removed eventually.
 */
 __export(__webpack_require__(/*! ./FeedHandler */ "./node_modules/htmlparser2/lib/FeedHandler.js"));
-__export(__webpack_require__(/*! ./WritableStream */ 111));
+__export(__webpack_require__(/*! ./WritableStream */ 113));
 __export(__webpack_require__(/*! ./CollectingHandler */ "./node_modules/htmlparser2/lib/CollectingHandler.js"));
 var DomUtils = __importStar(__webpack_require__(/*! domutils */ "./node_modules/domutils/lib/index.js"));
 exports.DomUtils = DomUtils;
@@ -54066,7 +54066,7 @@ function (_React$Component3) {
         __self: this
       }), __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_16__["default"], {
         type: "GitHub",
-        url: "#",
+        url: "https://github.com/adobe/spectrum-css/tree/master/components/".concat(this.props.pageData.packageSlug),
         title: "View repository",
         subTitle: "Github",
         __source: {
@@ -54076,7 +54076,7 @@ function (_React$Component3) {
         __self: this
       }), __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_16__["default"], {
         type: "NPM",
-        url: "#",
+        url: "https://www.npmjs.com/package/".concat(this.props.pageData.packageName),
         title: "View package",
         subTitle: "NPM",
         __source: {
@@ -54191,18 +54191,7 @@ function () {
 
 /***/ }),
 
-/***/ 111:
-/*!**********************************!*\
-  !*** ./WritableStream (ignored) ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 99:
+/***/ 101:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js ***!
   \*********************************************************************************************************************************************************/
@@ -54211,6 +54200,17 @@ function () {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js!./");
 
+
+/***/ }),
+
+/***/ 113:
+/*!**********************************!*\
+  !*** ./WritableStream (ignored) ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 
@@ -54225,5 +54225,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[99,"static/runtime/webpack.js","styles"]]]);
+},[[101,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=id.js.map
