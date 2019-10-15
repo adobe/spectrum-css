@@ -1,0 +1,35 @@
+:local(.width) {
+  img {
+    display: block;
+  }
+}
+
+:local(.responsiveImage) {
+  img {
+    display: block;
+  } 
+}
+
+:local(.Anatomy) {
+  display: flex;
+  align-items: center;
+}
+
+// :local(.imageContainer) {
+//   background-color: var(--spectrum-global-color-gray-100);
+// }
+
+:local(.hasMobile) {
+  :local(.mobile) {
+    display:none;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  :local(.desktop) {
+    display: block;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}

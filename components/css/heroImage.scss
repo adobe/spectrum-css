@@ -1,0 +1,19 @@
+:local(.heroContainer) {
+    overflow:hidden;
+    border-radius: 4px;
+  &:local(.Standard) {
+    width: 100%;
+    background-color: var(--spectrum-global-color-gray-100);
+    display: flex;
+    justify-content: center;
+  }
+  &:local(.Illustration) {
+    img {
+      width:100%;
+    }
+  }
+}
+
+:local(.row) {
+  margin-bottom: 56px;
+}

@@ -31,7 +31,7 @@ class Logo extends React.Component {
                   "spectrum-Heading3"
                 )}
               >
-                Spectrum
+                Spectrum CSS
               </h2>
               {process.env.build === "internal" ||
               process.env.build === "both" ? (
