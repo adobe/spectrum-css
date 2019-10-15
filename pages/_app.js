@@ -105,7 +105,7 @@ class MyApp extends App {
           <div className={'flexContainer'}>
             <Sidebar {...pageProps}/>
             <Layout>
-              <div style={{display: 'flex', justifyContent: 'flex-end', position: 'absolute', right: 0 }}>
+              <div style={{display: 'flex', justifyContent: 'flex-end'}}>
                 <FieldLabel label="Theme" labelFor="theme-selector" position="left">
                   <Select
                     onChange={this.updateTheme}
