@@ -33039,10 +33039,7 @@ function (_App) {
         },
         __self: this
       }, __jsx("div", {
-        style: {
-          display: 'flex',
-          justifyContent: 'flex-end'
-        },
+        className: "switcherContainer",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 108
@@ -33076,9 +33073,6 @@ function (_App) {
         }],
         defaultValue: "light",
         quiet: true,
-        style: {
-          marginRight: '37px'
-        },
         flexible: true,
         __source: {
           fileName: _jsxFileName,
@@ -33091,7 +33085,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 125
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -33118,13 +33112,13 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 126
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 148
         },
         __self: this
       }))))));

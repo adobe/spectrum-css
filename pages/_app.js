@@ -105,7 +105,7 @@ class MyApp extends App {
           <div className={'flexContainer'}>
             <Sidebar {...pageProps}/>
             <Layout>
-              <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+              <div className="switcherContainer">
                 <FieldLabel label="Theme" labelFor="theme-selector" position="left">
                   <Select
                     onChange={this.updateTheme}
@@ -119,7 +119,6 @@ class MyApp extends App {
                     ]}
                     defaultValue="light"
                     quiet
-                    style={{marginRight: '37px'}}
                     flexible
                   />
                 </FieldLabel>
