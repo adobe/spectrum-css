@@ -75,7 +75,7 @@ examples:
         </div>
         <div class="spectrum-SplitView-pane" style="height: 0">Right</div>
       </div>
-packageName: splitview
+packageSlug: splitview
 indexCSS: >
   .spectrum-SplitView {
     display: -ms-flexbox;
@@ -268,4 +268,6 @@ indexCSS: >
           }
 peerDependencies:
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/splitview'
 peerCSS: ''

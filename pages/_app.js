@@ -16,10 +16,9 @@ import '@adobe/spectrum-css/dist/vars/spectrum-light-unique.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-large-unique.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-global.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-global-unique.css';
 
 //import regeneratorRuntime from "regenerator-runtime";
-
 
 class Layout extends React.Component {
   render() {
@@ -106,7 +105,7 @@ class MyApp extends App {
           <div className={'flexContainer'}>
             <Sidebar {...pageProps}/>
             <Layout>
-              <div style={{display: 'flex', justifyContent: 'flex-end' }}>
+              <div style={{display: 'flex', justifyContent: 'flex-end', position: 'absolute', right: 0 }}>
                 <FieldLabel label="Theme" labelFor="theme-selector" position="left">
                   <Select
                     onChange={this.updateTheme}

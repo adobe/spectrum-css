@@ -92,7 +92,7 @@ examples:
           </svg>
         </button>
       </form>
-packageName: searchwithin
+packageSlug: searchwithin
 indexCSS: >
   .spectrum-SearchWithin {
     width: 250px;
@@ -135,4 +135,6 @@ indexCSS: >
       right: 0;
     }
 peerDependencies: {}
+packageVersion: 2.0.0
+packageName: '@spectrum-css/searchwithin'
 peerCSS: ''

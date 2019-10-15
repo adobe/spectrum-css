@@ -1061,7 +1061,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.9' };
+var core = module.exports = { version: '2.6.10' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -3669,7 +3669,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1
 
 /***/ }),
 
-/***/ 103:
+/***/ 121:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fnext%2Fdist%2Fpages%2F_error&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fnode_modules%2Fnext%2Fdist%2Fpages%2F_error.js ***!
   \******************************************************************************************************************************************************************************************/
@@ -3692,5 +3692,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[103,"static/runtime/webpack.js"]]]);
+},[[121,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map

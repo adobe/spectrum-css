@@ -65,7 +65,7 @@ examples:
           </button>
         </div>
       </div>
-packageName: rule
+packageSlug: rule
 indexCSS: |
   .spectrum-Rule {
     width: 100%;
@@ -122,4 +122,6 @@ indexCSS: |
     background-color: var(--spectrum-rule-small-background-color, var(--spectrum-global-color-gray-300));
   }
 peerDependencies: {}
+packageVersion: 2.0.0
+packageName: '@spectrum-css/rule'
 peerCSS: ''

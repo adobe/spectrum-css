@@ -59,7 +59,7 @@ examples:
       <input type="text" placeholder="Enter your name" name="field" value="Not a
       valid input" class="spectrum-Textfield spectrum-Textfield--quiet
       is-invalid" disabled>
-packageName: textfield
+packageSlug: textfield
 indexCSS: >
   .spectrum-Textfield {
     box-sizing: border-box;
@@ -293,4 +293,6 @@ indexCSS: >
         }
 peerDependencies:
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/textfield'
 peerCSS: ''

@@ -70,7 +70,7 @@ examples:
     markup: >
       <div class="spectrum-StatusLight
       spectrum-StatusLight--active">Active</div>
-packageName: statuslight
+packageSlug: statuslight
 indexCSS: >
   .spectrum-StatusLight {
     min-height: var(--spectrum-statuslight-height, var(--spectrum-alias-single-line-height));
@@ -193,4 +193,6 @@ indexCSS: >
   }
 peerDependencies:
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/statuslight'
 peerCSS: ''

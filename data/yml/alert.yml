@@ -67,7 +67,7 @@ examples:
           <button class="spectrum-Button spectrum-Button--primary spectrum-Button--quiet">Close</button>
         </div>
       </div>
-packageName: alert
+packageSlug: alert
 indexCSS: |
   .spectrum-Alert {
     position: relative;
@@ -187,6 +187,8 @@ indexCSS: |
 peerDependencies:
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/alert'
 peerCSS: |
   .spectrum-Icon,
   .spectrum-UIIcon {

@@ -14,17 +14,26 @@ class ResourceCard extends React.Component {
     return (
 
 
-        <button aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabindex="0" onClick={props.clickEvent ? (e)=>{props.clickEvent()}:() => this.goToResource(props.url)} >
-        <div className={styles.card} tabindex="-1">
+        <button aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0" onClick={props.clickEvent ? (e)=>{props.clickEvent()}:() => this.goToResource(props.url)} >
+        <div className={styles.card} tabIndex="-1">
           <div>
             {
-              props.type === 'XD' ? <img src="/static/thumbnail_xd@2x.png"/> : undefined
+              props.type === 'XD' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_xd@2x.png`}/> : undefined
             }
             {
-              props.type === 'CSS' ? <img src="/static/thumbnail_css@2x.png"/> : undefined
+              props.type === 'CSS' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_css@2x.png`}/> : undefined
             }
             {
-              props.type === 'react' ? <img src="/static/thumbnail_react@2x.png"/> : undefined
+              props.type === 'react' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_react@2x.png`}/> : undefined
+            }
+            {
+              props.type === 'Spectrum' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_spectrum.svg`}/> : undefined
+            }
+            {
+              props.type === 'GitHub' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_github.svg`}/> : undefined
+            }
+            {
+              props.type === 'NPM' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_npm.svg`}/> : undefined
             }
 
           </div>
@@ -38,7 +47,7 @@ class ResourceCard extends React.Component {
           </div>
         </div>
         </button>
-     
+
     )
 
   }

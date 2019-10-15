@@ -295,7 +295,7 @@ examples:
           <use xlink:href="#spectrum-css-icon-CornerTriangle" />
         </svg>
       </button>
-packageName: button
+packageSlug: button
 indexCSS: >
   .spectrum-Button,
 
@@ -1485,4 +1485,6 @@ indexCSS: >
       }
 peerDependencies:
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/button'
 peerCSS: ''

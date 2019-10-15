@@ -1,0 +1,76 @@
+:local(.section) {
+  margin-bottom:80px;
+  position: relative;
+
+}
+:global(.RelatedContent) {
+  ul {
+    list-style:none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    margin:0px;
+    padding: 0px;
+  }
+}
+
+
+
+//modifiers for specific section types
+
+:global(.Keyboardinteractions) {
+  & table {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  & td:first-of-type {
+    white-space: nowrap;
+    width: 30%;
+    font-weight: bold;
+  }
+}
+:global(.Changelog) {
+  & table {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  // & td:first-of-type {
+  //   white-space: nowrap;
+  //   width: 30%;
+  //   font-weight: bold;
+  // }
+}
+
+:local(.introRow) {
+  & :local(.sectionIntro) {
+    margin-bottom: 40px;  
+  }
+  &:last-of-type {
+    & :local(.sectionIntro) {
+      margin-bottom: 0px;  
+    }
+  }
+
+  
+}
+
+//staging helpers
+
+:local(.stageHelper) {
+  position: absolute;
+  height:100%;
+  width:100%;
+  pointer-events: none;
+}
+:local(.internal) {
+  outline:10px solid rgba(103, 103, 236,0.1);
+}
+:local(.public) {
+  outline: 10px solid rgba(68, 181, 86,0.1);
+}
+:local(.both) {
+  outline:10px solid  rgba(38, 128, 235,0.1) ;
+}
+:local(.notSet) {
+  outline:10px solid rgba(216, 55, 144,0.1);
+}

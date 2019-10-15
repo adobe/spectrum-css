@@ -1,0 +1,71 @@
+:local(.detailsTable) {
+  border-spacing: 0;
+  margin-bottom: var(--spectrum-global-dimension-size-450);
+  margin-top: var(--spectrum-global-dimension-size-500);
+
+  th {
+    font-weight: var(--spectrum-global-font-weight-regular);
+    height: var(--spectrum-global-dimension-size-350);
+    padding-right: var(--spectrum-global-dimension-size-300);
+    text-align: left;
+  }
+}
+
+:local(.resourceCards) {
+  margin-bottom: 73px;
+}
+
+:local(div.subHeadStatusLight) {
+  display: inline-flex;
+}
+
+:local(.exampleContainer) {
+  border-radius: var(--spectrum-global-dimension-size-50);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: var(--spectrum-global-dimension-size-500);
+}
+
+:local(.example) {
+  background-color: var(--spectrum-global-color-gray-100);
+  border-radius: var(--spectrum-global-dimension-size-50) var(--spectrum-global-dimension-size-50) 0 0;
+  flex: 1 0 auto;
+  // min-height: var(--spectrum-global-dimension-size-2400);
+  padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-500);
+}
+
+:local(.markup) {
+  background: var(--spectrum-global-color-gray-75);
+  border-radius: 0 0 var(--spectrum-global-dimension-size-50) var(--spectrum-global-dimension-size-50);
+  border: 1px solid var(--spectrum-global-color-gray-100);
+  font-size: var(--spectrum-global-dimension-font-size-25);
+  max-width: 100%;
+  padding: var(--spectrum-global-dimension-size-125) var(--spectrum-global-dimension-size-225);
+  position: relative;
+
+  code {
+    background: none;
+    font-family: inherit;
+  }
+}
+
+:local(.markupPre) {
+  max-height: var(--spectrum-global-dimension-size-1600);
+  overflow: hidden;
+  white-space: pre-wrap;
+
+  &:global(.is-open) {
+    max-height: 100%;
+  }
+}
+
+:local(.toggle) {
+  background: var(--spectrum-global-color-gray-75);
+  bottom: 0;
+  box-sizing: border-box;
+  font-size: var(--spectrum-global-dimension-font-size-150);
+  padding: 0 0 var(--spectrum-global-dimension-size-160) var(--spectrum-global-dimension-size-85);
+  text-align: left;
+  display: inline-block;
+}

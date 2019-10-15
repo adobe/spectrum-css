@@ -223,7 +223,6 @@ class SiteSearch extends React.Component {
         <Search
           aria-label="search"
           placeholder="Search"
-          defaultValue=""
           value={this.state.searchVal}
           style={{ width: "100%" }}
           onChange={e => {

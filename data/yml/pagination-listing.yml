@@ -16,7 +16,7 @@ examples:
         <a href="#" class="spectrum-ActionButton spectrum-ActionButton--quiet"><span class="spectrum-ActionButton-label">24</span></a>
         <a href="#" class="spectrum-Button spectrum-Button--primary spectrum-Button--quiet spectrum-Pagination-nextButton"><span class="spectrum-Button-label">Next</span></a>
       </nav>
-packageName: pagination
+packageSlug: pagination
 indexCSS: |
   .spectrum-Pagination--explicit,
   .spectrum-Pagination--listing {
@@ -63,6 +63,8 @@ peerDependencies:
   '@spectrum-css/splitbutton': ^2.0.0
   '@spectrum-css/textfield': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/pagination'
 peerCSS: >
   .spectrum-Button,
 
