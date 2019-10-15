@@ -18,19 +18,19 @@ class ResourceCard extends React.Component {
         <div className={styles.card} tabindex="-1">
           <div>
             {
-              props.type === 'XD' ? <img src="/static/thumbnail_xd@2x.png"/> : undefined
+              props.type === 'XD' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_xd@2x.png`}/> : undefined
             }
             {
-              props.type === 'CSS' ? <img src="/static/thumbnail_css@2x.png"/> : undefined
+              props.type === 'CSS' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_css@2x.png`}/> : undefined
             }
             {
-              props.type === 'react' ? <img src="/static/thumbnail_react@2x.png"/> : undefined
+              props.type === 'react' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_react@2x.png`}/> : undefined
             }
             {
-              props.type === 'Spectrum' ? <img src="/static/thumbnail_spectrum.svg"/> : undefined
+              props.type === 'Spectrum' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_spectrum.svg`}/> : undefined
             }
             {
-              props.type === 'GitHub' ? <img src="/static/thumbnail_github.svg"/> : undefined
+              props.type === 'GitHub' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_github.svg`}/> : undefined
             }
             {
               props.type === 'NPM' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_npm.svg`}/> : undefined
