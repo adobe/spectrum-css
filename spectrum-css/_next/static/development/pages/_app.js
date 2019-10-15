@@ -33041,9 +33041,7 @@ function (_App) {
       }, __jsx("div", {
         style: {
           display: 'flex',
-          justifyContent: 'flex-end',
-          position: 'absolute',
-          right: 0
+          justifyContent: 'flex-end'
         },
         __source: {
           fileName: _jsxFileName,
