@@ -1,0 +1,100 @@
+:global(.spectrum--light), :global(.spectrum--lightest) {
+  --hljs-color: #383a42;
+  --hljs-background: #fafafa;
+  --hljs-keyword-color: #a626a4;
+  --hljs-section-color: #e45649;
+  --hljs-literal-color: #0184bb;
+  --hljs-attribute-color: #50a14f;
+  --hljs-class-color: #c18401;
+  --hljs-variable-color: #986801;
+  --hljs-title-color: #4078f2;
+}
+:global(.spectrum--dark),
+:global(.spectrum--darkest) {
+  --hljs-color: #abb2bf;
+  --hljs-background: #282c34;
+  --hljs-keyword-color: #c678dd;
+  --hljs-section-color: #e06c75;
+  --hljs-literal-color: #56b6c2;
+  --hljs-attribute-color: #98c379;
+  --hljs-class-color: #e6c07b;
+  --hljs-variable-color: #d19a66;
+  --hljs-title-color: #61aeee;
+}
+
+:global(.hljs) {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: var(--hljs-color, #383a42);
+  background: var(--hljs-background, #fafafa);
+}
+
+:global(.hljs-comment),
+:global(.hljs-quote) {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+:global(.hljs-doctag),
+:global(.hljs-formula),
+:global(.hljs-keyword) {
+  color: var(--hljs-keyword-color, #a626a4);
+}
+
+:global(.hljs-deletion),
+:global(.hljs-name),
+:global(.hljs-section),
+:global(.hljs-selector-tag),
+:global(.hljs-subst) {
+  color: var(--hljs-section-color, #e45649);
+}
+
+:global(.hljs-literal) {
+  color: var(--hljs-literal-color, #0184bb);
+}
+
+:global(.hljs-addition),
+:global(.hljs-attribute),
+:global(.hljs-meta-string),
+:global(.hljs-regexp),
+:global(.hljs-string) {
+  color: var(--hljs-attribute-color, #50a14f);
+}
+
+:global(.hljs-built_in),
+:global(.hljs-class) :global(.hljs-title) {
+  color: var(--hljs-class-color, #c18401);
+}
+
+:global(.hljs-attr),
+:global(.hljs-number),
+:global(.hljs-selector-attr),
+:global(.hljs-selector-class),
+:global(.hljs-selector-pseudo),
+:global(.hljs-template-variable),
+:global(.hljs-type),
+:global(.hljs-variable) {
+  color: var(--hljs-variable-color, #986801);
+}
+
+:global(.hljs-bullet),
+:global(.hljs-link),
+:global(.hljs-meta),
+:global(.hljs-selector-id),
+:global(.hljs-symbol),
+:global(.hljs-title) {
+  color: var(--hljs-title-color, #4078f2);
+}
+
+:global(.hljs-emphasis) {
+  font-style: italic;
+}
+
+:global(.hljs-strong) {
+  font-weight: bold;
+}
+
+:global(.hljs-link) {
+  text-decoration: underline;
+}

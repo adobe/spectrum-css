@@ -123,7 +123,7 @@ examples:
           </span>
         </div>
       </div>
-packageName: steplist
+packageSlug: steplist
 indexCSS: >
   .spectrum-Steplist {
     z-index: 0;
@@ -374,6 +374,8 @@ indexCSS: >
 peerDependencies:
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/steplist'
 peerCSS: |
   .spectrum-Icon,
   .spectrum-UIIcon {

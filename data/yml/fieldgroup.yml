@@ -94,7 +94,7 @@ examples:
           <span class="spectrum-Checkbox-label">Bits</span>
         </label>
       </div>
-packageName: fieldgroup
+packageSlug: fieldgroup
 indexCSS: |
   .spectrum-FieldGroup {
     display: -ms-flexbox;
@@ -115,6 +115,8 @@ peerDependencies:
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/radio': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/fieldgroup'
 peerCSS: >
   .spectrum-Checkbox {
     display: -ms-inline-flexbox;

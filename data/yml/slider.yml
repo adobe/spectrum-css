@@ -396,7 +396,7 @@ examples:
           </div>
         </div>
       </div>
-packageName: slider
+packageSlug: slider
 indexCSS: >
   .spectrum-Slider,
 
@@ -1234,4 +1234,6 @@ indexCSS: >
             }
 peerDependencies:
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/slider'
 peerCSS: ''

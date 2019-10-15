@@ -1,0 +1,43 @@
+
+:local(.headingAnchor) {
+  transition: all 125ms ease-in-out;
+  margin-left:4px;
+  :local(.sectionHeader) & {
+    margin-left:6px;
+  }
+}
+
+// TODO: Override
+:local(.subHeader) {
+  margin-bottom: 16px !important;
+}
+
+:local(.headerContainer) {
+  margin-bottom:33px;
+}
+:local(.sectionHeader) {
+  padding-left: 0;
+}
+
+:local(.anchor) {
+  opacity: 0;
+  transition: all 125ms ease-in-out;
+  &:focus {
+    opacity: 1;
+    transition: all 125ms ease-in-out;
+  }
+}
+:local(.editLink) {
+  opacity: 0;
+}
+
+:local(.header):hover {
+  & :local(.editLink), :local(.anchor) {
+    opacity:1;
+    transition: all 125ms ease-in-out;
+  }
+
+  
+}
+
+

@@ -217,7 +217,7 @@ examples:
           <span class="spectrum-Tooltip-tip"></span>
         </div>
       </span>
-packageName: tooltip
+packageSlug: tooltip
 indexCSS: >
   .spectrum-Tooltip {
     visibility: hidden;
@@ -528,6 +528,8 @@ indexCSS: >
 peerDependencies:
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/tooltip'
 peerCSS: |
   .spectrum-Icon,
   .spectrum-UIIcon {

@@ -191,7 +191,7 @@ examples:
         </span>
         <span class="spectrum-Checkbox-label">Checkbox</span>
       </label>
-packageName: checkbox
+packageSlug: checkbox
 indexCSS: >
   .spectrum-Checkbox {
     display: -ms-inline-flexbox;
@@ -447,6 +447,8 @@ indexCSS: >
 peerDependencies:
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/checkbox'
 peerCSS: |
   .spectrum-Icon,
   .spectrum-UIIcon {

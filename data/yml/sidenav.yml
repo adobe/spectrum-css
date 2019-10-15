@@ -132,7 +132,7 @@ examples:
           </li>
         </ul>
       </nav>
-packageName: sidenav
+packageSlug: sidenav
 indexCSS: >
   .spectrum-SideNav {
     list-style-type: none;
@@ -286,4 +286,6 @@ indexCSS: >
   }
 peerDependencies:
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/sidenav'
 peerCSS: ''

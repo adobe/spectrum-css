@@ -160,7 +160,7 @@ examples:
           </div>
         </div>
       </div>
-packageName: circleloader
+packageSlug: circleloader
 indexCSS: >
   .spectrum-CircleLoader--indeterminate-fill-submask-2 {
     animation: 1s infinite linear spectrum-fill-mask-2;
@@ -817,4 +817,6 @@ indexCSS: >
     }
 peerDependencies:
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/circleloader'
 peerCSS: ''

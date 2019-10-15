@@ -63,7 +63,7 @@ examples:
         </button>
         <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
       </div>
-packageName: splitbutton
+packageSlug: splitbutton
 indexCSS: >
   .spectrum-SplitButton {
     position: relative;
@@ -165,6 +165,8 @@ indexCSS: >
 peerDependencies:
   '@spectrum-css/button': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/splitbutton'
 peerCSS: >
   .spectrum-Button,
 

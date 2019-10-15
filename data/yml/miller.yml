@@ -178,7 +178,7 @@ examples:
           </ul>
         </div>
       </div>
-packageName: miller
+packageSlug: miller
 indexCSS: |
   .spectrum-MillerColumns {
     overflow-x: auto;
@@ -210,6 +210,8 @@ peerDependencies:
   '@spectrum-css/checkbox': ^2.0.0
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/miller'
 peerCSS: >
   .spectrum-AssetList {
     margin-top: 0;

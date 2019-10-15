@@ -18,7 +18,7 @@ examples:
         <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">Drag and Drop Your File</h2>
         <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><a href="#" class="spectrum-Link">Select a File</a> from your computer<br> or <a href="#" class="spectrum-Link">Search Adobe Stock</a></p>
       </div>
-packageName: illustratedmessage
+packageSlug: illustratedmessage
 indexCSS: |
   .spectrum-IllustratedMessage {
     height: 100%;
@@ -64,6 +64,8 @@ indexCSS: |
 peerDependencies:
   '@spectrum-css/typography': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/illustratedmessage'
 peerCSS: >
   .spectrum {
     font-family: 'adobe-clean-ux', 'adobe-clean', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

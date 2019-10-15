@@ -8,7 +8,7 @@ examples:
         <div class="spectrum-DropIndicator spectrum-DropIndicator--vertical" style="height: 300px; margin-right: 100px;"></div>
         <div class="spectrum-DropIndicator spectrum-DropIndicator--horizontal" style="width: 300px;"></div>
       </div>
-packageName: dropindicator
+packageSlug: dropindicator
 indexCSS: |
   .spectrum-DropIndicator {
     position: relative;
@@ -72,6 +72,8 @@ indexCSS: |
 peerDependencies:
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/dropindicator'
 peerCSS: |
   .spectrum-Icon,
   .spectrum-UIIcon {

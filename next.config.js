@@ -12,6 +12,7 @@ const yaml = require('js-yaml');
 const glob = require('glob');
 const lunr = require('lunr');
 const resolve = require('resolve');
+const npmPackage = util.promisify(require('npm-package-info'));
 
 // Using git checkout origin/master -- `git ls-tree origin/master -r --name-only | grep ".yml"`
 // Using git checkout adobe/master -- `git ls-tree adobe/master -r --name-only | grep ".yml"`
@@ -24,11 +25,18 @@ function gatherYML() {
         encoding: 'utf8'
       });
       const componentData = yaml.safeLoad(componentYaml);
-      componentData.packageName = path.basename(path.dirname(path.dirname(file)));
-      componentData.indexCSS = fs.readFileSync(resolve.sync(`@adobe/spectrum-css/dist/components/${componentData.packageName}/index-vars.css`), {
+      componentData.packageSlug = path.basename(path.dirname(path.dirname(file)));
+      componentData.indexCSS = fs.readFileSync(resolve.sync(`@adobe/spectrum-css/dist/components/${componentData.packageSlug}/index-vars.css`), {
         encoding: 'utf8'
       });
-      componentData.peerDependencies = require(`@adobe/spectrum-css/dist/components/${componentData.packageName}/package.json`).peerDependencies || {};
+      const packageJson = require(`@adobe/spectrum-css/dist/components/${componentData.packageSlug}/package.json`)
+      componentData.peerDependencies = packageJson.peerDependencies || {};
+      componentData.packageVersion = packageJson.version;
+      componentData.packageName = packageJson.name;
+      // npmPackage(componentData.packageName, function(err, pkg) {
+      //   console.log(pkg.time[pkg['dist-tags'].latest])
+      //   // console.log(pkg.versions[pkg['dist-tags'].latest]);
+      // })
       componentData.peerCSS = '';
       Object.keys(componentData.peerDependencies).forEach((dep) => {
         const result = dep.split("/")[1];

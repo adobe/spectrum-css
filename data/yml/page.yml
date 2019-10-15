@@ -26,11 +26,13 @@ examples:
         <button class="spectrum-Button spectrum-Button--cta">Button</button>
       </div>
       <br><br>
-packageName: page
+packageSlug: page
 indexCSS: |
   .spectrum {
     background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 peerDependencies: {}
+packageVersion: 2.0.0
+packageName: '@spectrum-css/page'
 peerCSS: ''

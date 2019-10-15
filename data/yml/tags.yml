@@ -156,7 +156,7 @@ examples:
           </button>
         </div>
       </div>
-packageName: tags
+packageSlug: tags
 indexCSS: >
   .spectrum-Tags {
     display: inline-block;
@@ -349,6 +349,8 @@ indexCSS: >
 peerDependencies:
   '@spectrum-css/button': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/tags'
 peerCSS: >
   .spectrum-Button,
 

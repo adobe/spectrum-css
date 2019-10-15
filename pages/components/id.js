@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { withRouter } from "next/router";
-import Prism from "prismjs";
-import 'prismjs/themes/prism.css';
+import Highlight from 'react-highlight.js';
 import classNames from "classnames";
 import StatusLight from '@react/react-spectrum/StatusLight';
 import styles from '../../components/css/page.scss';
@@ -10,42 +9,85 @@ import compStyles from '../../components/css/componentPage.scss';
 import ResourceCard from '../../components/ResourceCard';
 import {Helmet} from "react-helmet";
 import PageHeader from '../../components/PageHeader';
+import Section from '../../components/Section';
+import Markdown from '../../components/Markdown';
+import SubHeader from '../../components/SubHeader';
+import Link from '@react/react-spectrum/Link';
+import Status from '../../components/Status';
+import '../../css/hljs.scss';
 
 async function loadData(id) {
   let data = await import(`../../data/yml/${id}.yml`);
   return data;
 }
+class Markup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.clickHander = this.clickHander.bind(this);
+    this.state = {
+      openFlag: false
+    };
+  }
+  clickHander(e) {
+    this.setState((state, props) => {
+      return {
+        openFlag: !state.openFlag
+      }
+    });
+    event.preventDefault();
+  }
+  render() {
+    return (
+      <div className={compStyles.markup}>
+        <Highlight language="html" className={classNames('spectrum-Code4', compStyles.markupPre, {'is-open': this.state.openFlag})}>
+          {this.props.children}
+        </Highlight>
+        <Link className={compStyles.toggle} href="#" onClick={this.clickHander}>{ !this.state.openFlag ? ('Show markup') : ('Hide markup')}</Link>
+      </div>
+    );
+  }
+}
+
+class Variant extends React.Component {
+  render() {
+    // if(example.status = 'Contribution')
+    return (
+      <article id={this.props.example.slug} key={this.props.example.slug}>
+        <SubHeader title={this.props.example.name}>
+          <Status className={compStyles.subHeadStatusLight} status={this.props.example.status}/>
+        </SubHeader>
+        { this.props.example.description ? (
+          <Markdown source={this.props.example.description}/>
+        ) : undefined }
+        { this.props.example.details ? (
+          <Markdown source={this.props.example.details}/>
+        ) : undefined }
+        { this.props.example.markup ? (
+          <section className={compStyles.exampleContainer}>
+            <div className={compStyles.example} dangerouslySetInnerHTML={{
+              __html: this.props.example.markup
+            }}/>
+          <Markup>{this.props.example.markup}</Markup>
+        </section>
+        ) : undefined }
+      </article>
+    )
+  }
+}
+
 
 class Page extends React.Component {
   constructor(props) {
     super(props);
-    //console.log(publicRuntimeConfig.ENVIRONMENT);
   }
   static async getInitialProps() {
     const node_env = process.env.NODE_ENV;
     return { node_env };
   }
   render() {
-    let examplesList = "no examples";
-    if (this.props.pageData.hasOwnProperty("examples")) {
-      examplesList = this.props.pageData.examples.map(function(example) {
-        return (
-          <div key={example.slug}>
-            <h3>{example.name}</h3>
-            <pre>
-              <code>{example.markup}</code>
-            </pre>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: example.markup
-              }}
-            />
-          </div>
-        );
-      });
-    }
+    const componentStatus = this.props.pageData.status || "Contribution";
     return (
-      <div className={styles.pageContainer}>
+      <div style={{overflow: 'hidden'}} className={styles.pageContainer}>
         <Helmet>
           <meta name="Description" content={this.props.pageData.description}/>
           <title> {this.props.pageData.name} - Spectrum CSS</title>
@@ -57,7 +99,7 @@ class Page extends React.Component {
             <tr>
               <th className="spectrum-Body--secondary">Component status</th>{/*TODO: replace with react-spectrum typography components*/}
               <td>
-                <StatusLight variant="notice">Contribution</StatusLight>
+                <Status status={componentStatus}/>
               </td>
             </tr>
             <tr>
@@ -66,28 +108,43 @@ class Page extends React.Component {
             </tr>
             <tr>
               <th className="spectrum-Body--secondary">Current version</th>
-              <td>@spectrum-css/banner@2.0.0</td>
+              <td>{this.props.pageData.packageName}@{this.props.pageData.packageVersion}</td>
             </tr>
           </tbody>
         </table>
-        <ResourceCard
-          type="Spectrum"
-          url="#"
-          title="View guidelines"
-          subTitle="Spectrum"
-        />
-        <ResourceCard
-          type="GitHub"
-          url="#"
-          title="View repository"
-          subTitle="Github"
-        />
-        <ResourceCard
-          type="NPM"
-          url="#"
-          title="View package"
-          subTitle="NPM"
-        />
+        <div className={compStyles.resourceCards}>
+          <ResourceCard
+            type="Spectrum"
+            url="#"
+            title="View guidelines"
+            subTitle="Spectrum"
+          />
+          <ResourceCard
+            type="GitHub"
+            url="#"
+            title="View repository"
+            subTitle="Github"
+          />
+          <ResourceCard
+            type="NPM"
+            url="#"
+            title="View package"
+            subTitle="NPM"
+          />
+        </div>
+      { this.props.pageData.description ? (
+        <Section title={'Usage notes'}>
+          <Markdown source={this.props.pageData.description}/>
+        </Section>
+      ) : undefined }
+      <Section title={'Variants'}>
+        {this.props.pageData.examples.map(function(example) {
+          example.status = example.status || componentStatus;
+          return(
+            <Variant example={example}/>
+          )
+        }, this)}
+        </Section>
       </div>
     );
   }

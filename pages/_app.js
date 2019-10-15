@@ -15,10 +15,9 @@ import '@adobe/spectrum-css/dist/vars/spectrum-light-unique.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-large-unique.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css';
-import '@adobe/spectrum-css/dist/vars/spectrum-global.css';
+import '@adobe/spectrum-css/dist/vars/spectrum-global-unique.css';
 
 //import regeneratorRuntime from "regenerator-runtime";
-
 
 class Layout extends React.Component {
   render() {
