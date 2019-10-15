@@ -791,7 +791,6 @@ function (_React$Component) {
       }), __jsx(_react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_10___default.a, {
         "aria-label": "search",
         placeholder: "Search",
-        defaultValue: "",
         value: this.state.searchVal,
         style: {
           width: "100%"
@@ -818,69 +817,69 @@ function (_React$Component) {
         className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlay, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlayOpen : undefined),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 240
+          lineNumber: 239
         },
         __self: this
       }), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.results, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.open : undefined),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 250
         },
         __self: this
       }, this.state.numResults === 0 ? __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResultsContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 260
+          lineNumber: 259
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Heading2--quiet", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResults),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 261
+          lineNumber: 260
         },
         __self: this
       }, "No results found"), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResulsSub),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 268
         },
         __self: this
       }, __jsx("em", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270
+          lineNumber: 269
         },
         __self: this
       }, "Try another search term."))) : undefined, this.state.foundation.length ? __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 277
+          lineNumber: 276
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 278
+          lineNumber: 277
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 279
+          lineNumber: 278
         },
         __self: this
       }, "Foundation")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 281
+          lineNumber: 280
         },
         __self: this
       }, this.state.foundation.map(function (result, i) {
@@ -893,7 +892,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 283
+            lineNumber: 282
           },
           __self: this
         }, result.name);
@@ -901,28 +900,28 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 304
+          lineNumber: 303
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 305
+          lineNumber: 304
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 305
         },
         __self: this
       }, "Components")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 307
         },
         __self: this
       }, this.state.components.map(function (result, i) {
@@ -935,7 +934,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 310
+            lineNumber: 309
           },
           __self: this
         }, result.name);
@@ -943,28 +942,28 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 332
+          lineNumber: 331
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 333
+          lineNumber: 332
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 334
+          lineNumber: 333
         },
         __self: this
       }, "Resources")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 336
+          lineNumber: 335
         },
         __self: this
       }, this.state.resources.map(function (result, i) {
@@ -977,7 +976,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 338
+            lineNumber: 337
           },
           __self: this
         }, result.name);
@@ -985,28 +984,28 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 359
+          lineNumber: 358
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 360
+          lineNumber: 359
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 361
+          lineNumber: 360
         },
         __self: this
       }, "Usage Guidelines")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 365
+          lineNumber: 364
         },
         __self: this
       }, this.state.usageGuidelines.map(function (result, i) {
@@ -1019,20 +1018,20 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 367
+            lineNumber: 366
           },
           __self: this
         }, __jsx("div", {
           className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.subHeader),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 384
+            lineNumber: 383
           },
           __self: this
         }, result.pageType, " > ", result.name), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 389
+            lineNumber: 388
           },
           __self: this
         }, result.display_description));
@@ -1040,28 +1039,28 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 399
+          lineNumber: 398
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 400
+          lineNumber: 399
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 401
+          lineNumber: 400
         },
         __self: this
       }, "Behaviors")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 403
+          lineNumber: 402
         },
         __self: this
       }, this.state.behaviors.map(function (result, i) {
@@ -1074,20 +1073,20 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 405
+            lineNumber: 404
           },
           __self: this
         }, __jsx("div", {
           className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.subHeader),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 422
+            lineNumber: 421
           },
           __self: this
         }, result.pageType, " > ", result.name), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 427
+            lineNumber: 426
           },
           __self: this
         }, result.display_description));
@@ -1095,28 +1094,28 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 437
+          lineNumber: 436
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 438
+          lineNumber: 437
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 439
+          lineNumber: 438
         },
         __self: this
       }, "Downloads")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 441
+          lineNumber: 440
         },
         __self: this
       }, this.state.files.map(function (result, i) {
@@ -1129,28 +1128,28 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 443
+            lineNumber: 442
           },
           __self: this
         }, __jsx("div", {
           className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.file,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 462
+            lineNumber: 461
           },
           __self: this
         }, __jsx("div", {
           className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.icon,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 463
+            lineNumber: 462
           },
           __self: this
         }, __jsx("img", {
           src: "/static/icon_xd_small@2x.png",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 464
+            lineNumber: 463
           },
           __self: this
         })), result.slug));
@@ -1158,28 +1157,28 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 476
+          lineNumber: 475
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 477
+          lineNumber: 476
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 478
+          lineNumber: 477
         },
         __self: this
       }, "Tutorials")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 480
+          lineNumber: 479
         },
         __self: this
       }, this.state.tutorials.map(function (result, i) {
@@ -1192,7 +1191,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 482
+            lineNumber: 481
           },
           __self: this
         }, result.name);
@@ -1200,28 +1199,28 @@ function (_React$Component) {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 503
+          lineNumber: 502
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 504
+          lineNumber: 503
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 505
+          lineNumber: 504
         },
         __self: this
       }, "Contributions")), __jsx("ul", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 507
+          lineNumber: 506
         },
         __self: this
       }, this.state.contributions.map(function (result, i) {
@@ -1234,13 +1233,13 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 509
+            lineNumber: 508
           },
           __self: this
         }, __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 528
+            lineNumber: 527
           },
           __self: this
         }, result.description));
@@ -8310,6 +8309,103 @@ _defineProperty(Provider, "childContextTypes", {
 
 /***/ }),
 
+/***/ "./node_modules/@react/react-spectrum/Rule/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@react/react-spectrum/Rule/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Use of this code is governed by the Adobe Terms of Use and
+ * Adobe Developer Additional Terms, and the license attached
+ * to this repo does not apply.
+ */
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+* Copyright 2019 Adobe
+* All Rights Reserved.
+*
+* NOTICE: All information contained herein is, and remains
+* the property of Adobe and its suppliers, if any. The intellectual
+* and technical concepts contained herein are proprietary to Adobe
+* and its suppliers and are protected by all applicable intellectual
+* property laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe.
+**************************************************************************/
+module.exports = __webpack_require__(/*! ./js/Rule */ "./node_modules/@react/react-spectrum/Rule/js/Rule.js");
+
+/***/ }),
+
+/***/ "./node_modules/@react/react-spectrum/Rule/js/Rule.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@react/react-spectrum/Rule/js/Rule.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Use of this code is governed by the Adobe Terms of Use and
+ * Adobe Developer Additional Terms, and the license attached
+ * to this repo does not apply.
+ */
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = Rule;
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _filterDOMProps = _interopRequireDefault(__webpack_require__(/*! ../../utils/filterDOMProps */ "./node_modules/@react/react-spectrum/utils/filterDOMProps.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+if (true) {
+  __webpack_require__(/*! ../../spectrum-css/rule/index.css */ "./node_modules/@react/react-spectrum/spectrum-css/rule/index.css");
+
+  __webpack_require__(/*! ../../spectrum-css/rule/index-diff.css */ "./node_modules/@react/react-spectrum/spectrum-css/rule/index-diff.css");
+} else {}
+
+if (true) __webpack_require__(/*! ../../spectrum-css/rule/multiStops/light.css */ "./node_modules/@react/react-spectrum/spectrum-css/rule/multiStops/light.css");
+if (true) __webpack_require__(/*! ../../spectrum-css/rule/multiStops/dark.css */ "./node_modules/@react/react-spectrum/spectrum-css/rule/multiStops/dark.css");
+if (true) __webpack_require__(/*! ../../spectrum-css/rule/multiStops/lightest.css */ "./node_modules/@react/react-spectrum/spectrum-css/rule/multiStops/lightest.css");
+if (true) __webpack_require__(/*! ../../spectrum-css/rule/multiStops/darkest.css */ "./node_modules/@react/react-spectrum/spectrum-css/rule/multiStops/darkest.css");
+
+function Rule(_ref) {
+  var className = _ref.className,
+      _ref$variant = _ref.variant,
+      variant = _ref$variant === void 0 ? 'large' : _ref$variant,
+      otherProps = _objectWithoutProperties(_ref, ["className", "variant"]);
+
+  return _react["default"].createElement("hr", _extends({}, (0, _filterDOMProps["default"])(otherProps), {
+    className: (0, _classnames["default"])('spectrum-Rule', "spectrum-Rule--".concat(variant), className)
+  }));
+}
+
+Rule.propTypes = {
+  /** Which Rule variant to render. */
+  variant: _propTypes["default"].oneOf(['large', 'medium', 'small'])
+};
+
+/***/ }),
+
 /***/ "./node_modules/@react/react-spectrum/Search/index.js":
 /*!************************************************************!*\
   !*** ./node_modules/@react/react-spectrum/Search/index.js ***!
@@ -13300,7 +13396,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.9' };
+var core = module.exports = { version: '2.6.10' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -32688,26 +32784,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @react/react-spectrum/FieldLabel */ "./node_modules/@react/react-spectrum/FieldLabel/index.js");
 /* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../css/main.scss */ "./css/main.scss");
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @react/react-spectrum/Rule */ "./node_modules/@react/react-spectrum/Rule/index.js");
+/* harmony import */ var _react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../css/main.scss */ "./css/main.scss");
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global-unique.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_25__);
 
 
 
@@ -32718,6 +32816,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+
 
 
 
@@ -32752,17 +32851,27 @@ function (_React$Component) {
     value: function render() {
       var children = this.props.children;
       return __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_15___default()('afg-container-fluid', 'site-mainContainer'),
+        className: classnames__WEBPACK_IMPORTED_MODULE_16___default()('afg-container-fluid', 'site-mainContainer'),
         style: {
           minHeight: '100vh',
           boxSizing: 'border-box'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 26
         },
         __self: this
-      }, children);
+      }, children, __jsx(_react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15___default.a, {
+        variant: "small",
+        style: {
+          marginTop: '32px'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }));
     }
   }]);
 
@@ -32824,7 +32933,7 @@ function (_App) {
       scale: 'medium',
       theme: 'light'
     };
-    next_router__WEBPACK_IMPORTED_MODULE_17__["Router"].events.on('routeChangeComplete', function () {
+    next_router__WEBPACK_IMPORTED_MODULE_18__["Router"].events.on('routeChangeComplete', function () {
       digitalData._set('page.pageInfo.siteSection', "".concat(_arguments[0].router.query.id, " Page"));
 
       digitalData._set('page.pageInfo.language', 'en-US');
@@ -32859,7 +32968,7 @@ function (_App) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 94
         },
         __self: this
       }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_10__["Helmet"], {
@@ -32871,7 +32980,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 96
         },
         __self: this
       }, __jsx("meta", {
@@ -32880,7 +32989,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 99
         },
         __self: this
       }), __jsx("link", {
@@ -32889,7 +32998,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 100
         },
         __self: this
       }), __jsx("link", {
@@ -32898,7 +33007,7 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 101
         },
         __self: this
       })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -32907,26 +33016,26 @@ function (_App) {
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 104
         },
         __self: this
       }, __jsx("div", {
         className: 'flexContainer',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 105
         },
         __self: this
       }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_11__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 106
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 107
         },
         __self: this
       }, __jsx("div", {
@@ -32938,7 +33047,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 108
         },
         __self: this
       }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
@@ -32947,7 +33056,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 109
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -32975,7 +33084,7 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 110
         },
         __self: this
       })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
@@ -32984,7 +33093,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 126
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -33011,13 +33120,13 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 127
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 149
         },
         __self: this
       }))))));
@@ -33027,7 +33136,7 @@ function (_App) {
   return MyApp;
 }(next_app__WEBPACK_IMPORTED_MODULE_9___default.a);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_17__["withRouter"])(MyApp));
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_18__["withRouter"])(MyApp));
 
 /***/ }),
 

@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 import Provider from '@react/react-spectrum/Provider';
 import Select from '@react/react-spectrum/Select';
 import FieldLabel from '@react/react-spectrum/FieldLabel';
+import Rule from '@react/react-spectrum/Rule';
 import classNames from 'classnames';
 import styles from '../css/main.scss';
 import { withRouter, Router } from 'next/router';
@@ -23,7 +24,9 @@ class Layout extends React.Component {
   render() {
     const {children} = this.props
     return <div className={classNames('afg-container-fluid', 'site-mainContainer')}
-                style={{minHeight: '100vh', boxSizing: 'border-box'}}>{children}</div>
+                style={{minHeight: '100vh', boxSizing: 'border-box'}}>{children}
+                <Rule variant="small" style={{marginTop: '32px'}}/>
+           </div>
   }
 }
 

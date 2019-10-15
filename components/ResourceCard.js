@@ -14,8 +14,8 @@ class ResourceCard extends React.Component {
     return (
 
 
-        <button aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabindex="0" onClick={props.clickEvent ? (e)=>{props.clickEvent()}:() => this.goToResource(props.url)} >
-        <div className={styles.card} tabindex="-1">
+        <button aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0" onClick={props.clickEvent ? (e)=>{props.clickEvent()}:() => this.goToResource(props.url)} >
+        <div className={styles.card} tabIndex="-1">
           <div>
             {
               props.type === 'XD' ? <img src={`${process.env.BACKEND_URL}/static/thumbnail_xd@2x.png`}/> : undefined

@@ -141,7 +141,7 @@ class Page extends React.Component {
         {this.props.pageData.examples.map(function(example) {
           example.status = example.status || componentStatus;
           return(
-            <Variant example={example}/>
+            <Variant key={example.id} example={example}/>
           )
         }, this)}
         </Section>
