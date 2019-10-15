@@ -2460,6 +2460,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_PageHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/PageHeader */ "./components/PageHeader.js");
 /* harmony import */ var _components_HeroImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/HeroImage */ "./components/HeroImage.js");
+/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/css/page.scss */ "./components/css/page.scss");
+/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_css_page_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2467,11 +2469,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 var Home = function Home() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
+  return __jsx("div", {
+    style: {
+      overflow: 'hidden'
+    },
+    className: _components_css_page_scss__WEBPACK_IMPORTED_MODULE_4___default.a.pageContainer,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
+    },
+    __self: this
+  }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
     },
     __self: this
   }, __jsx("meta", {
@@ -2479,27 +2492,27 @@ var Home = function Home() {
     content: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }), __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, "Spectrum CSS")), __jsx(_components_PageHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Meet Spectrum CSS",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: this
   }), __jsx("p", {
     className: "spectrum-Body2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
   }, "Spectrum CSS is an open-source implementation of Spectrum, Adobe\u2019s design system. It includes components and resources to make applications more cohesive."));
@@ -2509,7 +2522,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 99:
+/***/ 114:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js ***!
   \********************************************************************************************************************************/
@@ -2532,5 +2545,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[99,"static/runtime/webpack.js","styles"]]]);
+},[[114,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

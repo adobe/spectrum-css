@@ -21,8 +21,8 @@ const link = props => {
       <Link href={props.href} target="_blank">{props.children}</Link> :
       <Link href={props.href}>{props.children}</Link>
     )
-  } 
-  
+  }
+
 }
 const paragraph = props => <p className={'spectrum-Body3'}>{props.children}</p>
 const table = props => <table className={classNames('spectrum-Table spectrum-Table--quiet', styles.table)}>{props.children}</table>
@@ -44,7 +44,6 @@ const tableCell = props => {
 const Markdown = (props) => (
   <div>
       <ReactMarkdown escapeHtml={false} source={props.source} renderers={{link, paragraph, table, tableHead,tableCell, tableRow, tableBody, list}} />
-
   </div>
 )
 
