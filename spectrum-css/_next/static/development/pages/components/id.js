@@ -796,19 +796,20 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var title = this.props.title ? this.props.title : 'Missing title';
+      var parentClass = this.props.className || '';
       return __jsx("h3", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_8___default()('spectrum-Heading4', _css_subHeader_scss__WEBPACK_IMPORTED_MODULE_7___default.a.subHeader, _css_subHeader_scss__WEBPACK_IMPORTED_MODULE_7___default.a.header),
+        className: classnames__WEBPACK_IMPORTED_MODULE_8___default()('spectrum-Heading4', _css_subHeader_scss__WEBPACK_IMPORTED_MODULE_7___default.a.subHeader, _css_subHeader_scss__WEBPACK_IMPORTED_MODULE_7___default.a.header, parentClass),
         id: title.split(" ").join("-"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 16
         },
         __self: this
       }, this.props.title, __jsx("span", {
         className: _css_subHeader_scss__WEBPACK_IMPORTED_MODULE_7___default.a.headingAnchor,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 18
         },
         __self: this
       }, __jsx("a", {
@@ -816,7 +817,7 @@ function (_React$Component) {
         href: '#' + title.split(" ").join("-"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 19
         },
         __self: this
       }, "#")), this.props.children);
@@ -34660,7 +34661,7 @@ exports.EVENTS = {
     They should probably be removed eventually.
 */
 __export(__webpack_require__(/*! ./FeedHandler */ "./node_modules/htmlparser2/lib/FeedHandler.js"));
-__export(__webpack_require__(/*! ./WritableStream */ 110));
+__export(__webpack_require__(/*! ./WritableStream */ 106));
 __export(__webpack_require__(/*! ./CollectingHandler */ "./node_modules/htmlparser2/lib/CollectingHandler.js"));
 var DomUtils = __importStar(__webpack_require__(/*! domutils */ "./node_modules/domutils/lib/index.js"));
 exports.DomUtils = DomUtils;
@@ -54188,7 +54189,18 @@ function () {
 
 /***/ }),
 
-/***/ 103:
+/***/ 106:
+/*!**********************************!*\
+  !*** ./WritableStream (ignored) ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 99:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js ***!
   \*********************************************************************************************************************************************************/
@@ -54197,17 +54209,6 @@ function () {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js!./");
 
-
-/***/ }),
-
-/***/ 110:
-/*!**********************************!*\
-  !*** ./WritableStream (ignored) ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -54222,5 +54223,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[103,"static/runtime/webpack.js","styles"]]]);
+},[[99,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=id.js.map

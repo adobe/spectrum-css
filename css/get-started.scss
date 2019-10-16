@@ -1,0 +1,15 @@
+:local(.codeBlock) {
+  code {
+    border: 1px solid var(--spectrum-global-color-gray-400);
+    border-radius: var(--spectrum-global-dimension-size-50);
+    padding: 14px 17px;
+    margin: 3px 0;
+  }
+}
+
+:local(.subSection) {
+  margin: 50px 0;
+}
+
+:local(.p) {
+}
