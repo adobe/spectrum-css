@@ -9,6 +9,9 @@ body {
   overflow: auto !important;
 }
 
+:global(.dummy-spacing) {
+  height: var(--spectrum-global-dimension-size-2400);
+}
 
 :global(.flexContainer) {
   padding-left:248px;

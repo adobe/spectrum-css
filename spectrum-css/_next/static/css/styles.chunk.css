@@ -13283,6 +13283,9 @@ to this repo does not apply.
 body {
   overflow: auto !important; }
 
+.dummy-spacing {
+  height: var(--spectrum-global-dimension-size-2400); }
+
 .flexContainer {
   padding-left: 248px; }
   @media screen and (max-width: 960px) {
@@ -15434,6 +15437,42 @@ div.subHeadStatusLight___3Xg_x {
 .hljs-link {
   text-decoration: underline; }
 
+
+.heroContainer___2bZ_C {
+  overflow: hidden;
+  border-radius: 4px; }
+  .heroContainer___2bZ_C.Standard___11jua {
+    width: 100%;
+    background-color: var(--spectrum-global-color-gray-100);
+    display: flex;
+    justify-content: center; }
+  .heroContainer___2bZ_C.Illustration___1VC_5 img {
+    width: 100%; }
+
+.row___EIpbc {
+  margin-bottom: 56px; }
+
+.width___3VV6B img {
+  display: block; }
+
+.responsiveImage___2Oagb img {
+  display: block; }
+
+.Anatomy___3C7c7 {
+  display: flex;
+  align-items: center; }
+
+.hasMobile___1Bo_v .mobile___dqoEu {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .hasMobile___1Bo_v .mobile___dqoEu {
+      display: block; } }
+
+.hasMobile___1Bo_v .desktop___4riAm {
+  display: block; }
+  @media screen and (max-width: 768px) {
+    .hasMobile___1Bo_v .desktop___4riAm {
+      display: none; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

@@ -12729,6 +12729,9 @@ to this repo does not apply.
 body {
   overflow: auto !important; }
 
+.dummy-spacing {
+  height: var(--spectrum-global-dimension-size-2400); }
+
 .flexContainer {
   padding-left: 248px; }
   @media screen and (max-width: 960px) {
