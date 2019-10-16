@@ -3,13 +3,14 @@ import Button from "@react/react-spectrum/Button";
 import ShowMenu from "@react/react-spectrum/Icon/ShowMenu";
 import { SideNav, SideNavItem } from "@react/react-spectrum/SideNav";
 import Router from "next/router";
+import { withRouter } from "next/router";
 import classNames from "classnames";
 import menuData from "../data/newmenu";
-import styles from "./css/sidebar.scss";
 import SiteSearch from "./SiteSearch";
 import getConfig from "next/config";
 import Logo from "./Logo";
-import { withRouter } from "next/router";
+import styles from "./css/sidebar.scss";
+
 
 const createLinkProps = item => {
   if (item.linkType === "External") {
@@ -120,11 +121,17 @@ class Sidebar extends React.Component {
                         }
                         renderLink={props => {
                           delete props.href;
-                          return (
-                            <Link {...createLinkProps(item)}>
-                              <a {...props}>{item.title}</a>
-                            </Link>
-                          );
+                          if(item.linkType === "External") {
+                            return (
+                              <a className="spectrum-SideNav-itemLink" {...createLinkProps(item)}>{item.title}</a>
+                            );
+                          } else {
+                            return (
+                              <Link {...createLinkProps(item)}>
+                                <a {...props}>{item.title}</a>
+                              </Link>
+                            );
+                          }
                         }}
                       />
                     );
@@ -152,11 +159,17 @@ class Sidebar extends React.Component {
                                 }
                                 renderLink={props => {
                                   delete props.href;
-                                  return (
-                                    <Link {...createLinkProps(childItem)}>
-                                      <a {...props}>{childItem.title}</a>
-                                    </Link>
-                                  );
+                                  if(childItem.linkType === "External") {
+                                    return (
+                                      <a {...createLinkProps(childItem)}>{childItem.title}</a>
+                                    );
+                                  } else {
+                                    return (
+                                      <Link {...createLinkProps(childItem)}>
+                                        <a {...props}>{childItem.title}</a>
+                                      </Link>
+                                    );
+                                  }
                                 }}
                               />
                             );

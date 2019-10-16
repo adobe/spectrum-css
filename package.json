@@ -25,12 +25,10 @@
     "@adobe/spectrum-css": "^2.14.0",
     "@adobe/spectrum-css-workflow-icons": "1.0.0-beta.6",
     "classnames": "^2.2.6",
-    "isomorphic-unfetch": "^3.0.0",
     "js-yaml-loader": "^1.2.2",
     "loadicons": "^1.0.0",
-    "next": "^9.0.5",
+    "next": "^9.1.1",
     "npm-package-info": "^0.1.0",
-    "raw-loader": "^3.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-highlight.js": "^1.0.7",
@@ -38,7 +36,7 @@
     "resolve": "^1.12.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@react/collection-view": "file:react-collection-view-4.1.5.tgz",
     "@react/react-spectrum": "file:react-react-spectrum-2.25.0.tgz",
     "@zeit/next-css": "^1.0.1",
@@ -56,7 +54,7 @@
     "nextjs-sitemap-generator": "^0.1.1",
     "node-sass": "^4.12.0",
     "react-helmet": "^5.2.1",
-    "webpack": "^4.39.3",
+    "webpack": "^4.41.2",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-node-externals": "^1.7.2"
   },
