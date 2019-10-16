@@ -23,7 +23,7 @@ Adobe maintains separate JavaScript libraries written with React, Angular, and w
 
 The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
 
-To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
+To use Spectrum CSS with or without IE 11, see the [legacy usage documentation](README-legacy.md).
 
 ### Installing components
 
@@ -68,14 +68,14 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
 ```
 
-Then, make sure you've included the relevant classes to choose which scale and colorstop you want:
+Next, make sure you've included the relevant classes to choose which scale and colorstop you want:
 ```html
 <html class="spectrum spectrum--medium spectrum--light">
 ```
 
 **Note:**  If you are importing SVG icon sprite sheets, the `.spectrum--medium`/`.spectrum--large` classes should be added to the `<html>` element so UI icons render in the correct size in IE 11. For browsers that support custom properties, or if you're not using SVG sprite sheets for UI icons and are manually managing icon sizing in your implementation, `.spectrum--medium`/`.spectrum--large` can be added to the `<body>` or other element.
 
-Then you can use components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
+You can now use the components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
 
 With the magic of CSS custom properties, you can infinitely nest different color stops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
 
