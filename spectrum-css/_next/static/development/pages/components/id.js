@@ -34660,7 +34660,7 @@ exports.EVENTS = {
     They should probably be removed eventually.
 */
 __export(__webpack_require__(/*! ./FeedHandler */ "./node_modules/htmlparser2/lib/FeedHandler.js"));
-__export(__webpack_require__(/*! ./WritableStream */ 114));
+__export(__webpack_require__(/*! ./WritableStream */ 106));
 __export(__webpack_require__(/*! ./CollectingHandler */ "./node_modules/htmlparser2/lib/CollectingHandler.js"));
 var DomUtils = __importStar(__webpack_require__(/*! domutils */ "./node_modules/domutils/lib/index.js"));
 exports.DomUtils = DomUtils;
@@ -53690,24 +53690,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_highlight_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_highlight_js__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @react/react-spectrum/StatusLight */ "./node_modules/@react/react-spectrum/StatusLight/index.js");
-/* harmony import */ var _react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/css/page.scss */ "./components/css/page.scss");
-/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_css_page_scss__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/css/componentPage.scss */ "./components/css/componentPage.scss");
-/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_ResourceCard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/ResourceCard */ "./components/ResourceCard.js");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/lib/Helmet.js");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _components_PageHeader__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/PageHeader */ "./components/PageHeader.js");
-/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/Section */ "./components/Section.js");
-/* harmony import */ var _components_Markdown__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/Markdown */ "./components/Markdown.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/lib/Helmet.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @react/react-spectrum/Link */ "./node_modules/@react/react-spectrum/Link/index.js");
+/* harmony import */ var _react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _components_Markdown__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/Markdown */ "./components/Markdown.js");
+/* harmony import */ var _components_PageHeader__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/PageHeader */ "./components/PageHeader.js");
+/* harmony import */ var _components_ResourceCard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/ResourceCard */ "./components/ResourceCard.js");
+/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/Section */ "./components/Section.js");
+/* harmony import */ var _components_Status__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/Status */ "./components/Status.js");
+/* harmony import */ var _react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @react/react-spectrum/StatusLight */ "./node_modules/@react/react-spectrum/StatusLight/index.js");
+/* harmony import */ var _react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_20__);
 /* harmony import */ var _components_SubHeader__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/SubHeader */ "./components/SubHeader.js");
-/* harmony import */ var _react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @react/react-spectrum/Link */ "./node_modules/@react/react-spectrum/Link/index.js");
-/* harmony import */ var _react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _components_Status__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/Status */ "./components/Status.js");
-/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../css/hljs.scss */ "./css/hljs.scss");
-/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_css_hljs_scss__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../css/hljs.scss */ "./css/hljs.scss");
+/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_css_hljs_scss__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/css/page.scss */ "./components/css/page.scss");
+/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_components_css_page_scss__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/css/componentPage.scss */ "./components/css/componentPage.scss");
+/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24__);
 
 
 
@@ -53798,7 +53798,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return __jsx("div", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.markup,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.markup,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41
@@ -53806,7 +53806,7 @@ function (_React$Component) {
         __self: this
       }, __jsx(react_highlight_js__WEBPACK_IMPORTED_MODULE_11___default.a, {
         language: "html",
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Code4', _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.markupPre, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Code4', _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.markupPre, {
           'is-open': this.state.openFlag
         }),
         __source: {
@@ -53814,8 +53814,8 @@ function (_React$Component) {
           lineNumber: 42
         },
         __self: this
-      }, this.props.children), __jsx(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_22___default.a, {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.toggle,
+      }, this.props.children), __jsx(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.toggle,
         href: "#",
         onClick: this.clickHander,
         __source: {
@@ -53844,65 +53844,62 @@ function (_React$Component2) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Variant, [{
     key: "render",
     value: function render() {
-      // if(example.status = 'Contribution')
       return __jsx("article", {
-        id: this.props.example.slug,
-        key: this.props.example.slug,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 54
         },
         __self: this
       }, __jsx(_components_SubHeader__WEBPACK_IMPORTED_MODULE_21__["default"], {
         title: this.props.example.name,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 55
         },
         __self: this
-      }, __jsx(_components_Status__WEBPACK_IMPORTED_MODULE_23__["default"], {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.subHeadStatusLight,
+      }, __jsx(_components_Status__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.subHeadStatusLight,
         status: this.props.example.status,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 56
         },
         __self: this
-      })), this.props.example.description ? __jsx(_components_Markdown__WEBPACK_IMPORTED_MODULE_20__["default"], {
+      })), this.props.example.description ? __jsx(_components_Markdown__WEBPACK_IMPORTED_MODULE_15__["default"], {
         source: this.props.example.description,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 59
         },
         __self: this
-      }) : undefined, this.props.example.details ? __jsx(_components_Markdown__WEBPACK_IMPORTED_MODULE_20__["default"], {
+      }) : undefined, this.props.example.details ? __jsx(_components_Markdown__WEBPACK_IMPORTED_MODULE_15__["default"], {
         source: this.props.example.details,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 62
         },
         __self: this
       }) : undefined, this.props.example.markup ? __jsx("section", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.exampleContainer,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.exampleContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 65
         },
         __self: this
       }, __jsx("div", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.example,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.example,
         dangerouslySetInnerHTML: {
           __html: this.props.example.markup
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 66
         },
         __self: this
       }), __jsx(Markup, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 69
         },
         __self: this
       }, this.props.example.markup)) : undefined);
@@ -53931,16 +53928,16 @@ function (_React$Component3) {
         style: {
           overflow: 'hidden'
         },
-        className: _components_css_page_scss__WEBPACK_IMPORTED_MODULE_14___default.a.pageContainer,
+        className: _components_css_page_scss__WEBPACK_IMPORTED_MODULE_23___default.a.pageContainer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_13__["Helmet"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 90
-        },
-        __self: this
-      }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_17__["Helmet"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 91
         },
         __self: this
       }, __jsx("meta", {
@@ -53948,171 +53945,171 @@ function (_React$Component3) {
         content: this.props.pageData.description,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 91
         },
         __self: this
       }), __jsx("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 92
         },
         __self: this
       }, " ", this.props.pageData.name, " - Spectrum CSS"), __jsx("style", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 93
         },
         __self: this
-      }, "".concat(this.props.pageData.peerCSS).concat(this.props.pageData.indexCSS))), __jsx(_components_PageHeader__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }, "".concat(this.props.pageData.peerCSS).concat(this.props.pageData.indexCSS))), __jsx(_components_PageHeader__WEBPACK_IMPORTED_MODULE_16__["default"], {
         title: this.props.pageData.name,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }), __jsx("table", {
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.detailsTable,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 96
         },
         __self: this
-      }), __jsx("table", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.detailsTable,
+      }, __jsx("tbody", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 97
         },
         __self: this
-      }, __jsx("tbody", {
+      }, __jsx("tr", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 98
         },
         __self: this
-      }, __jsx("tr", {
+      }, __jsx("th", {
+        className: "spectrum-Body--secondary",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 99
         },
         __self: this
-      }, __jsx("th", {
-        className: "spectrum-Body--secondary",
+      }, "Component status"), __jsx("td", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 100
         },
         __self: this
-      }, "Component status"), __jsx("td", {
+      }, __jsx(_components_Status__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        status: componentStatus,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 101
         },
         __self: this
-      }, __jsx(_components_Status__WEBPACK_IMPORTED_MODULE_23__["default"], {
-        status: componentStatus,
+      }))), __jsx("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 104
         },
         __self: this
-      }))), __jsx("tr", {
+      }, __jsx("th", {
+        className: "spectrum-Body--secondary",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 105
         },
         __self: this
-      }, __jsx("th", {
-        className: "spectrum-Body--secondary",
+      }, "Last released"), __jsx("td", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 106
         },
         __self: this
-      }, "Last released"), __jsx("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 107
-        },
-        __self: this
       }, "October 8, 2019")), __jsx("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 108
         },
         __self: this
       }, __jsx("th", {
         className: "spectrum-Body--secondary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 109
         },
         __self: this
       }, "Current version"), __jsx("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 110
         },
         __self: this
       }, this.props.pageData.packageName, "@", this.props.pageData.packageVersion)))), __jsx("div", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_15___default.a.resourceCards,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.resourceCards,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 114
         },
         __self: this
-      }, __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      }, __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_17__["default"], {
         type: "Spectrum",
         url: "#",
         title: "View guidelines",
         subTitle: "Spectrum",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 115
         },
         __self: this
-      }), __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      }), __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_17__["default"], {
         type: "GitHub",
         url: "https://github.com/adobe/spectrum-css/tree/master/components/".concat(this.props.pageData.packageSlug),
         title: "View repository",
         subTitle: "Github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 121
         },
         __self: this
-      }), __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      }), __jsx(_components_ResourceCard__WEBPACK_IMPORTED_MODULE_17__["default"], {
         type: "NPM",
         url: "https://www.npmjs.com/package/".concat(this.props.pageData.packageName),
         title: "View package",
         subTitle: "NPM",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 127
         },
         __self: this
-      })), this.props.pageData.description ? __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      })), this.props.pageData.description ? __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_18__["default"], {
         title: 'Usage notes',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 135
+        },
+        __self: this
+      }, __jsx(_components_Markdown__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        source: this.props.pageData.description,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 136
         },
         __self: this
-      }, __jsx(_components_Markdown__WEBPACK_IMPORTED_MODULE_20__["default"], {
-        source: this.props.pageData.description,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 137
-        },
-        __self: this
-      })) : undefined, __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      })) : undefined, __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_18__["default"], {
         title: 'Variants',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 139
         },
         __self: this
-      }, this.props.pageData.examples.map(function (example) {
+      }, this.props.pageData.examples.map(function (example, index) {
         example.status = example.status || componentStatus;
         return __jsx(Variant, {
-          key: example.id,
+          key: "".concat(example.id, "-").concat(index),
           example: example,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 144
+            lineNumber: 143
           },
           __self: this
         });
@@ -54191,7 +54188,18 @@ function () {
 
 /***/ }),
 
-/***/ 103:
+/***/ 106:
+/*!**********************************!*\
+  !*** ./WritableStream (ignored) ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 99:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js ***!
   \*********************************************************************************************************************************************************/
@@ -54200,17 +54208,6 @@ function () {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js!./");
 
-
-/***/ }),
-
-/***/ 114:
-/*!**********************************!*\
-  !*** ./WritableStream (ignored) ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -54225,5 +54222,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[103,"static/runtime/webpack.js","styles"]]]);
+},[[99,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=id.js.map

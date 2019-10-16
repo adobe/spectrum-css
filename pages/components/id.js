@@ -4,17 +4,17 @@ import { withRouter } from "next/router";
 import Highlight from 'react-highlight.js';
 import classNames from "classnames";
 import {Helmet} from "react-helmet";
-import StatusLight from '@react/react-spectrum/StatusLight';
 import Link from '@react/react-spectrum/Link';
+import Markdown from '../../components/Markdown';
+import PageHeader from '../../components/PageHeader';
+import ResourceCard from '../../components/ResourceCard';
+import Section from '../../components/Section';
+import Status from '../../components/Status';
+import StatusLight from '@react/react-spectrum/StatusLight';
+import SubHeader from '../../components/SubHeader';
+import '../../css/hljs.scss';
 import styles from '../../components/css/page.scss';
 import compStyles from '../../components/css/componentPage.scss';
-import ResourceCard from '../../components/ResourceCard';
-import PageHeader from '../../components/PageHeader';
-import Section from '../../components/Section';
-import Markdown from '../../components/Markdown';
-import SubHeader from '../../components/SubHeader';
-import Status from '../../components/Status';
-import '../../css/hljs.scss';
 
 async function loadData(id) {
   let data = await import(`../../data/yml/${id}.yml`);
@@ -50,9 +50,8 @@ class Markup extends React.Component {
 
 class Variant extends React.Component {
   render() {
-    // if(example.status = 'Contribution')
     return (
-      <article id={this.props.example.slug} key={this.props.example.slug}>
+      <article>
         <SubHeader title={this.props.example.name}>
           <Status className={compStyles.subHeadStatusLight} status={this.props.example.status}/>
         </SubHeader>
@@ -138,10 +137,10 @@ class Page extends React.Component {
         </Section>
       ) : undefined }
       <Section title={'Variants'}>
-        {this.props.pageData.examples.map(function(example) {
+        {this.props.pageData.examples.map(function(example, index) {
           example.status = example.status || componentStatus;
           return(
-            <Variant key={example.id} example={example}/>
+            <Variant key={`${example.id}-${index}`} example={example}/>
           )
         }, this)}
         </Section>

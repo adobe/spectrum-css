@@ -3,10 +3,11 @@ import {Helmet} from "react-helmet";
 import Link from '@react/react-spectrum/Link';
 import Highlight from 'react-highlight.js';
 import classNames from "classnames";
+import Markdown from '../components/Markdown';
 import PageHeader from '../components/PageHeader';
 import Section from '../components/Section';
 import SubHeader from '../components/SubHeader';
-import Markdown from '../components/Markdown';
+import compStyles from '../components/css/componentPage.scss';
 
 const GetStarted = () => (
   <div style={{overflow: 'hidden', position: "relative"}}>
@@ -33,7 +34,7 @@ const GetStarted = () => (
         <p className="spectrum-Body2">Spectrum CSS requires a Node.js environment with a minimum version of 10.</p>
         <p className="spectrum-Body2">
           First, install the required button dependencies by running:
-          <Highlight language="shell" className={classNames('spectrum-Code4')}>
+          <Highlight language="shell" className={classNames('spectrum-Code4', compStyles.markupPre)}>
             $ npm install @spectrum-css/vars @spectrum-css/button @spectrum-css/page
           </Highlight>
         </p>

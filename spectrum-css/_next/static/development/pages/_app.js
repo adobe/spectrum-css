@@ -154,12 +154,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _data_newmenu__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../data/newmenu */ "./data/newmenu.json");
 var _data_newmenu__WEBPACK_IMPORTED_MODULE_13___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/newmenu */ "./data/newmenu.json", 1);
-/* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./css/sidebar.scss */ "./components/css/sidebar.scss");
-/* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _SiteSearch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./SiteSearch */ "./components/SiteSearch.js");
-/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! next/config */ "./node_modules/next/dist/next-server/lib/runtime-config.js");
-/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Logo */ "./components/Logo.js");
+/* harmony import */ var _SiteSearch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./SiteSearch */ "./components/SiteSearch.js");
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! next/config */ "./node_modules/next/dist/next-server/lib/runtime-config.js");
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Logo */ "./components/Logo.js");
+/* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./css/sidebar.scss */ "./components/css/sidebar.scss");
+/* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17__);
 
 
 
@@ -272,20 +272,20 @@ function (_React$Component) {
       var _this2 = this;
 
       return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.overlay, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.menuClosed),
+        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.overlay, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         onClick: function onClick() {
           return _this2.closeMenu();
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 75
         },
         __self: this
       }), __jsx("div", {
-        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.appHeader,
+        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.appHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 82
         },
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -293,7 +293,7 @@ function (_React$Component) {
         icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_9___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 85
           },
           __self: this
         }),
@@ -303,47 +303,47 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 83
         },
         __self: this
       })), __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.menuClosed),
+        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 90
         },
         __self: this
       }, __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.spectrumSidebar),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 95
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.header,
+        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 96
         },
         __self: this
-      }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }, __jsx("div", {
+        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.header,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 97
         },
         __self: this
-      }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_15__["default"], {
+      }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_16__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 98
+        },
+        __self: this
+      }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
         },
         __self: this
       })), __jsx("div", {
-        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_14___default.a.navigation,
+        className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 103
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNav"], {
@@ -355,7 +355,7 @@ function (_React$Component) {
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 104
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_13__.menu[0].children.map(function (item, i) {
@@ -370,23 +370,36 @@ function (_React$Component) {
             ref: item.url === _this2.props.router.query.id ? _this2.selectedItem : undefined,
             renderLink: function renderLink(props) {
               delete props.href;
-              return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 124
-                },
-                __self: this
-              }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 125
-                },
-                __self: this
-              }), item.title));
+
+              if (item.linkType === "External") {
+                return __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+                  className: "spectrum-SideNav-itemLink"
+                }, createLinkProps(item), {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 126
+                  },
+                  __self: this
+                }), item.title);
+              } else {
+                return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 130
+                  },
+                  __self: this
+                }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 131
+                  },
+                  __self: this
+                }), item.title));
+              }
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 111
+              lineNumber: 112
             },
             __self: this
           });
@@ -401,7 +414,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 133
+              lineNumber: 140
             },
             __self: this
           }, item.children && item.children.map(function (childItem, childI) {
@@ -415,23 +428,34 @@ function (_React$Component) {
               ref: childItem.url === _this2.props.router.query.id ? _this2.selectedItem : undefined,
               renderLink: function renderLink(props) {
                 delete props.href;
-                return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 156
-                  },
-                  __self: this
-                }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 157
-                  },
-                  __self: this
-                }), childItem.title));
+
+                if (childItem.linkType === "External") {
+                  return __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 164
+                    },
+                    __self: this
+                  }), childItem.title);
+                } else {
+                  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 168
+                    },
+                    __self: this
+                  }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 169
+                    },
+                    __self: this
+                  }), childItem.title));
+                }
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 143
+                lineNumber: 150
               },
               __self: this
             });
@@ -444,7 +468,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 182
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNavItem"], {
@@ -456,7 +480,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 170
+          lineNumber: 183
         },
         __self: this
       }, "Spectrum"))))));
@@ -18934,7 +18958,7 @@ var IntlMessageFormat = __webpack_require__(/*! ./lib/main */ "./node_modules/in
 
 // Add all locale data to `IntlMessageFormat`. This module will be ignored when
 // bundling for the browser with Browserify/Webpack.
-__webpack_require__(/*! ./lib/locales */ 18);
+__webpack_require__(/*! ./lib/locales */ 17);
 
 // Re-export `IntlMessageFormat` as the CommonJS default exports with all the
 // locale data registered, and with English set as the default locale. Define
@@ -33139,7 +33163,7 @@ function (_App) {
 
 /***/ }),
 
-/***/ 18:
+/***/ 17:
 /*!*******************************!*\
   !*** ./lib/locales (ignored) ***!
   \*******************************/
