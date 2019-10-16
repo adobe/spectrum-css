@@ -126,7 +126,11 @@ module.exports = withCSS({
     config.plugins.push(
       new CopyWebpackPlugin([
         {
-          from: path.join(__dirname, 'node_modules/@adobe/spectrum-css-workflow-icons/dist/sites/spectrum-css/spectrum-css-icons.svg'),
+          from: path.join(__dirname, 'node_modules/@adobe/spectrum-css/dist/icons/spectrum-css-icons.svg'),
+          to: path.join(__dirname, 'static/images/svg/')
+        },        
+        {
+          from: path.join(__dirname, 'node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg'),
           to: path.join(__dirname, 'static/images/svg/')
         },
         {
