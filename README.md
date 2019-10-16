@@ -2,12 +2,29 @@
 
 Spectrum CSS provides a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
-1. [Show me a demo](#show-me-a-demo)
-1. [Where is the JavaScript?](#where-is-the-javascript)
-1. [Using Spectrum CSS](#using-spectrum-css)
-1. [Contributing](#contributing)
-1. [Testing](#testing)
-1. [Releasing](#releasing)
+Table of Contents
+=================
+* [Show me a demo](#show-me-a-demo)
+* [Where is the JavaScript?](#where-is-the-javascript)
+* [Using Spectrum CSS](#using-spectrum-css)
+  * [Installing components](#installing-components)
+  * [Using components](#using-components)
+  * [Importing UI icons](#importing-ui-icons)
+  * [Importing workflow icons](#importing-workflow-icons)
+  * [Language support](#language-support)
+  * [Variable fallbacks](#variable-fallbacks)
+* [Contributing](#contributing)
+  * [Building](#building)
+  * [Documentation site](#documentation-site)
+  * [CLI](#cli)
+* [Testing](#testing)
+  * [Setup docker](#setup-docker)
+  * [Backstop reference bitmap](#backstop-reference-bitmap)
+  * [Start dev server with Browsersync notification turnoff](#start-dev-server-with-browsersync-notification-turnoff)
+  * [Testing CLI targets](#testing-cli-targets)
+* [Releasing](#releasing)
+  * [Releasing individual components](#releasing-individual-components)
+  * [Releasing bundles](#releasing-bundles)
 
 ## Show me a demo
 
