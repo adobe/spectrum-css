@@ -32946,12 +32946,12 @@ function (_App) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "handleOnLoad", function () {
       window.onload = function () {
-        loadIcons('/static/images/svg/spectrum-icons.svg', function (err, svg) {
+        loadIcons("".concat("", "/static/images/svg/spectrum-icons.svg"), function (err, svg) {
           if (err) {
             console.error('Loading Workflow icons failed: ' + error);
           }
         });
-        loadIcons('/static/images/svg/spectrum-css-icons.svg', function (err, svg) {
+        loadIcons("".concat("", "/static/images/svg/spectrum-css-icons.svg"), function (err, svg) {
           if (err) {
             console.error('Loading UI icons failed: ' + error);
           }
@@ -33004,7 +33004,7 @@ function (_App) {
         __self: this
       }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_10__["Helmet"], {
         script: [{
-          src: '/static/javascript/loadicons/index.js'
+          src: "".concat("", "/static/javascript/loadicons/index.js")
         }],
         onChangeClientState: function onChangeClientState(newState, addedTags) {
           return _this2.handleScriptInject(addedTags);

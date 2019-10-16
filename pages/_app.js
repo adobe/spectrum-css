@@ -80,13 +80,13 @@ class MyApp extends App {
 
   handleOnLoad = () => {
     window.onload = function () {
-      loadIcons('/static/images/svg/spectrum-icons.svg', function (err, svg) {
+      loadIcons(`${process.env.BACKEND_URL}/static/images/svg/spectrum-icons.svg`, function (err, svg) {
         if (err) {
           console.error('Loading Workflow icons failed: ' + error);
         }
       });
 
-      loadIcons('/static/images/svg/spectrum-css-icons.svg', function (err, svg) {
+      loadIcons(`${process.env.BACKEND_URL}/static/images/svg/spectrum-css-icons.svg`, function (err, svg) {
         if (err) {
           console.error('Loading UI icons failed: ' + error);
         }
@@ -102,7 +102,7 @@ class MyApp extends App {
       <div>
         {/* SVG iconfile loadscript */}
         <Helmet
-          script={[{ src: '/static/javascript/loadicons/index.js' }]}
+          script={[{ src: `${process.env.BACKEND_URL}/static/javascript/loadicons/index.js` }]}
           onChangeClientState={(newState, addedTags) => this.handleScriptInject(addedTags)}>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
           <link rel="icon" type="image/x-icon" href={`${process.env.BACKEND_URL}/static/favicon.ico`} />
