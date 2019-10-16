@@ -53702,12 +53702,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @react/react-spectrum/StatusLight */ "./node_modules/@react/react-spectrum/StatusLight/index.js");
 /* harmony import */ var _react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_StatusLight__WEBPACK_IMPORTED_MODULE_20__);
 /* harmony import */ var _components_SubHeader__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/SubHeader */ "./components/SubHeader.js");
-/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../css/hljs.scss */ "./css/hljs.scss");
-/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_css_hljs_scss__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/css/page.scss */ "./components/css/page.scss");
-/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_components_css_page_scss__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/css/componentPage.scss */ "./components/css/componentPage.scss");
-/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/css/page.scss */ "./components/css/page.scss");
+/* harmony import */ var _components_css_page_scss__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_components_css_page_scss__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/css/componentPage.scss */ "./components/css/componentPage.scss");
+/* harmony import */ var _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../css/hljs.scss */ "./css/hljs.scss");
+/* harmony import */ var _css_hljs_scss__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_css_hljs_scss__WEBPACK_IMPORTED_MODULE_24__);
 
 
 
@@ -53798,7 +53798,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return __jsx("div", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.markup,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.markup,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41
@@ -53806,7 +53806,7 @@ function (_React$Component) {
         __self: this
       }, __jsx(react_highlight_js__WEBPACK_IMPORTED_MODULE_11___default.a, {
         language: "html",
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Code4', _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.markupPre, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()('spectrum-Code4', _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.markupPre, {
           'is-open': this.state.openFlag
         }),
         __source: {
@@ -53815,7 +53815,7 @@ function (_React$Component) {
         },
         __self: this
       }, this.props.children), __jsx(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_14___default.a, {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.toggle,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.toggle,
         href: "#",
         onClick: this.clickHander,
         __source: {
@@ -53858,7 +53858,7 @@ function (_React$Component2) {
         },
         __self: this
       }, __jsx(_components_Status__WEBPACK_IMPORTED_MODULE_19__["default"], {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.subHeadStatusLight,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.subHeadStatusLight,
         status: this.props.example.status,
         __source: {
           fileName: _jsxFileName,
@@ -53880,14 +53880,14 @@ function (_React$Component2) {
         },
         __self: this
       }) : undefined, this.props.example.markup ? __jsx("section", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.exampleContainer,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.exampleContainer,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 65
         },
         __self: this
       }, __jsx("div", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.example,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.example,
         dangerouslySetInnerHTML: {
           __html: this.props.example.markup
         },
@@ -53928,7 +53928,7 @@ function (_React$Component3) {
         style: {
           overflow: 'hidden'
         },
-        className: _components_css_page_scss__WEBPACK_IMPORTED_MODULE_23___default.a.pageContainer,
+        className: _components_css_page_scss__WEBPACK_IMPORTED_MODULE_22___default.a.pageContainer,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 89
@@ -53968,7 +53968,7 @@ function (_React$Component3) {
         },
         __self: this
       }), __jsx("table", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.detailsTable,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.detailsTable,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 96
@@ -54045,7 +54045,7 @@ function (_React$Component3) {
         },
         __self: this
       }, this.props.pageData.packageName, "@", this.props.pageData.packageVersion)))), __jsx("div", {
-        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_24___default.a.resourceCards,
+        className: _components_css_componentPage_scss__WEBPACK_IMPORTED_MODULE_23___default.a.resourceCards,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 114

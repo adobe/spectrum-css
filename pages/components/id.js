@@ -12,9 +12,9 @@ import Section from '../../components/Section';
 import Status from '../../components/Status';
 import StatusLight from '@react/react-spectrum/StatusLight';
 import SubHeader from '../../components/SubHeader';
-import '../../css/hljs.scss';
 import styles from '../../components/css/page.scss';
 import compStyles from '../../components/css/componentPage.scss';
+import '../../css/hljs.scss';
 
 async function loadData(id) {
   let data = await import(`../../data/yml/${id}.yml`);

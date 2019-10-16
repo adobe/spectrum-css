@@ -15254,94 +15254,6 @@ to this repo does not apply.
   background-color: rgb(134, 76, 204);
 }
 
-.spectrum--light, .spectrum--lightest {
-  --hljs-color: #383a42;
-  --hljs-background: #fafafa;
-  --hljs-keyword-color: #a626a4;
-  --hljs-section-color: #e45649;
-  --hljs-literal-color: #0184bb;
-  --hljs-attribute-color: #50a14f;
-  --hljs-class-color: #c18401;
-  --hljs-variable-color: #986801;
-  --hljs-title-color: #4078f2; }
-
-.spectrum--dark,
-.spectrum--darkest {
-  --hljs-color: #abb2bf;
-  --hljs-background: #282c34;
-  --hljs-keyword-color: #c678dd;
-  --hljs-section-color: #e06c75;
-  --hljs-literal-color: #56b6c2;
-  --hljs-attribute-color: #98c379;
-  --hljs-class-color: #e6c07b;
-  --hljs-variable-color: #d19a66;
-  --hljs-title-color: #61aeee; }
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: var(--hljs-color, #383a42);
-  background: var(--hljs-background, #fafafa); }
-
-.hljs-comment,
-.hljs-quote {
-  color: #a0a1a7;
-  font-style: italic; }
-
-.hljs-doctag,
-.hljs-formula,
-.hljs-keyword {
-  color: var(--hljs-keyword-color, #a626a4); }
-
-.hljs-deletion,
-.hljs-name,
-.hljs-section,
-.hljs-selector-tag,
-.hljs-subst {
-  color: var(--hljs-section-color, #e45649); }
-
-.hljs-literal {
-  color: var(--hljs-literal-color, #0184bb); }
-
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta-string,
-.hljs-regexp,
-.hljs-string {
-  color: var(--hljs-attribute-color, #50a14f); }
-
-.hljs-built_in,
-.hljs-class .hljs-title {
-  color: var(--hljs-class-color, #c18401); }
-
-.hljs-attr,
-.hljs-number,
-.hljs-selector-attr,
-.hljs-selector-class,
-.hljs-selector-pseudo,
-.hljs-template-variable,
-.hljs-type,
-.hljs-variable {
-  color: var(--hljs-variable-color, #986801); }
-
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-symbol,
-.hljs-title {
-  color: var(--hljs-title-color, #4078f2); }
-
-.hljs-emphasis {
-  font-style: italic; }
-
-.hljs-strong {
-  font-weight: bold; }
-
-.hljs-link {
-  text-decoration: underline; }
-
 .pageContainer___3Z_T8 {
   position: relative; }
 
@@ -15445,6 +15357,83 @@ div.subHeadStatusLight___3Xg_x {
   padding: 0 0 var(--spectrum-global-dimension-size-160) var(--spectrum-global-dimension-size-85);
   text-align: left;
   display: inline-block; }
+
+.spectrum {
+  --hljs-color: var(--spectrum-global-color-gray-800, #383a42);
+  --hljs-background: var(--spectrum-global-color-gray-75, #fafafa);
+  --hljs-keyword-color: var(--spectrum-global-color-fuchsia-600, #a626a4);
+  --hljs-section-color: var(--spectrum-global-color-red-600, #e45649);
+  --hljs-literal-color: var(--spectrum-global-color-blue-600, #0184bb);
+  --hljs-attribute-color: var(--spectrum-global-color-celery-600, #50a14f);
+  --hljs-class-color: var(--spectrum-global-color-yellow-600, #c18401);
+  --hljs-variable-color: var(--spectrum-global-color-orange-600, #986801);
+  --hljs-title-color: var(--spectrum-global-color-indigo-600, #4078f2); }
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: var(--hljs-color, #383a42);
+  background: var(--hljs-background, #fafafa); }
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic; }
+
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+  color: var(--hljs-keyword-color, #a626a4); }
+
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+  color: var(--hljs-section-color, #e45649); }
+
+.hljs-literal {
+  color: var(--hljs-literal-color, #0184bb); }
+
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string,
+.hljs-regexp,
+.hljs-string {
+  color: var(--hljs-attribute-color, #50a14f); }
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: var(--hljs-class-color, #c18401); }
+
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: var(--hljs-variable-color, #986801); }
+
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+  color: var(--hljs-title-color, #4078f2); }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-weight: bold; }
+
+.hljs-link {
+  text-decoration: underline; }
+
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

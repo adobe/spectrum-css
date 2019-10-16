@@ -1,25 +1,13 @@
-:global(.spectrum--light), :global(.spectrum--lightest) {
-  --hljs-color: #383a42;
-  --hljs-background: #fafafa;
-  --hljs-keyword-color: #a626a4;
-  --hljs-section-color: #e45649;
-  --hljs-literal-color: #0184bb;
-  --hljs-attribute-color: #50a14f;
-  --hljs-class-color: #c18401;
-  --hljs-variable-color: #986801;
-  --hljs-title-color: #4078f2;
-}
-:global(.spectrum--dark),
-:global(.spectrum--darkest) {
-  --hljs-color: #abb2bf;
-  --hljs-background: #282c34;
-  --hljs-keyword-color: #c678dd;
-  --hljs-section-color: #e06c75;
-  --hljs-literal-color: #56b6c2;
-  --hljs-attribute-color: #98c379;
-  --hljs-class-color: #e6c07b;
-  --hljs-variable-color: #d19a66;
-  --hljs-title-color: #61aeee;
+:global(.spectrum) {
+  --hljs-color: var(--spectrum-global-color-gray-800, #383a42);
+  --hljs-background: var(--spectrum-global-color-gray-75, #fafafa);
+  --hljs-keyword-color: var(--spectrum-global-color-fuchsia-600, #a626a4);
+  --hljs-section-color: var(--spectrum-global-color-red-600, #e45649);
+  --hljs-literal-color: var(--spectrum-global-color-blue-600, #0184bb);
+  --hljs-attribute-color: var(--spectrum-global-color-celery-600, #50a14f);
+  --hljs-class-color: var(--spectrum-global-color-yellow-600, #c18401);
+  --hljs-variable-color: var(--spectrum-global-color-orange-600, #986801);
+  --hljs-title-color: var(--spectrum-global-color-indigo-600, #4078f2);
 }
 
 :global(.hljs) {
