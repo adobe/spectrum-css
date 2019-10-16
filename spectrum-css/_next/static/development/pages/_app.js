@@ -32792,20 +32792,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_17__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_unique_css__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_unique_css__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_unique_css__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_unique_css__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_unique_css__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_unique_css__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global-unique.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global-unique.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_unique_css__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_25__);
 
 
 
@@ -32921,11 +32921,18 @@ function (_App) {
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "handleOnLoad", function () {
-      window.onload = loadIcons('/static/images/svg/spectrum-css-icons.svg', function (err, svg) {
-        if (err) {
-          console.error('Everything failed because ' + error);
-        }
-      });
+      window.onload = function () {
+        loadIcons('/static/images/svg/spectrum-icons.svg', function (err, svg) {
+          if (err) {
+            console.error('Loading Workflow icons failed: ' + error);
+          }
+        });
+        loadIcons('/static/images/svg/spectrum-css-icons.svg', function (err, svg) {
+          if (err) {
+            console.error('Loading UI icons failed: ' + error);
+          }
+        });
+      };
     });
 
     _this.scaleSelector = react__WEBPACK_IMPORTED_MODULE_8___default.a.createRef();
@@ -32968,7 +32975,7 @@ function (_App) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 102
         },
         __self: this
       }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_10__["Helmet"], {
@@ -32980,7 +32987,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 104
         },
         __self: this
       }, __jsx("meta", {
@@ -32989,7 +32996,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 107
         },
         __self: this
       }), __jsx("link", {
@@ -32998,7 +33005,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 108
         },
         __self: this
       }), __jsx("link", {
@@ -33007,7 +33014,7 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 109
         },
         __self: this
       })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -33016,33 +33023,33 @@ function (_App) {
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 112
         },
         __self: this
       }, __jsx("div", {
         className: 'flexContainer',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 113
         },
         __self: this
       }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_11__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 114
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 115
         },
         __self: this
       }, __jsx("div", {
         className: "switcherContainer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 116
         },
         __self: this
       }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
@@ -33051,7 +33058,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 117
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -33076,7 +33083,7 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 118
         },
         __self: this
       })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
@@ -33085,7 +33092,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 133
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -33112,13 +33119,13 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 134
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 156
         },
         __self: this
       }))))));
