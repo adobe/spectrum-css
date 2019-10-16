@@ -314,9 +314,11 @@ indexCSS: >
         border-color: var(--spectrum-radio-circle-border-color-key-focus, var(--spectrum-global-color-blue-400));
         box-shadow: 0 0 0 1px var(--spectrum-radio-circle-border-color-key-focus, var(--spectrum-global-color-blue-400));
       }
-peerDependencies:
+devDependencies:
+  '@spectrum-css/component-builder': ^1.0.0
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
 packageVersion: 2.0.0
 packageName: '@spectrum-css/radio'
 peerCSS: |

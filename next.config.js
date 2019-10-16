@@ -30,7 +30,7 @@ function gatherYML() {
         encoding: 'utf8'
       });
       const packageJson = require(`@adobe/spectrum-css/dist/components/${componentData.packageSlug}/package.json`)
-      componentData.peerDependencies = packageJson.peerDependencies || {};
+      componentData.devDependencies = packageJson.devDependencies || {};
       componentData.packageVersion = packageJson.version;
       componentData.packageName = packageJson.name;
       // npmPackage(componentData.packageName, function(err, pkg) {
@@ -38,9 +38,10 @@ function gatherYML() {
       //   // console.log(pkg.versions[pkg['dist-tags'].latest]);
       // })
       componentData.peerCSS = '';
-      Object.keys(componentData.peerDependencies).forEach((dep) => {
+      Object.keys(componentData.devDependencies).forEach((dep) => {
+        const scope = dep.split("/")[0]
         const result = dep.split("/")[1];
-        if(result !== 'vars') {
+        if(scope === '@spectrum-css' && result && result !== 'vars' && result !== 'component-builder') {
           componentData.peerCSS += fs.readFileSync(resolve.sync(`@adobe/spectrum-css/dist/components/${result}/index-vars.css`), {
             encoding: 'utf8'
           });

@@ -110,11 +110,13 @@ indexCSS: |
     -ms-flex-direction: column;
         flex-direction: column;
   }
-peerDependencies:
+devDependencies:
   '@spectrum-css/checkbox': ^2.0.0
+  '@spectrum-css/component-builder': ^1.0.0
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/radio': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
 packageVersion: 2.0.0
 packageName: '@spectrum-css/fieldgroup'
 peerCSS: >

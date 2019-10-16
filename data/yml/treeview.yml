@@ -536,9 +536,11 @@ indexCSS: >
         background-color: var(--spectrum-alias-highlight-selected);
         box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-item-border-color-key-focus, var(--spectrum-alias-focus-color)) inset;
       }
-peerDependencies:
+devDependencies:
+  '@spectrum-css/component-builder': ^1.0.0
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
 packageVersion: 2.0.0
 packageName: '@spectrum-css/treeview'
 peerCSS: |

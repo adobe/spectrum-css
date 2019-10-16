@@ -89,12 +89,14 @@ indexCSS: |
       background-color: var(--spectrum-pagination-page-button-background-color-down, var(--spectrum-global-color-gray-800));
       color: var(--spectrum-pagination-page-button-text-color-down, var(--spectrum-global-color-static-white));
     }
-peerDependencies:
+devDependencies:
   '@spectrum-css/button': ^2.0.0
+  '@spectrum-css/component-builder': ^1.0.0
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/splitbutton': ^2.0.0
   '@spectrum-css/textfield': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
 packageVersion: 2.0.0
 packageName: '@spectrum-css/pagination'
 peerCSS: >

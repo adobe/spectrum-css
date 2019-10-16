@@ -4,9 +4,9 @@ import Link from '@react/react-spectrum/Link';
 import Highlight from 'react-highlight.js';
 import classNames from "classnames";
 import Markdown from '../components/Markdown';
-import PageHeader from '../components/PageHeader';
 import Section from '../components/Section';
 import SubHeader from '../components/SubHeader';
+import PageHeader from '../components/PageHeader';
 import compStyles from '../components/css/componentPage.scss';
 import '../css/hljs.scss';
 import styles from '../css/get-started.scss'

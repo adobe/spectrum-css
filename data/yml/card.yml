@@ -233,6 +233,29 @@ examples:
           </div>
         </div>
       </div>
+  - id: card-small
+    name: Small (horizontal)
+    description: >-
+      A small, horizontal card. Small cards should not be used without
+      `--quiet`.
+    markup: |
+      <div style="width: 208px;">
+        <div class="spectrum-Card spectrum-Card--small spectrum-Card--horizontal" tabindex="0" role="figure">
+          <div class="spectrum-Card-preview">
+            <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true" aria-label="FileTxt">
+              <use xlink:href="#spectrum-icon-18-FileTxt"></use>
+            </svg>
+          </div>
+          <div class="spectrum-Card-body">
+            <div class="spectrum-Card-header">
+              <div class="spectrum-Card-title">Card Title</div>
+            </div>
+            <div class="spectrum-Card-content">
+              <div class="spectrum-Card-subtitle">jpg</div>
+            </div>
+          </div>
+        </div>
+      </div>
   - id: card-quiet-small
     name: Small (quiet)
     description: 'A small, quiet card.'
@@ -772,13 +795,15 @@ indexCSS: >
 
       border-color: var(--spectrum-card-border-color, var(--spectrum-global-color-gray-200));
     }
-peerDependencies:
+devDependencies:
   '@spectrum-css/asset': ^2.0.0
   '@spectrum-css/button': ^2.0.0
   '@spectrum-css/checkbox': ^2.0.0
+  '@spectrum-css/component-builder': ^1.0.0
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/quickaction': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
 packageVersion: 2.0.0
 packageName: '@spectrum-css/card'
 peerCSS: >

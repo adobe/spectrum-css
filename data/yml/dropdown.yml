@@ -7,7 +7,7 @@ examples:
       <h4>Closed</h4>
 
       <div class="spectrum-Dropdown" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country with a very long label, too long in fact</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -19,7 +19,7 @@ examples:
       <h4>Open</h4>
 
       <div class="spectrum-Dropdown is-open" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label">Ballard</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -35,13 +35,22 @@ examples:
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Fremont</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Greenwood</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
             <li class="spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
               <span class="spectrum-Menu-itemLabel">United States of America</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
           </ul>
         </div>
@@ -54,7 +63,7 @@ examples:
       <h4>With Thumbnails</h4>
 
       <div class="spectrum-Dropdown is-open" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="listbox">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
@@ -79,12 +88,18 @@ examples:
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-Menu-itemLabel">Fremont</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-Menu-itemLabel">Greenwood</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
             <li class="spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
@@ -92,6 +107,9 @@ examples:
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
               <span class="spectrum-Menu-itemLabel">United States of America</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
           </ul>
         </div>
@@ -104,7 +122,7 @@ examples:
       <h4>Disabled</h4>
 
       <div class="spectrum-Dropdown is-disabled" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger" disabled aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -116,7 +134,7 @@ examples:
       <h4>Closed</h4>
 
       <div class="spectrum-Dropdown is-invalid" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -131,7 +149,7 @@ examples:
       <h4>Open</h4>
 
       <div class="spectrum-Dropdown is-open is-invalid" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid is-selected" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid is-selected" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label">Ballard</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -150,13 +168,22 @@ examples:
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Fremont</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Greenwood</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
             <li class="spectrum-Menu-divider" role="separator"></li>
             <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
               <span class="spectrum-Menu-itemLabel">United States of America</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+              </svg>
             </li>
           </ul>
         </div>
@@ -170,7 +197,7 @@ examples:
 
       <div class="spectrum-Dropdown is-invalid is-disabled" style="width:
       240px;">
-        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" disabled aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-invalid" disabled aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -187,7 +214,7 @@ examples:
       <h4>Closed</h4>
 
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -199,7 +226,7 @@ examples:
       <h4>Open</h4>
 
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label">Ballard</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -219,13 +246,22 @@ examples:
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Fremont</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Greenwood</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
           <li class="spectrum-Menu-divider" role="separator"></li>
           <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
             <span class="spectrum-Menu-itemLabel">United States of America</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
         </ul>
       </div>
@@ -237,7 +273,7 @@ examples:
       <h4>With Thumbnails</h4>
 
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="listbox">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
@@ -266,12 +302,18 @@ examples:
               <use xlink:href="#spectrum-icon-18-Image" />
             </svg>
             <span class="spectrum-Menu-itemLabel">Fremont</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
               <use xlink:href="#spectrum-icon-18-Image" />
             </svg>
             <span class="spectrum-Menu-itemLabel">Greenwood</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
           <li class="spectrum-Menu-divider" role="separator"></li>
           <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
@@ -279,6 +321,9 @@ examples:
               <use xlink:href="#spectrum-icon-18-Image" />
             </svg>
             <span class="spectrum-Menu-itemLabel">United States of America</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
         </ul>
       </div>
@@ -290,7 +335,7 @@ examples:
       <h4>Disabled</h4>
 
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-disabled">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger" disabled aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -302,7 +347,7 @@ examples:
       <h4>Closed</h4>
 
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Dropdown-trigger" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -318,7 +363,7 @@ examples:
 
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open
       is-invalid">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Dropdown-trigger" aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label">Ballard</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -341,13 +386,22 @@ examples:
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Fremont</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Greenwood</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
           <li class="spectrum-Menu-divider" role="separator"></li>
           <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
             <span class="spectrum-Menu-itemLabel">United States of America</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            </svg>
           </li>
         </ul>
       </div>
@@ -360,7 +414,7 @@ examples:
 
       <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid
       is-disabled">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Dropdown-trigger" disabled aria-haspopup="listbox">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -549,12 +603,14 @@ indexCSS: >
   .spectrum-Dropdown-trigger.focus-ring .spectrum-Dropdown-icon {
       color: var(--spectrum-dropdown-icon-color-key-focus, var(--spectrum-alias-icon-color-focus))
     }
-peerDependencies:
+devDependencies:
   '@spectrum-css/button': ^2.0.0
+  '@spectrum-css/component-builder': ^1.0.0
   '@spectrum-css/icon': ^2.0.0
   '@spectrum-css/menu': ^2.0.0
   '@spectrum-css/popover': ^2.0.0
   '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
 packageVersion: 2.0.0
 packageName: '@spectrum-css/dropdown'
 peerCSS: >

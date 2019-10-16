@@ -1,0 +1,25 @@
+:local(.Standard) {
+    width:100%;
+    background-color: var(--spectrum-global-color-gray-100);
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+    border-radius: 4px;
+}
+:local(.Illustration) {
+
+  & img {
+    width:100%;
+    border-radius: 4px;
+  }
+}
+:local(.row) {
+  margin-bottom:64px;
+  & h3  {
+   margin-top: 16px;
+  }
+  &:last-of-type {
+    margin-bottom:0px;
+  }
+
+}
