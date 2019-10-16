@@ -3871,88 +3871,6 @@ to this repo does not apply.
   color: rgb(162, 162, 162);
 }
 
-.appHeader___1ukmz {
-  height: 48px;
-  border-bottom: 1px solid var(--spectrum-global-color-gray-200);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: fixed;
-  background-color: var(--spectrum-global-color-gray-50);
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  padding-left: 8px;
-  z-index: 10; }
-  @media screen and (min-width: 961px) {
-    .appHeader___1ukmz {
-      display: none; } }
-
-.overlay___ohheB {
-  background-color: var(--spectrum-alias-background-color-modal-overlay);
-  opacity: 0.5;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 11; }
-  .overlay___ohheB.menuClosed___1538U {
-    display: none; }
-
-.sideBar___oMpBa {
-  z-index: 12;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  width: 248px; }
-  @media screen and (max-width: 960px) {
-    .sideBar___oMpBa {
-      transform: translate3d(-248px, 0, 0);
-      transition: transform 100ms ease-in-out; }
-      .sideBar___oMpBa.menuOpen___3cldn {
-        transform: translate3d(0, 0, 0); } }
-
-.spectrumSidebar___3o3U6 {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: var(--spectrum-global-color-gray-75); }
-
-.header___pV9wH {
-  padding: 30px 24px 24px 24px;
-  width: 248px; }
-
-.navigation___342Gc {
-  padding: 0px 24px;
-  flex: 1;
-  flex-grow: 1;
-  overflow: auto;
-  overflow-x: hidden;
-  overflow-y: auto; }
-
-.logo___KrQMx {
-  width: 30px;
-  display: block;
-  margin-right: 16px; }
-
-.title___EZ0XC {
-  display: flex;
-  flex-direction: row; }
-
-.headerLink___2-zW6 {
-  text-decoration-line: none !important; }
-
-.titleText___bDj-Z {
-  margin: 0px !important; }
-
-.internal___2BOEY {
-  font-size: 12px;
-  margin: 0px;
-  color: #8E8E8E;
-  font-weight: 600; }
-
 /*
 Use of this code is governed by the Adobe Terms of Use and
 Adobe Developer Additional Terms, and the license attached
@@ -4723,6 +4641,88 @@ to this repo does not apply.
   @media screen and (max-width: 768px) {
     .internal___1FyKb {
       font-size: 13px !important; } }
+
+.appHeader___1ukmz {
+  height: 48px;
+  border-bottom: 1px solid var(--spectrum-global-color-gray-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  background-color: var(--spectrum-global-color-gray-50);
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  padding-left: 8px;
+  z-index: 10; }
+  @media screen and (min-width: 961px) {
+    .appHeader___1ukmz {
+      display: none; } }
+
+.overlay___ohheB {
+  background-color: var(--spectrum-alias-background-color-modal-overlay);
+  opacity: 0.5;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 11; }
+  .overlay___ohheB.menuClosed___1538U {
+    display: none; }
+
+.sideBar___oMpBa {
+  z-index: 12;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 248px; }
+  @media screen and (max-width: 960px) {
+    .sideBar___oMpBa {
+      transform: translate3d(-248px, 0, 0);
+      transition: transform 100ms ease-in-out; }
+      .sideBar___oMpBa.menuOpen___3cldn {
+        transform: translate3d(0, 0, 0); } }
+
+.spectrumSidebar___3o3U6 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--spectrum-global-color-gray-75); }
+
+.header___pV9wH {
+  padding: 30px 24px 24px 24px;
+  width: 248px; }
+
+.navigation___342Gc {
+  padding: 0px 24px;
+  flex: 1;
+  flex-grow: 1;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.logo___KrQMx {
+  width: 30px;
+  display: block;
+  margin-right: 16px; }
+
+.title___EZ0XC {
+  display: flex;
+  flex-direction: row; }
+
+.headerLink___2-zW6 {
+  text-decoration-line: none !important; }
+
+.titleText___bDj-Z {
+  margin: 0px !important; }
+
+.internal___2BOEY {
+  font-size: 12px;
+  margin: 0px;
+  color: #8E8E8E;
+  font-weight: 600; }
 
 /*
 Use of this code is governed by the Adobe Terms of Use and
@@ -12728,6 +12728,2242 @@ Use of this code is governed by the Adobe Terms of Use and
 Adobe Developer Additional Terms, and the license attached
 to this repo does not apply.
 */
+.spectrum-Link {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  transition: color 130ms ease-in-out;
+  outline: none;
+}
+.spectrum-Link:hover {
+    text-decoration: underline;
+  }
+.spectrum-Link.focus-ring {
+    text-decoration: underline;
+  }
+.spectrum-Link.focus-ring {
+    text-decoration: underline;
+    -webkit-text-decoration-style: double;
+            text-decoration-style: double;
+  }
+.spectrum-Link.is-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+.spectrum-Link.is-disabled:hover,
+    .spectrum-Link.is-disabled:focus {
+      text-decoration: none;
+    }
+.spectrum-Link--subtle,
+/** @deprecated */.spectrum-Link--quiet {
+  text-decoration: underline;
+}
+.spectrum-Link--overBackground {
+  text-decoration: underline;
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--large .spectrum-Link {
+  transition: color 130ms ease-in-out;
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--light .spectrum-Link {
+  color: rgb(13, 102, 208);
+}
+.spectrum--light .spectrum-Link:hover {
+    color: rgb(13, 102, 208);
+  }
+.spectrum--light .spectrum-Link:active {
+    color: rgb(9, 90, 186);
+  }
+.spectrum--light .spectrum-Link.focus-ring {
+    color: rgb(13, 102, 208);
+  }
+.spectrum--light .spectrum-Link.is-disabled {
+    color: rgb(179, 179, 179);
+  }
+.spectrum--light .spectrum-Link--quiet,
+.spectrum--light .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--light .spectrum-Link--quiet:hover,
+.spectrum--light .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--light .spectrum-Link--quiet:active,
+.spectrum--light .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--light .spectrum-Link--quiet:focus,
+.spectrum--light .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--light .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--light .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--light .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--light .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--light .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--dark .spectrum-Link {
+  color: rgb(75, 156, 245);
+}
+.spectrum--dark .spectrum-Link:hover {
+    color: rgb(75, 156, 245);
+  }
+.spectrum--dark .spectrum-Link:active {
+    color: rgb(90, 169, 250);
+  }
+.spectrum--dark .spectrum-Link.focus-ring {
+    color: rgb(75, 156, 245);
+  }
+.spectrum--dark .spectrum-Link.is-disabled {
+    color: rgb(110, 110, 110);
+  }
+.spectrum--dark .spectrum-Link--quiet,
+.spectrum--dark .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--dark .spectrum-Link--quiet:hover,
+.spectrum--dark .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--dark .spectrum-Link--quiet:active,
+.spectrum--dark .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--dark .spectrum-Link--quiet:focus,
+.spectrum--dark .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--dark .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--dark .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--lightest .spectrum-Link {
+  color: rgb(20, 115, 230);
+}
+.spectrum--lightest .spectrum-Link:hover {
+    color: rgb(20, 115, 230);
+  }
+.spectrum--lightest .spectrum-Link:active {
+    color: rgb(13, 102, 208);
+  }
+.spectrum--lightest .spectrum-Link.focus-ring {
+    color: rgb(20, 115, 230);
+  }
+.spectrum--lightest .spectrum-Link.is-disabled {
+    color: rgb(188, 188, 188);
+  }
+.spectrum--lightest .spectrum-Link--quiet,
+.spectrum--lightest .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--lightest .spectrum-Link--quiet:hover,
+.spectrum--lightest .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--quiet:active,
+.spectrum--lightest .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--quiet:focus,
+.spectrum--lightest .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--lightest .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--darkest .spectrum-Link {
+  color: rgb(55, 142, 240);
+}
+.spectrum--darkest .spectrum-Link:hover {
+    color: rgb(55, 142, 240);
+  }
+.spectrum--darkest .spectrum-Link:active {
+    color: rgb(75, 156, 245);
+  }
+.spectrum--darkest .spectrum-Link.focus-ring {
+    color: rgb(55, 142, 240);
+  }
+.spectrum--darkest .spectrum-Link.is-disabled {
+    color: rgb(92, 92, 92);
+  }
+.spectrum--darkest .spectrum-Link--quiet,
+.spectrum--darkest .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--darkest .spectrum-Link--quiet:hover,
+.spectrum--darkest .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--darkest .spectrum-Link--quiet:active,
+.spectrum--darkest .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--darkest .spectrum-Link--quiet:focus,
+.spectrum--darkest .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--darkest .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--darkest .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--darkest .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--darkest .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--darkest .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+.table___1eH1D {
+  width: 100%; }
+
+.list___hsw97 {
+  font-size: 16px;
+  margin-left: 0px;
+  padding-left: 24px; }
+
+.pageHeading___26RtH {
+  font-size: 58px !important;
+  font-family: adobe-clean-serif !important;
+  font-weight: 800;
+  line-height: 1.15 !important;
+  letter-spacing: normal !important; }
+  @media screen and (max-width: 768px) {
+    .pageHeading___26RtH {
+      font-size: 44px !important;
+      font-family: adobe-clean-serif !important;
+      letter-spacing: normal !important; } }
+
+.headerRow___2meAi {
+  margin-bottom: 16px; }
+
+.card___2ZaLE {
+  width: 224px;
+  margin-right: 16px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+  box-shadow: 0 0 0 1px var(--spectrum-global-color-gray-300);
+  transition: 125ms ease-in-out;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer; }
+  .card___2ZaLE:hover {
+    box-shadow: 0 0 0 1px var(--spectrum-global-color-gray-400);
+    transition: 125ms ease-in-out; }
+  @media screen and (max-width: 960px) {
+    .card___2ZaLE {
+      margin-bottom: 16px; } }
+  .card___2ZaLE img {
+    height: 64px; }
+  .card___2ZaLE .content___1VKv9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 16px; }
+  .card___2ZaLE .cardTitle___35xj1 {
+    font-weight: 700 !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important; }
+  .card___2ZaLE .cardSubTitle___12tj6 {
+    color: var(--spectrum-global-color-gray-700) !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important; }
+
+.link___3YiP4 {
+  text-decoration: none; }
+
+.row___3btx3 {
+  margin-bottom: 56px; }
+
+.link___3YiP4 {
+  text-decoration: none; }
+
+.cardButton___2kEb- {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  outline-style: none; }
+  .cardButton___2kEb- > div:focus {
+    outline: none;
+    outline-style: none; }
+  .cardButton___2kEb-:focus > div {
+    box-shadow: 0 0 0 2px #2680eb;
+    outline: none; }
+
+.section___1Znpf {
+  margin-bottom: 80px;
+  position: relative; }
+
+.RelatedContent ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0px;
+  padding: 0px; }
+
+.Keyboardinteractions table {
+  width: 100%;
+  margin-bottom: 48px; }
+
+.Keyboardinteractions td:first-of-type {
+  white-space: nowrap;
+  width: 30%;
+  font-weight: bold; }
+
+.Changelog table {
+  width: 100%;
+  margin-bottom: 48px; }
+
+.introRow___hejS3 .sectionIntro___1GWEw {
+  margin-bottom: 40px; }
+
+.introRow___hejS3:last-of-type .sectionIntro___1GWEw {
+  margin-bottom: 0px; }
+
+.stageHelper___2alaF {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none; }
+
+.internal___2Br0S {
+  outline: 10px solid rgba(103, 103, 236, 0.1); }
+
+.public___2b2AX {
+  outline: 10px solid rgba(68, 181, 86, 0.1); }
+
+.both___2CENL {
+  outline: 10px solid rgba(38, 128, 235, 0.1); }
+
+.notSet___1aPGq {
+  outline: 10px solid rgba(216, 55, 144, 0.1); }
+
+.headingAnchor___CupO2 {
+  transition: all 125ms ease-in-out;
+  margin-left: 4px; }
+  .sectionHeader___1vbUF .headingAnchor___CupO2 {
+    margin-left: 6px; }
+
+.subHeader___l-0m8 {
+  margin-bottom: 16px !important; }
+
+.headerContainer___3NxS9 {
+  margin-bottom: 33px; }
+
+.sectionHeader___1vbUF {
+  padding-left: 0; }
+
+.anchor___NrH_s {
+  opacity: 0;
+  transition: all 125ms ease-in-out; }
+  .anchor___NrH_s:focus {
+    opacity: 1;
+    transition: all 125ms ease-in-out; }
+
+.editLink___1-WTE {
+  opacity: 0; }
+
+.header___3q7Ji:hover .editLink___1-WTE, .header___3q7Ji:hover .anchor___NrH_s {
+  opacity: 1;
+  transition: all 125ms ease-in-out; }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum-Rule {
+  width: 100%;
+  overflow: visible;
+
+  border: none;
+  border-width: 2px;
+  border-radius: 2px;
+}
+.spectrum-Rule--large {
+  height: 4px;
+
+  border-radius: 2px;
+}
+.spectrum-Rule--medium {
+  height: 2px;
+
+  border-radius: 1px;
+}
+.spectrum-Rule--small {
+  height: 1px;
+
+  border-radius: 1px;
+}
+.spectrum-Rule--vertical {
+  height: 100%;
+}
+.spectrum-Rule--vertical.spectrum-Rule--large {
+    width: 4px;
+  }
+.spectrum-Rule--vertical.spectrum-Rule--medium {
+    width: 2px;
+  }
+.spectrum-Rule--vertical.spectrum-Rule--small {
+    width: 1px;
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--large .spectrum-Rule {
+  border-width: 2px;
+  border-radius: 2px;
+}
+.spectrum--large .spectrum-Rule--large {
+  height: 4px;
+
+  border-radius: 2px;
+}
+.spectrum--large .spectrum-Rule--medium {
+  height: 2px;
+
+  border-radius: 1px;
+}
+.spectrum--large .spectrum-Rule--small {
+  height: 1px;
+
+  border-radius: 1px;
+}
+.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--large {
+    width: 4px;
+  }
+.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--medium {
+    width: 2px;
+  }
+.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--small {
+    width: 1px;
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--light .spectrum-Rule--large {
+  background-color: rgb(75, 75, 75);
+}
+.spectrum--light .spectrum-Rule--medium {
+  background-color: rgb(225, 225, 225);
+}
+.spectrum--light .spectrum-Rule--small {
+  background-color: rgb(225, 225, 225);
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--dark .spectrum-Rule--large {
+  background-color: rgb(227, 227, 227);
+}
+.spectrum--dark .spectrum-Rule--medium {
+  background-color: rgb(74, 74, 74);
+}
+.spectrum--dark .spectrum-Rule--small {
+  background-color: rgb(74, 74, 74);
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--lightest .spectrum-Rule--large {
+  background-color: rgb(80, 80, 80);
+}
+.spectrum--lightest .spectrum-Rule--medium {
+  background-color: rgb(234, 234, 234);
+}
+.spectrum--lightest .spectrum-Rule--small {
+  background-color: rgb(234, 234, 234);
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--darkest .spectrum-Rule--large {
+  background-color: rgb(200, 200, 200);
+}
+.spectrum--darkest .spectrum-Rule--medium {
+  background-color: rgb(57, 57, 57);
+}
+.spectrum--darkest .spectrum-Rule--small {
+  background-color: rgb(57, 57, 57);
+}
+
+* {
+  box-sizing: border-box; }
+
+body {
+  overflow: auto !important; }
+
+.flexContainer {
+  padding-left: 248px; }
+  @media screen and (max-width: 960px) {
+    .flexContainer {
+      padding-left: 0px; } }
+  .flexContainer .site-mainContainer {
+    padding: 40px 52px 0px 52px;
+    max-width: 1080px; }
+    @media screen and (max-width: 768px) {
+      .flexContainer .site-mainContainer {
+        padding-left: 16px;
+        padding-right: 16px; } }
+    @media screen and (max-width: 960px) {
+      .flexContainer .site-mainContainer {
+        padding-top: 80px; } }
+
+.noMargin {
+  margin: 0px; }
+
+.pageHeading___efYON {
+  size: 65px; }
+
+.spectrum-Table-row {
+  cursor: auto; }
+  .spectrum-Table-row:hover {
+    background-color: inherit !important;
+    cursor: auto; }
+
+p.spectrum-Body3 {
+  margin-bottom: 24px;
+  margin-top: 0px; }
+
+.spectrum-Body3 {
+  margin-bottom: 8px; }
+
+.well-box {
+  background-color: var(--spectrum-global-color-gray-75);
+  border: 1px solid var(--spectrum-global-color-gray-200);
+  padding: 15px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  font-size: 16px; }
+
+.spectrum {
+  background-color: var(--spectrum-global-color-gray-50) !important; }
+
+.footerContainer {
+  padding-top: 0px !important;
+  padding-bottom: 20px;
+  margin-top: 0px; }
+
+.Footernav-region {
+  visibility: hidden  !important;
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px; }
+
+.footerContainer a:hover {
+  text-decoration: underline !important; }
+
+.Footernav-misc {
+  padding: 8px !important; }
+
+.site-footer-col {
+  padding: 0px 8px !important; }
+
+.switcherContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; }
+  .switcherContainer > * {
+    margin-right: 37px; }
+
+.spectrum--dark {
+  --spectrum-global-color-celery-400: rgb(68, 181, 86);
+  --spectrum-global-color-celery-500: rgb(75, 195, 95);
+  --spectrum-global-color-celery-600: rgb(81, 210, 103);
+  --spectrum-global-color-celery-700: rgb(88, 224, 111);
+  --spectrum-global-color-chartreuse-400: rgb(133, 208, 68);
+  --spectrum-global-color-chartreuse-500: rgb(142, 222, 73);
+  --spectrum-global-color-chartreuse-600: rgb(155, 236, 84);
+  --spectrum-global-color-chartreuse-700: rgb(163, 248, 88);
+  --spectrum-global-color-yellow-400: rgb(223, 191, 0);
+  --spectrum-global-color-yellow-500: rgb(237, 204, 0);
+  --spectrum-global-color-yellow-600: rgb(250, 217, 0);
+  --spectrum-global-color-yellow-700: rgb(255, 226, 46);
+  --spectrum-global-color-magenta-400: rgb(216, 55, 144);
+  --spectrum-global-color-magenta-500: rgb(226, 73, 157);
+  --spectrum-global-color-magenta-600: rgb(236, 90, 170);
+  --spectrum-global-color-magenta-700: rgb(245, 107, 183);
+  --spectrum-global-color-fuchsia-400: rgb(192, 56, 204);
+  --spectrum-global-color-fuchsia-500: rgb(207, 62, 220);
+  --spectrum-global-color-fuchsia-600: rgb(217, 81, 229);
+  --spectrum-global-color-fuchsia-700: rgb(227, 102, 239);
+  --spectrum-global-color-purple-400: rgb(146, 86, 217);
+  --spectrum-global-color-purple-500: rgb(157, 100, 225);
+  --spectrum-global-color-purple-600: rgb(168, 115, 233);
+  --spectrum-global-color-purple-700: rgb(180, 131, 240);
+  --spectrum-global-color-indigo-400: rgb(103, 103, 236);
+  --spectrum-global-color-indigo-500: rgb(117, 117, 241);
+  --spectrum-global-color-indigo-600: rgb(130, 130, 246);
+  --spectrum-global-color-indigo-700: rgb(144, 144, 250);
+  --spectrum-global-color-seafoam-400: rgb(27, 149, 154);
+  --spectrum-global-color-seafoam-500: rgb(32, 163, 168);
+  --spectrum-global-color-seafoam-600: rgb(35, 178, 184);
+  --spectrum-global-color-seafoam-700: rgb(38, 192, 199);
+  --spectrum-global-color-red-400: rgb(227, 72, 80);
+  --spectrum-global-color-red-500: rgb(236, 91, 98);
+  --spectrum-global-color-red-600: rgb(247, 109, 116);
+  --spectrum-global-color-red-700: rgb(255, 123, 130);
+  --spectrum-global-color-orange-400: rgb(230, 134, 25);
+  --spectrum-global-color-orange-500: rgb(242, 148, 35);
+  --spectrum-global-color-orange-600: rgb(249, 164, 63);
+  --spectrum-global-color-orange-700: rgb(255, 181, 91);
+  --spectrum-global-color-green-400: rgb(45, 157, 120);
+  --spectrum-global-color-green-500: rgb(51, 171, 132);
+  --spectrum-global-color-green-600: rgb(57, 185, 144);
+  --spectrum-global-color-green-700: rgb(63, 200, 156);
+  --spectrum-global-color-blue-400: rgb(38, 128, 235);
+  --spectrum-global-color-blue-500: rgb(55, 142, 240);
+  --spectrum-global-color-blue-600: rgb(75, 156, 245);
+  --spectrum-global-color-blue-700: rgb(90, 169, 250);
+  --spectrum-global-color-gray-50: rgb(37, 37, 37);
+  --spectrum-global-color-gray-75: rgb(47, 47, 47);
+  --spectrum-global-color-gray-100: rgb(50, 50, 50);
+  --spectrum-global-color-gray-200: rgb(62, 62, 62);
+  --spectrum-global-color-gray-300: rgb(74, 74, 74);
+  --spectrum-global-color-gray-400: rgb(90, 90, 90);
+  --spectrum-global-color-gray-500: rgb(110, 110, 110);
+  --spectrum-global-color-gray-600: rgb(144, 144, 144);
+  --spectrum-global-color-gray-700: rgb(185, 185, 185);
+  --spectrum-global-color-gray-800: rgb(227, 227, 227);
+  --spectrum-global-color-gray-900: rgb(255, 255, 255);
+  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.5);
+  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.5);
+  --spectrum-alias-background-color-hover-overlay: rgba(255,255,255,0.06);
+  --spectrum-alias-highlight-hover: rgba(255,255,255,0.07);
+  --spectrum-alias-highlight-active: rgba(255,255,255,0.1);
+  --spectrum-alias-highlight-selected: rgba(55,142,240,0.15);
+  --spectrum-alias-highlight-selected-hover: rgba(55,142,240,0.25);
+  --spectrum-alias-text-highlight-color: rgba(55,142,240,0.25);
+  --spectrum-alias-background-color-quickactions: rgba(50,50,50,0.9);
+  --spectrum-alias-radial-reaction-color-default: rgba(227,227,227,0.6);
+  --spectrum-alias-pasteboard-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-alias-appframe-border-color: var(--spectrum-global-color-gray-50);
+  --spectrum-alias-appframe-separator-color: var(--spectrum-global-color-gray-50);
+  --spectrum-colorarea-border-color: rgba(255,255,255,0.1);
+  --spectrum-colorarea-border-color-hover: rgba(255,255,255,0.1);
+  --spectrum-colorarea-border-color-down: rgba(255,255,255,0.1);
+  --spectrum-colorarea-border-color-key-focus: rgba(255,255,255,0.1);
+  --spectrum-colorslider-border-color: rgba(255,255,255,0.1);
+  --spectrum-colorslider-border-color-hover: rgba(255,255,255,0.1);
+  --spectrum-colorslider-border-color-down: rgba(255,255,255,0.1);
+  --spectrum-colorslider-border-color-key-focus: rgba(255,255,255,0.1);
+  --spectrum-colorslider-vertical-border-color: rgba(255,255,255,0.1);
+  --spectrum-colorslider-vertical-border-color-hover: rgba(255,255,255,0.1);
+  --spectrum-colorslider-vertical-border-color-down: rgba(255,255,255,0.1);
+  --spectrum-colorslider-vertical-border-color-key-focus: rgba(255,255,255,0.1);
+  --spectrum-colorwheel-border-color: rgba(255,255,255,0.1);
+  --spectrum-colorwheel-border-color-hover: rgba(255,255,255,0.1);
+  --spectrum-colorwheel-border-color-down: rgba(255,255,255,0.1);
+  --spectrum-colorwheel-border-color-key-focus: rgba(255,255,255,0.1);
+  --spectrum-miller-column-item-background-color-selected: rgba(55,142,240,0.1);
+  --spectrum-miller-column-item-background-color-selected-hover: rgba(55,142,240,0.2);
+  --spectrum-tabs-compact-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-emphasized-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-well-background-color: rgba(227,227,227,0.02);
+  --spectrum-well-border-color: rgba(255,255,255,0.05);
+}
+
+.spectrum--darkest {
+  --spectrum-global-color-celery-400: rgb(61, 167, 78);
+  --spectrum-global-color-celery-500: rgb(68, 181, 86);
+  --spectrum-global-color-celery-600: rgb(75, 195, 95);
+  --spectrum-global-color-celery-700: rgb(81, 210, 103);
+  --spectrum-global-color-chartreuse-400: rgb(124, 195, 63);
+  --spectrum-global-color-chartreuse-500: rgb(133, 208, 68);
+  --spectrum-global-color-chartreuse-600: rgb(142, 222, 73);
+  --spectrum-global-color-chartreuse-700: rgb(155, 236, 84);
+  --spectrum-global-color-yellow-400: rgb(210, 178, 0);
+  --spectrum-global-color-yellow-500: rgb(223, 191, 0);
+  --spectrum-global-color-yellow-600: rgb(237, 204, 0);
+  --spectrum-global-color-yellow-700: rgb(250, 217, 0);
+  --spectrum-global-color-magenta-400: rgb(202, 41, 150);
+  --spectrum-global-color-magenta-500: rgb(216, 55, 144);
+  --spectrum-global-color-magenta-600: rgb(226, 73, 157);
+  --spectrum-global-color-magenta-700: rgb(236, 90, 170);
+  --spectrum-global-color-fuchsia-400: rgb(177, 48, 189);
+  --spectrum-global-color-fuchsia-500: rgb(192, 56, 204);
+  --spectrum-global-color-fuchsia-600: rgb(207, 62, 220);
+  --spectrum-global-color-fuchsia-700: rgb(217, 81, 229);
+  --spectrum-global-color-purple-400: rgb(134, 76, 204);
+  --spectrum-global-color-purple-500: rgb(146, 86, 217);
+  --spectrum-global-color-purple-600: rgb(157, 100, 225);
+  --spectrum-global-color-purple-700: rgb(168, 115, 223);
+  --spectrum-global-color-indigo-400: rgb(92, 92, 224);
+  --spectrum-global-color-indigo-500: rgb(103, 103, 236);
+  --spectrum-global-color-indigo-600: rgb(117, 117, 241);
+  --spectrum-global-color-indigo-700: rgb(130, 130, 246);
+  --spectrum-global-color-seafoam-400: rgb(22, 135, 140);
+  --spectrum-global-color-seafoam-500: rgb(27, 149, 154);
+  --spectrum-global-color-seafoam-600: rgb(32, 163, 168);
+  --spectrum-global-color-seafoam-700: rgb(35, 178, 184);
+  --spectrum-global-color-red-400: rgb(215, 55, 63);
+  --spectrum-global-color-red-500: rgb(227, 72, 80);
+  --spectrum-global-color-red-600: rgb(236, 91, 98);
+  --spectrum-global-color-red-700: rgb(247, 109, 116);
+  --spectrum-global-color-orange-400: rgb(218, 123, 17);
+  --spectrum-global-color-orange-500: rgb(230, 134, 25);
+  --spectrum-global-color-orange-600: rgb(242, 148, 35);
+  --spectrum-global-color-orange-700: rgb(249, 164, 63);
+  --spectrum-global-color-green-400: rgb(38, 142, 108);
+  --spectrum-global-color-green-500: rgb(45, 157, 120);
+  --spectrum-global-color-green-600: rgb(51, 171, 132);
+  --spectrum-global-color-green-700: rgb(57, 185, 144);
+  --spectrum-global-color-blue-400: rgb(20, 115, 230);
+  --spectrum-global-color-blue-500: rgb(38, 128, 235);
+  --spectrum-global-color-blue-600: rgb(55, 142, 240);
+  --spectrum-global-color-blue-700: rgb(75, 156, 245);
+  --spectrum-global-color-gray-50: rgb(8, 8, 8);
+  --spectrum-global-color-gray-75: rgb(26, 26, 26);
+  --spectrum-global-color-gray-100: rgb(30, 30, 30);
+  --spectrum-global-color-gray-200: rgb(44, 44, 44);
+  --spectrum-global-color-gray-300: rgb(57, 57, 57);
+  --spectrum-global-color-gray-400: rgb(73, 73, 73);
+  --spectrum-global-color-gray-500: rgb(92, 92, 92);
+  --spectrum-global-color-gray-600: rgb(124, 124, 124);
+  --spectrum-global-color-gray-700: rgb(162, 162, 162);
+  --spectrum-global-color-gray-800: rgb(200, 200, 200);
+  --spectrum-global-color-gray-900: rgb(239, 239, 239);
+  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.6);
+  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.8);
+  --spectrum-alias-background-color-hover-overlay: rgba(239,239,239,0.08);
+  --spectrum-alias-highlight-hover: rgba(239,239,239,0.08);
+  --spectrum-alias-highlight-active: rgba(239,239,239,0.15);
+  --spectrum-alias-highlight-selected: rgba(38,128,235,0.2);
+  --spectrum-alias-highlight-selected-hover: rgba(38,128,235,0.3);
+  --spectrum-alias-text-highlight-color: rgba(38,128,235,0.3);
+  --spectrum-alias-background-color-quickactions: rgba(30,30,30,0.9);
+  --spectrum-alias-radial-reaction-color-default: rgba(200,200,200,0.6);
+  --spectrum-alias-pasteboard-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-alias-appframe-border-color: var(--spectrum-global-color-gray-50);
+  --spectrum-alias-appframe-separator-color: var(--spectrum-global-color-gray-50);
+  --spectrum-colorarea-border-color: rgba(239,239,239,0.1);
+  --spectrum-colorarea-border-color-hover: rgba(239,239,239,0.1);
+  --spectrum-colorarea-border-color-down: rgba(239,239,239,0.1);
+  --spectrum-colorarea-border-color-key-focus: rgba(239,239,239,0.1);
+  --spectrum-colorslider-border-color: rgba(239,239,239,0.1);
+  --spectrum-colorslider-border-color-hover: rgba(239,239,239,0.1);
+  --spectrum-colorslider-border-color-down: rgba(239,239,239,0.1);
+  --spectrum-colorslider-border-color-key-focus: rgba(239,239,239,0.1);
+  --spectrum-colorslider-vertical-border-color: rgba(239,239,239,0.1);
+  --spectrum-colorslider-vertical-border-color-hover: rgba(239,239,239,0.1);
+  --spectrum-colorslider-vertical-border-color-down: rgba(239,239,239,0.1);
+  --spectrum-colorslider-vertical-border-color-key-focus: rgba(239,239,239,0.1);
+  --spectrum-colorwheel-border-color: rgba(239,239,239,0.1);
+  --spectrum-colorwheel-border-color-hover: rgba(239,239,239,0.1);
+  --spectrum-colorwheel-border-color-down: rgba(239,239,239,0.1);
+  --spectrum-colorwheel-border-color-key-focus: rgba(239,239,239,0.1);
+  --spectrum-miller-column-item-background-color-selected: rgba(38,128,235,0.1);
+  --spectrum-miller-column-item-background-color-selected-hover: rgba(38,128,235,0.2);
+  --spectrum-tabs-compact-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-emphasized-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-well-background-color: rgba(200,200,200,0.02);
+  --spectrum-well-border-color: rgba(239,239,239,0.05);
+}
+
+.spectrum--light {
+  --spectrum-global-color-celery-400: rgb(68, 181, 86);
+  --spectrum-global-color-celery-500: rgb(61, 167, 78);
+  --spectrum-global-color-celery-600: rgb(55, 153, 71);
+  --spectrum-global-color-celery-700: rgb(49, 139, 64);
+  --spectrum-global-color-chartreuse-400: rgb(133, 208, 68);
+  --spectrum-global-color-chartreuse-500: rgb(124, 195, 63);
+  --spectrum-global-color-chartreuse-600: rgb(115, 181, 58);
+  --spectrum-global-color-chartreuse-700: rgb(106, 168, 52);
+  --spectrum-global-color-yellow-400: rgb(223, 191, 0);
+  --spectrum-global-color-yellow-500: rgb(210, 178, 0);
+  --spectrum-global-color-yellow-600: rgb(196, 166, 0);
+  --spectrum-global-color-yellow-700: rgb(183, 153, 0);
+  --spectrum-global-color-magenta-400: rgb(216, 55, 144);
+  --spectrum-global-color-magenta-500: rgb(206, 39, 131);
+  --spectrum-global-color-magenta-600: rgb(188, 28, 116);
+  --spectrum-global-color-magenta-700: rgb(174, 14, 102);
+  --spectrum-global-color-fuchsia-400: rgb(192, 56, 204);
+  --spectrum-global-color-fuchsia-500: rgb(177, 48, 189);
+  --spectrum-global-color-fuchsia-600: rgb(162, 40, 173);
+  --spectrum-global-color-fuchsia-700: rgb(147, 33, 158);
+  --spectrum-global-color-purple-400: rgb(146, 86, 217);
+  --spectrum-global-color-purple-500: rgb(134, 76, 204);
+  --spectrum-global-color-purple-600: rgb(122, 66, 191);
+  --spectrum-global-color-purple-700: rgb(111, 56, 177);
+  --spectrum-global-color-indigo-400: rgb(103, 103, 236);
+  --spectrum-global-color-indigo-500: rgb(92, 92, 224);
+  --spectrum-global-color-indigo-600: rgb(81, 81, 211);
+  --spectrum-global-color-indigo-700: rgb(70, 70, 198);
+  --spectrum-global-color-seafoam-400: rgb(27, 149, 154);
+  --spectrum-global-color-seafoam-500: rgb(22, 135, 140);
+  --spectrum-global-color-seafoam-600: rgb(15, 121, 125);
+  --spectrum-global-color-seafoam-700: rgb(9, 108, 111);
+  --spectrum-global-color-red-400: rgb(227, 72, 80);
+  --spectrum-global-color-red-500: rgb(215, 55, 63);
+  --spectrum-global-color-red-600: rgb(201, 37, 45);
+  --spectrum-global-color-red-700: rgb(187, 18, 26);
+  --spectrum-global-color-orange-400: rgb(230, 134, 25);
+  --spectrum-global-color-orange-500: rgb(218, 123, 17);
+  --spectrum-global-color-orange-600: rgb(203, 111, 16);
+  --spectrum-global-color-orange-700: rgb(189, 100, 13);
+  --spectrum-global-color-green-400: rgb(45, 157, 120);
+  --spectrum-global-color-green-500: rgb(38, 142, 108);
+  --spectrum-global-color-green-600: rgb(18, 128, 92);
+  --spectrum-global-color-green-700: rgb(16, 113, 84);
+  --spectrum-global-color-blue-400: rgb(38, 128, 235);
+  --spectrum-global-color-blue-500: rgb(20, 115, 230);
+  --spectrum-global-color-blue-600: rgb(13, 102, 208);
+  --spectrum-global-color-blue-700: rgb(9, 90, 186);
+  --spectrum-global-color-gray-50: rgb(255, 255, 255);
+  --spectrum-global-color-gray-75: rgb(250, 250, 250);
+  --spectrum-global-color-gray-100: rgb(245, 245, 245);
+  --spectrum-global-color-gray-200: rgb(234, 234, 234);
+  --spectrum-global-color-gray-300: rgb(225, 225, 225);
+  --spectrum-global-color-gray-400: rgb(202, 202, 202);
+  --spectrum-global-color-gray-500: rgb(179, 179, 179);
+  --spectrum-global-color-gray-600: rgb(142, 142, 142);
+  --spectrum-global-color-gray-700: rgb(110, 110, 110);
+  --spectrum-global-color-gray-800: rgb(75, 75, 75);
+  --spectrum-global-color-gray-900: rgb(44, 44, 44);
+  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.4);
+  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.15);
+  --spectrum-alias-background-color-hover-overlay: rgba(44,44,44,0.04);
+  --spectrum-alias-highlight-hover: rgba(44,44,44,0.06);
+  --spectrum-alias-highlight-active: rgba(44,44,44,0.1);
+  --spectrum-alias-highlight-selected: rgba(20,115,230,0.1);
+  --spectrum-alias-highlight-selected-hover: rgba(20,115,230,0.2);
+  --spectrum-alias-text-highlight-color: rgba(20,115,230,0.2);
+  --spectrum-alias-background-color-quickactions: rgba(245,245,245,0.9);
+  --spectrum-alias-radial-reaction-color-default: rgba(75,75,75,0.6);
+  --spectrum-alias-pasteboard-background-color: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-appframe-border-color: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-appframe-separator-color: var(--spectrum-global-color-gray-300);
+  --spectrum-colorarea-border-color: rgba(44,44,44,0.1);
+  --spectrum-colorarea-border-color-hover: rgba(44,44,44,0.1);
+  --spectrum-colorarea-border-color-down: rgba(44,44,44,0.1);
+  --spectrum-colorarea-border-color-key-focus: rgba(44,44,44,0.1);
+  --spectrum-colorslider-border-color: rgba(44,44,44,0.1);
+  --spectrum-colorslider-border-color-hover: rgba(44,44,44,0.1);
+  --spectrum-colorslider-border-color-down: rgba(44,44,44,0.1);
+  --spectrum-colorslider-border-color-key-focus: rgba(44,44,44,0.1);
+  --spectrum-colorslider-vertical-border-color: rgba(44,44,44,0.1);
+  --spectrum-colorslider-vertical-border-color-hover: rgba(44,44,44,0.1);
+  --spectrum-colorslider-vertical-border-color-down: rgba(44,44,44,0.1);
+  --spectrum-colorslider-vertical-border-color-key-focus: rgba(44,44,44,0.1);
+  --spectrum-colorwheel-border-color: rgba(44,44,44,0.1);
+  --spectrum-colorwheel-border-color-hover: rgba(44,44,44,0.1);
+  --spectrum-colorwheel-border-color-down: rgba(44,44,44,0.1);
+  --spectrum-colorwheel-border-color-key-focus: rgba(44,44,44,0.1);
+  --spectrum-miller-column-item-background-color-selected: rgba(20,115,230,0.1);
+  --spectrum-miller-column-item-background-color-selected-hover: rgba(20,115,230,0.2);
+  --spectrum-tabs-compact-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-emphasized-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-well-background-color: rgba(75,75,75,0.02);
+  --spectrum-well-border-color: rgba(44,44,44,0.05);
+}
+
+.spectrum--lightest {
+  --spectrum-global-color-celery-400: rgb(75, 195, 95);
+  --spectrum-global-color-celery-500: rgb(68, 181, 86);
+  --spectrum-global-color-celery-600: rgb(61, 167, 78);
+  --spectrum-global-color-celery-700: rgb(55, 153, 71);
+  --spectrum-global-color-chartreuse-400: rgb(142, 222, 73);
+  --spectrum-global-color-chartreuse-500: rgb(133, 208, 68);
+  --spectrum-global-color-chartreuse-600: rgb(124, 195, 63);
+  --spectrum-global-color-chartreuse-700: rgb(115, 181, 58);
+  --spectrum-global-color-yellow-400: rgb(237, 204, 0);
+  --spectrum-global-color-yellow-500: rgb(223, 191, 0);
+  --spectrum-global-color-yellow-600: rgb(210, 178, 0);
+  --spectrum-global-color-yellow-700: rgb(196, 166, 0);
+  --spectrum-global-color-magenta-400: rgb(226, 73, 157);
+  --spectrum-global-color-magenta-500: rgb(216, 55, 144);
+  --spectrum-global-color-magenta-600: rgb(202, 41, 130);
+  --spectrum-global-color-magenta-700: rgb(188, 28, 116);
+  --spectrum-global-color-fuchsia-400: rgb(207, 62, 220);
+  --spectrum-global-color-fuchsia-500: rgb(192, 56, 204);
+  --spectrum-global-color-fuchsia-600: rgb(177, 48, 189);
+  --spectrum-global-color-fuchsia-700: rgb(162, 40, 173);
+  --spectrum-global-color-purple-400: rgb(157, 100, 225);
+  --spectrum-global-color-purple-500: rgb(146, 86, 217);
+  --spectrum-global-color-purple-600: rgb(134, 76, 204);
+  --spectrum-global-color-purple-700: rgb(122, 66, 191);
+  --spectrum-global-color-indigo-400: rgb(117, 117, 241);
+  --spectrum-global-color-indigo-500: rgb(103, 103, 236);
+  --spectrum-global-color-indigo-600: rgb(92, 92, 224);
+  --spectrum-global-color-indigo-700: rgb(81, 81, 211);
+  --spectrum-global-color-seafoam-400: rgb(32, 163, 168);
+  --spectrum-global-color-seafoam-500: rgb(27, 149, 154);
+  --spectrum-global-color-seafoam-600: rgb(22, 135, 140);
+  --spectrum-global-color-seafoam-700: rgb(15, 121, 125);
+  --spectrum-global-color-red-400: rgb(236, 91, 98);
+  --spectrum-global-color-red-500: rgb(227, 72, 80);
+  --spectrum-global-color-red-600: rgb(215, 55, 63);
+  --spectrum-global-color-red-700: rgb(201, 37, 45);
+  --spectrum-global-color-orange-400: rgb(242, 148, 35);
+  --spectrum-global-color-orange-500: rgb(230, 134, 25);
+  --spectrum-global-color-orange-600: rgb(218, 123, 17);
+  --spectrum-global-color-orange-700: rgb(203, 111, 16);
+  --spectrum-global-color-green-400: rgb(51, 171, 132);
+  --spectrum-global-color-green-500: rgb(45, 157, 120);
+  --spectrum-global-color-green-600: rgb(38, 142, 108);
+  --spectrum-global-color-green-700: rgb(18, 128, 92);
+  --spectrum-global-color-blue-400: rgb(55, 142, 240);
+  --spectrum-global-color-blue-500: rgb(38, 128, 235);
+  --spectrum-global-color-blue-600: rgb(20, 115, 230);
+  --spectrum-global-color-blue-700: rgb(13, 102, 208);
+  --spectrum-global-color-gray-50: rgb(255, 255, 255);
+  --spectrum-global-color-gray-75: rgb(255, 255, 255);
+  --spectrum-global-color-gray-100: rgb(255, 255, 255);
+  --spectrum-global-color-gray-200: rgb(244, 244, 244);
+  --spectrum-global-color-gray-300: rgb(234, 234, 234);
+  --spectrum-global-color-gray-400: rgb(211, 211, 211);
+  --spectrum-global-color-gray-500: rgb(188, 188, 188);
+  --spectrum-global-color-gray-600: rgb(149, 149, 149);
+  --spectrum-global-color-gray-700: rgb(116, 116, 116);
+  --spectrum-global-color-gray-800: rgb(80, 80, 80);
+  --spectrum-global-color-gray-900: rgb(50, 50, 50);
+  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.4);
+  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.15);
+  --spectrum-alias-background-color-hover-overlay: rgba(50,50,50,0.04);
+  --spectrum-alias-highlight-hover: rgba(50,50,50,0.06);
+  --spectrum-alias-highlight-active: rgba(50,50,50,0.1);
+  --spectrum-alias-highlight-selected: rgba(38,128,235,0.1);
+  --spectrum-alias-highlight-selected-hover: rgba(38,128,235,0.2);
+  --spectrum-alias-text-highlight-color: rgba(38,128,235,0.2);
+  --spectrum-alias-background-color-quickactions: rgba(255,255,255,0.9);
+  --spectrum-alias-radial-reaction-color-default: rgba(80,80,80,0.6);
+  --spectrum-alias-pasteboard-background-color: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-appframe-border-color: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-appframe-separator-color: var(--spectrum-global-color-gray-300);
+  --spectrum-tabs-compact-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-compact-vertical-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-compact-vertical-emphasized-rule-color: var(--spectrum-global-color-gray-200);
+  --spectrum-tabs-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-tabs-quiet-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
+  --spectrum-colorarea-border-color: rgba(50,50,50,0.1);
+  --spectrum-colorarea-border-color-hover: rgba(50,50,50,0.1);
+  --spectrum-colorarea-border-color-down: rgba(50,50,50,0.1);
+  --spectrum-colorarea-border-color-key-focus: rgba(50,50,50,0.1);
+  --spectrum-colorslider-border-color: rgba(50,50,50,0.1);
+  --spectrum-colorslider-border-color-hover: rgba(50,50,50,0.1);
+  --spectrum-colorslider-border-color-down: rgba(50,50,50,0.1);
+  --spectrum-colorslider-border-color-key-focus: rgba(50,50,50,0.1);
+  --spectrum-colorslider-vertical-border-color: rgba(50,50,50,0.1);
+  --spectrum-colorslider-vertical-border-color-hover: rgba(50,50,50,0.1);
+  --spectrum-colorslider-vertical-border-color-down: rgba(50,50,50,0.1);
+  --spectrum-colorslider-vertical-border-color-key-focus: rgba(50,50,50,0.1);
+  --spectrum-colorwheel-border-color: rgba(50,50,50,0.1);
+  --spectrum-colorwheel-border-color-hover: rgba(50,50,50,0.1);
+  --spectrum-colorwheel-border-color-down: rgba(50,50,50,0.1);
+  --spectrum-colorwheel-border-color-key-focus: rgba(50,50,50,0.1);
+  --spectrum-miller-column-item-background-color-selected: rgba(38,128,235,0.1);
+  --spectrum-miller-column-item-background-color-selected-hover: rgba(38,128,235,0.2);
+  --spectrum-well-background-color: rgba(80,80,80,0.02);
+  --spectrum-well-border-color: rgba(50,50,50,0.05);
+}
+
+.spectrum--large {
+  --spectrum-global-dimension-scale-factor: 1.25;
+  --spectrum-global-dimension-size-0: 0px;
+  --spectrum-global-dimension-size-10: 1px;
+  --spectrum-global-dimension-size-25: 2px;
+  --spectrum-global-dimension-size-40: 4px;
+  --spectrum-global-dimension-size-50: 5px;
+  --spectrum-global-dimension-size-65: 6px;
+  --spectrum-global-dimension-size-75: 8px;
+  --spectrum-global-dimension-size-85: 9px;
+  --spectrum-global-dimension-size-100: 10px;
+  --spectrum-global-dimension-size-115: 11px;
+  --spectrum-global-dimension-size-125: 13px;
+  --spectrum-global-dimension-size-130: 14px;
+  --spectrum-global-dimension-size-150: 15px;
+  --spectrum-global-dimension-size-160: 16px;
+  --spectrum-global-dimension-size-175: 18px;
+  --spectrum-global-dimension-size-200: 20px;
+  --spectrum-global-dimension-size-225: 22px;
+  --spectrum-global-dimension-size-250: 25px;
+  --spectrum-global-dimension-size-300: 30px;
+  --spectrum-global-dimension-size-350: 35px;
+  --spectrum-global-dimension-size-400: 40px;
+  --spectrum-global-dimension-size-450: 45px;
+  --spectrum-global-dimension-size-500: 50px;
+  --spectrum-global-dimension-size-550: 56px;
+  --spectrum-global-dimension-size-600: 60px;
+  --spectrum-global-dimension-size-675: 68px;
+  --spectrum-global-dimension-size-700: 70px;
+  --spectrum-global-dimension-size-800: 80px;
+  --spectrum-global-dimension-size-900: 112px;
+  --spectrum-global-dimension-size-1000: 100px;
+  --spectrum-global-dimension-size-1200: 120px;
+  --spectrum-global-dimension-size-1250: 125px;
+  --spectrum-global-dimension-size-1600: 160px;
+  --spectrum-global-dimension-size-1700: 212px;
+  --spectrum-global-dimension-size-2000: 200px;
+  --spectrum-global-dimension-size-2400: 240px;
+  --spectrum-global-dimension-size-3000: 300px;
+  --spectrum-global-dimension-size-3400: 340px;
+  --spectrum-global-dimension-size-3600: 360px;
+  --spectrum-global-dimension-size-4600: 460px;
+  --spectrum-global-dimension-size-5000: 500px;
+  --spectrum-global-dimension-size-6000: 600px;
+  --spectrum-global-dimension-font-size-25: 12px;
+  --spectrum-global-dimension-font-size-50: 13px;
+  --spectrum-global-dimension-font-size-75: 15px;
+  --spectrum-global-dimension-font-size-100: 17px;
+  --spectrum-global-dimension-font-size-150: 18px;
+  --spectrum-global-dimension-font-size-200: 19px;
+  --spectrum-global-dimension-font-size-300: 22px;
+  --spectrum-global-dimension-font-size-400: 24px;
+  --spectrum-global-dimension-font-size-500: 27px;
+  --spectrum-global-dimension-font-size-600: 31px;
+  --spectrum-global-dimension-font-size-700: 34px;
+  --spectrum-global-dimension-font-size-800: 39px;
+  --spectrum-global-dimension-font-size-900: 44px;
+  --spectrum-global-dimension-font-size-1000: 49px;
+  --spectrum-global-dimension-font-size-1100: 55px;
+  --spectrum-alias-heading-display1-text-size: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-xxxl-text-size: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-display1-margin-top: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-xxxl-margin-top: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-display2-text-size: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-xxl-text-size: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-display2-margin-top: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading-xxl-margin-top: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading1-text-size: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading-xl-text-size: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading1-margin-top: var(--spectrum-global-dimension-font-size-700);
+  --spectrum-alias-heading-xl-margin-top: var(--spectrum-global-dimension-font-size-700);
+  --spectrum-alias-heading2-text-size: var(--spectrum-global-dimension-font-size-600);
+  --spectrum-alias-heading-l-text-size: var(--spectrum-global-dimension-font-size-600);
+  --spectrum-alias-heading2-margin-top: var(--spectrum-global-dimension-font-size-500);
+  --spectrum-alias-heading-l-margin-top: var(--spectrum-global-dimension-font-size-500);
+  --spectrum-alias-heading3-text-size: var(--spectrum-global-dimension-font-size-400);
+  --spectrum-alias-heading-m-text-size: var(--spectrum-global-dimension-font-size-400);
+  --spectrum-alias-heading3-margin-top: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-alias-heading-m-margin-top: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-actionbutton-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-actionbutton-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-actionbutton-emphasized-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-actionbutton-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-actionbutton-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-actionbutton-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-actionbutton-quiet-emphasized-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-actionbutton-quiet-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-barloader-large-border-radius: 4px;
+  --spectrum-barloader-large-indeterminate-border-radius: 4px;
+  --spectrum-barloader-large-over-background-border-radius: 4px;
+  --spectrum-barloader-small-border-radius: 3px;
+  --spectrum-barloader-small-indeterminate-border-radius: 3px;
+  --spectrum-barloader-small-over-background-border-radius: 3px;
+  --spectrum-breadcrumb-compact-item-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-compact-button-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-item-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-button-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-multiline-item-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-multiline-button-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-cta-text-padding-bottom: [object Object];
+  --spectrum-button-cta-min-width: 90px;
+  --spectrum-button-cta-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-cta-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-over-background-text-padding-bottom: [object Object];
+  --spectrum-button-over-background-min-width: 90px;
+  --spectrum-button-over-background-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-over-background-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-primary-text-padding-bottom: [object Object];
+  --spectrum-button-primary-min-width: 90px;
+  --spectrum-button-primary-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-primary-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-quiet-over-background-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-over-background-min-width: 90px;
+  --spectrum-button-quiet-over-background-touch-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-quiet-over-background-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-quiet-over-background-cursor-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-quiet-primary-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-primary-min-width: 90px;
+  --spectrum-button-quiet-primary-touch-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-quiet-primary-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-quiet-primary-cursor-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-quiet-secondary-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-secondary-min-width: 90px;
+  --spectrum-button-quiet-secondary-touch-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-quiet-secondary-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-quiet-secondary-cursor-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-quiet-warning-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-warning-min-width: 90px;
+  --spectrum-button-quiet-warning-touch-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-quiet-warning-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-quiet-warning-cursor-hit-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-button-secondary-text-padding-bottom: [object Object];
+  --spectrum-button-secondary-min-width: 90px;
+  --spectrum-button-secondary-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-secondary-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-warning-text-padding-bottom: [object Object];
+  --spectrum-button-warning-min-width: 90px;
+  --spectrum-button-warning-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-button-warning-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-checkbox-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-text-gap-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-text-gap-error-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-checkbox-emphasized-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-emphasized-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-emphasized-text-gap-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-emphasized-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-emphasized-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-emphasized-text-gap-error-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-checkbox-quiet-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-quiet-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-quiet-text-gap-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-quiet-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-quiet-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-quiet-text-gap-error-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-checkbox-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-circleloader-medium-border-size: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-circleloader-medium-over-background-border-size: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-circleloader-small-border-size: 3px;
+  --spectrum-circleloader-small-over-background-border-size: 3px;
+  --spectrum-colorhandle-loupe-margin: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-colorslider-touch-hit-y: var(--spectrum-global-dimension-size-85);
+  --spectrum-colorslider-vertical-touch-hit-x: var(--spectrum-global-dimension-size-85);
+  --spectrum-colorwheel-min-size: var(--spectrum-global-dimension-static-size-2600);
+  --spectrum-colorwheel-touch-hit-outer: var(--spectrum-global-dimension-size-85);
+  --spectrum-colorwheel-touch-hit-inner: var(--spectrum-global-dimension-size-85);
+  --spectrum-cyclebutton-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-cyclebutton-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-dialog-confirm-max-width: var(--spectrum-global-dimension-static-size-5000);
+  --spectrum-dialog-confirm-title-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-dialog-confirm-description-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-dialog-confirm-padding: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-dialog-confirm-description-margin-bottom: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-max-width: var(--spectrum-global-dimension-static-size-5000);
+  --spectrum-dialog-title-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-dialog-content-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-dialog-padding: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-dialog-content-margin-bottom: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-destructive-max-width: var(--spectrum-global-dimension-static-size-5000);
+  --spectrum-dialog-destructive-title-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-dialog-destructive-description-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-dialog-destructive-padding: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-dialog-destructive-description-margin-bottom: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-error-max-width: var(--spectrum-global-dimension-static-size-5000);
+  --spectrum-dialog-error-title-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-dialog-error-description-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-dialog-error-padding: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-dialog-error-description-margin-bottom: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-info-max-width: var(--spectrum-global-dimension-static-size-5000);
+  --spectrum-dialog-info-title-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-dialog-info-description-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-dialog-info-padding: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-dialog-info-description-margin-bottom: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dropdown-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-dropdown-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-dropdown-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-dropdown-thumbnail-small-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-dropdown-thumbnail-small-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-fieldbutton-quiet-min-width: var(--spectrum-global-dimension-size-200);
+  --spectrum-icon-arrow-down-small-height: 12px;
+  --spectrum-icon-arrow-left-medium-height: 12px;
+  --spectrum-icon-checkmark-medium-width: 16px;
+  --spectrum-icon-checkmark-medium-height: 16px;
+  --spectrum-icon-checkmark-small-width: 12px;
+  --spectrum-icon-checkmark-small-height: 12px;
+  --spectrum-icon-chevron-down-medium-width: 12px;
+  --spectrum-icon-chevron-left-large-width: 16px;
+  --spectrum-icon-chevron-left-medium-height: 12px;
+  --spectrum-icon-chevron-right-large-width: 16px;
+  --spectrum-icon-chevron-right-medium-height: 12px;
+  --spectrum-icon-cross-large-width: 16px;
+  --spectrum-icon-cross-large-height: 16px;
+  --spectrum-icon-dash-small-width: 12px;
+  --spectrum-icon-dash-small-height: 12px;
+  --spectrum-icon-skip-left-width: 10px;
+  --spectrum-icon-skip-left-height: 12px;
+  --spectrum-icon-skip-right-width: 10px;
+  --spectrum-icon-skip-right-height: 12px;
+  --spectrum-icon-triplegripper-width: 12px;
+  --spectrum-loader-bar-large-border-radius: 4px;
+  --spectrum-loader-bar-large-over-background-border-radius: 4px;
+  --spectrum-loader-bar-small-border-radius: 3px;
+  --spectrum-loader-bar-small-over-background-border-radius: 3px;
+  --spectrum-loader-circle-medium-border-size: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-loader-circle-medium-over-background-border-size: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-loader-circle-small-border-size: 3px;
+  --spectrum-loader-circle-small-over-background-border-size: 3px;
+  --spectrum-meter-large-border-radius: 4px;
+  --spectrum-meter-small-border-radius: 3px;
+  --spectrum-pagination-page-button-line-height: 32px;
+  --spectrum-radio-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-margin-bottom: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-radio-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-radio-emphasized-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-emphasized-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-emphasized-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-emphasized-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-emphasized-margin-bottom: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-radio-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-radio-quiet-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-quiet-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-quiet-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-quiet-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-radio-quiet-margin-bottom: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-radio-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-rating-icon-width: 30px;
+  --spectrum-rating-indicator-width: 20px;
+  --spectrum-rating-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-rating-emphasized-icon-width: 30px;
+  --spectrum-rating-emphasized-indicator-width: 20px;
+  --spectrum-rating-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-rating-quiet-icon-width: 30px;
+  --spectrum-rating-quiet-indicator-width: 20px;
+  --spectrum-rating-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-search-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-search-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-search-icon-frame: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-search-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-search-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-search-quiet-icon-frame: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-selectlist-option-icon-size: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-selectlist-option-icon-padding-y: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-selectlist-option-icon-margin-top: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-selectlist-option-height: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-selectlist-thumbnail-option-icon-padding-y: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-selectlist-thumbnail-small-option-icon-padding-y: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-sidenav-item-touch-hit-bottom: 3px;
+  --spectrum-sidenav-multilevel-item-touch-hit-bottom: 3px;
+  --spectrum-slider-track-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-slider-handle-touch-hit-x: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-slider-handle-touch-hit-y: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-slider-editable-track-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-slider-editable-handle-touch-hit-x: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-slider-editable-handle-touch-hit-y: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-slider-fill-track-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-slider-fill-handle-touch-hit-x: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-slider-fill-handle-touch-hit-y: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-switch-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-track-width: var(--spectrum-global-dimension-static-size-450);
+  --spectrum-switch-handle-border-radius: 9px;
+  --spectrum-switch-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-switch-emphasized-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-emphasized-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-emphasized-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-emphasized-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-emphasized-track-width: var(--spectrum-global-dimension-static-size-450);
+  --spectrum-switch-emphasized-handle-border-radius: 9px;
+  --spectrum-switch-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-switch-quiet-text-gap-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-quiet-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-quiet-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-quiet-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-switch-quiet-track-width: var(--spectrum-global-dimension-static-size-450);
+  --spectrum-switch-quiet-handle-border-radius: 9px;
+  --spectrum-switch-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-tabs-compact-focus-ring-border-radius: 6px;
+  --spectrum-tabs-compact-margin-left: -11px;
+  --spectrum-tabs-compact-margin-right: -11px;
+  --spectrum-tabs-compact-vertical-focus-ring-border-radius: 6px;
+  --spectrum-tabs-compact-vertical-emphasized-focus-ring-border-radius: 6px;
+  --spectrum-tabs-baseline: var(--spectrum-global-dimension-size-250);
+  --spectrum-tabs-focus-ring-border-radius: 6px;
+  --spectrum-tabs-margin-left: -11px;
+  --spectrum-tabs-margin-right: -11px;
+  --spectrum-tabs-emphasized-baseline: var(--spectrum-global-dimension-size-250);
+  --spectrum-tabs-emphasized-focus-ring-border-radius: 6px;
+  --spectrum-tabs-emphasized-margin-left: -11px;
+  --spectrum-tabs-emphasized-margin-right: -11px;
+  --spectrum-tabs-quiet-baseline: var(--spectrum-global-dimension-size-250);
+  --spectrum-tabs-quiet-focus-ring-border-radius: 6px;
+  --spectrum-tabs-quiet-margin-left: -11px;
+  --spectrum-tabs-quiet-margin-right: -11px;
+  --spectrum-tabs-quiet-compact-focus-ring-border-radius: 6px;
+  --spectrum-tabs-quiet-compact-margin-left: -11px;
+  --spectrum-tabs-quiet-compact-margin-right: -11px;
+  --spectrum-tabs-quiet-compact-emphasized-focus-ring-border-radius: 6px;
+  --spectrum-tabs-quiet-compact-emphasized-margin-left: -11px;
+  --spectrum-tabs-quiet-compact-emphasized-margin-right: -11px;
+  --spectrum-tabs-quiet-compact-vertical-focus-ring-border-radius: 6px;
+  --spectrum-tabs-quiet-compact-vertical-emphasized-focus-ring-border-radius: 6px;
+  --spectrum-tabs-quiet-emphasized-baseline: var(--spectrum-global-dimension-size-250);
+  --spectrum-tabs-quiet-emphasized-focus-ring-border-radius: 6px;
+  --spectrum-tabs-quiet-emphasized-margin-left: -11px;
+  --spectrum-tabs-quiet-emphasized-margin-right: -11px;
+  --spectrum-tabs-quiet-vertical-baseline: var(--spectrum-global-dimension-size-250);
+  --spectrum-tabs-quiet-vertical-focus-ring-border-radius: 6px;
+  --spectrum-tabs-quiet-vertical-emphasized-baseline: var(--spectrum-global-dimension-size-250);
+  --spectrum-tabs-quiet-vertical-emphasized-focus-ring-border-radius: 6px;
+  --spectrum-tabs-vertical-baseline: var(--spectrum-global-dimension-size-250);
+  --spectrum-tabs-vertical-focus-ring-border-radius: 6px;
+  --spectrum-textarea-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textarea-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textarea-icon-frame: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-textarea-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textarea-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textarea-quiet-icon-frame: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-textfield-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textfield-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textfield-icon-frame: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-textfield-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textfield-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-textfield-quiet-icon-frame: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-tool-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-tool-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-tool-high-emphasis-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-tool-high-emphasis-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-tooltip-padding-bottom: 6px;
+  --spectrum-tooltip-content-max-width: 126px;
+  --spectrum-tooltip-info-padding-bottom: 6px;
+  --spectrum-tooltip-info-content-max-width: 126px;
+  --spectrum-tooltip-negative-padding-bottom: 6px;
+  --spectrum-tooltip-negative-content-max-width: 126px;
+  --spectrum-tooltip-positive-padding-bottom: 6px;
+  --spectrum-tooltip-positive-content-max-width: 126px;
+}
+
+.spectrum--medium {
+  --spectrum-global-dimension-scale-factor: 1;
+  --spectrum-global-dimension-size-0: 0px;
+  --spectrum-global-dimension-size-10: 1px;
+  --spectrum-global-dimension-size-25: 2px;
+  --spectrum-global-dimension-size-40: 3px;
+  --spectrum-global-dimension-size-50: 4px;
+  --spectrum-global-dimension-size-65: 5px;
+  --spectrum-global-dimension-size-75: 6px;
+  --spectrum-global-dimension-size-85: 7px;
+  --spectrum-global-dimension-size-100: 8px;
+  --spectrum-global-dimension-size-115: 9px;
+  --spectrum-global-dimension-size-125: 10px;
+  --spectrum-global-dimension-size-130: 11px;
+  --spectrum-global-dimension-size-150: 12px;
+  --spectrum-global-dimension-size-160: 13px;
+  --spectrum-global-dimension-size-175: 14px;
+  --spectrum-global-dimension-size-200: 16px;
+  --spectrum-global-dimension-size-225: 18px;
+  --spectrum-global-dimension-size-250: 20px;
+  --spectrum-global-dimension-size-300: 24px;
+  --spectrum-global-dimension-size-350: 28px;
+  --spectrum-global-dimension-size-400: 32px;
+  --spectrum-global-dimension-size-450: 36px;
+  --spectrum-global-dimension-size-500: 40px;
+  --spectrum-global-dimension-size-550: 44px;
+  --spectrum-global-dimension-size-600: 48px;
+  --spectrum-global-dimension-size-675: 54px;
+  --spectrum-global-dimension-size-700: 56px;
+  --spectrum-global-dimension-size-800: 64px;
+  --spectrum-global-dimension-size-900: 72px;
+  --spectrum-global-dimension-size-1000: 80px;
+  --spectrum-global-dimension-size-1200: 96px;
+  --spectrum-global-dimension-size-1250: 100px;
+  --spectrum-global-dimension-size-1600: 128px;
+  --spectrum-global-dimension-size-1700: 136px;
+  --spectrum-global-dimension-size-2000: 160px;
+  --spectrum-global-dimension-size-2400: 192px;
+  --spectrum-global-dimension-size-3000: 240px;
+  --spectrum-global-dimension-size-3400: 272px;
+  --spectrum-global-dimension-size-3600: 288px;
+  --spectrum-global-dimension-size-4600: 368px;
+  --spectrum-global-dimension-size-5000: 400px;
+  --spectrum-global-dimension-size-6000: 480px;
+  --spectrum-global-dimension-font-size-25: 10px;
+  --spectrum-global-dimension-font-size-50: 11px;
+  --spectrum-global-dimension-font-size-75: 12px;
+  --spectrum-global-dimension-font-size-100: 14px;
+  --spectrum-global-dimension-font-size-150: 15px;
+  --spectrum-global-dimension-font-size-200: 16px;
+  --spectrum-global-dimension-font-size-300: 18px;
+  --spectrum-global-dimension-font-size-400: 20px;
+  --spectrum-global-dimension-font-size-500: 22px;
+  --spectrum-global-dimension-font-size-600: 25px;
+  --spectrum-global-dimension-font-size-700: 28px;
+  --spectrum-global-dimension-font-size-800: 32px;
+  --spectrum-global-dimension-font-size-900: 36px;
+  --spectrum-global-dimension-font-size-1000: 40px;
+  --spectrum-global-dimension-font-size-1100: 45px;
+  --spectrum-alias-heading-display1-text-size: var(--spectrum-global-dimension-font-size-1100);
+  --spectrum-alias-heading-xxxl-text-size: var(--spectrum-global-dimension-font-size-1100);
+  --spectrum-alias-heading-display1-margin-top: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-xxxl-margin-top: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-display2-text-size: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-xxl-text-size: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-display2-margin-top: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-xxl-margin-top: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading1-text-size: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-xl-text-size: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading1-margin-top: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading-xl-margin-top: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading2-text-size: var(--spectrum-global-dimension-font-size-700);
+  --spectrum-alias-heading-l-text-size: var(--spectrum-global-dimension-font-size-700);
+  --spectrum-alias-heading2-margin-top: var(--spectrum-global-dimension-font-size-600);
+  --spectrum-alias-heading-l-margin-top: var(--spectrum-global-dimension-font-size-600);
+  --spectrum-alias-heading3-text-size: var(--spectrum-global-dimension-font-size-500);
+  --spectrum-alias-heading-m-text-size: var(--spectrum-global-dimension-font-size-500);
+  --spectrum-alias-heading3-margin-top: var(--spectrum-global-dimension-font-size-400);
+  --spectrum-alias-heading-m-margin-top: var(--spectrum-global-dimension-font-size-400);
+  --spectrum-actionbutton-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-actionbutton-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-actionbutton-emphasized-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-actionbutton-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-actionbutton-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-actionbutton-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-actionbutton-quiet-emphasized-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-actionbutton-quiet-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-barloader-large-border-radius: 3px;
+  --spectrum-barloader-large-indeterminate-border-radius: 3px;
+  --spectrum-barloader-large-over-background-border-radius: 3px;
+  --spectrum-barloader-small-border-radius: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-barloader-small-indeterminate-border-radius: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-barloader-small-over-background-border-radius: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-breadcrumb-compact-item-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-breadcrumb-compact-button-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-breadcrumb-item-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-breadcrumb-button-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-breadcrumb-multiline-item-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-breadcrumb-multiline-button-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-cta-text-padding-bottom: [object Object];
+  --spectrum-button-cta-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-cta-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-cta-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-over-background-text-padding-bottom: [object Object];
+  --spectrum-button-over-background-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-over-background-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-over-background-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-primary-text-padding-bottom: [object Object];
+  --spectrum-button-primary-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-primary-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-primary-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-over-background-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-over-background-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-quiet-over-background-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-quiet-over-background-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-over-background-cursor-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-quiet-primary-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-primary-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-quiet-primary-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-quiet-primary-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-primary-cursor-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-quiet-secondary-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-secondary-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-quiet-secondary-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-quiet-secondary-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-secondary-cursor-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-quiet-warning-text-padding-bottom: [object Object];
+  --spectrum-button-quiet-warning-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-quiet-warning-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-quiet-warning-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-warning-cursor-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-button-secondary-text-padding-bottom: [object Object];
+  --spectrum-button-secondary-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-secondary-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-secondary-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-warning-text-padding-bottom: [object Object];
+  --spectrum-button-warning-min-width: var(--spectrum-global-dimension-size-900);
+  --spectrum-button-warning-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-warning-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-checkbox-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-text-gap-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-text-gap-error-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-checkbox-emphasized-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-emphasized-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-emphasized-text-gap-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-emphasized-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-emphasized-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-emphasized-text-gap-error-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-checkbox-quiet-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-quiet-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-quiet-text-gap-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-quiet-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-quiet-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-quiet-text-gap-error-indeterminate-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-checkbox-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-circleloader-medium-border-size: 3px;
+  --spectrum-circleloader-medium-over-background-border-size: 3px;
+  --spectrum-circleloader-small-border-size: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-circleloader-small-over-background-border-size: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-colorhandle-loupe-margin: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-colorslider-touch-hit-y: var(--spectrum-global-dimension-size-150);
+  --spectrum-colorslider-vertical-touch-hit-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-colorwheel-min-size: var(--spectrum-global-dimension-size-2400);
+  --spectrum-colorwheel-touch-hit-outer: var(--spectrum-global-dimension-size-150);
+  --spectrum-colorwheel-touch-hit-inner: var(--spectrum-global-dimension-size-150);
+  --spectrum-cyclebutton-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-cyclebutton-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-dialog-confirm-max-width: var(--spectrum-global-dimension-static-size-6000);
+  --spectrum-dialog-confirm-title-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-dialog-confirm-description-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-dialog-confirm-padding: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-confirm-description-margin-bottom: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-dialog-max-width: var(--spectrum-global-dimension-static-size-6000);
+  --spectrum-dialog-title-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-dialog-content-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-dialog-padding: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-content-margin-bottom: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-dialog-destructive-max-width: var(--spectrum-global-dimension-static-size-6000);
+  --spectrum-dialog-destructive-title-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-dialog-destructive-description-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-dialog-destructive-padding: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-destructive-description-margin-bottom: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-dialog-error-max-width: var(--spectrum-global-dimension-static-size-6000);
+  --spectrum-dialog-error-title-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-dialog-error-description-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-dialog-error-padding: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-error-description-margin-bottom: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-dialog-info-max-width: var(--spectrum-global-dimension-static-size-6000);
+  --spectrum-dialog-info-title-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-dialog-info-description-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-dialog-info-padding: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-info-description-margin-bottom: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-dropdown-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-dropdown-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-dropdown-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-dropdown-thumbnail-small-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-dropdown-thumbnail-small-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-fieldbutton-quiet-min-width: var(--spectrum-global-dimension-size-225);
+  --spectrum-icon-arrow-down-small-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-arrow-left-medium-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-checkmark-medium-width: var(--spectrum-global-dimension-size-150);
+  --spectrum-icon-checkmark-medium-height: var(--spectrum-global-dimension-size-150);
+  --spectrum-icon-checkmark-small-width: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-checkmark-small-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-chevron-down-medium-width: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-chevron-left-large-width: var(--spectrum-global-dimension-size-150);
+  --spectrum-icon-chevron-left-medium-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-chevron-right-large-width: var(--spectrum-global-dimension-size-150);
+  --spectrum-icon-chevron-right-medium-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-cross-large-width: var(--spectrum-global-dimension-size-150);
+  --spectrum-icon-cross-large-height: var(--spectrum-global-dimension-size-150);
+  --spectrum-icon-dash-small-width: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-dash-small-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-skip-left-width: 9px;
+  --spectrum-icon-skip-left-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-skip-right-width: 9px;
+  --spectrum-icon-skip-right-height: var(--spectrum-global-dimension-size-125);
+  --spectrum-icon-triplegripper-width: var(--spectrum-global-dimension-size-125);
+  --spectrum-loader-bar-large-border-radius: 3px;
+  --spectrum-loader-bar-large-over-background-border-radius: 3px;
+  --spectrum-loader-bar-small-border-radius: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-loader-bar-small-over-background-border-radius: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-loader-circle-medium-border-size: 3px;
+  --spectrum-loader-circle-medium-over-background-border-size: 3px;
+  --spectrum-loader-circle-small-border-size: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-loader-circle-small-over-background-border-size: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-meter-large-border-radius: 3px;
+  --spectrum-meter-small-border-radius: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-pagination-page-button-line-height: 26px;
+  --spectrum-radio-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-margin-bottom: 0px;
+  --spectrum-radio-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-radio-emphasized-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-emphasized-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-emphasized-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-emphasized-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-emphasized-margin-bottom: 0px;
+  --spectrum-radio-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-radio-quiet-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-quiet-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-quiet-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-quiet-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-radio-quiet-margin-bottom: 0px;
+  --spectrum-radio-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-rating-icon-width: 24px;
+  --spectrum-rating-indicator-width: 16px;
+  --spectrum-rating-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-rating-emphasized-icon-width: 24px;
+  --spectrum-rating-emphasized-indicator-width: 16px;
+  --spectrum-rating-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-rating-quiet-icon-width: 24px;
+  --spectrum-rating-quiet-indicator-width: 16px;
+  --spectrum-rating-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-search-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-search-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-search-icon-frame: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-search-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-search-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-search-quiet-icon-frame: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-selectlist-option-icon-size: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-selectlist-option-icon-padding-y: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-selectlist-option-icon-margin-top: var(--spectrum-global-dimension-static-size-65);
+  --spectrum-selectlist-option-height: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-selectlist-thumbnail-option-icon-padding-y: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-selectlist-thumbnail-small-option-icon-padding-y: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-sidenav-item-touch-hit-bottom: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-sidenav-multilevel-item-touch-hit-bottom: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-slider-track-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-slider-handle-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-slider-handle-touch-hit-y: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-slider-editable-track-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-slider-editable-handle-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-slider-editable-handle-touch-hit-y: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-slider-fill-track-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-slider-fill-handle-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-slider-fill-handle-touch-hit-y: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-switch-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-track-width: 26px;
+  --spectrum-switch-handle-border-radius: 7px;
+  --spectrum-switch-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-switch-emphasized-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-emphasized-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-emphasized-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-emphasized-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-emphasized-track-width: 26px;
+  --spectrum-switch-emphasized-handle-border-radius: 7px;
+  --spectrum-switch-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-switch-quiet-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-quiet-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-quiet-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-quiet-text-gap-error-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-switch-quiet-track-width: 26px;
+  --spectrum-switch-quiet-handle-border-radius: 7px;
+  --spectrum-switch-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tabs-compact-focus-ring-border-radius: 5px;
+  --spectrum-tabs-compact-margin-left: -8px;
+  --spectrum-tabs-compact-margin-right: -8px;
+  --spectrum-tabs-compact-vertical-focus-ring-border-radius: 5px;
+  --spectrum-tabs-compact-vertical-emphasized-focus-ring-border-radius: 5px;
+  --spectrum-tabs-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-focus-ring-border-radius: 5px;
+  --spectrum-tabs-margin-left: -8px;
+  --spectrum-tabs-margin-right: -8px;
+  --spectrum-tabs-emphasized-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-emphasized-focus-ring-border-radius: 5px;
+  --spectrum-tabs-emphasized-margin-left: -8px;
+  --spectrum-tabs-emphasized-margin-right: -8px;
+  --spectrum-tabs-quiet-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-quiet-focus-ring-border-radius: 5px;
+  --spectrum-tabs-quiet-margin-left: -8px;
+  --spectrum-tabs-quiet-margin-right: -8px;
+  --spectrum-tabs-quiet-compact-focus-ring-border-radius: 5px;
+  --spectrum-tabs-quiet-compact-margin-left: -8px;
+  --spectrum-tabs-quiet-compact-margin-right: -8px;
+  --spectrum-tabs-quiet-compact-emphasized-focus-ring-border-radius: 5px;
+  --spectrum-tabs-quiet-compact-emphasized-margin-left: -8px;
+  --spectrum-tabs-quiet-compact-emphasized-margin-right: -8px;
+  --spectrum-tabs-quiet-compact-vertical-focus-ring-border-radius: 5px;
+  --spectrum-tabs-quiet-compact-vertical-emphasized-focus-ring-border-radius: 5px;
+  --spectrum-tabs-quiet-emphasized-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-quiet-emphasized-focus-ring-border-radius: 5px;
+  --spectrum-tabs-quiet-emphasized-margin-left: -8px;
+  --spectrum-tabs-quiet-emphasized-margin-right: -8px;
+  --spectrum-tabs-quiet-vertical-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-quiet-vertical-focus-ring-border-radius: 5px;
+  --spectrum-tabs-quiet-vertical-emphasized-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-quiet-vertical-emphasized-focus-ring-border-radius: 5px;
+  --spectrum-tabs-vertical-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-vertical-focus-ring-border-radius: 5px;
+  --spectrum-textarea-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-icon-frame: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-textarea-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-quiet-icon-frame: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-textfield-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-icon-frame: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-textfield-quiet-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-quiet-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-quiet-icon-frame: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-tool-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tool-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tool-high-emphasis-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tool-high-emphasis-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tooltip-padding-bottom: 5px;
+  --spectrum-tooltip-content-max-width: 101px;
+  --spectrum-tooltip-info-padding-bottom: 5px;
+  --spectrum-tooltip-info-content-max-width: 101px;
+  --spectrum-tooltip-negative-padding-bottom: 5px;
+  --spectrum-tooltip-negative-content-max-width: 101px;
+  --spectrum-tooltip-positive-padding-bottom: 5px;
+  --spectrum-tooltip-positive-content-max-width: 101px;
+}
+
+.spectrum {  /* spectrum-animationGlobals.css */
+  --spectrum-global-animation-duration-0: 0ms;
+  --spectrum-global-animation-duration-100: 130ms;
+  --spectrum-global-animation-duration-200: 160ms;
+  --spectrum-global-animation-duration-300: 190ms;
+  --spectrum-global-animation-duration-400: 220ms;
+  --spectrum-global-animation-duration-500: 250ms;
+  --spectrum-global-animation-duration-600: 300ms;
+  --spectrum-global-animation-duration-700: 350ms;
+  --spectrum-global-animation-duration-800: 400ms;
+  --spectrum-global-animation-duration-900: 450ms;
+  --spectrum-global-animation-duration-1000: 500ms;
+  --spectrum-global-animation-duration-2000: 1000ms;
+  --spectrum-global-animation-duration-4000: 2000ms;
+  --spectrum-global-animation-ease-in-out: cubic-bezier(.45, 0, .40, 1);
+  --spectrum-global-animation-ease-in: cubic-bezier(.50, 0, 1, 1);
+  --spectrum-global-animation-ease-out: cubic-bezier(0, 0, 0.40, 1);
+  --spectrum-global-animation-linear: cubic-bezier(0, 0, 1, 1);
+
+
+  /* spectrum-colorGlobals.css */
+  --spectrum-global-color-static-black: rgb(0, 0, 0);
+  --spectrum-global-color-static-white: rgb(255, 255, 255);
+  --spectrum-global-color-static-blue: rgb(20, 115, 230);
+  --spectrum-global-color-static-gray-50: rgb(255, 255, 255);
+  --spectrum-global-color-static-gray-75: rgb(255, 255, 255);
+  --spectrum-global-color-static-gray-100: rgb(255, 255, 255);
+  --spectrum-global-color-static-gray-200: rgb(244, 244, 244);
+  --spectrum-global-color-static-gray-300: rgb(234, 234, 234);
+  --spectrum-global-color-static-gray-400: rgb(211, 211, 211);
+  --spectrum-global-color-static-gray-500: rgb(188, 188, 188);
+  --spectrum-global-color-static-gray-600: rgb(149, 149, 149);
+  --spectrum-global-color-static-gray-700: rgb(116, 116, 116);
+  --spectrum-global-color-static-gray-800: rgb(80, 80, 80);
+  --spectrum-global-color-static-gray-900: rgb(50, 50, 50);
+  --spectrum-global-color-static-blue-400: rgb(55, 142, 240);
+  --spectrum-global-color-static-blue-500: rgb(38, 128, 235);
+  --spectrum-global-color-static-blue-600: rgb(20, 115, 230);
+  --spectrum-global-color-static-blue-700: rgb(13, 102, 208);
+  --spectrum-global-color-static-red-400: rgb(236, 91, 98);
+  --spectrum-global-color-static-red-500: rgb(227, 72, 80);
+  --spectrum-global-color-static-red-600: rgb(215, 55, 63);
+  --spectrum-global-color-static-red-700: rgb(201, 37, 45);
+  --spectrum-global-color-static-orange-400: rgb(242, 148, 35);
+  --spectrum-global-color-static-orange-500: rgb(230, 134, 25);
+  --spectrum-global-color-static-orange-600: rgb(218, 123, 17);
+  --spectrum-global-color-static-orange-700: rgb(203, 111, 16);
+  --spectrum-global-color-static-green-400: rgb(51, 171, 132);
+  --spectrum-global-color-static-green-500: rgb(45, 157, 120);
+  --spectrum-global-color-static-green-600: rgb(38, 142, 108);
+  --spectrum-global-color-static-green-700: rgb(18, 128, 92);
+  --spectrum-global-color-static-celery-400: rgb(75, 195, 95);
+  --spectrum-global-color-static-celery-500: rgb(68, 181, 86);
+  --spectrum-global-color-static-celery-600: rgb(61, 167, 78);
+  --spectrum-global-color-static-celery-700: rgb(55, 153, 71);
+  --spectrum-global-color-static-chartreuse-400: rgb(142, 222, 73);
+  --spectrum-global-color-static-chartreuse-500: rgb(133, 208, 68);
+  --spectrum-global-color-static-chartreuse-600: rgb(124, 195, 63);
+  --spectrum-global-color-static-chartreuse-700: rgb(115, 181, 58);
+  --spectrum-global-color-static-yellow-400: rgb(237, 204, 0);
+  --spectrum-global-color-static-yellow-500: rgb(223, 191, 0);
+  --spectrum-global-color-static-yellow-600: rgb(210, 178, 0);
+  --spectrum-global-color-static-yellow-700: rgb(196, 166, 0);
+  --spectrum-global-color-static-magenta-400: rgb(226, 73, 157);
+  --spectrum-global-color-static-magenta-500: rgb(216, 55, 144);
+  --spectrum-global-color-static-magenta-600: rgb(202, 41, 130);
+  --spectrum-global-color-static-magenta-700: rgb(188, 28, 116);
+  --spectrum-global-color-static-fuchsia-400: rgb(207, 62, 220);
+  --spectrum-global-color-static-fuchsia-500: rgb(192, 56, 204);
+  --spectrum-global-color-static-fuchsia-600: rgb(177, 48, 189);
+  --spectrum-global-color-static-fuchsia-700: rgb(162, 40, 173);
+  --spectrum-global-color-static-purple-400: rgb(157, 100, 225);
+  --spectrum-global-color-static-purple-500: rgb(146, 86, 217);
+  --spectrum-global-color-static-purple-600: rgb(134, 76, 204);
+  --spectrum-global-color-static-purple-700: rgb(122, 66, 191);
+  --spectrum-global-color-static-indigo-400: rgb(117, 117, 241);
+  --spectrum-global-color-static-indigo-500: rgb(103, 103, 236);
+  --spectrum-global-color-static-indigo-600: rgb(92, 92, 224);
+  --spectrum-global-color-static-indigo-700: rgb(81, 81, 211);
+  --spectrum-global-color-static-seafoam-400: rgb(32, 163, 168);
+  --spectrum-global-color-static-seafoam-500: rgb(27, 149, 154);
+  --spectrum-global-color-static-seafoam-600: rgb(22, 135, 140);
+  --spectrum-global-color-static-seafoam-700: rgb(15, 121, 125);
+  --spectrum-global-color-opacity-100: 1;
+  --spectrum-global-color-opacity-90: 0.9;
+  --spectrum-global-color-opacity-80: 0.8;
+  --spectrum-global-color-opacity-60: 0.6;
+  --spectrum-global-color-opacity-50: 0.5;
+  --spectrum-global-color-opacity-40: 0.4;
+  --spectrum-global-color-opacity-30: 0.3;
+  --spectrum-global-color-opacity-25: 0.25;
+  --spectrum-global-color-opacity-20: 0.2;
+  --spectrum-global-color-opacity-15: 0.15;
+  --spectrum-global-color-opacity-10: 0.1;
+  --spectrum-global-color-opacity-8: 0.08;
+  --spectrum-global-color-opacity-7: 0.07;
+  --spectrum-global-color-opacity-6: 0.06;
+  --spectrum-global-color-opacity-5: 0.05;
+  --spectrum-global-color-opacity-4: 0.04;
+
+
+  /* spectrum-colorSemantics.css */
+  --spectrum-semantic-negative-color-background: var(--spectrum-global-color-static-red-700);
+  --spectrum-semantic-negative-color-default: var(--spectrum-global-color-red-500);
+  --spectrum-semantic-negative-color-dark: var(--spectrum-global-color-red-600);
+  --spectrum-semantic-negative-color-border: var(--spectrum-global-color-red-400);
+  --spectrum-semantic-negative-color-icon: var(--spectrum-global-color-red-600);
+  --spectrum-semantic-negative-color-status: var(--spectrum-global-color-red-400);
+  --spectrum-semantic-negative-color-text-large: var(--spectrum-global-color-red-500);
+  --spectrum-semantic-negative-color-text-small: var(--spectrum-global-color-red-600);
+  --spectrum-semantic-negative-color-state-down: var(--spectrum-global-color-red-700);
+  --spectrum-semantic-negative-color-state-focus: var(--spectrum-global-color-red-400);
+  --spectrum-semantic-notice-color-background: var(--spectrum-global-color-static-orange-700);
+  --spectrum-semantic-notice-color-default: var(--spectrum-global-color-orange-500);
+  --spectrum-semantic-notice-color-dark: var(--spectrum-global-color-orange-600);
+  --spectrum-semantic-notice-color-border: var(--spectrum-global-color-orange-400);
+  --spectrum-semantic-notice-color-icon: var(--spectrum-global-color-orange-600);
+  --spectrum-semantic-notice-color-status: var(--spectrum-global-color-orange-400);
+  --spectrum-semantic-notice-color-text-large: var(--spectrum-global-color-orange-500);
+  --spectrum-semantic-notice-color-text-small: var(--spectrum-global-color-orange-600);
+  --spectrum-semantic-notice-color-state-down: var(--spectrum-global-color-orange-700);
+  --spectrum-semantic-notice-color-state-focus: var(--spectrum-global-color-orange-400);
+  --spectrum-semantic-positive-color-background: var(--spectrum-global-color-static-green-700);
+  --spectrum-semantic-positive-color-default: var(--spectrum-global-color-green-500);
+  --spectrum-semantic-positive-color-dark: var(--spectrum-global-color-green-600);
+  --spectrum-semantic-positive-color-border: var(--spectrum-global-color-green-400);
+  --spectrum-semantic-positive-color-icon: var(--spectrum-global-color-green-600);
+  --spectrum-semantic-positive-color-status: var(--spectrum-global-color-green-400);
+  --spectrum-semantic-positive-color-text-large: var(--spectrum-global-color-green-500);
+  --spectrum-semantic-positive-color-text-small: var(--spectrum-global-color-green-600);
+  --spectrum-semantic-positive-color-state-down: var(--spectrum-global-color-green-700);
+  --spectrum-semantic-positive-color-state-focus: var(--spectrum-global-color-green-400);
+  --spectrum-semantic-informative-color-background: var(--spectrum-global-color-static-blue-700);
+  --spectrum-semantic-informative-color-default: var(--spectrum-global-color-blue-500);
+  --spectrum-semantic-informative-color-dark: var(--spectrum-global-color-blue-600);
+  --spectrum-semantic-informative-color-border: var(--spectrum-global-color-blue-400);
+  --spectrum-semantic-informative-color-icon: var(--spectrum-global-color-blue-600);
+  --spectrum-semantic-informative-color-status: var(--spectrum-global-color-blue-400);
+  --spectrum-semantic-informative-color-text-large: var(--spectrum-global-color-blue-500);
+  --spectrum-semantic-informative-color-text-small: var(--spectrum-global-color-blue-600);
+  --spectrum-semantic-informative-color-state-down: var(--spectrum-global-color-blue-700);
+  --spectrum-semantic-informative-color-state-focus: var(--spectrum-global-color-blue-400);
+  --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-static-blue-600);
+  --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-static-blue-700);
+  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-static-blue-700);
+  --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-static-blue-600);
+  --spectrum-semantic-background-color-key-focus: var(--spectrum-global-color-static-blue-600);
+  --spectrum-semantic-neutral-color-background: var(--spectrum-global-color-static-gray-700);
+  --spectrum-semantic-presence-color-1: var(--spectrum-global-color-static-red-500);
+  --spectrum-semantic-presence-color-2: var(--spectrum-global-color-static-orange-400);
+  --spectrum-semantic-presence-color-3: var(--spectrum-global-color-static-yellow-400);
+  --spectrum-semantic-presence-color-4: rgb(75, 204, 162);
+  --spectrum-semantic-presence-color-5: rgb(0, 199, 255);
+  --spectrum-semantic-presence-color-6: rgb(0, 140, 184);
+  --spectrum-semantic-presence-color-7: rgb(126, 75, 243);
+  --spectrum-semantic-presence-color-8: var(--spectrum-global-color-static-fuchsia-600);
+
+
+  /* spectrum-dimensionGlobals.css */
+  --spectrum-global-dimension-static-size-0: 0px;
+  --spectrum-global-dimension-static-size-10: 1px;
+  --spectrum-global-dimension-static-size-25: 2px;
+  --spectrum-global-dimension-static-size-50: 4px;
+  --spectrum-global-dimension-static-size-40: 3px;
+  --spectrum-global-dimension-static-size-65: 5px;
+  --spectrum-global-dimension-static-size-100: 8px;
+  --spectrum-global-dimension-static-size-115: 9px;
+  --spectrum-global-dimension-static-size-125: 10px;
+  --spectrum-global-dimension-static-size-150: 12px;
+  --spectrum-global-dimension-static-size-175: 14px;
+  --spectrum-global-dimension-static-size-200: 16px;
+  --spectrum-global-dimension-static-size-225: 18px;
+  --spectrum-global-dimension-static-size-250: 20px;
+  --spectrum-global-dimension-static-size-300: 24px;
+  --spectrum-global-dimension-static-size-400: 32px;
+  --spectrum-global-dimension-static-size-450: 36px;
+  --spectrum-global-dimension-static-size-500: 40px;
+  --spectrum-global-dimension-static-size-550: 44px;
+  --spectrum-global-dimension-static-size-600: 48px;
+  --spectrum-global-dimension-static-size-700: 56px;
+  --spectrum-global-dimension-static-size-800: 64px;
+  --spectrum-global-dimension-static-size-900: 72px;
+  --spectrum-global-dimension-static-size-1000: 80px;
+  --spectrum-global-dimension-static-size-1200: 96px;
+  --spectrum-global-dimension-static-size-1700: 136px;
+  --spectrum-global-dimension-static-size-2400: 192px;
+  --spectrum-global-dimension-static-size-2600: 208px;
+  --spectrum-global-dimension-static-size-3400: 272px;
+  --spectrum-global-dimension-static-size-3600: 288px;
+  --spectrum-global-dimension-static-size-4600: 368px;
+  --spectrum-global-dimension-static-size-5000: 400px;
+  --spectrum-global-dimension-static-size-6000: 480px;
+  --spectrum-global-dimension-static-font-size-50: 11px;
+  --spectrum-global-dimension-static-font-size-75: 12px;
+  --spectrum-global-dimension-static-font-size-100: 14px;
+  --spectrum-global-dimension-static-font-size-150: 15px;
+  --spectrum-global-dimension-static-font-size-200: 16px;
+  --spectrum-global-dimension-static-font-size-300: 18px;
+  --spectrum-global-dimension-static-font-size-400: 20px;
+  --spectrum-global-dimension-static-font-size-500: 22px;
+  --spectrum-global-dimension-static-font-size-600: 25px;
+  --spectrum-global-dimension-static-font-size-700: 28px;
+  --spectrum-global-dimension-static-font-size-800: 32px;
+  --spectrum-global-dimension-static-font-size-900: 36px;
+  --spectrum-global-dimension-static-font-size-1000: 40px;
+  --spectrum-global-dimension-static-percent-50: 50%;
+  --spectrum-global-dimension-static-percent-100: 100%;
+  --spectrum-global-dimension-static-breakpoint-xsmall: 304px;
+  --spectrum-global-dimension-static-breakpoint-small: 768px;
+  --spectrum-global-dimension-static-breakpoint-medium: 1280px;
+  --spectrum-global-dimension-static-breakpoint-large: 1768px;
+  --spectrum-global-dimension-static-breakpoint-xlarge: 2160px;
+  --spectrum-global-dimension-static-grid-columns: 12;
+  --spectrum-global-dimension-static-grid-fluid-width: 100%;
+  --spectrum-global-dimension-static-grid-fixed-max-width: 1280px;
+
+
+  /* spectrum-fontGlobals.css */
+  --spectrum-global-font-family-base: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-global-font-family-serif: adobe-clean-serif, 'Source Serif Pro', Georgia, serif;
+  --spectrum-global-font-family-code: 'Source Code Pro', Monaco, monospace;
+  --spectrum-global-font-weight-thin: 100;
+  --spectrum-global-font-weight-ultra-light: 200;
+  --spectrum-global-font-weight-light: 300;
+  --spectrum-global-font-weight-regular: 400;
+  --spectrum-global-font-weight-medium: 500;
+  --spectrum-global-font-weight-semi-bold: 600;
+  --spectrum-global-font-weight-bold: 700;
+  --spectrum-global-font-weight-extra-bold: 800;
+  --spectrum-global-font-weight-black: 900;
+  --spectrum-global-font-style-regular: normal;
+  --spectrum-global-font-style-italic: italic;
+  --spectrum-global-font-letter-spacing-none: 0;
+  --spectrum-global-font-letter-spacing-small: 0.0125em;
+  --spectrum-global-font-letter-spacing-han: 0.05em;
+  --spectrum-global-font-letter-spacing-medium: 0.06em;
+  --spectrum-global-font-line-height-large: 1.7;
+  --spectrum-global-font-line-height-medium: 1.5;
+  --spectrum-global-font-line-height-small: 1.3;
+  --spectrum-global-font-multiplier-25: 0.25em;
+  --spectrum-global-font-multiplier-75: 0.75em;
+
+
+  /* spectrum-staticAliases.css */
+  --spectrum-alias-border-size-thin: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-alias-border-size-thick: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-alias-border-size-thicker: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-alias-border-size-thickest: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-alias-border-offset-thin: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-alias-border-offset-thick: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-alias-border-offset-thicker: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-alias-border-offset-thickest: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-grid-baseline: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-alias-grid-gutter-xsmall: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-grid-gutter-small: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-alias-grid-gutter-medium: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-alias-grid-gutter-large: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-alias-grid-gutter-xlarge: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-alias-grid-margin-xsmall: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-grid-margin-small: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-alias-grid-margin-medium: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-alias-grid-margin-large: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-alias-grid-margin-xlarge: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-alias-grid-layout-region-margin-bottom-xsmall: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-grid-layout-region-margin-bottom-small: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-alias-grid-layout-region-margin-bottom-medium: var(--spectrum-global-dimension-static-size-400);
+  --spectrum-alias-grid-layout-region-margin-bottom-large: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-alias-grid-layout-region-margin-bottom-xlarge: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-alias-radial-reaction-size-default: var(--spectrum-global-dimension-static-size-550);
+  --spectrum-alias-font-family-ar: myriad-arabic, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-alias-font-family-he: myriad-hebrew, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-alias-font-family-zh: adobe-clean-han-traditional, source-han-traditional, 'MingLiu', 'Heiti TC Light','sans-serif';
+  --spectrum-alias-font-family-zhhans: adobe-clean-han-simplified-c, source-han-simplified-c, 'SimSun', 'Heiti SC Light', 'sans-serif';
+  --spectrum-alias-font-family-ko: adobe-clean-han-korean, source-han-korean, 'Malgun Gothic', 'Apple Gothic', 'sans-serif';
+  --spectrum-alias-font-family-ja: adobe-clean-han-japanese, source-han-japanese, 'Yu Gothic', '\30E1   \30A4   \30EA   \30AA', '\30D2   \30E9   \30AE   \30CE   \89D2   \30B4    Pro W3', 'Hiragino Kaku Gothic Pro W3', 'Osaka', '\FF2D   \FF33   \FF30   \30B4   \30B7   \30C3   \30AF', 'MS PGothic', 'sans-serif';
+  --spectrum-alias-font-family-condensed: adobe-clean-han-traditional, source-han-traditional, 'MingLiu', 'Heiti TC Light', adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-alias-line-height-body: var(--spectrum-global-font-line-height-medium);
+  --spectrum-alias-line-height-title: var(--spectrum-global-font-line-height-small);
+  --spectrum-alias-body-han-text-line-height: var(--spectrum-global-font-line-height-large);
+  --spectrum-alias-body-text-font-family: var(--spectrum-global-font-family-base);
+  --spectrum-alias-body-text-line-height: var(--spectrum-global-font-line-height-medium);
+  --spectrum-alias-body-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-body-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-button-text-line-height: var(--spectrum-global-font-line-height-small);
+  --spectrum-alias-heading-han-text-line-height: var(--spectrum-global-font-line-height-medium);
+  --spectrum-alias-heading-text-line-height: var(--spectrum-global-font-line-height-small);
+  --spectrum-alias-heading-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-heading-text-font-weight-regular-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-light);
+  --spectrum-alias-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-subheading-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-serif-text-font-family: var(--spectrum-global-font-family-serif);
+  --spectrum-alias-article-text-font-family: var(--spectrum-global-font-family-serif);
+  --spectrum-alias-article-body-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-article-body-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-article-heading-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-article-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-article-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-article-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-article-subheading-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-article-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-article-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-article-detail-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-code-text-font-family: var(--spectrum-global-font-family-code);
+  --spectrum-alias-han-heading-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-han-heading-text-font-weight-regular-emphasis: var(--spectrum-global-font-weight-extra-bold);
+  --spectrum-alias-han-heading-text-font-weight-regular-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-light);
+  --spectrum-alias-han-heading-text-font-weight-quiet-emphasis: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-han-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-han-heading-text-font-weight-light: var(--spectrum-global-font-weight-light);
+  --spectrum-alias-han-heading-text-font-weight-light-emphasis: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-han-heading-text-font-weight-light-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-han-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-strong-emphasis: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-heavy: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-heavy-emphasis: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-heading-text-font-weight-heavy-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-body-text-font-weight-regular: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-han-body-text-font-weight-emphasis: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-han-body-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-subheading-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-han-subheading-text-font-weight-emphasis: var(--spectrum-global-font-weight-extra-bold);
+  --spectrum-alias-han-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-han-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-han-detail-text-font-weight-emphasis: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-han-detail-text-font-weight-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-code-text-font-weight-regular: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-code-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-code-text-line-height: var(--spectrum-global-font-line-height-medium);
+  --spectrum-alias-heading-margin-bottom: var(--spectrum-global-font-multiplier-25);
+  --spectrum-alias-body-margin-bottom: var(--spectrum-global-font-multiplier-75);
+
+}
+
+.spectrum--medium,
+.spectrum--large {
+  /* spectrum-dimensionAliases.css */
+  --spectrum-alias-dropshadow-blur: var(--spectrum-global-dimension-size-50);
+  --spectrum-alias-dropshadow-offset-y: var(--spectrum-global-dimension-size-10);
+  --spectrum-alias-font-size-default: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-alias-line-height-small: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-line-height-medium: var(--spectrum-global-dimension-size-250);
+  --spectrum-alias-line-height-large: var(--spectrum-global-dimension-size-300);
+  --spectrum-alias-line-height-xlarge: var(--spectrum-global-dimension-size-400);
+  --spectrum-alias-line-height-xxlarge: var(--spectrum-global-dimension-size-600);
+  --spectrum-alias-layout-label-gap-size: var(--spectrum-global-dimension-size-100);
+  --spectrum-alias-pill-button-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-alias-pill-button-text-baseline: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-border-radius-xsmall: var(--spectrum-global-dimension-size-10);
+  --spectrum-alias-border-radius-small: var(--spectrum-global-dimension-size-25);
+  --spectrum-alias-border-radius-regular: var(--spectrum-global-dimension-size-50);
+  --spectrum-alias-border-radius-medium: var(--spectrum-global-dimension-size-100);
+  --spectrum-alias-border-radius-large: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-single-line-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-alias-single-line-width: var(--spectrum-global-dimension-size-2400);
+  --spectrum-alias-workflow-icon-size: var(--spectrum-global-dimension-size-225);
+  --spectrum-alias-heading-han-display1-text-size: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-han-xxxl-text-size: var(--spectrum-global-dimension-font-size-1000);
+  --spectrum-alias-heading-han-display1-margin-top: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-han-xxxl-margin-top: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-han-display2-text-size: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-han-xxl-text-size: var(--spectrum-global-dimension-font-size-900);
+  --spectrum-alias-heading-han-display2-margin-top: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading-han-xxl-margin-top: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading1-han-text-size: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading-han-xl-text-size: var(--spectrum-global-dimension-font-size-800);
+  --spectrum-alias-heading1-han-margin-top: var(--spectrum-global-dimension-font-size-700);
+  --spectrum-alias-heading-han-xl-margin-top: var(--spectrum-global-dimension-font-size-700);
+  --spectrum-alias-heading2-han-text-size: var(--spectrum-global-dimension-font-size-600);
+  --spectrum-alias-heading-han-l-text-size: var(--spectrum-global-dimension-font-size-600);
+  --spectrum-alias-heading2-han-margin-top: var(--spectrum-global-dimension-font-size-500);
+  --spectrum-alias-heading-han-l-margin-top: var(--spectrum-global-dimension-font-size-500);
+  --spectrum-alias-heading3-han-text-size: var(--spectrum-global-dimension-font-size-400);
+  --spectrum-alias-heading-han-m-text-size: var(--spectrum-global-dimension-font-size-400);
+  --spectrum-alias-heading3-han-margin-top: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-alias-heading-han-m-margin-top: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-alias-heading4-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-alias-heading-s-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-alias-heading4-margin-top: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-alias-heading-s-margin-top: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-alias-heading5-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-alias-heading-xs-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-alias-heading5-margin-top: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-alias-heading-xs-margin-top: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-alias-heading6-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-alias-heading-xxs-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-alias-heading6-margin-top: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-alias-heading-xxs-margin-top: var(--spectrum-global-dimension-font-size-75);
+}
+
+.spectrum--darkest,
+.spectrum--dark,
+.spectrum--light,
+.spectrum--lightest {
+  /* spectrum-colorAliases.css */
+  --spectrum-alias-background-color-default: var(--spectrum-global-color-gray-100);
+  --spectrum-alias-background-color-transparent: transparent;
+  --spectrum-alias-background-color-label-gray: rgb(112, 112, 112);
+  --spectrum-alias-background-color-quickactions-overlay: rgba(0,0,0,0.2);
+  --spectrum-alias-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-alias-placeholder-text-color-hover: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-placeholder-text-color-down: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-placeholder-text-color-selected: var(--spectrum-global-color-gray-800);
+  --spectrum-alias-label-text-color: var(--spectrum-global-color-gray-700);
+  --spectrum-alias-text-color: var(--spectrum-global-color-gray-800);
+  --spectrum-alias-text-color-hover: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-text-color-down: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-text-color-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-text-color-mouse-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-text-color-disabled: var(--spectrum-global-color-gray-500);
+  --spectrum-alias-text-color-invalid: var(--spectrum-global-color-red-500);
+  --spectrum-alias-text-color-selected: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-text-color-selected-neutral: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-title-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-heading-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-border-color: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-400);
+  --spectrum-alias-border-color-focus: var(--spectrum-global-color-blue-400);
+  --spectrum-alias-border-color-down: var(--spectrum-global-color-blue-500);
+  --spectrum-alias-border-color-extralight: var(--spectrum-global-color-gray-100);
+  --spectrum-alias-border-color-light: var(--spectrum-global-color-gray-200);
+  --spectrum-alias-border-color-mid: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-border-color-dark: var(--spectrum-global-color-gray-400);
+  --spectrum-alias-border-color-transparent: transparent;
+  --spectrum-alias-border-color-translucent-dark: rgba(0,0,0,0.05);
+  --spectrum-alias-border-color-translucent-darker: rgba(0,0,0,0.1);
+  --spectrum-alias-focus-color: var(--spectrum-global-color-blue-400);
+  --spectrum-alias-track-color-default: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-track-color-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-track-color-over-background: rgba(255,255,255,0.2);
+  --spectrum-alias-icon-color: var(--spectrum-global-color-gray-700);
+  --spectrum-alias-icon-color-over-background: var(--spectrum-global-color-static-white);
+  --spectrum-alias-icon-color-hover: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-icon-color-down: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-icon-color-focus: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-icon-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-alias-icon-color-selected-neutral: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-icon-color-selected: var(--spectrum-global-color-blue-500);
+  --spectrum-alias-icon-color-selected-hover: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-icon-color-selected-down: var(--spectrum-global-color-blue-700);
+  --spectrum-alias-icon-color-selected-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-icon-color-error: var(--spectrum-global-color-red-400);
+  --spectrum-alias-toolbar-background-color: var(--spectrum-global-color-gray-100);
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
 .spectrum-StatusLight {
   min-height: 32px;
   display: -ms-flexbox;
@@ -13018,6 +15254,94 @@ to this repo does not apply.
   background-color: rgb(134, 76, 204);
 }
 
+.spectrum--light, .spectrum--lightest {
+  --hljs-color: #383a42;
+  --hljs-background: #fafafa;
+  --hljs-keyword-color: #a626a4;
+  --hljs-section-color: #e45649;
+  --hljs-literal-color: #0184bb;
+  --hljs-attribute-color: #50a14f;
+  --hljs-class-color: #c18401;
+  --hljs-variable-color: #986801;
+  --hljs-title-color: #4078f2; }
+
+.spectrum--dark,
+.spectrum--darkest {
+  --hljs-color: #abb2bf;
+  --hljs-background: #282c34;
+  --hljs-keyword-color: #c678dd;
+  --hljs-section-color: #e06c75;
+  --hljs-literal-color: #56b6c2;
+  --hljs-attribute-color: #98c379;
+  --hljs-class-color: #e6c07b;
+  --hljs-variable-color: #d19a66;
+  --hljs-title-color: #61aeee; }
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: var(--hljs-color, #383a42);
+  background: var(--hljs-background, #fafafa); }
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic; }
+
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+  color: var(--hljs-keyword-color, #a626a4); }
+
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+  color: var(--hljs-section-color, #e45649); }
+
+.hljs-literal {
+  color: var(--hljs-literal-color, #0184bb); }
+
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string,
+.hljs-regexp,
+.hljs-string {
+  color: var(--hljs-attribute-color, #50a14f); }
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: var(--hljs-class-color, #c18401); }
+
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: var(--hljs-variable-color, #986801); }
+
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+  color: var(--hljs-title-color, #4078f2); }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-weight: bold; }
+
+.hljs-link {
+  text-decoration: underline; }
+
 .pageContainer___3Z_T8 {
   position: relative; }
 
@@ -13121,1293 +15445,6 @@ div.subHeadStatusLight___3Xg_x {
   padding: 0 0 var(--spectrum-global-dimension-size-160) var(--spectrum-global-dimension-size-85);
   text-align: left;
   display: inline-block; }
-
-.card___2ZaLE {
-  width: 224px;
-  margin-right: 16px;
-  margin-bottom: 2px;
-  margin-top: 2px;
-  margin-left: 2px;
-  box-shadow: 0 0 0 1px var(--spectrum-global-color-gray-300);
-  transition: 125ms ease-in-out;
-  height: 64px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 4px;
-  overflow: hidden;
-  cursor: pointer; }
-  .card___2ZaLE:hover {
-    box-shadow: 0 0 0 1px var(--spectrum-global-color-gray-400);
-    transition: 125ms ease-in-out; }
-  @media screen and (max-width: 960px) {
-    .card___2ZaLE {
-      margin-bottom: 16px; } }
-  .card___2ZaLE img {
-    height: 64px; }
-  .card___2ZaLE .content___1VKv9 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 16px; }
-  .card___2ZaLE .cardTitle___35xj1 {
-    font-weight: 700 !important;
-    margin-bottom: 0px !important;
-    margin-top: 0px !important; }
-  .card___2ZaLE .cardSubTitle___12tj6 {
-    color: var(--spectrum-global-color-gray-700) !important;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important; }
-
-.link___3YiP4 {
-  text-decoration: none; }
-
-.row___3btx3 {
-  margin-bottom: 56px; }
-
-.link___3YiP4 {
-  text-decoration: none; }
-
-.cardButton___2kEb- {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: none;
-  outline-style: none; }
-  .cardButton___2kEb- > div:focus {
-    outline: none;
-    outline-style: none; }
-  .cardButton___2kEb-:focus > div {
-    box-shadow: 0 0 0 2px #2680eb;
-    outline: none; }
-
-.pageHeading___26RtH {
-  font-size: 58px !important;
-  font-family: adobe-clean-serif !important;
-  font-weight: 800;
-  line-height: 1.15 !important;
-  letter-spacing: normal !important; }
-  @media screen and (max-width: 768px) {
-    .pageHeading___26RtH {
-      font-size: 44px !important;
-      font-family: adobe-clean-serif !important;
-      letter-spacing: normal !important; } }
-
-.headerRow___2meAi {
-  margin-bottom: 16px; }
-
-.section___1Znpf {
-  margin-bottom: 80px;
-  position: relative; }
-
-.RelatedContent ul {
-  list-style: none;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 32px;
-  margin: 0px;
-  padding: 0px; }
-
-.Keyboardinteractions table {
-  width: 100%;
-  margin-bottom: 48px; }
-
-.Keyboardinteractions td:first-of-type {
-  white-space: nowrap;
-  width: 30%;
-  font-weight: bold; }
-
-.Changelog table {
-  width: 100%;
-  margin-bottom: 48px; }
-
-.introRow___hejS3 .sectionIntro___1GWEw {
-  margin-bottom: 40px; }
-
-.introRow___hejS3:last-of-type .sectionIntro___1GWEw {
-  margin-bottom: 0px; }
-
-.stageHelper___2alaF {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  pointer-events: none; }
-
-.internal___2Br0S {
-  outline: 10px solid rgba(103, 103, 236, 0.1); }
-
-.public___2b2AX {
-  outline: 10px solid rgba(68, 181, 86, 0.1); }
-
-.both___2CENL {
-  outline: 10px solid rgba(38, 128, 235, 0.1); }
-
-.notSet___1aPGq {
-  outline: 10px solid rgba(216, 55, 144, 0.1); }
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum-Link {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-  text-decoration: none;
-  transition: color 130ms ease-in-out;
-  outline: none;
-}
-.spectrum-Link:hover {
-    text-decoration: underline;
-  }
-.spectrum-Link.focus-ring {
-    text-decoration: underline;
-  }
-.spectrum-Link.focus-ring {
-    text-decoration: underline;
-    -webkit-text-decoration-style: double;
-            text-decoration-style: double;
-  }
-.spectrum-Link.is-disabled {
-    cursor: default;
-    pointer-events: none;
-  }
-.spectrum-Link.is-disabled:hover,
-    .spectrum-Link.is-disabled:focus {
-      text-decoration: none;
-    }
-.spectrum-Link--subtle,
-/** @deprecated */.spectrum-Link--quiet {
-  text-decoration: underline;
-}
-.spectrum-Link--overBackground {
-  text-decoration: underline;
-}
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--large .spectrum-Link {
-  transition: color 130ms ease-in-out;
-}
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--light .spectrum-Link {
-  color: rgb(13, 102, 208);
-}
-.spectrum--light .spectrum-Link:hover {
-    color: rgb(13, 102, 208);
-  }
-.spectrum--light .spectrum-Link:active {
-    color: rgb(9, 90, 186);
-  }
-.spectrum--light .spectrum-Link.focus-ring {
-    color: rgb(13, 102, 208);
-  }
-.spectrum--light .spectrum-Link.is-disabled {
-    color: rgb(179, 179, 179);
-  }
-.spectrum--light .spectrum-Link--quiet,
-.spectrum--light .spectrum-Link--subtle {
-  color: inherit;
-}
-.spectrum--light .spectrum-Link--quiet:hover,
-.spectrum--light .spectrum-Link--subtle:hover {
-    color: inherit;
-  }
-.spectrum--light .spectrum-Link--quiet:active,
-.spectrum--light .spectrum-Link--subtle:active {
-    color: inherit;
-  }
-.spectrum--light .spectrum-Link--quiet:focus,
-.spectrum--light .spectrum-Link--subtle:focus {
-    color: inherit;
-  }
-.spectrum--light .spectrum-Link--overBackground {
-  color: rgb(255, 255, 255);
-}
-.spectrum--light .spectrum-Link--overBackground:hover {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--light .spectrum-Link--overBackground:active {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--light .spectrum-Link--overBackground:focus {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--light .spectrum-Link--overBackground.is-disabled {
-    color: rgba(255,255,255,0.5);
-  }
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--dark .spectrum-Link {
-  color: rgb(75, 156, 245);
-}
-.spectrum--dark .spectrum-Link:hover {
-    color: rgb(75, 156, 245);
-  }
-.spectrum--dark .spectrum-Link:active {
-    color: rgb(90, 169, 250);
-  }
-.spectrum--dark .spectrum-Link.focus-ring {
-    color: rgb(75, 156, 245);
-  }
-.spectrum--dark .spectrum-Link.is-disabled {
-    color: rgb(110, 110, 110);
-  }
-.spectrum--dark .spectrum-Link--quiet,
-.spectrum--dark .spectrum-Link--subtle {
-  color: inherit;
-}
-.spectrum--dark .spectrum-Link--quiet:hover,
-.spectrum--dark .spectrum-Link--subtle:hover {
-    color: inherit;
-  }
-.spectrum--dark .spectrum-Link--quiet:active,
-.spectrum--dark .spectrum-Link--subtle:active {
-    color: inherit;
-  }
-.spectrum--dark .spectrum-Link--quiet:focus,
-.spectrum--dark .spectrum-Link--subtle:focus {
-    color: inherit;
-  }
-.spectrum--dark .spectrum-Link--overBackground {
-  color: rgb(255, 255, 255);
-}
-.spectrum--dark .spectrum-Link--overBackground:hover {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--dark .spectrum-Link--overBackground:active {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--dark .spectrum-Link--overBackground:focus {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--dark .spectrum-Link--overBackground.is-disabled {
-    color: rgba(255,255,255,0.5);
-  }
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--lightest .spectrum-Link {
-  color: rgb(20, 115, 230);
-}
-.spectrum--lightest .spectrum-Link:hover {
-    color: rgb(20, 115, 230);
-  }
-.spectrum--lightest .spectrum-Link:active {
-    color: rgb(13, 102, 208);
-  }
-.spectrum--lightest .spectrum-Link.focus-ring {
-    color: rgb(20, 115, 230);
-  }
-.spectrum--lightest .spectrum-Link.is-disabled {
-    color: rgb(188, 188, 188);
-  }
-.spectrum--lightest .spectrum-Link--quiet,
-.spectrum--lightest .spectrum-Link--subtle {
-  color: inherit;
-}
-.spectrum--lightest .spectrum-Link--quiet:hover,
-.spectrum--lightest .spectrum-Link--subtle:hover {
-    color: inherit;
-  }
-.spectrum--lightest .spectrum-Link--quiet:active,
-.spectrum--lightest .spectrum-Link--subtle:active {
-    color: inherit;
-  }
-.spectrum--lightest .spectrum-Link--quiet:focus,
-.spectrum--lightest .spectrum-Link--subtle:focus {
-    color: inherit;
-  }
-.spectrum--lightest .spectrum-Link--overBackground {
-  color: rgb(255, 255, 255);
-}
-.spectrum--lightest .spectrum-Link--overBackground:hover {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--lightest .spectrum-Link--overBackground:active {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--lightest .spectrum-Link--overBackground:focus {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--lightest .spectrum-Link--overBackground.is-disabled {
-    color: rgba(255,255,255,0.5);
-  }
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--darkest .spectrum-Link {
-  color: rgb(55, 142, 240);
-}
-.spectrum--darkest .spectrum-Link:hover {
-    color: rgb(55, 142, 240);
-  }
-.spectrum--darkest .spectrum-Link:active {
-    color: rgb(75, 156, 245);
-  }
-.spectrum--darkest .spectrum-Link.focus-ring {
-    color: rgb(55, 142, 240);
-  }
-.spectrum--darkest .spectrum-Link.is-disabled {
-    color: rgb(92, 92, 92);
-  }
-.spectrum--darkest .spectrum-Link--quiet,
-.spectrum--darkest .spectrum-Link--subtle {
-  color: inherit;
-}
-.spectrum--darkest .spectrum-Link--quiet:hover,
-.spectrum--darkest .spectrum-Link--subtle:hover {
-    color: inherit;
-  }
-.spectrum--darkest .spectrum-Link--quiet:active,
-.spectrum--darkest .spectrum-Link--subtle:active {
-    color: inherit;
-  }
-.spectrum--darkest .spectrum-Link--quiet:focus,
-.spectrum--darkest .spectrum-Link--subtle:focus {
-    color: inherit;
-  }
-.spectrum--darkest .spectrum-Link--overBackground {
-  color: rgb(255, 255, 255);
-}
-.spectrum--darkest .spectrum-Link--overBackground:hover {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--darkest .spectrum-Link--overBackground:active {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--darkest .spectrum-Link--overBackground:focus {
-    color: rgb(255, 255, 255);
-  }
-.spectrum--darkest .spectrum-Link--overBackground.is-disabled {
-    color: rgba(255,255,255,0.5);
-  }
-
-.table___1eH1D {
-  width: 100%; }
-
-.list___hsw97 {
-  font-size: 16px;
-  margin-left: 0px;
-  padding-left: 24px; }
-
-.headingAnchor___CupO2 {
-  transition: all 125ms ease-in-out;
-  margin-left: 4px; }
-  .sectionHeader___1vbUF .headingAnchor___CupO2 {
-    margin-left: 6px; }
-
-.subHeader___l-0m8 {
-  margin-bottom: 16px !important; }
-
-.headerContainer___3NxS9 {
-  margin-bottom: 33px; }
-
-.sectionHeader___1vbUF {
-  padding-left: 0; }
-
-.anchor___NrH_s {
-  opacity: 0;
-  transition: all 125ms ease-in-out; }
-  .anchor___NrH_s:focus {
-    opacity: 1;
-    transition: all 125ms ease-in-out; }
-
-.editLink___1-WTE {
-  opacity: 0; }
-
-.header___3q7Ji:hover .editLink___1-WTE, .header___3q7Ji:hover .anchor___NrH_s {
-  opacity: 1;
-  transition: all 125ms ease-in-out; }
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum-Rule {
-  width: 100%;
-  overflow: visible;
-
-  border: none;
-  border-width: 2px;
-  border-radius: 2px;
-}
-.spectrum-Rule--large {
-  height: 4px;
-
-  border-radius: 2px;
-}
-.spectrum-Rule--medium {
-  height: 2px;
-
-  border-radius: 1px;
-}
-.spectrum-Rule--small {
-  height: 1px;
-
-  border-radius: 1px;
-}
-.spectrum-Rule--vertical {
-  height: 100%;
-}
-.spectrum-Rule--vertical.spectrum-Rule--large {
-    width: 4px;
-  }
-.spectrum-Rule--vertical.spectrum-Rule--medium {
-    width: 2px;
-  }
-.spectrum-Rule--vertical.spectrum-Rule--small {
-    width: 1px;
-  }
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--large .spectrum-Rule {
-  border-width: 2px;
-  border-radius: 2px;
-}
-.spectrum--large .spectrum-Rule--large {
-  height: 4px;
-
-  border-radius: 2px;
-}
-.spectrum--large .spectrum-Rule--medium {
-  height: 2px;
-
-  border-radius: 1px;
-}
-.spectrum--large .spectrum-Rule--small {
-  height: 1px;
-
-  border-radius: 1px;
-}
-.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--large {
-    width: 4px;
-  }
-.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--medium {
-    width: 2px;
-  }
-.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--small {
-    width: 1px;
-  }
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--light .spectrum-Rule--large {
-  background-color: rgb(75, 75, 75);
-}
-.spectrum--light .spectrum-Rule--medium {
-  background-color: rgb(225, 225, 225);
-}
-.spectrum--light .spectrum-Rule--small {
-  background-color: rgb(225, 225, 225);
-}
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--dark .spectrum-Rule--large {
-  background-color: rgb(227, 227, 227);
-}
-.spectrum--dark .spectrum-Rule--medium {
-  background-color: rgb(74, 74, 74);
-}
-.spectrum--dark .spectrum-Rule--small {
-  background-color: rgb(74, 74, 74);
-}
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--lightest .spectrum-Rule--large {
-  background-color: rgb(80, 80, 80);
-}
-.spectrum--lightest .spectrum-Rule--medium {
-  background-color: rgb(234, 234, 234);
-}
-.spectrum--lightest .spectrum-Rule--small {
-  background-color: rgb(234, 234, 234);
-}
-
-/*
-Use of this code is governed by the Adobe Terms of Use and
-Adobe Developer Additional Terms, and the license attached
-to this repo does not apply.
-*/
-.spectrum--darkest .spectrum-Rule--large {
-  background-color: rgb(200, 200, 200);
-}
-.spectrum--darkest .spectrum-Rule--medium {
-  background-color: rgb(57, 57, 57);
-}
-.spectrum--darkest .spectrum-Rule--small {
-  background-color: rgb(57, 57, 57);
-}
-
-* {
-  box-sizing: border-box; }
-
-body {
-  overflow: auto !important; }
-
-.flexContainer {
-  padding-left: 248px; }
-  @media screen and (max-width: 960px) {
-    .flexContainer {
-      padding-left: 0px; } }
-  .flexContainer .site-mainContainer {
-    padding: 40px 52px 0px 52px;
-    max-width: 1080px; }
-    @media screen and (max-width: 768px) {
-      .flexContainer .site-mainContainer {
-        padding-left: 16px;
-        padding-right: 16px; } }
-    @media screen and (max-width: 960px) {
-      .flexContainer .site-mainContainer {
-        padding-top: 80px; } }
-
-.noMargin {
-  margin: 0px; }
-
-.pageHeading___efYON {
-  size: 65px; }
-
-.spectrum-Table-row {
-  cursor: auto; }
-  .spectrum-Table-row:hover {
-    background-color: inherit !important;
-    cursor: auto; }
-
-p.spectrum-Body3 {
-  margin-bottom: 24px;
-  margin-top: 0px; }
-
-.spectrum-Body3 {
-  margin-bottom: 8px; }
-
-.well-box {
-  background-color: var(--spectrum-global-color-gray-75);
-  border: 1px solid var(--spectrum-global-color-gray-200);
-  padding: 15px 16px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 0px;
-  margin-bottom: 24px;
-  font-size: 16px; }
-
-.spectrum {
-  background-color: var(--spectrum-global-color-gray-50) !important; }
-
-.footerContainer {
-  padding-top: 0px !important;
-  padding-bottom: 20px;
-  margin-top: 0px; }
-
-.Footernav-region {
-  visibility: hidden  !important;
-  height: 0px;
-  overflow: hidden;
-  padding: 0px;
-  margin: 0px; }
-
-.footerContainer a:hover {
-  text-decoration: underline !important; }
-
-.Footernav-misc {
-  padding: 8px !important; }
-
-.site-footer-col {
-  padding: 0px 8px !important; }
-
-.switcherContainer {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap; }
-  .switcherContainer > * {
-    margin-right: 37px; }
-
-.spectrum--dark {
-  --spectrum-global-color-celery-400: rgb(68, 181, 86);
-  --spectrum-global-color-chartreuse-400: rgb(133, 208, 68);
-  --spectrum-global-color-yellow-400: rgb(223, 191, 0);
-  --spectrum-global-color-magenta-400: rgb(216, 55, 144);
-  --spectrum-global-color-magenta-500: rgb(226, 73, 157);
-  --spectrum-global-color-magenta-700: rgb(245, 107, 183);
-  --spectrum-global-color-fuchsia-400: rgb(192, 56, 204);
-  --spectrum-global-color-purple-400: rgb(146, 86, 217);
-  --spectrum-global-color-indigo-400: rgb(103, 103, 236);
-  --spectrum-global-color-seafoam-400: rgb(27, 149, 154);
-  --spectrum-global-color-red-500: rgb(236, 91, 98);
-  --spectrum-global-color-red-600: rgb(247, 109, 116);
-  --spectrum-global-color-red-700: rgb(255, 123, 130);
-  --spectrum-global-color-blue-400: rgb(38, 128, 235);
-  --spectrum-global-color-blue-500: rgb(55, 142, 240);
-  --spectrum-global-color-blue-600: rgb(75, 156, 245);
-  --spectrum-global-color-blue-700: rgb(90, 169, 250);
-  --spectrum-global-color-gray-50: rgb(37, 37, 37);
-  --spectrum-global-color-gray-75: rgb(47, 47, 47);
-  --spectrum-global-color-gray-100: rgb(50, 50, 50);
-  --spectrum-global-color-gray-200: rgb(62, 62, 62);
-  --spectrum-global-color-gray-300: rgb(74, 74, 74);
-  --spectrum-global-color-gray-400: rgb(90, 90, 90);
-  --spectrum-global-color-gray-500: rgb(110, 110, 110);
-  --spectrum-global-color-gray-600: rgb(144, 144, 144);
-  --spectrum-global-color-gray-700: rgb(185, 185, 185);
-  --spectrum-global-color-gray-800: rgb(227, 227, 227);
-  --spectrum-global-color-gray-900: rgb(255, 255, 255);
-  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.5);
-  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.5);
-  --spectrum-alias-background-color-hover-overlay: rgba(255,255,255,0.06);
-  --spectrum-alias-highlight-hover: rgba(255,255,255,0.07);
-  --spectrum-alias-highlight-active: rgba(255,255,255,0.1);
-  --spectrum-alias-highlight-selected: rgba(55,142,240,0.15);
-  --spectrum-alias-highlight-selected-hover: rgba(55,142,240,0.25);
-  --spectrum-alias-background-color-quickactions: rgba(50,50,50,0.9);
-  --spectrum-miller-column-item-background-color-selected: rgba(55,142,240,0.1);
-  --spectrum-miller-column-item-background-color-selected-hover: rgba(55,142,240,0.2);
-  --spectrum-well-background-color: rgba(227,227,227,0.02);
-  --spectrum-well-border-color: rgba(255,255,255,0.05);
-}
-
-.spectrum--darkest {
-  --spectrum-global-color-celery-400: rgb(61, 167, 78);
-  --spectrum-global-color-chartreuse-400: rgb(124, 195, 63);
-  --spectrum-global-color-yellow-400: rgb(210, 178, 0);
-  --spectrum-global-color-magenta-400: rgb(202, 41, 150);
-  --spectrum-global-color-magenta-500: rgb(216, 55, 144);
-  --spectrum-global-color-magenta-700: rgb(236, 90, 170);
-  --spectrum-global-color-fuchsia-400: rgb(177, 48, 189);
-  --spectrum-global-color-purple-400: rgb(134, 76, 204);
-  --spectrum-global-color-indigo-400: rgb(92, 92, 224);
-  --spectrum-global-color-seafoam-400: rgb(22, 135, 140);
-  --spectrum-global-color-red-500: rgb(227, 72, 80);
-  --spectrum-global-color-red-600: rgb(236, 91, 98);
-  --spectrum-global-color-red-700: rgb(247, 109, 116);
-  --spectrum-global-color-blue-400: rgb(20, 115, 230);
-  --spectrum-global-color-blue-500: rgb(38, 128, 235);
-  --spectrum-global-color-blue-600: rgb(55, 142, 240);
-  --spectrum-global-color-blue-700: rgb(75, 156, 245);
-  --spectrum-global-color-gray-50: rgb(8, 8, 8);
-  --spectrum-global-color-gray-75: rgb(26, 26, 26);
-  --spectrum-global-color-gray-100: rgb(30, 30, 30);
-  --spectrum-global-color-gray-200: rgb(44, 44, 44);
-  --spectrum-global-color-gray-300: rgb(57, 57, 57);
-  --spectrum-global-color-gray-400: rgb(73, 73, 73);
-  --spectrum-global-color-gray-500: rgb(92, 92, 92);
-  --spectrum-global-color-gray-600: rgb(124, 124, 124);
-  --spectrum-global-color-gray-700: rgb(162, 162, 162);
-  --spectrum-global-color-gray-800: rgb(200, 200, 200);
-  --spectrum-global-color-gray-900: rgb(239, 239, 239);
-  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.6);
-  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.8);
-  --spectrum-alias-background-color-hover-overlay: rgba(239,239,239,0.08);
-  --spectrum-alias-highlight-hover: rgba(239,239,239,0.08);
-  --spectrum-alias-highlight-active: rgba(239,239,239,0.15);
-  --spectrum-alias-highlight-selected: rgba(38,128,235,0.2);
-  --spectrum-alias-highlight-selected-hover: rgba(38,128,235,0.3);
-  --spectrum-alias-background-color-quickactions: rgba(30,30,30,0.9);
-  --spectrum-miller-column-item-background-color-selected: rgba(38,128,235,0.1);
-  --spectrum-miller-column-item-background-color-selected-hover: rgba(38,128,235,0.2);
-  --spectrum-well-background-color: rgba(200,200,200,0.02);
-  --spectrum-well-border-color: rgba(239,239,239,0.05);
-}
-
-.spectrum--light {
-  --spectrum-global-color-celery-400: rgb(68, 181, 86);
-  --spectrum-global-color-chartreuse-400: rgb(133, 208, 68);
-  --spectrum-global-color-yellow-400: rgb(223, 191, 0);
-  --spectrum-global-color-magenta-400: rgb(216, 55, 144);
-  --spectrum-global-color-magenta-500: rgb(206, 39, 131);
-  --spectrum-global-color-magenta-700: rgb(174, 14, 102);
-  --spectrum-global-color-fuchsia-400: rgb(192, 56, 204);
-  --spectrum-global-color-purple-400: rgb(146, 86, 217);
-  --spectrum-global-color-indigo-400: rgb(103, 103, 236);
-  --spectrum-global-color-seafoam-400: rgb(27, 149, 154);
-  --spectrum-global-color-red-500: rgb(215, 55, 63);
-  --spectrum-global-color-red-600: rgb(201, 37, 45);
-  --spectrum-global-color-red-700: rgb(187, 18, 26);
-  --spectrum-global-color-blue-400: rgb(38, 128, 235);
-  --spectrum-global-color-blue-500: rgb(20, 115, 230);
-  --spectrum-global-color-blue-600: rgb(13, 102, 208);
-  --spectrum-global-color-blue-700: rgb(9, 90, 186);
-  --spectrum-global-color-gray-50: rgb(255, 255, 255);
-  --spectrum-global-color-gray-75: rgb(250, 250, 250);
-  --spectrum-global-color-gray-100: rgb(245, 245, 245);
-  --spectrum-global-color-gray-200: rgb(234, 234, 234);
-  --spectrum-global-color-gray-300: rgb(225, 225, 225);
-  --spectrum-global-color-gray-400: rgb(202, 202, 202);
-  --spectrum-global-color-gray-500: rgb(179, 179, 179);
-  --spectrum-global-color-gray-600: rgb(142, 142, 142);
-  --spectrum-global-color-gray-700: rgb(110, 110, 110);
-  --spectrum-global-color-gray-800: rgb(75, 75, 75);
-  --spectrum-global-color-gray-900: rgb(44, 44, 44);
-  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.4);
-  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.15);
-  --spectrum-alias-background-color-hover-overlay: rgba(44,44,44,0.04);
-  --spectrum-alias-highlight-hover: rgba(44,44,44,0.06);
-  --spectrum-alias-highlight-active: rgba(44,44,44,0.1);
-  --spectrum-alias-highlight-selected: rgba(20,115,230,0.1);
-  --spectrum-alias-highlight-selected-hover: rgba(20,115,230,0.2);
-  --spectrum-alias-background-color-quickactions: rgba(245,245,245,0.9);
-  --spectrum-miller-column-item-background-color-selected: rgba(20,115,230,0.1);
-  --spectrum-miller-column-item-background-color-selected-hover: rgba(20,115,230,0.2);
-  --spectrum-well-background-color: rgba(75,75,75,0.02);
-  --spectrum-well-border-color: rgba(44,44,44,0.05);
-}
-
-.spectrum--lightest {
-  --spectrum-global-color-celery-400: rgb(75, 195, 95);
-  --spectrum-global-color-chartreuse-400: rgb(142, 222, 73);
-  --spectrum-global-color-yellow-400: rgb(237, 204, 0);
-  --spectrum-global-color-magenta-400: rgb(226, 73, 157);
-  --spectrum-global-color-magenta-500: rgb(216, 55, 144);
-  --spectrum-global-color-magenta-700: rgb(188, 28, 116);
-  --spectrum-global-color-fuchsia-400: rgb(207, 62, 220);
-  --spectrum-global-color-purple-400: rgb(157, 100, 225);
-  --spectrum-global-color-indigo-400: rgb(117, 117, 241);
-  --spectrum-global-color-seafoam-400: rgb(32, 163, 168);
-  --spectrum-global-color-red-500: rgb(227, 72, 80);
-  --spectrum-global-color-red-600: rgb(215, 55, 63);
-  --spectrum-global-color-red-700: rgb(201, 37, 45);
-  --spectrum-global-color-blue-400: rgb(55, 142, 240);
-  --spectrum-global-color-blue-500: rgb(38, 128, 235);
-  --spectrum-global-color-blue-600: rgb(20, 115, 230);
-  --spectrum-global-color-blue-700: rgb(13, 102, 208);
-  --spectrum-global-color-gray-50: rgb(255, 255, 255);
-  --spectrum-global-color-gray-75: rgb(255, 255, 255);
-  --spectrum-global-color-gray-100: rgb(255, 255, 255);
-  --spectrum-global-color-gray-200: rgb(244, 244, 244);
-  --spectrum-global-color-gray-300: rgb(234, 234, 234);
-  --spectrum-global-color-gray-400: rgb(211, 211, 211);
-  --spectrum-global-color-gray-500: rgb(188, 188, 188);
-  --spectrum-global-color-gray-600: rgb(149, 149, 149);
-  --spectrum-global-color-gray-700: rgb(116, 116, 116);
-  --spectrum-global-color-gray-800: rgb(80, 80, 80);
-  --spectrum-global-color-gray-900: rgb(50, 50, 50);
-  --spectrum-alias-background-color-modal-overlay: rgba(0,0,0,0.4);
-  --spectrum-alias-dropshadow-color: rgba(0,0,0,0.15);
-  --spectrum-alias-background-color-hover-overlay: rgba(50,50,50,0.04);
-  --spectrum-alias-highlight-hover: rgba(50,50,50,0.06);
-  --spectrum-alias-highlight-active: rgba(50,50,50,0.1);
-  --spectrum-alias-highlight-selected: rgba(38,128,235,0.1);
-  --spectrum-alias-highlight-selected-hover: rgba(38,128,235,0.2);
-  --spectrum-alias-background-color-quickactions: rgba(255,255,255,0.9);
-  --spectrum-miller-column-item-background-color-selected: rgba(38,128,235,0.1);
-  --spectrum-miller-column-item-background-color-selected-hover: rgba(38,128,235,0.2);
-  --spectrum-well-background-color: rgba(80,80,80,0.02);
-  --spectrum-well-border-color: rgba(50,50,50,0.05);
-}
-
-.spectrum--large {
-  --spectrum-global-dimension-size-10: 1px;
-  --spectrum-global-dimension-size-25: 2px;
-  --spectrum-global-dimension-size-40: 4px;
-  --spectrum-global-dimension-size-50: 5px;
-  --spectrum-global-dimension-size-65: 6px;
-  --spectrum-global-dimension-size-75: 8px;
-  --spectrum-global-dimension-size-85: 9px;
-  --spectrum-global-dimension-size-100: 10px;
-  --spectrum-global-dimension-size-115: 11px;
-  --spectrum-global-dimension-size-125: 13px;
-  --spectrum-global-dimension-size-130: 14px;
-  --spectrum-global-dimension-size-150: 15px;
-  --spectrum-global-dimension-size-160: 16px;
-  --spectrum-global-dimension-size-175: 18px;
-  --spectrum-global-dimension-size-200: 20px;
-  --spectrum-global-dimension-size-225: 22px;
-  --spectrum-global-dimension-size-250: 25px;
-  --spectrum-global-dimension-size-300: 30px;
-  --spectrum-global-dimension-size-350: 35px;
-  --spectrum-global-dimension-size-400: 40px;
-  --spectrum-global-dimension-size-450: 45px;
-  --spectrum-global-dimension-size-500: 50px;
-  --spectrum-global-dimension-size-550: 56px;
-  --spectrum-global-dimension-size-600: 60px;
-  --spectrum-global-dimension-size-700: 70px;
-  --spectrum-global-dimension-size-800: 80px;
-  --spectrum-global-dimension-size-900: 112px;
-  --spectrum-global-dimension-size-1250: 125px;
-  --spectrum-global-dimension-size-1600: 160px;
-  --spectrum-global-dimension-size-1700: 212px;
-  --spectrum-global-dimension-size-2400: 240px;
-  --spectrum-global-dimension-size-3000: 300px;
-  --spectrum-global-dimension-size-3400: 340px;
-  --spectrum-global-dimension-size-5000: 500px;
-  --spectrum-global-dimension-font-size-25: 12px;
-  --spectrum-global-dimension-font-size-50: 13px;
-  --spectrum-global-dimension-font-size-75: 15px;
-  --spectrum-global-dimension-font-size-100: 17px;
-  --spectrum-global-dimension-font-size-150: 18px;
-  --spectrum-global-dimension-font-size-200: 19px;
-  --spectrum-global-dimension-font-size-300: 22px;
-  --spectrum-global-dimension-font-size-400: 24px;
-  --spectrum-global-dimension-font-size-700: 34px;
-  --spectrum-global-dimension-font-size-900: 44px;
-  --spectrum-alias-heading-display1-text-size: var(--spectrum-global-dimension-font-size-1000);
-  --spectrum-alias-heading-display1-margin-top: var(--spectrum-global-dimension-font-size-900);
-  --spectrum-alias-heading-display2-text-size: var(--spectrum-global-dimension-font-size-900);
-  --spectrum-alias-heading-display2-margin-top: var(--spectrum-global-dimension-font-size-800);
-  --spectrum-alias-heading1-text-size: var(--spectrum-global-dimension-font-size-800);
-  --spectrum-alias-heading1-margin-top: var(--spectrum-global-dimension-font-size-700);
-  --spectrum-alias-heading2-text-size: var(--spectrum-global-dimension-font-size-600);
-  --spectrum-alias-heading2-margin-top: var(--spectrum-global-dimension-font-size-500);
-  --spectrum-alias-heading3-text-size: var(--spectrum-global-dimension-font-size-400);
-  --spectrum-alias-heading3-margin-top: var(--spectrum-global-dimension-font-size-300);
-  --spectrum-barloader-large-border-radius: 4px;
-  --spectrum-barloader-small-border-radius: 3px;
-  --spectrum-button-primary-min-width: 90px;
-  --spectrum-dialog-title-text-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-dialog-content-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-dialog-padding: var(--spectrum-global-dimension-static-size-300);
-  --spectrum-icon-arrow-down-small-height: 12px;
-  --spectrum-icon-arrow-left-medium-height: 12px;
-  --spectrum-icon-checkmark-medium-width: 16px;
-  --spectrum-icon-checkmark-medium-height: 16px;
-  --spectrum-icon-checkmark-small-width: 12px;
-  --spectrum-icon-checkmark-small-height: 12px;
-  --spectrum-icon-chevron-down-medium-width: 12px;
-  --spectrum-icon-chevron-left-large-width: 16px;
-  --spectrum-icon-chevron-left-medium-height: 12px;
-  --spectrum-icon-chevron-right-large-width: 16px;
-  --spectrum-icon-chevron-right-medium-height: 12px;
-  --spectrum-icon-cross-large-width: 16px;
-  --spectrum-icon-cross-large-height: 16px;
-  --spectrum-icon-dash-small-width: 12px;
-  --spectrum-icon-dash-small-height: 12px;
-  --spectrum-icon-skip-left-width: 10px;
-  --spectrum-icon-skip-left-height: 12px;
-  --spectrum-icon-skip-right-width: 10px;
-  --spectrum-icon-skip-right-height: 12px;
-  --spectrum-icon-triplegripper-width: 12px;
-  --spectrum-loader-circle-medium-border-size: var(--spectrum-global-dimension-static-size-50);
-  --spectrum-loader-circle-small-border-size: 3px;
-  --spectrum-rating-icon-width: 30px;
-  --spectrum-rating-indicator-width: 20px;
-  --spectrum-selectlist-option-height: var(--spectrum-global-dimension-static-size-600);
-  --spectrum-switch-track-width: var(--spectrum-global-dimension-static-size-450);
-  --spectrum-switch-handle-border-radius: 9px;
-  --spectrum-tabs-focus-ring-border-radius: 6px;
-  --spectrum-textfield-icon-frame: var(--spectrum-global-dimension-static-size-500);
-  --spectrum-tooltip-content-max-width: 126px;
-}
-
-.spectrum--medium {
-  --spectrum-global-dimension-size-10: 1px;
-  --spectrum-global-dimension-size-25: 2px;
-  --spectrum-global-dimension-size-40: 3px;
-  --spectrum-global-dimension-size-50: 4px;
-  --spectrum-global-dimension-size-65: 5px;
-  --spectrum-global-dimension-size-75: 6px;
-  --spectrum-global-dimension-size-85: 7px;
-  --spectrum-global-dimension-size-100: 8px;
-  --spectrum-global-dimension-size-115: 9px;
-  --spectrum-global-dimension-size-125: 10px;
-  --spectrum-global-dimension-size-130: 11px;
-  --spectrum-global-dimension-size-150: 12px;
-  --spectrum-global-dimension-size-160: 13px;
-  --spectrum-global-dimension-size-175: 14px;
-  --spectrum-global-dimension-size-200: 16px;
-  --spectrum-global-dimension-size-225: 18px;
-  --spectrum-global-dimension-size-250: 20px;
-  --spectrum-global-dimension-size-300: 24px;
-  --spectrum-global-dimension-size-350: 28px;
-  --spectrum-global-dimension-size-400: 32px;
-  --spectrum-global-dimension-size-450: 36px;
-  --spectrum-global-dimension-size-500: 40px;
-  --spectrum-global-dimension-size-550: 44px;
-  --spectrum-global-dimension-size-600: 48px;
-  --spectrum-global-dimension-size-700: 56px;
-  --spectrum-global-dimension-size-800: 64px;
-  --spectrum-global-dimension-size-900: 72px;
-  --spectrum-global-dimension-size-1250: 100px;
-  --spectrum-global-dimension-size-1600: 128px;
-  --spectrum-global-dimension-size-1700: 136px;
-  --spectrum-global-dimension-size-2400: 192px;
-  --spectrum-global-dimension-size-3000: 240px;
-  --spectrum-global-dimension-size-3400: 272px;
-  --spectrum-global-dimension-size-5000: 400px;
-  --spectrum-global-dimension-font-size-25: 10px;
-  --spectrum-global-dimension-font-size-50: 11px;
-  --spectrum-global-dimension-font-size-75: 12px;
-  --spectrum-global-dimension-font-size-100: 14px;
-  --spectrum-global-dimension-font-size-150: 15px;
-  --spectrum-global-dimension-font-size-200: 16px;
-  --spectrum-global-dimension-font-size-300: 18px;
-  --spectrum-global-dimension-font-size-400: 20px;
-  --spectrum-global-dimension-font-size-700: 28px;
-  --spectrum-global-dimension-font-size-900: 36px;
-  --spectrum-alias-heading-display1-text-size: var(--spectrum-global-dimension-font-size-1100);
-  --spectrum-alias-heading-display1-margin-top: var(--spectrum-global-dimension-font-size-1000);
-  --spectrum-alias-heading-display2-text-size: var(--spectrum-global-dimension-font-size-1000);
-  --spectrum-alias-heading-display2-margin-top: var(--spectrum-global-dimension-font-size-900);
-  --spectrum-alias-heading1-text-size: var(--spectrum-global-dimension-font-size-900);
-  --spectrum-alias-heading1-margin-top: var(--spectrum-global-dimension-font-size-800);
-  --spectrum-alias-heading2-text-size: var(--spectrum-global-dimension-font-size-700);
-  --spectrum-alias-heading2-margin-top: var(--spectrum-global-dimension-font-size-600);
-  --spectrum-alias-heading3-text-size: var(--spectrum-global-dimension-font-size-500);
-  --spectrum-alias-heading3-margin-top: var(--spectrum-global-dimension-font-size-400);
-  --spectrum-barloader-large-border-radius: 3px;
-  --spectrum-barloader-small-border-radius: var(--spectrum-global-dimension-static-size-25);
-  --spectrum-button-primary-min-width: var(--spectrum-global-dimension-size-900);
-  --spectrum-dialog-title-text-size: var(--spectrum-global-dimension-font-size-300);
-  --spectrum-dialog-content-text-size: var(--spectrum-global-dimension-font-size-100);
-  --spectrum-dialog-padding: var(--spectrum-global-dimension-static-size-500);
-  --spectrum-icon-arrow-down-small-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-arrow-left-medium-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-checkmark-medium-width: var(--spectrum-global-dimension-size-150);
-  --spectrum-icon-checkmark-medium-height: var(--spectrum-global-dimension-size-150);
-  --spectrum-icon-checkmark-small-width: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-checkmark-small-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-chevron-down-medium-width: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-chevron-left-large-width: var(--spectrum-global-dimension-size-150);
-  --spectrum-icon-chevron-left-medium-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-chevron-right-large-width: var(--spectrum-global-dimension-size-150);
-  --spectrum-icon-chevron-right-medium-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-cross-large-width: var(--spectrum-global-dimension-size-150);
-  --spectrum-icon-cross-large-height: var(--spectrum-global-dimension-size-150);
-  --spectrum-icon-dash-small-width: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-dash-small-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-skip-left-width: 9px;
-  --spectrum-icon-skip-left-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-skip-right-width: 9px;
-  --spectrum-icon-skip-right-height: var(--spectrum-global-dimension-size-125);
-  --spectrum-icon-triplegripper-width: var(--spectrum-global-dimension-size-125);
-  --spectrum-loader-circle-medium-border-size: 3px;
-  --spectrum-loader-circle-small-border-size: var(--spectrum-global-dimension-static-size-25);
-  --spectrum-rating-icon-width: 24px;
-  --spectrum-rating-indicator-width: 16px;
-  --spectrum-selectlist-option-height: var(--spectrum-global-dimension-static-size-400);
-  --spectrum-switch-track-width: 26px;
-  --spectrum-switch-handle-border-radius: 7px;
-  --spectrum-tabs-focus-ring-border-radius: 5px;
-  --spectrum-textfield-icon-frame: var(--spectrum-global-dimension-static-size-400);
-  --spectrum-tooltip-content-max-width: 101px;
-}
-
-.spectrum {  /* spectrum-animationGlobals.css */
-  --spectrum-global-animation-duration-100: 130ms;
-  --spectrum-global-animation-duration-200: 160ms;
-  --spectrum-global-animation-duration-300: 190ms;
-  --spectrum-global-animation-duration-500: 250ms;
-  --spectrum-global-animation-duration-600: 300ms;
-  --spectrum-global-animation-duration-2000: 1000ms;
-  --spectrum-global-animation-ease-in-out: cubic-bezier(.45, 0, .40, 1);
-  --spectrum-global-animation-ease-in: cubic-bezier(.50, 0, 1, 1);
-  --spectrum-global-animation-ease-out: cubic-bezier(0, 0, 0.40, 1);
-
-
-  /* spectrum-colorGlobals.css */
-  --spectrum-global-color-static-white: rgb(255, 255, 255);
-  --spectrum-global-color-static-blue: rgb(20, 115, 230);
-  --spectrum-global-color-static-gray-500: rgb(188, 188, 188);
-  --spectrum-global-color-static-gray-700: rgb(116, 116, 116);
-  --spectrum-global-color-static-blue-700: rgb(13, 102, 208);
-  --spectrum-global-color-static-red-600: rgb(215, 55, 63);
-  --spectrum-global-color-static-red-700: rgb(201, 37, 45);
-  --spectrum-global-color-static-orange-600: rgb(218, 123, 17);
-  --spectrum-global-color-static-orange-700: rgb(203, 111, 16);
-  --spectrum-global-color-static-green-600: rgb(38, 142, 108);
-  --spectrum-global-color-static-green-700: rgb(18, 128, 92);
-
-
-  /* spectrum-colorSemantics.css */
-  --spectrum-semantic-negative-color-default: var(--spectrum-global-color-red-500);
-  --spectrum-semantic-negative-color-border: var(--spectrum-global-color-red-400);
-  --spectrum-semantic-negative-color-icon: var(--spectrum-global-color-red-600);
-  --spectrum-semantic-negative-color-status: var(--spectrum-global-color-red-400);
-  --spectrum-semantic-negative-color-text-small: var(--spectrum-global-color-red-600);
-  --spectrum-semantic-notice-color-default: var(--spectrum-global-color-orange-500);
-  --spectrum-semantic-notice-color-border: var(--spectrum-global-color-orange-400);
-  --spectrum-semantic-notice-color-icon: var(--spectrum-global-color-orange-600);
-  --spectrum-semantic-notice-color-status: var(--spectrum-global-color-orange-400);
-  --spectrum-semantic-positive-color-border: var(--spectrum-global-color-green-400);
-  --spectrum-semantic-positive-color-icon: var(--spectrum-global-color-green-600);
-  --spectrum-semantic-positive-color-status: var(--spectrum-global-color-green-400);
-  --spectrum-semantic-informative-color-default: var(--spectrum-global-color-blue-500);
-  --spectrum-semantic-informative-color-border: var(--spectrum-global-color-blue-400);
-  --spectrum-semantic-informative-color-icon: var(--spectrum-global-color-blue-600);
-  --spectrum-semantic-informative-color-status: var(--spectrum-global-color-blue-400);
-  --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-static-blue-600);
-  --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-static-blue-700);
-  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-static-blue-700);
-  --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-static-blue-600);
-
-
-  /* spectrum-dimensionGlobals.css */
-  --spectrum-global-dimension-static-size-0: 0px;
-  --spectrum-global-dimension-static-size-10: 1px;
-  --spectrum-global-dimension-static-size-25: 2px;
-  --spectrum-global-dimension-static-size-50: 4px;
-  --spectrum-global-dimension-static-size-100: 8px;
-  --spectrum-global-dimension-static-size-125: 10px;
-  --spectrum-global-dimension-static-size-150: 12px;
-  --spectrum-global-dimension-static-size-200: 16px;
-  --spectrum-global-dimension-static-size-250: 20px;
-  --spectrum-global-dimension-static-size-300: 24px;
-  --spectrum-global-dimension-static-size-400: 32px;
-  --spectrum-global-dimension-static-size-500: 40px;
-  --spectrum-global-dimension-static-size-600: 48px;
-  --spectrum-global-dimension-static-size-1000: 80px;
-  --spectrum-global-dimension-static-size-3400: 272px;
-  --spectrum-global-dimension-static-size-3600: 288px;
-  --spectrum-global-dimension-static-size-4600: 368px;
-  --spectrum-global-dimension-static-font-size-100: 14px;
-
-
-  /* spectrum-fontGlobals.css */
-  --spectrum-global-font-weight-regular: 400;
-  --spectrum-global-font-weight-medium: 500;
-  --spectrum-global-font-weight-bold: 700;
-  --spectrum-global-font-style-regular: normal;
-  --spectrum-global-font-style-italic: italic;
-  --spectrum-global-font-letter-spacing-none: 0;
-  --spectrum-global-font-letter-spacing-small: 0.0125em;
-  --spectrum-global-font-letter-spacing-han: 0.05em;
-  --spectrum-global-font-letter-spacing-medium: 0.06em;
-  --spectrum-global-font-line-height-medium: 1.5;
-  --spectrum-global-font-line-height-small: 1.3;
-
-
-  /* spectrum-staticAliases.css */
-  --spectrum-alias-border-size-thin: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-alias-border-size-thick: var(--spectrum-global-dimension-static-size-25);
-  --spectrum-alias-border-size-thicker: var(--spectrum-global-dimension-static-size-50);
-  --spectrum-alias-body-han-text-line-height: var(--spectrum-global-font-line-height-large);
-  --spectrum-alias-body-text-line-height: var(--spectrum-global-font-line-height-medium);
-  --spectrum-alias-body-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-body-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-heading-han-text-line-height: var(--spectrum-global-font-line-height-medium);
-  --spectrum-alias-heading-text-line-height: var(--spectrum-global-font-line-height-small);
-  --spectrum-alias-heading-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-heading-text-font-weight-regular-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-light);
-  --spectrum-alias-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-subheading-text-font-weight: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-article-text-font-family: var(--spectrum-global-font-family-serif);
-  --spectrum-alias-article-body-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-article-body-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-article-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-article-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-article-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-article-subheading-text-font-weight: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-article-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-article-detail-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-code-text-font-family: var(--spectrum-global-font-family-code);
-  --spectrum-alias-han-heading-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-han-heading-text-font-weight-regular-emphasis: var(--spectrum-global-font-weight-extra-bold);
-  --spectrum-alias-han-heading-text-font-weight-regular-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-han-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-light);
-  --spectrum-alias-han-heading-text-font-weight-quiet-emphasis: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-han-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-han-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-han-heading-text-font-weight-strong-emphasis: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-han-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-han-body-text-font-weight-regular: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-han-body-text-font-weight-emphasis: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-han-body-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-han-subheading-text-font-weight-emphasis: var(--spectrum-global-font-weight-extra-bold);
-  --spectrum-alias-han-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-han-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-han-detail-text-font-weight-emphasis: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-han-detail-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-code-text-font-weight-regular: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-code-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-code-text-line-height: var(--spectrum-global-font-line-height-medium);
-
-}
-
-.spectrum--medium,
-.spectrum--large {
-  /* spectrum-dimensionAliases.css */
-  --spectrum-alias-font-size-default: var(--spectrum-global-dimension-font-size-100);
-  --spectrum-alias-line-height-medium: var(--spectrum-global-dimension-size-250);
-  --spectrum-alias-pill-button-text-size: var(--spectrum-global-dimension-font-size-100);
-  --spectrum-alias-border-radius-xsmall: var(--spectrum-global-dimension-size-10);
-  --spectrum-alias-border-radius-small: var(--spectrum-global-dimension-size-25);
-  --spectrum-alias-border-radius-regular: var(--spectrum-global-dimension-size-50);
-  --spectrum-alias-border-radius-medium: var(--spectrum-global-dimension-size-100);
-  --spectrum-alias-border-radius-large: var(--spectrum-global-dimension-size-200);
-  --spectrum-alias-single-line-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-alias-single-line-width: var(--spectrum-global-dimension-size-2400);
-  --spectrum-alias-workflow-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-alias-heading-han-display1-text-size: var(--spectrum-global-dimension-font-size-1000);
-  --spectrum-alias-heading-han-display2-text-size: var(--spectrum-global-dimension-font-size-900);
-  --spectrum-alias-heading1-han-text-size: var(--spectrum-global-dimension-font-size-800);
-  --spectrum-alias-heading2-han-text-size: var(--spectrum-global-dimension-font-size-600);
-  --spectrum-alias-heading3-han-text-size: var(--spectrum-global-dimension-font-size-400);
-  --spectrum-alias-heading4-text-size: var(--spectrum-global-dimension-font-size-300);
-  --spectrum-alias-heading4-margin-top: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-alias-heading5-text-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-alias-heading5-margin-top: var(--spectrum-global-dimension-font-size-100);
-  --spectrum-alias-heading6-text-size: var(--spectrum-global-dimension-font-size-100);
-  --spectrum-alias-heading6-margin-top: var(--spectrum-global-dimension-font-size-75);
-}
-
-.spectrum--darkest,
-.spectrum--dark,
-.spectrum--light,
-.spectrum--lightest {
-  /* spectrum-colorAliases.css */
-  --spectrum-alias-background-color-default: var(--spectrum-global-color-gray-100);
-  --spectrum-alias-background-color-transparent: transparent;
-  --spectrum-alias-background-color-quickactions-overlay: rgba(0,0,0,0.2);
-  --spectrum-alias-placeholder-text-color: var(--spectrum-global-color-gray-600);
-  --spectrum-alias-placeholder-text-color-hover: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-label-text-color: var(--spectrum-global-color-gray-700);
-  --spectrum-alias-text-color: var(--spectrum-global-color-gray-800);
-  --spectrum-alias-text-color-hover: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-text-color-down: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-text-color-key-focus: var(--spectrum-global-color-blue-600);
-  --spectrum-alias-text-color-disabled: var(--spectrum-global-color-gray-500);
-  --spectrum-alias-title-text-color: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-heading-text-color: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-border-color: var(--spectrum-global-color-gray-300);
-  --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-400);
-  --spectrum-alias-border-color-focus: var(--spectrum-global-color-blue-400);
-  --spectrum-alias-border-color-down: var(--spectrum-global-color-blue-500);
-  --spectrum-alias-border-color-extralight: var(--spectrum-global-color-gray-100);
-  --spectrum-alias-border-color-mid: var(--spectrum-global-color-gray-300);
-  --spectrum-alias-border-color-dark: var(--spectrum-global-color-gray-400);
-  --spectrum-alias-border-color-transparent: transparent;
-  --spectrum-alias-border-color-translucent-dark: rgba(0,0,0,0.05);
-  --spectrum-alias-focus-color: var(--spectrum-global-color-blue-400);
-  --spectrum-alias-track-color-default: var(--spectrum-global-color-gray-300);
-  --spectrum-alias-track-color-over-background: rgba(255,255,255,0.2);
-  --spectrum-alias-icon-color: var(--spectrum-global-color-gray-700);
-  --spectrum-alias-icon-color-hover: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-icon-color-down: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-icon-color-focus: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-icon-color-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-alias-icon-color-selected: var(--spectrum-global-color-blue-500);
-  --spectrum-alias-icon-color-selected-hover: var(--spectrum-global-color-blue-600);
-  --spectrum-alias-icon-color-selected-down: var(--spectrum-global-color-blue-700);
-  --spectrum-alias-icon-color-selected-focus: var(--spectrum-global-color-blue-600);
-}
-
-.spectrum--light, .spectrum--lightest {
-  --hljs-color: #383a42;
-  --hljs-background: #fafafa;
-  --hljs-keyword-color: #a626a4;
-  --hljs-section-color: #e45649;
-  --hljs-literal-color: #0184bb;
-  --hljs-attribute-color: #50a14f;
-  --hljs-class-color: #c18401;
-  --hljs-variable-color: #986801;
-  --hljs-title-color: #4078f2; }
-
-.spectrum--dark,
-.spectrum--darkest {
-  --hljs-color: #abb2bf;
-  --hljs-background: #282c34;
-  --hljs-keyword-color: #c678dd;
-  --hljs-section-color: #e06c75;
-  --hljs-literal-color: #56b6c2;
-  --hljs-attribute-color: #98c379;
-  --hljs-class-color: #e6c07b;
-  --hljs-variable-color: #d19a66;
-  --hljs-title-color: #61aeee; }
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: var(--hljs-color, #383a42);
-  background: var(--hljs-background, #fafafa); }
-
-.hljs-comment,
-.hljs-quote {
-  color: #a0a1a7;
-  font-style: italic; }
-
-.hljs-doctag,
-.hljs-formula,
-.hljs-keyword {
-  color: var(--hljs-keyword-color, #a626a4); }
-
-.hljs-deletion,
-.hljs-name,
-.hljs-section,
-.hljs-selector-tag,
-.hljs-subst {
-  color: var(--hljs-section-color, #e45649); }
-
-.hljs-literal {
-  color: var(--hljs-literal-color, #0184bb); }
-
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta-string,
-.hljs-regexp,
-.hljs-string {
-  color: var(--hljs-attribute-color, #50a14f); }
-
-.hljs-built_in,
-.hljs-class .hljs-title {
-  color: var(--hljs-class-color, #c18401); }
-
-.hljs-attr,
-.hljs-number,
-.hljs-selector-attr,
-.hljs-selector-class,
-.hljs-selector-pseudo,
-.hljs-template-variable,
-.hljs-type,
-.hljs-variable {
-  color: var(--hljs-variable-color, #986801); }
-
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-symbol,
-.hljs-title {
-  color: var(--hljs-title-color, #4078f2); }
-
-.hljs-emphasis {
-  font-style: italic; }
-
-.hljs-strong {
-  font-weight: bold; }
-
-.hljs-link {
-  text-decoration: underline; }
 
 .heroContainer___2bZ_C {
   overflow: hidden;

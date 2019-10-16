@@ -120,22 +120,22 @@ module.exports = withCSS({
 
     const originalEntry = config.entry;
 
-    // copying Spectrum CSS SVG sprite to /static/images/svg
-    // and copying loadicons script to /static/javascript/loadicons
+    // copying Spectrum CSS SVG sprite to public/static/images/svg
+    // and copying loadicons script to public/static/javascript/loadicons
     // so the Spectrum UI icons can be used with NextJS
     config.plugins.push(
       new CopyWebpackPlugin([
         {
           from: path.join(__dirname, 'node_modules/@adobe/spectrum-css/dist/icons/spectrum-css-icons.svg'),
-          to: path.join(__dirname, 'static/images/svg/')
-        },        
+          to: path.join(__dirname, 'public/static/images/svg/')
+        },
         {
           from: path.join(__dirname, 'node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg'),
-          to: path.join(__dirname, 'static/images/svg/')
+          to: path.join(__dirname, 'public/static/images/svg/')
         },
         {
           from: path.join(__dirname, 'node_modules/loadicons/index.js'),
-          to: path.join(__dirname, 'static/javascript/loadicons/')
+          to: path.join(__dirname, 'public/static/javascript/loadicons/')
         }
       ])
     );
