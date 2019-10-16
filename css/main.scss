@@ -96,3 +96,12 @@ p:global(.spectrum-Body3) {
 :global(.site-footer-col) {
   padding: 0px 8px !important;
 }
+
+:global(.switcherContainer) {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  & > * {
+    margin-right: 37px;
+  }
+}

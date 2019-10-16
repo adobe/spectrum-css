@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_heroImage_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_heroImage_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ResponsiveImage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ResponsiveImage */ "./components/ResponsiveImage.js");
+/* harmony import */ var _ResponsiveImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ResponsiveImage */ "./components/ResponsiveImage.js");
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/HeroImage.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -45,7 +45,7 @@ var HeroImage = function HeroImage(props) {
       lineNumber: 9
     },
     __self: this
-  }, __jsx(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
     alt: props.desktop.description,
     image: props.desktop.file,
     imageMobile: props.mobile ? props.mobile.file : undefined,
@@ -122,8 +122,8 @@ var PageHeader = function PageHeader(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/responsiveImage.scss */ "./components/css/responsiveImage.scss");
-/* harmony import */ var _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/responsiveImage.scss */ "./components/css/responsiveImage.scss");
+/* harmony import */ var _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/ResponsiveImage.js";
@@ -134,7 +134,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var ResponsiveImage = function ResponsiveImage(props) {
   return __jsx("div", {
-    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('responsiveImage', props.imageMobile ? _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a.hasMobile : undefined, _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a.responsiveImage, props.imageStyle ? _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a[props.imageStyle] : undefined),
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('responsiveImage', props.imageMobile ? _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1___default.a.hasMobile : undefined, _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1___default.a.responsiveImage, props.imageStyle ? _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1___default.a[props.imageStyle] : undefined),
     style: {
       "minHeight": props.minHeight ? props.image.details.image.height / 2 + 'px' : undefined
     },
@@ -146,7 +146,7 @@ var ResponsiveImage = function ResponsiveImage(props) {
   }, __jsx("img", {
     key: props.image.url,
     alt: props.alt === '[blank]' ? '' : props.alt,
-    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a.desktop, _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a[props.sizeBy]),
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1___default.a.desktop, _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1___default.a[props.sizeBy]),
     src: 'https:' + props.image.url + '?w=' + Math.round(props.image.details.image.width / 2) + '&h=' + Math.round(props.image.details.image.height / 2),
     srcSet: 'https:' + props.image.url + ' 2x',
     __source: {
@@ -156,7 +156,7 @@ var ResponsiveImage = function ResponsiveImage(props) {
     __self: this
   }), props.imageMobile ? __jsx("img", {
     alt: props.alt === '[blank]' ? '' : props.alt,
-    className: _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a.mobile,
+    className: _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_1___default.a.mobile,
     key: props.imageMobile.url,
     src: 'https://' + props.imageMobile.url + '?w=' + Math.round(props.imageMobile.details.image.width / 2) + '&h=' + Math.round(props.imageMobile.details.image.height / 2),
     srcSet: 'https://' + props.imageMobile.url + ' 2x',

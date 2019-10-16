@@ -13751,6 +13751,13 @@ p.spectrum-Body3 {
 .site-footer-col {
   padding: 0px 8px !important; }
 
+.switcherContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; }
+  .switcherContainer > * {
+    margin-right: 37px; }
+
 .spectrum--dark {
   --spectrum-global-color-celery-400: rgb(68, 181, 86);
   --spectrum-global-color-chartreuse-400: rgb(133, 208, 68);
