@@ -25,10 +25,10 @@ const GetStarted = () => (
       <p className={classNames("spectrum-Body2", styles.p)}>
         If you’re ready to jump in, here’s how to set up Spectrum CSS on our GitHub:
       </p>
-      <ul>
-        <li><Link href="https://github.com/adobe/spectrum-css/blob/master/README.md">Full README</Link></li>
-        <li><Link href="https://github.com/adobe/spectrum-css/blob/master/README.md#importing-ui-icons">Importing icons</Link></li>
-        <li><Link href="https://github.com/adobe/spectrum-css/blob/master/README-legacy.md">IE 11 / legacy support</Link></li>
+      <ul className="spectrum-Body2">
+        <li><Link href="https://github.com/adobe/spectrum-css/blob/master/README.md" target="_blank">Full README</Link></li>
+        <li><Link href="https://github.com/adobe/spectrum-css/blob/master/README.md#importing-ui-icons" target="_blank">Importing icons</Link></li>
+        <li><Link href="https://github.com/adobe/spectrum-css/blob/master/README-legacy.md" target="_blank">IE 11 / legacy support</Link></li>
       </ul>
     </Section>
     <Section title={'Tutorial: add a Spectrum button'}>
@@ -101,9 +101,8 @@ const GetStarted = () => (
         "url": `${process.env.BACKEND_URL}/static/images/button-screen-shot.png`
       }}/>
     </Section>
-    <Section title={'Contribute to Spectrum CSS'}>
-      <Markdown source={`We’d love for you to contribute to the Spectrum CSS project. Review the [contribution guidelines on our GitHub](https://github.com/adobe/spectrum-css/blob/master/.github/CONTRIBUTING.md) to get started.`}/>
-    </Section>
+    <Section title={'Contribute to Spectrum CSS'}/>
+    <p className={classNames("spectrum-Body2", styles.p)}>We’d love for you to contribute to the Spectrum CSS project. Review the <Link href="https://github.com/adobe/spectrum-css/blob/master/.github/CONTRIBUTING.md" target="_blank">contribution guidelines on our GitHub</Link> to get started.</p>
   </div>
 )
 

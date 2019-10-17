@@ -1,14 +1,14 @@
 webpackHotUpdate("styles",{
 
-/***/ "./components/css/resourceCard.scss":
-/*!******************************************!*\
-  !*** ./components/css/resourceCard.scss ***!
-  \******************************************/
+/***/ "./css/get-started.scss":
+/*!******************************!*\
+  !*** ./css/get-started.scss ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"card":"card___2ZaLE","content":"content___1VKv9","cardTitle":"cardTitle___35xj1","cardSubTitle":"cardSubTitle___12tj6","link":"link___3YiP4","row":"row___3btx3","cardButton":"cardButton___2kEb-"};;
+module.exports = {"codeBlock":"codeBlock___2p41J","subSection":"subSection___1Fa0I"};;
     if (true) {
       var injectCss = function injectCss(prev, href) {
         var link = prev.cloneNode();
@@ -30,7 +30,7 @@ module.exports = {"card":"card___2ZaLE","content":"content___1VKv9","cardTitle":
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571342882404");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571344743709");
           });
       }
     }
@@ -39,4 +39,4 @@ module.exports = {"card":"card___2ZaLE","content":"content___1VKv9","cardTitle":
 /***/ })
 
 })
-//# sourceMappingURL=styles.1864b89c3a5a478554f8.hot-update.js.map
+//# sourceMappingURL=styles.ff63a9e4bd9355a2600f.hot-update.js.map
