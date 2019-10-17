@@ -88,7 +88,7 @@ const GetStarted = () => (
 </html>`}
         </Highlight>
       </div>
-      <ResponsiveImage style={{maxWidth: "100%"}} image={{
+      <ResponsiveImage alt="Screenshot of the rendered CTA button in a browser window" style={{maxWidth: "100%"}} image={{
         "contentType": "image/png",
         "details": {
           "image": {
