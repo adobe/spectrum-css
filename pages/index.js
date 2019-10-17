@@ -22,10 +22,10 @@ const Home = () => (
           contentType: "image/png",
           details: {
             image: {
-              width: 4278,
-              height: 1952,
+              width: 1952,
+              height: 891,
             },
-            size: 671941,
+            size: 290381,
           },
           fileName: "spectrum-css_illustration_desktop@2x.png",
           url: `${process.env.BACKEND_URL}/static/images/spectrum-css_illustration_desktop@2x.png`
