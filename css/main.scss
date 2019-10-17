@@ -9,6 +9,15 @@ body {
   overflow: auto !important;
 }
 
+:global(html) {
+  opacity: 0;
+  // transition: opacity var(--spectrum-global-animation-duration-200) ease-out 0ms;
+}
+
+:global(.wf-active) {
+  opacity: 1;
+}
+
 :global(.spectrum-Dropdown.react-spectrum-Dropdown-flexible) {
   min-width: 0;
   width: auto;

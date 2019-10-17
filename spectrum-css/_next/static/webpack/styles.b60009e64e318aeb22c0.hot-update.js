@@ -30,7 +30,7 @@ module.exports = {"detailsTable":"detailsTable___2x6rG","resourceCards":"resourc
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736339");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067311");
           });
       }
     }
@@ -68,7 +68,7 @@ module.exports = {"Standard":"Standard___2Afwl","Illustration":"Illustration___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736998");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067954");
           });
       }
     }
@@ -106,7 +106,7 @@ module.exports = {"heroContainer":"heroContainer___2bZ_C","Standard":"Standard__
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736988");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067943");
           });
       }
     }
@@ -144,7 +144,7 @@ module.exports = {"table":"table___1eH1D","list":"list___hsw97"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736965");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068023");
           });
       }
     }
@@ -182,7 +182,7 @@ module.exports = {"pageContainer":"pageContainer___3Z_T8","resources":"resources
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736316");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067345");
           });
       }
     }
@@ -220,7 +220,7 @@ module.exports = {"pageHeading":"pageHeading___26RtH","headerRow":"headerRow___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736934");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067965");
           });
       }
     }
@@ -258,7 +258,7 @@ module.exports = {"card":"card___2ZaLE","content":"content___1VKv9","cardTitle":
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736958");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068045");
           });
       }
     }
@@ -296,7 +296,7 @@ module.exports = {"width":"width___3VV6B","responsiveImage":"responsiveImage___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737257");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067983");
           });
       }
     }
@@ -334,7 +334,7 @@ module.exports = {"section":"section___1Znpf","introRow":"introRow___hejS3","sec
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736980");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067998");
           });
       }
     }
@@ -372,7 +372,45 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736927");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068011");
+          });
+      }
+    }
+  
+
+/***/ }),
+
+/***/ "./css/get-started.scss":
+/*!******************************!*\
+  !*** ./css/get-started.scss ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"codeBlock":"codeBlock___2p41J","subSection":"subSection___1Fa0I"};;
+    if (true) {
+      var injectCss = function injectCss(prev, href) {
+        var link = prev.cloneNode();
+        link.href = href;
+        link.onload = function() {
+          prev.parentNode.removeChild(prev);
+        };
+        prev.stale = true;
+        prev.parentNode.insertBefore(link, prev);
+      };
+      module.hot.dispose(function() {
+        window.__webpack_reload_css__ = true;
+      });
+      if (window.__webpack_reload_css__) {
+        module.hot.__webpack_reload_css__ = false;
+        console.log("[HMR] Reloading stylesheets...");
+        var prefix = document.location.protocol + '//' + document.location.host;
+        document
+          .querySelectorAll("link[href][rel=stylesheet]")
+          .forEach(function(link) {
+            if (!link.href.match(prefix) || link.stale) return;
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067286");
           });
       }
     }
@@ -409,7 +447,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344736350");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345067324");
           });
       }
     }
@@ -446,7 +484,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737200");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068220");
           });
       }
     }
@@ -483,7 +521,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737153");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068227");
           });
       }
     }
@@ -520,7 +558,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737194");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068245");
           });
       }
     }
@@ -557,7 +595,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737208");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068263");
           });
       }
     }
@@ -594,7 +632,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737162");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068238");
           });
       }
     }
@@ -631,7 +669,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737174");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068253");
           });
       }
     }
@@ -668,7 +706,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737145");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068290");
           });
       }
     }
@@ -705,7 +743,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737139");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068279");
           });
       }
     }
@@ -742,7 +780,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737229");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068316");
           });
       }
     }
@@ -779,7 +817,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737245");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068325");
           });
       }
     }
@@ -816,7 +854,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737219");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068299");
           });
       }
     }
@@ -853,7 +891,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571344737236");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571345068308");
           });
       }
     }
@@ -862,4 +900,4 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
 /***/ })
 
 })
-//# sourceMappingURL=styles.0bea65fe6a95583631b9.hot-update.js.map
+//# sourceMappingURL=styles.b60009e64e318aeb22c0.hot-update.js.map

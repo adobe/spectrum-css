@@ -53356,18 +53356,7 @@ var GetStarted = function GetStarted() {
 
 /***/ }),
 
-/***/ 108:
-/*!**********************************!*\
-  !*** ./WritableStream (ignored) ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 127:
+/***/ 100:
 /*!*************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fget-started&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fget-started.js ***!
   \*************************************************************************************************************************************************/
@@ -53376,6 +53365,17 @@ var GetStarted = function GetStarted() {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fget-started&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fget-started.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fget-started&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fget-started.js!./");
 
+
+/***/ }),
+
+/***/ 108:
+/*!**********************************!*\
+  !*** ./WritableStream (ignored) ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 
@@ -53390,5 +53390,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[127,"static/runtime/webpack.js","styles"]]]);
+},[[100,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=get-started.js.map

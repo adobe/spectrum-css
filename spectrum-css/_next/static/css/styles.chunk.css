@@ -14845,6 +14845,12 @@ to this repo does not apply.
 body {
   overflow: auto !important; }
 
+html {
+  opacity: 0; }
+
+.wf-active {
+  opacity: 1; }
+
 .spectrum-Dropdown.react-spectrum-Dropdown-flexible {
   min-width: 0;
   width: auto; }
@@ -15467,6 +15473,15 @@ div.subHeadStatusLight___3Xg_x {
   text-align: left;
   display: inline-block; }
 
+.codeBlock___2p41J code {
+  border: 1px solid var(--spectrum-global-color-gray-400);
+  border-radius: var(--spectrum-global-dimension-size-50);
+  padding: 14px 17px;
+  margin: 3px 0; }
+
+.subSection___1Fa0I {
+  margin: 50px 0; }
+
 .pageContainer___3Z_T8 {
   position: relative; }
 
@@ -15513,15 +15528,6 @@ body {
 
 .test1 {
   border: 1px solid red; }
-
-.codeBlock___2p41J code {
-  border: 1px solid var(--spectrum-global-color-gray-400);
-  border-radius: var(--spectrum-global-dimension-size-50);
-  padding: 14px 17px;
-  margin: 3px 0; }
-
-.subSection___1Fa0I {
-  margin: 50px 0; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

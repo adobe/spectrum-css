@@ -14348,6 +14348,12 @@ to this repo does not apply.
 body {
   overflow: auto !important; }
 
+html {
+  opacity: 0; }
+
+.wf-active {
+  opacity: 1; }
+
 .spectrum-Dropdown.react-spectrum-Dropdown-flexible {
   min-width: 0;
   width: auto; }
