@@ -98,7 +98,7 @@ const GetStarted = () => (
           "size": 286704
         },
         "fileName": "button-screen-shot.png",
-        "url": "/static/images/button-screen-shot.png"
+        "url": `${process.env.BACKEND_URL}/static/images/button-screen-shot.png`
       }}/>
     </Section>
     <Section title={'Contribute to Spectrum CSS'}>
