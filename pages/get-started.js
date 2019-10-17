@@ -1,14 +1,16 @@
-import React from 'react'
+import '../css/hljs.scss';
+
 import {Helmet} from "react-helmet";
-import Link from '@react/react-spectrum/Link';
 import Highlight from 'react-highlight.js';
-import classNames from "classnames";
+import Link from '@react/react-spectrum/Link';
 import Markdown from '../components/Markdown';
+import PageHeader from '../components/PageHeader';
+import React from 'react'
+import ResponsiveImage from '../components/ResponsiveImage';
 import Section from '../components/Section';
 import SubHeader from '../components/SubHeader';
-import PageHeader from '../components/PageHeader';
+import classNames from "classnames";
 import compStyles from '../components/css/componentPage.scss';
-import '../css/hljs.scss';
 import styles from '../css/get-started.scss'
 
 const GetStarted = () => (
@@ -86,7 +88,18 @@ const GetStarted = () => (
 </html>`}
         </Highlight>
       </div>
-      <Link className="jsbin-embed" href="https://jsbin.com/junupun/1/embed?html,output">JS Bin on jsbin.com</Link><script src="https://static.jsbin.com/js/embed.min.js?4.1.7"></script>
+      <ResponsiveImage style={{maxWidth: "100%"}} image={{
+        "contentType": "image/png",
+        "details": {
+          "image": {
+            "width": 1224,
+            "height": 1040
+          },
+          "size": 286704
+        },
+        "fileName": "button-screen-shot.png",
+        "url": "/static/images/button-screen-shot.png"
+      }}/>
     </Section>
     <Section title={'Contribute to Spectrum CSS'}>
       <Markdown source={`We’d love for you to contribute to the Spectrum CSS project. Review the [contribution guidelines on our GitHub](https://github.com/adobe/spectrum-css/blob/master/.github/CONTRIBUTING.md) to get started.`}/>

@@ -1,5 +1,5 @@
-import styles from './css/responsiveImage.scss';
 import classNames from 'classnames';
+import styles from './css/responsiveImage.scss';
 
 const ResponsiveImage= (props) => (
 

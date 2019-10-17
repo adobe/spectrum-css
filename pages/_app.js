@@ -1,15 +1,4 @@
-import React from 'react'
-import App from 'next/app'
-import { Helmet } from "react-helmet";
-import Sidebar from '../components/Sidebar';
-import Provider from '@react/react-spectrum/Provider';
-import Select from '@react/react-spectrum/Select';
-import FieldLabel from '@react/react-spectrum/FieldLabel';
-import Rule from '@react/react-spectrum/Rule';
-import classNames from 'classnames';
-import styles from '../css/main.scss';
-import { withRouter, Router } from 'next/router';
-
+import '../css/adcloud-flexbox-grid.min.css'
 import '@adobe/spectrum-css/dist/vars/spectrum-dark.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-darkest.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-light.css';
@@ -17,6 +6,19 @@ import '@adobe/spectrum-css/dist/vars/spectrum-lightest.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-large.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-medium.css';
 import '@adobe/spectrum-css/dist/vars/spectrum-global.css';
+
+import { Router, withRouter } from 'next/router';
+
+import App from 'next/app'
+import FieldLabel from '@react/react-spectrum/FieldLabel';
+import { Helmet } from "react-helmet";
+import Provider from '@react/react-spectrum/Provider';
+import React from 'react'
+import Rule from '@react/react-spectrum/Rule';
+import Select from '@react/react-spectrum/Select';
+import Sidebar from '../components/Sidebar';
+import classNames from 'classnames';
+import styles from '../css/main.scss';
 
 //import regeneratorRuntime from "regenerator-runtime";
 

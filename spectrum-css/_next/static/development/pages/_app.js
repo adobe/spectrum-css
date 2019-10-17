@@ -60,14 +60,14 @@ function (_React$Component) {
         as: "".concat("", "/"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 13
         },
         __self: this
       }, __jsx("a", {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.headerLink,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 14
         },
         __self: this
       }, __jsx("div", {
@@ -75,14 +75,14 @@ function (_React$Component) {
         tabIndex: "-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 15
         },
         __self: this
       }, __jsx("div", {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 17
         },
         __self: this
       }, __jsx("img", (_jsx = {
@@ -91,25 +91,25 @@ function (_React$Component) {
         alt: "Adobe Logo"
       }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "className", _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logo), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "__source", {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 19
       }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "__self", this), _jsx)), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         },
         __self: this
       }, __jsx("h2", {
         className: classnames__WEBPACK_IMPORTED_MODULE_8___default()(_css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.titleText, "spectrum-Site-title", "spectrum-Heading3"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, "Spectrum CSS"), undefined === "internal" || undefined === "both" ? __jsx("div", {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.internal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 37
         },
         __self: this
       }, "ADOBE INTERNAL") : undefined)))));
@@ -140,24 +140,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @react/react-spectrum/SideNav */ "./node_modules/@react/react-spectrum/SideNav/index.js");
+/* harmony import */ var _react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @react/react-spectrum/Button */ "./node_modules/@react/react-spectrum/Button/index.js");
 /* harmony import */ var _react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @react/react-spectrum/Icon/ShowMenu */ "./node_modules/@react/react-spectrum/Icon/ShowMenu/index.js");
-/* harmony import */ var _react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @react/react-spectrum/SideNav */ "./node_modules/@react/react-spectrum/SideNav/index.js");
-/* harmony import */ var _react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Logo */ "./components/Logo.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _data_newmenu__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../data/newmenu */ "./data/newmenu.json");
-var _data_newmenu__WEBPACK_IMPORTED_MODULE_13___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/newmenu */ "./data/newmenu.json", 1);
-/* harmony import */ var _SiteSearch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./SiteSearch */ "./components/SiteSearch.js");
+/* harmony import */ var _react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @react/react-spectrum/Icon/ShowMenu */ "./node_modules/@react/react-spectrum/Icon/ShowMenu/index.js");
+/* harmony import */ var _react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _SiteSearch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./SiteSearch */ "./components/SiteSearch.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! next/config */ "./node_modules/next/dist/next-server/lib/runtime-config.js");
 /* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Logo */ "./components/Logo.js");
+/* harmony import */ var _data_newmenu__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../data/newmenu */ "./data/newmenu.json");
+var _data_newmenu__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/newmenu */ "./data/newmenu.json", 1);
 /* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./css/sidebar.scss */ "./components/css/sidebar.scss");
 /* harmony import */ var _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17__);
 
@@ -228,7 +228,7 @@ function (_React$Component) {
   }, {
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
-      var selected = _data_newmenu__WEBPACK_IMPORTED_MODULE_13__.key.find(function (item) {
+      var selected = _data_newmenu__WEBPACK_IMPORTED_MODULE_16__.key.find(function (item) {
         return item.url === nextProps.router.query.id;
       });
 
@@ -236,7 +236,7 @@ function (_React$Component) {
         var selectedParentSlug = selected.parent.split(",").find(function (item) {
           return item !== "top-level-menu-item" && item !== "WebsiteMenu";
         });
-        var selectedParent = _data_newmenu__WEBPACK_IMPORTED_MODULE_13__.key.find(function (item) {
+        var selectedParent = _data_newmenu__WEBPACK_IMPORTED_MODULE_16__.key.find(function (item) {
           return item.title === selectedParentSlug;
         });
 
@@ -272,7 +272,7 @@ function (_React$Component) {
       var _this2 = this;
 
       return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.overlay, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
+        className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.overlay, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         onClick: function onClick() {
           return _this2.closeMenu();
         },
@@ -290,7 +290,7 @@ function (_React$Component) {
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8___default.a, {
         variant: "tool",
-        icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_9___default.a, {
+        icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_12___default.a, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 85
@@ -307,14 +307,14 @@ function (_React$Component) {
         },
         __self: this
       })), __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
+        className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 90
         },
         __self: this
       }, __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.spectrumSidebar),
+        className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 96
@@ -327,13 +327,13 @@ function (_React$Component) {
           lineNumber: 97
         },
         __self: this
-      }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 98
         },
         __self: this
-      }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 100
@@ -346,7 +346,7 @@ function (_React$Component) {
           lineNumber: 103
         },
         __self: this
-      }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNav"], {
+      }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNav"], {
         defaultValue: this.props.router.query.id,
         style: {
           width: "200px",
@@ -358,9 +358,9 @@ function (_React$Component) {
           lineNumber: 104
         },
         __self: this
-      }, _data_newmenu__WEBPACK_IMPORTED_MODULE_13__.menu[0].children.map(function (item, i) {
+      }, _data_newmenu__WEBPACK_IMPORTED_MODULE_16__.menu[0].children.map(function (item, i) {
         if (!item.children || item.children.length == 0) {
-          return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNavItem"], {
+          return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
             value: item.url,
             label: item.title,
             key: i,
@@ -382,7 +382,7 @@ function (_React$Component) {
                   __self: this
                 }), item.title);
               } else {
-                return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
+                return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
                   __source: {
                     fileName: _jsxFileName,
                     lineNumber: 130
@@ -404,7 +404,7 @@ function (_React$Component) {
             __self: this
           });
         } else {
-          return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNavItem"], {
+          return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
             value: item.url,
             label: item.title,
             key: i,
@@ -418,7 +418,7 @@ function (_React$Component) {
             },
             __self: this
           }, item.children && item.children.map(function (childItem, childI) {
-            return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNavItem"], {
+            return __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
               value: childItem.url,
               label: childItem.title,
               key: childI,
@@ -438,7 +438,7 @@ function (_React$Component) {
                     __self: this
                   }), childItem.title);
                 } else {
-                  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
+                  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
                       lineNumber: 168
@@ -461,7 +461,7 @@ function (_React$Component) {
             });
           }));
         }
-      })), __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNav"], {
+      })), __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNav"], {
         style: {
           width: "200px",
           marginBottom: "40px"
@@ -471,7 +471,7 @@ function (_React$Component) {
           lineNumber: 182
         },
         __self: this
-      }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_10__["SideNavItem"], {
+      }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
         value: "Spectrum",
         target: "_blank",
         href: "#",
@@ -503,34 +503,31 @@ function (_React$Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @react/react-spectrum/Search */ "./node_modules/@react/react-spectrum/Search/index.js");
-/* harmony import */ var _react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./css/siteSearch.scss */ "./components/css/siteSearch.scss");
-/* harmony import */ var _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var lunr__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lunr */ "./node_modules/lunr/lunr.js");
-/* harmony import */ var lunr__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(lunr__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _data_search_store__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../data/search_store */ "./data/search_store.json");
-var _data_search_store__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/search_store */ "./data/search_store.json", 1);
-/* harmony import */ var _data_search_index__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../data/search_index */ "./data/search_index.json");
-var _data_search_index__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/search_index */ "./data/search_index.json", 1);
-
-
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @react/react-spectrum/Search */ "./node_modules/@react/react-spectrum/Search/index.js");
+/* harmony import */ var _react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./css/siteSearch.scss */ "./components/css/siteSearch.scss");
+/* harmony import */ var _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var lunr__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lunr */ "./node_modules/lunr/lunr.js");
+/* harmony import */ var lunr__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(lunr__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _data_search_store__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../data/search_store */ "./data/search_store.json");
+var _data_search_store__WEBPACK_IMPORTED_MODULE_14___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/search_store */ "./data/search_store.json", 1);
+/* harmony import */ var _data_search_index__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../data/search_index */ "./data/search_index.json");
+var _data_search_index__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/search_index */ "./data/search_index.json", 1);
 
 
 
@@ -540,7 +537,8 @@ var _data_search_index__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__
 
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/SiteSearch.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+
 
 
 
@@ -552,16 +550,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 var SiteSearch =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(SiteSearch, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(SiteSearch, _React$Component);
 
   function SiteSearch(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, SiteSearch);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, SiteSearch);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(SiteSearch).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(SiteSearch).call(this, props));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "resetSearch", function () {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "resetSearch", function () {
       _this.setState({
         menuOpen: false,
         results: [],
@@ -575,72 +573,124 @@ function (_React$Component) {
         tutorials: [],
         searchVal: "",
         numResults: 0,
-        kbSelectedIndex: 1,
+        kbSelectedIndex: 0,
         kbSelectedLink: undefined,
         kbSelectedType: undefined
       });
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "handleKeyPress", function (e) {
-      //console.log('keypress function');
-      if (_this.state.menuOpen && _this.state.searchVal.length) {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "focusOnSearchItem", function (index) {
+      _this.setState({
+        kbSelectedIndex: index
+      });
+
+      var searchEl = document.getElementById("".concat(index, "_search"));
+
+      if (searchEl) {
+        searchEl.focus();
+      }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "handleSearchKeyPress", function (e) {
+      if (_this.state.numResults !== 0) {
         switch (e.key) {
-          case "ArrowDown":
-            _this.setState({
-              kbSelectedIndex: _this.state.kbSelectedIndex == _this.state.numResults ? _this.state.numResults : _this.state.kbSelectedIndex + 1
-            });
-
-            break;
-
-          case "ArrowUp":
-            _this.setState({
-              kbSelectedIndex: _this.state.kbSelectedIndex == 1 ? 1 : _this.state.kbSelectedIndex - 1
-            });
-
-            break;
-
           case "Enter":
-            if (_this.selectedSlug) {
-              // console.log(`${this.selectedSlug} - ${this.selectedSlugType} = ${this.selectedQuery}`   )
-              _this.navigate(_this.selectedSlug, _this.selectedSlugType, _this.selectedQuery);
-
-              _this.resetSearch();
-
-              document.activeElement.blur();
+            if (_this.state.numResults !== 0) {
+              // Navigate to the first search result
+              var searchEl = document.getElementById('0_search');
+              searchEl.click();
             }
 
             break;
 
-          default: // do nothing
+          case "Tab":
+          case "ArrowDown":
+            _this.openMenu();
 
+            _this.focusOnSearchItem(0);
+
+            e.preventDefault();
+            break;
         }
       }
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "navigate", function (slug, type, query) {
-      var q = query ? "#".concat(query.replace(/ /g, "-")) : "#";
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "handleKeyPress", function (e) {
+      if (_this.state.menuOpen) {
+        var index;
 
-      if (type === "Internal") {
-        next_router__WEBPACK_IMPORTED_MODULE_11___default.a.push("/page/".concat(slug).concat(q));
+        switch (e.key) {
+          case "ArrowDown":
+            index = _this.state.kbSelectedIndex == _this.state.numResults - 1 ? 0 : _this.state.kbSelectedIndex + 1;
 
-        _this.setState({
-          menuOpen: false
-        });
-      } else if (type === "File") {
-        window.open(slug);
-      } else {
-        window.open(slug, "_blank");
+            _this.focusOnSearchItem(index);
+
+            e.preventDefault();
+            break;
+
+          case "ArrowUp":
+            index = _this.state.kbSelectedIndex == 0 ? _this.state.numResults - 1 : _this.state.kbSelectedIndex - 1;
+
+            _this.focusOnSearchItem(index);
+
+            e.preventDefault();
+            break;
+
+          case "Home":
+            _this.focusOnSearchItem(0);
+
+            e.preventDefault();
+            break;
+
+          case "End":
+            _this.focusOnSearchItem(_this.state.numResults - 1);
+
+            e.preventDefault();
+            break;
+
+          case "Tab":
+            if (e.shiftKey && _this.state.kbSelectedIndex == 0) {
+              e.preventDefault();
+
+              _this.focusOnSearch();
+            }
+
+            break;
+
+          case "Escape":
+            _this.focusOnSearch();
+
+            _this.closeMenu();
+
+            e.preventDefault();
+            break;
+        }
+      }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "focusOnSearch", function () {
+      var field = _this.searchContainer.current.querySelector('.spectrum-Search-input');
+
+      if (field) {
+        field.focus();
       }
 
-      _this.search("");
-
       _this.setState({
-        menuOpen: false,
-        searchVal: ""
+        kbSelectedIndex: -1
       });
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "search", function (val) {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "getHREF", function (slug, type, query) {
+      var q = query ? "#".concat(query.replace(/ /g, "-")) : "#";
+
+      if (type === "Internal") {
+        return "/page/".concat(slug).concat(q);
+      }
+
+      return slug;
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "search", function (val) {
       _this.setState({
         searchVal: val
       });
@@ -658,12 +708,11 @@ function (_React$Component) {
       if (val.length > 2) {
         var searchParam = "".concat(val.trim(), " ").concat(val.trim(), "*");
         r = _this.idx.search(searchParam + "*");
-        console.log(r);
       }
 
       var length = 0;
       r.forEach(function (item, i) {
-        var storeItem = _data_search_store__WEBPACK_IMPORTED_MODULE_15__[item.ref];
+        var storeItem = _data_search_store__WEBPACK_IMPORTED_MODULE_14__[item.ref];
 
         if (storeItem.type == "usageGuideline") {
           length++;
@@ -685,7 +734,6 @@ function (_React$Component) {
           tutorials.push(storeItem);
         } else if (storeItem.type === "xd") {
           length++;
-          console.log(storeItem);
           files.push(storeItem);
         } else if (storeItem.type === "contribution") {
           length++;
@@ -707,29 +755,47 @@ function (_React$Component) {
       });
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "closeMenu", function (e) {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "closeMenu", function (e) {
       setTimeout(function () {
         this.setState({
-          menuOpen: false
-        });
-      }.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this)), 100);
+          menuOpen: false,
+          kbSelectedIndex: 0
+        }); // Workaround: React Spectrum incorrectly assigns this attribute to the <input>, it should be on the outer <div>
+
+        var searchComponent = this.searchContainer.current.querySelector('.spectrum-Search');
+        searchComponent.setAttribute('aria-expanded', 'false');
+      }.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this)), 100);
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "focus", function (e) {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "openMenu", function () {
       _this.setState({
         menuOpen: true
-      });
+      }); // Workaround: React Spectrum incorrectly assigns this attribute to the <input>, it should be on the outer <div>
+
+
+      var searchComponent = _this.searchContainer.current.querySelector('.spectrum-Search');
+
+      searchComponent.setAttribute('aria-expanded', 'true');
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "getSelected", function (index, slug, type, query) {
-      //TODO: this needs to be improved - data model for results weren't set up well for keyboard focus
-      if (_this.state.numResults && index === _this.state.kbSelectedIndex) {
-        _this.selectedSlug = slug;
-        _this.selectedSlugType = type;
-        _this.selectedQuery = query;
-        document.getElementById("".concat(index, "_search")) ? document.getElementById("".concat(index, "_search")).scrollIntoView(false) : undefined;
-        return _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.selected;
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "getHighlighted", function (index) {
+      if (index === _this.state.kbSelectedIndex) {
+        return _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a['is-highlighted'];
       }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "componentDidMount", function () {
+      // Workaround: React Spectrum incorrectly assigns the following attributes to the <input>, they should be on the outer <div>
+      var searchComponent = _this.searchContainer.current.querySelector('.spectrum-Search');
+
+      searchComponent.setAttribute('aria-haspopup', 'listbox');
+      searchComponent.setAttribute('aria-owns', 'search-results-listbox');
+      searchComponent.setAttribute('aria-expanded', 'false'); // Workaround: React Spectrum incorrectly assigns searchbox here, it needs to be textbox or aXe has a conniption
+
+      var searchInput = _this.searchContainer.current.querySelector('.spectrum-Search-input');
+
+      searchInput.setAttribute('role', 'textbox');
+      searchInput.setAttribute('type', 'text');
     });
 
     _this.state = {
@@ -745,534 +811,636 @@ function (_React$Component) {
       tutorials: [],
       searchVal: "",
       numResults: 0,
-      kbSelectedIndex: 1,
+      kbSelectedIndex: 0,
       kbSelectedLink: undefined,
       kbSelectedType: undefined,
       searchIndex: undefined,
       searchLoaded: true
     };
-    _this.selectedSlug = undefined;
-    _this.selectedQuery = undefined;
-    _this.selectedSlugType = "Internal"; //const res = await fetch(`${publicRuntimeConfig.API}/getSearchIndex`)
+    _this.searchContainer = react__WEBPACK_IMPORTED_MODULE_7___default.a.createRef(); //const res = await fetch(`${publicRuntimeConfig.API}/getSearchIndex`)
     //const data = await res.json();
 
-    _this.idx = lunr__WEBPACK_IMPORTED_MODULE_14___default.a.Index.load(_data_search_index__WEBPACK_IMPORTED_MODULE_16__); //console.log(search_index);
-    //this.setState({searchIndex: data});
+    _this.idx = lunr__WEBPACK_IMPORTED_MODULE_13___default.a.Index.load(_data_search_index__WEBPACK_IMPORTED_MODULE_15__); //this.setState({searchIndex: data});
 
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(SiteSearch, [{
-    key: "componentDidMount",
-    value: function () {
-      var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _this2 = this;
-
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                document.addEventListener("keyup", function (e) {
-                  return _this2.handleKeyPress(e);
-                });
-
-              case 1:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }));
-
-      function componentDidMount() {
-        return _componentDidMount.apply(this, arguments);
-      }
-
-      return componentDidMount;
-    }()
-  }, {
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(SiteSearch, [{
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
-      var searchIndex = 0;
+      var searchIndex = -1;
       return __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.searchContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 221
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlay,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 222
-        },
-        __self: this
-      }), __jsx(_react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_10___default.a, {
-        "aria-label": "search",
-        placeholder: "Search",
-        value: this.state.searchVal,
-        style: {
-          width: "100%"
-        },
-        onChange: function onChange(e) {
-          _this3.search(e);
-        },
-        onFocus: function onFocus(e) {
-          _this3.focus(e);
-        },
-        onKeyPress: function onKeyPress(e) {
-          _this3.handleKeyPress(e);
-        },
-        disabled: !this.state.searchLoaded,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 223
-        },
-        __self: this
-      }), __jsx("div", {
-        onClick: function onClick(e) {
-          _this3.closeMenu();
-        },
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlay, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.overlayOpen : undefined),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 239
-        },
-        __self: this
-      }), __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.results, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.open : undefined),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 250
-        },
-        __self: this
-      }, this.state.numResults === 0 ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResultsContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 259
-        },
-        __self: this
-      }, __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Heading2--quiet", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResults),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 260
-        },
-        __self: this
-      }, "No results found"), __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.noResulsSub),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 268
-        },
-        __self: this
-      }, __jsx("em", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 269
-        },
-        __self: this
-      }, "Try another search term."))) : undefined, this.state.foundation.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 276
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 277
-        },
-        __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.searchContainer,
+        ref: this.searchContainer,
+        role: "search",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 278
         },
         __self: this
-      }, "Foundation")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 280
-        },
-        __self: this
-      }, this.state.foundation.map(function (result, i) {
-        return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
-          key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal")),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, "Internal");
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 282
-          },
-          __self: this
-        }, result.name);
-      }))) : undefined, this.state.components.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 303
-        },
-        __self: this
       }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.overlay,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 283
+        },
+        __self: this
+      }), __jsx(_react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        role: "combobox",
+        "aria-autocomplete": "list",
+        "aria-label": "Search",
+        placeholder: "Search",
+        defaultValue: "",
+        value: this.state.searchVal,
+        style: {
+          width: "100%"
+        },
+        onChange: function onChange(e) {
+          _this2.search(e);
+
+          _this2.openMenu();
+        },
+        onFocus: function onFocus(e) {
+          _this2.openMenu();
+        },
+        onKeyDown: function onKeyDown(e) {
+          _this2.handleSearchKeyPress(e);
+        },
+        disabled: !this.state.searchLoaded,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 284
+        },
+        __self: this
+      }), __jsx("div", {
+        onClick: function onClick(e) {
+          _this2.closeMenu();
+        },
+        className: classnames__WEBPACK_IMPORTED_MODULE_11___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.overlay, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.overlayOpen : undefined),
         __source: {
           fileName: _jsxFileName,
           lineNumber: 304
         },
         __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
+      }), __jsx("div", {
+        className: classnames__WEBPACK_IMPORTED_MODULE_11___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.results, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.open : undefined),
+        onKeyDown: this.handleKeyPress,
+        id: "search-results-listbox",
+        role: "listbox",
+        "aria-label": "Search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 305
+          lineNumber: 315
+        },
+        __self: this
+      }, this.state.numResults === 0 ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.noResultsContainer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 328
+        },
+        __self: this
+      }, __jsx("div", {
+        className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Heading2--quiet", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.noResults),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 329
+        },
+        __self: this
+      }, "No results found"), __jsx("div", {
+        className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.noResulsSub),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 337
+        },
+        __self: this
+      }, __jsx("em", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 338
+        },
+        __self: this
+      }, "Try another search term."))) : undefined, this.state.foundation.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_Foundation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 345
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 346
+        },
+        __self: this
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_Foundation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 347
+        },
+        __self: this
+      }, "Foundation")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 349
+        },
+        __self: this
+      }, this.state.foundation.map(function (result, i) {
+        return __jsx("li", {
+          key: i,
+          role: "presentation",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 351
+          },
+          __self: this
+        }, __jsx("a", {
+          role: "option",
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          href: _this2.getHREF(result.slug, "Internal"),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 352
+          },
+          __self: this
+        }, result.name));
+      }))) : undefined, this.state.components.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_Components",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 372
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 373
+        },
+        __self: this
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_Components",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 374
         },
         __self: this
       }, "Components")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 376
         },
         __self: this
       }, this.state.components.map(function (result, i) {
         return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal")),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, "Internal");
-          },
+          role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 309
+            lineNumber: 378
           },
           __self: this
-        }, result.name);
+        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_10___default.a, {
+          href: "/components/id?id=".concat(result.slug),
+          as: "".concat("", "/components/").concat(result.slug),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 379
+          },
+          __self: this
+        }, __jsx("a", {
+          role: "option",
+          onClick: function onClick(e) {
+            _this2.closeMenu();
+          },
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 381
+          },
+          __self: this
+        }, result.name)));
       }))) : undefined, this.state.resources.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_Resources",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 331
+          lineNumber: 401
         },
         __self: this
       }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 332
-        },
-        __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 333
-        },
-        __self: this
-      }, "Resources")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 335
-        },
-        __self: this
-      }, this.state.resources.map(function (result, i) {
-        return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
-          key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal")),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, "Internal");
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 337
-          },
-          __self: this
-        }, result.name);
-      }))) : undefined, this.state.usageGuidelines.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 358
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 359
-        },
-        __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 360
-        },
-        __self: this
-      }, "Usage Guidelines")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 364
-        },
-        __self: this
-      }, this.state.usageGuidelines.map(function (result, i) {
-        return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
-          key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal", result.query)),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, "Internal", result.query);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 366
-          },
-          __self: this
-        }, __jsx("div", {
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.subHeader),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 383
-          },
-          __self: this
-        }, result.pageType, " > ", result.name), __jsx("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 388
-          },
-          __self: this
-        }, result.display_description));
-      }))) : undefined, this.state.behaviors.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 398
-        },
-        __self: this
-      }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 399
-        },
-        __self: this
-      }, __jsx("h4", {
-        className: "spectrum-Heading--subtitle3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 400
-        },
-        __self: this
-      }, "Behaviors")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 402
         },
         __self: this
-      }, this.state.behaviors.map(function (result, i) {
-        return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
-          key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "Internal", result.query)),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, "Internal", result.query);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 404
-          },
-          __self: this
-        }, __jsx("div", {
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.subHeader),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 421
-          },
-          __self: this
-        }, result.pageType, " > ", result.name), __jsx("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 426
-          },
-          __self: this
-        }, result.display_description));
-      }))) : undefined, this.state.files.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_Resources",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 436
+          lineNumber: 403
+        },
+        __self: this
+      }, "Resources")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 405
+        },
+        __self: this
+      }, this.state.resources.map(function (result, i) {
+        return __jsx("li", {
+          key: i,
+          role: "presentation",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 407
+          },
+          __self: this
+        }, __jsx("a", {
+          role: "option",
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          href: _this2.getHREF(result.slug, "Internal"),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 407
+          },
+          __self: this
+        }, result.name));
+      }))) : undefined, this.state.usageGuidelines.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_UsageGuidelines",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 426
         },
         __self: this
       }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 437
+          lineNumber: 427
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_UsageGuidelines",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 438
+          lineNumber: 428
         },
         __self: this
-      }, "Downloads")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+      }, "Usage Guidelines")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 440
+          lineNumber: 430
         },
         __self: this
-      }, this.state.files.map(function (result, i) {
+      }, this.state.usageGuidelines.map(function (result, i) {
         return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, "/static/resources/Latest/".concat(result.slug), "File")),
-          onClick: function onClick() {
-            _this3.navigate("/static/resources/Latest/".concat(result.slug), "File");
+          role: "presentation",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 432
           },
+          __self: this
+        }, __jsx("a", {
+          role: "option",
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          href: _this2.getHREF(result.slug, "Internal", result.query),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 432
+          },
+          __self: this
+        }, __jsx("div", {
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.subHeader),
           __source: {
             fileName: _jsxFileName,
             lineNumber: 442
           },
           __self: this
-        }, __jsx("div", {
-          className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.file,
+        }, result.pageType, " ", __jsx("span", {
+          "aria-hidden": "true",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 461
+            lineNumber: 445
           },
           __self: this
-        }, __jsx("div", {
-          className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.icon,
+        }, ">"), " ", result.name), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 462
+            lineNumber: 447
           },
           __self: this
-        }, __jsx("img", {
-          src: "/static/icon_xd_small@2x.png",
+        }, result.display_description)));
+      }))) : undefined, this.state.behaviors.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_Behaviors",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 457
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 458
+        },
+        __self: this
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_Behaviors",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 459
+        },
+        __self: this
+      }, "Behaviors")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 461
+        },
+        __self: this
+      }, this.state.behaviors.map(function (result, i) {
+        return __jsx("li", {
+          key: i,
+          role: "presentation",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 463
           },
           __self: this
-        })), result.slug));
-      }))) : undefined, this.state.tutorials.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
+        }, __jsx("a", {
+          role: "option",
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          href: _this2.getHREF(result.slug, "Internal", result.query),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 463
+          },
+          __self: this
+        }, __jsx("div", {
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.subHeader),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 473
+          },
+          __self: this
+        }, result.pageType, " ", __jsx("span", {
+          "aria-hidden": "true",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 476
+          },
+          __self: this
+        }, ">"), " ", result.name), __jsx("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 478
+          },
+          __self: this
+        }, result.display_description)));
+      }))) : undefined, this.state.files.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_Downloads",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 475
+          lineNumber: 488
         },
         __self: this
       }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 476
+          lineNumber: 489
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_Downloads",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 477
+          lineNumber: 490
+        },
+        __self: this
+      }, "Downloads")), __jsx("ul", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 492
+        },
+        __self: this
+      }, this.state.files.map(function (result, i) {
+        return __jsx("li", {
+          key: i,
+          role: "presentation",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 494
+          },
+          __self: this
+        }, __jsx("a", {
+          role: "option",
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          target: "_blank",
+          href: _this2.getHREF("/static/resources/Latest/".concat(result.slug), "File"),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 494
+          },
+          __self: this
+        }, __jsx("div", {
+          className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.file,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 505
+          },
+          __self: this
+        }, __jsx("div", {
+          className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.icon,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 506
+          },
+          __self: this
+        }, __jsx("img", {
+          src: "/static/icon_xd_small@2x.png",
+          alt: "XD File",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 507
+          },
+          __self: this
+        })), result.slug)));
+      }))) : undefined, this.state.tutorials.length ? __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_Tutorials",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 519
+        },
+        __self: this
+      }, __jsx("div", {
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 520
+        },
+        __self: this
+      }, __jsx("h4", {
+        className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_Tutorials",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 521
         },
         __self: this
       }, "Tutorials")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 479
+          lineNumber: 523
         },
         __self: this
       }, this.state.tutorials.map(function (result, i) {
         return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, result.slug, "External")),
-          onClick: function onClick() {
-            _this3.navigate(result.slug, "External");
-          },
+          role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 481
+            lineNumber: 525
           },
           __self: this
-        }, result.name);
+        }, __jsx("a", {
+          role: "option",
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          target: "_blank",
+          onClick: _this2.getHREF(result.slug, "External"),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 525
+          },
+          __self: this
+        }, result.name));
       }))) : undefined, this.state.contributions.length ? __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultContainer,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultContainer,
+        role: "group",
+        "aria-labelledby": "results_Contributions",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 502
+          lineNumber: 545
         },
         __self: this
       }, __jsx("div", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 503
+          lineNumber: 546
         },
         __self: this
       }, __jsx("h4", {
         className: "spectrum-Heading--subtitle3",
+        "aria-hidden": "true",
+        id: "results_Contributions",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 504
+          lineNumber: 547
         },
         __self: this
       }, "Contributions")), __jsx("ul", {
-        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.resultSet,
+        className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.resultSet,
+        role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 506
+          lineNumber: 549
         },
         __self: this
       }, this.state.contributions.map(function (result, i) {
         return __jsx("li", {
-          id: "".concat(searchIndex++, "_search"),
           key: i,
-          className: classnames__WEBPACK_IMPORTED_MODULE_12___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_13___default.a.listItem, _this3.getSelected(searchIndex, "https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), "External")),
-          onClick: function onClick() {
-            _this3.navigate("https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), "External");
-          },
+          role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 508
+            lineNumber: 551
+          },
+          __self: this
+        }, __jsx("a", {
+          role: "option",
+          id: "".concat(++searchIndex, "_search"),
+          className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
+          target: "_blank",
+          href: _this2.getHREF("https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), "External"),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 551
           },
           __self: this
         }, __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 527
+            lineNumber: 565
           },
           __self: this
-        }, result.description));
+        }, result.description)));
       }))) : undefined));
     }
   }]);
 
   return SiteSearch;
-}(react__WEBPACK_IMPORTED_MODULE_9___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (SiteSearch);
 
@@ -1658,58 +1826,6 @@ function _assertThisInitialized(self) {
   }
 
   return self;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js ***!
-  \*****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _asyncToGenerator; });
-/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
 }
 
 /***/ }),
@@ -2314,18 +2430,6 @@ function _interopRequireDefault(obj) {
 }
 
 module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/regenerator/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
-
 
 /***/ }),
 
@@ -18958,7 +19062,7 @@ var IntlMessageFormat = __webpack_require__(/*! ./lib/main */ "./node_modules/in
 
 // Add all locale data to `IntlMessageFormat`. This module will be ignored when
 // bundling for the browser with Browserify/Webpack.
-__webpack_require__(/*! ./lib/locales */ 17);
+__webpack_require__(/*! ./lib/locales */ 11);
 
 // Re-export `IntlMessageFormat` as the CommonJS default exports with all the
 // locale data registered, and with English set as the default locale. Define
@@ -25773,12 +25877,12 @@ module.exports = function(module) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -26452,12 +26556,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -27092,12 +27196,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -27312,12 +27416,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -31131,12 +31235,12 @@ exports.classNamesShape = classNamesShape;
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -32795,41 +32899,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/lib/Helmet.js");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Sidebar */ "./components/Sidebar.js");
-/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @react/react-spectrum/Provider */ "./node_modules/@react/react-spectrum/Provider/index.js");
-/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @react/react-spectrum/Select */ "./node_modules/@react/react-spectrum/Select/index.js");
-/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @react/react-spectrum/FieldLabel */ "./node_modules/@react/react-spectrum/FieldLabel/index.js");
-/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @react/react-spectrum/Rule */ "./node_modules/@react/react-spectrum/Rule/index.js");
-/* harmony import */ var _react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../css/main.scss */ "./css/main.scss");
-/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global.css");
-/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _css_adcloud_flexbox_grid_min_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/adcloud-flexbox-grid.min.css */ "./css/adcloud-flexbox-grid.min.css");
+/* harmony import */ var _css_adcloud_flexbox_grid_min_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_css_adcloud_flexbox_grid_min_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-dark.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-dark.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_dark_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-darkest.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-darkest.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_darkest_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-light.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-light.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_light_css__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-lightest.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-lightest.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_lightest_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-large.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-large.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_large_css__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-medium.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-medium.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_medium_css__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @adobe/spectrum-css/dist/vars/spectrum-global.css */ "./node_modules/@adobe/spectrum-css/dist/vars/spectrum-global.css");
+/* harmony import */ var _adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_adobe_spectrum_css_dist_vars_spectrum_global_css__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @react/react-spectrum/FieldLabel */ "./node_modules/@react/react-spectrum/FieldLabel/index.js");
+/* harmony import */ var _react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/lib/Helmet.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @react/react-spectrum/Provider */ "./node_modules/@react/react-spectrum/Provider/index.js");
+/* harmony import */ var _react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @react/react-spectrum/Rule */ "./node_modules/@react/react-spectrum/Rule/index.js");
+/* harmony import */ var _react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @react/react-spectrum/Select */ "./node_modules/@react/react-spectrum/Select/index.js");
+/* harmony import */ var _react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/Sidebar */ "./components/Sidebar.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../css/main.scss */ "./css/main.scss");
+/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_26__);
 
 
 
@@ -32839,7 +32945,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/_app.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement;
+
 
 
 
@@ -32875,24 +32982,24 @@ function (_React$Component) {
     value: function render() {
       var children = this.props.children;
       return __jsx("div", {
-        className: classnames__WEBPACK_IMPORTED_MODULE_16___default()('afg-container-fluid', 'site-mainContainer'),
+        className: classnames__WEBPACK_IMPORTED_MODULE_25___default()('afg-container-fluid', 'site-mainContainer'),
         style: {
           minHeight: '100vh',
           boxSizing: 'border-box'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 28
         },
         __self: this
-      }, children, __jsx(_react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_15___default.a, {
+      }, children, __jsx(_react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_22___default.a, {
         variant: "small",
         style: {
           marginTop: '32px'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 30
         },
         __self: this
       }));
@@ -32900,7 +33007,7 @@ function (_React$Component) {
   }]);
 
   return Layout;
-}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_21___default.a.Component);
 
 var MyApp =
 /*#__PURE__*/
@@ -32959,12 +33066,12 @@ function (_App) {
       };
     });
 
-    _this.scaleSelector = react__WEBPACK_IMPORTED_MODULE_8___default.a.createRef();
+    _this.scaleSelector = react__WEBPACK_IMPORTED_MODULE_21___default.a.createRef();
     _this.state = {
       scale: 'medium',
       theme: 'light'
     };
-    next_router__WEBPACK_IMPORTED_MODULE_18__["Router"].events.on('routeChangeComplete', function () {
+    next_router__WEBPACK_IMPORTED_MODULE_16__["Router"].events.on('routeChangeComplete', function () {
       digitalData._set('page.pageInfo.siteSection', "".concat(_arguments[0].router.query.id, " Page"));
 
       digitalData._set('page.pageInfo.language', 'en-US');
@@ -32999,10 +33106,10 @@ function (_App) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 104
         },
         __self: this
-      }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_10__["Helmet"], {
+      }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_19__["Helmet"], {
         script: [{
           src: "".concat("", "/static/javascript/loadicons/index.js")
         }],
@@ -33011,7 +33118,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 106
         },
         __self: this
       }, __jsx("meta", {
@@ -33020,7 +33127,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 109
         },
         __self: this
       }), __jsx("link", {
@@ -33029,7 +33136,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 110
         },
         __self: this
       }), __jsx("link", {
@@ -33038,54 +33145,54 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 111
         },
         __self: this
-      })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_12___default.a, {
+      })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_20___default.a, {
         theme: this.state.theme,
         scale: this.state.scale,
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 114
         },
         __self: this
       }, __jsx("div", {
         className: 'flexContainer',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 115
         },
         __self: this
-      }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_11__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+      }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_24__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 116
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 117
         },
         __self: this
       }, __jsx("div", {
         className: "switcherContainer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 118
         },
         __self: this
-      }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
+      }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18___default.a, {
         label: "Theme",
         labelFor: "theme-selector",
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 119
         },
         __self: this
-      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
+      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23___default.a, {
         onChange: this.updateTheme,
         id: "theme-selector",
         "aria-label": "Theme selector",
@@ -33107,19 +33214,19 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 120
         },
         __self: this
-      })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_14___default.a, {
+      })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18___default.a, {
         label: "Scale",
         labelFor: "scale-selector",
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 135
         },
         __self: this
-      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_13___default.a, {
+      }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23___default.a, {
         ref: this.scaleSelector,
         id: "scale-selector",
         onChange: function onChange(e) {
@@ -33143,13 +33250,13 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 136
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156
+          lineNumber: 158
         },
         __self: this
       }))))));
@@ -33157,13 +33264,13 @@ function (_App) {
   }]);
 
   return MyApp;
-}(next_app__WEBPACK_IMPORTED_MODULE_9___default.a);
+}(next_app__WEBPACK_IMPORTED_MODULE_17___default.a);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_18__["withRouter"])(MyApp));
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_16__["withRouter"])(MyApp));
 
 /***/ }),
 
-/***/ 17:
+/***/ 11:
 /*!*******************************!*\
   !*** ./lib/locales (ignored) ***!
   \*******************************/
@@ -33174,14 +33281,14 @@ function (_App) {
 
 /***/ }),
 
-/***/ "dll-reference dll_13346faca0e924a89b24":
+/***/ "dll-reference dll_b35e09dc2ca94ac6d9c1":
 /*!*******************************************!*\
-  !*** external "dll_13346faca0e924a89b24" ***!
+  !*** external "dll_b35e09dc2ca94ac6d9c1" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_13346faca0e924a89b24;
+module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 

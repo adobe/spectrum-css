@@ -1,8 +1,11 @@
-import React from 'react'
+import DoubleTextWithVisual from '../components/DoubleTextWithVisual'
 import {Helmet} from "react-helmet";
 import HeroImage from '../components/HeroImage';
-import SubHeader from '../components/SubHeader';
+import Link from '@react/react-spectrum/Link';
+import RouterLink from "next/link";
 import PageHeader from '../components/PageHeader';
+import React from 'react'
+import SubHeader from '../components/SubHeader';
 
 const Home = () => (
   <div style={{overflow: 'hidden', position: "relative"}}>
@@ -46,9 +49,26 @@ const Home = () => (
       style={'Illustration'}
     />
     <div className="afg-row">
-      <div className="afg-col-xs-12 afg-col-sm-4">
+      <div className="afg-col-xs-12 afg-col-sm-6">
         <SubHeader title="Robust documentation"/>
-        <p className="spectrum-Body2">Spectrum CSS is designed to be used in partnership with Spectrum’s detailed usage guidelines.</p>
+        <p>Spectrum CSS is designed to be used in partnership with Spectrum’s detailed usage guidelines.</p>
+        <p><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
+      </div>
+      <div className="afg-col-xs-12 afg-col-sm-6">
+        <SubHeader title="Flexible"/>
+        <p>Our CSS is customizable, powerful, and designed to work with any javascript framework.</p>
+        <p><RouterLink href={`/get-started/`} as={`${process.env.BACKEND_URL}/get-started/`}><a className="spectrum-Link">Get Started</a></RouterLink></p>
+      </div>
+    </div>
+    <div className="afg-row">
+      <div className="afg-col-xs-12 afg-col-sm-6">
+        <SubHeader title="Rigorously tested"/>
+        <p>These individually-versioned components have been vetted to be accessible and inclusive of global audiences.</p>
+      </div>
+      <div className="afg-col-xs-12 afg-col-sm-6">
+        <SubHeader title="Multi-platform support"/>
+        <p>We support evergreen browsers (minus one version) and IE 11 for scalability and flexibility.</p>
+        <p><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
       </div>
     </div>
   </div>

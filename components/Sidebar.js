@@ -1,16 +1,16 @@
-import Link from "next/link";
-import Button from "@react/react-spectrum/Button";
-import ShowMenu from "@react/react-spectrum/Icon/ShowMenu";
 import { SideNav, SideNavItem } from "@react/react-spectrum/SideNav";
-import Router from "next/router";
-import { withRouter } from "next/router";
-import classNames from "classnames";
-import menuData from "../data/newmenu";
-import SiteSearch from "./SiteSearch";
-import getConfig from "next/config";
-import Logo from "./Logo";
-import styles from "./css/sidebar.scss";
 
+import Button from "@react/react-spectrum/Button";
+import Link from "next/link";
+import Logo from "./Logo";
+import Router from "next/router";
+import ShowMenu from "@react/react-spectrum/Icon/ShowMenu";
+import SiteSearch from "./SiteSearch";
+import classNames from "classnames";
+import getConfig from "next/config";
+import menuData from "../data/newmenu";
+import styles from "./css/sidebar.scss";
+import { withRouter } from "next/router";
 
 const createLinkProps = item => {
   if (item.linkType === "External") {

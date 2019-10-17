@@ -1,10 +1,12 @@
 import Search from "@react/react-spectrum/Search";
 import Router from "next/router";
+import Link from "next/link";
 import classNames from "classnames";
 import styles from "./css/siteSearch.scss";
 import lunr from "lunr";
 import search_store from "../data/search_store";
 import search_index from "../data/search_index";
+
 
 class SiteSearch extends React.Component {
   constructor(props) {
@@ -22,27 +24,22 @@ class SiteSearch extends React.Component {
       tutorials: [],
       searchVal: "",
       numResults: 0,
-      kbSelectedIndex: 1,
+      kbSelectedIndex: 0,
       kbSelectedLink: undefined,
       kbSelectedType: undefined,
       searchIndex: undefined,
       searchLoaded: true
     };
 
-    this.selectedSlug = undefined;
-    this.selectedQuery = undefined;
-    this.selectedSlugType = "Internal";
+    this.searchContainer = React.createRef();
+
     //const res = await fetch(`${publicRuntimeConfig.API}/getSearchIndex`)
     //const data = await res.json();
 
     this.idx = lunr.Index.load(search_index);
-    //console.log(search_index);
     //this.setState({searchIndex: data});
   }
 
-  async componentDidMount() {
-    document.addEventListener("keyup", e => this.handleKeyPress(e));
-  }
   resetSearch = () => {
     this.setState({
       menuOpen: false,
@@ -57,63 +54,108 @@ class SiteSearch extends React.Component {
       tutorials: [],
       searchVal: "",
       numResults: 0,
-      kbSelectedIndex: 1,
+      kbSelectedIndex: 0,
       kbSelectedLink: undefined,
       kbSelectedType: undefined
     });
   };
-  handleKeyPress = e => {
-    //console.log('keypress function');
-    if (this.state.menuOpen && this.state.searchVal.length) {
+
+  focusOnSearchItem = index => {
+    this.setState({
+      kbSelectedIndex: index
+    });
+
+    let searchEl = document.getElementById(`${index}_search`);
+    if (searchEl) {
+      searchEl.focus();
+    }
+  };
+
+  handleSearchKeyPress = e => {
+    if (this.state.numResults !== 0) {
       switch (e.key) {
-        case "ArrowDown":
-          this.setState({
-            kbSelectedIndex:
-              this.state.kbSelectedIndex == this.state.numResults
-                ? this.state.numResults
-                : this.state.kbSelectedIndex + 1
-          });
-          break;
-        case "ArrowUp":
-          this.setState({
-            kbSelectedIndex:
-              this.state.kbSelectedIndex == 1
-                ? 1
-                : this.state.kbSelectedIndex - 1
-          });
-          break;
         case "Enter":
-          if (this.selectedSlug) {
-            // console.log(`${this.selectedSlug} - ${this.selectedSlugType} = ${this.selectedQuery}`   )
-            this.navigate(
-              this.selectedSlug,
-              this.selectedSlugType,
-              this.selectedQuery
-            );
-            this.resetSearch();
-            document.activeElement.blur();
+          if (this.state.numResults !== 0) {
+            // Navigate to the first search result
+            let searchEl = document.getElementById('0_search');
+            searchEl.click();
           }
           break;
-        default:
-        // do nothing
+        case "Tab":
+        case "ArrowDown":
+            this.openMenu();
+            this.focusOnSearchItem(0);
+            e.preventDefault();
+          break;
       }
     }
   };
 
-  navigate = (slug, type, query) => {
+  handleKeyPress = e => {
+    if (this.state.menuOpen) {
+      let index;
+      switch (e.key) {
+        case "ArrowDown":
+          index = this.state.kbSelectedIndex == this.state.numResults - 1
+            ? 0
+            : this.state.kbSelectedIndex + 1;
+
+          this.focusOnSearchItem(index);
+
+          e.preventDefault();
+          break;
+        case "ArrowUp":
+          index = this.state.kbSelectedIndex == 0
+            ? this.state.numResults - 1
+            : this.state.kbSelectedIndex - 1;
+
+          this.focusOnSearchItem(index);
+
+          e.preventDefault();
+          break;
+        case "Home":
+          this.focusOnSearchItem(0);
+
+          e.preventDefault();
+          break;
+        case "End":
+          this.focusOnSearchItem(this.state.numResults - 1);
+
+          e.preventDefault();
+          break;
+        case "Tab":
+          if (e.shiftKey && this.state.kbSelectedIndex == 0) {
+            e.preventDefault();
+            this.focusOnSearch();
+          }
+          break;
+        case "Escape":
+          this.focusOnSearch()
+          this.closeMenu();
+
+          e.preventDefault();
+          break;
+      }
+    }
+  };
+
+  focusOnSearch = () => {
+    let field = this.searchContainer.current.querySelector('.spectrum-Search-input');
+    if (field) {
+      field.focus();
+    }
+
+    this.setState({
+      kbSelectedIndex: -1
+    });
+  };
+
+  getHREF = (slug, type, query) => {
     let q = query ? `#${query.replace(/ /g, "-")}` : "#";
     if (type === "Internal") {
-      Router.push(`/page/${slug}${q}`);
-      this.setState({
-        menuOpen: false
-      });
-    } else if (type === "File") {
-      window.open(slug);
-    } else {
-      window.open(slug, "_blank");
+      return `/page/${slug}${q}`;
     }
-    this.search("");
-    this.setState({ menuOpen: false, searchVal: "" });
+    return slug;
   };
 
   search = val => {
@@ -134,7 +176,6 @@ class SiteSearch extends React.Component {
       let searchParam = `${val.trim()} ${val.trim()}*`;
 
       r = this.idx.search(searchParam + "*");
-      console.log(r);
     }
     let length = 0;
     r.forEach((item, i) => {
@@ -168,7 +209,6 @@ class SiteSearch extends React.Component {
         tutorials.push(storeItem);
       } else if (storeItem.type === "xd") {
         length++;
-        console.log(storeItem);
         files.push(storeItem);
       } else if (storeItem.type === "contribution") {
         length++;
@@ -192,47 +232,72 @@ class SiteSearch extends React.Component {
   closeMenu = e => {
     setTimeout(
       function() {
-        this.setState({ menuOpen: false });
+        this.setState({
+          menuOpen: false,
+          kbSelectedIndex: 0
+        });
+
+        // Workaround: React Spectrum incorrectly assigns this attribute to the <input>, it should be on the outer <div>
+        let searchComponent = this.searchContainer.current.querySelector('.spectrum-Search');
+        searchComponent.setAttribute('aria-expanded', 'false');
       }.bind(this),
       100
     );
   };
 
-  focus = e => {
+  openMenu = () => {
     this.setState({ menuOpen: true });
+
+    // Workaround: React Spectrum incorrectly assigns this attribute to the <input>, it should be on the outer <div>
+    let searchComponent = this.searchContainer.current.querySelector('.spectrum-Search');
+    searchComponent.setAttribute('aria-expanded', 'true');
   };
 
-  getSelected = (index, slug, type, query) => {
-    //TODO: this needs to be improved - data model for results weren't set up well for keyboard focus
-    if (this.state.numResults && index === this.state.kbSelectedIndex) {
-      this.selectedSlug = slug;
-      this.selectedSlugType = type;
-      this.selectedQuery = query;
-      document.getElementById(`${index}_search`)
-        ? document.getElementById(`${index}_search`).scrollIntoView(false)
-        : undefined;
-      return styles.selected;
+  getHighlighted = (index) => {
+    if (index === this.state.kbSelectedIndex) {
+      return styles['is-highlighted'];
     }
   };
 
+  componentDidMount = () => {
+    // Workaround: React Spectrum incorrectly assigns the following attributes to the <input>, they should be on the outer <div>
+    let searchComponent = this.searchContainer.current.querySelector('.spectrum-Search');
+    searchComponent.setAttribute('aria-haspopup', 'listbox');
+    searchComponent.setAttribute('aria-owns', 'search-results-listbox');
+    searchComponent.setAttribute('aria-expanded', 'false');
+
+    // Workaround: React Spectrum incorrectly assigns searchbox here, it needs to be textbox or aXe has a conniption
+    let searchInput = this.searchContainer.current.querySelector('.spectrum-Search-input');
+    searchInput.setAttribute('role', 'textbox');
+    searchInput.setAttribute('type', 'text');
+  };
+
   render() {
-    let searchIndex = 0;
+    let searchIndex = -1;
     return (
-      <div className={styles.searchContainer}>
+      <div
+        className={styles.searchContainer}
+        ref={this.searchContainer}
+        role="search"
+      >
         <div className={styles.overlay}></div>
         <Search
-          aria-label="search"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-label="Search"
           placeholder="Search"
+          defaultValue=""
           value={this.state.searchVal}
           style={{ width: "100%" }}
           onChange={e => {
             this.search(e);
+            this.openMenu();
           }}
           onFocus={e => {
-            this.focus(e);
+            this.openMenu();
           }}
-          onKeyPress={e => {
-            this.handleKeyPress(e);
+          onKeyDown={e => {
+            this.handleSearchKeyPress(e);
           }}
           disabled={!this.state.searchLoaded}
         />
@@ -254,6 +319,10 @@ class SiteSearch extends React.Component {
               ? styles.open
               : undefined
           )}
+         onKeyDown={this.handleKeyPress}
+         id="search-results-listbox"
+         role="listbox"
+         aria-label="Search"
         >
           {this.state.numResults === 0 ? (
             <div className={styles.noResultsContainer}>
@@ -273,25 +342,25 @@ class SiteSearch extends React.Component {
             undefined
           )}
           {this.state.foundation.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">Foundation</h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_Foundation">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_Foundation">Foundation</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.foundation.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
-                    className={classNames(
-                      "spectrum-Body4",
-                      styles.listItem,
-                      this.getSelected(searchIndex, result.slug, "Internal")
-                    )}
-                    onClick={() => {
-                      this.navigate(result.slug, "Internal");
-                    }}
-                  >
-                    {result.name}
+                  <li key={i} role="presentation">
+                    <a
+                      role="option"
+                      id={`${++searchIndex}_search`}
+                      className={classNames(
+                        "spectrum-Body4",
+                        styles.listItem,
+                        this.getHighlighted(searchIndex)
+                      )}
+                      href={this.getHREF(result.slug, "Internal")}
+                    >
+                      {result.name}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -300,25 +369,26 @@ class SiteSearch extends React.Component {
             undefined
           )}
           {this.state.components.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">Components</h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_Components">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_Components">Components</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.components.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
-                    className={classNames(
-                      "spectrum-Body4",
-                      styles.listItem,
-                      this.getSelected(searchIndex, result.slug, "Internal")
-                    )}
-                    onClick={() => {
-                      this.navigate(result.slug, "Internal");
-                    }}
-                  >
-                    {result.name}
+                  <li key={i} role="presentation">
+                    <Link href={`/components/id?id=${result.slug}`}
+                      as={`${process.env.BACKEND_URL}/components/${result.slug}`}>
+                      <a role="option"
+                        onClick={(e)=>{this.closeMenu();}}
+                        id={`${++searchIndex}_search`}
+                        className={classNames(
+                          "spectrum-Body4",
+                          styles.listItem,
+                          this.getHighlighted(searchIndex)
+                        )}>
+                        {result.name}
+                      </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -328,26 +398,24 @@ class SiteSearch extends React.Component {
           )}
 
           {this.state.resources.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">Resources</h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_Resources">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_Resources">Resources</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.resources.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
+                  <li key={i} role="presentation"><a
+                    role="option"
+                    id={`${++searchIndex}_search`}
                     className={classNames(
                       "spectrum-Body4",
                       styles.listItem,
-                      this.getSelected(searchIndex, result.slug, "Internal")
+                      this.getHighlighted(searchIndex)
                     )}
-                    onClick={() => {
-                      this.navigate(result.slug, "Internal");
-                    }}
+                    href={this.getHREF(result.slug, "Internal")}
                   >
                     {result.name}
-                  </li>
+                  </a></li>
                 ))}
               </ul>
             </div>
@@ -355,38 +423,29 @@ class SiteSearch extends React.Component {
             undefined
           )}
           {this.state.usageGuidelines.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">
-                  Usage Guidelines
-                </h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_UsageGuidelines">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_UsageGuidelines">Usage Guidelines</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.usageGuidelines.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
+                  <li key={i} role="presentation"><a
+                    role="option"
+                    id={`${++searchIndex}_search`}
                     className={classNames(
                       "spectrum-Body4",
                       styles.listItem,
-                      this.getSelected(
-                        searchIndex,
-                        result.slug,
-                        "Internal",
-                        result.query
-                      )
+                      this.getHighlighted(searchIndex)
                     )}
-                    onClick={() => {
-                      this.navigate(result.slug, "Internal", result.query);
-                    }}
+                    href={this.getHREF(result.slug, "Internal", result.query)}
                   >
                     <div
                       className={classNames("spectrum-Body5", styles.subHeader)}
                     >
-                      {result.pageType} > {result.name}
+                      {result.pageType} <span aria-hidden="true">&gt;</span> {result.name}
                     </div>
                     <div>{result.display_description}</div>
-                  </li>
+                  </a></li>
                 ))}
               </ul>
             </div>
@@ -395,36 +454,29 @@ class SiteSearch extends React.Component {
           )}
 
           {this.state.behaviors.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">Behaviors</h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_Behaviors">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_Behaviors">Behaviors</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.behaviors.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
+                  <li key={i} role="presentation"><a
+                    role="option"
+                    id={`${++searchIndex}_search`}
                     className={classNames(
                       "spectrum-Body4",
                       styles.listItem,
-                      this.getSelected(
-                        searchIndex,
-                        result.slug,
-                        "Internal",
-                        result.query
-                      )
+                      this.getHighlighted(searchIndex)
                     )}
-                    onClick={() => {
-                      this.navigate(result.slug, "Internal", result.query);
-                    }}
+                    href={this.getHREF(result.slug, "Internal", result.query)}
                   >
                     <div
                       className={classNames("spectrum-Body5", styles.subHeader)}
                     >
-                      {result.pageType} > {result.name}
+                      {result.pageType} <span aria-hidden="true">&gt;</span> {result.name}
                     </div>
                     <div>{result.display_description}</div>
-                  </li>
+                  </a></li>
                 ))}
               </ul>
             </div>
@@ -433,38 +485,30 @@ class SiteSearch extends React.Component {
           )}
 
           {this.state.files.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">Downloads</h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_Downloads">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_Downloads">Downloads</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.files.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
+                  <li key={i} role="presentation"><a
+                    role="option"
+                    id={`${++searchIndex}_search`}
                     className={classNames(
                       "spectrum-Body4",
                       styles.listItem,
-                      this.getSelected(
-                        searchIndex,
-                        `/static/resources/Latest/${result.slug}`,
-                        "File"
-                      )
+                      this.getHighlighted(searchIndex)
                     )}
-                    onClick={() => {
-                      this.navigate(
-                        `/static/resources/Latest/${result.slug}`,
-                        "File"
-                      );
-                    }}
+                    target="_blank"
+                    href={this.getHREF(`/static/resources/Latest/${result.slug}`, "File")}
                   >
                     <div className={styles.file}>
                       <div className={styles.icon}>
-                        <img src="/static/icon_xd_small@2x.png" />
+                        <img src="/static/icon_xd_small@2x.png" alt="XD File" />
                       </div>
                       {result.slug}
                     </div>
-                  </li>
+                  </a></li>
                 ))}
               </ul>
             </div>
@@ -472,26 +516,25 @@ class SiteSearch extends React.Component {
             undefined
           )}
           {this.state.tutorials.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">Tutorials</h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_Tutorials">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_Tutorials">Tutorials</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.tutorials.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
+                  <li key={i} role="presentation"><a
+                    role="option"
+                    id={`${++searchIndex}_search`}
                     className={classNames(
                       "spectrum-Body4",
                       styles.listItem,
-                      this.getSelected(searchIndex, result.slug, "External")
+                      this.getHighlighted(searchIndex)
                     )}
-                    onClick={() => {
-                      this.navigate(result.slug, "External");
-                    }}
+                    target="_blank"
+                    onClick={this.getHREF(result.slug, "External")}
                   >
                     {result.name}
-                  </li>
+                  </a></li>
                 ))}
               </ul>
             </div>
@@ -499,33 +542,28 @@ class SiteSearch extends React.Component {
             undefined
           )}
           {this.state.contributions.length ? (
-            <div className={styles.resultContainer}>
-              <div className={styles.header}>
-                <h4 className="spectrum-Heading--subtitle3">Contributions</h4>
+            <div className={styles.resultContainer} role="group" aria-labelledby="results_Contributions">
+              <div className={styles.header} role="presentation">
+                <h4 className="spectrum-Heading--subtitle3" aria-hidden="true" id="results_Contributions">Contributions</h4>
               </div>
-              <ul className={styles.resultSet}>
+              <ul className={styles.resultSet} role="presentation">
                 {this.state.contributions.map((result, i) => (
-                  <li
-                    id={`${searchIndex++}_search`}
-                    key={i}
+                  <li key={i} role="presentation"><a
+                    role="option"
+                    id={`${++searchIndex}_search`}
                     className={classNames(
                       "spectrum-Body4",
                       styles.listItem,
-                      this.getSelected(
-                        searchIndex,
-                        `https://spectrum-contributions.corp.adobe.com/submissions/${result.slug}`,
-                        "External"
-                      )
+                      this.getHighlighted(searchIndex)
                     )}
-                    onClick={() => {
-                      this.navigate(
-                        `https://spectrum-contributions.corp.adobe.com/submissions/${result.slug}`,
-                        "External"
-                      );
-                    }}
+                    target="_blank"
+                    href={this.getHREF(
+                      `https://spectrum-contributions.corp.adobe.com/submissions/${result.slug}`,
+                      "External"
+                    )}
                   >
                     <div>{result.description}</div>
-                  </li>
+                  </a></li>
                 ))}
               </ul>
             </div>

@@ -1,20 +1,22 @@
+import '../../css/hljs.scss';
+
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { withRouter } from "next/router";
-import Highlight from 'react-highlight.js';
-import classNames from "classnames";
+
 import {Helmet} from "react-helmet";
+import Highlight from 'react-highlight.js';
 import Link from '@react/react-spectrum/Link';
 import Markdown from '../../components/Markdown';
+import PageHeader from '../../components/PageHeader';
+import ReactDOM from "react-dom";
 import ResourceCard from '../../components/ResourceCard';
+import Section from '../../components/Section';
 import Status from '../../components/Status';
 import StatusLight from '@react/react-spectrum/StatusLight';
-import Section from '../../components/Section';
 import SubHeader from '../../components/SubHeader';
-import PageHeader from '../../components/PageHeader';
-import styles from '../../components/css/page.scss';
+import classNames from "classnames";
 import compStyles from '../../components/css/componentPage.scss';
-import '../../css/hljs.scss';
+import styles from '../../components/css/page.scss';
+import { withRouter } from "next/router";
 
 async function loadData(id) {
   let data = await import(`../../data/yml/${id}.yml`);
@@ -96,9 +98,9 @@ class Page extends React.Component {
         <table className={compStyles.detailsTable}>
           <tbody>
             <tr>
-              <th className="spectrum-Body--secondary">Component status</th>{/*TODO: replace with react-spectrum typography components*/}
+              <th className="spectrum-Body--secondary">Component status</th>
               <td>
-                <Status status={componentStatus}/>
+                <Status style={{position: "relative", left: "-11px"}} status={componentStatus}/>
               </td>
             </tr>
             <tr>

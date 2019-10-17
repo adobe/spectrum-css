@@ -1,11 +1,10 @@
+import Markdown from './Markdown';
 import React from 'react';
+import ResponsiveImage from './ResponsiveImage';
 import Router from 'next/router';
-import styles from './css/doubleTextWithVisual.scss';
+import SubHeader from './SubHeader';
 import classNames from 'classnames';
-import  Markdown from './Markdown';
-import  SubHeader from './SubHeader';
-import  ResponsiveImage from './ResponsiveImage';
-
+import styles from './css/doubleTextWithVisual.scss';
 
 class DoubleTextWithVisual extends React.Component {
   constructor(props) {

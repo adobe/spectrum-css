@@ -1,6 +1,5 @@
-import styles from './css/resourceCard.scss';
 import classNames from 'classnames';
-
+import styles from './css/resourceCard.scss';
 
 class ResourceCard extends React.Component {
   constructor(props) {

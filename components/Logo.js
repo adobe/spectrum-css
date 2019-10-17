@@ -3,7 +3,6 @@ import classNames from "classnames";
 import styles from "./css/logo.scss";
 import { withRouter } from "next/router";
 
-
 class Logo extends React.Component {
   constructor(props) {
     super(props);

@@ -14,20 +14,39 @@
   @media screen and (min-width: 961px) {
     display: none;
   }
-
 }
 :local(.overlay) {
+  display: none;
+  visibility: hidden;
+
   background-color: var(--spectrum-alias-background-color-modal-overlay);
-  opacity: 0.5;
+  opacity: 0;
+
   position: fixed;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
-  &:local(.menuClosed) {
-    display:none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+
+    /* Exit animations */
+    transition: opacity var(--spectrum-global-animation-duration-200) ease-out 0ms,
+                visibility 0ms linear var(--spectrum-global-animation-duration-200);
+
+    &:local(.menuOpen) {
+      visibility: visible;
+
+      opacity: 1;
+
+      pointer-events: auto;
+
+      /* Entry animations */
+      transition: opacity var(--spectrum-global-animation-duration-200) ease-in 0ms;
+    }
   }
-  z-index:11;
 }
 :local(.sideBar) {
   z-index:12;
@@ -36,11 +55,21 @@
   top:0px;
   bottom:0px;
   width:248px;
+  transition: none;
+
   @media screen and (max-width: 960px) {
-    transform: translate3d(-248px, 0, 0);
-    transition: transform 100ms ease-in-out;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 100%;
+    z-index: 100;
+
+    transform: translateX(0);
+    transition: transform var(--spectrum-global-animation-duration-200) ease-in-out;
+
     &:local(.menuOpen) {
-      transform: translate3d(0, 0, 0);
+      transform: translateX(100%);
     }
   }
 }
@@ -75,7 +104,6 @@
 :local(.title) {
   display:flex;
   flex-direction: row;
-
 }
 :local(.headerLink) {
     text-decoration-line: none !important;
@@ -83,7 +111,6 @@
 
 :local(.titleText) {
   margin:0px !important;
-
 }
 :local(.internal) {
   font-size: 12px;
@@ -91,18 +118,3 @@
   color: #8E8E8E;
   font-weight: 600;
 }
-// :local(.logoLink) {
-//   text-decoration: none;
-//   display: flex;
-//   font-size: 20px;
-//   font-weight: bold;
-//   color: var(--spectrum-heading-3-text-color);
-// }
-// :local(.navigation) {
-//   padding:0px 24px;
-//   flex:1;
-//   flex-grow: 1;
-//   overflow: auto;
-//   overflow-x: hidden;
-//   overflow-y:auto;
-// }

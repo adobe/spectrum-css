@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './css/subHeader.scss';
-import classNames from 'classnames';
 import Rule from '@react/react-spectrum/Rule';
+import classNames from 'classnames';
+import styles from './css/subHeader.scss';
 
 class SectionHeader extends React.Component {
 

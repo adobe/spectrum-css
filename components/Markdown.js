@@ -1,9 +1,7 @@
-import classNames from 'classnames';
-import ReactMarkdown from 'react-markdown/with-html';
 import Link from '@react/react-spectrum/Link';
+import ReactMarkdown from 'react-markdown/with-html';
+import classNames from 'classnames';
 import styles from './css/markdown.scss';
-
-
 
 const link = props => {
   let buttonText = props.children[0].props.children

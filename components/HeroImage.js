@@ -1,6 +1,6 @@
-import styles from './css/heroImage.scss';
-import classNames from 'classnames';
 import ResponsiveImage from './ResponsiveImage';
+import classNames from 'classnames';
+import styles from './css/heroImage.scss';
 
 const HeroImage = (props) => (
 

@@ -1,5 +1,5 @@
-import styles from './css/pageHeader.scss';
 import classNames from 'classnames';
+import styles from './css/pageHeader.scss';
 
 const PageHeader = (props) => (
 

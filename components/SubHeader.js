@@ -1,10 +1,9 @@
+import Markdown from './Markdown';
 import React from 'react';
 import Router from 'next/router';
-import styles from './css/subHeader.scss';
-import classNames from 'classnames';
-import  Markdown from './Markdown';
 import Rule from '@react/react-spectrum/Rule';
-
+import classNames from 'classnames';
+import styles from './css/subHeader.scss';
 
 class SubHeader extends React.Component {
 

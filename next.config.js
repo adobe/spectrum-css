@@ -158,6 +158,7 @@ module.exports = withCSS({
       cssModules: true,
       cssLoaderOptions: {
         url: false,
+        ignoreOrder: false,
         localIdentName: "[local]___[hash:base64:5]"
       },
       postcssLoaderOptions: {},

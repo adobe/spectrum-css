@@ -1,12 +1,10 @@
+import Markdown from './Markdown';
 import React from 'react';
 import Router from 'next/router';
-import styles from './css/section.scss';
-import classNames from 'classnames';
-import  Markdown from './Markdown';
-import  SectionHeader from './SectionHeader';
 import Rule from '@react/react-spectrum/Rule';
-
-
+import SectionHeader from './SectionHeader';
+import classNames from 'classnames';
+import styles from './css/section.scss';
 
 class Section extends React.Component {
   getClassName = (type) => {
