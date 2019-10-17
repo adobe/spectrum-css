@@ -52,6 +52,7 @@ class Markup extends React.Component {
 
 class Variant extends React.Component {
   render() {
+    this.props.example.markup = this.props.example.markup.replace('src="img/', `src="${process.env.BACKEND_URL}/static/images/`)
     return (
       <article>
         <SubHeader title={this.props.example.name}>
@@ -114,12 +115,14 @@ class Page extends React.Component {
           </tbody>
         </table>
         <div className={compStyles.resourceCards}>
-          <ResourceCard
-            type="Spectrum"
-            url="#"
-            title="View guidelines"
-            subTitle="Spectrum"
-          />
+          { this.props.pageData.SpectrumSiteSlug ? (
+            <ResourceCard
+              type="Spectrum"
+              url={this.props.pageData.SpectrumSiteSlug}
+              title="View guidelines"
+              subTitle="Spectrum"
+            />
+          ) : undefined }
           <ResourceCard
             type="GitHub"
             url={`https://github.com/adobe/spectrum-css/tree/master/components/${this.props.pageData.packageSlug}`}

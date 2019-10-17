@@ -9,6 +9,11 @@ body {
   overflow: auto !important;
 }
 
+:global(.spectrum-Dropdown.react-spectrum-Dropdown-flexible) {
+  min-width: 0;
+  width: auto;
+}
+
 :global(.dummy-spacing) {
   height: var(--spectrum-global-dimension-size-2400);
 }

@@ -13,7 +13,7 @@ class ResourceCard extends React.Component {
     return (
 
 
-        <button aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0" onClick={props.clickEvent ? (e)=>{props.clickEvent()}:() => this.goToResource(props.url)} >
+        <a href={props.url} aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0">
         <div className={styles.card} tabIndex="-1">
           <div>
             {
@@ -45,7 +45,7 @@ class ResourceCard extends React.Component {
             </div>
           </div>
         </div>
-        </button>
+        </a>
 
     )
 

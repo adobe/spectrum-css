@@ -286,7 +286,6 @@ class SiteSearch extends React.Component {
           aria-autocomplete="list"
           aria-label="Search"
           placeholder="Search"
-          defaultValue=""
           value={this.state.searchVal}
           style={{ width: "100%" }}
           onChange={e => {
