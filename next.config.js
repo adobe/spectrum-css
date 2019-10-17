@@ -197,7 +197,8 @@ module.exports = withCSS({
         'process.env.THEME_LIGHTEST': 'true',
         'process.env.THEME_DARK': 'true',
         'process.env.THEME_DARKEST': 'true'
-      })
+      }),
+      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     );
     return config;
   },
