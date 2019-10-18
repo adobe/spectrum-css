@@ -232,3 +232,5 @@ npm run release-bundles
 ```
 
 Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.
+
+📌 Thanks to all Contributors.
