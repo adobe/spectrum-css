@@ -74,6 +74,8 @@ class Sidebar extends React.Component {
   };
 
   render() {
+    let sidebarWidth = '208px';
+
     return (
       <>
         <div
@@ -107,7 +109,7 @@ class Sidebar extends React.Component {
             <div className={styles.navigation}>
               <SideNav
                 defaultValue={this.props.router.query.id}
-                style={{ width: "200px", marginBottom: 80 }}
+                style={{ width: sidebarWidth, marginBottom: 80 }}
                 variant="multiLevel"
               >
                 {menuData.menu[0].children.map((item, i) => {
@@ -117,7 +119,7 @@ class Sidebar extends React.Component {
                         value={item.url}
                         label={item.title}
                         key={i}
-                        style={{ width: "200px" }}
+                        style={{ width: sidebarWidth }}
                         ref={
                           item.url === this.props.router.query.id
                             ? this.selectedItem
@@ -146,7 +148,7 @@ class Sidebar extends React.Component {
                         label={item.title}
                         key={i}
                         defaultExpanded={item.defaultExpanded}
-                        style={{ width: "200px" }}
+                        style={{ width: sidebarWidth }}
                       >
                         {item.children &&
                           item.children.map((childItem, childI) => {
@@ -155,7 +157,7 @@ class Sidebar extends React.Component {
                                 value={childItem.url}
                                 label={childItem.title}
                                 key={childI}
-                                style={{ width: "200px" }}
+                                style={{ width: sidebarWidth }}
                                 ref={
                                   childItem.url === this.props.router.query.id
                                     ? this.selectedItem
@@ -184,12 +186,12 @@ class Sidebar extends React.Component {
                   }
                 })}
               </SideNav>
-              <SideNav style={{ width: "200px", marginBottom: "40px" }}>
+              <SideNav style={{ width: sidebarWidth, marginBottom: "40px" }}>
                 <SideNavItem
                   value="Spectrum"
                   target="_blank"
                   href="https://spectrum.adobe.com/"
-                  style={{ width: "200px" }}
+                  style={{ width: sidebarWidth }}
                 >
                   Spectrum
                 </SideNavItem>
