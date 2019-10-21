@@ -35,7 +35,8 @@ class Sidebar extends React.Component {
     };
   }
   componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions.bind(this));
+    const scaleMQL = window.matchMedia('(max-width: 960px)');
+    scaleMQL.addListener(this.updateDimensions.bind(this));
   }
   componentWillReceiveProps(nextProps) {
     const selected = menuData.key.find(item => {
@@ -55,7 +56,7 @@ class Sidebar extends React.Component {
     }
   }
   updateDimensions(e) {
-    if(this.state.menuOpen && window.innerWidth >= 960) {
+    if(!e.currentTarget.matches) {
       this.closeMenu();
     }
   }

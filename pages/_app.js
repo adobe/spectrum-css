@@ -52,16 +52,19 @@ class MyApp extends App {
   componentDidMount() {
     this.updateDimensions();
     this.updateTheme();
-    window.addEventListener("resize", this.updateDimensions.bind(this));
+    const scaleMQL = window.matchMedia('(max-width: 768px)');
+    scaleMQL.addListener(this.updateDimensions);
   }
 
-  updateDimensions = () => {
-    this.setState((state, props) => {
-      this.scaleSelector.current.state.value = window.innerWidth < 768 ? 'large' : 'medium';
-      return {
-        scale: window.innerWidth < 768 ? 'large' : 'medium'
-      }
-    });
+  updateDimensions = (e) => {
+    if (e) {
+      this.setState((state, props) => {
+        this.scaleSelector.current.state.value = e.currentTarget.matches ? 'large' : 'medium';
+        return {
+          scale: e.currentTarget.matches ? 'large' : 'medium'
+        }
+      });
+    }
   }
   updateTheme = (e = 'light') => {
     this.setState((state, props) => {
