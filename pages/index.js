@@ -56,7 +56,7 @@ const Home = () => (
         <div>
           <SubHeader title="Robust documentation"/>
           <p className="spectrum-Body3">Spectrum CSS is designed to be used in partnership with Spectrum’s detailed usage guidelines.</p>
-          <p className="spectrum-Body3"><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
+          <p className="spectrum-Body3"><Link href="https://spectrum.adobe.com/">View Spectrum guidelines</Link></p>
         </div>
       </div>
       <div className={classNames("afg-col-xs-12", "afg-col-sm-6", styles.homecard)}>
@@ -81,7 +81,7 @@ const Home = () => (
         <div>
           <SubHeader title="Multi-platform support"/>
           <p className="spectrum-Body3">We support evergreen browsers (minus one version) and IE 11 for scalability and flexibility.</p>
-          <p className="spectrum-Body3"><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
+          <p className="spectrum-Body3"><Link href="https://spectrum.adobe.com/">View Spectrum guidelines</Link></p>
         </div>
       </div>
     </div>
