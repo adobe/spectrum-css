@@ -28631,7 +28631,7 @@ var Home = function Home() {
     },
     __self: this
   }), __jsx("p", {
-    className: "spectrum-Body2",
+    className: classnames__WEBPACK_IMPORTED_MODULE_9___default()("spectrum-Body2", _css_homepage_scss__WEBPACK_IMPORTED_MODULE_8___default.a.description),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19

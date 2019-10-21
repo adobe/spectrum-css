@@ -30,7 +30,7 @@ module.exports = {"Standard":"Standard___2Afwl","Illustration":"Illustration___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964003");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691247996");
           });
       }
     }
@@ -68,7 +68,7 @@ module.exports = {"heroContainer":"heroContainer___2bZ_C","Standard":"Standard__
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964035");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248017");
           });
       }
     }
@@ -106,7 +106,7 @@ module.exports = {"table":"table___1eH1D","list":"list___hsw97"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964144");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248185");
           });
       }
     }
@@ -144,7 +144,7 @@ module.exports = {"pageHeading":"pageHeading___26RtH","headerRow":"headerRow___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964011");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691247987");
           });
       }
     }
@@ -182,7 +182,7 @@ module.exports = {"width":"width___3VV6B","responsiveImage":"responsiveImage___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964156");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248197");
           });
       }
     }
@@ -220,7 +220,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964025");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248007");
           });
       }
     }
@@ -236,7 +236,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"homecard":"homecard___1k3T0"};;
+module.exports = {"homecard":"homecard___1k3T0","description":"description___4pWrJ"};;
     if (true) {
       var injectCss = function injectCss(prev, href) {
         var link = prev.cloneNode();
@@ -258,7 +258,7 @@ module.exports = {"homecard":"homecard___1k3T0"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689963821");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691247827");
           });
       }
     }
@@ -295,7 +295,7 @@ module.exports = {"homecard":"homecard___1k3T0"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964181");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248156");
           });
       }
     }
@@ -332,7 +332,7 @@ module.exports = {"homecard":"homecard___1k3T0"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964168");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248143");
           });
       }
     }
@@ -369,7 +369,7 @@ module.exports = {"homecard":"homecard___1k3T0"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964198");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248166");
           });
       }
     }
@@ -406,7 +406,7 @@ module.exports = {"homecard":"homecard___1k3T0"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964212");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248205");
           });
       }
     }
@@ -443,7 +443,7 @@ module.exports = {"homecard":"homecard___1k3T0"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964188");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248151");
           });
       }
     }
@@ -480,7 +480,7 @@ module.exports = {"homecard":"homecard___1k3T0"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571689964206");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571691248175");
           });
       }
     }
@@ -489,4 +489,4 @@ module.exports = {"homecard":"homecard___1k3T0"};;
 /***/ })
 
 })
-//# sourceMappingURL=styles.9ff50a4c68a9230c8509.hot-update.js.map
+//# sourceMappingURL=styles.36d3cbbecef8923de942.hot-update.js.map

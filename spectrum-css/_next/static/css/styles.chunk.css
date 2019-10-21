@@ -14946,9 +14946,13 @@ p.spectrum-Body3 {
 
 .homecard___1k3T0 {
   display: inline-flex;
-  margin-bottom: var(--spectrum-global-dimension-size-350); }
+  margin-bottom: var(--spectrum-global-dimension-size-350);
+  padding: 0 var(--spectrum-global-dimension-size-250); }
   .homecard___1k3T0 img {
     margin-right: var(--spectrum-global-dimension-size-250); }
+
+.description___4pWrJ {
+  margin-bottom: var(--spectrum-global-dimension-size-800); }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

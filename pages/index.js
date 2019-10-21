@@ -16,7 +16,7 @@ const Home = () => (
       <title>Spectrum CSS</title>
     </Helmet>
     <PageHeader title="Meet Spectrum CSS"/>
-    <p className="spectrum-Body2">Spectrum CSS is an open-source implementation of Spectrum, Adobe’s design system. It includes components and resources to make applications more cohesive.</p>
+    <p className={classNames("spectrum-Body2", styles.description)}>Spectrum CSS is an open-source implementation of Spectrum, Adobe’s design system. It includes components and resources to make applications more cohesive.</p>
     <HeroImage
       desktop={{
         description: "Spectrum CSS Hero image",

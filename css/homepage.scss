@@ -1,7 +1,11 @@
 :local(.homecard) {
   display: inline-flex;
   margin-bottom: var(--spectrum-global-dimension-size-350);
+  padding: 0 var(--spectrum-global-dimension-size-250);
   img {
     margin-right: var(--spectrum-global-dimension-size-250);
   }
+}
+:local(.description) {
+  margin-bottom: var(--spectrum-global-dimension-size-800);
 }
