@@ -37,6 +37,7 @@ class Sidebar extends React.Component {
   componentDidMount() {
     const scaleMQL = window.matchMedia('(max-width: 960px)');
     scaleMQL.addListener(this.updateDimensions.bind(this));
+    Router.events.on('routeChangeComplete', this.closeMenu.bind(this))
   }
   componentWillReceiveProps(nextProps) {
     const selected = menuData.key.find(item => {

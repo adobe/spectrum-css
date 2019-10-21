@@ -225,6 +225,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       var scaleMQL = window.matchMedia('(max-width: 960px)');
       scaleMQL.addListener(this.updateDimensions.bind(this));
+      next_router__WEBPACK_IMPORTED_MODULE_11___default.a.events.on('routeChangeComplete', this.closeMenu.bind(this));
     }
   }, {
     key: "componentWillReceiveProps",
@@ -276,6 +277,7 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
+      var sidebarWidth = '208px';
       return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.overlay, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         onClick: function onClick() {
@@ -283,14 +285,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 83
         },
         __self: this
       }), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.appHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 90
         },
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -298,7 +300,7 @@ function (_React$Component) {
         icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_12___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90
+            lineNumber: 93
           },
           __self: this
         }),
@@ -308,60 +310,60 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 91
         },
         __self: this
       })), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 98
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 104
         },
         __self: this
       }, __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 105
         },
         __self: this
       }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 106
         },
         __self: this
       }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_13__["default"], {
         ref: this.search,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 108
         },
         __self: this
       })), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 111
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNav"], {
         defaultValue: this.props.router.query.id,
         style: {
-          width: "200px",
+          width: sidebarWidth,
           marginBottom: 80
         },
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 112
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_16__.menu[0].children.map(function (item, i) {
@@ -371,7 +373,7 @@ function (_React$Component) {
             label: item.title,
             key: i,
             style: {
-              width: "200px"
+              width: sidebarWidth
             },
             ref: item.url === _this2.props.router.query.id ? _this2.selectedItem : undefined,
             renderLink: function renderLink(props) {
@@ -384,7 +386,7 @@ function (_React$Component) {
                 }, createLinkProps(item), {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 131
+                    lineNumber: 134
                   },
                   __self: this
                 }), item.title);
@@ -392,13 +394,13 @@ function (_React$Component) {
                 return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 135
+                    lineNumber: 138
                   },
                   __self: this
                 }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 136
+                    lineNumber: 139
                   },
                   __self: this
                 }), item.title));
@@ -406,7 +408,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 117
+              lineNumber: 120
             },
             __self: this
           });
@@ -417,11 +419,11 @@ function (_React$Component) {
             key: i,
             defaultExpanded: item.defaultExpanded,
             style: {
-              width: "200px"
+              width: sidebarWidth
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 145
+              lineNumber: 148
             },
             __self: this
           }, item.children && item.children.map(function (childItem, childI) {
@@ -430,7 +432,7 @@ function (_React$Component) {
               label: childItem.title,
               key: childI,
               style: {
-                width: "200px"
+                width: sidebarWidth
               },
               ref: childItem.url === _this2.props.router.query.id ? _this2.selectedItem : undefined,
               renderLink: function renderLink(props) {
@@ -442,7 +444,7 @@ function (_React$Component) {
                   }, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 169
+                      lineNumber: 172
                     },
                     __self: this
                   }), childItem.title);
@@ -450,13 +452,13 @@ function (_React$Component) {
                   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 173
+                      lineNumber: 176
                     },
                     __self: this
                   }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 174
+                      lineNumber: 177
                     },
                     __self: this
                   }), childItem.title));
@@ -464,7 +466,7 @@ function (_React$Component) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 155
+                lineNumber: 158
               },
               __self: this
             });
@@ -472,12 +474,12 @@ function (_React$Component) {
         }
       })), __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNav"], {
         style: {
-          width: "200px",
+          width: sidebarWidth,
           marginBottom: "40px"
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 190
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
@@ -485,11 +487,11 @@ function (_React$Component) {
         target: "_blank",
         href: "https://spectrum.adobe.com/",
         style: {
-          width: "200px"
+          width: sidebarWidth
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 191
         },
         __self: this
       }, "Spectrum"))))));
