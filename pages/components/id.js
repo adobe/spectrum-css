@@ -101,16 +101,16 @@ class Page extends React.Component {
             <tr>
               <th className="spectrum-Body--secondary">Component status</th>
               <td>
-                <Status style={{position: "relative", left: "-11px"}} status={componentStatus}/>
+                <Status className={compStyles.compStatus} status={componentStatus}/>
               </td>
             </tr>
             <tr>
               <th className="spectrum-Body--secondary">Last released</th>
-              <td>October 8, 2019</td>
+              <td className="spectrum-Body4">October 8, 2019</td>
             </tr>
             <tr>
               <th className="spectrum-Body--secondary">Current version</th>
-              <td>{this.props.pageData.packageName}@{this.props.pageData.packageVersion}</td>
+              <td className="spectrum-Body4">{this.props.pageData.packageName}@{this.props.pageData.packageVersion}</td>
             </tr>
           </tbody>
         </table>
