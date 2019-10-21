@@ -2,7 +2,40 @@ id: avatar-small
 name: Avatar
 status: Verified
 examples:
-  - name: Standard
-    markup: |
+  - id: avatar-small
+    name: Standard
+    markup: >
       <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-      <img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg" alt="Disabled Avatar">
+
+      <img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg"
+      alt="Disabled Avatar">
+packageSlug: avatar
+indexCSS: |
+  .spectrum-Avatar {
+    width: var(--spectrum-avatar-small-width, var(--spectrum-global-dimension-size-200));
+    height: var(--spectrum-avatar-small-height, var(--spectrum-global-dimension-size-200));
+
+    border-radius: var(--spectrum-avatar-small-border-radius, 50%);
+    border-style: none;
+
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  .spectrum-Avatar {
+    opacity: NaN;
+  }
+
+  .spectrum-Avatar.is-disabled {
+      opacity: NaN;
+    }
+devDependencies:
+  '@spectrum-css/component-builder': ^1.0.0
+  '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/avatar'
+peerCSS: ''

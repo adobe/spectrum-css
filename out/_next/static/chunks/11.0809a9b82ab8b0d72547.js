@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{pzik:function(a,s){const t=[{id:"avatar",name:"Avatar",status:"Verified",markup:'<img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">\n<img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg" alt="Disabled Avatar">\n'}];a.exports=t.length<=1?t[0]:t}}]);

@@ -1,4 +1,3 @@
-import Header from './Header'
 import {Helmet} from "react-helmet";
 import Provider from '@react/react-spectrum/Provider';
 

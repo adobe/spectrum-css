@@ -1,0 +1,19 @@
+name: Deploy Docs
+on:
+  release:
+    types: [published, unpublished, created, deleted]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        latesttag=$(git describe --abbrev=0 --tags)
+        echo checking out ${latesttag}
+        git checkout ${latesttag}

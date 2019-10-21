@@ -1,22 +1,39 @@
 name: Status Light
+SpectrumSiteSlug: 'https://spectrum.adobe.com/page/status-light/'
 examples:
   - id: statuslight
     name: Colors
     status: Verified
-    markup: |-
-      <div class="spectrum-StatusLight spectrum-StatusLight--celery">Celery Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--yellow">Yellow Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--fuchsia">Fuchsia Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--indigo">Indigo Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--seafoam">Seafoam Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--chartreuse">Chartreuse Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--magenta">Magenta Status</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--purple">Purple Status</div>
+    markup: >-
+      <div class="spectrum-StatusLight spectrum-StatusLight--celery">Celery
+      Status</div>
+
+      <div class="spectrum-StatusLight spectrum-StatusLight--yellow">Yellow
+      Status</div>
+
+      <div class="spectrum-StatusLight spectrum-StatusLight--fuchsia">Fuchsia
+      Status</div>
+
+      <div class="spectrum-StatusLight spectrum-StatusLight--indigo">Indigo
+      Status</div>
+
+      <div class="spectrum-StatusLight spectrum-StatusLight--seafoam">Seafoam
+      Status</div>
+
+      <div class="spectrum-StatusLight
+      spectrum-StatusLight--chartreuse">Chartreuse Status</div>
+
+      <div class="spectrum-StatusLight spectrum-StatusLight--magenta">Magenta
+      Status</div>
+
+      <div class="spectrum-StatusLight spectrum-StatusLight--purple">Purple
+      Status</div>
   - id: statuslight-neutral
     name: Neutral
     status: Verified
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
+    markup: >
+      <div class="spectrum-StatusLight
+      spectrum-StatusLight--neutral">Paused</div>
   - id: statuslight-info
     name: Info
     status: Verified
@@ -25,18 +42,21 @@ examples:
   - id: statuslight-positive
     name: Positive
     status: Verified
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
+    markup: >
+      <div class="spectrum-StatusLight
+      spectrum-StatusLight--positive">Approved</div>
   - id: statuslight-notice
     name: Notice
     status: Verified
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
+    markup: >
+      <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs
+      Approval</div>
   - id: statuslight-negative
     name: Negative
     status: Verified
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
+    markup: >
+      <div class="spectrum-StatusLight
+      spectrum-StatusLight--negative">Rejected</div>
   - id: statuslight
     name: Disabled
     status: Verified
@@ -48,5 +68,134 @@ examples:
     status: Deprecated
     details: Use the `info` variant instead
     description: The active variant of Status Light
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
+    markup: >
+      <div class="spectrum-StatusLight
+      spectrum-StatusLight--active">Active</div>
+packageSlug: statuslight
+indexCSS: >
+  .spectrum-StatusLight {
+    min-height: var(--spectrum-statuslight-height, var(--spectrum-alias-single-line-height));
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: start;
+        align-items: flex-start;
+
+    padding: var(--spectrum-global-dimension-size-75) 0px;
+    box-sizing: border-box;
+
+    font-size: var(--spectrum-statuslight-text-size, var(--spectrum-alias-font-size-default));
+    font-weight: var(--spectrum-statuslight-text-font-weight, var(--spectrum-alias-body-text-font-weight));
+  }
+
+
+  .spectrum-StatusLight::before {
+      content: '';
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      display: inline-block;
+      width: var(--spectrum-statuslight-dot-size, var(--spectrum-global-dimension-size-100));
+      height: var(--spectrum-statuslight-dot-size, var(--spectrum-global-dimension-size-100));
+      border-radius: 50%;
+      margin: var(--spectrum-global-dimension-size-75) var(--spectrum-statuslight-text-gap, var(--spectrum-global-dimension-size-150));
+    }
+
+  .spectrum-StatusLight--neutral {
+    font-style: italic;
+  }
+
+
+  .spectrum-StatusLight {
+    color: var(--spectrum-statuslight-text-color, var(--spectrum-alias-text-color));
+  }
+
+
+  .spectrum-StatusLight[disabled],
+    .spectrum-StatusLight.is-disabled {
+      color: var(--spectrum-statuslight-text-color-disabled, var(--spectrum-alias-text-color-disabled));
+    }
+
+  .spectrum-StatusLight[disabled]::before,
+  .spectrum-StatusLight.is-disabled::before {
+        background-color: var(--spectrum-statuslight-dot-color-disabled, var(--spectrum-global-color-gray-400));
+      }
+
+  .spectrum-StatusLight--negative::before {
+    background-color: var(--spectrum-statuslight-negative-dot-color, var(--spectrum-semantic-negative-color-status));
+  }
+
+
+  .spectrum-StatusLight--notice::before {
+    background-color: var(--spectrum-statuslight-notice-dot-color, var(--spectrum-semantic-notice-color-status));
+  }
+
+
+  .spectrum-StatusLight--positive::before {
+    background-color: var(--spectrum-statuslight-positive-dot-color, var(--spectrum-semantic-positive-color-status));
+  }
+
+
+  .spectrum-StatusLight--info::before,
+
+  /** @depreacted */.spectrum-StatusLight--active::before {
+    background-color: var(--spectrum-statuslight-info-dot-color, var(--spectrum-semantic-informative-color-status));
+  }
+
+
+  .spectrum-StatusLight--neutral {
+    color: var(--spectrum-statuslight-neutral-text-color, var(--spectrum-global-color-gray-700));
+  }
+
+
+  .spectrum-StatusLight--neutral::before {
+      background-color: var(--spectrum-statuslight-neutral-dot-color, var(--spectrum-global-color-gray-500));
+    }
+
+  .spectrum-StatusLight--celery::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-celery, var(--spectrum-global-color-celery-400));
+  }
+
+
+  .spectrum-StatusLight--yellow::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-yellow, var(--spectrum-global-color-yellow-400));
+  }
+
+
+  .spectrum-StatusLight--fuchsia::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-fuchsia, var(--spectrum-global-color-fuchsia-400));
+  }
+
+
+  .spectrum-StatusLight--indigo::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-indigo, var(--spectrum-global-color-indigo-400));
+  }
+
+
+  .spectrum-StatusLight--seafoam::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-seafoam, var(--spectrum-global-color-seafoam-400));
+  }
+
+
+  .spectrum-StatusLight--chartreuse::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-chartreuse, var(--spectrum-global-color-chartreuse-400));
+  }
+
+
+  .spectrum-StatusLight--magenta::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-magenta, var(--spectrum-global-color-magenta-400));
+  }
+
+
+  .spectrum-StatusLight--purple::before {
+    background-color: var(--spectrum-statuslight-dot-color-label-purple, var(--spectrum-global-color-purple-400));
+  }
+devDependencies:
+  '@spectrum-css/component-builder': ^1.0.0
+  '@spectrum-css/vars': ^2.0.0
+  gulp: ^4.0.0
+packageVersion: 2.0.0
+packageName: '@spectrum-css/statuslight'
+peerCSS: ''

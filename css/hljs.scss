@@ -1,0 +1,88 @@
+:global(.spectrum) {
+  --hljs-color: var(--spectrum-global-color-gray-800, #383a42);
+  --hljs-background: var(--spectrum-global-color-gray-75, #fafafa);
+  --hljs-keyword-color: var(--spectrum-global-color-fuchsia-600, #a626a4);
+  --hljs-section-color: var(--spectrum-global-color-red-600, #e45649);
+  --hljs-literal-color: var(--spectrum-global-color-blue-600, #0184bb);
+  --hljs-attribute-color: var(--spectrum-global-color-celery-600, #50a14f);
+  --hljs-class-color: var(--spectrum-global-color-yellow-600, #c18401);
+  --hljs-variable-color: var(--spectrum-global-color-orange-600, #986801);
+  --hljs-title-color: var(--spectrum-global-color-indigo-600, #4078f2);
+}
+
+:global(.hljs) {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: var(--hljs-color, #383a42);
+  background: var(--hljs-background, #fafafa);
+}
+
+:global(.hljs-comment),
+:global(.hljs-quote) {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+:global(.hljs-doctag),
+:global(.hljs-formula),
+:global(.hljs-keyword) {
+  color: var(--hljs-keyword-color, #a626a4);
+}
+
+:global(.hljs-deletion),
+:global(.hljs-name),
+:global(.hljs-section),
+:global(.hljs-selector-tag),
+:global(.hljs-subst) {
+  color: var(--hljs-section-color, #e45649);
+}
+
+:global(.hljs-literal) {
+  color: var(--hljs-literal-color, #0184bb);
+}
+
+:global(.hljs-addition),
+:global(.hljs-attribute),
+:global(.hljs-meta-string),
+:global(.hljs-regexp),
+:global(.hljs-string) {
+  color: var(--hljs-attribute-color, #50a14f);
+}
+
+:global(.hljs-built_in),
+:global(.hljs-class) :global(.hljs-title) {
+  color: var(--hljs-class-color, #c18401);
+}
+
+:global(.hljs-attr),
+:global(.hljs-number),
+:global(.hljs-selector-attr),
+:global(.hljs-selector-class),
+:global(.hljs-selector-pseudo),
+:global(.hljs-template-variable),
+:global(.hljs-type),
+:global(.hljs-variable) {
+  color: var(--hljs-variable-color, #986801);
+}
+
+:global(.hljs-bullet),
+:global(.hljs-link),
+:global(.hljs-meta),
+:global(.hljs-selector-id),
+:global(.hljs-symbol),
+:global(.hljs-title) {
+  color: var(--hljs-title-color, #4078f2);
+}
+
+:global(.hljs-emphasis) {
+  font-style: italic;
+}
+
+:global(.hljs-strong) {
+  font-weight: bold;
+}
+
+:global(.hljs-link) {
+  text-decoration: underline;
+}

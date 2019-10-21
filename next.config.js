@@ -1,19 +1,102 @@
-const path = require('path')
-const fs = require('fs')
-const util = require("util")
+const path = require('path');
+const fs = require('fs');
+const util = require("util");
 const readdir = util.promisify(fs.readdir);
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 const withCSS = require('@zeit/next-css');
 const cssLoaderConfig = require('@zeit/next-css/css-loader-config');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const yaml = require('js-yaml');
+const glob = require('glob');
+const lunr = require('lunr');
+const resolve = require('resolve');
+const npmPackage = util.promisify(require('npm-package-info'));
+
+// Using git checkout origin/master -- `git ls-tree origin/master -r --name-only | grep ".yml"`
+// Using git checkout adobe/master -- `git ls-tree adobe/master -r --name-only | grep ".yml"`
+// Get all the yml files from master
+function gatherYML() {
+  glob("components/**/*.yml", {}, (er, files) => {
+    files.forEach((file) => {
+      const filename = path.basename(file);
+      const componentYaml = fs.readFileSync(file, {
+        encoding: 'utf8'
+      });
+      const componentData = yaml.safeLoad(componentYaml);
+      componentData.packageSlug = path.basename(path.dirname(path.dirname(file)));
+      componentData.indexCSS = fs.readFileSync(resolve.sync(`@adobe/spectrum-css/dist/components/${componentData.packageSlug}/index-vars.css`), {
+        encoding: 'utf8'
+      });
+      const packageJson = require(`@adobe/spectrum-css/dist/components/${componentData.packageSlug}/package.json`)
+      componentData.devDependencies = packageJson.devDependencies || {};
+      componentData.packageVersion = packageJson.version;
+      componentData.packageName = packageJson.name;
+      // npmPackage(componentData.packageName, function(err, pkg) {
+      //   console.log(pkg.time[pkg['dist-tags'].latest])
+      //   // console.log(pkg.versions[pkg['dist-tags'].latest]);
+      // })
+      componentData.peerCSS = '';
+      Object.keys(componentData.devDependencies).forEach((dep) => {
+        const scope = dep.split("/")[0]
+        const result = dep.split("/")[1];
+        if(scope === '@spectrum-css' && result && result !== 'vars' && result !== 'component-builder') {
+          componentData.peerCSS += fs.readFileSync(resolve.sync(`@adobe/spectrum-css/dist/components/${result}/index-vars.css`), {
+            encoding: 'utf8'
+          });
+        }
+      });
+      fs.writeFileSync(file, yaml.safeDump(componentData));
+      fs.renameSync(file,path.join('data','yml',filename))
+      try {
+        fs.rmdirSync(path.dirname(file));
+        fs.rmdirSync(path.dirname(path.dirname(file)));
+      }
+      catch(err) {
+        // ignore not empty file
+      }
+    })
+  });
+}
+
+function generateSearchIndex() {
+  glob('data/yml/**/*.yml', {}, (er, files) => {
+    const metaDataDocs = [];
+    const store = {};
+    files.forEach(file => {
+      let componentData = yaml.safeLoad(String(fs.readFileSync(file, {encoding: 'utf8'})));
+      let fileName = `${path.basename(file, '.yml')}`;
+      metaDataDocs.push({
+        href: fileName,
+        name: componentData.name,
+        description: componentData.description
+      });
+
+      store[fileName] = {
+        href: fileName,
+        name: componentData.name,
+        component: fileName,
+        description: componentData.description,
+        slug: fileName,
+        type: 'page',
+        pageType: 'Component'
+      };
+    });
+
+    const index = lunr(function() {
+      this.ref('href');
+      this.field('name', { boost: 10 });
+      this.field('description');
+      metaDataDocs.forEach(doc => this.add(doc), this);
+    });
+
+    fs.writeFileSync('data/search_index.json', JSON.stringify(index));
+    fs.writeFileSync('data/search_store.json', JSON.stringify(store));
+  });
+}
+
 //const nodeExternals = require('webpack-node-externals');
-
-const pathPrefix = process.env.NODE_ENV === 'production'
-  ? '/spectrum-css'
-  : '';
-
 if (typeof require !== "undefined") {
   require.extensions[".css"] = (file) => {};
 }
@@ -21,21 +104,43 @@ console.log(process.env.NODE_ENV);
 console.log(process.env.BUILD);
 module.exports = withCSS({
   env: {
-    build: process.env.BUILD
+    build: process.env.BUILD,
+    adobeLaunchEnv: process.env.ADOBE_LAUNCH_ENV
   },
   exportTrailingSlash: true,
   pageExtensions: ['js', 'jsx'],
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/spectrum-css/' : '',
   webpack(config, options) {
     const { dev, isServer } = options;
     // Next.js externalizes all code in node_modules. Override to include
     // react-spectrum
 
     if(process.env.NODE_ENV === 'production') {
-      config.externals = [ '@react', '@spectrum', '@adcloud'];
+      config.externals = [ '@react', '@spectrum', '@adobe' , '@adcloud'];
     }
 
     const originalEntry = config.entry;
+
+    // copying Spectrum CSS SVG sprite to public/static/images/svg
+    // and copying loadicons script to public/static/javascript/loadicons
+    // so the Spectrum UI icons can be used with NextJS
+    config.plugins.push(
+      new CopyWebpackPlugin([
+        {
+          from: path.join(__dirname, 'node_modules/@adobe/spectrum-css/dist/icons/spectrum-css-icons.svg'),
+          to: path.join(__dirname, 'public/static/images/svg/')
+        },
+        {
+          from: path.join(__dirname, 'node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg'),
+          to: path.join(__dirname, 'public/static/images/svg/')
+        },
+        {
+          from: path.join(__dirname, 'node_modules/loadicons/index.js'),
+          to: path.join(__dirname, 'public/static/javascript/loadicons/')
+        }
+      ])
+    );
+
     config.entry = async () => {
       const entries = await originalEntry();
       if (entries['main.js'] && !entries['main.js'].includes('./polyfills.js')) {
@@ -53,6 +158,7 @@ module.exports = withCSS({
       cssModules: true,
       cssLoaderOptions: {
         url: false,
+        ignoreOrder: false,
         localIdentName: "[local]___[hash:base64:5]"
       },
       postcssLoaderOptions: {},
@@ -65,7 +171,6 @@ module.exports = withCSS({
         }
       ]
     });
-
     config.module.rules.push(
       {
         test: /\.scss$/,
@@ -89,19 +194,24 @@ module.exports = withCSS({
         'process.env.SCALE_MEDIUM': 'true',
         'process.env.SCALE_LARGE': 'true',
         'process.env.THEME_LIGHT': 'true',
-        'process.env.THEME_LIGHTEST': 'false',
-        'process.env.THEME_DARK': 'false',
-        'process.env.THEME_DARKEST': 'false'
-      })
+        'process.env.THEME_LIGHTEST': 'true',
+        'process.env.THEME_DARK': 'true',
+        'process.env.THEME_DARKEST': 'true'
+      }),
+      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     );
     return config;
   },
   exportPathMap: async function() {
     const paths = {
-      '${pathPrefix}/': {
+      '/': {
         page: '/'
+      },
+      '/get-started': {
+        page: '/get-started'
       }
-    };
+    }
+    gatherYML();
     const components = await readdir('data/yml')
     const menuJSON = await readFile('data/menu.json', {
       encoding: 'utf8'
@@ -113,8 +223,8 @@ module.exports = withCSS({
       });
       const componentData = yaml.safeLoad(componentYaml);
       const slug = path.basename(component, '.yml');
-      paths[`${pathPrefix}/components/${slug}/`] = {
-        page: '/components/[id]',
+      paths[`/components/${slug}`] = {
+        page: `/components/id`,
         query: {
           id: slug
         }
@@ -125,10 +235,12 @@ module.exports = withCSS({
         "linkType": "Internal",
         "parent": "top-level-menu-item,WebsiteMenu,Components"
       };
-      menu.menu[0].children[0].children.push(menuComponentData);
+      menu.menu[0].children[2].children.push(menuComponentData); // TODO: this is brittle
       menu.key.push(menuComponentData);
     })
     await writeFile('data/newmenu.json', JSON.stringify(menu));
+
+    generateSearchIndex();
     return paths;
   }
 })
