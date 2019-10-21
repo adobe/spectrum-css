@@ -18,7 +18,8 @@
     margin-bottom: 16px;
   }
 
-  img {
+  img, svg {
+    width: 64px;
     height: 64px;
   }
 
@@ -74,5 +75,24 @@
   &:focus > div {
     box-shadow: 0 0 0 2px rgb(38, 128, 235);
     outline: none;
+  }
+}
+
+:local(.npmImage) {
+  background: rgba(203, 56, 55, 0.1);
+}
+
+:local(.githubImage) {
+  background-color: var(--spectrum-global-color-gray-200);
+  fill: black;
+}
+:local(.spectrumImage) {
+  background-color: var(--spectrum-global-color-gray-100);
+}
+:global(.spectrum--dark),
+:global(.spectrum--darkest) {
+  :local(.githubImage) {
+    background-color: rgba(245, 245, 245, 0.1);
+    fill: rgb(245, 245, 245);
   }
 }
