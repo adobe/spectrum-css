@@ -163,10 +163,9 @@ class Sidebar extends React.Component {
                                 }
                                 renderLink={props => {
                                   delete props.href;
-                                  props.target = "_blanks";
                                   if(childItem.linkType === "External") {
                                     return (
-                                      <a {...createLinkProps(childItem)}>{childItem.title}</a>
+                                      <a target="_blanks" {...createLinkProps(childItem)}>{childItem.title}</a>
                                     );
                                   } else {
                                     return (

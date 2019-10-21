@@ -434,13 +434,14 @@ function (_React$Component) {
               ref: childItem.url === _this2.props.router.query.id ? _this2.selectedItem : undefined,
               renderLink: function renderLink(props) {
                 delete props.href;
-                props.target = "_blanks";
 
                 if (childItem.linkType === "External") {
-                  return __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
+                  return __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+                    target: "_blanks"
+                  }, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 169
+                      lineNumber: 168
                     },
                     __self: this
                   }), childItem.title);
@@ -448,13 +449,13 @@ function (_React$Component) {
                   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 173
+                      lineNumber: 172
                     },
                     __self: this
                   }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 174
+                      lineNumber: 173
                     },
                     __self: this
                   }), childItem.title));
@@ -475,7 +476,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 186
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
@@ -487,7 +488,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 187
         },
         __self: this
       }, "Spectrum"))))));
