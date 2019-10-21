@@ -5,8 +5,8 @@
     border: 1px solid var(--spectrum-global-color-gray-400);
     position: absolute;
     background-color: var(--spectrum-global-color-gray-50);
-    padding-top:16px;
-    padding-bottom:16px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     z-index: 2000;
     width:368px;
     border-radius: 4px;
@@ -14,7 +14,7 @@
     display: none;
     max-height: calc(100vh - 200px);
     min-height: 220px;
-    overflow-y:scroll;
+    overflow-y: auto;
     box-shadow: 0 1px 4px var(--spectrum-alias-dropshadow-color);
 }
 :local(.overlay) {
@@ -34,29 +34,45 @@
     list-style: none;
     padding-left:0px;
     color: var(--spectrum-global-color-gray-800) !important;
-    padding-bottom:6px;
     margin:0px;
-
-
 }
+
 :local(.resultContainer) {
     &:not(:last-of-type) {
-        border-bottom:1px solid var(--spectrum-global-color-gray-200);
-        margin-bottom:12px;
+        &:after {
+            content: '';
+            display: block;
+            margin: 0 12px;
+            margin-top: 4px;
+            margin-bottom: 3px;
+            border-bottom: 1px solid var(--spectrum-global-color-gray-200);
+        }
     }
 }
 
 :local(.listItem) {
-
-    padding:6px 16px;
+    display: block;
+    padding: 6px 12px 6px 10px;
     margin-top:0px !important;
     margin-bottom:0px !important;
     cursor: pointer;
-    transition: all 125ms ease-in-out;
-    &:hover {
+    text-decoration: none;
 
+    border-left: 2px solid transparent;
+
+    &:hover {
         transition: all 125ms ease-in-out;
         background-color: var(--spectrum-alias-highlight-hover);
+    }
+
+    &.is-highlighted,
+    &:focus {
+        background-color: var(--spectrum-alias-highlight-hover);
+    }
+
+    &:focus {
+        outline: none;
+        border-left-color: var(--spectrum-global-color-blue-400);
     }
 }
 
@@ -68,9 +84,11 @@
     margin:0px;
 }
 :local(.header) {
-    padding-bottom:6px;
-    padding-left:16px;
-    padding-right:16px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 :local(.file) {
     display: flex;
@@ -85,7 +103,6 @@
         width:16px;
         height: 16px;
     }
-
 }
 :local(.noResultsContainer) {
     display:flex;
@@ -101,8 +118,4 @@
 }
 :local(.noResultsSub) {
     color: var(--spectrum-global-color-gray-700) !important;
-}
-
-:local(.selected) {
-    background-color: var(--spectrum-alias-highlight-hover);
 }

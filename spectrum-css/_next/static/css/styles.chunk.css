@@ -14576,8 +14576,8 @@ to this repo does not apply.
   border: 1px solid var(--spectrum-global-color-gray-400);
   position: absolute;
   background-color: var(--spectrum-global-color-gray-50);
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   z-index: 2000;
   width: 368px;
   border-radius: 4px;
@@ -14585,7 +14585,7 @@ to this repo does not apply.
   display: none;
   max-height: calc(100vh - 200px);
   min-height: 220px;
-  overflow-y: scroll;
+  overflow-y: auto;
   box-shadow: 0 1px 4px var(--spectrum-alias-dropshadow-color); }
 
 .overlay___1EmJy {
@@ -14604,22 +14604,32 @@ to this repo does not apply.
   list-style: none;
   padding-left: 0px;
   color: var(--spectrum-global-color-gray-800) !important;
-  padding-bottom: 6px;
   margin: 0px; }
 
-.resultContainer___1hN6D:not(:last-of-type) {
-  border-bottom: 1px solid var(--spectrum-global-color-gray-200);
-  margin-bottom: 12px; }
+.resultContainer___1hN6D:not(:last-of-type):after {
+  content: '';
+  display: block;
+  margin: 0 12px;
+  margin-top: 4px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid var(--spectrum-global-color-gray-200); }
 
 .listItem___3WtxC {
-  padding: 6px 16px;
+  display: block;
+  padding: 6px 12px 6px 10px;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   cursor: pointer;
-  transition: all 125ms ease-in-out; }
+  text-decoration: none;
+  border-left: 2px solid transparent; }
   .listItem___3WtxC:hover {
     transition: all 125ms ease-in-out;
     background-color: var(--spectrum-alias-highlight-hover); }
+  .listItem___3WtxC.is-highlighted___Xfvfs, .listItem___3WtxC:focus {
+    background-color: var(--spectrum-alias-highlight-hover); }
+  .listItem___3WtxC:focus {
+    outline: none;
+    border-left-color: var(--spectrum-global-color-blue-400); }
 
 .open___2qSsY {
   display: block; }
@@ -14629,9 +14639,11 @@ to this repo does not apply.
   margin: 0px; }
 
 .header___1ogAZ {
-  padding-bottom: 6px;
-  padding-left: 16px;
-  padding-right: 16px; }
+  height: 28px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px; }
 
 .file___1MQ8X {
   display: flex;
@@ -14659,9 +14671,6 @@ to this repo does not apply.
 
 .noResultsSub___2l0NW {
   color: var(--spectrum-global-color-gray-700) !important; }
-
-.selected___1pcvc {
-  background-color: var(--spectrum-alias-highlight-hover); }
 
 .appHeader___1ukmz {
   height: 48px;
