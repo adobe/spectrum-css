@@ -52,7 +52,7 @@
   --spectrum-selectlist-thumbnail-option-text-color: var(--spectrum-alias-text-color);
   --spectrum-selectlist-thumbnail-option-icon-color: var(--spectrum-alias-icon-color-selected);
   --spectrum-selectlist-thumbnail-divider-color: var(--spectrum-alias-border-color-extralight);
-  --spectrum-selectlist-thumbnail-image-opacity: 100%;
+  --spectrum-selectlist-thumbnail-image-opacity: 1;
   --spectrum-selectlist-thumbnail-option-icon-color-hover: var(--spectrum-alias-icon-color-selected);
   --spectrum-selectlist-thumbnail-option-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-selectlist-thumbnail-option-text-color-hover: var(--spectrum-alias-text-color);
@@ -74,7 +74,7 @@
   --spectrum-selectlist-thumbnail-option-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-selectlist-thumbnail-option-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-selectlist-thumbnail-option-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-selectlist-thumbnail-image-opacity-disabled: 30%;
+  --spectrum-selectlist-thumbnail-image-opacity-disabled: 0.3;
   --spectrum-selectlist-thumbnail-image-border-color: var(--spectrum-alias-border-color-translucent-dark);
   --spectrum-selectlist-thumbnail-option-focus-indicator-color: var(--spectrum-alias-border-color-focus);
   --spectrum-selectlist-thumbnail-background-color: var(--spectrum-alias-background-color-transparent);
@@ -102,7 +102,7 @@
   --spectrum-selectlist-thumbnail-small-option-text-color: var(--spectrum-alias-text-color);
   --spectrum-selectlist-thumbnail-small-option-icon-color: var(--spectrum-alias-icon-color-selected);
   --spectrum-selectlist-thumbnail-small-divider-color: var(--spectrum-alias-border-color-extralight);
-  --spectrum-selectlist-thumbnail-small-image-opacity: 100%;
+  --spectrum-selectlist-thumbnail-small-image-opacity: 1;
   --spectrum-selectlist-thumbnail-small-option-icon-color-hover: var(--spectrum-alias-icon-color-selected);
   --spectrum-selectlist-thumbnail-small-option-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-selectlist-thumbnail-small-option-text-color-hover: var(--spectrum-alias-text-color);
@@ -124,7 +124,7 @@
   --spectrum-selectlist-thumbnail-small-option-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-selectlist-thumbnail-small-option-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-selectlist-thumbnail-small-option-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-selectlist-thumbnail-small-image-opacity-disabled: 30%;
+  --spectrum-selectlist-thumbnail-small-image-opacity-disabled: 0.3;
   --spectrum-selectlist-thumbnail-small-image-border-color: var(--spectrum-alias-border-color-translucent-dark);
   --spectrum-selectlist-thumbnail-small-option-focus-indicator-color: var(--spectrum-alias-border-color-focus);
   --spectrum-selectlist-thumbnail-small-background-color: var(--spectrum-alias-background-color-transparent);

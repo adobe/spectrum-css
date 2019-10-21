@@ -115,6 +115,9 @@ function processValue(name, value) {
     }
     return value;
   }
+  if (typeof(value) === 'string' && value.substr(-1) === '%') {
+    return parseInt(value, 10) / 100;
+  }
   return value;
 }
 
