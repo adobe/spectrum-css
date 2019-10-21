@@ -259,7 +259,7 @@ module.exports = withCSS({
 
     for (let [source, destination] of Object.entries(redirects)) {
       paths[source] = {
-        page: '/redirects/[url]',
+        page: '/redirects/url',
         query: {
           url: destination
         }
