@@ -127,7 +127,7 @@ class Sidebar extends React.Component {
                           delete props.href;
                           if(item.linkType === "External") {
                             return (
-                              <a className="spectrum-SideNav-itemLink" {...createLinkProps(item)}>{item.title}</a>
+                              <a target="_blank" className="spectrum-SideNav-itemLink" {...createLinkProps(item)}>{item.title}</a>
                             );
                           } else {
                             return (
@@ -163,6 +163,7 @@ class Sidebar extends React.Component {
                                 }
                                 renderLink={props => {
                                   delete props.href;
+                                  props.target = "_blanks";
                                   if(childItem.linkType === "External") {
                                     return (
                                       <a {...createLinkProps(childItem)}>{childItem.title}</a>
