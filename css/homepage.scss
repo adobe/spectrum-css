@@ -1,0 +1,7 @@
+:local(.homecard) {
+  display: inline-flex;
+  margin-bottom: var(--spectrum-global-dimension-size-350);
+  img {
+    margin-right: var(--spectrum-global-dimension-size-250);
+  }
+}
