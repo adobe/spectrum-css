@@ -237,10 +237,35 @@ module.exports = withCSS({
       };
       menu.menu[0].children[2].children.push(menuComponentData); // TODO: this is brittle
       menu.key.push(menuComponentData);
-    })
+    });
+
     await writeFile('data/newmenu.json', JSON.stringify(menu));
 
     generateSearchIndex();
+
+    const redirects = JSON.parse(await readFile('data/redirects.json', {
+      encoding: 'utf8'
+    }));
+
+    const oldVersions = JSON.parse(await readFile('data/oldVersions.json', {
+      encoding: 'utf8'
+    }));
+
+    for (let version of oldVersions.versions) {
+      for (let [source, dest] of Object.entries(oldVersions.files)) {
+        redirects[`/${version}${source}`] = `${oldVersions.base}/${version}${dest}`;
+      }
+    }
+
+    for (let [source, destination] of Object.entries(redirects)) {
+      paths[source] = {
+        page: '/redirects/[url]',
+        query: {
+          url: destination
+        }
+      };
+    }
+
     return paths;
   }
 })
