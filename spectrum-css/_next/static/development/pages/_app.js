@@ -223,7 +223,8 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Sidebar, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      window.addEventListener("resize", this.updateDimensions.bind(this));
+      var scaleMQL = window.matchMedia('(max-width: 960px)');
+      scaleMQL.addListener(this.updateDimensions.bind(this));
     }
   }, {
     key: "componentWillReceiveProps",
@@ -249,7 +250,7 @@ function (_React$Component) {
   }, {
     key: "updateDimensions",
     value: function updateDimensions(e) {
-      if (this.state.menuOpen && window.innerWidth >= 960) {
+      if (!e.currentTarget.matches) {
         this.closeMenu();
       }
     }
@@ -282,14 +283,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 80
         },
         __self: this
       }), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.appHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 87
         },
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -297,7 +298,7 @@ function (_React$Component) {
         icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_12___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89
+            lineNumber: 90
           },
           __self: this
         }),
@@ -307,48 +308,48 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 88
         },
         __self: this
       })), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 95
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 101
         },
         __self: this
       }, __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 102
         },
         __self: this
       }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 103
         },
         __self: this
       }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_13__["default"], {
         ref: this.search,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 105
         },
         __self: this
       })), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 108
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNav"], {
@@ -360,7 +361,7 @@ function (_React$Component) {
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 109
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_16__.menu[0].children.map(function (item, i) {
@@ -383,7 +384,7 @@ function (_React$Component) {
                 }, createLinkProps(item), {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 130
+                    lineNumber: 131
                   },
                   __self: this
                 }), item.title);
@@ -391,13 +392,13 @@ function (_React$Component) {
                 return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 134
+                    lineNumber: 135
                   },
                   __self: this
                 }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 135
+                    lineNumber: 136
                   },
                   __self: this
                 }), item.title));
@@ -405,7 +406,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 116
+              lineNumber: 117
             },
             __self: this
           });
@@ -420,7 +421,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 144
+              lineNumber: 145
             },
             __self: this
           }, item.children && item.children.map(function (childItem, childI) {
@@ -441,7 +442,7 @@ function (_React$Component) {
                   }, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 168
+                      lineNumber: 169
                     },
                     __self: this
                   }), childItem.title);
@@ -449,13 +450,13 @@ function (_React$Component) {
                   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 172
+                      lineNumber: 173
                     },
                     __self: this
                   }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 173
+                      lineNumber: 174
                     },
                     __self: this
                   }), childItem.title));
@@ -463,7 +464,7 @@ function (_React$Component) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 154
+                lineNumber: 155
               },
               __self: this
             });
@@ -476,7 +477,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 187
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
@@ -488,7 +489,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 188
         },
         __self: this
       }, "Spectrum"))))));
@@ -33030,13 +33031,15 @@ function (_App) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(MyApp).call(this, props));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "updateDimensions", function () {
-      _this.setState(function (state, props) {
-        _this.scaleSelector.current.state.value = window.innerWidth < 768 ? 'large' : 'medium';
-        return {
-          scale: window.innerWidth < 768 ? 'large' : 'medium'
-        };
-      });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "updateDimensions", function (e) {
+      if (e) {
+        _this.setState(function (state, props) {
+          _this.scaleSelector.current.state.value = e.currentTarget.matches ? 'large' : 'medium';
+          return {
+            scale: e.currentTarget.matches ? 'large' : 'medium'
+          };
+        });
+      }
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "updateTheme", function () {
@@ -33099,7 +33102,8 @@ function (_App) {
     value: function componentDidMount() {
       this.updateDimensions();
       this.updateTheme();
-      window.addEventListener("resize", this.updateDimensions.bind(this));
+      var scaleMQL = window.matchMedia('(max-width: 768px)');
+      scaleMQL.addListener(this.updateDimensions);
     }
   }, {
     key: "render",
@@ -33113,7 +33117,7 @@ function (_App) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 107
         },
         __self: this
       }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_19__["Helmet"], {
@@ -33125,7 +33129,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 109
         },
         __self: this
       }, __jsx("meta", {
@@ -33134,7 +33138,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 112
         },
         __self: this
       }), __jsx("link", {
@@ -33143,7 +33147,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 113
         },
         __self: this
       }), __jsx("link", {
@@ -33152,7 +33156,7 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 114
         },
         __self: this
       })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_20___default.a, {
@@ -33161,33 +33165,33 @@ function (_App) {
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 117
         },
         __self: this
       }, __jsx("div", {
         className: 'flexContainer',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 118
         },
         __self: this
       }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_24__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 119
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 120
         },
         __self: this
       }, __jsx("div", {
         className: "switcherContainer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 121
         },
         __self: this
       }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -33196,7 +33200,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 122
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23___default.a, {
@@ -33221,7 +33225,7 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 123
         },
         __self: this
       })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -33230,7 +33234,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 138
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23___default.a, {
@@ -33257,13 +33261,13 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 139
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 161
         },
         __self: this
       }))))));
