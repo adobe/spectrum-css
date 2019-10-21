@@ -55,16 +55,16 @@ const Home = () => (
         <img src={`${process.env.BACKEND_URL}/static/images/illustration_documentation.svg`} width="100" height="80"/>
         <div>
           <SubHeader title="Robust documentation"/>
-          <p>Spectrum CSS is designed to be used in partnership with Spectrum’s detailed usage guidelines.</p>
-          <p><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
+          <p className="spectrum-Body3">Spectrum CSS is designed to be used in partnership with Spectrum’s detailed usage guidelines.</p>
+          <p className="spectrum-Body3"><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
         </div>
       </div>
       <div className={classNames("afg-col-xs-12", "afg-col-sm-6", styles.homecard)}>
         <img src={`${process.env.BACKEND_URL}/static/images/illustration_flexible.svg`} width="100" height="80"/>
         <div>
           <SubHeader title="Flexible"/>
-          <p>Our CSS is customizable, powerful, and designed to work with any javascript framework.</p>
-          <p><RouterLink href={`/get-started/`} as={`${process.env.BACKEND_URL}/get-started/`}><a className="spectrum-Link">Get Started</a></RouterLink></p>
+          <p className="spectrum-Body3">Our CSS is customizable, powerful, and designed to work with any javascript framework.</p>
+          <p className="spectrum-Body3"><RouterLink href={`/get-started/`} as={`${process.env.BACKEND_URL}/get-started/`}><a className="spectrum-Link">Get Started</a></RouterLink></p>
         </div>
       </div>
     </div>
@@ -73,15 +73,15 @@ const Home = () => (
         <img src={`${process.env.BACKEND_URL}/static/images/illustration_tested.svg`} width="100" height="80"/>
         <div>
           <SubHeader title="Rigorously tested"/>
-          <p>These individually-versioned components have been vetted to be accessible and inclusive of global audiences.</p>
+          <p className="spectrum-Body3">These individually-versioned components have been vetted to be accessible and inclusive of global audiences.</p>
         </div>
       </div>
       <div className={classNames("afg-col-xs-12", "afg-col-sm-6", styles.homecard)}>
         <img src={`${process.env.BACKEND_URL}/static/images/illustration_responsive.svg`} width="100" height="80"/>
         <div>
           <SubHeader title="Multi-platform support"/>
-          <p>We support evergreen browsers (minus one version) and IE 11 for scalability and flexibility.</p>
-          <p><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
+          <p className="spectrum-Body3">We support evergreen browsers (minus one version) and IE 11 for scalability and flexibility.</p>
+          <p className="spectrum-Body3"><Link href="https://spectrum.corp.adobe.com/">View Spectrum guidelines</Link></p>
         </div>
       </div>
     </div>
