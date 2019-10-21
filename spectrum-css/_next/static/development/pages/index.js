@@ -30,7 +30,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/DoubleTextWithVisual.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/DoubleTextWithVisual.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
@@ -179,7 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _css_heroImage_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/heroImage.scss */ "./components/css/heroImage.scss");
 /* harmony import */ var _css_heroImage_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_heroImage_scss__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/HeroImage.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/HeroImage.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -243,7 +243,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _css_markdown_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/markdown.scss */ "./components/css/markdown.scss");
 /* harmony import */ var _css_markdown_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_markdown_scss__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/Markdown.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Markdown.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -427,7 +427,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/pageHeader.scss */ "./components/css/pageHeader.scss");
 /* harmony import */ var _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/PageHeader.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/PageHeader.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -477,7 +477,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/responsiveImage.scss */ "./components/css/responsiveImage.scss");
 /* harmony import */ var _css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_responsiveImage_scss__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/ResponsiveImage.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/ResponsiveImage.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -553,7 +553,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/SubHeader.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/SubHeader.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
@@ -11093,10 +11093,10 @@ module.exports = addListMetadata;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fduplicate%2Fspectrum-css%2Fpages%2Findex.js!./":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fduplicate%2Fspectrum-css%2Fpages%2Findex.js ***!
-  \****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js!./":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28575,7 +28575,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_SubHeader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/SubHeader */ "./components/SubHeader.js");
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/pages/index.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
@@ -28817,13 +28817,13 @@ var Home = function Home() {
 /***/ }),
 
 /***/ 100:
-/*!********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fduplicate%2Fspectrum-css%2Fpages%2Findex.js ***!
-  \********************************************************************************************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fduplicate%2Fspectrum-css%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fduplicate%2Fspectrum-css%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js!./");
 
 
 /***/ }),

@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/Logo.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Logo.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -166,7 +166,7 @@ var _data_newmenu__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__webpa
 
 
 
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/Sidebar.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Sidebar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -474,7 +474,7 @@ function (_React$Component) {
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
         value: "Spectrum",
         target: "_blank",
-        href: "#",
+        href: "https://spectrum.adobe.com/",
         style: {
           width: "200px"
         },
@@ -535,7 +535,7 @@ var _data_search_index__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__
 
 
 
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/components/SiteSearch.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/SiteSearch.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
@@ -32943,7 +32943,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/garthdb/Spectrum/duplicate/spectrum-css/pages/_app.js";
+var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement;
 
 

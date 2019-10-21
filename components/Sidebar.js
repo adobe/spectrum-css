@@ -183,7 +183,7 @@ class Sidebar extends React.Component {
                 <SideNavItem
                   value="Spectrum"
                   target="_blank"
-                  href="#"
+                  href="https://spectrum.adobe.com/"
                   style={{ width: "200px" }}
                 >
                   Spectrum
