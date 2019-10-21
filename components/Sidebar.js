@@ -41,6 +41,7 @@ class Sidebar extends React.Component {
     const selected = menuData.key.find(item => {
       return item.url === nextProps.router.query.id;
     });
+    this.search = React.createRef();
     if (selected) {
       const selectedParentSlug = selected.parent.split(",").find(item => {
         return item !== "top-level-menu-item" && item !== "WebsiteMenu";
@@ -64,6 +65,9 @@ class Sidebar extends React.Component {
     });
   };
   closeMenu() {
+    this.search.current.setState({
+      menuOpen: false
+    });
     this.setState({
       menuOpen: false
     });
@@ -97,7 +101,7 @@ class Sidebar extends React.Component {
             <div className={styles.header}>
               <Logo/>
 
-              <SiteSearch />
+              <SiteSearch ref={this.search} />
             </div>
 
             <div className={styles.navigation}>
