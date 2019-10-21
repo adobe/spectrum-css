@@ -14954,5 +14954,19 @@ p.spectrum-Body3 {
 .description___4pWrJ {
   margin-bottom: var(--spectrum-global-dimension-size-800); }
 
+.container___-roxm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh; }
+
+.row___2qpW7 {
+  height: 100%; }
+
+.header___1nDdP, .body___2uvXd {
+  color: var(--spectrum-global-color-gray-700) !important; }
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

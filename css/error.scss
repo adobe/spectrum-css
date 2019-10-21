@@ -1,0 +1,14 @@
+:local(.container) {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height: 70vh;
+}
+:local(.row) {
+    height:100%;
+}
+:local(.header), :local(.body) {
+    color: var(--spectrum-global-color-gray-700) !important;
+}
