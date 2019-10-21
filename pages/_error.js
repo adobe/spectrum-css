@@ -29,7 +29,7 @@ class ErrorPage extends React.Component {
         response = (
           <div className={classNames('afg-row', styles.row)}>
             <div className={classNames("afg-col-xs-12", styles.container)}>
-              <div><img src="/static/404.svg"/></div>
+              <div><img src={`${process.env.BACKEND_URL}/static/404.svg`}/></div>
               <div className={classNames('spectrum-Heading1--quiet', styles.header)}>Error 404: page not found</div>
               <div className={classNames('spectrum-Body4', styles.body)}><em>The page isn't available. Try checking the
                 URL or visit a different page.</em></div>
@@ -41,7 +41,7 @@ class ErrorPage extends React.Component {
         response = (
           <div className={classNames('afg-row', styles.row)}>
             <div className={classNames("afg-col-xs-12", styles.container)}>
-              <div><img src="/static/error.svg"/></div>
+              <div><img src={`${process.env.BACKEND_URL}/static/404.svg`}/></div>
               <div className={classNames('spectrum-Heading1--quiet', styles.header)}>An error has occurred</div>
               <div className={classNames('spectrum-Body4', styles.body)}><em>Try reloading this page, and if the error
                 persists, contact the Spectrum team to report it.</em></div>
@@ -53,7 +53,7 @@ class ErrorPage extends React.Component {
         response = (
           <div className={classNames('afg-row', styles.row)}>
             <div className={classNames("afg-col-xs-12", styles.container)}>
-              <div><img src="/static/error.svg"/></div>
+              <div><img src={`${process.env.BACKEND_URL}/static/404.svg`}/></div>
               <div className={classNames('spectrum-Heading1--quiet', styles.header)}>Error 404: page not found</div>
               <div className={classNames('spectrum-Body4', styles.body)}><em>Try reloading this page, and if the error
                 persists, contact the Spectrum team to report it.</em></div>
