@@ -13,7 +13,7 @@ class ResourceCard extends React.Component {
     return (
 
 
-        <a href={props.url} aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0">
+        <a href={props.url} target={(props.type === 'Spectrum') ? "_self" : "_blank"} aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0">
         <div className={styles.card} tabIndex="-1">
           <div>
             {
