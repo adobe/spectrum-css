@@ -14,7 +14,8 @@ body {
   // transition: opacity var(--spectrum-global-animation-duration-200) ease-out 0ms;
 }
 
-:global(.wf-active) {
+:global(.wf-active),
+:global(.wf-inactive) {
   opacity: 1;
 }
 
