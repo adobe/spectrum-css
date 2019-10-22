@@ -43,7 +43,7 @@ examples:
   - id: card
     name: Standard (focused)
     markup: |
-      <h2>Focused Card item within a grid</h3>
+      <h2>Focused Card item within a grid</h2>
       <div role="grid">
         <div style="width: 208px; outline: 0;" role="row">
           <div class="spectrum-Card is-focused" role="rowheader" tabindex="0">
