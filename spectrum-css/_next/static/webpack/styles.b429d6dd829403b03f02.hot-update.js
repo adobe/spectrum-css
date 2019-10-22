@@ -30,7 +30,7 @@ module.exports = {"container":"container___-roxm","row":"row___2qpW7","header":"
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571701979916");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571702185476");
           });
       }
     }
@@ -39,4 +39,4 @@ module.exports = {"container":"container___-roxm","row":"row___2qpW7","header":"
 /***/ })
 
 })
-//# sourceMappingURL=styles.088da5f22010f0c00202.hot-update.js.map
+//# sourceMappingURL=styles.b429d6dd829403b03f02.hot-update.js.map
