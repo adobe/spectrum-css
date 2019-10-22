@@ -119,7 +119,9 @@ p:global(.spectrum-Body3) {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  & > * {
-    margin-right: 37px;
-  }
+  margin-right: var(--spectrum-global-dimension-size-200);
+}
+
+:global(.scaleSelector) {
+  margin-left: var(--spectrum-global-dimension-size-400);
 }
