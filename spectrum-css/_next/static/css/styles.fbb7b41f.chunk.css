@@ -14357,6 +14357,16 @@ to this repo does not apply.
 body {
   overflow: auto !important; }
 
+.spectrum-Dialog.spectrum-CSSExample-dialog {
+  position: relative !important;
+  transform: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: none; }
+
 html {
   opacity: 0; }
 

@@ -107,7 +107,8 @@ class MyApp extends App {
       <div>
         {/* SVG iconfile loadscript */}
         <Helmet
-          script={[{ src: `${process.env.BACKEND_URL}/static/javascript/loadicons/index.js` }]}
+          script={[{ src: `${process.env.BACKEND_URL}/static/javascript/loadicons/index.js` },
+          { src: `${process.env.BACKEND_URL}/static/javascript/enhancement.js` }]}
           onChangeClientState={(newState, addedTags) => this.handleScriptInject(addedTags)}>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
           <link rel="icon" type="image/x-icon" href={`${process.env.BACKEND_URL}/static/favicon.ico`} />

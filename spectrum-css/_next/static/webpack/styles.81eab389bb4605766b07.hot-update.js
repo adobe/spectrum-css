@@ -1,14 +1,14 @@
 webpackHotUpdate("styles",{
 
-/***/ "./css/error.scss":
-/*!************************!*\
-  !*** ./css/error.scss ***!
-  \************************/
+/***/ "./css/main.scss":
+/*!***********************!*\
+  !*** ./css/main.scss ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"container":"container___-roxm","row":"row___2qpW7","header":"header___1nDdP","body":"body___2uvXd"};;
+module.exports = {"pageHeading":"pageHeading___efYON"};;
     if (true) {
       var injectCss = function injectCss(prev, href) {
         var link = prev.cloneNode();
@@ -30,7 +30,7 @@ module.exports = {"container":"container___-roxm","row":"row___2qpW7","header":"
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571702185476");
+            injectCss(link, link.href.split("?")[0] + "?unix=1571772290156");
           });
       }
     }
@@ -39,4 +39,4 @@ module.exports = {"container":"container___-roxm","row":"row___2qpW7","header":"
 /***/ })
 
 })
-//# sourceMappingURL=styles.b429d6dd829403b03f02.hot-update.js.map
+//# sourceMappingURL=styles.81eab389bb4605766b07.hot-update.js.map

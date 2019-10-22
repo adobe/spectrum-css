@@ -9,6 +9,17 @@ body {
   overflow: auto !important;
 }
 
+:global(.spectrum-Dialog.spectrum-CSSExample-dialog) {
+  position: relative !important;
+  transform: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: none;
+}
+
 :global(html) {
   opacity: 0;
   // transition: opacity var(--spectrum-global-animation-duration-200) ease-out 0ms;
