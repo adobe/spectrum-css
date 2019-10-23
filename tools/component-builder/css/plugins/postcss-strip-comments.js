@@ -19,7 +19,7 @@ module.exports = postcss.plugin('postcss-strip-comments', (opts = {}) => {
           return;
         }
 
-        // Get a refernce to the parent before the node is removed
+        // Get a reference to the parent before the node is removed
         let parent = node.parent;
 
         node.remove();

@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Popover-tip {
   position: absolute;
-  /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
+  /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesirable */
   overflow: hidden;
   width: calc(var(--spectrum-popover-tip-width) + 1px);
   height: calc((var(--spectrum-popover-tip-width)/2)+(var(--spectrum-popover-border-size)));

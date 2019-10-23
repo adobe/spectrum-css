@@ -299,7 +299,7 @@ function generateDNAFiles() {
         return elementName !== 'select';
       });
 
-      // Anything that doesn't consistently reference the same variable or value bewteen stops/scales
+      // Anything that doesn't consistently reference the same variable or value between stops/scales
       let elementColorOverrides = initializeObject(stops);
       let elementDimensionOverrides = initializeObject(scales);
 

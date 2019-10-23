@@ -44,7 +44,7 @@ examples:
       <div class="spectrum-Radio">
         <input type="radio" name="longname" class="spectrum-Radio-input" id="radio-3">
         <span class="spectrum-Radio-button"></span>
-        <label class="spectrum-Radio-label" for="radio-3">Radio with an extrordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
+        <label class="spectrum-Radio-label" for="radio-3">Radio with an extraordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>
   - id: radio-quiet
     name: Quiet
@@ -88,5 +88,5 @@ examples:
       <div class="spectrum-Radio spectrum-Radio--quiet">
         <input type="radio" name="longname-quiet" class="spectrum-Radio-input" id="radio-4">
         <span class="spectrum-Radio-button"></span>
-        <label class="spectrum-Radio-label" for="radio-4">Radio with an extrordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
+        <label class="spectrum-Radio-label" for="radio-4">Radio with an extraordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>

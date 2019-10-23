@@ -25,8 +25,8 @@ See [documentation generation](/tools/bundle-builder/docs/README.md) documentati
 
 ### Adding a new component
 
-1. Copy the directory for a smiliar component from `components/` and rename it for your new component.
-2. Edit the `package.json`, resetting the verison number to `1.0.0-alpha.0`.
+1. Copy the directory for a similar component from `components/` and rename it for your new component.
+2. Edit the `package.json`, resetting the version number to `1.0.0-alpha.0`.
 3. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/vars` and `@spectrum-css/component-builder`, and most rely on `@spectrum-css/icon`.
 4. Run `gulp dev` in the root of the project to begin developing
 5. Edit `index.css` and `skin.css` with dimensions and color properties respectively.

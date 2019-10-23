@@ -164,7 +164,7 @@ function watch() {
       `${dirs.components}/*/metadata.yml`
     ],
     (changedFile, package, done) => {
-      // Do this as gulp tasks to avoid premature stream termenation
+      // Do this as gulp tasks to avoid premature stream termination
       gulp.series(
         // Get data first so nav builds
         docs.buildSite_getData,
