@@ -37,16 +37,6 @@
       flex-direction: column;
     }
   }
-  :local(.pageContainer) {
-    opacity: 0;
-    transition:  opacity 125ms ease-in-out;
-  }
-  
-  :global(.wf-active) {
-    & :local(.pageContainer) {
-      opacity: 1;
-    }
-  }
 
   :global(.test1) {
     border:1px solid red;
