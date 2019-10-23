@@ -120,7 +120,7 @@ class MyApp extends App {
             <Sidebar {...pageProps} />
             <Layout>
               <div className="switcherContainer">
-                <FieldLabel label="Theme" labelFor="theme-selector" position="left">
+                <FieldLabel className="themeSelector" label="Theme" labelFor="theme-selector" position="left">
                   <Select
                     onChange={this.updateTheme}
                     id="theme-selector"
@@ -136,7 +136,7 @@ class MyApp extends App {
                     flexible
                   />
                 </FieldLabel>
-                <FieldLabel label="Scale" labelFor="scale-selector" position="left">
+                <FieldLabel className="scaleSelector" label="Scale" labelFor="scale-selector" position="left">
                   <Select
                     ref={this.scaleSelector}
                     id="scale-selector"
