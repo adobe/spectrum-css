@@ -21,7 +21,7 @@ Each entry in the `components` object within the `.yml` file can have the follow
 
 ## Architecture
 
-Documentation is built by parsing `.yml` files within component packages that contain examples and their metdata and combining that with ID-matching of DNA data in `components/vars/spectrum-metadata.json`.
+Documentation is built by parsing `.yml` files within component packages that contain examples and their metadata and combining that with ID-matching of DNA data in `components/vars/spectrum-metadata.json`.
 
 The dependencies for the component's documentation page are determined by parsing the `package.json` and building a dependency graph which is then topologically sorted using [`dependency-solver`](https://www.npmjs.com/package/dependency-solver). This means that all dependencies and dependencies of dependencies will be included in the documentation pages for the component automatically.
 

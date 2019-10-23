@@ -29,7 +29,7 @@ module.exports = postcss.plugin('postcss-varsonly', function (opts) {
 
       // Check every declaration
       rule.walkDecls((decl) => {
-        // Remove if not varaible
+        // Remove if not variable
         if (!decl.value.match('var\(.*?\)')) {
           decl.remove();
         }

@@ -12,7 +12,7 @@ The files within the `dist/css/` folder contain processed DNA output, with refer
 
 To update from DNA:
 
-1. Update the DNA version in `package.json`, if necesssary
+1. Update the DNA version in `package.json`, if necessary
 1. Make sure you've executed `npm install` in the root of the project within the Adobe network so `node_modules/@spectrum/spectrum-dna` is present
 1. Run `npm run update`
 1. Commit the new files with `git add .; git commit -m "Update DNA"`
