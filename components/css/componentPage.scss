@@ -28,6 +28,7 @@
 }
 
 :local(.example) {
+  position: relative;
   background-color: var(--spectrum-global-color-gray-100);
   border-radius: var(--spectrum-global-dimension-size-50) var(--spectrum-global-dimension-size-50) 0 0;
   flex: 1 0 auto;
@@ -68,4 +69,16 @@
   padding: 0 0 var(--spectrum-global-dimension-size-160) var(--spectrum-global-dimension-size-85);
   text-align: left;
   display: inline-block;
+}
+
+:global(.spectrum-CSSExample-example--overlay) {
+  background: rgba(0,0,0,0.4);
+  color: rgba(0,0,0,0.4);
+}
+
+:global(.spectrum-CSSExample-overlayShowButton) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

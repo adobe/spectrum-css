@@ -52,7 +52,7 @@ class Markup extends React.Component {
 
 class Variant extends React.Component {
   render() {
-    this.props.example.markup = this.props.example.markup.replace('src="img/', `src="${process.env.BACKEND_URL}/static/images/`)
+    this.props.example.markup = this.props.example.markup.replace('src="img/', `src="${process.env.BACKEND_URL}/static/images/`).replace('url(img/', `url(${process.env.BACKEND_URL}/static/images/`)
     return (
       <article>
         <SubHeader title={this.props.example.name}>
@@ -66,7 +66,7 @@ class Variant extends React.Component {
         ) : undefined }
         { this.props.example.markup ? (
           <section className={compStyles.exampleContainer}>
-            <div className={compStyles.example} dangerouslySetInnerHTML={{
+            <div className={classNames(compStyles.example, this.props.example.demoClassName)} dangerouslySetInnerHTML={{
               __html: this.props.example.markup
             }}/>
           <Markup>{this.props.example.markup}</Markup>
