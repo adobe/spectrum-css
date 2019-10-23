@@ -162,6 +162,7 @@ class MyApp extends App {
               <Component {...pageProps} />
             </Layout>
           </div>
+          <div class="spectrum-Underlay" id="spectrum-underlay"></div>
         </Provider>
       </div>
     )
