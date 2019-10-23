@@ -70,5 +70,12 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "@spectrum-css/button": "^2.0.0",
+    "@spectrum-css/icon": "^2.0.0",
+    "@spectrum-css/page": "^2.0.0",
+    "@spectrum-css/typography": "^2.0.0",
+    "@spectrum-css/vars": "^2.0.0"
   }
 }
