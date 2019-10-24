@@ -98,11 +98,13 @@ function getClassNames(contents, pkgName) {
 }
 
 function resolveValue(value, vars) {
-  let match = value.match(/var\((.*?),?.*?\)/);
-  if (match) {
-    return vars[matches[0]];
+  if (value) {
+    let match = value.match(/var\((.+),?.*?\)/);
+    if (match) {
+      return match[1];
+    }
+    return value;
   }
-  return value;
 }
 
 const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..');

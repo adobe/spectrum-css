@@ -9,7 +9,7 @@ const dirs = require('../lib/dirs.js');
 
 // Uhg share this with component-builder
 function getVarsFromCSS(css) {
-  let variableList = [];
+  let variableList = {};
   let root = postcss.parse(css);
 
   root.walkRules((rule, ruleIndex) => {
@@ -17,9 +17,7 @@ function getVarsFromCSS(css) {
       let matches = decl.value.match(/--[\w-]+/g);
       if (matches) {
         matches.forEach(function(match) {
-          if (variableList.indexOf(match) === -1) {
-            variableList.push(match);
-          }
+          variableList[match] = true;
         });
       }
     });
@@ -28,19 +26,86 @@ function getVarsFromCSS(css) {
   return variableList;
 }
 
-function getUsedVars() {
+
+function getVarValues(css) {
+  let root = postcss.parse(css);
+  let variables = {};
+
+  root.walkRules((rule, ruleIndex) => {
+    rule.walkDecls((decl) => {
+      variables[decl.prop] = decl.value;
+    });
+  });
+
+  return variables;
+}
+
+function getAllVars() {
   return new Promise((resolve, reject) => {
     let variableList;
 
-    gulp.src(`${dirs.components}/*/dist/index-vars.css`)
+    gulp.src([
+      `${dirs.components}/vars/css/themes/*.css`,
+      `${dirs.components}/vars/css/scales/*.css`,
+      `${dirs.components}/vars/css/components/*.css`,
+      `${dirs.components}/vars/css/globals/*.css`
+    ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
-        variableList = getVarsFromCSS(file.contents.toString());
+        variableList = getVarValues(file.contents.toString());
 
         cb(null, file);
       }))
       .on('finish', () => {
         resolve(variableList);
+      })
+      .on('error', reject);
+  });
+}
+
+function resolveValue(value, vars) {
+  if (value) {
+    let match = value.match(/var\((.+),?.*?\)/);
+    if (match) {
+      return match[1];
+    }
+    return value;
+  }
+}
+
+function getUsedVars() {
+  return new Promise(async (resolve, reject) => {
+    let variableArray;
+    let variableObject;
+
+    let allVars = await getAllVars();
+
+    gulp.src(`${dirs.components}/*/dist/index-vars.css`)
+      .pipe(concat('everything.css'))
+      .pipe(through.obj(function getUsedVars(file, enc, cb) {
+        variableObject = getVarsFromCSS(file.contents.toString());
+
+        // Resolve each variable to ensure everything it references is available
+        for (let varName in variableObject) {
+          let reffedVar = allVars[varName];
+          if (reffedVar && reffedVar.startsWith('var')) {
+            let value = resolveValue(reffedVar);
+            let curVarName = value;
+            while (allVars[curVarName]) {
+              if (!variableObject[curVarName]) {
+                variableObject[curVarName] = true;
+              }
+              curVarName = allVars[curVarName];
+            }
+          }
+        }
+
+        variableArray = Object.keys(variableObject);
+
+        cb(null, file);
+      }))
+      .on('finish', () => {
+        resolve(variableArray);
       })
       .on('error', reject);
   });
