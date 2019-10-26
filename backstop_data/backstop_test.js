@@ -25,7 +25,7 @@ let isDocker = false;
 let env = 'local';
 let host = LOCALHOST_MAC;
 let report = 'CI';
-let captureLimit = 1;
+let captureLimit = 5;
 let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference';
 
 // Shared scenario configuration
