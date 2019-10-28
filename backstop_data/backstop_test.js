@@ -144,5 +144,5 @@ module.exports = {
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
-  dockerCommandTemplate: 'docker run --rm -it --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m backstopjs/backstopjs:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m backstopjs/backstopjs:{version} {backstopCommand} {args}'
 };
