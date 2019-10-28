@@ -20,12 +20,12 @@ governing permissions and limitations under the License.
     var popover = dropdown.querySelector('.spectrum-Dropdown-popover');
 
     dropdown[isOpen ? 'setAttribute' : 'removeAttribute']('aria-expanded', 'true');
-    dropdown.classList.toggle('is-open', isOpen);
-    fieldButton.classList.toggle('is-selected', isOpen);
+    dropdown.classList[isOpen ? 'add' : 'remove']('is-open');
+    fieldButton.classList[isOpen ? 'add' : 'remove']('is-selected');
 
     if (popover) {
       popover.style.zIndex = 1;
-      popover.classList.toggle('is-open', isOpen);
+      popover.classList[isOpen ? 'add' : 'remove']('is-open');
     }
 
     if (isOpen) {
