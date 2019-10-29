@@ -22,7 +22,7 @@ jobs:
     - name: npm install, build, and deploy
       run: |
         git checkout nextjs
-        npm ci
+        npm ci --no-optional
         npm run importdata
         npm run prep
         npm run deploy
