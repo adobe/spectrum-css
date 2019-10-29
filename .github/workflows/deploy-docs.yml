@@ -9,22 +9,22 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and deploy
+        ref: nextjs
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: <registry url>
+    - name: install
+      run: yarn install --ignore-optional
+    - name: build
       run: |
-        git checkout nextjs
-        npm ci --no-optional
         npm run importdata
         npm run prep
+    - name: deploy
+      run: |
         npm run deploy
       env:
         CI: true
