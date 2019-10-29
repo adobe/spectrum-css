@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "importdata": "git checkout adobe/master -- `git ls-tree adobe/master -r --name-only | grep 'components.*.yml'`",
+    "importdata": "git checkout origin/master -- `git ls-tree adobe/master -r --name-only | grep 'components.*.yml'`",
     "export": "npm run build && next export -o spectrum-css",
     "postexport": "node sitemap_generator",
     "prep": "npm run export && touch spectrum-css/.nojekyll",
