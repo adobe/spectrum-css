@@ -115,10 +115,12 @@ function copyIcons() {
   // lerna bug: require.resolve() won't find spectrum-icons within spectrum-css-compat, so we have to assume it's at the top level
   // note: maybe it needs a package.main?
   return gulp.src([
-    `${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/**`,
+    `${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/**/*`,
+    `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/*.html`,
     `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/18/**`,
     `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/24/**`,
-    `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/color/**`
+    `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/color/**`,
+    `!${dirs.topLevel}/node_modules/@adobe/spectrum-css-workflow-icons/dist/sites/**`,
   ])
     .pipe(gulp.dest('dist/icons/'));
 };
