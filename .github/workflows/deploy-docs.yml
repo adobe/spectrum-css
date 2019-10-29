@@ -21,7 +21,6 @@ jobs:
       run: yarn install --ignore-optional
     - name: build
       run: |
-        npm run importdata
         npm run prep
     - name: deploy
       run: |
