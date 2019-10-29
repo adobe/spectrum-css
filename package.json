@@ -10,7 +10,7 @@
     "export": "npm run build && next export -o spectrum-css",
     "postexport": "node sitemap_generator",
     "prep": "npm run export && touch spectrum-css/.nojekyll",
-    "deploy": "git subtree push --prefix spectrum-css origin gh-pages"
+    "deploy": "ghpages spectrum-css"
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "copy-webpack-plugin": "^5.0.4",
+    "ghpages": "0.0.10",
     "glob": "^7.1.4",
     "js-yaml": "^3.13.1",
     "lunr": "^2.3.6",
