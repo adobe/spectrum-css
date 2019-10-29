@@ -44,7 +44,7 @@ module.exports = () => {
     scenarios = scenarios.sort(sortByLabel);
 
     const existingScenarioList = JSON
-      .parse(fs.readFileSync('backstop_scenarios.json', 'utf8'))
+      .parse(fs.readFileSync('backstop_data/backstop_scenarios.json', 'utf8'))
       .sort(sortByLabel);
 
     const combinedScenarioList = scenarios.reduce((acc, current) => {
@@ -56,7 +56,7 @@ module.exports = () => {
 
     const file = new File('utf8');
     file.contents = Buffer.from(JSON.stringify(combinedScenarioList, null, 2));
-    file.path = 'backstop_scenarios.json';
+    file.path = 'backstop_data/backstop_scenarios.json';
     this.push(file);
 
     cb();
