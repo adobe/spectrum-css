@@ -71,7 +71,7 @@ cp getting-started.pug new-page.pug
 
 ## Adding a one-off example page
 
-Follow the instructions for adding a new page, but do not add it to the navigation. You can link to it from other document using markdown:
+Follow the instructions for adding a new page, but do not add it to the navigation. You can link to it from another document using markdown:
 
 ```markdown
 See the [internationalized typography example page](typography-i18n.html) for Japanese, Han, and Arabic examples.
