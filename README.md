@@ -41,7 +41,7 @@ If you are an existing user of Spectrum CSS and rely on the previous bundle pack
 
 ### Using components
 
-Spectrum CSS components have build output that uses CSS custom properties to change themes and scales. This has the lowest bundle size and the simplest usage, but is incompatible with IE 11.
+Spectrum CSS components have built output that uses CSS custom properties to change themes and scales. This has the lowest bundle size and the simplest usage, but is incompatible with IE 11.
 
 To use Spectrum CSS with IE 11, see the [legacy usage documentation](README-legacy.md).
 
@@ -94,7 +94,7 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 </script>
 ```
 
-Based on which scales you'll be using, you can choose to load different files:
+Based on which scales you'll be using; you can choose to load different files:
 
 * `@spectrum-css/icon/dist/spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
 * `@spectrum-css/icon/dist/spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
@@ -164,7 +164,7 @@ See [site generation](site/README.md) and [documentation generation](tools/bundl
 
 The following tasks are available:
 
-- `gulp build` - Performs a build of all components and the top level package
+- `gulp build` - Performs a build of all components and the top-level package
 - `gulp buildComponents` - Performs a build of all components
 - `gulp dev` - Performs a lite build (custom properties only), opens your browser with the documentation site, then starts watching components and website files
 - `gulp clean` - Cleans all output files for the project and all components
