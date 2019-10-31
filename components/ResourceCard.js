@@ -4,6 +4,8 @@ import styles from './css/resourceCard.scss';
 class ResourceCard extends React.Component {
   constructor(props) {
     super(props);
+    // set default target for links to "_blank" unless passed as prop.
+    this.linkTarget = (props.target) ? props.target : "_blank";
   }
   goToResource = (url) => {
     window.open(url, "_blank");
@@ -13,7 +15,7 @@ class ResourceCard extends React.Component {
     return (
 
 
-        <a href={props.url} target={(props.type === 'Spectrum') ? "_self" : "_blank"} aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0">
+        <a href={props.url} target={this.linkTarget} aria-label={props.clickEvent ? `Download ${props.componentName} UI Kit`: undefined} className={styles.cardButton} tabIndex="0">
         <div className={styles.card} tabIndex="-1">
           <div>
             {
