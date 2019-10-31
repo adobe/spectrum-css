@@ -73,7 +73,7 @@ governing permissions and limitations under the License.
   position: relative;
 
   box-sizing: border-box;
-  width: var(--spectrum-actionbar-width);
+  width: var(--spectrum-actionbar-width, 100%);
   margin: auto;
   height: var(--spectrum-actionbar-height);
   min-width: var(--spectrum-actionbar-min-width);
