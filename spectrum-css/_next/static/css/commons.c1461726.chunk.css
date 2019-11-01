@@ -1,0 +1,473 @@
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum-Link {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  transition: color 130ms ease-in-out;
+  outline: none;
+}
+.spectrum-Link:hover {
+    text-decoration: underline;
+  }
+.spectrum-Link.focus-ring {
+    text-decoration: underline;
+  }
+.spectrum-Link.focus-ring {
+    text-decoration: underline;
+    -webkit-text-decoration-style: double;
+            text-decoration-style: double;
+  }
+.spectrum-Link.is-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+.spectrum-Link.is-disabled:hover,
+    .spectrum-Link.is-disabled:focus {
+      text-decoration: none;
+    }
+.spectrum-Link--subtle,
+/** @deprecated */.spectrum-Link--quiet {
+  text-decoration: underline;
+}
+.spectrum-Link--overBackground {
+  text-decoration: underline;
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--large .spectrum-Link {
+  transition: color 130ms ease-in-out;
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--light .spectrum-Link {
+  color: rgb(13, 102, 208);
+}
+.spectrum--light .spectrum-Link:hover {
+    color: rgb(13, 102, 208);
+  }
+.spectrum--light .spectrum-Link:active {
+    color: rgb(9, 90, 186);
+  }
+.spectrum--light .spectrum-Link.focus-ring {
+    color: rgb(13, 102, 208);
+  }
+.spectrum--light .spectrum-Link.is-disabled {
+    color: rgb(179, 179, 179);
+  }
+.spectrum--light .spectrum-Link--quiet,
+.spectrum--light .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--light .spectrum-Link--quiet:hover,
+.spectrum--light .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--light .spectrum-Link--quiet:active,
+.spectrum--light .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--light .spectrum-Link--quiet:focus,
+.spectrum--light .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--light .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--light .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--light .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--light .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--light .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--dark .spectrum-Link {
+  color: rgb(75, 156, 245);
+}
+.spectrum--dark .spectrum-Link:hover {
+    color: rgb(75, 156, 245);
+  }
+.spectrum--dark .spectrum-Link:active {
+    color: rgb(90, 169, 250);
+  }
+.spectrum--dark .spectrum-Link.focus-ring {
+    color: rgb(75, 156, 245);
+  }
+.spectrum--dark .spectrum-Link.is-disabled {
+    color: rgb(110, 110, 110);
+  }
+.spectrum--dark .spectrum-Link--quiet,
+.spectrum--dark .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--dark .spectrum-Link--quiet:hover,
+.spectrum--dark .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--dark .spectrum-Link--quiet:active,
+.spectrum--dark .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--dark .spectrum-Link--quiet:focus,
+.spectrum--dark .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--dark .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--dark .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--lightest .spectrum-Link {
+  color: rgb(20, 115, 230);
+}
+.spectrum--lightest .spectrum-Link:hover {
+    color: rgb(20, 115, 230);
+  }
+.spectrum--lightest .spectrum-Link:active {
+    color: rgb(13, 102, 208);
+  }
+.spectrum--lightest .spectrum-Link.focus-ring {
+    color: rgb(20, 115, 230);
+  }
+.spectrum--lightest .spectrum-Link.is-disabled {
+    color: rgb(188, 188, 188);
+  }
+.spectrum--lightest .spectrum-Link--quiet,
+.spectrum--lightest .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--lightest .spectrum-Link--quiet:hover,
+.spectrum--lightest .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--quiet:active,
+.spectrum--lightest .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--quiet:focus,
+.spectrum--lightest .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--lightest .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--darkest .spectrum-Link {
+  color: rgb(55, 142, 240);
+}
+.spectrum--darkest .spectrum-Link:hover {
+    color: rgb(55, 142, 240);
+  }
+.spectrum--darkest .spectrum-Link:active {
+    color: rgb(75, 156, 245);
+  }
+.spectrum--darkest .spectrum-Link.focus-ring {
+    color: rgb(55, 142, 240);
+  }
+.spectrum--darkest .spectrum-Link.is-disabled {
+    color: rgb(92, 92, 92);
+  }
+.spectrum--darkest .spectrum-Link--quiet,
+.spectrum--darkest .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--darkest .spectrum-Link--quiet:hover,
+.spectrum--darkest .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--darkest .spectrum-Link--quiet:active,
+.spectrum--darkest .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--darkest .spectrum-Link--quiet:focus,
+.spectrum--darkest .spectrum-Link--subtle:focus {
+    color: inherit;
+  }
+.spectrum--darkest .spectrum-Link--overBackground {
+  color: rgb(255, 255, 255);
+}
+.spectrum--darkest .spectrum-Link--overBackground:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--darkest .spectrum-Link--overBackground:active {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--darkest .spectrum-Link--overBackground:focus {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--darkest .spectrum-Link--overBackground.is-disabled {
+    color: rgba(255,255,255,0.5);
+  }
+
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.table___1eH1D {
+  width: 100%; }
+
+.list___hsw97 {
+  font-size: 16px;
+  margin-left: 0px;
+  padding-left: 24px; }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum-Rule {
+  width: 100%;
+  overflow: visible;
+
+  border: none;
+  border-width: 2px;
+  border-radius: 2px;
+}
+.spectrum-Rule--large {
+  height: 4px;
+
+  border-radius: 2px;
+}
+.spectrum-Rule--medium {
+  height: 2px;
+
+  border-radius: 1px;
+}
+.spectrum-Rule--small {
+  height: 1px;
+
+  border-radius: 1px;
+}
+.spectrum-Rule--vertical {
+  height: 100%;
+}
+.spectrum-Rule--vertical.spectrum-Rule--large {
+    width: 4px;
+  }
+.spectrum-Rule--vertical.spectrum-Rule--medium {
+    width: 2px;
+  }
+.spectrum-Rule--vertical.spectrum-Rule--small {
+    width: 1px;
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--large .spectrum-Rule {
+  border-width: 2px;
+  border-radius: 2px;
+}
+.spectrum--large .spectrum-Rule--large {
+  height: 4px;
+
+  border-radius: 2px;
+}
+.spectrum--large .spectrum-Rule--medium {
+  height: 2px;
+
+  border-radius: 1px;
+}
+.spectrum--large .spectrum-Rule--small {
+  height: 1px;
+
+  border-radius: 1px;
+}
+.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--large {
+    width: 4px;
+  }
+.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--medium {
+    width: 2px;
+  }
+.spectrum--large .spectrum-Rule--vertical.spectrum-Rule--small {
+    width: 1px;
+  }
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--light .spectrum-Rule--large {
+  background-color: rgb(75, 75, 75);
+}
+.spectrum--light .spectrum-Rule--medium {
+  background-color: rgb(225, 225, 225);
+}
+.spectrum--light .spectrum-Rule--small {
+  background-color: rgb(225, 225, 225);
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--dark .spectrum-Rule--large {
+  background-color: rgb(227, 227, 227);
+}
+.spectrum--dark .spectrum-Rule--medium {
+  background-color: rgb(74, 74, 74);
+}
+.spectrum--dark .spectrum-Rule--small {
+  background-color: rgb(74, 74, 74);
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--lightest .spectrum-Rule--large {
+  background-color: rgb(80, 80, 80);
+}
+.spectrum--lightest .spectrum-Rule--medium {
+  background-color: rgb(234, 234, 234);
+}
+.spectrum--lightest .spectrum-Rule--small {
+  background-color: rgb(234, 234, 234);
+}
+
+/*
+Use of this code is governed by the Adobe Terms of Use and
+Adobe Developer Additional Terms, and the license attached
+to this repo does not apply.
+*/
+.spectrum--darkest .spectrum-Rule--large {
+  background-color: rgb(200, 200, 200);
+}
+.spectrum--darkest .spectrum-Rule--medium {
+  background-color: rgb(57, 57, 57);
+}
+.spectrum--darkest .spectrum-Rule--small {
+  background-color: rgb(57, 57, 57);
+}
+
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.pageHeading___26RtH {
+  font-size: 58px !important;
+  font-family: adobe-clean-serif !important;
+  font-weight: 800;
+  line-height: 1.15 !important;
+  letter-spacing: normal !important; }
+  @media screen and (max-width: 768px) {
+    .pageHeading___26RtH {
+      font-size: 44px !important;
+      font-family: adobe-clean-serif !important;
+      letter-spacing: normal !important; } }
+
+.headerRow___2meAi {
+  margin-bottom: 16px; }
+
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.headingAnchor___CupO2 {
+  transition: all 125ms ease-in-out;
+  margin-left: 4px; }
+  .sectionHeader___1vbUF .headingAnchor___CupO2 {
+    margin-left: 6px; }
+
+.subHeader___l-0m8 {
+  margin-bottom: 16px !important; }
+
+.headerContainer___3NxS9 {
+  margin-bottom: 33px; }
+
+.sectionHeader___1vbUF {
+  padding-left: 0; }
+
+.anchor___NrH_s {
+  opacity: 0;
+  transition: all 125ms ease-in-out; }
+  .anchor___NrH_s:focus {
+    opacity: 1;
+    transition: all 125ms ease-in-out; }
+
+.editLink___1-WTE {
+  opacity: 0; }
+
+.header___3q7Ji:hover .editLink___1-WTE, .header___3q7Ji:hover .anchor___NrH_s {
+  opacity: 1;
+  transition: all 125ms ease-in-out; }
+
