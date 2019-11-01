@@ -138,7 +138,7 @@ class Page extends React.Component {
             type="GitHub"
             url={`https://github.com/adobe/spectrum-css/tree/master/components/${this.props.pageData.packageSlug}`}
             title="View repository"
-            subTitle="Github"
+            subTitle="GitHub"
           />
           <ResourceCard
             type="NPM"
