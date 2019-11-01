@@ -10,7 +10,7 @@
     "export": "npm run build && next export -o spectrum-css",
     "postexport": "node sitemap_generator",
     "prep": "npm run export && touch spectrum-css/.nojekyll",
-    "deploy": "ghpages spectrum-css"
+    "deploy": "git subtree push --prefix spectrum-css origin gh-pages"
   },
   "repository": {
     "type": "git",
