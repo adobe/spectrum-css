@@ -1,5 +1,18 @@
 :local(.searchContainer) {
-    margin-top:24px;
+    margin-top: 24px;
+
+    // the Combobox component will over-write the search in the sidebar.
+    // Resetting the left search to gain 100% width and adding the correct padding 
+    // for the text input field.
+    & :global(.spectrum-Search) {
+        width: 100%;
+    }
+
+    & :global(.spectrum-Search-input) {
+        padding-left: var(--spectrum-global-dimension-size-450);
+        width: var(--spectrum-global-dimension-size-2400);
+    }
+
 }
 :local(.results) {
     border: 1px solid var(--spectrum-global-color-gray-400);
