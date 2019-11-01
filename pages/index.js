@@ -81,7 +81,6 @@ const Home = () => (
         <div>
           <SubHeader title="Multi-platform support"/>
           <p className="spectrum-Body3">We support evergreen browsers (minus one version) and IE 11 for scalability and flexibility.</p>
-          <p className="spectrum-Body3"><Link href="https://spectrum.adobe.com/">View Spectrum guidelines</Link></p>
         </div>
       </div>
     </div>
