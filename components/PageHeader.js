@@ -15,7 +15,7 @@ import styles from './css/pageHeader.scss';
 const PageHeader = (props) => (
 
   <div className={classNames('afg-row', styles.headerRow)}>
-    <div className="afg-col-xs-9 spectrum-Article">
+    <div className="afg-col-xs-12 spectrum-Article">
       <h1 className={classNames('spectrum-Heading1--display', styles.pageHeading)}>{props.title}</h1>
     </div>
   </div>
