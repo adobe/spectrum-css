@@ -8309,16 +8309,6 @@ to this repo does not apply.
   color: rgb(133, 133, 133);
 }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .spectrum {
   --hljs-color: var(--spectrum-global-color-gray-800, #383a42);
   --hljs-background: var(--spectrum-global-color-gray-75, #fafafa);
@@ -8651,16 +8641,6 @@ to this repo does not apply.
     color: rgba(255,255,255,0.5);
   }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .table___1eH1D {
   width: 100%; }
 
@@ -8669,46 +8649,11 @@ governing permissions and limitations under the License.
   margin-left: 0px;
   padding-left: 24px; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-.container___-roxm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 70vh; }
-
-.row___2qpW7 {
-  height: 100%; }
-
-.header___1nDdP, .body___2uvXd {
-  color: var(--spectrum-global-color-gray-700) !important; }
-
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .width___3VV6B img {
   display: block; }
 
 .responsiveImage___2Oagb img {
-  display: block;
-  width: 100%; }
+  display: block; }
 
 .Anatomy___3C7c7 {
   display: flex;
@@ -14023,16 +13968,6 @@ to this repo does not apply.
   color: rgb(162, 162, 162);
 }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .title___3-WCf {
   display: flex;
   flex-direction: row;
@@ -14710,18 +14645,13 @@ to this repo does not apply.
       color: rgb(92, 92, 92);
     }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .searchContainer___dkLfp {
   margin-top: 24px; }
+  .searchContainer___dkLfp .spectrum-Search {
+    width: 100%; }
+  .searchContainer___dkLfp .spectrum-Search-input {
+    padding-left: var(--spectrum-global-dimension-size-450);
+    width: var(--spectrum-global-dimension-size-2400); }
 
 .results___32tIF {
   border: 1px solid var(--spectrum-global-color-gray-400);
@@ -14823,16 +14753,6 @@ governing permissions and limitations under the License.
 .noResultsSub___2l0NW {
   color: var(--spectrum-global-color-gray-700) !important; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .appHeader___1ukmz {
   height: 48px;
   border-bottom: 1px solid var(--spectrum-global-color-gray-200);
@@ -14933,16 +14853,6 @@ governing permissions and limitations under the License.
   color: #8E8E8E;
   font-weight: 600; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 * {
   box-sizing: border-box; }
 
@@ -15051,16 +14961,6 @@ p.spectrum-Body3 {
 .scaleSelector {
   margin-left: var(--spectrum-global-dimension-size-400); }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .headingAnchor___CupO2 {
   transition: all 125ms ease-in-out;
   margin-left: 4px; }
@@ -15090,16 +14990,6 @@ governing permissions and limitations under the License.
   opacity: 1;
   transition: all 125ms ease-in-out; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .Standard___2Afwl {
   width: 100%;
   background-color: var(--spectrum-global-color-gray-100);
@@ -15119,16 +15009,6 @@ governing permissions and limitations under the License.
   .row___2RvJR:last-of-type {
     margin-bottom: 0px; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .heroContainer___2bZ_C {
   overflow: hidden;
   border-radius: 4px; }
@@ -15143,16 +15023,6 @@ governing permissions and limitations under the License.
 .row___EIpbc {
   margin-bottom: 56px; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .pageHeading___26RtH {
   font-size: 58px !important;
   font-family: adobe-clean-serif !important;
@@ -15168,36 +15038,6 @@ governing permissions and limitations under the License.
 .headerRow___2meAi {
   margin-bottom: 16px; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-.homecard___1k3T0 {
-  display: inline-flex;
-  margin-bottom: var(--spectrum-global-dimension-size-350);
-  padding: 0 var(--spectrum-global-dimension-size-250); }
-  .homecard___1k3T0 img {
-    margin-right: var(--spectrum-global-dimension-size-250); }
-
-.description___4pWrJ {
-  margin-bottom: var(--spectrum-global-dimension-size-800); }
-
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .card___2ZaLE {
   width: 224px;
   margin: 2px 16px 2px 2px;
@@ -15275,17 +15115,8 @@ governing permissions and limitations under the License.
   background-color: rgba(245, 245, 245, 0.1);
   fill: whitesmoke; }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .section___1Znpf {
+  margin-bottom: 80px;
   position: relative; }
 
 .RelatedContent ul {
@@ -15628,16 +15459,6 @@ to this repo does not apply.
   background-color: rgb(134, 76, 204);
 }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .detailsTable___2x6rG {
   border-spacing: 0;
   margin-bottom: var(--spectrum-global-dimension-size-450);
@@ -15650,14 +15471,6 @@ governing permissions and limitations under the License.
 
 .resourceCards___gpHo_ {
   margin-bottom: 73px; }
-
-.spectrum--large .compStatus___1C-79,
-.spectrum--medium .compStatus___1C-79 {
-  min-height: 0;
-  padding: 0; }
-  .spectrum--large .compStatus___1C-79:before,
-  .spectrum--medium .compStatus___1C-79:before {
-    margin-left: 0; }
 
 div.subHeadStatusLight___3Xg_x {
   display: inline-flex; }
@@ -15714,35 +15527,6 @@ div.subHeadStatusLight___3Xg_x {
   top: 50%;
   transform: translate(-50%, -50%); }
 
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-.codeBlock___2p41J code {
-  border: 1px solid var(--spectrum-global-color-gray-400);
-  border-radius: var(--spectrum-global-dimension-size-50);
-  padding: 14px 17px;
-  margin: 3px 0; }
-
-.subSection___1Fa0I {
-  margin: 50px 0; }
-
-/*
-Copyright 2019 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
 .pageContainer___3Z_T8 {
   position: relative; }
 
@@ -15782,6 +15566,16 @@ body {
 
 .test1 {
   border: 1px solid red; }
+
+.homecard___1k3T0 {
+  display: inline-flex;
+  margin-bottom: var(--spectrum-global-dimension-size-350);
+  padding: 0 var(--spectrum-global-dimension-size-250); }
+  .homecard___1k3T0 img {
+    margin-right: var(--spectrum-global-dimension-size-250); }
+
+.description___4pWrJ {
+  margin-bottom: var(--spectrum-global-dimension-size-800); }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
