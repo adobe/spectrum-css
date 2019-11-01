@@ -28,7 +28,7 @@ class MyDocument extends Document {
               adobe: {
                 launch: {
                   property: 'global',
-                  environment: '${process.env.adobeLaunchEnv || 'stage'}'
+                  environment: 'production'
                 },
                 target: false,
                 audienceManager: false
@@ -86,7 +86,7 @@ class MyDocument extends Document {
           }}>
         </script>
         {
-          process.env.environment === 'production' ?
+          process.env.NODE_ENV === 'production' ?
             <script
               src="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.js">
             </script>
