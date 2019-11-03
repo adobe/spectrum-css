@@ -139,4 +139,4 @@ If you need to display both Medium and Large, you can import `index.css` and `in
 
 You can then switch scales by adding the `.spectrum--large`  or `.spectrum--medium` class on the `<html>` element.
 
-Note that the Spectrum CSS UI icons must change as well, see below for a full example.
+Note that the Spectrum CSS UI icons must change as well, see [Importing UI icons](README.md#importing-ui-icons) for a full example.
