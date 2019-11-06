@@ -64,6 +64,12 @@ governing permissions and limitations under the License.
   position: sticky;
 }
 
+.spectrum-ActionBar--flexible {
+  .spectrum-ActionBar-popover {
+    width: auto;
+  }
+}
+
 .spectrum-ActionBar--fixed {
    position: fixed;
 }
@@ -73,7 +79,7 @@ governing permissions and limitations under the License.
   position: relative;
 
   box-sizing: border-box;
-  width: var(--spectrum-actionbar-width, 100%);
+  width: 100%;
   margin: auto;
   height: var(--spectrum-actionbar-height);
   min-width: var(--spectrum-actionbar-min-width);
