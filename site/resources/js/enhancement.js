@@ -10,6 +10,62 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Rating
+(function() {
+  function setFocus(rating, focused) {
+    rating.classList[focused ? 'add' : 'remove']('is-focused');
+  }
+
+  function setValue(rating, value) {
+    var input = rating.querySelector('.spectrum-Rating-input');
+    input.value = value;
+    Array.prototype.forEach.call(rating.querySelectorAll('.spectrum-Rating-icon'), function(el, index) {
+      el.classList[index <= value - 1 ? 'add' : 'remove']('is-selected');
+      el.classList[index === value - 1 ? 'add' : 'remove']('is-currentValue');
+    });
+  }
+
+  document.addEventListener('focusin', function(event) {
+    var rating = event.target.closest('.spectrum-Rating');
+
+    if (rating) {
+      setFocus(rating, true);
+    }
+  });
+
+  document.addEventListener('focusout', function(event) {
+    var rating = event.target.closest('.spectrum-Rating');
+
+    if (rating) {
+      setFocus(rating, false);
+    }
+  });
+
+  document.addEventListener('change', function(event) {
+    var input = event.target.closest('.spectrum-Rating-input');
+    if (input) {
+      if (input.hasAttribute('readonly')) {
+        event.preventDefault();
+        input.value = event.defaultValue;
+      }
+      else {
+        var value = parseInt(input.value, 10);
+        var rating = event.target.closest('.spectrum-Rating');
+        setValue(rating, value);
+      }
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    var icon = event.target.closest('.spectrum-Rating-icon');
+    if (icon) {
+      var rating = event.target.closest('.spectrum-Rating');
+      var value = Array.prototype.indexOf.call(rating.querySelectorAll('.spectrum-Rating-icon'), icon) + 1;
+      setValue(rating, value);
+    }
+  });
+}());
+
 // Dropdown
 (function() {
   var openDropdown = null;

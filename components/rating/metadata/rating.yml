@@ -109,7 +109,7 @@ examples:
     description: A non-interactive rating.
     markup: |
       <div class="spectrum-Rating is-readOnly">
-        <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" readOnly aria-label="Rating">
+        <input class="spectrum-Rating-input" type="range" min="0" max="5" value="3" readonly aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
           <svg class="spectrum-Icon spectrum-UIIcon-Star spectrum-Rating-starActive" focusable="false" aria-hidden="true">
@@ -262,7 +262,7 @@ examples:
     name: Quiet (read-only)
     markup: |
       <div class="spectrum-Rating spectrum-Rating--quiet is-readOnly">
-        <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" readOnly aria-label="Rating">
+        <input class="spectrum-Rating-input" type="range" min="0" max="5" value="3" readonly aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
           <svg class="spectrum-Icon spectrum-UIIcon-Star spectrum-Rating-starActive" focusable="false" aria-hidden="true">
