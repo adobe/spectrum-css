@@ -1,5 +1,5 @@
 name: Dialog
-description: 'In order to avoid blurry Dialogs, wrap them in `<div class="spectrum-Dialog-wrapper">` and apply `.is-open` to both the Wrapper and the Dialog at the same time. See [this example](dialogAlert.html) for a working demonstration.'
+description: 'In order to avoid blurry Dialogs, wrap them in `<div class="spectrum-Dialog-wrapper">` and apply `.is-open` to both the Wrapper and the Dialog at the same time. See [this example](#dialog-wrapped) for a working demonstration.'
 SpectrumSiteSlug: https://spectrum.adobe.com/page/dialog/
 examples:
   - id: dialog
@@ -429,5 +429,29 @@ examples:
         </div>
         <div class="spectrum-Dialog-footer">
           Anything in the footer is sticky and aligned right.
+        </div>
+      </div>
+
+  - id: dialog
+    name: Dialog - Wrapped
+    status: Verified
+    description: A dialog wrapped so that its positioned in a non-blurry way
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Wrapped Dialog</button>
+
+      <div class="spectrum-Dialog-wrapper">
+        <div class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--dismissible">
+          <div class="spectrum-Dialog-header">
+            <h2 class="spectrum-Dialog-title">Disclaimer</h2>
+            <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" onclick="closeDialog(this.closest('.spectrum-Dialog'))">
+              <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CrossLarge" />
+              </svg>
+            </button>
+          </div>
+          <div class="spectrum-Dialog-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
+          </div>
         </div>
       </div>
