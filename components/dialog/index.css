@@ -184,7 +184,9 @@ governing permissions and limitations under the License.
   .spectrum-Dialog:not(.spectrum-Dialog--fullscreen):not(.spectrum-Dialog--fullscreenTakeover) {
     pointer-events: auto;
 
-    position: static;
+    position: relative;
+    left: auto;
+    top: auto;
     transform: translateY(var(--spectrum-dialog-entry-animation-distance));
     margin-top: var(--spectrum-dialog-vertical-offset);
 
