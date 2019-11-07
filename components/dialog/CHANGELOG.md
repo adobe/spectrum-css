@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@2.0.0...@spectrum-css/dialog@2.0.1)
+
+### 🐛 Bug fixes
+
+* correct positioning of children of wrapped Dialogs, closes [#389](https://github.com/adobe/spectrum-css/issues/389) ([#393](https://github.com/adobe/spectrum-css/issues/393)) ([05a1161](https://github.com/adobe/spectrum-css/commit/05a1161))
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2019-10-08

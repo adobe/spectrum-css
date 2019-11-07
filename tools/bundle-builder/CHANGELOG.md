@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.1"></a>
+## 1.0.1
+🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@1.0.0...@spectrum-css/bundle-builder@1.0.1)
+
+### 🐛 Bug fixes
+
+* add missing variables to -unique files, closes [#336](https://github.com/adobe/spectrum-css/issues/336) ([3c9337f](https://github.com/adobe/spectrum-css/commit/3c9337f))
+
+
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0
 🗓 2019-10-08

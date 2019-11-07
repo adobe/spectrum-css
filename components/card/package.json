@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/card",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The Spectrum CSS card component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -24,13 +24,13 @@
     "@spectrum-css/vars": "^2.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/asset": "^2.0.0",
-    "@spectrum-css/button": "^2.0.0",
-    "@spectrum-css/checkbox": "^2.0.0",
-    "@spectrum-css/component-builder": "^1.0.0",
-    "@spectrum-css/icon": "^2.0.0",
-    "@spectrum-css/quickaction": "^2.0.0",
-    "@spectrum-css/vars": "^2.0.0",
+    "@spectrum-css/asset": "^2.0.1",
+    "@spectrum-css/button": "^2.0.1",
+    "@spectrum-css/checkbox": "^2.0.1",
+    "@spectrum-css/component-builder": "^1.0.1",
+    "@spectrum-css/icon": "^2.0.1",
+    "@spectrum-css/quickaction": "^2.0.1",
+    "@spectrum-css/vars": "^2.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

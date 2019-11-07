@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@2.0.0...@spectrum-css/avatar@2.0.1)
+
+### 🐛 Bug fixes
+
+* preprocess percentage values and convert them to floats, fixes [#340](https://github.com/adobe/spectrum-css/issues/340) ([a77ac11](https://github.com/adobe/spectrum-css/commit/a77ac11))
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2019-10-08
