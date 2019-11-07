@@ -33,11 +33,11 @@ async function checkPeerDependencies() {
 
     if (package.peerDependencies) {
       Object.keys(package.peerDependencies).forEach((dependency) => {
-        let devDepVer = package.devDependencies[dependency];
-        let peerDepVer = package.peerDependencies[dependency].replace('^', '');
+        let devDepVer = package.devDependencies[dependency].replace('^', '');
+        let peerDepVer = package.peerDependencies[dependency];
         if (devDepVer) {
-          if (!semver.satisfies(peerDepVer, devDepVer)) {
-            throw new Error(`${component} has out of date peerDependencies ${dependency} (found ${peerDepVer}, does not satisfy ${devDepVer})`);
+          if (!semver.satisfies(devDepVer, peerDepVer)) {
+            throw new Error(`${component} has out of date peerDependencies ${dependency} (found ${devDepVer}, does not satisfy ${peerDepVer})`);
           }
         }
         else {
