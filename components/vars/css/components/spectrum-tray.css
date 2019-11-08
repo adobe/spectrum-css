@@ -3,7 +3,7 @@
   --spectrum-tray-underlay-background-color: var(--spectrum-alias-background-color-modal-overlay);
   --spectrum-tray-padding-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-tray-padding-y: 0;
-  --spectrum-tray-width: 1;
+  --spectrum-tray-width: 100%;
   --spectrum-tray-max-width: 375px;
   --spectrum-tray-min-height: var(--spectrum-global-dimension-static-size-800);
   --spectrum-tray-border-radius: 0px;
