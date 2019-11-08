@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@2.0.1...@spectrum-css/vars@2.0.2)
+
+### 🐛 Bug fixes
+
+* do not convert non-opacity percent values to floats, fixes [#395](https://github.com/adobe/spectrum-css/issues/395) ([4b003ec](https://github.com/adobe/spectrum-css/commit/4b003ec))
+
+
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1
 🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@2.0.0...@spectrum-css/vars@2.0.1)
