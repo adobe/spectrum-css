@@ -13,7 +13,7 @@ assignees: ''
 
 ## Steps to reproduce
 
-1. Go to http://opensource.corp.adobe.com/spectrum-css/
+1. Go to http://opensource.adobe.com/spectrum-css/
 2. Click on ...
 3. Observe ...
 
