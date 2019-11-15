@@ -136,6 +136,8 @@ When this file is imported, if in updated version of `@spectrum-css/vars` change
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
+___
+
 ## Contributing
 
 Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start information, and head over to the [component documentation](components/README.md) and [bundle documentation](bundles/README.md) for more information.
@@ -222,6 +224,9 @@ The following tasks are available:
 - `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
 - `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
 
+
+___
+
 ## Testing
 
 Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). In order to avoid browser rendering inconsistent issue on different environments, the test needs to run inside of docker container.
@@ -255,6 +260,9 @@ Both `backstop:test` and `backstop:docker:test` accept arguments to customize yo
 - `npm run backstop:docker:test button` - Run test for `button` and its dependents components like action bar, toast etc with color stop as `light` and scale as `medium`.
 - `npm run backstop:docker:test themes=lightest,light scales=medium,large radio` - Run test for `radio` and its dependents components with color stop as `lightest` and `light` and scale as `medium` and `large`. It means that a single scenario will run 4 times.
 - `npm run backstop:docker:test themes=lightest,light,dark,darkest scales=medium,large` - Run test for all the components with all the color and scale combinations. It means that a single scenario will be run 8 times.
+
+___
+
 
 ## Releasing
 
