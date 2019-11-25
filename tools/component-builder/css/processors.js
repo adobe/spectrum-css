@@ -160,7 +160,7 @@ function getTypographyColor(name, tokenName, showIndicatorBackground=false) {
  * Add CSS nodes that are going to be processed with postcss
  *
  * @param {string} mixin name of the mixin
- * @param {string} css css injected in the mixing
+ * @param {string} css css injected in the mixin
  */
 function addNodesToCSS(mixin, css) {
   var nodes = postcssReal.parse(css);

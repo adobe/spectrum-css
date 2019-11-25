@@ -128,7 +128,7 @@ governing permissions and limitations under the License.
 
 /* T-Shirt sizes for .spectrum-Article */
 .spectrum-Article {
-  font-family: var(--spectrum-body-xl-text-font-family);
+  font-family: var(--spectrum-body-serif-xl-text-font-family);
   @mixin typographyTShirtSizes .spectrum-HeadingXXXL, heading-serif-XXXL {}
   @mixin typographyTShirtSizes .spectrum-HeadingXXL, heading-serif-XXL {}
   @mixin typographyTShirtSizes .spectrum-HeadingXL, heading-serif-XL {}
@@ -147,21 +147,21 @@ governing permissions and limitations under the License.
   @mixin typographyTShirtSizes .spectrum-BodyXS, body-serif-XS {}
   @mixin typographyTShirtSizes .spectrum-BodyXXS, body-serif-XS {}
 
-  @mixin typographyTShirtSizes .spectrum-HeadingXXXL--light, heading-light-XXXL {}
-  @mixin typographyTShirtSizes .spectrum-HeadingXXL--light, heading-light-XXL {}
-  @mixin typographyTShirtSizes .spectrum-HeadingXL--light, heading-light-XL {}
-  @mixin typographyTShirtSizes .spectrum-HeadingL--light, heading-light-L {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXXXL--light, heading-serif-light-XXXL {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXXL--light, heading-serif-light-XXL {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXL--light, heading-serif-light-XL {}
+  @mixin typographyTShirtSizes .spectrum-HeadingL--light, heading-serif-light-L {}
 
-  @mixin typographyTShirtSizes .spectrum-HeadingXXXL--heavy, heading-heavy-XXXL {}
-  @mixin typographyTShirtSizes .spectrum-HeadingXXL--heavy, heading-heavy-XXL {}
-  @mixin typographyTShirtSizes .spectrum-HeadingXL--heavy, heading-heavy-XL {}
-  @mixin typographyTShirtSizes .spectrum-HeadingL--heavy, heading-heavy-L {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXXXL--heavy, heading-serif-heavy-XXXL {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXXL--heavy, heading-serif-heavy-XXL {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXL--heavy, heading-serif-heavy-XL {}
+  @mixin typographyTShirtSizes .spectrum-HeadingL--heavy, heading-serif-heavy-L {}
 
-  /* These don't exist */
-  /* @mixin typographyTShirtSizes .spectrum-HeadingM--light, heading-light-M {} */
-  /*@mixin typographyTShirtSizes .spectrum-HeadingS--light, heading-light-S {}
-  @mixin typographyTShirtSizes .spectrum-HeadingXS--light, heading-light-XS {}
-  @mixin typographyTShirtSizes .spectrum-HeadingXXS--light, heading-light-XXS {} */
+  /* These don't exist, ticket is: https://jira.corp.adobe.com/browse/SDS-4454 */
+  /* @mixin typographyTShirtSizes .spectrum-HeadingM--light, heading-serif-light-M {} */
+  /*@mixin typographyTShirtSizes .spectrum-HeadingS--light, heading-serif-light-S {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXS--light, heading-serif-light-XS {}
+  @mixin typographyTShirtSizes .spectrum-HeadingXXS--light, heading-serif-light-XXS {} */
 
 
   @mixin typographyTShirtSizes .spectrum-DetailXL--serif, detail-serif-XL {}
