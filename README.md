@@ -160,6 +160,11 @@ Building the project will build and launch the project documentation site in you
 
 See [site generation](site/README.md) and [documentation generation](tools/bundle-builder/docs/README.md) for more information.
 
+### Updating Tokens / CSS variables from Spectrum DNA
+Instructions for updating tokens from [Spectrum DNA](https://git.corp.adobe.com/Spectrum/spectrum-dna) can be found here: 
+[components/vars/README.md](components/vars/README.md)
+
+
 ### CLI
 
 The following tasks are available:
