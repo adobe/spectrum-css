@@ -300,32 +300,32 @@ examples:
     description: Subheadings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <strong class="spectrum-DetailL--strong">DetailXL Strong</strong>.</p>
-        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <strong class="spectrum-DetailL--strong">DetailL Strong</strong>.</p>
-        <p class="spectrum-DetailM">DetailL <em class="spectrum-DetailM--light">DetailM Emphasis</em> <strong class="spectrum-DetailL--strong">DetailM Strong</strong>.</p>
-        <p class="spectrum-DetailS">DetailL <em class="spectrum-DetailS--light">DetailS Emphasis</em> <strong class="spectrum-DetailL--strong">DetailS Strong</strong>.</p>
+        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <span class="spectrum-DetailXL--light">DetailXL Light</span><strong class="spectrum-DetailL--strong">DetailXL Strong</strong>.</p>
+        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <span class="spectrum-DetailL--light">DetailL Light</span> <strong class="spectrum-DetailL--strong">DetailL Strong</strong>.</p>
+        <p class="spectrum-DetailM">DetailM <em class="spectrum-DetailM--light">DetailM Emphasis</em> <span class="spectrum-DetailM--light">DetailM Light</span> <strong class="spectrum-DetailM--strong">DetailM Strong</strong>.</p>
+        <p class="spectrum-DetailS">DetailS <em class="spectrum-DetailS--light">DetailS Emphasis</em> <span class="spectrum-DetailS--light">DetailS Light</span> <strong class="spectrum-DetailS--strong">DetailS Strong</strong>.</p>
       </div>
 
       <div class="spectrum-Article">
-        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <strong>DetailXL Strong</strong>.</p>
-        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <strong>DetailL Strong</strong>.</p>
-        <p class="spectrum-DetailM">DetailL <em class="spectrum-DetailM--light">DetailM Emphasis</em> <strong>DetailM Strong</strong>.</p>
-        <p class="spectrum-DetailS">DetailL <em class="spectrum-DetailS--light">DetailS Emphasis</em> <strong>DetailS Strong</strong>.</p>
+        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <span class="spectrum-DetailXL--light">DetailXL Light</span><strong class="spectrum-DetailL--strong">DetailXL Strong</strong>.</p>
+        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <span class="spectrum-DetailL--light">DetailL Light</span> <strong class="spectrum-DetailL--strong">DetailL Strong</strong>.</p>
+        <p class="spectrum-DetailM">DetailM <em class="spectrum-DetailM--light">DetailM Emphasis</em> <span class="spectrum-DetailM--light">DetailM Light</span> <strong class="spectrum-DetailM--strong">DetailM Strong</strong>.</p>
+        <p class="spectrum-DetailS">DetailS <em class="spectrum-DetailS--light">DetailS Emphasis</em> <span class="spectrum-DetailS--light">DetailS Light</span> <strong class="spectrum-DetailS--strong">DetailS Strong</strong>.</p>
       </div>
 
       <!-- Remove?
       <div class="spectrum">
-        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <strong>DetailXL Strong</strong>.</p>
-        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <strong>DetailL Strong</strong>.</p>
-        <p class="spectrum-DetailM">DetailL <em class="spectrum-DetailM--light">DetailM Emphasis</em> <strong>DetailM Strong</strong>.</p>
-        <p class="spectrum-DetailS">DetailL <em class="spectrum-DetailS--light">DetailS Emphasis</em> <strong>DetailS Strong</strong>.</p>
+        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <span class="spectrum-DetailXL--light">DetailXL Light</span><strong class="spectrum-DetailL--strong">DetailXL Strong</strong>.</p>
+        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <span class="spectrum-DetailL--light">DetailL Light</span> <strong class="spectrum-DetailL--strong">DetailL Strong</strong>.</p>
+        <p class="spectrum-DetailM">DetailM <em class="spectrum-DetailM--light">DetailM Emphasis</em> <span class="spectrum-DetailM--light">DetailM Light</span> <strong class="spectrum-DetailM--strong">DetailM Strong</strong>.</p>
+        <p class="spectrum-DetailS">DetailS <em class="spectrum-DetailS--light">DetailS Emphasis</em> <span class="spectrum-DetailS--light">DetailS Light</span> <strong class="spectrum-DetailS--strong">DetailS Strong</strong>.</p>
       </div>
 
       <div class="spectrum-Article">
-        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <strong>DetailXL Strong</strong>.</p>
-        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <strong>DetailL Strong</strong>.</p>
-        <p class="spectrum-DetailM">DetailL <em class="spectrum-DetailM--light">DetailM Emphasis</em> <strong>DetailM Strong</strong>.</p>
-        <p class="spectrum-DetailS">DetailL <em class="spectrum-DetailS--light">DetailS Emphasis</em> <strong>DetailS Strong</strong>.</p>
+        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <span class="spectrum-DetailXL--light">DetailXL Light</span><strong class="spectrum-DetailL--strong">DetailXL Strong</strong>.</p>
+        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <span class="spectrum-DetailL--light">DetailL Light</span> <strong class="spectrum-DetailL--strong">DetailL Strong</strong>.</p>
+        <p class="spectrum-DetailM">DetailM <em class="spectrum-DetailM--light">DetailM Emphasis</em> <span class="spectrum-DetailM--light">DetailM Light</span> <strong class="spectrum-DetailM--strong">DetailM Strong</strong>.</p>
+        <p class="spectrum-DetailS">DetailS <em class="spectrum-DetailS--light">DetailS Emphasis</em> <span class="spectrum-DetailS--light">DetailS Light</span> <strong class="spectrum-DetailS--strong">DetailS Strong</strong>.</p>
       </div>-->
   - id: heading-1
     name: Article
