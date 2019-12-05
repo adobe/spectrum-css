@@ -13,7 +13,9 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  /* Hardcoded for wrapping study */
+  /* Hardcoded for wrapping study.
+  Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466
+  */
   --spectrum-switch-label-margin-top: var(--spectrum-global-dimension-size-85);
 }
 
