@@ -49,6 +49,12 @@ module.exports = postcss.plugin('postcss-custom-properties-mapping', function() 
         if (customPropertiesRegExp.test(decl.value)) {
           let value = valueParser(decl.value);
 
+          if (value.nodes && value.nodes[0] && value.nodes[0].value === 'url') {
+            // Don't process custom properties within URLs, it does nothing and breaks parcel
+            // see https://github.com/parcel-bundler/parcel/issues/3881
+            return;
+          }
+
           value.walk((node, index, nodes) => {
             if (node.type === 'function' && node.value === 'var') {
               let v = node.nodes[0].value;
