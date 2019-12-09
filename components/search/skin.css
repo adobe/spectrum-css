@@ -14,10 +14,31 @@ governing permissions and limitations under the License.
   color: var(--spectrum-textfield-icon-color);
 }
 
+.spectrum-Search {
+}
+
 .spectrum-Search-input {
   &:disabled {
     & ~ .spectrum-Search-icon {
       color: var(--spectrum-textfield-text-color-disabled);
+    }
+  }
+
+  &:hover {
+    & ~ .spectrum-Search-icon {
+      color: var(--spectrum-search-icon-color-hover);
+    }
+  }
+
+  &:active {
+    & ~ .spectrum-Search-icon {
+      color: var(--spectrum-search-icon-color-down);
+    }
+  }
+
+  &:focus-ring {
+    & ~ .spectrum-Search-icon {
+      color: var(--spectrum-search-icon-color-key-focus);
     }
   }
 }

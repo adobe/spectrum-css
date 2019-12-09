@@ -72,5 +72,7 @@ governing permissions and limitations under the License.
   left: 12px;
   top: calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-magnifier-width) / 2));
 
+  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
+
   pointer-events: none;
 }
