@@ -11,6 +11,9 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "license": "Apache-2.0",
+  "peerDependencies": {
+    "@spectrum-css/vars": "^2.0.2"
+  },
   "dependencies": {
     "autoprefixer": "^6.5.3",
     "browser-sync": "^2.26.7",
