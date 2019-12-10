@@ -147,10 +147,6 @@ governing permissions and limitations under the License.
 
   cursor: pointer;
 
-  transition: background var(--spectrum-global-animation-duration-100) ease-in-out,
-        color var(--spectrum-global-animation-duration-100) ease-in-out,
-        border-color var(--spectrum-global-animation-duration-100) ease-in-out;
-
   &.is-disabled {
     cursor: default;
     pointer-events: none;
