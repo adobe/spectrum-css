@@ -55,7 +55,7 @@ governing permissions and limitations under the License.
   position: absolute;
   top: 0;
   left: calc(var(--spectrum-checkbox-cursor-hit-x) * -1);
-  width: calc(100% + var(--spectrum-checkbox-cursor-hit-x) * 2);;
+  width: calc(100% + var(--spectrum-checkbox-cursor-hit-x) * 2);
   height: 100%;
 
   opacity: .0001;
@@ -101,6 +101,10 @@ governing permissions and limitations under the License.
   font-weight: var(--spectrum-checkbox-text-font-weight);
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 
+  /* Fix for inconsistent line-height between browsers that would push the label 1px below the intended baseline */
+  /* more info: https://stackoverflow.com/questions/47700568/css-fonts-render-differently-in-firefox-and-chrome */
+  line-height: 1.49;
+  
   margin-top: var(--spectrum-checkbox-label-margin-top);
 }
 
