@@ -115,7 +115,7 @@ governing permissions and limitations under the License.
     width: 0;
     z-index: 1;
     &:before {
-      content: '—';
+      content: '–';
       display: inline-block;
       margin: 0 var(--spectrum-datepicker-range-dash-margin-left);
       overflow: hidden;
