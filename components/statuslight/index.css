@@ -14,8 +14,13 @@ governing permissions and limitations under the License.
 
 :root {
   --spectrum-statuslight-padding-y: var(--spectrum-global-dimension-size-75);
+
   /* Override line-height to fix Firefox */
   --spectrum-statuslight-text-line-height: 1.44;
+
+  /* Override padding to fix alignment of the first line of text (needs to be moved down 1px) */
+  --spectrum-statuslight-padding-top: calc(var(--spectrum-statuslight-padding-y) - 1px);
+  --spectrum-statuslight-padding-bottom: calc(var(--spectrum-statuslight-padding-y) + 1px);
 }
 
 .spectrum-StatusLight {
@@ -24,7 +29,7 @@ governing permissions and limitations under the License.
   flex-direction: row;
   align-items: flex-start;
 
-  padding: calc(var(--spectrum-statuslight-padding-y) - 1px) 0 calc(var(--spectrum-statuslight-padding-y) + 1px) 0;
+  padding: var(--spectrum-statuslight-padding-top) 0 var(--spectrum-statuslight-padding-bottom) 0;
   box-sizing: border-box;
 
   font-size: var(--spectrum-statuslight-text-size);
@@ -39,7 +44,9 @@ governing permissions and limitations under the License.
     width: var(--spectrum-statuslight-dot-size);
     height: var(--spectrum-statuslight-dot-size);
     border-radius: 50%;
-    margin: calc(var(--spectrum-statuslight-padding-y) + 1px) var(--spectrum-statuslight-text-gap) calc(var(--spectrum-statuslight-padding-y) - 1px) var(--spectrum-statuslight-text-gap);
+
+    /* margin on the dog is the opposite of the padding in order to align the dot as if the padding hack was not present */
+    margin: var(--spectrum-statuslight-padding-bottom) var(--spectrum-statuslight-text-gap) var(--spectrum-statuslight-padding-top) var(--spectrum-statuslight-text-gap);
   }
 }
 
