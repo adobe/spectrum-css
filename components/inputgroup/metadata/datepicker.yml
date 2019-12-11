@@ -95,7 +95,7 @@ examples:
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
         <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
+        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
         <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet" tabindex="-1" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
