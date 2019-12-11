@@ -14,9 +14,6 @@ governing permissions and limitations under the License.
   color: var(--spectrum-textfield-icon-color);
 }
 
-.spectrum-Search {
-}
-
 .spectrum-Search-input {
   &:disabled {
     & ~ .spectrum-Search-icon {
@@ -24,6 +21,7 @@ governing permissions and limitations under the License.
     }
   }
 
+  /* The value of color is identical for hover/active/focus-ring, but we repeat it here in case one is changed in the future */
   &:hover {
     & ~ .spectrum-Search-icon {
       color: var(--spectrum-search-icon-color-hover);
