@@ -156,12 +156,54 @@ Your `dist/` folder should now have a local copy of the Spectrum CSS docs and mi
 
 ### Documentation site
 
+#### Local development
+
 Building the project will build and launch the project documentation site in your browser automatically.
 
 See [site generation](site/README.md) and [documentation generation](tools/bundle-builder/docs/README.md) for more information.
 
+#### Generating and deploying external documentation site
+
+Checkout `nextjs` branch, pull, and install dependencies.
+
+```
+git checkout nextjs
+git pull
+yarn install
+```
+
+Update `yml` data from master
+
+```
+yarn importdata
+```
+
+Run `prep` script to build the static site locally
+
+```
+yarn prep
+````
+
+Commit changes
+
+```
+git commit -am '<message here>'
+```
+
+Deploy
+
+```
+yarn deploy
+```
+
+Push changes to `nextjs` branch
+
+```
+git push origin nextjs
+```
+
 ### Updating Tokens / CSS variables from Spectrum DNA
-Instructions for updating tokens from [Spectrum DNA](https://git.corp.adobe.com/Spectrum/spectrum-dna) can be found here: 
+Instructions for updating tokens from [Spectrum DNA](https://git.corp.adobe.com/Spectrum/spectrum-dna) can be found here:
 [components/vars/README.md](components/vars/README.md)
 
 
@@ -200,7 +242,7 @@ The reference bitmaps are hosted in a adobe internal repo and published as [@spe
 
 The following npm scripts are available for testing:
 
-- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes) 
+- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes)
 - `npm run backstop:test` - Run test in your local native environment
 - `npm run backstop:clean` - Clean up all the testing reports and test images
 - `npm run backstop:docker:test` - Run test in your local docker container
