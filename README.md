@@ -173,7 +173,7 @@ git checkout nextjs
 Update `yml` data from master
 
 ```
-npm run importdata
+yarn importdata
 ```
 
 Run `prep` script to build the static site locally
