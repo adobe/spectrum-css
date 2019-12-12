@@ -164,7 +164,7 @@ See [site generation](site/README.md) and [documentation generation](tools/bundl
 
 #### Generating and deploying external documentation site
 
-Checkout `nextjs` branch and pull if needed. Also dependencies are different in this branch from master so you might need to run `npm install` as well.
+Checkout `nextjs` branch, pull, and install dependencies.
 
 ```
 git checkout nextjs
