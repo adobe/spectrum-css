@@ -179,7 +179,7 @@ npm run importdata
 Run `prep` script to build the static site locally
 
 ```
-npm run prep
+yarn prep
 ````
 
 Commit changes
