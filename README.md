@@ -168,6 +168,8 @@ Checkout `nextjs` branch, pull, and install dependencies.
 
 ```
 git checkout nextjs
+git pull
+yarn install
 ```
 
 Update `yml` data from master
