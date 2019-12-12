@@ -109,6 +109,9 @@ governing permissions and limitations under the License.
   }
 
   &:disabled {
+    /* Disable the resize functionality when disabled */
+    resize: none;
+
     /* The opacity must be set to 1 */
     opacity: 1;
     &::placeholder {
