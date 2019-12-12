@@ -191,7 +191,7 @@ git commit -am '<message here>'
 Deploy
 
 ```
-npm run deploy
+yarn deploy
 ```
 
 Push changes to `nextjs` branch
