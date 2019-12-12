@@ -191,4 +191,9 @@ governing permissions and limitations under the License.
   &.is-valid {
     background-position: var(--spectrum-textfield-quiet-invalid-background-position);
   }
+
+  &.spectrum-Textfield--multiline {
+    height: var(--spectrum-textfield-height);
+    min-height: var(--spectrum-textfield-height);
+  }
 }
