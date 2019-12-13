@@ -1,5 +1,5 @@
 name: Typography (Depreciated I)
-description: "English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples."
+description: 'English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples.'
 SpectrumSiteSlug: https://spectrum.adobe.com/page/typography/
 examples:
   - id: heading-1
@@ -21,32 +21,31 @@ examples:
         <p class="spectrum-Body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body2">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
+
         <h1 class="spectrum-Heading3">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body3">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
 
         <h1 class="spectrum-Heading4">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body4">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
+
         <h1 class="spectrum-Heading5">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body5">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
 
         <h1 class="spectrum-Heading6">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body5">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
         <h1 class="spectrum-Subheading">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-BodyS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <h1 class="spectrum-Subheading">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body4">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
-
   - id: heading-1
     name: Heading
     status: Verified
@@ -83,9 +82,9 @@ examples:
         <p class="spectrum-Heading2--strong">Article Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
   - id: heading-1
-    name: Heading (Light)
+    name: Heading (Quiet)
     status: Verified
-    description: Light headings for typography.
+    description: Quiet headings for typography.
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--quiet">Heading1 <em>Heading1 Emphasis</em> <strong>Heading1 Strong</strong>.</p>
@@ -111,18 +110,18 @@ examples:
         <p class="spectrum-Heading2--display">Article Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
   - id: heading-1
-    name: Display (Heavy)
+    name: Display (Strong)
     status: Verified
-    description: Heavy display headings for typography.
+    description: Strong display headings for typography.
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--display spectrum-Heading1--strong">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
         <p class="spectrum-Heading2--display spectrum-Heading2--strong">Heading2 <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
   - id: heading-1
-    name: Display (Light)
+    name: Display (Quiet)
     status: Verified
-    description: Light display headings for typography.
+    description: Quiet display headings for typography.
     markup: |
       <div class="spectrum">
         <p class="spectrum-Heading1--display spectrum-Heading1--quiet">Heading1 <em>Emphasis</em> <strong>Strong</strong>.</p>
@@ -155,7 +154,6 @@ examples:
         <p class="spectrum-Body5">Article Body5 Text <em>Article Body5 Emphasis</em> <strong>Article Body5 Strong</strong>.</p>
         <p class="spectrum-Detail">Detail Text <em>Detail Emphasis</em> <strong>Detail Strong</strong>.</p>
       </div>
-
   - id: heading-1
     name: Article
     status: Verified
@@ -177,8 +175,7 @@ examples:
         <h5 class="spectrum-Heading5">Heading 5</h5>
         <p class="spectrum-Body5">Body copy that pairs with heading 5</p>
       </div>
-
-  - id: code-1
+  - id: heading-1
     name: Typography - Code
     status: Verified
     description: Typographic styles for computer code.

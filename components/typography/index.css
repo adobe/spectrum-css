@@ -27,7 +27,6 @@ governing permissions and limitations under the License.
 
 /* Swaps out the font-family to serif from sans-serif */
 .spectrum-Typography--serif {
-  background-color: pink !important;
   font-family: var(--spectrum-body-serif-xl-text-font-family);
 }
 

@@ -195,7 +195,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
             var tokenName = getTShirtTokenName(name);
           }
 
-          var output = getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorBorder = true);
+          var output = getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorBorder = false);
           addNodesToCSS(mixin, output);
         },
 
@@ -258,7 +258,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
           if (!tokenName) {
             var tokenName = getTShirtTokenName(name);
           }
-          var output = getTypographyColor(name, tokenName, showIndicatorBackground = true);
+          var output = getTypographyColor(name, tokenName, showIndicatorBackground = false);
           addNodesToCSS(mixin, output);
         },
 
