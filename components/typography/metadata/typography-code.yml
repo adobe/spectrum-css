@@ -1,0 +1,18 @@
+name: Typography Code
+description: "English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples."
+SpectrumSiteSlug: https://spectrum.adobe.com/page/code/
+examples:
+  - id: code-1
+    name: Typography - Code
+    status: Verified
+    description: Typographic styles for computer code.
+    markup: |
+      <code class="spectrum-CodeXL">CodeXL Text <strong>Strong</strong> <em>Emphasis</em></code>
+      <code class="spectrum-CodeL">CodeL Text <strong>Strong</strong> <em>Emphasis</em></code>
+      <code class="spectrum-CodeM">CodeM Text <strong>Strong</strong> <em>Emphasis</em></code>
+      <code class="spectrum-CodeS">CodeS Text <strong>Strong</strong> <em>Emphasis</em></code>
+      <code class="spectrum-CodeXS">CodeXS Text <strong>Strong</strong> <em>Emphasis</em></code>
+      <pre><code class="spectrum-CodeM">CodeM Text Wrapped in:
+      pre tags for
+      multiline
+      goodness</code></pre>

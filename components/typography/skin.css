@@ -20,13 +20,6 @@ governing permissions and limitations under the License.
 
 
 /* t-shirt size-based typography */
-@mixin typographyTShirtColor .spectrum-BodyXXXL {}
-@mixin typographyTShirtColor .spectrum-BodyXXL {}
-@mixin typographyTShirtColor .spectrum-BodyXL {}
-@mixin typographyTShirtColor .spectrum-BodyL {}
-@mixin typographyTShirtColor .spectrum-BodyM {}
-@mixin typographyTShirtColor .spectrum-BodyS {}
-@mixin typographyTShirtColor .spectrum-BodyXS {}
 
 @mixin typographyTShirtColor .spectrum-HeadingXXXL {}
 @mixin typographyTShirtColor .spectrum-HeadingXXL {}
@@ -52,6 +45,15 @@ governing permissions and limitations under the License.
 @mixin typographyTShirtColor .spectrum-HeadingXL--heading, heading-XL {}
 @mixin typographyTShirtColor .spectrum-HeadingL--heading, heading-L {}
 
+@mixin typographyTShirtColor .spectrum-BodyXXXL {}
+@mixin typographyTShirtColor .spectrum-BodyXXL {}
+@mixin typographyTShirtColor .spectrum-BodyXL {}
+@mixin typographyTShirtColor .spectrum-BodyL {}
+@mixin typographyTShirtColor .spectrum-BodyM {}
+@mixin typographyTShirtColor .spectrum-BodyS {}
+@mixin typographyTShirtColor .spectrum-BodyXS {}
+
+
 @mixin typographyTShirtColor .spectrum-DetailXL {}
 @mixin typographyTShirtColor .spectrum-DetailL {}
 @mixin typographyTShirtColor .spectrum-DetailM {}
@@ -62,50 +64,6 @@ governing permissions and limitations under the License.
 @mixin typographyTShirtColor .spectrum-CodeM, code-M {}
 @mixin typographyTShirtColor .spectrum-CodeS, code-S {}
 @mixin typographyTShirtColor .spectrum-CodeXS, code-XS {}
-
-.spectrum-Article {
-  @mixin typographyColor .spectrum-HeadingXXXL, heading-serif-XXXL {}
-  @mixin typographyColor .spectrum-HeadingXXL, heading-serif-XXL {}
-  @mixin typographyColor .spectrum-HeadingXL, heading-serif-XL {}
-  @mixin typographyColor .spectrum-HeadingL, heading-serif-L {}
-  @mixin typographyColor .spectrum-HeadingM, heading-serif-M {}
-  @mixin typographyColor .spectrum-HeadingS, heading-serif-S {}
-  @mixin typographyColor .spectrum-HeadingXS, heading-serif-XS {}
-  @mixin typographyColor .spectrum-HeadingXXS, heading-serif-XXS {}
-
-  @mixin typographyColor .spectrum-BodyXXXL, body-serif-XXXL {}
-  @mixin typographyColor .spectrum-BodyXXL, body-serif-XXL {}
-  @mixin typographyColor .spectrum-BodyXL, body-serif-XL {}
-  @mixin typographyColor .spectrum-BodyL, body-serif-L {}
-  @mixin typographyColor .spectrum-BodyM, body-serif-M {}
-  @mixin typographyColor .spectrum-BodyS, body-serif-S {}
-  @mixin typographyColor .spectrum-BodyXS, body-serif-XS {}
-  @mixin typographyColor .spectrum-BodyXXS, body-serif-XS {}
-
-  @mixin typographyColor .spectrum-HeadingXXXL--light, heading-light-XXXL {}
-  @mixin typographyColor .spectrum-HeadingXXL--light, heading-light-XXL {}
-  @mixin typographyColor .spectrum-HeadingXL--light, heading-light-XL {}
-  @mixin typographyColor .spectrum-HeadingL--light, heading-light-L {}
-
-  @mixin typographyColor .spectrum-HeadingXXXL--heavy, heading-heavy-XXXL {}
-  @mixin typographyColor .spectrum-HeadingXXL--heavy, heading-heavy-XXL {}
-  @mixin typographyColor .spectrum-HeadingXL--heavy, heading-heavy-XL {}
-  @mixin typographyColor .spectrum-HeadingL--heavy, heading-heavy-L {}
-
-  @mixin typographyColor .spectrum-HeadingXXXL--serif, heading-serif-XXXL {}
-  @mixin typographyColor .spectrum-HeadingXXL--serif, heading-serif-XXL {}
-  @mixin typographyColor .spectrum-HeadingXL--serif, heading-serif-XL {}
-  @mixin typographyColor .spectrum-HeadingL--serif, heading-serif-L {}
-  @mixin typographyColor .spectrum-HeadingM--serif, heading-serif-M {}
-  @mixin typographyColor .spectrum-HeadingS--serif, heading-serif-S {}
-  @mixin typographyColor .spectrum-HeadingXS--serif, heading-serif-XS {}
-  @mixin typographyColor .spectrum-HeadingXXS--serif, heading-serif-XXS {}
-
-  @mixin typographyColor .spectrum-DetailXL--serif, detail-serif-xl {}
-  @mixin typographyColor .spectrum-DetailL--serif, detail-serif-l {}
-  @mixin typographyColor .spectrum-DetailM--serif, detail-serif-m {}
-  @mixin typographyColor .spectrum-DetailS--serif, detail-serif-s {}
-}
 
 .spectrum {
   &:lang(ja),

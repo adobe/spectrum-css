@@ -28,14 +28,14 @@ governing permissions and limitations under the License.
   */
 
   --spectrum-font-family-base: 'adobe-clean-ux', 'adobe-clean', 'Source Sans Pro', var(--spectrum-font-fallbacks-sans);
-  --spectrum-font-family-ar: var(--spectrum-font-family-ar);
-  --spectrum-font-family-he:  var(--spectrum-font-family-he);
-  --spectrum-font-family-zh: var(--spectrum-font-family-zh);
-  --spectrum-font-family-zhhans: var(--spectrum-font-family-zhhans);
-  --spectrum-font-family-ko: var(--spectrum-font-family-ko);
-  --spectrum-font-family-ja: var(--spectrum-font-family-ja);
-  --spectrum-font-family-han: var(--spectrum-font-family-zh);
-  --spectrum-font-family-zhhant: var(--spectrum-font-family-zh);
+  --spectrum-font-family-ar: var(--spectrum-alias-font-family-ar);
+  --spectrum-font-family-he:  var(--spectrum-alias-font-family-he);
+  --spectrum-font-family-zh: var(--spectrum-alias-font-family-zh);
+  --spectrum-font-family-zhhans: var(--spectrum-alias-font-family-zhhans);
+  --spectrum-font-family-ko: var(--spectrum-alias-font-family-ko);
+  --spectrum-font-family-ja: var(--spectrum-alias-font-family-ja);
+  --spectrum-font-family-han: var(--spectrum-alias-font-family-zh);
+  --spectrum-font-family-zhhant: var(--spectrum-alias-font-family-zh);
   --spectrum-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-text-body-line-height: var(--spectrum-alias-line-height-medium);
   --spectrum-text-size-text-label: var(--spectrum-label-text-size);

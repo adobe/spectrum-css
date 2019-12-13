@@ -1,0 +1,22 @@
+name: Typography Detail
+description: "English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples."
+SpectrumSiteSlug: https://spectrum.adobe.com/page/detail/
+examples:
+  - id: detail-1
+    status: Verified
+    name: Detail
+    description: Subheadings for typography.
+    markup: |
+      <div class="spectrum">
+        <p class="spectrum-DetailXL">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <span class="spectrum-DetailXL--light">DetailXL Light</span><strong class="spectrum-DetailL--strong">DetailXL Strong</strong>.</p>
+        <p class="spectrum-DetailL">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <span class="spectrum-DetailL--light">DetailL Light</span> <strong class="spectrum-DetailL--strong">DetailL Strong</strong>.</p>
+        <p class="spectrum-DetailM">DetailM <em class="spectrum-DetailM--light">DetailM Emphasis</em> <span class="spectrum-DetailM--light">DetailM Light</span> <strong class="spectrum-DetailM--strong">DetailM Strong</strong>.</p>
+        <p class="spectrum-DetailS">DetailS <em class="spectrum-DetailS--light">DetailS Emphasis</em> <span class="spectrum-DetailS--light">DetailS Light</span> <strong class="spectrum-DetailS--strong">DetailS Strong</strong>.</p>
+
+        </br/>
+
+        <p class="spectrum-DetailXL spectrum-Typography--serif">DetailXL <em class="spectrum-DetailXL--light">DetailXL Emphasis</em> <span class="spectrum-DetailXL--light">DetailXL Light</span><strong class="spectrum-DetailL--strong">DetailXL Strong</strong>.</p>
+        <p class="spectrum-DetailL spectrum-Typography--serif">DetailL <em class="spectrum-DetailL--light">DetailL Emphasis</em> <span class="spectrum-DetailL--light">DetailL Light</span> <strong class="spectrum-DetailL--strong">DetailL Strong</strong>.</p>
+        <p class="spectrum-DetailM spectrum-Typography--serif">DetailM <em class="spectrum-DetailM--light">DetailM Emphasis</em> <span class="spectrum-DetailM--light">DetailM Light</span> <strong class="spectrum-DetailM--strong">DetailM Strong</strong>.</p>
+        <p class="spectrum-DetailS spectrum-Typography--serif">DetailS <em class="spectrum-DetailS--light">DetailS Emphasis</em> <span class="spectrum-DetailS--light">DetailS Light</span> <strong class="spectrum-DetailS--strong">DetailS Strong</strong>.</p>
+      </div>
