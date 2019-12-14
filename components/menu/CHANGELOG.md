@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.2"></a>
+## 2.1.2
+🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@2.1.1...@spectrum-css/menu@2.1.2)
+
+### 🐛 Bug fixes
+
+* wrapping on long words in dropdowns, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#452](https://github.com/adobe/spectrum-css/issues/452)) ([8bb2d5b](https://github.com/adobe/spectrum-css/commit/8bb2d5b))
+
+
+
+
+
 <a name="2.1.1"></a>
 ## 2.1.1
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@2.1.0...@spectrum-css/menu@2.1.1)

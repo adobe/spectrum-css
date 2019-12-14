@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.2...@spectrum-css/statuslight@2.0.3)
+
+### 🐛 Bug fixes
+
+* vertical alignment of Status Light text, fixes [#426](https://github.com/adobe/spectrum-css/issues/426) ([#436](https://github.com/adobe/spectrum-css/issues/436)) ([b87148b](https://github.com/adobe/spectrum-css/commit/b87148b))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.1...@spectrum-css/statuslight@2.0.2)

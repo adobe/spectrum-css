@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@2.0.2...@spectrum-css/calendar@2.0.3)
+
+### 🐛 Bug fixes
+
+* remove transition from dates in calendar, fixes [#438](https://github.com/adobe/spectrum-css/issues/438) ([9a47b73](https://github.com/adobe/spectrum-css/commit/9a47b73))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/calendar@2.0.1...@spectrum-css/calendar@2.0.2)

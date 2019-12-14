@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@2.0.2...@spectrum-css/well@2.0.3)
+
+### 🐛 Bug fixes
+
+* implement local tokens for Well, fixes [#422](https://github.com/adobe/spectrum-css/issues/422) ([#432](https://github.com/adobe/spectrum-css/issues/432)) ([81109f9](https://github.com/adobe/spectrum-css/commit/81109f9))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@2.0.1...@spectrum-css/well@2.0.2)

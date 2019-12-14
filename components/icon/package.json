@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/icon",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "The Spectrum CSS icon component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -20,8 +20,8 @@
     "@spectrum-css/vars": "^2.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^1.0.1",
-    "@spectrum-css/vars": "^2.0.2",
+    "@spectrum-css/component-builder": "^1.0.2",
+    "@spectrum-css/vars": "^2.0.3",
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",

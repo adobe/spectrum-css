@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@2.0.2...@spectrum-css/textfield@2.0.3)
+
+### 🐛 Bug fixes
+
+* disable resize functionality when disabled, fixes [#443](https://github.com/adobe/spectrum-css/issues/443) ([#446](https://github.com/adobe/spectrum-css/issues/446)) ([f069c00](https://github.com/adobe/spectrum-css/commit/f069c00))
+* make quiet Text area 1 line tall by default, fixes [#442](https://github.com/adobe/spectrum-css/issues/442) ([#447](https://github.com/adobe/spectrum-css/issues/447)) ([be910e8](https://github.com/adobe/spectrum-css/commit/be910e8))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@2.0.1...@spectrum-css/textfield@2.0.2)

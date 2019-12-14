@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@2.0.2...@spectrum-css/inputgroup@2.0.3)
+
+### 🐛 Bug fixes
+
+* fix button width in InputGroup, fix DatePicker example, fixes [#399](https://github.com/adobe/spectrum-css/issues/399) ([#431](https://github.com/adobe/spectrum-css/issues/431)) ([bdd57f6](https://github.com/adobe/spectrum-css/commit/bdd57f6)), closes [#394](https://github.com/adobe/spectrum-css/issues/394)
+* use endash for Date range picker, fixes [#440](https://github.com/adobe/spectrum-css/issues/440) ([41f8bb9](https://github.com/adobe/spectrum-css/commit/41f8bb9))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2019-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@2.0.1...@spectrum-css/inputgroup@2.0.2)

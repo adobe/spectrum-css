@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.2"></a>
+## 1.0.2
+🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.0.1...@spectrum-css/component-builder@1.0.2)
+
+### 🐛 Bug fixes
+
+* don't try to add fallbacks inside of url(), related to [#223](https://github.com/adobe/spectrum-css/issues/223) ([#424](https://github.com/adobe/spectrum-css/issues/424)) ([0fd90c6](https://github.com/adobe/spectrum-css/commit/0fd90c6))
+
+
+
+
+
 <a name="1.0.1"></a>
 ## 1.0.1
 🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.0.0...@spectrum-css/component-builder@1.0.1)
