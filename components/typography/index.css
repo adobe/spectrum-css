@@ -125,7 +125,7 @@ governing permissions and limitations under the License.
 
 
 /* Body t-shirt sizes */
-@mixin typographyTShirtSizes .spectrum-Body--XXXL {   background-color: red !important;}
+@mixin typographyTShirtSizes .spectrum-Body--XXXL { }
 @mixin typographyTShirtSizes .spectrum-Body--XXL {}
 @mixin typographyTShirtSizes .spectrum-Body--XL {}
 @mixin typographyTShirtSizes .spectrum-Body--L {}

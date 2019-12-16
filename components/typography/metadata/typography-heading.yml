@@ -2,55 +2,47 @@ name: Typography Heading
 description: "Spectrum Typography Headings."
 SpectrumSiteSlug: https://spectrum.corp.adobe.com/page/heading/
 examples:
-  - id: heading-1
+  - id: heading-body-1
     name: Standard
     status: Verified
     description: Typography elements paired to display clear content hierarchies.
     markup: |
       <div class="spectrum-Typography">
         <div style="max-width: 600px;">
-        <h1 class="spectrum-HeadingXXXL">Aliquet Mauris Eu</h1>
-        <p class="spectrum-BodyXXXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyXXXL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <h1 class="spectrum-HeadingXXL">Aliquet Mauris Eu</h1>
-        <p class="spectrum-BodyXXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyXXL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <h1 class="spectrum-HeadingXL">Aliquet Mauris Eu</h1>
-        <p class="spectrum-BodyXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyXL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL">Aliquet Mauris Eu</h1>
+        <p class="spectrum-Body spectrum-Body--XXXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--XXXL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL">Aliquet Mauris Eu</h1>
+        <p class="spectrum-Body spectrum-Body--XXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--XXL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h2 class="spectrum-HeadingL">Aliquet Mauris Eu</h1>
-        <p class="spectrum-BodyL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XL">Aliquet Mauris Eu</h1>
+        <p class="spectrum-Body spectrum-Body--XL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--XL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-HeadingL">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-BodyL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2 class="spectrum-Heading spectrum-Heading--L">Aliquet Mauris Eu</h1>
+        <p class="spectrum-Body spectrum-Body--L">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--L">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-HeadingM">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-BodyM">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyM">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--L">Lorem Ipsum Dolor</h1>
+        <p class="spectrum-Body spectrum-Body--L">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--L">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-HeadingS">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-BodyS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--M">Lorem Ipsum Dolor</h1>
+        <p class="spectrum-Body spectrum-Body--M">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--M">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-HeadingXS">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-BodyXS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyXS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--S">Lorem Ipsum Dolor</h1>
+        <p class="spectrum-Body spectrum-Body--S">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--S">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-HeadingXXS">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-BodyXS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyXS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XS">Lorem Ipsum Dolor</h1>
+        <p class="spectrum-Body spectrum-Body--XS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--XS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Subheading">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-BodyS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-BodyS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <h1 class="spectrum-Subheading">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-Body4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-Body4">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <h1 class="spectrum-Heading spectrum-Heading--XXS">Lorem Ipsum Dolor</h1>
+        <p class="spectrum-Body spectrum-Body--XS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <p class="spectrum-Body spectrum-Body--XS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
   - id: heading-1
@@ -59,23 +51,23 @@ examples:
     description: Headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-HeadingXXXL">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
-        <p class="spectrum-HeadingXL">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
-        <p class="spectrum-HeadingL">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL Strong</strong>.</p>
-        <p class="spectrum-HeadingM">HeadingM <em>HeadingM Emphasis</em> <strong>HeadingM Strong</strong>.</p>
-        <p class="spectrum-HeadingS">HeadingS <em>HeadingS Emphasis</em> <strong>HeadingS Strong</strong>.</p>
-        <p class="spectrum-HeadingXS">HeadingXS <em>HeadingXS Emphasis</em> <strong>HeadingXS Strong</strong>.</p>
-        <p class="spectrum-HeadingXXS">HeadingXXS <em>HeadingXXS Emphasis</em> <strong>HeadingXXS Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--M">HeadingM <em>HeadingM Emphasis</em> <strong>HeadingM Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--S">HeadingS <em>HeadingS Emphasis</em> <strong>HeadingS Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XS">HeadingXS <em>HeadingXS Emphasis</em> <strong>HeadingXS Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXS">HeadingXXS <em>HeadingXXS Emphasis</em> <strong>HeadingXXS Strong</strong>.</p>
         <br/>
-        <p class="spectrum-HeadingXXXL spectrum-Typography--serif">HeadingXXXL Serif <em>HeadingXXXL Serif Emphasis</em> <strong>HeadingXXXL Serif Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL spectrum-Typography--serif">HeadingXXL Serif <em>HeadingXXL Serif Emphasis</em> <strong>HeadingXXL Serif Strong</strong>.</p>
-        <p class="spectrum-HeadingXL spectrum-Typography--serif">HeadingXL Serif <em>HeadingXL Serif Emphasis</em> <strong>HeadingXL Serif Strong</strong>.</p>
-        <p class="spectrum-HeadingL spectrum-Typography--serif">HeadingL Serif <em>HeadingL Serif Emphasis</em> <strong>HeadingL Serif Strong</strong>.</p>
-        <p class="spectrum-HeadingM spectrum-Typography--serif">HeadingM Serif <em>HeadingM Serif Emphasis</em> <strong>HeadingM Serif Strong</strong>.</p>
-        <p class="spectrum-HeadingS spectrum-Typography--serif">HeadingS Serif <em>HeadingS Serif Emphasis</em> <strong>HeadingS Serif Strong</strong>.</p>
-        <p class="spectrum-HeadingXS spectrum-Typography--serif">HeadingXS Serif <em>HeadingXS Serif Emphasis</em> <strong>HeadingXS Serif Strong</strong>.</p>
-        <p class="spectrum-HeadingXXS spectrum-Typography--serif">HeadingXXS Serif <em>HeadingXXS Serif Emphasis</em> <strong>HeadingXXS Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--serif">HeadingXXXL Serif <em>HeadingXXXL Serif Emphasis</em> <strong>HeadingXXXL Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--serif">HeadingXXL Serif <em>HeadingXXL Serif Emphasis</em> <strong>HeadingXXL Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--serif">HeadingXL Serif <em>HeadingXL Serif Emphasis</em> <strong>HeadingXL Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--serif">HeadingL Serif <em>HeadingL Serif Emphasis</em> <strong>HeadingL Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--M spectrum-Heading--serif">HeadingM Serif <em>HeadingM Serif Emphasis</em> <strong>HeadingM Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--S spectrum-Heading--serif">HeadingS Serif <em>HeadingS Serif Emphasis</em> <strong>HeadingS Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XS spectrum-Heading--serif">HeadingXS Serif <em>HeadingXS Serif Emphasis</em> <strong>HeadingXS Serif Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXS spectrum-Heading--serif">HeadingXXS Serif <em>HeadingXXS Serif Emphasis</em> <strong>HeadingXXS Serif Strong</strong>.</p>
       </div>
 
   - id: heading-1
@@ -84,15 +76,15 @@ examples:
     description: Strong headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-HeadingXXXL--heavy">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heavy">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heavy">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heavy">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL heavy</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heavy">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heavy">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heavy">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heavy">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL heavy</strong>.</p>
         <br/>
-        <p class="spectrum-HeadingXXXL--heavy spectrum-Typography--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heavy spectrum-Typography--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heavy spectrum-Typography--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heavy spectrum-Typography--serif">HeadingL Serif <em>Emphasis</em> <strong>heavy</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heavy spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heavy spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heavy spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heavy spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>heavy</strong>.</p>
       </div>
 
   - id: heading-1
@@ -101,15 +93,15 @@ examples:
     description: Light headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-HeadingXXXL--light">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--light">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--light">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
-        <p class="spectrum-HeadingL--light">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--light">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--light">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--light">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--light">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL Strong</strong>.</p>
         <br/>
-        <p class="spectrum-HeadingXXXL--light spectrum-Typography--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--light spectrum-Typography--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--light spectrum-Typography--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--light spectrum-Typography--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
 
   - id: heading-1
@@ -118,15 +110,15 @@ examples:
     description: Display headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-HeadingXXXL--heading">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heading">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heading">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heading">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heading">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heading">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heading">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heading">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
         <br/>
-        <p class="spectrum-HeadingXXXL--heading spectrum-Typography--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heading spectrum-Typography--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heading spectrum-Typography--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heading spectrum-Typography--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
 
   - id: heading-1
@@ -135,15 +127,15 @@ examples:
     description: Heavy display headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-HeadingXXXL--heading spectrum-HeadingXXXL--heavy">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heading spectrum-HeadingXXL--heavy">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heading spectrum-HeadingXL--heavy">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heading spectrum-HeadingL--heavy">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--heavy">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--heavy">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--heavy">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--heavy">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
         <br/>
-        <p class="spectrum-HeadingXXXL--heading spectrum-HeadingXXXL--heavy spectrum-Typography--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heading spectrum-HeadingXXL--heavy spectrum-Typography--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heading spectrum-HeadingXL--heavy spectrum-Typography--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heading spectrum-HeadingL--heavy spectrum-Typography--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--heavy spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--heavy spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--heavy spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--heavy spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
 
   - id: heading-1
@@ -152,13 +144,13 @@ examples:
     description: Light display headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-HeadingXXXL--heading spectrum-HeadingXXXL--light">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heading spectrum-HeadingXXL--light">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heading spectrum-HeadingXL--light">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heading spectrum-HeadingL--light">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--light">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--light">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--light">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--light">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
         <br/>
-        <p class="spectrum-HeadingXXXL--heading spectrum-HeadingXXXL--light spectrum-Typography--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXXL--heading spectrum-HeadingXXL--light spectrum-Typography--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingXL--heading spectrum-HeadingXL--light spectrum-Typography--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-HeadingL--heading spectrum-HeadingL--light spectrum-Typography--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
