@@ -60,7 +60,7 @@ function getTShirtTokenName(name) {
         return '-' + y
       })
     .replace(/^-/, '');
-  tokenName = tokenName.replace('.spectrum--', '');
+  tokenName = tokenName.replace('.spectrum--', '').replace('--', '');
   tokenName = tokenName.toLowerCase();
   return tokenName;
 }
@@ -75,7 +75,7 @@ function getTShirtTokenName(name) {
  * @param {boolean} [showIndicatorBorder=false] shows a blue border around the items. Useful for debugging.
  * @returns {string} CSS output
  */
-function getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorBorder=false) {
+function getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorBorder = false) {
   var output = '';
   var propMap = {
     'font-size': 'text-size',
@@ -86,13 +86,13 @@ function getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorB
     'text-transform': 'text-transform',
   };
 
-/**
- *  Build typography properties for a DNA token
- *
- * @param {string} tokenString name of the token
- * @returns {string} CSS rule for provided selector selector
- */
-function buildProperties(tokenString) {
+  /**
+   *  Build typography properties for a DNA token
+   *
+   * @param {string} tokenString name of the token
+   * @returns {string} CSS rule for provided selector selector
+   */
+  function buildProperties(tokenString) {
     var ruleString = '';
     Object.keys(propMap).forEach((key) => {
       if (!textTransformIgnore || key != 'text-transform') {
@@ -147,7 +147,7 @@ function getTypographyMargins(name, tokenName) {
  * @param {boolean} [showIndicatorBackground=false]
  * @returns {string} CSS output
  */
-function getTypographyColor(name, tokenName, showIndicatorBackground=false) {
+function getTypographyColor(name, tokenName, showIndicatorBackground = false) {
   var indicatorBackground = (showIndicatorBackground === true) ? 'background-color: orange;' : '';
   var output = `${name} {
     ${indicatorBackground}
@@ -195,7 +195,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
             var tokenName = getTShirtTokenName(name);
           }
 
-          var output = getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorBorder = false);
+          var output = getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorBorder = true);
           addNodesToCSS(mixin, output);
         },
 
@@ -258,7 +258,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
           if (!tokenName) {
             var tokenName = getTShirtTokenName(name);
           }
-          var output = getTypographyColor(name, tokenName, showIndicatorBackground = false);
+          var output = getTypographyColor(name, tokenName, showIndicatorBackground = true);
           addNodesToCSS(mixin, output);
         },
 
