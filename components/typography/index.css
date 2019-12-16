@@ -13,8 +13,17 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 @import 'font.css';
 
-/*
-  Legacy Spectrum V2, fallbacks:
+/**
+ Support for Typography
+
+ Ordered by numeric, legacy (v3) and t-shirt sized (v4) versions.
+ V4 is added last to prevent fallbacks to v3.
+**/
+
+
+
+/**
+  Legacy Spectrum V3, fallbacks:
 
   The &.spectrum makes it so users can do <div class="spectrum spectrum--large"> and still get the right font sizes
   Without this, they would have to do <div class="spectrum--large"><div class="spectrum">, which makes no sense
@@ -64,6 +73,129 @@ governing permissions and limitations under the License.
 .spectrum-Heading--subtitle3 {
   @extend .spectrum-Subheading;
 }
+
+
+/**
+* Legacy numeric-based typography (depreciated)
+*/
+@mixin typography .spectrum-Body1 {}
+@mixin typography .spectrum-Body2 {}
+@mixin typography .spectrum-Body3 {}
+@mixin typography .spectrum-Body4 {}
+@mixin typography .spectrum-Body5 {}
+@mixin typography .spectrum-Heading1 {}
+@mixin typography .spectrum-Heading2 {}
+@mixin typography .spectrum-Heading3 {}
+@mixin typography .spectrum-Heading4 {}
+@mixin typography .spectrum-Heading5 {}
+@mixin typography .spectrum-Heading6 {}
+@mixin typography .spectrum-Subheading {}
+@mixin typography .spectrum-Detail {}
+@mixin typography .spectrum-Heading1--quiet, heading-quiet-1 {}
+@mixin typography .spectrum-Heading2--quiet, heading-quiet-2 {}
+@mixin typography .spectrum-Heading1--strong, heading-strong-1 {}
+@mixin typography .spectrum-Heading2--strong, heading-strong-2 {}
+@mixin typography .spectrum-Heading1--display, display-1 {}
+@mixin typography .spectrum-Heading2--display, display-2 {}
+@mixin typography .spectrum-Heading1--display.spectrum-Heading1--strong, display-strong-1 {}
+@mixin typography .spectrum-Heading2--display.spectrum-Heading2--strong, display-strong-2 {}
+@mixin typography .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-1 {}
+@mixin typography .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-2 {}
+
+.spectrum-Typography {
+  @mixin typographyMargins .spectrum-Body1 {}
+  @mixin typographyMargins .spectrum-Body2 {}
+  @mixin typographyMargins .spectrum-Body3 {}
+  @mixin typographyMargins .spectrum-Body4 {}
+  @mixin typographyMargins .spectrum-Body5 {}
+  @mixin typographyMargins .spectrum-Heading1 {}
+  @mixin typographyMargins .spectrum-Heading2 {}
+  @mixin typographyMargins .spectrum-Heading3 {}
+  @mixin typographyMargins .spectrum-Heading4 {}
+  @mixin typographyMargins .spectrum-Heading5 {}
+  @mixin typographyMargins .spectrum-Heading6 {}
+  @mixin typographyMargins .spectrum-Subheading {}
+  @mixin typographyMargins .spectrum-Detail {}
+  @mixin typographyMargins .spectrum-Heading1--quiet, heading-quiet-1 {}
+  @mixin typographyMargins .spectrum-Heading2--quiet, heading-quiet-2 {}
+  @mixin typographyMargins .spectrum-Heading1--strong, heading-strong-1 {}
+  @mixin typographyMargins .spectrum-Heading2--strong, heading-strong-2 {}
+  @mixin typographyMargins .spectrum-Heading1--display, display-1 {}
+  @mixin typographyMargins .spectrum-Heading2--display, display-2 {}
+  @mixin typographyMargins .spectrum-Heading1--display.spectrum-Heading1--strong, display-strong-1 {}
+  @mixin typographyMargins .spectrum-Heading2--display.spectrum-Heading2--strong, display-strong-2 {}
+  @mixin typographyMargins .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-1 {}
+  @mixin typographyMargins .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-2 {}
+}
+
+.spectrum-Article {
+  font-family: var(--spectrum-body-article-1-text-font-family);
+  @mixin typography .spectrum-Body1, body-article-1 {}
+  @mixin typography .spectrum-Body2, body-article-2 {}
+  @mixin typography .spectrum-Body3, body-article-3 {}
+  @mixin typography .spectrum-Body4, body-article-4 {}
+  @mixin typography .spectrum-Body5, body-article-5 {}
+  @mixin typography .spectrum-Heading1, heading-article-1 {}
+  @mixin typography .spectrum-Heading2, heading-article-2 {}
+  @mixin typography .spectrum-Heading3, heading-article-3 {}
+  @mixin typography .spectrum-Heading4, heading-article-4 {}
+  @mixin typography .spectrum-Heading5, heading-article-5 {}
+  @mixin typography .spectrum-Heading6, heading-article-6 {}
+  @mixin typography .spectrum-Subheading, subheading-article {}
+  @mixin typography .spectrum-Detail, detail-article {}
+  @mixin typography .spectrum-Heading1--quiet, heading-quiet-article-1 {}
+  @mixin typography .spectrum-Heading2--quiet, heading-quiet-article-2 {}
+  @mixin typography .spectrum-Heading1--display, display-article-1 {}
+  @mixin typography .spectrum-Heading2--display, display-article-2 {}
+  @mixin typography .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-article-1 {}
+  @mixin typography .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-article-2 {}
+}
+.spectrum {
+  &:lang(ja),
+  &:lang(ko),
+  &:lang(zh) {
+    @mixin typography .spectrum-Body1, body-han-1 {}
+    @mixin typography .spectrum-Body2, body-han-2 {}
+    @mixin typography .spectrum-Body3, body-han-3 {}
+    @mixin typography .spectrum-Body4, body-han-4 {}
+    @mixin typography .spectrum-Body5, body-han-5 {}
+    @mixin typography .spectrum-Heading1, heading-han-1 {}
+    @mixin typography .spectrum-Heading2, heading-han-2 {}
+    @mixin typography .spectrum-Heading3, heading-han-3 {}
+    @mixin typography .spectrum-Heading4, heading-han-4 {}
+    @mixin typography .spectrum-Heading5, heading-han-5 {}
+    @mixin typography .spectrum-Heading6, heading-han-6 {}
+    @mixin typography .spectrum-Subheading, subheading-han {}
+    @mixin typography .spectrum-Detail, detail-han {}
+    @mixin typography .spectrum-Heading1--quiet, heading-quiet-han-1 {}
+    @mixin typography .spectrum-Heading2--quiet, heading-quiet-han-2 {}
+    @mixin typography .spectrum-Heading1--strong, heading-strong-han-1 {}
+    @mixin typography .spectrum-Heading2--strong, heading-strong-han-2 {}
+    @mixin typography .spectrum-Heading1--display, display-han-1 {}
+    @mixin typography .spectrum-Heading2--display, display-han-2 {}
+    @mixin typography .spectrum-Heading1--display.spectrum-Heading1--strong, display-strong-han-1 {}
+    @mixin typography .spectrum-Heading2--display.spectrum-Heading2--strong, display-strong-han-2 {}
+    @mixin typography .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-han-1 {}
+    @mixin typography .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-han-2 {}
+  }
+}
+@mixin typography .spectrum-Code1, body-code-1, true {
+  font-family: var(--spectrum-body-code-1-text-font-family);
+}
+@mixin typography .spectrum-Code2, body-code-2, true {
+  font-family: var(--spectrum-body-code-2-text-font-family);
+}
+@mixin typography .spectrum-Code3, body-code-3, true {
+  font-family: var(--spectrum-body-code-3-text-font-family);
+}
+@mixin typography .spectrum-Code4, body-code-4, true {
+  font-family: var(--spectrum-body-code-4-text-font-family);
+}
+@mixin typography .spectrum-Code5, body-code-5, true {
+  font-family: var(--spectrum-body-code-5-text-font-family);
+}
+
+
 
 
 /**
@@ -151,7 +283,7 @@ governing permissions and limitations under the License.
   font-family: var(--spectrum-body-serif-xl-text-font-family);
 }
 
-@mixin typographyTShirtSizes .spectrum-Detail--XL {}
+@mixin typographyTShirtSizes .spectrum-Detail--XL { }
 @mixin typographyTShirtSizes .spectrum-Detail--L {}
 @mixin typographyTShirtSizes .spectrum-Detail--M {}
 @mixin typographyTShirtSizes .spectrum-Detail--S {}
@@ -293,125 +425,3 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-
-/**
-* Legacy numeric-based typography (depreciated)
-*/
-@mixin typography .spectrum-Body1 {}
-@mixin typography .spectrum-Body2 {}
-@mixin typography .spectrum-Body3 {}
-@mixin typography .spectrum-Body4 {}
-@mixin typography .spectrum-Body5 {}
-@mixin typography .spectrum-Heading1 {}
-@mixin typography .spectrum-Heading2 {}
-@mixin typography .spectrum-Heading3 {}
-@mixin typography .spectrum-Heading4 {}
-@mixin typography .spectrum-Heading5 {}
-@mixin typography .spectrum-Heading6 {}
-@mixin typography .spectrum-Subheading {}
-@mixin typography .spectrum-Detail {}
-@mixin typography .spectrum-Heading1--quiet, heading-quiet-1 {}
-@mixin typography .spectrum-Heading2--quiet, heading-quiet-2 {}
-@mixin typography .spectrum-Heading1--strong, heading-strong-1 {}
-@mixin typography .spectrum-Heading2--strong, heading-strong-2 {}
-@mixin typography .spectrum-Heading1--display, display-1 {}
-@mixin typography .spectrum-Heading2--display, display-2 {}
-@mixin typography .spectrum-Heading1--display.spectrum-Heading1--strong, display-strong-1 {}
-@mixin typography .spectrum-Heading2--display.spectrum-Heading2--strong, display-strong-2 {}
-@mixin typography .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-1 {}
-@mixin typography .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-2 {}
-
-.spectrum-Typography {
-  @mixin typographyMargins .spectrum-Body1 {}
-  @mixin typographyMargins .spectrum-Body2 {}
-  @mixin typographyMargins .spectrum-Body3 {}
-  @mixin typographyMargins .spectrum-Body4 {}
-  @mixin typographyMargins .spectrum-Body5 {}
-  @mixin typographyMargins .spectrum-Heading1 {}
-  @mixin typographyMargins .spectrum-Heading2 {}
-  @mixin typographyMargins .spectrum-Heading3 {}
-  @mixin typographyMargins .spectrum-Heading4 {}
-  @mixin typographyMargins .spectrum-Heading5 {}
-  @mixin typographyMargins .spectrum-Heading6 {}
-  @mixin typographyMargins .spectrum-Subheading {}
-  @mixin typographyMargins .spectrum-Detail {}
-  @mixin typographyMargins .spectrum-Heading1--quiet, heading-quiet-1 {}
-  @mixin typographyMargins .spectrum-Heading2--quiet, heading-quiet-2 {}
-  @mixin typographyMargins .spectrum-Heading1--strong, heading-strong-1 {}
-  @mixin typographyMargins .spectrum-Heading2--strong, heading-strong-2 {}
-  @mixin typographyMargins .spectrum-Heading1--display, display-1 {}
-  @mixin typographyMargins .spectrum-Heading2--display, display-2 {}
-  @mixin typographyMargins .spectrum-Heading1--display.spectrum-Heading1--strong, display-strong-1 {}
-  @mixin typographyMargins .spectrum-Heading2--display.spectrum-Heading2--strong, display-strong-2 {}
-  @mixin typographyMargins .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-1 {}
-  @mixin typographyMargins .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-2 {}
-}
-
-.spectrum-Article {
-  font-family: var(--spectrum-body-article-1-text-font-family);
-  @mixin typography .spectrum-Body1, body-article-1 {}
-  @mixin typography .spectrum-Body2, body-article-2 {}
-  @mixin typography .spectrum-Body3, body-article-3 {}
-  @mixin typography .spectrum-Body4, body-article-4 {}
-  @mixin typography .spectrum-Body5, body-article-5 {}
-  @mixin typography .spectrum-Heading1, heading-article-1 {}
-  @mixin typography .spectrum-Heading2, heading-article-2 {}
-  @mixin typography .spectrum-Heading3, heading-article-3 {}
-  @mixin typography .spectrum-Heading4, heading-article-4 {}
-  @mixin typography .spectrum-Heading5, heading-article-5 {}
-  @mixin typography .spectrum-Heading6, heading-article-6 {}
-  @mixin typography .spectrum-Subheading, subheading-article {}
-  @mixin typography .spectrum-Detail, detail-article {}
-  @mixin typography .spectrum-Heading1--quiet, heading-quiet-article-1 {}
-  @mixin typography .spectrum-Heading2--quiet, heading-quiet-article-2 {}
-  @mixin typography .spectrum-Heading1--display, display-article-1 {}
-  @mixin typography .spectrum-Heading2--display, display-article-2 {}
-  @mixin typography .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-article-1 {}
-  @mixin typography .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-article-2 {}
-}
-.spectrum {
-  &:lang(ja),
-  &:lang(ko),
-  &:lang(zh) {
-    @mixin typography .spectrum-Body1, body-han-1 {}
-    @mixin typography .spectrum-Body2, body-han-2 {}
-    @mixin typography .spectrum-Body3, body-han-3 {}
-    @mixin typography .spectrum-Body4, body-han-4 {}
-    @mixin typography .spectrum-Body5, body-han-5 {}
-    @mixin typography .spectrum-Heading1, heading-han-1 {}
-    @mixin typography .spectrum-Heading2, heading-han-2 {}
-    @mixin typography .spectrum-Heading3, heading-han-3 {}
-    @mixin typography .spectrum-Heading4, heading-han-4 {}
-    @mixin typography .spectrum-Heading5, heading-han-5 {}
-    @mixin typography .spectrum-Heading6, heading-han-6 {}
-    @mixin typography .spectrum-Subheading, subheading-han {}
-    @mixin typography .spectrum-Detail, detail-han {}
-    @mixin typography .spectrum-Heading1--quiet, heading-quiet-han-1 {}
-    @mixin typography .spectrum-Heading2--quiet, heading-quiet-han-2 {}
-    @mixin typography .spectrum-Heading1--strong, heading-strong-han-1 {}
-    @mixin typography .spectrum-Heading2--strong, heading-strong-han-2 {}
-    @mixin typography .spectrum-Heading1--display, display-han-1 {}
-    @mixin typography .spectrum-Heading2--display, display-han-2 {}
-    @mixin typography .spectrum-Heading1--display.spectrum-Heading1--strong, display-strong-han-1 {}
-    @mixin typography .spectrum-Heading2--display.spectrum-Heading2--strong, display-strong-han-2 {}
-    @mixin typography .spectrum-Heading1--display.spectrum-Heading1--quiet, display-quiet-han-1 {}
-    @mixin typography .spectrum-Heading2--display.spectrum-Heading2--quiet, display-quiet-han-2 {}
-  }
-}
-@mixin typography .spectrum-Code1, body-code-1, true {
-  font-family: var(--spectrum-body-code-1-text-font-family);
-}
-@mixin typography .spectrum-Code2, body-code-2, true {
-  font-family: var(--spectrum-body-code-2-text-font-family);
-}
-@mixin typography .spectrum-Code3, body-code-3, true {
-  font-family: var(--spectrum-body-code-3-text-font-family);
-}
-@mixin typography .spectrum-Code4, body-code-4, true {
-  font-family: var(--spectrum-body-code-4-text-font-family);
-}
-@mixin typography .spectrum-Code5, body-code-5, true {
-  font-family: var(--spectrum-body-code-5-text-font-family);
-}
-
