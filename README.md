@@ -136,7 +136,6 @@ When this file is imported, if in updated version of `@spectrum-css/vars` change
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
-___
 
 ## Contributing
 
@@ -225,7 +224,6 @@ The following tasks are available:
 - `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
 
 
-___
 
 ## Testing
 
