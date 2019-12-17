@@ -211,15 +211,55 @@ governing permissions and limitations under the License.
 /* t-shirt size-based typography */
 
 /* Headings t-shirt sizes */
+/* Standard SUIT rules for Heading: regular, serif, heavy, light */
 .spectrum-Heading {
   font-family: var(--spectrum-heading-xl-text-font-family);
+  font-weight: var(--spectrum-heading-xl-text-font-weight);
+
+  em, .spectrum-Heading--emphasis {
+    font-style: var(--spectrum-heading-xl-emphasis-text-font-style);
+    font-weight: var(--spectrum-heading-xl-emphasis-text-font-weight);
+  }
+
+  strong, .spectrum-Heading--strong {
+    font-style: var(--spectrum-heading-xl-strong-text-font-style);
+    font-weight: var(--spectrum-heading-xl-strong-text-font-weight);
+  }
 }
 
 .spectrum-Heading--serif {
   font-family: var(--spectrum-body-serif-xl-text-font-family);
 }
 
+.spectrum-Heading--heavy {
+  font-weight: var(--spectrum-heading-xl-text-font-weight);
 
+  em, .spectrum-Heading--emphasis {
+    font-style: var(--spectrum-heading-heavy-xl-emphasis-text-font-style);
+    font-weight: var(--spectrum-heading-heavy-xl-emphasis-text-font-weight);
+  }
+
+  strong, .spectrum-Heading--strong {
+    font-style: var(--spectrum-heading-heavy-xl-strong-text-font-style);
+    font-weight: var(--spectrum-heading-heavy-xl-strong-text-font-weight);
+  }
+}
+
+.spectrum-Heading--light {
+  font-weight: var(--spectrum-heading-xl-text-font-weight);
+
+  em, .spectrum-Heading--emphasis {
+    font-style: var(--spectrum-heading-light-xl-emphasis-text-font-style);
+    font-weight: var(--spectrum-heading-light-xl-emphasis-text-font-weight);
+  }
+
+  strong, .spectrum-Heading--strong {
+    font-style: var(--spectrum-heading-light-xl-strong-text-font-style);
+    font-weight: var(--spectrum-heading-light-xl-strong-text-font-weight);
+  }
+}
+
+/* Discrete rules for Heading: regular, heavy, light */
 @mixin typographyTShirtSizes .spectrum-Heading--XXXL {}
 @mixin typographyTShirtSizes .spectrum-Heading--XXL {}
 @mixin typographyTShirtSizes .spectrum-Heading--XL {}
@@ -229,7 +269,7 @@ governing permissions and limitations under the License.
 @mixin typographyTShirtSizes .spectrum-Heading--XS {}
 @mixin typographyTShirtSizes .spectrum-Heading--XXS {}
 
-/* Headings are currently missing light and heavy for sizes M to XXS in DNA */
+  /* Headings are currently missing light and heavy for sizes M to XXS in DNA */
 @mixin typographyTShirtSizes .spectrum-Heading-XXXL--heavy, heading-heavy-XXXL {}
 @mixin typographyTShirtSizes .spectrum-Heading-XXL--heavy, heading-heavy-XXL {}
 @mixin typographyTShirtSizes .spectrum-Heading-XL--heavy, heading-heavy-XL {}
@@ -239,7 +279,7 @@ governing permissions and limitations under the License.
 @mixin typographyTShirtSizes .spectrum-Heading-XL--light, heading-light-XL {}
 @mixin typographyTShirtSizes .spectrum-Heading-L--light, heading-light-L {}
 
-/* Headings standard, heavy, light, t-shirt sizes */
+  /* Headings standard, heavy, light, t-shirt sizes */
 @mixin typographyTShirtSizes .spectrum-Heading-XXXL--heading, heading-XXXL {}
 @mixin typographyTShirtSizes .spectrum-Heading-XXL--heading, heading-XXL {}
 @mixin typographyTShirtSizes .spectrum-Heading-XL--heading, heading-XL {}
@@ -275,6 +315,7 @@ governing permissions and limitations under the License.
 
 
 /* Detail / former subheadings t-shirt sizes */
+/* Standard SUIT rules for Detail: regular, serif, light */
 .spectrum-Detail {
   font-family: var(--spectrum-heading-xl-text-font-family);
 }
@@ -283,6 +324,21 @@ governing permissions and limitations under the License.
   font-family: var(--spectrum-body-serif-xl-text-font-family);
 }
 
+.spectrum-Detail--light {
+  font-weight: var(--spectrum-heading-xl-text-font-weight);
+
+  em, .spectrum-Detail--emphasis {
+    font-style: var(--spectrum-detail-light-xl-emphasis-text-font-style);
+    font-weight: var(--spectrum-detail-light-xl-emphasis-text-font-weight);
+  }
+
+  strong, .spectrum-Detail--strong {
+    font-style: var(--spectrum-detail-light-xl-strong-text-font-style);
+    font-weight: var(--spectrum-detail-light-xl-strong-text-font-weight);
+  }
+}
+
+/* Discrete rules for Detail: regular, light */
 @mixin typographyTShirtSizes .spectrum-Detail--XL { }
 @mixin typographyTShirtSizes .spectrum-Detail--L {}
 @mixin typographyTShirtSizes .spectrum-Detail--M {}

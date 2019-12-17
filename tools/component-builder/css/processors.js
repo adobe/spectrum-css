@@ -113,10 +113,10 @@ function getTypographySizes(name, tokenName, textTransformIgnore, showIndicatorB
   output = `${name} {
   ${indicatorBorder}
   ${buildProperties(tokenName)}
-    em, ${emStrongClassName}-emphasis {
-      ${buildProperties(`${tokenName}-emphasis`)}
+    em, ${emStrongClassName}--emphasis {
+      ${buildProperties(`${tokenName}--emphasis`)}
     }
-    strong, ${emStrongClassName}-strong {
+    strong, ${emStrongClassName}--strong {
       ${buildProperties(`${tokenName}-strong`)}
     }
   }`;
