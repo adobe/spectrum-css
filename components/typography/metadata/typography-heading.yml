@@ -71,20 +71,20 @@ examples:
       </div>
 
   - id: heading-1
-    name: Heading (Strong)
+    name: Heading (Heavy)
     status: Verified
     description: Strong headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heavy">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heavy">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heavy">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heavy">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL heavy</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL heavy</strong>.</p>
         <br/>
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heavy spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heavy spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heavy spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heavy spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>heavy</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>heavy</strong>.</p>
       </div>
 
   - id: heading-1
@@ -93,64 +93,13 @@ examples:
     description: Light headings for typography.
     markup: |
       <div class="spectrum">
-        <p class="spectrum-Heading spectrum-Heading-XXXL--light">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--light">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--light">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--light">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>HeadingXXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>HeadingXXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">HeadingXL <em>HeadingXL Emphasis</em> <strong>HeadingXL Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light">HeadingL <em>HeadingL Emphasis</em> <strong>HeadingL Strong</strong>.</p>
         <br/>
-        <p class="spectrum-Heading spectrum-Heading-XXXL--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-      </div>
-
-  - id: heading-1
-    name: Display
-    status: Verified
-    description: Display headings for typography.
-    markup: |
-      <div class="spectrum">
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heading">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heading">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heading">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heading">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <br/>
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-      </div>
-
-  - id: heading-1
-    name: Display (Heavy)
-    status: Verified
-    description: Heavy display headings for typography.
-    markup: |
-      <div class="spectrum">
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--heavy">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--heavy">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--heavy">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--heavy">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <br/>
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--heavy spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--heavy spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--heavy spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--heavy spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-      </div>
-
-  - id: heading-1
-    name: Display (Light)
-    status: Verified
-    description: Light display headings for typography.
-    markup: |
-      <div class="spectrum">
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--light">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--light">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--light">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--light">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <br/>
-        <p class="spectrum-Heading spectrum-Heading-XXXL--heading spectrum-Heading-XXXL--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XXL--heading spectrum-Heading-XXL--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-XL--heading spectrum-Heading-XL--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading-L--heading spectrum-Heading-L--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
