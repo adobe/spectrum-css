@@ -13,7 +13,9 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  --spectrum-statuslight-padding-y: var(--spectrum-global-dimension-size-75);
+  /* Hardcoded for wrapping study.
+  Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
+  --spectrum-statuslight-padding-y: var(--spectrum-global-dimension-size-65);
 
   /* Override line-height to fix Firefox */
   --spectrum-statuslight-text-line-height: 1.44;
