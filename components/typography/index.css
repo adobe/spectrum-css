@@ -227,13 +227,11 @@ governing permissions and limitations under the License.
   font-family: var(--spectrum-heading-xl-text-font-family);
   font-weight: var(--spectrum-heading-xl-text-font-weight);
 
-  em, .spectrum-Heading--emphasis {
+  em, .spectrum-Heading-emphasis {
     font-style: var(--spectrum-heading-xl-emphasis-text-font-style);
-    font-weight: var(--spectrum-heading-xl-emphasis-text-font-weight);
   }
 
-  strong, .spectrum-Heading--strong {
-    font-style: var(--spectrum-heading-xl-strong-text-font-style);
+  strong, .spectrum-Heading-strong {
     font-weight: var(--spectrum-heading-xl-strong-text-font-weight);
   }
 }
@@ -247,28 +245,25 @@ governing permissions and limitations under the License.
 .spectrum-Heading--heavy {
   font-weight: var(--spectrum-heading-heavy-xl-text-font-weight);
 
-  em, .spectrum-Heading--emphasis {
+  em, .spectrum-Heading-emphasis {
     font-style: var(--spectrum-heading-heavy-xl-emphasis-text-font-style);
-    font-weight: var(--spectrum-heading-heavy-xl-emphasis-text-font-weight);
   }
 
-  strong, .spectrum-Heading--strong {
-    font-style: var(--spectrum-heading-heavy-xl-strong-text-font-style);
+  strong, .spectrum-Heading-strong {
     font-weight: var(--spectrum-heading-heavy-xl-strong-text-font-weight);
   }
 }
 
 
+
 .spectrum-Heading--light {
   font-weight: var(--spectrum-heading-light-xl-emphasis-text-font-weight);
 
-  em, .spectrum-Heading--emphasis {
+  em, .spectrum-Heading-emphasis {
     font-style: var(--spectrum-heading-light-xl-emphasis-text-font-style);
-    font-weight: var(--spectrum-heading-light-xl-emphasis-text-font-weight);
   }
 
-  strong, .spectrum-Heading--strong {
-    font-style: var(--spectrum-heading-light-xl-strong-text-font-style);
+  strong, .spectrum-Heading-strong {
     font-weight: var(--spectrum-heading-light-xl-strong-text-font-weight);
   }
 }
@@ -285,6 +280,14 @@ governing permissions and limitations under the License.
 
 .spectrum-Body {
   font-family: var(--spectrum-body-xl-text-font-family);
+
+  strong, .spectrum-Body-strong {
+    font-weight: var(--spectrum-body-xl-strong-text-font-weight);
+  }
+
+  em, .spectrum-Body-emphasis {
+    font-style: var(--spectrum-body-xl-emphasis-text-font-style);
+  }
 }
 
 .spectrum-Body--serif {
@@ -297,10 +300,18 @@ governing permissions and limitations under the License.
 .spectrum-Detail {
   font-family: var(--spectrum-heading-xl-text-font-family);
 
-  .spectrum-Detail--light {
-    font-style: var(--spectrum-detail-light-xl-text-font-style);
-    font-weight: var(--spectrum-detail-light-xl-text-font-weight);
+  strong, .spectrum-Detail-strong {
+    font-weight: var(--spectrum-detail-xl-strong-text-font-weight);
   }
+
+  em, .spectrum-Detail-emphasis {
+    font-style: var(--spectrum-detail-xl-emphasis-text-font-style);
+  }
+}
+
+.spectrum-Detail--light {
+  font-style: var(--spectrum-detail-light-xl-text-font-style);
+  font-weight: var(--spectrum-detail-light-xl-text-font-weight);
 }
 
 
@@ -327,6 +338,14 @@ governing permissions and limitations under the License.
 /* Code t-shirt sizes */
 .spectrum-Code {
   font-family: var(--spectrum-heading-xl-text-font-family);
+
+  strong, .spectrum-Code-strong {
+    font-weight: var(--spectrum-code-xl-strong-text-font-weight);
+  }
+
+  em, .spectrum-Code-emphasis {
+    font-style: var(--spectrum-code-xl-emphasis-text-font-style);
+  }
 }
 
 

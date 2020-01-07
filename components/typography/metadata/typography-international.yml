@@ -411,11 +411,11 @@ examples:
     description: Typographic styles for computer code.
     markup: |
       <div class="spectrum" lang="ja">
-        <code class="spectrum-CodeXL">暗号 XL Code <strong>Strong</strong></code>
-        <code class="spectrum-CodeL">暗号 L Code <strong>Strong</strong></code>
-        <code class="spectrum-CodeM">暗号 M Code <strong>Strong</strong></code>
-        <code class="spectrum-CodeS">暗号 S Code <strong>Strong</strong></code>
-        <code class="spectrum-CodeXS">暗号 XS Code <strong>Strong</strong></code>
+        <code class="spectrum-CodeXL">暗号 XL Code <strong>Strong</strong> </code>
+        <code class="spectrum-CodeL">暗号 L Code <strong>Strong</strong> </code>
+        <code class="spectrum-CodeM">暗号 M Code <strong>Strong</strong> </code>
+        <code class="spectrum-CodeS">暗号 S Code <strong>Strong</strong> </code>
+        <code class="spectrum-CodeXS">暗号 XS Code <strong>Strong</strong> </code>
         <pre><code class="spectrum-CodeM">暗号 M Code Wrapped in:
         pre tags for
         goodness</code></pre>
