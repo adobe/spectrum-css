@@ -12,6 +12,10 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
+:root {
+  --spectrum-rule-vertical-height: 100%;
+}
+
 .spectrum-Rule {
   width: 100%;
 
@@ -42,7 +46,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rule--vertical {
-  height: 100%;
+  height: var(--spectrum-rule-vertical-height);
 
   &.spectrum-Rule--large {
     width: var(--spectrum-rule-large-height);
