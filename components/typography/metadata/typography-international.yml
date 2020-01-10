@@ -145,36 +145,36 @@ examples:
     description: Light headings for typography.
     markup: |
       <div class="spectrum" lang="en">
-        <p class=""spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--L spectrum-Heading--light">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
         <br/>
-        <p class=""spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XL spectrum-Heading--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--L spectrum-Heading--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
       </div>
 
       <div class="spectrum" lang="ja">
-        <p class=""spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">見出しXXXL <em>見出しXXXL 重点</em> <strong>見出しXXXL 強い強調</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">見出しXXL <em>見出しXXL 重点</em> <strong>見出しXXL 強い強調</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">見出しXL <em>見出しXL 重点</em> <strong>見出しXL 強い強調</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--L spectrum-Heading--light">見出しL <em>見出しL 重点</em> <strong>見出しL 強い強調</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">見出しXXXL <em>見出しXXXL 重点</em> <strong>見出しXXXL 強い強調</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">見出しXXL <em>見出しXXL 重点</em> <strong>見出しXXL 強い強調</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">見出しXL <em>見出しXL 重点</em> <strong>見出しXL 強い強調</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light">見出しL <em>見出しL 重点</em> <strong>見出しL 強い強調</strong>.</p>
       </div>
 
       <div class="spectrum" lang="ar">
-        <p class=""spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">XXXLالقسم <em>القسم XXXL  تشديد</em> <strong>XXXLالقسم  تأكيد قو</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">XXLالقسم <em>القسم XXL  تشديد</em> <strong>XXLالقسم  تأكيد قو</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">XLالقسم <em>القسم XL  تشديد</em> <strong>XLالقسم  تأكيد قو</strong>.</p>
-        <p class=""spectrum-Heading spectrum-Heading--L spectrum-Heading--light">Lالقسم <em>القسم L  تشديد</em> <strong>Lالقسم  تأكيد قو</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">XXXLالقسم <em>القسم XXXL  تشديد</em> <strong>XXXLالقسم  تأكيد قو</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">XXLالقسم <em>القسم XXL  تشديد</em> <strong>XXLالقسم  تأكيد قو</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">XLالقسم <em>القسم XL  تشديد</em> <strong>XLالقسم  تأكيد قو</strong>.</p>
+        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light">Lالقسم <em>القسم L  تشديد</em> <strong>Lالقسم  تأكيد قو</strong>.</p>
       </div>
 
       <div class="spectrum" lang="he">
-        <p class=""spectrum-Heading spectrum-HeadingXXXL--light">XXXLדגש כותרת <em>XXXLמאמר</em> <strong>XXXLחזק</strong>.</p>
-        <p class=""spectrum-Heading spectrum-HeadingXXL--light">XXLדגש כותרת <em>XXLמאמר</em> <strong>XXLחזק</strong>.</p>
-        <p class=""spectrum-Heading spectrum-HeadingXL--light">XLדגש כותרת <em>XLמאמר</em> <strong>XLחזק</strong>.</p>
-        <p class=""spectrum-Heading spectrum-HeadingL--light">Lדגש כותרת <em>Lמאמר</em> <strong>Lחזק</strong>.</p>
+        <p class="spectrum-Heading spectrum-HeadingXXXL--light">XXXLדגש כותרת <em>XXXLמאמר</em> <strong>XXXLחזק</strong>.</p>
+        <p class="spectrum-Heading spectrum-HeadingXXL--light">XXLדגש כותרת <em>XXLמאמר</em> <strong>XXLחזק</strong>.</p>
+        <p class="spectrum-Heading spectrum-HeadingXL--light">XLדגש כותרת <em>XLמאמר</em> <strong>XLחזק</strong>.</p>
+        <p class="spectrum-Heading spectrum-HeadingL--light">Lדגש כותרת <em>Lמאמר</em> <strong>Lחזק</strong>.</p>
       </div>
 
   - id: heading-1
