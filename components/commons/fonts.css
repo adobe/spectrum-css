@@ -27,7 +27,7 @@ governing permissions and limitations under the License.
   --spectrum-font-family-condensed: adobe-clean-condensed, var(--spectrum-font-family-base);
   */
 
-  --spectrum-font-family-base: var(--spectrum-global-font-family-base);
+  --spectrum-font-family-base: var(--spectrum-alias-body-text-font-family);
   --spectrum-font-family-ar: var(--spectrum-alias-font-family-ar);
   --spectrum-font-family-he:  var(--spectrum-alias-font-family-he);
   --spectrum-font-family-zh: var(--spectrum-alias-font-family-zh);

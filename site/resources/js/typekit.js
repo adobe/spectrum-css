@@ -22,8 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
      // On pageload, determine to current pages language setting.
      // If it is US-language or unset use the 1st Adobe font web project id (smaller size),
      // otherwise use the 2nd kit with all the language settings (larger size)
-     // kitId: document.querySelector('[lang]:not([lang="en-US"])') !== null ? 'pbi5ojv' : 'ruf7eed',
-
+    // kitId: document.querySelector('[lang]:not([lang="en-US"])') !== null ? 'pbi5ojv' : 'ruf7eed',
     kitId: document.querySelector('[lang]:not([lang="en-US"])') === null ? 'mge7bvf' : 'rok6rmo',
     scriptTimeout: 3000,
     active: function() {
