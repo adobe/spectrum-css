@@ -22,41 +22,36 @@ examples:
       <p class="spectrum-Body">Divide like-elements (tables, tool groups, elements within a panel, etc.)</p>
   - id: rule-vertical-small
     name: 'Vertical, Small'
+    description: |
+      When a vertical Rule is used inside of a flex container, use `align-self: stretch; height: auto` on the Rule.
+      ButtonGroup automatically applies these styles to vertical Rules.
     markup: |
-      <div style="display: flex; flex-direction: row; height: 32px">
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-Tool">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
-              <use xlink:href="#spectrum-icon-18-Properties" />
-            </svg>
-          </button>
-        </div>
+      <div class="spectrum-ButtonGroup">
+        <button class="spectrum-Tool">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+            <use xlink:href="#spectrum-icon-18-Properties" />
+          </svg>
+        </button>
         <div class="spectrum-Rule spectrum-Rule--small spectrum-Rule--vertical"></div>
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-Tool">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
-              <use xlink:href="#spectrum-icon-18-Select" />
-            </svg>
-          </button>
-        </div>
+        <button class="spectrum-Tool">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+            <use xlink:href="#spectrum-icon-18-Select" />
+          </svg>
+        </button>
       </div>
   - id: rule-vertical-medium
     name: 'Vertical, Medium'
     markup: |
-      <div style="display: flex; flex-direction: row; height: 32px">
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-Tool">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
-              <use xlink:href="#spectrum-icon-18-Properties" />
-            </svg>
-          </button>
-        </div>
+      <div class="spectrum-ButtonGroup">
+        <button class="spectrum-Tool">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+            <use xlink:href="#spectrum-icon-18-Properties" />
+          </svg>
+        </button>
         <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-Tool">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
-              <use xlink:href="#spectrum-icon-18-Select" />
-            </svg>
-          </button>
-        </div>
+        <button class="spectrum-Tool">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+            <use xlink:href="#spectrum-icon-18-Select" />
+          </svg>
+        </button>
       </div>
