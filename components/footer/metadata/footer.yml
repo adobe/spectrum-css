@@ -9,10 +9,10 @@ examples:
         <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Footer-divider">
         <div class="spectrum-Footer-links" role="list">
           <span role="listitem">
-            <a class="spectrum-Link spectrum-Link--quiet spectrum-FooterLink" href="https://www.adobe.com/legal/terms.html">Terms of use</a>
+            <a class="spectrum-Link spectrum-Link--quiet spectrum-Footer-link" href="https://www.adobe.com/legal/terms.html">Terms of use</a>
           </span>
           <span role="listitem">
-            <a class="spectrum-Link spectrum-Link--quiet spectrum-FooterLink" href="https://www.adobe.com/privacy/policy.html">Privacy Policy</a>
+            <a class="spectrum-Link spectrum-Link--quiet spectrum-Footer-link" href="https://www.adobe.com/privacy/policy.html">Privacy Policy</a>
           </span>
         </div>
         <div class="spectrum-Footer-copyright">Copyright © 2020 Adobe. All rights reserved</div>
@@ -25,10 +25,10 @@ examples:
         <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Footer-divider">
         <div class="spectrum-Footer-links" role="list">
           <span role="listitem">
-            <a class="spectrum-Link spectrum-Link--quiet spectrum-FooterLink" href="https://www.adobe.com/legal/terms.html">Terms of use</a>
+            <a class="spectrum-Link spectrum-Link--quiet spectrum-Footer-link" href="https://www.adobe.com/legal/terms.html">Terms of use</a>
           </span>
           <span role="listitem">
-            <a class="spectrum-Link spectrum-Link--quiet spectrum-FooterLink" href="https://www.adobe.com/privacy/policy.html">Privacy Policy</a>
+            <a class="spectrum-Link spectrum-Link--quiet spectrum-Footer-link" href="https://www.adobe.com/privacy/policy.html">Privacy Policy</a>
           </span>
           <div class="spectrum-Footer-languageSelector">
             <div class="spectrum-Footer-languageSelectorLabel">
@@ -37,8 +37,7 @@ examples:
                 <button type="button" aria-haspopup="listbox" aria-labelledby="react-spectrum-62 react-spectrum-63-value" id="react-spectrum-63" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger">
                   <span id="react-spectrum-63-value" class="spectrum-Dropdown-label spectrum-Footer-languageSelectorLabel">English</span>
                   <svg class="spectrum-UIIcon-ChevronDownMedium spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true" role="img">
-                    <path d="M9.99 1.01A1 1 0 0 0 8.283.3L5 3.586 1.717.3A1 1 0 1 0 .3 1.717L4.293 5.7a1 1 0 0 0 1.414 0L9.7 1.717a1 1 0 0 0 .29-.707z" class="spectrum-UIIcon--medium"></path>
-                    <path d="M11.99 1.51A1 1 0 0 0 10.283.8L6 5.086 1.717.8A1 1 0 1 0 .3 2.217l4.99 4.99a1 1 0 0 0 1.414 0l4.99-4.99a1 1 0 0 0 .296-.707z" class="spectrum-UIIcon--large"></path>
+                    <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
                   </svg>
                 </button>
               </div>

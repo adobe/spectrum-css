@@ -20,8 +20,10 @@
   --spectrum-footer-height : var(--spectrum-global-dimension-size-500);
   --spectrum-footer-text-size : var(--spectrum-global-dimension-font-size-75);
 
-  --spectrum-footer-item-gap : 32px;
-  --spectrum-footer-row-gap-mobile : 48px;
+  --spectrum-footer-item-gap : var(--spectrum-global-dimension-size-400);
+  --spectrum-footer-row-gap-mobile : var(--spectrum-global-dimension-size-600;
+
+  --spectrum-footer-languagelabel-gap : var(--spectrum-footer-item-gap);
 }
 
 .spectrum-Footer {
@@ -44,7 +46,7 @@
     flex-wrap: wrap;
   }
 
-  .spectrum-FooterLink {
+  .spectrum-Footer-link {
     flex-shrink: 0;
     line-height: var(--spectrum-footer-height);
     text-decoration: none;
@@ -58,7 +60,7 @@
     font-size: var(--spectrum-footer-text-size);
   }
 
-  .spectrum-FooterLink,
+  .spectrum-Footer-link,
   .spectrum-Footer-languageSelector {
     margin-right: var(--spectrum-footer-item-gap);
     margin-left: 0;
@@ -66,7 +68,7 @@
 
   .spectrum-Footer-languageSelectorLabel {
     display: flex;
-    margin-right: 5px;
+    margin-right: var(--spectrum-footer-languagelabel-gap);
     font-size: var(--spectrum-footer-text-size);
   }
 
