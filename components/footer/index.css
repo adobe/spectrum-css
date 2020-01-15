@@ -15,13 +15,14 @@
 * from Adobe.
 **************************************************************************/
 
+@import '../commons/index.css';
 
 :root {
   --spectrum-footer-height : var(--spectrum-global-dimension-size-500);
   --spectrum-footer-text-size : var(--spectrum-global-dimension-font-size-75);
 
   --spectrum-footer-item-gap : var(--spectrum-global-dimension-size-400);
-  --spectrum-footer-row-gap-mobile : var(--spectrum-global-dimension-size-600;
+  --spectrum-footer-row-gap-mobile : var(--spectrum-global-dimension-size-600);
 
   --spectrum-footer-languagelabel-gap : var(--spectrum-footer-item-gap);
 }
