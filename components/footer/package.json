@@ -1,0 +1,34 @@
+{
+  "name": "@spectrum-css/footer",
+  "version": "2.0.3",
+  "description": "The Spectrum CSS footer component",
+  "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/footer"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/vars": "^2.0.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder": "^1.0.2",
+    "@spectrum-css/dropdown": "^2.1.2",
+    "@spectrum-css/link": "^2.0.3",
+    "@spectrum-css/icon": "^2.0.3",
+    "@spectrum-css/rule": "^2.0.3",
+    "@spectrum-css/vars": "^2.0.3",
+    "gulp": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
+}
