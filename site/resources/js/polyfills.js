@@ -102,4 +102,9 @@ if (typeof window.CustomEvent !== 'function') {
     convertVarsToMultistops(document);
     window.fastLoadDisabled = true;
   }
+
+  // Expose for manual testing
+  window.testMultistops = function() {
+    convertVarsToMultistops(document);
+  };
 }());
