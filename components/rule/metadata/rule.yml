@@ -27,13 +27,13 @@ examples:
       ButtonGroup automatically applies these styles to vertical Rules.
     markup: |
       <div class="spectrum-ButtonGroup">
-        <button class="spectrum-Tool">
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
             <use xlink:href="#spectrum-icon-18-Properties" />
           </svg>
         </button>
         <div class="spectrum-Rule spectrum-Rule--small spectrum-Rule--vertical"></div>
-        <button class="spectrum-Tool">
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
             <use xlink:href="#spectrum-icon-18-Select" />
           </svg>
@@ -43,13 +43,13 @@ examples:
     name: 'Vertical, Medium'
     markup: |
       <div class="spectrum-ButtonGroup">
-        <button class="spectrum-Tool">
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
             <use xlink:href="#spectrum-icon-18-Properties" />
           </svg>
         </button>
         <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
-        <button class="spectrum-Tool">
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
             <use xlink:href="#spectrum-icon-18-Select" />
           </svg>
