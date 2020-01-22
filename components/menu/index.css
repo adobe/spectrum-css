@@ -117,7 +117,7 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-selectlist-option-label-line-height);
   hyphens: auto;
   overflow-wrap: break-word;
-  width: 80%;
+  width: calc(100% - (var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-selectlist-option-icon-padding-x))); 
 }
 
 .spectrum-Menu-itemLabel--wrapping {
