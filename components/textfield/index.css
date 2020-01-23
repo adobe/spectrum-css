@@ -22,7 +22,9 @@ governing permissions and limitations under the License.
 
   /* Remove border width from padding */
   --spectrum-textfield-padding-top-adjusted: calc(var(--spectrum-textfield-padding-top) - var(--spectrum-textfield-border-size));
-  --spectrum-textfield-padding-bottom-adjusted: calc(var(--spectrum-textfield-padding-bottom) - var(--spectrum-textfield-border-size));
+
+  /* Hack: we need 1px less padding here for text to fix properly */
+  --spectrum-textfield-padding-bottom-adjusted: calc(var(--spectrum-textfield-padding-bottom) - var(--spectrum-textfield-border-size) - 1px);
   --spectrum-textfield-padding-x-adjusted: calc(var(--spectrum-textfield-padding-x) - var(--spectrum-textfield-border-size));
 
   --spectrum-textarea-padding-top-adjusted: calc(var(--spectrum-textarea-padding-top) - var(--spectrum-textarea-border-size));
