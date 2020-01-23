@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 const postcssReal = require('postcss');
 
-function getProcessors(keepVars = false, notNested = true, secondNotNested = true) {
+function getProcessors(keepVars = false, notNested = true, secondNotNested = true, diff = false) {
   return [
     require('postcss-import'),
     require('postcss-mixins')({
@@ -83,6 +83,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
     }),
     require('postcss-nested'),
     require('postcss-inherit'),
+    diff ? require('./plugins/postcss-varsonly')() : null,
     require('postcss-custom-properties')({
       noValueNotifications: 'error',
       warnings: !keepVars
