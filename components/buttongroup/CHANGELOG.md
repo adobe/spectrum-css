@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.0"></a>
+# 2.1.0
+🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@2.0.3...@spectrum-css/buttongroup@2.1.0)
+
+### ✨ Features
+
+* support vertical Rules inside of ButtonGroup, related to [#455](https://github.com/adobe/spectrum-css/issues/455) ([ea7b85f](https://github.com/adobe/spectrum-css/commit/ea7b85f))
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@2.0.2...@spectrum-css/buttongroup@2.0.3)

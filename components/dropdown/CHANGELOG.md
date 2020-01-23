@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.3"></a>
+## 2.1.3
+🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@2.1.2...@spectrum-css/dropdown@2.1.3)
+
+### 🐛 Bug fixes
+
+* fix Quiet Dropdown width in large scale, fixes [#477](https://github.com/adobe/spectrum-css/issues/477) ([a36f3bf](https://github.com/adobe/spectrum-css/commit/a36f3bf))
+* make Menu items wrap correctly, fixes [#451](https://github.com/adobe/spectrum-css/issues/451) ([#482](https://github.com/adobe/spectrum-css/issues/482)) ([03208af](https://github.com/adobe/spectrum-css/commit/03208af))
+
+
+
+
+
 <a name="2.1.2"></a>
 ## 2.1.2
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@2.1.1...@spectrum-css/dropdown@2.1.2)

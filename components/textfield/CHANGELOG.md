@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@2.0.3...@spectrum-css/textfield@2.0.4)
+
+### 🐛 Bug fixes
+
+* correct bottom padding to text alignment issues ([6e782ed](https://github.com/adobe/spectrum-css/commit/6e782ed))
+* correct Textfield and Textarea padding, fixes [#454](https://github.com/adobe/spectrum-css/issues/454), fixes [#489](https://github.com/adobe/spectrum-css/issues/489) ([120e502](https://github.com/adobe/spectrum-css/commit/120e502))
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@2.0.2...@spectrum-css/textfield@2.0.3)

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@2.0.3...@spectrum-css/treeview@2.0.4)
+
+### 🐛 Bug fixes
+
+* be explicit about Treeview group indicator box model, fixes [#467](https://github.com/adobe/spectrum-css/issues/467) ([32cfd52](https://github.com/adobe/spectrum-css/commit/32cfd52))
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@2.0.2...@spectrum-css/treeview@2.0.3)

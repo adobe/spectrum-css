@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.3"></a>
+## 2.1.3
+🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.2...@spectrum-css/tabs@2.1.3)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
 <a name="2.1.2"></a>
 ## 2.1.2
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.1...@spectrum-css/tabs@2.1.2)
