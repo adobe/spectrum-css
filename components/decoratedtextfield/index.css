@@ -12,6 +12,10 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
+:root {
+  --spectrum-textfield-padding-x-adjusted: calc(var(--spectrum-textfield-padding-x) - var(--spectrum-textfield-border-size));
+}
+
 .spectrum-DecoratedTextfield {
   display: inline-block;
   position: relative;
@@ -22,10 +26,10 @@ governing permissions and limitations under the License.
   height: var(--spectrum-textfield-icon-size);
 
   position: absolute;
-  bottom: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-textfield-icon-size) / 2));
-  right: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-textfield-icon-size) / 2));
+  top: calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-textfield-icon-size) / 2));
+  right: var(--spectrum-textfield-padding-x);
 }
 
 .spectrum-DecoratedTextfield-field {
-  padding-right: var(--spectrum-textfield-icon-frame);
+  padding-right: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-textfield-icon-size) + var(--spectrum-textfield-icon-margin-left));
 }

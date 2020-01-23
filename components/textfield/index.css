@@ -151,13 +151,13 @@ governing permissions and limitations under the License.
   &.is-invalid,
   &:invalid {
     background-size: var(--spectrum-icon-alert-medium-width) var(--spectrum-icon-alert-medium-width);
-    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) 50%;
+    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2) - var(--spectrum-textfield-quiet-border-size));
     padding-right: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-icon-margin-left));
   }
 
   &.is-valid {
     background-size: var(--spectrum-icon-checkmark-medium-width) var(--spectrum-icon-checkmark-medium-width);
-    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) 50%;
+    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
     padding-right: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-icon-margin-left));
   }
 }
@@ -169,12 +169,6 @@ governing permissions and limitations under the License.
 
   /* Remove the default vertical scrollbar for textarea in IE. */
   overflow: auto;
-
-  &.is-invalid,
-  &:invalid,
-  &.is-valid {
-    background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) calc(100% - calc(var(--spectrum-textfield-icon-size) / 2));
-  }
 }
 
 .spectrum-Textfield--quiet {
