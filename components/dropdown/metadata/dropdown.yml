@@ -18,7 +18,7 @@ examples:
       <h4>Open</h4>
       <div class="spectrum-Dropdown is-open" style="width: 240px;">
         <button class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="listbox">
-          <span class="spectrum-Dropdown-label">Ballard</span>
+          <span class="spectrum-Dropdown-label">Donaudampfschifffahrtsgesellschaftskapitän</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
@@ -26,19 +26,19 @@ examples:
         <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover is-open" style="width: 100%">
           <ul class="spectrum-Menu" role="listbox">
             <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Ballard</span>
+              <span class="spectrum-Menu-itemLabel">Donaudampfschifffahrtsgesellschaftskapitän</span>
               <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Fremont</span>
+              <span class="spectrum-Menu-itemLabel">Some long value that should be cut off</span>
               <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
             </li>
             <li class="spectrum-Menu-item" role="option" tabindex="0">
-              <span class="spectrum-Menu-itemLabel">Greenwood</span>
+              <span class="spectrum-Menu-itemLabel">A very long text that has spaces and hyphens-between-words.</span>
               <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
               </svg>
