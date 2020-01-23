@@ -1,3 +1,43 @@
+<a name="2.16.0"></a>
+# 2.16.0
+🗓 2020-01-23 • 📑 [Documentation](https://opensource.adobe.com/spectrum-css/2.16.0/docs/) • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@adobe/spectrum-css@2.15.2...@adobe/spectrum-css@2.16.0)
+
+### ✨ Features
+
+* **buttongroup**: update [@spectrum-css/buttongroup](/components/buttongroup) from [2.0.3](/components/buttongroup/CHANGELOG.md#user-content-2.0.3) to [2.1.0](/components/buttongroup/CHANGELOG.md#user-content-2.1.0) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+
+
+### 🐛 Bug fixes
+
+* **actionbar**: update [@spectrum-css/actionbar](/components/actionbar) from [2.1.2](/components/actionbar/CHANGELOG.md#user-content-2.1.2) to [2.1.3](/components/actionbar/CHANGELOG.md#user-content-2.1.3) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **actionmenu**: update [@spectrum-css/actionmenu](/components/actionmenu) from [2.0.3](/components/actionmenu/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/actionmenu/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **assetlist**: update [@spectrum-css/assetlist](/components/assetlist) from [2.0.3](/components/assetlist/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/assetlist/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **card**: update [@spectrum-css/card](/components/card) from [2.0.3](/components/card/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/card/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **checkbox**: update [@spectrum-css/checkbox](/components/checkbox) from [2.0.3](/components/checkbox/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/checkbox/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **decoratedtextfield**: update [@spectrum-css/decoratedtextfield](/components/decoratedtextfield) from [2.0.3](/components/decoratedtextfield/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/decoratedtextfield/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **dropdown**: update [@spectrum-css/dropdown](/components/dropdown) from [2.1.2](/components/dropdown/CHANGELOG.md#user-content-2.1.2) to [2.1.3](/components/dropdown/CHANGELOG.md#user-content-2.1.3) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **fieldgroup**: update [@spectrum-css/fieldgroup](/components/fieldgroup) from [2.0.3](/components/fieldgroup/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/fieldgroup/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **fieldlabel**: update [@spectrum-css/fieldlabel](/components/fieldlabel) from [2.0.3](/components/fieldlabel/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/fieldlabel/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **inputgroup**: update [@spectrum-css/inputgroup](/components/inputgroup) from [2.0.3](/components/inputgroup/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/inputgroup/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **menu**: update [@spectrum-css/menu](/components/menu) from [2.1.2](/components/menu/CHANGELOG.md#user-content-2.1.2) to [2.1.3](/components/menu/CHANGELOG.md#user-content-2.1.3) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **miller**: update [@spectrum-css/miller](/components/miller) from [2.0.3](/components/miller/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/miller/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **pagination**: update [@spectrum-css/pagination](/components/pagination) from [2.0.3](/components/pagination/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/pagination/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **popover**: update [@spectrum-css/popover](/components/popover) from [2.0.3](/components/popover/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/popover/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **quickaction**: update [@spectrum-css/quickaction](/components/quickaction) from [2.0.3](/components/quickaction/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/quickaction/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **radio**: update [@spectrum-css/radio](/components/radio) from [2.0.3](/components/radio/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/radio/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **rule**: update [@spectrum-css/rule](/components/rule) from [2.0.3](/components/rule/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/rule/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **search**: update [@spectrum-css/search](/components/search) from [2.0.3](/components/search/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/search/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **searchwithin**: update [@spectrum-css/searchwithin](/components/searchwithin) from [2.0.3](/components/searchwithin/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/searchwithin/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **statuslight**: update [@spectrum-css/statuslight](/components/statuslight) from [2.0.3](/components/statuslight/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/statuslight/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **stepper**: update [@spectrum-css/stepper](/components/stepper) from [2.0.3](/components/stepper/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/stepper/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **table**: update [@spectrum-css/table](/components/table) from [2.0.3](/components/table/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/table/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **tabs**: update [@spectrum-css/tabs](/components/tabs) from [2.1.2](/components/tabs/CHANGELOG.md#user-content-2.1.2) to [2.1.3](/components/tabs/CHANGELOG.md#user-content-2.1.3) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **textfield**: update [@spectrum-css/textfield](/components/textfield) from [2.0.3](/components/textfield/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/textfield/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **toggle**: update [@spectrum-css/toggle](/components/toggle) from [2.0.3](/components/toggle/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/toggle/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+* **treeview**: update [@spectrum-css/treeview](/components/treeview) from [2.0.3](/components/treeview/CHANGELOG.md#user-content-2.0.3) to [2.0.4](/components/treeview/CHANGELOG.md#user-content-2.0.4) ([c720b98](https://github.com/adobe/spectrum-css/commit/c720b98))
+
+
+
 <a name="2.15.2"></a>
 ## 2.15.2
 🗓 2019-12-14 • 📑 [Documentation](https://opensource.adobe.com/spectrum-css/2.15.2/docs/) • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@adobe/spectrum-css@2.15.1...@adobe/spectrum-css@2.15.2)
