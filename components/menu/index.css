@@ -109,6 +109,14 @@ governing permissions and limitations under the License.
   .spectrum-Icon + .spectrum-Menu-itemLabel,
   .spectrum-Menu-itemIcon  + .spectrum-Menu-itemLabel {
     margin-left: var(--spectrum-selectlist-thumbnail-image-padding-x);
+
+    width: calc(
+      100%
+      - var(--spectrum-icon-checkmark-medium-width)
+      - var(--spectrum-selectlist-option-icon-padding-x)
+      - var(--spectrum-selectlist-thumbnail-image-padding-x)
+      - var(--spectrum-alias-workflow-icon-size)
+    );
   }
 }
 
@@ -117,7 +125,11 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-selectlist-option-label-line-height);
   hyphens: auto;
   overflow-wrap: break-word;
-  width: calc(100% - (var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-selectlist-option-icon-padding-x))); 
+  width: calc(
+    100%
+    - var(--spectrum-icon-checkmark-medium-width)
+    - var(--spectrum-selectlist-option-icon-padding-x)
+  );
 }
 
 .spectrum-Menu-itemLabel--wrapping {
