@@ -67,6 +67,7 @@
   --spectrum-alias-highlight-selected-hover: rgba(38,128,235,0.3);
   --spectrum-alias-text-highlight-color: rgba(38,128,235,0.3);
   --spectrum-alias-background-color-quickactions: rgba(30,30,30,0.9);
+  --spectrum-alias-border-color-disabled: colorStopData.darkest.colorTokens.gray-200;
   --spectrum-alias-radial-reaction-color-default: rgba(200,200,200,0.6);
   --spectrum-alias-pasteboard-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-alias-appframe-border-color: var(--spectrum-global-color-gray-50);

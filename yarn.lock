@@ -1042,10 +1042,10 @@
     chalk "^1.x"
     chalk-cli "^4.x"
 
-"@spectrum/spectrum-dna@^5.21":
-  version "5.21.0"
-  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/@spectrum/spectrum-dna/-/@spectrum/spectrum-dna-5.21.0.tgz#1a3e6638ae6c18830ead9934e258c6c5d4396609"
-  integrity sha1-Gj5mOK5sGIMOrZk04ljGxdQ5Zgk=
+"@spectrum/spectrum-dna@5.24.0":
+  version "5.24.0"
+  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/@spectrum/spectrum-dna/-/@spectrum/spectrum-dna-5.24.0.tgz#f176c60302327cef23cc7fc0614476f0653cb03e"
+  integrity sha1-8XbGAwIyfO8jzH/AYUR28GU8sD4=
   dependencies:
     "@spectrum/kulcon" "^1.x"
     bluebird "^3.x"
