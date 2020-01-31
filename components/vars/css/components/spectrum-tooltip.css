@@ -10,6 +10,7 @@
   --spectrum-tooltip-max-width: var(--spectrum-global-dimension-size-2000);
   --spectrum-tooltip-icon-size: var(--spectrum-global-dimension-size-175);
   --spectrum-tooltip-icon-margin-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-tooltip-icon-margin-y: var(--spectrum-global-dimension-size-65);
   --spectrum-tooltip-tip-height: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-tip-width: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-tip-margin: var(--spectrum-global-dimension-size-50);
@@ -40,6 +41,7 @@
   --spectrum-tooltip-info-max-width: var(--spectrum-global-dimension-size-2000);
   --spectrum-tooltip-info-icon-size: var(--spectrum-global-dimension-size-175);
   --spectrum-tooltip-info-icon-margin-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-tooltip-info-icon-margin-y: var(--spectrum-global-dimension-size-65);
   --spectrum-tooltip-info-tip-height: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-info-tip-width: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-info-tip-margin: var(--spectrum-global-dimension-size-50);
@@ -70,6 +72,7 @@
   --spectrum-tooltip-negative-max-width: var(--spectrum-global-dimension-size-2000);
   --spectrum-tooltip-negative-icon-size: var(--spectrum-global-dimension-size-175);
   --spectrum-tooltip-negative-icon-margin-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-tooltip-negative-icon-margin-y: var(--spectrum-global-dimension-size-65);
   --spectrum-tooltip-negative-tip-height: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-negative-tip-width: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-negative-tip-margin: var(--spectrum-global-dimension-size-50);
@@ -102,6 +105,7 @@
   --spectrum-tooltip-positive-max-width: var(--spectrum-global-dimension-size-2000);
   --spectrum-tooltip-positive-icon-size: var(--spectrum-global-dimension-size-175);
   --spectrum-tooltip-positive-icon-margin-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-tooltip-positive-icon-margin-y: var(--spectrum-global-dimension-size-65);
   --spectrum-tooltip-positive-tip-height: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-positive-tip-width: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-positive-tip-margin: var(--spectrum-global-dimension-size-50);

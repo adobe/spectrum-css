@@ -49,8 +49,9 @@
   --spectrum-alias-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-subheading-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-detail-text-font-weight-light: var(--spectrum-global-font-weight-regular);
+  --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-serif-text-font-family: var(--spectrum-global-font-family-serif);
   --spectrum-alias-article-text-font-family: var(--spectrum-global-font-family-serif);
   --spectrum-alias-article-body-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -93,4 +94,6 @@
   --spectrum-alias-code-text-line-height: var(--spectrum-global-font-line-height-medium);
   --spectrum-alias-heading-margin-bottom: var(--spectrum-global-font-multiplier-25);
   --spectrum-alias-body-margin-bottom: var(--spectrum-global-font-multiplier-75);
+  --spectrum-alias-loupe-entry-animation-duration: var(--spectrum-global-animation-duration-300);
+  --spectrum-alias-loupe-exit-animation-duration: var(--spectrum-global-animation-duration-300);
 }
