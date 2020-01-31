@@ -132,8 +132,7 @@ function buildMultiStops() {
   Create a file that only includes statements that are affected by variables
 */
 function buildDiff() {
-  var varsProcessors = processors.getProcessors(false, false, false);
-  varsProcessors.unshift(require('./plugins/postcss-varsonly')());
+  var varsProcessors = processors.getProcessors(false, false, false, true);
 
   return gulp.src('index.css')
     // Use large variables
