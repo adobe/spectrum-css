@@ -24,6 +24,8 @@
   --spectrum-button-cta-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-cta-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-cta-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-cta-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-cta-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-cta-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-cta-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-cta-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -56,6 +58,8 @@
   --spectrum-button-over-background-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-over-background-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-over-background-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-over-background-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-over-background-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-over-background-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-over-background-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-over-background-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -91,6 +95,8 @@
   --spectrum-button-primary-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-primary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-primary-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-primary-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-primary-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-primary-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-primary-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-primary-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -125,6 +131,8 @@
   --spectrum-button-quiet-over-background-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-over-background-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-over-background-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-quiet-over-background-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-quiet-over-background-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-over-background-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-quiet-over-background-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-over-background-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -160,6 +168,8 @@
   --spectrum-button-quiet-primary-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-primary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-primary-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-quiet-primary-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-quiet-primary-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-primary-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-quiet-primary-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-primary-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -195,6 +205,8 @@
   --spectrum-button-quiet-secondary-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-secondary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-secondary-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-quiet-secondary-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-quiet-secondary-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-secondary-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-quiet-secondary-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-secondary-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -230,6 +242,8 @@
   --spectrum-button-quiet-warning-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-warning-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-warning-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-quiet-warning-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-quiet-warning-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-warning-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-quiet-warning-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-warning-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -265,6 +279,8 @@
   --spectrum-button-secondary-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-secondary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-secondary-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-secondary-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-secondary-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-secondary-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-secondary-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-secondary-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -300,6 +316,8 @@
   --spectrum-button-warning-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-warning-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-warning-text-padding-top: var(--spectrum-global-dimension-size-75);
+  --spectrum-button-warning-medium-text-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-button-warning-large-text-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-button-warning-icon-padding-left: var(--spectrum-global-dimension-size-175);
   --spectrum-button-warning-icon-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-button-warning-icon-padding-y: var(--spectrum-global-dimension-size-85);
