@@ -359,3 +359,16 @@ only screen and (max-device-height: 350px) {
     transform: none;
   }
 }
+
+.spectrum-Dialog--error {
+
+  .spectrum-Dialog-typeIcon {
+    margin-left: var(--spectrum-dialog-icon-margin-left);
+    flex-shrink: 0;
+    padding-top: 3px;
+  }
+
+  .spectrum-Dialog-header {
+    align-items: normal;
+  }
+}
