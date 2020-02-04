@@ -365,7 +365,7 @@ only screen and (max-device-height: 350px) {
   .spectrum-Dialog-typeIcon {
     margin-left: var(--spectrum-dialog-icon-margin-left);
     flex-shrink: 0;
-    padding-top: 3px;
+    padding-top: 3.5px;
   }
 
   .spectrum-Dialog-header {
