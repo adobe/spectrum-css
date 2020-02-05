@@ -241,6 +241,9 @@ only screen and (max-device-height: 350px) {
 
 .spectrum-Dialog-typeIcon {
   display: block;
+  margin-left: var(--spectrum-dialog-icon-margin-left);
+  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .spectrum-Dialog-content {
@@ -357,18 +360,5 @@ only screen and (max-device-height: 350px) {
   &,
   &.is-open {
     transform: none;
-  }
-}
-
-.spectrum-Dialog--error {
-
-  .spectrum-Dialog-typeIcon {
-    margin-left: var(--spectrum-dialog-icon-margin-left);
-    flex-shrink: 0;
-    padding-top: 3.5px;
-  }
-
-  .spectrum-Dialog-header {
-    align-items: stretch;
   }
 }
