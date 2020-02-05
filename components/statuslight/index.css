@@ -49,6 +49,10 @@ governing permissions and limitations under the License.
 
     /* margin on the dog is the opposite of the padding in order to align the dot as if the padding hack was not present */
     margin: var(--spectrum-statuslight-padding-bottom) var(--spectrum-statuslight-text-gap) var(--spectrum-statuslight-padding-top) var(--spectrum-statuslight-text-gap);
+
+    /* support high contrast/forced-color-adjust mode for dot */
+    -ms-high-contrast-adjust: none;
+    forced-color-adjust: none;
   }
 }
 
