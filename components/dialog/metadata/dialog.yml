@@ -207,6 +207,29 @@ examples:
         </div>
       </div>
   - id: dialog-error
+    name: Dialog - Alert Error with long title
+    status: Verified
+    description: An error alert dialog has an error icon in the header and long title text.
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
+
+      <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+      <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--alert is-open spectrum-CSSExample-dialog">
+        <div class="spectrum-Dialog-header">
+          <h2 class="spectrum-Dialog-title">Unable to Share Project to Behance Community</h2>
+          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          </svg>
+        </div>
+        <div class="spectrum-Dialog-content">
+          An error occurred while sharing your project. Please verify the email address and try again.
+        </div>
+        <div class="spectrum-Dialog-footer">
+          <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">OK</button>
+        </div>
+      </div>
+  - id: dialog-error
     name: Dialog - Alert 3 buttons
     status: Verified
     description: An alert dialog can have up to 3 buttons.
