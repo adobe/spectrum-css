@@ -1,12 +1,12 @@
-name: Typography (Int., Deprecated I)
+name: Typography (Intenationalized, Deprecated)
 status: Deprecated
+hide: true
 examples:
   - id: heading-1
     name: Typography
     description: Typography elements paired to display clear content hierarchies.
     markup: |
       <div class="spectrum-Typography">
-        <div style="max-width: 600px;">
         <h1 class="spectrum-Heading1">Aliquet Mauris Eu</h1>
         <p class="spectrum-Body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body1">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -42,7 +42,6 @@ examples:
         <h1 class="spectrum-Subheading">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body4">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
       </div>
   - id: heading-1
     name: Heading

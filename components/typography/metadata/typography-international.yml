@@ -1,12 +1,16 @@
 name: Typography (Internationalized)
+fastLoad: false
+description: Internationalized typography examples. Note that, for these examples to work correctly, your Typekit needs to include the appropriate Han fonts.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/typography/
+status: Verified
+id: heading-han-m
 examples:
-  - id: heading-1
+  - id: heading-m
     name: Typography
     status: Verified
     description: Typography elements paired to display clear content hierarchies.
     markup: |
       <div class="spectrum-Typography">
-        <div style="max-width: 600px;">
         <h1 class="spectrum-Heading spectrum-Heading--XXXL">Aliquet Mauris Eu</h1>
         <p class="spectrum-Body spectrum-Body--XXXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--XXXL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -22,152 +26,148 @@ examples:
         <p class="spectrum-Body spectrum-Body--L">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--L">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--L">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-Body spectrum-Body--L">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-Body spectrum-Body--L">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <h1 class="spectrum-Heading spectrum-Heading--M">Lorem Ipsum Dolor</h1>
+        <h3 class="spectrum-Heading spectrum-Heading--M">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body spectrum-Body--M">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--M">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--S">Lorem Ipsum Dolor</h1>
+        <h4 class="spectrum-Heading spectrum-Heading--S">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body spectrum-Body--S">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--S">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--XS">Lorem Ipsum Dolor</h1>
+        <h5 class="spectrum-Heading spectrum-Heading--XS">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body spectrum-Body--XS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--XS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--XXS">Lorem Ipsum Dolor</h1>
+        <h6 class="spectrum-Heading spectrum-Heading--XXS">Lorem Ipsum Dolor</h1>
         <p class="spectrum-Body spectrum-Body--XS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--XS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
-  - id: heading-1
+  - id: heading-m
     name: Heading
     status: Verified
     description: Headings for typography.
     markup: |
       <div class="spectrum" lang="en">
-        <p class="spectrum-Heading spectrum-Heading--XXXL">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL">HeadingXL <em>HeadingXL Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L">HeadingL <em>HeadingL Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--M">HeadingM <em>HeadingM Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--S">HeadingS <em>HeadingS Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XS">HeadingXS <em>HeadingXS Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXS">HeadingXXS <em>HeadingXXS Emphasis</em> <strong>Strong</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL">HeadingXXXL <em>HeadingXXXL Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL">HeadingXXL <em>HeadingXXL Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL">HeadingXL <em>HeadingXL Emphasis</em> <strong>Strong</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L">HeadingL <em>HeadingL Emphasis</em> <strong>Strong</strong>.</h2>
+        <h3 class="spectrum-Heading spectrum-Heading--M">HeadingM <em>HeadingM Emphasis</em> <strong>Strong</strong>.</h3>
+        <h4 class="spectrum-Heading spectrum-Heading--S">HeadingS <em>HeadingS Emphasis</em> <strong>Strong</strong>.</h4>
+        <h5 class="spectrum-Heading spectrum-Heading--XS">HeadingXS <em>HeadingXS Emphasis</em> <strong>Strong</strong>.</h5>
+        <h6 class="spectrum-Heading spectrum-Heading--XXS">HeadingXXS <em>HeadingXXS Emphasis</em> <strong>Strong</strong>.</h6>
         <br/>
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--M spectrum-Heading--serif">HeadingM Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--S spectrum-Heading--serif">HeadingS Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XS spectrum-Heading--serif">HeadingXS Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXS spectrum-Heading--serif">HeadingXXS Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--serif"> spectrum-Heading--serif</h2>
+        <h3 class="spectrum-Heading spectrum-Heading--M spectrum-Heading--serif">HeadingM Serif <em>Emphasis</em> <strong>Strong</strong>.</h3>
+        <h4 class="spectrum-Heading spectrum-Heading--S spectrum-Heading--serif">HeadingS Serif <em>Emphasis</em> <strong>Strong</strong>.</h4>
+        <h5 class="spectrum-Heading spectrum-Heading--XS spectrum-Heading--serif">HeadingXS Serif <em>Emphasis</em> <strong>Strong</strong>.</h5>
+        <h6 class="spectrum-Heading spectrum-Heading--XXS spectrum-Heading--serif">HeadingXXS Serif <em>Emphasis</em> <strong>Strong</strong>.</h6>
       </div>
 
       <div class="spectrum" lang="ja">
-        <p class="spectrum-Heading spectrum-Heading--XXXL">見出しXXXL <em>見出しXXXL 重点</em> <strong>見出しXXXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL">見出しXXL <em>見出しXXL 重点</em> <strong>見出しXXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL">見出しXL <em>見出しXL 重点</em> <strong>見出しXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L">見出しL <em>見出しL 重点</em> <strong>見出しL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--M">見出しM <em>見出しM 重点</em> <strong>見出しM 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--S">見出しS <em>見出しS 重点</em> <strong>見出しS 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XS">見出しXS <em>見出しXS 重点</em> <strong>見出しXS 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXS">見出しXXS <em>見出しXXS 重点</em> <strong>見出しXXS 強い強調</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL">見出しXXXL <em>見出しXXXL 重点</em> <strong>見出しXXXL 強い強調</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL">見出しXXL <em>見出しXXL 重点</em> <strong>見出しXXL 強い強調</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL">見出しXL <em>見出しXL 重点</em> <strong>見出しXL 強い強調</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L">見出しL <em>見出しL 重点</em> <strong>見出しL 強い強調</strong>.</h2>
+        <h3 class="spectrum-Heading spectrum-Heading--M">見出しM <em>見出しM 重点</em> <strong>見出しM 強い強調</strong>.</h3>
+        <h4 class="spectrum-Heading spectrum-Heading--S">見出しS <em>見出しS 重点</em> <strong>見出しS 強い強調</strong>.</h4>
+        <h5 class="spectrum-Heading spectrum-Heading--XS">見出しXS <em>見出しXS 重点</em> <strong>見出しXS 強い強調</strong>.</h5>
+        <h6 class="spectrum-Heading spectrum-Heading--XXS">見出しXXS <em>見出しXXS 重点</em> <strong>見出しXXS 強い強調</strong>.</h6>
       </div>
 
       <div class="spectrum" lang="ar">
-        <p class="spectrum-Heading spectrum-Heading--XXXL">XXXLالقسم <em>XXXLالقسم  تشديد</em> <strong>XXXLالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL">XXLالقسم <em>XXLالقسم  تشديد</em> <strong>XXLالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL">XLالقسم <em>XLالقسم  تشديد</em> <strong>XLالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L">Lالقسم <em>Lالقسم  تشديد</em> <strong>Lالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--M">Mالقسم <em>Mالقسم  تشديد</em> <strong>Mالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--S">Sالقسم <em>Sالقسم  تشديد</em> <strong>Sالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XS">XSالقسم <em>XSالقسم  تشديد</em> <strong>XSالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXS">XSSالقسم <em>XSSالقسم  تشديد</em> <strong>XXSالقسم  تأكيد قو</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL">XXXLالقسم <em>XXXLالقسم  تشديد</em> <strong>XXXLالقسم  تأكيد قو</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL">XXLالقسم <em>XXLالقسم  تشديد</em> <strong>XXLالقسم  تأكيد قو</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL">XLالقسم <em>XLالقسم  تشديد</em> <strong>XLالقسم  تأكيد قو</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L">Lالقسم <em>Lالقسم  تشديد</em> <strong>Lالقسم  تأكيد قو</strong>.</h2>
+        <h3 class="spectrum-Heading spectrum-Heading--M">Mالقسم <em>Mالقسم  تشديد</em> <strong>Mالقسم  تأكيد قو</strong>.</h3>
+        <h4 class="spectrum-Heading spectrum-Heading--S">Sالقسم <em>Sالقسم  تشديد</em> <strong>Sالقسم  تأكيد قو</strong>.</h4>
+        <h5 class="spectrum-Heading spectrum-Heading--XS">XSالقسم <em>XSالقسم  تشديد</em> <strong>XSالقسم  تأكيد قو</strong>.</h5>
+        <h6 class="spectrum-Heading spectrum-Heading--XXS">XSSالقسم <em>XSSالقسم  تشديد</em> <strong>XXSالقسم  تأكيد قو</strong>.</h6>
       </div>
 
       <div class="spectrum" lang="he">
-        <p class="spectrum-Heading spectrum-Heading--XXXL">XXXLדגש כותרת <em>XXXLמאמר</em> <strong>XXXLחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL">XXLדגש כותרת <em>XXLמאמר</em> <strong>XXLחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL">XLדגש כותרת <em>XLמאמר</em> <strong>XLחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L">Lדגש כותרת <em>Lמאמר</em> <strong>Lחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--M">Mדגש כותרת <em>Mמאמר</em> <strong>Mחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--S">Sדגש כותרת <em>Sמאמר</em> <strong>Sחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XS">XSדגש כותרת <em>XSמאמר</em> <strong>XSחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXS">XXSדגש כותרת <em>XXSמאמר</em> <strong>XXSחזק</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL">XXXLדגש כותרת <em>XXXLמאמר</em> <strong>XXXLחזק</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL">XXLדגש כותרת <em>XXLמאמר</em> <strong>XXLחזק</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL">XLדגש כותרת <em>XLמאמר</em> <strong>XLחזק</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L">Lדגש כותרת <em>Lמאמר</em> <strong>Lחזק</strong>.</h2>
+        <h3 class="spectrum-Heading spectrum-Heading--M">Mדגש כותרת <em>Mמאמר</em> <strong>Mחזק</strong>.</h3>
+        <h4 class="spectrum-Heading spectrum-Heading--S">Sדגש כותרת <em>Sמאמר</em> <strong>Sחזק</strong>.</h4>
+        <h5 class="spectrum-Heading spectrum-Heading--XS">XSדגש כותרת <em>XSמאמר</em> <strong>XSחזק</strong>.</h5>
+        <h6 class="spectrum-Heading spectrum-Heading--XXS">XXSדגש כותרת <em>XXSמאמר</em> <strong>XXSחזק</strong>.</h6>
       </div>
 
-  - id: heading-1
+  - id: heading-heavy-m
     name: Heading (Heavy)
     status: Verified
     description: Strong headings for typography.
     markup: |
       <div class="spectrum" lang="en">
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy">HeadingL <em>Emphasis</em> <strong>heavy</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy"> spectrum-Heading--heavy</h2>
         <br/>
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy spectrum-Heading--serif">HeadingL Serif  <em>Emphasis</em> <strong>heavy</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy spectrum-Heading--serif"> spectrum-Heading--heavy spectrum-Heading--serif</h2>
       </div>
 
       <div class="spectrum" lang="ja">
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">見出しXXXL <em>見出し XXXL </em> <strong>>見出しXXXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">見出しXXL <em>見出し XXL 重点</em> <strong>見出しXXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">見出しXL <em>見出しXL  重点</em> <strong>見出しXL強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy">見出しL <em>見出しL  重点</em> <strong>見出しL強い強調</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">見出しXXXL <em>見出し XXXL </em> <strong>>見出しXXXL 強い強調</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">見出しXXL <em>見出し XXL 重点</em> <strong>見出しXXL 強い強調</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">見出しXL <em>見出しXL  重点</em> <strong>見出しXL強い強調</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy"> spectrum-Heading--heavy</h2>
       </div>
 
       <div class="spectrum" lang="ar">
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">القسمXXXL <em>القسم XXXL  تشديد</em> <strong>القسم 2XXXL تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">القسمXXL <em>القسم 1XXL  تشديد Emphasis</em> <strong>القسم XXL تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">القسمXL<em>القسم 1XL  تشديد</em> <strong>القسم XL تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy">القسمL <em>القسم L  تشديد</em> <strong>القسم L تأكيد قو</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">القسمXXXL <em>القسم XXXL  تشديد</em> <strong>القسم 2XXXL تأكيد قو</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">القسمXXL <em>القسم 1XXL  تشديد Emphasis</em> <strong>القسم XXL تأكيد قو</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">القسمXL<em>القسم 1XL  تشديد</em> <strong>القسم XL تأكيد قو</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy"> spectrum-Heading--heavy</h2>
       </div>
 
       <div class="spectrum" lang="he">
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">XXXLדגש כותרת <em>XXXLמאמר</em> <strong>XXXLחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">XXLדגש כותרת <em>XXLמאמר</em> <strong>XXLחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">XLדגש כותרת <em>XLמאמר</em> <strong>XLחזק</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy">Lדגש כותרת <em>Lמאמר</em> <strong>Lחזק</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--heavy">XXXLדגש כותרת <em>XXXLמאמר</em> <strong>XXXLחזק</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--heavy">XXLדגש כותרת <em>XXLמאמר</em> <strong>XXLחזק</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--heavy">XLדגש כותרת <em>XLמאמר</em> <strong>XLחזק</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--heavy"> spectrum-Heading--heavy</h2>
       </div>
 
-  - id: heading-1
+  - id: heading-light-m
     name: Heading (Light)
     status: Verified
     description: Light headings for typography.
     markup: |
       <div class="spectrum" lang="en">
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light">HeadingL <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">HeadingXXXL <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">HeadingXXL <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">HeadingXL <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light"> spectrum-Heading--light</h2>
         <br/>
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light spectrum-Heading--serif">HeadingL Serif <em>Emphasis</em> <strong>Strong</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light spectrum-Heading--serif">HeadingXXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light spectrum-Heading--serif">HeadingXL Serif <em>Emphasis</em> <strong>Strong</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light spectrum-Heading--serif"> spectrum-Heading--light spectrum-Heading--serif</h2>
       </div>
 
       <div class="spectrum" lang="ja">
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">見出しXXXL <em>見出しXXXL 重点</em> <strong>見出しXXXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">見出しXXL <em>見出しXXL 重点</em> <strong>見出しXXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">見出しXL <em>見出しXL 重点</em> <strong>見出しXL 強い強調</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light">見出しL <em>見出しL 重点</em> <strong>見出しL 強い強調</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">見出しXXXL <em>見出しXXXL 重点</em> <strong>見出しXXXL 強い強調</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">見出しXXL <em>見出しXXL 重点</em> <strong>見出しXXL 強い強調</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">見出しXL <em>見出しXL 重点</em> <strong>見出しXL 強い強調</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light"> spectrum-Heading--light</h2>
       </div>
 
       <div class="spectrum" lang="ar">
-        <p class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">XXXLالقسم <em>القسم XXXL  تشديد</em> <strong>XXXLالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">XXLالقسم <em>القسم XXL  تشديد</em> <strong>XXLالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">XLالقسم <em>القسم XL  تشديد</em> <strong>XLالقسم  تأكيد قو</strong>.</p>
-        <p class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light">Lالقسم <em>القسم L  تشديد</em> <strong>Lالقسم  تأكيد قو</strong>.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--XXXL spectrum-Heading--light">XXXLالقسم <em>القسم XXXL  تشديد</em> <strong>XXXLالقسم  تأكيد قو</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--light">XXLالقسم <em>القسم XXL  تشديد</em> <strong>XXLالقسم  تأكيد قو</strong>.</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--XL spectrum-Heading--light">XLالقسم <em>القسم XL  تشديد</em> <strong>XLالقسم  تأكيد قو</strong>.</h1>
+        <h2 class="spectrum-Heading spectrum-Heading--L spectrum-Heading--light"> spectrum-Heading--light</h2>
       </div>
 
       <div class="spectrum" lang="he">
@@ -177,7 +177,7 @@ examples:
         <p class="spectrum-Heading spectrum-HeadingL--light">Lדגש כותרת <em>Lמאמר</em> <strong>Lחזק</strong>.</p>
       </div>
 
-  - id: heading-1
+  - id: body-m
     name: Body
     status: Verified
     description: Default body text sizes.
@@ -230,7 +230,7 @@ examples:
         <p class="spectrum-Body spectrum-Body--XS">XSטקסט גוף הדגשות <em>XSגוף חזק</em> <strong>XSגוף חזק</strong>.</p>
       </div>
 
-  - id: detail-1
+  - id: detail-m
     status: Verified
     name: Detail
     description: Subheadings for typography.
@@ -268,7 +268,7 @@ examples:
         <p class="spectrum-Detail spectrum-Detail--S">Sالقسم טקסט גוף הדגשות <em>Sגוף חזק</em> <strong>Sגוף חזק</strong>.</p>
       </div>
 
-  - id: heading-1
+  - id: heading-han-m
     name: Han
     status: Verified
     description: Typographic pairings for Adobe Clean Han.
@@ -292,7 +292,7 @@ examples:
         <p class="spectrum-Body spectrum-Body--XS spectrum-Body--serif">見出しとよく対になる本文。</p>
       </div>
 
-  - id: code-1
+  - id: code-m
     name: Typography - Code
     status: Verified
     description: Typographic styles for computer code.
