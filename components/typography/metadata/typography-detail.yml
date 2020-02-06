@@ -1,12 +1,11 @@
 name: Typography Detail
 dnaStatus: Verified
-description: The Detail typography component.
+description: Detail is a typography component used for disclosing extra information or smaller items in hierarchical relationships of text.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/detail/
 examples:
   - id: detail-m
     status: Verified
     name: Detail
-    description: Subheadings for typography.
     markup: |
       <div class="spectrum">
         <p class="spectrum-Detail spectrum-Detail--XL">DetailXL <em>DetailXL Emphasis</em> <span class="spectrum-Detail--light">DetailXL Light</span> <strong>DetailXL Strong</strong>.</p>
