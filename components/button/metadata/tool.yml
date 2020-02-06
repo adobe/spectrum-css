@@ -1,7 +1,8 @@
 name: Tool
-status: Verified
+dnaStatus: Deprecated
 description: The tool button.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/tool/
+hide: true
 examples:
   - name: Standard
     markup: |

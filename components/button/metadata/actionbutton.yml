@@ -191,6 +191,7 @@ examples:
       </button>
   - id: actionbutton-quiet
     name: Quiet
+    description: The Quiet Action Button should be used where you previously used the [deprecated Tool component](tool.html).
     markup: |
       <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
