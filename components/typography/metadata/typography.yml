@@ -1,10 +1,10 @@
-name: Typography (Depreciated I)
+name: Typography (Deprecated I)
 description: 'English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples.'
+status: Deprecated
 SpectrumSiteSlug: https://spectrum.adobe.com/page/typography/
 examples:
   - id: heading-1
     name: Standard
-    status: Verified
     description: Typography elements paired to display clear content hierarchies.
     markup: |
       <div class="spectrum-Typography">
@@ -48,7 +48,6 @@ examples:
       </div>
   - id: heading-1
     name: Heading
-    status: Verified
     description: Headings for typography.
     markup: |
       <div class="spectrum">
@@ -69,7 +68,6 @@ examples:
       </div>
   - id: heading-1
     name: Heading (Strong)
-    status: Verified
     description: Strong headings for typography.
     markup: |
       <div class="spectrum">
@@ -83,7 +81,6 @@ examples:
       </div>
   - id: heading-1
     name: Heading (Quiet)
-    status: Verified
     description: Quiet headings for typography.
     markup: |
       <div class="spectrum">
@@ -97,7 +94,6 @@ examples:
       </div>
   - id: heading-1
     name: Display
-    status: Verified
     description: Display headings for typography.
     markup: |
       <div class="spectrum">
@@ -111,7 +107,6 @@ examples:
       </div>
   - id: heading-1
     name: Display (Strong)
-    status: Verified
     description: Strong display headings for typography.
     markup: |
       <div class="spectrum">
@@ -120,7 +115,6 @@ examples:
       </div>
   - id: heading-1
     name: Display (Quiet)
-    status: Verified
     description: Quiet display headings for typography.
     markup: |
       <div class="spectrum">
@@ -134,7 +128,6 @@ examples:
       </div>
   - id: heading-1
     name: Body
-    status: Verified
     description: Default body text sizes.
     markup: |
       <div class="spectrum">
@@ -156,7 +149,6 @@ examples:
       </div>
   - id: heading-1
     name: Article
-    status: Verified
     description: Typography elements paired to display clear content hierarchies in long form articles.
     markup: |
       <div class="spectrum-Article">
@@ -177,7 +169,6 @@ examples:
       </div>
   - id: heading-1
     name: Typography - Code
-    status: Verified
     description: Typographic styles for computer code.
     markup: |
       <code class="spectrum-Code1">Code1 Text <strong>Strong</strong></code>
