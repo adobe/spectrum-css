@@ -45,6 +45,26 @@ for (let [rule, className] of Object.entries(ruleClassnames)) {
   })(className);
 }
 
+const code_inline = md.renderer.rules.code_inline || defaultRenderer;
+md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
+  const token = tokens[idx];
+  // ~ indicates markup that should be red
+  if (token.content[0] === '~') {
+    let aIndex = tokens[idx].attrIndex('class');
+
+    let className = 'spectrum-CSSExample-oldAPI';
+    if (aIndex < 0) {
+      tokens[idx].attrPush(['class', className]); // add new attribute
+    }
+    else {
+      tokens[idx].attrs[aIndex][1] = `${tokens[idx].attrs[aIndex][1]} ${className}`;
+    }
+
+    token.content = token.content.substr(1);
+  }
+  return code_inline(tokens, idx, options, env, self);
+};
+
 const headingMap = {
   'h1': 'spectrum-Heading spectrum-Heading--L',
   'h2': 'spectrum-Heading spectrum-Heading--M',

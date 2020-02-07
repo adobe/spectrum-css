@@ -99,3 +99,7 @@ governing permissions and limitations under the License.
   background: rgba(0,0,0,0.4);
   color: rgba(0,0,0,0.4);
 }
+
+.spectrum-CSSExample-oldAPI {
+  color: var(--spectrum-semantic-negative-color-text-small);
+}

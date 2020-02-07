@@ -13,7 +13,7 @@ article.spectrum-CSSExample.spectrum-Typography
   if example.markup
     section.spectrum-CSSExample-container
       .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-      .spectrum-CSSExample-markup
+      .spectrum-CSSExample-markup.spectrum-Code.spectrum-Code--XS
         if example.markup.split('\n').length > 2
           a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show markup
         pre
