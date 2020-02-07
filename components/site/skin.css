@@ -50,6 +50,16 @@ governing permissions and limitations under the License.
   background: var(--spectrum-site-overlay-underlay-background-color);
 }
 
+.spectrum-CSSComponent-resource--github {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: black;
+}
+
+.spectrum-CSSComponent-resource--adobe {
+  color: rgb(255, 2, 1) !important;
+  background-color: var(--spectrum-global-color-gray-100) !important;
+}
+
 /* Scrollable */
 .u-scrollable::-webkit-scrollbar-track,
 .u-scrollable::-webkit-scrollbar-track-piece {

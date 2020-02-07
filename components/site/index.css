@@ -362,16 +362,6 @@ governing permissions and limitations under the License.
   margin-bottom: var(--spectrum-global-dimension-size-300);
 }
 
-.spectrum-CSSComponent-resource--adobe {
-  color: rgb(255, 2, 1) !important;
-  background-color: var(--spectrum-global-color-gray-100) !important;
-}
-
-.spectrum-CSSComponent-resource--github {
-  background-color: rgba(0, 0, 0, 0.1) !important;
-  color: black;
-}
-
 .spectrum--dark,
 .spectrum--darkest {
   .spectrum-CSSComponent-resource--github {
