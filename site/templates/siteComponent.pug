@@ -128,7 +128,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
             if component.details
               tr
                 th Details
-                tr!= util.markdown.toHTML(component.details)
+                tr!= util.markdown.render(component.details)
 
             div.spectrum-CSSComponent-resources
               if component.SpectrumSiteSlug
@@ -175,7 +175,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                   a(href="#usage").spectrum-BigSubtleLink Usage notes
                 hr.spectrum-Rule.spectrum-Rule--large
               section.spectrum-CSSComponent-description
-                div.spectrum-Body.spectrum-Body--M!= util.markdown.toHTML(component.description)
+                div.spectrum-Body.spectrum-Body--M!= util.markdown.render(component.description)
 
             if examples.length
               header.spectrum-CSSComponent-sectionHeading(id="variants")

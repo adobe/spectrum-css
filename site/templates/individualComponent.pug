@@ -85,7 +85,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
         p.spectrum-CSSComponent-version.spectrum-Body.spectrum-Body--S Version #{pkg.version}
 
       if component.description
-        section.spectrum-CSSComponent-description.spectrum-Body.spectrum-Body--L!= util.markdown.toHTML(component.description)
+        section.spectrum-CSSComponent-description.spectrum-Body.spectrum-Body--L!= util.markdown.render(component.description)
 
       each example in examples
         article.spectrum-CSSExample
@@ -94,7 +94,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
               h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S #{example.name}
 
             if example.description
-              section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--L!= util.markdown.toHTML(example.description)
+              section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--L!= util.markdown.render(example.description)
 
           if example.markup
 

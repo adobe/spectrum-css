@@ -49,7 +49,8 @@ let minimumDeps = [
   'illustratedmessage',
   'fieldlabel',
   'accordion',
-  'decoratedtextfield'
+  'decoratedtextfield',
+  'table'
 ];
 
 let templateData = {

@@ -175,6 +175,8 @@ exports.devHeavy = gulp.series(
   exports.devHeavy
 );
 
+exports.buildDocs = builder.buildDocs;
+
 exports.releaseBundles = releaseBundles;
 
 exports.prepare = site.copySiteResources;

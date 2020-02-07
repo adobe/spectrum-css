@@ -223,6 +223,7 @@ exports.buildComponents = subrunner.buildComponents;
 exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
+exports.buildDocs = docs.buildDocs;
 exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;
