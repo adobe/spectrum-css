@@ -13,6 +13,71 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 @import 'font.css';
 
+/**
+ Support for Typography
+
+ Ordered by numeric, legacy (v3) and t-shirt sized (v4) versions.
+ V4 is added last to prevent fallbacks to v3.
+**/
+
+
+
+/**
+  Legacy Spectrum V3, fallbacks:
+
+  The &.spectrum makes it so users can do <div class="spectrum spectrum--large"> and still get the right font sizes
+  Without this, they would have to do <div class="spectrum--large"><div class="spectrum">, which makes no sense
+*/
+&.spectrum,
+&.spectrum-Body,
+.spectrum,
+.spectrum-Body {
+  font-size: var(--spectrum-body-4-text-size);
+  font-weight: var(--spectrum-body-4-text-font-weight);
+  line-height: var(--spectrum-body-4-text-line-height);
+  font-style: var(--spectrum-body-4-text-font-style);
+}
+
+.spectrum-Body--italic {
+  font-style: var(--spectrum-body-4-emphasis-text-font-style);
+}
+
+.spectrum-Body--large {
+  @extend .spectrum-Body2;
+}
+
+.spectrum-Body--small {
+  @extend .spectrum-Body5;
+}
+
+.spectrum-Body--secondary {
+  @extend .spectrum-Body4;
+}
+
+.spectrum-Heading--display {
+  @extend .spectrum-Heading2--display.spectrum-Heading2--quiet;
+}
+
+.spectrum-Heading--pageTitle {
+  @extend .spectrum-Heading2--quiet;
+}
+
+.spectrum-Heading--subtitle1 {
+  @extend .spectrum-Heading4;
+}
+
+.spectrum-Heading--subtitle2 {
+  @extend .spectrum-Heading6;
+}
+
+.spectrum-Heading--subtitle3 {
+  @extend .spectrum-Subheading;
+}
+
+
+/**
+* Legacy numeric-based typography (depreciated)
+*/
 @mixin typography .spectrum-Body1 {}
 @mixin typography .spectrum-Body2 {}
 @mixin typography .spectrum-Body3 {}
@@ -130,52 +195,295 @@ governing permissions and limitations under the License.
   font-family: var(--spectrum-body-code-5-text-font-family);
 }
 
-/*
-  The &.spectrum makes it so users can do <div class="spectrum spectrum--large"> and still get the right font sizes
-  Without this, they would have to do <div class="spectrum--large"><div class="spectrum">, which makes no sense
-*/
-&.spectrum,
-&.spectrum-Body,
-.spectrum,
+
+
+
+/**
+ * Spectrum CSS Typography V3 (numeric) & V4 (t-shirt)
+ *
+ * Adds typography sizing and margins to be processed by
+ * mixins that are auto-generated in tools/component-builder/css/processor.js
+ *
+ */
+
+
+
+/* t-shirt size-based typography */
+
+/* Headings t-shirt sizes */
+
+/* Discrete rules for Heading: regular, heavy, light */
+@mixin typographyTShirtSizes .spectrum-Heading--XXXL {}
+@mixin typographyTShirtSizes .spectrum-Heading--XXL {}
+@mixin typographyTShirtSizes .spectrum-Heading--XL {}
+@mixin typographyTShirtSizes .spectrum-Heading--L {}
+@mixin typographyTShirtSizes .spectrum-Heading--M {}
+@mixin typographyTShirtSizes .spectrum-Heading--S {}
+@mixin typographyTShirtSizes .spectrum-Heading--XS {}
+@mixin typographyTShirtSizes .spectrum-Heading--XXS {}
+
+/* Standard SUIT rules for Heading: regular, serif, heavy, light */
+.spectrum-Heading {
+  font-family: var(--spectrum-heading-xl-text-font-family);
+  font-weight: var(--spectrum-heading-xl-text-font-weight);
+
+  em, .spectrum-Heading-emphasis {
+    font-style: var(--spectrum-heading-xl-emphasis-text-font-style);
+  }
+
+  strong, .spectrum-Heading-strong {
+    font-weight: var(--spectrum-heading-xl-strong-text-font-weight);
+  }
+}
+
+
+.spectrum-Heading--serif {
+  font-family: var(--spectrum-body-serif-xl-text-font-family);
+}
+
+
+.spectrum-Heading--heavy {
+  font-weight: var(--spectrum-heading-heavy-xl-text-font-weight);
+
+  em, .spectrum-Heading-emphasis {
+    font-style: var(--spectrum-heading-heavy-xl-emphasis-text-font-style);
+  }
+
+  strong, .spectrum-Heading-strong {
+    font-weight: var(--spectrum-heading-heavy-xl-strong-text-font-weight);
+  }
+}
+
+
+
+.spectrum-Heading--light {
+  font-weight: var(--spectrum-heading-light-xl-emphasis-text-font-weight);
+
+  em, .spectrum-Heading-emphasis {
+    font-style: var(--spectrum-heading-light-xl-emphasis-text-font-style);
+  }
+
+  strong, .spectrum-Heading-strong {
+    font-weight: var(--spectrum-heading-light-xl-strong-text-font-weight);
+  }
+}
+
+
+/* Body t-shirt sizes */
+@mixin typographyTShirtSizes .spectrum-Body--XXXL { }
+@mixin typographyTShirtSizes .spectrum-Body--XXL {}
+@mixin typographyTShirtSizes .spectrum-Body--XL {}
+@mixin typographyTShirtSizes .spectrum-Body--L {}
+@mixin typographyTShirtSizes .spectrum-Body--M {}
+@mixin typographyTShirtSizes .spectrum-Body--S {}
+@mixin typographyTShirtSizes .spectrum-Body--XS {}
+
 .spectrum-Body {
-  font-size: var(--spectrum-body-4-text-size);
-  font-weight: var(--spectrum-body-4-text-font-weight);
-  line-height: var(--spectrum-body-4-text-line-height);
-  font-style: var(--spectrum-body-4-text-font-style);
+  font-family: var(--spectrum-body-xl-text-font-family);
+
+  strong, .spectrum-Body-strong {
+    font-weight: var(--spectrum-body-xl-strong-text-font-weight);
+  }
+
+  em, .spectrum-Body-emphasis {
+    font-style: var(--spectrum-body-xl-emphasis-text-font-style);
+  }
 }
 
-.spectrum-Body--italic {
-  font-style: var(--spectrum-body-4-emphasis-text-font-style);
+.spectrum-Body--serif {
+  font-family: var(--spectrum-body-serif-xl-text-font-family);
 }
 
-.spectrum-Body--large {
-  @extend .spectrum-Body2;
+
+/* Detail / former subheadings t-shirt sizes */
+/* Standard SUIT rules for Detail: regular, serif, light */
+.spectrum-Detail {
+  font-family: var(--spectrum-heading-xl-text-font-family);
+
+  strong, .spectrum-Detail-strong {
+    font-weight: var(--spectrum-detail-xl-strong-text-font-weight);
+  }
+
+  em, .spectrum-Detail-emphasis {
+    font-style: var(--spectrum-detail-xl-emphasis-text-font-style);
+  }
 }
 
-.spectrum-Body--small {
-  @extend .spectrum-Body5;
+.spectrum-Detail--light {
+  font-style: var(--spectrum-detail-light-xl-text-font-style);
+  font-weight: var(--spectrum-detail-light-xl-text-font-weight);
 }
 
-.spectrum-Body--secondary {
-  @extend .spectrum-Body4;
+
+.spectrum-Detail--serif {
+  font-family: var(--spectrum-body-serif-xl-text-font-family);
 }
 
-.spectrum-Heading--display {
-  @extend .spectrum-Heading2--display.spectrum-Heading2--quiet;
+
+/* Discrete rules for Detail: regular, light */
+@mixin typographyTShirtSizes .spectrum-Detail--XL { }
+@mixin typographyTShirtSizes .spectrum-Detail--L {}
+@mixin typographyTShirtSizes .spectrum-Detail--M {}
+@mixin typographyTShirtSizes .spectrum-Detail--S {}
+
+/* @TODO does not exists for strong or heavy for Details. Will be added in the future */
+/*
+@mixin typographyTShirtSizes .spectrum-Detail-XL--strong, detail-strong-XL { background-color: orange;}
+@mixin typographyTShirtSizes .spectrum-Detail-L--strong, detail-strong-L {}
+@mixin typographyTShirtSizes .spectrum-Detail-M--strong, detail-strong-M {}
+@mixin typographyTShirtSizes .spectrum-Detail-S--heavy, detail-heavy-S {} */
+
+
+
+/* Code t-shirt sizes */
+.spectrum-Code {
+  font-family: var(--spectrum-heading-xl-text-font-family);
+
+  strong, .spectrum-Code-strong {
+    font-weight: var(--spectrum-code-xl-strong-text-font-weight);
+  }
+
+  em, .spectrum-Code-emphasis {
+    font-style: var(--spectrum-code-xl-emphasis-text-font-style);
+  }
 }
 
-.spectrum-Heading--pageTitle {
-  @extend .spectrum-Heading2--quiet;
+
+.spectrum-Code--serif {
+  font-family: var(--spectrum-body-serif-xl-text-font-family);
 }
 
-.spectrum-Heading--subtitle1 {
-  @extend .spectrum-Heading4;
+
+@mixin typographyTShirtSizes .spectrum-Code--XL, code-XL, true {
+  font-family: var(--spectrum-code-xl-text-font-family);
+}
+@mixin typographyTShirtSizes .spectrum-Code--L, code-L, true {
+  font-family: var(--spectrum-code-l-text-font-family);
+}
+@mixin typographyTShirtSizes .spectrum-Code--M, code-M, true {
+  font-family: var(--spectrum-code-m-text-font-family);
+}
+@mixin typographyTShirtSizes .spectrum-Code--S, code-S, true {
+  font-family: var(--spectrum-code-s-text-font-family);
+}
+@mixin typographyTShirtSizes .spectrum-Code--XS, code-XS, true {
+  font-family: var(--spectrum-code-xs-text-font-family);
 }
 
-.spectrum-Heading--subtitle2 {
-  @extend .spectrum-Heading6;
+/* Margins for headings and body */
+.spectrum-Typography {
+  @mixin typographyTShirtMargins .spectrum-Heading--XXXL {}
+  @mixin typographyTShirtMargins .spectrum-Heading--XXL {}
+  @mixin typographyTShirtMargins .spectrum-Heading--XL {}
+  @mixin typographyTShirtMargins .spectrum-Heading--L {}
+  @mixin typographyTShirtMargins .spectrum-Heading--M {}
+  @mixin typographyTShirtMargins .spectrum-Heading--S {}
+  @mixin typographyTShirtMargins .spectrum-Heading--XS {}
+  @mixin typographyTShirtMargins .spectrum-Heading--XXS {}
+
+  @mixin typographyTShirtMargins .spectrum-Body--XXXL {}
+  @mixin typographyTShirtMargins .spectrum-Body--XXL {}
+  @mixin typographyTShirtMargins .spectrum-Body--XL {}
+  @mixin typographyTShirtMargins .spectrum-Body--L {}
+  @mixin typographyTShirtMargins .spectrum-Body--M {}
+  @mixin typographyTShirtMargins .spectrum-Body--S {}
+  @mixin typographyTShirtMargins .spectrum-Body--XS {}
 }
 
-.spectrum-Heading--subtitle3 {
-  @extend .spectrum-Subheading;
+
+/* International support */
+.spectrum {
+  &:lang(ja),
+  &:lang(ko),
+  &:lang(zh) {
+    @mixin typographyTShirtSizes .spectrum-Heading--XXXL, heading-han-XXXL {}
+    @mixin typographyTShirtSizes .spectrum-Heading--XXL, heading-han-XXL {}
+    @mixin typographyTShirtSizes .spectrum-Heading--XL, heading-han-XL {}
+    @mixin typographyTShirtSizes .spectrum-Heading--L, heading-han-L {}
+    @mixin typographyTShirtSizes .spectrum-Heading--M, heading-han-M {}
+    @mixin typographyTShirtSizes .spectrum-Heading--S, heading-han-S {}
+    @mixin typographyTShirtSizes .spectrum-Heading--XS, heading-han-XS {}
+    @mixin typographyTShirtSizes .spectrum-Heading--XXS, heading-han-XXS {}
+
+
+    .spectrum-Heading--heavy {
+      font-weight: var(--spectrum-heading-han-xl-text-font-weight);
+
+      em, .spectrum-Heading--emphasis {
+        font-style: var(--spectrum-heading-han-heavy-xl-emphasis-text-font-style);
+        font-weight: var(--spectrum-heading-han-heavy-xl-emphasis-text-font-weight);
+      }
+
+      strong, .spectrum-Heading--strong {
+        font-style: var(--spectrum-heading-heavy-xl-strong-text-font-style);
+        font-weight: var(--spectrum-heading-heavy-xl-strong-text-font-weight);
+      }
+    }
+
+
+    .spectrum-Heading--light {
+      font-weight: var(--spectrum-heading-han-xl-text-font-weight);
+
+      em, .spectrum-Heading--emphasis {
+        font-style: var(--spectrum-heading-han-light-xl-emphasis-text-font-style);
+        font-weight: var(--spectrum-heading-han-light-xl-emphasis-text-font-weight);
+      }
+
+      strong, .spectrum-Heading--strong {
+        font-style: var(--spectrum-heading-han-light-xl-strong-text-font-style);
+        font-weight: var(--spectrum-heading-han-light-xl-strong-text-font-weight);
+      }
+    }
+
+
+    @mixin typographyTShirtSizes .spectrum-Body--XXXL, body-han-XXXL {}
+    @mixin typographyTShirtSizes .spectrum-Body--XXL, body-han-XXL {}
+    @mixin typographyTShirtSizes .spectrum-Body--XL, body-han-XL {}
+    @mixin typographyTShirtSizes .spectrum-Body--L, body-han-L {}
+    @mixin typographyTShirtSizes .spectrum-Body--M, body-han-M {}
+    @mixin typographyTShirtSizes .spectrum-Body--S, body-han-S {}
+    @mixin typographyTShirtSizes .spectrum-Body--XS, body-han-XS {}
+
+    @mixin typographyTShirtSizes .spectrum-Detail--XL, detail-han-xl {}
+    @mixin typographyTShirtSizes .spectrum-Detail--L, detail-han-l {}
+    @mixin typographyTShirtSizes .spectrum-Detail--M, detail-han-m {}
+    @mixin typographyTShirtSizes .spectrum-Detail--S, detail-han-s {}
+
+
+    .spectrum-Detail--light {
+      font-weight: var(--spectrum-detail-han-xl-text-font-weight);
+
+
+      em, .spectrum-Detail--emphasis {
+        font-style: var(--spectrum-detail-han-light-xl-emphasis-text-font-style);
+        font-weight: var(--spectrum-detail-han-light-xl-emphasis-text-font-weight);
+      }
+
+      strong, .spectrum-Detail--strong {
+        font-style: var(--spectrum-detail-han-light-xl-strong-text-font-style);
+        font-weight: var(--spectrum-detail-han-light-xl-strong-text-font-weight);
+      }
+    }
+
+
+
+    @mixin typographyTShirtSizes .spectrum-Code--XL, code-han-XL, true {
+      font-family: var(--spectrum-code-han-xl-text-font-family);
+    }
+
+    @mixin typographyTShirtSizes .spectrum-Code--L, code-han-L, true {
+      font-family: var(--spectrum-code-han-l-text-font-family);
+    }
+
+    @mixin typographyTShirtSizes .spectrum-Code--M, code-han-M, true {
+      font-family: var(--spectrum-code-han-m-text-font-family);
+    }
+
+    @mixin typographyTShirtSizes .spectrum-Code--S, code-han-S, true {
+      font-family: var(--spectrum-code-han-s-text-font-family);
+    }
+    @mixin typographyTShirtSizes .spectrum-Code--XS, code-han-XS, true {
+      font-family: var(--spectrum-code-han-xs-text-font-family);
+    }
+  }
 }
