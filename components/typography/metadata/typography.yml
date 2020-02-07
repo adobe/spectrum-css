@@ -43,3 +43,69 @@ examples:
       [View the Code typography component](typography-code.html)
     markup: |
       <code class="spectrum-Code spectrum-Code--S">alert("Hello world");</code>
+  - id: migrating-typography
+    status: Verified
+    name: Migrating from deprecated Typography
+    description: |
+      See the table below to reference what will need to change when migrating to the new Typography API. Cells with a dash indicate the typography style did not exist in the previous API.
+
+      Note that all instances of typography now require the component class in addition to the modifier class. For example, to get a large Heading, you will need the `.spectrum-Heading--L` modifier class as well as the `.spectrum-Heading` component class.
+
+      #### Heading
+
+      | Deprecated Classname                                    | New Classname                                                      |
+      | ------------------------------------------------------- | ------------------------------------------------------------------ |
+      | `~.spectrum-Heading1--display`                           | `.spectrum-Heading.spectrum-Heading--XXXL`                         |
+      | `~.spectrum-Heading1--display.spectrum-Heading1--quiet`  | `.spectrum-Heading.spectrum-Heading--XXXL.spectrum-Heading--light` |
+      | `~.spectrum-Heading1--display.spectrum-Heading1--strong` | `.spectrum-Heading.spectrum-Heading--XXXL.spectrum-Heading--heavy` |
+      | `~.spectrum-Heading2--display`                           | `.spectrum-Heading.spectrum-Heading-XXL`                           |
+      | `~.spectrum-Heading2--display.spectrum-Heading2--quiet`  | `.spectrum-Heading.spectrum-Heading--XXL.spectrum-Heading--light`  |
+      | `~.spectrum-Heading2--display.spectrum-Heading2--strong` | `.spectrum-Heading.spectrum-Heading--XXL.spectrum-Heading--heavy`  |
+      | `~.spectrum-Heading1`                                    | `.spectrum-Heading.spectrum-Heading-XL`                            |
+      | `~.spectrum-Heading1--quiet`                             | `.spectrum-Heading.spectrum-Heading--XL.spectrum-Heading--light`   |
+      | `~.spectrum-Heading1--strong`                            | `.spectrum-Heading.spectrum-Heading--XL.spectrum-Heading--heavy`   |
+      | `~.spectrum-Heading2`                                    | `.spectrum-Heading.spectrum-Heading-L`                             |
+      | `~.spectrum-Heading1--quiet`                             | `.spectrum-Heading.spectrum-Heading--L.spectrum-Heading--light`    |
+      | `~.spectrum-Heading2--strong`                            | `.spectrum-Heading.spectrum-Heading--L.spectrum-Heading--heavy`    |
+      | `~.spectrum-Heading3`                                    | `.spectrum-Heading.spectrum-Heading--M`                            |
+      | `~.spectrum-Heading4`                                    | `.spectrum-Heading.spectrum-Heading--S`                            |
+      | `~.spectrum-Heading5`                                    | `.spectrum-Heading.spectrum-Heading--XS`                           |
+      | `~.spectrum-Heading6`                                    | `.spectrum-Heading.spectrum-Heading--XXS`                          |
+
+
+      #### Body
+
+      | Deprecated Classname | New Classname                        |
+      | -------------------- | ------------------------------------ |
+      | -                    | `.spectrum-Body.spectrum-Body--XXXL` |
+      | -                    | `.spectrum-Body.spectrum-Body--XXL`  |
+      | `~.spectrum-Body1`    | `.spectrum-Body.spectrum-Body--XL`   |
+      | `~.spectrum-Body2`    | `.spectrum-Body.spectrum-Body--L`    |
+      | `~.spectrum-Body3`    | `.spectrum-Body.spectrum-Body--M`    |
+      | `~.spectrum-Body4`    | `.spectrum-Body.spectrum-Body--S`    |
+      | `~.spectrum-Body5`    | `.spectrum-Body.spectrum-Body--XS`   |
+
+
+      #### Detail
+
+      | Deprecated Classname   | New Classname                                 |
+      | ---------------------- | --------------------------------------------- |
+      | -                      | `.spectrum-Detail--XL`                        |
+      | -                      | `.spectrum-Detail--XL.spectrum-Detail--light` |
+      | -                      | `.spectrum-Detail--L`                         |
+      | -                      | `.spectrum-Detail--L.spectrum-Detail--light`  |
+      | -                      | `.spectrum-Detail--M`                         |
+      | -                      | `.spectrum-Detail--M.spectrum-Detail--light`  |
+      | `~.spectrum-Subheading` | `.spectrum-Detail--S`                         |
+      | `~.spectrum-Detail`     | `.spectrum-Detail--S.spectrum-Detail--light`  |
+
+
+      #### Code
+
+      | Deprecated Classname | New Classname       |
+      | -------------------- | ------------------- |
+      | `~.spectrum-Code-1`   | `.spectrum-Code--XL`|
+      | `~.spectrum-Code-2`   | `.spectrum-Code--L` |
+      | `~.spectrum-Code-3`   | `.spectrum-Code--M` |
+      | `~.spectrum-Code-4`   | `.spectrum-Code--S` |
+      | `~.spectrum-Code-5`   | `.spectrum-Code--XS`|
