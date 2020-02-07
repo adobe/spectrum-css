@@ -1,8 +1,9 @@
 name: Typography Body
-description: "Spectrum Typography Body."
-SpectrumSiteSlug: https://spectrum.corp.adobe.com/page/body/
+id: body-m
+description: Body is a typography component primarily used within Spectrum components and for blocks of text.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/body/
 examples:
-  - id: body-1
+  - id: body-m
     name: Body
     status: Verified
     description: Default body text sizes.
@@ -27,13 +28,12 @@ examples:
         <p class="spectrum-Body spectrum-Body--XS spectrum-Body--serif">BodyXS Text Serif <em>BodyXS Emphasis Serif</em> <strong>BodyXS Strong Serif</strong>.</p>
       </div>
 
-  - id: heading-body-1
+  - id: heading-m
     name: Standard
     status: Verified
     description: Typography elements paired to display clear content hierarchies.
     markup: |
       <div class="spectrum-Typography">
-        <div style="max-width: 600px;">
         <h1 class="spectrum-Heading spectrum-Heading--XXXL">Aliquet Mauris Eu</h1>
         <p class="spectrum-Body spectrum-Body--XXXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--XXXL">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -49,23 +49,19 @@ examples:
         <p class="spectrum-Body spectrum-Body--L">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--L">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--L">Lorem Ipsum Dolor</h1>
-        <p class="spectrum-Body spectrum-Body--L">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
-        <p class="spectrum-Body spectrum-Body--L">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <h1 class="spectrum-Heading spectrum-Heading--M">Lorem Ipsum Dolor</h1>
+        <h3 class="spectrum-Heading spectrum-Heading--M">Lorem Ipsum Dolor</h3>
         <p class="spectrum-Body spectrum-Body--M">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--M">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--S">Lorem Ipsum Dolor</h1>
+        <h4 class="spectrum-Heading spectrum-Heading--S">Lorem Ipsum Dolor</h4>
         <p class="spectrum-Body spectrum-Body--S">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--S">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--XS">Lorem Ipsum Dolor</h1>
+        <h5 class="spectrum-Heading spectrum-Heading--XS">Lorem Ipsum Dolor</h5>
         <p class="spectrum-Body spectrum-Body--XS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--XS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <h1 class="spectrum-Heading spectrum-Heading--XXS">Lorem Ipsum Dolor</h1>
+        <h6 class="spectrum-Heading spectrum-Heading--XXS">Lorem Ipsum Dolor</h6>
         <p class="spectrum-Body spectrum-Body--XS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
         <p class="spectrum-Body spectrum-Body--XS">Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>

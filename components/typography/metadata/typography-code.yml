@@ -1,8 +1,9 @@
 name: Typography Code
-description: "English typography examples. See the [typography example page](typography.html) for Japanese, Han, and Arabic examples."
+id: code-m
+description: Code is a typography component used for text that represents code.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/code/
 examples:
-  - id: code-1
+  - id: code-m
     name: Typography - Code
     status: Verified
     description: Typographic styles for computer code.
@@ -12,7 +13,8 @@ examples:
       <code class="spectrum-Code spectrum-Code--M">CodeM Text <strong>Strong</strong> <em>Emphasis</em> </code>
       <code class="spectrum-Code spectrum-Code--S">CodeS Text <strong>Strong</strong> <em>Emphasis</em> </code>
       <code class="spectrum-Code spectrum-Code--XS">CodeXS Text <strong>Strong</strong> <em>Emphasis</em> </code>
-      <pre><code class="spectrum-Code spectrum-Code--M">CodeM Text Wrapped in:
+      <pre><code class="spectrum-Code spectrum-Code--M">CodeM text
+      wrapped in
       pre tags for
       multiline
       goodness</code></pre>
