@@ -1,14 +1,16 @@
-article.spectrum-CSSExample.spectrum-Typography
+article.spectrum-CSSExample
   h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S(id=example.slug)
     a(href=`#${example.slug}`).spectrum-CSSComponent-link
       =example.name
     div(class=`spectrum-StatusLight spectrum-CSSExample-status spectrum-StatusLight--${util.getStatusLightVariant(example.status)}`)= example.status
 
   if example.description
-    section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--M!= util.markdown.render(example.description)
+    .spectrum-Typography
+      section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--M!= util.markdown.render(example.description)
 
   if example.details
-    .section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--M!= util.markdown.render(example.details)
+    .spectrum-Typography
+      .section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--M!= util.markdown.render(example.details)
 
   if example.markup
     section.spectrum-CSSExample-container
