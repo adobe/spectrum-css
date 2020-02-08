@@ -16,4 +16,5 @@ script:
   - yarn run watch &
   - sleep 5
   - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
-  - yarn run backstop:ci:test themes=light scales=medium
+  - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/ backstop_data/
+  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference
