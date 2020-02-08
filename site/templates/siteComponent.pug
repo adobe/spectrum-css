@@ -185,6 +185,10 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
               each example in examples
                 include ../includes/example.pug
 
+            if component.sections
+              each section in component.sections
+                include ../includes/section.pug
+
             include ../includes/footer.pug
 
     include ../includes/pageBottom.pug

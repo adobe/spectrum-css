@@ -43,15 +43,23 @@ examples:
       [View the Code typography component](typography-code.html)
     markup: |
       <code class="spectrum-Code spectrum-Code--S">alert("Hello world");</code>
-  - id: migrating-typography
-    status: Verified
-    name: Migrating from deprecated Typography
+sections:
+  - name: Applying margins
+    description: |
+      By default, Typography components do not include outer margins. If you would like to add margins, simply add the `.spectrum-Typography` class to your container, and every typography component inside of your container will have the correct margins.
+    markup: |
+      <div class="spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--XL">Aliquet Mauris Eu</h1>
+        <p class="spectrum-Body spectrum-Body--XL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+      </div>
+
+  - name: Migrating from deprecated Typography
     description: |
       See the table below to reference what will need to change when migrating to the new Typography API. Cells with a dash indicate the typography style did not exist in the previous API.
 
       Note that all instances of typography now require the component class in addition to the modifier class. For example, to get a large Heading, you will need the `.spectrum-Heading--L` modifier class as well as the `.spectrum-Heading` component class.
 
-      #### Heading
+      ### Heading
 
       | Deprecated Classname                                    | New Classname                                                      |
       | ------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -73,7 +81,7 @@ examples:
       | `~.spectrum-Heading6`                                    | `.spectrum-Heading.spectrum-Heading--XXS`                          |
 
 
-      #### Body
+      ### Body
 
       | Deprecated Classname | New Classname                        |
       | -------------------- | ------------------------------------ |
@@ -86,7 +94,7 @@ examples:
       | `~.spectrum-Body5`    | `.spectrum-Body.spectrum-Body--XS`   |
 
 
-      #### Detail
+      ### Detail
 
       | Deprecated Classname   | New Classname                                 |
       | ---------------------- | --------------------------------------------- |
@@ -100,7 +108,7 @@ examples:
       | `~.spectrum-Detail`     | `.spectrum-Detail--S.spectrum-Detail--light`  |
 
 
-      #### Code
+      ### Code
 
       | Deprecated Classname | New Classname       |
       | -------------------- | ------------------- |

@@ -54,9 +54,11 @@ md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
 
     let className = 'spectrum-CSSExample-oldAPI';
     if (aIndex < 0) {
-      tokens[idx].attrPush(['class', className]); // add new attribute
+      // add class
+      tokens[idx].attrPush(['class', className]);
     }
     else {
+      // append class
       tokens[idx].attrs[aIndex][1] = `${tokens[idx].attrs[aIndex][1]} ${className}`;
     }
 

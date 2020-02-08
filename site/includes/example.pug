@@ -4,19 +4,4 @@ article.spectrum-CSSExample
       =example.name
     div(class=`spectrum-StatusLight spectrum-CSSExample-status spectrum-StatusLight--${util.getStatusLightVariant(example.status)}`)= example.status
 
-  if example.description
-    .spectrum-Typography
-      section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--M!= util.markdown.render(example.description)
-
-  if example.details
-    .spectrum-Typography
-      .section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--M!= util.markdown.render(example.details)
-
-  if example.markup
-    section.spectrum-CSSExample-container
-      .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-      .spectrum-CSSExample-markup.spectrum-Code.spectrum-Code--XS
-        if example.markup.split('\n').length > 2
-          a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show markup
-        pre
-          code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
+  include exampleContent.pug
