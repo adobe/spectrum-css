@@ -25,4 +25,4 @@ deploy:
   edge: true
   repo: jianliao/spectrum-css-vr-test-result
   local_dir: temp
-  keep_history: true
+  target_branch: ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
