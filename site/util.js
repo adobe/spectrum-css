@@ -49,7 +49,7 @@ const code_inline = md.renderer.rules.code_inline || defaultRenderer;
 md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
   const token = tokens[idx];
   // ~ indicates markup that should be red
-  if (token.content[0] === '~') {
+  if (token.content.substr(0, 1) === '~' && token.content.substr(-1) === '~') {
     let aIndex = tokens[idx].attrIndex('class');
 
     let className = 'spectrum-CSSExample-oldAPI';
@@ -62,7 +62,7 @@ md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
       tokens[idx].attrs[aIndex][1] = `${tokens[idx].attrs[aIndex][1]} ${className}`;
     }
 
-    token.content = token.content.substr(1);
+    token.content = token.content.slice(1, -1);
   }
   return code_inline(tokens, idx, options, env, self);
 };
