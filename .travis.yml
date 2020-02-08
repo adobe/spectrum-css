@@ -1,3 +1,5 @@
+env:
+  - TRAVIS_ALLOW_FAILURE=true
 language: node_js
 node_js:
   - node
@@ -14,7 +16,7 @@ script:
   - sleep 5
   - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
-  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ button
+  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ typography
   - SPECTRUM_CSS_TEST_RESULT_FOLDER=temp/$(git rev-parse --short HEAD)_test_result
   - mkdir -p ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
   - cp -R backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
