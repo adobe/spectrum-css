@@ -17,7 +17,7 @@ script:
   - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ button
   - SPECTRUM_CSS_TEST_RESULT_FOLDER=$(git rev-parse --short HEAD)_test_result
   - mkdir ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
-  - mv backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
+  - cp -R backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
 deploy:
   provider: pages:git
   token:
