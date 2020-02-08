@@ -18,14 +18,14 @@ Each item in the `examples` array supports the following properties:
 
 * `id` - Provide the DNA ID here to fetch the status of this example.
 * `name` - The name of the example. If not provided, it will be loaded from DNA.
-* `description` - The example's description
+* `description` - The example's description, written in markdown. All links, headings, code blocks, and tables will automatically get Spectrum CSS classes applied to them.
 * `markup` - The markup example
 * `status` - The status of the example's design review; one of `Unverified`, `Verified`, or `Deprecated`.
 
 Each item in the `sections` array supports the following properties:
 
 * `name` - The name of the example (appears in the navigation and as the heading of the page). If not provided, it will be loaded from DNA.
-* `description` - The topmost description of the component. This will be loaded from DNA if something matches the ID of the component.
+* `description` - The content of the section, written in markdown. All links, headings, code blocks, and tables will automatically get Spectrum CSS classes applied to them.
 * `markup` - An optional markup example for the section
 
 ## Architecture
