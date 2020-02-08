@@ -1,20 +1,24 @@
 language: node_js
 node_js:
-  - "node"
+- node
 services:
-  - docker
+- docker
 before_install:
-  # Enforce upgrading to the latest yarn to avoid random version of yarn assigned by travis virtual environment.
-  - npm install -g yarn
+- npm install -g yarn
 install:
-  - yarn
+- yarn
 script:
-  # This script should be the first that runs to reduce the risk of
-  # executing a script from a compromised NPM package.
-  - audit-ci --moderate
-  - yarn run build
-  - yarn run watch &
-  - sleep 5
-  - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
-  - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
-  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/
+- audit-ci --moderate
+- yarn run build
+- yarn run watch &
+- sleep 5
+- yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
+- mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
+- yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ button
+deploy:
+  provider: pages:git
+  token:
+    secure: iDE8m01wkBgiR/nM0tTLDvjFmHGS0hG+Ubc4pq+Hr+NsPkAnVnmPF1KBjkA0dKzh62c23+6xlR98Dm1vnlohpFnsALbWb7QZ1C/vqtDSU6fiHboxamt+HhAEFmGM9RD9J5lgs7BrZC9w7iciS5i2lvuEbmK61zwrS0VliyhV7kJipHRyWbZkdnv2BvW203LurM7dQoSPRt3Yp7lN0Vr+bnkABfoYUhrp0rtxnBbArZ31R83OsHqD2S/ydR6AXpHpOMBWkj0Ock1W6FeR1hgmuiYZwHdGK1zYcFXDmF20X4KVGNlWJTAx7fiAswX6zVUaXa1IrwvAEBtByX7J51h5Y1Rkiug2QEJnRJuw6QncI2Kyrz/NDdI75PNiobyXChXGd38PV4FYQRyf8jpWilNQQP3i1Wen1iTtkHhT4ALPW+z6V5BThQ972YiFH/iNbBhRprRMhXji+JT+uG60dkH921XVCC//ozPLicn+gY94mht0GVoMumdPuftZqsY0KS9kxuy9Nvlf93dCkI0fRd5EgtvflPla00VKBo1P+JhXPE3OohilXyh0Fx5NLcPbCPNhhvhUTilYYy4Z3NQhG5PxRzq4JgDfVisPuCynWfkjYXZpgHs3k6T/HTz1VEUMNXuzt5HcHvywpqiPWH2C3Zwdp7WbJawm79KfoPmOSkJ++hE=
+  edge: true
+  repo: jianliao/spectrum-css-vr-test-result
+  local_dir: backstop_data
