@@ -18,7 +18,7 @@ script:
   - BRANCH_NAME=$(git rev-parse --short HEAD)_test_result
   - SPECTRUM_CSS_TEST_RESULT_FOLDER=temp/${BRANCH_NAME}
   - mkdir -p ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
-  - cp -R backstop_data/ ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
+  - cp -R backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
 deploy:
   provider: pages:git
   token:
