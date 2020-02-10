@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.0"></a>
+# 2.1.0
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@2.0.3...@spectrum-css/vars@2.1.0)
+
+### ✨ Features
+
+* upping DNA to 5.23.0 ([5371449](https://github.com/adobe/spectrum-css/commit/5371449))
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@2.0.2...@spectrum-css/vars@2.0.3)

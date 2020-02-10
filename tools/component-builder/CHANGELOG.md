@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# 1.1.0
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.0.2...@spectrum-css/component-builder@1.1.0)
+
+### ✨ Features
+
+* adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+
+
+### 🐛 Bug fixes
+
+* fix order of processor includes when doing diff CSS, fixes [#495](https://github.com/adobe/spectrum-css/issues/495) ([0d9f281](https://github.com/adobe/spectrum-css/commit/0d9f281))
+
+
+
+
+
 <a name="1.0.2"></a>
 ## 1.0.2
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.0.1...@spectrum-css/component-builder@1.0.2)

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.4...@spectrum-css/search@2.0.5)
+
+### 🐛 Bug fixes
+
+* color of disabled Search icon on hover/active/focus ([#483](https://github.com/adobe/spectrum-css/issues/483)) ([a928e3f](https://github.com/adobe/spectrum-css/commit/a928e3f))
+
+
+
+
+
 <a name="2.0.4"></a>
 ## 2.0.4
 🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@2.0.3...@spectrum-css/search@2.0.4)

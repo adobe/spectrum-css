@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.4...@spectrum-css/statuslight@2.0.5)
+
+### 🐛 Bug fixes
+
+* [Accessibility] StatusLight dot disappears in High Contrast Mode, fixes [#508](https://github.com/adobe/spectrum-css/issues/508) ([#509](https://github.com/adobe/spectrum-css/issues/509)) ([0909251](https://github.com/adobe/spectrum-css/commit/0909251))
+
+
+
+
+
 <a name="2.0.4"></a>
 ## 2.0.4
 🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.3...@spectrum-css/statuslight@2.0.4)
