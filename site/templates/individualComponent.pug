@@ -80,21 +80,21 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
     article.spectrum-CSSComponent
 
       header(id=component.slug).spectrum-CSSComponent-heading
-        a(href=`#${component.slug}`).spectrum-BigSubtleLink.spectrum-CSSComponent-title.spectrum-Article
-          h2.spectrum-Heading1--display #{component.name}
-        .spectrum-CSSComponent-version.spectrum-Body Version #{pkg.version}
+        h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--XXXL.spectrum-Heading--serif
+          a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
+        p.spectrum-CSSComponent-version.spectrum-Body.spectrum-Body--S Version #{pkg.version}
 
       if component.description
-        section.spectrum-CSSComponent-description.spectrum-Body2!= util.markdown.toHTML(component.description)
+        section.spectrum-CSSComponent-description.spectrum-Body.spectrum-Body--L!= util.markdown.render(component.description)
 
       each example in examples
         article.spectrum-CSSExample
           if example != component
             header(id=example.slug)
-              h4.spectrum-Heading--subtitle3 #{example.name}
+              h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S #{example.name}
 
             if example.description
-              section.spectrum-CSSExample-description.spectrum-Body2!= util.markdown.toHTML(example.description)
+              section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--L!= util.markdown.render(example.description)
 
           if example.markup
 

@@ -111,7 +111,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                           use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
 
             header(id=component.slug).spectrum-CSSComponent-heading
-              h2.spectrum-CSSComponent-title.spectrum-Article.spectrum-Heading1--display
+              h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--XXXL.spectrum-Heading--serif
                 a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
 
             table.spectrum-CSSComponent-detailsTable
@@ -128,7 +128,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
             if component.details
               tr
                 th Details
-                tr!= util.markdown.toHTML(component.details)
+                tr!= util.markdown.render(component.details)
 
             div.spectrum-CSSComponent-resources
               if component.SpectrumSiteSlug
@@ -171,19 +171,23 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
 
             if component.description
               header.spectrum-CSSComponent-sectionHeading(id="usage")
-                h4.spectrum-Heading3
+                h2.spectrum-Heading.spectrum-Heading--M
                   a(href="#usage").spectrum-BigSubtleLink Usage notes
                 hr.spectrum-Rule.spectrum-Rule--large
               section.spectrum-CSSComponent-description
-                div.spectrum-Body3!= util.markdown.toHTML(component.description)
+                div.spectrum-Body.spectrum-Body--M!= util.markdown.render(component.description)
 
             if examples.length
               header.spectrum-CSSComponent-sectionHeading(id="variants")
-                h4.spectrum-Heading3
+                h2.spectrum-Heading.spectrum-Heading--M
                   a(href="#variants").spectrum-BigSubtleLink=`${component.examplesHeading ? component.examplesHeading : 'Variants'}`
                 hr.spectrum-Rule.spectrum-Rule--large
               each example in examples
                 include ../includes/example.pug
+
+            if component.sections
+              each section in component.sections
+                include ../includes/section.pug
 
             include ../includes/footer.pug
 

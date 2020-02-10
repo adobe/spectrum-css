@@ -12,7 +12,79 @@ governing permissions and limitations under the License.
 
 const logger = require('gulplog');
 
-exports.markdown = require('markdown').markdown;
+const md = require('markdown-it')({
+  html: true,
+  linkify: false,
+  typographer: true,
+  breaks: true
+});
+
+function defaultRenderer(tokens, idx, options, env, self) {
+  return self.renderToken(tokens, idx, options, env, self);
+}
+
+let ruleClassnames = {
+  'link_open': 'spectrum-Link',
+  'table_open': 'spectrum-Table',
+  'thead_open': 'spectrum-Table-head',
+  'tr_open': 'spectrum-Table-row',
+  'tbody_open': 'spectrum-Table-body',
+  'th_open': 'spectrum-Table-headCell',
+  'td_open': 'spectrum-Table-cell',
+  'code_inline': 'spectrum-Code spectrum-Code--S',
+  'code_block': 'spectrum-Code spectrum-Code--S'
+};
+
+for (let [rule, className] of Object.entries(ruleClassnames)) {
+  md.renderer.rules[rule] = (function(className) {
+    const oldRule = md.renderer.rules[rule] || defaultRenderer;
+    return function (tokens, idx, options, env, self) {
+      tokens[idx].attrPush(['class', className]);
+      return oldRule(tokens, idx, options, env, self);
+    };
+  })(className);
+}
+
+const code_inline = md.renderer.rules.code_inline || defaultRenderer;
+md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
+  const token = tokens[idx];
+  // ~ indicates markup that should be red
+  if (token.content.substr(0, 1) === '~' && token.content.substr(-1) === '~') {
+    let aIndex = tokens[idx].attrIndex('class');
+
+    let className = 'spectrum-CSSExample-oldAPI';
+    if (aIndex < 0) {
+      // add class
+      tokens[idx].attrPush(['class', className]);
+    }
+    else {
+      // append class
+      tokens[idx].attrs[aIndex][1] = `${tokens[idx].attrs[aIndex][1]} ${className}`;
+    }
+
+    token.content = token.content.slice(1, -1);
+  }
+  return code_inline(tokens, idx, options, env, self);
+};
+
+const headingMap = {
+  'h1': 'spectrum-Heading spectrum-Heading--L',
+  'h2': 'spectrum-Heading spectrum-Heading--M',
+  'h3': 'spectrum-Heading spectrum-Heading--S',
+  'h4': 'spectrum-Heading spectrum-Heading--XS',
+  'h5': 'spectrum-Heading spectrum-Heading--XXS'
+};
+
+md.renderer.rules.heading_open = function(tokens, idx, options, env, self) {
+  let headingClass = headingMap[tokens[idx].tag];
+  if (headingClass) {
+    tokens[idx].attrPush(['class', headingClass]);
+  }
+  return defaultRenderer(tokens, idx, options, env, self);
+};
+
+exports.markdown = md;
+
 exports.Prism = require('prismjs');
 
 const statusLightVariants = {

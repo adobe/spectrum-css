@@ -1,20 +1,7 @@
 article.spectrum-CSSExample
-  h5.spectrum-CSSExample-heading.spectrum-Heading4(id=example.slug)
+  h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S(id=example.slug)
     a(href=`#${example.slug}`).spectrum-CSSComponent-link
       =example.name
     div(class=`spectrum-StatusLight spectrum-CSSExample-status spectrum-StatusLight--${util.getStatusLightVariant(example.status)}`)= example.status
 
-  if example.description
-    section.spectrum-CSSExample-description.spectrum-Body3!= util.markdown.toHTML(example.description)
-
-  if example.details
-    .section.spectrum-CSSExample-description.spectrum-Body3!= util.markdown.toHTML(example.details)
-
-  if example.markup
-    section.spectrum-CSSExample-container
-      .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-      .spectrum-CSSExample-markup
-        if example.markup.split('\n').length > 2
-          a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show markup
-        pre
-          code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
+  include exampleContent.pug
