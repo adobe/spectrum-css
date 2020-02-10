@@ -119,8 +119,17 @@ You can then use the icons in your app. Visit the [Spectrum workflow icon list](
 
 To take advantage of locale specific changes such as placeholders not italicizing Japanese, your application should specify a [`Content-Language` response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language) or set the [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang).
 
+In addition, you must set the `dir` attribute for components to render correctly.
+
+For English, a left-to-right language:
 ```html
-<html lang="ja">
+<html lang="en" dir="ltr">
+```
+
+For Arabic, a right-to-left language:
+
+```html
+<html lang="ar" dir="rtl">
 ```
 
 ### Variable fallbacks
