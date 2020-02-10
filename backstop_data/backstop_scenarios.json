@@ -388,14 +388,39 @@
     "package": "@spectrum-css/treeview"
   },
   {
+    "label": "truncation",
+    "url": "truncation.html",
+    "package": "@spectrum-css/truncation"
+  },
+  {
     "label": "typography",
     "url": "typography.html",
     "package": "@spectrum-css/typography",
     "misMatchThreshold": 0.11
   },
   {
+    "label": "typography-body",
+    "url": "typography-body.html",
+    "package": "@spectrum-css/typography"
+  },
+  {
+    "label": "typography-code",
+    "url": "typography-code.html",
+    "package": "@spectrum-css/typography"
+  },
+  {
     "label": "typography-deprecated",
     "url": "typography-deprecated.html",
+    "package": "@spectrum-css/typography"
+  },
+  {
+    "label": "typography-detail",
+    "url": "typography-detail.html",
+    "package": "@spectrum-css/typography"
+  },
+  {
+    "label": "typography-heading",
+    "url": "typography-heading.html",
     "package": "@spectrum-css/typography"
   },
   {
@@ -406,8 +431,23 @@
     "misMatchThreshold": 0.11
   },
   {
+    "label": "typography-international-deprecated",
+    "url": "typography-international-deprecated.html",
+    "package": "@spectrum-css/typography"
+  },
+  {
+    "label": "typography-legacy",
+    "url": "typography-legacy.html",
+    "package": "@spectrum-css/typography"
+  },
+  {
     "label": "well",
     "url": "well.html",
     "package": "@spectrum-css/well"
+  },
+  {
+    "label": "wrapping",
+    "url": "wrapping.html",
+    "package": "@spectrum-css/wrapping"
   }
 ]
