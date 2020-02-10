@@ -1,0 +1,120 @@
+doctype html
+html(lang='en-US').spectrum.spectrum--light.spectrum--medium
+  head
+    title Getting Started - Spectrum CSS
+
+    include includes/dependencies.pug
+
+  body
+
+    .spectrum-Site
+
+      include includes/header.pug
+
+      .spectrum-Site-content
+
+        include includes/sidebar.pug
+
+        .spectrum-Site-mainContainer
+          .spectrum-Site-page.spectrum-Typography
+            h1.spectrum-Heading.spectrum-Heading--XXL.spectrum-Heading--serif Get Started with Spectrum CSS
+
+            p.spectrum-Body.spectrum-Body--L We have a number of resources that outline how to set up Spectrum CSS for your project, as well as an introductory tutorial that’s a hands-on way to understand how our implementation works.
+
+            header(id="resources")
+              h2.spectrum-Heading.spectrum-Heading--M
+                a(href="#resources").spectrum-BigSubtleLink Resources
+              hr.spectrum-Rule.spectrum-Rule--large
+
+            section
+              p.spectrum-Body.spectrum-Body--L If you’re ready to jump in, here’s how to set up Spectrum CSS on our GitHub:
+
+              ul.spectrum-Body.spectrum-Body--L
+                li
+                  a.spectrum-Link(href="https://github.com/adobe/spectrum-css/blob/master/README.md") Full README
+                li
+                  a.spectrum-Link(href="https://github.com/adobe/spectrum-css/blob/master/README.md#importing-ui-icons") Importing icons
+                li
+                  a.spectrum-Link(href="https://github.com/adobe/spectrum-css/blob/master/README-legacy.md") IE 11 / legacy support
+
+            header(id="tutorial")
+              h2.spectrum-Heading.spectrum-Heading--M
+                a(href="#tutorial").spectrum-BigSubtleLink Tutorial: add a Spectrum button
+              hr.spectrum-Rule.spectrum-Rule--large
+
+            section
+              p.spectrum-Body.spectrum-Body--L This introductory exercise will show you how to quickly add a Spectrum button to your project.
+
+              h3.spectrum-Heading.spectrum-Heading--S Installing Spectrum CSS
+              p.spectrum-Body.spectrum-Body--L Spectrum CSS requires a Node.js environment with a minimum version of 10.
+
+              p.spectrum-Body.spectrum-Body--L First, install the required button dependencies by running:
+
+              pre.spectrum-CodeBlock
+                code.spectrum-Code.spectrum-Code--S.language-markup!=util.Prism.highlight('$ npm install @spectrum-css/vars @spectrum-css/button @spectrum-css/page', util.Prism.languages.markup, 'markup')
+
+              p.spectrum-Body.spectrum-Body--L Installed components will be available in the node_modules/@spectrum-css/ folder or on the Spectrum CSS NPM page.
+
+              h3.spectrum-Heading.spectrum-Heading--S Setting up global variables
+              p.spectrum-Body.spectrum-Body--L Create a new HTML file (e.g., #[code.spectrum-Code.spectrum-Code--S button.html]) in your project’s root folder.
+
+              p.spectrum-Body.spectrum-Body--L or displaying a button in Spectrum’s light color theme and medium scale, a couple of classes need to be added to the document’s #[code.spectrum-Code.spectrum-Code--S &lt;html&gt;] tag:
+
+              pre.spectrum-CodeBlock
+                code.spectrum-Code.spectrum-Code--S.language-markup!=util.Prism.highlight('<html class="spectrum spectrum--medium spectrum--light">', util.Prism.languages.markup, 'markup')
+
+              h3.spectrum-Heading.spectrum-Heading--S Adding Spectrum CSS
+              p.spectrum-Body.spectrum-Body--L Inside the #[code.spectrum-Code.spectrum-Code--S &lt;head&gt;] tag, include the stylesheets that contain the design system tokens for global variables, scales, and color themes, as well as the stylesheets for the components themselves:
+
+              -
+                htmlMarkup = util.Prism.highlight(`<head>
+                  <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+                  <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+                  <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+                  <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+                  <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+                </head>`, util.Prism.languages.markup, 'markup');
+              pre.spectrum-CodeBlock
+                code.spectrum-Code.spectrum-Code--S.language-markup!=htmlMarkup
+
+              p.spectrum-Body.spectrum-Body--L Inside the #[code.spectrum-Code.spectrum-Code--S &lt;body&gt;] tag, add the markup for a Spectrum button. Note that the example also includes the CSS class name, #[code.spectrum-Code.spectrum-Code--S spectrum-Button--cta], to use the call to action (CTA) option.
+
+              -
+                htmlMarkup = util.Prism.highlight(`<button class="spectrum-Button spectrum-Button--cta">
+                  <span class="spectrum-Button-label">Button</span>
+                </button>`, util.Prism.languages.markup, 'markup');
+              pre.spectrum-CodeBlock
+                code.spectrum-Code.spectrum-Code--S.language-markup!=htmlMarkup
+
+              p.spectrum-Body.spectrum-Body--L Here’s what your final button.html file should look like:
+
+              -
+                htmlMarkup = util.Prism.highlight(`<html class="spectrum spectrum--light spectrum--medium">
+                  <head>
+                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+                    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+                    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+                  </head>
+                  <body>
+                    <button class="spectrum-Button spectrum-Button--cta">
+                      <span class="spectrum-Button-label">Button</span>
+                    </button>
+                  </body>
+                </html>`, util.Prism.languages.markup, 'markup');
+              pre.spectrum-CodeBlock
+                code.spectrum-Code.spectrum-Code--S.language-markup!=htmlMarkup
+
+              img(alt="Screenshot of the rendered CTA button in a browser window", src="img/button-screen-shot.png").spectrum-CenteredImage
+
+              header(id="contribute")
+                h2.spectrum-Heading.spectrum-Heading--M
+                  a(href="#contribute").spectrum-BigSubtleLink Contribute to Spectrum CSS
+                hr.spectrum-Rule.spectrum-Rule--large
+
+              p.spectrum-Body.spectrum-Body--L We’d love for you to contribute to the Spectrum CSS project. Review the <a href="https://github.com/adobe/spectrum-css/blob/master/.github/CONTRIBUTING.md" class="spectrum-Link" target="_blank">contribution guidelines on our GitHub</a> to get started.
+
+            include includes/footer.pug
+
+    include includes/pageBottom.pug

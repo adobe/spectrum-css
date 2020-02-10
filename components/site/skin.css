@@ -103,3 +103,8 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-oldAPI {
   color: var(--spectrum-semantic-negative-color-text-small);
 }
+
+.spectrum-CodeBlock {
+  border-color: var(--spectrum-global-color-gray-400);
+  background-color: var(--spectrum-global-color-gray-75);
+}

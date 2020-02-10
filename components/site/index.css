@@ -532,6 +532,32 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-CenteredImage {
+  width: 100%;
+  margin: auto;
+}
+
+.spectrum-CodeBlock {
+  border-width: var(--spectrum-alias-border-size-thin);
+  border-style: solid;
+  border-radius: var(--spectrum-global-dimension-size-50);
+  padding: var(--spectrum-global-dimension-size-175) var(--spectrum-global-dimension-size-200);
+
+  margin: var(--spectrum-global-dimension-size-250) 0;
+}
+
+.spectrum-HomeCard {
+  display: inline-flex;
+  margin-bottom: var(--spectrum-global-dimension-size-350);
+  padding: 0 var(--spectrum-global-dimension-size-250);
+
+  img {
+    width: var(--spectrum-global-dimension-size-1250);
+    height: var(--spectrum-global-dimension-size-1000);
+    margin-right: var(--spectrum-global-dimension-size-250);
+  }
+}
+
 /* Scrollable */
 .u-scrollable {
   overflow-x: hidden;

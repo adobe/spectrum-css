@@ -1,8 +1,8 @@
 .u-scrollable.spectrum-Site-nav
   nav
     ul.spectrum-SideNav.spectrum-SideNav--multiLevel
-      //- li.spectrum-SideNav-item(class=pageURL === 'getting-started.html' ? 'is-selected' : '')
-      //-   a.spectrum-SideNav-itemLink.js-fastLoad(href='getting-started.html') Getting Started
+      li.spectrum-SideNav-item(class=pageURL === 'getting-started.html' ? 'is-selected' : '')
+        a.spectrum-SideNav-itemLink.js-fastLoad(href='get-started.html') Get Started
       li.spectrum-SideNav-item
         a.spectrum-SideNav-itemLink(href='https://github.com/adobe/spectrum-css', target='_blank', rel='noopener') Github
       li.spectrum-SideNav-item
@@ -16,7 +16,7 @@
                   'js-fastLoad': component.fastLoad != false
                 }, href=component.href)= component.name
 
-  //- nav.spectrum-Site-bottomNav
-  //-   ul.spectrum-SideNav
-  //-     li.spectrum-SideNav-item
-  //-       a.spectrum-SideNav-itemLink(href='http://opensource.adobe.com/spectrum', target='_blank', rel='noopener') Spectrum
+  nav.spectrum-Site-bottomNav
+    ul.spectrum-SideNav
+      li.spectrum-SideNav-item
+        a.spectrum-SideNav-itemLink(href='https://spectrum.adobe.com', target='_blank', rel='noopener') Spectrum
