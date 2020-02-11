@@ -9,9 +9,9 @@ if example.details
 if example.markup
   section.spectrum-CSSExample-container
     .spectrum-CSSExample-example(class=example.demoClassName ? `${example.demoClassName}` : '')!= example.markup
-    .spectrum-CSSExample-markup.spectrum-Code.spectrum-Code--XS
+    .spectrum-CSSExample-markup
       if example.markup.split('\n').length > 2
         a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show markup
       bdi
-        pre
+        pre.spectrum-Code.spectrum-Code--XS
           code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
