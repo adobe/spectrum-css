@@ -142,7 +142,8 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 td= releaseDate
               tr
                 th.spectrum-Body--secondary Current version
-                td #{pkg.name}@#{pkg.version}
+                td
+                  bdi #{pkg.name}@#{pkg.version}
             if component.details
               tr
                 th Details
