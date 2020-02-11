@@ -44,7 +44,7 @@
   let status = dnaStatusTranslation[component.dnaStatus] || component.dnaStatus;
 
 doctype html
-html(lang='en-US').spectrum.spectrum--light.spectrum--medium
+html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
   head
     title #{component.name} - Spectrum CSS
 
@@ -107,6 +107,24 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                           use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
                       li.spectrum-Menu-item(role='option' tabindex='0' value="large")
                         span.spectrum-Menu-itemLabel Large
+                        svg.spectrum-Icon.spectrum-UIIcon-CheckmarkMedium.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
+                          use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
+              div.spectrum-CSS-switcherContainer
+                label.spectrum-FieldLabel.spectrum-FieldLabel--left(for='switcher-theme') Direction
+
+                .spectrum-Dropdown.spectrum-Dropdown--quiet(id="switcher-direction")
+                  button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Dropdown-trigger(aria-haspopup="true")
+                    span.spectrum-Dropdown-label LTR
+                    svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Dropdown-icon(focusable="false" aria-hidden="true")
+                      use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
+                  .spectrum-Popover.spectrum-Popover--bottom.spectrum-Dropdown-popover.spectrum-Dropdown-popover--quiet
+                    ul.spectrum-Menu(role='listbox')
+                      li.spectrum-Menu-item.is-selected(role='option' aria-selected='true' tabindex='0' value="ltr")
+                        span.spectrum-Menu-itemLabel LTR
+                        svg.spectrum-Icon.spectrum-UIIcon-CheckmarkMedium.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
+                          use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
+                      li.spectrum-Menu-item(role='option' tabindex='0' value="rtl")
+                        span.spectrum-Menu-itemLabel RTL
                         svg.spectrum-Icon.spectrum-UIIcon-CheckmarkMedium.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
                           use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
 
