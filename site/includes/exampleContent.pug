@@ -12,5 +12,6 @@ if example.markup
     .spectrum-CSSExample-markup.spectrum-Code.spectrum-Code--XS
       if example.markup.split('\n').length > 2
         a.js-markup-toggle.spectrum-CSSExample-markupToggle.spectrum-Link(href="#") Show markup
-      pre
-        code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
+      bdi
+        pre
+          code.language-markup!= util.Prism.highlight(example.markup, util.Prism.languages.markup, 'markup')
