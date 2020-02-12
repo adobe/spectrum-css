@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Toast-buttons {
-  border-left-color: rgba(255, 255, 255, 0.2);
+  border-inline-start-color: rgba(255, 255, 255, 0.2);
 }
 
 .spectrum-Toast--warning {
@@ -72,4 +72,3 @@ governing permissions and limitations under the License.
     }
   }
 }
-
