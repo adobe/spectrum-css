@@ -25,8 +25,8 @@ governing permissions and limitations under the License.
 
   display: inline-block;
   box-sizing: border-box;
-  min-inline-size: var(--spectrum-alert-min-width);
-  min-block-size: var(--spectrum-alert-header-height);
+  min-width: var(--spectrum-alert-min-width);
+  min-height: var(--spectrum-alert-header-height);
   margin: 8px 0;
   padding: var(--spectrum-alert-padding-y) var(--spectrum-alert-padding-x);
 
@@ -44,13 +44,13 @@ governing permissions and limitations under the License.
 
 .spectrum-Alert-header {
   display: inline-block;
-  block-size: auto;
-  min-block-size: 0;
+  height: auto;
+  min-height: 0;
   margin: 0;
   padding: 0;
 
   /* Leave room for the icon */
-  padding-inline-end: 30px;
+  padding-right: 30px;
 
   font-size: 14px;
   font-weight: 700;
@@ -73,16 +73,16 @@ governing permissions and limitations under the License.
 
   text-align: right;
 
-  padding-block-start: 0.5rem;
+  padding-top: 0.5rem;
 
   &:empty {
     display: none;
   }
 
   .spectrum-Button {
-    margin-inline-end: 0;
+    margin-right: 0;
 
     /* Spacing between buttons */
-    margin-inline-start: 0.75rem;
+    margin-left: 0.75rem;
   }
 }
