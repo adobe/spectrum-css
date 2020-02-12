@@ -20,7 +20,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rule {
-  width: 100%;
+  inline-size: 100%;
 
   /* Show the overflow for hr in Edge and IE. */
   overflow: visible;
@@ -31,35 +31,35 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rule--large {
-  height: var(--spectrum-divider-large-height);
+  block-size: var(--spectrum-divider-large-height);
 
   border-radius: var(--spectrum-divider-large-border-radius);
 }
 
 .spectrum-Rule--medium {
-  height: var(--spectrum-divider-medium-height);
+  block-size: var(--spectrum-divider-medium-height);
 
   border-radius: var(--spectrum-divider-medium-border-radius);
 }
 
 .spectrum-Rule--small {
-  height: var(--spectrum-divider-small-height);
+  block-size: var(--spectrum-divider-small-height);
 
   border-radius: var(--spectrum-divider-small-border-radius);
 }
 
 .spectrum-Rule--vertical {
-  height: var(--spectrum-divider-vertical-height);
+  block-size: var(--spectrum-divider-vertical-height);
 
   &.spectrum-Rule--large {
-    width: var(--spectrum-divider-large-vertical-width);
+    inline-size: var(--spectrum-divider-large-vertical-width);
   }
 
   &.spectrum-Rule--medium {
-    width: var(--spectrum-divider-medium-vertical-width);
+    inline-size: var(--spectrum-divider-medium-vertical-width);
   }
 
   &.spectrum-Rule--small {
-    width: var(--spectrum-divider-small-vertical-width);
+    inline-size: var(--spectrum-divider-small-vertical-width);
   }
 }
