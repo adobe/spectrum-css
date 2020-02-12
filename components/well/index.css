@@ -20,10 +20,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Well {
+  text-align: start;
   display: block;
-  min-width: var(--spectrum-well-min-width);
+  min-inline-size: var(--spectrum-well-min-width);
   padding: var(--spectrum-well-padding);
-  margin-top: var( --spectrum-well-margin-top);
+  margin-block-start: var(--spectrum-well-margin-top);
   border-width: var(--spectrum-well-border-width);
   border-style: solid;
   border-radius: var(--spectrum-border-radius);
