@@ -20,26 +20,21 @@ script:
   # Move the reference image into backstop_data folder
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
   # Test
-  # - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ accordion || true
-  - trap 'test_error_code=$?' ERR
-  - false
-  - echo Cmd Result $?
+  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ || true
   # Generate the dynamic branch name for uploading the result to result repo
   - BRANCH_NAME=$(git rev-parse --short HEAD)-result-$(date +%Y-%m-%d_%H-%M-%S)
   - SPECTRUM_CSS_TEST_RESULT_FOLDER=temp/${BRANCH_NAME}
   # Create the dir
-  - mkdir -p ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
+  - mkdir -p ${SPECTRUM_CSS_TEST_RESULT_FOLDER} && cp -R backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
   # Copy github action file to the upload folder
   - mkdir -p temp/.github/workflows/ && cp backstop_data/push.yml temp/.github/workflows/
-  # Copy the result into upload folder
-  - cp -R backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
-# deploy:
-#   provider: pages:git
-#   token:
-#     secure: iDE8m01wkBgiR/nM0tTLDvjFmHGS0hG+Ubc4pq+Hr+NsPkAnVnmPF1KBjkA0dKzh62c23+6xlR98Dm1vnlohpFnsALbWb7QZ1C/vqtDSU6fiHboxamt+HhAEFmGM9RD9J5lgs7BrZC9w7iciS5i2lvuEbmK61zwrS0VliyhV7kJipHRyWbZkdnv2BvW203LurM7dQoSPRt3Yp7lN0Vr+bnkABfoYUhrp0rtxnBbArZ31R83OsHqD2S/ydR6AXpHpOMBWkj0Ock1W6FeR1hgmuiYZwHdGK1zYcFXDmF20X4KVGNlWJTAx7fiAswX6zVUaXa1IrwvAEBtByX7J51h5Y1Rkiug2QEJnRJuw6QncI2Kyrz/NDdI75PNiobyXChXGd38PV4FYQRyf8jpWilNQQP3i1Wen1iTtkHhT4ALPW+z6V5BThQ972YiFH/iNbBhRprRMhXji+JT+uG60dkH921XVCC//ozPLicn+gY94mht0GVoMumdPuftZqsY0KS9kxuy9Nvlf93dCkI0fRd5EgtvflPla00VKBo1P+JhXPE3OohilXyh0Fx5NLcPbCPNhhvhUTilYYy4Z3NQhG5PxRzq4JgDfVisPuCynWfkjYXZpgHs3k6T/HTz1VEUMNXuzt5HcHvywpqiPWH2C3Zwdp7WbJawm79KfoPmOSkJ++hE=
-#   edge: true
-#   repo: jianliao/spectrum-css-vr-test-result
-#   local_dir: temp
-#   target_branch: ${BRANCH_NAME}
-# after_deploy:
-#   -  echo https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
+deploy:
+  provider: pages:git
+  token:
+    secure: iDE8m01wkBgiR/nM0tTLDvjFmHGS0hG+Ubc4pq+Hr+NsPkAnVnmPF1KBjkA0dKzh62c23+6xlR98Dm1vnlohpFnsALbWb7QZ1C/vqtDSU6fiHboxamt+HhAEFmGM9RD9J5lgs7BrZC9w7iciS5i2lvuEbmK61zwrS0VliyhV7kJipHRyWbZkdnv2BvW203LurM7dQoSPRt3Yp7lN0Vr+bnkABfoYUhrp0rtxnBbArZ31R83OsHqD2S/ydR6AXpHpOMBWkj0Ock1W6FeR1hgmuiYZwHdGK1zYcFXDmF20X4KVGNlWJTAx7fiAswX6zVUaXa1IrwvAEBtByX7J51h5Y1Rkiug2QEJnRJuw6QncI2Kyrz/NDdI75PNiobyXChXGd38PV4FYQRyf8jpWilNQQP3i1Wen1iTtkHhT4ALPW+z6V5BThQ972YiFH/iNbBhRprRMhXji+JT+uG60dkH921XVCC//ozPLicn+gY94mht0GVoMumdPuftZqsY0KS9kxuy9Nvlf93dCkI0fRd5EgtvflPla00VKBo1P+JhXPE3OohilXyh0Fx5NLcPbCPNhhvhUTilYYy4Z3NQhG5PxRzq4JgDfVisPuCynWfkjYXZpgHs3k6T/HTz1VEUMNXuzt5HcHvywpqiPWH2C3Zwdp7WbJawm79KfoPmOSkJ++hE=
+  edge: true
+  repo: jianliao/spectrum-css-vr-test-result
+  local_dir: temp
+  target_branch: ${BRANCH_NAME}
+after_deploy:
+  -  echo https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
