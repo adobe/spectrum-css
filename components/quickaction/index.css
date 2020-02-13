@@ -22,9 +22,10 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  padding: var(--spectrum-quickactions-padding-y) var(--spectrum-quickactions-padding-x);
+  padding-block: var(--spectrum-quickactions-padding-y);
+  padding-inline: var(--spectrum-quickactions-padding-x);
 
-  height: var(--spectrum-quickactions-height);
+  block-size: var(--spectrum-quickactions-height);
 
   border-radius: var(--spectrum-quickactions-border-radius);
 
@@ -33,13 +34,13 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-left: var(--spectrum-quickactions-icon-button-gap-x);
+    margin-inline-start: var(--spectrum-quickactions-icon-button-gap-x);
   }
 }
 
 .spectrum-QuickActions--textOnly {
   .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-left: var(--spectrum-quickactions-text-button-gap-x);
+    margin-inline-start: var(--spectrum-quickactions-text-button-gap-x);
   }
 }
 
