@@ -87,28 +87,28 @@ tbody.spectrum-Table-body {
   border: none;
 
   .spectrum-Table-row {
-    border-top: none;
+    border-block-start: none;
   }
 
   .spectrum-Table-cell {
-    border-top: 1px solid var(--spectrum-table-cell-border-color);
+    border-block-start: 1px solid var(--spectrum-table-cell-border-color);
   }
 
   .spectrum-Table-row .spectrum-Table-cell:first-child {
-    border-left: 1px solid var(--spectrum-table-cell-border-color);
+    border-inline-start: 1px solid var(--spectrum-table-cell-border-color);
   }
 
   .spectrum-Table-row .spectrum-Table-cell:last-child {
-    border-right: 1px solid var(--spectrum-table-cell-border-color);
+    border-inline-end: 1px solid var(--spectrum-table-cell-border-color);
   }
 
   .spectrum-Table-row:last-child .spectrum-Table-cell {
-    border-bottom: 1px solid var(--spectrum-table-cell-border-color);
+    border-block-end: 1px solid var(--spectrum-table-cell-border-color);
   }
 }
 
 .spectrum-Table-row {
-  border-bottom: 1px solid var(--spectrum-table-cell-border-color);
+  border-block-end: 1px solid var(--spectrum-table-cell-border-color);
   background-color: var(--spectrum-table-row-background-color);
 
   &:hover {
@@ -151,8 +151,8 @@ tbody.spectrum-Table-body {
 }
 
 .spectrum-Table-cell--divider {
-  border-right-style: solid;
-  border-right-color: var(--spectrum-table-divider-border-color);
+  border-inline-end-style: solid;
+  border-inline-end-color: var(--spectrum-table-divider-border-color);
 }
 
 .spectrum-Table--quiet {
@@ -203,8 +203,8 @@ tbody.spectrum-Table-body {
   tbody.spectrum-Table-body {
     .spectrum-Table-row .spectrum-Table-cell:first-child,
     .spectrum-Table-row .spectrum-Table-cell:last-child {
-      border-left: none;
-      border-right: none;
+      border-inline-start: none;
+      border-inline-end: none;
     }
   }
 }
