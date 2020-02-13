@@ -17,8 +17,8 @@ governing permissions and limitations under the License.
   &:after {
     content: '';
     position: absolute;
-    width: var(--spectrum-dropindicator-circle-size);
-    height: var(--spectrum-dropindicator-circle-size);
+    inline-size: var(--spectrum-dropindicator-circle-size);
+    block-size: var(--spectrum-dropindicator-circle-size);
     border-radius: 50%;
     border: var(--spectrum-dropindicator-border-size) solid;
     box-sizing: border-box;
@@ -26,37 +26,38 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DropIndicator--horizontal {
-  height: var(--spectrum-dropindicator-border-size);
+  block-size: var(--spectrum-dropindicator-border-size);
   margin: 0 var(--spectrum-dropindicator-circle-size);
 
   &:before,
   &:after {
-    top: calc(-1 * var(--spectrum-dropindicator-circle-size) / 2 + var(--spectrum-dropindicator-border-size) / 2);
+    inset-block-start: calc(-1 * var(--spectrum-dropindicator-circle-size) / 2 + var(--spectrum-dropindicator-border-size) / 2);
   }
 
   &:before {
-    left: calc(-1 * var(--spectrum-dropindicator-circle-size));
+    inset-inline-start: calc(-1 * var(--spectrum-dropindicator-circle-size));
   }
 
   &:after {
-    right: calc(-1 * var(--spectrum-dropindicator-circle-size));
+    inset-inline-end: calc(-1 * var(--spectrum-dropindicator-circle-size));
   }
 }
 
 .spectrum-DropIndicator--vertical {
-  width: var(--spectrum-dropindicator-border-size);
-  margin: var(--spectrum-dropindicator-circle-size) 0;
+  inline-size: var(--spectrum-dropindicator-border-size);
+  margin-block: var(--spectrum-dropindicator-circle-size);
+  margin-inline: 0;
 
   &:before,
   &:after {
-    left: calc(-1 * var(--spectrum-dropindicator-circle-size) / 2 + var(--spectrum-dropindicator-border-size) / 2);
+    inset-inline-start: calc(-1 * var(--spectrum-dropindicator-circle-size) / 2 + var(--spectrum-dropindicator-border-size) / 2);
   }
 
   &:before {
-    top: calc(-1 * var(--spectrum-dropindicator-circle-size));
+    inset-block-start: calc(-1 * var(--spectrum-dropindicator-circle-size));
   }
 
   &:after {
-    bottom: calc(-1 * var(--spectrum-dropindicator-circle-size));
+    inset-block-end: calc(-1 * var(--spectrum-dropindicator-circle-size));
   }
 }
