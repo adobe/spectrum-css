@@ -26,12 +26,12 @@ governing permissions and limitations under the License.
   position: relative;
 
   /* Fix alignment, it's not quite centered */
-  top: var(--spectrum-global-dimension-size-10);
+  inset-block-start: var(--spectrum-global-dimension-size-10);
 
-  width: var(--spectrum-breadcrumb-ui-icon-width);
-  height: var(--spectrum-breadcrumb-ui-icon-height);
+  inline-size: var(--spectrum-breadcrumb-ui-icon-width);
+  block-size: var(--spectrum-breadcrumb-ui-icon-height);
 
-  transform: scale(1);
+  transform: logical scale(1) rotate(0deg);
 
   opacity: 1;
 }
@@ -42,7 +42,7 @@ governing permissions and limitations under the License.
   justify-content: start;
 
   box-sizing: border-box;
-  height: var(--spectrum-breadcrumb-list-height);
+  block-size: var(--spectrum-breadcrumb-list-height);
 
   position: relative;
 
@@ -59,7 +59,7 @@ governing permissions and limitations under the License.
   }
 
   > .spectrum-ActionButton {
-    margin-right: var(--spectrum-breadcrumb-button-gap);
+    margin-inline-end: var(--spectrum-breadcrumb-button-gap);
   }
 }
 
@@ -71,10 +71,11 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: start;
 
-  padding: 0 var(--spectrum-breadcrumb-item-padding-x);
-  height: var(--spectrum-breadcrumb-list-height);
+  padding-block: 0;
+  padding-inline: var(--spectrum-breadcrumb-item-padding-x);
+  block-size: var(--spectrum-breadcrumb-list-height);
 
-  margin-right: var(--spectrum-breadcrumb-item-margin-right);
+  margin-inline-end: var(--spectrum-breadcrumb-item-margin-right);
 
   border-radius: var(--spectrum-breadcrumb-item-border-radius);
 
@@ -97,13 +98,13 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before,
 .spectrum-Breadcrumbs-itemLink:focus-ring:before {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 
   box-sizing: border-box;
   display: block;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 
   border-width: var(--spectrum-breadcrumb-item-border-size-key-focus);
   border-style: solid;
@@ -126,18 +127,18 @@ governing permissions and limitations under the License.
     line-height: var(--spectrum-breadcrumb-multiline-item-text-line-height);
 
     &:last-of-type {
-      height: auto;
+      block-size: auto;
 
-      width: 100%;
+      inline-size: 100%;
 
-      margin-top: var(--spectrum-breadcrumb-multiline-title-margin-top);
+      margin-block-start: var(--spectrum-breadcrumb-multiline-title-margin-top);
 
       font-size: var(--spectrum-breadcrumb-multiline-title-text-size);
       font-weight: var(--spectrum-breadcrumb-multiline-title-text-font-weight);
       line-height: var(--spectrum-breadcrumb-multiline-title-text-line-height);
 
       .spectrum-Breadcrumbs-itemLink {
-        height: auto;
+        block-size: auto;
 
         text-decoration: none;
       }
@@ -149,7 +150,7 @@ governing permissions and limitations under the License.
 /* @deprecated */
 .spectrum-Breadcrumbs--title .spectrum-Breadcrumbs-item {
   &:last-of-type {
-    width: 100%;
+    inline-size: 100%;
 
     margin: var(--spectrum-breadcrumb-title-margin);
 
