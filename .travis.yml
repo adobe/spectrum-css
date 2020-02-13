@@ -29,4 +29,4 @@ deploy:
   local_dir: temp
   target_branch: ${BRANCH_NAME}
 after_deploy:
-  - echo `View result at https://jianliao.github.io/spectrum-css-vr-test-result/${BRANCH_NAME}/html_report/`
+  - echo View result at https://jianliao.github.io/spectrum-css-vr-test-result/${BRANCH_NAME}/html_report/
