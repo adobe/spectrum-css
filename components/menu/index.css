@@ -36,7 +36,8 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
 
-  margin: var(--spectrum-popover-padding-y) 0;
+  margin-block: var(--spectrum-popover-padding-y);
+  margin-inline: 0;
   padding: 0;
 
   list-style-type: none;
@@ -45,16 +46,16 @@ governing permissions and limitations under the License.
 
   > .spectrum-Menu-sectionHeading {
     /* Support headings as LI */
-    margin-top: var(--spectrum-menu-margin-x);
-    margin-bottom: var(--spectrum-menu-margin-x);
+    margin-block-start: var(--spectrum-menu-margin-x);
+    margin-block-end: var(--spectrum-menu-margin-x);
   }
 
   &.is-selectable {
     .spectrum-Menu-item {
-      padding-right: var(--spectrum-selectlist-option-selectable-padding-right);
+      padding-inline-end: var(--spectrum-selectlist-option-selectable-padding-right);
 
       &.is-selected {
-        padding-right: calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-popover-border-size));
+        padding-inline-end: calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-popover-border-size));
       }
     }
   }
@@ -77,9 +78,9 @@ governing permissions and limitations under the License.
 
   margin: 0;
 
-  border-left: var(--spectrum-selectlist-border-size-key-focus) solid transparent;
+  border-inline-start: var(--spectrum-selectlist-border-size-key-focus) solid transparent;
 
-  min-height: var(--spectrum-selectlist-option-height);
+  min-block-size: var(--spectrum-selectlist-option-height);
 
   font-size: var(--spectrum-selectlist-option-text-size);
   font-weight: var(--spectrum-selectlist-option-text-font-weight);
@@ -92,7 +93,7 @@ governing permissions and limitations under the License.
 
   &.is-selected {
     /* Redundant, but included for backwards compatibility */
-    padding-right: calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-popover-border-size));
+    padding-inline-end: calc(var(--spectrum-selectlist-option-padding) - var(--spectrum-popover-border-size));
 
     .spectrum-Menu-checkmark {
       display: block;
@@ -108,9 +109,9 @@ governing permissions and limitations under the License.
 
   .spectrum-Icon + .spectrum-Menu-itemLabel,
   .spectrum-Menu-itemIcon  + .spectrum-Menu-itemLabel {
-    margin-left: var(--spectrum-selectlist-thumbnail-image-padding-x);
+    margin-inline-start: var(--spectrum-selectlist-thumbnail-image-padding-x);
 
-    width: calc(
+    inline-size: calc(
       100%
       - var(--spectrum-icon-checkmark-medium-width)
       - var(--spectrum-selectlist-option-icon-padding-x)
@@ -125,7 +126,7 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-selectlist-option-label-line-height);
   hyphens: auto;
   overflow-wrap: break-word;
-  width: calc(
+  inline-size: calc(
     100%
     - var(--spectrum-icon-checkmark-medium-width)
     - var(--spectrum-selectlist-option-icon-padding-x)
@@ -146,8 +147,12 @@ governing permissions and limitations under the License.
 .spectrum-Menu-checkmark,
 .spectrum-Menu-chevron {
   flex-grow: 0;
-  margin-left: var(--spectrum-selectlist-option-icon-padding-x);
-  margin-top: var(--spectrum-selectlist-option-icon-margin-top);
+  margin-inline-start: var(--spectrum-selectlist-option-icon-padding-x);
+  margin-block-start: var(--spectrum-selectlist-option-icon-margin-top);
+}
+
+.spectrum-Menu-chevron {
+  transform: logical rotate(0deg);
 }
 
 .spectrum-Menu-divider {
@@ -157,9 +162,10 @@ governing permissions and limitations under the License.
   /* Show the overflow for hr in Edge and IE. */
   overflow: visible;
 
-  height: var(--spectrum-selectlist-divider-size);
-  margin: calc(var(--spectrum-selectlist-divider-padding) / 2) var(--spectrum-selectlist-option-padding);
-  padding: 0 0;
+  block-size: var(--spectrum-selectlist-divider-size);
+  margin-block: calc(var(--spectrum-selectlist-divider-padding) / 2);
+  margin-inline: var(--spectrum-selectlist-option-padding);
+  padding: 0;
   border: none;
 }
 
