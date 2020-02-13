@@ -36,5 +36,7 @@ deploy:
   repo: jianliao/spectrum-css-vr-test-result
   local_dir: temp
   target_branch: ${BRANCH_NAME}
+  on:
+    all_branches: true
 after_deploy:
   -  echo https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
