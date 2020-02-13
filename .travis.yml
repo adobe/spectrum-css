@@ -15,7 +15,7 @@ script:
   - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
   - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ accordion || true
-  - BRANCH_NAME=$(git rev-parse --short HEAD)-result-$(date +'%m/%d/%Y-%R')
+  - BRANCH_NAME=$(git rev-parse --short HEAD)-result-$(date +%Y-%m-%d_%H-%M-%S)
   - SPECTRUM_CSS_TEST_RESULT_FOLDER=temp/${BRANCH_NAME}
   - mkdir -p ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
   - mkdir -p temp/.github/workflows/ && cp backstop_data/push.yml temp/.github/workflows/
