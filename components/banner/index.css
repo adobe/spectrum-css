@@ -15,7 +15,8 @@ governing permissions and limitations under the License.
 .spectrum-Banner {
   display: inline-block;
   border-radius: var(--spectrum-banner-border-radius);
-  padding: var(--spectrum-banner-padding-y) var(--spectrum-banner-padding-x);
+  padding-block: var(--spectrum-banner-padding-y);
+  padding-inline: var(--spectrum-banner-padding-x);
   font-size: var(--spectrum-banner-text-size);
   line-height: var(--spectrum-banner-text-line-height);
 }
@@ -26,6 +27,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Banner--corner {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  inset-block-start: -10px;
+  inset-inline-end: -10px;
 }
