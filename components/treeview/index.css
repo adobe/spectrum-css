@@ -28,12 +28,12 @@ governing permissions and limitations under the License.
   &.is-open {
     > .spectrum-TreeView-itemLink > .spectrum-TreeView-indicator {
       /* Rotate the chevron */
-      transform: rotate(90deg);
+      transform: logical rotate(90deg);
     }
 
     > .spectrum-TreeView {
       /* Open the treeview */
-      height: auto;
+      block-size: auto;
       visibility: visible;
     }
   }
@@ -44,7 +44,8 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   cursor: pointer;
 
-  padding: calc(calc(var(--spectrum-treeview-item-margin-y) / 2) + var(--spectrum-treeview-item-padding-y)) var(--spectrum-treeview-item-padding-x);
+  padding-block: calc(calc(var(--spectrum-treeview-item-margin-y)/2) + var(--spectrum-treeview-item-padding-y));
+  padding-inline: var(--spectrum-treeview-item-padding-x);
 
   text-decoration: none;
 
@@ -60,21 +61,21 @@ governing permissions and limitations under the License.
 
   .spectrum-Icon {
     vertical-align: top;
-    margin-right: var(--spectrum-treeview-item-icon-gap);
+    margin-inline-end: var(--spectrum-treeview-item-icon-gap);
   }
 
   &::before {
     content: '';
 
     position: absolute;
-    left: calc(0 + var(--spectrum-treeview-item-border-size));
-    right: 0;
+    inset-inline-start: calc(0 + var(--spectrum-treeview-item-border-size));
+    inset-inline-end: 0;
     z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
-    margin-top: calc(-1 * var(--spectrum-treeview-item-padding-y));
+    margin-block-start: calc(-1 * var(--spectrum-treeview-item-padding-y));
 
-    height: var(--spectrum-treeview-item-height);
+    block-size: var(--spectrum-treeview-item-height);
 
     background-color: transparent;
 
@@ -86,16 +87,17 @@ governing permissions and limitations under the License.
   display: block;
   box-sizing: content-box;
 
-  float: left;
+  float: inline-start;
   position: relative;
 
-  left: var(--spectrum-global-dimension-size-125);
-  top: calc(-1 * var(--spectrum-global-dimension-size-65));
-  margin-left: calc(-1 * calc(var(--spectrum-global-dimension-size-400) + var(--spectrum-global-dimension-size-25)));
-  margin-bottom: calc(-1 * var(--spectrum-global-dimension-size-125));
+  inset-inline-start: var(--spectrum-global-dimension-size-125);
+  inset-block-start: calc(-1 * var(--spectrum-global-dimension-size-65));
+  margin-inline-start: calc(-1 * calc(var(--spectrum-global-dimension-size-400) + var(--spectrum-global-dimension-size-25)));
+  margin-block-end: calc(-1 * var(--spectrum-global-dimension-size-125));
 
   padding: var(--spectrum-global-dimension-size-125);
 
+  transform: logical rotate(0deg);
   transition: transform ease var(--spectrum-global-animation-duration-100);
 
   pointer-events: all !important;
@@ -106,49 +108,49 @@ governing permissions and limitations under the License.
   /* Don't be a highlight container stealer */
   position: static;
 
-  padding-left: var(--spectrum-treeview-item-indent);
+  padding-inline-start: var(--spectrum-treeview-item-indent);
 
   /* Be hidden */
-  height: 0;
+  block-size: 0;
   visibility: hidden;
 }
 
 .spectrum-TreeView-item--indent1 {
-  padding-left: var(--spectrum-treeview-item-indent);
+  padding-inline-start: var(--spectrum-treeview-item-indent);
 }
 
 .spectrum-TreeView-item--indent2 {
-  padding-left: calc(2 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(2 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent3 {
-  padding-left: calc(3 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(3 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent4 {
-  padding-left: calc(4 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(4 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent5 {
-  padding-left: calc(5 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(5 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent6 {
-  padding-left: calc(6 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(6 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent7 {
-  padding-left: calc(7 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(7 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent8 {
-  padding-left: calc(8 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(8 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent9 {
-  padding-left: calc(9 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(9 * var(--spectrum-treeview-item-indent));
 }
 
 .spectrum-TreeView-item--indent10 {
-  padding-left: calc(10 * var(--spectrum-treeview-item-indent));
+  padding-inline-start: calc(10 * var(--spectrum-treeview-item-indent));
 }
