@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Avatar {
-  width: var(--spectrum-avatar-small-width);
-  height: var(--spectrum-avatar-small-height);
+  inline-size: var(--spectrum-avatar-small-width);
+  block-size: var(--spectrum-avatar-small-height);
 
   border-radius: var(--spectrum-avatar-small-border-radius);
   border-style: none;
