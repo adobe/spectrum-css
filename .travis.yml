@@ -21,8 +21,9 @@ script:
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
   # Test
   # - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ accordion || true
-  # - trap 'test_error_code=$?' ERR
+  - trap 'test_error_code=$?' ERR
   - false
+  - echo Cmd Result $?
   # Generate the dynamic branch name for uploading the result to result repo
   - BRANCH_NAME=$(git rev-parse --short HEAD)-result-$(date +%Y-%m-%d_%H-%M-%S)
   - SPECTRUM_CSS_TEST_RESULT_FOLDER=temp/${BRANCH_NAME}
