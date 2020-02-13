@@ -25,7 +25,7 @@ governing permissions and limitations under the License.
   display: flex;
   justify-content: center;
 
-  bottom: 0;
+  inset-block-end: 0;
   z-index: 1;
 
   /* Account for fixed width */
@@ -35,7 +35,7 @@ governing permissions and limitations under the License.
   padding: 0 var(--spectrum-actionbar-margin-x);
 
   /* Take up no space when not open */
-  height: 0;
+  block-size: 0;
   opacity: 0;
 
   /* Clip anything outside of us, whether we're open or not. This makes the animation smooth */
@@ -53,20 +53,20 @@ governing permissions and limitations under the License.
   */
   &.is-open {
     /* Take up space in the table only when open */
-    height: calc(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-margin-x) * 2);
+    block-size: calc(var(--spectrum-actionbar-height) + var(--spectrum-actionbar-margin-x) * 2);
     opacity: 1;
   }
 }
 
 .spectrum-ActionBar--sticky {
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   position: sticky;
 }
 
 .spectrum-ActionBar--flexible {
   .spectrum-ActionBar-popover {
-    width: auto;
+    inline-size: auto;
   }
 }
 
@@ -79,11 +79,11 @@ governing permissions and limitations under the License.
   position: relative;
 
   box-sizing: border-box;
-  width: 100%;
+  inline-size: 100%;
   margin: auto;
-  height: var(--spectrum-actionbar-height);
-  min-width: var(--spectrum-actionbar-min-width);
-  max-width: var(--spectrum-actionbar-max-width);
+  block-size: var(--spectrum-actionbar-height);
+  min-inline-size: var(--spectrum-actionbar-min-width);
+  max-inline-size: var(--spectrum-actionbar-max-width);
   padding: 0 var(--spectrum-actionbar-padding-x);
 
   flex-direction: row;
