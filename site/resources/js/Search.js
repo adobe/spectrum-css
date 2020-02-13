@@ -154,7 +154,19 @@ Search.prototype.showResults = function(event) {
   this.form.setAttribute('aria-expanded', 'true');
   var inputRect = this.input.getBoundingClientRect();
   this.popover.style.top = `${inputRect.bottom + 10}px`;
-  this.popover.style.left = `${inputRect.left}px`;
+
+  var isRTL = window.getComputedStyle(document.documentElement, null).getPropertyValue('direction') === 'rtl';
+
+  if (isRTL) {
+    var width = window.innerWidth;
+    this.popover.style.right = `${window.innerWidth - inputRect.right}px`;
+    this.popover.style.left = 'auto';
+  }
+  else {
+    this.popover.style.right = 'auto';
+    this.popover.style.left = `${inputRect.left}px`;
+  }
+
   this.popover.classList.add('is-open');
 
   let firstItem = this.popover.querySelector('.spectrum-Menu-item');
