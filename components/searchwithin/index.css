@@ -21,30 +21,30 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-SearchWithin {
-  width: var(--spectrum-searchwithin-width);
+  inline-size: var(--spectrum-searchwithin-width);
   display: inline-flex;
   position: relative;
 
   .spectrum-Dropdown {
-    width: auto;
-    min-width: 0;
+    inline-size: auto;
+    min-inline-size: 0;
   }
 
   .spectrum-Dropdown-trigger {
-    border-top-right-radius: var(--spectrum-searchwithin-border-radius);
-    border-bottom-right-radius: var(--spectrum-searchwithin-border-radius);
+    border-start-end-radius: var(--spectrum-searchwithin-border-radius);
+    border-end-end-radius: var(--spectrum-searchwithin-border-radius);
   }
 
   .spectrum-Dropdown-label {
     /* Override dropdown's min-width and be tiny */
-    min-width: var(--spectrum-searchwithin-dropdown-min-width);
+    min-inline-size: var(--spectrum-searchwithin-dropdown-min-width);
   }
 
   .spectrum-Textfield {
     flex: 1;
-    margin-left: calc(-1 * var(--spectrum-textfield-border-size)); /* hides left border */
-    border-top-left-radius: var(--spectrum-searchwithin-border-radius);
-    border-bottom-left-radius: var(--spectrum-searchwithin-border-radius);
+    margin-inline-start: calc(-1 * var(--spectrum-textfield-border-size)); /* hides left border */
+    border-start-start-radius: var(--spectrum-searchwithin-border-radius);
+    border-end-start-radius: var(--spectrum-searchwithin-border-radius);
 
     &:hover, &:focus {
       position: relative; /* shows left border */
@@ -53,7 +53,7 @@ governing permissions and limitations under the License.
 
   .spectrum-ClearButton {
     position: absolute;
-    top: 0;
-    right: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
   }
 }
