@@ -100,7 +100,7 @@ function getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEm
         ruleString += `  ${key}: var(--spectrum-${tokenString}-${propMap[key]});\n`;
       }
     });
-    ruleString += '  margin-top: 0;\n  margin-bottom: 0;\n';
+    ruleString += '  margin-block-start: 0;\n  margin-block-end: 0;\n';
     return ruleString.toLowerCase();
   }
 
@@ -141,8 +141,8 @@ function getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEm
  */
 function getTypographyMargins(name, tokenName) {
   var output = `${name} {
-    margin-top: var(--spectrum-${tokenName}-margin-top);
-    margin-bottom: var(--spectrum-${tokenName}-margin-bottom);
+    margin-block-start: var(--spectrum-${tokenName}-margin-top);
+    margin-block-end: var(--spectrum-${tokenName}-margin-bottom);
   }`;
   return output
 }
