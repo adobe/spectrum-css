@@ -1,3 +1,6 @@
+env:
+  global:
+    secure: iCny9Ws9JZ0vCNsE2cJZcSeZbfgE0hBbjkPiiwxtA//lddrgOlS3jl1qSxciZ6qdMjXRC4dDp8UA1wfZ68p+GZW7pQ6RA17oHvbQ78adaA8Xr04k5DW+9EBpkvNZLrrJwCWcXojIBtIKqxtKlxjPSYw2mhNw2R/DFlBJszSojUaIdl25KeEkUwQJKMBPtSji+7am/74pYpzstV/O+KYgjgk+9Ym2tRHuB10VXxchKKQjUzYylD4tBpcwaSlq+X7w14gR6Km7eMd782bz7iOiW8tz1vubWkNmBh6hAzx8GcsYEyJsyjsGMMn5/5KxKIV+6RSnudpQ+PgktAIjtPugyIYFhr6niCrN9xwaoS9pTh9GiXF7ZXNbnYxdVUu5QTY0GFbqTxYrKFE9QwXP4C/bg3cQxk1qS3zmc0vXHf6n7lb5hGOtp86fW9AOoCWCpPOwY9rVT/TxLK15NC/tbPIixFTbw4R6KnaBe/NUXLy9EL2E1O17QXUbw0BusCevGl9aFvbMiLgy22rPJ/ihfCAHr5YdyJzgy693nqWbWiQ7si19Fm910QHZa47t9dZT5PhudAfHUjHgt+m3K4rS1/Uw5hOXN0VaUMqiNaY4vMlnBBRIiOCJQ3ol+PlnbmXokK0i79BzKM2el0gxDpPBmCHu70FF1A/6/xPh2OwSs3kmplM=
 language: node_js
 node_js:
   - node
@@ -8,25 +11,17 @@ before_install:
 install:
   - yarn
 script:
-  # Audit installed package
   - audit-ci --moderate
-  # Build spectrum-css site
   - yarn run build
-  # Start testing server
   - yarn run watch &
   - sleep 5
-  # Update the reference image to latest
   - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
-  # Move the reference image into backstop_data folder
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
-  # Test
-  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ alert || true
-  # Generate the dynamic branch name for uploading the result to result repo
+  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/
+    alert || true
   - BRANCH_NAME=$(git rev-parse --short HEAD)-result-$(date +%Y-%m-%d_%H-%M-%S)
   - SPECTRUM_CSS_TEST_RESULT_FOLDER=temp/${BRANCH_NAME}
-  # Create the dir
   - mkdir -p ${SPECTRUM_CSS_TEST_RESULT_FOLDER} && cp -R backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
-  # Copy github action file to the upload folder
   - mkdir -p temp/.github/workflows/ && cp backstop_data/push.yml temp/.github/workflows/
 deploy:
   provider: pages:git
@@ -35,8 +30,10 @@ deploy:
   edge: true
   repo: jianliao/spectrum-css-vr-test-result
   local_dir: temp
-  target_branch: ${BRANCH_NAME}
+  target_branch: "${BRANCH_NAME}"
   on:
     all_branches: true
 after_deploy:
-  -  echo https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
+  - TEST_RESULT_URL=https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
+  - echo $TEST_RESULT_URL
+  - ./backstop_data/add_comment.sh
