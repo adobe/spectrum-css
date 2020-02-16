@@ -35,4 +35,5 @@ deploy:
 after_deploy:
   - TEST_RESULT_URL=https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
   - echo $TEST_RESULT_URL
+  - echo $TRAVIS_PULL_REQUEST
   - ./backstop_data/add_comment.sh
