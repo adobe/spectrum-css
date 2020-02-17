@@ -25,6 +25,6 @@ git commit -q -m "Deploy jianliao/spectrum-css to github.com/jianliao/spectrum-c
 
 git show --stat-count=10 HEAD
 
-git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/jianliao/spectrum-css-vr-test-result.git
+git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/jianliao/spectrum-css-vr-test-result.git
 
 git push origin $BRANCH_NAME
