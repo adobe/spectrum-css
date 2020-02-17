@@ -1,9 +1,6 @@
 env:
   global:
     secure: h/g/KwPGkl2/eCl1ekzglUxqTkQIjzdZmgwoGpe8wLe5HvuKmjo8ZRtOpuLhfev+C/8btjIFfJ6QjOwP+Q6rafftFQ04CgRPYcDaEEM8bTwN/zZltkXXpaTuZPYQvxGfvjCyn1NpfnBWqBQNGoUXcidsyw+WqrwthcswHsH+uu8qKGO+j+3Zrf5hxgHbJV5Val8zv2EfQZiKVYs7sbnBEyOPV7SWWzuQGNd0+qjwRNfeezuHFmnINtzkFNNDU/1maeG2vpu2GtofcREkApnhFGfqNzE9eZJ8prw596BhaQLdo9LJU0cy79uqL9Gk8Z/+2UbFw7Wu0z+90XBdF91fLUDQOXtVRbWf7MImMfLfLvPBGIsG5fenKP8sgWtdnCyqs1blEm7OFiMOO6EKZJZCSw0t39Jvte0RtUQTtlGWRynKhXhJTmOdUxPHK9wm7QaFfOMlDAHrpecGgHb0T+AC/eObtwITJ3rmzEtdavZ8iiPn0B+xS9o2CPNu36JlOdm8cIyqQQD9pfEtPCbPRa8PJObV4XtyV3F8Snnkr3n2g4rmct5bjtUFrjUs1IjXvxlqL3dJh41HRxX2wvEHQm76SpIkRVjKUcJLLawCU55fGy2kYmd2ifmxv3r1ZmYRln4lHXxG8zI5iOKyf2OpEc/Rnpr/k/CxkaAhWj9Hk9/UrGQ=
-# env:
-#   global:
-#     secure: iCny9Ws9JZ0vCNsE2cJZcSeZbfgE0hBbjkPiiwxtA//lddrgOlS3jl1qSxciZ6qdMjXRC4dDp8UA1wfZ68p+GZW7pQ6RA17oHvbQ78adaA8Xr04k5DW+9EBpkvNZLrrJwCWcXojIBtIKqxtKlxjPSYw2mhNw2R/DFlBJszSojUaIdl25KeEkUwQJKMBPtSji+7am/74pYpzstV/O+KYgjgk+9Ym2tRHuB10VXxchKKQjUzYylD4tBpcwaSlq+X7w14gR6Km7eMd782bz7iOiW8tz1vubWkNmBh6hAzx8GcsYEyJsyjsGMMn5/5KxKIV+6RSnudpQ+PgktAIjtPugyIYFhr6niCrN9xwaoS9pTh9GiXF7ZXNbnYxdVUu5QTY0GFbqTxYrKFE9QwXP4C/bg3cQxk1qS3zmc0vXHf6n7lb5hGOtp86fW9AOoCWCpPOwY9rVT/TxLK15NC/tbPIixFTbw4R6KnaBe/NUXLy9EL2E1O17QXUbw0BusCevGl9aFvbMiLgy22rPJ/ihfCAHr5YdyJzgy693nqWbWiQ7si19Fm910QHZa47t9dZT5PhudAfHUjHgt+m3K4rS1/Uw5hOXN0VaUMqiNaY4vMlnBBRIiOCJQ3ol+PlnbmXokK0i79BzKM2el0gxDpPBmCHu70FF1A/6/xPh2OwSs3kmplM=
 language: node_js
 node_js:
   - node
@@ -18,7 +15,7 @@ script:
   - yarn run build
   - yarn run watch &
   - sleep 5
-  - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
+  # - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
   - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ actionbar
 after_failure:
