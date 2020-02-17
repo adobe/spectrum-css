@@ -17,8 +17,6 @@ git init .
 
 git checkout --orphan $BRANCH_NAME
 
-git branch
-
 git add -A .
 
 git commit -q -m "Deploy ${TRAVIS_REPO_SLUG} VR test result to github.com/jianliao/spectrum-css-vr-test-result.git:${BRANCH_NAME}"
