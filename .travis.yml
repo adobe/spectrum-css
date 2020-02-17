@@ -1,6 +1,3 @@
-# env:
-#   global:
-#     secure: iCny9Ws9JZ0vCNsE2cJZcSeZbfgE0hBbjkPiiwxtA//lddrgOlS3jl1qSxciZ6qdMjXRC4dDp8UA1wfZ68p+GZW7pQ6RA17oHvbQ78adaA8Xr04k5DW+9EBpkvNZLrrJwCWcXojIBtIKqxtKlxjPSYw2mhNw2R/DFlBJszSojUaIdl25KeEkUwQJKMBPtSji+7am/74pYpzstV/O+KYgjgk+9Ym2tRHuB10VXxchKKQjUzYylD4tBpcwaSlq+X7w14gR6Km7eMd782bz7iOiW8tz1vubWkNmBh6hAzx8GcsYEyJsyjsGMMn5/5KxKIV+6RSnudpQ+PgktAIjtPugyIYFhr6niCrN9xwaoS9pTh9GiXF7ZXNbnYxdVUu5QTY0GFbqTxYrKFE9QwXP4C/bg3cQxk1qS3zmc0vXHf6n7lb5hGOtp86fW9AOoCWCpPOwY9rVT/TxLK15NC/tbPIixFTbw4R6KnaBe/NUXLy9EL2E1O17QXUbw0BusCevGl9aFvbMiLgy22rPJ/ihfCAHr5YdyJzgy693nqWbWiQ7si19Fm910QHZa47t9dZT5PhudAfHUjHgt+m3K4rS1/Uw5hOXN0VaUMqiNaY4vMlnBBRIiOCJQ3ol+PlnbmXokK0i79BzKM2el0gxDpPBmCHu70FF1A/6/xPh2OwSs3kmplM=
 language: node_js
 node_js:
   - node
@@ -17,29 +14,6 @@ script:
   - sleep 5
   - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
-  # - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ alert || true
   - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ actionbar
-  # - BRANCH_NAME=$(git rev-parse --short HEAD)-result-$(date +%Y-%m-%d_%H-%M-%S)
-  # - SPECTRUM_CSS_TEST_RESULT_FOLDER=temp/${BRANCH_NAME}
-  # - mkdir -p ${SPECTRUM_CSS_TEST_RESULT_FOLDER} && cp -R backstop_data/* ${SPECTRUM_CSS_TEST_RESULT_FOLDER}
-  # - mkdir -p temp/.github/workflows/ && cp backstop_data/push.yml temp/.github/workflows/
-# deploy:
-#   provider: pages:git
-#   token:
-#     secure: iDE8m01wkBgiR/nM0tTLDvjFmHGS0hG+Ubc4pq+Hr+NsPkAnVnmPF1KBjkA0dKzh62c23+6xlR98Dm1vnlohpFnsALbWb7QZ1C/vqtDSU6fiHboxamt+HhAEFmGM9RD9J5lgs7BrZC9w7iciS5i2lvuEbmK61zwrS0VliyhV7kJipHRyWbZkdnv2BvW203LurM7dQoSPRt3Yp7lN0Vr+bnkABfoYUhrp0rtxnBbArZ31R83OsHqD2S/ydR6AXpHpOMBWkj0Ock1W6FeR1hgmuiYZwHdGK1zYcFXDmF20X4KVGNlWJTAx7fiAswX6zVUaXa1IrwvAEBtByX7J51h5Y1Rkiug2QEJnRJuw6QncI2Kyrz/NDdI75PNiobyXChXGd38PV4FYQRyf8jpWilNQQP3i1Wen1iTtkHhT4ALPW+z6V5BThQ972YiFH/iNbBhRprRMhXji+JT+uG60dkH921XVCC//ozPLicn+gY94mht0GVoMumdPuftZqsY0KS9kxuy9Nvlf93dCkI0fRd5EgtvflPla00VKBo1P+JhXPE3OohilXyh0Fx5NLcPbCPNhhvhUTilYYy4Z3NQhG5PxRzq4JgDfVisPuCynWfkjYXZpgHs3k6T/HTz1VEUMNXuzt5HcHvywpqiPWH2C3Zwdp7WbJawm79KfoPmOSkJ++hE=
-#   edge: true
-#   repo: jianliao/spectrum-css-vr-test-result
-#   local_dir: temp
-#   target_branch: "${BRANCH_NAME}"
-#   on:
-#     all_branches: true
-# after_deploy:
-#   - TEST_RESULT_URL=https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
-#   - echo $TEST_RESULT_URL
-#   - echo $TRAVIS_PULL_REQUEST
-#   - ./backstop_data/add_comment.sh
 after_failure:
   - ./backstop_data/deploy_comment.sh
-env:
-  global:
-    secure: h/g/KwPGkl2/eCl1ekzglUxqTkQIjzdZmgwoGpe8wLe5HvuKmjo8ZRtOpuLhfev+C/8btjIFfJ6QjOwP+Q6rafftFQ04CgRPYcDaEEM8bTwN/zZltkXXpaTuZPYQvxGfvjCyn1NpfnBWqBQNGoUXcidsyw+WqrwthcswHsH+uu8qKGO+j+3Zrf5hxgHbJV5Val8zv2EfQZiKVYs7sbnBEyOPV7SWWzuQGNd0+qjwRNfeezuHFmnINtzkFNNDU/1maeG2vpu2GtofcREkApnhFGfqNzE9eZJ8prw596BhaQLdo9LJU0cy79uqL9Gk8Z/+2UbFw7Wu0z+90XBdF91fLUDQOXtVRbWf7MImMfLfLvPBGIsG5fenKP8sgWtdnCyqs1blEm7OFiMOO6EKZJZCSw0t39Jvte0RtUQTtlGWRynKhXhJTmOdUxPHK9wm7QaFfOMlDAHrpecGgHb0T+AC/eObtwITJ3rmzEtdavZ8iiPn0B+xS9o2CPNu36JlOdm8cIyqQQD9pfEtPCbPRa8PJObV4XtyV3F8Snnkr3n2g4rmct5bjtUFrjUs1IjXvxlqL3dJh41HRxX2wvEHQm76SpIkRVjKUcJLLawCU55fGy2kYmd2ifmxv3r1ZmYRln4lHXxG8zI5iOKyf2OpEc/Rnpr/k/CxkaAhWj9Hk9/UrGQ=
