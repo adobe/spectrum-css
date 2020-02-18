@@ -31,7 +31,6 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     git push origin $BRANCH_NAME
 
     TEST_RESULT_URL=https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
-    echo !!!! TRAVIS_PULL_REQUEST: $TRAVIS_PULL_REQUEST
-    echo !!!! Test result url: $TEST_RESULT_URL
-    curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST \-d "{\"body\": \"Test result: ${TEST_RESULT_URL}\"}" "https://api.github.com/repos/jianliao/spectrum-css-vr-test-result/issues/${TRAVIS_PULL_REQUEST}/comments"
+
+    curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\"}" "https://api.github.com/repos/jianliao/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
