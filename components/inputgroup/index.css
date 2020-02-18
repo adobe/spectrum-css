@@ -40,6 +40,10 @@ governing permissions and limitations under the License.
     border-start-start-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
     border-end-start-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
   }
+
+  .spectrum-Textfield {
+    width: auto;
+  }
 }
 
 .spectrum-InputGroup-field {
