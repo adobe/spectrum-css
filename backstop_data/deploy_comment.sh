@@ -34,5 +34,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     echo Result: $TEST_RESULT_URL
 
-    curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\"}" "https://api.github.com/repos/jianliao/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
+    curl -H "Authorization: token ${GITHUB_TOKEN}" \
+    -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\"}" \
+    "https://api.github.com/repos/jianliao/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
