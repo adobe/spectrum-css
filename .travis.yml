@@ -17,6 +17,6 @@ script:
   - sleep 5
   - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
   - mv ./node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference/ backstop_data/
-  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/ actionbar
+  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/
 after_failure:
   - ./backstop_data/deploy_comment.sh
