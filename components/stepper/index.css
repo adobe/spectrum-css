@@ -109,6 +109,8 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-stepper-border-radius-reset);
 
   .spectrum-Stepper-buttons {
+    border-radius: var(--spectrum-stepper-border-radius-reset);
+
     .spectrum-ActionButton {
       border-block-start: none;
       border-inline-start: none;

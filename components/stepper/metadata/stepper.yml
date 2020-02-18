@@ -6,7 +6,9 @@ examples:
     status: Deprecated
     markup: |
       <div class="spectrum-Stepper">
-        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        <div class="spectrum-Textfield spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -22,7 +24,9 @@ examples:
       </div>
 
       <div class="spectrum-Stepper is-focused">
-        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        <div class="spectrum-Textfield spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -38,7 +42,9 @@ examples:
       </div>
 
       <div class="spectrum-Stepper is-invalid">
-        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        <div class="spectrum-Textfield spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -54,7 +60,9 @@ examples:
       </div>
 
       <div class="spectrum-Stepper">
-        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
+        <div class="spectrum-Textfield spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1" disabled>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -74,7 +82,9 @@ examples:
     description: The quiet variant of the Stepper.
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet">
-        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -90,7 +100,9 @@ examples:
       </div>
 
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-focused">
-        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -106,7 +118,9 @@ examples:
       </div>
 
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid">
-        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -122,7 +136,9 @@ examples:
       </div>
 
       <div class="spectrum-Stepper spectrum-Stepper--quiet">
-        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
+          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
+        </div>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1" disabled>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
