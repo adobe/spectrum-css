@@ -56,10 +56,12 @@ governing permissions and limitations under the License.
     }
   }
 
+  .spectrum-Textfield.is-focused &,
   &:focus {
     border-color: var(--spectrum-textfield-border-color-down);
   }
 
+  .spectrum-Textfield.is-keyboardFocused &,
   &:focus-ring {
     &:not(:active) {
       border-color: var(--spectrum-textfield-border-color-key-focus);
@@ -70,6 +72,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield.is-invalid & {
     border-color: var(--spectrum-textfield-border-color-error);
 
+    .is-keyboardFocused&,
     &:focus-ring { /* might break things due to pre-defined focus-ring */
       &:not(:active) {
         border-color: var(--spectrum-textfield-border-color-error);
@@ -106,40 +109,40 @@ governing permissions and limitations under the License.
       border-color: var(--spectrum-textfield-quiet-border-color-down);
     }
 
+    .is-focused&,
     &:focus {
       border-color: var(--spectrum-textfield-quiet-border-color-key-focus);
       box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-border-color-key-focus);
     }
 
+    .is-keyboardFocused&,
     &:focus-ring {
       &:not(:active) {
         border-color: var(--spectrum-textfield-border-color-key-focus);
         box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-key-focus);
       }
     }
-  }
 
-  &.is-disabled {
-    .spectrum-Textfield-input {
-      background-color: var(--spectrum-textfield-quiet-background-color-disabled);
-      border-color: var(--spectrum-textfield-quiet-border-color-disabled);
-    }
-  }
-
-  &.is-invalid {
-    .spectrum-Textfield-input {
+    .is-invalid& {
       border-color: var(--spectrum-textfield-border-color-error);
 
+      .is-focused&,
       &:focus {
         box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-error);
       }
 
+      .is-keyboardFocused&,
       &:focus-ring { /* might break things due to pre-defined focus-ring */
         &:not(:active) {
           border-color: var(--spectrum-textfield-border-color-error);
           box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-error);
         }
       }
+    }
+
+    .is-disabled& {
+      background-color: var(--spectrum-textfield-quiet-background-color-disabled);
+      border-color: var(--spectrum-textfield-quiet-border-color-disabled);
     }
   }
 }
