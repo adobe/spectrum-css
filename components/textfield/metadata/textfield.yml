@@ -2,6 +2,37 @@ name: Text Field
 status: Verified
 description: A single-line text field (aka textfield)
 SpectrumSiteSlug: https://spectrum.adobe.com/page/text-field/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Composition
+      As of 3.0.0, Textfield is now composed the same way a DecoratedTextfield was preivously.
+
+      That is, the outer element `div.spectrum-Textfield` contains a `input.spectrum-Textfield-input`.
+
+      ### Icons
+      Icons are now added as SVGs, with `svg.spectrum-Textfield-icon` for workflow icons, and `svg.spectrum-Textfield-validationIcon` for UI icons.
+
+      The `<svg>` element should appear before the `<input>` element.
+
+      ### Indicating validity and focus
+      Validity and focus must be bubbled up to the parent so adjacent siblings can be styled.
+
+      Thus, the implementations must add the following classes in the following situations:
+
+      * `.spectrum-Textfield.is-focused` - when the input is focused with the mouse
+      * `.spectrum-Textfield.is-keyboardFocused` - when the input is focused with the keyboard
+      * `.spectrum-Textfield.is-valid` - when the input has an explicit valid state
+      * `.spectrum-Textfield.is-invalid` - when the input has an explicit invalid state
+
+      ### Removal of `:valid` and `:invalid`
+      Textfield no longer supports the CSS pseudo selectors [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid) and [`:value`](https://developer.mozilla.org/en-US/docs/Web/CSS/:valid).
+
+      Using these selectors is an anti-pattern that complicates form validation techniques by making inputs appear invalid immediately, not after use interaction. Please apply `.is-valid` and `.is-invalid` to the outer `div.spectrum-Textfield` element instead.
+
+      ### Variants
+      Variants must be applied to the parent element, i.e. `.spectrum-Textfield.spectrum-Textfield--quiet` or `.spectrum-Textfield.spectrum-Textfield--multiline`. The `<input>` will be styled appropriately.
+
 examples:
   - id: textfield
     name: Standard

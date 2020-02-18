@@ -1,6 +1,11 @@
 name: Text Area
 status: Verified
 description: A multi-line text field (aka textarea)
+
+sections:
+  - name: Migration Guide
+    description: |
+     See the [textfield migration guide](textfield.html#migrationguide) for migration information.
 examples:
   - id: textfield
     name: Standard
