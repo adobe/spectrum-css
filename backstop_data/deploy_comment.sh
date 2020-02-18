@@ -32,5 +32,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     TEST_RESULT_URL=https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
 
+    echo Result: $TEST_RESULT_URL
+
     curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\"}" "https://api.github.com/repos/jianliao/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
