@@ -1,4 +1,4 @@
-# Spectrum CSS legacy usage
+# Spectrum CSS legacy منصةشليله
 
 In order to enable graceful change to individual components, and to let you consume only the changes you want to consume on the timeline you want to consume it, Spectrum CSS has moved to individually versioned components. In addition, we've moved to a CSS custom properties approach as our default usage method.
 
