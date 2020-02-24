@@ -167,8 +167,9 @@ governing permissions and limitations under the License.
 
   .spectrum-Textfield--quiet & {
     border-radius: var(--spectrum-textfield-quiet-border-radius);
-    border-width-block: 0 var(--spectrum-textfield-quiet-border-size);
-    border-width-inline: 0;
+    border-block-start-width: 0;
+    border-block-end-width: var(--spectrum-textfield-quiet-border-size);
+    border-inline-width: 0;
 
     /* removes the side padding to align the text properly */
     padding-inline-start: var(--spectrum-textfield-quiet-padding-x);
