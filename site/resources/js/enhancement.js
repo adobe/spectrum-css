@@ -66,6 +66,29 @@ governing permissions and limitations under the License.
   });
 }());
 
+// Textfield
+(function() {
+  function setFocus(textfield, focused) {
+    textfield.classList[focused ? 'add' : 'remove']('is-focused');
+  }
+
+  document.addEventListener('focusin', function(event) {
+    var textfield = event.target.closest('.spectrum-Textfield');
+
+    if (textfield) {
+      setFocus(textfield, true);
+    }
+  });
+
+  document.addEventListener('focusout', function(event) {
+    var textfield = event.target.closest('.spectrum-Textfield');
+
+    if (textfield) {
+      setFocus(textfield, false);
+    }
+  });
+}());
+
 // Dropdown
 (function() {
   var openDropdown = null;
