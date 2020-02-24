@@ -72,7 +72,10 @@ examples:
     name: Invalid
     markup: |
       <div class="spectrum-Textfield is-invalid">
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
   - id: textfield
@@ -82,7 +85,7 @@ examples:
         <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" disabled>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" disabled>
       </div>
 
   - id: textfield
@@ -103,19 +106,21 @@ examples:
     name: Focused (invalid)
     markup: |
       <div class="spectrum-Textfield is-invalid is-focused">
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
   - id: textfield
     name: Keyboard Focused (invalid)
     markup: |
       <div class="spectrum-Textfield is-invalid is-keyboardFocused">
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
-
-
-
-
 
   - id: textfield-quiet
     name: Quiet
@@ -155,7 +160,10 @@ examples:
     name: Quiet Invalid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid">
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
   - id: textfield-quiet
@@ -165,7 +173,7 @@ examples:
         <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" disabled>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" disabled>
       </div>
 
   - id: textfield-quiet
@@ -186,12 +194,18 @@ examples:
     name: Quiet Focused (invalid)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-focused">
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
 
   - id: textfield-quiet
     name: Quiet Keyboard Focused (invalid)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid is-keyboardFocused">
-        <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+        <input type="text" placeholder="Enter your name" name="field" value="Invalid input" class="spectrum-Textfield-input" pattern="[\d]+" required>
       </div>
