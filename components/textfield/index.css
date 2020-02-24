@@ -191,20 +191,20 @@ governing permissions and limitations under the License.
   .spectrum-Textfield--quiet & {
     padding-inline-end: 0;
   }
-}
 
-.spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon {
-  inline-size: var(--spectrum-icon-alert-medium-width);
-  block-size: var(--spectrum-icon-alert-medium-height);
-  inset-block-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2));
-  inset-inline-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-alert-medium-width) / 2));
-}
+  .spectrum-Textfield.is-invalid & {
+    inline-size: var(--spectrum-icon-alert-medium-width);
+    block-size: var(--spectrum-icon-alert-medium-height);
+    inset-block-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2));
+    inset-inline-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-alert-medium-width) / 2));
+  }
 
-.spectrum-Textfield.is-valid .spectrum-Textfield-validationIcon {
-  inline-size: var(--spectrum-icon-checkmark-medium-width);
-  block-size: var(--spectrum-icon-checkmark-medium-height);
-  inset-block-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
-  inset-inline-end: var(--spectrum-global-dimension-size-150);
+  .spectrum-Textfield.is-valid & {
+    inline-size: var(--spectrum-icon-checkmark-medium-width);
+    block-size: var(--spectrum-icon-checkmark-medium-height);
+    inset-block-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
+    inset-inline-end: var(--spectrum-global-dimension-size-150);
+  }
 }
 
 /* styles the left icon for textfield, assumes usage of workflow icon sizing (18px by 18px) */
@@ -231,17 +231,21 @@ governing permissions and limitations under the License.
     }
   }
 }
+
 .spectrum-Textfield--multiline {
-  .spectrum-Textfield-icon + .spectrum-Textfield-input {
-    block-size: var(--spectrum-textfield-height);
-    min-block-size: var(--spectrum-textfield-height);
+  .spectrum-Textfield-icon {
+    & ~ .spectrum-Textfield-input {
+      block-size: var(--spectrum-textfield-height);
+      min-block-size: var(--spectrum-textfield-height);
+    }
   }
 }
 
 .spectrum-Textfield--quiet {
   .spectrum-Textfield-icon {
     inset-inline-start: 0;
-    & + ~ .spectrum-Textfield-input {
+
+    & ~ .spectrum-Textfield-input {
       padding-inline-start: calc(var(--spectrum-global-dimension-size-100) + var(--spectrum-icon-info-medium-width));
     }
   }
