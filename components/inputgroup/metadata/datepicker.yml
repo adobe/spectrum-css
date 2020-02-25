@@ -6,7 +6,7 @@ examples:
     markup: |
       <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-haspopup="true">
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field" aria-invalid="false" placeholder="Choose a date" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
         </div>
           <button type="button" class="spectrum-FieldButton spectrum-InputGroup-button">
             <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS">
@@ -22,7 +22,7 @@ examples:
     markup: |
       <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-haspopup="true">
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field" aria-invalid="false" placeholder="Choose a date" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
         </div>
           <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button">
             <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS">
@@ -38,11 +38,11 @@ examples:
     markup: |
       <div aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="">
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="">
         </div>
         <button type="button" class="spectrum-FieldButton" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -57,11 +57,11 @@ examples:
 
       <div aria-invalid="true" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="">
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField is-invalid" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField is-invalid" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="">
         </div>
         <button type="button" class="spectrum-FieldButton is-invalid" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -76,11 +76,11 @@ examples:
 
       <div aria-disabled="true" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range is-disabled" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="" disabled>
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="" disabled>
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="" disabled>
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="" disabled>
         </div>
         <button type="button" class="spectrum-FieldButton" disabled tabindex="-1" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -95,11 +95,11 @@ examples:
 
       <div class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range spectrum-Datepicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
         </div>
         <button type="button" class="spectrum-FieldButton" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -114,11 +114,11 @@ examples:
     markup: |
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
         </div>
         <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet" tabindex="-1" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -133,11 +133,11 @@ examples:
 
       <div aria-invalid="true" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField is-invalid" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField is-invalid" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
         </div>
         <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -152,11 +152,11 @@ examples:
 
       <div aria-disabled="true" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range is-disabled" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01" disabled>
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01" disabled>
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30" disabled>
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30" disabled>
         </div>
         <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet" tabindex="-1" disabled aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
@@ -170,11 +170,11 @@ examples:
 
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range  spectrum-Datepicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-startField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
         </div>
         <div class="spectrum-Datepicker--rangeDash"></div>
         <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-field spectrum-Datepicker-endField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
         </div>
         <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">

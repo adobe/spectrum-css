@@ -89,6 +89,29 @@ governing permissions and limitations under the License.
   });
 }());
 
+// Inputgroup
+(function() {
+  function setFocus(inputgroup, focused) {
+    inputgroup.classList[focused ? 'add' : 'remove']('is-focused');
+  }
+
+  document.addEventListener('focusin', function(event) {
+    var inputgroup = event.target.closest('.spectrum-InputGroup');
+
+    if (inputgroup) {
+      setFocus(inputgroup, true);
+    }
+  });
+
+  document.addEventListener('focusout', function(event) {
+    var inputgroup = event.target.closest('.spectrum-InputGroup');
+
+    if (inputgroup) {
+      setFocus(inputgroup, false);
+    }
+  });
+}());
+
 // Dropdown
 (function() {
   var openDropdown = null;
@@ -308,7 +331,7 @@ function toggleInputGroupFocus(event) {
   var classList = event.target.classList;
   var closestSelector;
   // target within InputGroup
-  if (classList.contains('spectrum-InputGroup-field') ||
+  if (classList.contains('spectrum-InputGroup-input') ||
       classList.contains('spectrum-FieldButton')) {
     closestSelector = '.spectrum-InputGroup';
   }

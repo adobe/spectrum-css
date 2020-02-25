@@ -13,9 +13,9 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup {
   &.is-focused {
     &:not(.is-invalid) {
-      .spectrum-InputGroup-field:not(:disabled):not(.is-invalid) {
+      .spectrum-InputGroup-input:not(:disabled):not(.is-invalid) {
         border-color: var(--spectrum-textfield-border-color-key-focus);
-        ~ .spectrum-FieldButton {
+        ~ .spectrum-InputGroup-button {
           border-color: var(--spectrum-textfield-border-color-key-focus);
         }
       }
@@ -23,14 +23,14 @@ governing permissions and limitations under the License.
   }
   &:hover {
     &:not(.is-invalid):not(.is-focused) {
-      .spectrum-InputGroup-field:not(:disabled):not(.is-invalid) {
+      .spectrum-InputGroup-input:not(:disabled):not(.is-invalid) {
         border-color: var(--spectrum-textfield-border-color-hover);
-        ~ .spectrum-FieldButton {
+        ~ .spectrum-InputGroup-button {
           border-color: var(--spectrum-textfield-border-color-hover);
         }
         &:focus {
           border-color: var(--spectrum-textfield-border-color-key-focus);
-          ~ .spectrum-FieldButton {
+          ~ .spectrum-InputGroup-button {
             border-color: var(--spectrum-textfield-border-color-key-focus);
           }
         }
@@ -39,35 +39,35 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-InputGroup-field:focus {
-  ~ .spectrum-FieldButton {
+.spectrum-InputGroup-input:focus {
+  ~ .spectrum-InputGroup-button {
     border-color: var(--spectrum-dropdown-border-color-key-focus);
   }
 
   &.is-invalid,
   &:invalid {
-    ~ .spectrum-FieldButton {
+    ~ .spectrum-InputGroup-button {
       border-color: var(--spectrum-dropdown-border-color-error);
     }
   }
 }
 
 /* Only add the 2px ring for keyboard focus */
-.spectrum-InputGroup-field:focus-ring {
-  ~ .spectrum-FieldButton {
+.spectrum-InputGroup-input:focus-ring {
+  ~ .spectrum-InputGroup-button {
     box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-key-focus);
   }
 
   &.is-invalid,
   &:invalid {
-    ~ .spectrum-FieldButton {
+    ~ .spectrum-InputGroup-button {
       box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-error);
     }
   }
 }
 
 .spectrum-InputGroup--quiet {
-  .spectrum-FieldButton {
+  .spectrum-InputGroup-button {
     &,
     &:hover,
     &:focus,
@@ -82,31 +82,31 @@ governing permissions and limitations under the License.
   }
 
   &:hover:not(.is-invalid) {
-    .spectrum-InputGroup-field:not(:disabled):not(.is-invalid):not(:focus) {
-      ~ .spectrum-FieldButton {
+    .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) {
+      ~ .spectrum-InputGroup-button {
         border-color: var(--spectrum-textfield-quiet-border-color-hover);
       }
     }
   }
 
-  .spectrum-InputGroup-field {
+  .spectrum-InputGroup-input {
     &.is-invalid,
     &:invalid {
-      ~ .spectrum-FieldButton {
+      ~ .spectrum-InputGroup-button {
         border-color: var(--spectrum-textfield-border-color-error);
       }
     }
 
     /* Always add the 2px ring for keyboard focus for quiet inputgroups */
     &:focus {
-      ~ .spectrum-FieldButton {
+      ~ .spectrum-InputGroup-button {
         box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-border-color-key-focus);
         border-color: var(--spectrum-textfield-quiet-border-color-key-focus);
       }
 
       &.is-invalid,
       &:invalid {
-        ~ .spectrum-FieldButton {
+        ~ .spectrum-InputGroup-button {
           box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-error);
           border-color: var(--spectrum-textfield-border-color-error);
         }
@@ -116,7 +116,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Datepicker--range {
-  .spectrum-InputGroup-field {
+  .spectrum-InputGroup-input {
     &:focus-ring {
       box-shadow: none !important;
     }
@@ -134,7 +134,7 @@ governing permissions and limitations under the License.
     }
     &:invalid,
     &.is-invalid {
-      ~ .spectrum-FieldButton {
+      ~ .spectrum-InputGroup-button {
         box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-error);
       }
       ~ .spectrum-Datepicker-focusRing {
@@ -144,7 +144,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-invalid {
-    .spectrum-InputGroup-field {
+    .spectrum-InputGroup-input {
       border-color: var(--spectrum-dropdown-border-color-error) !important;
     }
 
@@ -153,12 +153,12 @@ governing permissions and limitations under the License.
       ~ .spectrum-Datepicker-focusRing {
         box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-error);
       }
-      ~ .spectrum-FieldButton {
+      ~ .spectrum-InputGroup-button {
         border-color: var(--spectrum-dropdown-border-color-error);
         box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-error);
       }
     }
-    .spectrum-FieldButton {
+    .spectrum-InputGroup-button {
       border-color: var(--spectrum-dropdown-border-color-error);
       &.is-invalid {
         &:focus-ring {
@@ -174,7 +174,7 @@ governing permissions and limitations under the License.
         box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-key-focus);
       }
       &.is-invalid {
-        .spectrum-FieldButton {
+        .spectrum-InputGroup-button {
           box-shadow: none;
           border-color: var(--spectrum-dropdown-border-color-error);
           &.is-invalid {

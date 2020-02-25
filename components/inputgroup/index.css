@@ -34,19 +34,19 @@ governing permissions and limitations under the License.
   min-inline-size: var(--spectrum-component-single-line-width);
   border-radius: var(--spectrum-border-radius);
 
-  .spectrum-FieldButton {
+  .spectrum-InputGroup-button {
     padding: 0;
     inline-size: var(--spectrum-combobox-button-width);
     border-start-start-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
     border-end-start-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
   }
 
-  .spectrum-Textfield {
+  .spectrum-InputGroup-input {
     width: auto;
   }
 }
 
-.spectrum-InputGroup-field {
+.spectrum-InputGroup-input {
   border-start-end-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
   border-end-end-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
   border-inline-end-width: var(--spectrum-combobox-field-border-width-right);
@@ -56,7 +56,7 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup--quiet {
   border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
-  .spectrum-FieldButton {
+  .spectrum-InputGroup-button {
     inline-size: auto;
     position: relative;
 
@@ -86,20 +86,20 @@ governing permissions and limitations under the License.
   /* Input Group */
   &.spectrum-InputGroup--quiet {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
-    .spectrum-FieldButton {
+    .spectrum-InputGroup-button {
       border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
     }
   }
   /* Datetime Range */
   &.spectrum-Datepicker--datetimeRange {
     /* Inputs */
-    .spectrum-InputGroup-field {
+    .spectrum-InputGroup-input {
       inline-size: var(--spectrum-datepicker-datetime-input-width);
       min-inline-size: var(--spectrum-datepicker-datetime-input-width);
     }
   }
   /* Inputs */
-  .spectrum-InputGroup-field {
+  .spectrum-InputGroup-input {
     inline-size: var(--spectrum-datepicker-input-width);
     min-inline-size: var(--spectrum-datepicker-input-width);
     flex: initial;
