@@ -22,15 +22,15 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     git add -A .
 
-    git commit -q -m "Deploy ${TRAVIS_REPO_SLUG} VR test result to github.com/jianliao/spectrum-css-vr-test-result.git:${BRANCH_NAME}"
+    git commit -q -m "Deploy ${TRAVIS_REPO_SLUG} VR test result to github.com/adobe/spectrum-css-vr-results.git:${BRANCH_NAME}"
 
     git show --stat-count=10 HEAD
 
-    git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/jianliao/spectrum-css-vr-test-result.git
+    git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/adobe/spectrum-css-vr-results.git
 
     git push origin $BRANCH_NAME
 
-    TEST_RESULT_URL=https://jianliao.github.io/spectrum-css-vr-test-result/$BRANCH_NAME/html_report/index.html
+    TEST_RESULT_URL=http://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/html_report/index.html
 
     echo Result: $TEST_RESULT_URL
 
