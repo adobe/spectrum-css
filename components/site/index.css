@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
   /* .spectrum-CSSExample */
   --spectrum-cssexample-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-cssexample-margin-bottom: var(--spectrum-global-dimension-size-800);
-  --spectrum-cssexample-min-height: var(--spectrum-global-dimension-size-2400);
+  --spectrum-cssexample-min-height: 0;
 
   --spectrum-cssexample-heading-margin-bottom: var(--spectrum-global-dimension-size-100);
 
