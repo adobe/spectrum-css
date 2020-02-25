@@ -58,10 +58,10 @@ governing permissions and limitations under the License.
 
   &:checked + .spectrum-ToggleSwitch-switch {
     [dir='ltr'] &::after {
-      transform: translateX(100%);
+      transform: translateX(calc(100% - var(--spectrum-switch-handle-border-size)));
     }
     [dir='rtl'] &::after {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% + var(--spectrum-switch-handle-border-size)));
     }
   }
 
