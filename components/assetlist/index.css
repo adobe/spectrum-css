@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
   inline-size: var(--spectrum-miller-column-width);
   block-size: var(--spectrum-miller-column-item-height);
 
-  padding-block:0;
+  padding-block: 0;
   padding-inline: var(--spectrum-miller-column-item-padding-left) var(--spectrum-miller-column-item-padding-right);
   margin-block: 0 var(--spectrum-miller-column-item-margin-bottom);
   margin-inline: 0;
@@ -95,7 +95,8 @@ governing permissions and limitations under the License.
 
 .spectrum-AssetList-itemSelector {
   display: none;
-  margin: var(--spectrum-miller-column-checkbox-margin);
+  /* hack: this needs to be specified as margin-right to override Checkbox's margin for LTR */
+  margin-inline-end: var(--spectrum-miller-column-checkbox-margin);
 }
 
 .spectrum-AssetList-itemChildIndicator {
