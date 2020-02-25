@@ -12,6 +12,14 @@ governing permissions and limitations under the License.
 const postcss = require('postcss');
 const { parse } = require('postcss-values-parser');
 
+const selectorParser = require('postcss-selector-parser');
+const addDir = selectors => {
+  selectors.each(selector => {
+    let dirPseudo = selectorParser.pseudo({value: ':dir(rtl)'});
+    selector.append(dirPseudo);
+  });
+};
+
 const matrix = 'matrix(-1, 0, 0, 1, 0, 0)';
 
 module.exports = postcss.plugin('postcss-transform-logical', function (opts) {
@@ -59,8 +67,11 @@ module.exports = postcss.plugin('postcss-transform-logical', function (opts) {
                 // Drop the unnecessary rotation
                 rotationNode.remove();
 
+                // Add direction to all matching selectors
+                let newSelector = selectorParser(addDir).processSync(rule.selector);
+
                 // Just flip horizontal
-                let rtlRule = postcss.parse(`${rule.selector}:dir(rtl) { transform: ${matrix} ${value}; }`);
+                let rtlRule = postcss.parse(`${newSelector} { transform: ${matrix} ${value}; }`);
                 root.insertBefore(rule, rtlRule);
               }
 
