@@ -26,7 +26,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     git show --stat-count=10 HEAD
 
-    git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/adobe/spectrum-css-vr-results.git
+    git remote add origin https://x-access-token:$VR_RESULT_PUBLISH_GITHUB_TOKEN@github.com/adobe/spectrum-css-vr-results.git
 
     git push origin $BRANCH_NAME
 
@@ -34,7 +34,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     echo Result: $TEST_RESULT_URL
 
-    curl -H "Authorization: token ${GITHUB_TOKEN}" \
+    curl -H "Authorization: token ${VR_RESULT_PUBLISH_GITHUB_TOKEN}" \
     -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\"}" \
     "https://api.github.com/repos/adobe/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
