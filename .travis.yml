@@ -1,3 +1,6 @@
+env:
+  global:
+    secure: e9GoqBqXMrDrybMMuqoAT/0L4I0QUff2iTUB9SIAjmmEo0M87CSFuAQcwtNjaRHH9DnF8fYrwqFY+g9KphARV4N1lEDbJzh91t0ic4j0aTOR5pGCdfVsMI+TmIlD+A9Ed/yQNyZQtYZyQeYxiQCT7UCxvgOTvCErm6jAbkrBpV4yPG7617i/ddlpu1N8JCfs4WAKXS4o6DrxhQUikCMyznUB6xZLWNgGonZ+7NED/Nzld6wl0UUMDfZqrNacjMpPge/MlwwaWifK7SUzh4fP1lPAFzpVUsYwsMlUJiQU/g1nbCfJ5wL8K5Dp+ivEMusQNiWyEGR8LucO8S1ZpfJYn0jFWOnPfU0K0638LSZ9ikWTUV7w3bPTPg5NOIbiEP4ocAPd7jDKeU9UkmHRgSes1MwRpoUIwgeOe4G3CtR2qRbldD5IPBbnxlRUHyGoJu1HPS1DtRBHpASynQ+iTAffB49Nvq0Z/izF5v8u316qaLWpIlLTa/9edw5FTs26gj+83pEdsW0jwuXPE+ZLJEDKQWRK9FWjlYeBIoBq1BiDFCB+C7QDLJyuFIzeTV5c2SmKeRzSGRbwq2rOYAiNr/A63wQ3jbRqfn0zaOAwnBw7iZFHZK3R+gwD+WPWp62pXuAhhEC8Q9F03pJ+Orrryy/LVI0Kuzq/f8ODrZzHQzvaj2I=
 language: node_js
 node_js:
   - "node"
@@ -15,5 +18,8 @@ script:
   - yarn run build
   - yarn run watch &
   - sleep 5
-  - yarn upgrade @spectrum-css/spectrum-css-vr-test-asset
-  - yarn run backstop:ci:test themes=light scales=medium
+  - yarn upgrade @spectrum-css/spectrum-css-vr-test-assets-essential
+  - cp -R ./node_modules/@spectrum-css/spectrum-css-vr-test-assets-essential/bitmaps_reference/ backstop_data/
+  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/
+after_failure:
+  - ./backstop_data/deploy_comment.sh
