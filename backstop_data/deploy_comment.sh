@@ -22,7 +22,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     git add -A .
 
-    git commit -q -m "Deploy ${TRAVIS_REPO_SLUG} VR test result to github.com/adobe/spectrum-css-vr-results.git:${BRANCH_NAME}"
+    git commit -q -m "chore: deploy ${TRAVIS_REPO_SLUG} VR result to github.com/adobe/spectrum-css-vr-results.git:${BRANCH_NAME}"
 
     git show --stat-count=10 HEAD
 
