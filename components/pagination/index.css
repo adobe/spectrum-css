@@ -20,18 +20,25 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Pagination-input {
-  width: var(--spectrum-pagination-textfield-width);
-  min-width: var(--spectrum-pagination-textfield-width);
+  inline-size: var(--spectrum-pagination-textfield-width);
+  min-inline-size: var(--spectrum-pagination-textfield-width);
 }
 
 .spectrum-Pagination-counter {
-  margin-left: var(--spectrum-pagination-counter-margin-left);
+  margin-inline-start: var(--spectrum-pagination-counter-margin-left);
 }
 
 .spectrum-Pagination-prevButton {
-  margin-right: var(--spectrum-pagination-page-button-margin-horizontal);
+  margin-inline-end: var(--spectrum-pagination-page-button-margin-horizontal);
 }
 
 .spectrum-Pagination-nextButton {
-  margin-left: var(--spectrum-pagination-page-button-margin-horizontal);
+  margin-inline-start: var(--spectrum-pagination-page-button-margin-horizontal);
+}
+
+.spectrum-Pagination-prevButton,
+.spectrum-Pagination-nextButton {
+  .spectrum-Icon {
+    transform: logical rotate(0deg);
+  }
 }
