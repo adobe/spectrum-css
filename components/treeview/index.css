@@ -19,6 +19,9 @@ governing permissions and limitations under the License.
   padding: 0;
   user-select: none;
   outline: none;
+
+  height: 500px;
+  width: 200px;
 }
 
 .spectrum-TreeView-item {
@@ -68,7 +71,7 @@ governing permissions and limitations under the License.
     content: '';
 
     position: absolute;
-    inset-inline-start: calc(0 + var(--spectrum-treeview-item-border-size));
+    inset-inline-start: var(--spectrum-treeview-item-border-size);
     inset-inline-end: 0;
     z-index: -1; /* make sure we don't block clicks on chevron */
 
@@ -153,4 +156,9 @@ governing permissions and limitations under the License.
 
 .spectrum-TreeView-item--indent10 {
   padding-inline-start: calc(10 * var(--spectrum-treeview-item-indent));
+}
+
+.spectrum-TreeView-heading {
+  padding: calc(calc(var(--spectrum-treeview-item-margin-y) * 2) + var(--spectrum-treeview-item-padding-y)) 10px;
+  font-weight: bold;
 }
