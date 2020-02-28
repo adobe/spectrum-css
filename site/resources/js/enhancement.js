@@ -306,6 +306,14 @@ function toggleInputGroupFocus(event) {
 document.addEventListener('focus', toggleInputGroupFocus, true);
 document.addEventListener('blur', toggleInputGroupFocus, true);
 
+function isRTL() {
+  return document.documentElement.getAttribute('dir') === 'rtl';
+}
+
+function toggleRTL(left, right) {
+  return isRTL() ? right : left;
+}
+
 // Sliders
 function makeDoubleSlider(slider) {
   var tracks = slider.querySelectorAll('.spectrum-Slider-track');
@@ -342,33 +350,62 @@ function makeDoubleSlider(slider) {
     var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
     var percent = (x / sliderOffsetWidth) * 100;
 
+    if (isRTL()) {
+      percent = 100 - percent;
+    }
+
     if (handle === leftHandle) {
-      if (percent < parseFloat(rightHandle.style.left)) {
-        handle.style.left = percent + '%';
+      if (percent < parseFloat(rightHandle.style[toggleRTL('left', 'right')])) {
+        handle.style[toggleRTL('left', 'right')] = percent + '%';
+        handle.style[toggleRTL('right', 'left')] = 'auto';
         leftTrack.style.width = percent + '%';
       }
     }
     else {
-      if (percent > parseFloat(leftHandle.style.left)) {
-        handle.style.left = percent + '%';
+      if (percent > parseFloat(leftHandle.style[toggleRTL('left', 'right')])) {
+        handle.style[toggleRTL('left', 'right')] = percent + '%';
+        handle.style[toggleRTL('right', 'left')] = 'auto';
         rightTrack.style.width = (100 - percent) + '%';
       }
     }
-    middleTrack.style.left = leftHandle.style.left;
-    middleTrack.style.right = (100 - parseFloat(rightHandle.style.left)) + '%';
+    middleTrack.style[toggleRTL('left', 'right')] = leftHandle.style[toggleRTL('left', 'right')];
+    middleTrack.style[toggleRTL('right', 'left')] = (100 - parseFloat(rightHandle.style[toggleRTL('left', 'right')])) + '%';
   }
 
-  // Set initial track position
-  var startPercent = parseFloat(leftHandle.style.left);
-  var endPercent = parseFloat(rightHandle.style.left);
-  leftTrack.style.width = startPercent + '%';
-  middleTrack.style.left = startPercent + '%';
-  middleTrack.style.right = (100 - endPercent) + '%';
-  rightTrack.style.width = (100 - endPercent) + '%';
+  function init() {
+    if (isRTL()) {
+      leftHandle.style.right = leftHandle.style.left;
+      leftHandle.style.left = leftHandle.style.right;
+      rightHandle.style.right = rightHandle.style.left;
+      rightHandle.style.left = rightHandle.style.right;
+    }
 
-  if (!slider.classList.contains('is-disabled')) {
-    slider.addEventListener('mousedown', onMouseDown);
+    // Set initial track position
+    var startPercent = parseFloat(leftHandle.style[toggleRTL('left', 'right')]);
+    var endPercent = parseFloat(rightHandle.style[toggleRTL('left', 'right')]);
+    leftTrack.style.width = startPercent + '%';
+    middleTrack.style[toggleRTL('left', 'right')] = startPercent + '%';
+    middleTrack.style[toggleRTL('right', 'left')] = (100 - endPercent) + '%';
+    rightTrack.style.width = (100 - endPercent) + '%';
+
+    if (!slider.classList.contains('is-disabled')) {
+      slider.addEventListener('mousedown', onMouseDown);
+    }
   }
+
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === "dir") {
+        init();
+      }
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true //configure it to listen to attribute changes
+  });
+
+  init();
 }
 
 function makeSlider(slider) {
@@ -389,7 +426,7 @@ function makeSlider(slider) {
   if (buffers.length) {
     var leftBuffer = buffers[0];
     var rightBuffer = buffers[1];
-    var bufferedAmount = parseInt(handle.style.left, 10) + parseInt(rightBuffer.style.width, 10);
+    var bufferedAmount = parseInt(handle.style[toggleRTL('left', 'right')], 10) + parseInt(rightBuffer.style.width, 10);
   }
 
   function onMouseDown(e, sliderHandle) {
@@ -408,30 +445,49 @@ function makeSlider(slider) {
 
     var x = Math.max(Math.min(e.x-sliderOffsetLeft, sliderOffsetWidth), 0);
     var percent = (x / sliderOffsetWidth) * 100;
+
+    if (isRTL()) {
+      percent = 100 - percent;
+    }
+
     if (leftTrack && rightTrack && !isColor) {
       leftTrack.style.width = percent + '%';
       rightTrack.style.width = (100 - percent) + '%';
     }
-    handle.style.left = percent + '%';
+
+    handle.style[toggleRTL('left', 'right')] = percent + '%';
+    handle.style[toggleRTL('right', 'left')] = 'auto';
 
     if (buffers.length) {
       if (percent >= bufferedAmount) {
-        // Don't show right buffer bar
+        // Hide the right buffer
         rightBuffer.style.width = 0;
         rightBuffer.style.left = 'auto';
         rightBuffer.style.right = 'auto';
-        leftBuffer.style.width = bufferedAmount + '%';
+
+        // This disgusting calculation takes into account the pretty gap
+        var bufferStyle = window.getComputedStyle(leftBuffer);
+        var handleGap = parseInt(bufferStyle[toggleRTL('paddingRight', 'paddingLeft')], 10);
+        var handlePosition = toggleRTL(handle.offsetLeft, handle.parentElement.offsetWidth - handle.offsetLeft) + handle.offsetWidth / 2;
+        var bufferMaxWidth = handlePosition;
+
+        // The left buffer is offset by the gap and some margin, so we have to add that back to make it actually hit the desired value
+        var bufferOffset = parseInt(bufferStyle[toggleRTL('marginLeft', 'marginRight')], 10) * -1;
+        var actualMiddle = handle.parentElement.offsetWidth / 2 + bufferOffset + handleGap;
+
+        // Keep the left buffer to account for the nasty gaps
+        leftBuffer.style.width = Math.min(bufferMaxWidth, actualMiddle) + 'px';
       }
       else {
         leftBuffer.style.width = percent + '%';
         rightBuffer.style.width = 'auto';
-        rightBuffer.style.left = percent + '%';
-        rightBuffer.style.right = (100 - bufferedAmount) + '%';
+        rightBuffer.style[toggleRTL('left', 'right')] = percent + '%';
+        rightBuffer.style[toggleRTL('right', 'left')] = (100 - bufferedAmount) + '%';
       }
     }
 
     if (fill) {
-      fill.style.left = (percent < 50 ? percent : 50) + '%';
+      fill.style[toggleRTL('left', 'right')] = (percent < 50 ? percent : 50) + '%';
       fill.style.width = (percent < 50 ? 50 - percent : percent - 50) + '%';
       if (percent > 50) {
         fill.classList.add('spectrum-Slider-fill--right');
@@ -441,17 +497,57 @@ function makeSlider(slider) {
       }
     }
   }
+  function init() {
+    if (isRTL()) {
+      handle.style.right = handle.style.left;
+      handle.style.left = handle.style.right;
+      if (fill) {
+        fill.style.right = fill.style.left;
+        fill.style.left = fill.style.right;
+      }
 
-  // Set initial track position
-  var percent = parseInt(handle.style.left, 10);
-  if (leftTrack && rightTrack && !isColor) {
-    leftTrack.style.width = percent + '%';
-    rightTrack.style.width = (100 - percent) + '%';
+      if (buffers.length) {
+        var oldRightRight = rightBuffer.style.right;
+        rightBuffer.style.right = rightBuffer.style.left;
+        rightBuffer.style.left = oldRightRight;
+        var oldLeftRight = leftBuffer.style.right;
+        leftBuffer.style.right = leftBuffer.style.left;
+        leftBuffer.style.left = oldLeftRight;
+      }
+
+      if (tracks.length) {
+        // Flip colors
+        if (tracks[0].style.background) {
+          tracks[0].style.background = tracks[0].style.background.replace('right', 'left');
+        }
+      }
+    }
+
+    // Set initial track position
+    var percent = parseInt(handle.style[toggleRTL('left', 'right')], 10);
+    if (leftTrack && rightTrack && !isColor) {
+      leftTrack.style.width = percent + '%';
+      rightTrack.style.width = (100 - percent) + '%';
+    }
+
+    if (!slider.classList.contains('is-disabled')) {
+      slider.addEventListener('mousedown', onMouseDown);
+    }
   }
 
-  if (!slider.classList.contains('is-disabled')) {
-    slider.addEventListener('mousedown', onMouseDown);
-  }
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === "dir") {
+        init();
+      }
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true //configure it to listen to attribute changes
+  });
+
+  init();
 }
 
 function makeDial(dial) {
