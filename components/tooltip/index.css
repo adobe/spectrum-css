@@ -134,18 +134,18 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip-typeIcon {
-  margin-left: calc(var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x));
-  margin-right: var(--spectrum-tooltip-icon-margin-x);
+  margin-inline-start: calc(var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x));
+  margin-inline-end: var(--spectrum-tooltip-icon-margin-x);
   width: var(--spectrum-tooltip-icon-size);
   height: var(--spectrum-tooltip-icon-size);
   align-self: flex-start;
 
   /* Adjusts for weird misalignment */
-  margin-top: 1px;
+  margin-block-start: 1px;
 }
 
 .spectrum-Tooltip-label {
-  max-width: var(--spectrum-tooltip-content-max-width);
+  max-inline-size: var(--spectrum-tooltip-content-max-width);
 
   /* Make sure line height is correct to prevent problems in Windows */
   line-height: var(--spectrum-tooltip-text-line-height);
