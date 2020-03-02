@@ -41,7 +41,6 @@ governing permissions and limitations under the License.
         box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-key-focus);
       }
 
-      &:invalid,
       &.is-invalid {
         box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-error);
 
@@ -51,7 +50,6 @@ governing permissions and limitations under the License.
       }
     }
 
-    &:invalid,
     &.is-invalid {
       border-color: var(--spectrum-textfield-border-color-error);
 
@@ -171,7 +169,6 @@ governing permissions and limitations under the License.
         }
       }
 
-      &:invalid,
       &.is-invalid {
         .spectrum-Stepper-input {
           box-shadow: none;
@@ -270,7 +267,6 @@ governing permissions and limitations under the License.
         }
       }
 
-      &:invalid,
       &.is-invalid {
         .spectrum-Stepper-input {
           border-color: var(--spectrum-textfield-border-color-error);
@@ -307,7 +303,7 @@ governing permissions and limitations under the License.
         }
       }
 
-      &.is-keyboard-Focused {
+      &.is-keyboardFocused {
         .spectrum-Stepper-input {
           box-shadow: 0 1px 0 0 var(--spectrum-textfield-border-color-error);
         }
