@@ -68,15 +68,22 @@ governing permissions and limitations under the License.
 
 // Textfield
 (function() {
-  function setFocus(textfield, focused) {
-    textfield.classList[focused ? 'add' : 'remove']('is-focused');
+  function setFocus(textfield, input, focused) {
+    var focusClass = input.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
+    if (focused) {
+      textfield.classList.add(focusClass);
+    }
+    else {
+      textfield.classList.remove('is-keyboardFocused');
+      textfield.classList.remove('is-focused');
+    }
   }
 
   document.addEventListener('focusin', function(event) {
     var textfield = event.target.closest('.spectrum-Textfield');
 
     if (textfield) {
-      setFocus(textfield, true);
+      setFocus(textfield, event.target, true);
     }
   });
 
@@ -84,22 +91,29 @@ governing permissions and limitations under the License.
     var textfield = event.target.closest('.spectrum-Textfield');
 
     if (textfield) {
-      setFocus(textfield, false);
+      setFocus(textfield, event.target,false);
     }
   });
 }());
 
 // Inputgroup
 (function() {
-  function setFocus(inputgroup, focused) {
-    inputgroup.classList[focused ? 'add' : 'remove']('is-focused');
+  function setFocus(inputgroup, input, focused) {
+    var focusClass = input.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
+    if (focused) {
+      inputgroup.classList.add(focusClass);
+    }
+    else {
+      inputgroup.classList.remove('is-keyboardFocused');
+      inputgroup.classList.remove('is-focused');
+    }
   }
 
   document.addEventListener('focusin', function(event) {
     var inputgroup = event.target.closest('.spectrum-InputGroup');
 
     if (inputgroup) {
-      setFocus(inputgroup, true);
+      setFocus(inputgroup, event.target, true);
     }
   });
 
@@ -107,7 +121,7 @@ governing permissions and limitations under the License.
     var inputgroup = event.target.closest('.spectrum-InputGroup');
 
     if (inputgroup) {
-      setFocus(inputgroup, false);
+      setFocus(inputgroup, event.target, false);
     }
   });
 }());

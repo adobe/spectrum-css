@@ -6,7 +6,7 @@ examples:
     markup: |
       <h4>Default</h4>
       <div class="spectrum-InputGroup">
-        <div class="spectrum-Textfield">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
         <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true">
@@ -18,7 +18,7 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-InputGroup is-open">
-        <div class="spectrum-Textfield">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
         <button class="spectrum-FieldButton spectrum-InputGroup-button is-selected" aria-haspopup="true">
@@ -49,7 +49,7 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-InputGroup is-disabled">
-        <div class="spectrum-Textfield">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input" disabled>
         </div>
         <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true" disabled>
@@ -61,7 +61,7 @@ examples:
 
       <h4>Invalid</h4>
       <div class="spectrum-InputGroup is-invalid">
-        <div class="spectrum-Textfield is-invalid">
+        <div class="spectrum-Textfield is-invalid spectrum-InputGroup-textfield">
           <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-AlertMedium" />
           </svg>
@@ -78,7 +78,7 @@ examples:
     markup: |
       <h4>Default</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
         <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true">
@@ -90,7 +90,7 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-open">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
         <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-selected" aria-haspopup="true">
@@ -121,7 +121,7 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input" disabled>
         </div>
         <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true" disabled>
@@ -133,7 +133,7 @@ examples:
 
       <h4>Invalid</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid spectrum-InputGroup-textfield">
           <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-AlertMedium" />
           </svg>
