@@ -125,6 +125,43 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Button--overBackground,
+.spectrum-Button--overBackground.spectrum-Button--quiet {
+  position: relative;
+  &:focus-ring {
+    box-shadow: none;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-width: var(--spectrum-button-over-background-focus-ring-size-key-focus);
+      border-style: solid;
+      padding: calc(var(--spectrum-button-over-background-focus-ring-gap-key-focus) + var(--spectrum-button-over-background-focus-ring-size-key-focus));
+      position: absolute;
+      top: calc(-1 * (var(--spectrum-button-over-background-focus-ring-gap-key-focus) + (2 * var(--spectrum-button-over-background-focus-ring-size-key-focus))));
+      border-radius: calc(var(--spectrum-button-over-background-border-radius) + var(--spectrum-button-over-background-focus-ring-size-key-focus) + var(--spectrum-button-over-background-focus-ring-gap-key-focus));
+    }
+  }
+}
+
+.spectrum-ClearButton--overBackground {
+  position: relative;
+  &:focus-ring {
+    box-shadow: none;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-width: var(--spectrum-button-over-background-focus-ring-size-key-focus);
+      border-style: solid;
+      padding: calc(var(--spectrum-button-over-background-focus-ring-gap-key-focus) + var(--spectrum-button-over-background-focus-ring-size-key-focus));
+      position: absolute;
+      top: calc(-1 * (var(--spectrum-button-over-background-focus-ring-gap-key-focus) + (2 * var(--spectrum-button-over-background-focus-ring-size-key-focus))));
+      border-radius: calc(var(--spectrum-clearbutton-medium-height) + var(--spectrum-button-over-background-focus-ring-size-key-focus) + var(--spectrum-button-over-background-focus-ring-gap-key-focus));
+    }
+  }
+}
+
 a.spectrum-Button,
 a.spectrum-ActionButton {
   /* Remove appearance for clickable types in iOS and Safari. */
@@ -148,6 +185,14 @@ a.spectrum-ActionButton {
 
   font-size: var(--spectrum-actionbutton-text-size);
   font-weight: var(--spectrum-actionbutton-text-font-weight);
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
 
   .spectrum-Icon + .spectrum-ActionButton-label {
     /* Have icon padding on the left */
@@ -205,6 +250,12 @@ a.spectrum-ActionButton {
 
   font-size: var(--spectrum-actionbutton-quiet-text-size);
   font-weight: var(--spectrum-actionbutton-quiet-text-font-weight);
+  &:hover {
+    box-shadow: none;
+  }
+  &:active {
+    box-shadow: none;
+  }
 }
 
 .spectrum-LogicButton {
@@ -236,6 +287,25 @@ a.spectrum-ActionButton {
 
   cursor: pointer;
   outline: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  &.is-selected {
+    &:focus-ring,
+    &.is-focused {
+      box-shadow: none;
+    }
+  }
+  &:disabled,
+  &.is-disabled {
+    &:focus-ring {
+      box-shadow: none;
+    }
+  }
 }
 
 .spectrum-FieldButton {
@@ -267,6 +337,12 @@ a.spectrum-ActionButton {
 
   border-width: var(--spectrum-fieldbutton-quiet-border-size);
   border-radius: var(--spectrum-fieldbutton-quiet-border-radius);
+  &:disabled,
+  &.is-disabled {
+    &:focus-ring {
+      box-shadow: none;
+    }
+  }
 }
 
 .spectrum-ClearButton {

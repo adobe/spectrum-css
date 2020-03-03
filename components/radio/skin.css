@@ -10,6 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  --spectrum-radio-emphasized-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
+  --spectrum-radio-emphasized-focus-ring-size-key-focus: calc(var(--spectrum-alias-focus-ring-gap) + var(--spectrum-alias-focus-ring-size));
+}
+
 .spectrum-Radio .spectrum-Radio-input {
   &:checked + .spectrum-Radio-button {
     border-color: var(--spectrum-radio-emphasized-circle-border-color-selected);
@@ -117,7 +122,7 @@ governing permissions and limitations under the License.
 .spectrum-Radio, .spectrum-Radio--quiet {
   & .spectrum-Radio-input:focus-ring, &:hover .spectrum-Radio-input:focus-ring {
     & + .spectrum-Radio-button {
-      box-shadow: 0 0 0 2px var(--spectrum-radio-focus-ring-gap-color-key-focus), 0 0 0 4px var(--spectrum-radio-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-radio-emphasized-focus-ring-gap-key-focus) var(--spectrum-radio-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-radio-emphasized-focus-ring-size-key-focus) var(--spectrum-radio-focus-ring-color-key-focus);
     }
   }
 }
