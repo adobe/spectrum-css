@@ -104,7 +104,6 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
   line-height: var(--spectrum-checkbox-label-line-height);
-  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Checkbox-box {
