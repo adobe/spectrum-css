@@ -18,7 +18,7 @@ sections:
       ### Indicating validity and focus
       Validity and focus must be bubbled up to the parent so adjacent siblings can be styled.
 
-      Thus, the implementations must add the following classes in the following situations:
+      Thus, implementations must add the following classes in the following situations:
 
       * `.spectrum-Textfield.is-focused` - when the input is focused with the mouse
       * `.spectrum-Textfield.is-keyboardFocused` - when the input is focused with the keyboard

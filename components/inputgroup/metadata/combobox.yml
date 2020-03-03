@@ -24,7 +24,7 @@ sections:
       ### Indicating validity and focus
       Validity and focus must be bubbled up to the parent so descendants siblings can be styled.
 
-      Thus, the implementations must add the following classes in the following situations:
+      Thus, implementations must add the following classes in the following situations:
 
       * `.spectrum-InputGroup.is-focused` - when the input or button is focused with the mouse
       * `.spectrum-InputGroup.is-keyboardFocused` - when the input or button is focused with the keyboard
