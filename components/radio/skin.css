@@ -117,17 +117,7 @@ governing permissions and limitations under the License.
 .spectrum-Radio, .spectrum-Radio--quiet {
   & .spectrum-Radio-input:focus-ring, &:hover .spectrum-Radio-input:focus-ring {
     & + .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-emphasized-circle-border-color-key-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-radio-emphasized-circle-border-color-key-focus);
-    }
-    & ~ .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-text-color-key-focus);
-    }
-  }
-  &.is-invalid {
-    .spectrum-Radio-input:checked:focus-ring + .spectrum-Radio-button {
-      border-color: var(--spectrum-radio-emphasized-circle-border-color-key-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-radio-emphasized-circle-border-color-key-focus);
+      box-shadow: 0 0 0 2px var(--spectrum-radio-focus-ring-gap-color-key-focus), 0 0 0 4px var(--spectrum-radio-focus-ring-color-key-focus);
     }
   }
 }
