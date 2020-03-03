@@ -1,5 +1,10 @@
 name: Date Picker
 description: A date picker uses the input group component to display a field with a button next to it
+sections:
+  - name: Migration Guide
+    description: |
+     See the [Combobox migration guide](combobox.html#migrationguide) for migration information.
+
 examples:
   - id: datepicker
     name: Standard

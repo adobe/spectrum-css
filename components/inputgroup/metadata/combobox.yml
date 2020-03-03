@@ -1,5 +1,36 @@
 name: Combobox
 SpectrumSiteSlug: https://spectrum.adobe.com/page/combo-box/
+sections:
+  - name: Migration Guide
+    description: |
+      ### New Textfield markup
+      InputGroup now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
+
+      ### Additional clases
+      The following classes must be added:
+
+      * `.spectrum-InputGroup-textfield` is now required on the Textfield outer element (`.spectrum-Textfield`)
+      * `.spectrum-InputGroup-input` is now required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
+      * `.spectrum-InputGroup-button` is now required on the FieldButton (`.spectrum-FieldButton`)
+
+      ### Renamed classes
+
+      * `.spectrum-Datepicker--rangeDash` renamed to `.spectrum-Datepicker-rangeDash`
+
+      ### Removed elements
+
+      * `.spectrum-Datepicker-focusRing` is no longer required and should be removed
+
+      ### Indicating validity and focus
+      Validity and focus must be bubbled up to the parent so descendants siblings can be styled.
+
+      Thus, the implementations must add the following classes in the following situations:
+
+      * `.spectrum-InputGroup.is-focused` - when the input or button is focused with the mouse
+      * `.spectrum-InputGroup.is-keyboardFocused` - when the input or button is focused with the keyboard
+      * `.spectrum-InputGroup.is-valid` - when the input has an explicit valid state
+      * `.spectrum-InputGroup.is-invalid` - when the input has an explicit invalid state
+
 examples:
   - id: combobox
     name: Standard
