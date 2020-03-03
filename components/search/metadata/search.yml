@@ -1,5 +1,11 @@
 name: Search
 description: 'The searchy, cleary field.'
+sections:
+  - name: Migration Guide
+    description: |
+      ### New Textfield markup
+      Search now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
+
 examples:
   - id: search
     name: Standard
