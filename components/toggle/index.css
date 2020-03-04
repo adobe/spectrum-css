@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
   cursor: pointer;
 
   &:checked + .spectrum-ToggleSwitch-switch {
-    &::after {
+    &:before {
       transform: translateX(calc(var(--spectrum-switch-track-width) - var(--spectrum-switch-handle-size)));
     }
   }
@@ -72,16 +72,16 @@ governing permissions and limitations under the License.
   margin: 0 var(--spectrum-switch-text-gap);
   margin-top: var(--spectrum-switch-label-margin-top);
   font-size: var(--spectrum-switch-text-size);
-  line-height: var(--spectrum-switch-label-line-height);  
+  line-height: var(--spectrum-switch-label-line-height);
   transition: color var(--spectrum-global-animation-duration-200) ease-in-out;
 }
 
 .spectrum-ToggleSwitch-switch {
   display: inline-block;
+  box-sizing: border-box;
   /* positions the pseudo elements relative to this one */
   position: relative;
 
-  height: var(--spectrum-switch-track-height);
   width: var(--spectrum-switch-track-width);
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
@@ -92,28 +92,24 @@ governing permissions and limitations under the License.
 
   vertical-align: middle;
 
-  &:before,
-  &:after {
+  transition: background var(--spectrum-global-animation-duration-100) ease-in-out, border var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  height: var(--spectrum-switch-track-height);
+
+  left: 0;
+  right: 0;
+
+  border-radius: calc(var(--spectrum-switch-track-height) / 2);
+
+  &:before {
     display: block;
     position: absolute;
     content: "";
     box-sizing: border-box;
   }
 
-  /* :before is used for the track of the switch */
+  /* :before is used for the handle of the switch */
   &:before {
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
-
-    height: var(--spectrum-switch-track-height);
-
-    left: 0;
-    right: 0;
-
-    border-radius: calc(var(--spectrum-switch-track-height) / 2);
-  }
-
-  /* :after is used for the handle of the switch */
-  &:after {
     transition: background var(--spectrum-global-animation-duration-100) ease-in-out, border var(--spectrum-global-animation-duration-100) ease-in-out, transform var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 
     width: var(--spectrum-switch-handle-size);
@@ -125,5 +121,20 @@ governing permissions and limitations under the License.
     border-width: var(--spectrum-switch-handle-border-size);
     border-radius: var(--spectrum-switch-handle-border-radius);
     border-style: solid;
+  }
+
+  /* :after is used for the focus halo */
+  &:after {
+    border-radius: calc(calc(var(--spectrum-switch-track-height) / 2) + var(--spectrum-alias-focus-ring-gap) * 2);
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
+
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out;
   }
 }

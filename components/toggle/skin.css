@@ -11,18 +11,15 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --spectrum-switch-emphasized-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
-  --spectrum-switch-emphasized-focus-ring-size-key-focus: calc(var(--spectrum-alias-focus-ring-gap) + var(--spectrum-alias-focus-ring-size));
+  --spectrum-switch-emphasized-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size));
 }
 
 /* Default */
 .spectrum-ToggleSwitch-switch {
-  /* :before is used for the track of the switch */
+  background-color: var(--spectrum-switch-emphasized-track-color);
+  /* :after is the focus ring */
+  /* :before is used for the handle of the switch */
   &:before {
-    background-color: var(--spectrum-switch-emphasized-track-color);
-  }
-  /* :after is used for the handle of the switch */
-  &:after {
     background-color: var(--spectrum-switch-emphasized-handle-background-color);
     border-color: var(--spectrum-switch-emphasized-handle-border-color);
   }
@@ -33,10 +30,8 @@ governing permissions and limitations under the License.
 /* Selected */
 .spectrum-ToggleSwitch-input {
   &:checked + .spectrum-ToggleSwitch-switch {
+    background-color: var(--spectrum-switch-emphasized-track-color-selected);
     &:before {
-      background-color: var(--spectrum-switch-emphasized-track-color-selected);
-    }
-    &:after {
       border-color: var(--spectrum-switch-emphasized-handle-border-color-selected);
     }
   }
@@ -45,7 +40,7 @@ governing permissions and limitations under the License.
 .spectrum-ToggleSwitch:hover {
   .spectrum-ToggleSwitch-input {
     & + .spectrum-ToggleSwitch-switch {
-      &:after {
+      &:before {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-hover);
         box-shadow: none;
       }
@@ -55,10 +50,8 @@ governing permissions and limitations under the License.
     }
     /* Selected Hover */
     &:checked:enabled + .spectrum-ToggleSwitch-switch {
+      background-color: var(--spectrum-switch-emphasized-track-color-selected-hover);
       &:before {
-        background-color: var(--spectrum-switch-emphasized-track-color-selected-hover);
-      }
-      &:after {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-selected-hover);
       }
     }
@@ -68,7 +61,7 @@ governing permissions and limitations under the License.
 .spectrum-ToggleSwitch:active {
   .spectrum-ToggleSwitch-input {
     & + .spectrum-ToggleSwitch-switch {
-      &:after {
+      &:before {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-down);
       }
     }
@@ -77,10 +70,8 @@ governing permissions and limitations under the License.
     }
     /* Selected Down */
     &:checked:enabled + .spectrum-ToggleSwitch-switch {
+      background-color: var(--spectrum-switch-emphasized-track-color-selected-down);
       &:before {
-        background-color: var(--spectrum-switch-emphasized-track-color-selected-down);
-      }
-      &:after {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-selected-down);
       }
     }
@@ -89,11 +80,8 @@ governing permissions and limitations under the License.
 /* Disabled */
 .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input:disabled {
   & + .spectrum-ToggleSwitch-switch {
+    background-color: var(--spectrum-switch-emphasized-track-color-disabled);
     &:before {
-      background-color: var(--spectrum-switch-emphasized-track-color-disabled);
-    }
-
-    &:after {
       border-color: var(--spectrum-switch-emphasized-handle-border-color-disabled);
     }
   }
@@ -103,10 +91,8 @@ governing permissions and limitations under the License.
   /* Selected Disabled */
   &:checked {
     & + .spectrum-ToggleSwitch-switch {
+      background-color: var(--spectrum-switch-emphasized-track-color-selected-disabled);
       &:before {
-        background-color: var(--spectrum-switch-emphasized-track-color-selected-disabled);
-      }
-      &:after {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-selected-disabled);
       }
     }
@@ -119,10 +105,8 @@ governing permissions and limitations under the License.
 /* Quiet Selected */
 .spectrum-ToggleSwitch--quiet {
   .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-switch {
+    background-color: var(--spectrum-switch-quiet-track-color-selected);
     &:before {
-      background-color: var(--spectrum-switch-quiet-track-color-selected);
-    }
-    &:after {
       border-color: var(--spectrum-switch-quiet-handle-border-color-selected);
     }
   }
@@ -130,10 +114,8 @@ governing permissions and limitations under the License.
 /* Quiet Selected Hover */
 .spectrum-ToggleSwitch--quiet:hover {
   .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch {
+    background-color: var(--spectrum-switch-quiet-track-color-selected-hover);
     &:before {
-      background-color: var(--spectrum-switch-quiet-track-color-selected-hover);
-    }
-    &:after {
       border-color: var(--spectrum-switch-quiet-handle-border-color-selected-hover);
     }
   }
@@ -141,55 +123,41 @@ governing permissions and limitations under the License.
 /* Quiet Selected Down */
 .spectrum-ToggleSwitch.spectrum-ToggleSwitch--quiet:active {
   .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch {
+    background-color: var(--spectrum-switch-quiet-track-color-selected-down);
     &:before {
-      background-color: var(--spectrum-switch-quiet-track-color-selected-down);
-    }
-    &:after {
       border-color: var(--spectrum-switch-quiet-handle-border-color-selected-down);
     }
   }
 }
 /* Key Focus */
-.spectrum-ToggleSwitch, .spectrum-ToggleSwitch:hover {
+.spectrum-ToggleSwitch,
+.spectrum-ToggleSwitch:hover {
   .spectrum-ToggleSwitch-input:focus-ring {
     & + .spectrum-ToggleSwitch-switch {
-      &:before {
-        box-shadow: 0 0 0 var(--spectrum-switch-emphasized-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
-      }
       &:after {
+        box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+      }
+      &:before {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-key-focus);
       }
     }
     /* Selected Key Focus */
     &:checked {
       & + .spectrum-ToggleSwitch-switch {
-        &:before {
-          background-color: var(--spectrum-switch-emphasized-track-color-selected-key-focus);
-          box-shadow: 0 0 0 var(--spectrum-switch-emphasized-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
-        }
-        &:after {
-          border-color: var(--spectrum-switch-emphasized-handle-border-color-selected-key-focus);
-        }
+        background-color: var(--spectrum-switch-emphasized-track-color-selected-key-focus);
       }
     }
   }
 }
 
-.spectrum-ToggleSwitch--quiet, .spectrum-ToggleSwitch--quiet:hover {
+.spectrum-ToggleSwitch--quiet,
+.spectrum-ToggleSwitch--quiet:hover {
   .spectrum-ToggleSwitch-input:focus-ring {
-    & + .spectrum-ToggleSwitch-switch {
-      &:before {
-        box-shadow: 0 0 0 var(--spectrum-switch-quiet-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
-      }
-    }
     /* Selected Key Focus */
     &:checked {
       & + .spectrum-ToggleSwitch-switch {
+        background-color: var(--spectrum-switch-quiet-track-color-selected-key-focus);
         &:before {
-          background-color: var(--spectrum-switch-quiet-track-color-selected-key-focus);
-          box-shadow: 0 0 0 var(--spectrum-switch-quiet-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
-        }
-        &:after {
           border-color: var(--spectrum-switch-quiet-handle-border-color-selected-key-focus);
         }
       }
@@ -201,14 +169,12 @@ governing permissions and limitations under the License.
   .spectrum-ToggleSwitch-input {
     & {
       &:checked + .spectrum-ToggleSwitch-switch {
-        &:before {
-          background-color: var(--spectrum-switch-track-color);
-        }
+        background-color: var(--spectrum-switch-track-color);
       }
     }
 
     &:checked + .spectrum-ToggleSwitch-switch {
-      &:after {
+      &:before {
         /* Don't be blue */
         border-color: var(--spectrum-switch-handle-border-color);
       }
@@ -216,26 +182,20 @@ governing permissions and limitations under the License.
 
     &:focus-ring {
       &:checked + .spectrum-ToggleSwitch-switch {
-        &:before {
-          box-shadow: 0 0 0 var(--spectrum-switch-emphasized-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
-          background-color: var(--spectrum-switch-track-color);
-        }
+        box-shadow: 0 0 0 var(--spectrum-switch-emphasized-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
+        background-color: var(--spectrum-switch-track-color);
       }
     }
 
     &:disabled {
       &:checked + .spectrum-ToggleSwitch-switch {
-        &:before {
-          background-color: var(--spectrum-switch-emphasized-track-color-disabled);
-        }
+        background-color: var(--spectrum-switch-emphasized-track-color-disabled);
       }
 
       & + .spectrum-ToggleSwitch-switch {
-        &:before {
-          background-color: var(--spectrum-switch-emphasized-track-color-disabled);
-        }
+        background-color: var(--spectrum-switch-emphasized-track-color-disabled);
 
-        &:after {
+        &:before {
           border-color: var(--spectrum-switch-emphasized-handle-border-color-disabled);
         }
       }
@@ -245,10 +205,8 @@ governing permissions and limitations under the License.
   &:hover {
     .spectrum-ToggleSwitch-input {
       &:checked:enabled + .spectrum-ToggleSwitch-switch {
+        background-color: var(--spectrum-switch-emphasized-track-color);
         &:before {
-          background-color: var(--spectrum-switch-emphasized-track-color);
-        }
-        &:after {
           border-color: var(--spectrum-switch-emphasized-handle-border-color-hover);
         }
       }
@@ -258,10 +216,8 @@ governing permissions and limitations under the License.
   &:active {
     .spectrum-ToggleSwitch-input {
       &:checked:enabled + .spectrum-ToggleSwitch-switch {
+        background-color: var(--spectrum-switch-emphasized-track-color);
         &:before {
-          background-color: var(--spectrum-switch-emphasized-track-color);
-        }
-        &:after {
           border-color: var(--spectrum-switch-emphasized-handle-border-color-down);
         }
       }
