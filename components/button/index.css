@@ -25,6 +25,9 @@ governing permissions and limitations under the License.
 }
 
 %spectrum-BaseButton {
+  /* Contain halo */
+  position: relative;
+
   display: inline-flex;
   box-sizing: border-box;
 
@@ -89,6 +92,7 @@ governing permissions and limitations under the License.
     max-height: 100%;
     flex-shrink: 0;
   }
+
 }
 
 .spectrum-Button {
@@ -123,15 +127,9 @@ governing permissions and limitations under the License.
   .spectrum-Button-label + .spectrum-Icon {
     margin-left: calc(var(--spectrum-button-primary-text-gap) / 2);
   }
-}
-
-.spectrum-Button--overBackground,
-.spectrum-Button--overBackground.spectrum-Button--quiet,
-.spectrum-ClearButton--overBackground {
-  position: relative;
 
   &:after {
-    border-radius: calc(var(--spectrum-clearbutton-medium-height) + var(--spectrum-alias-focus-ring-gap));
+    border-radius: calc(var(--spectrum-button-primary-border-radius) + var(--spectrum-alias-focus-ring-gap));
     content: '';
     display: block;
     position: absolute;
@@ -142,10 +140,6 @@ governing permissions and limitations under the License.
     margin: calc(var(--spectrum-alias-focus-ring-gap) * -2);
 
     transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out;
-  }
-
-  &:focus-ring {
-    box-shadow: none;
   }
 }
 
@@ -266,6 +260,20 @@ a.spectrum-ActionButton {
   font-size: var(--spectrum-logicbutton-and-text-size);
   font-weight: var(--spectrum-logicbutton-and-text-font-weight);
   line-height: 0;
+
+  &:after {
+    border-radius: calc(var(--spectrum-logicbutton-and-border-radius) + var(--spectrum-alias-focus-ring-gap));
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc(var(--spectrum-alias-focus-ring-gap) * -2);
+
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out;
+  }
 }
 
 .spectrum-FieldButton {

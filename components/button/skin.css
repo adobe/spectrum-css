@@ -11,18 +11,19 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --spectrum-button-primary-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
-  --spectrum-button-primary-focus-ring-size-key-focus: calc(var(--spectrum-alias-focus-ring-gap) + var(--spectrum-alias-focus-ring-size));
-
   /* Overridden because of the way we draw focus rings */
   --spectrum-actionbutton-quiet-border-size-key-focus: 1px;
+
+  --spectrum-button-primary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
 }
 
 .spectrum-LogicButton,
 .spectrum-Button {
-  &:focus-ring {
-    box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-gap-key-focus) var(--spectrum-button-primary-focus-ring-gap-color-key-focus),
-                0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+  &:focus-ring,
+  &.is-focused {
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+    }
   }
 }
 
@@ -196,7 +197,6 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-button-over-background-background-color-hover);
     border-color: var(--spectrum-button-over-background-border-color-hover);
     color: inherit;
-    box-shadow: none;
 
     &:after {
       box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-over-background-border-color-key-focus);
