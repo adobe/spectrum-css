@@ -10,6 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  --spectrum-slider-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
+}
+
 .spectrum-Slider-track {
   &::before {
     background: var(--spectrum-slider-track-color);
@@ -56,7 +60,9 @@ governing permissions and limitations under the License.
   }
 
   &.is-focused {
-    border-color: var(--spectrum-slider-handle-border-color-key-focus);
+    &:before {
+      box-shadow: 0 0 0 var(--spectrum-slider-focus-ring-size-key-focus) var(--spectrum-slider-handle-border-color-key-focus);
+    }
   }
 
   &:active,
@@ -83,11 +89,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-handle {
-  &.is-focused {
-    border-color: var(--spectrum-slider-handle-border-color-key-focus);
-    background: var(--spectrum-slider-handle-background-color-key-focus);
-  }
-
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
     background: var(--spectrum-slider-handle-background-color-down);
