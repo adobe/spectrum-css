@@ -1,30 +1,12 @@
 name: Stepper
-sections:
-  - name: Migration Guide
-    description: |
-      ### New Textfield markup
-      Stepper now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
-
-      ### Indicating validity, focus, and disable
-      Validity and focus must be bubbled up to the parent so descendants siblings can be styled.
-
-      Thus, implementations must add the following classes in the following situations:
-
-      * `.spectrum-Stepper.is-focused` - when the input or button is focused with the mouse
-      * `.spectrum-Stepper.is-keyboardFocused` - when the input or button is focused with the keyboard
-      * `.spectrum-Stepper.is-valid` - when the input has an explicit valid state
-      * `.spectrum-Stepper.is-invalid` - when the input has an explicit invalid state
-      * `.spectrum-Stepper.is-disabled` - when the component is disabled. Note that the Textfield must have `.is-disabled`, and the `<input>` and `<buttons>` must have the `[disabled]` property.
-
+description: 'Note that you must manually apply the `.is-focused` class, and that the `.is-focused` styles below don''t look correct unless your cursor is actually in the stepper input field.'
 examples:
   - id: stepper
     name: Standard
     status: Deprecated
     markup: |
       <div class="spectrum-Stepper">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
+        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -38,14 +20,9 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
-    name: Focused
-    status: Deprecated
-    markup: |
+
       <div class="spectrum-Stepper is-focused">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
+        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -59,35 +36,9 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
-    name: Keyboard Focused
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper is-keyboardFocused">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
-        <span class="spectrum-Stepper-buttons">
-          <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
-            </svg>
-          </button>
-          <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
-            </svg>
-          </button>
-        </span>
-      </div>
-  - id: stepper
-    name: Invalid
-    status: Deprecated
-    markup: |
+
       <div class="spectrum-Stepper is-invalid">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
+        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -101,56 +52,9 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper
-    name: Invalid (focused)
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper is-invalid is-focused">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
-        <span class="spectrum-Stepper-buttons">
-          <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
-            </svg>
-          </button>
-          <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
-            </svg>
-          </button>
-        </span>
-      </div>
-  - id: stepper
-    name: Invalid (keyboard focused)
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper is-invalid is-keyboardFocused">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
-        <span class="spectrum-Stepper-buttons">
-          <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
-            </svg>
-          </button>
-          <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
-            </svg>
-          </button>
-        </span>
-      </div>
-  - id: stepper
-    name: Disabled
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper is-disabled">
-        <div class="spectrum-Textfield spectrum-Stepper-textfield is-disabled">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
-        </div>
+
+      <div class="spectrum-Stepper">
+        <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1" disabled>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -167,11 +71,10 @@ examples:
   - id: stepper-quiet
     name: Quiet
     status: Deprecated
+    description: The quiet variant of the Stepper.
     markup: |
       <div class="spectrum-Stepper spectrum-Stepper--quiet">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
+        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -185,14 +88,9 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
-    name: Quiet (focused)
-    status: Deprecated
-    markup: |
+
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-focused">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
+        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -206,35 +104,9 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
-    name: Quiet (keyboard focused)
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper spectrum-Stepper--quiet is-keyboardFocused">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
-        <span class="spectrum-Stepper-buttons">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
-            </svg>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
-            </svg>
-          </button>
-        </span>
-      </div>
-  - id: stepper-quiet
-    name: Quiet (invalid)
-    status: Deprecated
-    markup: |
+
       <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
+        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -248,56 +120,9 @@ examples:
           </button>
         </span>
       </div>
-  - id: stepper-quiet
-    name: Quiet (invalid, focused)
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid is-focused">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
-        <span class="spectrum-Stepper-buttons">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
-            </svg>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
-            </svg>
-          </button>
-        </span>
-      </div>
-  - id: stepper-quiet
-    name: Quiet (invalid, keyboard focused)
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid is-keyboardFocused">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
-        </div>
-        <span class="spectrum-Stepper-buttons">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
-            </svg>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
-            </svg>
-          </button>
-        </span>
-      </div>
-  - id: stepper-quiet
-    name: Quiet (disabled)
-    status: Deprecated
-    markup: |
-      <div class="spectrum-Stepper spectrum-Stepper--quiet is-disabled">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-textfield is-disabled">
-          <input type="number" class="spectrum-Textfield-input spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
-        </div>
+
+      <div class="spectrum-Stepper spectrum-Stepper--quiet">
+        <input type="number" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" disabled>
         <span class="spectrum-Stepper-buttons">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1" disabled>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">

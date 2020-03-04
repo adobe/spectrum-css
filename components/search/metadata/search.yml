@@ -1,22 +1,14 @@
 name: Search
 description: 'The searchy, cleary field.'
-sections:
-  - name: Migration Guide
-    description: |
-      ### New Textfield markup
-      Search now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
-
 examples:
   - id: search
     name: Standard
     markup: |
       <form class="spectrum-Search">
-        <div class="spectrum-Textfield">
-          <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Magnifier" />
-          </svg>
-          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off">
-        </div>
+        <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input">
+        <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Magnifier" />
+        </svg>
         <button type="reset" class="spectrum-ClearButton">
           <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossSmall" />
@@ -25,12 +17,10 @@ examples:
       </form>
 
       <form class="spectrum-Search">
-        <div class="spectrum-Textfield">
-          <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Magnifier" />
-          </svg>
-          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off" disabled>
-        </div>
+        <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input" disabled>
+        <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Magnifier" />
+        </svg>
         <button type="reset" class="spectrum-ClearButton" disabled>
           <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossSmall" />
@@ -41,12 +31,10 @@ examples:
     name: Quiet
     markup: |
       <form class="spectrum-Search">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Magnifier" />
-          </svg>
-          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off">
-        </div>
+        <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input">
+        <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Magnifier" />
+        </svg>
         <button type="reset" class="spectrum-ClearButton">
           <svg class="spectrum-Icon spectrum-UIIcon-CrossMedium focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossMedium" />
@@ -55,12 +43,10 @@ examples:
       </form>
 
       <form class="spectrum-Search">
-        <div class="spectrum-Textfield spectrum-Textfield--quiet">
-          <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Magnifier" />
-          </svg>
-          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off" disabled>
-        </div>
+        <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input" disabled>
+        <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Magnifier" />
+        </svg>
         <button type="reset" class="spectrum-ClearButton" disabled>
           <svg class="spectrum-Icon spectrum-UIIcon-CrossMedium focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossMedium" />

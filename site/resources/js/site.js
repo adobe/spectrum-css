@@ -262,8 +262,8 @@ window.addEventListener('DOMContentLoaded', function() {
     overlay.removeEventListener('click', hideSideBar);
     sideBar.classList.remove('is-open');
     overlay.classList.remove('is-open');
-    if (window.siteSearch) {
-      window.siteSearch.hideResults();
+    if (window.search) {
+      window.search.hideResults();
     }
   }
 
@@ -278,7 +278,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // Search isn't supported on IE 11
   if (typeof Search !== 'undefined') {
-    window.siteSearch = new Search(document.querySelector('#site-search'))
+    window.search = new Search(document.querySelector('#site-search'))
   }
 
   window.addEventListener('SearchFocused', function() {

@@ -1,0 +1,27 @@
+name: Text Field - Decorated
+description: A Spectrum text field with an additional icon. The icon must be the Small size (18px) in order for it to be positioned correctly.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/text-field/#Validation-icon
+examples:
+  - id: textfield
+    name: Standard
+    markup: |
+      <label for="DecoratedTextField-single" class="spectrum-FieldLabel">Search</label>
+      <div class="spectrum-DecoratedTextfield is-decorated">
+        <input id="DecoratedTextField-single" placeholder="Enter your name" class="spectrum-Textfield spectrum-DecoratedTextfield-field" aria-invalid="false" type="text">
+
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+      </div>
+  - id: textfield
+    name: Multiline
+    markup: |
+      <div class="spectrum-DecoratedTextfield is-decorated">
+        <label for="DecoratedTextField-multiline" class="spectrum-FieldLabel spectrum-FieldLabel--left">Search</label>
+
+        <textarea id="DecoratedTextField-multiline" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-DecoratedTextfield-field"></textarea>
+
+        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Icon--sizeS spectrum-DecoratedTextfield-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        </svg>
+      </div>

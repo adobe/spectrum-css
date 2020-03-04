@@ -34,24 +34,15 @@ governing permissions and limitations under the License.
   min-inline-size: var(--spectrum-component-single-line-width);
   border-radius: var(--spectrum-border-radius);
 
-  .spectrum-InputGroup-button {
+  .spectrum-FieldButton {
     padding: 0;
     inline-size: var(--spectrum-combobox-button-width);
     border-start-start-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
     border-end-start-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
   }
-
-  .spectrum-InputGroup-input {
-    width: auto;
-  }
 }
 
-.spectrum-InputGroup-button {
-  /* Be above textfield so box shadow shines through */
-  position: relative;
-}
-
-.spectrum-InputGroup-input {
+.spectrum-InputGroup-field {
   border-start-end-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
   border-end-end-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
   border-inline-end-width: var(--spectrum-combobox-field-border-width-right);
@@ -61,7 +52,7 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup--quiet {
   border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
-  .spectrum-InputGroup-button {
+  .spectrum-FieldButton {
     inline-size: auto;
     position: relative;
 
@@ -91,36 +82,31 @@ governing permissions and limitations under the License.
   /* Input Group */
   &.spectrum-InputGroup--quiet {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
-    .spectrum-InputGroup-button {
+    .spectrum-FieldButton {
       border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
     }
   }
   /* Datetime Range */
   &.spectrum-Datepicker--datetimeRange {
     /* Inputs */
-    .spectrum-InputGroup-textfield {
+    .spectrum-InputGroup-field {
       inline-size: var(--spectrum-datepicker-datetime-input-width);
       min-inline-size: var(--spectrum-datepicker-datetime-input-width);
     }
   }
-
   /* Inputs */
-  .spectrum-InputGroup-textfield {
-    flex: initial;
+  .spectrum-InputGroup-field {
     inline-size: var(--spectrum-datepicker-input-width);
     min-inline-size: var(--spectrum-datepicker-input-width);
-    &.is-invalid {
-      .spectrum-InputGroup-input {
-        padding-inline-end: var(--spectrum-padding);
-      }
-    }
-  }
-  .spectrum-InputGroup-input {
-    inline-size: 100%;
-
+    flex: initial;
     &.spectrum-Datepicker-startField {
       border-inline-end: 0;
       padding-inline-end: var(--spectrum-padding);
+      &.is-invalid,
+      &:invalid {
+        background-image: none;
+        padding-inline-end: var(--spectrum-padding);
+      }
     }
     &.spectrum-Datepicker-endField {
       border-inline-start: 0;
@@ -129,7 +115,7 @@ governing permissions and limitations under the License.
     }
   }
   /* Em dash */
-  .spectrum-Datepicker-rangeDash {
+  .spectrum-Datepicker--rangeDash {
     line-height: var(--spectrum-datepicker-range-dash-line-height);
     padding-block-start: var(--spectrum-datepicker-range-dash-padding-top);
     flex: initial;
@@ -147,7 +133,24 @@ governing permissions and limitations under the License.
     }
   }
   /* Focus ring */
+  &.is-focused {
+    .spectrum-Datepicker-focusRing {
+      position: absolute;
+      border-radius: var(--spectrum-border-radius);
+      inset-block-start: 0;
+      inset-inline-end: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      pointer-events: none;
+    }
+  }
   &.spectrum-InputGroup--quiet {
+    &.is-focused {
+      .spectrum-Datepicker-focusRing {
+        border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
+        inset-block-start: auto;
+      }
+    }
     .spectrum-Datepicker--rangeDash {
       &:before {
         margin-inline-start: var(--spectrum-datepicker-range-dash-margin-left);

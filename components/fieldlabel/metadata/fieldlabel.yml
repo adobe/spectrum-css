@@ -6,32 +6,24 @@ examples:
     name: Standard
     markup: |
       <label for="lifestory" class="spectrum-FieldLabel">Life Story</label>
-      <div class="spectrum-Textfield">
-        <input id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
-      </div>
+      <input id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield">
 
       <label for="lifestory2" class="spectrum-FieldLabel is-disabled">Life Story</label>
-      <div class="spectrum-Textfield is-disabled">
-        <input id="lifestory2" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input" disabled>
-      </div>
+      <input id="lifestory2" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield" disabled>
   - id: fieldlabel-side
     name: Left
     description: A left aligned field label.
     markup: |
       <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left" style="width: 72px">Life Story</label>
 
-      <div class="spectrum-Textfield spectrum-Textfield--multiline">
-        <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
-      </div>
+      <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
   - id: fieldlabel-side
     name: Right
     description: A right aligned field label.
     markup: |
       <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--right" style="width: 72px">Life Story</label>
 
-      <div class="spectrum-Textfield spectrum-Textfield--multiline">
-        <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
-      </div>
+      <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
   - id: fieldlabel
     name: Required
     description: Field label for a required field.
@@ -41,14 +33,10 @@ examples:
           <use xlink:href="#spectrum-css-icon-Asterisk" />
         </svg>
       </label>
-      <div class="spectrum-Textfield">
-        <input id="lifestory3" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
-      </div>
+      <input id="lifestory3" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield">
 
       <label for="lifestory4" class="spectrum-FieldLabel">Life Story (Required)</label>
-      <div class="spectrum-Textfield">
-        <input id="lifestory4" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
-      </div>
+      <input id="lifestory4" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield">
 
       <br/>
       <br/>
@@ -58,9 +46,7 @@ examples:
           <use xlink:href="#spectrum-css-icon-Asterisk" />
         </svg>
       </label>
-      <div class="spectrum-Textfield spectrum-Textfield--multiline">
-        <textarea id="lifestory5" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
-      </div>
+      <textarea id="lifestory5" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
 
 
       <label for="lifestory6" class="spectrum-FieldLabel is-disabled">Life Story
@@ -68,6 +54,4 @@ examples:
           <use xlink:href="#spectrum-css-icon-Asterisk" />
         </svg>
       </label>
-      <div class="spectrum-Textfield is-disabled">
-        <input id="lifestory6" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input" disabled>
-      </div>
+      <input id="lifestory6" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield" disabled>
