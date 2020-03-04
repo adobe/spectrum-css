@@ -15,10 +15,11 @@ governing permissions and limitations under the License.
   --spectrum-button-primary-focus-ring-size-key-focus: calc(var(--spectrum-alias-focus-ring-gap) + var(--spectrum-alias-focus-ring-size));
 }
 
-
+.spectrum-LogicButton,
 .spectrum-Button {
   &:focus-ring {
-    box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-gap-key-focus) var(--spectrum-button-primary-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-gap-key-focus) var(--spectrum-button-primary-focus-ring-gap-color-key-focus),
+                0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
   }
 }
 
@@ -532,12 +533,6 @@ governing permissions and limitations under the License.
     color: var(--spectrum-logicbutton-and-text-color);
   }
 
-  &:focus-ring {
-    background-color: var(--spectrum-logicbutton-and-background-color-key-focus);
-    border-color: var(--spectrum-logicbutton-and-border-color-key-focus);
-    color: var(--spectrum-logicbutton-and-text-color);
-  }
-
   &:disabled,
   &.is-disabled {
     background-color: var(--spectrum-logicbutton-and-background-color-disabled);
@@ -554,12 +549,6 @@ governing permissions and limitations under the License.
   &:hover {
     background-color: var(--spectrum-logicbutton-or-background-color-hover);
     border-color: var(--spectrum-logicbutton-or-border-color-hover);
-    color: var(--spectrum-logicbutton-or-text-color);
-  }
-
-  &:focus-ring {
-    background-color: var(--spectrum-logicbutton-or-background-color-key-focus);
-    border-color: var(--spectrum-logicbutton-or-border-color-key-focus);
     color: var(--spectrum-logicbutton-or-text-color);
   }
 
