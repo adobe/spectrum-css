@@ -18,26 +18,20 @@ governing permissions and limitations under the License.
   display: flex;
 
   .spectrum-Button,
-  .spectrum-ActionButton,
-  .spectrum-Tool {
+  .spectrum-ActionButton {
     flex-shrink: 0;
   }
 
-  > .spectrum-Rule--vertical {
-    block-size: auto;
-    align-self: stretch;
-  }
-
   .spectrum-Button + .spectrum-Button {
-    margin-inline-start: var(--spectrum-buttongroup-button-gap-x);
+    margin-left: var(--spectrum-buttongroup-button-gap-x);
   }
 
   .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-inline-start: var(--spectrum-actionbuttongroup-text-button-gap-x);
+    margin-left: var(--spectrum-actionbuttongroup-text-button-gap-x);
   }
 
-  .spectrum-Tool + .spectrum-Tool {
-    margin-inline-start: var(--spectrum-toolgroup-text-button-gap-x);
+  &:focus {
+    outline: none;
   }
 }
 
@@ -47,21 +41,16 @@ governing permissions and limitations under the License.
 
   .spectrum-ActionButton-label {
     flex-grow: 1;
-    text-align: start;
+    text-align: left;
   }
 
   .spectrum-Button + .spectrum-Button {
-    margin-block-start: var(--spectrum-buttongroup-button-gap-y);
-    margin-inline-start: var(--spectrum-buttongroup-button-gap-reset);
+    margin-top: var(--spectrum-buttongroup-button-gap-y);
+    margin-left: var(--spectrum-buttongroup-button-gap-reset);
   }
 
   .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-block-start: var(--spectrum-actionbuttongroup-text-button-gap-y);
-    margin-inline-start: var(--spectrum-buttongroup-button-gap-reset);
-  }
-
-  .spectrum-Tool + .spectrum-Tool {
-    margin-block-start: var(--spectrum-toolgroup-text-button-gap-y);
-    margin-inline-start: var(--spectrum-buttongroup-button-gap-reset);
+    margin-top: var(--spectrum-actionbuttongroup-text-button-gap-y);
+    margin-left: var(--spectrum-buttongroup-button-gap-reset);
   }
 }
