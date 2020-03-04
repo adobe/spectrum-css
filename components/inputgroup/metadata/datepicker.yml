@@ -1,11 +1,18 @@
 name: Date Picker
 description: A date picker uses the input group component to display a field with a button next to it
+sections:
+  - name: Migration Guide
+    description: |
+     See the [Combobox migration guide](combobox.html#migrationguide) for migration information.
+
 examples:
   - id: datepicker
     name: Standard
     markup: |
       <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-haspopup="true">
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field" aria-invalid="false" placeholder="Choose a date" value="">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
+        </div>
           <button type="button" class="spectrum-FieldButton spectrum-InputGroup-button">
             <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS">
               <path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z">
@@ -19,7 +26,9 @@ examples:
     name: Quiet
     markup: |
       <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-haspopup="true">
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" aria-invalid="false" placeholder="Choose a date" value="">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
+        </div>
           <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button">
             <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS">
               <path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z">
@@ -33,118 +42,134 @@ examples:
     name: Range
     markup: |
       <div aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="">
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="">
-        <button type="button" class="spectrum-FieldButton" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="">
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="">
+        </div>
+        <button type="button" class="spectrum-FieldButton spectrum-InputGroup-button" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>
 
       <p/>
 
       <div aria-invalid="true" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="">
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-endField is-invalid" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="">
-        <button type="button" class="spectrum-FieldButton is-invalid" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
+        <div class="spectrum-Textfield is-invalid spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="">
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield is-invalid spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="">
+        </div>
+        <button type="button" class="spectrum-FieldButton is-invalid spectrum-InputGroup-button" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>
 
       <p/>
 
       <div aria-disabled="true" class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range is-disabled" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="" disabled>
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="" disabled>
-        <button type="button" class="spectrum-FieldButton" disabled tabindex="-1" aria-label="Calendar">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield is-disabled">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="" disabled>
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield is-disabled">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="" disabled>
+        </div>
+        <button type="button" class="spectrum-FieldButton spectrum-InputGroup-button" disabled tabindex="-1" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>
 
       <p/>
 
       <div class="spectrum-InputGroup spectrum-Datepicker spectrum-Datepicker--range spectrum-Datepicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
-        <button type="button" class="spectrum-FieldButton" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
+        </div>
+        <button type="button" class="spectrum-FieldButton spectrum-InputGroup-button" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>
   - id: datepicker-range-quiet
     name: Range (quiet)
     markup: |
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
-        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet" tabindex="-1" aria-label="Calendar">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
+        </div>
+        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" tabindex="-1" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>
 
       <p />
 
       <div aria-invalid="true" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range is-invalid" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-endField is-invalid" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
-        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
+        <div class="spectrum-Textfield is-invalid spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" aria-invalid="true" placeholder="mm/dd/yyyy" name="start" value="2018-10-01">
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield is-invalid spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
+        </div>
+        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-InputGroup-button" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>
 
       <p />
 
       <div aria-disabled="true" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range is-disabled" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01" disabled>
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30" disabled>
-        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet" tabindex="-1" disabled aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet is-disabled spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" placeholder="mm/dd/yyyy" name="start" value="2018-10-01" disabled>
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield spectrum-Textfield--quiet is-disabled spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy" name="end" value="2018-10-30" disabled>
+        </div>
+        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" tabindex="-1" disabled aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>
       <p/>
 
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker spectrum-Datepicker--range  spectrum-Datepicker--datetimeRange" role="combobox" aria-expanded="false" aria-haspopup="dialog">
-        <input type="text" class="spectrum-Textfield  spectrum-Textfield--quiet spectrum-InputGroup-field spectrum-Datepicker-startField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
-        <div class="spectrum-Datepicker--rangeDash"></div>
-        <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet  spectrum-InputGroup-field spectrum-Datepicker-endField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
-        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-startField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="start" value="">
+        </div>
+        <div class="spectrum-Datepicker-rangeDash"></div>
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
+        </div>
+        <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" tabindex="-1" aria-expanded="false" aria-haspopup="dialog" aria-label="Calendar">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
           </svg>
         </button>
-        <!-- To render focus ring around entire input group when one of the inputs has keyboard focus, we need this: -->
-        <div class="spectrum-Datepicker-focusRing" role="presentation"></div>
       </div>

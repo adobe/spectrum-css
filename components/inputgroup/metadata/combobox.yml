@@ -1,12 +1,45 @@
 name: Combobox
 SpectrumSiteSlug: https://spectrum.adobe.com/page/combo-box/
+sections:
+  - name: Migration Guide
+    description: |
+      ### New Textfield markup
+      InputGroup now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
+
+      ### Additional clases
+      The following classes must be added:
+
+      * `.spectrum-InputGroup-textfield` is now required on the Textfield outer element (`.spectrum-Textfield`)
+      * `.spectrum-InputGroup-input` is now required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
+      * `.spectrum-InputGroup-button` is now required on the FieldButton (`.spectrum-FieldButton`)
+
+      ### Renamed classes
+
+      * `.spectrum-Datepicker--rangeDash` renamed to `.spectrum-Datepicker-rangeDash`
+
+      ### Removed elements
+
+      * `.spectrum-Datepicker-focusRing` is no longer required and should be removed
+
+      ### Indicating validity and focus
+      Validity and focus must be bubbled up to the parent so descendants siblings can be styled.
+
+      Thus, implementations must add the following classes in the following situations:
+
+      * `.spectrum-InputGroup.is-focused` - when the input or button is focused with the mouse
+      * `.spectrum-InputGroup.is-keyboardFocused` - when the input or button is focused with the keyboard
+      * `.spectrum-InputGroup.is-valid` - when the input has an explicit valid state
+      * `.spectrum-InputGroup.is-invalid` - when the input has an explicit invalid state
+
 examples:
   - id: combobox
     name: Standard
     markup: |
       <h4>Default</h4>
       <div class="spectrum-InputGroup">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
+        </div>
         <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -16,7 +49,9 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-InputGroup is-open">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
+        </div>
         <button class="spectrum-FieldButton spectrum-InputGroup-button is-selected" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -45,7 +80,9 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-InputGroup is-disabled">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field" disabled>
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input" disabled>
+        </div>
         <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true" disabled>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -55,7 +92,12 @@ examples:
 
       <h4>Invalid</h4>
       <div class="spectrum-InputGroup is-invalid">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field is-invalid">
+        <div class="spectrum-Textfield is-invalid spectrum-InputGroup-textfield">
+          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          </svg>
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
+        </div>
         <button class="spectrum-FieldButton spectrum-InputGroup-button is-invalid" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -67,7 +109,9 @@ examples:
     markup: |
       <h4>Default</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
+        </div>
         <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -77,7 +121,9 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-open">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
+        </div>
         <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-selected" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -106,7 +152,9 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" disabled>
+        <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input" disabled>
+        </div>
         <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true" disabled>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -116,7 +164,12 @@ examples:
 
       <h4>Invalid</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
-        <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field is-invalid">
+        <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid spectrum-InputGroup-textfield">
+          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          </svg>
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
+        </div>
         <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-invalid" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />

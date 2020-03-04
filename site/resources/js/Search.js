@@ -17,10 +17,12 @@ function Search(el) {
   this.el.innerHTML = `
 <div class="spectrum-Site-search" role="search">
   <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
-    <input type="search" placeholder="Search for components" name="search" autocomplete="off" class="spectrum-Textfield spectrum-Search-input js-input" aria-autocomplete="list" aria-owns="search-results-listbox" aria-label="Search">
-    <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-Magnifier" />
-    </svg>
+    <div class="spectrum-Textfield">
+      <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-Magnifier" />
+      </svg>
+      <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input js-input" autocomplete="off">
+    </div>
     <button type="reset" value="Reset" class="spectrum-ClearButton js-clearButton" tabindex="-1" hidden>
       <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CrossSmall" />
