@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 :root {
   --spectrum-radio-emphasized-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size));
 
-  --spectrum-radio-circle-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-radio-circle-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
 }
 
 .spectrum-Radio .spectrum-Radio-input {
@@ -153,6 +153,11 @@ governing permissions and limitations under the License.
       }
       &:after {
         box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+      }
+    }
+    &:checked + .spectrum-Radio-button {
+      &:before {
+        border-color: var(--spectrum-radio-circle-border-color-selected-key-focus);
       }
     }
   }

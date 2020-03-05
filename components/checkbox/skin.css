@@ -107,10 +107,17 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-input {
   &:focus-ring + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-box-border-color-selected-key-focus);
+      border-color: var(--spectrum-checkbox-box-border-color-key-focus);
     }
     &:after {
       box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+    }
+  }
+  &:checked {
+    &:focus-ring + .spectrum-Checkbox-box {
+      &:before {
+        border-color: var(--spectrum-checkbox-box-border-color-selected-key-focus);
+      }
     }
   }
   &:focus-ring ~ .spectrum-Checkbox-label {
