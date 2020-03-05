@@ -156,6 +156,10 @@ governing permissions and limitations under the License.
 .spectrum-Dial-handle {
   box-shadow: none;
 
+  &:before {
+    display: none;
+  }
+
   &::after {
     background-color: var(--spectrum-dial-handle-marker-color);
   }
