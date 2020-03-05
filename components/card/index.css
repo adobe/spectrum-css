@@ -62,7 +62,9 @@ governing permissions and limitations under the License.
 
   visibility: hidden;
 
-  .spectrum-Checkbox {
+  /* hack to work around #124 */
+  .spectrum-Checkbox:dir(ltr),
+  .spectrum-Checkbox:dir(rtl) {
     margin: 0;
   }
 }
