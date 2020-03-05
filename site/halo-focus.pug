@@ -21,7 +21,8 @@ html(lang='en-US').spectrum.spectrum--medium
         'slider',
         'toggle',
         'checkbox',
-        'radio'
+        'radio',
+        'tags'
       ];
 
     each dep in exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1)
@@ -35,10 +36,16 @@ html(lang='en-US').spectrum.spectrum--medium
         height: 100%;
       }
       .a-overlay {
-        height: 80px;
+        box-sizing: border-box;
+        min-height: 80px;
+        padding: 20px 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
+      }
+      .a-overlay > * {
+        margin: 0 10px !important;
       }
       .a-overlay--dark {
         background-color: rgba(21, 21, 21, 0.8);
