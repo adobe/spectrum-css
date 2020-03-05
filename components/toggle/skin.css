@@ -182,6 +182,10 @@ governing permissions and limitations under the License.
     &:focus-ring {
       &:checked + .spectrum-ToggleSwitch-switch {
         background-color: var(--spectrum-switch-track-color);
+
+        &:before {
+          border-color: var(--spectrum-switch-handle-border-color-selected);
+        }
       }
     }
 
