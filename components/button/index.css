@@ -291,25 +291,6 @@ a.spectrum-ActionButton {
 
   cursor: pointer;
   outline: none;
-
-  &:hover {
-    box-shadow: none;
-  }
-  &:active {
-    box-shadow: none;
-  }
-  &.is-selected {
-    &:focus-ring,
-    &.is-focused {
-      box-shadow: none;
-    }
-  }
-  &:disabled,
-  &.is-disabled {
-    &:focus-ring {
-      box-shadow: none;
-    }
-  }
 }
 
 .spectrum-FieldButton {

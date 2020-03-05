@@ -578,6 +578,12 @@ governing permissions and limitations under the License.
     border-color: var(--spectrum-fieldbutton-border-color-hover);
   }
 
+  &:active,
+  &.is-selected {
+    background-color: var(--spectrum-fieldbutton-background-color-down);
+    border-color: var(--spectrum-fieldbutton-border-color-down);
+  }
+
   &:focus-ring,
   &.is-focused {
     background-color: var(--spectrum-fieldbutton-background-color-key-focus);
@@ -588,12 +594,6 @@ governing permissions and limitations under the License.
     &.is-placeholder {
       color: var(--spectrum-fieldbutton-placeholder-text-color-key-focus);
     }
-  }
-
-  &:active,
-  &.is-selected {
-    background-color: var(--spectrum-fieldbutton-background-color-down);
-    border-color: var(--spectrum-fieldbutton-border-color-down);
   }
 
   &.is-invalid {
