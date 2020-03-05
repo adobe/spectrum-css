@@ -66,6 +66,14 @@ governing permissions and limitations under the License.
   &[disabled] {
     cursor: default;
   }
+
+  &:focus-ring {
+    + .spectrum-ToggleSwitch-switch {
+      &:after {
+        margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
+      }
+    }
+  }
 }
 
 .spectrum-ToggleSwitch-label {
@@ -133,8 +141,9 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
+    margin: 0;
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out;
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
+                margin var(--spectrum-global-animation-duration-100) ease-out;
   }
 }

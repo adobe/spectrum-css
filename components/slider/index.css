@@ -232,14 +232,23 @@ governing permissions and limitations under the License.
     left: 50%;
     top: 50%;
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out;
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
+                width var(--spectrum-global-animation-duration-100) ease-out,
+                height var(--spectrum-global-animation-duration-100) ease-out;
 
-    width: calc(var(--spectrum-slider-handle-width) + var(--spectrum-alias-focus-ring-gap) * 2);
-    height: calc(var(--spectrum-slider-handle-height) + var(--spectrum-alias-focus-ring-gap) * 2);
+    width: var(--spectrum-slider-handle-width);
+    height: var(--spectrum-slider-handle-height);
 
     transform: translate(-50%, -50%);
 
     border-radius: 100%;
+  }
+
+  &.is-focused {
+    &:before {
+      width: calc(var(--spectrum-slider-handle-width) + var(--spectrum-alias-focus-ring-gap) * 2);
+      height: calc(var(--spectrum-slider-handle-height) + var(--spectrum-alias-focus-ring-gap) * 2);
+    }
   }
 }
 
