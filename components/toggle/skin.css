@@ -156,6 +156,9 @@ governing permissions and limitations under the License.
       &:before {
         box-shadow: 0 0 0 var(--spectrum-switch-emphasized-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
       }
+      &:after {
+        border-color: var(--spectrum-switch-emphasized-handle-border-color-key-focus);
+      }
     }
     /* Selected Key Focus */
     &:checked {

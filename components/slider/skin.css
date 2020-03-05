@@ -60,6 +60,9 @@ governing permissions and limitations under the License.
   }
 
   &.is-focused {
+    /* todo: use key-focus when fixed */
+    border-color: var(--spectrum-slider-handle-border-color-hover);
+
     &:before {
       box-shadow: 0 0 0 var(--spectrum-slider-focus-ring-size-key-focus) var(--spectrum-slider-handle-border-color-key-focus);
     }
