@@ -126,38 +126,34 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Button--overBackground,
-.spectrum-Button--overBackground.spectrum-Button--quiet {
+.spectrum-Button--overBackground.spectrum-Button--quiet,
+.spectrum-ClearButton--overBackground {
   position: relative;
+
+  &:after {
+    border-radius: calc(var(--spectrum-clearbutton-medium-height) + var(--spectrum-alias-focus-ring-gap));
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc(var(--spectrum-alias-focus-ring-gap) * -2);
+
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out;
+  }
+
   &:focus-ring {
     box-shadow: none;
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      border-width: var(--spectrum-button-over-background-focus-ring-size-key-focus);
-      border-style: solid;
-      padding: calc(var(--spectrum-button-over-background-focus-ring-gap-key-focus) + var(--spectrum-button-over-background-focus-ring-size-key-focus));
-      position: absolute;
-      top: calc(-1 * (var(--spectrum-button-over-background-focus-ring-gap-key-focus) + (2 * var(--spectrum-button-over-background-focus-ring-size-key-focus))));
-      border-radius: calc(var(--spectrum-button-over-background-border-radius) + var(--spectrum-button-over-background-focus-ring-size-key-focus) + var(--spectrum-button-over-background-focus-ring-gap-key-focus));
-    }
   }
 }
 
 .spectrum-ClearButton--overBackground {
-  position: relative;
   &:focus-ring {
-    box-shadow: none;
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      border-width: var(--spectrum-button-over-background-focus-ring-size-key-focus);
-      border-style: solid;
-      padding: calc(var(--spectrum-button-over-background-focus-ring-gap-key-focus) + var(--spectrum-button-over-background-focus-ring-size-key-focus));
-      position: absolute;
-      top: calc(-1 * (var(--spectrum-button-over-background-focus-ring-gap-key-focus) + (2 * var(--spectrum-button-over-background-focus-ring-size-key-focus))));
-      border-radius: calc(var(--spectrum-clearbutton-medium-height) + var(--spectrum-button-over-background-focus-ring-size-key-focus) + var(--spectrum-button-over-background-focus-ring-gap-key-focus));
+    &:after {
+      /* Adjust margin because ClearButton does not have a border */
+      margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
     }
   }
 }

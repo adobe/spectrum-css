@@ -193,8 +193,10 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-button-over-background-background-color-hover);
     border-color: var(--spectrum-button-over-background-border-color-hover);
     color: inherit;
-    &::after {
-      border-color: var(--spectrum-button-over-background-border-color-key-focus);
+    box-shadow: none;
+
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-over-background-border-color-key-focus);
     }
   }
 
@@ -228,8 +230,10 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-button-quiet-over-background-background-color-hover);
     border-color: var(--spectrum-button-quiet-over-background-border-color-hover);
     color: var(--spectrum-button-quiet-over-background-text-color-hover);
-    &::after {
-      border-color: var(--spectrum-button-over-background-border-color-key-focus);
+    box-shadow: none;
+
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-over-background-border-color-key-focus);
     }
   }
 
