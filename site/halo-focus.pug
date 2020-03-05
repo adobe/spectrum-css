@@ -47,14 +47,21 @@ html(lang='en-US').spectrum.spectrum--medium
       .a-overlay > * {
         margin: 0 10px !important;
       }
+      .a-overlay.spectrum--dark,
+      .a-overlay.spectrum--light {
+        color: var(--spectrum-alias-background-color-default);
+      }
       .a-overlay--dark {
         background-color: rgba(21, 21, 21, 0.8);
+        color: rgba(21, 21, 21, 0.8);
       }
       .a-overlay--light {
         background-color: rgba(225, 225, 225, 0.8);
+        color: rgba(225, 225, 225, 0.8);
       }
       .a-overlay--mid {
         background-color: rgba(100, 100, 100, 0.8);
+        color: rgba(100, 100, 100, 0.8);
       }
 
   body
