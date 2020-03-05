@@ -166,10 +166,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ToggleSwitch--ab {
   .spectrum-ToggleSwitch-input {
-    & {
-      &:checked + .spectrum-ToggleSwitch-switch {
-        background-color: var(--spectrum-switch-track-color);
-      }
+    &:checked + .spectrum-ToggleSwitch-switch {
+      background-color: var(--spectrum-switch-track-color);
     }
 
     &:checked + .spectrum-ToggleSwitch-switch {
