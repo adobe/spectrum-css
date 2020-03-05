@@ -17,7 +17,9 @@ governing permissions and limitations under the License.
 
 .spectrum-Radio .spectrum-Radio-input {
   &:checked + .spectrum-Radio-button {
-    border-color: var(--spectrum-radio-emphasized-circle-border-color-selected);
+    &:before {
+      border-color: var(--spectrum-radio-emphasized-circle-border-color-selected);
+    }
   }
 }
 
