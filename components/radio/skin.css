@@ -11,8 +11,7 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --spectrum-radio-emphasized-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size));
-
+  /* todo: fix in DNA */
   --spectrum-radio-circle-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
 }
 
@@ -152,7 +151,7 @@ governing permissions and limitations under the License.
         border-color: var(--spectrum-radio-circle-border-color-key-focus);
       }
       &:after {
-        box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+        box-shadow: 0 0 0 var(--spectrum-radio-focus-ring-size-key-focus) var(--spectrum-radio-focus-ring-color-key-focus);
       }
     }
     &:checked + .spectrum-Radio-button {

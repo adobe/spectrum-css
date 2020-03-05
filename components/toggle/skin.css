@@ -10,10 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
-  --spectrum-switch-emphasized-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size));
-}
-
 /* Default */
 .spectrum-ToggleSwitch-switch {
   background-color: var(--spectrum-switch-emphasized-track-color);
@@ -135,7 +131,7 @@ governing permissions and limitations under the License.
   .spectrum-ToggleSwitch-input:focus-ring {
     & + .spectrum-ToggleSwitch-switch {
       &:after {
-        box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+        box-shadow: 0 0 0 var(--spectrum-switch-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
       }
       &:before {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-key-focus);
@@ -145,6 +141,9 @@ governing permissions and limitations under the License.
     &:checked {
       & + .spectrum-ToggleSwitch-switch {
         background-color: var(--spectrum-switch-emphasized-track-color-selected-key-focus);
+        &:before {
+          border-color: var(--spectrum-switch-emphasized-handle-border-color-selected-key-focus);
+        }
       }
     }
   }
@@ -182,7 +181,6 @@ governing permissions and limitations under the License.
 
     &:focus-ring {
       &:checked + .spectrum-ToggleSwitch-switch {
-        box-shadow: 0 0 0 var(--spectrum-switch-emphasized-focus-ring-gap-key-focus) var(--spectrum-switch-focus-ring-gap-color-key-focus), 0 0 0 var(--spectrum-switch-emphasized-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
         background-color: var(--spectrum-switch-track-color);
       }
     }

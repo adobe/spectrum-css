@@ -13,8 +13,6 @@ governing permissions and limitations under the License.
 :root {
   /* Overridden because of the way we draw focus rings */
   --spectrum-actionbutton-quiet-border-size-key-focus: 1px;
-
-  --spectrum-button-primary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
 }
 
 .spectrum-LogicButton,
