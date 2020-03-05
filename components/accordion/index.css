@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   /* left padding takes into account the icon's size as well as the focus state's left border */
   padding: var(--spectrum-accordion-item-title-padding-y) var(--spectrum-accordion-item-padding) var(--spectrum-accordion-item-title-padding-y) calc(calc(var(--spectrum-accordion-item-padding) * 2) + 2px);
-  margin: 0;
+  margin: 25px;
 
   min-height: var(--spectrum-accordion-item-height-actual);
 
