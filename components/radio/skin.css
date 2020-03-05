@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 :root {
   /* todo: fix in DNA */
-  --spectrum-radio-circle-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-radio-emphasized-circle-border-color-selected-key-focus: var(--spectrum-radio-emphasized-circle-border-color-selected-hover);
 }
 
 .spectrum-Radio .spectrum-Radio-input {
@@ -50,7 +50,6 @@ governing permissions and limitations under the License.
     .spectrum-Radio-label {
       color: var(--spectrum-radio-emphasized-text-color-hover);
     }
-
   }
 
   &:active {
@@ -156,7 +155,7 @@ governing permissions and limitations under the License.
     }
     &:checked + .spectrum-Radio-button {
       &:before {
-        border-color: var(--spectrum-radio-circle-border-color-selected-key-focus);
+        border-color: var(--spectrum-radio-emphasized-circle-border-color-selected-key-focus);
       }
     }
   }
