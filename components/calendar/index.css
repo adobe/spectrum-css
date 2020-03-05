@@ -54,7 +54,8 @@ governing permissions and limitations under the License.
 }
 
 /* hack to work around #620 */
-.spectrum-Calendar:(dir=ltr):dir(rtl) {
+.spectrum-Calendar:dir(ltr),
+.spectrum-Calendar:dir(rtl) {
   .spectrum-Calendar-prevMonth,
   .spectrum-Calendar-nextMonth {
     margin: 0 var(--spectrum-calendar-button-gap);
