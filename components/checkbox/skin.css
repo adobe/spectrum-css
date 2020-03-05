@@ -111,6 +111,7 @@ governing permissions and limitations under the License.
       box-shadow: 0 0 0 var(--spectrum-checkbox-focus-ring-size-key-focus) var(--spectrum-checkbox-focus-ring-color-key-focus);
     }
   }
+  .spectrum-Checkbox.is-indeterminate &,
   &:checked {
     &:focus-ring + .spectrum-Checkbox-box {
       &:before {
@@ -123,8 +124,9 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Checkbox--quiet .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 .spectrum-Checkbox--quiet.is-indeterminate .spectrum-Checkbox-box,
-.spectrum-Checkbox--quiet .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+.spectrum-Checkbox--quiet.is-indeterminate .spectrum-Checkbox-input:focus-ring + .spectrum-Checkbox-box {
   &:before {
     border-color: var(--spectrum-checkbox-quiet-box-border-color-selected);
   }
