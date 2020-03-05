@@ -12,6 +12,10 @@ governing permissions and limitations under the License.
 
 :root {
   --spectrum-slider-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
+
+    /* todo: remove when fixed */
+  --spectrum-slider-handle-border-color-key-focus: var(--spectrum-global-color-gray-800);
+  --spectrum-slider-handle-focus-ring-color-key-focus: var(--spectrum-alias-focus-color);
 }
 
 .spectrum-Slider-track {
@@ -60,11 +64,10 @@ governing permissions and limitations under the License.
   }
 
   &.is-focused {
-    /* todo: use key-focus when fixed */
-    border-color: var(--spectrum-slider-handle-border-color-hover);
+    border-color: var(--spectrum-slider-handle-border-color-key-focus);
 
     &:before {
-      box-shadow: 0 0 0 var(--spectrum-slider-focus-ring-size-key-focus) var(--spectrum-slider-handle-border-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-slider-focus-ring-size-key-focus) var(--spectrum-slider-handle-focus-ring-color-key-focus);
     }
   }
 
