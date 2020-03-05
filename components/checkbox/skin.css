@@ -12,8 +12,8 @@ governing permissions and limitations under the License.
 
 :root {
   /* todo: fix in DNA */
-  --spectrum-checkbox-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-checkbox-box-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-checkbox-emphasized-text-color-key-focus: var(--spectrum-checkbox-emphasized-text-color-hover);
+  --spectrum-checkbox-emphasized-box-border-color-selected-key-focus: var(--spectrum-checkbox-emphasized-box-border-color-selected-hover);
 }
 
 .spectrum-Checkbox {
@@ -115,7 +115,7 @@ governing permissions and limitations under the License.
   &:checked {
     &:focus-ring + .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--spectrum-checkbox-box-border-color-selected-key-focus);
+        border-color: var(--spectrum-checkbox-emphasized-box-border-color-selected-key-focus);
       }
     }
   }
@@ -159,6 +159,19 @@ governing permissions and limitations under the License.
 
   .spectrum-Checkbox-label {
     color: var(--spectrum-checkbox-text-color-error);
+  }
+
+  &.is-indeterminate .spectrum-Checkbox-input:focus-ring,
+  .spectrum-Checkbox-input:focus-ring {
+    & + .spectrum-Checkbox-box {
+      &:before {
+        border-color: var(--spectrum-checkbox-box-border-color-error-hover);
+      }
+    }
+
+    & ~ .spectrum-Checkbox-label {
+      color: var(--spectrum-checkbox-text-color-error-hover);
+    }
   }
 
   &:hover {
