@@ -13,6 +13,9 @@ governing permissions and limitations under the License.
 :root {
   --spectrum-button-primary-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-focus-ring-size-key-focus: calc(var(--spectrum-alias-focus-ring-gap) + var(--spectrum-alias-focus-ring-size));
+
+  /* Overridden because of the way we draw focus rings */
+  --spectrum-actionbutton-quiet-border-size-key-focus: 1px;
 }
 
 .spectrum-LogicButton,
