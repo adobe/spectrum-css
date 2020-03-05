@@ -1,7 +1,7 @@
 doctype html
 html(lang='en-US').spectrum.spectrum--medium
   head
-    title Wrapping - Spectrum CSS
+    title Halo Focus - Spectrum CSS
 
     include includes/dependencies.pug
 
@@ -53,147 +53,26 @@ html(lang='en-US').spectrum.spectrum--medium
   body
 
     div.a-container
+      div.a-overlay.spectrum.spectrum--dark
+        include templates/halo-focus.pug
+
       div.a-overlay.a-overlay--dark.spectrum--dark
-        button.spectrum-Button.spectrum-Button--overBackground.spectrum-Button--quiet
-          span.spectrum-Button-label Download apps
-
-        button.spectrum-Button.spectrum-Button--overBackground
-          span.spectrum-Button-label Download apps
-
-        button.spectrum-Button.spectrum-Button--cta
-          span.spectrum-Button-label Download apps
-
-        div(class="spectrum-Slider" style="margin: 0 20px;")
-          div(class="spectrum-Slider-controls")
-            div(class="spectrum-Slider-track")
-            div(class="spectrum-Slider-handle" style="left: 40%;")
-              input(type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20")
-            div(class="spectrum-Slider-track")
-
-        label(class="spectrum-Checkbox")
-          input(type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0")
-          span(class="spectrum-Checkbox-box")
-            svg(class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-CheckmarkSmall")
-            svg(class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-DashSmall")
-          span(class="spectrum-Checkbox-label") Checkbox
-
-        div(class="spectrum-Radio")
-          input(type="radio" name="pets" class="spectrum-Radio-input" id="radio-0")
-          span(class="spectrum-Radio-button")
-          label(class="spectrum-Radio-label" for="radio-0") Kittens
-
-        div(class="spectrum-ToggleSwitch")
-          input(type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0")
-          span(class="spectrum-ToggleSwitch-switch")
-          label(class="spectrum-ToggleSwitch-label" for="toggle-onoff-0") Toggle Off
+        include templates/halo-focus.pug
 
       div.a-overlay.a-overlay--mid.spectrum--dark
-        button.spectrum-Button.spectrum-Button--overBackground.spectrum-Button--quiet
-          span.spectrum-Button-label Download apps
+        include templates/halo-focus.pug
 
-        button.spectrum-Button.spectrum-Button--overBackground
-          span.spectrum-Button-label Download apps
+      div.a-overlay.spectrum--dark
+        include templates/halo-focus.pug
 
-        button.spectrum-Button.spectrum-Button--cta
-          span.spectrum-Button-label Download apps
-
-        div(class="spectrum-Slider" style="margin: 0 20px;")
-          div(class="spectrum-Slider-controls")
-            div(class="spectrum-Slider-track")
-            div(class="spectrum-Slider-handle" style="left: 40%;")
-              input(type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20")
-            div(class="spectrum-Slider-track")
-
-        label(class="spectrum-Checkbox")
-          input(type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0")
-          span(class="spectrum-Checkbox-box")
-            svg(class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-CheckmarkSmall")
-            svg(class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-DashSmall")
-          span(class="spectrum-Checkbox-label") Checkbox
-
-        div(class="spectrum-Radio")
-          input(type="radio" name="pets" class="spectrum-Radio-input" id="radio-0")
-          span(class="spectrum-Radio-button")
-          label(class="spectrum-Radio-label" for="radio-0") Kittens
-
-        div(class="spectrum-ToggleSwitch")
-          input(type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0")
-          span(class="spectrum-ToggleSwitch-switch")
-          label(class="spectrum-ToggleSwitch-label" for="toggle-onoff-0") Toggle Off
+      div.a-overlay.spectrum--light
+        include templates/halo-focus.pug
 
       div.a-overlay.a-overlay--mid.spectrum--light
-        button.spectrum-Button.spectrum-Button--overBackground.spectrum-Button--quiet
-          span.spectrum-Button-label Download apps
-
-        button.spectrum-Button.spectrum-Button--overBackground
-          span.spectrum-Button-label Download apps
-
-        button.spectrum-Button.spectrum-Button--cta
-          span.spectrum-Button-label Download apps
-
-        div(class="spectrum-Slider" style="margin: 0 20px;")
-          div(class="spectrum-Slider-controls")
-            div(class="spectrum-Slider-track")
-            div(class="spectrum-Slider-handle" style="left: 40%;")
-              input(type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20")
-            div(class="spectrum-Slider-track")
-
-        label(class="spectrum-Checkbox")
-          input(type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0")
-          span(class="spectrum-Checkbox-box")
-            svg(class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-CheckmarkSmall")
-            svg(class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-DashSmall")
-          span(class="spectrum-Checkbox-label") Checkbox
-
-        div(class="spectrum-Radio")
-          input(type="radio" name="pets" class="spectrum-Radio-input" id="radio-0")
-          span(class="spectrum-Radio-button")
-          label(class="spectrum-Radio-label" for="radio-0") Kittens
-
-        div(class="spectrum-ToggleSwitch")
-          input(type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0")
-          span(class="spectrum-ToggleSwitch-switch")
-          label(class="spectrum-ToggleSwitch-label" for="toggle-onoff-0") Toggle Off
+        include templates/halo-focus.pug
 
       div.a-overlay.a-overlay--light.spectrum--light
-        button.spectrum-Button.spectrum-Button--overBackground.spectrum-Button--quiet
-          span.spectrum-Button-label Download apps
+        include templates/halo-focus.pug
 
-        button.spectrum-Button.spectrum-Button--overBackground
-          span.spectrum-Button-label Download apps
-
-        button.spectrum-Button.spectrum-Button--cta
-          span.spectrum-Button-label Download apps
-
-        div(class="spectrum-Slider" style="margin: 0 20px;")
-          div(class="spectrum-Slider-controls")
-            div(class="spectrum-Slider-track")
-            div(class="spectrum-Slider-handle" style="left: 40%;")
-              input(type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20")
-            div(class="spectrum-Slider-track")
-
-        label(class="spectrum-Checkbox")
-          input(type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0")
-          span(class="spectrum-Checkbox-box")
-            svg(class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-CheckmarkSmall")
-            svg(class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true")
-              use(xlink:href="#spectrum-css-icon-DashSmall")
-          span(class="spectrum-Checkbox-label") Checkbox
-
-        div(class="spectrum-Radio")
-          input(type="radio" name="pets" class="spectrum-Radio-input" id="radio-0")
-          span(class="spectrum-Radio-button")
-          label(class="spectrum-Radio-label" for="radio-0") Kittens
-
-        div(class="spectrum-ToggleSwitch")
-          input(type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0")
-          span(class="spectrum-ToggleSwitch-switch")
-          label(class="spectrum-ToggleSwitch-label" for="toggle-onoff-0") Toggle Off
-
+      div.a-overlay.spectrum.spectrum--light
+        include templates/halo-focus.pug
