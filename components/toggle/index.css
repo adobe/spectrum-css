@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
   /* Hardcoded for wrapping study.
   Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
   --spectrum-switch-label-margin-top: var(--spectrum-global-dimension-size-65);
-
+  
   /* Fix for inconsistent line-height between browsers that would push the label 1px below the intended baseline */
   /* more info: https://stackoverflow.com/questions/47700568/css-fonts-render-differently-in-firefox-and-chrome */
   --spectrum-switch-label-line-height: 1.49;
@@ -57,11 +57,8 @@ governing permissions and limitations under the License.
   cursor: pointer;
 
   &:checked + .spectrum-ToggleSwitch-switch {
-    [dir='ltr'] &::after {
-      transform: translateX(calc(100% - var(--spectrum-switch-handle-border-size)));
-    }
-    [dir='rtl'] &::after {
-      transform: translateX(calc(-100% + var(--spectrum-switch-handle-border-size)));
+    &:before {
+      transform: translateX(calc(var(--spectrum-switch-track-width) - var(--spectrum-switch-handle-size)));
     }
   }
 
@@ -69,12 +66,20 @@ governing permissions and limitations under the License.
   &[disabled] {
     cursor: default;
   }
+
+  &:focus-ring {
+    + .spectrum-ToggleSwitch-switch {
+      &:after {
+        margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
+      }
+    }
+  }
 }
 
 .spectrum-ToggleSwitch-label {
-  text-align: start;
-  margin: 0 var(--spectrum-switch-text-gap);
+  margin-inline: var(--spectrum-switch-text-gap);
   margin-block-start: var(--spectrum-switch-label-margin-top);
+  margin-block-end: 0;
   font-size: var(--spectrum-switch-text-size);
   line-height: var(--spectrum-switch-label-line-height);
   transition: color var(--spectrum-global-animation-duration-200) ease-in-out;
@@ -82,46 +87,39 @@ governing permissions and limitations under the License.
 
 .spectrum-ToggleSwitch-switch {
   display: inline-block;
+  box-sizing: border-box;
   /* positions the pseudo elements relative to this one */
   position: relative;
 
-  block-size: var(--spectrum-switch-track-height);
   inline-size: var(--spectrum-switch-track-width);
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
-  margin: calc((var(--spectrum-switch-height) - var(--spectrum-switch-track-height)) / 2) 0;
+  margin-block: calc((var(--spectrum-switch-height) - var(--spectrum-switch-track-height)) / 2);
+  margin-inline: 0;
 
   flex-grow: 0;
   flex-shrink: 0;
 
   vertical-align: middle;
 
-  /* Forms stacking context for Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1510479
-  Fix for scaling all elements with transform property equally on browser zoom */
-  will-change: transform;
+  transition: background var(--spectrum-global-animation-duration-100) ease-in-out, border var(--spectrum-global-animation-duration-100) ease-in-out;
 
-  &::before,
-  &::after {
+  block-size: var(--spectrum-switch-track-height);
+
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+
+  border-radius: calc(var(--spectrum-switch-track-height) / 2);
+
+  &:before {
     display: block;
     position: absolute;
     content: "";
     box-sizing: border-box;
   }
 
-  /* ::before is used for the track of the switch */
-  &::before {
-    transition: background var(--spectrum-global-animation-duration-100) ease-in-out, border var(--spectrum-global-animation-duration-100) ease-in-out;
-
-    block-size: var(--spectrum-switch-track-height);
-
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-
-    border-radius: calc(var(--spectrum-switch-track-height) / 2);
-  }
-
-  /* ::after is used for the handle of the switch */
-  &::after {
+  /* :before is used for the handle of the switch */
+  &:before {
     transition: background var(--spectrum-global-animation-duration-100) ease-in-out, border var(--spectrum-global-animation-duration-100) ease-in-out, transform var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 
     inline-size: var(--spectrum-switch-handle-size);
@@ -133,5 +131,21 @@ governing permissions and limitations under the License.
     border-width: var(--spectrum-switch-handle-border-size);
     border-radius: var(--spectrum-switch-handle-border-radius);
     border-style: solid;
+  }
+
+  /* :after is used for the focus halo */
+  &:after {
+    border-radius: calc(calc(var(--spectrum-switch-track-height) / 2) + var(--spectrum-alias-focus-ring-gap) * 2);
+    content: '';
+    display: block;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    inset-block-start: 0;
+    margin: 0;
+
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
+                margin var(--spectrum-global-animation-duration-100) ease-out;
   }
 }

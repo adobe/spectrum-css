@@ -11,6 +11,9 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     # Create the folder with the branch name and copy the result into it
     mkdir -p $HOME/temp/$BRANCH_NAME && cp -R backstop_data/* $HOME/temp/$BRANCH_NAME
 
+    # Move the spectrum-css build dist folder into the branch folder
+    mv dist/ $HOME/temp/$BRANCH_NAME
+
     # Create github action folder and copy the action file into it
     mkdir -p $HOME/temp/.github/workflows/ && cp backstop_data/push.yml $HOME/temp/.github/workflows/
 
@@ -30,11 +33,14 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     git push origin $BRANCH_NAME
 
-    TEST_RESULT_URL=http://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/html_report/index.html
+    TEST_RESULT_URL=http://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/html_report/
+
+    DEV_SITE_URL=http://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/dist/docs/
 
     echo Result: $TEST_RESULT_URL
+    echo Dev Site: $DEV_SITE_URL
 
     curl -H "Authorization: token ${VR_RESULT_PUBLISH_GITHUB_TOKEN}" \
-    -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\"}" \
+    -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\n\nDev Site: ${DEV_SITE_URL}\"}" \
     "https://api.github.com/repos/adobe/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
