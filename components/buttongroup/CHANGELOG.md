@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.2.1"></a>
+## 2.2.1
+🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@2.2.0...@spectrum-css/buttongroup@2.2.1)
+
+**Note:** Version bump only for package @spectrum-css/buttongroup
+
+
+
+
+
 <a name="2.2.0"></a>
 # 2.2.0
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@2.1.0...@spectrum-css/buttongroup@2.2.0)
