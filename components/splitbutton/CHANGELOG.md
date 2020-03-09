@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@2.0.5...@spectrum-css/splitbutton@3.0.0-beta.0)
+
+### ✨ Features
+
+* make SplitButton support RTL ([f56928e](https://github.com/adobe/spectrum-css/commit/f56928e))
+
+
+
+
+
 <a name="2.0.5"></a>
 ## 2.0.5
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@2.0.4...@spectrum-css/splitbutton@2.0.5)

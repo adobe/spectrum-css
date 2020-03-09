@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.5...@spectrum-css/tabs@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Tabs support RTL ([e39628a](https://github.com/adobe/spectrum-css/commit/e39628a))
+
+
+
+
+
 <a name="2.1.5"></a>
 ## 2.1.5
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@2.1.4...@spectrum-css/tabs@2.1.5)

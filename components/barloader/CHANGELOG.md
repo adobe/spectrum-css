@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/barloader@2.0.5...@spectrum-css/barloader@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Bar Loader support RTL ([c12138c](https://github.com/adobe/spectrum-css/commit/c12138c))
+
+
+
+
+
 <a name="2.0.5"></a>
 ## 2.0.5
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/barloader@2.0.4...@spectrum-css/barloader@2.0.5)

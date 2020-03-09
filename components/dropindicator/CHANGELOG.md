@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@2.0.5...@spectrum-css/dropindicator@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Drop Indicator support RTL ([9f7b854](https://github.com/adobe/spectrum-css/commit/9f7b854))
+
+
+
+
+
 <a name="2.0.5"></a>
 ## 2.0.5
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@2.0.4...@spectrum-css/dropindicator@2.0.5)

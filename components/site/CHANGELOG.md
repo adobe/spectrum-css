@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0-beta.0"></a>
+# 2.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@1.1.1...@spectrum-css/site@2.0.0-beta.0)
+
+### ✨ Features
+
+* make Site layout respect RTL ([77b18df](https://github.com/adobe/spectrum-css/commit/77b18df))
+
+
+
+
+
 <a name="1.1.1"></a>
 ## 1.1.1
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@1.1.0...@spectrum-css/site@1.1.1)
