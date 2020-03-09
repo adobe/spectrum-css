@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-header {
-  border-bottom-color: var(--spectrum-site-header-border-color);
+  border-block-end-color: var(--spectrum-site-header-border-color);
   background-color: var(--spectrum-site-header-background-color);
 }
 
@@ -80,7 +80,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSExample-markup {
-  border-top: 1px solid var(--spectrum-cssexample-border-color);
+  border-block-start: 1px solid var(--spectrum-cssexample-border-color);
 
   background: var(--spectrum-cssexample-markup-background-color);
 }

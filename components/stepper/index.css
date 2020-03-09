@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   flex-direction: row-reverse;
   flex-wrap: nowrap;
 
-  width: var(--spectrum-component-single-line-width);
+  inline-size: var(--spectrum-component-single-line-width);
   line-height: 0;
   border-radius: var(--spectrum-border-radius);
   transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
@@ -37,27 +37,33 @@ governing permissions and limitations under the License.
 
 .spectrum-Stepper-buttons {
   display: block;
-  border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
+  border-start-start-radius: var(--spectrum-border-radius);
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  border-end-start-radius: var(--spectrum-border-radius);
   transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
   position: relative;
-  display: block;
+  display: flex;
 
-  height: var(--spectrum-stepper-button-height);
-  width: var(--spectrum-stepper-button-width);
+  block-size: var(--spectrum-stepper-button-height);
+  inline-size: var(--spectrum-stepper-button-width);
 
-  padding-left: var(--spectrum-stepper-padding);
-  padding-right: var(--spectrum-stepper-padding);
+  padding-inline-start: var(--spectrum-stepper-padding);
+  padding-inline-end: var(--spectrum-stepper-padding);
 
   /* Avoid margin added by adjacent buttons */
   margin: 0 !important;
 
   border-width: var(--spectrum-stepper-border-size-default);
-  border-right-width: var(--spectrum-stepper-border-size-reset);
-  border-radius: var(--spectrum-border-radius) 0 0 var(--spectrum-border-radius);
+  border-inline-end-width: var(--spectrum-stepper-border-size-reset);
+  border-start-start-radius: var(--spectrum-border-radius);
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  border-end-start-radius: var(--spectrum-border-radius);
 
   .spectrum-Icon {
     margin: 0 !important;
@@ -66,31 +72,25 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Stepper-stepUp {
-  border-bottom: none;
-  border-bottom-left-radius: var(--spectrum-stepper-border-radius-reset);
+  border-block-end: none;
+  border-end-start-radius: var(--spectrum-stepper-border-radius-reset);
 
   .spectrum-Icon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 3px;
+    padding-block-start: 3px;
   }
 }
 
 .spectrum-Stepper-stepDown {
-  border-top: none;
-  border-top-left-radius: var(--spectrum-stepper-border-radius-reset);
-  border-bottom-width: var(--spectrum-stepper-border-size-default);
+  border-block-start: none;
+  border-start-start-radius: var(--spectrum-stepper-border-radius-reset);
+  border-block-end-width: var(--spectrum-stepper-border-size-default);
 
   &:focus {
-    border-top: none;
+    border-block-start: none;
   }
 
   .spectrum-Icon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 3px;
+    padding-block-end: 3px;
   }
 }
 
@@ -99,8 +99,8 @@ governing permissions and limitations under the License.
 
   flex: 1;
 
-  border-top-left-radius: var(--spectrum-stepper-border-radius-reset);
-  border-bottom-left-radius: var(--spectrum-stepper-border-radius-reset);
+  border-start-start-radius: var(--spectrum-stepper-border-radius-reset);
+  border-end-start-radius: var(--spectrum-stepper-border-radius-reset);
 
   z-index: 1;
 }
@@ -110,8 +110,8 @@ governing permissions and limitations under the License.
 
   .spectrum-Stepper-buttons {
     .spectrum-ActionButton {
-      border-top: none;
-      border-left: none;
+      border-block-start: none;
+      border-inline-start: none;
       border-radius: var(--spectrum-stepper-border-radius-reset);
     }
   }

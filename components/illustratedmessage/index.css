@@ -19,7 +19,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-IllustratedMessage {
-  height: 100%;
+  block-size: 100%;
 
   display: flex;
   flex-direction: column;
@@ -30,16 +30,16 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-IllustratedMessage-illustration {
-  margin-bottom: var(--spectrum-illustrated-message-illustration-margin-bottom);
+  margin-block-end: var(--spectrum-illustrated-message-illustration-margin-bottom);
 }
 
 .spectrum-IllustratedMessage-heading {
-  max-width: var(--spectrum-illustrated-message-heading-max-width);
+  max-inline-size: var(--spectrum-illustrated-message-heading-max-width);
   margin: var(--spectrum-illustrated-message-heading-margin);
 }
 
 .spectrum-IllustratedMessage-description {
-  max-width: var(--spectrum-illustrated-message-description-max-width);
+  max-inline-size: var(--spectrum-illustrated-message-description-max-width);
   margin: var(--spectrum-illustrated-message-description-margin);
 
   font-style: italic;

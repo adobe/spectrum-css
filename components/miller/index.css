@@ -25,16 +25,16 @@ governing permissions and limitations under the License.
 
 .spectrum-MillerColumns-item {
   display: inline-block;
-  width: var(--spectrum-miller-column-width);
+  inline-size: var(--spectrum-miller-column-width);
   vertical-align: top;
   outline: none;
   margin: 0;
   padding: 0;
-  margin-right: var(--spectrum-miller-column-margin);
+  margin-inline-end: var(--spectrum-miller-column-margin);
   overflow: auto;
-  height: 100%;
+  block-size: 100%;
 
   &:first-child {
-    margin-left: var(--spectrum-miller-column-margin);
+    margin-inline-start: var(--spectrum-miller-column-margin);
   }
 }

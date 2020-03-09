@@ -34,10 +34,12 @@ governing permissions and limitations under the License.
   display: block;
 
   position: absolute;
-  left: var(--spectrum-accordion-icon-spacing);
-  top: calc(var(--spectrum-accordion-item-height-actual) / 2 - var(--spectrum-accordion-icon-height) / 2);
+  inset-inline-start: var(--spectrum-accordion-icon-spacing);
+  inset-block-start: calc(var(--spectrum-accordion-item-height-actual) / 2 - var(--spectrum-accordion-icon-height) / 2);
 
   transition: transform ease var(--spectrum-global-animation-duration-100);
+
+  transform: logical rotate(0deg);
 }
 
 .spectrum-Accordion-item {
@@ -47,10 +49,10 @@ governing permissions and limitations under the License.
   display: list-item;
   margin: 0;
 
-  border-bottom: var(--spectrum-accordion-item-border-size) solid transparent;
+  border-block-end: var(--spectrum-accordion-item-border-size) solid transparent;
 
   &:first-of-type {
-    border-top: var(--spectrum-accordion-item-border-size) solid transparent;
+    border-block-start: var(--spectrum-accordion-item-border-size) solid transparent;
   }
 }
 
@@ -67,10 +69,11 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
   /* left padding takes into account the icon's size as well as the focus state's left border */
-  padding: var(--spectrum-accordion-item-title-padding-y) var(--spectrum-accordion-item-padding) var(--spectrum-accordion-item-title-padding-y) calc(calc(var(--spectrum-accordion-item-padding) * 2) + 2px);
+  padding-block: var(--spectrum-accordion-item-title-padding-y);
+  padding-inline: calc(calc(var(--spectrum-accordion-item-padding) * 2) + 2px) var(--spectrum-accordion-item-padding);
   margin: 0;
 
-  min-height: var(--spectrum-accordion-item-height-actual);
+  min-block-size: var(--spectrum-accordion-item-height-actual);
 
   font-size: var(--spectrum-accordion-item-title-text-size);
   line-height: var(--spectrum-accordion-item-line-height);
@@ -89,7 +92,7 @@ governing permissions and limitations under the License.
   border: 0;
   font-family: inherit;
   text-align: start;
-  width: 100%;
+  inline-size: 100%;
 
   &:focus {
     outline: none;
@@ -98,17 +101,18 @@ governing permissions and limitations under the License.
       content: '';
 
       position: absolute;
-      left: 0;
-      top: calc(-1 * var(--spectrum-accordion-item-border-size));
-      bottom: calc(-1 * var(--spectrum-accordion-item-border-size));
+      inset-inline-start: 0;
+      inset-block-start: calc(-1 * var(--spectrum-accordion-item-border-size));
+      inset-block-end: calc(-1 * var(--spectrum-accordion-item-border-size));
 
-      width: var(--spectrum-accordion-item-border-size-key-focus);
+      inline-size: var(--spectrum-accordion-item-border-size-key-focus);
     }
   }
 }
 
 .spectrum-Accordion-itemContent {
-  padding: 0 var(--spectrum-accordion-item-content-padding) var(--spectrum-accordion-item-content-padding) var(--spectrum-accordion-item-content-padding);
+  padding-block: 0 var(--spectrum-accordion-item-content-padding);
+  padding-inline: var(--spectrum-accordion-item-content-padding) var(--spectrum-accordion-item-content-padding);
   display: none;
 }
 
@@ -116,17 +120,17 @@ governing permissions and limitations under the License.
   &.is-open {
     > .spectrum-Accordion-itemHeading {
       > .spectrum-Accordion-itemIndicator {
-        transform: rotate(90deg);
+        transform: logical rotate(90deg);
       }
     }
 
     > .spectrum-Accordion-itemIndicator {
-      transform: rotate(90deg);
+      transform: logical rotate(90deg);
     }
 
     > .spectrum-Accordion-itemHeader::after {
       /* No bottom border when open, so be less tall */
-      height: var(--spectrum-accordion-item-height-actual);
+      block-size: var(--spectrum-accordion-item-height-actual);
     }
 
     > .spectrum-Accordion-itemContent {

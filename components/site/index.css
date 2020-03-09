@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
   /* .spectrum-CSSExample */
   --spectrum-cssexample-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-cssexample-margin-bottom: var(--spectrum-global-dimension-size-800);
-  --spectrum-cssexample-min-height: --spectrum-global-dimension-size-2400;
+  --spectrum-cssexample-min-height: 0;
 
   --spectrum-cssexample-heading-margin-bottom: var(--spectrum-global-dimension-size-100);
 
@@ -58,7 +58,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site {
-  height: 100%;
+  block-size: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -66,19 +66,19 @@ governing permissions and limitations under the License.
 .spectrum-Site-content {
   display: flex;
   flex-direction: row;
-  max-height: 100%;
-  height: 100%;
+  max-block-size: 100%;
+  block-size: 100%;
 }
 
 .spectrum-Site-header {
   display: none;
 
   box-sizing: border-box;
-  height: var(--spectrum-site-header-height);
+  block-size: var(--spectrum-site-header-height);
   padding: var(--spectrum-site-header-padding);
 
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  border-block-end-width: 1px;
+  border-block-end-style: solid;
 }
 
 .spectrum-Site-sideBar {
@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
-  max-width: 100%;
+  max-inline-size: 100%;
 
   transition: none;
 }
@@ -116,9 +116,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-searchResults {
-  top: -100%;
-  left: -100%;
-  max-height: calc(90vh - 120px);
+  inset-block-start: -100%;
+  inset-inline-start: -100%;
+  max-block-size: calc(90vh - 120px);
   z-index: 101;
   position: absolute;
 
@@ -130,19 +130,19 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-logo {
-  margin-right: var(--spectrum-global-dimension-size-175);
+  margin-inline-end: var(--spectrum-global-dimension-size-175);
   color: rgb(225, 37, 27);
 }
 
 .spectrum--medium {
   .spectrum-Site-logo {
-    height: 31px;
+    block-size: 31px;
   }
 }
 
 .spectrum--large {
   .spectrum-Site-logo {
-    height: 39px;
+    block-size: 39px;
   }
 }
 
@@ -153,35 +153,35 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-bottomNav {
-  margin-top: var(--spectrum-global-dimension-static-size-1000);
+  margin-block-start: var(--spectrum-global-dimension-static-size-1000);
 }
 
 .spectrum-Site-mainContainer {
   flex-grow: 1;
-  border: none;
+  border-block: none;
 
   overflow-y: auto;
 }
 
 .spectrum-Site-page {
   padding: 40px 52px 24px 52px;
-  max-width: 1080px;
+  max-inline-size: 1080px;
   margin: auto;
 }
 
 .spectrum-Site-hero {
-  max-width: 75%;
+  max-inline-size: 75%;
   margin: auto;
 }
 
 .spectrum-Site-heroHeading {
-  margin-bottom: 16px;
+  margin-block-end: 16px;
 }
 
 .spectrum-Site-heroImage {
-  margin-top: 40px;
-  margin-bottom: 80px;
-  max-width: 100%;
+  margin-block-start: 40px;
+  margin-block-end: 80px;
+  max-inline-size: 100%;
 }
 
 .spectrum-Site-footer {
@@ -203,10 +203,10 @@ governing permissions and limitations under the License.
 
   pointer-events: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
 
   /* Float above things by default */
   z-index: 99;
@@ -240,9 +240,9 @@ governing permissions and limitations under the License.
 
   .spectrum-Site-sideBar {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 100%;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-end: 100%;
     z-index: 100;
 
     transform: translateX(0);
@@ -258,12 +258,12 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Site-page {
-    padding-left: var(--spectrum-global-dimension-size-300);
-    padding-right: var(--spectrum-global-dimension-size-300);
+    padding-inline-start: var(--spectrum-global-dimension-size-300);
+    padding-inline-end: var(--spectrum-global-dimension-size-300);
   }
 
   .spectrum-Site-hero {
-    max-width: 100%;
+    max-inline-size: 100%;
   }
 
   .spectrum-Site-heroHeading h1.spectrum-Heading1--display {
@@ -273,13 +273,13 @@ governing permissions and limitations under the License.
 
 /* CSS Component */
 .spectrum-CSSComponent {
-  max-width: var(--spectrum-csscomponent-max-width);
+  max-inline-size: var(--spectrum-csscomponent-max-width);
   margin: var(--spectrum-csscomponent-margin) auto;
   padding: 0 var(--spectrum-csscomponent-padding);
 }
 
 .spectrum-CSSComponent-heading {
-  margin-bottom: var(--spectrum-csscomponent-heading-margin-bottom);
+  margin-block-end: var(--spectrum-csscomponent-heading-margin-bottom);
 
   display: flex;
   flex-direction: row;
@@ -309,34 +309,34 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSComponent-detailsTable th {
   text-align: left;
-  height: var(--spectrum-global-dimension-size-350);
+  block-size: var(--spectrum-global-dimension-size-350);
   font-weight: var(--spectrum-global-font-weight-regular);
-  padding-right: var(--spectrum-csscomponent-detailstable-padding-x);
+  padding-inline-end: var(--spectrum-csscomponent-detailstable-padding-x);
 }
 
 .spectrum-CSSComponent-detailsTable {
   border-spacing: 0;
-  margin-top: var(--spectrum-csscomponent-detailstable-margin-top);
-  margin-bottom: var(--spectrum-csscomponent-detailstable-margin-bottom);
+  margin-block-start: var(--spectrum-csscomponent-detailstable-margin-top);
+  margin-block-end: var(--spectrum-csscomponent-detailstable-margin-bottom);
 }
 
 .spectrum-CSSComponent-sectionHeading {
-  margin-top: var(--spectrum-csscomponent-sectionheading-margin-top);
-  margin-bottom: var(--spectrum-csscomponent-sectionheading-margin-bottom);
+  margin-block-start: var(--spectrum-csscomponent-sectionheading-margin-top);
+  margin-block-end: var(--spectrum-csscomponent-sectionheading-margin-bottom);
 }
 
 .spectrum-CSSExample-status,
 .spectrum-CSSComponent-status {
   padding: 0 !important;
-  min-height: 0 !important;
+  min-block-size: 0 !important;
 }
 
 .spectrum-CSSComponent-status::before {
-  margin-left: 0 !important;
+  margin-inline-start: 0 !important;
 }
 
 .spectrum-CSSExample-status {
-  margin-left: var(--spectrum-global-dimension-size-200);
+  margin-inline-start: var(--spectrum-global-dimension-size-200);
 }
 
 .spectrum-CSSComponent-version {
@@ -345,8 +345,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSComponent-description {
-  margin-top: var(--spectrum-csscomponent-description-margin-top);
-  margin-bottom: var(--spectrum-csscomponent-description-margin-bottom);
+  margin-block-start: var(--spectrum-csscomponent-description-margin-top);
+  margin-block-end: var(--spectrum-csscomponent-description-margin-bottom);
 }
 
 /* cards */
@@ -354,12 +354,12 @@ governing permissions and limitations under the License.
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom: var(--spectrum-global-dimension-size-700);
+  margin-block-end: var(--spectrum-global-dimension-size-700);
 }
 
 .spectrum-CSSComponent-resources .spectrum-Card {
-  margin-right: var(--spectrum-global-dimension-size-300);
-  margin-bottom: var(--spectrum-global-dimension-size-300);
+  margin-inline-end: var(--spectrum-global-dimension-size-300);
+  margin-block-end: var(--spectrum-global-dimension-size-300);
 }
 
 .spectrum--dark,
@@ -386,13 +386,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSS-switcherContainer {
-  margin-left: var(--spectrum-global-dimension-size-400);
+  margin-inline-start: var(--spectrum-global-dimension-size-400);
   white-space: nowrap;
 }
 
 /* CSS Example */
 .spectrum-CSSExample {
-  margin-bottom: var(--spectrum-cssexample-margin-bottom);
+  margin-block-end: var(--spectrum-cssexample-margin-bottom);
 }
 
 .spectrum-CSSExample-container {
@@ -408,7 +408,7 @@ governing permissions and limitations under the License.
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: var(--spectrum-cssexample-heading-margin-bottom) !important;
+  margin-block-end: var(--spectrum-cssexample-heading-margin-bottom) !important;
 }
 
 .spectrum-CSSExample-example,
@@ -426,7 +426,7 @@ governing permissions and limitations under the License.
   justify-content: center;
   */
 
-  min-height: var(--spectrum-cssexample-min-height);
+  min-block-size: var(--spectrum-cssexample-min-height);
 
   padding: var(--spectrum-cssexample-padding-y) var(--spectrum-cssexample-padding-x);
 
@@ -435,8 +435,8 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSExample-markup {
   position: relative;
-  max-width: 100%;
-  max-height: var(--spectrum-cssexample-markup-height);
+  max-inline-size: 100%;
+  max-block-size: var(--spectrum-cssexample-markup-height);
 
   padding: var(--spectrum-cssexample-markup-padding-y) var(--spectrum-cssexample-markup-padding-x);
 
@@ -446,9 +446,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSExample-markup.is-open {
-  max-height: 100%;
+  max-block-size: 100%;
 
-  padding-bottom: var(--spectrum-global-dimension-size-700);
+  padding-block-end: var(--spectrum-global-dimension-size-700);
 }
 
 .spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle::before {
@@ -456,28 +456,29 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSExample-markupToggle + pre {
-  padding-bottom: var(--spectrum-global-dimension-size-100);
+  padding-block-end: var(--spectrum-global-dimension-size-100);
 }
 
 .spectrum-CSSExample-example--overlay {
   position: relative;
+  min-height: var(--spectrum-global-dimension-size-800);
 }
 
 .spectrum-Dialog.spectrum-CSSExample-dialog {
   position: relative !important;
   transform: none !important;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  top: 0;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  inset-inline-start: 0;
+  inset-block-start: 0;
   z-index: 1;
   transition: none;
 }
 
-.spectrum-CSSExample-overlayShowButton {
+.spectrum-Button.spectrum-CSSExample-overlayShowButton {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -488,9 +489,9 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-markupToggle {
   position: absolute;
   z-index: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
 
   box-sizing: border-box;
   padding: var(--spectrum-cssexample-markup-toggle-padding-y) var(--spectrum-cssexample-markup-toggle-padding-x);
@@ -506,12 +507,12 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-CSSComponent-description {
-    margin-bottom: var(--spectrum-global-dimension-size-150);
+    margin-block-end: var(--spectrum-global-dimension-size-150);
     /*--spectrum-body-2-text-size: var(--spectrum-global-dimension-font-size-100);*/
   }
 
   .spectrum-CSSExample {
-    margin-bottom: var(--spectrum-global-dimension-size-200);
+    margin-block-end: var(--spectrum-global-dimension-size-200);
   }
 
   .spectrum-CSSExample-example {
@@ -519,7 +520,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-CSSComponent-header {
-    margin-bottom: var(--spectrum-global-dimension-size-150);
+    margin-block-end: var(--spectrum-global-dimension-size-150);
   }
 
   .spectrum-CSSComponent-statusContainer,
@@ -540,14 +541,14 @@ governing permissions and limitations under the License.
 }
 
 .u-scrollable::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  inline-size: 10px;
+  block-size: 10px;
 }
 
 .u-scrollable::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  width: 8px;
-  height: 8px;
-  border: 2px solid rgba(0, 0, 0, 0);
+  inline-size: 8px;
+  block-size: 8px;
+  border-block: 2px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
 }

@@ -45,7 +45,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-coverPhoto {
   background-color: var(--spectrum-card-coverphoto-background-color);
-  border-bottom-color: var(--spectrum-card-coverphoto-border-color);
+  border-block-end-color: var(--spectrum-card-coverphoto-border-color);
 }
 
 .spectrum-Card-footer {

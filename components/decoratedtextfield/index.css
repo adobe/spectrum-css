@@ -22,14 +22,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DecoratedTextfield-icon {
-  width: var(--spectrum-textfield-icon-size);
-  height: var(--spectrum-textfield-icon-size);
+  inline-size: var(--spectrum-textfield-icon-size);
+  block-size: var(--spectrum-textfield-icon-size);
 
   position: absolute;
-  top: calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-textfield-icon-size) / 2));
-  right: var(--spectrum-textfield-padding-x);
+  inset-block-start: calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-textfield-icon-size) / 2));
+  inset-inline-end: var(--spectrum-textfield-padding-x);
 }
 
 .spectrum-DecoratedTextfield-field {
-  padding-right: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-textfield-icon-size) + var(--spectrum-textfield-icon-margin-left));
+  padding-inline-end: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-textfield-icon-size) + var(--spectrum-textfield-icon-margin-left));
 }

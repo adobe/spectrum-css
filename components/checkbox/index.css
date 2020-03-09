@@ -28,10 +28,10 @@ governing permissions and limitations under the License.
 
   position: relative;
 
-  min-height: var(--spectrum-checkbox-height);
-  max-width: 100%;
+  min-block-size: var(--spectrum-checkbox-height);
+  max-inline-size: 100%;
 
-  margin-right: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
+  margin-inline-end: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
 
   vertical-align: top;
 }
@@ -56,10 +56,10 @@ governing permissions and limitations under the License.
 
   /* Hit area */
   position: absolute;
-  top: 0;
-  left: calc(var(--spectrum-checkbox-cursor-hit-x) * -1);
-  width: calc(100% + var(--spectrum-checkbox-cursor-hit-x) * 2);
-  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--spectrum-checkbox-cursor-hit-x) * -1);
+  inline-size: calc(100% + var(--spectrum-checkbox-cursor-hit-x) * 2);
+  block-size: 100%;
 
   opacity: .0001;
   z-index: 1;
@@ -111,8 +111,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Checkbox-label {
-  margin-left: var(--spectrum-checkbox-text-gap);
-  margin-top: var(--spectrum-checkbox-label-margin-top);
+  text-align: start;
+  margin-inline-start: var(--spectrum-checkbox-text-gap);
+  margin-block-start: var(--spectrum-checkbox-label-margin-top);
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
   line-height: var(--spectrum-checkbox-label-line-height);
@@ -121,8 +122,8 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-box {
   position: relative;
   box-sizing: border-box;
-  width: var(--spectrum-checkbox-box-size);
-  height: var(--spectrum-checkbox-box-size);
+  inline-size: var(--spectrum-checkbox-box-size);
+  block-size: var(--spectrum-checkbox-box-size);
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
   margin: calc((var(--spectrum-checkbox-height) - var(--spectrum-checkbox-box-size)) / 2) 0;
@@ -167,11 +168,11 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-checkmark,
 .spectrum-Checkbox-partialCheckmark {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
 
-  margin-top: calc(var(--spectrum-icon-checkmark-small-height) / -2);
-  margin-left: calc(var(--spectrum-icon-checkmark-small-width) / -2);
+  margin-block-start: calc(var(--spectrum-icon-checkmark-small-height) / -2);
+  margin-inline-start: calc(var(--spectrum-icon-checkmark-small-width) / -2);
 
   opacity: 0;
   transform: scale(0);

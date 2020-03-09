@@ -23,7 +23,8 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
 
-  padding: var(--spectrum-fieldlabel-padding-top) 0 var(--spectrum-fieldlabel-padding-bottom);
+  padding-block: var(--spectrum-fieldlabel-padding-top) var(--spectrum-fieldlabel-padding-bottom);
+  padding-inline: 0;
 
   font-size: var(--spectrum-fieldlabel-text-size);
   font-weight: var(--spectrum-fieldlabel-text-font-weight);
@@ -37,22 +38,26 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel-requiredIcon {
-  margin: var(--spectrum-fieldlabel-asterisk-margin-y) 0 0 var(--spectrum-fieldlabel-asterisk-gap);
+  margin-block: var(--spectrum-fieldlabel-asterisk-margin-y) 0;
+  margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
 }
 
 .spectrum-FieldLabel--left {
   display: inline-block;
-  padding: var(--spectrum-fieldlabel-side-padding-top) var(--spectrum-fieldlabel-side-padding-x) 0 0;
+  padding-block: var(--spectrum-fieldlabel-side-padding-top) 0;
+  padding-inline: 0 var(--spectrum-fieldlabel-side-padding-x);
 
   & .spectrum-FieldLabel-requiredIcon {
-    margin: var(--spectrum-fieldlabel-side-asterisk-margin-y) 0 0 var(--spectrum-fieldlabel-asterisk-gap);
+    margin-block: var(--spectrum-fieldlabel-side-asterisk-margin-y) 0;
+    margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
   }
 }
 
 .spectrum-FieldLabel--right {
   display: inline-block;
-  text-align: right;
-  padding: var(--spectrum-fieldlabel-side-padding-top) var(--spectrum-fieldlabel-side-padding-x) 0 0;
+  text-align: end;
+  padding-block: var(--spectrum-fieldlabel-side-padding-top) 0;
+  padding-inline: 0 var(--spectrum-fieldlabel-side-padding-x);
 }
 
 .spectrum-Form {
@@ -85,7 +90,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
 
     & + .spectrum-Form-item {
-      margin-top: var(--spectrum-fieldlabel-margin);
+      margin-block-start: var(--spectrum-fieldlabel-margin);
     }
   }
 }

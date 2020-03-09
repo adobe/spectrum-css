@@ -14,7 +14,8 @@ governing permissions and limitations under the License.
 
 .spectrum-CycleButton {
   /* Be square */
-  padding: 0 var(--spectrum-actionbutton-icon-padding-x);
+  padding-block: 0;
+  padding-inline: var(--spectrum-actionbutton-icon-padding-x);
 
   .spectrum-CycleButton-item:not(.is-selected) {
     display: none

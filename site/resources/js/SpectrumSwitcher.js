@@ -15,14 +15,30 @@ function SpectrumSwitcher(options) {
 
   this._theme = options.theme || 'light';
   this._scale = options.scale || 'medium';
+  this._direction = options.direction || 'ltr';
+  this._callback = options.callback || null;
 
   document.addEventListener('keydown', function(event) {
     if (event.ctrlKey) {
-      if (SpectrumSwitcher.ThemeKeys[event.key]) {
-        this.theme = SpectrumSwitcher.ThemeKeys[event.key];
+      let property;
+      let value;
+      if (value = SpectrumSwitcher.ThemeKeys[event.key]) {
+        property = 'theme';
       }
-      else if (SpectrumSwitcher.ScaleKeys[event.key]) {
-        this.scale = SpectrumSwitcher.ScaleKeys[event.key];
+      else if (value = SpectrumSwitcher.ScaleKeys[event.key]) {
+        property = 'scale';
+      }
+      else if (value = SpectrumSwitcher.DirectionKeys[event.key]) {
+        property = 'direction';
+      }
+
+      this[property] = value;
+
+      if (this._callback) {
+        this._callback({
+          property: property,
+          value: value
+        });
       }
     }
   }.bind(this));
@@ -40,6 +56,11 @@ SpectrumSwitcher.ColorStops = [
   'darkest'
 ];
 
+SpectrumSwitcher.Direction = [
+  'ltr',
+  'rtl'
+];
+
 SpectrumSwitcher.ThemeKeys = {
   '1': 'lightest',
   '2': 'light',
@@ -50,6 +71,11 @@ SpectrumSwitcher.ThemeKeys = {
 SpectrumSwitcher.ScaleKeys = {
   'm': 'medium',
   'l': 'large'
+};
+
+SpectrumSwitcher.DirectionKeys = {
+  'r': 'rtl',
+  'n': 'ltr'
 };
 
 Object.defineProperty(SpectrumSwitcher.prototype, 'theme', {
@@ -77,5 +103,16 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'scale', {
   },
   get: function() {
     return this._scale;
+  }
+});
+
+Object.defineProperty(SpectrumSwitcher.prototype, 'direction', {
+  set: function(direction) {
+    document.documentElement.setAttribute('dir', direction);
+
+    this._direction = direction;
+  },
+  get: function() {
+    return this._direction;
   }
 });
