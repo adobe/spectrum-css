@@ -14,7 +14,13 @@ const fsp = require('fs').promises;
 const semver = require('semver');
 
 async function readPackage(component) {
-  return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
+  try {
+    return JSON.parse(await fsp.readFile(path.join(component, 'package.json')));
+  }
+  catch(err) {
+    console.trace();
+    throw new Error(`Error while parsing JSON: for ${component}: ${err}`);
+  }
 }
 
 async function writePackage(component, package) {
@@ -37,7 +43,12 @@ async function checkPeerDependencies() {
         let peerDepVer = package.peerDependencies[dependency];
         if (devDepVer) {
           if (!semver.satisfies(devDepVer, peerDepVer)) {
-            throw new Error(`${component} has out of date peerDependencies ${dependency} (found ${devDepVer}, does not satisfy ${peerDepVer})`);
+            console.error(`${component} has out of date peerDependencies ${dependency} (found ${devDepVer}, does not satisfy ${peerDepVer})`);
+
+            // Set a new peer dependency, stripping the beta version number
+            let newPeerDepVer = '^' + devDepVer.replace(/-\d+$/, '');
+            package.peerDependencies[dependency] = newPeerDepVer
+            console.error(`  Updated ${dependency} to ${newPeerDepVer}`);
           }
         }
         else {
