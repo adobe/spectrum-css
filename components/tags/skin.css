@@ -144,10 +144,9 @@ governing permissions and limitations under the License.
 
   .spectrum-Tags-itemClearButton {
     &.is-focused {
-       border: 2px solid var(--spectrum-tag-removable-border-color-key-focus);
-       border-radius: var(--spectrum-alias-border-radius-regular);
-       background-color: var(--spectrum-tag-removable-button-background-color-key-focus);
-       color: var(--spectrum-tag-removable-button-icon-color-key-focus);
+      border-color: var(--spectrum-tag-removable-border-color-key-focus);
+      background-color: var(--spectrum-tag-removable-button-background-color-key-focus);
+      color: var(--spectrum-tag-removable-button-icon-color-key-focus);
     }
     &:hover {
       background-color: var(--spectrum-tag-removable-button-background-color-hover);
