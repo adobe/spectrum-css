@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.0...@spectrum-css/stepper@3.0.0-beta.1)
+
+### ✨ Features
+
+* make Stepper use new Textfield markup ([724d09a](https://github.com/adobe/spectrum-css/commit/724d09a))
+
+
+### 🛑 BREAKING CHANGES
+
+* migrated to next Textfield markup
+* Use FieldButton instead of ActionButton
+* Width decreased
+* .spectrum-Stepper-stepUpIcon and .spectrum-Stepper-stepDownIcon removed
+* Must apply .is-disabled for disabled steppers
+* Must apply .is-focused and .is-keyboardFocused
+* remove support for :invalid
+
+
+
+
+
 <a name="3.0.0-beta.0"></a>
 # 3.0.0-beta.0
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@2.0.6...@spectrum-css/stepper@3.0.0-beta.0)

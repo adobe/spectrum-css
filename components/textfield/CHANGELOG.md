@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.0-beta.0...@spectrum-css/textfield@3.0.0-beta.1)
+
+### ✨ Features
+
+* refactor Textfield to be decorated, closes [#142](https://github.com/adobe/spectrum-css/issues/142) ([d34be59](https://github.com/adobe/spectrum-css/commit/d34be59))
+
+
+### 🛑 BREAKING CHANGES
+
+* remove support for .is-focused on .spectrum-Textfield-input
+* remove support for .is-invalid/.is-valid on .spectrum-Textfield-input (must go on parent)
+* remove support for .is-disabled on .spectrum-Textfield-input (must go on parent)
+* markup changed completely, see migration guide
+
+Co-authored-by: Daniel Lu <dlu@livefyre.com>
+
+
+
+
+
 <a name="3.0.0-beta.0"></a>
 # 3.0.0-beta.0
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@2.0.6...@spectrum-css/textfield@3.0.0-beta.0)

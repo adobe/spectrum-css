@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.0...@spectrum-css/fieldlabel@3.0.0-beta.1)
+
+### ✨ Features
+
+* make Form/FieldLabel use new Textfield markup ([bb404fb](https://github.com/adobe/spectrum-css/commit/bb404fb))
+
+
+### 🛑 BREAKING CHANGES
+
+* migrated to next Textfield markup
+
+
+
+
+
 <a name="3.0.0-beta.0"></a>
 # 3.0.0-beta.0
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@2.0.6...@spectrum-css/fieldlabel@3.0.0-beta.0)
