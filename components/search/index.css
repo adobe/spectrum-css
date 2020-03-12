@@ -12,67 +12,38 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
+:root {
+  --spectrum-search-quiet-button-offset: calc(var(--spectrum-fieldbutton-min-width) / 2 - var(--spectrum-icon-cross-small-width) / 2);
+}
+
 .spectrum-Search {
   display: inline-block;
   position: relative;
+}
 
-  .spectrum-ClearButton {
-    position: absolute;
-    inset-inline-end: 0;
-    inset-block-start: 0;
-  }
+.spectrum-Search-clearButton {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
 }
 
 .spectrum-Search-input {
-  display: block;
-
   /* Correct the odd appearance of input[type="search"] in Chrome and Safari.*/
-  /* This gets overridden by .spectrum-Textfield */
+  /* Without this, it gets overridden by .spectrum-Textfield */
   -webkit-appearance: none;
 
   /* Correct the outline for input[type="search"] style in Safari. */
   outline-offset: -2px;
-
-  /* Use padding instead of text-indent so long strings don't overlap the icon */
-  padding-inline-start: var(--spectrum-search-padding-left);
-  text-indent: 0;
-
-  /* Don't let long strings overlap the close icon */
-  padding-inline-end: var(--spectrum-search-padding-right);
 
   /* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
     -webkit-appearance: none;
   }
-
-  &.spectrum-Textfield--quiet {
-    padding-inline-start: var(--spectrum-search-quiet-padding-left);
-    padding-inline-end: var(--spectrum-search-quiet-padding-right);
-
-    /* Since quiet button has no left padding, push the icon all the way to the left */
-    & ~ .spectrum-Search-icon {
-      inset-inline-start: 0;
-    }
-
-    & ~ .spectrum-Search-clear {
-      inset-inline-end: -8px;
-    }
-
-    /* Since quiet button has no right padding, push the icon all the way to the right */
-    & ~ .spectrum-Search-rightIcon {
-      inset-inline-end: 0;
-    }
-  }
 }
 
-.spectrum-Search-icon {
-  display: block;
-  position: absolute;
-  inset-inline-start: 12px;
-  inset-block-start: calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-magnifier-width) / 2));
-
-  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
-
-  pointer-events: none;
+.spectrum-Search--quiet {
+  .spectrum-Search-clearButton {
+    transform: translateX(var(--spectrum-search-quiet-button-offset));
+  }
 }
