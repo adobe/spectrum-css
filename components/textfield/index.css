@@ -13,43 +13,51 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  --spectrum-textfield-quiet-invalid-background-position: 100% 50%;
+  --spectrum-textfield-padding-top: 3px;
+  --spectrum-textfield-padding-bottom: 5px;
 
-  --spectrum-textarea-height: auto;
+  /* Todo fix in DNA */
+  --spectrum-textfield-quiet-border-radius: 0;
 
-  /* Todo: fix in DNA */
-  --spectrum-textarea-min-height: var(--spectrum-global-dimension-size-700);
+  --spectrum-textfield-multiline-height: auto;
+  --spectrum-textfield-multiline-min-height: var(--spectrum-global-dimension-size-700);
 
-  /* Remove border width from padding */
-  --spectrum-textfield-padding-top-adjusted: calc(var(--spectrum-textfield-padding-top) - var(--spectrum-textfield-border-size));
-
-  /* Hack: we need 1px less padding here for text to fix properly */
-  --spectrum-textfield-padding-bottom-adjusted: calc(var(--spectrum-textfield-padding-bottom) - var(--spectrum-textfield-border-size) - 1px);
-  --spectrum-textfield-padding-x-adjusted: calc(var(--spectrum-textfield-padding-x) - var(--spectrum-textfield-border-size));
-
-  --spectrum-textarea-padding-top-adjusted: calc(var(--spectrum-textarea-padding-top) - var(--spectrum-textarea-border-size));
-  --spectrum-textarea-padding-bottom-adjusted: calc(var(--spectrum-textarea-padding-bottom) - var(--spectrum-textarea-border-size));
-  --spectrum-textarea-padding-x-adjusted: calc(var(--spectrum-textarea-padding-x) - var(--spectrum-textarea-border-size));
+  --spectrum-textfield-multiline-padding-x: var(--spectrum-textfield-padding-x);
+  --spectrum-textfield-multiline-padding-top: var(--spectrum-textfield-padding-top);
+  --spectrum-textfield-multiline-padding-bottom: var(--spectrum-textfield-padding-bottom);
 
   /* Todo: DNA uses incorrect font family "Adobe Clean" */;
   --spectrum-textfield-text-font-family: var(--spectrum-font-family-base);
+
+  --spectrum-textfield-icon-gap: var(--spectrum-global-dimension-size-65);
+  --spectrum-textfield-quiet-icon-gap: var(--spectrum-global-dimension-size-75);
 }
 
 .spectrum-Textfield {
+  display: inline-flex;
+  position: relative;
+  min-inline-size: var(--spectrum-textfield-min-width);
+  inline-size: var(--spectrum-component-single-line-width);
+
+  &.spectrum-Textfield--quiet.spectrum-Textfield--multiline .spectrum-Textfield-input {
+    block-size: var(--spectrum-textfield-height);
+    min-block-size: var(--spectrum-textfield-height);
+  }
+}
+
+.spectrum-Textfield-input {
   /* box */
   box-sizing: border-box;
   border: var(--spectrum-textfield-border-size) solid;
   border-radius: var(--spectrum-textfield-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding-block: var(--spectrum-textfield-padding-top-adjusted) var(--spectrum-textfield-padding-bottom-adjusted);
-  padding-inline: var(--spectrum-textfield-padding-x-adjusted) var(--spectrum-textfield-padding-x-adjusted);
+  padding: var(--spectrum-textfield-padding-top) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) calc(var(--spectrum-textfield-padding-x) - 1px);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
-  min-inline-size: var(--spectrum-textfield-min-width);
+  inline-size: 100%;
   block-size: var(--spectrum-textfield-height);
-  inline-size: var(--spectrum-component-single-line-width);
 
   vertical-align: top; /* used to align them correctly in forms. */
 
@@ -143,64 +151,109 @@ governing permissions and limitations under the License.
     box-shadow: none;
   }
 
-  &.is-invalid,
-  &:invalid,
-  &.is-valid {
-    background-repeat: no-repeat;
+  .spectrum-Textfield.is-valid & {
+    padding-inline-end: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-icon-margin-left));
   }
 
-  &.is-invalid,
-  &:invalid {
-    background-size: var(--spectrum-icon-alert-medium-width) var(--spectrum-icon-alert-medium-width);
-    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2) - var(--spectrum-textfield-quiet-border-size));
-    padding-inline-end: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-icon-margin-left));
+  .spectrum-Textfield.is-invalid & {
+    padding-inline-end: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-icon-margin-left));
+  }
 
-    [dir="rtl"] & {
-      background-position: calc(var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2));
+  .spectrum-Textfield--multiline & {
+    block-size: var(--spectrum-textfield-multiline-height);
+    min-block-size: var(--spectrum-textfield-multiline-min-height);
+    padding: var(--spectrum-textfield-multiline-padding-top) var(--spectrum-textfield-multiline-padding-x) var(--spectrum-textfield-multiline-padding-bottom) calc(var(--spectrum-textfield-multiline-padding-x) - 1px);
+
+    /* Remove the default vertical scrollbar for textarea in IE. */
+    overflow: auto;
+  }
+
+  .spectrum-Textfield--quiet & {
+    border-radius: var(--spectrum-textfield-quiet-border-radius);
+    border-block-start-width: 0;
+    border-block-end-width: var(--spectrum-textfield-quiet-border-size);
+    border-inline-width: 0;
+
+    /* removes the side padding to align the text properly */
+    padding-inline-start: var(--spectrum-textfield-quiet-padding-x);
+    padding-inline-end: var(--spectrum-textfield-quiet-padding-x);
+
+    /* Treat all quiet inputs and textareas the same */
+    resize: none;
+    overflow-y: hidden;
+
+    .is-invalid& {
+      padding-inline-end: calc(var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-quiet-icon-margin-left));
+    }
+    .is-valid& {
+      padding-inline-end: calc(var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-quiet-icon-margin-left));
+    }
+  }
+}
+
+.spectrum-Textfield-validationIcon {
+  position: absolute;
+  pointer-events: all;
+
+  .spectrum-Textfield--quiet & {
+    padding-inline-end: 0;
+  }
+
+  .spectrum-Textfield.is-invalid & {
+    inline-size: var(--spectrum-icon-alert-medium-width);
+    block-size: var(--spectrum-icon-alert-medium-height);
+    inset-block-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2));
+    inset-inline-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-alert-medium-width) / 2));
+
+    padding-inline-end: calc(var(--spectrum-textfield-padding-x) / 2 - var(--spectrum-global-dimension-size-10));
+
+    .spectrum-Textfield--quiet& {
+      inset-inline-end: 0;
     }
   }
 
-  &.is-valid {
-    background-size: var(--spectrum-icon-checkmark-medium-width) var(--spectrum-icon-checkmark-medium-width);
-    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
-    padding-inline-end: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-icon-margin-left));
+  .spectrum-Textfield.is-valid & {
+    inline-size: var(--spectrum-icon-checkmark-medium-width);
+    block-size: var(--spectrum-icon-checkmark-medium-height);
+    inset-block-end: calc(calc(var(--spectrum-textfield-icon-frame) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
+    inset-inline-end: var(--spectrum-global-dimension-size-150);
 
-    [dir="rtl"] & {
-      background-position: calc(var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
+    .spectrum-Textfield--quiet& {
+      inset-inline-end: 0;
     }
+  }
+}
+
+/* styles the left icon for textfield, assumes usage of workflow icon sizing (18px by 18px) */
+.spectrum-Textfield-icon {
+  display: block;
+  position: absolute;
+  block-size: var(--spectrum-alias-workflow-icon-size);
+  inline-size: var(--spectrum-alias-workflow-icon-size);
+  inset-inline-start: var(--spectrum-textfield-icon-margin-left);
+  inset-block-start: calc(var(--spectrum-textfield-height) / 2 - var(--spectrum-alias-workflow-icon-size) / 2);
+
+  .spectrum-Textfield--quiet & {
+    /* Since quiet button has no left padding, push the icon all the way to the left */
+    inset-inline-start: 0;
+
+    & ~ .spectrum-Textfield-input {
+      padding-inline-start: calc(var(--spectrum-alias-workflow-icon-size) + var(--spectrum-textfield-quiet-icon-gap));
+    }
+  }
+
+  /* styles the textfield properly if the left icon is provided */
+  & + .spectrum-Textfield-input {
+    /* Use padding instead of text-indent so long strings don't overlap the icon */
+    padding-inline-start: calc(var(--spectrum-textfield-icon-margin-left) + var(--spectrum-alias-workflow-icon-size) + var(--spectrum-textfield-icon-gap));
   }
 }
 
 .spectrum-Textfield--multiline {
-  block-size: var(--spectrum-textarea-height);
-  min-block-size: var(--spectrum-textarea-min-height);
-  padding-block: var(--spectrum-textarea-padding-top-adjusted) var(--spectrum-textarea-padding-bottom-adjusted);
-  padding-inline: var(--spectrum-textarea-padding-x-adjusted) var(--spectrum-textarea-padding-x-adjusted);
-
-  /* Remove the default vertical scrollbar for textarea in IE. */
-  overflow: auto;
-}
-
-.spectrum-Textfield--quiet {
-  border-radius: var(--spectrum-textfield-quiet-border-radius);
-  border-width: logical 0 0 var(--spectrum-textfield-quiet-border-size) 0;
-
-  /* removes the side padding to align the text properly */
-  padding-inline-start: var(--spectrum-textfield-quiet-padding-x);
-  padding-inline-end: var(--spectrum-textfield-quiet-padding-x);
-
-  /* Treat all quiet inputs and textareas the same */
-  resize: none;
-  overflow-y: hidden;
-
-  &.is-invalid,
-  &:invalid,
-  &.is-valid {
-    background-position: var(--spectrum-textfield-quiet-invalid-background-position);
-  }
-
-  &.spectrum-Textfield--multiline {
-    block-size: var(--spectrum-textfield-height);
-    min-block-size: var(--spectrum-textfield-height);
+  .spectrum-Textfield-icon {
+    & ~ .spectrum-Textfield-input {
+      block-size: var(--spectrum-textfield-height);
+      min-block-size: var(--spectrum-textfield-height);
+    }
   }
 }
