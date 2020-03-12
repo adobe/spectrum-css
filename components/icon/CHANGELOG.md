@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.0"></a>
+# 2.1.0
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@2.0.5...@spectrum-css/icon@2.1.0)
+
+### ✨ Features
+
+* make Icon support RTL ([1e3ce00](https://github.com/adobe/spectrum-css/commit/1e3ce00))
+
+
+
+
+
 <a name="2.0.5"></a>
 ## 2.0.5
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@2.0.4...@spectrum-css/icon@2.0.5)
