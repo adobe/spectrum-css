@@ -177,5 +177,8 @@ governing permissions and limitations under the License.
     &:hover {
       color: var(--spectrum-tag-removable-button-icon-color-hover);
     }
+    &:active {
+      background-color: var(--spectrum-tag-removable-button-background-color-hover);
+    }
   }
 }
