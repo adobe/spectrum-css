@@ -58,7 +58,6 @@ governing permissions and limitations under the License.
   .spectrum-Tags-itemClearButton {
     display: flex;
     margin-inline-end: calc(-1 * var(--spectrum-tag-padding-x));
-    margin-inline-start: var(--spectrum-tag-removable-border-size-key-focus);
     border-radius: var(--spectrum-alias-border-radius-small);
   }
 }
