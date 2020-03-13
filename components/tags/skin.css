@@ -136,7 +136,6 @@ governing permissions and limitations under the License.
     .spectrum-Tags-itemClearButton {
       color: var(--spectrum-tag-removable-button-icon-color-selected);
       &:hover {
-         background-color: var(--spectrum-tag-removable-button-background-color-selected-hover);
          color: var(--spectrum-tag-removable-button-icon-color-selected-hover);
       }
     }
@@ -149,7 +148,6 @@ governing permissions and limitations under the License.
       color: var(--spectrum-tag-removable-button-icon-color-key-focus);
     }
     &:hover {
-      background-color: var(--spectrum-tag-removable-button-background-color-hover);
       color: var(--spectrum-tag-removable-button-icon-color-hover);
     }
   }
