@@ -64,6 +64,10 @@ governing permissions and limitations under the License.
 
   line-height: var(--spectrum-button-line-height);
 
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none; /* prevent touch scrolling on buttons */
+
   cursor: pointer;
 
   &:focus {
