@@ -29,6 +29,7 @@ governing permissions and limitations under the License.
 .spectrum-SearchWithin-dropdown {
   inline-size: auto;
   min-inline-size: 0;
+  flex-shrink: 0;
 }
 
 .spectrum-SearchWithin-dropdownTrigger {
