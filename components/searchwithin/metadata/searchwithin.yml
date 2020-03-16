@@ -6,16 +6,18 @@ examples:
     markup: |
       <h4>Default</h4>
       <form class="spectrum-SearchWithin">
-        <div class="spectrum-Dropdown">
-          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+        <div class="spectrum-Dropdown spectrum-SearchWithin-dropdown">
+          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger spectrum-SearchWithin-dropdownTrigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label">All</span>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
             </svg>
           </button>
         </div>
-        <input type="text" placeholder="Search" class="spectrum-Textfield">
-        <button type="reset" class="spectrum-ClearButton">
+        <div class="spectrum-Textfield">
+          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-SearchWithin-input" autocomplete="off">
+        </div>
+        <button type="reset" class="spectrum-ClearButton spectrum-SearchWithin-clearButton">
           <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossSmall" />
           </svg>
@@ -24,16 +26,18 @@ examples:
 
       <h4>Open</h4>
       <form class="spectrum-SearchWithin" style="margin-bottom: 180px;">
-        <div class="spectrum-Dropdown is-open">
-          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
+        <div class="spectrum-Dropdown spectrum-SearchWithin-dropdown is-open">
+          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger spectrum-SearchWithin-dropdownTrigger is-selected" aria-haspopup="true">
             <span class="spectrum-Dropdown-label">All</span>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
             </svg>
           </button>
         </div>
-        <input type="text" placeholder="Search" class="spectrum-Textfield">
-        <button type="reset" class="spectrum-ClearButton">
+        <div class="spectrum-Textfield">
+          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-SearchWithin-input" autocomplete="off">
+        </div>
+        <button type="reset" class="spectrum-ClearButton spectrum-SearchWithin-clearButton">
           <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossSmall" />
           </svg>
@@ -59,16 +63,18 @@ examples:
 
       <h4>Default (Changed Selection)</h4>
       <form class="spectrum-SearchWithin">
-        <div class="spectrum-Dropdown">
-          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+        <div class="spectrum-Dropdown spectrum-SearchWithin-dropdown">
+          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger spectrum-SearchWithin-dropdownTrigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label">Campaigns</span>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
             </svg>
           </button>
         </div>
-        <input type="text" placeholder="Search" class="spectrum-Textfield">
-        <button type="reset" class="spectrum-ClearButton">
+        <div class="spectrum-Textfield">
+          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-SearchWithin-input" autocomplete="off">
+        </div>
+        <button type="reset" class="spectrum-ClearButton spectrum-SearchWithin-clearButton">
           <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossSmall" />
           </svg>
@@ -77,8 +83,8 @@ examples:
 
       <h4>Disabled</h4>
       <form class="spectrum-SearchWithin">
-        <div class="spectrum-Dropdown is-disabled">
-          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+        <div class="spectrum-Dropdown spectrum-SearchWithin-dropdown is-disabled">
+          <button type="button" class="spectrum-FieldButton spectrum-Dropdown-trigger spectrum-SearchWithin-dropdownTrigger" disabled aria-haspopup="true">
             <span class="spectrum-Dropdown-label">All</span>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
@@ -86,7 +92,7 @@ examples:
           </button>
         </div>
         <input type="text" placeholder="Search" class="spectrum-Textfield" value="Term" disabled>
-        <button type="reset" class="spectrum-ClearButton" disabled>
+        <button type="reset" class="spectrum-ClearButton spectrum-SearchWithin-clearButton" disabled>
           <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CrossSmall" />
           </svg>
