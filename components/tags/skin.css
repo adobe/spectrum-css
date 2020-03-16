@@ -10,6 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  --spectrum-tag-background-color-error-selected: var(--spectrum-global-color-red-500);
+  --spectrum-tag-background-color-error-selected-hover: var(--spectrum-global-color-red-600);
+}
+
 .spectrum-Tags-item {
   color: var(--spectrum-tag-text-color);
   background-color: var(--spectrum-tag-background-color);
@@ -60,17 +65,22 @@ governing permissions and limitations under the License.
 
     &.is-invalid {
       border-color: var(--spectrum-tag-border-color-error-selected);
+      background-color: var(--spectrum-tag-background-color-error-selected);
       .spectrum-Tags-itemIcon,
       .spectrum-Tags-itemLabel,
       .spectrum-Tags-itemClearButton {
         color: var(--spectrum-tag-text-color-error-selected);
       }
       &.focus-ring {
-        box-shadow: 0 0 0 2px var(--spectrum-tag-border-color-key-focus);
-        border-color: var(--spectrum-tag-border-color-error-selected);
+        box-shadow: 0 0 0 2px var(--spectrum-tag-border-color-error-selected-key-focus);
+        border-color: var(--spectrum-tag-text-color-selected-key-focus);
       }
       &:hover {
         border-color: var(--spectrum-tag-border-color-selected);
+        background-color: var(--spectrum-tag-background-color-error-selected-hover);
+        .spectrum-Tags-itemIcon {
+          color: var(--spectrum-tag-icon-color-selected);
+        }
       }
     }
   }
@@ -135,15 +145,8 @@ governing permissions and limitations under the License.
       }
     }
 
-    .spectrum-Tags-itemClearButton {
-      &.is-focused {
-         color: var(--spectrum-tag-icon-color-error-hover);
-       }
-     }
-
     &:active {
       border-color: var(--spectrum-tag-removable-border-color-error-down);
-      color: var(--spectrum-tag-removable-text-color-error-down);
     }
   }
 
@@ -164,6 +167,13 @@ governing permissions and limitations under the License.
       color: var(--spectrum-tag-removable-button-icon-color-selected);
       &:hover {
          color: var(--spectrum-tag-removable-button-icon-color-selected-hover);
+      }
+    }
+    &.is-invalid {
+      &:hover {
+        .spectrum-Tags-itemClearButton {
+          color: var(--spectrum-tag-removable-button-icon-color-selected);
+        }
       }
     }
   }
