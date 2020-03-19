@@ -1,6 +1,11 @@
 id: link-primary
 name: Link
 SpectrumSiteSlug: https://spectrum.adobe.com/page/link/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Subtle variant
+      Subtle variant was removed. Please use Secondary.
 examples:
   - id: link-primary
     status: Verified
