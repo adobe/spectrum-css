@@ -313,3 +313,55 @@ examples:
           </li>
         </ul>
       </nav>
+  - id: breadcrumb-disabled
+    name: Disabled
+    status: Verified
+    markup: |
+      <nav>
+        <ul class="spectrum-Breadcrumbs">
+          <li class="spectrum-Breadcrumbs-item">
+            <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item">
+            <div class="spectrum-Breadcrumbs-itemLink is-disabled" role="link" aria-disabled="true">Trend</div>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
+          <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item">
+            <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-FolderBreadcrumb spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-FolderBreadcrumb" />
+              </svg>
+            </button>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Trendy</a>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+            </svg>
+          </li>
+          <li class="spectrum-Breadcrumbs-item">
+            <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">January 2019 Assets</a>
+          </li>
+        </ul>
+      </nav>
