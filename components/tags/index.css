@@ -24,6 +24,7 @@ governing permissions and limitations under the License.
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
+  vertical-align: middle;
   margin-block: calc(var(--spectrum-taggroup-tag-gap-y)/2);
   margin-inline: calc(var(--spectrum-taggroup-tag-gap-x)/2);
   padding-block: 0;
