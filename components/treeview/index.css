@@ -18,6 +18,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-icon-margin-right: var(--spectrum-global-dimension-size-100);
   --spectrum-treeview-item-affordance-width: var(--spectrum-global-dimension-size-400);
   --spectrum-treeview-item-indentation: var(--spectrum-global-dimension-size-200);
+  --spectrum-treeview-heading-font-weight: var(--spectrum-global-font-weight-bold);
 }
 
 .spectrum-TreeView {
@@ -57,7 +58,7 @@ governing permissions and limitations under the License.
 
   text-decoration: none;
 
-  min-height: var(--spectrum-global-dimension-size-400);
+  height: var(--spectrum-treeview-item-min-height);
 
   /* Prevent weirdness that can cause the vertical bar to fall down */
   white-space: nowrap;
@@ -169,5 +170,8 @@ governing permissions and limitations under the License.
 .spectrum-TreeView-heading {
   padding: var(--spectrum-treeview-item-padding-y);
   font-weight: var(--spectrum-treeview-heading-font-weight);
-  margin-block-start: var(--spectrum-global-dimension-size-200);
+
+  &:not(:first-child) {
+    margin-block-start: var(--spectrum-global-dimension-size-200);
+  }
 }
