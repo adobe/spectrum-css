@@ -59,7 +59,7 @@ governing permissions and limitations under the License.
     }
 
     &.focus-ring {
-      box-shadow: 0 0 0 2px var(--spectrum-tag-border-color-selected-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-tag-border-color-selected-key-focus);
       border-color: var(--spectrum-tag-text-color-selected-key-focus);
     }
 
@@ -72,7 +72,7 @@ governing permissions and limitations under the License.
         color: var(--spectrum-tag-text-color-error-selected);
       }
       &.focus-ring {
-        box-shadow: 0 0 0 2px var(--spectrum-tag-border-color-error-selected-key-focus);
+        box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-tag-border-color-error-selected-key-focus);
         border-color: var(--spectrum-tag-text-color-selected-key-focus);
       }
       &:hover {
