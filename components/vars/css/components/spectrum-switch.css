@@ -25,7 +25,6 @@
   --spectrum-switch-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-handle-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-handle-background-color-disabled: var(--spectrum-global-color-gray-75);
@@ -58,7 +57,6 @@
   --spectrum-switch-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-focus-ring-size-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-focus-ring-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-focus-ring-gap-color-selected-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-handle-border-size-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -91,7 +89,6 @@
   --spectrum-switch-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-focus-ring-gap-color-error-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-handle-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-handle-background-color-error-disabled: var(--spectrum-global-color-gray-75);
@@ -124,7 +121,6 @@
   --spectrum-switch-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-focus-ring-gap-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-track-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-handle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -171,7 +167,6 @@
   --spectrum-switch-emphasized-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-emphasized-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-emphasized-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-emphasized-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-emphasized-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-emphasized-handle-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-emphasized-handle-background-color-disabled: var(--spectrum-global-color-gray-75);
@@ -204,7 +199,6 @@
   --spectrum-switch-emphasized-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-emphasized-focus-ring-size-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-emphasized-focus-ring-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-emphasized-focus-ring-gap-color-selected-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-emphasized-handle-border-size-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -237,7 +231,6 @@
   --spectrum-switch-emphasized-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-emphasized-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-emphasized-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-emphasized-focus-ring-gap-color-error-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-emphasized-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-emphasized-handle-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-emphasized-handle-background-color-error-disabled: var(--spectrum-global-color-gray-75);
@@ -270,7 +263,6 @@
   --spectrum-switch-emphasized-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-emphasized-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-emphasized-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-emphasized-focus-ring-gap-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-emphasized-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-emphasized-track-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-emphasized-handle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -317,7 +309,6 @@
   --spectrum-switch-quiet-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-quiet-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-quiet-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-quiet-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-quiet-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-quiet-handle-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-quiet-handle-background-color-disabled: var(--spectrum-global-color-gray-75);
@@ -350,7 +341,6 @@
   --spectrum-switch-quiet-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-quiet-focus-ring-size-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-quiet-focus-ring-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-quiet-focus-ring-gap-color-selected-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-quiet-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-quiet-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-quiet-handle-border-size-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -383,7 +373,6 @@
   --spectrum-switch-quiet-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-quiet-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-quiet-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-quiet-focus-ring-gap-color-error-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-quiet-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-quiet-handle-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-quiet-handle-background-color-error-disabled: var(--spectrum-global-color-gray-75);
@@ -416,7 +405,6 @@
   --spectrum-switch-quiet-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-switch-quiet-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-switch-quiet-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-switch-quiet-focus-ring-gap-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-switch-quiet-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-quiet-track-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-quiet-handle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);

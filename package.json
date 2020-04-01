@@ -39,6 +39,7 @@
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
+    "@adobe/spectrum-tokens": "6.0.0-beta.1",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.3",
@@ -57,7 +58,6 @@
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0",
-    "@spectrum/spectrum-dna": "^5.23.0",
     "@spectrum/spectrum-icons": "^2.3.0"
   },
   "resolutions": {

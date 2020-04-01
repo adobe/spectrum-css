@@ -199,7 +199,7 @@ function calculateOverrides(objects, processValue) {
 }
 
 function generateDNAFiles() {
-  const dnaJSONPath = path.join(path.dirname(require.resolve('@spectrum/spectrum-dna')), '..', 'dist', 'data', 'json', 'dna-linked.json');
+  const dnaJSONPath = path.join(path.dirname(require.resolve('@adobe/spectrum-tokens')), '..', 'dist', 'data', 'json', 'dna-linked.json');
   return gulp.src(dnaJSONPath)
     .pipe(through.obj(function translateJSON(file, enc, cb) {
 

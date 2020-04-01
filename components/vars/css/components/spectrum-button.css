@@ -16,7 +16,6 @@
   --spectrum-button-cta-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-cta-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-cta-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-cta-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-cta-background-color-key-focus: var(--spectrum-semantic-cta-color-background-hover);
   --spectrum-button-cta-border-color-key-focus: var(--spectrum-semantic-cta-color-background-hover);
   --spectrum-button-cta-text-color-key-focus: var(--spectrum-global-color-static-white);
@@ -55,7 +54,6 @@
   --spectrum-button-over-background-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-over-background-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-over-background-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-over-background-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-over-background-background-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-border-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-icon-color-disabled: rgba(255,255,255,0.35);
@@ -95,7 +93,6 @@
   --spectrum-button-primary-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-primary-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-primary-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-primary-background-color-key-focus: var(--spectrum-global-color-gray-800);
   --spectrum-button-primary-border-color-key-focus: var(--spectrum-global-color-gray-800);
   --spectrum-button-primary-text-color-key-focus: var(--spectrum-global-color-gray-50);
@@ -136,7 +133,6 @@
   --spectrum-button-quiet-over-background-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-over-background-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-over-background-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-quiet-over-background-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-quiet-over-background-background-color-key-focus: rgba(255,255,255,0.1);
   --spectrum-button-quiet-over-background-border-color-key-focus: var(--spectrum-alias-border-color-transparent);
   --spectrum-button-quiet-over-background-text-color-key-focus: var(--spectrum-global-color-static-white);
@@ -177,7 +173,6 @@
   --spectrum-button-quiet-primary-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-primary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-primary-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-quiet-primary-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-quiet-primary-background-color-key-focus: var(--spectrum-global-color-gray-200);
   --spectrum-button-quiet-primary-border-color-key-focus: var(--spectrum-global-color-gray-200);
   --spectrum-button-quiet-primary-text-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -218,7 +213,6 @@
   --spectrum-button-quiet-secondary-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-secondary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-secondary-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-quiet-secondary-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-quiet-secondary-background-color-key-focus: var(--spectrum-global-color-gray-200);
   --spectrum-button-quiet-secondary-border-color-key-focus: var(--spectrum-global-color-gray-200);
   --spectrum-button-quiet-secondary-text-color-key-focus: var(--spectrum-global-color-gray-800);
@@ -259,7 +253,6 @@
   --spectrum-button-quiet-warning-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-warning-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-warning-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-quiet-warning-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-quiet-warning-background-color-key-focus: var(--spectrum-global-color-gray-200);
   --spectrum-button-quiet-warning-border-color-key-focus: var(--spectrum-global-color-gray-200);
   --spectrum-button-quiet-warning-text-color-key-focus: var(--spectrum-global-color-red-700);
@@ -300,7 +293,6 @@
   --spectrum-button-secondary-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-secondary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-secondary-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-secondary-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-secondary-background-color-key-focus: var(--spectrum-global-color-gray-700);
   --spectrum-button-secondary-border-color-key-focus: var(--spectrum-global-color-gray-700);
   --spectrum-button-secondary-text-color-key-focus: var(--spectrum-global-color-gray-50);
@@ -341,7 +333,6 @@
   --spectrum-button-warning-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-warning-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-warning-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-button-warning-focus-ring-gap-color-key-focus: var(--spectrum-alias-focus-ring-gap-color);
   --spectrum-button-warning-background-color-key-focus: var(--spectrum-semantic-negative-color-text-small);
   --spectrum-button-warning-border-color-key-focus: var(--spectrum-semantic-negative-color-text-small);
   --spectrum-button-warning-text-color-key-focus: var(--spectrum-global-color-gray-50);

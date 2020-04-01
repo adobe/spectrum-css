@@ -36,6 +36,20 @@
     "@a4u/a4u-collection-react-spectrum-open-source-release" "^3.1.0"
     "@a4u/a4u-collection-spectrum-css-release" "^2.3.0"
 
+"@adobe/spectrum-tokens@6.0.0-beta.1":
+  version "6.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-6.0.0-beta.1.tgz#22cc9b738f7dfc94b5a9e7af51780989a7421e8c"
+  integrity sha512-+hW0p/Hg72Swlrb29PRqF0YZqJolRNGb0bSFuLZ56W4u4+yGfbg8vIMN7HKqOB2cvHbdiSWmOy+HrrFetFH30w==
+  dependencies:
+    "@spectrum/kulcon" "^1.x"
+    bluebird "^3.x"
+    color-alpha "^1.0.3"
+    deep-extend "^0.6.0"
+    fs-extra "^4.x"
+    globby "^6.x"
+    node-es-module-loader "^0.3.8"
+    xtend "^4.x"
+
 "@babel/code-frame@^7.0.0":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"

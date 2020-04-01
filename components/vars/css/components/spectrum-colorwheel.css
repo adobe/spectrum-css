@@ -12,11 +12,11 @@
   --spectrum-colorwheel-cursor-hit-outer: var(--spectrum-global-dimension-size-0);
   --spectrum-colorwheel-cursor-hit-inner: var(--spectrum-global-dimension-size-0);
   --spectrum-colorwheel-loupe-entry-animation-delay: 0ms;
-  --spectrum-colorwheel-loupe-entry-animation-duration: staticAliases.loupe-entry-animation-duration;
+  --spectrum-colorwheel-loupe-entry-animation-duration: var(--spectrum-alias-loupe-entry-animation-duration);
   --spectrum-colorwheel-loupe-entry-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorwheel-loupe-entry-animation-properties: opacity;
   --spectrum-colorwheel-loupe-exit-animation-delay: 0ms;
-  --spectrum-colorwheel-loupe-exit-animation-duration: staticAliases.loupe-exit-animation-duration;
+  --spectrum-colorwheel-loupe-exit-animation-duration: var(--spectrum-alias-loupe-exit-animation-duration);
   --spectrum-colorwheel-loupe-exit-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorwheel-loupe-exit-animation-properties: opacity;
 }
