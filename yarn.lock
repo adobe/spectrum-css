@@ -1104,20 +1104,6 @@
     chalk "^1.x"
     chalk-cli "^4.x"
 
-"@spectrum/spectrum-dna@^5.23.0":
-  version "5.23.0"
-  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/@spectrum/spectrum-dna/-/@spectrum/spectrum-dna-5.23.0.tgz#c93a8e202e22ba66da27a791f80ffead765f8529"
-  integrity sha1-yTqOIC4iumbaJ6eR+A/+rXZfhSk=
-  dependencies:
-    "@spectrum/kulcon" "^1.x"
-    bluebird "^3.x"
-    color-alpha "^1.0.3"
-    deep-extend "^0.6.0"
-    fs-extra "^4.x"
-    globby "^6.x"
-    node-es-module-loader "^0.3.8"
-    xtend "^4.x"
-
 "@spectrum/spectrum-icons@^2.3.0":
   version "2.3.0"
   resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-spectrum-release/@spectrum/spectrum-icons/-/@spectrum/spectrum-icons-2.3.0.tgz#2256cddcf701a371c982d257e5b988683524b43e"
