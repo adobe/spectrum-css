@@ -90,7 +90,7 @@ For most use cases, you'll want to use `spectrum-css-icons.svg` so you have supp
 ```js
 <script src="node_modules/loadicons/index.js"></script>
 <script>
-  loadIcons('node_modules/@spectrum-css/icon/dist/spectrum-css-icons.svg');
+  loadIcons('node_modules/@spectrum-css/icons/dist/spectrum-css-icons.svg');
 </script>
 ```
 
