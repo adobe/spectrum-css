@@ -10,11 +10,11 @@ examples:
           <label class="spectrum-Checkbox is-indeterminate">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
             <span class="spectrum-Checkbox-box">
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark75" />
               </svg>
-              <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-DashSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-DashSmallNew spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash50" />
               </svg>
             </span>
             <span class="spectrum-Checkbox-label">2 Selected</span>
@@ -38,11 +38,11 @@ examples:
           <label class="spectrum-Checkbox is-indeterminate">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
             <span class="spectrum-Checkbox-box">
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark75" />
               </svg>
-              <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-DashSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-DashSmallNew spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash50" />
               </svg>
             </span>
             <span class="spectrum-Checkbox-label">4 Selected</span>
@@ -75,11 +75,11 @@ examples:
           <label class="spectrum-Checkbox is-indeterminate">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
             <span class="spectrum-Checkbox-box">
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark75" />
               </svg>
-              <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-DashSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-DashSmallNew spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash50" />
               </svg>
             </span>
             <span class="spectrum-Checkbox-label">6 Selected</span>
@@ -112,11 +112,11 @@ examples:
           <label class="spectrum-Checkbox is-indeterminate">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1">
             <span class="spectrum-Checkbox-box">
-              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark75" />
               </svg>
-              <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-DashSmall" />
+              <svg class="spectrum-Icon spectrum-UIIcon-DashSmallNew spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash50" />
               </svg>
             </span>
             <span class="spectrum-Checkbox-label">228 Selected</span>
@@ -145,25 +145,25 @@ examples:
             <label class="spectrum-Checkbox is-indeterminate">
               <input type="checkbox" class="spectrum-Checkbox-input">
               <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark75" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-DashSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-DashSmallNew spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash50" />
                 </svg>
               </span>
             </label>
           </div>
           <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
             Column Title
-            <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmallNew spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
           </div>
           <div class="spectrum-Table-headCell is-sortable" style="flex: 1" role="columnheader" aria-sort="none" tabindex="0">
             Column Title
-            <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmall spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-ArrowDownSmall" />
+            <svg class="spectrum-Icon spectrum-UIIcon-ArrowDownSmallNew spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Arrow100" />
             </svg>
           </div>
           <div class="spectrum-Table-headCell" style="flex: 1" role="columnheader">Column Title</div>
@@ -174,8 +174,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -189,8 +189,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -204,8 +204,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -219,8 +219,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -234,8 +234,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -249,8 +249,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -264,8 +264,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -279,8 +279,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -294,8 +294,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-Table-checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
               </label>
@@ -309,11 +309,11 @@ examples:
               <label class="spectrum-Checkbox is-indeterminate">
                 <input type="checkbox" class="spectrum-Checkbox-input">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmallNew spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
-                  <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-DashSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-DashSmallNew spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Dash50" />
                   </svg>
                 </span>
                 <span class="spectrum-Checkbox-label">4 Selected</span>

@@ -52,8 +52,8 @@ examples:
     name: Valid
     markup: |
       <div class="spectrum-Textfield is-valid">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
         </svg>
         <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
       </div>
@@ -62,8 +62,8 @@ examples:
     name: Valid (disabled)
     markup: |
       <div class="spectrum-Textfield is-valid is-disabled">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
         </svg>
         <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>
       </div>
@@ -140,8 +140,8 @@ examples:
     name: Quiet Valid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
         </svg>
         <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required>
       </div>
@@ -150,8 +150,8 @@ examples:
     name: Quiet Valid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--quiet is-valid is-disabled">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
         </svg>
         <input type="text" placeholder="Enter your name" name="field" value="A valid input" class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>
       </div>

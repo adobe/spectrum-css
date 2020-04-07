@@ -183,3 +183,101 @@ governing permissions and limitations under the License.
   inline-size: var(--spectrum-icon-triplegripper-width);
   block-size: var(--spectrum-icon-triplegripper-height);
 }
+
+/* New UI icons*/
+.spectrum-UIIcon-ArrowDownSmallNew {
+  transform: rotate(90deg);
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-ArrowLeftMediumNew {
+  transform: rotate(180deg);
+  inline-size: var(--spectrum-global-dimension-size-175);
+  block-size: var(--spectrum-global-dimension-size-175);
+}
+.spectrum-UIIcon-ArrowUpSmallNew {
+  transform: rotate(-90deg);
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-AsteriskNew {
+  inline-size: var(--spectrum-global-dimension-size-100);
+  block-size: var(--spectrum-global-dimension-size-100);
+}
+.spectrum-UIIcon-CheckmarkMediumNew {
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-CheckmarkSmallNew {
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-ChevronDownMediumNew {
+  transform: rotate(90deg);
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-ChevronDownSmallNew {
+  transform: rotate(90deg);
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-ChevronLeftMediumNew {
+  transform: rotate(180deg);
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-ChevronLeftLargeNew {
+  transform: rotate(180deg);
+  inline-size: var(--spectrum-global-dimension-size-200);
+  block-size: var(--spectrum-global-dimension-size-200);
+}
+.spectrum-UIIcon-ChevronRightSmallNew {
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-ChevronRightMediumNew {
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-ChevronRightLargeNew {
+  inline-size: var(--spectrum-global-dimension-size-200);
+  block-size: var(--spectrum-global-dimension-size-200);
+}
+.spectrum-UIIcon-ChevronUpSmallNew {
+  transform: rotate(-90deg);
+  inline-size: var(--spectrum-global-dimension-size-125);
+  block-size: var(--spectrum-global-dimension-size-125);
+}
+.spectrum-UIIcon-CornerTriangleNew {
+  inline-size: var(--spectrum-global-dimension-size-65);
+  block-size: var(--spectrum-global-dimension-size-65);
+}
+.spectrum-UIIcon-CrossSmallNew {
+  inline-size: var(--spectrum-global-dimension-size-100);
+  block-size: var(--spectrum-global-dimension-size-100);
+}
+.spectrum-UIIcon-CrossMediumNew {
+  inline-size: var(--spectrum-global-dimension-size-100);
+  block-size: var(--spectrum-global-dimension-size-100);
+}
+.spectrum-UIIcon-CrossLargeNew {
+  inline-size: var(--spectrum-global-dimension-size-175);
+  block-size: var(--spectrum-global-dimension-size-175);
+}
+.spectrum-UIIcon-DashSmallNew {
+  inline-size: var(--spectrum-global-dimension-size-100);
+  block-size: var(--spectrum-global-dimension-size-100);
+}
+.spectrum-UIIcon-DoubleGripperNew {
+  inline-size: var(--spectrum-global-dimension-size-200); 
+  block-size: var(--spectrum-global-dimension-size-50);
+}
+.spectrum-UIIcon-SingleGripper {
+  inline-size: var(--spectrum-global-dimension-size-300); 
+  block-size: var(--spectrum-global-dimension-size-25);
+}
+.spectrum-UIIcon-TripleGripperNew {
+  inline-size: var(--spectrum-global-dimension-size-125); 
+  block-size: var(--spectrum-global-dimension-size-100);
+}
