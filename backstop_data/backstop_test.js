@@ -42,7 +42,7 @@ const baseScenarioConfig = {
   selectors: ['.spectrum-CSSExample-example'],
   selectorExpansion: true,
   expect: 0,
-  misMatchThreshold: 0.1,
+  misMatchThreshold: 0.01,
   requireSameDimensions: true
 };
 
