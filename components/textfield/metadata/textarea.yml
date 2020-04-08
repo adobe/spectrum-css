@@ -26,7 +26,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid">
         <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required>A valid input</textarea>
       </div>
@@ -36,7 +36,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid is-disabled">
         <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>A valid input</textarea>
       </div>
@@ -114,7 +114,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid">
         <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required>A valid input</textarea>
       </div>
@@ -124,7 +124,7 @@ examples:
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid is-disabled">
         <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-CheckmarkMedium100" />
+          <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>A valid input</textarea>
       </div>
