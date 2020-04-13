@@ -1,0 +1,27 @@
+:root {
+  --spectrum-colorwheel-focus-ring-color: var(--spectrum-alias-focus-color);
+
+  --spectrum-colorwheel-background-color: var(--spectrum-global-color-blue-400);
+  --spectrum-colorwheel-background-color-hover: var(--spectrum-global-color-blue-500);
+  --spectrum-colorwheel-background-color-disabled: var(--spectrum-global-color-gray-400);
+
+  --spectrum-colorwheel-stroke-color: rgba(44, 44, 44, 0.1);
+}
+
+.spectrum-ColorWheel {
+  &.is-disabled {
+    opacity: var(--spectrum-colorwheel-disabled-opacity);
+  }
+}
+
+.spectrum-ColorWheel-outerCircle,
+.spectrum-ColorWheel-innerCircle {
+  fill: transparent;
+
+  stroke-width: var(--spectrum-colorwheel-stroke-width);
+  stroke: var(--spectrum-colorwheel-stroke-color);
+}
+
+.spectrum-ColorWheel-outerCircle {
+  stroke-width: var(--spectrum-colorwheel-stroke-width);
+}
