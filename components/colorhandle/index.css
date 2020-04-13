@@ -1,0 +1,114 @@
+:root {
+  --spectrum-colorhandle-animation-duration: var(--spectrum-global-animation-duration-100);
+  --spectrum-colorhandle-animation-easing: ease-in-out;
+
+  --spectrum-colorhandle-size: var(--spectrum-global-dimension-size-200);
+  --spectrum-colorhandle-border-width: var(--spectrum-global-dimension-size-25);
+  --spectrum-colorhandle-hitarea-size: var(--spectrum-global-dimension-size-300);
+  --spectrum-colorhandle-hitarea-radius: 100%;
+
+  --spectrum-colorhandle-stroke-width: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-colorhandle-stroke-width-focused: var(--spectrum-global-dimension-static-size-25);
+
+  /* size is the same on desktop and mobile */
+  --spectrum-colorhandle-loupe-width: 50px;
+  --spectrum-colorhandle-loupe-height: 66px;
+  --spectrum-colorhandle-loupe-offset: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-colorhandle-loupe-animation-distance: var(--spectrum-global-dimension-static-size-100);
+}
+
+%spectrum-ColorControl-handle--focused {
+  /* Bigger handle when focused */
+  width: calc(var(--spectrum-colorhandle-size) * 2);
+  height: calc(var(--spectrum-colorhandle-size) * 2);
+
+  margin-left: calc(-1 * var(--spectrum-colorhandle-size));
+  margin-top: calc(-1 * var(--spectrum-colorhandle-size));
+}
+
+.spectrum-ColorHandle {
+  display: block;
+  position: absolute;
+  z-index: 1; /* Be above */
+  box-sizing: border-box;
+  width: var(--spectrum-colorhandle-size);
+  height: var(--spectrum-colorhandle-size);
+  border-width: var(--spectrum-colorhandle-border-width);
+  border-style: solid;
+
+  margin-left: calc(-1 * calc(var(--spectrum-colorhandle-size) / 2));
+  margin-top: calc(-1 * calc(var(--spectrum-colorhandle-size) / 2));
+
+  transition:
+    width var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
+    height var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
+    border-width var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
+    margin-left var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
+    margin-top var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing);
+
+  /*
+  cursor: move;
+  cursor: grab;
+  */
+
+  &,
+  &:after {
+    border-radius: 100%;
+  }
+
+  &:after {
+    content: '';
+    left: calc(50% - calc(var(--spectrum-colorhandle-hitarea-size) / 2));
+    top: calc(50% - calc(var(--spectrum-colorhandle-hitarea-size) / 2));
+    position: absolute;
+    display: block;
+    width: var(--spectrum-colorhandle-hitarea-size);
+    height: var(--spectrum-colorhandle-hitarea-size);
+  }
+
+  &.is-open {
+    .spectrum-ColorHandle-loupe {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &.is-focused,
+  &.focus-ring {
+    @extend %spectrum-ColorControl-handle--focused;
+  }
+}
+
+.spectrum-ColorHandle-color {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.spectrum-ColorHandle-loupeOuter {
+  stroke-width: var(--spectrum-colorhandle-stroke-width);
+}
+
+.spectrum-ColorHandle-loupe {
+  width: var(--spectrum-colorhandle-loupe-width);
+  height: var(--spectrum-colorhandle-loupe-height);
+
+  position: absolute;
+  transform: translate(0, var(--spectrum-colorhandle-loupe-animation-distance));
+  opacity: 0;
+  transform-origin: bottom center;
+  bottom: calc(50% + var(--spectrum-colorhandle-loupe-offset));
+  left: calc(50% - calc(var(--spectrum-colorhandle-loupe-width) / 2));
+  transition: transform 100ms ease-in-out,
+              opacity 125ms ease-in-out;
+
+  pointer-events: none;
+}
+
+.spectrum-ColorHandle-loupeBackground {
+  fill: var(--spectrum-global-color-static-white);
+}
+
+.spectrum-ColorHandle-loupeCheck {
+  fill: var(--spectrum-global-color-static-gray-500);
+}

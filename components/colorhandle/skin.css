@@ -1,0 +1,33 @@
+:root {
+  --spectrum-colorhandle-stroke-color: rgba(44, 44, 44, 0.1);
+  --spectrum-colorhandle-color: var(--spectrum-global-color-gray-50);
+
+  --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-size-25));
+}
+
+.spectrum-ColorHandle {
+  border-color: var(--spectrum-colorhandle-color);
+  box-shadow: 0 0 0 var(--spectrum-colorhandle-stroke-width) var(--spectrum-colorhandle-stroke-color), inset 0 0 0 var(--spectrum-colorhandle-stroke-width) var(--spectrum-colorhandle-stroke-color);
+
+  background-color: var(--spectrum-global-color-static-white);
+
+  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
+  background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%);
+  background-size:
+    var(--spectrum-global-dimension-static-size-200)
+    var(--spectrum-global-dimension-static-size-200);
+  background-position:
+    var(--spectrum-colorhandle-background-offset) var(--spectrum-colorhandle-background-offset),
+    var(--spectrum-colorhandle-background-offset) calc(var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)),
+    calc(var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)) calc(-1 * var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)),
+    calc(-1 * var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)) var(--spectrum-colorhandle-background-offset);
+}
+
+.spectrum-ColorHandle-loupeOuter {
+  fill: white;
+  stroke: rgba(44, 44, 44, 0.1);
+}
