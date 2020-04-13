@@ -23,18 +23,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tabs-item {
-  .spectrum-Tabs-itemLabel {
-    color: var(--spectrum-tabs-text-color);
-  }
+  color: var(--spectrum-tabs-text-color);
 
   .spectrum-Icon {
     color: var(--spectrum-tabs-icon-color)
   }
 
   &:hover {
-    .spectrum-Tabs-itemLabel {
-      color: var(--spectrum-tabs-text-color-hover);
-    }
+    color: var(--spectrum-tabs-text-color-hover);
 
     .spectrum-Icon {
       color: var(--spectrum-tabs-icon-color-hover)
@@ -42,9 +38,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    .spectrum-Tabs-itemLabel {
-      color: var(--spectrum-tabs-text-color-selected);
-    }
+    color: var(--spectrum-tabs-text-color-selected);
 
     .spectrum-Icon {
       color: var(--spectrum-tabs-icon-color-selected)
@@ -52,9 +46,7 @@ governing permissions and limitations under the License.
   }
 
   &:focus-ring {
-    .spectrum-Tabs-itemLabel {
-      color: var(--spectrum-tabs-text-color-key-focus);
-    }
+    color: var(--spectrum-tabs-text-color-key-focus);
 
     &::before {
       border-color: var(--spectrum-tabs-focus-ring-color);
@@ -66,9 +58,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-disabled {
-    .spectrum-Tabs-itemLabel {
-      color: var(--spectrum-tabs-text-color-disabled);
-    }
+    color: var(--spectrum-tabs-text-color-disabled);
 
     .spectrum-Icon {
       color: var(--spectrum-tabs-icon-color-disabled)
