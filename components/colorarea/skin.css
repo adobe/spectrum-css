@@ -1,0 +1,9 @@
+:root {
+  --spectrum-colorarea-disabled-opacity: 0.3;
+}
+
+.spectrum-ColorArea {
+  &.is-disabled {
+    opacity: var(--spectrum-colorarea-disabled-opacity);
+  }
+}
