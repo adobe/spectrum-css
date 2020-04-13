@@ -448,3 +448,22 @@ examples:
       </div>
 
       <div class="dummy-spacing"></div>
+  - id: tabs
+    name: Tabs with anchors
+    status: Verified
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--horizontal">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <a href="#1" class="spectrum-Tabs-itemLabel">Tab 1</a>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <a href="#2" class="spectrum-Tabs-itemLabel">Tab 2</a>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <a href="#3" class="spectrum-Tabs-itemLabel">Tab 3</a>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+        <a href="#4" class="spectrum-Tabs-itemLabel">Tab 4</a>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+      </div>
