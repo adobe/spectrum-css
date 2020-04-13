@@ -1,0 +1,10 @@
+:root {
+  --spectrum-colorslider-stroke-color: rgba(44, 44, 44, 0.1);
+  --spectrum-colorslider-disabled-opacity: 0.3;
+}
+
+.spectrum-ColorSlider {
+  &.is-disabled {
+    opacity: var(--spectrum-colorslider-disabled-opacity);
+  }
+}

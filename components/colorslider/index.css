@@ -1,0 +1,110 @@
+:root {
+  --spectrum-colorslider-width: calc(var(--spectrum-global-dimension-size-125) * 16);
+  --spectrum-colorslider-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-colorslider-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-colorslider-stroke-width: var(--spectrum-global-dimension-static-size-10);
+
+  --spectrum-colorslider-handle-hitarea-border-radius: 0%;
+  --spectrum-colorslider-handle-hitarea-width: var(--spectrum-global-dimension-size-300);
+  --spectrum-colorslider-handle-hitarea-height: var(--spectrum-global-dimension-size-300);
+}
+
+%spectrum-ColorControl-handle--focused {
+  /* Bigger handle when focused */
+  width: calc(var(--spectrum-colorhandle-size) * 2);
+  height: calc(var(--spectrum-colorhandle-size) * 2);
+
+  margin-left: calc(-1 * var(--spectrum-colorhandle-size));
+  margin-top: calc(-1 * var(--spectrum-colorhandle-size));
+}
+
+%spectrum-ColorControl-hiddenField {
+  opacity: 0.0001;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.spectrum-ColorSlider {
+  position: relative;
+  display: block;
+  width: var(--spectrum-colorslider-width);
+  height: var(--spectrum-colorslider-height);
+
+  /* Otherwise we randomly drag a file icon */
+  user-select: none;
+
+  cursor: default;
+
+  &.is-focused {
+    z-index: 2;
+
+    .spectrum-ColorSlider-handle {
+      @extend %spectrum-ColorControl-handle--focused;
+    }
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+  }
+}
+
+.spectrum-ColorSlider--vertical {
+  display: inline-block;
+
+  height: var(--spectrum-colorslider-width);
+  width: var(--spectrum-colorslider-height);
+
+  .spectrum-ColorSlider-handle {
+    left: 50%;
+    top: 0;
+  }
+}
+
+.spectrum-ColorSlider-handle {
+  left: 0;
+  top: 50%;
+
+  &:after {
+    border-radius: var(--spectrum-colorslider-handle-hitarea-border-radius);
+    width: var(--spectrum-colorslider-handle-hitarea-width);
+    height: var(--spectrum-colorslider-handle-hitarea-height);
+  }
+}
+
+.spectrum-ColorSlider-gradient {
+  box-shadow: 0 0 0 var(--spectrum-colorslider-stroke-width) var(--spectrum-colorslider-stroke-color);
+}
+
+.spectrum-ColorSlider-checkerboard {
+  background-color: var(--spectrum-global-color-static-white);
+
+  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
+  background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%);
+  background-size:
+    var(--spectrum-global-dimension-static-size-200)
+    var(--spectrum-global-dimension-static-size-200);
+  background-position:
+    0 0,
+    0 var(--spectrum-global-dimension-static-size-100),
+    var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)),
+    calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
+}
+
+.spectrum-ColorSlider-gradient,
+.spectrum-ColorSlider-checkerboard {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--spectrum-colorslider-border-radius);
+}
+
+.spectrum-ColorSlider-slider {
+  @extend %spectrum-ColorControl-hiddenField;
+}
