@@ -4,7 +4,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/color-slider/
 description: |
   - Set the value of the ColorHandle component to the selected color
   - The `.spectrum-ColorHandle` should be moved with the `translateX` style property as the slider is dragged
-  - Ensure that you set the `min`/`max` to the corresponding scale (i.e. `0` to `1` for `a`, `0` to `255` for `r`, etc)
+  - Ensure that you set the `min`/`max` of `.spectrum-ColorSlider-slider` to the corresponding scale (i.e. `0` to `1` for `a`, `0` to `255` for `r`, etc)
   - Ensure that you the `step` attribute of `.spectrum-ColorSlider-slider` appropriately (i.e. `0.1` for `a`, `s`, `v` or `1` and `h`, `r`, etc)
   - Set the `background` style property of `.spectrum-ColorSlider-gradient` to the gradient of the colors to be selected.
   - Set the `value` attribute of `.spectrum-ColorSlider-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
