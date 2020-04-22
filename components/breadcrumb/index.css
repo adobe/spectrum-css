@@ -37,10 +37,6 @@ governing permissions and limitations under the License.
   transform: logical scale(1) rotate(0deg);
 
   opacity: 1;
-
-  &.is-reversed {
-    transform: scale(-1);
-  }
 }
 
 .spectrum-Breadcrumbs-item {
