@@ -2,9 +2,7 @@ name: Color Wheel
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-wheel/
 description: |
-  - For a given rotation on the wheel, `X`, set the following style properties to move the handle
-    - The `.spectrum-ColorHandle` should be moved by applying the style property `transform: rotate(-Xdeg)`
-    - The `.spectrum-ColorHandle-handleContainer` should be moved by applying the style property `transform: rotate(Xdeg) translate(67.5px)`
+  - For a given rotation on the wheel, `X`, the `.spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${67.5 * Math.cos(X)}px, ${67.5 * Math.sin(X)}px)`
   - Set the value of the ColorHandle component to the selected color
   - Set the `value` attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
   - Add `.is-dragged` when the handle is being dragged
@@ -25,18 +23,14 @@ examples:
           <circle cx="80" cy="80" r="56" class="spectrum-ColorWheel-innerCircle" />
         </svg>
 
-        <div class="spectrum-ColorWheel-handleContainer" role="presentation" style="transform: rotate(0deg) translate(67.5px)">
-
-          <div class="spectrum-ColorHandle spectrum-ColorWheel-handle" style="transform: rotate(0deg);">
-            <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
-            <svg class="spectrum-ColorHandle-loupe">
-              <g transform="translate(1 1)">
-                <path class="spectrum-ColorHandle-loupeInner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
-                <path class="spectrum-ColorHandle-loupeOuter" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
-              </g>
-            </svg>
-          </div>
-
+        <div class="spectrum-ColorHandle spectrum-ColorWheel-handle" style="transform: translate(67.5px, 0);">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorHandle-loupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorHandle-loupeInner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorHandle-loupeOuter" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
         </div>
 
         <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
@@ -59,18 +53,14 @@ examples:
           <circle cx="80" cy="80" r="56" class="spectrum-ColorWheel-innerCircle" />
         </svg>
 
-        <div class="spectrum-ColorWheel-handleContainer" role="presentation" style="transform: rotate(0deg) translate(67.5px)">
-
-          <div class="spectrum-ColorHandle spectrum-ColorWheel-handle" style="transform: rotate(0deg);">
-            <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
-            <svg class="spectrum-ColorHandle-loupe">
-              <g transform="translate(1 1)">
-                <path class="spectrum-ColorHandle-loupeInner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
-                <path class="spectrum-ColorHandle-loupeOuter" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
-              </g>
-            </svg>
-          </div>
-
+        <div class="spectrum-ColorHandle spectrum-ColorWheel-handle" style="transform: translate(67.5px, 0);">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorHandle-loupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorHandle-loupeInner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorHandle-loupeOuter" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
         </div>
 
         <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
