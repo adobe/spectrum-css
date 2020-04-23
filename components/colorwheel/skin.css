@@ -1,4 +1,7 @@
 :root {
+  --spectrum-colorwheel-disabled-opacity: 0.3;
+  --spectrum-colorwheel-stroke-width: var(--spectrum-global-dimension-static-size-10);
+
   --spectrum-colorwheel-focus-ring-color: var(--spectrum-alias-focus-color);
 
   --spectrum-colorwheel-background-color: var(--spectrum-global-color-blue-400);

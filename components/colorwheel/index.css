@@ -2,7 +2,6 @@
   /* global (static) */
   --spectrum-colorwheel-focus-ring-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorwheel-stroke-width: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-colorwheel-disabled-opacity: 0.3;
   --spectrum-colorwheel-border-radius: 100%;
   /* index.css (scale dependent) */
   --spectrum-colorwheel-margin: var(--spectrum-global-dimension-size-100);
