@@ -24,10 +24,6 @@ governing permissions and limitations under the License.
   &:focus-ring {
     color: var(--spectrum-link-text-color-key-focus);
   }
-
-  &.is-disabled {
-    color: var(--spectrum-link-text-color-disabled);
-  }
 }
 
 .spectrum-Link--secondary{
@@ -59,9 +55,5 @@ governing permissions and limitations under the License.
 
   &:focus {
     color: var(--spectrum-link-over-background-text-color-key-focus);
-  }
-
-  &.is-disabled {
-    color: var(--spectrum-link-over-background-text-color-disabled);
   }
 }

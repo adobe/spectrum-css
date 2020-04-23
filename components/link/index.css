@@ -26,16 +26,6 @@ governing permissions and limitations under the License.
     text-decoration: underline;
     text-decoration-style: double;
   }
-
-  &.is-disabled {
-    cursor: default;
-    pointer-events: none;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-  }
 }
 
 .spectrum-Link--quiet {

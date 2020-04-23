@@ -41,10 +41,4 @@ examples:
         <p class="spectrum-Body" style="color: rgb(255, 255, 255);">
           Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--overBackground spectrum-Link--quiet"> spectrum-Link--overBackground</a>. This is just filler text, but if you keep reading maybe something good will happen.
         </p>
-      </div>     
-  - id: link-disabled
-    name: Link - Disabled
-    status: Deprecated
-    details: Do not use disabled links.
-    markup: |
-      <p>This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>
+      </div>
