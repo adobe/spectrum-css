@@ -1,6 +1,9 @@
 name: Action Button
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/
+description: |
+  - For Action Buttons that only contain an icon with no label, do not include the element with the `.spectrum-ActionButton-label` class in the markup
+  - If an icon and a label are both used, ensure that the element with the `.spectrum-ActionButton-label` class comes after the `.spectrum-Icon` element.
 examples:
   - id: actionbutton
     name: Standard
@@ -464,7 +467,7 @@ examples:
       </button>
 
   - id: actionbutton
-    name: Emphasized
+    name: Emphasized (quiet)
     markup: |
       <button class="spectrum-ActionButton spectrum-ActionButton--emphasized spectrum-ActionButton--quiet">
         <span class="spectrum-ActionButton-label">Edit</span>
