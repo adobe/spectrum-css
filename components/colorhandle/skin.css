@@ -27,8 +27,3 @@
     calc(var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)) calc(-1 * var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)),
     calc(-1 * var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)) var(--spectrum-colorhandle-background-offset);
 }
-
-.spectrum-ColorHandle-loupeOuter {
-  fill: white;
-  stroke: rgba(44, 44, 44, 0.1);
-}
