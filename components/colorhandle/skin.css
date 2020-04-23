@@ -2,7 +2,8 @@
   --spectrum-colorhandle-stroke-color: rgba(44, 44, 44, 0.1);
   --spectrum-colorhandle-color: var(--spectrum-global-color-gray-50);
 
-  --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-size-25));
+  --spectrum-colorhandle-stroke-width: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-static-size-25));
 }
 
 .spectrum-ColorHandle {
