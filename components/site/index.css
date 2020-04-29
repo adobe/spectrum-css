@@ -461,6 +461,7 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSExample-example--overlay {
   position: relative;
+  min-height: var(--spectrum-global-dimension-size-800);
 }
 
 .spectrum-Dialog.spectrum-CSSExample-dialog {
@@ -474,7 +475,7 @@ governing permissions and limitations under the License.
   transition: none;
 }
 
-.spectrum-CSSExample-overlayShowButton {
+.spectrum-Button.spectrum-CSSExample-overlayShowButton {
   position: absolute;
   inset-inline-start: 50%;
   inset-block-start: 50%;

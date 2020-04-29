@@ -49,7 +49,6 @@ let minimumDeps = [
   'illustratedmessage',
   'fieldlabel',
   'accordion',
-  'decoratedtextfield',
   'table'
 ];
 

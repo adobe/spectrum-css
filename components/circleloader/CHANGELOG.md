@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/circleloader@3.0.0-beta.0...@spectrum-css/circleloader@3.0.0-beta.1)
+
+**Note:** Version bump only for package @spectrum-css/circleloader
+
+
+
+
+
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/circleloader@2.0.5...@spectrum-css/circleloader@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Circle Loader support RTL ([f3be212](https://github.com/adobe/spectrum-css/commit/f3be212))
+
+
+
+
+
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/circleloader@2.0.4...@spectrum-css/circleloader@2.0.5)
+
+**Note:** Version bump only for package @spectrum-css/circleloader
+
+
+
+
+
 <a name="2.0.4"></a>
 ## 2.0.4
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/circleloader@2.0.3...@spectrum-css/circleloader@2.0.4)

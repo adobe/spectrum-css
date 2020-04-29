@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/miller",
-  "version": "2.0.5",
+  "version": "3.0.0-beta.1",
   "description": "The Spectrum CSS miller component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,17 +16,17 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/assetlist": "^2.0.0",
-    "@spectrum-css/checkbox": "^2.0.0",
+    "@spectrum-css/assetlist": "^3.0.0-beta.0",
+    "@spectrum-css/checkbox": "^3.0.0-beta.0",
     "@spectrum-css/icon": "^2.0.0",
     "@spectrum-css/vars": "^2.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/assetlist": "^2.0.5",
-    "@spectrum-css/checkbox": "^2.0.5",
-    "@spectrum-css/component-builder": "^1.1.0",
-    "@spectrum-css/icon": "^2.0.4",
-    "@spectrum-css/vars": "^2.1.0",
+    "@spectrum-css/assetlist": "^3.0.0-beta.1",
+    "@spectrum-css/checkbox": "^3.0.0-beta.1",
+    "@spectrum-css/component-builder": "^1.2.0",
+    "@spectrum-css/icon": "^2.1.0",
+    "@spectrum-css/vars": "^2.2.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

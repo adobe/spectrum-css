@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@3.0.0-beta.0...@spectrum-css/toggle@3.0.0-beta.1)
+
+**Note:** Version bump only for package @spectrum-css/toggle
+
+
+
+
+
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@2.1.0...@spectrum-css/toggle@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Switch support RTL ([07fddb3](https://github.com/adobe/spectrum-css/commit/07fddb3))
+
+
+### 🐛 Bug fixes
+
+* make Switch handle stay within track when on ([5632951](https://github.com/adobe/spectrum-css/commit/5632951))
+* re-add RTL support for Toggle since merge blew it away ([18a2e27](https://github.com/adobe/spectrum-css/commit/18a2e27))
+
+
+
+
+
+<a name="2.1.0"></a>
+# 2.1.0
+🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@2.0.5...@spectrum-css/toggle@2.1.0)
+
+### ✨ Features
+
+* halo focus ring, closes [#112](https://github.com/adobe/spectrum-css/issues/112), closes [#573](https://github.com/adobe/spectrum-css/issues/573) ([#603](https://github.com/adobe/spectrum-css/issues/603)) ([d87e9a5](https://github.com/adobe/spectrum-css/commit/d87e9a5)), closes [#619](https://github.com/adobe/spectrum-css/issues/619)
+
+
+
+
+
 <a name="2.0.5"></a>
 ## 2.0.5
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@2.0.4...@spectrum-css/toggle@2.0.5)

@@ -107,7 +107,7 @@ Based on which scales you'll be using, you can choose to load different files:
 
 If your app has any level of complexity, you'll need "workflow" icons to indicate actions. These icons are not required to render the base components, and instead are used within buttons or menu items for actions like share, play, justify, save, etc.
 
-These icons are released within in the bundle package as `@spectrum-css/spectrum-css/dist/icons/spectrum-icons.svg`. You can import the entire set of icons in all sizes as follows:
+These icons are released within the [`@adobe/spectrum-css-workflow-icons`](https://www.npmjs.com/package/@adobe/spectrum-css-workflow-icons) package. After installing the package, you can import the entire set of icons in all sizes as follows:
 
 ```js
 loadIcons('node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg');

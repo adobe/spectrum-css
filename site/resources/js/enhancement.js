@@ -66,6 +66,96 @@ governing permissions and limitations under the License.
   });
 }());
 
+// Textfield
+(function() {
+  function setFocus(textfield, input, focused) {
+    var focusClass = input.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
+    if (focused) {
+      textfield.classList.add(focusClass);
+    }
+    else {
+      textfield.classList.remove('is-keyboardFocused');
+      textfield.classList.remove('is-focused');
+    }
+  }
+
+  document.addEventListener('focusin', function(event) {
+    var textfield = event.target.closest('.spectrum-Textfield');
+
+    if (textfield) {
+      setFocus(textfield, event.target, true);
+    }
+  });
+
+  document.addEventListener('focusout', function(event) {
+    var textfield = event.target.closest('.spectrum-Textfield');
+
+    if (textfield) {
+      setFocus(textfield, event.target,false);
+    }
+  });
+}());
+
+// Inputgroup
+(function() {
+  function setFocus(inputgroup, input, focused) {
+    var focusClass = input.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
+    if (focused) {
+      inputgroup.classList.add(focusClass);
+    }
+    else {
+      inputgroup.classList.remove('is-keyboardFocused');
+      inputgroup.classList.remove('is-focused');
+    }
+  }
+
+  document.addEventListener('focusin', function(event) {
+    var inputgroup = event.target.closest('.spectrum-InputGroup');
+
+    if (inputgroup) {
+      setFocus(inputgroup, event.target, true);
+    }
+  });
+
+  document.addEventListener('focusout', function(event) {
+    var inputgroup = event.target.closest('.spectrum-InputGroup');
+
+    if (inputgroup) {
+      setFocus(inputgroup, event.target, false);
+    }
+  });
+}());
+
+// Stepper
+(function() {
+  function setFocus(stepper, input, focused) {
+    var focusClass = input.classList.contains('focus-ring') ? 'is-keyboardFocused' : 'is-focused';
+    if (focused) {
+      stepper.classList.add(focusClass);
+    }
+    else {
+      stepper.classList.remove('is-keyboardFocused');
+      stepper.classList.remove('is-focused');
+    }
+  }
+
+  document.addEventListener('focusin', function(event) {
+    var stepper = event.target.closest('.spectrum-Stepper');
+
+    if (stepper) {
+      setFocus(stepper, event.target, true);
+    }
+  });
+
+  document.addEventListener('focusout', function(event) {
+    var stepper = event.target.closest('.spectrum-Stepper');
+
+    if (stepper) {
+      setFocus(stepper, event.target, false);
+    }
+  });
+}());
+
 // Dropdown
 (function() {
   var openDropdown = null;
@@ -285,7 +375,7 @@ function toggleInputGroupFocus(event) {
   var classList = event.target.classList;
   var closestSelector;
   // target within InputGroup
-  if (classList.contains('spectrum-InputGroup-field') ||
+  if (classList.contains('spectrum-InputGroup-input') ||
       classList.contains('spectrum-FieldButton')) {
     closestSelector = '.spectrum-InputGroup';
   }
