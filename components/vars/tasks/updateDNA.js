@@ -383,7 +383,7 @@ function generateDNAFiles() {
               if (variant.states) {
                 for (let stateName in variant.states) {
                   let state = variant.states[stateName];
-
+                  if(stateName === 'text-color') console.log({variant})
                   for (let key in state) {
                     let value = state[key];
                     let varName = key;

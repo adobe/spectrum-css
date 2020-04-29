@@ -17,7 +17,7 @@
   --spectrum-checkbox-text-gap-down: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-box-border-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-checkbox-box-background-color-down: var(--spectrum-global-color-gray-75);
-  --spectrum-checkbox-text-color-key-focus: var(--spectrum-alias-text-color-key-focus);
+  --spectrum-checkbox-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-checkbox-box-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-box-border-radius-key-focus: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-box-border-color-key-focus: var(--spectrum-global-color-gray-700);
@@ -25,6 +25,7 @@
   --spectrum-checkbox-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-checkbox-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-checkbox-focus-ring-border-radius-key-focus: var(--spectrum-global-dimension-size-75);
   --spectrum-checkbox-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-checkbox-box-border-size-disabled: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-box-border-radius-disabled: var(--spectrum-alias-border-radius-small);
@@ -49,7 +50,7 @@
   --spectrum-checkbox-text-gap-selected-down: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-box-border-color-selected-down: var(--spectrum-global-color-gray-900);
   --spectrum-checkbox-box-background-color-selected-down: var(--spectrum-global-color-gray-900);
-  --spectrum-checkbox-text-color-selected-key-focus: var(--spectrum-alias-text-color-key-focus);
+  --spectrum-checkbox-text-color-selected-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-checkbox-box-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-box-border-radius-selected-key-focus: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-box-border-color-selected-key-focus: var(--spectrum-global-color-gray-800);
@@ -224,7 +225,7 @@
   --spectrum-checkbox-emphasized-text-gap-down: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-emphasized-box-border-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-checkbox-emphasized-box-background-color-down: var(--spectrum-global-color-gray-75);
-  --spectrum-checkbox-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-key-focus);
+  --spectrum-checkbox-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-checkbox-emphasized-box-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-emphasized-box-border-radius-key-focus: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-emphasized-box-border-color-key-focus: var(--spectrum-global-color-gray-700);
@@ -232,6 +233,7 @@
   --spectrum-checkbox-emphasized-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-checkbox-emphasized-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-emphasized-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-checkbox-emphasized-focus-ring-border-radius-key-focus: var(--spectrum-global-dimension-size-75);
   --spectrum-checkbox-emphasized-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-checkbox-emphasized-box-border-size-disabled: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-emphasized-box-border-radius-disabled: var(--spectrum-alias-border-radius-small);
@@ -256,7 +258,7 @@
   --spectrum-checkbox-emphasized-text-gap-selected-down: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-emphasized-box-border-color-selected-down: var(--spectrum-global-color-blue-700);
   --spectrum-checkbox-emphasized-box-background-color-selected-down: var(--spectrum-global-color-blue-700);
-  --spectrum-checkbox-emphasized-text-color-selected-key-focus: var(--spectrum-alias-text-color-key-focus);
+  --spectrum-checkbox-emphasized-text-color-selected-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-checkbox-emphasized-box-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-emphasized-box-border-radius-selected-key-focus: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-emphasized-box-border-color-selected-key-focus: var(--spectrum-global-color-blue-600);
@@ -431,7 +433,7 @@
   --spectrum-checkbox-quiet-text-gap-down: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-quiet-box-border-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-checkbox-quiet-box-background-color-down: var(--spectrum-global-color-gray-75);
-  --spectrum-checkbox-quiet-text-color-key-focus: var(--spectrum-alias-text-color-key-focus);
+  --spectrum-checkbox-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-checkbox-quiet-box-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-quiet-box-border-radius-key-focus: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-quiet-box-border-color-key-focus: var(--spectrum-global-color-gray-700);
@@ -439,6 +441,7 @@
   --spectrum-checkbox-quiet-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-checkbox-quiet-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-quiet-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-checkbox-quiet-focus-ring-border-radius-key-focus: var(--spectrum-global-dimension-size-75);
   --spectrum-checkbox-quiet-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-checkbox-quiet-box-border-size-disabled: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-quiet-box-border-radius-disabled: var(--spectrum-alias-border-radius-small);
@@ -463,7 +466,7 @@
   --spectrum-checkbox-quiet-text-gap-selected-down: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-quiet-box-border-color-selected-down: var(--spectrum-global-color-gray-900);
   --spectrum-checkbox-quiet-box-background-color-selected-down: var(--spectrum-global-color-gray-900);
-  --spectrum-checkbox-quiet-text-color-selected-key-focus: var(--spectrum-alias-text-color-key-focus);
+  --spectrum-checkbox-quiet-text-color-selected-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-checkbox-quiet-box-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-quiet-box-border-radius-selected-key-focus: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-quiet-box-border-color-selected-key-focus: var(--spectrum-global-color-gray-800);

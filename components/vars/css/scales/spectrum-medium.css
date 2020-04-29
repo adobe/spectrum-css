@@ -145,6 +145,7 @@
   --spectrum-circleloader-small-border-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-circleloader-small-over-background-border-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorhandle-loupe-margin: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-colorloupe-colorhandle-gap: var(--spectrum-global-dimension-static-size-125);
   --spectrum-colorslider-touch-hit-y: var(--spectrum-global-dimension-size-150);
   --spectrum-colorslider-vertical-touch-hit-x: var(--spectrum-global-dimension-size-150);
   --spectrum-colorwheel-min-size: var(--spectrum-global-dimension-size-2400);
@@ -289,6 +290,7 @@
   --spectrum-slider-fill-track-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-slider-fill-handle-touch-hit-x: var(--spectrum-global-dimension-static-size-200);
   --spectrum-slider-fill-handle-touch-hit-y: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-switch-focus-ring-border-radius-key-focus: var(--spectrum-global-dimension-static-size-130);
   --spectrum-switch-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
   --spectrum-switch-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
   --spectrum-switch-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
@@ -296,6 +298,7 @@
   --spectrum-switch-track-width: 26px;
   --spectrum-switch-handle-border-radius: 7px;
   --spectrum-switch-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-switch-emphasized-focus-ring-border-radius-key-focus: var(--spectrum-global-dimension-static-size-130);
   --spectrum-switch-emphasized-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
   --spectrum-switch-emphasized-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
   --spectrum-switch-emphasized-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);
@@ -303,6 +306,7 @@
   --spectrum-switch-emphasized-track-width: 26px;
   --spectrum-switch-emphasized-handle-border-radius: 7px;
   --spectrum-switch-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-switch-quiet-focus-ring-border-radius-key-focus: var(--spectrum-global-dimension-static-size-130);
   --spectrum-switch-quiet-text-gap-key-focus: var(--spectrum-global-dimension-static-size-115);
   --spectrum-switch-quiet-text-gap-selected-key-focus: var(--spectrum-global-dimension-static-size-115);
   --spectrum-switch-quiet-text-gap-error-key-focus: var(--spectrum-global-dimension-static-size-115);

@@ -1,6 +1,7 @@
 :root {
   --spectrum-semantic-negative-color-background: var(--spectrum-global-color-static-red-700);
   --spectrum-semantic-negative-color-default: var(--spectrum-global-color-red-500);
+  --spectrum-semantic-negative-color-state-hover: var(--spectrum-global-color-red-600);
   --spectrum-semantic-negative-color-dark: var(--spectrum-global-color-red-600);
   --spectrum-semantic-negative-color-border: var(--spectrum-global-color-red-400);
   --spectrum-semantic-negative-color-icon: var(--spectrum-global-color-red-600);
