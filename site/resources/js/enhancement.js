@@ -678,7 +678,7 @@ function openDialog(dialog, withOverlay) {
   dialog.classList.add('is-open');
 
   // Support wrapped dialogs
-  var innerDialog = dialog.querySelector('.spectrum-Dialog');
+  var innerDialog = dialog.querySelector('.spectrum-Modal');
   if (innerDialog) {
     innerDialog.classList.add('is-open');
   }
