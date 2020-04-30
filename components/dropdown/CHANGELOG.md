@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@3.0.0-beta.0...@spectrum-css/dropdown@3.0.0-beta.1)
+
+**Note:** Version bump only for package @spectrum-css/dropdown
+
+
+
+
+
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@2.1.5...@spectrum-css/dropdown@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Dropdown support RTL ([b580068](https://github.com/adobe/spectrum-css/commit/b580068))
+
+
+
+
+
 <a name="2.1.5"></a>
 ## 2.1.5
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@2.1.4...@spectrum-css/dropdown@2.1.5)

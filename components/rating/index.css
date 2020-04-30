@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex: 0 0 auto;
 
-  width: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
+  inline-size: calc(var(--spectrum-rating-icon-width) * var(--spectrum-rating-icon-count));
 
   border-radius: var(--spectrum-rating-border-radius);
 
@@ -60,8 +60,8 @@ governing permissions and limitations under the License.
 .spectrum-Rating-input {
   position: absolute;
   z-index: 0;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   margin: 0;
   opacity: 0.0001;
   pointer-events: none;
@@ -71,8 +71,8 @@ governing permissions and limitations under the License.
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  width: var(--spectrum-rating-icon-width);
-  height: var(--spectrum-icon-star-height);
+  inline-size: var(--spectrum-rating-icon-width);
+  block-size: var(--spectrum-icon-star-height);
   padding: var(--spectrum-rating-icon-padding-y) 0;
 
   @extend %spectrum-Rating-strokedStar;
@@ -85,11 +85,11 @@ governing permissions and limitations under the License.
     &:after {
       border-radius: var(--spectrum-rating-indicator-border-radius);
       content: '';
-      height: var(--spectrum-rating-indicator-height);
+      block-size: var(--spectrum-rating-indicator-height);
       position: absolute;
-      bottom: var(--spectrum-rating-indicator-offset);
-      left: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
-      right: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
+      inset-block-end: var(--spectrum-rating-indicator-offset);
+      inset-inline-start: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
+      inset-inline-end: calc((var(--spectrum-rating-icon-width) - var(--spectrum-rating-indicator-width)) / 2);
     }
   }
 
@@ -101,7 +101,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  width: var(--spectrum-icon-star-width);
-  height: var(--spectrum-icon-star-width);
+  inline-size: var(--spectrum-icon-star-width);
+  block-size: var(--spectrum-icon-star-width);
   margin: 0 auto;
 }

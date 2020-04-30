@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.0...@spectrum-css/illustratedmessage@3.0.0-beta.1)
+
+**Note:** Version bump only for package @spectrum-css/illustratedmessage
+
+
+
+
+
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@2.1.1...@spectrum-css/illustratedmessage@3.0.0-beta.0)
+
+### ✨ Features
+
+* make IllustratedMessage support RTL ([3183eff](https://github.com/adobe/spectrum-css/commit/3183eff))
+
+
+
+
+
 <a name="2.1.1"></a>
 ## 2.1.1
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@2.1.0...@spectrum-css/illustratedmessage@2.1.1)

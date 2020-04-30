@@ -1,18 +1,21 @@
+id: link-primary
 name: Link
 SpectrumSiteSlug: https://spectrum.adobe.com/page/link/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Subtle variant
+      Subtle variant was removed. Please use Quiet.
 examples:
-  - id: link
-    name: Standard
+  - id: link-primary
     status: Verified
     markup: |
       <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
-  - id: link-quiet
-    name: Link - Quiet
+  - id: link-secondary
     status: Verified
     markup: |
-      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
+      <a href="#" class="spectrum-Link spectrum-Link--secondary">Link using spectrum-Link--secondary</a>
   - id: link-over-background
-    name: Link - Over Background
     status: Verified
     markup: |
       <div style="background-color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
@@ -20,15 +23,22 @@ examples:
           Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--overBackground"> spectrum-Link--overBackground</a>. This is just filler text, but if you keep reading maybe something good will happen.
         </p>
       </div>
-  - id: link-disabled
-    name: Link - Disabled
-    status: Deprecated
-    details: Do not use disabled links.
+  - id: link-quiet-primary
+    name: Link - Quiet (Primary)
+    status: Verified
     markup: |
-      <p>This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>
-  - id: link-subtle
-    name: Link - Subtle
-    status: Deprecated
-    details: Use `quiet` instead.
+      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
+  - id: link-quiet-secondary
+    name: Link - Quiet (Secondary)
+    status: Verified
     markup: |
-      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
+      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--secondary spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
+  - id: link-quiet-over-background
+    name: Link - Quiet (Over Background)
+    status: Verified
+    markup: |
+      <div style="background-color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
+        <p class="spectrum-Body" style="color: rgb(255, 255, 255);">
+          Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--overBackground spectrum-Link--quiet"> spectrum-Link--overBackground</a>. This is just filler text, but if you keep reading maybe something good will happen.
+        </p>
+      </div>

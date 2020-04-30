@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/popover",
-  "version": "2.0.6",
+  "version": "3.0.0-beta.1",
   "description": "The Spectrum CSS popover component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -19,10 +19,10 @@
     "@spectrum-css/vars": "^2.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^2.2.0",
-    "@spectrum-css/component-builder": "^1.1.0",
-    "@spectrum-css/dialog": "^2.0.5",
-    "@spectrum-css/menu": "^2.1.5",
+    "@spectrum-css/button": "^3.0.0-beta.1",
+    "@spectrum-css/component-builder": "^1.2.0",
+    "@spectrum-css/dialog": "^3.0.0-beta.1",
+    "@spectrum-css/menu": "^3.0.0-beta.1",
     "@spectrum-css/vars": "^2.2.0",
     "gulp": "^4.0.0"
   },

@@ -199,7 +199,7 @@ function calculateOverrides(objects, processValue) {
 }
 
 function generateDNAFiles() {
-  const dnaJSONPath = path.join(path.dirname(require.resolve('@spectrum/spectrum-dna')), '..', 'dist', 'data', 'json', 'dna-linked.json');
+  const dnaJSONPath = path.join(path.dirname(require.resolve('@adobe/spectrum-tokens')), '..', 'dist', 'data', 'json', 'dna-linked.json');
   return gulp.src(dnaJSONPath)
     .pipe(through.obj(function translateJSON(file, enc, cb) {
 
@@ -383,7 +383,7 @@ function generateDNAFiles() {
               if (variant.states) {
                 for (let stateName in variant.states) {
                   let state = variant.states[stateName];
-
+                  if(stateName === 'text-color') console.log({variant})
                   for (let key in state) {
                     let value = state[key];
                     let varName = key;

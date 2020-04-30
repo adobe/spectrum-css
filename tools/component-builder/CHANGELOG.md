@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# 1.2.0
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.1.0...@spectrum-css/component-builder@1.2.0)
+
+### ✨ Features
+
+* make Typography support RTL ([17abd2b](https://github.com/adobe/spectrum-css/commit/17abd2b))
+* support transform: logical rotate(rotation) for RTL ([5bbc8d2](https://github.com/adobe/spectrum-css/commit/5bbc8d2))
+
+
+### 🐛 Bug fixes
+
+* support multiple selectors in postcss-transform-logical ([3ef1750](https://github.com/adobe/spectrum-css/commit/3ef1750))
+
+
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.0.2...@spectrum-css/component-builder@1.1.0)

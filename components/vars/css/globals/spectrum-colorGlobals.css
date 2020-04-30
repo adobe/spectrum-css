@@ -1,4 +1,6 @@
 :root {
+  --spectrum-global-color-status: Verified;
+  --spectrum-global-color-version: 5.0.1;
   --spectrum-global-color-static-black: rgb(0, 0, 0);
   --spectrum-global-color-static-white: rgb(255, 255, 255);
   --spectrum-global-color-static-blue: rgb(20, 115, 230);
@@ -19,6 +21,7 @@
   --spectrum-global-color-static-blue-500: rgb(38, 128, 235);
   --spectrum-global-color-static-blue-600: rgb(20, 115, 230);
   --spectrum-global-color-static-blue-700: rgb(13, 102, 208);
+  --spectrum-global-color-static-blue-800: rgb(9, 90, 186);
   --spectrum-global-color-static-red-400: rgb(236, 91, 98);
   --spectrum-global-color-static-red-500: rgb(227, 72, 80);
   --spectrum-global-color-static-red-600: rgb(215, 55, 63);
@@ -80,6 +83,7 @@
   --spectrum-global-color-opacity-80: 0.8;
   --spectrum-global-color-opacity-60: 0.6;
   --spectrum-global-color-opacity-50: 0.5;
+  --spectrum-global-color-opacity-42: 0.42;
   --spectrum-global-color-opacity-40: 0.4;
   --spectrum-global-color-opacity-30: 0.3;
   --spectrum-global-color-opacity-25: 0.25;

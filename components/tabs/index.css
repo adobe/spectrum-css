@@ -96,6 +96,9 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-tabs-text-size);
   font-weight: var(--spectrum-tabs-text-font-weight);
 
+  /* support links */
+  text-decoration: none;
+
   &:empty {
     /* Hide the tab label if it's not being used */
     display: none;
