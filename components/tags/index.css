@@ -12,10 +12,6 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
-:root {
-  --spectrum-tag-removable-key-focus-border-size: var(--spectrum-alias-border-size-thick);
-}
-
 .spectrum-Tags {
   display: inline-block;
 
@@ -85,7 +81,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Tags-itemClearButton {
     &.is-focused {
-      border: var(--spectrum-tag-removable-key-focus-border-size) solid;
+      border: var(--spectrum-tag-removable-border-size-key-focus) solid;
       border-radius: var(--spectrum-alias-border-radius-regular);
     }
   }
