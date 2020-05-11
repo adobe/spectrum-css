@@ -73,6 +73,8 @@ examples:
       </div>
       <script>
         var canvas = document.querySelector('canvas.spectrum-ColorSlider-gradient');
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
         var context = canvas.getContext('2d');
         context.rect(0, 0, canvas.width, canvas.height);
 

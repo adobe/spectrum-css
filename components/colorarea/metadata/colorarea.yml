@@ -91,6 +91,8 @@ examples:
       </div>
       <script>
         var canvas = document.querySelector('canvas.spectrum-ColorArea-gradient');
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
         var context = canvas.getContext('2d');
         context.rect(0, 0, canvas.width, canvas.height);
 
