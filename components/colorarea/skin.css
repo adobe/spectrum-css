@@ -1,9 +1,19 @@
 :root {
+  /* todo: fix this in DNA */
+  --spectrum-colorarea-border-color: var(--spectrum-colorhandle-outer-border-color);
+
   --spectrum-colorarea-disabled-opacity: 0.3;
 }
 
 .spectrum-ColorArea {
+
   &.is-disabled {
     opacity: var(--spectrum-colorarea-disabled-opacity);
+  }
+}
+
+.spectrum-ColorArea {
+  &:before {
+    box-shadow: inset 0 0 0 var(--spectrum-colorarea-border-size) var(--spectrum-colorarea-border-color);
   }
 }

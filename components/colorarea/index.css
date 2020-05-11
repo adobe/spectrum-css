@@ -1,9 +1,3 @@
-:root {
-  --spectrum-colorarea-width: calc(var(--spectrum-global-dimension-size-125) * 16);
-  --spectrum-colorarea-height: var(--spectrum-colorarea-width);
-  --spectrum-colorarea-border-radius: var(--spectrum-alias-border-radius-regular);
-}
-
 %spectrum-ColorControl-hiddenField {
   opacity: 0.0001;
   position: absolute;
@@ -26,8 +20,8 @@
 .spectrum-ColorArea {
   position: relative;
   display: inline-block;
-  width: var(--spectrum-colorarea-width);
-  height: var(--spectrum-colorarea-height);
+  width: var(--spectrum-colorarea-default-width);
+  height: var(--spectrum-colorarea-default-height);
 
   cursor: default;
 
@@ -44,6 +38,18 @@
   &.is-disabled {
     pointer-events: none;
   }
+
+  /* the floating inset box shadow must be a separate element since <canvas> won't take it */
+  &:before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: var(--spectrum-colorarea-border-radius);
+  }
 }
 
 .spectrum-ColorArea-handle {
@@ -55,8 +61,6 @@
   width: 100%;
   height: 100%;
   border-radius: var(--spectrum-colorarea-border-radius);
-
-  box-shadow: inset 0 0 0 var(--spectrum-colorwheel-stroke-width) var(--spectrum-colorwheel-stroke-color);
 }
 
 .spectrum-ColorArea-slider {
