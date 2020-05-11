@@ -1,6 +1,5 @@
 :root {
   --spectrum-colorwheel-disabled-opacity: 0.3;
-  --spectrum-colorwheel-stroke-width: var(--spectrum-global-dimension-static-size-10);
 
   --spectrum-colorwheel-focus-ring-color: var(--spectrum-alias-focus-color);
 
@@ -17,14 +16,11 @@
   }
 }
 
-.spectrum-ColorWheel-outerCircle,
-.spectrum-ColorWheel-innerCircle {
-  fill: transparent;
-
-  stroke-width: var(--spectrum-colorwheel-stroke-width);
-  stroke: var(--spectrum-colorwheel-stroke-color);
+.spectrum-ColorWheel-gradient {
+  border-color: var(--spectrum-colorwheel-stroke-color);
 }
 
-.spectrum-ColorWheel-outerCircle {
-  stroke-width: var(--spectrum-colorwheel-stroke-width);
+.spectrum-ColorWheel-outerCircle,
+.spectrum-ColorWheel-innerCircle {
+  stroke: var(--spectrum-colorwheel-stroke-color);
 }

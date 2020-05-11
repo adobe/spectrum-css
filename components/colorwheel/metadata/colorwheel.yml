@@ -64,3 +64,45 @@ examples:
 
         <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
       </div>
+
+  - id: color-wheel
+    name: Standard (with canvas)
+    markup: |
+      <div class="spectrum-ColorWheel">
+        <canvas class="spectrum-ColorWheel-gradient"></canvas>
+
+        <div class="spectrum-ColorHandle spectrum-ColorWheel-handle" style="transform: translate(67.5px, 0);">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
+      </div>
+
+      <script>
+        var canvas = document.querySelector('canvas.spectrum-ColorWheel-gradient');
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        var context = canvas.getContext('2d');
+        context.rect(0, 0, canvas.width, canvas.height);
+
+        var width = canvas.width;
+        var height = canvas.height;
+        var centerX = width / 2;
+        var centerY = height / 2;
+        var ringSize = 57;
+
+        for (var i = 0; i < 360; i += Math.PI / 8) {
+          var rad = i * (2 * Math.PI) / 360;
+          context.strokeStyle = `hsla(${i}, 100%, 50%, 1.0)`;
+          context.beginPath();
+          context.moveTo(centerX + ringSize * Math.cos(rad), centerY + ringSize * Math.sin(rad));
+          context.lineTo(centerX + centerX * Math.cos(rad), centerY + centerY * Math.sin(rad));
+          context.stroke();
+        }
+      </script>

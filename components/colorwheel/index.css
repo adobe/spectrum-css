@@ -3,6 +3,7 @@
   --spectrum-colorwheel-focus-ring-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorwheel-stroke-width: var(--spectrum-global-dimension-static-size-10);
   --spectrum-colorwheel-border-radius: 100%;
+  --spectrum-colorwheel-stroke-width: var(--spectrum-global-dimension-static-size-10);
   /* index.css (scale dependent) */
   --spectrum-colorwheel-margin: var(--spectrum-global-dimension-size-100);
   --spectrum-colorwheel-width: calc(var(--spectrum-global-dimension-size-125) * 16);
@@ -58,6 +59,30 @@
     /* Be on top when dragging so loupe can overlap */
     z-index: 2;
   }
+}
+
+.spectrum-ColorWheel-gradient {
+  position: relative;
+  z-index: 0;
+  width: var(--spectrum-colorwheel-width);
+  height: var(--spectrum-colorwheel-height);
+  border-radius: 100%;
+  box-sizing: border-box;
+
+  border-width: var(--spectrum-colorwheel-stroke-width);
+  border-style: solid;
+}
+
+.spectrum-ColorWheel-wheel {
+  position: relative;
+  z-index: 1;
+}
+
+.spectrum-ColorWheel-outerCircle,
+.spectrum-ColorWheel-innerCircle {
+  fill: transparent;
+
+  stroke-width: var(--spectrum-colorwheel-stroke-width);
 }
 
 .spectrum-ColorWheel-slider {
