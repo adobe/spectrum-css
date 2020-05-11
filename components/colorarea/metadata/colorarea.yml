@@ -31,9 +31,9 @@ examples:
       </div>
 
   - id: color-area
-    name: Small
+    name: Custom Size
     markup: |
-      <div class="spectrum-ColorArea spectrum-ColorArea--small">
+      <div class="spectrum-ColorArea" style="width: 72px; height: 72px">
         <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
 
         <div class="spectrum-ColorHandle spectrum-ColorArea-handle" style="transform: translate(72px, 0px);">

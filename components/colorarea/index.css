@@ -2,8 +2,6 @@
   --spectrum-colorarea-width: calc(var(--spectrum-global-dimension-size-125) * 16);
   --spectrum-colorarea-height: var(--spectrum-colorarea-width);
   --spectrum-colorarea-border-radius: var(--spectrum-alias-border-radius-regular);
-  --spectrum-colorarea-small-width: var(--spectrum-global-dimension-size-900);
-  --spectrum-colorarea-small-height: var(--spectrum-colorarea-small-width);
 }
 
 %spectrum-ColorControl-hiddenField {
@@ -46,11 +44,6 @@
   &.is-disabled {
     pointer-events: none;
   }
-}
-
-.spectrum-ColorArea--small {
-  width: var(--spectrum-colorarea-small-width);
-  height: var(--spectrum-colorarea-small-height);
 }
 
 .spectrum-ColorArea-handle {
