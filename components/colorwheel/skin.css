@@ -1,13 +1,8 @@
 :root {
   --spectrum-colorwheel-disabled-opacity: 0.3;
 
-  --spectrum-colorwheel-focus-ring-color: var(--spectrum-alias-focus-color);
-
-  --spectrum-colorwheel-background-color: var(--spectrum-global-color-blue-400);
-  --spectrum-colorwheel-background-color-hover: var(--spectrum-global-color-blue-500);
-  --spectrum-colorwheel-background-color-disabled: var(--spectrum-global-color-gray-400);
-
-  --spectrum-colorwheel-stroke-color: rgba(44, 44, 44, 0.1);
+  /* todo: fix this in DNA */
+  --spectrum-colorwheel-border-color: var(--spectrum-colorhandle-outer-border-color);
 }
 
 .spectrum-ColorWheel {
@@ -17,10 +12,10 @@
 }
 
 .spectrum-ColorWheel-gradient {
-  border-color: var(--spectrum-colorwheel-stroke-color);
+  border-color: var(--spectrum-colorwheel-border-color);
 }
 
 .spectrum-ColorWheel-outerCircle,
 .spectrum-ColorWheel-innerCircle {
-  stroke: var(--spectrum-colorwheel-stroke-color);
+  stroke: var(--spectrum-colorwheel-border-color);
 }
