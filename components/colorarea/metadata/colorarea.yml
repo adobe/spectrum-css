@@ -2,11 +2,11 @@ name: Color Area
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
 description: |
-  - The `.spectrum-ColorHandle` should be moved with the `translate` style property as the sliders are dragged
+  - The `.spectrum-ColorHandle` should be moved with the `transform: translate(x, y)` style property as the sliders are dragged
   - Set the `background` style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected
-  - Set the `value` attribute of `.spectrum-ColorSlider-value` to the currently selected hue
-  - Set the `value` attribute of `.spectrum-ColorArea-slider[name=s]` to the currently selected saturation
-  - Set the `value` attribute of `.spectrum-ColorArea-slider[name=v]` to the currently selected value
+  - Alternatively, provide a `<canvas>` or `<img>` element with the gradient you want to use and apply the `.spectrum-ColorArea-gradient` class
+  - Set the `value` attribute of `.spectrum-ColorArea-slider[name=x]` to the currently selected x value (i.e. saturation)
+  - Set the `value` attribute of `.spectrum-ColorArea-slider[name=y]` to the currently selected y value (i.e. value)
   - Set the value of the ColorHandle component to the selected color
   - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
 examples:
@@ -26,9 +26,8 @@ examples:
           </svg>
         </div>
 
-        <input type="hidden" class="spectrum-ColorArea-value" name="h">
-        <input type="range" class="spectrum-ColorArea-slider" name="s" aria-label="saturation and value" min="0" max="1" step="0.01">
-        <input type="range" class="spectrum-ColorArea-slider" name="v" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
       </div>
 
   - id: color-area
@@ -47,9 +46,8 @@ examples:
           </svg>
         </div>
 
-        <input type="hidden" class="spectrum-ColorArea-value" name="h">
-        <input type="range" class="spectrum-ColorArea-slider" name="s" aria-label="saturation and value" min="0" max="1" step="0.01">
-        <input type="range" class="spectrum-ColorArea-slider" name="v" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
       </div>
 
   - id: color-area
@@ -68,7 +66,6 @@ examples:
           </svg>
         </div>
 
-        <input type="hidden" class="spectrum-ColorArea-value" name="h">
-        <input type="range" class="spectrum-ColorArea-slider" name="s" aria-label="saturation and value" min="0" max="1" step="0.01">
-        <input type="range" class="spectrum-ColorArea-slider" name="v" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
       </div>

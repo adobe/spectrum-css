@@ -34,7 +34,6 @@ examples:
         </div>
 
         <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
-        <input type="hidden" class="spectrum-ColorWheel-input">
       </div>
 
   - id: color-wheel
@@ -64,5 +63,4 @@ examples:
         </div>
 
         <input type="range" class="spectrum-ColorWheel-slider" aria-label="hue" min="0" max="360" step="`">
-        <input type="hidden" class="spectrum-ColorWheel-input">
       </div>
