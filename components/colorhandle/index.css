@@ -2,13 +2,8 @@
   --spectrum-colorhandle-animation-duration: var(--spectrum-global-animation-duration-100);
   --spectrum-colorhandle-animation-easing: ease-in-out;
 
-  --spectrum-colorhandle-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-colorhandle-border-width: var(--spectrum-global-dimension-size-25);
   --spectrum-colorhandle-hitarea-size: var(--spectrum-global-dimension-size-300);
   --spectrum-colorhandle-hitarea-radius: 100%;
-
-  --spectrum-colorhandle-stroke-width: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-colorhandle-stroke-width-focused: var(--spectrum-global-dimension-static-size-25);
 }
 
 %spectrum-ColorControl-handle--focused {
@@ -27,7 +22,7 @@
   box-sizing: border-box;
   width: var(--spectrum-colorhandle-size);
   height: var(--spectrum-colorhandle-size);
-  border-width: var(--spectrum-colorhandle-border-width);
+  border-width: var(--spectrum-colorhandle-inner-border-size);
   border-style: solid;
 
   margin-left: calc(-1 * calc(var(--spectrum-colorhandle-size) / 2));

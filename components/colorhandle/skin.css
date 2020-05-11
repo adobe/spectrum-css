@@ -1,14 +1,13 @@
 :root {
-  --spectrum-colorhandle-stroke-color: rgba(44, 44, 44, 0.1);
-  --spectrum-colorhandle-color: var(--spectrum-global-color-gray-50);
-
-  --spectrum-colorhandle-stroke-width: var(--spectrum-global-dimension-static-size-10);
+  /* redefine this var so it can be used in skin.css */
+  --spectrum-colorhandle-outer-border-size: var(--spectrum-global-dimension-static-size-10);
   --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-static-size-25));
+  --spectrum-colorhandle-checkerboard-size: var(--spectrum-global-dimension-static-size-100);
 }
 
 .spectrum-ColorHandle {
-  border-color: var(--spectrum-colorhandle-color);
-  box-shadow: 0 0 0 var(--spectrum-colorhandle-stroke-width) var(--spectrum-colorhandle-stroke-color), inset 0 0 0 var(--spectrum-colorhandle-stroke-width) var(--spectrum-colorhandle-stroke-color);
+  border-color: var(--spectrum-colorhandle-inner-border-color);
+  box-shadow: 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color), inset 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color);
 
   background-color: var(--spectrum-global-color-static-white);
 
@@ -23,7 +22,7 @@
     var(--spectrum-global-dimension-static-size-200);
   background-position:
     var(--spectrum-colorhandle-background-offset) var(--spectrum-colorhandle-background-offset),
-    var(--spectrum-colorhandle-background-offset) calc(var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)),
-    calc(var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)) calc(-1 * var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)),
-    calc(-1 * var(--spectrum-global-dimension-static-size-100) + var(--spectrum-colorhandle-background-offset)) var(--spectrum-colorhandle-background-offset);
+    var(--spectrum-colorhandle-background-offset) calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
+    calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
+    calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) var(--spectrum-colorhandle-background-offset);
 }
