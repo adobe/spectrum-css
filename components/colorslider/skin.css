@@ -1,11 +1,12 @@
 :root {
   --spectrum-colorslider-disabled-opacity: 0.3;
-  --spectrum-colorslider-stroke-color: rgba(44, 44, 44, 0.1);
-  --spectrum-colorslider-stroke-width: var(--spectrum-global-dimension-static-size-10);
+
+  /* todo: fix this in DNA */
+  --spectrum-colorslider-border-color: var(--spectrum-colorhandle-outer-border-color);
 }
 
 .spectrum-ColorSlider-gradient {
-  box-shadow: 0 0 0 var(--spectrum-colorslider-stroke-width) var(--spectrum-colorslider-stroke-color);
+  box-shadow: 0 0 0 var(--spectrum-colorslider-border-size) var(--spectrum-colorslider-border-color);
 }
 
 .spectrum-ColorSlider {

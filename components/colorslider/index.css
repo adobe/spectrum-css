@@ -1,8 +1,4 @@
 :root {
-  --spectrum-colorslider-width: calc(var(--spectrum-global-dimension-size-125) * 16);
-  --spectrum-colorslider-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-colorslider-border-radius: var(--spectrum-alias-border-radius-regular);
-
   --spectrum-colorslider-handle-hitarea-border-radius: 0%;
   --spectrum-colorslider-handle-hitarea-width: var(--spectrum-global-dimension-size-300);
   --spectrum-colorslider-handle-hitarea-height: var(--spectrum-global-dimension-size-300);
@@ -30,7 +26,7 @@
 .spectrum-ColorSlider {
   position: relative;
   display: block;
-  width: var(--spectrum-colorslider-width);
+  width: var(--spectrum-colorslider-default-width);
   height: var(--spectrum-colorslider-height);
 
   /* Otherwise we randomly drag a file icon */
@@ -54,8 +50,8 @@
 .spectrum-ColorSlider--vertical {
   display: inline-block;
 
-  height: var(--spectrum-colorslider-width);
-  width: var(--spectrum-colorslider-height);
+  width: var(--spectrum-colorslider-vertical-width);
+  height: var(--spectrum-colorslider-vertical-default-height);
 
   .spectrum-ColorSlider-handle {
     left: 50%;
@@ -72,10 +68,6 @@
     width: var(--spectrum-colorslider-handle-hitarea-width);
     height: var(--spectrum-colorslider-handle-hitarea-height);
   }
-}
-
-.spectrum-ColorSlider-gradient {
-  box-shadow: 0 0 0 var(--spectrum-colorslider-stroke-width) var(--spectrum-colorslider-stroke-color);
 }
 
 .spectrum-ColorSlider-checkerboard {
