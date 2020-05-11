@@ -1,10 +1,13 @@
 :root {
   /* size is the same on desktop and mobile */
-  --spectrum-colorloupe-width: 50px;
-  --spectrum-colorloupe-height: 66px;
+  --spectrum-colorloupe-width: calc(var(--spectrum-colorhandle-loupe-width) + var(--spectrum-colorhandle-inner-border-size) * 2);
+  --spectrum-colorloupe-height: calc(var(--spectrum-colorhandle-loupe-height) + var(--spectrum-colorhandle-inner-border-size) * 2);
+
+  /* Distance between the loupe and the handle */
   --spectrum-colorloupe-offset: var(--spectrum-global-dimension-static-size-200);
+
+  /* How much to animate up to the offset distance */
   --spectrum-colorloupe-animation-distance: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-colorloupe-stroke-width: var(--spectrum-global-dimension-static-size-10);
 }
 
 .spectrum-ColorLoupe {
@@ -29,5 +32,5 @@
 }
 
 .spectrum-ColorLoupe-outer {
-  stroke-width: var(--spectrum-colorloupe-stroke-width);
+  stroke-width: var(--spectrum-colorhandle-loupe-outer-border-size);
 }
