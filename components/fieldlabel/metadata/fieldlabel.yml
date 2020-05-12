@@ -5,69 +5,86 @@ examples:
   - id: fieldlabel
     name: Standard
     markup: |
-      <label for="lifestory" class="spectrum-FieldLabel">Life Story</label>
-      <div class="spectrum-Textfield">
-        <input id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
+      <div class="spectrum-Field spectrum-Field--positionTop">
+        <label for="lifestory" class="spectrum-FieldLabel">Life Story</label>
+        <div class="spectrum-Textfield spectrum-Field-field">
+          <input id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
+        </div>
       </div>
 
-      <label for="lifestory2" class="spectrum-FieldLabel is-disabled">Life Story</label>
-      <div class="spectrum-Textfield is-disabled">
-        <input id="lifestory2" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input" disabled>
+      <div class="spectrum-Field spectrum-Field--positionTop">
+        <label for="lifestory2" class="spectrum-FieldLabel is-disabled">Life Story</label>
+        <div class="spectrum-Textfield spectrum-Field-field is-disabled">
+          <input id="lifestory2" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input" disabled>
+        </div>
       </div>
   - id: fieldlabel-side
     name: Left
     description: A left aligned field label.
     markup: |
-      <label for="lifestory3" class="spectrum-FieldLabel spectrum-FieldLabel--left" style="width: 72px">Life Story</label>
-
-      <div class="spectrum-Textfield spectrum-Textfield--multiline">
-        <textarea id="lifestory3" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
+      <div class="spectrum-Field spectrum-Field--positionSide">
+        <label for="lifestory3" class="spectrum-FieldLabel spectrum-FieldLabel--positionSide">Life Story</label>
+        <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Field-field">
+          <textarea id="lifestory3" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
+        </div>
       </div>
   - id: fieldlabel-side
     name: Right
     description: A right aligned field label.
     markup: |
-      <label for="lifestory4" class="spectrum-FieldLabel spectrum-FieldLabel--right" style="width: 72px">Life Story</label>
-
-      <div class="spectrum-Textfield spectrum-Textfield--multiline">
-        <textarea id="lifestory4" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
-      </div>
+      <div class="spectrum-Field spectrum-Field--positionSide">
+        <label for="lifestory4" class="spectrum-FieldLabel spectrum-FieldLabel--positionSide">Life Story</label>
+        <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Field-field">
+          <textarea id="lifestory4" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
+        </div>
+      </div>  
   - id: fieldlabel
     name: Required
     description: Field label for a required field.
     markup: |
-      <label for="lifestory5" class="spectrum-FieldLabel">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-Asterisk" />
-        </svg>
-      </label>
-      <div class="spectrum-Textfield">
-        <input id="lifestory5" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
+      <div class="spectrum-Field spectrum-Field--positionTop">
+        <label for="lifestory5" class="spectrum-FieldLabel">Life Story
+          <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Asterisk" />
+          </svg>
+        </label>
+        <div class="spectrum-Textfield spectrum-Field-field">
+          <input id="lifestory5" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
+        </div>
       </div>
+      
+      <br/>
 
-      <label for="lifestory6" class="spectrum-FieldLabel">Life Story (Required)</label>
-      <div class="spectrum-Textfield">
-        <input id="lifestory6" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
+      <div class="spectrum-Field spectrum-Field--positionTop">
+        <label for="lifestory6" class="spectrum-FieldLabel">Life Story (Required)</label>
+        <div class="spectrum-Textfield spectrum-Field-field">
+          <input id="lifestory6" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
+        </div>
       </div>
 
       <br/>
       <br/>
 
-      <label for="lifestory7" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-Asterisk" />
-        </svg>
-      </label>
-      <div class="spectrum-Textfield spectrum-Textfield--multiline">
-        <textarea id="lifestory7" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
+      <div class="spectrum-Field spectrum-Field--positionSide">
+        <label for="lifestory7" class="spectrum-FieldLabel spectrum-FieldLabel--positionSide">Life Story
+          <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Asterisk" />
+          </svg>
+        </label>
+        <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Field-field">
+          <textarea id="lifestory7" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
+        </div>
       </div>
 
+      <br/>
 
-      <label for="lifestory8" class="spectrum-FieldLabel is-disabled">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-Asterisk" />
-        </svg>
-      </label>
-      <div class="spectrum-Textfield is-disabled">
-        <input id="lifestory8" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input" disabled>
+      <div class="spectrum-Field spectrum-Field--positionTop">
+        <label for="lifestory8" class="spectrum-FieldLabel is-disabled">Life Story
+          <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Asterisk" />
+          </svg>
+        </label>
+        <div class="spectrum-Textfield is-disabled spectrum-Field-field">
+          <input id="lifestory8" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input" disabled>
+        </div>
       </div>
