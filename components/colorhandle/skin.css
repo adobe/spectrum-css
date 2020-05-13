@@ -9,8 +9,7 @@
 
 .spectrum-ColorHandle {
   border-color: var(--spectrum-colorhandle-inner-border-color);
-  box-shadow: 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color),
-              inset 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color);
+  box-shadow: 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color);
 
   background-color: var(--spectrum-global-color-static-white);
 
@@ -30,4 +29,8 @@
       display: none;
     }
   }
+}
+
+.spectrum-ColorHandle-color {
+  box-shadow: inset 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color);
 }
