@@ -1,6 +1,6 @@
 :root {
   /* todo: fix this in DNA */
-  --spectrum-colorwheel-border-color: var(--spectrum-colorhandle-outer-border-color);
+  --spectrum-colorwheel-border-color: var(--spectrum-colorarea-border-color);
 }
 
 .spectrum-ColorWheel {

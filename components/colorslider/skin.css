@@ -1,6 +1,6 @@
 :root {
   /* todo: fix this in DNA */
-  --spectrum-colorslider-border-color: var(--spectrum-colorhandle-outer-border-color);
+  --spectrum-colorslider-border-color: var(--spectrum-colorarea-border-color);
 }
 
 .spectrum-ColorSlider-checkerboard {
