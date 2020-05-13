@@ -1,13 +1,16 @@
 :root {
   /* redefine this var so it can be used in skin.css */
-  --spectrum-colorhandle-outer-border-size: var(--spectrum-global-dimension-static-size-10);
   --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-static-size-25));
   --spectrum-colorhandle-checkerboard-size: var(--spectrum-global-dimension-static-size-100);
+
+  /* todo: update DNA so this is no longer required */
+  --spectrum-colorhandle-outer-border-color: rgba(0, 0, 0, 0.42);
 }
 
 .spectrum-ColorHandle {
   border-color: var(--spectrum-colorhandle-inner-border-color);
-  box-shadow: 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color), inset 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color);
+  box-shadow: 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color),
+              inset 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color);
 
   background-color: var(--spectrum-global-color-static-white);
 
