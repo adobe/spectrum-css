@@ -14,10 +14,17 @@ examples:
         <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
       </div>
   - id: color-area
+    name: Disabled
+    demoClassName: spectrum-CSSExample-example--spacious
+    markup: |
+      <div class="spectrum-ColorHandle is-disabled" style="position: absolute; top: 75%; left: 50%;">
+        <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+      </div>
+  - id: color-area
     name: Open
     demoClassName: spectrum-CSSExample-example--spacious
     markup: |
-      <div class="spectrum-ColorHandle is-open" style="position: absolute; top: 75%; left: 50%;">
+      <div class="spectrum-ColorHandle" style="position: absolute; top: 75%; left: 50%;">
         <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
         <svg class="spectrum-ColorLoupe is-open">
           <g transform="translate(1 1)">

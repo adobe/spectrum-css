@@ -17,12 +17,14 @@
     linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
     linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%),
     linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%);
-  background-size:
-    var(--spectrum-global-dimension-static-size-200)
-    var(--spectrum-global-dimension-static-size-200);
-  background-position:
-    var(--spectrum-colorhandle-background-offset) var(--spectrum-colorhandle-background-offset),
-    var(--spectrum-colorhandle-background-offset) calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
-    calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
-    calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) var(--spectrum-colorhandle-background-offset);
+
+  &.is-disabled {
+    border-color: var(--spectrum-colorhandle-inner-border-color-disabled);
+    background: var(--spectrum-colorhandle-fill-color-disabled);
+    box-shadow: none;
+
+    .spectrum-ColorHandle-color {
+      display: none;
+    }
+  }
 }

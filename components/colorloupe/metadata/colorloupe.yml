@@ -4,6 +4,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
 description: |
   - Set the `fill` style property of the `.spectrum-ColorLoupe-inner` element to indicate the currently selected color
   - Apply `.is-open` to display the loupe
+  - Color Loupe does not have a disabled style; do not show it when the handle its attached to is disabled.
 examples:
   - id: color-area
     name: Standard

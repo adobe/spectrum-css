@@ -23,6 +23,8 @@
   width: var(--spectrum-colorarea-default-width);
   height: var(--spectrum-colorarea-default-height);
 
+  border-radius: var(--spectrum-colorarea-border-radius);
+
   cursor: default;
 
   user-select: none;

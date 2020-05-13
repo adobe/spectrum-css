@@ -1,5 +1,5 @@
 :root {
-  /* todo: missing in DNA; */
+  /* todo: fix this in DNA */
   --spectrum-colorwheel-focus-ring-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorwheel-border-radius: 100%;
   --spectrum-colorwheel-width: calc(var(--spectrum-global-dimension-size-125) * 16);

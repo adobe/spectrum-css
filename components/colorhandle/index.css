@@ -22,11 +22,21 @@
   box-sizing: border-box;
   width: var(--spectrum-colorhandle-size);
   height: var(--spectrum-colorhandle-size);
-  border-width: var(--spectrum-colorhandle-inner-border-size);
-  border-style: solid;
 
   margin-left: calc(-1 * calc(var(--spectrum-colorhandle-size) / 2));
   margin-top: calc(-1 * calc(var(--spectrum-colorhandle-size) / 2));
+
+  border-width: var(--spectrum-colorhandle-inner-border-size);
+  border-style: solid;
+
+  background-size:
+    var(--spectrum-global-dimension-static-size-200)
+    var(--spectrum-global-dimension-static-size-200);
+  background-position:
+    var(--spectrum-colorhandle-background-offset) var(--spectrum-colorhandle-background-offset),
+    var(--spectrum-colorhandle-background-offset) calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
+    calc(var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)),
+    calc(-1 * var(--spectrum-colorhandle-checkerboard-size) + var(--spectrum-colorhandle-background-offset)) var(--spectrum-colorhandle-background-offset);
 
   transition:
     width var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
@@ -34,11 +44,6 @@
     border-width var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
     margin-left var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing),
     margin-top var(--spectrum-colorhandle-animation-duration) var(--spectrum-colorhandle-animation-easing);
-
-  /*
-  cursor: move;
-  cursor: grab;
-  */
 
   &,
   &:after {
@@ -55,12 +60,13 @@
     height: var(--spectrum-colorhandle-hitarea-size);
   }
 
-  &.is-open {
-  }
-
   &.is-focused,
   &.focus-ring {
     @extend %spectrum-ColorControl-handle--focused;
+  }
+
+  &.is-disabled {
+    pointer-events: none;
   }
 }
 

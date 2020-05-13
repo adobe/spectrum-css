@@ -1,13 +1,23 @@
 :root {
-  --spectrum-colorwheel-disabled-opacity: 0.3;
-
   /* todo: fix this in DNA */
   --spectrum-colorwheel-border-color: var(--spectrum-colorhandle-outer-border-color);
 }
 
 .spectrum-ColorWheel {
   &.is-disabled {
-    opacity: var(--spectrum-colorwheel-disabled-opacity);
+    .spectrum-ColorWheel-outerCircle,
+    .spectrum-ColorWheel-innerCircle {
+      stroke: var(--spectrum-colorwheel-border-color-disabled);
+    }
+
+    .spectrum-ColorWheel-outerCircle {
+      fill: var(--spectrum-colorwheel-fill-color-disabled);
+    }
+
+    /* hide all the little colored bits */
+    .spectrum-ColorWheel-segment {
+      display: none;
+    }
   }
 }
 
