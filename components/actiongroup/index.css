@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 :root {
   --spectrum-actiongroup-button-gap-reset: 0;
-  --spectrum-actiongroup-quiet-compact-button-gap: var(--spectrum-global-dimension-size-50);
+  --spectrum-actiongroup-quiet-compact-button-gap: var(--spectrum-global-dimension-size-25);
 }
 
 .spectrum-ActionGroup {
