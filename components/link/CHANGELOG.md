@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@2.0.6...@spectrum-css/link@3.0.0)
+
+### ✨ Features
+
+* link component updates ([#650](https://github.com/adobe/spectrum-css/issues/650)) ([4ff38d3](https://github.com/adobe/spectrum-css/commit/4ff38d3)), closes [#703](https://github.com/adobe/spectrum-css/issues/703)
+
+
+### 🛑 BREAKING CHANGES
+
+* .is-disabled is no longer supported
+
+Co-authored-by: Aleksandra Ljubenovic <pst67662@adobe.com>
+Co-authored-by: Jian Liao <jianliao@adobe.com>
+Co-authored-by: Larry Davis <lawdavis@adobe.com>
+
+
+
+
+
 <a name="2.0.6"></a>
 ## 2.0.6
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@2.0.5...@spectrum-css/link@2.0.6)

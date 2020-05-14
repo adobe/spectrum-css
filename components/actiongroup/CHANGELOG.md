@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.1"></a>
+# 1.0.0-beta.1
+🗓 2020-05-14
+
+### 🐛 Bug fixes
+
+* quiet compact Action Group margin ([#724](https://github.com/adobe/spectrum-css/issues/724)) ([cbffcf2](https://github.com/adobe/spectrum-css/commit/cbffcf2))
+
+
+* Button Breaking Changes (#649) ([abf116b](https://github.com/adobe/spectrum-css/commit/abf116b)), closes [#649](https://github.com/adobe/spectrum-css/issues/649) [#519](https://github.com/adobe/spectrum-css/issues/519) [#620](https://github.com/adobe/spectrum-css/issues/620) [#606](https://github.com/adobe/spectrum-css/issues/606)
+
+
+### 🛑 BREAKING CHANGES
+
+* Tool button has been removed
+
+* fix: interaction on mobile, text select
+
+* feat: add Emphasized Action Button
+
+* docs: add exampes for Quiet Emphasized Action Button
+
+fix: correct Quiet Emphasized Action Button
+
+* feat: button group
+* Button group no longer supports Action Button, just normal buttons
+* Margins have been removed from adjacent buttons. Use ButtonGroup instead.
+
+
+
+
+
 <a name="3.0.0-beta.1"></a>
 # 3.0.0-beta.1
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@3.0.0-beta.0...@spectrum-css/buttongroup@3.0.0-beta.1)

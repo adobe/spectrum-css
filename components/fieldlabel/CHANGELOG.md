@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.3"></a>
+# 3.0.0-beta.3
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.2...@spectrum-css/fieldlabel@3.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* **fieldlabel:** use unique id for each input ([#677](https://github.com/adobe/spectrum-css/issues/677)) ([b617d0e](https://github.com/adobe/spectrum-css/commit/b617d0e))
+
+
+
+
+
 <a name="3.0.0-beta.2"></a>
 # 3.0.0-beta.2
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.1...@spectrum-css/fieldlabel@3.0.0-beta.2)
