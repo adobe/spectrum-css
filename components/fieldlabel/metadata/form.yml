@@ -29,9 +29,9 @@ examples:
             </button>
           </div>
         </div>
-        <div class="spectrum-FieldGroup spectrum-FieldGroup--positionSide spectrum-Field">
+        <div class="spectrum-Field spectrum-FieldGroup spectrum-FieldGroup--positionSide">
           <span class="spectrum-FieldLabel spectrum-FieldLabel--positionSide" for="spectrum-textinput-instance">Interests</span>
-          <div class="spectrum-FieldGroup-group">
+          <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
             <div class="spectrum-Radio">
               <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
               <span class="spectrum-Radio-button"></span>
