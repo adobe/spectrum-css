@@ -45,7 +45,7 @@ examples:
     description: Put the labels below by adding the modifier class to the field itself.
     markup: |
       <div class="spectrum-FieldGroup spectrum-Field">
-        <div class="spectrum-FieldGroup-group">
+        <div class="spectrum-FieldGroup-group spectrum-FieldGroup-group--horizontal">
           <div class="spectrum-Radio spectrum-Radio--labelBelow">
             <input type="radio" name="rating" class="spectrum-Radio-input" id="radio-2">
             <span class="spectrum-Radio-button"></span>

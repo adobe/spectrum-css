@@ -31,7 +31,7 @@ examples:
         </div>
         <div class="spectrum-Field spectrum-FieldGroup spectrum-FieldGroup--positionSide">
           <span class="spectrum-FieldLabel spectrum-FieldLabel--positionSide" for="spectrum-textinput-instance">Interests</span>
-          <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+          <div class="spectrum-FieldGroup-group spectrum-FieldGroup-group--horizontal">
             <div class="spectrum-Radio">
               <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
               <span class="spectrum-Radio-button"></span>
@@ -44,7 +44,7 @@ examples:
             </div>
           </div>
 
-          <div class="spectrum-FieldGroup-group">
+          <div class="spectrum-FieldGroup-group spectrum-FieldGroup-group--horizontal">
             <label class="spectrum-Checkbox">
               <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
               <span class="spectrum-Checkbox-box">
