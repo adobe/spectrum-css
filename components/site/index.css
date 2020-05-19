@@ -184,14 +184,8 @@ governing permissions and limitations under the License.
   max-inline-size: 100%;
 }
 
-.spectrum-Site-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.spectrum-Site-footerContent {
-}
-.spectrum-Site-footerCopyright {
+.spectrum-Site-footerContainer {
+  /* TODO place footer appear under the .spectrum-Site-mainContainer */
 }
 
 /* Kill the overlay without animating when the page is resized */
