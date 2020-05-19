@@ -26,12 +26,6 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: row;
   vertical-align: top;
-
-  /* Spacing for buttons placed inline */
-  & + .spectrum-SplitButton,
-  & + .spectrum-Button {
-    margin-inline-start: var(--spectrum-margin);
-  }
 }
 
 /* Spacing for buttons placed inline */
@@ -49,13 +43,8 @@ governing permissions and limitations under the License.
 
   /* CTA is special and doesn't have a border between the buttons */
   &.spectrum-Button--cta {
-    border-inline-end: 0;
+    /*border-inline-end: 0;*/
     margin-inline-end: var(--spectrum-button-primary-border-size);
-  }
-
-  & + .spectrum-SplitButton-trigger {
-    /* Override button + button style */
-    margin-inline-start: var(--spectrum-spltibutton-margin-left);
   }
 
   &:after {
@@ -73,10 +62,15 @@ governing permissions and limitations under the License.
   border-end-start-radius: 0;
   border-inline-start-width: var(--spectrum-splitbutton-trigger-border-left);
 
-  padding-inline-start: calc(var(--spectrum-padding) * calc(2 / 3));
+  padding-inline-start: calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size) * 4);
   padding-inline-end: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
 
   min-inline-size: var(--spectrum-splitbutton-trigger-min-width);
+
+  /* Fix CTA button focus ring alignment */
+  &.spectrum-Button--cta {
+    border-inline-start-width: var(--spectrum-button-primary-border-size);
+  }
 
   &:focus-ring {
     box-shadow: none;
@@ -120,7 +114,8 @@ governing permissions and limitations under the License.
 
     /* CTA is special and doesn't have a border between the buttons */
     &.spectrum-Button--cta {
-      border-inline-start: 0;
+      /*border-inline-start: 0;*/
+      padding-inline-start: calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size) - var(--spectrum-button-primary-border-size));
       margin-inline-start: var(--spectrum-button-primary-border-size);
     }
 
@@ -143,8 +138,13 @@ governing permissions and limitations under the License.
     border-inline-start-width: var(--spectrum-button-primary-border-size);
     border-inline-end-width: var(--spectrum-splitbutton-trigger-border-left);
 
-    padding-inline-end: calc(var(--spectrum-padding) * calc(2 / 3));
+    padding-inline-end: calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size) * 4);
     padding-inline-start: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
+
+    /* Fix CTA button focus ring alignment */
+    &.spectrum-Button--cta {
+      border-inline-end-width: var(--spectrum-button-primary-border-size);
+    }
 
     &:after {
       border-start-start-radius: var(--spectrum-button-primary-border-radius);
