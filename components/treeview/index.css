@@ -49,7 +49,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-TreeView-itemLink {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   box-sizing: border-box;
   cursor: pointer;
 
@@ -70,7 +73,7 @@ governing permissions and limitations under the License.
     outline: none;
   }
 
-  .spectrum-Icon {
+  .spectrum-Treeview-icon {
     vertical-align: top;
     margin-inline-end: var(--spectrum-treeview-item-icon-margin-right);
   }
@@ -105,6 +108,7 @@ governing permissions and limitations under the License.
   inset-block-start: calc(-1 * var(--spectrum-global-dimension-size-65));
   margin-inline-start: calc(-1 * var(--spectrum-global-dimension-size-500));
   margin-block-end: calc(-1 * var(--spectrum-global-dimension-size-125));
+  margin-inline-end: var(--spectrum-global-dimension-size-130);
 
   padding-inline: var(--spectrum-global-dimension-size-150);
   padding-block: var(--spectrum-global-dimension-size-125);

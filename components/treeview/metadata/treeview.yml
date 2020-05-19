@@ -16,7 +16,7 @@ examples:
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
             </svg>
-            Group 1
+            Design Files
           </a>
           <ul class="spectrum-TreeView">
             <li class="spectrum-TreeView-item">
@@ -84,7 +84,7 @@ examples:
       <ul class="spectrum-TreeView" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
               <use xlink:href="#spectrum-icon-18-Layers"></use>
             </svg>
             Layer 1
@@ -96,7 +96,7 @@ examples:
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
             </svg>
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
               <use xlink:href="#spectrum-icon-18-Folder"></use>
             </svg>
             Group 1
@@ -104,7 +104,7 @@ examples:
           <ul class="spectrum-TreeView">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+                <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
                   <use xlink:href="#spectrum-icon-18-Layers"></use>
                 </svg>
                 Layer 2
@@ -112,7 +112,7 @@ examples:
             </li>
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
-                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+                <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
                   <use xlink:href="#spectrum-icon-18-Layers"></use>
                 </svg>
                 Layer 3
@@ -123,7 +123,7 @@ examples:
 
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
               <use xlink:href="#spectrum-icon-18-Layers"></use>
             </svg>
             Layer 4
@@ -131,7 +131,7 @@ examples:
         </li>
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
               <use xlink:href="#spectrum-icon-18-Layers"></use>
             </svg>
             Layer 5
@@ -143,7 +143,7 @@ examples:
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
             </svg>
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
               <use xlink:href="#spectrum-icon-18-Folder"></use>
             </svg>
             Group 2
@@ -154,7 +154,7 @@ examples:
                 <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
                   <use xlink:href="#spectrum-icon-18-Folder"></use>
                 </svg>
                 Group 3
@@ -165,7 +165,7 @@ examples:
                     <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
                     </svg>
-                    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                    <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
                       <use xlink:href="#spectrum-icon-18-Folder"></use>
                     </svg>
                     Group 4
@@ -173,7 +173,7 @@ examples:
                   <ul class="spectrum-TreeView">
                     <li class="spectrum-TreeView-item">
                       <a class="spectrum-TreeView-itemLink" href="#">
-                        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+                        <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
                           <use xlink:href="#spectrum-icon-18-Layers"></use>
                         </svg>
                         Layer 6
@@ -184,7 +184,7 @@ examples:
                         <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
                           <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
                         </svg>
-                        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                        <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
                           <use xlink:href="#spectrum-icon-18-Folder"></use>
                         </svg>
                         Group 5
@@ -195,6 +195,124 @@ examples:
               </ul>
             </li>
           </ui>
+        </li>
+      </ul>
+  - id: treeview
+    name: Folders & Files
+    description: A nested Spectrum tree view with folders and files
+    markup: |
+      <ul class="spectrum-TreeView">
+        <li class="spectrum-TreeView-item is-open">
+          <a class="spectrum-TreeView-itemLink" href="#">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+              <use xlink:href="#spectrum-icon-18-Folder"></use>
+            </svg>
+            Design Files
+          </a>
+          <ul class="spectrum-TreeView">
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+                </svg>
+                <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                  <use xlink:href="#spectrum-icon-18-Folder"></use>
+                </svg>
+                Production Ready
+              </a>
+            </li>
+            <li class="spectrum-TreeView-item is-open">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+                </svg>
+                <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                  <use xlink:href="#spectrum-icon-18-Folder"></use>
+                </svg>
+                Work in Progress
+              </a>
+              <ul class="spectrum-TreeView">
+                <li class="spectrum-TreeView-item is-open">
+                  <a class="spectrum-TreeView-itemLink" href="#">
+                    <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+                    </svg>
+                    <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                      <use xlink:href="#spectrum-icon-18-Folder"></use>
+                    </svg>
+                    Branding
+                  </a>
+                  <ul class="spectrum-TreeView">
+                    <li class="spectrum-TreeView-item">
+                      <a class="spectrum-TreeView-itemLink" href="#">
+                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+                        </svg>
+                        <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                          <use xlink:href="#spectrum-icon-18-Folder"></use>
+                        </svg>
+                        Assets
+                      </a>
+                    </li>
+                    <li class="spectrum-TreeView-item is-open">
+                      <a class="spectrum-TreeView-itemLink" href="#">
+                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+                        </svg>
+                        <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                          <use xlink:href="#spectrum-icon-18-Folder"></use>
+                        </svg>
+                        Explorations
+                      </a>
+                      <ul class="spectrum-TreeView">
+                        <li class="spectrum-TreeView-item">
+                          <a class="spectrum-TreeView-itemLink" href="#">
+                            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Document">
+                              <use xlink:href="#spectrum-icon-18-Document"></use>
+                            </svg>
+                            CocaCola_01.ai
+                          </a>
+                        </li>
+                        <li class="spectrum-TreeView-item">
+                          <a class="spectrum-TreeView-itemLink" href="#">
+                            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Document">
+                              <use xlink:href="#spectrum-icon-18-Document"></use>
+                            </svg>
+                            CocaCola_02.ai
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+                </svg>
+                <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                  <use xlink:href="#spectrum-icon-18-Folder"></use>
+                </svg>
+                Archive
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="spectrum-TreeView-item">
+          <a class="spectrum-TreeView-itemLink" href="#">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <svg class="spectrum-Treeview-icon spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+              <use xlink:href="#spectrum-icon-18-Folder"></use>
+            </svg>
+            References
+          </a>
         </li>
       </ul>
   - id: treeview
