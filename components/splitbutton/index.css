@@ -17,6 +17,8 @@ governing permissions and limitations under the License.
   --spectrum-splitbutton-trigger-min-width: 0;
   --spectrum-spltibutton-margin-left: 0;
   --spectrum-splitbutton-icon-gap: var(--spectrum-global-dimension-size-150);
+
+  --spectrum-splitbutton-border-radius-edge: var(--spectrum-alias-border-radius-small);
 }
 
 .spectrum-SplitButton {
@@ -55,6 +57,11 @@ governing permissions and limitations under the License.
     /* Override button + button style */
     margin-inline-start: var(--spectrum-spltibutton-margin-left);
   }
+
+  &:after {
+    border-start-end-radius: var(--spectrum-splitbutton-border-radius-edge);
+    border-end-end-radius: var(--spectrum-splitbutton-border-radius-edge);
+  }
 }
 
 .spectrum-SplitButton-trigger {
@@ -73,6 +80,11 @@ governing permissions and limitations under the License.
 
   &:focus-ring {
     box-shadow: none;
+  }
+
+  &:after {
+    border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
+    border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
   }
 }
 
@@ -111,6 +123,13 @@ governing permissions and limitations under the License.
       border-inline-start: 0;
       margin-inline-start: var(--spectrum-button-primary-border-size);
     }
+
+    &:after {
+      border-start-start-radius: var(--spectrum-splitbutton-border-radius-edge);
+      border-start-end-radius: var(--spectrum-button-primary-border-radius);
+      border-end-end-radius: var(--spectrum-button-primary-border-radius);
+      border-end-start-radius: var(--spectrum-splitbutton-border-radius-edge);
+    }
   }
 
   .spectrum-SplitButton-trigger {
@@ -126,5 +145,12 @@ governing permissions and limitations under the License.
 
     padding-inline-end: calc(var(--spectrum-padding) * calc(2 / 3));
     padding-inline-start: calc(var(--spectrum-padding) - var(--spectrum-button-primary-border-size));
+
+    &:after {
+      border-start-start-radius: var(--spectrum-button-primary-border-radius);
+      border-start-end-radius: var(--spectrum-splitbutton-border-radius-edge);
+      border-end-end-radius: var(--spectrum-splitbutton-border-radius-edge);
+      border-end-start-radius: var(--spectrum-button-primary-border-radius);
+    }
   }
 }
