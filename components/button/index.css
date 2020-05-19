@@ -157,15 +157,6 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-ClearButton--overBackground {
-  &:focus-ring {
-    &:after {
-      /* Adjust margin because ClearButton does not have a border */
-      margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
-    }
-  }
-}
-
 a.spectrum-Button,
 a.spectrum-ActionButton {
   /* Remove appearance for clickable types in iOS and Safari. */
@@ -327,6 +318,7 @@ a.spectrum-ActionButton {
 
 .spectrum-ClearButton {
   @inherit: %spectrum-BaseButton;
+  @inherit: %spectrum-ButtonWithFocusRing;
 
   inline-size: var(--spectrum-clearbutton-medium-width);
   block-size: var(--spectrum-clearbutton-medium-height);
@@ -342,6 +334,15 @@ a.spectrum-ActionButton {
     /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
     margin-block: 0;
     margin-inline: auto;
+  }
+}
+
+.spectrum-ClearButton--overBackground {
+  &:focus-ring {
+    &:after {
+      /* Adjust margin because ClearButton does not have a border */
+      margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
+    }
   }
 }
 
