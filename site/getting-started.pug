@@ -15,11 +15,13 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
 
         include includes/sidebar.pug
 
-        .spectrum-Site-mainContainer
-          .spectrum-Site-page
-            h1.spectrum-Heading.spectrum-Heading--XL Getting Started
-              p.spectrum-Body.spectrum-Body--L Please see the #[a(href="https://github.com/adobe/spectrum-css/blob/master/.github/CONTRIBUTING.md" target="_blank") contributing document] and #[a(href="https://github.com/adobe/spectrum-css" target="_blank") project documentation] for information on how to get started with Spectrum CSS.
+        .spectrum-Site-mainContent
 
-        include includes/footer.pug
+          .spectrum-Site-mainContainer
+            .spectrum-Site-page
+              h1.spectrum-Heading.spectrum-Heading--XL Getting Started
+                p.spectrum-Body.spectrum-Body--L Please see the #[a(href="https://github.com/adobe/spectrum-css/blob/master/.github/CONTRIBUTING.md" target="_blank") contributing document] and #[a(href="https://github.com/adobe/spectrum-css" target="_blank") project documentation] for information on how to get started with Spectrum CSS.
+
+          include includes/footer.pug
 
     include includes/pageBottom.pug

@@ -156,13 +156,6 @@ governing permissions and limitations under the License.
   margin-block-start: var(--spectrum-global-dimension-static-size-1000);
 }
 
-.spectrum-Site-mainContainer {
-  flex-grow: 1;
-  border-block: none;
-
-  overflow-y: auto;
-}
-
 .spectrum-Site-page {
   padding: 40px 52px 24px 52px;
   max-inline-size: 1080px;
@@ -184,8 +177,16 @@ governing permissions and limitations under the License.
   max-inline-size: 100%;
 }
 
+.spectrum-Site-mainContent {
+  flex-grow: 1;
+  border-block: none;
+  overflow-y: auto;
+}
+
 .spectrum-Site-footerContainer {
-  /* TODO place footer appear under the .spectrum-Site-mainContainer */
+  max-inline-size: var(--spectrum-csscomponent-max-width);
+  margin: var(--spectrum-csscomponent-margin) auto;
+  padding: 0 var(--spectrum-csscomponent-padding);
 }
 
 /* Kill the overlay without animating when the page is resized */
