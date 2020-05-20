@@ -454,6 +454,11 @@ governing permissions and limitations under the License.
   padding-block-end: var(--spectrum-global-dimension-size-100);
 }
 
+.spectrum-CSSExample-example--spacious {
+  position: relative;
+  height: 150px;
+}
+
 .spectrum-CSSExample-example--overlay {
   position: relative;
   min-height: var(--spectrum-global-dimension-size-800);

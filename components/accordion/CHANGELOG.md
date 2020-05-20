@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.2"></a>
+# 3.0.0-beta.2
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.0-beta.1...@spectrum-css/accordion@3.0.0-beta.2)
+
+**Note:** Version bump only for package @spectrum-css/accordion
+
+
+
+
+
 <a name="3.0.0-beta.1"></a>
 # 3.0.0-beta.1
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.0-beta.0...@spectrum-css/accordion@3.0.0-beta.1)

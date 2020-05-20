@@ -17,39 +17,21 @@ governing permissions and limitations under the License.
   background-color: transparent;
   /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
   -webkit-text-decoration-skip: objects;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   outline: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:focus-ring {
-    text-decoration: underline;
-  }
+  cursor: pointer;
 
   &:focus-ring {
     text-decoration: underline;
     text-decoration-style: double;
   }
+}
 
-  &.is-disabled {
-    cursor: default;
-    pointer-events: none;
+.spectrum-Link--quiet {
+  text-decoration: none;
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
+  &:hover {
+    text-decoration: underline;
   }
-}
-
-.spectrum-Link--subtle,
-/** @deprecated */.spectrum-Link--quiet {
-  text-decoration: underline;
-}
-
-.spectrum-Link--overBackground {
-  text-decoration: underline;
 }

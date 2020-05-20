@@ -337,14 +337,15 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                     <div style="width: 160px">
                       <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
                       <div class="spectrum-InputGroup">
-                        <input type="text" placeholder="Type here" name="field" value="" id="spectrum-combobox-instance" class="spectrum-Textfield spectrum-InputGroup-input">
+                        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+                          <input type="text" placeholder="Type here" name="field" value="" id="spectrum-combobox-instance" class="spectrum-Textfield-input spectrum-InputGroup-input">
+                        </div>
                         <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true">
                           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
                             <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
                           </svg>
                         </button>
                       </div>
-                    </div>
 
               article.spectrum-CSSExample
                 h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Dropdown (wrapping label)
@@ -368,8 +369,20 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
                       <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
-                    <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
+                      <div class="spectrum-Textfield">
+                        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+                      </div>
                     </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Slider (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Slider spectrum-Slider--filled" style="width: 208px">
+                      <div class="spectrum-Slider-labelContainer">
+                        <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
+                      </div>
 
               article.spectrum-CSSExample
                 h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Slider (wrapping)
