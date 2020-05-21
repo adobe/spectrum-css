@@ -10,6 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  --spectrum-treeview-item-background-color-selected: var(--spectrum-alias-highlight-selected);
+  --spectrum-treeview-item-border-color-selected: var(--spectrum-global-color-blue-500);
+
+  --spectrum-treeview-item-background-color-quiet-selected: var(--spectrum-alias-highlight-hover);
+  --spectrum-treeview-item-border-color-quiet-selected: transparent;
+}
+
 .spectrum-TreeView-item {
   &.is-disabled {
     > .spectrum-TreeView-itemLink {
@@ -20,16 +28,46 @@ governing permissions and limitations under the License.
       }
     }
   }
+
+  &.is-selected {
+    .spectrum-TreeView-itemLink {
+      &:before {
+        background-color: var(--spectrum-treeview-item-background-color-selected);
+        border-color: var(--spectrum-treeview-item-border-color-key-focus);
+      }
+    }
+  }
+
+  &.is-drop-target {
+    .spectrum-TreeView-itemLink {
+      &:before {
+        background-color: var(--spectrum-alias-highlight-selected);
+        border-color: var(--spectrum-treeview-item-border-color-key-focus);
+      }
+    }
+  }
+}
+
+.spectrum-TreeView--quiet {
+  .spectrum-TreeView-item {
+     &.is-selected {
+      .spectrum-TreeView-itemLink {
+        &:before {
+          background-color: var(--spectrum-treeview-item-background-color-quiet-selected);
+          border-color: transparent;
+        }
+      }
+    }
+  }
 }
 
 .spectrum-TreeView-itemLink {
   color: var(--spectrum-treeview-item-text-color);
 
-  &:hover,
-  &.is-selected {
+  &:hover {
     color: var(--spectrum-treeview-item-text-color-hover);
 
-    &::before {
+    &:before {
       background-color: var(--spectrum-treeview-item-background-color-hover);
     }
   }
@@ -40,15 +78,7 @@ governing permissions and limitations under the License.
     &::before {
       background-color: var(--spectrum-treeview-item-background-color-key-focus);
 
-      /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-      box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-item-border-color-key-focus) inset;
-    }
-  }
-
-  &.is-drop-target {
-    &::before {
-      background-color: var(--spectrum-alias-highlight-selected);
-      box-shadow: 0px 0px 0px 2px var(--spectrum-treeview-item-border-color-key-focus) inset;
+      border-color: var(--spectrum-treeview-item-border-color-key-focus);
     }
   }
 }

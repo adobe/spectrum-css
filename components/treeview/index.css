@@ -19,15 +19,23 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-affordance-width: var(--spectrum-global-dimension-size-400);
   --spectrum-treeview-item-indentation: var(--spectrum-global-dimension-size-200);
   --spectrum-treeview-heading-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-treeview-item-hover-offset: var(--spectrum-global-dimension-size-25);
 }
 
 .spectrum-TreeView {
   display: block;
   list-style: none;
-  position: relative;
   padding: 0;
   user-select: none;
   outline: none;
+}
+
+.spectrum-TreeView--standalone {
+  .spectrum-TreeView-itemLink {
+    &:before {
+      border-radius: var(--spectrum-treeview-item-border-radius);
+    }
+  }
 }
 
 .spectrum-TreeView-item {
@@ -44,6 +52,14 @@ governing permissions and limitations under the License.
       /* Open the treeview */
       block-size: auto;
       visibility: visible;
+    }
+  }
+
+  &.is-drop-target {
+    .spectrum-TreeView-itemLink {
+      &:before {
+        border-width: var(--spectrum-treeview-item-border-size);
+      }
     }
   }
 }
@@ -78,22 +94,29 @@ governing permissions and limitations under the License.
     margin-inline-end: var(--spectrum-treeview-item-icon-margin-right);
   }
 
-  &::before {
+  &:before {
     content: '';
+
+    box-sizing: border-box;
 
     position: absolute;
     inset-inline-start: var(--spectrum-treeview-item-border-size);
     inset-inline-end: 0;
-    z-index: -1; /* make sure we don't block clicks on chevron */
 
-    /* Position correctly since top is not defined */
-    margin-block-start: calc(-1 * var(--spectrum-treeview-item-padding-y));
+    block-size: calc(var(--spectrum-treeview-item-height) - var(--spectrum-treeview-item-hover-offset) * 2);
 
-    block-size: var(--spectrum-treeview-item-height);
-
+    border-style: solid;
+    border-color: transparent;
+    border-width: var(--spectrum-treeview-item-border-size) 0 var(--spectrum-treeview-item-border-size) 0;
     background-color: transparent;
+  }
+}
 
-    border-radius: var(--spectrum-treeview-item-border-radius);
+.spectrum-TreeView--standalone {
+  .spectrum-TreeView-itemLink {
+    &:before {
+      border-width: var(--spectrum-treeview-item-border-size);
+    }
   }
 }
 
@@ -103,6 +126,9 @@ governing permissions and limitations under the License.
 
   float: inline-start;
   position: relative;
+
+  /* make sure hover doesn't block clicks on chevron */
+  z-index: 1;
 
   inset-inline-start: var(--spectrum-global-dimension-size-125);
   inset-block-start: calc(-1 * var(--spectrum-global-dimension-size-65));
