@@ -147,6 +147,9 @@ governing permissions and limitations under the License.
   .spectrum-Dialog-divider {
     display: none;
   }
+  .spectrum-Dialog-heading {
+    padding-bottom: calc(var(--spectrum-dialog-rule-margin-top, var(--spectrum-global-dimension-static-size-150)) + var(--spectrum-dialog-rule-margin-bottom, var(--spectrum-global-dimension-static-size-200)) + var(--spectrum-dialog-rule-height, var(--spectrum-global-dimension-static-size-25)));
+  }
 }
 
 .spectrum-Dialog-content {

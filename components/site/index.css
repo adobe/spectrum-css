@@ -469,7 +469,7 @@ governing permissions and limitations under the License.
   min-height: var(--spectrum-global-dimension-size-800);
 }
 
-.spectrum-Dialog.spectrum-CSSExample-dialog {
+.spectrum-CSSExample-dialog {
   position: relative !important;
   transform: none !important;
   margin-inline-start: auto;
