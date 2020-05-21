@@ -1,6 +1,7 @@
 :root {
   --spectrum-semantic-negative-color-background: var(--spectrum-global-color-static-red-700);
   --spectrum-semantic-negative-color-default: var(--spectrum-global-color-red-500);
+  --spectrum-semantic-negative-color-state-hover: var(--spectrum-global-color-red-600);
   --spectrum-semantic-negative-color-dark: var(--spectrum-global-color-red-600);
   --spectrum-semantic-negative-color-border: var(--spectrum-global-color-red-400);
   --spectrum-semantic-negative-color-icon: var(--spectrum-global-color-red-600);
@@ -41,7 +42,7 @@
   --spectrum-semantic-informative-color-state-focus: var(--spectrum-global-color-blue-400);
   --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-static-blue-600);
   --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-static-blue-700);
-  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-static-blue-700);
+  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-static-blue-800);
   --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-static-blue-600);
   --spectrum-semantic-background-color-key-focus: var(--spectrum-global-color-static-blue-600);
   --spectrum-semantic-neutral-color-background: var(--spectrum-global-color-static-gray-700);

@@ -12,11 +12,11 @@
   --spectrum-colorarea-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-colorarea-touch-hit-y: var(--spectrum-global-dimension-size-100);
   --spectrum-colorarea-loupe-entry-animation-delay: 0ms;
-  --spectrum-colorarea-loupe-entry-animation-duration: staticAliases.loupe-entry-animation-duration;
+  --spectrum-colorarea-loupe-entry-animation-duration: var(--spectrum-alias-loupe-entry-animation-duration);
   --spectrum-colorarea-loupe-entry-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorarea-loupe-entry-animation-properties: opacity;
   --spectrum-colorarea-loupe-exit-animation-delay: 0ms;
-  --spectrum-colorarea-loupe-exit-animation-duration: staticAliases.loupe-exit-animation-duration;
+  --spectrum-colorarea-loupe-exit-animation-duration: var(--spectrum-alias-loupe-exit-animation-duration);
   --spectrum-colorarea-loupe-exit-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorarea-loupe-exit-animation-properties: opacity;
 }

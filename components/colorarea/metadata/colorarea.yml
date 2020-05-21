@@ -1,0 +1,113 @@
+name: Color Area
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
+description: |
+  - The `.spectrum-ColorHandle` should be moved with the `transform: translate(x, y)` style property as the sliders are dragged
+  - Set the `background` style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected
+  - Alternatively, provide a `<canvas>` or `<img>` element with the gradient you want to use and apply the `.spectrum-ColorArea-gradient` class
+  - Set the `value` attribute of `.spectrum-ColorArea-slider[name=x]` to the currently selected x value (i.e. saturation)
+  - Set the `value` attribute of `.spectrum-ColorArea-slider[name=y]` to the currently selected y value (i.e. value)
+  - Set the value of the ColorHandle component to the selected color
+  - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
+examples:
+  - id: color-area
+    name: Standard
+    markup: |
+      <div class="spectrum-ColorArea">
+        <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorArea-handle" style="transform: translate(192px, 0px);">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
+      </div>
+
+  - id: color-area
+    name: Disabled
+    markup: |
+      <div class="spectrum-ColorArea spectrum-ColorArea--small is-disabled">
+        <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorArea-handle is-disabled" style="transform: translate(192px, 0px);">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
+      </div>
+
+  - id: color-area
+    name: Custom Size
+    markup: |
+      <div class="spectrum-ColorArea" style="width: 72px; height: 72px">
+        <div class="spectrum-ColorArea-gradient" style="background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, white 0%, rgba(0, 0, 0, 0) 100%), rgb(255, 0, 0);"></div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorArea-handle" style="transform: translate(72px, 0px);">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
+      </div>
+
+  - id: color-area
+    name: Canvas element
+    markup: |
+      <div class="spectrum-ColorArea">
+        <canvas class="spectrum-ColorArea-gradient"></canvas>
+
+        <div class="spectrum-ColorHandle spectrum-ColorArea-handle" style="transform: translate(192px, 0px);">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorArea-slider" name="x" aria-label="saturation and value" min="0" max="1" step="0.01">
+        <input type="range" class="spectrum-ColorArea-slider" name="y" aria-label="saturation and value" min="0" max="1" step="0.01">
+      </div>
+      <script>
+        var canvas = document.querySelector('canvas.spectrum-ColorArea-gradient');
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        var context = canvas.getContext('2d');
+        context.rect(0, 0, canvas.width, canvas.height);
+
+        var gradB = context.createLinearGradient(0, 0, 0, canvas.height);
+        gradB.addColorStop(0, 'white');
+        gradB.addColorStop(1, 'black');
+        var gradC = context.createLinearGradient(0, 0, canvas.width, 0);
+        gradC.addColorStop(0, 'hsla(0,100%,50%,0)');
+        gradC.addColorStop(1, 'hsla(0,100%,50%,1)');
+
+        context.fillStyle = gradB;
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = gradC;
+        context.globalCompositeOperation = 'multiply';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.globalCompositeOperation = 'source-over';
+      </script>
+
