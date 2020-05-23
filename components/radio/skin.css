@@ -156,10 +156,5 @@ governing permissions and limitations under the License.
         box-shadow: 0 0 0 var(--spectrum-radio-focus-ring-size-key-focus) var(--spectrum-radio-focus-ring-color-key-focus);
       }
     }
-    &:checked + .spectrum-Radio-button {
-      &:before {
-        border-color: var(--spectrum-radio-emphasized-circle-border-color-selected-key-focus);
-      }
-    }
   }
 }
