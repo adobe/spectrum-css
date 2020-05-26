@@ -114,7 +114,6 @@ governing permissions and limitations under the License.
 
     /* CTA is special and doesn't have a border between the buttons */
     &.spectrum-Button--cta {
-      /*border-inline-start: 0;*/
       padding-inline-start: calc(var(--spectrum-button-primary-padding-x) - var(--spectrum-button-primary-border-size) - var(--spectrum-button-primary-border-size));
       margin-inline-start: var(--spectrum-button-primary-border-size);
     }
