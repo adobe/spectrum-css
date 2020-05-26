@@ -332,11 +332,24 @@ governing permissions and limitations under the License.
 
 // Treeview
 window.addEventListener('click', function(event) {
-  var isDisabled = event.target.closest('.spectrum-TreeView-item') !== null &&
-    event.target.closest('.spectrum-TreeView-item').classList.contains('is-disabled');
+  var treeviewItem = event.target.closest('.spectrum-TreeView-item');
+  if (!treeviewItem) {
+    return;
+  }
+
+  var isDisabled = treeviewItem.classList.contains('is-disabled');
+  if (isDisabled) {
+    return;
+  }
+
   var el;
-  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null && !isDisabled) {
-    el.classList.toggle('is-open');
+
+  if ((el = event.target.closest('.spectrum-TreeView-indicator')) !== null) {
+    treeviewItem.classList.toggle('is-open');
+    event.preventDefault();
+  }
+  else if ((el = event.target.closest('.spectrum-TreeView-itemLink')) !== null) {
+    treeviewItem.classList.toggle('is-selected');
     event.preventDefault();
   }
 });
