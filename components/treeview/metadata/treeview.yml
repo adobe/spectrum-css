@@ -201,7 +201,7 @@ examples:
     name: Folders & Files
     description: A nested Spectrum tree view with folders and files
     markup: |
-      <ul class="spectrum-TreeView">
+      <ul class="spectrum-TreeView" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
           <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -319,7 +319,7 @@ examples:
     name: Layers
     description: A nested Spectrum tree view with layers
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--layers">
+      <ul class="spectrum-TreeView spectrum-TreeView--layers" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
           <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -357,7 +357,7 @@ examples:
     markup: |
       <ul class="spectrum-TreeView spectrum-TreeView--layers spectrum-TreeView--quiet" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
-          <a class="spectrum-TreeView-itemLink" href="#">
+          <a class="spectrum-TreeView-itemLink" href="#" style="width: 250px">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
             </svg>
