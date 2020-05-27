@@ -16,7 +16,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^2.0.0"
+    "@spectrum-css/vars": "^2.0.0",
+    "@spectrum-css/dialog": "^3.0.0-beta.2"
   },
   "devDependencies": {
     "@spectrum-css/button": "^3.0.0-beta.2",
