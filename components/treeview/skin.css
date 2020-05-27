@@ -74,6 +74,12 @@ governing permissions and limitations under the License.
           background-color: var(--spectrum-treeview-item-background-color-quiet-selected);
           border-color: transparent;
         }
+
+        &:focus-ring {
+          &:before {
+            border-color: var(--spectrum-treeview-item-border-color-key-focus);
+          }
+        }
       }
     }
   }
