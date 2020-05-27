@@ -48,3 +48,11 @@ examples:
       <div class="spectrum-Thumbnail">
         <div class="spectrum-Thumbnail-background" style="background-image: url(img/example-card-landscape.jpeg)" title="Eiffel Tower at night"></div>
       </div>
+  - id: thumbnail
+    name: Thumbnail (image against background)
+    description: Portrait images set as the background will fill vertically
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <div class="spectrum-Thumbnail-background" style="background-color: orange"></div>
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
