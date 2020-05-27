@@ -288,6 +288,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Dialog-buttonGroup {
     grid-area: buttonGroup;
+    align-self: start;
   }
 }
 
