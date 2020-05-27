@@ -3,6 +3,7 @@ description: Tray Dialogs are typically used to portray information on mobile de
 examples:
   - id: tray
     name: Tray
+    demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Tray is-open spectrum-Tray " style="max-height: calc(1149px - var(--spectrum-tray-margin-top));">
