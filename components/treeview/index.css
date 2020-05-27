@@ -27,12 +27,14 @@ governing permissions and limitations under the License.
 
 .spectrum-TreeView {
   display: block;
-  list-style: none;
-  padding: 0;
-  user-select: none;
-  outline: none;
-}
+  position: relative;
 
+  padding: 0;
+
+  list-style: none;
+  outline: none;
+  user-select: none;
+}
 
 .spectrum-TreeView-item {
   /* Don't let child treeviews that are open spill out */
