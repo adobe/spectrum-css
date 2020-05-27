@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    .spectrum-TreeView-itemLink {
+    .spectrum-TreeView-itemLink:not(:focus-ring) {
       &:before {
         border-width: var(--spectrum-treeview-item-border-size-selected);
       }
