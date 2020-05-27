@@ -355,7 +355,7 @@ window.addEventListener('click', function(event) {
 
   var el;
 
-  if ((el = event.target.closest('.spectrum-TreeView-indicator')) !== null) {
+  if ((el = event.target.closest('.spectrum-TreeView-itemIndicator')) !== null) {
     treeviewItem.classList.toggle('is-open');
     event.preventDefault();
   }

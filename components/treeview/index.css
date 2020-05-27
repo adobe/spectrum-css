@@ -41,7 +41,7 @@ governing permissions and limitations under the License.
   overflow: hidden;
 
   &.is-open {
-    > .spectrum-TreeView-itemLink > .spectrum-TreeView-indicator {
+    > .spectrum-TreeView-itemLink > .spectrum-TreeView-itemIndicator {
       /* Rotate the chevron */
       transform: logical rotate(90deg);
     }
@@ -70,6 +70,11 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-TreeView-itemLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .spectrum-TreeView-itemLink {
   display: flex;
   flex-direction: row;
@@ -88,11 +93,10 @@ governing permissions and limitations under the License.
   /* Prevent weirdness that can cause the vertical bar to fall down */
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 
   outline: none;
 
-  .spectrum-TreeView-icon {
+  .spectrum-TreeView-itemIcon {
     vertical-align: top;
     margin-inline-end: var(--spectrum-treeview-item-icon-margin-right);
   }
@@ -143,7 +147,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-TreeView-indicator {
+.spectrum-TreeView-itemIndicator {
   display: block;
   box-sizing: content-box;
 

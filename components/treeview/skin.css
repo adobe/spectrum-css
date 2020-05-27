@@ -51,7 +51,7 @@ governing permissions and limitations under the License.
         border-color: var(--spectrum-treeview-item-border-color-key-focus);
       }
 
-      .spectrum-TreeView-icon {
+      .spectrum-TreeView-itemIcon {
         color: var(--spectrum-treeview-item-icon-color-selected);
       }
     }
@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-TreeView-icon {
+.spectrum-TreeView-itemIcon {
   color: var(--spectrum-treeview-item-icon-color);
 }
 
@@ -100,7 +100,7 @@ governing permissions and limitations under the License.
       background-color: var(--spectrum-treeview-item-background-color-hover);
     }
 
-    .spectrum-TreeView-icon {
+    .spectrum-TreeView-itemIcon {
       color: var(--spectrum-treeview-item-icon-color-hover);
     }
   }
@@ -114,7 +114,7 @@ governing permissions and limitations under the License.
       border-color: var(--spectrum-treeview-item-border-color-key-focus);
     }
 
-    .spectrum-TreeView-icon {
+    .spectrum-TreeView-itemIcon {
       color: var(--spectrum-treeview-item-icon-color-focus);
     }
   }
