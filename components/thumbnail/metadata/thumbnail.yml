@@ -1,0 +1,21 @@
+name: Thumbnail
+status: Contribution
+examples:
+  - id: thumbnail
+    name: Thumbnail
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (selected)
+    markup: |
+      <div class="spectrum-Thumbnail is-selected">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (focused)
+    markup: |
+      <div class="spectrum-Thumbnail is-focused">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
