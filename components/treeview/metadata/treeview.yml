@@ -316,6 +316,78 @@ examples:
         </li>
       </ul>
   - id: treeview
+    name: Layers
+    description: A nested Spectrum tree view with layers
+    markup: |
+      <ul class="spectrum-TreeView spectrum-TreeView--layers">
+        <li class="spectrum-TreeView-item is-open">
+          <a class="spectrum-TreeView-itemLink" href="#">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
+              <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+              <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+            </div>
+            Composition
+          </a>
+          <ul class="spectrum-TreeView">
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
+                  <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                </div>
+                Flowers
+              </a>
+            </li>
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
+                  <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                </div>
+                Figure
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  - id: treeview
+    name: Layers (quiet)
+    description: A nested Spectrum tree view with layers
+    markup: |
+      <ul class="spectrum-TreeView spectrum-TreeView--layers spectrum-TreeView--quiet">
+        <li class="spectrum-TreeView-item is-open">
+          <a class="spectrum-TreeView-itemLink" href="#">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+            </svg>
+            <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
+              <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+              <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+            </div>
+            Composition
+          </a>
+          <ul class="spectrum-TreeView">
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
+                  <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Flowers">
+                </div>
+                Flowers
+              </a>
+            </li>
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-itemLink" href="#">
+                <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
+                  <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+                </div>
+                Figure
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  - id: treeview
     name: Disabled
     markup: |
       <ul class="spectrum-TreeView" style="width: 250px">

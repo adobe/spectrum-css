@@ -19,9 +19,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Thumbnail {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0;
   padding: 0;
 
@@ -50,6 +47,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail-image {
-  width: 100%;
-  height: auto;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
 }

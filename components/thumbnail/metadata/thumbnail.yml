@@ -19,3 +19,17 @@ examples:
       <div class="spectrum-Thumbnail is-focused">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
+  - id: thumbnail
+    name: Thumbnail (landscape image)
+    description: Landscape images will fill vertically and be cropped on either side.
+    markup: |
+      <div class="spectrum-Thumbnail is-focused">
+        <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (portrait image)
+    description: Portrait images will fill vertically and have space on either side.
+    markup: |
+      <div class="spectrum-Thumbnail is-focused">
+        <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
+      </div>
