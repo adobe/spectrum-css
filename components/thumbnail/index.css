@@ -54,3 +54,10 @@ governing permissions and limitations under the License.
   max-height: 100%;
   max-width: 100%;
 }
+
+.spectrum-Thumbnail-background {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}

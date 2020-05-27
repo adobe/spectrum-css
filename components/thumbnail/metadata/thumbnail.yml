@@ -34,3 +34,17 @@ examples:
       <div class="spectrum-Thumbnail is-focused">
         <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
       </div>
+  - id: thumbnail
+    name: Thumbnail (background portrait)
+    description: Portrait images set as the background will fill horizontally
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <div class="spectrum-Thumbnail-background" style="background-image: url(img/example-card-portrait.jpg)" title="Eiffel Tower at night"></div>
+      </div>
+  - id: thumbnail
+    name: Thumbnail (background landscape)
+    description: Portrait images set as the background will fill vertically
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <div class="spectrum-Thumbnail-background" style="background-image: url(img/example-card-landscape.jpeg)" title="Eiffel Tower at night"></div>
+      </div>
