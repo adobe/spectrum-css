@@ -22,6 +22,10 @@ governing permissions and limitations under the License.
   margin: 0;
   padding: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: var(--spectrum-thumbnail-size-small);
   height: var(--spectrum-thumbnail-size-small);
 
@@ -47,12 +51,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail-image {
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
+  max-height: 100%;
+  max-width: 100%;
 }

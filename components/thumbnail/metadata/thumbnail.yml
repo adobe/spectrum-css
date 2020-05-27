@@ -2,6 +2,7 @@ name: Thumbnail
 status: Contribution
 examples:
   - id: thumbnail
+    description: Rectangular images will fill the entire space.
     name: Thumbnail
     markup: |
       <div class="spectrum-Thumbnail">
@@ -21,7 +22,7 @@ examples:
       </div>
   - id: thumbnail
     name: Thumbnail (landscape image)
-    description: Landscape images will fill vertically and be cropped on either side.
+    description: Landscape images will fill horizontally and have space above and below.
     markup: |
       <div class="spectrum-Thumbnail is-focused">
         <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
