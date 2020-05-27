@@ -331,6 +331,17 @@ governing permissions and limitations under the License.
 }());
 
 // Treeview
+function furthest(el, selector) {
+  var lastMatch = null;
+  while (el) {
+    if (el.matches && el.matches(selector)) {
+      lastMatch = el;
+    }
+    el = el.parentNode;
+  }
+  return lastMatch;
+}
+
 window.addEventListener('click', function(event) {
   var treeviewItem = event.target.closest('.spectrum-TreeView-item');
   if (!treeviewItem) {
@@ -349,6 +360,17 @@ window.addEventListener('click', function(event) {
     event.preventDefault();
   }
   else if ((el = event.target.closest('.spectrum-TreeView-itemLink')) !== null) {
+    if (!(event.shiftKey || event.metaKey)) {
+      // Remove other selected items
+      let outerTreeview = furthest(el, '.spectrum-TreeView');
+      if (outerTreeview) {
+        Array.prototype.forEach.call(outerTreeview.querySelectorAll('.spectrum-TreeView-item.is-selected'), function(item) {
+          if (item != treeviewItem) {
+            item.classList.remove('is-selected');
+          }
+        });
+      }
+    }
     treeviewItem.classList.toggle('is-selected');
     event.preventDefault();
   }
