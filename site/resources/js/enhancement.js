@@ -367,11 +367,21 @@ window.addEventListener('click', function(event) {
         Array.prototype.forEach.call(outerTreeview.querySelectorAll('.spectrum-TreeView-item.is-selected'), function(item) {
           if (item != treeviewItem) {
             item.classList.remove('is-selected');
+
+            var thumbnail = item.querySelector('.spectrum-TreeView-itemThumbnail');
+            if (thumbnail) {
+              thumbnail.classList.remove('is-focused');
+            }
           }
         });
       }
     }
-    treeviewItem.classList.toggle('is-selected');
+    let selected = treeviewItem.classList.toggle('is-selected');
+
+    var thumbnail = treeviewItem.querySelector('.spectrum-TreeView-itemThumbnail');
+    if (thumbnail) {
+      thumbnail.classList[selected ? 'add' : 'remove']('is-focused');
+    }
     event.preventDefault();
   }
 });
