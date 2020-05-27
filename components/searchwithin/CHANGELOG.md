@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.3"></a>
+# 3.0.0-beta.3
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.0-beta.2...@spectrum-css/searchwithin@3.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* make SearchWithin use new Textfield markup ([#645](https://github.com/adobe/spectrum-css/issues/645)) ([262d5d7](https://github.com/adobe/spectrum-css/commit/262d5d7))
+
+
+
+
+
 <a name="3.0.0-beta.2"></a>
 # 3.0.0-beta.2
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.0-beta.1...@spectrum-css/searchwithin@3.0.0-beta.2)

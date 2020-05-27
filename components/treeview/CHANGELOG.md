@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.2"></a>
+# 3.0.0-beta.2
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.0-beta.1...@spectrum-css/treeview@3.0.0-beta.2)
+
+### ✨ Features
+
+* add Treeview heading (via RSP V3) ([#601](https://github.com/adobe/spectrum-css/issues/601)) ([5bd34dc](https://github.com/adobe/spectrum-css/commit/5bd34dc))
+
+
+
+
+
 <a name="3.0.0-beta.1"></a>
 # 3.0.0-beta.1
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.0-beta.0...@spectrum-css/treeview@3.0.0-beta.1)

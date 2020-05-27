@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.3.0"></a>
+# 2.3.0
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@2.2.0...@spectrum-css/vars@2.3.0)
+
+### ✨ Features
+
+* switch from dna to spectrum-tokens ([#657](https://github.com/adobe/spectrum-css/issues/657)) ([31a6fc5](https://github.com/adobe/spectrum-css/commit/31a6fc5))
+
+
+### 🐛 Bug fixes
+
+* ignore invalid array-like variables, fixes [#728](https://github.com/adobe/spectrum-css/issues/728) ([27bd8d8](https://github.com/adobe/spectrum-css/commit/27bd8d8))
+
+
+
+
+
 <a name="2.2.0"></a>
 # 2.2.0
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@2.1.0...@spectrum-css/vars@2.2.0)
