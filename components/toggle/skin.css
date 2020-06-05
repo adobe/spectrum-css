@@ -128,10 +128,18 @@ governing permissions and limitations under the License.
 /* Key Focus */
 .spectrum-ToggleSwitch,
 .spectrum-ToggleSwitch:hover {
-  .spectrum-ToggleSwitch-input:focus-ring {
+  .spectrum-ToggleSwitch-input {
     & + .spectrum-ToggleSwitch-switch {
       &:after {
         box-shadow: 0 0 0 var(--spectrum-switch-focus-ring-size-key-focus) var(--spectrum-switch-focus-ring-color-key-focus);
+        opacity: 0;
+      }
+    }
+  }
+  .spectrum-ToggleSwitch-input:focus-ring {
+    & + .spectrum-ToggleSwitch-switch {
+      &:after {
+        opacity: 1;
       }
       &:before {
         border-color: var(--spectrum-switch-emphasized-handle-border-color-key-focus);
