@@ -2,6 +2,26 @@ name: Tree View
 description: |
   The typical usage of a treeview involves nesting a `.spectrum-Treeview` element within the `.spectrum-TreeView-item` parent element.
   The visibility of child treeviews is controlled by adding `.is-open` to the `.spectrum-TreeView-item` of the parent element.
+sections:
+  - name: Migration Guide
+    description: |
+      ### Additional clases
+
+      The following classes must be added:
+
+      * `.spectrum-TreeView-label` is now required to wrap labels to enable truncation behavior
+      * `.spectrum-Treeview-icon` is now required on all non-indicator icons
+
+
+      ### Renamed classes
+
+      * `.spectrum-TreeView-indicator` renamed to `.spectrum-TreeView-itemIndicator`
+      * `.spectrum-TreeView-icon` renamed to `.spectrum-TreeView-itemIcon`
+
+      ### Moved classes
+
+      * `.is-drop-target` and `.is-selected` must be placed on the `.spectrum-TreeView-item` element
+
 examples:
   - id: treeview
     name: Standard
