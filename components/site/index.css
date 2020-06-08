@@ -160,22 +160,29 @@ governing permissions and limitations under the License.
   padding: 40px 52px 24px 52px;
   max-inline-size: 1080px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .spectrum-Site-hero {
-  max-inline-size: 75%;
+  max-inline-size: 1080px;
   margin: auto;
 }
 
 .spectrum-Site-heroHeading {
   margin-block-end: 16px;
 }
+.spectrum-Site-heroHeading .spectrum-Heading {
+  margin-top: 0 !important;
+}
 
 .spectrum-Site-heroImage {
   display: block;
+  max-inline-size: 100%;
   margin-block-start: var(--spectrum-global-dimension-size-700);
   margin-block-end: var(--spectrum-global-dimension-size-700);
-  max-inline-size: 100%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  border-radius: var(--spectrum-alias-border-radius-regular);
 }
 
 .spectrum-Site-mainContent {
@@ -549,7 +556,7 @@ governing permissions and limitations under the License.
 
 .spectrum-HomeCards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   grid-gap: 1rem;
   margin: var(--spectrum-global-dimension-size-700) 0;
 }
@@ -561,7 +568,6 @@ governing permissions and limitations under the License.
 
   margin-bottom: var(--spectrum-global-dimension-size-350);
   padding: 0 var(--spectrum-global-dimension-size-250);
-
 }
 
 .spectrum-HomeCard-image {
