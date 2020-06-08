@@ -172,8 +172,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-heroImage {
-  margin-block-start: 40px;
-  margin-block-end: 80px;
+  display: block;
+  margin-block-start: var(--spectrum-global-dimension-size-700);
+  margin-block-end: var(--spectrum-global-dimension-size-700);
   max-inline-size: 100%;
 }
 
@@ -546,16 +547,31 @@ governing permissions and limitations under the License.
   margin: var(--spectrum-global-dimension-size-250) 0;
 }
 
+.spectrum-HomeCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 1rem;
+  margin: var(--spectrum-global-dimension-size-700) 0;
+}
+
 .spectrum-HomeCard {
-  display: inline-flex;
+  display: flex;
+
+  align-items: flex-start;
+
   margin-bottom: var(--spectrum-global-dimension-size-350);
   padding: 0 var(--spectrum-global-dimension-size-250);
 
-  img {
-    width: var(--spectrum-global-dimension-size-1250);
-    height: var(--spectrum-global-dimension-size-1000);
-    margin-right: var(--spectrum-global-dimension-size-250);
-  }
+}
+
+.spectrum-HomeCard-image {
+  width: var(--spectrum-global-dimension-size-1250);
+  margin-right: var(--spectrum-global-dimension-size-250);
+  flex: 0 0 auto;
+}
+
+.spectrum-HomeCard-content {
+  flex: 1 1 auto;
 }
 
 /* Scrollable */
