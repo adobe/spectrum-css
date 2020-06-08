@@ -27,11 +27,11 @@ governing permissions and limitations under the License.
   --spectrum-csscomponent-margin: var(--spectrum-global-dimension-size-500);
   --spectrum-csscomponent-padding: var(--spectrum-global-dimension-size-700);
   --spectrum-csscomponent-max-width: 1080px;
-  --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-global-dimension-size-700);
-  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-500);
+  --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-global-dimension-size-600);
+  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-400);
   --spectrum-csscomponent-heading-margin-bottom: var(--spectrum-global-dimension-size-500);
 
-  --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-900);
+  --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-600);
   --spectrum-csscomponent-description-margin-top: var(--spectrum-global-dimension-size-300);
 
   --spectrum-csscomponent-statuscontainer-margin-x: var(--spectrum-global-dimension-size-200);
@@ -98,7 +98,7 @@ governing permissions and limitations under the License.
   flex-direction: row;
   align-items: center;
 
-  padding: var(--spectrum-global-dimension-size-400);
+  padding: var(--spectrum-global-dimension-size-350) var(--spectrum-global-dimension-size-300);
 
   text-decoration: none;
 }
@@ -112,7 +112,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-search {
-  padding: 0 var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-400);
+  padding: 0 var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-300);
 }
 
 .spectrum-Site-searchResults {
@@ -130,19 +130,19 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-logo {
-  margin-inline-end: var(--spectrum-global-dimension-size-175);
+  margin-inline-end: var(--spectrum-global-dimension-size-200);
   color: #FA0F00;
 }
 
 .spectrum--medium {
   .spectrum-Site-logo {
-    block-size: 31px;
+    block-size: 32px;
   }
 }
 
 .spectrum--large {
   .spectrum-Site-logo {
-    block-size: 39px;
+    block-size: 40px;
   }
 }
 
