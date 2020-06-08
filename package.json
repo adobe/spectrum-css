@@ -62,7 +62,8 @@
   },
   "resolutions": {
     "handlebars": "^4.5.2",
-    "https-proxy-agent": "^3.0.0"
+    "https-proxy-agent": "^3.0.0",
+    "http-proxy": "^1.18.1"
   },
   "workspaces": [
     "components/*",
