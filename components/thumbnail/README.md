@@ -1,5 +1,5 @@
-# @spectrum-css/rule
-> The Spectrum CSS rule component
+# @spectrum-css/tabs
+> The Spectrum CSS tabs component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
