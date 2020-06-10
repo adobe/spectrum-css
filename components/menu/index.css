@@ -116,14 +116,13 @@ governing permissions and limitations under the License.
   grid-area: checkmark;
 }
 
-.spectrum-Menu-divider {
+.spectrum-Menu-divider.spectrum-Divider {
   /* Add the correct box sizing for hr in Firefox. */
   box-sizing: content-box;
 
   /* Show the overflow for hr in Edge and IE. */
   overflow: visible;
-
-  block-size: var(--spectrum-selectlist-divider-size);
+  width: auto;
   margin: calc(var(--spectrum-selectlist-divider-padding) / 2) var(--spectrum-selectlist-option-padding);
   padding: 0 0;
   border: none;

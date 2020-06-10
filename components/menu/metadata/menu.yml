@@ -24,7 +24,7 @@ examples:
                 </li>
               </ul>
             </li>
-            <li role="separator" class="spectrum-Menu-divider"></li>
+            <li role="separator" class="spectrum-Divider spectrum-Divider--small spectrum-Menu-divider"></li>
             <li role="presentation">
               <ul role="group" class="spectrum-Menu">
                 <li aria-disabled="false" role="menuitem" tabindex="-1" class="spectrum-Menu-item">
@@ -53,7 +53,7 @@ examples:
                 </li>
               </ul>
             </li>
-            <li role="separator" class="spectrum-Menu-divider"></li>
+            <li role="separator" class="spectrum-Divider spectrum-Divider--small spectrum-Menu-divider"></li>
             <li role="presentation"><span aria-hidden="true" class="spectrum-Menu-sectionHeading">Section Heading</span>
               <ul role="group" class="spectrum-Menu">
                 <li aria-disabled="false" role="menuitem" tabindex="0" data-key="Aardvark" class="spectrum-Menu-item">
@@ -92,7 +92,7 @@ examples:
                 </li>
               </ul>
             </li>
-            <li role="separator" class="spectrum-Menu-divider"></li>
+            <li role="separator" class="spectrum-Divider spectrum-Divider--small spectrum-Menu-divider"></li>
             <li role="presentation"><span aria-hidden="true" class="spectrum-Menu-sectionHeading">Oakland</span>
               <ul role="group" class="spectrum-Menu">
                 <li aria-disabled="false" role="menuitem" tabindex="0" class="spectrum-Menu-item is-disabled">
