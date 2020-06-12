@@ -2,16 +2,15 @@
 window.adobeGlobalnavConfig = {
   locale: 'en',
   footer: {
-      target: document.getElementById('footer_global'),
-      theme:{
-          backgroundColor:'#FFFFFF',
-          columnTitleColor: '#00FF00',
-          linkColor: '#4B4B4B',
-          linkHoverColor: '#2C2C2C',
-          separatorColor: '',
-          caretColor: ''
-      },
-      excludeNavigation: true
+    target: document.getElementById('footer_global'),
+    excludeNavigation: true
+  },
+  callbacks: {
+    globalnav_ready: function() {
+      document.querySelector('#AdobeFooterNav').style.background = 'var(--spectrum-global-color-gray-50)';
+      document.querySelector('.Footernav-disclaimers').style.color = 'var(--spectrum-body-text-color, var(--spectrum-alias-text-color))';
+      document.querySelector('.Footernav-region').style.visibility = 'hidden';
+    }
   }
 }
 </script>
