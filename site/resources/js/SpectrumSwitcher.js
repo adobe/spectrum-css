@@ -85,21 +85,24 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'theme', {
     });
     document.documentElement.classList.add('spectrum--' + theme);
 
+    let prismLink = document.querySelector('[data-prism]');
+    let prismDarkLink = document.querySelector('[data-prism-dark]');
     if (theme === 'dark' || theme === 'darkest') {
-      let prism = document.querySelector('[data-prism]');
-      if (prism) {
-        let darkTheme = document.createElement('link');
-        darkTheme.setAttribute('rel', 'stylesheet');
-        darkTheme.setAttribute('data-prism-dark', '');
-        darkTheme.setAttribute('type', 'text/css');
-        darkTheme.setAttribute('href', 'css/prism/prism-dark.css');
-        prism.parentElement.insertBefore(darkTheme, prism.nextElementSibling);
+      if (prismLink) {
+        if (!prismDarkLink) {
+          prismDarkLink = document.createElement('link');
+          prismDarkLink.setAttribute('rel', 'stylesheet');
+          prismDarkLink.setAttribute('data-prism-dark', '');
+          prismDarkLink.setAttribute('type', 'text/css');
+          prismDarkLink.setAttribute('href', 'css/prism/prism-dark.css');
+        }
+
+        prismLink.parentElement.insertBefore(prismDarkLink, prismLink.nextElementSibling);
       }
     }
     else {
-      let darkTheme = document.querySelector('[data-prism-dark]');
-      if (darkTheme) {
-        darkTheme.parentElement.removeChild(darkTheme);
+      if (prismDarkLink) {
+        prismDarkLink.parentElement.removeChild(prismDarkLink);
       }
     }
 
