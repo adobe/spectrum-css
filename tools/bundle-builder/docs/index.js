@@ -278,6 +278,7 @@ function buildSite_html() {
   return gulp.src(`${dirs.site}/*.pug`)
     .pipe(data(function(file) {
       return {
+        util: require(`${dirs.site}/util`),
         pageURL: path.basename(file.basename, '.pug') + '.html',
         dependencyOrder: minimumDeps
       };
