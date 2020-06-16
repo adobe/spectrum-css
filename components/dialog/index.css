@@ -50,6 +50,12 @@ governing permissions and limitations under the License.
   );
 
   --spectrum-dialog-gap-size: var(--spectrum-global-dimension-size-200);
+
+  --spectrum-dialog-content-padding: var(--spectrum-global-dimension-size-25);
+  --spectrum-dialog-content-margin: calc(var(--spectrum-global-dimension-size-25) * -1);
+
+  --spectrum-dialog-footer-padding-top: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-dialog-buttongroup-padding-top: var(--spectrum-global-dimension-static-size-500);
 }
 
 .spectrum-Dialog {
@@ -195,14 +201,14 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-dialog-content-text-line-height);
 
   /* this is kinda dumb, but needed for the keyboard focus rings so they don't get clipped. is there a better way to treat this */
-  padding: 0 var(--spectrum-global-dimension-size-25);
-  margin: 0 calc(var(--spectrum-global-dimension-size-25) * -1);
+  padding: 0 var(--spectrum-dialog-content-padding);
+  margin: 0 var(--spectrum-dialog-content-margin);
 }
 
 .spectrum-Dialog-footer {
   grid-area: footer;
   /* this padding isn't built into the grid because it disappears with this footer */
-  padding-block-start: var(--spectrum-global-dimension-static-size-500);
+  padding-block-start: var(--spectrum-dialog-footer-padding-top);
 
   display: flex;
   flex-wrap: wrap;
@@ -219,7 +225,7 @@ governing permissions and limitations under the License.
 .spectrum-Dialog-buttonGroup {
   grid-area: buttonGroup;
   /* this padding isn't built into the grid because it disappears with this buttonGroup */
-  padding-block-start: var(--spectrum-global-dimension-static-size-500);
+  padding-block-start: var(--spectrum-dialog-buttongroup-padding-top);
   display: flex;
   justify-content: flex-end;
   /* this padding should be safe as button group is always end aligned */
@@ -393,7 +399,7 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Dialog-buttonGroup {
-      padding-block-start: var(--spectrum-global-dimension-static-size-500);
+      padding-block-start: var(--spectrum-dialog-buttongroup-padding-top);
     }
 
     .spectrum-Dialog-heading {
