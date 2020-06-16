@@ -285,12 +285,20 @@ npm run release
 
 Version numbers are automatically determined, changelogs generated, and packages published.
 
+### Releasing the website
+
+After performing a release, run the following command to release the website:
+
+```
+npm run release:site
+```
+
 ### Releasing bundles
 
 Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
 
 ```
-npm run release-bundles
+npm run release:bundles
 ```
 
 Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.
