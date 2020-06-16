@@ -35,7 +35,7 @@ governing permissions and limitations under the License.
   justify-content: center;
 
   box-sizing: border-box;
-  width: 100vw;
+  inline-size: 100vw;
   /* On mobile browsers, vh units are fixed based on the maximum height of the screen.
    * However, when you scroll, the toolbar and address bar shrink, making the viewport resize.
    * We use the fill-available value to counteract this where supported. */
@@ -98,9 +98,9 @@ governing permissions and limitations under the License.
 only screen and (max-device-width: 400px),
 only screen and (max-device-height: 350px) {
   .spectrum-Modal--responsive {
-    width: 100%;
+    inline-size: 100%;
     height: 100%;
-    max-width: 100%;
+    max-inline-size: 100%;
     max-height: 100%;
     border-radius: 0;
   }
@@ -118,7 +118,7 @@ only screen and (max-device-height: 350px) {
   top: var(--spectrum-dialog-fullscreen-margin);
   right: var(--spectrum-dialog-fullscreen-margin);
   bottom: var(--spectrum-dialog-fullscreen-margin);
-  max-width: none;
+  max-inline-size: none;
   max-height: none;
 }
 
@@ -128,7 +128,7 @@ only screen and (max-device-height: 350px) {
   right: 0;
   top: 0;
   bottom: 0;
-  max-width: none;
+  max-inline-size: none;
   max-height: none;
 
   box-sizing: border-box;
