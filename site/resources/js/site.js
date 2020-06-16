@@ -52,6 +52,12 @@ window.addEventListener('DOMContentLoaded', function() {
         oldMainContainer.parentNode.insertBefore(newMainContainer, oldMainContainer);
         oldMainContainer.parentNode.removeChild(oldMainContainer);
 
+        // Execute JS
+        var scripts = newMainContainer.querySelectorAll('script');
+        scripts.forEach(function(script) {
+          eval(script.innerText);
+        });
+
         currentHREF = href;
 
         console.log('  ✅ ' + href + ' loaded');
@@ -285,6 +291,6 @@ window.addEventListener('DOMContentLoaded', function() {
     showSideBar();
 
     // Immediately hide results, otherwise they show up in the wrong position since we're in the middle of animation
-    search.hideResults();
+    siteSearch.hideResults();
   });
 });
