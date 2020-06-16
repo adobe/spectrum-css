@@ -36,9 +36,9 @@ function buildSite_lunr() {
 function buildSite_prism() {
   return gulp.src([
     `${path.dirname(require.resolve('prismjs'))}/themes/prism.css`,
-    `${path.dirname(require.resolve('prismjs'))}/themes/prism-tomorrow.css`
+    `${path.dirname(require.resolve('prismjs'))}/themes/prism-dark.css`
   ])
-    .pipe(gulp.dest(path.join(__dirname, 'dist/css/prisim/')));
+    .pipe(gulp.dest(path.join(__dirname, 'dist/css/prism/')));
 }
 
 let copySiteResources = gulp.parallel(
