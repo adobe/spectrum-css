@@ -1,0 +1,88 @@
+name: Thumbnail
+status: Contribution
+examples:
+  - id: thumbnail
+    description: Rectangular images will fill the entire space.
+    name: Thumbnail
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (selected)
+    markup: |
+      <div class="spectrum-Thumbnail is-selected">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (focused)
+    markup: |
+      <div class="spectrum-Thumbnail is-focused">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (landscape image)
+    description: Landscape images will fill horizontally and have space above and below.
+    markup: |
+      <div class="spectrum-Thumbnail is-focused">
+        <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (portrait image)
+    description: Portrait images will fill vertically and have space on either side.
+    markup: |
+      <div class="spectrum-Thumbnail is-focused">
+        <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (background portrait)
+    description: Portrait images set as the background will fill horizontally
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <div class="spectrum-Thumbnail-background" style="background-image: url(img/example-card-portrait.jpg)" title="Eiffel Tower at night"></div>
+      </div>
+  - id: thumbnail
+    name: Thumbnail (background landscape)
+    description: Portrait images set as the background will fill vertically
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <div class="spectrum-Thumbnail-background" style="background-image: url(img/example-card-landscape.jpeg)" title="Eiffel Tower at night"></div>
+      </div>
+  - id: thumbnail
+    name: Thumbnail (image against background)
+    description: Portrait images set as the background will fill vertically
+    markup: |
+      <div class="spectrum-Thumbnail">
+        <div class="spectrum-Thumbnail-background" style="background-color: orange"></div>
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (S)
+    markup: |
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--S">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (M, default)
+    markup: |
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--M">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (L)
+    markup: |
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--L">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (XL)
+    markup: |
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--XL">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
+  - id: thumbnail
+    name: Thumbnail (XXL)
+    markup: |
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--XXL">
+        <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
+      </div>
