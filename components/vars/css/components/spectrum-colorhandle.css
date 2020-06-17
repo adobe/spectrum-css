@@ -8,9 +8,6 @@
   --spectrum-colorhandle-touch-hit-width: var(--spectrum-global-dimension-static-size-600);
   --spectrum-colorhandle-touch-hit-height: var(--spectrum-global-dimension-static-size-600);
   --spectrum-colorhandle-touch-hit-border-radius: var(--spectrum-global-dimension-static-percent-50);
-  --spectrum-colorhandle-loupe-inner-border-color: var(--spectrum-global-color-static-white);
-  --spectrum-colorhandle-loupe-outer-border-color: rgba(50,50,50,0.1);
-  --spectrum-colorhandle-loupe-shadow-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-colorhandle-inner-border-color-hover: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-hover: var(--spectrum-alias-colorhandle-outer-border-color);
   --spectrum-colorhandle-fill-color-hover: none;
@@ -45,10 +42,4 @@
   --spectrum-colorhandle-inner-border-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorhandle-outer-border-size: var(--spectrum-global-dimension-static-size-10);
   --spectrum-colorhandle-size-focus: var(--spectrum-global-dimension-size-400);
-  --spectrum-colorhandle-loupe-width: var(--spectrum-global-dimension-static-size-600);
-  --spectrum-colorhandle-loupe-height: var(--spectrum-global-dimension-static-size-800);
-  --spectrum-colorhandle-loupe-inner-border-size: var(--spectrum-global-dimension-static-size-25);
-  --spectrum-colorhandle-loupe-outer-border-size: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-colorhandle-loupe-shadow-offset-y: var(--spectrum-global-dimension-size-10);
-  --spectrum-colorhandle-loupe-shadow-blur: var(--spectrum-global-dimension-size-50);
 }

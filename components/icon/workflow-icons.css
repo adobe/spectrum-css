@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size);
-  --spectrum-icon-size-m: var(--spectrum-global-dimension-size-300);
+  --spectrum-icon-size-s: var(--spectrum-alias-workflow-icon-size-s);
+  --spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-icon-size-xxs: calc(var(--spectrum-icon-size-s) / 2);
   --spectrum-icon-size-xs: calc(var(--spectrum-icon-size-m) / 2);
   --spectrum-icon-size-l: calc(var(--spectrum-icon-size-s) * 2);
