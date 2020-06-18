@@ -266,8 +266,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
   function hideSideBar() {
     overlay.removeEventListener('click', hideSideBar);
-    sideBar.classList.remove('is-open');
     overlay.classList.remove('is-open');
+    if (sideBar) {
+      sideBar.classList.remove('is-open');
+    }
     if (window.siteSearch) {
       window.siteSearch.hideResults();
     }
@@ -282,8 +284,8 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Search isn't supported on IE 11
-  if (typeof Search !== 'undefined') {
+  // Search isn't supported on IE 11 and siteBar will not be exist in test mode
+  if (typeof Search !== 'undefined' && document.querySelector('#site-search')) {
     window.siteSearch = new Search(document.querySelector('#site-search'))
   }
 
