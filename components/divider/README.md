@@ -1,4 +1,4 @@
-# @spectrum-css/rule
+# @spectrum-css/divider
 > The Spectrum CSS rule component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
