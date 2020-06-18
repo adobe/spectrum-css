@@ -1,8 +1,10 @@
 .spectrum-Site-footerContainer
   hr.spectrum-Rule.spectrum-Rule--small
 
-  div(id="footer_global")
+  if !process.env.DISABLE_FOOTER
 
-  include adobe-globalnav.js
+    div(id="footer_global")
 
-  script(src="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.js")
+    include adobe-globalnav.js
+
+    script(src="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.js")
