@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
-    "release:site": "gh-pages -d dist/ -e .",
+    "release:site": "gh-pages -d dist/ -f -e .",
     "release:bundles": "gulp releaseBundles",
     "version": "gulp version",
     "backstop:approve": "backstop approve --config=backstop_data/backstop_test.js",
