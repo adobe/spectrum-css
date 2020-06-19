@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.3"></a>
+# 3.0.0-beta.3
+🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.2...@spectrum-css/button@3.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* correct OverBackground ClearButton focus-ring, fixes [#730](https://github.com/adobe/spectrum-css/issues/730) ([#733](https://github.com/adobe/spectrum-css/issues/733)) ([5a34fa4](https://github.com/adobe/spectrum-css/commit/5a34fa4))
+
+
+
+
+
 <a name="3.0.0-beta.2"></a>
 # 3.0.0-beta.2
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.1...@spectrum-css/button@3.0.0-beta.2)
