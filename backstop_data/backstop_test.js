@@ -110,6 +110,7 @@ testingScenarios.map(specificScenarioConfig => {
       const config = {...specificScenarioConfig};
       config.label = `${config.label}-${t}-${s}`;
       config.url = `http://${host}:3000/docs/${config.url}`;
+      config.readySelector = 'html.wf-active';
       config.scale = s;
       config.theme = t;
       scenarios.push(Object.assign({...baseScenarioConfig}, config));
