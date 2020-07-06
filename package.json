@@ -46,7 +46,7 @@
     "@commitlint/config-conventional": "^8.1.0",
     "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.3",
     "audit-ci": "^2.0.1",
-    "backstopjs": "^5.0.1",
+    "backstopjs-spectrum": "^5.0.4",
     "del": "^5.1.0",
     "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
@@ -78,5 +78,6 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  }
+  },
+  "dependencies": {}
 }

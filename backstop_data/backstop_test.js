@@ -43,7 +43,8 @@ const baseScenarioConfig = {
   selectorExpansion: true,
   expect: 0,
   misMatchThreshold: 0.1,
-  requireSameDimensions: true
+  requireSameDimensions: true,
+  retries: 3
 };
 
 const [...rest] = process.argv.slice(3); // Exclude 'node', 'backstop' and backstop sub command like 'test/approve'
@@ -144,5 +145,5 @@ module.exports = {
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
-  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m backstopjs/backstopjs:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m jianliao/backstopjs:{version} {backstopCommand} {args}'
 };
