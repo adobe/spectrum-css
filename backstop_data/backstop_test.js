@@ -25,7 +25,6 @@ let isDocker = false;
 let env = 'local';
 let host = LOCALHOST_MAC;
 let report = 'CI';
-let captureLimit = 1;
 let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference';
 
 // Shared scenario configuration
@@ -33,7 +32,6 @@ const baseScenarioConfig = {
   referenceUrl: '',
   readyEvent: '',
   readySelector: 'html.wf-active',
-  delay: 0,
   hideSelectors: [],
   removeSelectors: [],
   hoverSelector: '',
@@ -110,7 +108,6 @@ testingScenarios.map(specificScenarioConfig => {
       const config = {...specificScenarioConfig};
       config.label = `${config.label}-${t}-${s}`;
       config.url = `http://${host}:3000/docs/${config.url}`;
-      config.readySelector = 'html.wf-active';
       config.scale = s;
       config.theme = t;
       scenarios.push(Object.assign({...baseScenarioConfig}, config));
@@ -139,9 +136,17 @@ module.exports = {
   report: [`${report}`],
   engine: 'puppeteer',
   engineOptions: {
-    args: ['--no-sandbox']
+    ignoreHTTPSErrors: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-gpu',
+      '--force-device-scale-factor=1',
+      '--disable-infobars=true',
+      '--hide-scrollbars'
+    ]
   },
-  asyncCaptureLimit: captureLimit,
+  asyncCaptureLimit: 5,
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
