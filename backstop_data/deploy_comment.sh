@@ -6,7 +6,7 @@ set -e
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     # Generate the dynamic branch name with short commit hash and current timestamp
-    BRANCH_NAME=$(git rev-parse --short HEAD)-result-$(date +%Y-%m-%d_%H-%M-%S)
+    BRANCH_NAME=vrt-$(git rev-parse --short HEAD)-$(date +%Y-%m-%d_%H-%M-%S)
 
     # Create the folder with the branch name and copy the result into it
     mkdir -p $HOME/temp/$BRANCH_NAME && cp -R backstop_data/* $HOME/temp/$BRANCH_NAME
@@ -25,7 +25,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     git add -A .
 
-    git commit -q -m "chore: deploy ${TRAVIS_REPO_SLUG} VR result to github.com/adobe/spectrum-css-vr-results.git:${BRANCH_NAME}"
+    git commit -q -m "chore: deploy ${TRAVIS_REPO_SLUG} VR result to github.com/${TRAVIS_REPO_SLUG}-vr-results.git:${BRANCH_NAME}"
 
     git show --stat-count=10 HEAD
 
@@ -39,5 +39,5 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     curl -H "Authorization: token ${VR_RESULT_PUBLISH_GITHUB_TOKEN}" \
     -X POST -d "{\"body\": \"[VRT result](${TEST_RESULT_URL})\"}" \
-    "https://api.github.com/repos/adobe/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
+    "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
