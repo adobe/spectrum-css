@@ -26,6 +26,7 @@ let env = 'local';
 let host = LOCALHOST_MAC;
 let report = 'CI';
 let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference';
+let captureLimit = 5;
 
 // Shared scenario configuration
 const baseScenarioConfig = {
@@ -85,6 +86,7 @@ if (env === 'local') {
 }
 else {
   report = 'CI';
+  captureLimit = 2;
 }
 
 // Generate vr testing scenarios
@@ -146,7 +148,7 @@ module.exports = {
       '--hide-scrollbars'
     ]
   },
-  asyncCaptureLimit: 5,
+  asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
