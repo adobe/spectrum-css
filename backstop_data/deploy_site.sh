@@ -38,7 +38,7 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     echo Dev Site: $DEV_SITE_URL
 
     curl -H "Authorization: token ${VR_RESULT_PUBLISH_GITHUB_TOKEN}" \
-    -X POST -d "{\"body\": \"[Spectrum Dev Site](${DEV_SITE_URL})\"}" \
+    -X POST -d "{\"body\": \"Build successfully! :tada: \n\n [View the Spectrum dev site](${DEV_SITE_URL})\"}" \
     "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
 
 fi

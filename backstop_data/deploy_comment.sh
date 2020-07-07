@@ -43,6 +43,6 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     echo Result: $TEST_RESULT_URL
 
     curl -H "Authorization: token ${VR_RESULT_PUBLISH_GITHUB_TOKEN}" \
-    -X POST -d "{\"body\": \"[VRT result](${TEST_RESULT_URL})\"}" \
+    -X POST -d "{\"body\": \"VRT successfully! :confetti_ball: \n\n [View the VRT result](${TEST_RESULT_URL})\"}" \
     "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
