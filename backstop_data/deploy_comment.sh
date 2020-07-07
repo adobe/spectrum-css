@@ -33,14 +33,11 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
     git push origin $BRANCH_NAME
 
-    TEST_RESULT_URL=http://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/html_report/
-
-    DEV_SITE_URL=http://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/dist/docs/
+    TEST_RESULT_URL=https://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/html_report/
 
     echo Result: $TEST_RESULT_URL
-    echo Dev Site: $DEV_SITE_URL
 
     curl -H "Authorization: token ${VR_RESULT_PUBLISH_GITHUB_TOKEN}" \
-    -X POST -d "{\"body\": \"Test result: ${TEST_RESULT_URL}\n\nDev Site: ${DEV_SITE_URL}\"}" \
+    -X POST -d "{\"body\": \"[VRT result](${TEST_RESULT_URL})\"}" \
     "https://api.github.com/repos/adobe/spectrum-css/issues/${TRAVIS_PULL_REQUEST}/comments"
 fi
