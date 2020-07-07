@@ -8,8 +8,16 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     # Generate the dynamic branch name with short commit hash and current timestamp
     BRANCH_NAME=vrt-$(git rev-parse --short HEAD)-$(date +%Y-%m-%d_%H-%M-%S)
 
+    TEST_SITE_URL=https://opensource.adobe.com/spectrum-css-vr-results/$BRANCH_NAME/dist/docs
+
     # Create the folder with the branch name and copy the result into it
     mkdir -p $HOME/temp/$BRANCH_NAME && cp -R backstop_data/* $HOME/temp/$BRANCH_NAME
+
+    # Move the spectrum-css build dist folder into the branch folder
+    mv dist/ $HOME/temp/$BRANCH_NAME
+
+    # Replace the url to the actual dev site url
+    sed -i -e s+http://127.0.0.1:3000+https://${TEST_SITE_URL}+g $HOME/temp/$BRANCH_NAME/html_report/config.js
 
     # Move the spectrum-css build dist folder into the branch folder
     mv dist/ $HOME/temp/$BRANCH_NAME
