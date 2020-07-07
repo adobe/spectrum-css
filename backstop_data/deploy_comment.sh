@@ -19,9 +19,6 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     # Replace the url to the actual dev site url
     sed -i -e s+http://127.0.0.1:3000+https://${TEST_SITE_URL}+g $HOME/temp/$BRANCH_NAME/html_report/config.js
 
-    # Move the spectrum-css build dist folder into the branch folder
-    mv dist/ $HOME/temp/$BRANCH_NAME
-
     # Create github action folder and copy the action file into it
     mkdir -p $HOME/temp/.github/workflows/ && cp backstop_data/push.yml $HOME/temp/.github/workflows/
 
