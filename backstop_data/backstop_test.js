@@ -32,7 +32,7 @@ let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_
 const baseScenarioConfig = {
   referenceUrl: '',
   readyEvent: '',
-  readySelector: '',
+  readySelector: 'html.wf-active',
   delay: 0,
   hideSelectors: [],
   removeSelectors: [],
