@@ -22,8 +22,7 @@
     "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepare": "gulp prepare",
-    "watch": "gulp watch",
-    "test-puppeteer": "node testPuppeteer"
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
