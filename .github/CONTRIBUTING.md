@@ -81,7 +81,7 @@ Make sure your branch is up to date with the original repo:
 
 ```
 git fetch upstream
-git merge upstream/master
+git merge upstream/main
 ```
 
 Review your changes and any possible conflicts and push to your fork:
@@ -97,5 +97,5 @@ At this point you're waiting on us. We do our best to keep on top of all the pul
 Some things that will increase the chance that your pull request is accepted:
 
 - Write a good pull request description, include screenshots, and test your changes across all evergreen browsers (and IE 11, sadly)
-- Make sure the PR merges cleanly with the latest master.
+- Make sure the PR merges cleanly with the latest main.
 - Describe your feature/bugfix and why it's needed/important in the pull request description.
