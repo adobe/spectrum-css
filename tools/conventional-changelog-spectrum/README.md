@@ -6,7 +6,7 @@
 
 ## Angular Convention
 
-Angular's [commit message guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit).
+Angular's [commit message guidelines](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit).
 
 ### Examples
 
@@ -64,7 +64,7 @@ If the prefix is `feat`, `fix` or `perf`, it will appear in the changelog. Howev
 
 Other prefixes are up to your discretion. Suggested prefixes are `build`, `ci`, `docs` ,`style`, `refactor`, and `test` for non-changelog related tasks.
 
-Details regarding these types can be found in the official [Angular Contributing Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type)
+Details regarding these types can be found in the official [Angular Contributing Guidelines](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#type)
 
 ### Scope
 
@@ -95,7 +95,7 @@ A detailed explanation can be found in this [document][commit-message-format].
 
 [npm-image]: https://badge.fury.io/js/conventional-changelog-angular.svg
 [npm-url]: https://npmjs.org/package/conventional-changelog-angular
-[travis-image]: https://travis-ci.org/conventional-changelog/conventional-changelog-angular.svg?branch=master
+[travis-image]: https://travis-ci.org/conventional-changelog/conventional-changelog-angular.svg?branch=main
 [travis-url]: https://travis-ci.org/conventional-changelog/conventional-changelog-angular
 [daviddm-image]: https://david-dm.org/conventional-changelog/conventional-changelog-angular.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/conventional-changelog/conventional-changelog-angular

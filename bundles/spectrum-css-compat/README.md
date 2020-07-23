@@ -23,7 +23,7 @@ npm run release
 
 To release all bundles:
 ```
-npm run release-bundles
+npm run release:bundles
 ```
 
 To release only this bundle:
