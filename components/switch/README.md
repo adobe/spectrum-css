@@ -1,5 +1,6 @@
-# @spectrum-css/toggle
-> The Spectrum CSS toggle component
+# @spectrum-css/switch
+
+> The Spectrum CSS switch component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
