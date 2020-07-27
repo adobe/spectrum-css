@@ -22,11 +22,11 @@
   --spectrum-colorslider-colorhandle-cursor-hit-width: var(--spectrum-global-dimension-size-200);
   --spectrum-colorslider-colorhandle-cursor-hit-height: var(--spectrum-global-dimension-size-300);
   --spectrum-colorslider-loupe-entry-animation-delay: 0ms;
-  --spectrum-colorslider-loupe-entry-animation-duration: staticAliases.loupe-entry-animation-duration;
+  --spectrum-colorslider-loupe-entry-animation-duration: var(--spectrum-alias-loupe-entry-animation-duration);
   --spectrum-colorslider-loupe-entry-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorslider-loupe-entry-animation-properties: opacity;
   --spectrum-colorslider-loupe-exit-animation-delay: 0ms;
-  --spectrum-colorslider-loupe-exit-animation-duration: staticAliases.loupe-exit-animation-duration;
+  --spectrum-colorslider-loupe-exit-animation-duration: var(--spectrum-alias-loupe-exit-animation-duration);
   --spectrum-colorslider-loupe-exit-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorslider-loupe-exit-animation-properties: opacity;
   --spectrum-colorslider-vertical-fill-color: none;
@@ -52,11 +52,11 @@
   --spectrum-colorslider-vertical-colorhandle-cursor-hit-width: var(--spectrum-global-dimension-size-300);
   --spectrum-colorslider-vertical-colorhandle-cursor-hit-height: var(--spectrum-global-dimension-size-200);
   --spectrum-colorslider-vertical-loupe-entry-animation-delay: 0ms;
-  --spectrum-colorslider-vertical-loupe-entry-animation-duration: staticAliases.loupe-entry-animation-duration;
+  --spectrum-colorslider-vertical-loupe-entry-animation-duration: var(--spectrum-alias-loupe-entry-animation-duration);
   --spectrum-colorslider-vertical-loupe-entry-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorslider-vertical-loupe-entry-animation-properties: opacity;
   --spectrum-colorslider-vertical-loupe-exit-animation-delay: 0ms;
-  --spectrum-colorslider-vertical-loupe-exit-animation-duration: staticAliases.loupe-exit-animation-duration;
+  --spectrum-colorslider-vertical-loupe-exit-animation-duration: var(--spectrum-alias-loupe-exit-animation-duration);
   --spectrum-colorslider-vertical-loupe-exit-animation-ease: var(--spectrum-global-animation-ease-out);
   --spectrum-colorslider-vertical-loupe-exit-animation-properties: opacity;
 }

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.3"></a>
+# 3.0.0-beta.3
+🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.2...@spectrum-css/tabs@3.0.0-beta.3)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.0.0-beta.2"></a>
+# 3.0.0-beta.2
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.1...@spectrum-css/tabs@3.0.0-beta.2)
+
+### ✨ Features
+
+* fix tabs markup, support anchors for labels ([#672](https://github.com/adobe/spectrum-css/issues/672)) ([eb07ee7](https://github.com/adobe/spectrum-css/commit/eb07ee7))
+
+
+
+
+
 <a name="3.0.0-beta.1"></a>
 # 3.0.0-beta.1
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.0...@spectrum-css/tabs@3.0.0-beta.1)

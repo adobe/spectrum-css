@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.1"></a>
+## 2.1.1
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@2.1.0...@spectrum-css/icon@2.1.1)
+
+**Note:** Version bump only for package @spectrum-css/icon
+
+
+
+
+
 <a name="2.1.0"></a>
 # 2.1.0
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@2.0.5...@spectrum-css/icon@2.1.0)

@@ -9,7 +9,8 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
-    "release-bundles": "gulp releaseBundles",
+    "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
+    "release:bundles": "gulp releaseBundles",
     "version": "gulp version",
     "backstop:approve": "backstop approve --config=backstop_data/backstop_test.js",
     "backstop:test": "backstop test --config=backstop_data/backstop_test.js --env=local",
@@ -39,12 +40,16 @@
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
+    "@adobe/spectrum-tokens": "6.0.0-beta.8",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.3",
     "audit-ci": "^2.0.1",
-    "backstopjs": "^4.3.2",
+    "backstopjs-spectrum": "^5.0.4",
+    "del": "^5.1.0",
+    "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
+    "gulp-replace": "^1.0.0",
     "gulplog": "^1.0.0",
     "husky": "^3.0.5",
     "lerna": "^3.16.4",
@@ -57,12 +62,12 @@
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0",
-    "@spectrum/spectrum-dna": "^5.23.0",
     "@spectrum/spectrum-icons": "^2.3.0"
   },
   "resolutions": {
     "handlebars": "^4.5.2",
-    "https-proxy-agent": "^3.0.0"
+    "https-proxy-agent": "^3.0.0",
+    "http-proxy": "^1.18.1"
   },
   "workspaces": [
     "components/*",

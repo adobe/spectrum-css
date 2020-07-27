@@ -1,4 +1,4 @@
-# Spectrum CSS [![Build Status](https://travis-ci.org/adobe/spectrum-css.svg?branch=master)](https://travis-ci.org/adobe/spectrum-css)
+# Spectrum CSS [![Build Status](https://travis-ci.org/adobe/spectrum-css.svg?branch=main)](https://travis-ci.org/adobe/spectrum-css)
 
 Spectrum CSS provides a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
@@ -107,7 +107,7 @@ Based on which scales you'll be using, you can choose to load different files:
 
 If your app has any level of complexity, you'll need "workflow" icons to indicate actions. These icons are not required to render the base components, and instead are used within buttons or menu items for actions like share, play, justify, save, etc.
 
-These icons are released within in the bundle package as `@spectrum-css/spectrum-css/dist/icons/spectrum-icons.svg`. You can import the entire set of icons in all sizes as follows:
+These icons are released within the [`@adobe/spectrum-css-workflow-icons`](https://www.npmjs.com/package/@adobe/spectrum-css-workflow-icons) package. After installing the package, you can import the entire set of icons in all sizes as follows:
 
 ```js
 loadIcons('node_modules/@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg');
@@ -182,7 +182,7 @@ git pull
 yarn install
 ```
 
-Update `yml` data from master
+Update `yml` data from main
 
 ```
 yarn importdata
@@ -285,12 +285,20 @@ npm run release
 
 Version numbers are automatically determined, changelogs generated, and packages published.
 
+### Releasing the website
+
+After performing a release, run the following command to release the website:
+
+```
+npm run release:site
+```
+
 ### Releasing bundles
 
 Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
 
 ```
-npm run release-bundles
+npm run release:bundles
 ```
 
 Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.

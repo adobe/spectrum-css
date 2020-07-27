@@ -1,0 +1,35 @@
+name: Color Handle
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
+description: |
+  - Set the `background-color` style property of the `.spectrum-ColorHandle-color` element to indicate the currently selected color
+  - Apply `.is-open` to `.spectrum-ColorLoupe` display the loupe
+  - Set the `fill` style property of the `.spectrum-ColorLoupe-inner` element to indicate the currently selected color
+examples:
+  - id: color-area
+    name: Standard
+    demoClassName: spectrum-CSSExample-example--spacious
+    markup: |
+      <div class="spectrum-ColorHandle" style="position: absolute; top: 50%; left: 50%;">
+        <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+      </div>
+  - id: color-area
+    name: Disabled
+    demoClassName: spectrum-CSSExample-example--spacious
+    markup: |
+      <div class="spectrum-ColorHandle is-disabled" style="position: absolute; top: 75%; left: 50%;">
+        <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+      </div>
+  - id: color-area
+    name: Open
+    demoClassName: spectrum-CSSExample-example--spacious
+    markup: |
+      <div class="spectrum-ColorHandle" style="position: absolute; top: 75%; left: 50%;">
+        <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+        <svg class="spectrum-ColorLoupe is-open">
+          <g transform="translate(1 1)">
+            <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgba(255, 0, 0, 0.5)" />
+            <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+          </g>
+        </svg>
+      </div>

@@ -8,6 +8,10 @@
     []
   ],
   [
+    "@spectrum-css/actiongroup",
+    []
+  ],
+  [
     "@spectrum-css/actionmenu",
     []
   ],
@@ -49,6 +53,7 @@
     "@spectrum-css/button",
     [
       "@spectrum-css/actionbar",
+      "@spectrum-css/actiongroup",
       "@spectrum-css/actionmenu",
       "@spectrum-css/alert",
       "@spectrum-css/breadcrumb",
@@ -108,11 +113,33 @@
     []
   ],
   [
-    "@spectrum-css/cyclebutton",
+    "@spectrum-css/colorarea",
     []
   ],
   [
-    "@spectrum-css/decoratedtextfield",
+    "@spectrum-css/colorhandle",
+    [
+      "@spectrum-css/colorarea",
+      "@spectrum-css/colorslider",
+      "@spectrum-css/colorwheel"
+    ]
+  ],
+  [
+    "@spectrum-css/colorloupe",
+    [
+      "@spectrum-css/colorhandle"
+    ]
+  ],
+  [
+    "@spectrum-css/colorslider",
+    []
+  ],
+  [
+    "@spectrum-css/colorwheel",
+    []
+  ],
+  [
+    "@spectrum-css/cyclebutton",
     []
   ],
   [
@@ -143,9 +170,7 @@
   ],
   [
     "@spectrum-css/fieldlabel",
-    [
-      "@spectrum-css/decoratedtextfield"
-    ]
+    []
   ],
   [
     "@spectrum-css/illustratedmessage",
@@ -272,13 +297,18 @@
   [
     "@spectrum-css/textfield",
     [
-      "@spectrum-css/decoratedtextfield",
       "@spectrum-css/fieldlabel",
       "@spectrum-css/inputgroup",
       "@spectrum-css/pagination",
       "@spectrum-css/search",
       "@spectrum-css/searchwithin",
       "@spectrum-css/stepper"
+    ]
+  ],
+  [
+    "@spectrum-css/thumbnail",
+    [
+      "@spectrum-css/treeview"
     ]
   ],
   [

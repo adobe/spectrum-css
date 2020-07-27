@@ -3,7 +3,7 @@ meta(name='description', content='The CSS implementation of Adobe\'s Spectrum de
 meta(charset = 'utf-8')
 link(rel='icon', type='image/png', href='favicon.png')
 
-link(rel='stylesheet', type='text/css', href='css/prisim/prism.css', data-prism)
+link(rel='stylesheet', type='text/css', href='css/prism/prism.css', data-prism)
 
 link(rel='stylesheet', type='text/css', href='../components/vars/spectrum-global.css')
 
@@ -20,6 +20,9 @@ each dep in dependencyOrder.filter((dep) => dep != 'vars' )
 
 link(rel='stylesheet', type='text/css', href='css/site.css')
 link(rel='stylesheet', type='text/css', href='css/docs.css')
+
+unless process.env.VRT
+  link(rel="stylesheet", type="text/css", href="//wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css")
 
 script(src='js/loadicons/index.js')
 script(src='js/focus-ring-polyfill/index.js')
