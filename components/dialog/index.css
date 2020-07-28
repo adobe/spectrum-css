@@ -141,17 +141,17 @@ governing permissions and limitations under the License.
   border-bottom-left-radius: 0;
   outline: none; /* Hide focus outline around header */
 
-  padding-block-end: calc(var(--spectrum-dialog-rule-margin-top) + var(--spectrum-dialog-rule-margin-bottom) + var(--spectrum-dialog-rule-height));
+  padding-block-end: calc(var(--spectrum-dialog-confirm-divider-margin-top) + var(--spectrum-dialog-confirm-divider-margin-bottom) + var(--spectrum-dialog-confirm-divider-height));
 
   /* The rule element */
   &::after {
     position: absolute;
-    bottom: var(--spectrum-dialog-rule-margin-bottom);
+    bottom: var(--spectrum-dialog-confirm-divider-margin-bottom);
     left: 0;
     right: 0;
     content: '';
 
-    block-size: var(--spectrum-dialog-rule-height);
+    block-size: var(--spectrum-dialog-confirm-divider-height);
   }
 }
 

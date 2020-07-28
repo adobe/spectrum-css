@@ -11,14 +11,14 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Dialog {
-  background: var(--spectrum-dialog-background-color);
+  background: var(--spectrum-dialog-confirm-background-color);
 }
 
 .spectrum-Dialog-header {
-  background: var(--spectrum-dialog-background-color);
+  background: var(--spectrum-dialog-confirm-background-color);
 
   &:after {
-    background: var(--spectrum-dialog-rule-color);
+    background: var(--spectrum-dialog-confirm-divider-color);
   }
 }
 
@@ -35,7 +35,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Dialog-footer {
-  background: var(--spectrum-dialog-background-color);
+  background: var(--spectrum-dialog-confirm-background-color);
 }
 
 .spectrum-Dialog--error {
