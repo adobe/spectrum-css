@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-module.exports = function (page, scenario) {
-  page.evaluate(() => {
-    document.querySelector('#site-sidebar').hidden = true;
-  });
-};
+.spectrum-Modal {
+  background: var(--spectrum-dialog-background-color);
+}

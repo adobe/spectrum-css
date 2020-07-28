@@ -1,6 +1,5 @@
-# @spectrum-css/picker
-
-> The Spectrum CSS picker component
+# @spectrum-css/modal
+> The Spectrum CSS tray component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
