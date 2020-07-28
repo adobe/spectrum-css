@@ -218,6 +218,11 @@ governing permissions and limitations under the License.
 }
 
 @media screen and (max-width: 960px) {
+  .spectrum-Site-content {
+    /* fix: header scrolls off */
+    max-height: calc(100% - 48px);
+  }
+
   .spectrum-Site-overlay {
     display: block;
 
@@ -475,11 +480,13 @@ governing permissions and limitations under the License.
 .spectrum-CSSExample-dialog {
   position: relative !important;
   transform: none !important;
+  width: auto !important;
+  height: auto !important;
   margin-inline-start: auto;
   margin-inline-end: auto;
   inset-inline-start: 0;
   inset-block-start: 0;
-  z-index: 1;
+  z-index: 1 !important;
   transition: none;
 }
 

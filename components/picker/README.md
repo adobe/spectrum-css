@@ -1,5 +1,6 @@
-# @spectrum-css/dropdown
-> The Spectrum CSS dropdown component
+# @spectrum-css/picker
+
+> The Spectrum CSS picker component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

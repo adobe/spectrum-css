@@ -4,6 +4,8 @@ const test = require('./tools/test-builder');
 const site = require('./site/gulpfile.js');
 const subrunner = require('./tools/bundle-builder/subrunner');
 const through = require('through2');
+const replace = require('gulp-replace');
+const del = require('del');
 
 Object.assign(exports, builder);
 Object.assign(exports, test);
@@ -165,6 +167,33 @@ See the [Spectrum CSS documentation](https://opensource.adobe.com/spectrum-css/)
   }));
 }
 
+/** Site */
+function prepareSite_clean() {
+  return del('dist-site/');
+}
+
+function prepareSite_components() {
+  return gulp.src('dist/components/**/*', {
+    base: 'dist'
+  })
+    .pipe(gulp.dest('dist-site/'));
+}
+
+function prepareSite_docs() {
+  return gulp.src('dist/docs/**/*')
+    .pipe(replace('../components/', 'components/'))
+    .pipe(gulp.dest('dist-site/'));
+}
+
+const prepareSite = gulp.series(
+  prepareSite_clean,
+  gulp.parallel(
+    prepareSite_docs,
+    prepareSite_components
+  )
+);
+
+exports.prepareSite = prepareSite;
 exports.graduatePeerDeps = graduatePeerDeps;
 exports.readmeLint = readmeLint;
 exports.packageLint = packageLint;
