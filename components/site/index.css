@@ -218,6 +218,11 @@ governing permissions and limitations under the License.
 }
 
 @media screen and (max-width: 960px) {
+  .spectrum-Site-content {
+    /* fix: header scrolls off */
+    max-height: calc(100% - 48px);
+  }
+
   .spectrum-Site-overlay {
     display: block;
 

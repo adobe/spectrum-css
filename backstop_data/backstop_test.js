@@ -25,15 +25,14 @@ let isDocker = false;
 let env = 'local';
 let host = LOCALHOST_MAC;
 let report = 'CI';
-let captureLimit = 1;
-let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-asset/bitmaps_reference';
+let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-assets-essential/bitmaps_reference';
+let captureLimit = 5;
 
 // Shared scenario configuration
 const baseScenarioConfig = {
   referenceUrl: '',
   readyEvent: '',
-  readySelector: '',
-  delay: 0,
+  readySelector: 'html.wf-active',
   hideSelectors: [],
   removeSelectors: [],
   hoverSelector: '',
@@ -43,7 +42,8 @@ const baseScenarioConfig = {
   selectorExpansion: true,
   expect: 0,
   misMatchThreshold: 0.1,
-  requireSameDimensions: true
+  requireSameDimensions: true,
+  retries: 3
 };
 
 const [...rest] = process.argv.slice(3); // Exclude 'node', 'backstop' and backstop sub command like 'test/approve'
@@ -83,10 +83,10 @@ else {
 
 if (env === 'local') {
   report = 'browser';
-  captureLimit = 5;
 }
 else {
   report = 'CI';
+  captureLimit = 2;
 }
 
 // Generate vr testing scenarios
@@ -138,11 +138,19 @@ module.exports = {
   report: [`${report}`],
   engine: 'puppeteer',
   engineOptions: {
-    args: ['--no-sandbox']
+    ignoreHTTPSErrors: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-gpu',
+      '--force-device-scale-factor=1',
+      '--disable-infobars=true',
+      '--hide-scrollbars'
+    ]
   },
   asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
-  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m backstopjs/backstopjs:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m jianliao/backstopjs:{version} {backstopCommand} {args}'
 };

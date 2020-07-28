@@ -8,15 +8,24 @@ before_install:
   - npm install -g yarn
 install:
   - yarn
-script:
-  # This script should be the first that runs to reduce the risk of
-  # executing a script from a compromised NPM package.
-  - audit-ci --moderate
-  - yarn run build
-  - yarn run watch &
-  - sleep 5
-  - yarn upgrade @spectrum-css/spectrum-css-vr-test-assets-essential
-  - cp -R ./node_modules/@spectrum-css/spectrum-css-vr-test-assets-essential/bitmaps_reference/ backstop_data/
-  - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/
-after_failure:
-  - ./backstop_data/deploy_comment.sh
+jobs:
+  fast_finish: true
+  include:
+    - language: node_js
+      node_js: 12
+      script:
+        - audit-ci --moderate
+        - VRT=true yarn run build
+        - yarn run watch &
+        - yarn upgrade @spectrum-css/spectrum-css-vr-test-assets-essential
+        - cp -R ./node_modules/@spectrum-css/spectrum-css-vr-test-assets-essential/bitmaps_reference/ backstop_data/
+        - yarn run backstop:ci:test themes=light scales=medium reference=backstop_data/bitmaps_reference/
+      after_failure:
+        - ./backstop_data/deploy_comment.sh
+    - language: node_js
+      node_js: 12
+      script:
+        - audit-ci --moderate
+        - yarn run build
+      after_success:
+        - ./backstop_data/deploy_site.sh
