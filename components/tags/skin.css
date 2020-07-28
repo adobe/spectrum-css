@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
   border-color: var(--spectrum-tag-border-color);
 
   .spectrum-ClearButton {
-    color: var(--spectrum-tag-deletable-icon-color);
+    color: var(--spectrum-tag-removable-icon-color);
   }
 
   &:hover {
@@ -25,7 +25,7 @@ governing permissions and limitations under the License.
     border-color: var(--spectrum-tag-border-color-hover);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-deletable-icon-color-hover);
+      color: var(--spectrum-tag-removable-icon-color-hover);
     }
   }
 
@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
     box-shadow: 0 0 0 1px var(--spectrum-tag-border-color-key-focus);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-deletable-icon-color-key-focus);
+      color: var(--spectrum-tag-removable-icon-color-key-focus);
     }
   }
 
@@ -75,57 +75,57 @@ governing permissions and limitations under the License.
 
     .spectrum-Avatar {
       /* Duplicated so state is on the tag */
-      opacity: var(--spectrum-avatar-small-opacity-disabled);
+      opacity: var(--spectrum-avatar-size-100-opacity-disabled);
     }
   }
 }
 
 .spectrum-Tags-item--deletable {
   &:hover {
-    color: var(--spectrum-tag-deletable-text-color-hover);
+    color: var(--spectrum-tag-removable-text-color-hover);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-deletable-icon-color-hover);
+      color: var(--spectrum-tag-removable-icon-color-hover);
     }
   }
 
   &:active {
-    color: var(--spectrum-tag-deletable-text-color-down);
+    color: var(--spectrum-tag-removable-text-color-down);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-deletable-icon-color-down);
+      color: var(--spectrum-tag-removable-icon-color-down);
     }
   }
 
   &.is-invalid {
     &:hover {
-      border-color: var(--spectrum-tag-deletable-border-color-error-hover);
-      color: var(--spectrum-tag-deletable-text-color-error-hover);
+      border-color: var(--spectrum-tag-removable-border-color-error-hover);
+      color: var(--spectrum-tag-removable-text-color-error-hover);
 
       .spectrum-ClearButton {
-        color: var(--spectrum-tag-deletable-icon-color-error-hover);
+        color: var(--spectrum-tag-removable-icon-color-error-hover);
       }
     }
 
     &:active {
-      border-color: var(--spectrum-tag-deletable-border-color-error-down);
-      color: var(--spectrum-tag-deletable-text-color-error-down);
+      border-color: var(--spectrum-tag-removable-border-color-error-down);
+      color: var(--spectrum-tag-removable-text-color-error-down);
 
       .spectrum-ClearButton {
-        color: var(--spectrum-tag-deletable-icon-color-error-down);
+        color: var(--spectrum-tag-removable-icon-color-error-down);
       }
     }
   }
 
   &:focus-ring {
-    color: var(--spectrum-tag-deletable-text-color-key-focus);
+    color: var(--spectrum-tag-removable-text-color-key-focus);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-deletable-icon-color-key-focus);
+      color: var(--spectrum-tag-removable-icon-color-key-focus);
     }
 
     &.is-invalid {
-      color: var(--spectrum-tag-deletable-text-color-error-key-focus);
+      color: var(--spectrum-tag-removable-text-color-error-key-focus);
     }
   }
 }
