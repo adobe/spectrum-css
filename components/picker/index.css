@@ -1,0 +1,174 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../commons/index.css";
+
+:root {
+  --spectrum-picker-popover-max-width: var(
+    --spectrum-global-dimension-size-3000
+  );
+  --spectrum-picker-width: var(--spectrum-global-dimension-size-2400);
+
+  /* This needs to be a variable so it overrides when using multiStops */
+  --spectrum-picker-quiet-width: auto;
+}
+
+.spectrum-Picker {
+  position: relative;
+  display: inline-block;
+
+  /* Truncate if menu options make us too wide */
+  max-inline-size: 100%;
+  inline-size: var(--spectrum-picker-width);
+  min-inline-size: var(--spectrum-picker-min-width);
+
+  /* Hack to enable select-powered Dropdowns */
+  select {
+    appearance: none;
+    -ms-appearance: none; /* Edge */
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &::-ms-value {
+      background-color: transparent;
+    }
+
+    & + .spectrum-Picker-icon {
+      position: absolute;
+      inset-inline-end: var(--spectrum-picker-padding-x);
+      inset-block-start: 50%;
+      margin-block-start: calc(
+        var(--spectrum-icon-chevron-down-medium-height) / -2
+      );
+    }
+  }
+}
+
+.spectrum-Picker-trigger {
+  position: relative;
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spectrum-Picker-label {
+  /* Be the biggest, but also shrink! */
+  flex: 1 1 auto;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  block-size: calc(
+    var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2)
+  );
+  line-height: calc(
+    var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2)
+  );
+
+  font-size: var(--spectrum-picker-text-size);
+
+  text-overflow: ellipsis;
+  text-align: start;
+
+  &.is-placeholder {
+    font-weight: var(--spectrum-picker-placeholder-text-font-weight);
+    font-style: var(--spectrum-picker-placeholder-text-font-style);
+    transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+}
+
+/* Only apply margin to the icon if there's a label */
+.spectrum-Picker-label + .spectrum-Picker-icon {
+  margin-inline-start: var(--spectrum-picker-icon-margin-left);
+}
+
+.spectrum-Icon + .spectrum-Picker-label {
+  margin-inline-start: var(--spectrum-selectlist-thumbnail-image-padding-x);
+}
+
+/* Only apply margin if there's a label */
+.spectrum-Picker-label ~ .spectrum-Picker-icon {
+  margin-inline-start: var(--spectrum-picker-icon-margin-left);
+}
+
+.spectrum-Picker-icon {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  transition: color var(--spectrum-global-animation-duration-100) ease-out;
+
+  /* Fix Safari 10 bug where align-items is ignored inside of buttons */
+  margin-block-start: calc(
+    calc(
+        var(--spectrum-picker-height) -
+          calc(var(--spectrum-picker-border-size) * 2) -
+          var(--spectrum-icon-chevron-down-medium-height)
+      ) / 2
+  );
+  margin-block-end: calc(
+    calc(
+        var(--spectrum-picker-height) -
+          calc(var(--spectrum-picker-border-size) * 2) -
+          var(--spectrum-icon-chevron-down-medium-height)
+      ) / 2
+  );
+
+  opacity: 1;
+}
+
+/* Error icons */
+.spectrum-Picker-trigger {
+  .spectrum-Icon:not(.spectrum-Picker-icon) {
+    /* Fix Safari 10 bug where align-items is ignored inside of buttons */
+    margin-block-start: calc(
+      calc(
+          var(--spectrum-picker-height) -
+            calc(var(--spectrum-picker-border-size) * 2) -
+            var(--spectrum-picker-icon-size)
+        ) / 2
+    );
+    margin-block-end: calc(
+      calc(
+          var(--spectrum-picker-height) -
+            calc(var(--spectrum-picker-border-size) * 2) -
+            var(--spectrum-picker-icon-size)
+        ) / 2
+    );
+  }
+
+  .spectrum-Picker-label + .spectrum-Icon:not(.spectrum-Picker-icon) {
+    margin-inline-start: var(--spectrum-picker-icon-margin-left);
+  }
+}
+
+.spectrum-Icon + .spectrum-Picker-icon {
+  margin-inline-start: var(--spectrum-picker-icon-gap);
+}
+
+.spectrum-Picker--quiet {
+  inline-size: var(--spectrum-picker-quiet-width);
+  min-inline-size: var(--spectrum-picker-quiet-min-width);
+}
+
+.spectrum-Picker-popover {
+  max-inline-size: var(--spectrum-picker-popover-max-width);
+}
+
+.spectrum-Picker-popover--quiet {
+  margin-inline-start: calc(
+    -1 * calc(var(--spectrum-picker-quiet-popover-offset-x) +
+          var(--spectrum-popover-border-size))
+  );
+}
