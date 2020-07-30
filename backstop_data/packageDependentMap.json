@@ -63,12 +63,12 @@
       "@spectrum-css/coachmark",
       "@spectrum-css/cyclebutton",
       "@spectrum-css/dialog",
-      "@spectrum-css/dropdown",
+      "@spectrum-css/divider",
       "@spectrum-css/inputgroup",
       "@spectrum-css/pagination",
+      "@spectrum-css/picker",
       "@spectrum-css/popover",
       "@spectrum-css/quickaction",
-      "@spectrum-css/rule",
       "@spectrum-css/search",
       "@spectrum-css/searchwithin",
       "@spectrum-css/splitbutton",
@@ -81,7 +81,7 @@
     "@spectrum-css/buttongroup",
     [
       "@spectrum-css/dialog",
-      "@spectrum-css/rule"
+      "@spectrum-css/divider"
     ]
   ],
   [
@@ -146,15 +146,16 @@
   [
     "@spectrum-css/dialog",
     [
-      "@spectrum-css/popover"
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
     ]
   ],
   [
-    "@spectrum-css/dropdown",
+    "@spectrum-css/divider",
     [
-      "@spectrum-css/fieldlabel",
-      "@spectrum-css/searchwithin",
-      "@spectrum-css/tabs"
+      "@spectrum-css/dialog",
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
     ]
   ],
   [
@@ -193,8 +194,8 @@
     "@spectrum-css/menu",
     [
       "@spectrum-css/actionmenu",
-      "@spectrum-css/dropdown",
       "@spectrum-css/inputgroup",
+      "@spectrum-css/picker",
       "@spectrum-css/popover",
       "@spectrum-css/tabs"
     ]
@@ -202,6 +203,13 @@
   [
     "@spectrum-css/miller",
     []
+  ],
+  [
+    "@spectrum-css/modal",
+    [
+      "@spectrum-css/dialog",
+      "@spectrum-css/tray"
+    ]
   ],
   [
     "@spectrum-css/page",
@@ -212,12 +220,20 @@
     []
   ],
   [
+    "@spectrum-css/picker",
+    [
+      "@spectrum-css/fieldlabel",
+      "@spectrum-css/searchwithin",
+      "@spectrum-css/tabs"
+    ]
+  ],
+  [
     "@spectrum-css/popover",
     [
       "@spectrum-css/actionbar",
       "@spectrum-css/actionmenu",
-      "@spectrum-css/dropdown",
-      "@spectrum-css/inputgroup"
+      "@spectrum-css/inputgroup",
+      "@spectrum-css/picker"
     ]
   ],
   [
@@ -235,10 +251,6 @@
   ],
   [
     "@spectrum-css/rating",
-    []
-  ],
-  [
-    "@spectrum-css/rule",
     []
   ],
   [
@@ -325,6 +337,10 @@
     [
       "@spectrum-css/steplist"
     ]
+  ],
+  [
+    "@spectrum-css/tray",
+    []
   ],
   [
     "@spectrum-css/treeview",

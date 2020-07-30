@@ -152,17 +152,17 @@ governing permissions and limitations under the License.
   });
 }());
 
-// Dropdown
+// Picker
 (function() {
-  var openDropdown = null;
+  var openPicker = null;
 
-  function toggleOpen(dropdown, force) {
-    var isOpen = force !== undefined ? force : !dropdown.classList.contains('is-open');
-    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
-    var popover = dropdown.querySelector('.spectrum-Dropdown-popover');
+  function toggleOpen(picker, force) {
+    var isOpen = force !== undefined ? force : !picker.classList.contains('is-open');
+    var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
+    var popover = picker.querySelector('.spectrum-Picker-popover');
 
-    dropdown[isOpen ? 'setAttribute' : 'removeAttribute']('aria-expanded', 'true');
-    dropdown.classList[isOpen ? 'add' : 'remove']('is-open');
+    picker[isOpen ? 'setAttribute' : 'removeAttribute']('aria-expanded', 'true');
+    picker.classList[isOpen ? 'add' : 'remove']('is-open');
     fieldButton.classList[isOpen ? 'add' : 'remove']('is-selected');
 
     if (popover) {
@@ -171,14 +171,14 @@ governing permissions and limitations under the License.
     }
 
     if (isOpen) {
-      openDropdown = dropdown;
+      openPicker = picker;
     }
   }
 
-  function closeAndFocusDropdown(dropdown) {
-    if (dropdown) {
-      toggleOpen(dropdown, false);
-      var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+  function closeAndFocusPicker(picker) {
+    if (picker) {
+      toggleOpen(picker, false);
+      var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
       if (fieldButton) {
         fieldButton.focus();
       }
@@ -202,13 +202,13 @@ governing permissions and limitations under the License.
         } else if (event.key === 'End') {
           newItemIndex = items.length - 1;
         } else if (event.key === 'Escape') {
-          var dropdown = event.target.closest('.spectrum-Dropdown');
-          closeAndFocusDropdown(dropdown);
+          var picker = event.target.closest('.spectrum-Picker');
+          closeAndFocusPicker(picker);
         } else if (event.key === 'Enter') {
           handleMenuChange(menu, menuItem);
 
-          var dropdown = event.target.closest('.spectrum-Dropdown');
-          closeAndFocusDropdown(dropdown);
+          var picker = event.target.closest('.spectrum-Picker');
+          closeAndFocusPicker(picker);
           event.preventDefault();
         }
         if (newItemIndex !== -1) {
@@ -220,9 +220,9 @@ governing permissions and limitations under the License.
       }
     } else {
       if (event.key === 'ArrowDown') {
-        var dropdown = event.target.closest('.spectrum-Dropdown');
-        if (dropdown) {
-          var menu = dropdown.querySelector('.spectrum-Menu');
+        var picker = event.target.closest('.spectrum-Picker');
+        if (picker) {
+          var menu = picker.querySelector('.spectrum-Menu');
           if (menu) {
             var menuItem = menu.querySelector('.spectrum-Menu-item');
             if (menuItem) {
@@ -235,9 +235,9 @@ governing permissions and limitations under the License.
     }
   });
 
-  function setDropdownValue(dropdown, value, label) {
-    var menu = dropdown.querySelector('.spectrum-Menu');
-    var menuItem = dropdown.querySelector('.spectrum-Menu-item[value="' + value + '"]');
+  function setPickerValue(picker, value, label) {
+    var menu = picker.querySelector('.spectrum-Menu');
+    var menuItem = picker.querySelector('.spectrum-Menu-item[value="' + value + '"]');
 
     if (menuItem) {
       var selectedMenuItem = menu.querySelector('.spectrum-Menu-item.is-selected');
@@ -257,12 +257,12 @@ governing permissions and limitations under the License.
       }
     }
 
-    dropdown.setAttribute('value', value);
-    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+    picker.setAttribute('value', value);
+    var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
     if (fieldButton && label) {
-      var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
-      if (dropdownLabel) {
-        dropdownLabel.innerHTML = label;
+      var pickerLabel = fieldButton.querySelector('.spectrum-Picker-label');
+      if (pickerLabel) {
+        pickerLabel.innerHTML = label;
       }
     }
 
@@ -274,7 +274,7 @@ governing permissions and limitations under the License.
       }
     });
 
-    dropdown.dispatchEvent(event);
+    picker.dispatchEvent(event);
   }
 
   function handleMenuChange(menu, menuItem) {
@@ -282,27 +282,27 @@ governing permissions and limitations under the License.
     var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
     var label = menuLabel.innerHTML;
 
-    var dropdown = menu.closest('.spectrum-Dropdown');
-    if (dropdown) {
-      toggleOpen(dropdown, false);
-      setDropdownValue(dropdown, value, label);
+    var picker = menu.closest('.spectrum-Picker');
+    if (picker) {
+      toggleOpen(picker, false);
+      setPickerValue(picker, value, label);
     }
   }
 
   window.addEventListener('click', function(event) {
-    var dropdown = event.target.closest('.spectrum-Dropdown');
+    var picker = event.target.closest('.spectrum-Picker');
 
-    if (dropdown) {
-      toggleOpen(dropdown);
+    if (picker) {
+      toggleOpen(picker);
 
       var menuItem = event.target.closest('.spectrum-Menu-item');
       if (menuItem) {
-        var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+        var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
         var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
         if (menuLabel) {
-          var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
-          if (dropdownLabel) {
-            dropdownLabel.innerHTML = menuLabel.innerHTML;
+          var pickerLabel = fieldButton.querySelector('.spectrum-Picker-label');
+          if (pickerLabel) {
+            pickerLabel.innerHTML = menuLabel.innerHTML;
 
             event.stopPropagation();
             handleMenuChange(menuItem.parentElement, menuItem);
@@ -310,13 +310,13 @@ governing permissions and limitations under the License.
         }
       }
     } else {
-      if (openDropdown) {
-        toggleOpen(openDropdown, false);
+      if (openPicker) {
+        toggleOpen(openPicker, false);
       }
     }
   });
 
-  window.setDropdownValue = setDropdownValue;
+  window.setPickerValue = setPickerValue;
 }());
 
 // Treeview

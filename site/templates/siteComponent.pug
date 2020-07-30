@@ -70,12 +70,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 div.spectrum-CSS-switcherContainer
                   label.spectrum-FieldLabel.spectrum-FieldLabel--left(for='switcher-theme') Theme
 
-                  .spectrum-Dropdown.spectrum-Dropdown--quiet(id="switcher-theme")
-                    button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Dropdown-trigger(aria-haspopup="true")
-                      span.spectrum-Dropdown-label Light
-                      svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Dropdown-icon(focusable="false" aria-hidden="true")
+                  .spectrum-Picker.spectrum-Picker--quiet(id="switcher-theme")
+                    button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Picker-trigger(aria-haspopup="true")
+                      span.spectrum-Picker-label Light
+                      svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Picker-icon(focusable="false" aria-hidden="true")
                         use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
-                    .spectrum-Popover.spectrum-Popover--bottom.spectrum-Dropdown-popover.spectrum-Dropdown-popover--quiet
+                    .spectrum-Popover.spectrum-Popover--bottom.spectrum-Picker-popover.spectrum-Picker-popover--quiet
                       ul.spectrum-Menu(role='listbox')
                         li.spectrum-Menu-item(role='option' aria-selected='true' tabindex='0' value="lightest")
                           span.spectrum-Menu-itemLabel Lightest
@@ -96,12 +96,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 div.spectrum-CSS-switcherContainer
                   label.spectrum-FieldLabel.spectrum-FieldLabel--left(for='switcher-scale') Scale
 
-                  .spectrum-Dropdown.spectrum-Dropdown--quiet(id="switcher-scale")
-                    button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Dropdown-trigger(aria-haspopup="true")
-                      span.spectrum-Dropdown-label Medium
-                      svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Dropdown-icon(focusable="false" aria-hidden="true")
+                  .spectrum-Picker.spectrum-Picker--quiet(id="switcher-scale")
+                    button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Picker-trigger(aria-haspopup="true")
+                      span.spectrum-Picker-label Medium
+                      svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Picker-icon(focusable="false" aria-hidden="true")
                         use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
-                    .spectrum-Popover.spectrum-Popover--bottom.spectrum-Dropdown-popover.spectrum-Dropdown-popover--quiet
+                    .spectrum-Popover.spectrum-Popover--bottom.spectrum-Picker-popover.spectrum-Picker-popover--quiet
                       ul.spectrum-Menu(role='listbox')
                         li.spectrum-Menu-item.is-selected(role='option' aria-selected='true' tabindex='0' value="medium")
                           span.spectrum-Menu-itemLabel Medium
@@ -114,12 +114,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 div.spectrum-CSS-switcherContainer
                   label.spectrum-FieldLabel.spectrum-FieldLabel--left(for='switcher-theme') Direction
 
-                  .spectrum-Dropdown.spectrum-Dropdown--quiet(id="switcher-direction")
-                    button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Dropdown-trigger(aria-haspopup="true")
-                      span.spectrum-Dropdown-label LTR
-                      svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Dropdown-icon(focusable="false" aria-hidden="true")
+                  .spectrum-Picker.spectrum-Picker--quiet(id="switcher-direction")
+                    button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Picker-trigger(aria-haspopup="true")
+                      span.spectrum-Picker-label LTR
+                      svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Picker-icon(focusable="false" aria-hidden="true")
                         use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
-                    .spectrum-Popover.spectrum-Popover--bottom.spectrum-Dropdown-popover.spectrum-Dropdown-popover--quiet
+                    .spectrum-Popover.spectrum-Popover--bottom.spectrum-Picker-popover.spectrum-Picker-popover--quiet
                       ul.spectrum-Menu(role='listbox')
                         li.spectrum-Menu-item.is-selected(role='option' aria-selected='true' tabindex='0' value="ltr")
                           span.spectrum-Menu-itemLabel LTR
@@ -194,7 +194,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 header.spectrum-CSSComponent-sectionHeading(id="usage")
                   h2.spectrum-Heading.spectrum-Heading--M
                     a(href="#usage").spectrum-BigSubtleLink Usage notes
-                  hr.spectrum-Rule.spectrum-Rule--large
+                  hr.spectrum-Divider.spectrum-Divider--large
                 section.spectrum-CSSComponent-description
                   div.spectrum-Body.spectrum-Body--M!= util.markdown.render(component.description)
 
@@ -202,7 +202,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 header.spectrum-CSSComponent-sectionHeading(id="variants")
                   h2.spectrum-Heading.spectrum-Heading--M
                     a(href="#variants").spectrum-BigSubtleLink=`${component.examplesHeading ? component.examplesHeading : 'Variants'}`
-                  hr.spectrum-Rule.spectrum-Rule--large
+                  hr.spectrum-Divider.spectrum-Divider--large
                 each example in examples
                   include ../includes/example.pug
 
