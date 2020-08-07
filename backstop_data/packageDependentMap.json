@@ -80,6 +80,7 @@
   [
     "@spectrum-css/buttongroup",
     [
+      "@spectrum-css/dialog",
       "@spectrum-css/rule"
     ]
   ],
@@ -110,6 +111,32 @@
   ],
   [
     "@spectrum-css/coachmark",
+    []
+  ],
+  [
+    "@spectrum-css/colorarea",
+    []
+  ],
+  [
+    "@spectrum-css/colorhandle",
+    [
+      "@spectrum-css/colorarea",
+      "@spectrum-css/colorslider",
+      "@spectrum-css/colorwheel"
+    ]
+  ],
+  [
+    "@spectrum-css/colorloupe",
+    [
+      "@spectrum-css/colorhandle"
+    ]
+  ],
+  [
+    "@spectrum-css/colorslider",
+    []
+  ],
+  [
+    "@spectrum-css/colorwheel",
     []
   ],
   [
@@ -277,6 +304,12 @@
       "@spectrum-css/search",
       "@spectrum-css/searchwithin",
       "@spectrum-css/stepper"
+    ]
+  ],
+  [
+    "@spectrum-css/thumbnail",
+    [
+      "@spectrum-css/treeview"
     ]
   ],
   [

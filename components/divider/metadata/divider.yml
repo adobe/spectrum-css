@@ -1,0 +1,57 @@
+name: Divider
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/divider/
+examples:
+  - id: divider-large
+    name: 'Large'
+    markup: |
+      <h2 class="spectrum-Heading--subtitle1">Large</h2>
+      <hr class="spectrum-Divider spectrum-Divider--large">
+      <p class="spectrum-Body">Page or Section Titles.</p>
+  - id: divider-medium
+    name: 'Medium'
+    markup: |
+      <h3 class="spectrum-Heading--subtitle2">Medium</h3>
+      <hr class="spectrum-Divider spectrum-Divider--medium">
+      <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
+  - id: divider-small
+    name: 'Small'
+    markup: |
+      <h4 class="spectrum-Heading--subtitle3">Small</h4>
+      <hr class="spectrum-Divider spectrum-Divider--small">
+      <p class="spectrum-Body">Divide like-elements (tables, tool groups, elements within a panel, etc.)</p>
+  - id: divider-vertical-small
+    name: 'Vertical, Small'
+    description: |
+      When a vertical Divider is used inside of a flex container, use `align-self: stretch; height: auto` on the Divider.
+      ButtonGroup automatically applies these styles to vertical Dividers.
+    markup: |
+      <div class="spectrum-ButtonGroup">
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+            <use xlink:href="#spectrum-icon-18-Properties" />
+          </svg>
+        </button>
+        <div class="spectrum-Divider spectrum-Divider--small spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+            <use xlink:href="#spectrum-icon-18-Select" />
+          </svg>
+        </button>
+      </div>
+  - id: divider-vertical-medium
+    name: 'Vertical, Medium'
+    markup: |
+      <div class="spectrum-ButtonGroup">
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+            <use xlink:href="#spectrum-icon-18-Properties" />
+          </svg>
+        </button>
+        <div class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+            <use xlink:href="#spectrum-icon-18-Select" />
+          </svg>
+        </button>
+      </div>

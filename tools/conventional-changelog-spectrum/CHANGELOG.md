@@ -182,7 +182,7 @@ URL should be used:
 
 ### Features
 
-* **angular:** use latest [Angular Commit Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type) ([03f0210e42dff58689ddf182694a8a6ca26e526b](https://github.com/conventional-changelog/conventional-changelog/commit/03f0210e42dff58689ddf182694a8a6ca26e526b))
+* **angular:** use latest [Angular Commit Conventions](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#type) ([03f0210e42dff58689ddf182694a8a6ca26e526b](https://github.com/conventional-changelog/conventional-changelog/commit/03f0210e42dff58689ddf182694a8a6ca26e526b))
 
 ### BREAKING CHANGES
 

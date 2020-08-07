@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0-beta.3"></a>
+# 2.0.0-beta.3
+🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.0.0-beta.2...@spectrum-css/site@2.0.0-beta.3)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
+<a name="2.0.0-beta.2"></a>
+# 2.0.0-beta.2
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.0.0-beta.1...@spectrum-css/site@2.0.0-beta.2)
+
+### ✨ Features
+
+* Color Handle/Slider/Area/Wheel ([#673](https://github.com/adobe/spectrum-css/issues/673)) ([bcd2bf1](https://github.com/adobe/spectrum-css/commit/bcd2bf1))
+
+
+
+
+
 <a name="2.0.0-beta.1"></a>
 # 2.0.0-beta.1
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.0.0-beta.0...@spectrum-css/site@2.0.0-beta.1)

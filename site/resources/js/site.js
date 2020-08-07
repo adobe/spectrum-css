@@ -52,6 +52,12 @@ window.addEventListener('DOMContentLoaded', function() {
         oldMainContainer.parentNode.insertBefore(newMainContainer, oldMainContainer);
         oldMainContainer.parentNode.removeChild(oldMainContainer);
 
+        // Execute JS
+        var scripts = newMainContainer.querySelectorAll('script');
+        scripts.forEach(function(script) {
+          eval(script.innerText);
+        });
+
         currentHREF = href;
 
         console.log('  ✅ ' + href + ' loaded');
@@ -260,8 +266,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
   function hideSideBar() {
     overlay.removeEventListener('click', hideSideBar);
-    sideBar.classList.remove('is-open');
     overlay.classList.remove('is-open');
+    if (sideBar) {
+      sideBar.classList.remove('is-open');
+    }
     if (window.siteSearch) {
       window.siteSearch.hideResults();
     }
@@ -276,8 +284,8 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Search isn't supported on IE 11
-  if (typeof Search !== 'undefined') {
+  // Search isn't supported on IE 11 and sideBar will not be exist in test mode
+  if (typeof Search !== 'undefined' && document.querySelector('#site-search')) {
     window.siteSearch = new Search(document.querySelector('#site-search'))
   }
 
@@ -285,6 +293,6 @@ window.addEventListener('DOMContentLoaded', function() {
     showSideBar();
 
     // Immediately hide results, otherwise they show up in the wrong position since we're in the middle of animation
-    search.hideResults();
+    siteSearch.hideResults();
   });
 });

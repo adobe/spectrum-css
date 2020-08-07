@@ -1,0 +1,151 @@
+name: Color Slider
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/color-slider/
+description: |
+  - Set the value of the ColorHandle component to the selected color
+  - The `.spectrum-ColorHandle` should be moved with the `transform: translateX(x)` style property as the slider is dragged
+  - Ensure that you set the `min`/`max` of `.spectrum-ColorSlider-slider` to the corresponding scale (i.e. `0` to `1` for `a`, `0` to `255` for `r`, etc)
+  - Ensure that you the `step` attribute of `.spectrum-ColorSlider-slider` appropriately (i.e. `0.1` for `a`, `s`, `v` or `1` and `h`, `r`, etc)
+  - Set the `background` style property of `.spectrum-ColorSlider-gradient` to the gradient of the colors to be selected.
+  - Alternatively, provide a `<canvas>` or `<img>` element with the gradient you want to use and apply the `.spectrum-ColorSlider-gradient` class
+examples:
+  - id: color-slider
+    name: Standard
+    markup: |
+      <div class="spectrum-ColorSlider">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+          <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
+        </div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+      </div>
+
+  - id: color-slider
+    name: Alpha
+    markup: |
+      <div class="spectrum-ColorSlider">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+          <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
+        </div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgba(0, 0, 0, 1)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+      </div>
+
+  - id: color-slider
+    name: Disabled
+    markup: |
+      <div class="spectrum-ColorSlider is-disabled">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+          <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
+        </div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle is-disabled">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+      </div>
+
+  - id: color-slider
+    name: Vertical
+    markup: |
+      <div class="spectrum-ColorSlider spectrum-ColorSlider--vertical">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+          <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to bottom, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
+        </div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
+          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgb(255, 0, 0)" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+      </div>
+
+  - id: color-slider
+    name: Standard (with canvas)
+    markup: |
+      <div class="spectrum-ColorSlider">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+          <canvas class="spectrum-ColorSlider-gradient" role="presentation"></canvas>
+        </div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
+          <div class="spectrum-ColorHandle-color" style="background-color: #8ED6FF"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="#8ED6FF" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+      </div>
+      <script>
+        var canvas = document.querySelector('canvas.spectrum-ColorSlider-gradient');
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        var context = canvas.getContext('2d');
+        context.rect(0, 0, canvas.width, canvas.height);
+
+        var gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+
+        gradient.addColorStop(0, '#8ED6FF');
+        gradient.addColorStop(1, '#004CB3');
+
+        context.fillStyle = gradient;
+        context.fill();
+      </script>
+
+  - id: color-slider
+    name: Standard (with image)
+    markup: |
+      <div class="spectrum-ColorSlider">
+        <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+          <img class="spectrum-ColorSlider-gradient" role="presentation" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAeCAIAAAAkbYJ/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyVpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjNBMTBENzk4QkQzMTFFQThDOTdDN0QyNDNGMUNFMzAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjNBMTBEN0E4QkQzMTFFQThDOTdDN0QyNDNGMUNFMzAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGM0ExMEQ3NzhCRDMxMUVBOEM5N0M3RDI0M0YxQ0UzMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGM0ExMEQ3ODhCRDMxMUVBOEM5N0M3RDI0M0YxQ0UzMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrmQ8p4AAADbSURBVHja7JFLDsMgDAWNc/9L9h7YiQ0Gou66rGaUWHxegDDN5SPiEm/Uo+3S3LPWIzEy2uqu1Vh1dy3q5TM/ks38yprJbGdXK38GdHwVs94sAtXNas9h/LIK2zE11jlHrI5ksa9a5r+mdJ3E8i+OveISurzCvldr3V/dp91XQLTPvWYdgbFCr/tcp81BqW/bzKxLkz2epxLzPWglS7Y1ERX4axCMYEAwIBgQDAgGBAOCEQwIBgQDggHBgGBAMIIBwYBgQDAgGBAMCAYEIxgQDAgGBAOC4RduAQYALiXYw9aNKvcAAAAASUVORK5CYII="></img>
+        </div>
+
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
+          <div class="spectrum-ColorHandle-color" style="background-color: #ff00de"></div>
+          <svg class="spectrum-ColorLoupe">
+            <g transform="translate(1 1)">
+              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="#ff00de" />
+              <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
+            </g>
+          </svg>
+        </div>
+
+        <input type="range" class="spectrum-ColorSlider-slider" min="0" max="100" step="1">
+      </div>

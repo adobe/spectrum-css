@@ -85,6 +85,27 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'theme', {
     });
     document.documentElement.classList.add('spectrum--' + theme);
 
+    let prismLink = document.querySelector('[data-prism]');
+    let prismDarkLink = document.querySelector('[data-prism-dark]');
+    if (theme === 'dark' || theme === 'darkest') {
+      if (prismLink) {
+        if (!prismDarkLink) {
+          prismDarkLink = document.createElement('link');
+          prismDarkLink.setAttribute('rel', 'stylesheet');
+          prismDarkLink.setAttribute('data-prism-dark', '');
+          prismDarkLink.setAttribute('type', 'text/css');
+          prismDarkLink.setAttribute('href', 'css/prism/prism-dark.css');
+        }
+
+        prismLink.parentElement.insertBefore(prismDarkLink, prismLink.nextElementSibling);
+      }
+    }
+    else {
+      if (prismDarkLink) {
+        prismDarkLink.parentElement.removeChild(prismDarkLink);
+      }
+    }
+
     this._theme = theme;
   },
   get: function() {

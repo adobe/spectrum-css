@@ -221,6 +221,11 @@ function generateDNAFiles() {
             }
 
             let value = section[key];
+            if (value[0] === '[' && value[value.length-1] === ']') {
+              console.error(`Skipping ${prefix}-${key}, value is an array`);
+              continue;
+            }
+
             contents += getCSSVar(prefix, key, value);
           }
         });

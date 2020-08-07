@@ -7,7 +7,6 @@
   {
     "label": "actionbar",
     "url": "actionbar.html",
-    "delay": 3000,
     "package": "@spectrum-css/actionbar"
   },
   {
@@ -134,6 +133,31 @@
     "package": "@spectrum-css/coachmark"
   },
   {
+    "label": "colorarea",
+    "url": "colorarea.html",
+    "package": "@spectrum-css/colorarea"
+  },
+  {
+    "label": "colorhandle",
+    "url": "colorhandle.html",
+    "package": "@spectrum-css/colorhandle"
+  },
+  {
+    "label": "colorloupe",
+    "url": "colorloupe.html",
+    "package": "@spectrum-css/colorloupe"
+  },
+  {
+    "label": "colorslider",
+    "url": "colorslider.html",
+    "package": "@spectrum-css/colorslider"
+  },
+  {
+    "label": "colorwheel",
+    "url": "colorwheel.html",
+    "package": "@spectrum-css/colorwheel"
+  },
+  {
     "label": "combobox",
     "url": "combobox.html",
     "package": "@spectrum-css/combobox"
@@ -147,11 +171,6 @@
     "label": "datepicker",
     "url": "datepicker.html",
     "package": "@spectrum-css/datepicker"
-  },
-  {
-    "label": "decoratedtextfield",
-    "url": "decoratedtextfield.html",
-    "package": "@spectrum-css/decoratedtextfield"
   },
   {
     "label": "dial",
@@ -368,6 +387,11 @@
     "package": "@spectrum-css/textfield"
   },
   {
+    "label": "thumbnail",
+    "url": "thumbnail.html",
+    "package": "@spectrum-css/thumbnail"
+  },
+  {
     "label": "toast",
     "url": "toast.html",
     "package": "@spectrum-css/toast"
@@ -376,11 +400,6 @@
     "label": "toggle",
     "url": "toggle.html",
     "package": "@spectrum-css/toggle"
-  },
-  {
-    "label": "tool",
-    "url": "tool.html",
-    "package": "@spectrum-css/tool"
   },
   {
     "label": "tooltip",
@@ -400,8 +419,7 @@
   {
     "label": "typography",
     "url": "typography.html",
-    "package": "@spectrum-css/typography",
-    "misMatchThreshold": 0.11
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "typography-body",
@@ -431,9 +449,7 @@
   {
     "label": "typography-international",
     "url": "typography-international.html",
-    "delay": 3000,
-    "package": "@spectrum-css/typography",
-    "misMatchThreshold": 0.11
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "typography-international-deprecated",
