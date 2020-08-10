@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@a4u/a4u-collection-essential-ui-icons-release@^4.1.0":
-  version "4.1.0"
-  resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release/@a4u/a4u-collection-essential-ui-icons-release/-/@a4u/a4u-collection-essential-ui-icons-release-4.1.0.tgz#e6ba2a091d7240b750dec21d8c42a3a146c024e9"
-  integrity sha1-5roqCR1yQLdQ3sIdjEKjoUbAJOk=
-
 "@a4u/a4u-collection-react-spectrum-open-source-color-icons-release@^2.0.0":
   version "2.0.0"
   resolved "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-a4u-release/@a4u/a4u-collection-react-spectrum-open-source-color-icons-release/-/@a4u/a4u-collection-react-spectrum-open-source-color-icons-release-2.0.0.tgz#92fe08ed97d87ccec5ab15ca21da8e8eaaa589fa"
@@ -9854,6 +9849,13 @@ vinyl-fs@^3.0.0:
     value-or-function "^3.0.0"
     vinyl "^2.0.0"
     vinyl-sourcemap "^1.1.0"
+
+vinyl-paths@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/vinyl-paths/-/vinyl-paths-3.0.1.tgz#16b42404e21ebddfb75954863f553af3345d56b5"
+  integrity sha512-fpjimhur1emSbJSvy5dJjDklCFEh2LvQRSHPzMQlYFjPrdFMHAyzSe1fiLzykoqg9X2tqH8evhsOUDNT55a0sw==
+  dependencies:
+    through2 "^3.0.1"
 
 vinyl-sourcemap@^1.1.0:
   version "1.1.0"
