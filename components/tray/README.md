@@ -1,5 +1,5 @@
-# @spectrum-css/dropdown
-> The Spectrum CSS dropdown component
+# @spectrum-css/tray
+> The Spectrum CSS tray component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

@@ -25,10 +25,10 @@ examples:
         <div class="spectrum-Form-item">
           <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
           <div class="spectrum-Form-itemField">
-            <div class="spectrum-Dropdown" style="width: 195px;">
-              <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-                <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
-                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+            <div class="spectrum-Picker" style="width: 195px;">
+              <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="true">
+                <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Picker-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
               </button>
@@ -122,10 +122,10 @@ examples:
         <div class="spectrum-Form-item">
           <label class="spectrum-Form-itemLabel spectrum-FieldLabel--right" for="spectrum-textinput-instance">Country</label>
           <div class="spectrum-Form-itemField">
-            <div class="spectrum-Dropdown" style="width: 195px;">
-              <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-                <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
-                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+            <div class="spectrum-Picker" style="width: 195px;">
+              <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="true">
+                <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Picker-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
               </button>
@@ -219,10 +219,10 @@ examples:
         <div class="spectrum-Form-item">
           <label class="spectrum-Form-itemLabel" for="spectrum-textinput-instance">Country</label>
           <div class="spectrum-Form-itemField">
-            <div class="spectrum-Dropdown" style="width: 195px;">
-              <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-                <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
-                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+            <div class="spectrum-Picker" style="width: 195px;">
+              <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="true">
+                <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Picker-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
               </button>
