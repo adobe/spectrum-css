@@ -16,22 +16,18 @@ governing permissions and limitations under the License.
 
 .spectrum-Dialog-header {
   background: var(--spectrum-dialog-confirm-background-color);
-
-  &:after {
-    background: var(--spectrum-dialog-confirm-divider-color);
-  }
 }
 
 .spectrum-Dialog-title {
-  color: var(--spectrum-dialog-title-text-color);
+  color: var(--spectrum-dialog-confirm-title-text-color);
 }
 
 .spectrum-Dialog-content {
-  color: var(--spectrum-dialog-content-text-color);
+  color: var(--spectrum-dialog-confirm-description-text-color);
 }
 
 .spectrum-Dialog-typeIcon {
-  color: var(--spectrum-dialog-icon-color);
+  color: var(--spectrum-dialog-confirm-icon-color);
 }
 
 .spectrum-Dialog-footer {
