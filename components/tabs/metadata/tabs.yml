@@ -356,7 +356,7 @@ examples:
           <div class="spectrum-Picker spectrum-Picker--quiet">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
               <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Picker-icon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
@@ -369,7 +369,7 @@ examples:
           <div class="spectrum-Picker spectrum-Picker--quiet is-open">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
               <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Picker-icon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
@@ -380,7 +380,7 @@ examples:
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Tab 1</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Checkmark100" />
             </svg>
           </li>
@@ -406,7 +406,7 @@ examples:
           <div class="spectrum-Picker spectrum-Picker--quiet">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
               <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Picker-icon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
@@ -419,7 +419,7 @@ examples:
           <div class="spectrum-Picker spectrum-Picker--quiet is-open">
             <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
               <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMediumNew spectrum-Picker-icon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
@@ -431,7 +431,7 @@ examples:
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Tab 1</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Checkmark100" />
             </svg>
           </li>

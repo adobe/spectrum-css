@@ -25,7 +25,7 @@ examples:
     name: Valid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required>A valid input</textarea>
@@ -35,7 +35,7 @@ examples:
     name: Valid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-valid is-disabled">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>A valid input</textarea>
@@ -45,7 +45,7 @@ examples:
     name: Invalid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\d]+" required>Invalid input</textarea>
@@ -55,7 +55,7 @@ examples:
     name: Invalid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-disabled">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" disabled>Invalid input</textarea>
@@ -79,7 +79,7 @@ examples:
     name: Focused (invalid)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-focused">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\d]+" required>Invalid input</textarea>
@@ -89,7 +89,7 @@ examples:
     name: Keyboard Focused (invalid)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline is-invalid is-keyboardFocused">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\d]+" required>Invalid input</textarea>
@@ -113,7 +113,7 @@ examples:
     name: Quiet Valid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required>A valid input</textarea>
@@ -123,7 +123,7 @@ examples:
     name: Quiet Valid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-valid is-disabled">
-        <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMediumNew spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-Checkmark100" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required disabled>A valid input</textarea>
@@ -133,7 +133,7 @@ examples:
     name: Quiet Invalid
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\d]+" required>Invalid input</textarea>
@@ -143,7 +143,7 @@ examples:
     name: Quiet Invalid (disabled)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-disabled">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" disabled>Invalid input</textarea>
@@ -167,7 +167,7 @@ examples:
     name: Quiet Focused (invalid)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-focused">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\d]+" required>Invalid input</textarea>
@@ -177,7 +177,7 @@ examples:
     name: Quiet Keyboard Focused (invalid)
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid is-keyboardFocused">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-AlertMedium" />
         </svg>
         <textarea placeholder="Enter your name" name="field"  class="spectrum-Textfield-input" pattern="[\d]+" required>Invalid input</textarea>

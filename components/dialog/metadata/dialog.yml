@@ -78,7 +78,7 @@ examples:
                 faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper
                 dignissim cras lobortis.</section>
               <button aria-label="Dismiss" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
-                <svg class="spectrum-Icon spectrum-UIIcon-CrossLargeNew" focusable="false" aria-hidden="true">
+                <svg class="spectrum-Icon spectrum-UIIcon-Cross500" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Cross500"></use>
                 </svg>
               </button>
@@ -104,7 +104,7 @@ examples:
                 faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper
                 dignissim cras lobortis.</section>
               <button aria-label="Dismiss" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
-                <svg class="spectrum-Icon spectrum-UIIcon-CrossLargeNew" focusable="false" aria-hidden="true">
+                <svg class="spectrum-Icon spectrum-UIIcon-Cross500" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Cross500"></use>
                 </svg>
               </button>
@@ -129,7 +129,7 @@ examples:
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
               </section>
               <button aria-label="Dismiss" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
-                <svg class="spectrum-Icon spectrum-UIIcon-CrossLargeNew" focusable="false" aria-hidden="true">
+                <svg class="spectrum-Icon spectrum-UIIcon-Cross500" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-css-icon-Cross500"></use>
                 </svg>
               </button>
@@ -227,7 +227,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Unable to Share</h1>
-              <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
               </svg>
               <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
@@ -253,7 +253,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Unable to Share Project to the Behance Community</h1>
-              <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
               </svg>
               <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
