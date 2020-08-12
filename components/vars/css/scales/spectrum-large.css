@@ -18,6 +18,7 @@
   --spectrum-global-dimension-size-200: 20px;
   --spectrum-global-dimension-size-225: 22px;
   --spectrum-global-dimension-size-250: 25px;
+  --spectrum-global-dimension-size-275: 28px;
   --spectrum-global-dimension-size-300: 30px;
   --spectrum-global-dimension-size-350: 35px;
   --spectrum-global-dimension-size-400: 40px;
@@ -373,4 +374,73 @@
   --spectrum-tooltip-negative-content-max-width: 126px;
   --spectrum-tooltip-positive-padding-bottom: 6px;
   --spectrum-tooltip-positive-content-max-width: 126px;
+
+  /* TODO: Remove the following temporary placeholder  */
+
+  /* chevron */
+  --spectrum-alias-ui-icon-chevron-size-75: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-ui-icon-chevron-size-100: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-alias-ui-icon-chevron-size-200: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-chevron-size-300: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-chevron-size-400: var(--spectrum-global-dimension-static-size-225);
+  --spectrum-alias-ui-icon-chevron-size-500: var(--spectrum-global-dimension-static-size-250);
+
+  /* checkmark */
+  --spectrum-alias-ui-icon-checkmark-size-50: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-ui-icon-checkmark-size-75: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-ui-icon-checkmark-size-100: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-alias-ui-icon-checkmark-size-200: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-checkmark-size-300: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-checkmark-size-400: var(--spectrum-global-dimension-static-size-225);
+  --spectrum-alias-ui-icon-checkmark-size-500: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-alias-ui-icon-checkmark-size-600: var(--spectrum-global-dimension-static-size-300);
+
+  /* dash */
+  --spectrum-alias-ui-icon-dash-size-50: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-alias-ui-icon-dash-size-75: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-alias-ui-icon-dash-size-100: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-ui-icon-dash-size-200: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-alias-ui-icon-dash-size-300: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-dash-size-400: var(--spectrum-global-dimension-static-size-225);
+  --spectrum-alias-ui-icon-dash-size-500: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-alias-ui-icon-dash-size-600: var(--spectrum-global-dimension-static-size-275);
+
+  /* cross */
+  --spectrum-alias-ui-icon-cross-size-75: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-alias-ui-icon-cross-size-100: var(--spectrum-global-dimension-static-size-125);
+  --spectrum-alias-ui-icon-cross-size-200: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-ui-icon-cross-size-300: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-alias-ui-icon-cross-size-400: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-cross-size-500: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-cross-size-600: var(--spectrum-global-dimension-static-size-225);
+
+  /* arrow */
+  --spectrum-alias-ui-icon-arrow-size-75: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-ui-icon-arrow-size-100: var(--spectrum-global-dimension-static-size-175);
+  --spectrum-alias-ui-icon-arrow-size-200: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-arrow-size-300: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-alias-ui-icon-arrow-size-400: var(--spectrum-global-dimension-static-size-225);
+  --spectrum-alias-ui-icon-arrow-size-500: var(--spectrum-global-dimension-static-size-275);
+  --spectrum-alias-ui-icon-arrow-size-600: var(--spectrum-global-dimension-static-size-300);
+
+  /* triplegripper */
+  --spectrum-alias-ui-icon-triplegripper-size-100-width: var(--spectrum-global-dimension-static-size-175);
+
+  /* doublegripper */
+  --spectrum-alias-ui-icon-doublegripper-size-100-height: var(--spectrum-global-dimension-static-size-75);
+
+  /* singlegripper */
+  --spectrum-alias-ui-icon-singlegripper-size-100-height: var(--spectrum-global-dimension-static-size-50);
+
+  /* cornertriangle */
+  --spectrum-alias-ui-icon-cornertriangle-size-100: var(--spectrum-global-dimension-static-size-85);
+  --spectrum-alias-ui-icon-cornertriangle-size-300: var(--spectrum-global-dimension-static-size-100);
+
+  /* asterisk */
+  --spectrum-alias-ui-icon-asterisk-size-75: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-alias-ui-icon-asterisk-size-200: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-alias-ui-icon-asterisk-size-300: var(--spectrum-global-dimension-static-size-150);
+
+  /* None ui icon */
+  --spectrum-alias-workflow-icon-size-l: var(--spectrum-global-dimension-static-size-300);
 }

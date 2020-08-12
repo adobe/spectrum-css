@@ -10,13 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* TODO: Remove the following temporary placeholder  */
-:root {
-  --spectrum-global-dimension-static-size-75: 6px;
-  --spectrum-global-dimension-static-size-85: 7px;
-  --spectrum-global-dimension-static-size-275: 22px;
-}
-
 /* Hide UI icons on older browsers with SVG 1.1 implementations */
 .spectrum--medium {
   .spectrum-UIIcon--large {
@@ -25,55 +18,6 @@ governing permissions and limitations under the License.
   .spectrum-UIIcon--medium {
     display: inline;
   }
-
-  /* TODO: Remove the following temporary placeholder  */
-  --spectrum-alias-ui-icon-chevron-size-75: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-chevron-size-100: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-chevron-size-200: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-chevron-size-300: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-chevron-size-400: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-chevron-size-500: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-checkmark-size-50: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-checkmark-size-75: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-checkmark-size-100: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-checkmark-size-200: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-checkmark-size-300: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-checkmark-size-400: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-checkmark-size-500: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-checkmark-size-600: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-dash-size-50: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-dash-size-75: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-dash-size-100: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-dash-size-200: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-dash-size-300: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-dash-size-400: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-dash-size-500: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-dash-size-600: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-cross-size-75: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-cross-size-100: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-cross-size-200: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-cross-size-300: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-cross-size-400: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-cross-size-500: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-cross-size-600: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-arrow-size-75: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-arrow-size-100: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-arrow-size-200: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-arrow-size-300: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-arrow-size-400: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-arrow-size-500: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-arrow-size-600: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-alias-ui-icon-triplegripper-size-100-width: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-doublegripper-size-100-height: var(--spectrum-global-dimension-static-size-50);
-  --spectrum-alias-ui-icon-singlegripper-size-100-height: var(--spectrum-global-dimension-static-size-25);
-  --spectrum-alias-ui-icon-cornertriangle-size-75: var(--spectrum-global-dimension-static-size-65);
-  --spectrum-alias-ui-icon-cornertriangle-size-100: var(--spectrum-global-dimension-static-size-65);
-  --spectrum-alias-ui-icon-cornertriangle-size-200: var(--spectrum-global-dimension-static-size-75);
-  --spectrum-alias-ui-icon-cornertriangle-size-300: var(--spectrum-global-dimension-static-size-85);
-  --spectrum-alias-ui-icon-asterisk-size-75: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-asterisk-size-100: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-asterisk-size-200: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-asterisk-size-300: var(--spectrum-global-dimension-static-size-125);
 }
 
 .spectrum--large {
@@ -83,55 +27,6 @@ governing permissions and limitations under the License.
   .spectrum-UIIcon--large {
     display: inline;
   }
-
-  /* TODO: Remove the following temporary placeholder  */
-  --spectrum-alias-ui-icon-chevron-size-75: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-chevron-size-100: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-chevron-size-200: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-chevron-size-300: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-chevron-size-400: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-chevron-size-500: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-alias-ui-icon-checkmark-size-50: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-checkmark-size-75: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-checkmark-size-100: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-checkmark-size-200: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-checkmark-size-300: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-checkmark-size-400: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-checkmark-size-500: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-alias-ui-icon-checkmark-size-600: var(--spectrum-global-dimension-static-size-300);
-  --spectrum-alias-ui-icon-dash-size-50: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-dash-size-75: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-dash-size-100: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-dash-size-200: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-dash-size-300: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-dash-size-400: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-dash-size-500: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-alias-ui-icon-dash-size-600: var(--spectrum-global-dimension-static-size-275);
-  --spectrum-alias-ui-icon-cross-size-75: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-cross-size-100: var(--spectrum-global-dimension-static-size-125);
-  --spectrum-alias-ui-icon-cross-size-200: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-cross-size-300: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-cross-size-400: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-cross-size-500: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-cross-size-600: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-arrow-size-75: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-arrow-size-100: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-arrow-size-200: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-arrow-size-300: var(--spectrum-global-dimension-static-size-200);
-  --spectrum-alias-ui-icon-arrow-size-400: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-alias-ui-icon-arrow-size-500: var(--spectrum-global-dimension-static-size-275);
-  --spectrum-alias-ui-icon-arrow-size-600: var(--spectrum-global-dimension-static-size-300);
-  --spectrum-alias-ui-icon-triplegripper-size-100-width: var(--spectrum-global-dimension-static-size-175);
-  --spectrum-alias-ui-icon-doublegripper-size-100-height: var(--spectrum-global-dimension-static-size-75);
-  --spectrum-alias-ui-icon-singlegripper-size-100-height: var(--spectrum-global-dimension-static-size-50);
-  --spectrum-alias-ui-icon-cornertriangle-size-75: var(--spectrum-global-dimension-static-size-65);
-  --spectrum-alias-ui-icon-cornertriangle-size-100: var(--spectrum-global-dimension-static-size-85);
-  --spectrum-alias-ui-icon-cornertriangle-size-200: var(--spectrum-global-dimension-static-size-85);
-  --spectrum-alias-ui-icon-cornertriangle-size-300: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-asterisk-size-75: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-asterisk-size-100: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-alias-ui-icon-asterisk-size-200: var(--spectrum-global-dimension-static-size-150);
-  --spectrum-alias-ui-icon-asterisk-size-300: var(--spectrum-global-dimension-static-size-150);
 }
 
 /* Hide UI icons on browsers that implement SVG 2 correctly (Firefox 56+) */
@@ -560,11 +455,6 @@ governing permissions and limitations under the License.
 }
 
 /* Cross */
-.spectrum-UIIcon-Cross50 {
-  inline-size: var(--spectrum-alias-ui-icon-cross-size-50);
-  block-size: var(--spectrum-alias-ui-icon-cross-size-50);
-}
-
 .spectrum-UIIcon-Cross75 {
   inline-size: var(--spectrum-alias-ui-icon-cross-size-75);
   block-size: var(--spectrum-alias-ui-icon-cross-size-75);
