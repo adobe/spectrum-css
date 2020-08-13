@@ -25,8 +25,8 @@ examples:
     status: Verified
     markup: |
       <div class="spectrum-Toast spectrum-Toast--info">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is done</div>
@@ -44,8 +44,8 @@ examples:
     status: Verified
     markup: |
       <div class="spectrum-Toast spectrum-Toast--negative">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
@@ -66,8 +66,8 @@ examples:
     status: Verified
     markup: |
       <div class="spectrum-Toast spectrum-Toast--positive">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SuccessMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is golden brown</div>
@@ -89,8 +89,8 @@ examples:
     markup: |
 
       <div class="spectrum-Toast spectrum-Toast--info">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">
@@ -112,8 +112,8 @@ examples:
       <br><br>
 
       <div class="spectrum-Toast spectrum-Toast--info" style="width: 318px;">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">
@@ -135,8 +135,8 @@ examples:
       <br><br>
 
       <div class="spectrum-Toast spectrum-Toast--info" style="width: 332px;">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">
@@ -155,8 +155,8 @@ examples:
       <br><br>
 
       <div class="spectrum-Toast spectrum-Toast--info">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">An update is available</div>
@@ -174,8 +174,8 @@ examples:
     details: Use `negative` variant instead
     markup: |
       <div class="spectrum-Toast spectrum-Toast--error">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
@@ -197,8 +197,8 @@ examples:
     details: Use `negative` variant instead
     markup: |
       <div class="spectrum-Toast spectrum-Toast--warning">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
@@ -219,8 +219,8 @@ examples:
     details: Use `positive` variant instead
     markup: |
       <div class="spectrum-Toast spectrum-Toast--success">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SuccessMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is golden brown</div>
@@ -258,8 +258,8 @@ examples:
       <br><br>
 
       <div class="spectrum-Toast spectrum-Toast--info">
-        <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Toast-content">Don't use this markup, it's deprecated</div>
         <div class="spectrum-Toast-buttons">

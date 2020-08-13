@@ -4,8 +4,8 @@ examples:
     name: Info
     markup: |
       <div class="spectrum-Alert spectrum-Alert--info">
-        <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Alert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-Alert-header">Information Alert Header</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
@@ -14,8 +14,8 @@ examples:
     name: Success
     markup: |
       <div class="spectrum-Alert spectrum-Alert--success">
-        <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SuccessMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Alert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
         </svg>
         <div class="spectrum-Alert-header">Successful Alert Header</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
@@ -24,8 +24,8 @@ examples:
     name: Warning
     markup: |
       <div class="spectrum-Alert spectrum-Alert--warning">
-        <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Alert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-Alert-header">Warning Alert Header</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
@@ -34,8 +34,8 @@ examples:
     name: Help
     markup: |
       <div class="spectrum-Alert spectrum-Alert--help">
-        <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-HelpMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Alert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Help" />
         </svg>
         <div class="spectrum-Alert-header">Information Alert Header</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
@@ -44,8 +44,8 @@ examples:
     name: Error
     markup: |
       <div class="spectrum-Alert spectrum-Alert--error">
-        <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Alert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-Alert-header">Error Alert - Oh no</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
@@ -56,8 +56,8 @@ examples:
     description: An Alert with a close button in the footer. Combine this strategy with any variant.
     markup: |
       <div class="spectrum-Alert spectrum-Alert--error">
-        <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Alert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
         <div class="spectrum-Alert-content">This is an alert.</div>

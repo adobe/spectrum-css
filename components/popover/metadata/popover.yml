@@ -27,7 +27,7 @@ examples:
     name: Popover - Dialog style
     description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
-      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation" style="max-width:320px">
         <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
@@ -40,12 +40,12 @@ examples:
         </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 215px"></div>
+      <div class="dummy-spacing" style="height: 240px"></div>
 
       <br>
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+      <div class="spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation" style="max-width:320px">
         <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
@@ -58,17 +58,17 @@ examples:
         </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 215px"></div>
+      <div class="dummy-spacing" style="height: 240px"></div>
 
       <br>
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+      <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation" style="max-width:320px">
         <section class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--error" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
-            <svg class="spectrum-Icon spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Alert"></use>
             </svg>
             <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
             <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
@@ -87,4 +87,4 @@ examples:
         </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 290px"></div>
+      <div class="dummy-spacing" style="height: 320px"></div>

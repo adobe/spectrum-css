@@ -69,8 +69,8 @@ examples:
         <ul class="spectrum-SideNav">
           <li class="spectrum-SideNav-item is-selected">
             <a href="#" class="spectrum-SideNav-itemLink" aria-current="page">
-              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Star" />
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Star" />
               </svg>
               Section Title 1
             </a>
@@ -78,16 +78,16 @@ examples:
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Star" />
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Star" />
               </svg>
               Section Title 2
             </a>
           </li>
           <li class="spectrum-SideNav-item">
             <a href="#" class="spectrum-SideNav-itemLink">
-              <svg class="spectrum-Icon spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Star" />
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-SideNav-itemIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Star" />
               </svg>
               Section Title 3
             </a>

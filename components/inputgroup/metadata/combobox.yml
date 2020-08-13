@@ -94,8 +94,8 @@ examples:
       <h4>Invalid</h4>
       <div class="spectrum-InputGroup is-invalid">
         <div class="spectrum-Textfield is-invalid spectrum-InputGroup-textfield">
-          <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-Alert" />
           </svg>
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
@@ -166,8 +166,8 @@ examples:
       <h4>Invalid</h4>
       <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
         <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid spectrum-InputGroup-textfield">
-          <svg class="spectrum-Icon spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-Alert" />
           </svg>
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>

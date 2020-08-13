@@ -227,8 +227,8 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Unable to Share</h1>
-              <svg class="spectrum-Icon spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert"></use>
               </svg>
               <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">An error occurred while sharing your project. Please verify the email address and try again.</section>
@@ -253,8 +253,8 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Unable to Share Project to the Behance Community</h1>
-              <svg class="spectrum-Icon spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert"></use>
               </svg>
               <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">An error occurred while sharing your project. Please verify the email address and try again.</section>
