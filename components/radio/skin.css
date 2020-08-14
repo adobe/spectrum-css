@@ -29,6 +29,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Radio-button {
   &:before {
+    forced-color-adjust: none;
     background-color: var(--spectrum-radio-emphasized-circle-background-color);
     border-color: var(--spectrum-radio-emphasized-circle-border-color);
   }
@@ -139,6 +140,7 @@ governing permissions and limitations under the License.
   }
 
   &:disabled ~ .spectrum-Radio-label {
+    forced-color-adjust: none;
     color: var(--spectrum-radio-emphasized-text-color-disabled);
   }
 }
@@ -162,4 +164,37 @@ governing permissions and limitations under the License.
       }
     }
   }
+}
+
+@media (forced-colors: active) {
+  .spectrum-Radio-input {
+    &:focus-ring + .spectrum-Radio-button {
+      forced-color-adjust: none;
+      outline-color: var(--spectrum-radio-focus-ring-color-key-focus);
+      outline-style: auto;
+      outline-offset: var(--spectrum-radio-focus-ring-gap-key-focus);
+      outline-width: var(--spectrum-radio-focus-ring-size-key-focus);    }
+  }
+  :root {
+    --spectrum-radio-emphasized-circle-background-color : var(--spectrum-alias-background-color-transparent);
+    --spectrum-radio-emphasized-circle-background-color-disabled : var(--spectrum-alias-background-color-transparent);
+    --spectrum-radio-emphasized-circle-border-color-disabled : GrayText;
+    --spectrum-radio-text-color-disabled : GrayText;
+    --spectrum-radio-circle-border-color-key-focus: FieldText;
+    --spectrum-radio-emphasized-circle-border-color: FieldText;
+    --spectrum-radio-quiet-circle-border-color: FieldText; 
+    --spectrum-radio-circle-border-color-selected-hover : Highlight;
+    --spectrum-radio-emphasized-circle-border-color-selected-hover : Highlight;
+    --spectrum-radio-quiet-circle-border-color-selected-hover : Highlight;
+    --spectrum-radio-emphasized-circle-border-color-selected: Highlight; 
+    --spectrum-radio-quiet-circle-border-color-selected: Highlight;
+    --spectrum-radio-checkmark-color: HighlightText;
+    --spectrum-radio-focus-ring-color-key-focus: Highlight;
+    --spectrum-radio-focus-ring-gap-key-focus: var(--spectrum-global-dimension-static-size-25);
+    --spectrum-radio-focus-ring-size-key-focus: var(--spectrum-global-dimension-static-size-40);
+    --spectrum-radio-emphasized-circle-border-color-error: FieldText;
+    --spectrum-radio-emphasized-circle-border-color-error-hover: FieldText;
+    --spectrum-radio-emphasized-circle-border-color-error-selected: FieldText;
+    --spectrum-radio-text-color-error: FieldText;
+  }        
 }
