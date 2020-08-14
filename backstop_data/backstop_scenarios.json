@@ -183,9 +183,9 @@
     "package": "@spectrum-css/dialog"
   },
   {
-    "label": "dropdown",
-    "url": "dropdown.html",
-    "package": "@spectrum-css/dropdown"
+    "label": "divider",
+    "url": "divider.html",
+    "package": "@spectrum-css/divider"
   },
   {
     "label": "dropindicator",
@@ -272,6 +272,11 @@
     "package": "@spectrum-css/miller"
   },
   {
+    "label": "modal",
+    "url": "modal.html",
+    "package": "@spectrum-css/modal"
+  },
+  {
     "label": "page",
     "url": "page.html",
     "package": "@spectrum-css/page"
@@ -292,6 +297,11 @@
     "package": "@spectrum-css/pagination"
   },
   {
+    "label": "picker",
+    "url": "picker.html",
+    "package": "@spectrum-css/picker"
+  },
+  {
     "label": "popover",
     "url": "popover.html",
     "package": "@spectrum-css/popover"
@@ -310,11 +320,6 @@
     "label": "rating",
     "url": "rating.html",
     "package": "@spectrum-css/rating"
-  },
-  {
-    "label": "rule",
-    "url": "rule.html",
-    "package": "@spectrum-css/rule"
   },
   {
     "label": "search",
@@ -405,6 +410,11 @@
     "label": "tooltip",
     "url": "tooltip.html",
     "package": "@spectrum-css/tooltip"
+  },
+  {
+    "label": "tray",
+    "url": "tray.html",
+    "package": "@spectrum-css/tray"
   },
   {
     "label": "treeview",

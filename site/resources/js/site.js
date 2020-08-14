@@ -185,13 +185,13 @@ window.addEventListener('DOMContentLoaded', function() {
     callback: function(event) {
       switch (event.property) {
         case 'scale':
-          setDropdownValue(scaleDropdown, event.value);
+          setPickerValue(scalePicker, event.value);
           break;
         case 'theme':
-          setDropdownValue(themeDropdown, event.value);
+          setPickerValue(themePicker, event.value);
           break;
         case 'direction':
-          setDropdownValue(directionDropdown, event.value);
+          setPickerValue(directionPicker, event.value);
           break;
       }
     }
@@ -208,8 +208,8 @@ window.addEventListener('DOMContentLoaded', function() {
     else {
       switcher.scale = 'medium';
     }
-    if (scaleDropdown) {
-      setDropdownValue(scaleDropdown, switcher.scale);
+    if (scalePicker) {
+      setPickerValue(scalePicker, switcher.scale);
     }
   }
   scaleMQL.addListener(handleScaleMQLChange);
@@ -226,21 +226,21 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  let scaleDropdown = document.querySelector('#switcher-scale');
-  let themeDropdown = document.querySelector('#switcher-theme');
-  let directionDropdown = document.querySelector('#switcher-direction');
-  window.addEventListener('PageFastLoaded', function updateScaleDropdowns() {
-    scaleDropdown = document.querySelector('#switcher-scale');
-    themeDropdown = document.querySelector('#switcher-theme');
-    directionDropdown = document.querySelector('#switcher-direction');
-    if (scaleDropdown) {
-      setDropdownValue(scaleDropdown, switcher.scale);
+  let scalePicker = document.querySelector('#switcher-scale');
+  let themePicker = document.querySelector('#switcher-theme');
+  let directionPicker = document.querySelector('#switcher-direction');
+  window.addEventListener('PageFastLoaded', function updateScalePickers() {
+    scalePicker = document.querySelector('#switcher-scale');
+    themePicker = document.querySelector('#switcher-theme');
+    directionPicker = document.querySelector('#switcher-direction');
+    if (scalePicker) {
+      setPickerValue(scalePicker, switcher.scale);
     }
-    if (themeDropdown) {
-      setDropdownValue(themeDropdown, switcher.theme);
+    if (themePicker) {
+      setPickerValue(themePicker, switcher.theme);
     }
-    if (directionDropdown) {
-      setDropdownValue(directionDropdown, switcher.direction);
+    if (directionPicker) {
+      setPickerValue(directionPicker, switcher.direction);
     }
   });
 
