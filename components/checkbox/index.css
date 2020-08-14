@@ -185,6 +185,7 @@ governing permissions and limitations under the License.
   margin-inline-start: calc(var(--spectrum-icon-checkmark-small-width) / -2);
 }
 
+/* TODO DNA bug ? should be replaced with dedicated DNA token */
 .spectrum-Checkbox-partialCheckmark {
   margin-block-start: calc(var(--spectrum-global-dimension-size-100) / -2);
   margin-inline-start: calc(var(--spectrum-global-dimension-size-100) / -2);

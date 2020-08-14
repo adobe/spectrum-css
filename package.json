@@ -66,7 +66,11 @@
   "resolutions": {
     "handlebars": "^4.5.2",
     "https-proxy-agent": "^3.0.0",
-    "http-proxy": "^1.18.1"
+    "http-proxy": "^1.18.1",
+    "dot-prop": "^5.2.0",
+    "yargs-parser": "^19.0.1",
+    "lodash": "^4.17.20",
+    "minimist": "^1.2.5"
   },
   "workspaces": [
     "components/*",
