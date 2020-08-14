@@ -67,7 +67,7 @@ examples:
         <section class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--error" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
-            <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Alert"></use>
             </svg>
             <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">

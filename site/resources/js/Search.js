@@ -18,7 +18,7 @@ function Search(el) {
 <div class="spectrum-Site-search" role="search">
   <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
     <div class="spectrum-Textfield">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-icon-18-Magnify" />
       </svg>
       <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input js-input" autocomplete="off">

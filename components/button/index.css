@@ -189,7 +189,7 @@ a.spectrum-ActionButton {
     padding-inline-end: calc(var(--spectrum-actionbutton-text-padding-x) - var(--spectrum-actionbutton-icon-padding-x));
   }
 
-  .spectrum-Icon--sizeS:only-child {
+  .spectrum-Icon--sizeM:only-child {
     /* Position absolutely to avoid layout errors introduced by padding */
     position: absolute;
     inset-block-start: calc(50% - calc(var(--spectrum-actionbutton-icon-size) / 2));

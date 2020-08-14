@@ -27,14 +27,14 @@ examples:
       <br><br>
 
       <button class="spectrum-Button spectrum-Button--primary">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
       <button class="spectrum-Button spectrum-Button--primary" disabled>
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
@@ -43,14 +43,14 @@ examples:
       <br><br>
 
       <a class="spectrum-Button spectrum-Button--primary">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
       </a>
 
       <a class="spectrum-Button spectrum-Button--primary is-disabled">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
