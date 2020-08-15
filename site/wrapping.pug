@@ -12,12 +12,15 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
         'tooltip',
         'coachmark',
         'dialog',
+        'divider',
         'button',
+        'buttongroup',
         'sidenav',
         'menu',
+        'modal',
         'barloader',
         'inputgroup',
-        'dropdown',
+        'picker',
         'slider',
         'toggle',
         'checkbox',
@@ -142,16 +145,23 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                     <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
 
                     <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
-                    <div class="spectrum-Dialog spectrum-Dialog--alert is-open spectrum-CSSExample-dialog" style="width: 300px">
-                      <div class="spectrum-Dialog-header">
-                        <h2 class="spectrum-Dialog-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                      </div>
-                      <div class="spectrum-Dialog-content">
-                        Smart filters are nondestructive and will preserve your original images.
-                      </div>
-                      <div class="spectrum-Dialog-footer">
-                        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
-                        <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Enable</button>
+                    <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+                      <div class="spectrum-Modal is-open" data-testid="modal" style="width: 300px">
+                        <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
+                          <div class="spectrum-Dialog-grid">
+                            <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                            <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+                            <section class="spectrum-Dialog-content">Smart filters are nondestructive and will preserve your original images.</section>
+                            <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
+                              <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                                <span class="spectrum-Button-label">Cancel</span>
+                              </button>
+                              <button class="spectrum-Button spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                                <span class="spectrum-Button-label">Enable</span>
+                              </button>
+                            </div>
+                          </div>
+                        </section>
                       </div>
                     </div>
 
@@ -348,15 +358,15 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                       </div>
 
               article.spectrum-CSSExample
-                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Dropdown (wrapping label)
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Picker (wrapping label)
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
                       <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
-                      <div class="spectrum-Dropdown" style="width: 195px;">
-                        <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
-                          <span class="spectrum-Dropdown-label is-placeholder">Select an option</span>
-                          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+                      <div class="spectrum-Picker" style="width: 195px;">
+                        <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="true">
+                          <span class="spectrum-Picker-label is-placeholder">Select an option</span>
+                          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
                             <use xlink:href="#spectrum-css-icon-Chevron100" />
                           </svg>
                         </button>

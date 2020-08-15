@@ -15,7 +15,7 @@ examples:
           <div class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.</section>
             </div>
           </div>
@@ -34,7 +34,7 @@ examples:
           <div class="spectrum-Dialog spectrum-Dialog--medium" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.</section>
             </div>
           </div>
@@ -53,7 +53,7 @@ examples:
           <div class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.</section>
             </div>
           </div>
@@ -72,7 +72,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissable" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu.
                 Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id
                 faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper
@@ -149,7 +149,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--confirmation" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Enable Smart Filters?</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Smart filters are nondestructive and will preserve your original images.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
                 <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -175,7 +175,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Connect to WiFi</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Please connect to WiFi to sync your projects or go to Settings to change your preferences.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
                 <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -201,7 +201,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Delete 3 Documents</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Are you sure you want to delete the 3 selected documents?</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
                 <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -230,7 +230,7 @@ examples:
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Alert"></use>
               </svg>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">An error occurred while sharing your project. Please verify the email address and try again.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
                 <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -256,7 +256,7 @@ examples:
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Alert"></use>
               </svg>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">An error occurred while sharing your project. Please verify the email address and try again.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
                 <button class="spectrum-Button spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -279,7 +279,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--medium" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Rate This App</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">If you enjoy our app, would you mind taking a moment to rate it?</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
                 <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -309,7 +309,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--large" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">EULA</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                   aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -366,7 +366,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--fullscreen" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Default Dialog - Fullscreen</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                   aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -423,7 +423,7 @@ examples:
           <section class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Fullscreen Takeover</h1>
-              <hr class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content"> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover
                 dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a
                 fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover
