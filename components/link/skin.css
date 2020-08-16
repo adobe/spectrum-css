@@ -11,22 +11,22 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Link {
-  color: var(--spectrum-link-text-color);
+  color: var(--spectrum-link-primary-text-color);
 
   &:hover {
-    color: var(--spectrum-link-text-color-hover);
+    color: var(--spectrum-link-primary-text-color-hover);
   }
 
   &:active {
-    color: var(--spectrum-link-text-color-down);
+    color: var(--spectrum-link-primary-text-color-down);
   }
 
   &:focus-ring {
-    color: var(--spectrum-link-text-color-key-focus);
+    color: var(--spectrum-link-primary-text-color-key-focus);
   }
 }
 
-.spectrum-Link--secondary{
+.spectrum-Link--secondary {
   color: inherit;
 
   &:hover {

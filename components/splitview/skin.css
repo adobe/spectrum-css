@@ -11,17 +11,17 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-SplitView-pane {
-  background-color: var(--spectrum-rail-content-background-color);
+  background-color: var(--spectrum-panel-background-color);
 }
 
 .spectrum-SplitView-splitter {
-  background-color: var(--spectrum-rail-handle-background-color);
+  background-color: var(--spectrum-dragbar-handle-background-color);
 }
 
 .spectrum-SplitView-gripper {
-  border-color: var(--spectrum-rail-handle-background-color);
+  border-color: var(--spectrum-dragbar-handle-background-color);
   &:before {
-    background-color: var(--spectrum-rail-handle-background-color);
+    background-color: var(--spectrum-dragbar-handle-background-color);
   }
 }
 
@@ -29,24 +29,28 @@ governing permissions and limitations under the License.
   &.is-draggable {
     &:hover,
     &.is-hovered {
-      background-color: var(--spectrum-rail-handle-background-color-hover);
+      background-color: var(--spectrum-dragbar-handle-background-color-hover);
 
       .spectrum-SplitView-gripper {
-        border-color: var(--spectrum-rail-handle-background-color-hover);
+        border-color: var(--spectrum-dragbar-handle-background-color-hover);
         &:before {
-          background-color: var(--spectrum-rail-handle-background-color-hover);
+          background-color: var(
+            --spectrum-dragbar-handle-background-color-hover
+          );
         }
       }
     }
 
     &:active,
     &.is-active {
-      background-color: var(--spectrum-rail-handle-background-color-down);
+      background-color: var(--spectrum-dragbar-handle-background-color-down);
 
       .spectrum-SplitView-gripper {
-        border-color: var(--spectrum-rail-handle-background-color-down);
+        border-color: var(--spectrum-dragbar-handle-background-color-down);
         &:before {
-          background-color: var(--spectrum-rail-handle-background-color-down);
+          background-color: var(
+            --spectrum-dragbar-handle-background-color-down
+          );
         }
       }
     }

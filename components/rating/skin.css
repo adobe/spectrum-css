@@ -10,9 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  --spectrum-rating-focus-ring-color: var(--spectrum-alias-focus-ring-color);
+}
+
 .spectrum-Rating {
   &.is-focused {
-    box-shadow: 0 0 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-rating-focus-ring-color);
+    box-shadow: 0 0 0 var(--spectrum-global-dimension-static-size-25)
+      var(--spectrum-rating-focus-ring-color);
   }
 
   &:hover {
@@ -56,27 +61,27 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Rating--quiet {
+.spectrum-Rating--emphasized {
   .spectrum-Rating-icon {
-    color: var(--spectrum-rating-quiet-icon-color);
+    color: var(--spectrum-rating-emphasized-icon-color);
 
     &.is-selected {
-      color: var(--spectrum-rating-quiet-icon-color-selected);
+      color: var(--spectrum-rating-emphasized-icon-color-selected);
     }
   }
 
   &:hover {
     .spectrum-Rating-icon {
       /* Make all stars selected when the component is hovered */
-      color: var(--spectrum-rating-quiet-icon-color-selected);
+      color: var(--spectrum-rating-emphasized-icon-color-selected);
 
       &:hover {
         /* The icon that's actually hovered is darker */
-        color: var(--spectrum-rating-quiet-icon-color-hover);
+        color: var(--spectrum-rating-emphasized-icon-color-hover);
       }
 
       &:active {
-        color: var(--spectrum-rating-quiet-icon-color-down);
+        color: var(--spectrum-rating-emphasized-icon-color-down);
       }
     }
   }

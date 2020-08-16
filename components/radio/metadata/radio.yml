@@ -46,47 +46,47 @@ examples:
         <span class="spectrum-Radio-button"></span>
         <label class="spectrum-Radio-label" for="radio-3">Radio with an extraordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>
-  - id: radio-quiet
-    name: Quiet
+  - id: radio-emphasized
+    name: Emphasized
     markup: |
       <form>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
+        <div class="spectrum-Radio spectrum-Radio--emphasized">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
           <span class="spectrum-Radio-button"></span>
           <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
         </div>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
+        <div class="spectrum-Radio spectrum-Radio--emphasized">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
           <span class="spectrum-Radio-button"></span>
           <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
         </div>
       </form>
       <form>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
+        <div class="spectrum-Radio spectrum-Radio--emphasized">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
           <span class="spectrum-Radio-button"></span>
           <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
         </div>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
+        <div class="spectrum-Radio spectrum-Radio--emphasized">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
           <span class="spectrum-Radio-button"></span>
           <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
         </div>
       </form>
       <form>
-        <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
+        <div class="spectrum-Radio spectrum-Radio--emphasized is-invalid">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
           <span class="spectrum-Radio-button"></span>
           <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
         </div>
-        <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
+        <div class="spectrum-Radio spectrum-Radio--emphasized is-invalid">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
           <span class="spectrum-Radio-button"></span>
           <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
         </div>
       </form>
-      <div class="spectrum-Radio spectrum-Radio--quiet">
-        <input type="radio" name="longname-quiet" class="spectrum-Radio-input" id="radio-4">
+      <div class="spectrum-Radio spectrum-Radio--emphasized">
+        <input type="radio" name="longname-emphasized" class="spectrum-Radio-input" id="radio-4">
         <span class="spectrum-Radio-button"></span>
         <label class="spectrum-Radio-label" for="radio-4">Radio with an extraordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>

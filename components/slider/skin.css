@@ -11,11 +11,21 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --spectrum-slider-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
+  --spectrum-slider-focus-ring-size-key-focus: var(
+    --spectrum-alias-focus-ring-size
+  );
 
-    /* todo: remove when fixed */
-  --spectrum-slider-handle-border-color-key-focus: var(--spectrum-global-color-gray-800);
-  --spectrum-slider-handle-focus-ring-color-key-focus: var(--spectrum-alias-focus-color);
+  /* todo: remove when fixed */
+  --spectrum-slider-handle-border-color-key-focus: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-slider-handle-focus-ring-color-key-focus: var(
+    --spectrum-alias-focus-color
+  );
+  --spectrum-slider-label-text-color: var(--spectrum-alias-label-text-color);
+  --spectrum-slider-label-text-color-disabled: var(
+    --spectrum-alias-label-text-color
+  );
 }
 
 .spectrum-Slider-track {
@@ -25,7 +35,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Slider-labelContainer {
-  color: var(--spectrum-label-text-color);
+  color: var(--spectrum-slider-label-text-color);
 }
 
 .spectrum-Slider--filled {
@@ -42,19 +52,6 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Slider-buffer {
-  &::before,
-  &::after {
-    background: var(--spectrum-slider-player-track-buffer-color);
-  }
-}
-
-.spectrum-Slider-ramp {
-  path {
-    fill: var(--spectrum-slider-track-color);
-  }
-}
-
 .spectrum-Slider-handle {
   border-color: var(--spectrum-slider-handle-border-color);
   background: var(--spectrum-slider-handle-background-color);
@@ -67,20 +64,14 @@ governing permissions and limitations under the License.
     border-color: var(--spectrum-slider-handle-border-color-key-focus);
 
     &:before {
-      box-shadow: 0 0 0 var(--spectrum-slider-focus-ring-size-key-focus) var(--spectrum-slider-handle-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-slider-focus-ring-size-key-focus)
+        var(--spectrum-slider-handle-focus-ring-color-key-focus);
     }
   }
 
   &:active,
   &.is-dragged {
     border-color: var(--spectrum-slider-handle-border-color-down);
-  }
-}
-
-.spectrum-Slider--ramp {
-  .spectrum-Slider-handle {
-    /* We can't draw this one correctly without this hack : ( */
-    box-shadow: 0 0 0 4px var(--spectrum-alias-background-color-default);
   }
 }
 
@@ -111,127 +102,10 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Slider--color {
-  .spectrum-Slider-controls::before {
-    background-color: var(--spectrum-global-color-static-white);
-    /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
-    background-image:
-      linear-gradient(-45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
-      linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
-      linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%),
-      linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%);
-    background-size:
-      var(--spectrum-global-dimension-static-size-200)
-      var(--spectrum-global-dimension-static-size-200);
-    background-position:
-      0 0,
-      0 var(--spectrum-global-dimension-static-size-100),
-      var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)),
-      calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
-    z-index: 0;
-  }
-  .spectrum-Slider-track {
-    background-color: transparent;
-    background-image: linear-gradient(to right, var(--spectrum-slider-color-track-background-color-gradient-start), var(--spectrum-slider-color-track-background-color-gradient-end));
-    box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-track-border-color);
-    &::before {
-      display: none;
-    }
-  }
-  .spectrum-Slider-handle {
-    box-shadow: inset 0 0 0 1px var(--spectrum-slider-color-handle-inset-border-color), 0 0 0 1px var(--spectrum-slider-color-handle-outset-border-color);
-    border-color: var(--spectrum-slider-color-handle-border-color);
-    background: var(--spectrum-slider-color-handle-color);
-
-    &.is-focused {
-      box-shadow: 0 0 0 1px var(--spectrum-slider-color-handle-outset-border-color-key-focus);
-    }
-  }
-}
-
-.spectrum-Dial-labelContainer {
-  @inherit: .spectrum-Slider-labelContainer;
-}
-
-.spectrum-Dial-handle {
-  box-shadow: none;
-
-  &:before {
-    display: none;
-  }
-
-  &::after {
-    background-color: var(--spectrum-dial-handle-marker-color);
-  }
-
-  &:hover {
-    &::after {
-      background-color: var(--spectrum-dial-handle-marker-color-hover);
-    }
-  }
-
-  &.is-focused {
-    background-color: var(--spectrum-slider-handle-background-color-key-focus);
-
-    border-color: var(--spectrum-slider-handle-border-color-key-focus);
-
-    &::after {
-      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
-    }
-  }
-
-  &:active,
-  &.is-dragged {
-    background-color: var(--spectrum-dial-border-color-hover);
-
-    border-color: var(--spectrum-slider-handle-border-color-down);
-
-    &::after {
-      background-color: var(--spectrum-dial-handle-marker-color-key-focus);
-    }
-  }
-}
-
-.spectrum-Dial-controls {
-  &::before,
-  &::after {
-    background-color: var(--spectrum-dial-min-max-tick-color);
-  }
-}
-
-.spectrum-Dial {
-  &.is-disabled {
-    .spectrum-Dial-labelContainer {
-      color: var(--spectrum-label-text-color-disabled);
-    }
-    .spectrum-Dial-controls {
-      &::after,
-      &::before {
-        background-color: var(--spectrum-slider-handle-border-color-disabled);
-      }
-    }
-    .spectrum-Dial-handle {
-      border-color: var(--spectrum-slider-handle-border-color-disabled);
-      background: var(--spectrum-alias-background-color-default);
-
-      &:hover,
-      &:active {
-        border-color: var(--spectrum-slider-handle-border-color-disabled);
-        background: var(--spectrum-slider-handle-background-color);
-      }
-
-      &::after,
-      &::before {
-        background-color: var(--spectrum-slider-track-color-disabled);
-      }
-    }
-  }
-}
-
 .spectrum-Slider {
   &.is-disabled {
     .spectrum-Slider-labelContainer {
-      color: var(--spectrum-label-text-color-disabled);
+      color: var(--spectrum-slider-label-text-color-disabled);
     }
 
     .spectrum-Slider-handle {
@@ -259,35 +133,6 @@ governing permissions and limitations under the License.
     .spectrum-Slider-fill {
       &::before {
         background: var(--spectrum-slider-fill-track-color-disabled);
-      }
-    }
-    .spectrum-Slider-buffer {
-      &::before {
-        background: var(--spectrum-slider-player-track-buffer-color-disabled);
-      }
-    }
-    .spectrum-Slider-ramp {
-      path {
-        fill: var(--spectrum-slider-ramp-track-color-disabled);
-      }
-    }
-
-    &.spectrum-Slider--color {
-      .spectrum-Slider-track {
-        background: var(--spectrum-slider-color-track-color-disabled) !important;
-        box-shadow: none;
-      }
-      .spectrum-Slider-handle {
-        background: var(--spectrum-slider-color-handle-color-disabled);
-        box-shadow: none;
-        border-color: var(--spectrum-slider-color-handle-border-color-disabled);
-
-        &:hover,
-        &:active {
-          background: var(--spectrum-slider-color-handle-color-disabled);
-          box-shadow: none;
-          border-color: var(--spectrum-slider-color-handle-border-color-disabled);
-        }
       }
     }
 

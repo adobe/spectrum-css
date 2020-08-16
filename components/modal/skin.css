@@ -10,20 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Dialog-heading {
-  color: var(--spectrum-dialog-confirm-title-text-color);
-}
-
-.spectrum-Dialog-content {
-  color: var(--spectrum-dialog-confirm-description-text-color);
-}
-
-.spectrum-Dialog-typeIcon {
-  color: var(--spectrum-dialog-confirm-icon-color);
-}
-
-.spectrum-Dialog--error {
-  .spectrum-Dialog-typeIcon {
-    color: var(--spectrum-dialog-error-icon-color);
-  }
+.spectrum-Modal {
+  background: var(--spectrum-dialog-confirm-background-color);
 }

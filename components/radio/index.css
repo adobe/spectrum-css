@@ -10,13 +10,19 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
-  --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter) / 2) - calc(var(--spectrum-radio-circle-dot-size) / 2));
+  --spectrum-radio-border-width-checked: calc(
+    calc(var(--spectrum-radio-circle-diameter) / 2) -
+      calc(var(--spectrum-radio-circle-dot-size) / 2)
+  );
 
-  --spectrum-radio-labelbelow-label-margin: var(--spectrum-global-dimension-size-40) 0 0 0;
+  --spectrum-radio-labelbelow-label-margin: var(
+      --spectrum-global-dimension-size-40
+    )
+    0 0 0;
   --spectrum-radio-labelbelow-height: auto;
 
   /* Hardcoded for wrapping study.
@@ -67,7 +73,7 @@ governing permissions and limitations under the License.
   inline-size: calc(100% + var(--spectrum-radio-cursor-hit-x) * 2);
   block-size: 100%;
 
-  opacity: .0001;
+  opacity: 0.0001;
   z-index: 1;
 
   cursor: pointer;
@@ -108,14 +114,17 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-radio-circle-diameter);
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
-  margin: calc((var(--spectrum-radio-height) - var(--spectrum-radio-circle-diameter)) / 2) 0;
+  margin: calc(
+      (var(--spectrum-radio-height) - var(--spectrum-radio-circle-diameter)) / 2
+    )
+    0;
 
   flex-grow: 0;
   flex-shrink: 0;
   &:before {
     display: block;
     z-index: 0;
-    content: '';
+    content: "";
     box-sizing: border-box;
     position: absolute;
 
@@ -127,12 +136,12 @@ governing permissions and limitations under the License.
     border-style: solid;
 
     transition: border var(--spectrum-global-animation-duration-100) ease-in-out,
-                box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+      box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 
   &:after {
     border-radius: 100%;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -141,8 +150,9 @@ governing permissions and limitations under the License.
     top: 0;
     margin: var(--spectrum-alias-focus-ring-gap);
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
-                margin var(--spectrum-global-animation-duration-100) ease-out;
+    transition: box-shadow var(--spectrum-global-animation-duration-100)
+        ease-out,
+      margin var(--spectrum-global-animation-duration-100) ease-out;
   }
 }
 
