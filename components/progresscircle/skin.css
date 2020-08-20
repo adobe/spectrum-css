@@ -10,34 +10,34 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-CircleLoader-track {
+.spectrum-ProgressCircle-track {
   border-color: var(--spectrum-progresscircle-medium-track-color);
 }
 
-.spectrum-CircleLoader-fill {
+.spectrum-ProgressCircle-fill {
   border-color: var(--spectrum-progresscircle-medium-track-fill-color);
 }
 
-.spectrum-CircleLoader--overBackground {
-  .spectrum-CircleLoader-track {
+.spectrum-ProgressCircle--overBackground {
+  .spectrum-ProgressCircle-track {
     border-color: var(
       --spectrum-progresscircle-medium-over-background-track-color
     );
   }
-  .spectrum-CircleLoader-fill {
+  .spectrum-ProgressCircle-fill {
     border-color: var(
       --spectrum-progresscircle-medium-over-background-track-fill-color
     );
   }
 }
 
-.spectrum-CircleLoader--indeterminate.spectrum-CircleLoader--overBackground {
-  .spectrum-CircleLoader-track {
+.spectrum-ProgressCircle--indeterminate.spectrum-ProgressCircle--overBackground {
+  .spectrum-ProgressCircle-track {
     border-color: var(
       --spectrum-progresscircle-medium-over-background-track-color
     );
   }
-  .spectrum-CircleLoader-fill {
+  .spectrum-ProgressCircle-fill {
     border-color: var(
       --spectrum-progresscircle-medium-over-background-track-fill-color
     );

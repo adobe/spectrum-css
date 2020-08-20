@@ -1,5 +1,6 @@
-# @spectrum-css/alert
-> The Spectrum CSS alert component
+# @spectrum-css/progresscirlce
+
+> The Spectrum CSS progresscirlce component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

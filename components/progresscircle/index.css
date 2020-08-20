@@ -13,14 +13,14 @@ governing permissions and limitations under the License.
 @import "../commons/index.css";
 @import "animation.css";
 
-.spectrum-CircleLoader {
+.spectrum-ProgressCircle {
   display: inline-block;
   inline-size: var(--spectrum-progresscircle-medium-width);
   block-size: var(--spectrum-progresscircle-medium-height);
   position: relative;
   direction: ltr;
 }
-.spectrum-CircleLoader-track {
+.spectrum-ProgressCircle-track {
   box-sizing: border-box;
   inline-size: calc(var(--spectrum-progresscircle-medium-width));
   block-size: calc(var(--spectrum-progresscircle-medium-height));
@@ -28,14 +28,14 @@ governing permissions and limitations under the License.
   border-width: var(--spectrum-progresscircle-medium-border-size);
   border-radius: var(--spectrum-progresscircle-medium-width);
 }
-.spectrum-CircleLoader-fills {
+.spectrum-ProgressCircle-fills {
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
   inline-size: 100%;
   block-size: 100%;
 }
-.spectrum-CircleLoader-fill {
+.spectrum-ProgressCircle-fill {
   box-sizing: border-box;
   inline-size: calc(var(--spectrum-progresscircle-medium-width));
   block-size: calc(var(--spectrum-progresscircle-medium-height));
@@ -43,8 +43,8 @@ governing permissions and limitations under the License.
   border-width: var(--spectrum-progresscircle-medium-border-size);
   border-radius: var(--spectrum-progresscircle-medium-width);
 }
-.spectrum-CircleLoader-fillMask1,
-.spectrum-CircleLoader-fillMask2 {
+.spectrum-ProgressCircle-fillMask1,
+.spectrum-ProgressCircle-fillMask2 {
   inline-size: 50%;
   block-size: 100%;
   transform-origin: 100% center;
@@ -52,30 +52,30 @@ governing permissions and limitations under the License.
   overflow: hidden;
   position: absolute;
 }
-.spectrum-CircleLoader-fillSubMask1,
-.spectrum-CircleLoader-fillSubMask2 {
+.spectrum-ProgressCircle-fillSubMask1,
+.spectrum-ProgressCircle-fillSubMask2 {
   inline-size: 100%;
   block-size: 100%;
   transform-origin: 100% center;
   overflow: hidden;
   transform: rotate(-180deg);
 }
-.spectrum-CircleLoader-fillMask2 {
+.spectrum-ProgressCircle-fillMask2 {
   transform: rotate(0deg);
 }
 
-.spectrum-CircleLoader--small {
+.spectrum-ProgressCircle--small {
   inline-size: var(--spectrum-progresscircle-small-width);
   block-size: var(--spectrum-progresscircle-small-height);
 
-  .spectrum-CircleLoader-track {
+  .spectrum-ProgressCircle-track {
     inline-size: calc(var(--spectrum-progresscircle-small-width));
     block-size: calc(var(--spectrum-progresscircle-small-height));
     border-style: solid;
     border-width: var(--spectrum-progresscircle-small-border-size);
     border-radius: var(--spectrum-progresscircle-small-width);
   }
-  .spectrum-CircleLoader-fill {
+  .spectrum-ProgressCircle-fill {
     inline-size: calc(var(--spectrum-progresscircle-small-width));
     block-size: calc(var(--spectrum-progresscircle-small-height));
     border-style: solid;
@@ -84,11 +84,11 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-CircleLoader--large {
+.spectrum-ProgressCircle--large {
   inline-size: var(--spectrum-progresscircle-large-width);
   block-size: var(--spectrum-progresscircle-large-height);
 
-  .spectrum-CircleLoader-track {
+  .spectrum-ProgressCircle-track {
     inline-size: calc(var(--spectrum-progresscircle-large-width));
     block-size: calc(var(--spectrum-progresscircle-large-height));
     border-style: solid;
@@ -96,7 +96,7 @@ governing permissions and limitations under the License.
     border-radius: var(--spectrum-progresscircle-large-width);
   }
 
-  .spectrum-CircleLoader-fill {
+  .spectrum-ProgressCircle-fill {
     inline-size: calc(var(--spectrum-progresscircle-large-width));
     block-size: calc(var(--spectrum-progresscircle-large-height));
     border-style: solid;
@@ -105,21 +105,21 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-CircleLoader--indeterminate {
-  .spectrum-CircleLoader-fills {
+.spectrum-ProgressCircle--indeterminate {
+  .spectrum-ProgressCircle-fills {
     will-change: transform;
     transform: translateZ(0);
     animation: 1s infinite cubic-bezier(0.25, 0.78, 0.48, 0.89)
       spectrum-fills-rotate;
     transform-origin: center;
   }
-  .spectrum-CircleLoader-fillSubMask1 {
+  .spectrum-ProgressCircle-fillSubMask1 {
     will-change: transform;
     transform: translateZ(0);
     animation: 1s infinite linear spectrum-fill-mask-1;
   }
 
-  .spectrum-CircleLoader-fillSubMask2 {
+  .spectrum-ProgressCircle-fillSubMask2 {
     will-change: transform;
     transform: translateZ(0);
     animation: 1s infinite linear spectrum-fill-mask-2;

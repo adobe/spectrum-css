@@ -10,54 +10,58 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-BarLoader {
-  .spectrum-BarLoader-fill {
-    background: var(--spectrum-barloader-large-track-fill-color);
+.spectrum-ProgressBar {
+  .spectrum-ProgressBar-fill {
+    background: var(--spectrum-progressbar-large-track-fill-color);
   }
 
-  .spectrum-BarLoader-track {
-    background-color: var(--spectrum-barloader-large-track-color);
+  .spectrum-ProgressBar-track {
+    background-color: var(--spectrum-progressbar-large-track-color);
   }
 
-  &.spectrum-BarLoader--overBackground {
-    .spectrum-BarLoader-fill {
-      background: var(--spectrum-barloader-large-over-background-track-fill-color);
+  &.spectrum-ProgressBar--overBackground {
+    .spectrum-ProgressBar-fill {
+      background: var(
+        --spectrum-progressbar-large-over-background-track-fill-color
+      );
     }
 
-    .spectrum-BarLoader-label,
-    .spectrum-BarLoader-percentage {
-      color: var(--spectrum-barloader-large-over-background-track-fill-color);
+    .spectrum-ProgressBar-label,
+    .spectrum-ProgressBar-percentage {
+      color: var(--spectrum-progressbar-large-over-background-track-fill-color);
     }
 
-    .spectrum-BarLoader-track {
-      background-color: var(--spectrum-barloader-large-over-background-track-color);
+    .spectrum-ProgressBar-track {
+      background-color: var(
+        --spectrum-progressbar-large-over-background-track-color
+      );
     }
   }
   &.is-positive {
-    .spectrum-BarLoader-fill {
+    .spectrum-ProgressBar-fill {
       background: var(--spectrum-meter-large-track-color-positive);
     }
   }
   &.is-warning {
-    .spectrum-BarLoader-fill {
+    .spectrum-ProgressBar-fill {
       background: var(--spectrum-meter-large-track-color-warning);
     }
   }
   &.is-critical {
-    .spectrum-BarLoader-fill {
+    .spectrum-ProgressBar-fill {
       background: var(--spectrum-meter-large-track-color-critical);
     }
   }
 }
-.spectrum-BarLoader-label,
-.spectrum-BarLoader-percentage {
+.spectrum-ProgressBar-label,
+.spectrum-ProgressBar-percentage {
   color: var(--spectrum-fieldlabel-text-color);
 }
-.spectrum-BarLoader-label,
-.spectrum-BarLoader-percentage {
+.spectrum-ProgressBar-label,
+.spectrum-ProgressBar-percentage {
   color: var(--spectrum-fieldlabel-text-color);
 }
-.spectrum-BarLoader-label,
-.spectrum-BarLoader-percentage {
+.spectrum-ProgressBar-label,
+.spectrum-ProgressBar-percentage {
   color: var(--spectrum-fieldlabel-text-color);
 }

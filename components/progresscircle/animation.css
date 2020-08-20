@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-CircleLoader--indeterminate-fill-submask-2 {
+.spectrum-ProgressCircle--indeterminate-fill-submask-2 {
   animation: 1s infinite linear spectrum-fill-mask-2;
 }
 @keyframes spectrum-fill-mask-1 {
@@ -496,6 +496,10 @@ governing permissions and limitations under the License.
   }
 }
 @keyframes spectrum-fills-rotate {
-  0% {transform: rotate(-90deg)}
-  100% {transform: rotate(270deg)}
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
 }
