@@ -21,7 +21,7 @@ Adobe maintains separate JavaScript libraries written with React, Angular, and w
 
 ## Using Spectrum CSS
 
-The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colostops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
+The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and colorstops. This has the lowest bundle size and the simplest usage, but is incompatible with < IE 11
 
 To use Spectrum CSS with IE 11 or without, see the [legacy usage documentation](README-legacy.md).
 
@@ -55,7 +55,7 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-large.css">
 
-<!-- Include only the colostops your application needs -->
+<!-- Include only the colorstops your application needs -->
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-lightest.css">
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css">
