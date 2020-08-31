@@ -15,12 +15,8 @@ governing permissions and limitations under the License.
   --spectrum-dial-label-text-color-disabled: var(
     --spectrum-alias-label-text-color
   );
-  /* todo: remove when fixed */
-  --spectrum-slider-handle-border-color-key-focus: var(
-    --spectrum-global-color-gray-800
-  );
-  --spectrum-slider-handle-border-color-down: var(
-    --spectrum-slider-handle-border-color
+  --spectrum-dial-handle-border-color-disabled: var(
+    --spectrum-alias-icon-color-disabled
   );
 }
 
@@ -30,7 +26,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Dial-handle {
   box-shadow: none;
-  border-color: var(--spectrum-slider-handle-border-color-key-focus);
+  border-color: var(--spectrum-dial-small-handle-marker-color);
 
   &:before {
     display: none;
@@ -41,6 +37,7 @@ governing permissions and limitations under the License.
   }
 
   &:hover {
+    border-color: var(--spectrum-dial-border-color-hover);
     &::after {
       background-color: var(--spectrum-dial-handle-marker-color-hover);
     }
@@ -59,8 +56,7 @@ governing permissions and limitations under the License.
   &:active,
   &.is-dragged {
     background-color: var(--spectrum-dial-border-color-hover);
-
-    border-color: var(--spectrum-slider-handle-border-color-down);
+    border-color: var(--spectrum-dial-border-color-hover);
 
     &::after {
       background-color: var(--spectrum-dial-handle-marker-color-key-focus);
@@ -83,22 +79,22 @@ governing permissions and limitations under the License.
     .spectrum-Dial-controls {
       &::after,
       &::before {
-        background-color: var(--spectrum-slider-handle-border-color-disabled);
+        background-color: var(--spectrum-dial-handle-border-color-disabled);
       }
     }
     .spectrum-Dial-handle {
-      border-color: var(--spectrum-slider-handle-border-color-disabled);
+      border-color: var(--spectrum-dial-handle-border-color-disabled);
       background: var(--spectrum-alias-background-color-default);
 
       &:hover,
       &:active {
-        border-color: var(--spectrum-slider-handle-border-color-disabled);
-        background: var(--spectrum-slider-handle-background-color);
+        border-color: var(--spectrum-dial-handle-border-color-disabled);
+        background: var(--spectrum-dial-handle-border-color-disabled);
       }
 
       &::after,
       &::before {
-        background-color: var(--spectrum-slider-track-color-disabled);
+        background-color: var(--spectrum-dial-handle-border-color-disabled);
       }
     }
   }
