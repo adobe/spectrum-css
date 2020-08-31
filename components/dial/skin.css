@@ -30,6 +30,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Dial-handle {
   box-shadow: none;
+  border-color: var(--spectrum-slider-handle-border-color-key-focus);
 
   &:before {
     display: none;
