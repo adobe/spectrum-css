@@ -160,9 +160,9 @@ governing permissions and limitations under the License.
     top: 0;
     margin: var(--spectrum-alias-focus-ring-gap);
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
+    transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
                 margin var(--spectrum-global-animation-duration-100) ease-out;
- 
+
     /* force ff to render on the pixel grid */
     transform: translate(0, 0);
   }

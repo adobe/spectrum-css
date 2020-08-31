@@ -17,10 +17,14 @@ governing permissions and limitations under the License.
 
 .spectrum-LogicButton,
 .spectrum-Button {
+  &:after {
+    box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+    opacity: 0;
+  }
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-focus-ring-color-key-focus);
+      opacity: 1;
     }
   }
 }

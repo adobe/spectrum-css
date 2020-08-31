@@ -96,7 +96,6 @@ governing permissions and limitations under the License.
     max-block-size: 100%;
     flex-shrink: 0;
   }
-
 }
 
 %spectrum-ButtonWithFocusRing {
@@ -111,7 +110,7 @@ governing permissions and limitations under the License.
     top: 0;
     margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
+    transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
                 margin var(--spectrum-global-animation-duration-100) ease-out;
   }
 
