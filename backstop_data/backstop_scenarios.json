@@ -183,6 +183,11 @@
     "package": "@spectrum-css/dialog"
   },
   {
+    "label": "divider",
+    "url": "divider.html",
+    "package": "@spectrum-css/divider"
+  },
+  {
     "label": "dropdown",
     "url": "dropdown.html",
     "package": "@spectrum-css/dropdown"
@@ -272,6 +277,11 @@
     "package": "@spectrum-css/miller"
   },
   {
+    "label": "modal",
+    "url": "modal.html",
+    "package": "@spectrum-css/modal"
+  },
+  {
     "label": "page",
     "url": "page.html",
     "package": "@spectrum-css/page"
@@ -292,9 +302,24 @@
     "package": "@spectrum-css/pagination"
   },
   {
+    "label": "picker",
+    "url": "picker.html",
+    "package": "@spectrum-css/picker"
+  },
+  {
     "label": "popover",
     "url": "popover.html",
     "package": "@spectrum-css/popover"
+  },
+  {
+    "label": "progressbar",
+    "url": "progressbar.html",
+    "package": "@spectrum-css/progressbar"
+  },
+  {
+    "label": "progresscircle",
+    "url": "progresscircle.html",
+    "package": "@spectrum-css/progresscircle"
   },
   {
     "label": "quickaction",
@@ -362,6 +387,11 @@
     "package": "@spectrum-css/stepper"
   },
   {
+    "label": "switch",
+    "url": "switch.html",
+    "package": "@spectrum-css/switch"
+  },
+  {
     "label": "table",
     "url": "table.html",
     "package": "@spectrum-css/table"
@@ -405,6 +435,11 @@
     "label": "tooltip",
     "url": "tooltip.html",
     "package": "@spectrum-css/tooltip"
+  },
+  {
+    "label": "tray",
+    "url": "tray.html",
+    "package": "@spectrum-css/tray"
   },
   {
     "label": "treeview",
