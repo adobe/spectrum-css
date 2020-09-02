@@ -185,3 +185,7 @@ governing permissions and limitations under the License.
     }
   }
 }
+&,
+.spectrum-Body {
+  color: var(--spectrum-body-m-text-color);
+}
