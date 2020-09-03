@@ -39,7 +39,6 @@ governing permissions and limitations under the License.
 
 .spectrum-SearchWithin-input {
   flex: 1;
-  min-width: inherit;
   margin-inline-start: calc(-1 * var(--spectrum-textfield-border-size)); /* hides left border */
   border-start-start-radius: var(--spectrum-searchwithin-border-radius);
   border-end-start-radius: var(--spectrum-searchwithin-border-radius);
@@ -53,8 +52,4 @@ governing permissions and limitations under the License.
   position: absolute;
   inset-block-start: 0;
   inset-inline-end: 0;
-}
-
-.spectrum-SearchWithin > .spectrum-Textfield {
-  flex-grow: 1;
 }
