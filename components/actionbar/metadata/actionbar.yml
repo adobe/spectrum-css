@@ -1,5 +1,13 @@
 name: Action Bar
 description: Floating action bar that appears in selection mode.
+sections:
+  - name: Migration Guide
+    description: |
+      ### New ActionGroup markup
+      Action Bar now uses the new ActionGroup markup. Replace `.spectrum-ButtonGroup` with `.spectrum-ActionGroup` and apply `.spectrum-ActionGroup-item` to each action button. See the [Action Group](actiongroup.html) for more information.
+
+      ### Change workflow icon size to medium
+      If you use icon action button in your markup, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: actionbar
     name: Standard
