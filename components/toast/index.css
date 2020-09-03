@@ -59,6 +59,7 @@ governing permissions and limitations under the License.
   display: flex;
   flex: 0 0 auto;
   align-items: flex-start;
+  border-inline-start-color: rgba(255, 255, 255, 0.2);
 
   .spectrum-Button,
   .spectrum-ClearButton {
