@@ -114,9 +114,11 @@ governing permissions and limitations under the License.
   text-align: start;
   margin-inline-start: var(--spectrum-checkbox-text-gap);
   margin-block-start: var(--spectrum-checkbox-label-margin-top);
+
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
-  line-height: var(--spectrum-checkbox-label-line-height);
+  font-style: var(--spectrum-checkbox-text-font-style);
+  line-height: var(--spectrum-checkbox-text-line-height);
 }
 
 .spectrum-Checkbox-box {
