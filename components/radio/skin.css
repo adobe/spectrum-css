@@ -122,7 +122,7 @@ governing permissions and limitations under the License.
       }
     }
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-circle-border-color-error-hover);
+      color: var(--spectrum-radio-emphasized-text-color-error-hover);
     }
   }
   &.is-invalid:active {
@@ -134,7 +134,7 @@ governing permissions and limitations under the License.
       }
     }
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-circle-border-color-error-down);
+      color: var(--spectrum-radio-emphasized-text-color-error-down);
     }
   }
   &.is-invalid {
@@ -147,7 +147,7 @@ governing permissions and limitations under the License.
       }
     }
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-circle-border-color-error);
+      color: var(--spectrum-radio-emphasized-text-color-error);
     }
   }
 }
