@@ -100,8 +100,12 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--spectrum-radio-text-gap);
   /* Hardcoded as no good way to calculate this */
   margin-block-start: var(--spectrum-radio-label-margin-top);
+
   font-size: var(--spectrum-radio-text-size);
-  line-height: var(--spectrum-radio-label-line-height);
+  font-weight: var(--spectrum-radio-text-font-weight);
+  font-style: var(--spectrum-radio-text-font-style);
+  line-height: var(--spectrum-radio-text-line-height);
+
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
