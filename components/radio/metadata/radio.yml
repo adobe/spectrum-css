@@ -30,25 +30,6 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
-
-          <form>
-            <div class="spectrum-Radio">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-            </div>
-            <br>
-            <div class="spectrum-Radio">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-            </div>
-          </form>
-
-        </div>
-
-        <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
 
           <form>
@@ -60,6 +41,25 @@ examples:
             <br>
             <div class="spectrum-Radio is-invalid">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <form>
+            <div class="spectrum-Radio">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
@@ -92,25 +92,6 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
-
-          <form>
-            <div class="spectrum-Radio spectrum-Radio--quiet">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-            </div>
-            <br>
-            <div class="spectrum-Radio spectrum-Radio--quiet">
-              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
-              <span class="spectrum-Radio-button"></span>
-              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-            </div>
-          </form>
-
-        </div>
-
-        <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
 
           <form>
@@ -122,6 +103,25 @@ examples:
             <br>
             <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--quiet">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--quiet">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
