@@ -31,8 +31,6 @@ governing permissions and limitations under the License.
   min-block-size: var(--spectrum-checkbox-height);
   max-inline-size: 100%;
 
-  margin-inline-end: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
-
   vertical-align: top;
 }
 

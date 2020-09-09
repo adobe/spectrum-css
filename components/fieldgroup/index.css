@@ -10,6 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  --spectrum-fieldgroup-margin: var(--spectrum-global-dimension-size-100);
+}
+
 @import '../commons/index.css';
 
 .spectrum-FieldGroup {
@@ -21,4 +25,8 @@ governing permissions and limitations under the License.
 .spectrum-FieldGroup--vertical {
   display: inline-flex;
   flex-direction: column;
+}
+
+.spectrum-FieldGroup-item {
+  margin: 0 var(--spectrum-checkbox-cursor-hit-x);
 }

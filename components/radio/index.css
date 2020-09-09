@@ -43,8 +43,6 @@ governing permissions and limitations under the License.
   min-block-size: var(--spectrum-radio-height);
   max-inline-size: 100%;
 
-  margin-inline-end: calc(var(--spectrum-radio-cursor-hit-x) * 2);
-
   vertical-align: top;
 }
 
