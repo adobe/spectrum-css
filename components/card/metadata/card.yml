@@ -1,4 +1,9 @@
 name: Card
+sections:
+  - name: Migration Guide
+    description: |
+      ### Change workflow icon size to medium
+      Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: card
     name: Standard

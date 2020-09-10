@@ -1,6 +1,11 @@
 name: Card - Gallery
 status: Beta
 description: A gallery card for an image.
+sections:
+  - name: Migration Guide
+    description: |
+      ### Change workflow icon size to medium
+      Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: card-gallery
     name: Standard
