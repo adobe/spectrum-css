@@ -121,6 +121,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-title {
   font-size: var(--spectrum-card-title-text-size);
+  font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
