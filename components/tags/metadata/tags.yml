@@ -6,7 +6,7 @@ sections:
   - name: Migration Guide
     description: |
       ### Change avatar icon size to small
-      If you use avatar action along with tag, please replace `.spectrum-Icon--sizeXS` with `.spectrum-Icon--sizeS`.
+      If you use avatar icon along with tag, please replace `.spectrum-Icon--sizeXS` with `.spectrum-Icon--sizeS`.
 examples:
   - id: taggroup
     name: Standard
