@@ -54,10 +54,16 @@ governing permissions and limitations under the License.
   flex: 1 1 auto;
   display: inline-block;
   box-sizing: border-box;
+
   padding-block-start: var(--spectrum-toast-neutral-content-padding-top);
   padding-inline-end: var(--spectrum-toast-neutral-content-padding-right);
   padding-block-end: var(--spectrum-toast-content-padding-bottom);
   padding-inline-start: 0;
+
+  font-size: var(--spectrum-toast-info-text-size);
+  font-weight: var(--spectrum-toast-info-text-font-weight);
+  line-height: var(--spectrum-toast-info-text-line-height);
+
   text-align: start;
 }
 
