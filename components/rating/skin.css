@@ -50,7 +50,7 @@ governing permissions and limitations under the License.
   color: var(--spectrum-rating-icon-color);
 
   &.is-selected {
-    color: var(--spectrum-alias-icon-color-selected);
+    color: var(--spectrum-rating-icon-color-selected);
   }
 
   &:hover {
@@ -67,6 +67,13 @@ governing permissions and limitations under the License.
 
     &.is-selected {
       color: var(--spectrum-rating-emphasized-icon-color-selected);
+    }
+
+    &:hover {
+      /* All stars following the hovered star */
+      & ~ .spectrum-Rating-icon {
+        color: var(--spectrum-rating-emphasized-icon-color);
+      }
     }
   }
 
