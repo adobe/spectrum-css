@@ -1,6 +1,10 @@
 name: Divider
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/divider/
+sections:
+  - name: Migrating from Rule
+    description: |
+      Rule is now named Divider. All instances of `.spectrum-Rule` in your code should be replaced with `.spectrum-Divider`, and the `@spectrum-css/divider` package should be used instead of `@spectrum-css/rule`.
 examples:
   - id: divider-large
     name: 'Large'
