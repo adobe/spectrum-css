@@ -150,7 +150,7 @@ examples:
     name: With tooltip (static)
     description: A static steplist with tooltips.
     markup: |
-      <h3 class="spectrum-Heading spectrum-Heading--subtitle2">Static variant</h3>
+      <h3 class="spectrum-Heading spectrum-Heading--XXS">Static variant</h3>
 
       <div class="spectrum-Steplist" role="list">
         <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete" role="listitem" aria-posinset="1" aria-setsize="4">
