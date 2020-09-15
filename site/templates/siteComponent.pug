@@ -194,7 +194,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 header.spectrum-CSSComponent-sectionHeading(id="usage")
                   h2.spectrum-Heading.spectrum-Heading--M
                     a(href="#usage").spectrum-BigSubtleLink Usage notes
-                  hr.spectrum-Rule.spectrum-Rule--large
+                  hr.spectrum-Divider.spectrum-Divider--large
                 section.spectrum-CSSComponent-description
                   div.spectrum-Body.spectrum-Body--M!= util.markdown.render(component.description)
 
@@ -202,7 +202,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 header.spectrum-CSSComponent-sectionHeading(id="variants")
                   h2.spectrum-Heading.spectrum-Heading--M
                     a(href="#variants").spectrum-BigSubtleLink=`${component.examplesHeading ? component.examplesHeading : 'Variants'}`
-                  hr.spectrum-Rule.spectrum-Rule--large
+                  hr.spectrum-Divider.spectrum-Divider--large
                 each example in examples
                   include ../includes/example.pug
 
