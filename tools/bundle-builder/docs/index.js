@@ -41,13 +41,12 @@ let minimumDeps = [
   'search',
   'menu',
   'fieldlabel',
-  'dropdown',
+  'picker',
   'popover',
   'underlay',
   'card',
-  'rule',
+  'divider',
   'illustratedmessage',
-  'fieldlabel',
   'accordion',
   'table'
 ];
