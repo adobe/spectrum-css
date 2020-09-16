@@ -158,8 +158,8 @@ governing permissions and limitations under the License.
 
   function toggleOpen(dropdown, force) {
     var isOpen = force !== undefined ? force : !dropdown.classList.contains('is-open');
-    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
-    var popover = dropdown.querySelector('.spectrum-Dropdown-popover');
+    var fieldButton = dropdown.querySelector('.spectrum-Picker-trigger');
+    var popover = dropdown.querySelector('.spectrum-Picker-popover');
 
     dropdown[isOpen ? 'setAttribute' : 'removeAttribute']('aria-expanded', 'true');
     dropdown.classList[isOpen ? 'add' : 'remove']('is-open');
@@ -178,7 +178,7 @@ governing permissions and limitations under the License.
   function closeAndFocusDropdown(dropdown) {
     if (dropdown) {
       toggleOpen(dropdown, false);
-      var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+      var fieldButton = dropdown.querySelector('.spectrum-Picker-trigger');
       if (fieldButton) {
         fieldButton.focus();
       }
@@ -202,12 +202,12 @@ governing permissions and limitations under the License.
         } else if (event.key === 'End') {
           newItemIndex = items.length - 1;
         } else if (event.key === 'Escape') {
-          var dropdown = event.target.closest('.spectrum-Dropdown');
+          var dropdown = event.target.closest('.spectrum-Picker');
           closeAndFocusDropdown(dropdown);
         } else if (event.key === 'Enter') {
           handleMenuChange(menu, menuItem);
 
-          var dropdown = event.target.closest('.spectrum-Dropdown');
+          var dropdown = event.target.closest('.spectrum-Picker');
           closeAndFocusDropdown(dropdown);
           event.preventDefault();
         }
@@ -220,7 +220,7 @@ governing permissions and limitations under the License.
       }
     } else {
       if (event.key === 'ArrowDown') {
-        var dropdown = event.target.closest('.spectrum-Dropdown');
+        var dropdown = event.target.closest('.spectrum-Picker');
         if (dropdown) {
           var menu = dropdown.querySelector('.spectrum-Menu');
           if (menu) {
@@ -258,9 +258,9 @@ governing permissions and limitations under the License.
     }
 
     dropdown.setAttribute('value', value);
-    var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+    var fieldButton = dropdown.querySelector('.spectrum-Picker-trigger');
     if (fieldButton && label) {
-      var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
+      var dropdownLabel = fieldButton.querySelector('.spectrum-Picker-label');
       if (dropdownLabel) {
         dropdownLabel.innerHTML = label;
       }
@@ -282,7 +282,7 @@ governing permissions and limitations under the License.
     var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
     var label = menuLabel.innerHTML;
 
-    var dropdown = menu.closest('.spectrum-Dropdown');
+    var dropdown = menu.closest('.spectrum-Picker');
     if (dropdown) {
       toggleOpen(dropdown, false);
       setDropdownValue(dropdown, value, label);
@@ -290,17 +290,17 @@ governing permissions and limitations under the License.
   }
 
   window.addEventListener('click', function(event) {
-    var dropdown = event.target.closest('.spectrum-Dropdown');
+    var dropdown = event.target.closest('.spectrum-Picker');
 
     if (dropdown) {
       toggleOpen(dropdown);
 
       var menuItem = event.target.closest('.spectrum-Menu-item');
       if (menuItem) {
-        var fieldButton = dropdown.querySelector('.spectrum-Dropdown-trigger');
+        var fieldButton = dropdown.querySelector('.spectrum-Picker-trigger');
         var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
         if (menuLabel) {
-          var dropdownLabel = fieldButton.querySelector('.spectrum-Dropdown-label');
+          var dropdownLabel = fieldButton.querySelector('.spectrum-Picker-label');
           if (dropdownLabel) {
             dropdownLabel.innerHTML = menuLabel.innerHTML;
 
