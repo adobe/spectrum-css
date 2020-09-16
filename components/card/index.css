@@ -120,7 +120,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-title {
-  font-size: var(--spectrum-card-title-text-size);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -128,9 +127,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-subtitle {
-  font-size: var(--spectrum-card-subtitle-text-size);
-  letter-spacing: var(--spectrum-card-subtitle-letter-spacing);
-  text-transform: uppercase;
   padding-inline-end: var(--spectrum-card-subtitle-padding-right);
 }
 
