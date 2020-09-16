@@ -8,7 +8,7 @@ sections:
       Dropdown is now known as Picker. Replace all `.spectrum-Dropdown*` classnames with `.spectrum-Picker*`.
 
       ### Change workflow icon size to medium
-      If you use icon action button in your markup, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+      If you use icon in your markup, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: picker
     name: Standard
