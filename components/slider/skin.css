@@ -52,6 +52,12 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Slider-ramp {
+  path {
+    fill: var(--spectrum-slider-track-color);
+  }
+}
+
 .spectrum-Slider-handle {
   border-color: var(--spectrum-slider-handle-border-color);
   background: var(--spectrum-slider-handle-background-color);
@@ -75,6 +81,14 @@ governing permissions and limitations under the License.
   }
 }
 
+
+.spectrum-Slider--ramp {
+  .spectrum-Slider-handle {
+    /* We can't draw this one correctly without this hack : ( */
+    box-shadow: 0 0 0 4px var(--spectrum-alias-background-color-default);
+  }
+}
+
 .spectrum-Slider-input {
   background: transparent;
 }
@@ -84,6 +98,7 @@ governing permissions and limitations under the License.
     background-color: var(--spectrum-slider-tick-mark-color);
   }
 }
+
 
 .spectrum-Slider-handle {
   &.is-dragged {
@@ -101,6 +116,7 @@ governing permissions and limitations under the License.
     }
   }
 }
+
 
 .spectrum-Slider {
   &.is-disabled {
@@ -135,6 +151,13 @@ governing permissions and limitations under the License.
         background: var(--spectrum-slider-fill-track-color-disabled);
       }
     }
+
+    .spectrum-Slider-ramp {
+      path {
+        fill: var(--spectrum-slider-ramp-track-color-disabled);
+      }
+    }
+
 
     &.spectrum-Slider--range {
       .spectrum-Slider-track {
