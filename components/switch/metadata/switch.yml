@@ -1,5 +1,15 @@
 name: Switch
 SpectrumSiteSlug: https://spectrum.adobe.com/page/switch/
+sections:
+  - name: Migration Guide
+    description: |
+        ### Quiet and emphasized
+        Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
+        If you were using the `quiet` variant, the `.spectrum-Switch--quiet` class is no longer required and can be removed.
+        If you need a switch to look like it did before this change, add `.spectrum-Switch--emphasized`.
+
+        ### A/B toggle variant removed
+        It's been deprecated and removed. A similar use case could be served by using Radio buttons.
 examples:
   - id: switch
     name: Standard
