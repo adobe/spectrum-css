@@ -142,6 +142,7 @@ governing permissions and limitations under the License.
   width: var(--spectrum-tooltip-icon-size);
   height: var(--spectrum-tooltip-icon-size);
   align-self: flex-start;
+  flex-shrink: 0;
 
   /* Adjusts for weird misalignment */
   margin-block-start: 1px;
