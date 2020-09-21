@@ -12,18 +12,20 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
         'tooltip',
         'coachmark',
         'dialog',
+        'divider',
         'button',
+        'buttongroup',
         'sidenav',
         'menu',
-        'barloader',
+        'modal',
+        'progressbar',
         'inputgroup',
-        'dropdown',
+        'picker',
         'slider',
-        'switch',
         'checkbox',
-        'radio'
+        'radio',
+        'switch'
       ];
-
     each dep in exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1)
       link(rel='stylesheet', type='text/css', href='../components/' + dep + '/index-vars.css', data-dependency=dep)
 
@@ -48,7 +50,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Link (wrapping)
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
-                    <div style="width: 146px">See our <a href="#" class="spectrum-Link">Privacy Policy</a> for more details or <a href="#" class="spectrum-Link">opt-out at any time</a>.</div>
+                    <div style="width: 146px" class="spectrum-Body spectrum-Body--S">See our <a href="#" class="spectrum-Link">Privacy Policy</a> for more details or <a href="#" class="spectrum-Link">opt-out at any time</a>.</div>
 
               article.spectrum-CSSExample
                 h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Toast (wrapping)
@@ -66,7 +68,6 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                         </button>
                       </div>
                     </div>
-
               article.spectrum-CSSExample
                 h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Toast with Icon and Button (wrapping)
                 section.spectrum-CSSExample-container
@@ -142,16 +143,23 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                     <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
 
                     <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
-                    <div class="spectrum-Dialog spectrum-Dialog--alert is-open spectrum-CSSExample-dialog" style="width: 300px">
-                      <div class="spectrum-Dialog-header">
-                        <h2 class="spectrum-Dialog-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                      </div>
-                      <div class="spectrum-Dialog-content">
-                        Smart filters are nondestructive and will preserve your original images.
-                      </div>
-                      <div class="spectrum-Dialog-footer">
-                        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
-                        <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Enable</button>
+                    <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+                      <div class="spectrum-Modal is-open" data-testid="modal" style="width: 300px">
+                        <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
+                          <div class="spectrum-Dialog-grid">
+                            <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                            <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+                            <section class="spectrum-Dialog-content">Smart filters are nondestructive and will preserve your original images.</section>
+                            <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
+                              <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                                <span class="spectrum-Button-label">Cancel</span>
+                              </button>
+                              <button class="spectrum-Button spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                                <span class="spectrum-Button-label">Enable</span>
+                              </button>
+                            </div>
+                          </div>
+                        </section>
                       </div>
                     </div>
 
@@ -290,16 +298,16 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Switch (wrapping)
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
-                    <div class=".spectrum-Switch">
-                      <input type="checkbox" class=".spectrum-Switch-input" id="switch-onoff-0">
-                      <span class=".spectrum-Switch-switch"></span>
-                      <label class=".spectrum-Switch-label" for="switch-onoff-0">Add Adobe Stock. Get one month free.*</label>
+                    <div class="spectrum-Switch">
+                      <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-0">
+                      <span class="spectrum-Switch-switch"></span>
+                      <label class="spectrum-Switch-label" for="switch-onoff-0">Add Adobe Stock. Get one month free.*</label>
                     </div>
                     <br>
-                    <div class=".spectrum-Switch" style="width: 170px">
-                      <input type="checkbox" class=".spectrum-Switch-input" id="switch-onoff-0">
-                      <span class=".spectrum-Switch-switch"></span>
-                      <label class=".spectrum-Switch-label" for="switch-onoff-0">Add Adobe Stock. Get one month free.*</label>
+                    <div class="spectrum-Switch" style="width: 170px">
+                      <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-0">
+                      <span class="spectrum-Switch-switch"></span>
+                      <label class="spectrum-Switch-label" for="switch-onoff-0">Add Adobe Stock. Get one month free.*</label>
                     </div>
 
               article.spectrum-CSSExample
@@ -307,11 +315,11 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="margin: 20px 0; width: 168px">
-                      <div class="spectrum-BarLoader" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
-                        <div class="spectrum-BarLoader-label">Laden ihrer Creative Cloud dateien</div>
-                        <div class="spectrum-BarLoader-percentage">26%</div>
-                        <div class="spectrum-BarLoader-track">
-                          <div class="spectrum-BarLoader-fill" style="width: 26%;"></div>
+                      <div class="spectrum-ProgressBar" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
+                        <div class="spectrum-ProgressBar-label">Laden ihrer Creative Cloud dateien</div>
+                        <div class="spectrum-ProgressBar-percentage">26%</div>
+                        <div class="spectrum-ProgressBar-track">
+                          <div class="spectrum-ProgressBar-fill" style="width: 26%;"></div>
                         </div>
                       </div>
                     </div>
@@ -321,11 +329,11 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="margin: 20px 0;">
-                      <div class="spectrum-BarLoader is-positive" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
-                        <div class="spectrum-BarLoader-label">Creative Cloud datennutzung insgesamt</div>
-                        <div class="spectrum-BarLoader-percentage">26%</div>
-                        <div class="spectrum-BarLoader-track">
-                          <div class="spectrum-BarLoader-fill" style="width: 26%;"></div>
+                      <div class="spectrum-ProgressBar is-positive" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
+                        <div class="spectrum-ProgressBar-label">Creative Cloud datennutzung insgesamt</div>
+                        <div class="spectrum-ProgressBar-percentage">26%</div>
+                        <div class="spectrum-ProgressBar-track">
+                          <div class="spectrum-ProgressBar-fill" style="width: 26%;"></div>
                         </div>
                       </div>
                     </div>
@@ -348,7 +356,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                       </div>
 
               article.spectrum-CSSExample
-                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Dropdown (wrapping label)
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S Picker (wrapping label)
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
@@ -402,3 +410,4 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
           include includes/footer.pug
 
     include includes/pageBottom.pug
+    
