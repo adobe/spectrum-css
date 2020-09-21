@@ -9,7 +9,7 @@ sections:
         If you need a switch to look like it did before this change, add `.spectrum-Switch--emphasized`.
 
         ### A/B toggle variant removed
-        It's been deprecated and removed.
+        It's been deprecated and removed. A similar use case could be served by using Radio buttons.
 examples:
   - id: switch
     name: Standard
