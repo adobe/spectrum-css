@@ -64,11 +64,8 @@ governing permissions and limitations under the License.
   /* Remove the padding for [type="radio"] in IE 10-. */
   padding: 0;
 
-  /* Hit area */
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: calc(var(--spectrum-radio-cursor-hit-x) * -1);
-  inline-size: calc(100% + var(--spectrum-radio-cursor-hit-x) * 2);
+  inline-size: 100%;
   block-size: 100%;
 
   opacity: 0.0001;
