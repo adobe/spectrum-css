@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
 
   /* Force override */
   --spectrum-searchwithin-border-radius: 0;
-  --spectrum-searchwithin-dropdown-min-width: 0;
+  --spectrum-searchwithin-picker-min-width: 0;
 }
 
 .spectrum-SearchWithin {
@@ -26,13 +26,13 @@ governing permissions and limitations under the License.
   position: relative;
 }
 
-.spectrum-SearchWithin-dropdown {
+.spectrum-SearchWithin-picker {
   inline-size: auto;
   min-inline-size: 0;
   flex-shrink: 0;
 }
 
-.spectrum-SearchWithin-dropdownTrigger {
+.spectrum-SearchWithin-pickerTrigger {
   border-start-end-radius: var(--spectrum-searchwithin-border-radius);
   border-end-end-radius: var(--spectrum-searchwithin-border-radius);
 }

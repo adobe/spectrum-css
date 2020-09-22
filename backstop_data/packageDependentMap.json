@@ -129,12 +129,17 @@
   [
     "@spectrum-css/dialog",
     [
-      "@spectrum-css/popover"
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
     ]
   ],
   [
     "@spectrum-css/divider",
-    []
+    [
+      "@spectrum-css/dialog",
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
+    ]
   ],
   [
     "@spectrum-css/dropindicator",

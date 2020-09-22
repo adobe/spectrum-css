@@ -22,7 +22,7 @@ cd $CWD
 # components=$(ls components/)
 
 # Ignores commons, other new components
-components="accordion   checkbox    fieldlabel    rule      stepper
+components="accordion   checkbox    fieldlabel    divider      stepper
 actionbar   circleloader        search      table
 actionmenu    coachmark   illustratedmessage  searchwithin    tabs
 alert        inputgroup    sidenav     tags
@@ -32,7 +32,7 @@ avatar        menu       toggle
 banner      cyclebutton   miller        tooltip
 barloader   decoratedtextfield  page        treeview
 breadcrumb    dialog      pagination     typography
-button      dropdown    popover     splitbutton   underlay
+button      picker    popover     splitbutton   underlay
 buttongroup   dropindicator   quickaction   splitview   well
 calendar    dropzone    radio     statuslight
 card      fieldgroup    rating      steplist"
