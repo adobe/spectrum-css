@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  --spectrum-fieldgroup-margin: var(--spectrum-global-dimension-size-100);
+  --spectrum-fieldgroup-margin: var(--spectrum-global-dimension-size-200);
 }
 
 @import '../commons/index.css';
@@ -22,11 +22,13 @@ governing permissions and limitations under the License.
   flex-wrap: wrap;
 }
 
+.spectrum-FieldGroup--horizontal {
+  .spectrum-FieldGroup-item + .spectrum-FieldGroup-item {
+    margin: 0 0 0 var(--spectrum-fieldgroup-margin);
+  }
+}
+
 .spectrum-FieldGroup--vertical {
   display: inline-flex;
   flex-direction: column;
-}
-
-.spectrum-FieldGroup-item {
-  margin: 0 var(--spectrum-checkbox-cursor-hit-x);
 }

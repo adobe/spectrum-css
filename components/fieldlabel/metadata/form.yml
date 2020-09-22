@@ -40,19 +40,6 @@ examples:
           <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Interests</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
-              <div class="spectrum-Radio spectrum-FieldGroup-item">
-                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
-                <span class="spectrum-Radio-button"></span>
-                <label class="spectrum-Radio-label" for="radio-5">Kittens</label>
-              </div>
-              <div class="spectrum-Radio spectrum-FieldGroup-item">
-                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-6">
-                <span class="spectrum-Radio-button"></span>
-                <label class="spectrum-Radio-label" for="radio-6">Dogs</label>
-              </div>
-            </div>
-
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                 <span class="spectrum-Checkbox-box">
@@ -60,7 +47,7 @@ examples:
                     <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
                   </svg>
                 </span>
-                <span class="spectrum-Checkbox-label">Checkbox</span>
+                <span class="spectrum-Checkbox-label">Kittens</span>
               </label>
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
@@ -69,7 +56,7 @@ examples:
                     <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
                   </svg>
                 </span>
-                <span class="spectrum-Checkbox-label">Checkbox</span>
+                <span class="spectrum-Checkbox-label">Dogs</span>
               </label>
             </div>
           </div>
@@ -137,19 +124,6 @@ examples:
           <label class="spectrum-Form-itemLabel spectrum-FieldLabel--right" for="spectrum-textinput-instance">Interests</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
-              <div class="spectrum-Radio spectrum-FieldGroup-item">
-                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
-                <span class="spectrum-Radio-button"></span>
-                <label class="spectrum-Radio-label" for="radio-5">Kittens</label>
-              </div>
-              <div class="spectrum-Radio spectrum-FieldGroup-item">
-                <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-6">
-                <span class="spectrum-Radio-button"></span>
-                <label class="spectrum-Radio-label" for="radio-6">Dogs</label>
-              </div>
-            </div>
-
-            <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                 <span class="spectrum-Checkbox-box">
@@ -157,7 +131,7 @@ examples:
                     <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
                   </svg>
                 </span>
-                <span class="spectrum-Checkbox-label">Checkbox</span>
+                <span class="spectrum-Checkbox-label">Kittens</span>
               </label>
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
@@ -166,7 +140,7 @@ examples:
                     <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
                   </svg>
                 </span>
-                <span class="spectrum-Checkbox-label">Checkbox</span>
+                <span class="spectrum-Checkbox-label">Dogs</span>
               </label>
             </div>
           </div>
