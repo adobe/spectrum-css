@@ -4,7 +4,11 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/divider/
 sections:
   - name: Migrating from Rule
     description: |
+      ### Component rename
       Rule is now named Divider. All instances of `.spectrum-Rule` in your code should be replaced with `.spectrum-Divider`, and the `@spectrum-css/divider` package should be used instead of `@spectrum-css/rule`.
+
+      ### Change workflow icon size to medium
+      Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: divider-large
     name: 'Large'
@@ -32,13 +36,13 @@ examples:
     markup: |
       <div class="spectrum-ButtonGroup">
         <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Properties">
             <use xlink:href="#spectrum-icon-18-Properties" />
           </svg>
         </button>
         <div class="spectrum-Divider spectrum-Divider--small spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
         <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Select">
             <use xlink:href="#spectrum-icon-18-Select" />
           </svg>
         </button>
@@ -48,13 +52,13 @@ examples:
     markup: |
       <div class="spectrum-ButtonGroup">
         <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Properties">
             <use xlink:href="#spectrum-icon-18-Properties" />
           </svg>
         </button>
         <div class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
         <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Select">
             <use xlink:href="#spectrum-icon-18-Select" />
           </svg>
         </button>
