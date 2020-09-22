@@ -231,21 +231,14 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Textfield.is-invalid & {
-    inline-size: var(--spectrum-icon-alert-medium-width);
-    block-size: var(--spectrum-icon-alert-medium-height);
+    inline-size: var(--spectrum-textfield-validation-icon-width-error);
+    block-size: var(--spectrum-textfield-validation-icon-height-error);
     inset-block-end: calc(
-      calc(var(--spectrum-textfield-validation-icon-height) / 2) -
-        calc(var(--spectrum-icon-alert-medium-height) / 2)
-    );
-    inset-inline-end: calc(
-      calc(var(--spectrum-textfield-validation-icon-width) / 2) -
-        calc(var(--spectrum-icon-alert-medium-width) / 2)
+      calc(var(--spectrum-textfield-height) / 2) -
+        calc(var(--spectrum-textfield-validation-icon-height-error) / 2)
     );
 
-    padding-inline-end: calc(
-      var(--spectrum-textfield-padding-x) / 2 -
-        var(--spectrum-global-dimension-size-10)
-    );
+    inset-inline-end: var(--spectrum-textfield-icon-margin-left);
 
     .spectrum-Textfield--quiet& {
       inset-inline-end: 0;
@@ -253,13 +246,13 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Textfield.is-valid & {
-    inline-size: var(--spectrum-icon-checkmark-medium-width);
-    block-size: var(--spectrum-icon-checkmark-medium-height);
+    inline-size: var(--spectrum-textfield-validation-icon-width-valid);
+    block-size: var(--spectrum-textfield-validation-icon-height-valid);
     inset-block-end: calc(
-      calc(var(--spectrum-textfield-validation-icon-height) / 2) -
-        calc(var(--spectrum-icon-checkmark-medium-height) / 2)
+      calc(var(--spectrum-textfield-height) / 2) -
+        calc(var(--spectrum-textfield-validation-icon-height-valid) / 2)
     );
-    inset-inline-end: var(--spectrum-global-dimension-size-150);
+    inset-inline-end: var(--spectrum-textfield-icon-margin-left);
 
     .spectrum-Textfield--quiet& {
       inset-inline-end: 0;
