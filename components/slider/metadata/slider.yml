@@ -3,7 +3,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/slider/
 sections:
   - name: Migration Guide
     description: |
-      ### Color Slider moved  out of Sliders into it's own component
+      ### Color slider is now a separate component
       Color Slider moved to [Color slider](colorslider.html).
       Replace class names starting with `.spectrum-Slider` with `.spectrum-ColorSlider`.
 examples:
