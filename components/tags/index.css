@@ -24,11 +24,11 @@ governing permissions and limitations under the License.
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
-
+  vertical-align: middle;
   margin-block: calc(var(--spectrum-taggroup-tag-gap-y)/2);
   margin-inline: calc(var(--spectrum-taggroup-tag-gap-x)/2);
   padding-block: 0;
-  padding-inline: calc(var(--spectrum-tag-padding-x)-var(--spectrum-tag-border-size));
+  padding-inline: calc(var(--spectrum-tag-padding-x) - var(--spectrum-tag-border-size));
   block-size: var(--spectrum-tag-height);
   max-inline-size: 100%;
 
@@ -47,20 +47,22 @@ governing permissions and limitations under the License.
     pointer-events: none;
   }
 
-  > .spectrum-Icon,
-  > .spectrum-Avatar {
+  > .spectrum-Tags-itemIcon {
     margin-inline-end: var(--spectrum-tag-icon-padding-x);
-
-    /* Add padding for "avatar" variant */
-    margin-inline-start: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
+    margin-inline-start: calc(-1 * var(--spectrum-tag-removable-border-size-key-focus));
 
     ~ .spectrum-Tags-itemLabel {
       margin-inline-end: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
     }
   }
 
-  .spectrum-ClearButton {
-    margin-inline-end: calc(-1 * var(--spectrum-tag-padding-x));
+  .spectrum-Tags-itemClearButton {
+    display: flex;
+    margin-inline-end: calc(-0.5 * var(--spectrum-tag-padding-x));
+    margin-inline-start: calc(0.5 * var(--spectrum-tag-padding-x));
+    block-size: var(--spectrum-alias-font-size-default);
+    inline-size: var(--spectrum-alias-font-size-default);
+    border-radius: var(--spectrum-alias-border-radius-small);
   }
 }
 
@@ -73,4 +75,15 @@ governing permissions and limitations under the License.
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.spectrum-Tags-item--removable {
+
+  .spectrum-Tags-itemClearButton {
+    &.is-focused {
+      border: var(--spectrum-tag-removable-border-size-key-focus) solid;
+      border-radius: var(--spectrum-alias-border-radius-regular);
+    }
+  }
+  
 }

@@ -96,7 +96,6 @@ governing permissions and limitations under the License.
     max-block-size: 100%;
     flex-shrink: 0;
   }
-
 }
 
 %spectrum-ButtonWithFocusRing {
@@ -111,7 +110,7 @@ governing permissions and limitations under the License.
     top: 0;
     margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
+    transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
                 margin var(--spectrum-global-animation-duration-100) ease-out;
   }
 
@@ -264,13 +263,13 @@ a.spectrum-ActionButton {
 .spectrum-FieldButton {
   @inherit: %spectrum-BaseButton;
 
-  block-size: var(--spectrum-dropdown-height);
+  block-size: var(--spectrum-picker-height);
 
-  padding: 0 var(--spectrum-dropdown-padding-x);
+  padding: 0 var(--spectrum-picker-padding-x);
 
   font-family: inherit;
   font-weight: normal;
-  font-size: var(--spectrum-dropdown-text-size);
+  font-size: var(--spectrum-picker-text-size);
   line-height: normal;
   -webkit-font-smoothing: initial;
 
@@ -281,9 +280,9 @@ a.spectrum-ActionButton {
 .spectrum-FieldButton {
   margin: 0;
   padding-block: 0;
-  padding-inline: var(--spectrum-dropdown-padding-x);
+  padding-inline: var(--spectrum-picker-padding-x);
 
-  border-width: var(--spectrum-dropdown-border-size);
+  border-width: var(--spectrum-picker-border-size);
   border-style: solid;
   border-radius: var(--spectrum-border-radius);
 
@@ -298,7 +297,7 @@ a.spectrum-ActionButton {
   }
 
   &.is-open {
-    border-width: var(--spectrum-dropdown-border-size);
+    border-width: var(--spectrum-picker-border-size);
   }
 }
 

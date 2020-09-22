@@ -59,13 +59,13 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup.is-focused {
   .spectrum-InputGroup-button,
   .spectrum-InputGroup-input {
-    border-color: var(--spectrum-dropdown-border-color-key-focus);
+    border-color: var(--spectrum-picker-border-color-key-focus);
   }
 
   &.is-invalid {
     .spectrum-InputGroup-button,
     .spectrum-InputGroup-input {
-      border-color: var(--spectrum-dropdown-border-color-error);
+      border-color: var(--spectrum-picker-border-color-error);
     }
   }
 }
@@ -73,7 +73,7 @@ governing permissions and limitations under the License.
 /* Only add the 2px ring for keyboard focus */
 .spectrum-InputGroup:not(.spectrum-InputGroup--quiet).is-keyboardFocused {
   & {
-    box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-picker-border-color-key-focus);
   }
 
   .spectrum-InputGroup-input,
@@ -83,12 +83,12 @@ governing permissions and limitations under the License.
 
   &.is-invalid {
     & {
-      box-shadow: 0 0 0 1px var(--spectrum-dropdown-border-color-error-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-picker-border-color-error-key-focus);
     }
 
     .spectrum-InputGroup-button,
     .spectrum-InputGroup-input {
-      border-color: var(--spectrum-dropdown-border-color-error-key-focus);
+      border-color: var(--spectrum-picker-border-color-error-key-focus);
     }
   }
 
@@ -147,8 +147,8 @@ governing permissions and limitations under the License.
     &.is-invalid {
       .spectrum-InputGroup-input,
       .spectrum-InputGroup-button {
-        box-shadow: 0 1px 0 var(--spectrum-dropdown-border-color-error-key-focus);
-        border-color: var(--spectrum-dropdown-border-color-error-key-focus);
+        box-shadow: 0 1px 0 var(--spectrum-picker-border-color-error-key-focus);
+        border-color: var(--spectrum-picker-border-color-error-key-focus);
       }
     }
   }
