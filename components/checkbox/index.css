@@ -161,7 +161,7 @@ governing permissions and limitations under the License.
 
     transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
                 margin var(--spectrum-global-animation-duration-100) ease-out;
- 
+
     /* force ff to render on the pixel grid */
     transform: translate(0, 0);
   }

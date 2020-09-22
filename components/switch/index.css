@@ -163,8 +163,7 @@ governing permissions and limitations under the License.
     inset-block-start: 0;
     margin: 0;
 
-    transition: box-shadow var(--spectrum-global-animation-duration-100)
-        ease-out,
-      margin var(--spectrum-global-animation-duration-100) ease-out;
+    transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
+                margin var(--spectrum-global-animation-duration-100) ease-out;
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tray",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-beta.0",
   "description": "The Spectrum CSS tray component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -28,7 +28,7 @@
     "@spectrum-css/vars": "^2.1.0",
     "@spectrum-css/modal": "^3.0.0-beta.0",
     "@spectrum-css/dialog": "^3.0.0-beta.3",
-    "@spectrum-css/divider": "^1.0.0-beta.0",
+    "@spectrum-css/divider": "^1.0.0-beta.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
