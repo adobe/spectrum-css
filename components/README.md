@@ -60,7 +60,7 @@ For example, `actionbar` gets its tokens from `vars`, and requires `button`, `ch
     "@spectrum-css/checkbox": "^2.0.0",
     "@spectrum-css/icon": "^2.0.0",
     "@spectrum-css/popover": "^2.0.0",
-    "@spectrum-css/vars": "^2.0.0"
+    "@spectrum-css/vars": "^3.0.0-beta.0"
   },
   "devDependencies": {
     "@spectrum-css/button": "^2.0.0",
@@ -69,7 +69,7 @@ For example, `actionbar` gets its tokens from `vars`, and requires `button`, `ch
     "@spectrum-css/icon": "^2.0.0",
     "@spectrum-css/popover": "^2.0.0",
     "@spectrum-css/table": "^2.0.0",
-    "@spectrum-css/vars": "^2.0.0"
+    "@spectrum-css/vars": "^3.0.0-beta.0"
   }
 }
 ```
