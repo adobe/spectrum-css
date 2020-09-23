@@ -224,9 +224,9 @@ governing permissions and limitations under the License.
   &:active,
   &.is-focused,
   &.is-dragged {
-    /*border-width: var(--spectrum-slider-handle-border-size-down);*/
     cursor: ns-resize;
     cursor: grabbing;
+    border-width: var(--spectrum-slider-handle-border-size-down);
   }
 
   &:active,
