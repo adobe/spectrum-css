@@ -68,7 +68,14 @@
     "dot-prop": "^5.2.0",
     "handlebars": "^4.5.2",
     "https-proxy-agent": "^3.0.0",
-    "http-proxy": "^1.18.1"
+    "http-proxy": "^1.18.1",
+    "jimp": "^0.16.1",
+    "node-fetch": "^2.6.1",
+    "lodash": "^4.17.19",
+    "yargs-parser": "^18.1.2",
+    "minimist": "^1.2.3",
+    "is-url-superb": "^4.0.0",
+    "postcss-values-parser": "^4.0.0"
   },
   "workspaces": [
     "components/*",
