@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.3...@spectrum-css/dialog@3.0.0-beta.4)
+
+### ✨ Features
+
+* RSP V3 Dialog ([#710](https://github.com/adobe/spectrum-css/issues/710)) ([33d6638](https://github.com/adobe/spectrum-css/commit/33d6638)), closes [rsp-v3#517](https://github.com/rsp-v3/issues/517)
+
+
+### 🐛 Bug fixes
+
+* fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
+* removed deprecated tokens in dialog ([ebbe6c1](https://github.com/adobe/spectrum-css/commit/ebbe6c1))
+* replaced deprecated dialog tokens ([012f083](https://github.com/adobe/spectrum-css/commit/012f083))
+* resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.2...@spectrum-css/dialog@3.0.0-beta.3)

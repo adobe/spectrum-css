@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.5"></a>
+# 3.0.0-beta.5
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@3.0.0-beta.4...@spectrum-css/inputgroup@3.0.0-beta.5)
+
+### 🐛 Bug fixes
+
+* change workflow icon size to medium for most of the examples ([#962](https://github.com/adobe/spectrum-css/issues/962)) ([db7b8b2](https://github.com/adobe/spectrum-css/commit/db7b8b2))
+* removed deprecated tokens from searchWithin ([d97b026](https://github.com/adobe/spectrum-css/commit/d97b026))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="3.0.0-beta.4"></a>
 # 3.0.0-beta.4
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@3.0.0-beta.3...@spectrum-css/inputgroup@3.0.0-beta.4)

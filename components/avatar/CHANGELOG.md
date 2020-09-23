@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.3"></a>
+# 3.0.0-beta.3
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@3.0.0-beta.2...@spectrum-css/avatar@3.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* removed deprecated avatar tokens ([1ea0190](https://github.com/adobe/spectrum-css/commit/1ea0190))
+* removed more deprecations ([70dd116](https://github.com/adobe/spectrum-css/commit/70dd116))
+
+
+
+
+
 <a name="3.0.0-beta.2"></a>
 # 3.0.0-beta.2
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@3.0.0-beta.1...@spectrum-css/avatar@3.0.0-beta.2)

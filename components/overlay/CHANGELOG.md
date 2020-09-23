@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1-beta.0"></a>
+## 2.0.1-beta.0
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/overlay@2.0.0...@spectrum-css/overlay@2.0.1-beta.0)
+
+### 🐛 Bug fixes
+
+* fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2019-10-08

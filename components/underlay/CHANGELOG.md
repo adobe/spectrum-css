@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.8-beta.0"></a>
+## 2.0.8-beta.0
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.7...@spectrum-css/underlay@2.0.8-beta.0)
+
+### 🐛 Bug fixes
+
+* removed deprecated tokens from underlay/overlay ([cf15784](https://github.com/adobe/spectrum-css/commit/cf15784))
+
+
+
+
+
 <a name="2.0.7"></a>
 ## 2.0.7
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.6...@spectrum-css/underlay@2.0.7)

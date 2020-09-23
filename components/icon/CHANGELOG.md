@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@2.1.1...@spectrum-css/icon@3.0.0-beta.0)
+
+### ✨ Features
+
+* change icon sizes to match Spectrum ([ceff437](https://github.com/adobe/spectrum-css/commit/ceff437))
+
+
+### 🐛 Bug fixes
+
+* updating tokens beta with breaking changes ([9043417](https://github.com/adobe/spectrum-css/commit/9043417))
+
+
+### 🛑 BREAKING CHANGES
+
+* icon sizes have changed, all instances of spectrum-Icon--sizeS should be replaced with spectrum-Icon--sizeM, check other sizes as well
+
+
+
+
+
 <a name="2.1.1"></a>
 ## 2.1.1
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@2.1.0...@spectrum-css/icon@2.1.1)

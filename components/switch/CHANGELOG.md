@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.1"></a>
+# 1.0.0-beta.1
+🗓 2020-09-23
+
+### 🐛 Bug fixes
+
+* resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+
+
+
+
+
 <a name="3.0.0-beta.2"></a>
 # 3.0.0-beta.2
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@3.0.0-beta.1...@spectrum-css/toggle@3.0.0-beta.2)

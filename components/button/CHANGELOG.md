@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.3...@spectrum-css/button@3.0.0-beta.4)
+
+### 🐛 Bug fixes
+
+* actionButton focus-ring active state visual issue [#755](https://github.com/adobe/spectrum-css/issues/755) ([#777](https://github.com/adobe/spectrum-css/issues/777)) ([64af508](https://github.com/adobe/spectrum-css/commit/64af508))
+* fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
+* removed deprecated tokens in button ([281027d](https://github.com/adobe/spectrum-css/commit/281027d))
+* resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+* workflow icon size change to medium ([#917](https://github.com/adobe/spectrum-css/issues/917)) ([a609ee6](https://github.com/adobe/spectrum-css/commit/a609ee6))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.2...@spectrum-css/button@3.0.0-beta.3)
