@@ -10,13 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   --spectrum-divider-vertical-height: 100%;
-
-  /* Work around DNA misspelling */
-  --spectrum-divider-small-vertical-width: var(--spectrum-divider-small-vertical-width, var(--spectrum-divider-small-veritcal-width));
 }
 
 .spectrum-Divider {

@@ -22,6 +22,10 @@ sections:
 
       * `.is-drop-target` and `.is-selected` must be placed on the `.spectrum-TreeView-item` element
 
+      ### Workflow icon size
+
+      * Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
 examples:
   - id: treeview
     name: Standard

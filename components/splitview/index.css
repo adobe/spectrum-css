@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   --spectrum-splitview-vertical-width: 100%;
@@ -29,21 +29,29 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-SplitView-gripper {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   border-style: solid;
-  border-radius: var(--spectrum-rail-gripper-border-radius);
+  border-radius: var(--spectrum-dragbar-gripper-border-radius);
 
   inset-block-start: 50%;
   transform: translate(0, -50%);
 
   /* half of (width + horizontal border - handle width) * -1 (for negative opposite) */
-  inset-inline-start: calc(((var(--spectrum-rail-gripper-width) + (2 * var(--spectrum-rail-gripper-border-width-horizontal)) - var(--spectrum-rail-handle-width)) / 2) * -1);
-  inline-size: var(--spectrum-rail-gripper-width);
-  block-size: var(--spectrum-rail-gripper-height);
-  border-block-width: var(--spectrum-rail-gripper-border-width-vertical);
-  border-inline-width: var(--spectrum-rail-gripper-border-width-horizontal);
+  inset-inline-start: calc(
+    (
+        (
+            var(--spectrum-dragbar-gripper-width) +
+              (2 * var(--spectrum-dragbar-gripper-border-width-horizontal)) -
+              var(--spectrum-dragbar-handle-width)
+          ) / 2
+      ) * -1
+  );
+  inline-size: var(--spectrum-dragbar-gripper-width);
+  block-size: var(--spectrum-dragbar-gripper-height);
+  border-block-width: var(--spectrum-dragbar-gripper-border-width-vertical);
+  border-inline-width: var(--spectrum-dragbar-gripper-border-width-horizontal);
 }
 
 .spectrum-SplitView-splitter {
@@ -53,7 +61,7 @@ governing permissions and limitations under the License.
   /* Prevent text selection while dragging */
   user-select: none;
 
-  inline-size: var(--spectrum-rail-handle-width);
+  inline-size: var(--spectrum-dragbar-handle-width);
   block-size: 100%;
   z-index: 1;
 
@@ -62,12 +70,14 @@ governing permissions and limitations under the License.
     .spectrum-SplitView-gripper {
       /* make the center line of the gripper */
       &:before {
-        content: '';
+        content: "";
         position: absolute;
 
         inset-block-start: 0;
-        inset-inline-start: calc(50% - calc(var(--spectrum-rail-handle-width) / 2));
-        inline-size: var(--spectrum-rail-handle-width);
+        inset-inline-start: calc(
+          50% - calc(var(--spectrum-dragbar-handle-width) / 2)
+        );
+        inline-size: var(--spectrum-dragbar-handle-width);
         block-size: 100%;
       }
     }
@@ -97,21 +107,36 @@ governing permissions and limitations under the License.
 
   .spectrum-SplitView-gripper {
     /* half of (height + vertical border - handle width) * -1 (for negative opposite) */
-    inset-block-start: calc(((var(--spectrum-rail-gripper-width) + (2 * var(--spectrum-rail-gripper-border-width-horizontal)) - var(--spectrum-rail-handle-width)) / 2) * -1);
+    inset-block-start: calc(
+      (
+          (
+              var(--spectrum-dragbar-gripper-width) +
+                (2 * var(--spectrum-dragbar-gripper-border-width-horizontal)) -
+                var(--spectrum-dragbar-handle-width)
+            ) / 2
+        ) * -1
+    );
 
-    transform: translate(calc(-1 * var(--spectrum-splitview-vertical-gripper-width)), 0);
+    transform: translate(
+      calc(-1 * var(--spectrum-splitview-vertical-gripper-width)),
+      0
+    );
     inset-inline-start: var(--spectrum-splitview-vertical-gripper-width);
-    inline-size: var(--spectrum-rail-gripper-height); /* same as default height */
-    block-size: var(--spectrum-rail-gripper-width); /* same as default width */
+    inline-size: var(
+      --spectrum-dragbar-gripper-height
+    ); /* same as default height */
+    block-size: var(
+      --spectrum-dragbar-gripper-width
+    ); /* same as default width */
 
     /* opposite of default border-width */
-    border-block-width: var(--spectrum-rail-gripper-border-width-horizontal);
-    border-inline-width: var(--spectrum-rail-gripper-border-width-vertical);
+    border-block-width: var(--spectrum-dragbar-gripper-border-width-horizontal);
+    border-inline-width: var(--spectrum-dragbar-gripper-border-width-vertical);
   }
 
   .spectrum-SplitView-splitter {
     inline-size: var(--spectrum-splitview-vertical-width);
-    block-size: var(--spectrum-rail-handle-width);
+    block-size: var(--spectrum-dragbar-handle-width);
 
     &.is-collapsed-start,
     &.is-collapsed-end {
@@ -120,10 +145,13 @@ governing permissions and limitations under the License.
 
         /* make the center line of the gripper */
         &:before {
-          inset-block-start: calc(var(--spectrum-splitview-vertical-gripper-width) - calc(var(--spectrum-rail-handle-width) / 2));
+          inset-block-start: calc(
+            var(--spectrum-splitview-vertical-gripper-width) -
+              calc(var(--spectrum-dragbar-handle-width) / 2)
+          );
           inset-inline-start: var(--spectrum-splitview-vertical-gripper-reset);
           inline-size: var(--spectrum-splitview-vertical-gripper-outer-width);
-          block-size: var(--spectrum-rail-handle-width);
+          block-size: var(--spectrum-dragbar-handle-width);
         }
       }
     }

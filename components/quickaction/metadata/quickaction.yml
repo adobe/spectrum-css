@@ -3,6 +3,11 @@ name: Quick Actions
 status: Verified
 description: 'Note that the `.spectrum-QuickActions-overlay` class should be placed on the container where the Quick Actions are displayed, and the `.spectrum-QuickActions--textOnly` class should be applied when the buttons have text only.'
 SpectrumSiteSlug: https://spectrum.adobe.com/page/quick-actions/
+section:
+  - name: Migration Guide
+    description: |
+      ### Change workflow icon size to medium
+      Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: quickactions
     name: Standard

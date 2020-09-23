@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/component-builder",
-  "version": "1.2.0",
+  "version": "1.2.1-beta.0",
   "description": "The Spectrum CSS component builder",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@spectrum-css/vars": "^2.0.2"
+    "@spectrum-css/vars": "^3.0.0-beta.0"
   },
   "dependencies": {
     "autoprefixer": "^6.5.3",
@@ -38,7 +38,7 @@
     "postcss-functions": "^3.0.0",
     "postcss-import": "^10.0.0",
     "postcss-inherit": "^4.0.3",
-    "postcss-logical": "^4.0.0",
+    "postcss-logical": "^4.0.2",
     "postcss-mixins": "^6.2.1",
     "postcss-nested": "^3.0.0",
     "postcss-selector-parser": "^6.0.2",

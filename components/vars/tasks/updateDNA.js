@@ -49,10 +49,11 @@ function getJSVariableReference(value) {
 function getExport(key, value) {
   if (value[0] === '$') {
     let reference = getJSVariableReference(value.substr(1));
-    return `exports[${JSON.stringify(key)}] = ${reference};\n`;
-  }
-  else {
-    return `exports[${JSON.stringify(key)}] = ${JSON.stringify(value)};\n`;
+    return `exports[${JSON.stringify(key)}] = ${reference};
+`;
+  } else {
+    return `exports[${JSON.stringify(key)}] = ${JSON.stringify(value)};
+`;
   }
 }
 
@@ -85,16 +86,19 @@ function getCSSVar(prefix, key, value) {
   key = `--spectrum-${key}`;
   if (value[0] === '$') {
     let reference = getCSSVariableReference(value);
-    return `  ${key}: var(${reference});\n`;
-  }
-  else {
+    return `  ${key}: var(${reference});
+`;
+  } else {
     value = processValue(key, value);
-    return `  ${key}: ${value};\n`;
+    return `  ${key}: ${value};
+`;
   }
 }
 
 function initializeObject(array) {
-  return array.reduce(function(a, v) { a[v] = {}; return a; }, {});
+  return array.reduce(function(a, v) {
+    a[v] = {}; return a;
+  }, {});
 }
 
 function populateObject(parentObject, keysOfParent, keyOfChild) {
@@ -109,13 +113,12 @@ function processValue(name, value) {
   if (name.indexOf('animation') !== -1) {
     if (value[0] === '(') {
       return `cubic-bezier${value}`;
-    }
-    else if (name.match(/delay$/) && value.indexOf('ms') === -1) {
+    } else if (name.match(/delay$/) && value.indexOf('ms') === -1) {
       return `${value}ms`;
     }
     return value;
   }
-  if (name.match(/opacity/) && typeof(value) === 'string' && value.substr(-1) === '%') {
+  if (name.match(/opacity/) && typeof (value) === 'string' && value.substr(-1) === '%') {
     return parseInt(value, 10) / 100;
   }
   return value;
@@ -204,14 +207,17 @@ function generateDNAFiles() {
     .pipe(through.obj(function translateJSON(file, enc, cb) {
 
       let pushFile = (contents, fileName, folder) => {
-        let vinylFile = file.clone({ contents: false });
+        let vinylFile = file.clone({
+          contents: false
+        });
         vinylFile.path = path.join(file.base, folder || '', fileName);
         vinylFile.contents = Buffer.from(contents);
         this.push(vinylFile);
       };
 
       let generateCSSFile = (sections, fileName, folder) => {
-        let contents = `:root {\n`;
+        let contents = `:root {
+`;
 
         sections.forEach(section => {
           let prefix = section.varBaseName;
@@ -221,7 +227,7 @@ function generateDNAFiles() {
             }
 
             let value = section[key];
-            if (value[0] === '[' && value[value.length-1] === ']') {
+            if (value[0] === '[' && value[value.length - 1] === ']') {
               console.error(`Skipping ${prefix}-${key}, value is an array`);
               continue;
             }
@@ -230,7 +236,8 @@ function generateDNAFiles() {
           }
         });
 
-        contents += `}\n`;
+        contents += `}
+`;
 
         pushFile(contents, `spectrum-${fileName}.css`, folder);
       };
@@ -253,7 +260,8 @@ function generateDNAFiles() {
 
         // We have issues with switch, so only allow self refs for base vars
         if (folderCount === 1) {
-          contents += `const ${fileName.replace(/-.*/, '')} = exports;\n`;
+          contents += `const ${fileName.replace(/-.*/, '')} = exports;
+`;
         }
 
         let dependencies = {};
@@ -278,7 +286,8 @@ function generateDNAFiles() {
 
         let requires = '';
         for (let dependency in dependencies) {
-          requires += `const ${dependency} = require('${basePath}${dependency}.js');\n`;
+          requires += `const ${dependency} = require('${basePath}${dependency}.js');
+`;
         }
 
         pushFile(requires + contents, `${fileName}.js`, folder);
@@ -287,7 +296,7 @@ function generateDNAFiles() {
 
       let generateFiles = (sections, fileName, folder = '') => {
         generateCSSFile(sections, fileName, `css/${folder}`);
-        // generateJSFile(sections, fileName, `js/${folder}`);
+      // generateJSFile(sections, fileName, `js/${folder}`);
       };
 
       let data = JSON.parse(String(file.contents));
@@ -302,14 +311,14 @@ function generateDNAFiles() {
         return dnaData.colorStopData[stopName].colorTokens.status !== 'Deprecated';
       });
       let scales = Object.keys(dnaData.scaleData);
-      let elements = Object.keys(dnaData.elements[stops[0]][scales[0]]).filter(elementName => {
+      let components = Object.keys(dnaData.components[stops[0]][scales[0]]).filter(componentName => {
         // Ok this is gross, but we have to skip this bad boy because it duplicates tokens from selectlist!
-        return elementName !== 'select';
+        return componentName !== 'select';
       });
 
       // Anything that doesn't consistently reference the same variable or value between stops/scales
-      let elementColorOverrides = initializeObject(stops);
-      let elementDimensionOverrides = initializeObject(scales);
+      let componentColorOverrides = initializeObject(stops);
+      let componentDimensionOverrides = initializeObject(scales);
 
       // Globals
       flatVars.forEach(key => {
@@ -318,14 +327,14 @@ function generateDNAFiles() {
       });
 
       // Elements
-      let jsElementVariables = initializeObject(elements);
-      let elementVariables = initializeObject(elements);
+      let jsElementVariables = initializeObject(components);
+      let componentVariables = initializeObject(components);
       let colorVariables = {};
       let dimensionVariables = {};
       let cssFilesGenerated = {};
       let overriddenTokens = {};
 
-      function addColorVariable(elementName, varName, value, varBaseName, stopName, stateName) {
+      function addColorVariable(componentName, varName, value, varBaseName, stopName, stateName) {
         if (stateName && stateName !== 'default') {
           varName += `-${stateName}`;
         }
@@ -334,19 +343,22 @@ function generateDNAFiles() {
         let cssVariableName = getCSSVariableReference(value);
         if (colorVariables[fullName] && colorVariables[fullName].cssVariableName !== cssVariableName) {
           // logger.debug(`Found override for ${fullName} (${colorVariables[fullName].cssVariableName} vs ${cssVariableName})`);
-          elementColorOverrides[colorVariables[fullName].name][fullName] = colorVariables[fullName].value;
-          elementColorOverrides[stopName][fullName] = value;
+          componentColorOverrides[colorVariables[fullName].name][fullName] = colorVariables[fullName].value;
+          componentColorOverrides[stopName][fullName] = value;
           overriddenTokens[fullName] = true;
-          delete elementVariables[elementName][fullName];
+          delete componentVariables[componentName][fullName];
+        } else if (!overriddenTokens[fullName]) {
+          componentVariables[componentName][fullName] = value;
         }
-        else if (!overriddenTokens[fullName]) {
-          elementVariables[elementName][fullName] = value;
-        }
-        colorVariables[fullName] = { name: stopName, value: value, cssVariableName: cssVariableName };
-        jsElementVariables[elementName][varName] = value;
+        colorVariables[fullName] = {
+          name: stopName,
+          value: value,
+          cssVariableName: cssVariableName
+        };
+        jsElementVariables[componentName][varName] = value;
       }
 
-      function addDimensionVariable(elementName, varName, value, varBaseName, scaleName, stateName) {
+      function addDimensionVariable(componentName, varName, value, varBaseName, scaleName, stateName) {
         if (stateName && stateName !== 'default') {
           varName += `-${stateName}`;
         }
@@ -355,31 +367,34 @@ function generateDNAFiles() {
         let cssVariableName = getCSSVariableReference(value);
         if (dimensionVariables[fullName] && dimensionVariables[fullName].cssVariableName !== cssVariableName) {
           // logger.debug(`Found override for ${fullName} (${dimensionVariables[fullName].cssVariableName} vs ${cssVariableName})`);
-          elementDimensionOverrides[dimensionVariables[fullName].name][fullName] = dimensionVariables[fullName].value;
-          elementDimensionOverrides[scaleName][fullName] = value;
+          componentDimensionOverrides[dimensionVariables[fullName].name][fullName] = dimensionVariables[fullName].value;
+          componentDimensionOverrides[scaleName][fullName] = value;
           overriddenTokens[fullName] = true;
-          delete elementVariables[elementName][fullName];
+          delete componentVariables[componentName][fullName];
+        } else if (!overriddenTokens[fullName]) {
+          componentVariables[componentName][fullName] = value;
         }
-        else if (!overriddenTokens[fullName]) {
-          elementVariables[elementName][fullName] = value;
-        }
-        dimensionVariables[fullName] = { name: scaleName, value: value, cssVariableName: cssVariableName };
-        jsElementVariables[elementName][varName] = value;
+        dimensionVariables[fullName] = {
+          name: scaleName,
+          value: value,
+          cssVariableName: cssVariableName
+        };
+        jsElementVariables[componentName][varName] = value;
       }
 
       for (let stopName of stops) {
-        let stop = dnaData.elements[stopName];
+        let stop = dnaData.components[stopName];
 
         for (let scaleName of scales) {
           let scale = stop[scaleName];
 
-          for (let elementName of elements) {
-            let element = scale[elementName];
+          for (let componentName of components) {
+            let component = scale[componentName];
 
-            for (let variantName in element) {
-              let variant = element[variantName];
+            for (let variantName in component) {
+              let variant = component[variantName];
 
-              let metadataKeyBase = 'spectrum-' + elementName + (variantName === 'default' ? '' : `-${variantName}`);
+              let metadataKeyBase = 'spectrum-' + componentName + (variantName === 'default' ? '' : `-${variantName}`);
               metadata[`${metadataKeyBase}-name`] = variant.name;
               metadata[`${metadataKeyBase}-description`] = variant.description;
               metadata[`${metadataKeyBase}-status`] = variant.status;
@@ -388,15 +403,16 @@ function generateDNAFiles() {
               if (variant.states) {
                 for (let stateName in variant.states) {
                   let state = variant.states[stateName];
-                  if(stateName === 'text-color') console.log({variant})
+                  if (stateName === 'text-color') console.log({
+                      variant
+                    })
                   for (let key in state) {
                     let value = state[key];
                     let varName = key;
                     if (isColorValue(varName, value)) {
-                      addColorVariable(elementName, varName, value, variant.varBaseName, stopName, stateName);
-                    }
-                    else {
-                      addDimensionVariable(elementName, varName, value, variant.varBaseName, scaleName, stateName);
+                      addColorVariable(componentName, varName, value, variant.varBaseName, stopName, stateName);
+                    } else {
+                      addDimensionVariable(componentName, varName, value, variant.varBaseName, scaleName, stateName);
                     }
                   }
                 }
@@ -406,7 +422,7 @@ function generateDNAFiles() {
                 for (let key in variant.colors) {
                   let value = variant.colors[key];
                   let varName = key;
-                  addColorVariable(elementName, varName, value, variant.varBaseName, stopName);
+                  addColorVariable(componentName, varName, value, variant.varBaseName, stopName);
                 }
               }
 
@@ -414,7 +430,7 @@ function generateDNAFiles() {
                 for (let key in variant.dimensions) {
                   let value = variant.dimensions[key];
                   let varName = key;
-                  addDimensionVariable(elementName, varName, value, variant.varBaseName, scaleName);
+                  addDimensionVariable(componentName, varName, value, variant.varBaseName, scaleName);
                 }
               }
 
@@ -422,7 +438,7 @@ function generateDNAFiles() {
                 for (let key in variant.animation) {
                   let value = variant.animation[key];
                   let varName = key;
-                  addDimensionVariable(elementName, varName, value, variant.varBaseName, scaleName);
+                  addDimensionVariable(componentName, varName, value, variant.varBaseName, scaleName);
                 }
               }
             }
@@ -430,16 +446,16 @@ function generateDNAFiles() {
         }
       }
 
-      for (let elementName of elements) {
+      for (let componentName of components) {
         generateCSSFile([
-          elementVariables[elementName]
-        ], elementName, 'css/components');
-        cssFilesGenerated[elementName] = true;
+          componentVariables[componentName]
+        ], componentName, 'css/components');
+        cssFilesGenerated[componentName] = true;
 
-        // generateJSFile([
-        //   jsElementVariables[elementName]
-        // ], elementName, 'js/components');
-        // generateJSIndexFile(dnaModules, 'js/');
+      // generateJSFile([
+      //   jsElementVariables[componentName]
+      // ], componentName, 'js/components');
+      // generateJSIndexFile(dnaModules, 'js/');
       }
 
       pushFile(JSON.stringify(metadata, null, 2), 'spectrum-metadata.json', 'json/');
@@ -492,7 +508,7 @@ function generateDNAFiles() {
           stop.colorTokens,
           stop.colorAliases,
           stop.colorSemantics,
-          elementColorOverrides[stopName]
+          componentColorOverrides[stopName]
         ], stopName, 'themes');
       }
 
@@ -521,7 +537,7 @@ function generateDNAFiles() {
         generateFiles([
           scale.dimensionTokens,
           scale.dimensionAliases,
-          elementDimensionOverrides[scaleName]
+          componentDimensionOverrides[scaleName]
         ], scaleName, 'scales');
       }
 
@@ -535,21 +551,23 @@ function generateIndex(source, dest) {
     let lastFile;
     let componentFilenames = [];
     return gulp.src(source)
-     .pipe(through.obj(
-      function(file, enc, cb) {
-        lastFile = file;
-        componentFilenames.push(path.basename(file.path));
-        cb(null);
-      },
-      function(cb) {
-        let vinylFile = lastFile.clone({ contents: false });
-        vinylFile.path = path.join(lastFile.base, 'index.css');
-        vinylFile.contents = Buffer.from(componentFilenames.map(fileName => `@import '${fileName}';`).join('\n'));
-        this.push(vinylFile);
-        cb();
-      }
-    ))
-     .pipe(gulp.dest(dest));
+      .pipe(through.obj(
+        function(file, enc, cb) {
+          lastFile = file;
+          componentFilenames.push(path.basename(file.path));
+          cb(null);
+        },
+        function(cb) {
+          let vinylFile = lastFile.clone({
+            contents: false
+          });
+          vinylFile.path = path.join(lastFile.base, 'index.css');
+          vinylFile.contents = Buffer.from(componentFilenames.map(fileName => `@import '${fileName}';`).join('\n'));
+          this.push(vinylFile);
+          cb();
+        }
+      ))
+      .pipe(gulp.dest(dest));
   }
 }
 

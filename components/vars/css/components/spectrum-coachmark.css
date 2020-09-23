@@ -5,7 +5,7 @@
   --spectrum-coachmark-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-coachmark-shadow-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-coachmark-border-color: var(--spectrum-alias-border-color-dark);
-  --spectrum-coachmark-title-text-color: var(--spectrum-alias-title-text-color);
+  --spectrum-coachmark-title-text-color: var(--spectrum-alias-heading-text-color);
   --spectrum-coachmark-content-text-color: var(--spectrum-alias-text-color);
   --spectrum-coachmark-step-text-color: var(--spectrum-alias-label-text-color);
   --spectrum-coachmark-min-width: var(--spectrum-global-dimension-size-3400);
@@ -66,7 +66,7 @@
   --spectrum-coachmark-quiet-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-coachmark-quiet-shadow-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-coachmark-quiet-border-color: var(--spectrum-alias-border-color-dark);
-  --spectrum-coachmark-quiet-title-text-color: var(--spectrum-alias-title-text-color);
+  --spectrum-coachmark-quiet-title-text-color: var(--spectrum-alias-heading-text-color);
   --spectrum-coachmark-quiet-content-text-color: var(--spectrum-alias-text-color);
   --spectrum-coachmark-quiet-step-text-color: var(--spectrum-alias-label-text-color);
   --spectrum-coachmark-quiet-min-width: var(--spectrum-global-dimension-size-3400);

@@ -224,7 +224,7 @@
   --spectrum-code-han-l-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-l-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-l-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-regular);
-  --spectrum-code-han-l-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-l-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-l-text-transform: none;
   --spectrum-code-han-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-l-margin-bottom-multiplier: 0em;
@@ -235,7 +235,7 @@
   --spectrum-code-han-l-emphasis-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-l-emphasis-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-l-emphasis-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-emphasis);
-  --spectrum-code-han-l-emphasis-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-l-emphasis-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-l-emphasis-text-transform: none;
   --spectrum-code-han-l-emphasis-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-l-emphasis-margin-bottom-multiplier: 0em;
@@ -246,7 +246,7 @@
   --spectrum-code-han-l-emphasis-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-l-emphasis-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-l-emphasis-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-l-emphasis-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-l-emphasis-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-l-emphasis-strong-text-transform: none;
   --spectrum-code-han-l-emphasis-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-l-emphasis-strong-margin-bottom-multiplier: 0em;
@@ -257,7 +257,7 @@
   --spectrum-code-han-l-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-l-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-l-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-l-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-l-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-l-strong-text-transform: none;
   --spectrum-code-han-l-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-l-strong-margin-bottom-multiplier: 0em;
@@ -268,7 +268,7 @@
   --spectrum-code-han-m-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-m-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-m-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-regular);
-  --spectrum-code-han-m-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-m-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-m-text-transform: none;
   --spectrum-code-han-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-m-margin-bottom-multiplier: 0em;
@@ -279,7 +279,7 @@
   --spectrum-code-han-m-emphasis-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-m-emphasis-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-m-emphasis-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-emphasis);
-  --spectrum-code-han-m-emphasis-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-m-emphasis-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-m-emphasis-text-transform: none;
   --spectrum-code-han-m-emphasis-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-m-emphasis-margin-bottom-multiplier: 0em;
@@ -290,7 +290,7 @@
   --spectrum-code-han-m-emphasis-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-m-emphasis-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-m-emphasis-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-m-emphasis-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-m-emphasis-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-m-emphasis-strong-text-transform: none;
   --spectrum-code-han-m-emphasis-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-m-emphasis-strong-margin-bottom-multiplier: 0em;
@@ -301,7 +301,7 @@
   --spectrum-code-han-m-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-m-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-m-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-m-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-m-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-m-strong-text-transform: none;
   --spectrum-code-han-m-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-m-strong-margin-bottom-multiplier: 0em;
@@ -312,7 +312,7 @@
   --spectrum-code-han-s-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-s-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-s-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-regular);
-  --spectrum-code-han-s-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-s-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-s-text-transform: none;
   --spectrum-code-han-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-s-margin-bottom-multiplier: 0em;
@@ -323,7 +323,7 @@
   --spectrum-code-han-s-emphasis-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-s-emphasis-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-s-emphasis-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-emphasis);
-  --spectrum-code-han-s-emphasis-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-s-emphasis-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-s-emphasis-text-transform: none;
   --spectrum-code-han-s-emphasis-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-s-emphasis-margin-bottom-multiplier: 0em;
@@ -334,7 +334,7 @@
   --spectrum-code-han-s-emphasis-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-s-emphasis-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-s-emphasis-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-s-emphasis-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-s-emphasis-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-s-emphasis-strong-text-transform: none;
   --spectrum-code-han-s-emphasis-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-s-emphasis-strong-margin-bottom-multiplier: 0em;
@@ -345,7 +345,7 @@
   --spectrum-code-han-s-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-s-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-s-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-s-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-s-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-s-strong-text-transform: none;
   --spectrum-code-han-s-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-s-strong-margin-bottom-multiplier: 0em;
@@ -356,7 +356,7 @@
   --spectrum-code-han-xl-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xl-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xl-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-regular);
-  --spectrum-code-han-xl-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xl-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xl-text-transform: none;
   --spectrum-code-han-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xl-margin-bottom-multiplier: 0em;
@@ -367,7 +367,7 @@
   --spectrum-code-han-xl-emphasis-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xl-emphasis-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xl-emphasis-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-emphasis);
-  --spectrum-code-han-xl-emphasis-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xl-emphasis-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xl-emphasis-text-transform: none;
   --spectrum-code-han-xl-emphasis-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xl-emphasis-margin-bottom-multiplier: 0em;
@@ -378,7 +378,7 @@
   --spectrum-code-han-xl-emphasis-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xl-emphasis-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xl-emphasis-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-xl-emphasis-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xl-emphasis-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xl-emphasis-strong-text-transform: none;
   --spectrum-code-han-xl-emphasis-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xl-emphasis-strong-margin-bottom-multiplier: 0em;
@@ -389,7 +389,7 @@
   --spectrum-code-han-xl-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xl-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xl-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-xl-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xl-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xl-strong-text-transform: none;
   --spectrum-code-han-xl-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xl-strong-margin-bottom-multiplier: 0em;
@@ -400,7 +400,7 @@
   --spectrum-code-han-xs-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xs-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xs-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-regular);
-  --spectrum-code-han-xs-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xs-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xs-text-transform: none;
   --spectrum-code-han-xs-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xs-margin-bottom-multiplier: 0em;
@@ -411,7 +411,7 @@
   --spectrum-code-han-xs-emphasis-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xs-emphasis-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xs-emphasis-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-emphasis);
-  --spectrum-code-han-xs-emphasis-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xs-emphasis-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xs-emphasis-text-transform: none;
   --spectrum-code-han-xs-emphasis-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xs-emphasis-margin-bottom-multiplier: 0em;
@@ -422,7 +422,7 @@
   --spectrum-code-han-xs-emphasis-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xs-emphasis-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xs-emphasis-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-xs-emphasis-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xs-emphasis-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xs-emphasis-strong-text-transform: none;
   --spectrum-code-han-xs-emphasis-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xs-emphasis-strong-margin-bottom-multiplier: 0em;
@@ -433,7 +433,7 @@
   --spectrum-code-han-xs-strong-text-font-family: var(--spectrum-alias-font-family-zh);
   --spectrum-code-han-xs-strong-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-code-han-xs-strong-text-font-weight: var(--spectrum-alias-han-body-text-font-weight-strong);
-  --spectrum-code-han-xs-strong-text-line-height: var(--spectrum-alias-body-han-text-line-height);
+  --spectrum-code-han-xs-strong-text-line-height: var(--spectrum-alias-han-body-text-line-height);
   --spectrum-code-han-xs-strong-text-transform: none;
   --spectrum-code-han-xs-strong-text-letter-spacing: var(--spectrum-global-font-letter-spacing-han);
   --spectrum-code-han-xs-strong-margin-bottom-multiplier: 0em;

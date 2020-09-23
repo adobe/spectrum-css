@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.3...@spectrum-css/tabs@3.0.0-beta.4)
+
+### 🐛 Bug fixes
+
+* removed deprecated tokens from tabs and tags ([1e543e4](https://github.com/adobe/spectrum-css/commit/1e543e4))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.2...@spectrum-css/tabs@3.0.0-beta.3)

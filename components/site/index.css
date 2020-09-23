@@ -490,6 +490,19 @@ governing permissions and limitations under the License.
   transition: none;
 }
 
+.spectrum-Examples {
+  display: flex;
+  flex-direction: row;
+}
+
+.spectrum-Examples-item {
+  flex: 1;
+}
+
+.spectrum-Examples-item .spectrum-Examples-itemHeading {
+  margin-bottom: var(--spectrum-global-dimension-size-100);
+}
+
 .spectrum-Button.spectrum-CSSExample-overlayShowButton {
   position: absolute;
   inset-inline-start: 50%;

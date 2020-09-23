@@ -1,4 +1,9 @@
 name: Calendar
+sections:
+  - name: Migration Guide
+    description: |
+      ### Previous/Next Icon size change
+      ChevronLeftLarge/ChevronRightLarge was changed to ChevronLeftMedium/ChevronRightMedium.
 examples:
   - id: calendar
     name: Standard

@@ -3,7 +3,12 @@ description: A date picker uses the input group component to display a field wit
 sections:
   - name: Migration Guide
     description: |
-     See the [Combobox migration guide](combobox.html#migrationguide) for migration information.
+      ### Textfiled markup change
+      See the [Combobox migration guide](combobox.html#migrationguide) for migration information.
+      
+      ### Change workflow icon size to medium
+      Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
 
 examples:
   - id: datepicker

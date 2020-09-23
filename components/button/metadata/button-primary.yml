@@ -2,6 +2,11 @@ name: Button - Primary
 status: Verified
 description: The primary button is used for medium emphasis.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Primary
+sections:
+- name: Migration Guide
+  description: |
+    ### Change workflow icon size to medium
+    Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: button-primary
     name: Primary

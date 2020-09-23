@@ -1,6 +1,14 @@
 name: Picker
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/picker/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Component renamed
+      Dropdown is now known as Picker. Replace all `.spectrum-Dropdown*` classnames with `.spectrum-Picker*`.
+
+      ### Change workflow icon size to medium
+      If you use icon in your markup, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: picker
     name: Standard

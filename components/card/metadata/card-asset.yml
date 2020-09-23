@@ -1,5 +1,12 @@
 name: Card - Asset preview
 description: A standard cards with a full-sized asset preview.
+sections:
+  - name: Migration Guide
+    description: |
+      ### Use Spectrum Heading for title and Spectrum Detail for subtitle
+      To make the card component more flexible, products can have more fine control over the typography by using the Heading and Detail components with their corresponding sizes. To be more consistent with previous card designs you can use the following:
+        * Add the `spectrum-Heading` and `spectrum-Heading--XS` or `spectrum-Heading--XXS` to the `spectrum-Card-title` element.
+        * Add the `spectrum-Detail` and `spectrum-Detail--S` classes to `spectrum-Card-subtitle`.
 examples:
   - id: card-asset
     name: Standard
@@ -13,10 +20,10 @@ examples:
           </div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title">Card Title</div>
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Card Title</div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle">jpg</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
             </div>
           </div>
           <div class="spectrum-QuickActions spectrum-Card-quickActions">

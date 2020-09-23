@@ -10,47 +10,56 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   /* Hardcoded for wrapping study.
   Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
-  --spectrum-statuslight-padding-y: var(--spectrum-global-dimension-size-65);
+  --spectrum-statuslight-info-padding-y: var(
+    --spectrum-global-dimension-size-65
+  );
 
   /* Override line-height to fix Firefox */
-  --spectrum-statuslight-text-line-height: 1.44;
+  --spectrum-statuslight-info-text-line-height: 1.44;
 
   /* Override padding to fix alignment of the first line of text (needs to be moved down 1px) */
-  --spectrum-statuslight-padding-top: calc(var(--spectrum-statuslight-padding-y) - 1px);
-  --spectrum-statuslight-padding-bottom: calc(var(--spectrum-statuslight-padding-y) + 1px);
+  --spectrum-statuslight-info-padding-top: calc(
+    var(--spectrum-statuslight-info-padding-y) - 1px
+  );
+  --spectrum-statuslight-info-padding-bottom: calc(
+    var(--spectrum-statuslight-info-padding-y) + 1px
+  );
 }
 
 .spectrum-StatusLight {
-  min-block-size: var(--spectrum-statuslight-height);
+  min-block-size: var(--spectrum-statuslight-info-height);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 
-  padding-block: var(--spectrum-statuslight-padding-top) var(--spectrum-statuslight-padding-bottom);
+  padding-block: var(--spectrum-statuslight-info-padding-top)
+    var(--spectrum-statuslight-info-padding-bottom);
   padding-inline: 0;
   box-sizing: border-box;
 
-  font-size: var(--spectrum-statuslight-text-size);
-  font-weight: var(--spectrum-statuslight-text-font-weight);
-  line-height: var(--spectrum-statuslight-text-line-height);
+  font-size: var(--spectrum-statuslight-info-text-size);
+  font-weight: var(--spectrum-statuslight-info-text-font-weight);
+  line-height: var(--spectrum-statuslight-info-text-line-height);
 
   &::before {
-    content: '';
+    content: "";
     flex-grow: 0;
     flex-shrink: 0;
     display: inline-block;
-    inline-size: var(--spectrum-statuslight-dot-size);
-    block-size: var(--spectrum-statuslight-dot-size);
+    inline-size: var(--spectrum-statuslight-info-dot-size);
+    block-size: var(--spectrum-statuslight-info-dot-size);
     border-radius: 50%;
 
     /* margin on the dog is the opposite of the padding in order to align the dot as if the padding hack was not present */
-    margin-block: var(--spectrum-statuslight-padding-bottom) var(--spectrum-statuslight-padding-top);
-    margin-inline: var(--spectrum-statuslight-text-gap) var(--spectrum-statuslight-text-gap);
+    margin-block: var(--spectrum-statuslight-info-padding-bottom)
+      var(--spectrum-statuslight-info-padding-top);
+    margin-inline: var(--spectrum-statuslight-info-text-gap)
+      var(--spectrum-statuslight-info-text-gap);
 
     /* support high contrast/forced-color-adjust mode for dot */
     -ms-high-contrast-adjust: none;

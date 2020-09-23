@@ -47,7 +47,6 @@ let minimumDeps = [
   'card',
   'divider',
   'illustratedmessage',
-  'fieldlabel',
   'accordion',
   'table'
 ];
@@ -99,6 +98,7 @@ async function buildDocs_forDep(dep) {
           date = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         }
         catch (err) {
+          date = 'Unreleased';
           logger.error(`Could not determine date of release for ${pkg.name}@${pkg.version}`);
         }
 

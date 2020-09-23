@@ -1,4 +1,9 @@
 name: Cycle Button
+sections:
+  - name: Migration Guide
+    description: |
+      ### Change workflow icon size to medium
+      Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: cyclebutton
     name: Standard

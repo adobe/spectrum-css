@@ -16,10 +16,6 @@
     []
   ],
   [
-    "@spectrum-css/alert",
-    []
-  ],
-  [
     "@spectrum-css/asset",
     [
       "@spectrum-css/card"
@@ -38,14 +34,6 @@
     ]
   ],
   [
-    "@spectrum-css/banner",
-    []
-  ],
-  [
-    "@spectrum-css/barloader",
-    []
-  ],
-  [
     "@spectrum-css/breadcrumb",
     []
   ],
@@ -55,7 +43,6 @@
       "@spectrum-css/actionbar",
       "@spectrum-css/actiongroup",
       "@spectrum-css/actionmenu",
-      "@spectrum-css/alert",
       "@spectrum-css/breadcrumb",
       "@spectrum-css/buttongroup",
       "@spectrum-css/calendar",
@@ -104,10 +91,6 @@
       "@spectrum-css/quickaction",
       "@spectrum-css/table"
     ]
-  ],
-  [
-    "@spectrum-css/circleloader",
-    []
   ],
   [
     "@spectrum-css/coachmark",
@@ -237,6 +220,14 @@
     ]
   ],
   [
+    "@spectrum-css/progressbar",
+    []
+  ],
+  [
+    "@spectrum-css/progresscircle",
+    []
+  ],
+  [
     "@spectrum-css/quickaction",
     [
       "@spectrum-css/card"
@@ -294,6 +285,10 @@
     ]
   ],
   [
+    "@spectrum-css/switch",
+    []
+  ],
+  [
     "@spectrum-css/table",
     [
       "@spectrum-css/actionbar"
@@ -326,10 +321,6 @@
   ],
   [
     "@spectrum-css/toast",
-    []
-  ],
-  [
-    "@spectrum-css/toggle",
     []
   ],
   [

@@ -1,0 +1,213 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../commons/index.css";
+
+:root {
+  --spectrum-dial-label-gap-y: var(--spectrum-global-dimension-size-65);
+  --spectrum-dial-handle-position: var(--spectrum-global-dimension-size-100);
+
+  --spectrum-dial-handle-size: 100%;
+  --spectrum-dial-min-height: 0;
+  --spectrum-dial-controls-min-height: 0;
+  --spectrum-dial-controls-margin: calc(
+    var(--spectrum-global-dimension-size-200) / 2
+  );
+
+  --spectrum-dial-handle-border-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-dial-label-text-size: var(--spectrum-body-xs-text-size);
+  --spectrum-dial-label-line-height: var(--spectrum-body-xs-text-line-height);
+}
+
+.spectrum-Dial-label {
+  padding-inline-start: 0;
+  flex-grow: 1;
+}
+
+.spectrum-Dial-value {
+  flex-grow: 0;
+  padding-inline-end: 0;
+  cursor: default;
+}
+
+.spectrum-Dial {
+  position: relative;
+
+  /* Don't let z-index'd child elements float above other things on the page */
+  z-index: 1;
+  user-select: none;
+  display: inline-flex;
+  flex-direction: column;
+  block-size: auto;
+  min-inline-size: var(--spectrum-dial-min-height);
+  min-block-size: var(--spectrum-dial-min-height);
+  inline-size: var(--spectrum-dial-container-width);
+}
+
+.spectrum-Dial-labelContainer {
+  display: flex;
+  position: relative;
+  inline-size: auto;
+  padding-block-start: var(--spectrum-fieldlabel-padding-top);
+  font-size: var(--spectrum-dial-label-text-size);
+  line-height: var(--spectrum-dial-label-line-height);
+  margin-block-end: var(--spectrum-dial-label-gap-y);
+}
+
+.spectrum-Dial-label {
+  &:only-child {
+    /* Only center if we don't have a value */
+    text-align: center;
+  }
+}
+
+.spectrum-Dial-controls {
+  display: inline-block;
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: auto;
+
+  vertical-align: top;
+
+  inline-size: var(--spectrum-dial-width);
+  block-size: var(--spectrum-dial-height);
+  min-block-size: var(--spectrum-dial-controls-min-height);
+  margin-inline-start: var(--spectrum-dial-controls-margin);
+
+  border-radius: var(--spectrum-dial-border-radius);
+  position: relative;
+  display: inline-block;
+  margin: 0;
+
+  box-sizing: border-box;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    inline-size: calc(var(--spectrum-dial-handle-marker-height) * 2);
+    block-size: var(--spectrum-dial-handle-marker-height);
+    border-radius: var(--spectrum-dial-handle-marker-border-radius);
+    position: absolute;
+    inset-block-end: 0;
+  }
+  &::before {
+    inset-inline-start: auto;
+    inset-inline-end: calc(var(--spectrum-dial-handle-marker-height) * -1);
+    transform: rotate(var(--spectrum-dial-min-max-tick-angles));
+  }
+  &::after {
+    inset-inline-start: calc(var(--spectrum-dial-handle-marker-height) * -1);
+    transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
+  }
+}
+
+.spectrum-Dial-handle {
+  position: absolute;
+  inset-inline-start: 0;
+  z-index: 2;
+  display: inline-block;
+  box-sizing: border-box;
+
+  margin-block: calc(var(--spectrum-global-dimension-size-200) / -2) 0;
+  margin-inline: calc(var(--spectrum-global-dimension-size-200) / -2) 0;
+
+  outline: none;
+  cursor: pointer;
+  cursor: grab;
+
+  inline-size: var(--spectrum-dial-handle-size);
+  block-size: var(--spectrum-dial-handle-size);
+  border-width: var(--spectrum-dial-handle-border-size);
+  border-style: solid;
+  box-shadow: none;
+  position: absolute;
+  inset-block-start: var(--spectrum-dial-handle-position);
+  inset-inline-start: var(--spectrum-dial-handle-position);
+  inset-inline-end: var(--spectrum-dial-handle-position);
+  inset-block-end: var(--spectrum-dial-handle-position);
+  border-radius: var(--spectrum-dial-border-radius);
+  transform: rotate(calc(-1 * var(--spectrum-dial-min-max-tick-angles)));
+  cursor: pointer;
+  cursor: grab;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: calc(var(--spectrum-dial-handle-marker-height) * -1);
+    inline-size: var(--spectrum-dial-handle-marker-width);
+    block-size: var(--spectrum-dial-handle-marker-height);
+    border-radius: var(--spectrum-dial-handle-marker-border-radius);
+    transform: translateY(-50%);
+  }
+
+  &:active,
+  &.is-focused,
+  &.is-dragged {
+    border-width: var(--spectrum-dial-handle-border-size);
+    cursor: ns-resize;
+    cursor: grabbing;
+  }
+}
+
+.spectrum-Dial-input {
+  /*  Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0.000001;
+  cursor: default;
+  -webkit-appearance: none;
+  border: 0;
+  pointer-events: none;
+  inline-size: var(--spectrum-dial-handle-size);
+  block-size: var(--spectrum-dial-handle-size);
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.spectrum-Dial--small {
+  .spectrum-Dial-controls {
+    inline-size: var(--spectrum-dial-small-width);
+    block-size: var(--spectrum-dial-small-height);
+  }
+}
+
+.spectrum-Dial {
+  &.is-disabled {
+    cursor: default;
+  }
+}
+
+.u-isGrabbing {
+  cursor: ns-resize;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .spectrum-Dial {
+    .spectrum-Dial-label,
+    .spectrum-Dial-value {
+      cursor: inherit;
+    }
+  }
+}

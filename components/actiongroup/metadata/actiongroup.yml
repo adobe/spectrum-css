@@ -1,5 +1,10 @@
 name: Action Group
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/
+sections:
+- name: Migration Guide
+  description: |
+    ### Change workflow icon size to medium
+    Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: actiongroup
     name: Horizontal
