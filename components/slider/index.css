@@ -218,14 +218,10 @@ governing permissions and limitations under the License.
   transition: border-width var(--spectrum-slider-animation-duration) ease-in-out;
 
   outline: none;
-  cursor: pointer;
-  cursor: grab;
 
   &:active,
   &.is-focused,
   &.is-dragged {
-    cursor: ns-resize;
-    cursor: grabbing;
     border-width: var(--spectrum-slider-handle-border-size-down);
   }
 
@@ -395,25 +391,6 @@ governing permissions and limitations under the License.
     .spectrum-Slider-handle {
       cursor: default;
       pointer-events: none;
-    }
-  }
-}
-
-
-.u-isGrabbing {
-  cursor: ns-resize;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  .spectrum-Slider {
-    .spectrum-Slider-label,
-    .spectrum-Slider-value {
-      cursor: inherit;
     }
   }
 }
