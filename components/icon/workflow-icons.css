@@ -20,6 +20,7 @@ governing permissions and limitations under the License.
   --spectrum-icon-size-xxl: calc(var(--spectrum-icon-size-m) * 3);
 }
 
+/* Hey! Icon sizes changed recently, double check sizing */
 .spectrum-Icon--sizeXXS {
   &,
   img,
