@@ -14,10 +14,10 @@ governing permissions and limitations under the License.
 @import "../overlay/index.css";
 
 :root {
-  --spectrum-dialog-vertical-offset: -2vh;
+  --spectrum-dialog-confirm-vertical-offset: -2vh;
 
   /* Bug: this must be 0ms, not 0 */
-  --spectrum-dialog-exit-animation-delay: 0ms;
+  --spectrum-dialog-confirm-exit-animation-delay: 0ms;
 
   /* Distance between top and bottom of dialog and edge of window for fullscreen dialog */
   --spectrum-dialog-fullscreen-margin: 32px;
@@ -65,7 +65,9 @@ governing permissions and limitations under the License.
   @inherit: %spectrum-overlay;
 
   /* Start offset by the animation distance */
-  transform: translateY(var(--spectrum-dialog-entry-animation-distance));
+  transform: translateY(
+    var(--spectrum-dialog-confirm-entry-animation-distance)
+  );
 
   /* Appear above underlay */
   z-index: 2;
@@ -73,33 +75,37 @@ governing permissions and limitations under the License.
   /* Don't be bigger than the screen */
   max-height: var(--spectrum-dialog-max-height);
 
-  border-radius: var(--spectrum-dialog-border-radius);
+  border-radius: var(--spectrum-dialog-confirm-border-radius);
   overflow: hidden;
   outline: none; /* Firefox shows outline */
   pointer-events: auto;
 
   /* Exit animations */
-  transition: opacity var(--spectrum-dialog-exit-animation-duration)
-      cubic-bezier(0.5, 0, 1, 1) var(--spectrum-dialog-exit-animation-delay),
+  transition: opacity var(--spectrum-dialog-confirm-exit-animation-duration)
+      cubic-bezier(0.5, 0, 1, 1)
+      var(--spectrum-dialog-confirm-exit-animation-delay),
     visibility 0ms linear
       calc(
-        var(--spectrum-dialog-exit-animation-delay) +
-          var(--spectrum-dialog-exit-animation-duration)
+        var(--spectrum-dialog-confirm-exit-animation-delay) +
+          var(--spectrum-dialog-confirm-exit-animation-duration)
       ),
     transform 0ms linear
       calc(
-        var(--spectrum-dialog-exit-animation-delay) +
-          var(--spectrum-dialog-exit-animation-duration)
+        var(--spectrum-dialog-confirm-exit-animation-delay) +
+          var(--spectrum-dialog-confirm-exit-animation-duration)
       );
 
   &.is-open {
     @inherit: %spectrum-overlay--open;
 
     /* Entry animations */
-    transition: transform var(--spectrum-dialog-entry-animation-duration)
-        cubic-bezier(0, 0, 0.4, 1) var(--spectrum-dialog-entry-animation-delay),
-      opacity var(--spectrum-dialog-entry-animation-duration)
-        cubic-bezier(0, 0, 0.4, 1) var(--spectrum-dialog-entry-animation-delay);
+    transition: transform
+        var(--spectrum-dialog-confirm-entry-animation-duration)
+        cubic-bezier(0, 0, 0.4, 1)
+        var(--spectrum-dialog-confirm-entry-animation-delay),
+      opacity var(--spectrum-dialog-confirm-entry-animation-duration)
+        cubic-bezier(0, 0, 0.4, 1)
+        var(--spectrum-dialog-confirm-entry-animation-delay);
 
     transform: translateY(0);
   }

@@ -1,92 +1,151 @@
 name: Radio
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/radio-button/
+description:
+  Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
+
+  Radio buttons should not be used on their own, they should always be used within a [FieldGroup](fieldgroup.html).
 examples:
   - id: radio
     name: Standard
     markup: |
-      <form>
-        <div class="spectrum-Radio">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+
+          <form>
+            <div class="spectrum-Radio">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
         </div>
-        <div class="spectrum-Radio">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
+
+          <form>
+            <div class="spectrum-Radio is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
         </div>
-      </form>
-      <form>
-        <div class="spectrum-Radio">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <form>
+            <div class="spectrum-Radio">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
         </div>
-        <div class="spectrum-Radio">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-        </div>
-      </form>
-      <form>
-        <div class="spectrum-Radio is-invalid">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-        </div>
-        <div class="spectrum-Radio is-invalid">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-        </div>
-      </form>
-      <div class="spectrum-Radio">
-        <input type="radio" name="longname" class="spectrum-Radio-input" id="radio-3">
-        <span class="spectrum-Radio-button"></span>
-        <label class="spectrum-Radio-label" for="radio-3">Radio with an extraordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>
+
   - id: radio-quiet
     name: Quiet
     markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--quiet">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--quiet">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--quiet">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--quiet">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+  - id: radio-labelbelow
+    name: Label below
+    markup: |
       <form>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
+        <div class="spectrum-Radio spectrum-Radio--quiet spectrum-Radio--labelBelow">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
           <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-        </div>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+          <label class="spectrum-Radio-label" for="radio-0">A label</label>
         </div>
       </form>
-      <form>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-        </div>
-        <div class="spectrum-Radio spectrum-Radio--quiet">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-        </div>
-      </form>
-      <form>
-        <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-        </div>
-        <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-        </div>
-      </form>
-      <div class="spectrum-Radio spectrum-Radio--quiet">
-        <input type="radio" name="longname-quiet" class="spectrum-Radio-input" id="radio-4">
+
+  - id: radio-wrapping
+    name: Wrapping behavior
+    markup: |
+      <div class="spectrum-Radio">
+        <input type="radio" name="longname" class="spectrum-Radio-input" id="radio-3">
         <span class="spectrum-Radio-button"></span>
-        <label class="spectrum-Radio-label" for="radio-4">Radio with an extraordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
+        <label class="spectrum-Radio-label" for="radio-3">Radio with an extraordinarily long label please don't do this but if you did it should wrap text when it gets longer than the container which contains the radio which has an unacceptably long label</label>
       </div>

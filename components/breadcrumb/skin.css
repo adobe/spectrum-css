@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Breadcrumbs-item {
-  color: var(--spectrum-breadcrumb-text-color);
+  color: var(--spectrum-breadcrumb-item-text-color);
 
   &.is-dragged {
     .spectrum-Breadcrumbs-itemLink {
@@ -25,18 +25,18 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Breadcrumbs-itemSeparator {
-    color: var(--spectrum-breadcrumb-ui-icon-color);
+    color: var(--spectrum-breadcrumb-separator-icon-color);
   }
 
   .spectrum-Breadcrumbs-itemLink {
     color: inherit;
 
     &:hover {
-      color: var(--spectrum-breadcrumb-text-color-hover);
+      color: var(--spectrum-breadcrumb-item-text-color-hover);
     }
 
     &:focus-ring {
-      color: var(--spectrum-breadcrumb-text-color-key-focus);
+      color: var(--spectrum-breadcrumb-item-text-color-key-focus);
 
       &:before {
         border-color: var(--spectrum-breadcrumb-item-border-color-key-focus);
@@ -44,29 +44,29 @@ governing permissions and limitations under the License.
     }
 
     &:active {
-      color: var(--spectrum-breadcrumb-text-color-down);
+      color: var(--spectrum-breadcrumb-item-text-color-down);
       border-block-end: 0;
     }
 
     &.is-disabled {
-      color: var(--spectrum-label-text-color-disabled);
+      color: var(--spectrum-breadcrumb-item-text-color-disabled);
     }
   }
 
   &.is-selected,
   &:last-of-type {
-    color: var(--spectrum-breadcrumb-text-color-down);
+    color: var(--spectrum-breadcrumb-item-text-color-down);
   }
 
   &.is-selected {
     ~ .spectrum-Breadcrumb {
       &:last-of-type {
-        color: var(--spectrum-breadcrumb-text-color);
+        color: var(--spectrum-breadcrumb-item-text-color);
       }
     }
     .spectrum-Breadcrumbs-itemLink {
       &:focus-ring {
-        color: var(--spectrum-breadcrumb-text-color-down);
+        color: var(--spectrum-breadcrumb-item-text-color-down);
         border-block-end: 0;
       }
     }

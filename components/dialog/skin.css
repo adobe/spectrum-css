@@ -9,30 +9,21 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-:root {
-  --spectrum-dialog-warning-icon-color: var(--spectrum-semantic-notice-color-icon);
-}
 
 .spectrum-Dialog-heading {
-  color: var(--spectrum-dialog-title-text-color);
+  color: var(--spectrum-dialog-confirm-title-text-color);
 }
 
 .spectrum-Dialog-content {
-  color: var(--spectrum-dialog-content-text-color);
+  color: var(--spectrum-dialog-confirm-description-text-color);
 }
 
 .spectrum-Dialog-typeIcon {
-  color: var(--spectrum-dialog-icon-color);
+  color: var(--spectrum-dialog-confirm-icon-color);
 }
 
 .spectrum-Dialog--error {
   .spectrum-Dialog-typeIcon {
     color: var(--spectrum-dialog-error-icon-color);
-  }
-}
-
-.spectrum-Dialog--warning {
-  .spectrum-Dialog-typeIcon {
-    color: var(--spectrum-dialog-warning-icon-color);
   }
 }

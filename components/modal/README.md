@@ -1,5 +1,6 @@
 # @spectrum-css/modal
-> The Spectrum CSS tray component
+
+> The Spectrum CSS modal component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

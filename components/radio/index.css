@@ -10,13 +10,19 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
-  --spectrum-radio-border-width-checked: calc(calc(var(--spectrum-radio-circle-diameter) / 2) - calc(var(--spectrum-radio-circle-dot-size) / 2));
+  --spectrum-radio-border-width-checked: calc(
+    calc(var(--spectrum-radio-circle-diameter) / 2) -
+      calc(var(--spectrum-radio-circle-dot-size) / 2)
+  );
 
-  --spectrum-radio-labelbelow-label-margin: var(--spectrum-global-dimension-size-40) 0 0 0;
+  --spectrum-radio-labelbelow-label-margin: var(
+      --spectrum-global-dimension-size-40
+    )
+    0 0 0;
   --spectrum-radio-labelbelow-height: auto;
 
   /* Hardcoded for wrapping study.
@@ -36,8 +42,6 @@ governing permissions and limitations under the License.
 
   min-block-size: var(--spectrum-radio-height);
   max-inline-size: 100%;
-
-  margin-inline-end: calc(var(--spectrum-radio-cursor-hit-x) * 2);
 
   vertical-align: top;
 }
@@ -60,14 +64,11 @@ governing permissions and limitations under the License.
   /* Remove the padding for [type="radio"] in IE 10-. */
   padding: 0;
 
-  /* Hit area */
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: calc(var(--spectrum-radio-cursor-hit-x) * -1);
-  inline-size: calc(100% + var(--spectrum-radio-cursor-hit-x) * 2);
+  inline-size: 100%;
   block-size: 100%;
 
-  opacity: .0001;
+  opacity: 0.0001;
   z-index: 1;
 
   cursor: pointer;
@@ -96,8 +97,12 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--spectrum-radio-text-gap);
   /* Hardcoded as no good way to calculate this */
   margin-block-start: var(--spectrum-radio-label-margin-top);
+
   font-size: var(--spectrum-radio-text-size);
-  line-height: var(--spectrum-radio-label-line-height);
+  font-weight: var(--spectrum-radio-text-font-weight);
+  font-style: var(--spectrum-radio-text-font-style);
+  line-height: var(--spectrum-radio-text-line-height);
+
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
@@ -108,14 +113,17 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-radio-circle-diameter);
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
-  margin: calc((var(--spectrum-radio-height) - var(--spectrum-radio-circle-diameter)) / 2) 0;
+  margin: calc(
+      (var(--spectrum-radio-height) - var(--spectrum-radio-circle-diameter)) / 2
+    )
+    0;
 
   flex-grow: 0;
   flex-shrink: 0;
   &:before {
     display: block;
     z-index: 0;
-    content: '';
+    content: "";
     box-sizing: border-box;
     position: absolute;
 
@@ -127,12 +135,12 @@ governing permissions and limitations under the License.
     border-style: solid;
 
     transition: border var(--spectrum-global-animation-duration-100) ease-in-out,
-                box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+      box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 
   &:after {
     border-radius: 100%;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;

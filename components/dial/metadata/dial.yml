@@ -1,0 +1,83 @@
+name: Dial
+description: A dial for turning it up to 11.
+examples:
+  - id: dial
+    name: Standard
+    markup: |
+      <div class="spectrum-Dial">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+      <div class="spectrum-Dial is-disabled">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="spectrum-Dial spectrum-Dial--small">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+      <div class="spectrum-Dial spectrum-Dial--small is-disabled">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+  - id: dial
+    name: With label
+    markup: |
+      <div class="spectrum-Dial">
+        <div class="spectrum-Dial-labelContainer">
+          <label id="dialLabel" class="spectrum-Dial-label" for="labeledDial">Label</label>
+          <!--<div class="spectrum-Dial-value" role="textbox" aria-readonly="true" aria-labelledby="dialLabel">54</div>-->
+        </div>
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" id="labeledDial" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+      <div class="spectrum-Dial is-disabled">
+        <div class="spectrum-Dial-labelContainer">
+          <label id="dialLabel" class="spectrum-Dial-label" for="labeledDial">Label</label>
+          <!--<div class="spectrum-Dial-value" role="textbox" aria-readonly="true" aria-labelledby="dialLabel">54</div>-->
+        </div>
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" id="labeledDial" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="spectrum-Dial">
+        <div class="spectrum-Dial-labelContainer">
+          <label id="dialLabel" class="spectrum-Dial-label" for="labeledDial">Label</label>
+          <div class="spectrum-Dial-value" role="textbox" aria-readonly="true" aria-labelledby="dialLabel">54</div>
+        </div>
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" id="labeledDial" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+      <div class="spectrum-Dial is-disabled">
+        <div class="spectrum-Dial-labelContainer">
+          <label id="dialLabel" class="spectrum-Dial-label" for="labeledDial">Label</label>
+          <div class="spectrum-Dial-value" role="textbox" aria-readonly="true" aria-labelledby="dialLabel">54</div>
+        </div>
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" id="labeledDial" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>

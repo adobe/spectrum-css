@@ -11,12 +11,12 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Toast {
-  background-color: var(--spectrum-toast-background-color);
-  color: var(--spectrum-toast-background-color);
+  background-color: var(--spectrum-toast-neutral-background-color);
+  color: var(--spectrum-toast-neutral-background-color);
 }
 
 .spectrum-Toast-content {
-  color: var(--spectrum-toast-text-color);
+  color: var(--spectrum-toast-neutral-text-color);
 }
 
 .spectrum-Toast-typeIcon {
@@ -40,12 +40,12 @@ governing permissions and limitations under the License.
 
 .spectrum-Toast--negative,
 /** @deprecated */.spectrum-Toast--error {
-  background-color: var(--spectrum-toast-error-background-color);
-  color: var(--spectrum-toast-error-background-color);
+  background-color: var(--spectrum-toast-negative-background-color);
+  color: var(--spectrum-toast-negative-background-color);
 
   .spectrum-Toast-closeButton {
     &:focus-ring:not(:active) {
-      color: var(--spectrum-toast-error-background-color);
+      color: var(--spectrum-toast-negative-background-color);
     }
   }
 }

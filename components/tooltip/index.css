@@ -10,8 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
-@import '../overlay/index.css';
+@import "../commons/index.css";
+@import "../overlay/index.css";
 
 :root {
   --spectrum-tooltip-target-offset: 3px;
@@ -37,6 +37,7 @@ governing permissions and limitations under the License.
   padding: var(--spectrum-tooltip-padding-top) var(--spectrum-tooltip-padding-x);
   border-radius: var(--spectrum-tooltip-border-radius);
   min-height: var(--spectrum-tooltip-min-height);
+  max-inline-size: var(--spectrum-tooltip-max-width);
 
   font-size: var(--spectrum-tooltip-text-size);
   font-weight: var(--spectrum-tooltip-text-font-weight);
@@ -134,19 +135,20 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip-typeIcon {
-  margin-inline-start: calc(var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x));
+  margin-inline-start: calc(
+    var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x)
+  );
   margin-inline-end: var(--spectrum-tooltip-icon-margin-x);
   width: var(--spectrum-tooltip-icon-size);
   height: var(--spectrum-tooltip-icon-size);
   align-self: flex-start;
+  flex-shrink: 0;
 
   /* Adjusts for weird misalignment */
   margin-block-start: 1px;
 }
 
 .spectrum-Tooltip-label {
-  max-inline-size: var(--spectrum-tooltip-content-max-width);
-
   /* Make sure line height is correct to prevent problems in Windows */
   line-height: var(--spectrum-tooltip-text-line-height);
 }
@@ -160,7 +162,8 @@ governing permissions and limitations under the License.
     white-space: nowrap;
     /* Required for animations to work, !important for diff scaling to work */
     visibility: visible !important;
-    transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: transform var(--spectrum-global-animation-duration-100)
+      ease-in-out;
     top: -100%;
   }
 
@@ -228,7 +231,10 @@ governing permissions and limitations under the License.
   &:focus .spectrum-Tooltip.spectrum-Tooltip--left,
   &.is-focused .spectrum-Tooltip.spectrum-Tooltip--left,
   *:focus .spectrum-Tooltip.spectrum-Tooltip--left {
-    transform: translate(calc(-100% - var(--spectrum-tooltip-tip-margin)), -50%);
+    transform: translate(
+      calc(-100% - var(--spectrum-tooltip-tip-margin)),
+      -50%
+    );
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--right,

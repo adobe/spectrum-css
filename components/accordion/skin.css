@@ -32,8 +32,10 @@ governing permissions and limitations under the License.
   }
 
   &:focus-ring {
-    &:after  {
-      background-color: var(--spectrum-accordion-border-left-color-key-focus);
+    &:after {
+      background-color: var(
+        --spectrum-accordion-item-border-left-color-key-focus
+      );
     }
   }
 }
