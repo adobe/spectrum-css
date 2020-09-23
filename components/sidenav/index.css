@@ -75,6 +75,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-SideNav-itemIcon {
+    flex-shrink: 0;
     margin-inline-end: var(--spectrum-sidenav-icon-gap);
   }
 }
