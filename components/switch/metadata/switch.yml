@@ -3,6 +3,9 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/switch/
 sections:
   - name: Migration Guide
     description: |
+        ### Component renamed
+        Toggle is now known as Switch. Replace all `.spectrum-ToggleSwitch*` classnames with `.spectrum-Switch*`.
+
         ### Quiet and emphasized
         Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
         If you were using the `quiet` variant, the `.spectrum-Switch--quiet` class is no longer required and can be removed.

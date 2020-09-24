@@ -1,6 +1,11 @@
 name: Progress circle
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/progress-circle/
+sections:
+  - name: Migration Guide
+    description: |
+        ### Component renamed
+        Circle loader is now known as Progress circle. Replace all `.spectrum-CircleLoader*` classnames with `.spectrum-ProgressCircle*`.
 examples:
   - id: progresscircle-small
     name: Standard
