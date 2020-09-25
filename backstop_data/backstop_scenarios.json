@@ -282,6 +282,9 @@
   {
     "label": "progresscircle",
     "url": "progresscircle.html",
+    "removeSelectors": [
+      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
+    ],
     "package": "@spectrum-css/progresscircle"
   },
   {
