@@ -39,11 +39,11 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
+    "@adobe/spectrum-css-workflow-icons": "^1.1.0",
     "@adobe/spectrum-tokens": "6.0.0-beta.17",
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
-    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.3",
+    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.21",
     "audit-ci": "^2.0.1",
     "backstopjs-spectrum": "^5.0.4",
     "del": "^5.1.0",
@@ -59,9 +59,6 @@
     "prismjs": "^1.17.1",
     "semver": "^6.3.0",
     "through2": "^3.0.1"
-  },
-  "optionalDependencies": {
-    "@spectrum/spectrum-icons": "^2.3.0"
   },
   "resolutions": {
     "dot-prop": "^5.2.0",

@@ -111,22 +111,11 @@ function copyPackages() {
     .pipe(gulp.dest('dist/components/'));
 }
 
-function copyIcons() {
-  // lerna bug: require.resolve() won't find spectrum-icons within spectrum-css-compat, so we have to assume it's at the top level
-  // note: maybe it needs a package.main?
-  return gulp.src([
-    `${dirs.topLevel}/node_modules/@spectrum/spectrum-icons/dist/svg/**`,
-    `${dirs.topLevel}/node_modules/@spectrum/spectrum-icons/dist/lib/**`
-  ])
-    .pipe(gulp.dest('dist/icons/'));
-};
-
 function buildIfTopLevel() {
   let builtTasks = gulp.parallel(
     docs.build,
     buildCombined,
     buildStandalone,
-    copyIcons,
     copyPackages
   );
 
@@ -155,7 +144,6 @@ let buildLite = gulp.series(
   },
   gulp.parallel(
     docs.build,
-    copyIcons,
     copyPackages
   )
 );
@@ -167,7 +155,6 @@ let buildHeavy = gulp.series(
   },
   gulp.parallel(
     docs.build,
-    copyIcons,
     copyPackages
   )
 );
@@ -186,7 +173,7 @@ else {
     clean,
     gulp.parallel(
       docs.build,
-      copyIcons,
+
       copyPackages
     ),
     dev.watch
