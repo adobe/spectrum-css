@@ -1,5 +1,10 @@
-name: Progress Bar
+name: Progress bar
 SpectrumSiteSlug: https://spectrum.adobe.com/page/progress-bar/
+sections:
+  - name: Migration Guide
+    description: |
+        ### Component renamed
+        Bar loader is now known as Progress bar. Replace all `.spectrum-BarLoader*` classnames with `.spectrum-ProgressBar*`.
 examples:
   - id: progressbar-small
     name: Standard

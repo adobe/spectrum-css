@@ -9,7 +9,9 @@
   ],
   [
     "@spectrum-css/actiongroup",
-    []
+    [
+      "@spectrum-css/actionbar"
+    ]
   ],
   [
     "@spectrum-css/actionmenu",
@@ -127,6 +129,10 @@
     []
   ],
   [
+    "@spectrum-css/dial",
+    []
+  ],
+  [
     "@spectrum-css/dialog",
     [
       "@spectrum-css/popover",
@@ -151,7 +157,9 @@
   ],
   [
     "@spectrum-css/fieldgroup",
-    []
+    [
+      "@spectrum-css/fieldlabel"
+    ]
   ],
   [
     "@spectrum-css/fieldlabel",
@@ -340,6 +348,7 @@
   [
     "@spectrum-css/typography",
     [
+      "@spectrum-css/card",
       "@spectrum-css/illustratedmessage"
     ]
   ],
