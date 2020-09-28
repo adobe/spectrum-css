@@ -1,5 +1,5 @@
 :root {
-  --spectrum-toast-info-background-color: var(--spectrum-global-color-static-blue-700);
+  --spectrum-toast-info-background-color: var(--spectrum-semantic-informative-color-background);
   --spectrum-toast-info-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-info-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-info-rule-color: var(--spectrum-alias-track-color-over-background);
@@ -45,7 +45,7 @@
   --spectrum-toast-info-exit-animation-keyframe-0-offset-y: var(--spectrum-global-dimension-static-size-200);
   --spectrum-toast-info-exit-animation-keyframe-100-opacity: 0%;
   --spectrum-toast-info-exit-animation-keyframe-100-offset-y: var(--spectrum-global-dimension-static-percent-50);
-  --spectrum-toast-negative-background-color: var(--spectrum-global-color-static-red-700);
+  --spectrum-toast-negative-background-color: var(--spectrum-semantic-negative-color-background);
   --spectrum-toast-negative-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-negative-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-negative-rule-color: var(--spectrum-alias-track-color-over-background);
@@ -91,7 +91,7 @@
   --spectrum-toast-negative-exit-animation-keyframe-0-offset-y: var(--spectrum-global-dimension-static-size-200);
   --spectrum-toast-negative-exit-animation-keyframe-100-opacity: 0%;
   --spectrum-toast-negative-exit-animation-keyframe-100-offset-y: var(--spectrum-global-dimension-static-percent-50);
-  --spectrum-toast-neutral-background-color: var(--spectrum-global-color-static-gray-700);
+  --spectrum-toast-neutral-background-color: var(--spectrum-semantic-neutral-background-color-default);
   --spectrum-toast-neutral-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-neutral-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-neutral-rule-color: var(--spectrum-alias-track-color-over-background);
@@ -137,7 +137,7 @@
   --spectrum-toast-neutral-exit-animation-keyframe-0-offset-y: var(--spectrum-global-dimension-static-size-200);
   --spectrum-toast-neutral-exit-animation-keyframe-100-opacity: 0%;
   --spectrum-toast-neutral-exit-animation-keyframe-100-offset-y: var(--spectrum-global-dimension-static-percent-50);
-  --spectrum-toast-positive-background-color: var(--spectrum-global-color-static-green-700);
+  --spectrum-toast-positive-background-color: var(--spectrum-semantic-positive-color-background);
   --spectrum-toast-positive-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-positive-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-positive-rule-color: var(--spectrum-alias-track-color-over-background);

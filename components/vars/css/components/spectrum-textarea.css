@@ -170,7 +170,6 @@
   --spectrum-textarea-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-textarea-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-textarea-text-transform: none;
-  --spectrum-textarea-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-textarea-height: var(--spectrum-alias-single-line-height);
   --spectrum-textarea-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-textarea-padding-x: var(--spectrum-global-dimension-size-150);
@@ -363,7 +362,6 @@
   --spectrum-textarea-quiet-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-textarea-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-textarea-quiet-text-transform: none;
-  --spectrum-textarea-quiet-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-textarea-quiet-height: var(--spectrum-alias-single-line-height);
   --spectrum-textarea-quiet-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-textarea-quiet-padding-x: 0;

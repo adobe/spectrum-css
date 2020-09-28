@@ -31,6 +31,7 @@
   --spectrum-button-cta-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-text-transform: none;
   --spectrum-button-cta-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-cta-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-cta-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-cta-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-cta-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -70,6 +71,7 @@
   --spectrum-button-over-background-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-text-transform: none;
   --spectrum-button-over-background-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-over-background-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-over-background-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-over-background-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-over-background-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -112,6 +114,7 @@
   --spectrum-button-primary-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-text-transform: none;
   --spectrum-button-primary-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-primary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-primary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-primary-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-primary-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -122,7 +125,6 @@
   --spectrum-button-primary-text-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-button-primary-text-size: var(--spectrum-alias-pill-button-text-size);
   --spectrum-button-primary-text-baseline: var(--spectrum-alias-pill-button-text-baseline);
-  --spectrum-button-primary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-quiet-over-background-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-button-quiet-over-background-border-color: var(--spectrum-alias-border-color-transparent);
@@ -155,6 +157,7 @@
   --spectrum-button-quiet-over-background-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-text-transform: none;
   --spectrum-button-quiet-over-background-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-quiet-over-background-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-quiet-over-background-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-over-background-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-quiet-over-background-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -197,6 +200,7 @@
   --spectrum-button-quiet-primary-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-text-transform: none;
   --spectrum-button-quiet-primary-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-quiet-primary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-quiet-primary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-primary-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-quiet-primary-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -207,7 +211,6 @@
   --spectrum-button-quiet-primary-text-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-primary-text-size: var(--spectrum-alias-pill-button-text-size);
   --spectrum-button-quiet-primary-text-baseline: var(--spectrum-alias-pill-button-text-baseline);
-  --spectrum-button-quiet-primary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-quiet-secondary-icon-color: var(--spectrum-global-color-gray-700);
   --spectrum-button-quiet-secondary-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-button-quiet-secondary-border-color: var(--spectrum-alias-border-color-transparent);
@@ -240,6 +243,7 @@
   --spectrum-button-quiet-secondary-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-text-transform: none;
   --spectrum-button-quiet-secondary-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-quiet-secondary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-quiet-secondary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-secondary-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-quiet-secondary-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -250,7 +254,6 @@
   --spectrum-button-quiet-secondary-text-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-secondary-text-size: var(--spectrum-alias-pill-button-text-size);
   --spectrum-button-quiet-secondary-text-baseline: var(--spectrum-alias-pill-button-text-baseline);
-  --spectrum-button-quiet-secondary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-quiet-warning-icon-color: var(--spectrum-semantic-negative-color-text-small);
   --spectrum-button-quiet-warning-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-button-quiet-warning-border-color: var(--spectrum-alias-border-color-transparent);
@@ -283,6 +286,7 @@
   --spectrum-button-quiet-warning-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-text-transform: none;
   --spectrum-button-quiet-warning-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-quiet-warning-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-quiet-warning-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-quiet-warning-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-quiet-warning-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -293,7 +297,6 @@
   --spectrum-button-quiet-warning-text-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-button-quiet-warning-text-size: var(--spectrum-alias-pill-button-text-size);
   --spectrum-button-quiet-warning-text-baseline: var(--spectrum-alias-pill-button-text-baseline);
-  --spectrum-button-quiet-warning-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-secondary-icon-color: var(--spectrum-global-color-gray-700);
   --spectrum-button-secondary-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-button-secondary-border-color: var(--spectrum-global-color-gray-700);
@@ -326,6 +329,7 @@
   --spectrum-button-secondary-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-text-transform: none;
   --spectrum-button-secondary-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-secondary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-secondary-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-secondary-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-secondary-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -336,7 +340,6 @@
   --spectrum-button-secondary-text-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-button-secondary-text-size: var(--spectrum-alias-pill-button-text-size);
   --spectrum-button-secondary-text-baseline: var(--spectrum-alias-pill-button-text-baseline);
-  --spectrum-button-secondary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-warning-icon-color: var(--spectrum-semantic-negative-color-text-small);
   --spectrum-button-warning-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-button-warning-border-color: var(--spectrum-semantic-negative-color-text-small);
@@ -369,6 +372,7 @@
   --spectrum-button-warning-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-text-transform: none;
   --spectrum-button-warning-height: var(--spectrum-alias-single-line-height);
+  --spectrum-button-warning-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-button-warning-text-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-button-warning-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-button-warning-icon-padding-left: var(--spectrum-global-dimension-size-175);
@@ -379,5 +383,4 @@
   --spectrum-button-warning-text-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-button-warning-text-size: var(--spectrum-alias-pill-button-text-size);
   --spectrum-button-warning-text-baseline: var(--spectrum-alias-pill-button-text-baseline);
-  --spectrum-button-warning-icon-size: var(--spectrum-alias-workflow-icon-size-m);
 }
