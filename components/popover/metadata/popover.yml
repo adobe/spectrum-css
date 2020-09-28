@@ -27,7 +27,7 @@ examples:
     name: Popover - Dialog style
     description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
-      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation" style="max-width:320px">
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
         <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
@@ -45,7 +45,7 @@ examples:
       <br>
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation" style="max-width:320px">
+      <div class="spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
         <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
@@ -63,7 +63,7 @@ examples:
       <br>
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation" style="max-width:320px">
+      <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
         <section class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--error" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
