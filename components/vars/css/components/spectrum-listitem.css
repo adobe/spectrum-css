@@ -33,6 +33,7 @@
   --spectrum-listitem-divider-color: var(--spectrum-alias-border-color-extralight);
   --spectrum-listitem-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-divider-padding: 3px;
+  --spectrum-listitem-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-listitem-option-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-listitem-option-padding: var(--spectrum-global-dimension-static-size-150);
   --spectrum-listitem-option-padding-y: var(--spectrum-global-dimension-size-85);
@@ -45,7 +46,6 @@
   --spectrum-listitem-padding-left: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-padding-right: var(--spectrum-global-dimension-size-450);
   --spectrum-listitem-option-icon-padding-x: var(--spectrum-global-dimension-size-150);
-  --spectrum-listitem-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-listitem-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-listitem-thumbnail-option-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-thumbnail-option-text-color: var(--spectrum-alias-text-color);
@@ -79,6 +79,7 @@
   --spectrum-listitem-thumbnail-image-border-color: var(--spectrum-alias-border-color-translucent-dark);
   --spectrum-listitem-thumbnail-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-thumbnail-divider-padding: 3px;
+  --spectrum-listitem-thumbnail-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-listitem-thumbnail-option-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-listitem-thumbnail-option-padding: var(--spectrum-global-dimension-static-size-150);
   --spectrum-listitem-thumbnail-option-padding-y: var(--spectrum-global-dimension-size-85);
