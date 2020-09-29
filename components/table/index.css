@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
 
   &.is-sorted-asc {
     .spectrum-Table-sortedIcon {
-      transform: rotateZ(180deg);
+      transform: rotateZ(-90deg);
     }
   }
 }
