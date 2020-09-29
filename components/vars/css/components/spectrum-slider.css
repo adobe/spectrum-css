@@ -2,6 +2,7 @@
   --spectrum-slider-handle-border-color: var(--spectrum-global-color-gray-700);
   --spectrum-slider-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-track-color: var(--spectrum-global-color-gray-300);
+  --spectrum-slider-value-text-color: var(--spectrum-alias-text-color);
   --spectrum-slider-handle-border-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-slider-handle-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-track-color-hover: var(--spectrum-global-color-gray-300);
@@ -20,6 +21,7 @@
   --spectrum-slider-handle-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-slider-handle-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-track-color-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-slider-value-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-slider-track-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-slider-track-height: var(--spectrum-alias-border-size-thick);
   --spectrum-slider-handle-border-size: var(--spectrum-alias-border-size-thick);
@@ -36,6 +38,14 @@
   --spectrum-slider-label-gap-y: 0px;
   --spectrum-slider-label-gap-x: var(--spectrum-global-dimension-size-200);
   --spectrum-slider-text-baseline: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slider-value-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-slider-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-slider-value-text-line-height: var(--spectrum-global-font-line-height-small);
+  --spectrum-slider-value-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slider-value-gap-y: 0px;
+  --spectrum-slider-value-gap-x: var(--spectrum-global-dimension-size-200);
+  --spectrum-slider-value-text-alignment: right;
+  --spectrum-slider-value-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-slider-track-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-slider-track-cursor-hit-y: var(--spectrum-global-dimension-size-200);
   --spectrum-slider-hot-text-cursor-hit-y: var(--spectrum-global-dimension-size-100);
@@ -44,6 +54,7 @@
   --spectrum-slider-editable-handle-border-color: var(--spectrum-global-color-gray-700);
   --spectrum-slider-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-editable-track-color: var(--spectrum-global-color-gray-300);
+  --spectrum-slider-editable-value-text-color: var(--spectrum-alias-text-color);
   --spectrum-slider-editable-handle-border-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-slider-editable-handle-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-editable-track-color-hover: var(--spectrum-global-color-gray-300);
@@ -62,6 +73,7 @@
   --spectrum-slider-editable-handle-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-slider-editable-handle-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-editable-track-color-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-slider-editable-value-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-slider-editable-track-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-slider-editable-track-height: var(--spectrum-alias-border-size-thick);
   --spectrum-slider-editable-handle-border-size: var(--spectrum-alias-border-size-thick);
@@ -78,6 +90,14 @@
   --spectrum-slider-editable-label-gap-y: 0px;
   --spectrum-slider-editable-label-gap-x: var(--spectrum-global-dimension-size-200);
   --spectrum-slider-editable-text-baseline: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slider-editable-value-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-slider-editable-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-slider-editable-value-text-line-height: var(--spectrum-global-font-line-height-small);
+  --spectrum-slider-editable-value-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slider-editable-value-gap-y: 0px;
+  --spectrum-slider-editable-value-gap-x: var(--spectrum-global-dimension-size-200);
+  --spectrum-slider-editable-value-text-alignment: right;
+  --spectrum-slider-editable-value-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-slider-editable-track-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-slider-editable-track-cursor-hit-y: var(--spectrum-global-dimension-size-200);
   --spectrum-slider-editable-hot-text-cursor-hit-y: var(--spectrum-global-dimension-size-100);
@@ -87,6 +107,7 @@
   --spectrum-slider-fill-handle-border-color: var(--spectrum-global-color-gray-700);
   --spectrum-slider-fill-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-fill-track-color: var(--spectrum-global-color-gray-700);
+  --spectrum-slider-fill-value-text-color: var(--spectrum-alias-text-color);
   --spectrum-slider-fill-handle-border-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-slider-fill-handle-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-fill-track-color-hover: var(--spectrum-global-color-gray-700);
@@ -105,6 +126,7 @@
   --spectrum-slider-fill-handle-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-slider-fill-handle-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-fill-track-color-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-slider-fill-value-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-slider-fill-track-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-slider-fill-track-height: var(--spectrum-alias-border-size-thick);
   --spectrum-slider-fill-handle-border-size: var(--spectrum-alias-border-size-thick);
@@ -121,6 +143,14 @@
   --spectrum-slider-fill-label-gap-y: 0px;
   --spectrum-slider-fill-label-gap-x: var(--spectrum-global-dimension-size-200);
   --spectrum-slider-fill-text-baseline: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slider-fill-value-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-slider-fill-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-slider-fill-value-text-line-height: var(--spectrum-global-font-line-height-small);
+  --spectrum-slider-fill-value-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slider-fill-value-gap-y: 0px;
+  --spectrum-slider-fill-value-gap-x: var(--spectrum-global-dimension-size-200);
+  --spectrum-slider-fill-value-text-alignment: right;
+  --spectrum-slider-fill-value-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-slider-fill-track-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-slider-fill-track-cursor-hit-y: var(--spectrum-global-dimension-size-200);
   --spectrum-slider-fill-hot-text-cursor-hit-y: var(--spectrum-global-dimension-size-100);
