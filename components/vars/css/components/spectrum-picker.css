@@ -127,6 +127,7 @@
   --spectrum-picker-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-picker-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-picker-text-transform: none;
+  --spectrum-picker-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-picker-border-size-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-picker-ui-icon-height: 6px;
   --spectrum-picker-ui-icon-width: var(--spectrum-global-dimension-static-size-125);
@@ -274,6 +275,7 @@
   --spectrum-picker-quiet-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-picker-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-picker-quiet-text-transform: none;
+  --spectrum-picker-quiet-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-picker-quiet-border-size-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-picker-quiet-ui-icon-height: 6px;
   --spectrum-picker-quiet-ui-icon-width: var(--spectrum-global-dimension-static-size-125);
@@ -423,6 +425,7 @@
   --spectrum-picker-thumbnail-small-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-picker-thumbnail-small-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-picker-thumbnail-small-text-transform: none;
+  --spectrum-picker-thumbnail-small-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-picker-thumbnail-small-border-size-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-picker-thumbnail-small-ui-icon-height: 6px;
   --spectrum-picker-thumbnail-small-ui-icon-width: var(--spectrum-global-dimension-static-size-125);

@@ -115,6 +115,7 @@
   --spectrum-fieldbutton-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-fieldbutton-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-fieldbutton-text-transform: none;
+  --spectrum-fieldbutton-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-fieldbutton-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-fieldbutton-border-size-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-fieldbutton-ui-icon-height: 6px;
@@ -252,6 +253,7 @@
   --spectrum-fieldbutton-quiet-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-fieldbutton-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-fieldbutton-quiet-text-transform: none;
+  --spectrum-fieldbutton-quiet-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-fieldbutton-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-fieldbutton-quiet-border-size-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-fieldbutton-quiet-ui-icon-height: 6px;
