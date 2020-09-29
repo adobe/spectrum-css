@@ -15,28 +15,6 @@ governing permissions and limitations under the License.
   --spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-icon-size-l: var(--spectrum-alias-workflow-icon-size-l);
   --spectrum-icon-size-xl: var(--spectrum-alias-workflow-icon-size-xl);
-  --spectrum-icon-size-xxs: calc(var(--spectrum-icon-size-s) / 2);
-  --spectrum-icon-size-xs: calc(var(--spectrum-icon-size-m) / 2);
-  --spectrum-icon-size-xxl: calc(var(--spectrum-icon-size-m) * 3);
-}
-
-/* Hey! Icon sizes changed recently, double check sizing */
-.spectrum-Icon--sizeXXS {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-xxs);
-    inline-size: var(--spectrum-icon-size-xxs);
-  }
-}
-
-.spectrum-Icon--sizeXS {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-xs);
-    inline-size: var(--spectrum-icon-size-xs);
-  }
 }
 
 .spectrum-Icon--sizeS {
@@ -72,14 +50,5 @@ governing permissions and limitations under the License.
   svg {
     block-size: var(--spectrum-icon-size-xl);
     inline-size: var(--spectrum-icon-size-xl);
-  }
-}
-
-.spectrum-Icon--sizeXXL {
-  &,
-  img,
-  svg {
-    block-size: var(--spectrum-icon-size-xxl);
-    inline-size: var(--spectrum-icon-size-xxl);
   }
 }
