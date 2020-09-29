@@ -54,10 +54,10 @@ function bakeVars() {
     let usedVars = {};
     variableList.forEach(varName => {
       if (varName.indexOf('spectrum-global') !== -1) {
-        logger.warn(`${pkg.name} directly uses global variable ${varName}`);
+        logger.warn(`⚠️  ${pkg.name} directly uses global variable ${varName}`);
       }
       else if (!allVars[varName]) {
-        logger.warn(`${pkg.name} uses undefined variable ${varName}`);
+        logger.error(`🚨 ${pkg.name} uses undefined variable ${varName}`);
       }
       else {
         usedVars[varName] = vars[varName];

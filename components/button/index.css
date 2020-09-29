@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @import "../commons/index.css";
+@import "../commons/basebutton.css";
 
 :root {
   /* Todo: fix in DNA, should have been zero */
@@ -162,102 +163,12 @@ governing permissions and limitations under the License.
   }
 }
 
-a.spectrum-Button,
-a.spectrum-ActionButton {
-  /* Remove appearance for clickable types in iOS and Safari. */
-  -webkit-appearance: none;
-  /* Make link text not selectable  */
-  user-select: none;
+a.spectrum-Button {
+  @inherit: %spectrum-AnchorButton;
 }
 
-.spectrum-ActionButton {
-  @inherit: %spectrum-BaseButton;
-  position: relative;
-
-  block-size: var(--spectrum-actionbutton-height);
-  min-inline-size: var(--spectrum-actionbutton-min-width);
-
-  /* Use icon padding by default as it's smaller */
-  padding: 0
-    calc(
-      var(--spectrum-actionbutton-icon-padding-x) -
-        var(--spectrum-actionbutton-border-size)
-    );
-
-  border-width: var(--spectrum-actionbutton-border-size);
-  border-radius: var(--spectrum-actionbutton-border-radius);
-
-  font-size: var(--spectrum-actionbutton-text-size);
-  font-weight: var(--spectrum-actionbutton-text-font-weight);
-
-  .spectrum-Icon + .spectrum-ActionButton-label {
-    /* Have icon padding on the left */
-    padding-inline-start: var(--spectrum-actionbutton-icon-padding-x);
-
-    /* Have text padding on the right */
-    padding-inline-end: calc(
-      var(--spectrum-actionbutton-text-padding-x) -
-        var(--spectrum-actionbutton-icon-padding-x)
-    );
-  }
-
-  .spectrum-Icon--sizeM:only-child {
-    /* Position absolutely to avoid layout errors introduced by padding */
-    position: absolute;
-    inset-block-start: calc(
-      50% - calc(var(--spectrum-actionbutton-icon-size) / 2)
-    );
-    inset-inline-start: calc(
-      50% - calc(var(--spectrum-actionbutton-icon-size) / 2)
-    );
-  }
-
-  .spectrum-ActionButton-label:only-child {
-    /* Add padding for text only buttons */
-    padding: 0
-      calc(
-        var(--spectrum-actionbutton-text-padding-x) -
-          var(--spectrum-actionbutton-icon-padding-x)
-      );
-  }
-}
-
-.spectrum-ActionButton-hold {
-  position: absolute;
-  inset-inline-end: var(--spectrum-actionbutton-hold-icon-padding-right);
-  inset-block-end: var(--spectrum-actionbutton-hold-icon-padding-bottom);
-
-  transform: logical rotate(0deg);
-}
-
-.spectrum-ActionButton-label,
 .spectrum-Button-label {
-  align-self: center;
-  justify-self: center;
-
-  /* Fixes horizontal alignment of text in anchor buttons */
-  text-align: center;
-
-  /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-  /*inline-size: 100%;*/
-
-  &:empty {
-    display: none;
-  }
-}
-
-.spectrum-ActionButton-label {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.spectrum-ActionButton--quiet {
-  border-width: var(--spectrum-actionbutton-quiet-border-size);
-  border-radius: var(--spectrum-actionbutton-quiet-border-radius);
-
-  font-size: var(--spectrum-actionbutton-quiet-text-size);
-  font-weight: var(--spectrum-actionbutton-quiet-text-font-weight);
+  @inherit: %spectrum-ButtonLabel;
 }
 
 .spectrum-LogicButton {
