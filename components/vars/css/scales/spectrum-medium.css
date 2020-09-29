@@ -367,15 +367,15 @@
   --spectrum-switch-emphasized-track-width: 26px;
   --spectrum-switch-emphasized-handle-border-radius: 7px;
   --spectrum-switch-emphasized-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tabs-baseline: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-focus-ring-border-radius: 5px;
+  --spectrum-tabs-margin-left: -8px;
+  --spectrum-tabs-margin-right: -8px;
   --spectrum-tabs-compact-focus-ring-border-radius: 5px;
   --spectrum-tabs-compact-margin-left: -8px;
   --spectrum-tabs-compact-margin-right: -8px;
   --spectrum-tabs-compact-vertical-focus-ring-border-radius: 5px;
   --spectrum-tabs-compact-vertical-emphasized-focus-ring-border-radius: 5px;
-  --spectrum-tabs-baseline: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-focus-ring-border-radius: 5px;
-  --spectrum-tabs-margin-left: -8px;
-  --spectrum-tabs-margin-right: -8px;
   --spectrum-tabs-emphasized-baseline: var(--spectrum-global-dimension-size-225);
   --spectrum-tabs-emphasized-focus-ring-border-radius: 5px;
   --spectrum-tabs-emphasized-margin-left: -8px;
@@ -414,7 +414,6 @@
   --spectrum-tooltip-negative-padding-bottom: 5px;
   --spectrum-tooltip-padding-bottom: 5px;
   --spectrum-tooltip-positive-padding-bottom: 5px;
-  --spectrum-tooltip-positive-content-max-width: 101px;
 
   /* TODO: Remove the following temporary placeholder  */
 
@@ -484,4 +483,5 @@
 
   /* None ui icon */
   --spectrum-alias-workflow-icon-size-l: var(--spectrum-global-dimension-static-size-250);
+
 }

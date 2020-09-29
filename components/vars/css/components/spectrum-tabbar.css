@@ -23,6 +23,7 @@
   --spectrum-tabbar-primary-background-color: var(--spectrum-alias-background-color-primary);
   --spectrum-tabbar-primary-height: 49px;
   --spectrum-tabbar-primary-border-size: 1px;
+  --spectrum-tabbar-primary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-primary-padding-top: var(--spectrum-global-dimension-static-size-100);
   --spectrum-tabbar-primary-padding-bottom: 3px;
   --spectrum-tabbar-primary-icon-gap: var(--spectrum-global-dimension-static-size-50);
@@ -55,6 +56,7 @@
   --spectrum-tabbar-primary-sidelabel-background-color: var(--spectrum-alias-background-color-primary);
   --spectrum-tabbar-primary-sidelabel-height: 49px;
   --spectrum-tabbar-primary-sidelabel-border-size: 1px;
+  --spectrum-tabbar-primary-sidelabel-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-primary-sidelabel-padding-top: var(--spectrum-global-dimension-static-size-100);
   --spectrum-tabbar-primary-sidelabel-padding-bottom: 3px;
   --spectrum-tabbar-primary-sidelabel-icon-gap: var(--spectrum-global-dimension-static-size-50);
@@ -91,6 +93,7 @@
   --spectrum-tabbar-secondary-background-color: var(--spectrum-alias-background-color-primary);
   --spectrum-tabbar-secondary-height: 49px;
   --spectrum-tabbar-secondary-border-size: 1px;
+  --spectrum-tabbar-secondary-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-secondary-padding-top: var(--spectrum-global-dimension-static-size-100);
   --spectrum-tabbar-secondary-padding-bottom: 3px;
   --spectrum-tabbar-secondary-icon-gap: var(--spectrum-global-dimension-static-size-50);
@@ -123,6 +126,7 @@
   --spectrum-tabbar-secondary-sidelabel-background-color: var(--spectrum-alias-background-color-secondary);
   --spectrum-tabbar-secondary-sidelabel-height: 49px;
   --spectrum-tabbar-secondary-sidelabel-border-size: 1px;
+  --spectrum-tabbar-secondary-sidelabel-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-secondary-sidelabel-padding-top: var(--spectrum-global-dimension-static-size-100);
   --spectrum-tabbar-secondary-sidelabel-padding-bottom: 3px;
   --spectrum-tabbar-secondary-sidelabel-icon-gap: var(--spectrum-global-dimension-static-size-50);
