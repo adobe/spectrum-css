@@ -116,6 +116,22 @@
   --spectrum-alias-heading-xs-margin-top: var(--spectrum-global-dimension-font-size-100);
   --spectrum-alias-heading-xxs-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-alias-heading-xxs-margin-top: var(--spectrum-global-dimension-font-size-75);
+
+  /* icon */
+  --spectrum-alias-workflow-icon-size-s: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-workflow-icon-size-m: var(--spectrum-global-dimension-size-225);
+  --spectrum-alias-workflow-icon-size-xl: var(--spectrum-global-dimension-size-275);
+  --spectrum-alias-ui-icon-alert-size-75: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-ui-icon-alert-size-100: var(--spectrum-global-dimension-size-225);
+  --spectrum-alias-ui-icon-alert-size-200: var(--spectrum-global-dimension-size-250);
+  --spectrum-alias-ui-icon-alert-size-300: var(--spectrum-global-dimension-size-275);
+  --spectrum-alias-ui-icon-triplegripper-size-100-height: var(--spectrum-global-dimension-size-100);
+  --spectrum-alias-ui-icon-doublegripper-size-100-width: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-ui-icon-singlegripper-size-100-width: var(--spectrum-global-dimension-size-300);
+  --spectrum-alias-ui-icon-cornertriangle-size-75: var(--spectrum-global-dimension-size-65);
+  --spectrum-alias-ui-icon-cornertriangle-size-200: var(--spectrum-global-dimension-size-75);
+  --spectrum-alias-ui-icon-asterisk-size-75: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-alias-ui-icon-asterisk-size-100: var(--spectrum-global-dimension-size-100);
   --spectrum-alias-avatar-size-50: var(--spectrum-global-dimension-size-200);
   --spectrum-alias-avatar-size-75: var(--spectrum-global-dimension-size-225);
   --spectrum-alias-avatar-size-200: var(--spectrum-global-dimension-size-275);

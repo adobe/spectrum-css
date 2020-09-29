@@ -40,7 +40,7 @@ examples:
         </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 215px"></div>
+      <div class="dummy-spacing" style="height: 240px"></div>
 
       <br>
       <br>
@@ -58,7 +58,7 @@ examples:
         </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 215px"></div>
+      <div class="dummy-spacing" style="height: 240px"></div>
 
       <br>
       <br>
@@ -67,8 +67,8 @@ examples:
         <section class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--error" role="dialog" tabindex="-1" aria-modal="true">
           <div class="spectrum-Dialog-grid" style="display: grid;">
             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
-            <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
+            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Alert"></use>
             </svg>
             <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
             <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
@@ -87,4 +87,4 @@ examples:
         </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 290px"></div>
+      <div class="dummy-spacing" style="height: 320px"></div>

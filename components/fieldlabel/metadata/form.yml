@@ -28,8 +28,8 @@ examples:
             <div class="spectrum-Picker" style="width: 195px;">
               <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="true">
                 <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
-                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
               </button>
             </div>
@@ -43,8 +43,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
                 <span class="spectrum-Checkbox-label">Kittens</span>
@@ -52,8 +52,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
                 <span class="spectrum-Checkbox-label">Dogs</span>
@@ -71,13 +71,13 @@ examples:
               </div>
               <span class="spectrum-Stepper-buttons">
                 <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75" />
                   </svg>
                 </button>
                 <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75" />
                   </svg>
                 </button>
               </span>
@@ -112,8 +112,8 @@ examples:
             <div class="spectrum-Picker" style="width: 195px;">
               <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="true">
                 <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
-                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
               </button>
             </div>
@@ -127,8 +127,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
                 <span class="spectrum-Checkbox-label">Kittens</span>
@@ -136,8 +136,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
                 <span class="spectrum-Checkbox-label">Dogs</span>
@@ -155,13 +155,13 @@ examples:
               </div>
               <span class="spectrum-Stepper-buttons">
                 <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75" />
                   </svg>
                 </button>
                 <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75" />
                   </svg>
                 </button>
               </span>
@@ -196,8 +196,8 @@ examples:
             <div class="spectrum-Picker" style="width: 195px;">
               <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="true">
                 <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
-                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+                <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
                 </svg>
               </button>
             </div>
@@ -224,8 +224,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
                 <span class="spectrum-Checkbox-label">Checkbox</span>
@@ -233,8 +233,8 @@ examples:
               <label class="spectrum-Checkbox spectrum-FieldGroup-item">
                 <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
                 </span>
                 <span class="spectrum-Checkbox-label">Checkbox</span>
@@ -252,13 +252,13 @@ examples:
               </div>
               <span class="spectrum-Stepper-buttons">
                 <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUpSmall spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronUpSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronUp75 spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75" />
                   </svg>
                 </button>
                 <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownSmall spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronDownSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown75 spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron75" />
                   </svg>
                 </button>
               </span>

@@ -166,6 +166,10 @@
     []
   ],
   [
+    "@spectrum-css/form",
+    []
+  ],
+  [
     "@spectrum-css/illustratedmessage",
     [
       "@spectrum-css/dropzone"
@@ -214,6 +218,7 @@
     "@spectrum-css/picker",
     [
       "@spectrum-css/fieldlabel",
+      "@spectrum-css/form",
       "@spectrum-css/searchwithin",
       "@spectrum-css/tabs"
     ]

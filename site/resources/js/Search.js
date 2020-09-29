@@ -18,14 +18,14 @@ function Search(el) {
 <div class="spectrum-Site-search" role="search">
   <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
     <div class="spectrum-Textfield">
-      <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-Magnifier" />
+      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-icon-18-Magnify" />
       </svg>
       <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input js-input" autocomplete="off">
     </div>
     <button type="reset" value="Reset" class="spectrum-ClearButton spectrum-Search-clearButton js-clearButton" tabindex="-1" hidden>
-      <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-CrossSmall" />
+      <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-Cross75" />
       </svg>
     </button>
   </form>

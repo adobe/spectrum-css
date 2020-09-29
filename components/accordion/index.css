@@ -27,6 +27,8 @@ governing permissions and limitations under the License.
   --spectrum-accordion-animation-duration: var(
     --spectrum-global-animation-duration-100
   );
+  /* Override dna accordion icon width */
+  --spectrum-accordion-icon-width: var(--spectrum-global-dimension-size-125);
 }
 
 .spectrum-Accordion {

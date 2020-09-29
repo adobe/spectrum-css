@@ -31,9 +31,6 @@ governing permissions and limitations under the License.
   /* Fix alignment, it's not quite centered */
   inset-block-start: var(--spectrum-global-dimension-size-10);
 
-  inline-size: var(--spectrum-breadcrumb-separator-icon-width);
-  block-size: var(--spectrum-breadcrumb-separator-icon-height);
-
   transform: logical scale(1) rotate(0deg);
 
   opacity: 1;

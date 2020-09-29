@@ -37,8 +37,8 @@ examples:
     description: Field label for a required field.
     markup: |
       <label for="lifestory5" class="spectrum-FieldLabel">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-Asterisk" />
+        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Asterisk100" />
         </svg>
       </label>
       <div class="spectrum-Textfield">
@@ -54,8 +54,8 @@ examples:
       <br/>
 
       <label for="lifestory7" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-Asterisk" />
+        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Asterisk100" />
         </svg>
       </label>
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
@@ -64,8 +64,8 @@ examples:
 
 
       <label for="lifestory8" class="spectrum-FieldLabel is-disabled">Life Story
-        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-Asterisk" />
+        <svg class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Asterisk100" />
         </svg>
       </label>
       <div class="spectrum-Textfield is-disabled">

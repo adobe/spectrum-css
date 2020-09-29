@@ -63,8 +63,8 @@ examples:
         </div>
         <div class="spectrum-Datepicker-rangeDash"></div>
         <div class="spectrum-Textfield is-invalid spectrum-InputGroup-textfield">
-          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-Alert" />
           </svg>
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="">
         </div>
@@ -116,8 +116,8 @@ examples:
         </div>
         <div class="spectrum-Datepicker-rangeDash"></div>
         <div class="spectrum-Textfield spectrum-InputGroup-textfield is-invalid">
-          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-Alert" />
           </svg>
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
         </div>
@@ -153,8 +153,8 @@ examples:
         </div>
         <div class="spectrum-Datepicker-rangeDash"></div>
         <div class="spectrum-Textfield is-invalid spectrum-Textfield--quiet spectrum-InputGroup-textfield">
-          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-Alert" />
           </svg>
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="true" placeholder="mm/dd/yyyy" name="end" value="2018-10-30">
         </div>
@@ -205,8 +205,8 @@ examples:
         </div>
         <div class="spectrum-Datepicker-rangeDash"></div>
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield is-invalid">
-          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-AlertMedium" />
+          <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-icon-18-Alert" />
           </svg>
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input spectrum-Datepicker-endField" aria-invalid="false" placeholder="mm/dd/yyyy hh:mm a" name="end" value="">
         </div>

@@ -201,7 +201,7 @@ a.spectrum-ActionButton {
     );
   }
 
-  .spectrum-Icon--sizeS:only-child {
+  .spectrum-Icon--sizeM:only-child {
     /* Position absolutely to avoid layout errors introduced by padding */
     position: absolute;
     inset-block-start: calc(
