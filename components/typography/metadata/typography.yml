@@ -24,7 +24,7 @@ examples:
 
       [View the Body typography component](typography-body.html)
     markup: |
-      <p class="spectrum-Body spectrum-Body--M">Spectrum is based on real-world situations.</p>
+      <p class="spectrum-Body spectrum-Body--sizeM">Spectrum is based on real-world situations.</p>
   - id: detail-m
     status: Verified
     name: Detail
@@ -33,7 +33,7 @@ examples:
 
       [View the Detail typography component](typography-detail.html)
     markup: |
-      <p class="spectrum-Detail spectrum-Detail--XL">Our recommendations</p>
+      <p class="spectrum-Detail spectrum-Detail--sizeXL">Our recommendations</p>
   - id: code-m
     name: Code
     status: Verified
@@ -42,22 +42,22 @@ examples:
 
       [View the Code typography component](typography-code.html)
     markup: |
-      <code class="spectrum-Code spectrum-Code--S">alert("Hello world");</code>
+      <code class="spectrum-Code spectrum-Code--sizeS">alert("Hello world");</code>
 sections:
   - name: Applying margins
     description: |
       By default, Typography components do not include outer margins. If you would like to add margins, simply add the `.spectrum-Typography` class to your container, and every typography component inside of your container will have the correct margins.
     markup: |
       <div class="spectrum-Typography">
-        <h1 class="spectrum-Heading spectrum-Heading--XL">Aliquet Mauris Eu</h1>
-        <p class="spectrum-Body spectrum-Body--XL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXL">Aliquet Mauris Eu</h1>
+        <p class="spectrum-Body spectrum-Body--sizeXL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</p>
       </div>
 
   - name: Migrating from deprecated Typography
     description: |
       See the table below to reference what will need to change when migrating to the new Typography API. Cells with a dash indicate the typography style did not exist in the previous API.
 
-      Note that all instances of typography now require the component class in addition to the modifier class. For example, to get a large Heading, you will need the `.spectrum-Heading--L` modifier class as well as the `.spectrum-Heading` component class.
+      Note that all instances of typography now require the component class in addition to the modifier class. For example, to get a large Heading, you will need the `.spectrum-Heading--sizeL` modifier class as well as the `.spectrum-Heading` component class.
 
       ### Heading
 
@@ -116,4 +116,4 @@ sections:
       | `~.spectrum-Code-2~` | `.spectrum-Code--L` |
       | `~.spectrum-Code-3~` | `.spectrum-Code--M` |
       | `~.spectrum-Code-4~` | `.spectrum-Code--S` |
-      | `~.spectrum-Code-5~` | `.spectrum-Code--XS`|
+      | `~.spectrum-Code-5~` | `.spectrum-Code--sizeXS`|

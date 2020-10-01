@@ -51,16 +51,12 @@ const postcssReal = require('postcss');
  * @returns {string} Spectrum CSS t-shirt sized token name
  */
 function getTShirtTokenName(name) {
-  tokenName = name.replace(/\.?([A-Z]{,1}$ |[0-9])/g,
-    function (x, y) {
-      return '-' + y
-    })
-    .replace(/([A-Z]{1,})/g,
-      function (x, y) {
-        return '-' + y
-      })
-    .replace(/^-/, '');
-  tokenName = tokenName.replace('.spectrum--', '').replace('--', '');
+  tokenName = name
+    .replace(/-{1,2}(size)([A-Z]*)/, (match, p1, p2) => `--${p2}`)
+    .replace(/\.?([A-Z]{,1}$ |[0-9])/g, (match, p1) => `-${p1}`)
+    .replace(/([A-Z]{1,})/g, (match, p1) => `-${p1}`)
+    .replace(/^-/, "");
+  tokenName = tokenName.replace(".spectrum--", "").replace("--", "");
   tokenName = tokenName.toLowerCase();
   return tokenName;
 }
