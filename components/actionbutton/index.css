@@ -111,7 +111,8 @@ a.spectrum-ActionButton {
   block-size: var(--spectrum-actionbutton-height);
   min-inline-size: var(--spectrum-actionbutton-min-width);
 
-  padding-inline: var(--spectrum-actionbutton-icononly-padding-left) var(--spectrum-actionbutton-icononly-padding-right);
+  /* Start with text padding */
+  padding-inline: var(--spectrum-actionbutton-padding-left) var(--spectrum-actionbutton-padding-right);
 
   border-width: var(--spectrum-actionbutton-border-size);
   border-radius: var(--spectrum-actionbutton-border-radius);
@@ -127,8 +128,15 @@ a.spectrum-ActionButton {
     /* Have gap on on the left */
     padding-inline-start: var(--spectrum-actionbutton-icon-gap);
 
-    /* Have text padding on the right */
-    padding-inline-end: calc(var(--spectrum-actionbutton-padding-right) - var(--spectrum-actionbutton-icononly-padding-right));
+    /* Have no padding on the right (it's built into the element) */
+    padding-inline-end: 0;
+  }
+
+  .spectrum-ActionButton-hold + .spectrum-Icon,
+  .spectrum-Icon:only-child {
+    /* Use icon-only padding */
+    margin-left: calc(-1 * (var(--spectrum-actionbutton-padding-left) - var(--spectrum-actionbutton-icononly-padding-left)));
+    margin-right: calc(-1 * (var(--spectrum-actionbutton-padding-right) - var(--spectrum-actionbutton-icononly-padding-right)));
   }
 }
 
@@ -138,11 +146,6 @@ a.spectrum-ActionButton {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  &:only-child {
-    /* Add padding for text only buttons */
-    padding-inline: calc(var(--spectrum-actionbutton-padding-left) - var(--spectrum-actionbutton-icononly-padding-left)) calc(var(--spectrum-actionbutton-padding-right) - var(--spectrum-actionbutton-icononly-padding-right));
-  }
 }
 
 .spectrum-ActionButton-hold {
