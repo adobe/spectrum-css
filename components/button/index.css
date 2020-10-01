@@ -55,6 +55,10 @@ governing permissions and limitations under the License.
     box-shadow: none;
   }
 
+  .spectrum-Icon {
+    @inherit: %spectrum-ButtonIcon;
+  }
+
   .spectrum-Icon + .spectrum-Button-label {
     margin-inline-start: var(--spectrum-button-primary-text-gap);
   }

@@ -13,15 +13,12 @@ governing permissions and limitations under the License.
 @import "../commons/index.css";
 @import "../commons/basebutton.css";
 
-:root {
-  --spectrum-actionbutton-s-text-padding-x: var(--spectrum-global-dimension-size-150);
-  --spectrum-actionbutton-m-text-padding-x: var(--spectrum-global-dimension-size-160);
-  --spectrum-actionbutton-l-text-padding-x: var(--spectrum-global-dimension-size-175);
-  --spectrum-actionbutton-xl-text-padding-x: var(--spectrum-global-dimension-size-200);
-}
-
 .spectrum-ActionButton--M {
   /* Set up default variables, size medium */
+  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-m-padding-left);
+  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-m-padding-right);
+  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-m-icononly-padding-left);
+  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-m-icononly-padding-right);
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-m-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-m-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-m-height);
@@ -35,11 +32,14 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-quiet-text-font-weight: var(--spectrum-actionbutton-m-quiet-text-font-weight);
   --spectrum-actionbutton-quiet-text-size: var(--spectrum-actionbutton-m-quiet-text-size);
   --spectrum-actionbutton-text-font-weight: var(--spectrum-actionbutton-m-text-font-weight);
-  --spectrum-actionbutton-text-padding-x: var(--spectrum-actionbutton-m-text-padding-x);
   --spectrum-actionbutton-text-size: var(--spectrum-actionbutton-m-text-size);
 }
 
 .spectrum-ActionButton--S {
+  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-s-padding-left);
+  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-s-padding-right);
+  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-s-icononly-padding-left);
+  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-s-icononly-padding-right);
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-s-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-s-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-s-height);
@@ -47,17 +47,21 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-s-hold-icon-padding-right);
   --spectrum-actionbutton-icon-gap: var(--spectrum-actionbutton-s-icon-gap);
   --spectrum-actionbutton-icon-size: var(--spectrum-actionbutton-s-icon-size);
-  --spectrum-actionbutton-min-width: var(--spectrum-actionbutton-s-min-width);
+  /*--spectrum-actionbutton-min-width: var(--spectrum-actionbutton-s-min-width);*/
+  --spectrum-actionbutton-min-width: var(--spectrum-global-dimension-static-size-300); /* todo: fix in DNA */
   --spectrum-actionbutton-quiet-border-radius: var(--spectrum-actionbutton-s-quiet-border-radius);
   --spectrum-actionbutton-quiet-border-size: var(--spectrum-actionbutton-s-quiet-border-size);
   --spectrum-actionbutton-quiet-text-font-weight: var(--spectrum-actionbutton-s-quiet-text-font-weight);
   --spectrum-actionbutton-quiet-text-size: var(--spectrum-actionbutton-s-quiet-text-size);
   --spectrum-actionbutton-text-font-weight: var(--spectrum-actionbutton-s-text-font-weight);
-  --spectrum-actionbutton-text-padding-x: var(--spectrum-actionbutton-s-text-padding-x);
   --spectrum-actionbutton-text-size: var(--spectrum-actionbutton-s-text-size);
 }
 
 .spectrum-ActionButton--L {
+  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-l-padding-left);
+  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-l-padding-right);
+  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-l-icononly-padding-left);
+  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-l-icononly-padding-right);
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-l-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-l-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-l-height);
@@ -71,11 +75,15 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-quiet-text-font-weight: var(--spectrum-actionbutton-l-quiet-text-font-weight);
   --spectrum-actionbutton-quiet-text-size: var(--spectrum-actionbutton-l-quiet-text-size);
   --spectrum-actionbutton-text-font-weight: var(--spectrum-actionbutton-l-text-font-weight);
-  --spectrum-actionbutton-text-padding-x: var(--spectrum-actionbutton-l-text-padding-x);
   --spectrum-actionbutton-text-size: var(--spectrum-actionbutton-l-text-size);
 }
 
 .spectrum-ActionButton--XL {
+  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-xl-padding-left);
+  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-xl-padding-right);
+  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-xl-icononly-padding-left);
+  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-xl-icononly-padding-right);
+  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-xl-padding-left);
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-xl-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-xl-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-xl-height);
@@ -89,7 +97,6 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-quiet-text-font-weight: var(--spectrum-actionbutton-xl-quiet-text-font-weight);
   --spectrum-actionbutton-quiet-text-size: var(--spectrum-actionbutton-xl-quiet-text-size);
   --spectrum-actionbutton-text-font-weight: var(--spectrum-actionbutton-xl-text-font-weight);
-  --spectrum-actionbutton-text-padding-x: var(--spectrum-actionbutton-xl-text-padding-x);
   --spectrum-actionbutton-text-size: var(--spectrum-actionbutton-xl-text-size);
 }
 
@@ -104,8 +111,7 @@ a.spectrum-ActionButton {
   block-size: var(--spectrum-actionbutton-height);
   min-inline-size: var(--spectrum-actionbutton-min-width);
 
-  /* Use icon padding by default as it's smaller */
-  padding: 0 calc(var(--spectrum-actionbutton-icon-gap) - var(--spectrum-actionbutton-border-size));
+  padding-inline: var(--spectrum-actionbutton-icononly-padding-left) var(--spectrum-actionbutton-icononly-padding-right);
 
   border-width: var(--spectrum-actionbutton-border-size);
   border-radius: var(--spectrum-actionbutton-border-radius);
@@ -113,28 +119,29 @@ a.spectrum-ActionButton {
   font-size: var(--spectrum-actionbutton-text-size);
   font-weight: var(--spectrum-actionbutton-text-font-weight);
 
+  .spectrum-Icon {
+    @inherit: %spectrum-ButtonIcon;
+  }
+
   .spectrum-Icon + .spectrum-ActionButton-label {
-    /* Have icon padding on the left */
+    /* Have gap on on the left */
     padding-inline-start: var(--spectrum-actionbutton-icon-gap);
 
     /* Have text padding on the right */
-    padding-inline-end: calc(var(--spectrum-actionbutton-text-padding-x) - var(--spectrum-actionbutton-icon-gap));
+    padding-inline-end: calc(var(--spectrum-actionbutton-padding-right) - var(--spectrum-actionbutton-icononly-padding-right));
   }
+}
 
-  .spectrum-Icon--sizeS:only-child {
-    /* Position absolutely to avoid layout errors introduced by padding */
-    position: absolute;
-    inset-block-start: calc(
-      50% - calc(var(--spectrum-actionbutton-icon-size) / 2)
-    );
-    inset-inline-start: calc(
-      50% - calc(var(--spectrum-actionbutton-icon-size) / 2)
-    );
-  }
+.spectrum-ActionButton-label {
+  @inherit: %spectrum-ButtonLabel;
 
-  .spectrum-ActionButton-label:only-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:only-child {
     /* Add padding for text only buttons */
-    padding: 0 calc(var(--spectrum-actionbutton-text-padding-x) - var(--spectrum-actionbutton-icon-gap));
+    padding-inline: calc(var(--spectrum-actionbutton-padding-left) - var(--spectrum-actionbutton-icononly-padding-left)) calc(var(--spectrum-actionbutton-padding-right) - var(--spectrum-actionbutton-icononly-padding-right));
   }
 }
 
@@ -144,16 +151,6 @@ a.spectrum-ActionButton {
   inset-block-end: var(--spectrum-actionbutton-hold-icon-padding-bottom);
 
   transform: logical rotate(0deg);
-}
-
-.spectrum-ActionButton-label{
-  @inherit: %spectrum-ButtonLabel;
-}
-
-.spectrum-ActionButton-label {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .spectrum-ActionButton--quiet {

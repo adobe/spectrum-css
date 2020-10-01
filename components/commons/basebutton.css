@@ -82,11 +82,11 @@ governing permissions and limitations under the License.
   &.is-disabled {
     cursor: default;
   }
+}
 
-  .spectrum-Icon {
-    max-block-size: 100%;
-    flex-shrink: 0;
-  }
+%spectrum-ButtonIcon {
+  max-block-size: 100%;
+  flex-shrink: 0;
 }
 
 %spectrum-ButtonWithFocusRing {
