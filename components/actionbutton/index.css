@@ -47,8 +47,7 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-s-hold-icon-padding-right);
   --spectrum-actionbutton-icon-gap: var(--spectrum-actionbutton-s-icon-gap);
   --spectrum-actionbutton-icon-size: var(--spectrum-actionbutton-s-icon-size);
-  /*--spectrum-actionbutton-min-width: var(--spectrum-actionbutton-s-min-width);*/
-  --spectrum-actionbutton-min-width: var(--spectrum-global-dimension-static-size-300); /* todo: fix in DNA */
+  --spectrum-actionbutton-min-width: var(--spectrum-actionbutton-s-min-width);
   --spectrum-actionbutton-quiet-border-radius: var(--spectrum-actionbutton-s-quiet-border-radius);
   --spectrum-actionbutton-quiet-border-size: var(--spectrum-actionbutton-s-quiet-border-size);
   --spectrum-actionbutton-quiet-text-font-weight: var(--spectrum-actionbutton-s-quiet-text-font-weight);
