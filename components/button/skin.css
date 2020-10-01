@@ -10,11 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
-  /* Overridden because of the way we draw focus rings */
-  --spectrum-actionbutton-s-quiet-border-size-key-focus: 1px;
-}
-
 .spectrum-LogicButton,
 .spectrum-Button {
   &:focus-ring,
