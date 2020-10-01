@@ -1,5 +1,5 @@
-# @spectrum-css/button
-> The Spectrum CSS button component
+# @spectrum-css/actionbuttonbutton
+> The Spectrum CSS action button component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
