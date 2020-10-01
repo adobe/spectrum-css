@@ -15,10 +15,10 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionButton--sizeM {
   /* Set up default variables, size medium */
-  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-m-padding-left);
-  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-m-padding-right);
-  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-m-icononly-padding-left);
-  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-m-icononly-padding-right);
+  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-m-padding-left) - var(--spectrum-actionbutton-m-border-size));
+  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-m-padding-right) - var(--spectrum-actionbutton-m-border-size));
+  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-m-icononly-padding-left) - var(--spectrum-actionbutton-m-border-size));
+  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-m-icononly-padding-right) - var(--spectrum-actionbutton-m-border-size));
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-m-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-m-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-m-height);
@@ -36,10 +36,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeS {
-  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-s-padding-left);
-  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-s-padding-right);
-  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-s-icononly-padding-left);
-  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-s-icononly-padding-right);
+  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-s-padding-left) - var(--spectrum-actionbutton-s-border-size));
+  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-s-padding-right) - var(--spectrum-actionbutton-s-border-size));
+  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-s-icononly-padding-left) - var(--spectrum-actionbutton-s-border-size));
+  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-s-icononly-padding-right) - var(--spectrum-actionbutton-s-border-size));
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-s-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-s-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-s-height);
@@ -58,10 +58,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeL {
-  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-l-padding-left);
-  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-l-padding-right);
-  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-l-icononly-padding-left);
-  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-l-icononly-padding-right);
+  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-l-padding-left) - var(--spectrum-actionbutton-l-border-size));
+  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-l-padding-right) - var(--spectrum-actionbutton-l-border-size));
+  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-l-icononly-padding-left) - var(--spectrum-actionbutton-l-border-size));
+  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-l-icononly-padding-right) - var(--spectrum-actionbutton-l-border-size));
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-l-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-l-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-l-height);
@@ -79,10 +79,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeXL {
-  --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-xl-padding-left);
-  --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-xl-padding-right);
-  --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-xl-icononly-padding-left);
-  --spectrum-actionbutton-icononly-padding-right: var(--spectrum-actionbutton-xl-icononly-padding-right);
+  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-xl-padding-left) - var(--spectrum-actionbutton-xl-border-size));
+  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-xl-padding-right) - var(--spectrum-actionbutton-xl-border-size));
+  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-xl-icononly-padding-left) - var(--spectrum-actionbutton-xl-border-size));
+  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-xl-icononly-padding-right) - var(--spectrum-actionbutton-xl-border-size));
   --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-xl-padding-left);
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-xl-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-xl-border-size);
