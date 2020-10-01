@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "../commons/index.css";
 @import "../commons/basebutton.css";
 
-.spectrum-ActionButton--M {
+.spectrum-ActionButton--sizeM {
   /* Set up default variables, size medium */
   --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-m-padding-left);
   --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-m-padding-right);
@@ -35,7 +35,7 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-text-size: var(--spectrum-actionbutton-m-text-size);
 }
 
-.spectrum-ActionButton--S {
+.spectrum-ActionButton--sizeS {
   --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-s-padding-left);
   --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-s-padding-right);
   --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-s-icononly-padding-left);
@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-text-size: var(--spectrum-actionbutton-s-text-size);
 }
 
-.spectrum-ActionButton--L {
+.spectrum-ActionButton--sizeL {
   --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-l-padding-left);
   --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-l-padding-right);
   --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-l-icononly-padding-left);
@@ -78,7 +78,7 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-text-size: var(--spectrum-actionbutton-l-text-size);
 }
 
-.spectrum-ActionButton--XL {
+.spectrum-ActionButton--sizeXL {
   --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-xl-padding-left);
   --spectrum-actionbutton-padding-right: var(--spectrum-actionbutton-xl-padding-right);
   --spectrum-actionbutton-icononly-padding-left: var(--spectrum-actionbutton-xl-icononly-padding-left);
