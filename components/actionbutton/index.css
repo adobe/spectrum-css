@@ -24,6 +24,8 @@ extra-large: 7x7pm hold icon, 6px from the edge
   /* Set up default variables, size medium */
   --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-m-padding-left) - var(--spectrum-actionbutton-m-border-size));
   --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-m-padding-right) - var(--spectrum-actionbutton-m-border-size));
+  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-m-textonly-padding-left) - var(--spectrum-actionbutton-m-border-size));
+  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-m-textonly-padding-right) - var(--spectrum-actionbutton-m-border-size));
   --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-m-icononly-padding-left) - var(--spectrum-actionbutton-m-border-size));
   --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-m-icononly-padding-right) - var(--spectrum-actionbutton-m-border-size));
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-m-border-radius);
@@ -52,6 +54,8 @@ extra-large: 7x7pm hold icon, 6px from the edge
 .spectrum-ActionButton--sizeS {
   --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-s-padding-left) - var(--spectrum-actionbutton-s-border-size));
   --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-s-padding-right) - var(--spectrum-actionbutton-s-border-size));
+  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-s-textonly-padding-left) - var(--spectrum-actionbutton-s-border-size));
+  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-s-textonly-padding-right) - var(--spectrum-actionbutton-s-border-size));
   --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-s-icononly-padding-left) - var(--spectrum-actionbutton-s-border-size));
   --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-s-icononly-padding-right) - var(--spectrum-actionbutton-s-border-size));
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-s-border-radius);
@@ -82,6 +86,8 @@ extra-large: 7x7pm hold icon, 6px from the edge
   --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-l-padding-right) - var(--spectrum-actionbutton-l-border-size));
   --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-l-icononly-padding-left) - var(--spectrum-actionbutton-l-border-size));
   --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-l-icononly-padding-right) - var(--spectrum-actionbutton-l-border-size));
+  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-l-textonly-padding-left) - var(--spectrum-actionbutton-l-border-size));
+  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-l-textonly-padding-right) - var(--spectrum-actionbutton-l-border-size));
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-l-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-l-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-l-height);
@@ -108,6 +114,8 @@ extra-large: 7x7pm hold icon, 6px from the edge
 .spectrum-ActionButton--sizeXL {
   --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-xl-padding-left) - var(--spectrum-actionbutton-xl-border-size));
   --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-xl-padding-right) - var(--spectrum-actionbutton-xl-border-size));
+  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-xl-textonly-padding-left) - var(--spectrum-actionbutton-xl-border-size));
+  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-xl-textonly-padding-right) - var(--spectrum-actionbutton-xl-border-size));
   --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-xl-icononly-padding-left) - var(--spectrum-actionbutton-xl-border-size));
   --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-xl-icononly-padding-right) - var(--spectrum-actionbutton-xl-border-size));
   --spectrum-actionbutton-padding-left: var(--spectrum-actionbutton-xl-padding-left);
@@ -145,8 +153,8 @@ a.spectrum-ActionButton {
   block-size: var(--spectrum-actionbutton-height);
   min-inline-size: var(--spectrum-actionbutton-min-width);
 
-  /* Start with text padding */
-  padding-inline: var(--spectrum-actionbutton-padding-left) var(--spectrum-actionbutton-padding-right);
+  /* Start with text-only padding */
+  padding-inline: var(--spectrum-actionbutton-textonly-padding-left) var(--spectrum-actionbutton-textonly-padding-right);
 
   border-width: var(--spectrum-actionbutton-border-size);
   border-radius: var(--spectrum-actionbutton-border-radius);
@@ -157,21 +165,27 @@ a.spectrum-ActionButton {
 
   .spectrum-Icon {
     @inherit: %spectrum-ButtonIcon;
+
+    /* Scoot over, assuming we have both icon and text */
+    margin-inline-start: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-left) - var(--spectrum-actionbutton-padding-left)));
   }
 
   .spectrum-Icon + .spectrum-ActionButton-label {
     /* Have gap on on the left */
     padding-inline-start: var(--spectrum-actionbutton-icon-gap);
 
-    /* Have no padding on the right (it's built into the element) */
+    /*
+      Have no padding on the right (it's built into the element)
+      This will fail if --spectrum-actionbutton-textonly-padding-right !== --spectrum-actionbutton-padding-right
+    */
     padding-inline-end: 0;
   }
 
   .spectrum-ActionButton-hold + .spectrum-Icon,
   .spectrum-Icon:only-child {
-    /* Use icon-only padding */
-    margin-left: calc(-1 * (var(--spectrum-actionbutton-padding-left) - var(--spectrum-actionbutton-icononly-padding-left)));
-    margin-right: calc(-1 * (var(--spectrum-actionbutton-padding-right) - var(--spectrum-actionbutton-icononly-padding-right)));
+    /* Use icon-only padding, subtracted from the default text-only padding */
+    margin-left: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-left) - var(--spectrum-actionbutton-icononly-padding-left)));
+    margin-right: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-right) - var(--spectrum-actionbutton-icononly-padding-right)));
   }
 }
 
