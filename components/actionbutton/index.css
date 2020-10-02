@@ -13,6 +13,13 @@ governing permissions and limitations under the License.
 @import "../commons/index.css";
 @import "../commons/basebutton.css";
 
+/*
+small: 5x5px hold icon, 3px from the edge
+medium: 5x5px hold icon, 4px from the edge
+large: 6x6px hold icon, 5px from the edge
+extra-large: 7x7pm hold icon, 6px from the edge
+*/
+
 .spectrum-ActionButton--sizeM {
   /* Set up default variables, size medium */
   --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-m-padding-left) - var(--spectrum-actionbutton-m-border-size));
@@ -22,8 +29,14 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-m-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-m-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-m-height);
+
+  /* todo: remove hardcoded values when we update DNA */
+  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
+  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-40);
+/*
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-m-hold-icon-padding-bottom);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-m-hold-icon-padding-right);
+*/
   --spectrum-actionbutton-icon-gap: var(--spectrum-actionbutton-m-icon-gap);
   --spectrum-actionbutton-icon-size: var(--spectrum-actionbutton-m-icon-size);
   --spectrum-actionbutton-min-width: var(--spectrum-actionbutton-m-min-width);
@@ -43,8 +56,14 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-s-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-s-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-s-height);
+
+  /* todo: remove hardcoded values when we update DNA */
+  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-25);
+  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-25);
+/*
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-s-hold-icon-padding-bottom);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-s-hold-icon-padding-right);
+*/
   --spectrum-actionbutton-icon-gap: var(--spectrum-actionbutton-s-icon-gap);
   --spectrum-actionbutton-icon-size: var(--spectrum-actionbutton-s-icon-size);
   --spectrum-actionbutton-min-width: var(--spectrum-actionbutton-s-min-width);
@@ -64,8 +83,14 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-l-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-l-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-l-height);
+
+  /* todo: remove hardcoded values when we update DNA */
+  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-50);
+/*
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-l-hold-icon-padding-bottom);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-l-hold-icon-padding-right);
+*/
   --spectrum-actionbutton-icon-gap: var(--spectrum-actionbutton-l-icon-gap);
   --spectrum-actionbutton-icon-size: var(--spectrum-actionbutton-l-icon-size);
   --spectrum-actionbutton-min-width: var(--spectrum-actionbutton-l-min-width);
@@ -86,8 +111,14 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-xl-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-xl-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-xl-height);
+
+  /* todo: remove hardcoded values when we update DNA */
+  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-65);
+  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-65);
+/*
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-xl-hold-icon-padding-bottom);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-xl-hold-icon-padding-right);
+*/
   --spectrum-actionbutton-icon-gap: var(--spectrum-actionbutton-xl-icon-gap);
   --spectrum-actionbutton-icon-size: var(--spectrum-actionbutton-xl-icon-size);
   --spectrum-actionbutton-min-width: var(--spectrum-actionbutton-xl-min-width);
