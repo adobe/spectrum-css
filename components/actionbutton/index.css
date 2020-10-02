@@ -29,6 +29,7 @@ extra-large: 7x7pm hold icon, 6px from the edge
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-m-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-m-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-m-height);
+  --spectrum-actionbutton-text-line-height: var(--spectrum-actionbutton-m-text-line-height);
 
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
@@ -56,6 +57,7 @@ extra-large: 7x7pm hold icon, 6px from the edge
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-s-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-s-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-s-height);
+  --spectrum-actionbutton-text-line-height: var(--spectrum-actionbutton-s-text-line-height);
 
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-25);
@@ -83,6 +85,7 @@ extra-large: 7x7pm hold icon, 6px from the edge
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-l-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-l-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-l-height);
+  --spectrum-actionbutton-text-line-height: var(--spectrum-actionbutton-l-text-line-height);
 
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
@@ -111,6 +114,7 @@ extra-large: 7x7pm hold icon, 6px from the edge
   --spectrum-actionbutton-border-radius: var(--spectrum-actionbutton-xl-border-radius);
   --spectrum-actionbutton-border-size: var(--spectrum-actionbutton-xl-border-size);
   --spectrum-actionbutton-height: var(--spectrum-actionbutton-xl-height);
+  --spectrum-actionbutton-text-line-height: var(--spectrum-actionbutton-xl-text-line-height);
 
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-65);
@@ -149,6 +153,7 @@ a.spectrum-ActionButton {
 
   font-size: var(--spectrum-actionbutton-text-size);
   font-weight: var(--spectrum-actionbutton-text-font-weight);
+  line-height: var(--spectrum-actionbutton-text-line-height);
 
   .spectrum-Icon {
     @inherit: %spectrum-ButtonIcon;
