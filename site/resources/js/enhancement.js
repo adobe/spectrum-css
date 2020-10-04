@@ -553,12 +553,14 @@ function makeSlider(slider) {
   function onMouseDown(e, sliderHandle) {
     window.addEventListener('mouseup', onMouseUp);
     window.addEventListener('mousemove', onMouseMove);
-    document.body.classList.add('u-isGrabbing');
+    handle.classList.add('is-dragged');
+    // to move by merely clicking on the track
+    onMouseMove(e);
   }
   function onMouseUp(e, sliderHandle) {
     window.removeEventListener('mouseup', onMouseUp);
     window.removeEventListener('mousemove', onMouseMove);
-    document.body.classList.remove('u-isGrabbing');
+    handle.classList.remove('is-dragged');
   }
   function onMouseMove(e, sliderHandle) {
     var sliderOffsetWidth = slider.offsetWidth;

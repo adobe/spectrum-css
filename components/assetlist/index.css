@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   --spectrum-miller-column-chevron-height: 10px;
@@ -35,16 +35,18 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-miller-column-item-height);
 
   padding-block: 0;
-  padding-inline: var(--spectrum-miller-column-item-padding-left) var(--spectrum-miller-column-item-padding-right);
+  padding-inline: var(--spectrum-miller-column-item-padding-left)
+    var(--spectrum-miller-column-item-padding-right);
   margin-block: 0 var(--spectrum-miller-column-item-margin-bottom);
   margin-inline: 0;
 
   border-radius: var(--spectrum-miller-column-item-border-radius);
 
-  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: background-color var(--spectrum-global-animation-duration-100)
+    ease-in-out;
 
-  font-size: var(--spectrum-selectlist-option-text-size);
-  font-weight: var(--spectrum-selectlist-option-text-font-weight);
+  font-size: var(--spectrum-listitem-option-text-size);
+  font-weight: var(--spectrum-listitem-option-text-font-weight);
   font-style: normal;
 
   cursor: pointer;
@@ -52,7 +54,7 @@ governing permissions and limitations under the License.
   outline: none;
 
   &::before {
-    content: '';
+    content: "";
 
     position: absolute;
     inset-inline-start: 0;

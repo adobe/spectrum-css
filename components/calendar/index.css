@@ -10,16 +10,23 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   --spectrum-calendar-border-radius-reset: 0;
   --spectrum-calendar-border-width-reset: 0;
   --spectrum-calendar-margin-y: 24px;
   --spectrum-calendar-margin-x: 32px;
-  --spectrum-calendar-width: calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7);
+  --spectrum-calendar-width: calc(
+    (
+        var(--spectrum-calendar-day-width) +
+          var(--spectrum-calendar-day-padding) * 2
+      ) * 7
+  );
   --spectrum-calendar-button-gap: var(--spectrum-global-dimension-size-40);
-  --spectrum-calendar-title-text-letter-spacing: var(--spectrum-detail-text-letter-spacing);
+  --spectrum-calendar-title-text-letter-spacing: var(
+    --spectrum-detail-m-text-letter-spacing
+  );
 }
 
 .spectrum-Calendar {
@@ -45,7 +52,6 @@ governing permissions and limitations under the License.
   margin: 0;
   order: 1;
   flex-grow: 1;
-
 
   text-align: center;
   overflow: hidden;
@@ -154,12 +160,17 @@ governing permissions and limitations under the License.
   border: var(--spectrum-calendar-day-border-size-key-focus) solid transparent;
 
   font-size: var(--spectrum-calendar-day-text-size);
-  line-height: calc(var(--spectrum-calendar-day-width) - var(--spectrum-calendar-day-border-size-key-focus) * 2);
+  line-height: calc(
+    var(--spectrum-calendar-day-width) -
+      var(--spectrum-calendar-day-border-size-key-focus) * 2
+  );
   white-space: nowrap;
 
   cursor: pointer;
 
-  &:lang(ja), &:lang(zh), &:lang(ko) {
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
     font-size: var(--spectrum-calendar-day-text-size-han);
   }
 
@@ -173,10 +184,12 @@ governing permissions and limitations under the License.
   }
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     inset-block-start: calc(50% - calc(var(--spectrum-calendar-day-width) / 2));
-    inset-inline-start: calc(50% - calc(var(--spectrum-calendar-day-width) / 2));
+    inset-inline-start: calc(
+      50% - calc(var(--spectrum-calendar-day-width) / 2)
+    );
     box-sizing: border-box;
     inline-size: var(--spectrum-calendar-day-width);
     block-size: var(--spectrum-calendar-day-height);
@@ -205,13 +218,19 @@ governing permissions and limitations under the License.
     border-radius: var(--spectrum-calendar-border-radius-reset);
 
     /* Todo: Calculate this */
-    inline-size: calc(var(--spectrum-calendar-day-width) + calc(var(--spectrum-calendar-day-padding) * 2));
+    inline-size: calc(
+      var(--spectrum-calendar-day-width) +
+        calc(var(--spectrum-calendar-day-padding) * 2)
+    );
 
     &.is-range-start,
     &.is-range-end,
     &.is-selection-start,
     &.is-selection-end {
-      inline-size: calc(var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding));
+      inline-size: calc(
+        var(--spectrum-calendar-day-width) +
+          var(--spectrum-calendar-day-padding)
+      );
     }
 
     &.is-selection-start,
@@ -229,7 +248,7 @@ governing permissions and limitations under the License.
 
         border-radius: var(--spectrum-calendar-day-width);
 
-        content: '';
+        content: "";
       }
     }
 

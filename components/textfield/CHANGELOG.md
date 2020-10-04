@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.0-beta.3...@spectrum-css/textfield@3.0.0-beta.4)
+
+### 🐛 Bug fixes
+
+* adjusted textfield icon placement with updated tokens. closes [#860](https://github.com/adobe/spectrum-css/issues/860) ([03e2cde](https://github.com/adobe/spectrum-css/commit/03e2cde))
+* wip ([32120c5](https://github.com/adobe/spectrum-css/commit/32120c5))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.0-beta.2...@spectrum-css/textfield@3.0.0-beta.3)

@@ -25,11 +25,6 @@
     "package": "@spectrum-css/actionmenu"
   },
   {
-    "label": "alert",
-    "url": "alert.html",
-    "package": "@spectrum-css/alert"
-  },
-  {
     "label": "asset",
     "url": "asset.html",
     "package": "@spectrum-css/asset"
@@ -43,19 +38,6 @@
     "label": "avatar",
     "url": "avatar.html",
     "package": "@spectrum-css/avatar"
-  },
-  {
-    "label": "banner",
-    "url": "banner.html",
-    "package": "@spectrum-css/banner"
-  },
-  {
-    "label": "barloader",
-    "url": "barloader.html",
-    "removeSelectors": [
-      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
-    ],
-    "package": "@spectrum-css/barloader"
   },
   {
     "label": "breadcrumb",
@@ -116,11 +98,6 @@
     "label": "checkbox",
     "url": "checkbox.html",
     "package": "@spectrum-css/checkbox"
-  },
-  {
-    "label": "circleloader",
-    "url": "circleloader.html",
-    "package": "@spectrum-css/circleloader"
   },
   {
     "label": "clearbutton",
@@ -213,18 +190,6 @@
     "package": "@spectrum-css/form"
   },
   {
-    "label": "getting-started",
-    "url": "getting-started.html",
-    "selectors": [],
-    "viewports": [
-      {
-        "label": "test",
-        "width": 1024,
-        "height": 768
-      }
-    ]
-  },
-  {
     "label": "illustratedmessage",
     "url": "illustratedmessage.html",
     "package": "@spectrum-css/illustratedmessage"
@@ -307,6 +272,19 @@
     "package": "@spectrum-css/popover"
   },
   {
+    "label": "progressbar",
+    "url": "progressbar.html",
+    "removeSelectors": [
+      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
+    ],
+    "package": "@spectrum-css/progressbar"
+  },
+  {
+    "label": "progresscircle",
+    "url": "progresscircle.html",
+    "package": "@spectrum-css/progresscircle"
+  },
+  {
     "label": "quickaction",
     "url": "quickaction.html",
     "package": "@spectrum-css/quickaction"
@@ -367,6 +345,11 @@
     "package": "@spectrum-css/stepper"
   },
   {
+    "label": "switch",
+    "url": "switch.html",
+    "package": "@spectrum-css/switch"
+  },
+  {
     "label": "table",
     "url": "table.html",
     "package": "@spectrum-css/table"
@@ -400,11 +383,6 @@
     "label": "toast",
     "url": "toast.html",
     "package": "@spectrum-css/toast"
-  },
-  {
-    "label": "toggle",
-    "url": "toggle.html",
-    "package": "@spectrum-css/toggle"
   },
   {
     "label": "tooltip",
@@ -442,11 +420,6 @@
     "package": "@spectrum-css/typography"
   },
   {
-    "label": "typography-deprecated",
-    "url": "typography-deprecated.html",
-    "package": "@spectrum-css/typography"
-  },
-  {
     "label": "typography-detail",
     "url": "typography-detail.html",
     "package": "@spectrum-css/typography"
@@ -459,16 +432,6 @@
   {
     "label": "typography-international",
     "url": "typography-international.html",
-    "package": "@spectrum-css/typography"
-  },
-  {
-    "label": "typography-international-deprecated",
-    "url": "typography-international-deprecated.html",
-    "package": "@spectrum-css/typography"
-  },
-  {
-    "label": "typography-legacy",
-    "url": "typography-legacy.html",
     "package": "@spectrum-css/typography"
   },
   {

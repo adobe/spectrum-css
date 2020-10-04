@@ -12,8 +12,12 @@ governing permissions and limitations under the License.
 
 :root {
   /* todo: fix in DNA */
-  --spectrum-checkbox-emphasized-text-color-key-focus: var(--spectrum-checkbox-emphasized-text-color-hover);
-  --spectrum-checkbox-emphasized-box-border-color-selected-key-focus: var(--spectrum-checkbox-emphasized-box-border-color-selected-hover);
+  --spectrum-checkbox-emphasized-text-color-key-focus: var(
+    --spectrum-checkbox-emphasized-text-color-hover
+  );
+  --spectrum-checkbox-emphasized-box-border-color-selected-key-focus: var(
+    --spectrum-checkbox-emphasized-box-border-color-selected-hover
+  );
 }
 
 .spectrum-Checkbox {
@@ -27,20 +31,20 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-box {
   &:before {
     forced-color-adjust: none;
-    border-color: var(--spectrum-checkbox-emphasized-box-border-color);
-    background-color: var(--spectrum-checkbox-emphasized-box-background-color);
+    border-color: var(--spectrum-checkbox-box-border-color);
+    background-color: var(--spectrum-checkbox-box-background-color);
   }
 }
 
 .spectrum-Checkbox-label {
-  color: var(--spectrum-checkbox-emphasized-text-color);
+  color: var(--spectrum-checkbox-text-color);
 }
 
 /* Indetermiate is basically a checked state, so handle colors for checked state here */
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
   &:before {
-    border-color: var(--spectrum-checkbox-emphasized-box-border-color-selected);
+    border-color: var(--spectrum-checkbox-box-border-color-selected);
   }
 }
 
@@ -48,7 +52,9 @@ governing permissions and limitations under the License.
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-emphasized-box-border-color-selected-hover);
+      border-color: var(
+        --spectrum-checkbox-box-border-color-selected-hover
+      );
     }
   }
 }
@@ -57,33 +63,37 @@ governing permissions and limitations under the License.
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-emphasized-box-border-color-selected-down);
+      border-color: var(
+        --spectrum-checkbox-box-border-color-selected-down
+      );
     }
   }
 }
 
 .spectrum-Checkbox {
-  border-color: var(--spectrum-checkbox-emphasized-box-border-color);
+  border-color: var(--spectrum-checkbox-box-border-color);
 
   &:hover {
     .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--spectrum-checkbox-emphasized-box-border-color-hover);
+        border-color: var(
+          --spectrum-checkbox-box-border-color-hover
+        );
       }
     }
     .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-emphasized-text-color-hover);
+      color: var(--spectrum-checkbox-text-color-hover);
     }
   }
 
   &:active {
     .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--spectrum-checkbox-emphasized-box-border-color-down);
+        border-color: var(--spectrum-checkbox-box-border-color-down);
       }
     }
     .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-emphasized-text-color-down);
+      color: var(--spectrum-checkbox-text-color-down);
     }
   }
 }
@@ -92,8 +102,12 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox .spectrum-Checkbox-input:checked {
   &:disabled + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-emphasized-box-border-color-disabled);
-      background-color: var(--spectrum-checkbox-emphasized-box-background-color-disabled);
+      border-color: var(
+        --spectrum-checkbox-box-border-color-disabled
+      );
+      background-color: var(
+        --spectrum-checkbox-box-background-color-disabled
+      );
     }
   }
 
@@ -105,53 +119,58 @@ governing permissions and limitations under the License.
 
 /* Focus */
 .spectrum-Checkbox-input {
-  + .spectrum-Checkbox-box {
-    &:after {
-      box-shadow: 0 0 0 var(--spectrum-checkbox-focus-ring-size-key-focus) var(--spectrum-checkbox-focus-ring-color-key-focus);
-      opacity: 0;
-    }
-  }
   &:focus-ring + .spectrum-Checkbox-box {
     &:before {
       border-color: var(--spectrum-checkbox-box-border-color-key-focus);
     }
     &:after {
-      opacity: 1;
+      box-shadow: 0 0 0 var(--spectrum-checkbox-focus-ring-size-key-focus)
+        var(--spectrum-checkbox-focus-ring-color-key-focus);
     }
   }
   .spectrum-Checkbox.is-indeterminate &,
   &:checked {
     &:focus-ring + .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--spectrum-checkbox-emphasized-box-border-color-selected-key-focus);
+        border-color: var(
+          --spectrum-checkbox-box-border-color-selected-key-focus
+        );
       }
     }
   }
   &:focus-ring ~ .spectrum-Checkbox-label {
-    color: var(--spectrum-checkbox-emphasized-text-color-key-focus);
+    color: var(--spectrum-checkbox-text-color-key-focus);
   }
 }
 
-.spectrum-Checkbox--quiet .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
-.spectrum-Checkbox--quiet.is-indeterminate .spectrum-Checkbox-box,
-.spectrum-Checkbox--quiet.is-indeterminate .spectrum-Checkbox-input:focus-ring + .spectrum-Checkbox-box {
+.spectrum-Checkbox--emphasized
+  .spectrum-Checkbox-input:checked
+  + .spectrum-Checkbox-box,
+.spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box,
+.spectrum-Checkbox--emphasized.is-indeterminate
+  .spectrum-Checkbox-input:focus-ring
+  + .spectrum-Checkbox-box {
   &:before {
-    border-color: var(--spectrum-checkbox-quiet-box-border-color-selected);
+    border-color: var(--spectrum-checkbox-emphasized-box-border-color-selected);
   }
 }
-.spectrum-Checkbox--quiet:hover {
+.spectrum-Checkbox--emphasized:hover {
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-quiet-box-border-color-selected-hover);
+      border-color: var(
+        --spectrum-checkbox-emphasized-box-border-color-selected-hover
+      );
     }
   }
 }
-.spectrum-Checkbox--quiet:active {
+.spectrum-Checkbox--emphasized:active {
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-quiet-box-border-color-selected-down);
+      border-color: var(
+        --spectrum-checkbox-emphasized-box-border-color-selected-down
+      );
     }
   }
 }
@@ -225,11 +244,11 @@ governing permissions and limitations under the License.
     --spectrum-checkbox-text-color-disabled : GrayText;
     --spectrum-checkbox-box-border-color-key-focus: FieldText;
     --spectrum-checkbox-emphasized-box-border-color: FieldText;
-    --spectrum-checkbox-quiet-box-border-color: FieldText; 
+    --spectrum-checkbox-quiet-box-border-color: FieldText;
     --spectrum-checkbox-box-border-color-selected-hover : Highlight;
     --spectrum-checkbox-emphasized-box-border-color-selected-hover : Highlight;
     --spectrum-checkbox-quiet-box-border-color-selected-hover : Highlight;
-    --spectrum-checkbox-emphasized-box-border-color-selected: Highlight; 
+    --spectrum-checkbox-emphasized-box-border-color-selected: Highlight;
     --spectrum-checkbox-quiet-box-border-color-selected: Highlight;
     --spectrum-checkbox-checkmark-color: HighlightText;
     --spectrum-checkbox-focus-ring-color-key-focus: Highlight;
@@ -239,5 +258,5 @@ governing permissions and limitations under the License.
     --spectrum-checkbox-box-border-color-error-hover: FieldText;
     --spectrum-checkbox-box-border-color-error-selected: FieldText;
     --spectrum-checkbox-text-color-error: FieldText;
-  }        
+  }
 }

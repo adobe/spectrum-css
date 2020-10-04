@@ -10,10 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
-  --spectrum-picker-popover-max-width: var(--spectrum-global-dimension-size-3000);
+  --spectrum-picker-popover-max-width: var(
+    --spectrum-global-dimension-size-3000
+  );
   --spectrum-picker-width: var(--spectrum-global-dimension-size-2400);
 
   /* This needs to be a variable so it overrides when using multiStops */
@@ -46,7 +48,9 @@ governing permissions and limitations under the License.
       position: absolute;
       inset-inline-end: var(--spectrum-picker-padding-x);
       inset-block-start: 50%;
-      margin-block-start: calc(var(--spectrum-icon-chevron-down-medium-height) / -2);
+      margin-block-start: calc(
+        var(--spectrum-icon-chevron-down-medium-height) / -2
+      );
     }
   }
 }
@@ -66,8 +70,12 @@ governing permissions and limitations under the License.
   white-space: nowrap;
   overflow: hidden;
 
-  block-size: calc(var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2));
-  line-height: calc(var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2));
+  block-size: calc(
+    var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2)
+  );
+  line-height: calc(
+    var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2)
+  );
 
   font-size: var(--spectrum-picker-text-size);
 
@@ -87,7 +95,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Icon + .spectrum-Picker-label {
-  margin-inline-start: var(--spectrum-selectlist-thumbnail-image-padding-x);
+  margin-inline-start: var(--spectrum-listitem-thumbnail-image-padding-x);
 }
 
 /* Only apply margin if there's a label */
@@ -102,8 +110,20 @@ governing permissions and limitations under the License.
   transition: color var(--spectrum-global-animation-duration-100) ease-out;
 
   /* Fix Safari 10 bug where align-items is ignored inside of buttons */
-  margin-block-start: calc(calc(var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2) - var(--spectrum-icon-chevron-down-medium-height)) / 2);
-  margin-block-end: calc(calc(var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2) - var(--spectrum-icon-chevron-down-medium-height)) / 2);
+  margin-block-start: calc(
+    calc(
+        var(--spectrum-picker-height) -
+          calc(var(--spectrum-picker-border-size) * 2) -
+          var(--spectrum-icon-chevron-down-medium-height)
+      ) / 2
+  );
+  margin-block-end: calc(
+    calc(
+        var(--spectrum-picker-height) -
+          calc(var(--spectrum-picker-border-size) * 2) -
+          var(--spectrum-icon-chevron-down-medium-height)
+      ) / 2
+  );
 
   opacity: 1;
 }
@@ -112,8 +132,20 @@ governing permissions and limitations under the License.
 .spectrum-Picker-trigger {
   .spectrum-Icon:not(.spectrum-Picker-icon) {
     /* Fix Safari 10 bug where align-items is ignored inside of buttons */
-  margin-block-start: calc(calc(var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2) - var(--spectrum-picker-icon-size)) / 2);
-    margin-block-end: calc(calc(var(--spectrum-picker-height) - calc(var(--spectrum-picker-border-size) * 2) - var(--spectrum-picker-icon-size)) / 2);
+    margin-block-start: calc(
+      calc(
+          var(--spectrum-picker-height) -
+            calc(var(--spectrum-picker-border-size) * 2) -
+            var(--spectrum-picker-icon-size)
+        ) / 2
+    );
+    margin-block-end: calc(
+      calc(
+          var(--spectrum-picker-height) -
+            calc(var(--spectrum-picker-border-size) * 2) -
+            var(--spectrum-picker-icon-size)
+        ) / 2
+    );
   }
 
   .spectrum-Picker-label + .spectrum-Icon:not(.spectrum-Picker-icon) {
@@ -135,5 +167,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Picker-popover--quiet {
-  margin-inline-start: calc(-1 * calc(var(--spectrum-picker-quiet-popover-offset-x) + var(--spectrum-popover-border-size)));
+  margin-inline-start: calc(
+    -1 * calc(var(--spectrum-picker-quiet-popover-offset-x) +
+          var(--spectrum-popover-border-size))
+  );
 }

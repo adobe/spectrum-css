@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.1"></a>
+# 1.0.0-beta.1
+🗓 2020-09-23
+
+### ✨ Features
+
+* renamed dropdown to picker ([#540](https://github.com/adobe/spectrum-css/issues/540)) ([d1081f0](https://github.com/adobe/spectrum-css/commit/d1081f0))
+
+
+### 🐛 Bug fixes
+
+* renamed dropdown to picker ([6fc60cb](https://github.com/adobe/spectrum-css/commit/6fc60cb))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@3.0.0-beta.2...@spectrum-css/dropdown@3.0.0-beta.3)

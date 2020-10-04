@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tags@3.0.0-beta.3...@spectrum-css/tags@3.0.0-beta.4)
+
+### ✨ Features
+
+* tags contributd by rsp@v3 ([a759544](https://github.com/adobe/spectrum-css/commit/a759544))
+
+
+### 🐛 Bug fixes
+
+* add back the margin-inline-end for the tag has icon or avatar ([ba335a9](https://github.com/adobe/spectrum-css/commit/ba335a9))
+* adjust the color to match design for standard tag item ([c3cf3b6](https://github.com/adobe/spectrum-css/commit/c3cf3b6))
+* fix some mismatch between impl and design xd ([bb9bab1](https://github.com/adobe/spectrum-css/commit/bb9bab1))
+* fix truncation example for tag and fix clear button size ([828e5c0](https://github.com/adobe/spectrum-css/commit/828e5c0))
+* implements the background for clearButton ([7bfccfd](https://github.com/adobe/spectrum-css/commit/7bfccfd))
+* mix tag with or without icon/avatar ([27d5b3c](https://github.com/adobe/spectrum-css/commit/27d5b3c))
+* move border-radius setting to index.css ([0b39aa4](https://github.com/adobe/spectrum-css/commit/0b39aa4))
+* remove the margin-left for clearButton ([81f17e8](https://github.com/adobe/spectrum-css/commit/81f17e8))
+* removed deprecated tokens from tabs and tags ([1e543e4](https://github.com/adobe/spectrum-css/commit/1e543e4))
+* resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+* update dna variable for focus-ring and border-size ([d8873f6](https://github.com/adobe/spectrum-css/commit/d8873f6))
+* use dna variables for border-shadow and border-size ([4eb1d09](https://github.com/adobe/spectrum-css/commit/4eb1d09))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tags@3.0.0-beta.2...@spectrum-css/tags@3.0.0-beta.3)

@@ -1,6 +1,10 @@
 name: Rating
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/rating/
+sections:
+  - name: A note on emphasized and quiet
+    description: |
+      Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
 examples:
   - id: rating
     name: Standard
@@ -156,10 +160,10 @@ examples:
           </svg>
         </span>
       </div>
-  - id: rating-quiet
-    name: Quiet
+  - id: rating-emphasized
+    name: Emphasized
     markup: |
-      <div class="spectrum-Rating spectrum-Rating--quiet">
+      <div class="spectrum-Rating spectrum-Rating--emphasized">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating">
 
         <span class="spectrum-Rating-icon">
@@ -207,10 +211,10 @@ examples:
           </svg>
         </span>
       </div>
-  - id: rating-quiet
-    name: Quiet (selected)
+  - id: rating-emphasized
+    name: Emphasized (selected)
     markup: |
-      <div class="spectrum-Rating spectrum-Rating--quiet">
+      <div class="spectrum-Rating spectrum-Rating--emphasized">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">
@@ -258,10 +262,10 @@ examples:
           </svg>
         </span>
       </div>
-  - id: rating-quiet
-    name: Quiet (read-only)
+  - id: rating-emphasized
+    name: Emphasized (read-only)
     markup: |
-      <div class="spectrum-Rating spectrum-Rating--quiet is-readOnly">
+      <div class="spectrum-Rating spectrum-Rating--emphasized is-readOnly">
         <input class="spectrum-Rating-input" type="range" min="0" max="5" value="3" readonly aria-label="Rating">
 
         <span class="spectrum-Rating-icon is-selected">

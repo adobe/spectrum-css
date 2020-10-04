@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.4-beta.0"></a>
+## 2.1.4-beta.0
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.1.3...@spectrum-css/typography@2.1.4-beta.0)
+
+### 🐛 Bug fixes
+
+* global typography color added back ([4a2f78f](https://github.com/adobe/spectrum-css/commit/4a2f78f))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="2.1.3"></a>
 ## 2.1.3
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.1.2...@spectrum-css/typography@2.1.3)

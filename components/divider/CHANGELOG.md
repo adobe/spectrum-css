@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.1"></a>
+# 1.0.0-beta.1
+🗓 2020-09-23
+
+### ✨ Features
+
+* renamed Rule to Divider; closes [#193](https://github.com/adobe/spectrum-css/issues/193) ([#751](https://github.com/adobe/spectrum-css/issues/751)) ([9d3a305](https://github.com/adobe/spectrum-css/commit/9d3a305))
+
+
+### 🐛 Bug fixes
+
+* change workflow icon size to medium for most of the examples ([#962](https://github.com/adobe/spectrum-css/issues/962)) ([db7b8b2](https://github.com/adobe/spectrum-css/commit/db7b8b2))
+* fix the issues caused by component rename ([#778](https://github.com/adobe/spectrum-css/issues/778)) ([e1d180c](https://github.com/adobe/spectrum-css/commit/e1d180c))
+* resolving conflicts with main ([8cafffa](https://github.com/adobe/spectrum-css/commit/8cafffa))
+* updated deprecated tokens ([1286203](https://github.com/adobe/spectrum-css/commit/1286203))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rule@3.0.0-beta.2...@spectrum-css/rule@3.0.0-beta.3)

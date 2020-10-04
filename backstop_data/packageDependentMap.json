@@ -9,14 +9,12 @@
   ],
   [
     "@spectrum-css/actiongroup",
-    []
+    [
+      "@spectrum-css/actionbar"
+    ]
   ],
   [
     "@spectrum-css/actionmenu",
-    []
-  ],
-  [
-    "@spectrum-css/alert",
     []
   ],
   [
@@ -38,14 +36,6 @@
     ]
   ],
   [
-    "@spectrum-css/banner",
-    []
-  ],
-  [
-    "@spectrum-css/barloader",
-    []
-  ],
-  [
     "@spectrum-css/breadcrumb",
     []
   ],
@@ -55,7 +45,6 @@
       "@spectrum-css/actionbar",
       "@spectrum-css/actiongroup",
       "@spectrum-css/actionmenu",
-      "@spectrum-css/alert",
       "@spectrum-css/breadcrumb",
       "@spectrum-css/buttongroup",
       "@spectrum-css/calendar",
@@ -106,10 +95,6 @@
     ]
   ],
   [
-    "@spectrum-css/circleloader",
-    []
-  ],
-  [
     "@spectrum-css/coachmark",
     []
   ],
@@ -144,6 +129,10 @@
     []
   ],
   [
+    "@spectrum-css/dial",
+    []
+  ],
+  [
     "@spectrum-css/dialog",
     [
       "@spectrum-css/popover",
@@ -168,7 +157,9 @@
   ],
   [
     "@spectrum-css/fieldgroup",
-    []
+    [
+      "@spectrum-css/fieldlabel"
+    ]
   ],
   [
     "@spectrum-css/fieldlabel",
@@ -237,6 +228,14 @@
     ]
   ],
   [
+    "@spectrum-css/progressbar",
+    []
+  ],
+  [
+    "@spectrum-css/progresscircle",
+    []
+  ],
+  [
     "@spectrum-css/quickaction",
     [
       "@spectrum-css/card"
@@ -294,6 +293,10 @@
     ]
   ],
   [
+    "@spectrum-css/switch",
+    []
+  ],
+  [
     "@spectrum-css/table",
     [
       "@spectrum-css/actionbar"
@@ -329,10 +332,6 @@
     []
   ],
   [
-    "@spectrum-css/toggle",
-    []
-  ],
-  [
     "@spectrum-css/tooltip",
     [
       "@spectrum-css/steplist"
@@ -349,6 +348,7 @@
   [
     "@spectrum-css/typography",
     [
+      "@spectrum-css/card",
       "@spectrum-css/illustratedmessage"
     ]
   ],
