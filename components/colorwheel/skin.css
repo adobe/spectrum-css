@@ -29,3 +29,13 @@
 .spectrum-ColorWheel-innerCircle {
   stroke: var(--spectrum-colorwheel-border-color);
 }
+
+@media (forced-colors: active) {
+  :root {
+    --spectrum-colorwheel-border-color-disabled : GrayText;
+    --spectrum-colorwheel-fill-color-disabled : Canvas;
+  }
+  .spectrum-ColorWheel {
+    forced-color-adjust: none;
+  }
+}
