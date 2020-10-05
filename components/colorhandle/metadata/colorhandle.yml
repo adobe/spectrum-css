@@ -28,6 +28,12 @@ examples:
         <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
         <svg class="spectrum-ColorLoupe is-open">
           <g transform="translate(1 1)">
+            <pattern id="colorloupe-background" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+              <rect class="spectrum-ColorLoupe-inner-background" x="0" y="0" width="16" height="16" />
+              <rect class="spectrum-ColorLoupe-inner-checker" x="0" y="0" width="8" height="8" />
+              <rect class="spectrum-ColorLoupe-inner-checker" x="8" y="8" width="8" height="8" />
+            </pattern>
+            <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="url(#colorloupe-background)" />
             <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="rgba(255, 0, 0, 0.5)" />
             <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
           </g>
