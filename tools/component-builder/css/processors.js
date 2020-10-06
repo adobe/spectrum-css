@@ -292,6 +292,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
         }
       }
     }),
+    require('postcss-remapvars'),
     require('postcss-nested'),
     require('postcss-inherit'),
     diff ? require('./plugins/postcss-varsonly')() : null,
