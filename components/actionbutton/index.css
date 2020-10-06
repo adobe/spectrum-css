@@ -20,14 +20,6 @@ governing permissions and limitations under the License.
     replace: -spectrum-actionbutton-;
   }
 
-  /* Set up default variables, size medium */
-  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-m-padding-left) - var(--spectrum-actionbutton-m-border-size));
-  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-m-padding-right) - var(--spectrum-actionbutton-m-border-size));
-  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-m-textonly-padding-left) - var(--spectrum-actionbutton-m-border-size));
-  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-m-textonly-padding-right) - var(--spectrum-actionbutton-m-border-size));
-  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-m-icononly-padding-left) - var(--spectrum-actionbutton-m-border-size));
-  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-m-icononly-padding-right) - var(--spectrum-actionbutton-m-border-size));
-
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-40);
@@ -42,13 +34,6 @@ governing permissions and limitations under the License.
     find: -spectrum-actionbutton-s-;
     replace: -spectrum-actionbutton-;
   }
-
-  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-s-padding-left) - var(--spectrum-actionbutton-s-border-size));
-  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-s-padding-right) - var(--spectrum-actionbutton-s-border-size));
-  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-s-textonly-padding-left) - var(--spectrum-actionbutton-s-border-size));
-  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-s-textonly-padding-right) - var(--spectrum-actionbutton-s-border-size));
-  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-s-icononly-padding-left) - var(--spectrum-actionbutton-s-border-size));
-  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-s-icononly-padding-right) - var(--spectrum-actionbutton-s-border-size));
 
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-25);
@@ -65,13 +50,6 @@ governing permissions and limitations under the License.
     replace: -spectrum-actionbutton-;
   }
 
-  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-l-padding-left) - var(--spectrum-actionbutton-l-border-size));
-  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-l-padding-right) - var(--spectrum-actionbutton-l-border-size));
-  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-l-icononly-padding-left) - var(--spectrum-actionbutton-l-border-size));
-  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-l-icononly-padding-right) - var(--spectrum-actionbutton-l-border-size));
-  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-l-textonly-padding-left) - var(--spectrum-actionbutton-l-border-size));
-  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-l-textonly-padding-right) - var(--spectrum-actionbutton-l-border-size));
-
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-50);
@@ -87,13 +65,6 @@ governing permissions and limitations under the License.
     replace: -spectrum-actionbutton-;
   }
 
-  --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-xl-padding-left) - var(--spectrum-actionbutton-xl-border-size));
-  --spectrum-actionbutton-padding-right: calc(var(--spectrum-actionbutton-xl-padding-right) - var(--spectrum-actionbutton-xl-border-size));
-  --spectrum-actionbutton-textonly-padding-left: calc(var(--spectrum-actionbutton-xl-textonly-padding-left) - var(--spectrum-actionbutton-xl-border-size));
-  --spectrum-actionbutton-textonly-padding-right: calc(var(--spectrum-actionbutton-xl-textonly-padding-right) - var(--spectrum-actionbutton-xl-border-size));
-  --spectrum-actionbutton-icononly-padding-left: calc(var(--spectrum-actionbutton-xl-icononly-padding-left) - var(--spectrum-actionbutton-xl-border-size));
-  --spectrum-actionbutton-icononly-padding-right: calc(var(--spectrum-actionbutton-xl-icononly-padding-right) - var(--spectrum-actionbutton-xl-border-size));
-
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-65);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-65);
@@ -101,6 +72,16 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-xl-hold-icon-padding-bottom);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-xl-hold-icon-padding-right);
 */
+}
+
+.spectrum-ActionButton {
+  /* Adjustments for inset/outset padding in DNA */
+  --spectrum-actionbutton-padding-left-adjusted: calc(var(--spectrum-actionbutton-padding-left) - var(--spectrum-actionbutton-border-size));
+  --spectrum-actionbutton-padding-right-adjusted: calc(var(--spectrum-actionbutton-padding-right) - var(--spectrum-actionbutton-border-size));
+  --spectrum-actionbutton-textonly-padding-left-adjusted: calc(var(--spectrum-actionbutton-textonly-padding-left) - var(--spectrum-actionbutton-border-size));
+  --spectrum-actionbutton-textonly-padding-right-adjusted: calc(var(--spectrum-actionbutton-textonly-padding-right) - var(--spectrum-actionbutton-border-size));
+  --spectrum-actionbutton-icononly-padding-left-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-left) - var(--spectrum-actionbutton-border-size));
+  --spectrum-actionbutton-icononly-padding-right-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-right) - var(--spectrum-actionbutton-border-size));
 }
 
 a.spectrum-ActionButton {
@@ -115,7 +96,7 @@ a.spectrum-ActionButton {
   min-inline-size: var(--spectrum-actionbutton-min-width);
 
   /* Start with text-only padding */
-  padding-inline: var(--spectrum-actionbutton-textonly-padding-left) var(--spectrum-actionbutton-textonly-padding-right);
+  padding-inline: var(--spectrum-actionbutton-textonly-padding-left-adjusted) var(--spectrum-actionbutton-textonly-padding-right-adjusted);
 
   border-width: var(--spectrum-actionbutton-border-size);
   border-radius: var(--spectrum-actionbutton-border-radius);
@@ -128,7 +109,7 @@ a.spectrum-ActionButton {
     @inherit: %spectrum-ButtonIcon;
 
     /* Scoot over, assuming we have both icon and text */
-    margin-inline-start: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-left) - var(--spectrum-actionbutton-padding-left)));
+    margin-inline-start: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-left-adjusted) - var(--spectrum-actionbutton-padding-left-adjusted)));
   }
 
   .spectrum-Icon + .spectrum-ActionButton-label {
@@ -145,8 +126,8 @@ a.spectrum-ActionButton {
   .spectrum-ActionButton-hold + .spectrum-Icon,
   .spectrum-Icon:only-child {
     /* Use icon-only padding, subtracted from the default text-only padding */
-    margin-left: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-left) - var(--spectrum-actionbutton-icononly-padding-left)));
-    margin-right: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-right) - var(--spectrum-actionbutton-icononly-padding-right)));
+    margin-left: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-left-adjusted) - var(--spectrum-actionbutton-icononly-padding-left-adjusted)));
+    margin-right: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-right-adjusted) - var(--spectrum-actionbutton-icononly-padding-right-adjusted)));
   }
 }
 
