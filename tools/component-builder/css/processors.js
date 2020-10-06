@@ -320,6 +320,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
     }),
     require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
     require('postcss-dropunusedvars'),
+    require('postcss-dropdupedvars'),
     require('postcss-focus-ring'),
     secondNotNested ? require('./plugins/postcss-notnested')() : null, // Second one to catch all stray &
     require('postcss-discard-empty'),
