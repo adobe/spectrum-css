@@ -26,6 +26,7 @@ function remapVars(rule) {
       prop: varName,
       value: `var(${value})`
     });
+    decl.raws.before = rule.raws.before;
     decl.raws.semicolon = true;
 
     rule.parent.append(decl);
