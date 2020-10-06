@@ -29,7 +29,7 @@ function remapVars(rule) {
     decl.raws.before = rule.raws.before;
     decl.raws.semicolon = true;
 
-    rule.parent.append(decl);
+    rule.parent.insertBefore(rule, decl);
   }
 
   // Close out the rule with a semicolon
