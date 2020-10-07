@@ -13,13 +13,6 @@ governing permissions and limitations under the License.
 @import "../commons/index.css";
 @import "../commons/basebutton.css";
 
-/*
-small: 5x5px hold icon, 3px from the edge
-medium: 5x5px hold icon, 4px from the edge
-large: 6x6px hold icon, 5px from the edge
-extra-large: 7x7pm hold icon, 6px from the edge
-*/
-
 .spectrum-ActionButton--sizeM {
   /* Set up default variables, size medium */
   --spectrum-actionbutton-padding-left: calc(var(--spectrum-actionbutton-m-padding-left) - var(--spectrum-actionbutton-m-border-size));
