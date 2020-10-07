@@ -23,10 +23,6 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-40);
-/*
-  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-m-hold-icon-padding-bottom);
-  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-m-hold-icon-padding-right);
-*/
 }
 
 .spectrum-ActionButton--sizeS {
@@ -38,10 +34,6 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-25);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-25);
-/*
-  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-s-hold-icon-padding-bottom);
-  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-s-hold-icon-padding-right);
-*/
 }
 
 .spectrum-ActionButton--sizeL {
@@ -53,10 +45,6 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-50);
-/*
-  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-l-hold-icon-padding-bottom);
-  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-l-hold-icon-padding-right);
-*/
 }
 
 .spectrum-ActionButton--sizeXL {
@@ -68,10 +56,6 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-65);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-65);
-/*
-  --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-actionbutton-xl-hold-icon-padding-bottom);
-  --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-actionbutton-xl-hold-icon-padding-right);
-*/
 }
 
 .spectrum-ActionButton {
