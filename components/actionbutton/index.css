@@ -16,8 +16,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionButton--sizeS {
   @remapvars {
-    find: -spectrum-actionbutton-s-;
-    replace: -spectrum-actionbutton-;
+    find: --spectrum-actionbutton-s-;
+    replace: --spectrum-actionbutton-;
   }
 
   /* todo: remove hardcoded values when we update DNA */
@@ -27,8 +27,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionButton--sizeM {
   @remapvars {
-    find: -spectrum-actionbutton-m-;
-    replace: -spectrum-actionbutton-;
+    find: --spectrum-actionbutton-m-;
+    replace: --spectrum-actionbutton-;
   }
 
   /* todo: remove hardcoded values when we update DNA */
@@ -38,8 +38,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionButton--sizeL {
   @remapvars {
-    find: -spectrum-actionbutton-l-;
-    replace: -spectrum-actionbutton-;
+    find: --spectrum-actionbutton-l-;
+    replace: --spectrum-actionbutton-;
   }
 
   /* todo: remove hardcoded values when we update DNA */
@@ -49,8 +49,8 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionButton--sizeXL {
   @remapvars {
-    find: -spectrum-actionbutton-xl-;
-    replace: -spectrum-actionbutton-;
+    find: --spectrum-actionbutton-xl-;
+    replace: --spectrum-actionbutton-;
   }
 
   /* todo: remove hardcoded values when we update DNA */
