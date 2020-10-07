@@ -9,7 +9,7 @@ examples:
   - id: actionmenu
     name: Standard
     markup: |
-      <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
+      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
         <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-More" />
         </svg>
@@ -36,7 +36,7 @@ examples:
 
       <div class="dummy-spacing"></div>
 
-      <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
+      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
         <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-More" />
         </svg>
@@ -62,7 +62,7 @@ examples:
 
       <div class="dummy-spacing"></div>
 
-      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
         <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-More" />
         </svg>

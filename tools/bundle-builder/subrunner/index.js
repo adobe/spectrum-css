@@ -91,6 +91,9 @@ function runTaskOnPackages(task, packages) {
 
       if (packageDir) {
         runComponentTask(packageDir, task, function(err) {
+          if (err) {
+            process.exit();
+          }
           processPackage();
         });
       }

@@ -493,10 +493,10 @@ governing permissions and limitations under the License.
 .spectrum-Examples {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .spectrum-Examples-item {
-  flex: 1;
 }
 
 .spectrum-Examples-item .spectrum-Examples-itemHeading {
