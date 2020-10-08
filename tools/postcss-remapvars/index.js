@@ -11,6 +11,13 @@ function remapVars(rule) {
     config[node.prop.toLowerCase()] = node.value;
   });
 
+  // Support regexp
+  const match = config.find.match(/^\/(.*?)\/(.*?)$/, '');
+  if (match) {
+    const [, stringPattern, flags] = match;
+    config.find = RegExp(stringPattern, flags);
+  }
+
   let outVariables = {};
 
   // Check for matching variables

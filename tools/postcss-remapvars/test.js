@@ -24,3 +24,7 @@ function readFile(filename) {
 test('remap with find and replace', t => {
   return compare(t, 'find-replace.css', 'find-replace.css');
 });
+
+test('support regexp', t => {
+  return compare(t, 'regexp.css', 'regexp.css');
+});
