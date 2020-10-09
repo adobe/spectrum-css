@@ -28,3 +28,15 @@ test('remap with find and replace', t => {
 test('support regexp', t => {
   return compare(t, 'regexp.css', 'regexp.css');
 });
+
+test('support filter', t => {
+  return compare(t, 'filter.css', 'filter.css');
+});
+
+test('support a list of filters', t => {
+  return compare(t, 'filter-list.css', 'filter-list.css');
+});
+
+test('support a list of filters with regex', t => {
+  return compare(t, 'filter-list-regex.css', 'filter-list-regex.css');
+});
