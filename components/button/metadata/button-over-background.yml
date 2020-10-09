@@ -6,24 +6,163 @@ examples:
   - id: button-over-background
     name: Over background
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
-        <button class="spectrum-Button spectrum-Button--overBackground">
-          <span class="spectrum-Button-label">Button</span>
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+        <div class="spectrum-Examples">
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">S</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeS">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeS">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">M (default)</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeM">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeM">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">L</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeL">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">XL</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeXL">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--sizeXL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: button-over-background
+    name: Over Background - Disabled
+    markup: |
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground" disabled>
+          <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--overBackground" disabled>
-          <span class="spectrum-Button-label">Button</span>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground" disabled>
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+            <use xlink:href="#spectrum-icon-18-Edit" />
+          </svg>
+          <span class="spectrum-Button-label">Edit</span>
         </button>
       </div>
+
   - id: button-quiet-over-background
     name: Over Background (quiet)
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
-        <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
-          <span class="spectrum-Button-label">Button</span>
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+        <div class="spectrum-Examples">
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">S</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeS">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeS">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">M (default)</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeM">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeM">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">L</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeL">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">XL</h4>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeXL">
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet spectrum-Button--sizeXL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: button-quiet-over-background
+    name: Over Background (quiet) - Disabled
+    markup: |
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet" disabled>
+          <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet" disabled>
-          <span class="spectrum-Button-label">Button</span>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet" disabled>
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+            <use xlink:href="#spectrum-icon-18-Edit" />
+          </svg>
+          <span class="spectrum-Button-label">Edit</span>
         </button>
       </div>

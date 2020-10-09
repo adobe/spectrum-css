@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 @import "../commons/index.css";
 @import "../commons/basebutton.css";
+@import "../vars/css/components/spectrum-button.css";
 
 :root {
   /* Todo: fix in DNA, should have been zero */
@@ -26,6 +27,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Button {
+  /* Adjustments for inset/outset padding in DNA */
+  --spectrum-button-primary-padding-left-adjusted: calc(var(--spectrum-button-primary-padding-left) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-padding-right-adjusted: calc(var(--spectrum-button-padding-right) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-textonly-padding-left) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-textonly-padding-right) - var(--spectrum-button-primary-border-size));
+}
+
+.spectrum-Button {
   @inherit: %spectrum-BaseButton;
   @inherit: %spectrum-ButtonWithFocusRing;
 
@@ -37,15 +46,12 @@ governing permissions and limitations under the License.
   block-size: auto;
   min-inline-size: var(--spectrum-button-primary-min-width);
 
-  padding: var(--spectrum-button-padding-y)
-    calc(
-      var(--spectrum-button-primary-text-padding-x) -
-        var(--spectrum-button-primary-border-size)
-    );
-
   /* @hack: fix button text vertical alignment at 14px */
   padding-block-end: calc(var(--spectrum-button-padding-y) + 1px);
   padding-block-start: calc(var(--spectrum-button-padding-y) - 1px);
+
+  /* Start with text-only padding */
+  padding-inline: var(--spectrum-button-primary-textonly-padding-left-adjusted) var(--spectrum-button-primary-textonly-padding-right-adjusted);
 
   font-size: var(--spectrum-button-primary-text-size);
   font-weight: var(--spectrum-button-primary-text-font-weight);
@@ -57,14 +63,55 @@ governing permissions and limitations under the License.
 
   .spectrum-Icon {
     @inherit: %spectrum-ButtonIcon;
+
+    /* Scoot over, assuming we have both icon and text */
+    margin-inline-start: calc(-1 * (var(--spectrum-button-primary-textonly-padding-left-adjusted) - var(--spectrum-button-primary-padding-left-adjusted)));
   }
 
   .spectrum-Icon + .spectrum-Button-label {
-    margin-inline-start: var(--spectrum-button-primary-text-gap);
+    /* Have gap on on the left */
+    padding-inline-start: var(--spectrum-button-primary-icon-gap);
+
+    /*
+      Have no padding on the right (it's built into the element)
+      This will fail if --spectrum-button-primary-textonly-padding-right !== --spectrum-button-padding-right
+    */
+    padding-inline-end: 0;
+  }
+}
+
+.spectrum-Button--sizeS {
+  @remapvars {
+    find: /--spectrum-button(.*)-s-/;
+    filter: color;
+    replace: --spectrum-button$1-;
   }
 
-  .spectrum-Button-label + .spectrum-Icon {
-    margin-inline-start: calc(var(--spectrum-button-primary-text-gap) / 2);
+  /* todo: remove override when fixed in DNA */
+  --spectrum-button-primary-border-radius: var(--spectrum-global-dimension-size-160);
+}
+
+.spectrum-Button--sizeM {
+  @remapvars {
+    find: /--spectrum-button(.*)-m-/;
+    filter: color;
+    replace: --spectrum-button$1-;
+  }
+}
+
+.spectrum-Button--sizeL {
+  @remapvars {
+    find: /--spectrum-button(.*)-l-/;
+    filter: color;
+    replace: --spectrum-button$1-;
+  }
+}
+
+.spectrum-Button--sizeXL {
+  @remapvars {
+    find: /--spectrum-button(.*)-xl-/;
+    filter: color;
+    replace: --spectrum-button$1-;
   }
 }
 
@@ -74,126 +121,4 @@ a.spectrum-Button {
 
 .spectrum-Button-label {
   @inherit: %spectrum-ButtonLabel;
-}
-
-.spectrum-LogicButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
-
-  block-size: var(--spectrum-logicbutton-and-height);
-  padding: var(--spectrum-logicbutton-and-padding-x);
-
-  border-width: var(--spectrum-logicbutton-and-border-size);
-  border-radius: var(--spectrum-logicbutton-and-border-radius);
-
-  font-size: var(--spectrum-logicbutton-and-text-size);
-  font-weight: var(--spectrum-logicbutton-and-text-font-weight);
-  line-height: 0;
-
-  &:after {
-    /* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
-    border-radius: calc(
-      var(--spectrum-logicbutton-and-border-radius) +
-        var(--spectrum-alias-focus-ring-gap)
-    );
-  }
-}
-
-.spectrum-FieldButton {
-  @inherit: %spectrum-BaseButton;
-
-  block-size: var(--spectrum-picker-height);
-
-  padding: 0 var(--spectrum-picker-padding-x);
-
-  font-family: inherit;
-  font-weight: normal;
-  font-size: var(--spectrum-picker-text-size);
-  line-height: normal;
-  -webkit-font-smoothing: initial;
-
-  cursor: pointer;
-  outline: none;
-}
-
-.spectrum-FieldButton {
-  margin: 0;
-  padding-block: 0;
-  padding-inline: var(--spectrum-picker-padding-x);
-
-  border-width: var(--spectrum-picker-border-size);
-  border-style: solid;
-  border-radius: var(--spectrum-border-radius);
-
-  transition: background-color var(--spectrum-global-animation-duration-100),
-    box-shadow var(--spectrum-global-animation-duration-100),
-    border-color var(--spectrum-global-animation-duration-100);
-
-  &:disabled,
-  &.is-disabled {
-    border-width: var(--spectrum-fieldbutton-disabled-border-size);
-    cursor: default;
-  }
-
-  &.is-open {
-    border-width: var(--spectrum-picker-border-size);
-  }
-}
-
-.spectrum-FieldButton--quiet {
-  margin: var(--spectrum-fieldbutton-quiet-margin);
-  padding: var(--spectrum-fieldbutton-quiet-padding);
-
-  border-width: var(--spectrum-fieldbutton-quiet-border-size);
-  border-radius: var(--spectrum-fieldbutton-quiet-border-radius);
-  &:disabled,
-  &.is-disabled {
-    &:focus-ring {
-      box-shadow: none;
-    }
-  }
-}
-
-.spectrum-ClearButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
-
-  inline-size: var(--spectrum-clearbutton-medium-width);
-  block-size: var(--spectrum-clearbutton-medium-height);
-
-  border-radius: 100%;
-
-  padding: 0;
-  margin: 0;
-
-  border: none;
-
-  > .spectrum-Icon {
-    /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-    margin-block: 0;
-    margin-inline: auto;
-  }
-}
-
-.spectrum-ClearButton--overBackground {
-  &:focus-ring {
-    &:after {
-      /* Adjust margin because ClearButton does not have a border */
-      margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
-    }
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .spectrum-ClearButton {
-    > .spectrum-Icon {
-      /* @ie11 Workaround for regression caused by fix for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-      margin: 0;
-    }
-  }
-}
-
-.spectrum-ClearButton--small {
-  inline-size: var(--spectrum-clearbutton-small-width);
-  block-size: var(--spectrum-clearbutton-small-height);
 }
