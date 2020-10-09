@@ -4,6 +4,15 @@ function getVariable(varName, config) {
   return varName.replace(config.find, config.replace);
 }
 
+function getPattern(pattern) {
+  const match = pattern.match(/^\/(.*?)\/(.*?)$/, '');
+  if (match) {
+    const [, stringPattern, flags] = match;
+    pattern = RegExp(stringPattern, flags);
+  }
+  return pattern;
+}
+
 function remapVars(rule) {
   // Read in config
   let config = {};
@@ -12,17 +21,27 @@ function remapVars(rule) {
   });
 
   // Support regexp
-  const match = config.find.match(/^\/(.*?)\/(.*?)$/, '');
-  if (match) {
-    const [, stringPattern, flags] = match;
-    config.find = RegExp(stringPattern, flags);
+  config.find = getPattern(config.find);
+
+  const filterPatterns = [];
+  if (config.filter) {
+    // Support multiple filters split by commas with whitespace
+    for (let filterPattern of config.filter.split(',')) {
+      filterPatterns.push(getPattern(filterPattern.trim()));
+    }
   }
 
   let outVariables = {};
 
   // Check for matching variables
-  for (let varName of allVariables) {
+  varLoop: for (let varName of allVariables) {
     if (varName.match(config.find)) {
+      filterLoop: for (let filterPattern of filterPatterns) {
+        if (varName.match(filterPattern)) {
+          // Skip this variable
+          continue varLoop;
+        }
+      }
       outVariables[getVariable(varName, config)] = varName;
     }
   }

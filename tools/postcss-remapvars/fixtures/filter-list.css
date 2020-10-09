@@ -1,0 +1,35 @@
+:root {
+  --prefix-component-background-color: blue;
+  --prefix-component-shadow-size: 1px;
+  --prefix-component-s-width: 10px;
+  --prefix-component-s-height: 10px;
+  --prefix-component-s-background-color: blue;
+  --prefix-component-s-shadow-size: 1px;
+  --prefix-component-l-width: 20px;
+  --prefix-component-l-height: 20px;
+  --prefix-component-l-background-color: blue;
+  --prefix-component-l-shadow-size: 1px;
+}
+
+.component {
+  background-color: var(--prefix-component-background-color);
+
+  width: var(--prefix-component-width);
+  height: var(--prefix-component-height);
+}
+
+.component--small {
+  @remapvars {
+    find: --prefix-component-s-;
+    filter: color, shadow;
+    replace: --prefix-component-;
+  }
+}
+
+.component--large {
+  @remapvars {
+    find: --prefix-component-l-;
+    filter: color, shadow;
+    replace: --prefix-component-;
+  }
+}
