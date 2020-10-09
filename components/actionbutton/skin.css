@@ -45,7 +45,7 @@ governing permissions and limitations under the License.
   &:focus-ring {
     background-color: var(--spectrum-actionbutton-m-background-color-key-focus);
     border-color: var(--spectrum-actionbutton-m-border-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-button-primary-border-size-increase-key-focus) var(--spectrum-actionbutton-m-border-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-actionbutton-m-quiet-border-size-key-focus) var(--spectrum-actionbutton-m-border-color-key-focus);
     color: var(--spectrum-actionbutton-m-text-color-key-focus);
 
     &:active {
@@ -185,7 +185,7 @@ governing permissions and limitations under the License.
   &:focus-ring {
     background-color: var(--spectrum-actionbutton-m-emphasized-background-color-key-focus);
     border-color: var(--spectrum-actionbutton-m-emphasized-border-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-button-primary-border-size-increase-key-focus) var(--spectrum-actionbutton-m-border-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-actionbutton-m-quiet-border-size-key-focus) var(--spectrum-actionbutton-m-border-color-key-focus);
     color: var(--spectrum-actionbutton-m-emphasized-text-color-key-focus);
 
     .spectrum-Icon {
