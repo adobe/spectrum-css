@@ -16,6 +16,10 @@
   --spectrum-alias-item-height-m: var(--spectrum-global-dimension-size-400);
   --spectrum-alias-item-height-l: var(--spectrum-global-dimension-size-500);
   --spectrum-alias-item-height-xl: var(--spectrum-global-dimension-size-600);
+  --spectrum-alias-item-rounded-border-radius-s: var(--spectrum-global-dimension-size-150);
+  --spectrum-alias-item-rounded-border-radius-m: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-item-rounded-border-radius-l: var(--spectrum-global-dimension-size-250);
+  --spectrum-alias-item-rounded-border-radius-xl: var(--spectrum-global-dimension-size-300);
   --spectrum-alias-item-text-size-s: var(--spectrum-global-dimension-font-size-75);
   --spectrum-alias-item-text-size-m: var(--spectrum-global-dimension-font-size-100);
   --spectrum-alias-item-text-size-l: var(--spectrum-global-dimension-font-size-200);
@@ -123,10 +127,7 @@
   --spectrum-alias-avatar-size-500: var(--spectrum-global-dimension-size-400);
   --spectrum-alias-avatar-size-700: var(--spectrum-global-dimension-size-500);
 
-  /* hard code for icon, should be replaced after we get 6.0.0-beta.20 */
-  --spectrum-alias-workflow-icon-size-s: var(--spectrum-global-dimension-size-200);
-  --spectrum-alias-workflow-icon-size-m: var(--spectrum-global-dimension-size-225);
-  --spectrum-alias-workflow-icon-size-xl: var(--spectrum-global-dimension-size-275);
+  /* hard code for icon, not sure why these are still here? */
   --spectrum-alias-ui-icon-alert-size-75: var(--spectrum-global-dimension-size-200);
   --spectrum-alias-ui-icon-alert-size-100: var(--spectrum-global-dimension-size-225);
   --spectrum-alias-ui-icon-alert-size-200: var(--spectrum-global-dimension-size-250);
