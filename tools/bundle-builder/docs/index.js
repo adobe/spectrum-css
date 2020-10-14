@@ -36,6 +36,7 @@ let minimumDeps = [
   'typography',
   'tooltip',
   'sidenav',
+  'actionbutton',
   'button',
   'textfield',
   'search',
