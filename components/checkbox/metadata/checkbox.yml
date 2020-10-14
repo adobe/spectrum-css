@@ -11,7 +11,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <label class="spectrum-Checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -58,7 +58,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
           <label class="spectrum-Checkbox is-invalid">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
             <span class="spectrum-Checkbox-box">
@@ -104,7 +104,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <label class="spectrum-Checkbox is-disabled">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
@@ -156,7 +156,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--quiet">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
@@ -203,7 +203,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
           <label class="spectrum-Checkbox spectrum-Checkbox--quiet is-invalid">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
             <span class="spectrum-Checkbox-box">
@@ -249,7 +249,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--quiet is-disabled">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
