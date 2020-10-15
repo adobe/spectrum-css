@@ -15,6 +15,7 @@ governing permissions and limitations under the License.
   --spectrum-icon-size-m: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-icon-size-l: var(--spectrum-alias-workflow-icon-size-l);
   --spectrum-icon-size-xl: var(--spectrum-alias-workflow-icon-size-xl);
+  --spectrum-icon-size-xxl: var(--spectrum-global-dimension-size-400);
 }
 
 .spectrum-Icon--sizeS {
@@ -50,5 +51,15 @@ governing permissions and limitations under the License.
   svg {
     block-size: var(--spectrum-icon-size-xl);
     inline-size: var(--spectrum-icon-size-xl);
+  }
+}
+
+
+.spectrum-Icon--sizeXXL {
+  &,
+  img,
+  svg {
+    block-size: var(--spectrum-icon-size-xxl);
+    inline-size: var(--spectrum-icon-size-xxl);
   }
 }
