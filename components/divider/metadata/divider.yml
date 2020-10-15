@@ -13,19 +13,19 @@ examples:
   - id: divider-large
     name: 'Large'
     markup: |
-      <h2 class="spectrum-Heading spectrum-Heading--M">Large</h2>
+      <h2 class="spectrum-Heading spectrum-Heading--sizeM">Large</h2>
       <hr class="spectrum-Divider spectrum-Divider--large">
       <p class="spectrum-Body">Page or Section Titles.</p>
   - id: divider-medium
     name: 'Medium'
     markup: |
-      <h2 class="spectrum-Heading spectrum-Heading--S">Medium</h2>
+      <h2 class="spectrum-Heading spectrum-Heading--sizeS">Medium</h2>
       <hr class="spectrum-Divider spectrum-Divider--medium">
       <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
   - id: divider-small
     name: 'Small'
     markup: |
-      <h2 class="spectrum-Heading spectrum-Heading--XS">Small</h2>
+      <h2 class="spectrum-Heading spectrum-Heading--sizeXS">Small</h2>
       <hr class="spectrum-Divider spectrum-Divider--small">
       <p class="spectrum-Body">Divide like-elements (tables, tool groups, elements within a panel, etc.)</p>
   - id: divider-vertical-small
