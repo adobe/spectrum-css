@@ -108,6 +108,7 @@ governing permissions and limitations under the License.
   position: relative;
   vertical-align: top;
   transition: color var(--spectrum-global-animation-duration-100) ease-out;
+  flex-shrink: 0;
 
   /* Fix Safari 10 bug where align-items is ignored inside of buttons */
   margin-block-start: calc(
@@ -131,6 +132,7 @@ governing permissions and limitations under the License.
 /* Error icons */
 .spectrum-Picker-trigger {
   .spectrum-Icon:not(.spectrum-Picker-icon) {
+    flex-shrink: 0;
     /* Fix Safari 10 bug where align-items is ignored inside of buttons */
     margin-block-start: calc(
       calc(
