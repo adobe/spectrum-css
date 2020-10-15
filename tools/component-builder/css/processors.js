@@ -201,7 +201,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
 
           // overwrite-support for the Typography-V3 <em> & <strong> selectors
           // sharing the same classname ".spectrum-Detail". This will be added like
-          // ".spectrum-Detail--sizXL em {}"
+          // ".spectrum-Detail--sizeXL em {}"
           addStrongAndEmphasisChildren = (name.includes('.spectrum-Detail')) ? true : false;
 
           var output = getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasisChildren, showIndicatorBorder = false);
