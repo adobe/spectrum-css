@@ -8,7 +8,7 @@ examples:
       <div class="spectrum-Toast">
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">Button.xd has been archived</div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Undo</span>
           </button>
         </div>
@@ -49,7 +49,7 @@ examples:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -71,7 +71,7 @@ examples:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is golden brown</div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -96,7 +96,7 @@ examples:
           <div class="spectrum-Toast-content">
             A new version of Lightroom Classic is now available
           </div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Update</span>
           </button>
         </div>
@@ -119,7 +119,7 @@ examples:
           <div class="spectrum-Toast-content">
             A new version of Lightroom Classic is now available
           </div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Update</span>
           </button>
         </div>
@@ -179,7 +179,7 @@ examples:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -202,7 +202,7 @@ examples:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -224,7 +224,7 @@ examples:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is golden brown</div>
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -244,7 +244,7 @@ examples:
       <div class="spectrum-Toast">
         <div class="spectrum-Toast-content">Button.xd has been archived</div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Undo</span>
           </button>
           <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
@@ -263,7 +263,7 @@ examples:
         </svg>
         <div class="spectrum-Toast-content">Don't use this markup, it's deprecated</div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
             <span class="spectrum-Button-label">Ok</span>
           </button>
           <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
