@@ -3,10 +3,21 @@ status: Verified
 description: The primary button is used for medium emphasis.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Primary
 sections:
-- name: Migration Guide
-  description: |
-    ### Change workflow icon size to medium
-    Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+  - name: Migration Guide
+    description: |
+      ### T-shirt sizing
+      Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
+
+      ### Change workflow icon size
+
+      Previously, all Buttons used `.spectrum-Icon--sizeS`. This has changed:
+
+      | Action Button Class        | Workflow Icon Class               |
+      | -------------------------- | --------------------------------- |
+      | `.spectrum-Button--sizeS`  | `.spectrum-Icon--sizeS`           |
+      | `.spectrum-Button--sizeM`  | `.spectrum-Icon--sizeM`           |
+      | `.spectrum-Button--sizeL`  | `.spectrum-Icon--sizeL`           |
+      | `.spectrum-Button--sizeXL` | `.spectrum-Icon--sizeXL`          |
 examples:
   - id: button-primary
     name: Sizing
