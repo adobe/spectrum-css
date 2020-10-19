@@ -12,7 +12,16 @@ governing permissions and limitations under the License.
 
 @import "../commons/index.css";
 
-:root {
+/* todo: find a way to make this silly little dead block not required */
+null {
+  --spectrum-button-primary-border-radius: 0;
+  --spectrum-button-primary-border-size: 0;
+  --spectrum-button-primary-textonly-padding-left: 0;
+  --spectrum-button-primary-padding-left: 0;
+  --spectrum-button-primary-padding-right: 0;
+}
+
+.spectrum-SplitButton {
   --spectrum-splitbutton-trigger-border-left: 0;
   --spectrum-splitbutton-trigger-min-width: 0;
   --spectrum-spltibutton-margin-left: 0;
@@ -65,11 +74,12 @@ governing permissions and limitations under the License.
   border-inline-start-width: var(--spectrum-splitbutton-trigger-border-left);
 
   padding-inline-start: calc(
-    var(--spectrum-button-primary-text-padding-x) -
-      var(--spectrum-button-primary-border-size) * 4
+    var(--spectrum-button-primary-padding-right) -
+      var(--spectrum-button-primary-border-size) * 3
   );
   padding-inline-end: calc(
-    var(--spectrum-padding) - var(--spectrum-button-primary-border-size)
+    var(--spectrum-button-primary-padding-left) -
+      var(--spectrum-button-primary-border-size) * 2
   );
 
   min-inline-size: var(--spectrum-splitbutton-trigger-min-width);
@@ -122,7 +132,7 @@ governing permissions and limitations under the License.
     /* CTA is special and doesn't have a border between the buttons */
     &.spectrum-Button--cta {
       padding-inline-start: calc(
-        var(--spectrum-button-primary-text-padding-x) -
+        var(--spectrum-button-primary-textonly-padding-left) -
           var(--spectrum-button-primary-border-size) -
           var(--spectrum-button-primary-border-size)
       );
@@ -149,11 +159,12 @@ governing permissions and limitations under the License.
     border-inline-end-width: var(--spectrum-splitbutton-trigger-border-left);
 
     padding-inline-end: calc(
-      var(--spectrum-button-primary-text-padding-x) -
+      var(--spectrum-button-primary-padding-right) -
         var(--spectrum-button-primary-border-size) * 4
     );
     padding-inline-start: calc(
-      var(--spectrum-padding) - var(--spectrum-button-primary-border-size)
+      var(--spectrum-button-primary-padding-left) -
+        var(--spectrum-button-primary-border-size)
     );
 
     /* Fix CTA button focus ring alignment */
