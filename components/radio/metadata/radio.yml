@@ -5,6 +5,13 @@ description:
   Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
 
   Radio buttons should not be used on their own, they should always be used within a [FieldGroup](fieldgroup.html).
+sections:
+  - name: Migration Guide
+    description: |
+        ### Quiet and emphasized
+        Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
+        If you were using the `quiet` variant, the `.spectrum-Radio--quiet` class is no longer required and can be removed.
+        If you need a switch to look like it did before this change, add `.spectrum-Radio--emphasized`.
 examples:
   - id: radio
     name: Standard
@@ -68,21 +75,21 @@ examples:
         </div>
       </div>
 
-  - id: radio-quiet
-    name: Quiet
+  - id: radio-emphasized
+    name: Emphasized
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
 
           <form>
-            <div class="spectrum-Radio spectrum-Radio--quiet">
+            <div class="spectrum-Radio spectrum-Radio--emphasized">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
-            <div class="spectrum-Radio spectrum-Radio--quiet">
+            <div class="spectrum-Radio spectrum-Radio--emphasized">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
@@ -95,13 +102,13 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
 
           <form>
-            <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
+            <div class="spectrum-Radio spectrum-Radio--emphasized is-invalid">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
-            <div class="spectrum-Radio spectrum-Radio--quiet is-invalid">
+            <div class="spectrum-Radio spectrum-Radio--emphasized is-invalid">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
@@ -114,13 +121,13 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
 
           <form>
-            <div class="spectrum-Radio spectrum-Radio--quiet">
+            <div class="spectrum-Radio spectrum-Radio--emphasized">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
-            <div class="spectrum-Radio spectrum-Radio--quiet">
+            <div class="spectrum-Radio spectrum-Radio--emphasized">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
@@ -134,7 +141,7 @@ examples:
     name: Label below
     markup: |
       <form>
-        <div class="spectrum-Radio spectrum-Radio--quiet spectrum-Radio--labelBelow">
+        <div class="spectrum-Radio spectrum-Radio--labelBelow">
           <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
           <span class="spectrum-Radio-button"></span>
           <label class="spectrum-Radio-label" for="radio-0">A label</label>
