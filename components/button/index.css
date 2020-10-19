@@ -14,13 +14,10 @@ governing permissions and limitations under the License.
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-button.css";
 
-:root {
-  /* Todo: fix in DNA, should have been zero */
-  --spectrum-fieldbutton-quiet-border-size: 0;
-  --spectrum-fieldbutton-disabled-border-size: 0;
-  --spectrum-fieldbutton-quiet-margin: 0;
-  --spectrum-fieldbutton-quiet-padding: 0;
-}
+/* include the other button components that have been broken out */
+@import "./fieldbutton.css";
+@import "./logicbutton.css";
+@import "./clearbutton.css";
 
 .spectrum-Button {
   /* Adjustments for inset/outset padding in DNA */
