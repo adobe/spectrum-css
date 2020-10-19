@@ -22,6 +22,7 @@ governing permissions and limitations under the License.
 .spectrum-Button {
   /* Adjustments for inset/outset padding in DNA */
   --spectrum-button-primary-padding-left-adjusted: calc(var(--spectrum-button-primary-padding-left) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-padding-right-adjusted: calc(var(--spectrum-button-primary-padding-right) - var(--spectrum-button-primary-border-size));
   --spectrum-button-primary-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-textonly-padding-left) - var(--spectrum-button-primary-border-size));
   --spectrum-button-primary-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-textonly-padding-right) - var(--spectrum-button-primary-border-size));
 
