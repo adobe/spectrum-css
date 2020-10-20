@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/cyclebutton",
-  "version": "3.0.0-beta.4",
+  "version": "3.0.0-beta.5",
   "description": "The Spectrum CSS cyclebutton component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -21,9 +21,9 @@
     "@spectrum-css/vars": "^2.3.0"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^3.0.0-beta.4",
-    "@spectrum-css/component-builder": "^1.2.1-beta.0",
-    "@spectrum-css/icon": "^3.0.0-beta.0",
+    "@spectrum-css/button": "^3.0.0-beta.5",
+    "@spectrum-css/component-builder": "^2.0.0-beta.0",
+    "@spectrum-css/icon": "^3.0.0-beta.1",
     "@spectrum-css/vars": "^2.3.0",
     "gulp": "^4.0.0"
   },

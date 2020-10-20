@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.5"></a>
+# 3.0.0-beta.5
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@3.0.0-beta.4...@spectrum-css/actionbar@3.0.0-beta.5)
+
+### 🐛 Bug fixes
+
+* **actionbar:** ensure Poppover padding is managed for content direction ([06e5f1a](https://github.com/adobe/spectrum-css/commit/06e5f1a))
+
+
+
+
+
 <a name="3.0.0-beta.4"></a>
 # 3.0.0-beta.4
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbar@3.0.0-beta.3...@spectrum-css/actionbar@3.0.0-beta.4)
