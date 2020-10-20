@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 :root {
   --spectrum-treeview-item-min-height: var(--spectrum-global-dimension-size-400);
   --spectrum-treeview-item-padding-y: var(--spectrum-global-dimension-size-75);
-  --spectrum-treeview-item-icon-margin-right: var(--spectrum-global-dimension-size-100);
+  --spectrum-treeview-item-icon-margin-right: var(--spectrum-global-dimension-size-125);
   --spectrum-treeview-item-affordance-width: var(--spectrum-global-dimension-size-400);
   --spectrum-treeview-item-indentation: var(--spectrum-global-dimension-size-200);
   --spectrum-treeview-heading-font-weight: var(--spectrum-global-font-weight-bold);
@@ -161,7 +161,7 @@ governing permissions and limitations under the License.
   inset-block-start: calc(-1 * var(--spectrum-global-dimension-size-65));
   margin-inline-start: calc(-1 * var(--spectrum-global-dimension-size-500));
   margin-block-end: calc(-1 * var(--spectrum-global-dimension-size-125));
-  margin-inline-end: var(--spectrum-global-dimension-size-130);
+  margin-inline-end: var(--spectrum-global-dimension-size-85);
 
   padding-inline: var(--spectrum-global-dimension-size-150);
   padding-block: var(--spectrum-global-dimension-size-125);

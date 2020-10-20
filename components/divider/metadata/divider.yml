@@ -32,16 +32,15 @@ examples:
     name: 'Vertical, Small'
     description: |
       When a vertical Divider is used inside of a flex container, use `align-self: stretch; height: auto` on the Divider.
-      ButtonGroup automatically applies these styles to vertical Dividers.
     markup: |
-      <div class="spectrum-ButtonGroup">
-        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+      <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Properties">
             <use xlink:href="#spectrum-icon-18-Properties" />
           </svg>
         </button>
         <div class="spectrum-Divider spectrum-Divider--small spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
-        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Select">
             <use xlink:href="#spectrum-icon-18-Select" />
           </svg>
@@ -50,14 +49,14 @@ examples:
   - id: divider-vertical-medium
     name: 'Vertical, Medium'
     markup: |
-      <div class="spectrum-ButtonGroup">
-        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+      <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Properties">
             <use xlink:href="#spectrum-icon-18-Properties" />
           </svg>
         </button>
         <div class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
-        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Select">
             <use xlink:href="#spectrum-icon-18-Select" />
           </svg>

@@ -15,6 +15,9 @@ governing permissions and limitations under the License.
 :root {
   --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-height));
   --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-height));
+
+  /* todo: remove when this is added back to DNA */
+  --spectrum-tabs-text-size: var(--spectrum-alias-font-size-default);
 }
 
 .spectrum-Tabs {

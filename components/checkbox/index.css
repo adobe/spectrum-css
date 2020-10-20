@@ -173,13 +173,21 @@ governing permissions and limitations under the License.
   inset-block-start: 50%;
   inset-inline-start: 50%;
 
-  margin-block-start: calc(var(--spectrum-icon-checkmark-small-height) / -2);
-  margin-inline-start: calc(var(--spectrum-icon-checkmark-small-width) / -2);
-
   opacity: 0;
   transform: scale(0);
 
   transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out, transform var(--spectrum-global-animation-duration-100) ease-in-out;
+}
+
+.spectrum-Checkbox-checkmark {
+  margin-block-start: calc(var(--spectrum-icon-checkmark-small-height) / -2);
+  margin-inline-start: calc(var(--spectrum-icon-checkmark-small-width) / -2);
+}
+
+/* TODO DNA bug ? should be replaced with dedicated DNA token */
+.spectrum-Checkbox-partialCheckmark {
+  margin-block-start: calc(var(--spectrum-global-dimension-size-100) / -2);
+  margin-inline-start: calc(var(--spectrum-global-dimension-size-100) / -2);
 }
 
 .spectrum-Checkbox-partialCheckmark {
