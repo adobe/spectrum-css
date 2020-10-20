@@ -18,7 +18,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <form>
             <div class="spectrum-Radio">
@@ -37,7 +37,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
 
           <form>
             <div class="spectrum-Radio is-invalid">
@@ -56,7 +56,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <form>
             <div class="spectrum-Radio">
@@ -80,7 +80,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--emphasized">
@@ -99,7 +99,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Invalid</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--emphasized is-invalid">
@@ -118,7 +118,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <form>
             <div class="spectrum-Radio spectrum-Radio--emphasized">

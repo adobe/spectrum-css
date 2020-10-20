@@ -31,8 +31,8 @@ let ruleClassnames = {
   'tbody_open': 'spectrum-Table-body',
   'th_open': 'spectrum-Table-headCell',
   'td_open': 'spectrum-Table-cell',
-  'code_inline': 'spectrum-Code spectrum-Code--S',
-  'code_block': 'spectrum-Code spectrum-Code--S'
+  'code_inline': 'spectrum-Code spectrum-Code--sizeS',
+  'code_block': 'spectrum-Code spectrum-Code--sizeS'
 };
 
 for (let [rule, className] of Object.entries(ruleClassnames)) {
@@ -68,11 +68,11 @@ md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
 };
 
 const headingMap = {
-  'h1': 'spectrum-Heading spectrum-Heading--L',
-  'h2': 'spectrum-Heading spectrum-Heading--M',
-  'h3': 'spectrum-Heading spectrum-Heading--S',
-  'h4': 'spectrum-Heading spectrum-Heading--XS',
-  'h5': 'spectrum-Heading spectrum-Heading--XXS'
+  'h1': 'spectrum-Heading spectrum-Heading--sizeL',
+  'h2': 'spectrum-Heading spectrum-Heading--sizeM',
+  'h3': 'spectrum-Heading spectrum-Heading--sizeS',
+  'h4': 'spectrum-Heading spectrum-Heading--sizeXS',
+  'h5': 'spectrum-Heading spectrum-Heading--sizeXXS'
 };
 
 md.renderer.rules.heading_open = function(tokens, idx, options, env, self) {

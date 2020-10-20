@@ -116,6 +116,10 @@ governing permissions and limitations under the License.
         background: var(--spectrum-calendar-day-background-color-selected-hover);
       }
     }
+
+    &:before {
+      border-color: var(--spectrum-calendar-day-border-color-key-focus);
+    }
   }
 
   &.is-disabled {

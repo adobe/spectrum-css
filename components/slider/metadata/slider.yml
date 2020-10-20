@@ -9,6 +9,9 @@ sections:
       ### Color slider is now a separate component
       Color slider has been moved to the [Color Slider](colorslider.html) component.
       Replace class names starting with `.spectrum-Slider` with `.spectrum-ColorSlider`.
+
+      ### Use class `is-dragged` instead of `u-isGrabbing`
+      On `spectrum-Slider-handle` when dragging, use `is-dragged` instead of `u-isGrabbing`.
 examples:
   - id: slider
     name: Standard
@@ -361,4 +364,3 @@ examples:
           </div>
         </div>
       </div>
-      
