@@ -24,3 +24,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-pagination-page-button-text-color-down);
   }
 }
+
+.spectrum-Pagination-counter {
+  color: var(--spectrum-alias-label-text-color);
+}

@@ -10,54 +10,63 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+  /* these need to be removed but we don't have a full design spec */
+  --spectrum-listheading-text-color: var(--spectrum-global-color-gray-700);
+}
+
 .spectrum-Menu {
-  background-color: var(--spectrum-selectlist-background-color);
+  background-color: var(--spectrum-listitem-background-color);
 }
 
 .spectrum-Menu-item {
-  background-color: var(--spectrum-selectlist-option-background-color);
-  color: var(--spectrum-selectlist-option-text-color);
+  background-color: var(--spectrum-listitem-option-background-color);
+  color: var(--spectrum-listitem-option-text-color);
 
   &:focus-ring,
   &.is-focused {
-    background-color: var(--spectrum-selectlist-option-background-color-key-focus);
-    color: var(--spectrum-selectlist-option-text-color-key-focus);
-    border-inline-start-color: var(--spectrum-selectlist-option-focus-indicator-color);
+    background-color: var(
+      --spectrum-listitem-option-background-color-key-focus
+    );
+    color: var(--spectrum-listitem-option-text-color-key-focus);
+    border-inline-start-color: var(
+      --spectrum-listitem-option-focus-indicator-color
+    );
   }
 
   &:hover,
   &:focus,
   &.is-highlighted,
   &.is-open {
-    background-color: var(--spectrum-selectlist-option-background-color-hover);
-    color: var(--spectrum-selectlist-option-text-color-hover);
+    background-color: var(--spectrum-listitem-option-background-color-hover);
+    color: var(--spectrum-listitem-option-text-color-hover);
   }
 
   &.is-selected {
-    color: var(--spectrum-selectlist-option-text-color-selected);
+    color: var(--spectrum-listitem-option-text-color-selected);
 
     .spectrum-Menu-checkmark {
-      color: var(--spectrum-selectlist-option-icon-color-selected);
+      color: var(--spectrum-listitem-option-icon-color-selected);
     }
   }
 
   .is-active,
   &:active {
-    background-color: var(--spectrum-selectlist-option-background-color-down);
+    background-color: var(--spectrum-listitem-option-background-color-down);
   }
 
   &.is-disabled {
-    background-color: var(--spectrum-selectlist-option-background-color-disabled);
+    background-color: var(--spectrum-listitem-option-background-color-disabled);
     background-image: none;
-    color: var(--spectrum-selectlist-option-text-color-disabled);
+    color: var(--spectrum-listitem-option-text-color-disabled);
     cursor: default;
   }
 }
 
 .spectrum-Menu-sectionHeading {
-  color: var(--spectrum-heading-subtitle3-text-color);
+  color: var(--spectrum-listheading-text-color);
 }
 
 .spectrum-Menu-divider {
-  background-color: var(--spectrum-selectlist-divider-color);
+  background-color: var(--spectrum-listitem-divider-color);
 }

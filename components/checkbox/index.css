@@ -31,8 +31,6 @@ governing permissions and limitations under the License.
   min-block-size: var(--spectrum-checkbox-height);
   max-inline-size: 100%;
 
-  margin-inline-end: calc(var(--spectrum-checkbox-cursor-hit-x) * 2);
-
   vertical-align: top;
 }
 
@@ -54,11 +52,8 @@ governing permissions and limitations under the License.
   /* Remove the padding for [type="checkbox"] in IE 10-. */
   padding: 0;
 
-  /* Hit area */
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: calc(var(--spectrum-checkbox-cursor-hit-x) * -1);
-  inline-size: calc(100% + var(--spectrum-checkbox-cursor-hit-x) * 2);
+  inline-size: 100%;
   block-size: 100%;
 
   opacity: .0001;
@@ -114,9 +109,13 @@ governing permissions and limitations under the License.
   text-align: start;
   margin-inline-start: var(--spectrum-checkbox-text-gap);
   margin-block-start: var(--spectrum-checkbox-label-margin-top);
+
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
-  line-height: var(--spectrum-checkbox-label-line-height);
+  font-style: var(--spectrum-checkbox-text-font-style);
+  line-height: var(--spectrum-checkbox-text-line-height);
+
+  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 .spectrum-Checkbox-box {
@@ -162,6 +161,9 @@ governing permissions and limitations under the License.
 
     transition: box-shadow var(--spectrum-global-animation-duration-100) ease-out,
                 margin var(--spectrum-global-animation-duration-100) ease-out;
+
+    /* force ff to render on the pixel grid */
+    transform: translate(0, 0);
   }
 }
 
@@ -171,13 +173,21 @@ governing permissions and limitations under the License.
   inset-block-start: 50%;
   inset-inline-start: 50%;
 
-  margin-block-start: calc(var(--spectrum-icon-checkmark-small-height) / -2);
-  margin-inline-start: calc(var(--spectrum-icon-checkmark-small-width) / -2);
-
   opacity: 0;
   transform: scale(0);
 
   transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out, transform var(--spectrum-global-animation-duration-100) ease-in-out;
+}
+
+.spectrum-Checkbox-checkmark {
+  margin-block-start: calc(var(--spectrum-icon-checkmark-small-height) / -2);
+  margin-inline-start: calc(var(--spectrum-icon-checkmark-small-width) / -2);
+}
+
+/* TODO DNA bug ? should be replaced with dedicated DNA token */
+.spectrum-Checkbox-partialCheckmark {
+  margin-block-start: calc(var(--spectrum-global-dimension-size-100) / -2);
+  margin-inline-start: calc(var(--spectrum-global-dimension-size-100) / -2);
 }
 
 .spectrum-Checkbox-partialCheckmark {

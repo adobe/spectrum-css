@@ -38,8 +38,7 @@
   --spectrum-tabs-compact-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-compact-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-compact-text-transform: none;
-  --spectrum-tabs-compact-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-compact-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-compact-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-compact-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-tabs-compact-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-compact-item-height: var(--spectrum-global-dimension-size-400);
@@ -93,8 +92,7 @@
   --spectrum-tabs-compact-vertical-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-compact-vertical-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-compact-vertical-text-transform: none;
-  --spectrum-tabs-compact-vertical-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-compact-vertical-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-tabs-compact-vertical-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-compact-vertical-item-height: var(--spectrum-global-dimension-size-400);
@@ -150,8 +148,7 @@
   --spectrum-tabs-compact-vertical-emphasized-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-compact-vertical-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-compact-vertical-emphasized-text-transform: none;
-  --spectrum-tabs-compact-vertical-emphasized-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-compact-vertical-emphasized-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-tabs-compact-vertical-emphasized-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-compact-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-400);
@@ -209,8 +206,7 @@
   --spectrum-tabs-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-text-transform: none;
-  --spectrum-tabs-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -263,8 +259,7 @@
   --spectrum-tabs-emphasized-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-emphasized-text-transform: none;
-  --spectrum-tabs-emphasized-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-emphasized-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -283,7 +278,6 @@
   --spectrum-tabs-quiet-ui-icon-color: var(--spectrum-alias-icon-color);
   --spectrum-tabs-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-quiet-text-color-hover: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-quiet-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
@@ -312,14 +306,14 @@
   --spectrum-tabs-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-quiet-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-tabs-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
+  --spectrum-tabs-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-quiet-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-tabs-quiet-text-font-weight: var(--spectrum-alias-body-text-font-weight);
   --spectrum-tabs-quiet-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-text-transform: none;
-  --spectrum-tabs-quiet-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-quiet-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-quiet-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -373,8 +367,7 @@
   --spectrum-tabs-quiet-compact-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-compact-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-compact-text-transform: none;
-  --spectrum-tabs-quiet-compact-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-compact-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-compact-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-compact-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-tabs-quiet-compact-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-quiet-compact-item-height: var(--spectrum-global-dimension-size-400);
@@ -428,8 +421,7 @@
   --spectrum-tabs-quiet-compact-emphasized-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-compact-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-compact-emphasized-text-transform: none;
-  --spectrum-tabs-quiet-compact-emphasized-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-compact-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-compact-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-compact-emphasized-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-tabs-quiet-compact-emphasized-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-quiet-compact-emphasized-item-height: var(--spectrum-global-dimension-size-400);
@@ -484,8 +476,7 @@
   --spectrum-tabs-quiet-compact-vertical-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-compact-vertical-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-compact-vertical-text-transform: none;
-  --spectrum-tabs-quiet-compact-vertical-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-compact-vertical-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-tabs-quiet-compact-vertical-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-quiet-compact-vertical-item-height: var(--spectrum-global-dimension-size-400);
@@ -542,8 +533,7 @@
   --spectrum-tabs-quiet-compact-vertical-emphasized-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-compact-vertical-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-compact-vertical-emphasized-text-transform: none;
-  --spectrum-tabs-quiet-compact-vertical-emphasized-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-compact-vertical-emphasized-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-tabs-quiet-compact-vertical-emphasized-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-quiet-compact-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-400);
@@ -600,8 +590,7 @@
   --spectrum-tabs-quiet-emphasized-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-emphasized-text-transform: none;
-  --spectrum-tabs-quiet-emphasized-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-emphasized-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -655,8 +644,7 @@
   --spectrum-tabs-quiet-vertical-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-vertical-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-vertical-text-transform: none;
-  --spectrum-tabs-quiet-vertical-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-vertical-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-vertical-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-quiet-vertical-item-height: var(--spectrum-global-dimension-size-550);
   --spectrum-tabs-quiet-vertical-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -712,8 +700,7 @@
   --spectrum-tabs-quiet-vertical-emphasized-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-quiet-vertical-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-quiet-vertical-emphasized-text-transform: none;
-  --spectrum-tabs-quiet-vertical-emphasized-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-quiet-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-quiet-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-quiet-vertical-emphasized-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-quiet-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-550);
   --spectrum-tabs-quiet-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -770,8 +757,7 @@
   --spectrum-tabs-vertical-text-line-height: var(--spectrum-alias-body-text-line-height);
   --spectrum-tabs-vertical-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-vertical-text-transform: none;
-  --spectrum-tabs-vertical-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-tabs-vertical-icon-size: var(--spectrum-alias-workflow-icon-size);
+  --spectrum-tabs-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabs-vertical-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-vertical-item-height: var(--spectrum-global-dimension-size-550);
   --spectrum-tabs-vertical-icon-gap: var(--spectrum-global-dimension-size-100);

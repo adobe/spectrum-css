@@ -28,7 +28,7 @@ pipeline {
             script {
               env.MASTER_COMMIT_SHA = 
                 sh (returnStdout: true, script: """
-                  git ls-remote git@git.corp.adobe.com:Spectrum/spectrum-css.git master | awk '{ print \$1 }' | tr -d '\n'
+                  git ls-remote git@git.corp.adobe.com:Spectrum/spectrum-css.git main | awk '{ print \$1 }' | tr -d '\n'
                 """)
 
               env.PARENT_COMMIT_SHA = 
@@ -52,7 +52,7 @@ pipeline {
 
                   env.UPDATED_SPECTRUM_GIT_REPO_PATH = 
                     sh (returnStdout: true, script: """
-                      echo master/\$MASTER_COMMIT_SHA | tr -d '\n'
+                      echo main/\$MASTER_COMMIT_SHA | tr -d '\n'
                     """)                  
                 }
                 echo "$UPDATED_SPECTRUM_GIT_REPO_PATH/**"
@@ -112,7 +112,7 @@ pipeline {
               sh "git add -A"
               sh ("""
                 git commit -m "Visual report update"
-                git push origin master
+                git push origin main
               """)
               deleteDir()
             }

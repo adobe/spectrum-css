@@ -23,7 +23,7 @@ function clean() {
 const build = gulp.series(
   clean,
   gulp.parallel(
-    css.buildCSS,
+    css.buildVars,
     docs.buildDocs
   )
 );

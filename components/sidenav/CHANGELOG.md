@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.0-beta.3...@spectrum-css/sidenav@3.0.0-beta.4)
+
+**Note:** Version bump only for package @spectrum-css/sidenav
+
+
+
+
+
+<a name="3.0.0-beta.3"></a>
+# 3.0.0-beta.3
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.0-beta.2...@spectrum-css/sidenav@3.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* side nav item with long text cuts off icon, fixes [#895](https://github.com/adobe/spectrum-css/issues/895) ([d4b8bed](https://github.com/adobe/spectrum-css/commit/d4b8bed))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="3.0.0-beta.2"></a>
 # 3.0.0-beta.2
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.0-beta.1...@spectrum-css/sidenav@3.0.0-beta.2)

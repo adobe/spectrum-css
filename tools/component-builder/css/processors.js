@@ -51,16 +51,12 @@ const postcssReal = require('postcss');
  * @returns {string} Spectrum CSS t-shirt sized token name
  */
 function getTShirtTokenName(name) {
-  tokenName = name.replace(/\.?([A-Z]{,1}$ |[0-9])/g,
-    function (x, y) {
-      return '-' + y
-    })
-    .replace(/([A-Z]{1,})/g,
-      function (x, y) {
-        return '-' + y
-      })
-    .replace(/^-/, '');
-  tokenName = tokenName.replace('.spectrum--', '').replace('--', '');
+  tokenName = name
+    .replace(/-{1,2}(size)([A-Z]*)/, (match, p1, p2) => `--${p2}`)
+    .replace(/\.?([A-Z]{,1}$ |[0-9])/g, (match, p1) => `-${p1}`)
+    .replace(/([A-Z]{1,})/g, (match, p1) => `-${p1}`)
+    .replace(/^-/, "");
+  tokenName = tokenName.replace(".spectrum--", "").replace("--", "");
   tokenName = tokenName.toLowerCase();
   return tokenName;
 }
@@ -205,7 +201,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
 
           // overwrite-support for the Typography-V3 <em> & <strong> selectors
           // sharing the same classname ".spectrum-Detail". This will be added like
-          // ".spectrum-Detail--XL em {}"
+          // ".spectrum-Detail--sizeXL em {}"
           addStrongAndEmphasisChildren = (name.includes('.spectrum-Detail')) ? true : false;
 
           var output = getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasisChildren, showIndicatorBorder = false);
@@ -292,6 +288,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
         }
       }
     }),
+    require('postcss-remapvars'),
     require('postcss-nested'),
     require('postcss-inherit'),
     diff ? require('./plugins/postcss-varsonly')() : null,
@@ -318,6 +315,8 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
       }
     }),
     require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
+    require('postcss-dropunusedvars'),
+    require('postcss-dropdupedvars'),
     require('postcss-focus-ring'),
     secondNotNested ? require('./plugins/postcss-notnested')() : null, // Second one to catch all stray &
     require('postcss-discard-empty'),

@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.1.4-beta.0...@spectrum-css/typography@3.0.0-beta.0)
+
+* fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+
+
+### 🛑 BREAKING CHANGES
+
+* all typography sizing classes now have --size* instead of --*, see migration guides
+
+
+
+
+
+<a name="2.1.4-beta.0"></a>
+## 2.1.4-beta.0
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.1.3...@spectrum-css/typography@2.1.4-beta.0)
+
+### 🐛 Bug fixes
+
+* global typography color added back ([4a2f78f](https://github.com/adobe/spectrum-css/commit/4a2f78f))
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+
+
+
 <a name="2.1.3"></a>
 ## 2.1.3
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.1.2...@spectrum-css/typography@2.1.3)

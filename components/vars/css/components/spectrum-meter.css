@@ -4,7 +4,9 @@
   --spectrum-meter-large-track-fill-color: var(--spectrum-global-color-blue-500);
   --spectrum-meter-large-track-color-positive: var(--spectrum-semantic-positive-color-status);
   --spectrum-meter-large-track-color-warning: var(--spectrum-semantic-notice-color-status);
+  --spectrum-meter-large-track-color-notice: var(--spectrum-semantic-notice-color-status);
   --spectrum-meter-large-track-color-critical: var(--spectrum-semantic-negative-color-status);
+  --spectrum-meter-large-track-color-negative: var(--spectrum-semantic-negative-color-status);
   --spectrum-meter-large-track-color-disabled: var(--spectrum-alias-track-color-disabled);
   --spectrum-meter-large-track-fill-color-disabled: var(--spectrum-alias-track-color-disabled);
   --spectrum-meter-large-width: var(--spectrum-global-dimension-size-2400);
@@ -17,7 +19,9 @@
   --spectrum-meter-small-track-fill-color: var(--spectrum-global-color-blue-500);
   --spectrum-meter-small-track-color-positive: var(--spectrum-semantic-positive-color-status);
   --spectrum-meter-small-track-color-warning: var(--spectrum-semantic-notice-color-status);
+  --spectrum-meter-small-track-color-notice: var(--spectrum-semantic-notice-color-status);
   --spectrum-meter-small-track-color-critical: var(--spectrum-semantic-negative-color-status);
+  --spectrum-meter-small-track-color-negative: var(--spectrum-semantic-negative-color-status);
   --spectrum-meter-small-track-color-disabled: var(--spectrum-alias-track-color-disabled);
   --spectrum-meter-small-track-fill-color-disabled: var(--spectrum-alias-track-color-disabled);
   --spectrum-meter-small-width: var(--spectrum-global-dimension-size-2400);

@@ -1,0 +1,19 @@
+name: Tray
+description: Tray Dialogs are typically used to portray information on mobile device or smaller screens.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/trays/
+examples:
+  - id: tray
+    name: Tray
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal spectrum-Tray is-open spectrum-Tray " style="max-height: calc(1149px - var(--spectrum-tray-margin-top));">
+          <section class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
+            <div class="spectrum-Dialog-grid">
+              <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">New Messages</h1>
+              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <section class="spectrum-Dialog-content">You have 5 new messages.</section>
+            </div>
+          </section
+        </div>
+      </div>

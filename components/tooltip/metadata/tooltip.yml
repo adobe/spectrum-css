@@ -26,15 +26,15 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
-        <svg class="spectrum-Icon spectrum-UIIcon-InfoSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoSmall" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <span class="spectrum-Tooltip-label">Info</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
-        <svg class="spectrum-Icon spectrum-UIIcon-InfoSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoSmall" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class="spectrum-Tooltip-tip"></span>
@@ -52,15 +52,15 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--positive is-open">
-        <svg class="spectrum-Icon spectrum-UIIcon-SuccessSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SuccessSmall" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
         </svg>
         <span class="spectrum-Tooltip-label">Success</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--positive is-open">
-        <svg class="spectrum-Icon spectrum-UIIcon-SuccessSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SuccessSmall" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
         </svg>
         <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class="spectrum-Tooltip-tip"></span>
@@ -78,15 +78,15 @@ examples:
         <span class="spectrum-Tooltip-tip"></span>
       </span>
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--negative is-open">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertSmall" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <span class="spectrum-Tooltip-label">Warning</span>
         <span class="spectrum-Tooltip-tip"></span>
       </span>
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--negative is-open">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertSmall" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class="spectrum-Tooltip-tip"></span>
@@ -146,8 +146,8 @@ examples:
     description: An informative tooltip with a help icon.
     markup: |
       <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
-        <svg class="spectrum-Icon spectrum-UIIcon-HelpSmall spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-HelpSmall" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Help" />
         </svg>
         <span class="spectrum-Tooltip-label">Help</span>
         <span class="spectrum-Tooltip-tip"></span>

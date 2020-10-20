@@ -11,14 +11,14 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-StatusLight {
-  color: var(--spectrum-statuslight-text-color);
+  color: var(--spectrum-statuslight-info-text-color);
 
   &[disabled],
   &.is-disabled {
-    color: var(--spectrum-statuslight-text-color-disabled);
+    color: var(--spectrum-statuslight-info-text-color-disabled);
 
     &::before {
-      background-color: var(--spectrum-statuslight-dot-color-disabled);
+      background-color: var(--spectrum-statuslight-info-dot-color-disabled);
     }
   }
 }
@@ -49,33 +49,33 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-StatusLight--celery::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-celery);
+  background-color: var(--spectrum-statuslight-celery-dot-color);
 }
 
 .spectrum-StatusLight--yellow::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-yellow);
+  background-color: var(--spectrum-statuslight-yellow-dot-color);
 }
 
 .spectrum-StatusLight--fuchsia::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-fuchsia);
+  background-color: var(--spectrum-statuslight-fuchsia-dot-color);
 }
 
 .spectrum-StatusLight--indigo::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-indigo);
+  background-color: var(--spectrum-statuslight-indigo-dot-color);
 }
 
 .spectrum-StatusLight--seafoam::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-seafoam);
+  background-color: var(--spectrum-statuslight-seafoam-dot-color);
 }
 
 .spectrum-StatusLight--chartreuse::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-chartreuse);
+  background-color: var(--spectrum-statuslight-chartreuse-dot-color);
 }
 
 .spectrum-StatusLight--magenta::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-magenta);
+  background-color: var(--spectrum-statuslight-magenta-dot-color);
 }
 
 .spectrum-StatusLight--purple::before {
-  background-color: var(--spectrum-statuslight-dot-color-label-purple);
+  background-color: var(--spectrum-statuslight-purple-dot-color);
 }

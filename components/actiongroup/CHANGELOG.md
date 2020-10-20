@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.4"></a>
+# 1.0.0-beta.4
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.3...@spectrum-css/actiongroup@1.0.0-beta.4)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
+<a name="1.0.0-beta.3"></a>
+# 1.0.0-beta.3
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.2...@spectrum-css/actiongroup@1.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* actiongroup wrapping, fixes [#749](https://github.com/adobe/spectrum-css/issues/749) ([8b654b7](https://github.com/adobe/spectrum-css/commit/8b654b7))
+* removed deprecated tokens from actiongroup ([4dfe577](https://github.com/adobe/spectrum-css/commit/4dfe577))
+* workflow icon size change to medium ([#917](https://github.com/adobe/spectrum-css/issues/917)) ([a609ee6](https://github.com/adobe/spectrum-css/commit/a609ee6))
+
+
+
+
+
+<a name="1.0.0-beta.2"></a>
+# 1.0.0-beta.2
+🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.1...@spectrum-css/actiongroup@1.0.0-beta.2)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
 <a name="1.0.0-beta.1"></a>
 # 1.0.0-beta.1
 🗓 2020-05-14

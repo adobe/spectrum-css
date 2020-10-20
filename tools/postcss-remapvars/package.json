@@ -1,0 +1,17 @@
+{
+  "name": "postcss-remapvars",
+  "version": "1.0.0",
+  "description": "Remap variables with find and replace",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Larry Davis <lazdnet@gmail.com>",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "postcss": "^7.0.32"
+  },
+  "devDependencies": {
+    "ava": "^3.9.0"
+  }
+}

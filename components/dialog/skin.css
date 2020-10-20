@@ -10,39 +10,19 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Dialog {
-  background: var(--spectrum-dialog-background-color);
-}
-
-.spectrum-Dialog-header {
-  background: var(--spectrum-dialog-background-color);
-
-  &:after {
-    background: var(--spectrum-dialog-rule-color);
-  }
-}
-
-.spectrum-Dialog-title {
-  color: var(--spectrum-dialog-title-text-color);
+.spectrum-Dialog-heading {
+  color: var(--spectrum-dialog-confirm-title-text-color);
 }
 
 .spectrum-Dialog-content {
-  color: var(--spectrum-dialog-content-text-color);
+  color: var(--spectrum-dialog-confirm-description-text-color);
 }
 
 .spectrum-Dialog-typeIcon {
-  color: var(--spectrum-dialog-icon-color);
-}
-
-.spectrum-Dialog-footer {
-  background: var(--spectrum-dialog-background-color);
+  color: var(--spectrum-dialog-confirm-icon-color);
 }
 
 .spectrum-Dialog--error {
-  .spectrum-Dialog-title {
-    color: var(--spectrum-dialog-error-title-text-color);
-  }
-
   .spectrum-Dialog-typeIcon {
     color: var(--spectrum-dialog-error-icon-color);
   }

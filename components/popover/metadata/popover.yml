@@ -27,49 +27,64 @@ examples:
     name: Popover - Dialog style
     description: Spectrum Popovers are implemented using the Dialog's inner elements.
     markup: |
-      <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--bottom is-open" style="max-width:320px">
-        <div class="spectrum-Dialog-header">
-          <div class="spectrum-Dialog-title">Popover Title</div>
-        </div>
-        <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-        <div class="spectrum-Popover-tip"></div>
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+        <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+          <div class="spectrum-Dialog-grid" style="display: grid;">
+            <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Popover Title</h1>
+            <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+            <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+          </div>
+        </section>
+        <svg xmlns="http://www.w3.org/svg/2000" width="23" height="12" class="spectrum-Popover-tip" style="left: 201px;">
+          <path class="spectrum-Popover-tip-triangle" d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"></path>
+        </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 215px"></div>
+      <div class="dummy-spacing" style="height: 240px"></div>
 
       <br>
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right is-open" style="max-width:320px">
-        <div class="spectrum-Dialog-header">
-          <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
-        </div>
-        <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-        <div class="spectrum-Popover-tip"></div>
+      <div class="spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+        <section class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
+          <div class="spectrum-Dialog-grid" style="display: grid;">
+            <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
+            <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+            <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+          </div>
+        </section>
+        <svg xmlns="http://www.w3.org/svg/2000" width="12" height="23" class="spectrum-Popover-tip" style="top: 16px;">
+          <path class="spectrum-Popover-tip-triangle" d="M 0 0.7071067811865476 L 10.707106781186548 11.414213562373096 L 0 22.121320343559645"></path>
+        </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 215px"></div>
+      <div class="dummy-spacing" style="height: 240px"></div>
 
       <br>
       <br>
 
-      <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right spectrum-Dialog--error is-open" style="max-width:320px">
-        <div class="spectrum-Dialog-header">
-          <div class="spectrum-Dialog-title">Very Long Error Message With Much Text</div>
-          <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-AlertMedium" />
-          </svg>
-        </div>
-        <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-        <div class="spectrum-Dialog-footer">
-          <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--quiet">
-            <span>Cancel</span>
-          </button>
-          <button class="spectrum-Button spectrum-Button--primary spectrum-Button--quiet">
-            <span>Save</span>
-          </button>
-        </div>
-        <div class="spectrum-Popover-tip"></div>
+      <div class="spectrum-Popover spectrum-Popover--left spectrum-Popover--withTip is-open spectrum-Popover" role="presentation">
+        <section class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--error" role="dialog" tabindex="-1" aria-modal="true">
+          <div class="spectrum-Dialog-grid" style="display: grid;">
+            <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Very Very Very Very Long Popover Title</h1>
+            <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Alert"></use>
+            </svg>
+            <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+            <section class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah.</section>
+            <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-Button--quiet spectrum-ButtonGroup-item" type="button">
+                <span class="spectrum-Button-label">Cancel</span>
+              </button>
+              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-Button--quiet spectrum-ButtonGroup-item" type="button">
+                <span class="spectrum-Button-label">Save</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <svg xmlns="http://www.w3.org/svg/2000" width="12" height="23" class="spectrum-Popover-tip" style="top: 16px;">
+          <path class="spectrum-Popover-tip-triangle" d="M 0 0.7071067811865476 L 10.707106781186548 11.414213562373096 L 0 22.121320343559645"></path>
+        </svg>
       </div>
 
-      <div class="dummy-spacing" style="height: 290px"></div>
+      <div class="dummy-spacing" style="height: 320px"></div>

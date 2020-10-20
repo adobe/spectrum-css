@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: gh-pages
-      - uses: adobe/spectrum-css-vr-results@master
+      - uses: adobe/spectrum-css-vr-results@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

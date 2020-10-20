@@ -1,7 +1,7 @@
 :root {
   --spectrum-alias-background-color-default: var(--spectrum-global-color-gray-100);
+  --spectrum-alias-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-alias-background-color-transparent: transparent;
-  --spectrum-alias-background-color-label-gray: rgb(112, 112, 112);
   --spectrum-alias-background-color-quickactions-overlay: rgba(0,0,0,0.2);
   --spectrum-alias-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-alias-placeholder-text-color-hover: var(--spectrum-global-color-gray-900);
@@ -17,7 +17,6 @@
   --spectrum-alias-text-color-invalid: var(--spectrum-global-color-red-500);
   --spectrum-alias-text-color-selected: var(--spectrum-global-color-blue-600);
   --spectrum-alias-text-color-selected-neutral: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-title-text-color: var(--spectrum-global-color-gray-900);
   --spectrum-alias-heading-text-color: var(--spectrum-global-color-gray-900);
   --spectrum-alias-border-color: var(--spectrum-global-color-gray-400);
   --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-500);
@@ -48,9 +47,20 @@
   --spectrum-alias-icon-color-selected-hover: var(--spectrum-global-color-blue-600);
   --spectrum-alias-icon-color-selected-down: var(--spectrum-global-color-blue-700);
   --spectrum-alias-icon-color-selected-focus: var(--spectrum-global-color-blue-600);
-  --spectrum-alias-icon-color-error: var(--spectrum-global-color-red-400);
   --spectrum-alias-toolbar-background-color: var(--spectrum-global-color-gray-100);
   --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
+  --spectrum-alias-code-highlight-color-default: var(--spectrum-global-color-gray-800);
+  --spectrum-alias-code-highlight-color-background: var(--spectrum-global-color-gray-75);
+  --spectrum-alias-code-highlight-color-keyword: var(--spectrum-global-color-fuchsia-600);
+  --spectrum-alias-code-highlight-color-section: var(--spectrum-global-color-red-600);
+  --spectrum-alias-code-highlight-color-literal: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-code-highlight-color-attribute: var(--spectrum-global-color-seafoam-600);
+  --spectrum-alias-code-highlight-color-class: var(--spectrum-global-color-magenta-600);
+  --spectrum-alias-code-highlight-color-variable: var(--spectrum-global-color-purple-600);
+  --spectrum-alias-code-highlight-color-title: var(--spectrum-global-color-indigo-600);
+  --spectrum-alias-code-highlight-color-string: var(--spectrum-global-color-fuchsia-600);
+  --spectrum-alias-code-highlight-color-function: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-code-highlight-color-comment: var(--spectrum-global-color-gray-700);
   --spectrum-alias-categorical-color-1: var(--spectrum-global-color-static-seafoam-200);
   --spectrum-alias-categorical-color-2: var(--spectrum-global-color-static-indigo-700);
   --spectrum-alias-categorical-color-3: var(--spectrum-global-color-static-orange-500);

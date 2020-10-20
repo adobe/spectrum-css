@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 .spectrum-Breadcrumbs {
   display: flex;
@@ -30,9 +30,6 @@ governing permissions and limitations under the License.
 
   /* Fix alignment, it's not quite centered */
   inset-block-start: var(--spectrum-global-dimension-size-10);
-
-  inline-size: var(--spectrum-breadcrumb-ui-icon-width);
-  block-size: var(--spectrum-breadcrumb-ui-icon-height);
 
   transform: logical scale(1) rotate(0deg);
 
@@ -98,7 +95,6 @@ governing permissions and limitations under the License.
   }
 }
 
-
 .spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink:before,
 .spectrum-Breadcrumbs-itemLink:focus-ring:before {
   position: absolute;
@@ -114,7 +110,7 @@ governing permissions and limitations under the License.
   border-style: solid;
   border-radius: var(--spectrum-breadcrumb-item-border-radius);
 
-  content: '';
+  content: "";
   pointer-events: none;
 }
 

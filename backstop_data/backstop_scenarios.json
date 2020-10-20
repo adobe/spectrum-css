@@ -7,7 +7,6 @@
   {
     "label": "actionbar",
     "url": "actionbar.html",
-    "delay": 3000,
     "package": "@spectrum-css/actionbar"
   },
   {
@@ -26,11 +25,6 @@
     "package": "@spectrum-css/actionmenu"
   },
   {
-    "label": "alert",
-    "url": "alert.html",
-    "package": "@spectrum-css/alert"
-  },
-  {
     "label": "asset",
     "url": "asset.html",
     "package": "@spectrum-css/asset"
@@ -44,19 +38,6 @@
     "label": "avatar",
     "url": "avatar.html",
     "package": "@spectrum-css/avatar"
-  },
-  {
-    "label": "banner",
-    "url": "banner.html",
-    "package": "@spectrum-css/banner"
-  },
-  {
-    "label": "barloader",
-    "url": "barloader.html",
-    "removeSelectors": [
-      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
-    ],
-    "package": "@spectrum-css/barloader"
   },
   {
     "label": "breadcrumb",
@@ -119,11 +100,6 @@
     "package": "@spectrum-css/checkbox"
   },
   {
-    "label": "circleloader",
-    "url": "circleloader.html",
-    "package": "@spectrum-css/circleloader"
-  },
-  {
     "label": "clearbutton",
     "url": "clearbutton.html",
     "package": "@spectrum-css/clearbutton"
@@ -174,11 +150,6 @@
     "package": "@spectrum-css/datepicker"
   },
   {
-    "label": "decoratedtextfield",
-    "url": "decoratedtextfield.html",
-    "package": "@spectrum-css/decoratedtextfield"
-  },
-  {
     "label": "dial",
     "url": "dial.html",
     "package": "@spectrum-css/dial"
@@ -189,9 +160,9 @@
     "package": "@spectrum-css/dialog"
   },
   {
-    "label": "dropdown",
-    "url": "dropdown.html",
-    "package": "@spectrum-css/dropdown"
+    "label": "divider",
+    "url": "divider.html",
+    "package": "@spectrum-css/divider"
   },
   {
     "label": "dropindicator",
@@ -217,18 +188,6 @@
     "label": "form",
     "url": "form.html",
     "package": "@spectrum-css/form"
-  },
-  {
-    "label": "getting-started",
-    "url": "getting-started.html",
-    "selectors": [],
-    "viewports": [
-      {
-        "label": "test",
-        "width": 1024,
-        "height": 768
-      }
-    ]
   },
   {
     "label": "illustratedmessage",
@@ -278,6 +237,11 @@
     "package": "@spectrum-css/miller"
   },
   {
+    "label": "modal",
+    "url": "modal.html",
+    "package": "@spectrum-css/modal"
+  },
+  {
     "label": "page",
     "url": "page.html",
     "package": "@spectrum-css/page"
@@ -298,9 +262,27 @@
     "package": "@spectrum-css/pagination"
   },
   {
+    "label": "picker",
+    "url": "picker.html",
+    "package": "@spectrum-css/picker"
+  },
+  {
     "label": "popover",
     "url": "popover.html",
     "package": "@spectrum-css/popover"
+  },
+  {
+    "label": "progressbar",
+    "url": "progressbar.html",
+    "removeSelectors": [
+      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
+    ],
+    "package": "@spectrum-css/progressbar"
+  },
+  {
+    "label": "progresscircle",
+    "url": "progresscircle.html",
+    "package": "@spectrum-css/progresscircle"
   },
   {
     "label": "quickaction",
@@ -316,11 +298,6 @@
     "label": "rating",
     "url": "rating.html",
     "package": "@spectrum-css/rating"
-  },
-  {
-    "label": "rule",
-    "url": "rule.html",
-    "package": "@spectrum-css/rule"
   },
   {
     "label": "search",
@@ -368,6 +345,11 @@
     "package": "@spectrum-css/stepper"
   },
   {
+    "label": "switch",
+    "url": "switch.html",
+    "package": "@spectrum-css/switch"
+  },
+  {
     "label": "table",
     "url": "table.html",
     "package": "@spectrum-css/table"
@@ -393,24 +375,24 @@
     "package": "@spectrum-css/textfield"
   },
   {
+    "label": "thumbnail",
+    "url": "thumbnail.html",
+    "package": "@spectrum-css/thumbnail"
+  },
+  {
     "label": "toast",
     "url": "toast.html",
     "package": "@spectrum-css/toast"
   },
   {
-    "label": "toggle",
-    "url": "toggle.html",
-    "package": "@spectrum-css/toggle"
-  },
-  {
-    "label": "tool",
-    "url": "tool.html",
-    "package": "@spectrum-css/tool"
-  },
-  {
     "label": "tooltip",
     "url": "tooltip.html",
     "package": "@spectrum-css/tooltip"
+  },
+  {
+    "label": "tray",
+    "url": "tray.html",
+    "package": "@spectrum-css/tray"
   },
   {
     "label": "treeview",
@@ -425,8 +407,7 @@
   {
     "label": "typography",
     "url": "typography.html",
-    "package": "@spectrum-css/typography",
-    "misMatchThreshold": 0.11
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "typography-body",
@@ -436,11 +417,6 @@
   {
     "label": "typography-code",
     "url": "typography-code.html",
-    "package": "@spectrum-css/typography"
-  },
-  {
-    "label": "typography-deprecated",
-    "url": "typography-deprecated.html",
     "package": "@spectrum-css/typography"
   },
   {
@@ -456,18 +432,6 @@
   {
     "label": "typography-international",
     "url": "typography-international.html",
-    "delay": 3000,
-    "package": "@spectrum-css/typography",
-    "misMatchThreshold": 0.11
-  },
-  {
-    "label": "typography-international-deprecated",
-    "url": "typography-international-deprecated.html",
-    "package": "@spectrum-css/typography"
-  },
-  {
-    "label": "typography-legacy",
-    "url": "typography-legacy.html",
     "package": "@spectrum-css/typography"
   },
   {

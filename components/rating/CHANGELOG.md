@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rating@3.0.0-beta.0...@spectrum-css/rating@3.0.0-beta.1)
+
+**Note:** Version bump only for package @spectrum-css/rating
+
+
+
+
+
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rating@2.0.7...@spectrum-css/rating@3.0.0-beta.0)
+
+* Spectrum Tokens 17 Rating (#916) ([3de2a8c](https://github.com/adobe/spectrum-css/commit/3de2a8c)), closes [#916](https://github.com/adobe/spectrum-css/issues/916)
+
+
+### 🐛 Bug fixes
+
+* wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+
+### 🛑 BREAKING CHANGES
+
+* default style is now Quiet, use Emphasized for previous colors
+
+* fix: selected Rating star color, emphasized hover color
+
+
+
+
+
 <a name="2.0.7"></a>
 ## 2.0.7
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rating@2.0.6...@spectrum-css/rating@2.0.7)

@@ -1,4 +1,4 @@
-# Spectrum CSS [![Build Status](https://travis-ci.org/adobe/spectrum-css.svg?branch=master)](https://travis-ci.org/adobe/spectrum-css)
+# Spectrum CSS [![Build Status](https://travis-ci.org/adobe/spectrum-css.svg?branch=main)](https://travis-ci.org/adobe/spectrum-css)
 
 Spectrum CSS provides a standard CSS implementation of the Spectrum design language for internal and 3rd party use on Adobe's platforms.
 
@@ -138,10 +138,10 @@ Each component has a `dist/vars.css` file that contains declarations for each co
 
 As such, **you do not need to include `dist/vars.css`** unless:
 
-1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-rule-medium-height`)
-2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/rule`) and do not want to update the component-level variables used by that component
+1. You wish to reference the component-level variables used by a component in external CSS (i.e. `--spectrum-divider-medium-height`)
+2. You have upgraded `@spectrum-css/vars`, but have not updated a component (such as `@spectrum-css/divider`) and do not want to update the component-level variables used by that component
 
-When this file is imported, if in updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
+When this file is imported, if in updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium divider, `--spectrum-divider-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
@@ -182,7 +182,7 @@ git pull
 yarn install
 ```
 
-Update `yml` data from master
+Update `yml` data from main
 
 ```
 yarn importdata
@@ -236,37 +236,28 @@ The following tasks are available:
 
 ## Testing
 
-Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). In order to avoid browser rendering inconsistent issue on different environments, the test needs to run inside of docker container.
+Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). To avoid browser rendering inconsistent issue, the test needs to run with a docker container.
 
 ### Setup docker
 
 Install docker on your machine [Download Docker](https://hub.docker.com/search/?type=edition&offering=community&architecture=amd64)
 
-### Backstop reference bitmap
+### Reference bitmap images
 
-The reference bitmaps are hosted in a adobe internal repo and published as [@spectrum-css/spectrum-css-vr-test-asset](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-asset). All the reference bitmaps are generated within docker instance. If you want to run test with native environment, you have to regenerate the reference yourself.
+The reference bitmap images are published as an NPM package [@spectrum-css/spectrum-css-vr-test-assets-essential](https://www.npmjs.com/package/@spectrum-css/spectrum-css-vr-test-assets-essential). Before the test, please try to upgrade this package.
 
-### Start dev server with Browsersync notification turnoff
+`yarn upgrade @spectrum-css/spectrum-css-vr-test-assets-essential`
 
-`gulp dev`
+### Start VRT dev server mode
+
+`VRT=true yarn run dev`
 
 ### Testing CLI targets
 
-The following npm scripts are available for testing:
+The following yarn scripts are available for testing:
 
-- `npm run backstop:approve` - Identical to [backstop approve](https://github.com/garris/BackstopJS#approving-changes)
-- `npm run backstop:test` - Run test in your local native environment
-- `npm run backstop:clean` - Clean up all the testing reports and test images
-- `npm run backstop:docker:test` - Run test in your local docker container
-- `npm run backstop:ci:test` - Run test in a continuous integration environment like [Travis-CI](https://travis-ci.org/adobe/spectrum-css)
-- `npm run kill-zombies` - Kill zombies Chromium instances on your local machine
-
-Both `backstop:test` and `backstop:docker:test` accept arguments to customize your test run:
-
-- `npm run backstop:docker:test` - Run test for all the components with color stop as `light` and scale as `medium`.
-- `npm run backstop:docker:test button` - Run test for `button` and its dependents components like action bar, toast etc with color stop as `light` and scale as `medium`.
-- `npm run backstop:docker:test themes=lightest,light scales=medium,large radio` - Run test for `radio` and its dependents components with color stop as `lightest` and `light` and scale as `medium` and `large`. It means that a single scenario will run 4 times.
-- `npm run backstop:docker:test themes=lightest,light,dark,darkest scales=medium,large` - Run test for all the components with all the color and scale combinations. It means that a single scenario will be run 8 times.
+- `yarn run backstop:docker:test` - Run all the visual regression tests.
+- `yarn run backstop:docker:test button` - Run test for `button` component only.
 
 ___
 
@@ -285,12 +276,20 @@ npm run release
 
 Version numbers are automatically determined, changelogs generated, and packages published.
 
+### Releasing the website
+
+After performing a release, run the following command to release the website:
+
+```
+npm run release:site
+```
+
 ### Releasing bundles
 
 Bundles are released with a separate command, intended to be ran after individual components are released. To release bundles, simply run:
 
 ```
-npm run release-bundles
+npm run release:bundles
 ```
 
 Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.

@@ -9,14 +9,12 @@
   ],
   [
     "@spectrum-css/actiongroup",
-    []
+    [
+      "@spectrum-css/actionbar"
+    ]
   ],
   [
     "@spectrum-css/actionmenu",
-    []
-  ],
-  [
-    "@spectrum-css/alert",
     []
   ],
   [
@@ -38,14 +36,6 @@
     ]
   ],
   [
-    "@spectrum-css/banner",
-    []
-  ],
-  [
-    "@spectrum-css/barloader",
-    []
-  ],
-  [
     "@spectrum-css/breadcrumb",
     []
   ],
@@ -55,7 +45,6 @@
       "@spectrum-css/actionbar",
       "@spectrum-css/actiongroup",
       "@spectrum-css/actionmenu",
-      "@spectrum-css/alert",
       "@spectrum-css/breadcrumb",
       "@spectrum-css/buttongroup",
       "@spectrum-css/calendar",
@@ -63,12 +52,12 @@
       "@spectrum-css/coachmark",
       "@spectrum-css/cyclebutton",
       "@spectrum-css/dialog",
-      "@spectrum-css/dropdown",
+      "@spectrum-css/divider",
       "@spectrum-css/inputgroup",
       "@spectrum-css/pagination",
+      "@spectrum-css/picker",
       "@spectrum-css/popover",
       "@spectrum-css/quickaction",
-      "@spectrum-css/rule",
       "@spectrum-css/search",
       "@spectrum-css/searchwithin",
       "@spectrum-css/splitbutton",
@@ -80,7 +69,8 @@
   [
     "@spectrum-css/buttongroup",
     [
-      "@spectrum-css/rule"
+      "@spectrum-css/dialog",
+      "@spectrum-css/divider"
     ]
   ],
   [
@@ -103,10 +93,6 @@
       "@spectrum-css/quickaction",
       "@spectrum-css/table"
     ]
-  ],
-  [
-    "@spectrum-css/circleloader",
-    []
   ],
   [
     "@spectrum-css/coachmark",
@@ -143,17 +129,22 @@
     []
   ],
   [
+    "@spectrum-css/dial",
+    []
+  ],
+  [
     "@spectrum-css/dialog",
     [
-      "@spectrum-css/popover"
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
     ]
   ],
   [
-    "@spectrum-css/dropdown",
+    "@spectrum-css/divider",
     [
-      "@spectrum-css/fieldlabel",
-      "@spectrum-css/searchwithin",
-      "@spectrum-css/tabs"
+      "@spectrum-css/dialog",
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
     ]
   ],
   [
@@ -166,10 +157,16 @@
   ],
   [
     "@spectrum-css/fieldgroup",
-    []
+    [
+      "@spectrum-css/fieldlabel"
+    ]
   ],
   [
     "@spectrum-css/fieldlabel",
+    []
+  ],
+  [
+    "@spectrum-css/form",
     []
   ],
   [
@@ -192,8 +189,8 @@
     "@spectrum-css/menu",
     [
       "@spectrum-css/actionmenu",
-      "@spectrum-css/dropdown",
       "@spectrum-css/inputgroup",
+      "@spectrum-css/picker",
       "@spectrum-css/popover",
       "@spectrum-css/tabs"
     ]
@@ -201,6 +198,13 @@
   [
     "@spectrum-css/miller",
     []
+  ],
+  [
+    "@spectrum-css/modal",
+    [
+      "@spectrum-css/dialog",
+      "@spectrum-css/tray"
+    ]
   ],
   [
     "@spectrum-css/page",
@@ -211,13 +215,30 @@
     []
   ],
   [
+    "@spectrum-css/picker",
+    [
+      "@spectrum-css/fieldlabel",
+      "@spectrum-css/form",
+      "@spectrum-css/searchwithin",
+      "@spectrum-css/tabs"
+    ]
+  ],
+  [
     "@spectrum-css/popover",
     [
       "@spectrum-css/actionbar",
       "@spectrum-css/actionmenu",
-      "@spectrum-css/dropdown",
-      "@spectrum-css/inputgroup"
+      "@spectrum-css/inputgroup",
+      "@spectrum-css/picker"
     ]
+  ],
+  [
+    "@spectrum-css/progressbar",
+    []
+  ],
+  [
+    "@spectrum-css/progresscircle",
+    []
   ],
   [
     "@spectrum-css/quickaction",
@@ -234,10 +255,6 @@
   ],
   [
     "@spectrum-css/rating",
-    []
-  ],
-  [
-    "@spectrum-css/rule",
     []
   ],
   [
@@ -281,6 +298,10 @@
     ]
   ],
   [
+    "@spectrum-css/switch",
+    []
+  ],
+  [
     "@spectrum-css/table",
     [
       "@spectrum-css/actionbar"
@@ -306,11 +327,13 @@
     ]
   ],
   [
-    "@spectrum-css/toast",
-    []
+    "@spectrum-css/thumbnail",
+    [
+      "@spectrum-css/treeview"
+    ]
   ],
   [
-    "@spectrum-css/toggle",
+    "@spectrum-css/toast",
     []
   ],
   [
@@ -320,12 +343,17 @@
     ]
   ],
   [
+    "@spectrum-css/tray",
+    []
+  ],
+  [
     "@spectrum-css/treeview",
     []
   ],
   [
     "@spectrum-css/typography",
     [
+      "@spectrum-css/card",
       "@spectrum-css/illustratedmessage"
     ]
   ],

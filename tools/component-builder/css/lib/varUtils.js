@@ -38,6 +38,23 @@ function getVarsFromCSS(css) {
   return variableList;
 }
 
+function getVarsDefinedInCSS(css) {
+  let variableList = [];
+  let root = postcss.parse(css);
+
+  root.walkRules((rule, ruleIndex) => {
+    rule.walkDecls((decl) => {
+      if (decl.prop.startsWith('--')) {
+        let varName = decl.prop;
+        if (variableList.indexOf(varName) === -1) {
+          variableList.push(varName);
+        }
+      }
+    });
+  });
+  return variableList;
+}
+
 function getVarValues(css) {
   let root = postcss.parse(css);
   let variables = {};
@@ -174,6 +191,7 @@ function getAllComponentVars() {
 
 exports.getAllComponentVars = getAllComponentVars;
 exports.getAllVars = getAllVars;
+exports.getVarsDefinedInCSS = getVarsDefinedInCSS;
 exports.getVarsFromCSS = getVarsFromCSS;
 exports.getVarValues = getVarValues;
 exports.getClassNames = getClassNames;

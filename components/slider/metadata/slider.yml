@@ -1,5 +1,17 @@
 name: Slider
 SpectrumSiteSlug: https://spectrum.adobe.com/page/slider/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Dial is now a separate component
+      Dial has been moved to the [Dial](dial.html) component.
+
+      ### Color slider is now a separate component
+      Color slider has been moved to the [Color Slider](colorslider.html) component.
+      Replace class names starting with `.spectrum-Slider` with `.spectrum-ColorSlider`.
+
+      ### Use class `is-dragged` instead of `u-isGrabbing`
+      On `spectrum-Slider-handle` when dragging, use `is-dragged` instead of `u-isGrabbing`.
 examples:
   - id: slider
     name: Standard
@@ -349,48 +361,6 @@ examples:
           </div>
           <div class="spectrum-Slider-handle" style="left: 40%;">
             <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-11" disabled>
-          </div>
-        </div>
-      </div>
-  - id: slider-color
-    name: Color
-    status: Deprecated
-    details: A new color slider is forthcoming.
-    description: Spectrum Color slider
-    markup: |
-      <div class="spectrum-Slider spectrum-Slider--color">
-        <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider--color-label-0" for="spectrum-Slider--color-input-0">Color</label>
-          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider--color-label-0">#2680eb</div>
-        </div>
-        <div class="spectrum-Slider-controls">
-          <div class="spectrum-Slider-track" style="background: linear-gradient(to right, rgb(38, 128, 235), rgb(9, 90, 186))"></div>
-          <div class="spectrum-Slider-handle" style="left: 40%;">
-            <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" id="spectrum-Slider--color-input-0">
-          </div>
-        </div>
-      </div>
-      <div class="spectrum-Slider spectrum-Slider--color">
-        <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider--color-label-1" for="spectrum-Slider--color-input-1">Color (showing alpha)</label>
-          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider--color-label-1">#2680eb</div>
-        </div>
-        <div class="spectrum-Slider-controls">
-          <div class="spectrum-Slider-track" style="background: linear-gradient(to right, rgba(38, 128, 235, .5), rgb(9, 90, 186))"></div>
-          <div class="spectrum-Slider-handle" style="left: 40%;">
-            <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" id="spectrum-Slider--color-input-1">
-          </div>
-        </div>
-      </div>
-      <div class="spectrum-Slider spectrum-Slider--color is-disabled">
-        <div class="spectrum-Slider-labelContainer">
-          <label class="spectrum-Slider-label" id="spectrum-Slider--color-label-2" for="spectrum-Slider--color-input-2">Color</label>
-          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider--color-label-2">#2680eb</div>
-        </div>
-        <div class="spectrum-Slider-controls">
-          <div class="spectrum-Slider-track" style="background: linear-gradient(to right, rgba(38, 128, 235, .5), rgb(9, 90, 186))"></div>
-          <div class="spectrum-Slider-handle" style="left: 40%;">
-            <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" disabled id="spectrum-Slider--color-input-2">
           </div>
         </div>
       </div>

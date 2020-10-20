@@ -1,5 +1,10 @@
 name: Tabs
 SpectrumSiteSlug: https://spectrum.adobe.com/page/tabs/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Change workflow icon size to medium
+      If you use workflow icon with tab item, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
   - id: tabs
     name: Basic tabs
@@ -26,25 +31,25 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 2</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 3</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
@@ -76,25 +81,25 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 2</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 3</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
@@ -125,25 +130,25 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 2</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 3</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
@@ -155,22 +160,22 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
         </div>
@@ -200,25 +205,25 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 2</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 3</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
@@ -230,22 +235,22 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
         </div>
@@ -274,25 +279,25 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--vertical">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 2</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 3</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
@@ -322,25 +327,25 @@ examples:
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--vertical spectrum-Tabs--compact">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 1</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 2</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
             <use xlink:href="#spectrum-icon-18-Filter" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 3</span>
         </div>
         <div class="spectrum-Tabs-item" tabindex="0">
-          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
             <use xlink:href="#spectrum-icon-18-Comment" />
           </svg>
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
@@ -353,11 +358,11 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
-          <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
-            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Dropdown-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+          <div class="spectrum-Picker spectrum-Picker--quiet">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Picker-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
           </div>
@@ -366,22 +371,22 @@ examples:
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
-          <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
-            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Dropdown-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+          <div class="spectrum-Picker spectrum-Picker--quiet is-open">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Picker-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
           </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
-      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Tab 1</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">
@@ -403,11 +408,11 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
-          <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
-            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Dropdown-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+          <div class="spectrum-Picker spectrum-Picker--quiet">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Picker-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
           </div>
@@ -416,23 +421,23 @@ examples:
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
-          <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
-            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Dropdown-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Dropdown-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+          <div class="spectrum-Picker spectrum-Picker--quiet is-open">
+            <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
+              <span class="spectrum-Picker-label">Tab 1</span>
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </button>
           </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
       <br>
-      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Dropdown-popover spectrum-Dropdown-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
+      <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
         <ul class="spectrum-Menu" role="listbox">
           <li class="spectrum-Menu-item is-selected" role="option" aria-selected="true" tabindex="0">
             <span class="spectrum-Menu-itemLabel">Tab 1</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkMedium spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
-              <use xlink:href="#spectrum-css-icon-CheckmarkMedium" />
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
             </svg>
           </li>
           <li class="spectrum-Menu-item" role="option" tabindex="0">

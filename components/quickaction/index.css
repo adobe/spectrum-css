@@ -10,8 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
-@import '../overlay/index.css';
+@import "../commons/index.css";
+@import "../overlay/index.css";
 
 .spectrum-QuickActions {
   box-sizing: border-box;
@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-ActionButton + .spectrum-ActionButton {
-    margin-inline-start: var(--spectrum-quickactions-icon-button-gap-x);
+    margin-inline-start: var(--spectrum-quickactions-button-gap-x);
   }
 }
 
@@ -55,4 +55,3 @@ governing permissions and limitations under the License.
     @inherit: %spectrum-overlay--right--open; /* should animate to the right when aligned left */
   }
 }
-

@@ -9,7 +9,8 @@
     "start": "npm run dev",
     "ci-all": "npm run build",
     "release": "npx lerna publish",
-    "release-bundles": "gulp releaseBundles",
+    "release:site": "gulp prepareSite && gh-pages -d dist-site/ -f -e .",
+    "release:bundles": "gulp releaseBundles",
     "version": "gulp version",
     "backstop:approve": "backstop approve --config=backstop_data/backstop_test.js",
     "backstop:test": "backstop test --config=backstop_data/backstop_test.js --env=local",
@@ -38,14 +39,17 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
-    "@adobe/spectrum-tokens": "6.0.0-beta.8",
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.3",
+    "@adobe/spectrum-css-workflow-icons": "^1.1.0",
+    "@adobe/spectrum-tokens": "6.0.0-beta.20.2",
+    "@commitlint/cli": "^8.3.3",
+    "@commitlint/config-conventional": "^8.3.3",
+    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.21",
     "audit-ci": "^2.0.1",
-    "backstopjs": "^4.3.2",
+    "backstopjs-spectrum": "^5.0.8",
+    "del": "^5.1.0",
+    "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
+    "gulp-replace": "^1.0.0",
     "gulplog": "^1.0.0",
     "husky": "^3.0.5",
     "lerna": "^3.16.4",
@@ -56,13 +60,18 @@
     "semver": "^6.3.0",
     "through2": "^3.0.1"
   },
-  "optionalDependencies": {
-    "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0",
-    "@spectrum/spectrum-icons": "^2.3.0"
-  },
   "resolutions": {
+    "dot-prop": "^5.2.0",
     "handlebars": "^4.5.2",
-    "https-proxy-agent": "^3.0.0"
+    "https-proxy-agent": "^3.0.0",
+    "http-proxy": "^1.18.1",
+    "jimp": "^0.16.1",
+    "node-fetch": "^2.6.1",
+    "lodash": "^4.17.19",
+    "yargs-parser": "^18.1.2",
+    "minimist": "^1.2.3",
+    "is-url-superb": "^4.0.0",
+    "postcss-values-parser": "^4.0.0"
   },
   "workspaces": [
     "components/*",

@@ -15,19 +15,25 @@ governing permissions and limitations under the License.
 :root {
   --spectrum-treeview-item-min-height: var(--spectrum-global-dimension-size-400);
   --spectrum-treeview-item-padding-y: var(--spectrum-global-dimension-size-75);
-  --spectrum-treeview-item-icon-margin-right: var(--spectrum-global-dimension-size-100);
+  --spectrum-treeview-item-icon-margin-right: var(--spectrum-global-dimension-size-125);
   --spectrum-treeview-item-affordance-width: var(--spectrum-global-dimension-size-400);
   --spectrum-treeview-item-indentation: var(--spectrum-global-dimension-size-200);
   --spectrum-treeview-heading-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-treeview-item-hover-offset: var(--spectrum-global-dimension-size-25);
+  --spectrum-treeview-item-border-size-selected: var(--spectrum-alias-border-size-thin);
+
+  --spectrum-treeview-item-height-layers: var(--spectrum-global-dimension-size-550);
 }
 
 .spectrum-TreeView {
   display: block;
-  list-style: none;
   position: relative;
+
   padding: 0;
-  user-select: none;
+
+  list-style: none;
   outline: none;
+  user-select: none;
 }
 
 .spectrum-TreeView-item {
@@ -35,7 +41,7 @@ governing permissions and limitations under the License.
   overflow: hidden;
 
   &.is-open {
-    > .spectrum-TreeView-itemLink > .spectrum-TreeView-indicator {
+    > .spectrum-TreeView-itemLink > .spectrum-TreeView-itemIndicator {
       /* Rotate the chevron */
       transform: logical rotate(90deg);
     }
@@ -46,10 +52,34 @@ governing permissions and limitations under the License.
       visibility: visible;
     }
   }
+
+  &.is-drop-target {
+    .spectrum-TreeView-itemLink {
+      &:before {
+        border-width: var(--spectrum-treeview-item-border-size);
+      }
+    }
+  }
+
+  &.is-selected {
+    .spectrum-TreeView-itemLink:not(:focus-ring) {
+      &:before {
+        border-width: var(--spectrum-treeview-item-border-size-selected);
+      }
+    }
+  }
+}
+
+.spectrum-TreeView-itemLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .spectrum-TreeView-itemLink {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   box-sizing: border-box;
   cursor: pointer;
 
@@ -63,48 +93,75 @@ governing permissions and limitations under the License.
   /* Prevent weirdness that can cause the vertical bar to fall down */
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 
-  &:focus {
-    /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
-    outline: none;
-  }
+  outline: none;
 
-  .spectrum-Icon {
+  .spectrum-TreeView-itemIcon {
     vertical-align: top;
     margin-inline-end: var(--spectrum-treeview-item-icon-margin-right);
   }
 
-  &::before {
+  &:before {
     content: '';
+
+    box-sizing: border-box;
 
     position: absolute;
     inset-inline-start: var(--spectrum-treeview-item-border-size);
     inset-inline-end: 0;
-    z-index: -1; /* make sure we don't block clicks on chevron */
 
-    /* Position correctly since top is not defined */
-    margin-block-start: calc(-1 * var(--spectrum-treeview-item-padding-y));
+    block-size: calc(var(--spectrum-treeview-item-height) - var(--spectrum-treeview-item-hover-offset) * 2);
 
-    block-size: var(--spectrum-treeview-item-height);
-
+    border-style: solid;
+    border-color: transparent;
+    border-width: var(--spectrum-treeview-item-border-size) 0 var(--spectrum-treeview-item-border-size) 0;
     background-color: transparent;
+  }
 
-    border-radius: var(--spectrum-treeview-item-border-radius);
+  &:focus-ring {
+    &:before {
+      border-width: var(--spectrum-treeview-item-border-size);
+    }
   }
 }
 
-.spectrum-TreeView-indicator {
+.spectrum-TreeView--standalone {
+  .spectrum-TreeView-itemLink {
+    &:before {
+      border-radius: var(--spectrum-treeview-item-border-radius);
+      border-width: var(--spectrum-treeview-item-border-size);
+    }
+  }
+}
+
+.spectrum-TreeView--thumbnail {
+  .spectrum-TreeView-itemThumbnail {
+    margin-inline-end: var(--spectrum-treeview-item-icon-margin-right);
+  }
+  .spectrum-TreeView-itemLink {
+    height: var(--spectrum-treeview-item-height-layers);
+
+    &:before {
+      block-size: var(--spectrum-treeview-item-height-layers);
+    }
+  }
+}
+
+.spectrum-TreeView-itemIndicator {
   display: block;
   box-sizing: content-box;
 
   float: inline-start;
   position: relative;
 
+  /* make sure hover doesn't block clicks on chevron */
+  z-index: 1;
+
   inset-inline-start: var(--spectrum-global-dimension-size-125);
   inset-block-start: calc(-1 * var(--spectrum-global-dimension-size-65));
   margin-inline-start: calc(-1 * var(--spectrum-global-dimension-size-500));
   margin-block-end: calc(-1 * var(--spectrum-global-dimension-size-125));
+  margin-inline-end: var(--spectrum-global-dimension-size-85);
 
   padding-inline: var(--spectrum-global-dimension-size-150);
   padding-block: var(--spectrum-global-dimension-size-125);

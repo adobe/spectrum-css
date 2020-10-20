@@ -1,4 +1,9 @@
 .spectrum-ColorLoupe-outer {
-  fill: var(--spectrum-colorhandle-loupe-inner-border-color);
-  stroke: var(--spectrum-colorhandle-loupe-outer-border-color);
+  fill: var(--spectrum-colorloupe-inner-border-color);
+  stroke: var(--spectrum-colorloupe-outer-border-color);
+}
+@media (forced-colors: active) {
+  :root {
+    --spectrum-colorloupe-outer-border-color: CanvasText;
+  }
 }

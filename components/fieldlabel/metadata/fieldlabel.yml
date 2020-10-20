@@ -13,7 +13,7 @@ examples:
       </div>
 
       <br/>
-      
+
       <div class="spectrum-Field spectrum-Field--positionTop">
         <label for="lifestory2" class="spectrum-FieldLabel is-disabled">Life Story</label>
         <div class="spectrum-Textfield spectrum-Field-field is-disabled">
@@ -39,7 +39,7 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Field-field">
           <textarea id="lifestory4" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
         </div>
-      </div>  
+      </div>
   - id: fieldlabel
     name: Required
     description: Field label for a required field.
@@ -54,7 +54,7 @@ examples:
           <input id="lifestory5" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
         </div>
       </div>
-      
+
       <br/>
 
       <div class="spectrum-Field spectrum-Field--positionTop">

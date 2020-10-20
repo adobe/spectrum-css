@@ -34,3 +34,16 @@
 .spectrum-ColorHandle-color {
   box-shadow: inset 0 0 0 var(--spectrum-colorhandle-outer-border-size) var(--spectrum-colorhandle-outer-border-color);
 }
+
+@media (forced-colors: active) {
+  :root {
+    --spectrum-colorhandle-inner-border-color-disabled : GrayText;
+    --spectrum-colorhandle-fill-color-disabled: Canvas;
+    --spectrum-colorhandle-inner-border-color: CanvasText;
+  }
+  .spectrum-ColorHandle {
+    &.is-disabled {
+      forced-color-adjust: none;
+    }
+  }
+}

@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
 
 :root {
   /* Todo: move to DNA */
@@ -18,25 +18,57 @@ governing permissions and limitations under the License.
   --spectrum-combobox-field-border-width-right: 0;
   --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
 
-  --spectrum-datepicker-range-input-width-first: calc(var(--spectrum-global-dimension-size-1600) -  2 * var(--spectrum-padding));
-  --spectrum-datepicker-input-width: calc(var(--spectrum-datepicker-range-input-width-first) + var(--spectrum-icon-alert-medium-width));
-  --spectrum-datepicker-range-input-width-quiet-first: calc(var(--spectrum-global-dimension-size-900) + var(--spectrum-global-dimension-size-200));
-  --spectrum-datepicker-input-width-quiet: calc(var(--spectrum-datepicker-range-input-width-quiet-first) + var(--spectrum-icon-alert-medium-width));
+  --spectrum-datepicker-range-input-width-first: calc(
+    var(--spectrum-global-dimension-size-1600) - 2 * var(--spectrum-padding)
+  );
+  --spectrum-datepicker-input-width: calc(
+    var(--spectrum-datepicker-range-input-width-first) +
+      var(--spectrum-icon-alert-medium-width)
+  );
+  --spectrum-datepicker-range-input-width-quiet-first: calc(
+    var(--spectrum-global-dimension-size-900) +
+      var(--spectrum-global-dimension-size-200)
+  );
+  --spectrum-datepicker-input-width-quiet: calc(
+    var(--spectrum-datepicker-range-input-width-quiet-first) +
+      var(--spectrum-icon-alert-medium-width)
+  );
 
-  --spectrum-datepicker-datetime-input-width-first: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-450));
-  --spectrum-datepicker-datetime-input-width: calc(var(--spectrum-datepicker-datetime-input-width-first) + var(--spectrum-icon-alert-medium-width));
+  --spectrum-datepicker-datetime-input-width-first: calc(
+    var(--spectrum-datepicker-input-width) +
+      var(--spectrum-global-dimension-size-450)
+  );
+  --spectrum-datepicker-datetime-input-width: calc(
+    var(--spectrum-datepicker-datetime-input-width-first) +
+      var(--spectrum-icon-alert-medium-width)
+  );
 
-  --spectrum-datepicker-datetime-quiet-input-width-first: calc(var(--spectrum-datepicker-input-width) + var(--spectrum-global-dimension-size-300));
-  --spectrum-datepicker-datetime-quiet-input-width: calc(var(--spectrum-datepicker-datetime-quiet-input-width-first) + var(--spectrum-icon-alert-medium-width));
+  --spectrum-datepicker-datetime-quiet-input-width-first: calc(
+    var(--spectrum-datepicker-input-width) +
+      var(--spectrum-global-dimension-size-300)
+  );
+  --spectrum-datepicker-datetime-quiet-input-width: calc(
+    var(--spectrum-datepicker-datetime-quiet-input-width-first) +
+      var(--spectrum-icon-alert-medium-width)
+  );
 
-  --spectrum-datepicker-range-dash-margin-left: calc(-0.5 * var(--spectrum-global-dimension-static-font-size-100));
+  --spectrum-datepicker-range-dash-margin-left: calc(
+    -0.5 * var(--spectrum-global-dimension-static-font-size-100)
+  );
   --spectrum-datepicker-range-dash-padding-top: 0;
-  --spectrum-datepicker-range-dash-line-height: calc(var(--spectrum-textfield-height) - var(--spectrum-global-dimension-size-100));
+  --spectrum-datepicker-range-dash-line-height: calc(
+    var(--spectrum-textfield-height) - var(--spectrum-global-dimension-size-100)
+  );
 
   /* be square: we're a little ahead of DNA at the time of writing, but Nate said so */
-  --spectrum-combobox-button-width: calc(var(--spectrum-global-dimension-size-400));
+  --spectrum-combobox-button-width: calc(
+    var(--spectrum-global-dimension-size-400)
+  );
 
-  --spectrum-combobox-quiet-button-offset: calc(var(--spectrum-fieldbutton-min-width) / 2 - var(--spectrum-icon-chevron-down-medium-width) / 2);
+  --spectrum-combobox-quiet-button-offset: calc(
+    var(--spectrum-fieldbutton-min-width) / 2 -
+      var(--spectrum-icon-chevron-down-medium-width) / 2
+  );
 }
 
 .spectrum-InputGroup {
@@ -50,8 +82,12 @@ governing permissions and limitations under the License.
   .spectrum-InputGroup-button {
     padding: 0;
     inline-size: var(--spectrum-combobox-button-width);
-    border-start-start-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
-    border-end-start-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
+    border-start-start-radius: var(
+      --spectrum-combobox-fieldbutton-border-top-left-radius
+    );
+    border-end-start-radius: var(
+      --spectrum-combobox-fieldbutton-border-bottom-left-radius
+    );
   }
 
   .spectrum-InputGroup-input {
@@ -65,8 +101,12 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-InputGroup-input {
-  border-start-end-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
-  border-end-end-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
+  border-start-end-radius: var(
+    --spectrum-combobox-textfield-border-top-right-radius
+  );
+  border-end-end-radius: var(
+    --spectrum-combobox-textfield-border-bottom-right-radius
+  );
   border-inline-end-width: var(--spectrum-combobox-field-border-width-right);
   flex: 1;
 }
@@ -79,14 +119,16 @@ governing permissions and limitations under the License.
     position: relative;
 
     padding-inline-start: var(--spectrum-combobox-quiet-button-offset);
-    padding-inline-end: var(--spectrum-combobox-quiet-fieldbutton-padding-right);
+    padding-inline-end: var(
+      --spectrum-combobox-quiet-fieldbutton-padding-right
+    );
 
-    border-block-end: var(--spectrum-textfield-quiet-affixed-border-size) solid;
+    border-block-end: var(--spectrum-textfield-quiet-border-size) solid;
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
     /* More hitarea */
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       block-size: 100%;
       inline-size: var(--spectrum-combobox-quiet-button-offset);
@@ -134,7 +176,9 @@ governing permissions and limitations under the License.
         inline-size: var(--spectrum-datepicker-datetime-quiet-input-width);
 
         &:first-of-type {
-          inline-size: var(--spectrum-datepicker-datetime-quiet-input-width-first);
+          inline-size: var(
+            --spectrum-datepicker-datetime-quiet-input-width-first
+          );
         }
       }
     }
@@ -176,7 +220,7 @@ governing permissions and limitations under the License.
     inline-size: 0;
     z-index: 1;
     &:before {
-      content: '–';
+      content: "–";
       display: inline-block;
       margin-block: 0;
       margin-inline: var(--spectrum-datepicker-range-dash-margin-left);
