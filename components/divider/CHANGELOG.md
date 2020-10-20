@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.2"></a>
+# 1.0.0-beta.2
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/divider@1.0.0-beta.1...@spectrum-css/divider@1.0.0-beta.2)
+
+* fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+
+
+### 🛑 BREAKING CHANGES
+
+* all typography sizing classes now have --size* instead of --*, see migration guides
+
+
+
+
+
 <a name="1.0.0-beta.1"></a>
 # 1.0.0-beta.1
 🗓 2020-09-23
