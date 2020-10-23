@@ -15,7 +15,6 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-button.css";
 
 /* include the other button components that have been broken out */
-@import "./fieldbutton.css";
 @import "./logicbutton.css";
 @import "./clearbutton.css";
 
@@ -28,6 +27,9 @@ governing permissions and limitations under the License.
 
   /* Adjust padding to make things look right */
   --spectrum-button-padding-y: calc(var(--spectrum-button-primary-text-padding-top) - 1px);
+
+  /* todo: remove when fixed in DNA */
+  --spectrum-button-primary-min-width: var(--spectrum-global-dimension-size-900);
 }
 
 .spectrum-Button {
