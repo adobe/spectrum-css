@@ -23,7 +23,7 @@
   --spectrum-sidenav-min-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-sidenav-item-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-sidenav-item-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-sidenav-item-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-sidenav-item-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-sidenav-item-text-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-sidenav-item-height: var(--spectrum-alias-single-line-height);
   --spectrum-sidenav-item-padding-x: var(--spectrum-global-dimension-size-150);
@@ -87,7 +87,7 @@
   --spectrum-sidenav-multilevel-min-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-sidenav-multilevel-item-text-size: var(--spectrum-alias-font-size-default);
   --spectrum-sidenav-multilevel-item-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-sidenav-multilevel-item-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-sidenav-multilevel-item-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-sidenav-multilevel-item-text-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-sidenav-multilevel-item-height: var(--spectrum-alias-single-line-height);
   --spectrum-sidenav-multilevel-item-padding-x: var(--spectrum-global-dimension-size-150);
