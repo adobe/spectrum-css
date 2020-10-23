@@ -6,7 +6,7 @@
   --spectrum-statuslight-celery-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-celery-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-celery-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-celery-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-celery-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-celery-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-celery-text-transform: none;
   --spectrum-statuslight-celery-text-size: var(--spectrum-alias-font-size-default);
@@ -20,7 +20,7 @@
   --spectrum-statuslight-chartreuse-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-chartreuse-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-chartreuse-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-chartreuse-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-chartreuse-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-chartreuse-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-chartreuse-text-transform: none;
   --spectrum-statuslight-chartreuse-text-size: var(--spectrum-alias-font-size-default);
@@ -34,7 +34,7 @@
   --spectrum-statuslight-fuchsia-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-fuchsia-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-fuchsia-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-fuchsia-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-fuchsia-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-fuchsia-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-fuchsia-text-transform: none;
   --spectrum-statuslight-fuchsia-text-size: var(--spectrum-alias-font-size-default);
@@ -48,7 +48,7 @@
   --spectrum-statuslight-indigo-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-indigo-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-indigo-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-indigo-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-indigo-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-indigo-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-indigo-text-transform: none;
   --spectrum-statuslight-indigo-text-size: var(--spectrum-alias-font-size-default);
@@ -62,7 +62,7 @@
   --spectrum-statuslight-info-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-info-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-info-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-info-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-info-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-info-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-info-text-transform: none;
   --spectrum-statuslight-info-text-size: var(--spectrum-alias-font-size-default);
@@ -76,7 +76,7 @@
   --spectrum-statuslight-magenta-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-magenta-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-magenta-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-magenta-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-magenta-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-magenta-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-magenta-text-transform: none;
   --spectrum-statuslight-magenta-text-size: var(--spectrum-alias-font-size-default);
@@ -90,7 +90,7 @@
   --spectrum-statuslight-negative-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-negative-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-negative-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-negative-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-negative-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-negative-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-negative-text-transform: none;
   --spectrum-statuslight-negative-text-size: var(--spectrum-alias-font-size-default);
@@ -104,7 +104,7 @@
   --spectrum-statuslight-neutral-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-neutral-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-statuslight-neutral-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-neutral-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-neutral-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-neutral-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-neutral-text-transform: none;
   --spectrum-statuslight-neutral-text-size: var(--spectrum-alias-font-size-default);
@@ -118,7 +118,7 @@
   --spectrum-statuslight-notice-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-notice-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-notice-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-notice-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-notice-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-notice-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-notice-text-transform: none;
   --spectrum-statuslight-notice-text-size: var(--spectrum-alias-font-size-default);
@@ -132,7 +132,7 @@
   --spectrum-statuslight-positive-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-positive-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-positive-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-positive-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-positive-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-positive-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-positive-text-transform: none;
   --spectrum-statuslight-positive-text-size: var(--spectrum-alias-font-size-default);
@@ -146,7 +146,7 @@
   --spectrum-statuslight-purple-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-purple-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-purple-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-purple-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-purple-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-purple-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-purple-text-transform: none;
   --spectrum-statuslight-purple-text-size: var(--spectrum-alias-font-size-default);
@@ -160,7 +160,7 @@
   --spectrum-statuslight-seafoam-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-seafoam-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-seafoam-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-seafoam-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-seafoam-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-seafoam-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-seafoam-text-transform: none;
   --spectrum-statuslight-seafoam-text-size: var(--spectrum-alias-font-size-default);
@@ -174,7 +174,7 @@
   --spectrum-statuslight-yellow-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-statuslight-yellow-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-statuslight-yellow-text-font-weight: var(--spectrum-alias-body-text-font-weight);
-  --spectrum-statuslight-yellow-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-statuslight-yellow-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-statuslight-yellow-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-statuslight-yellow-text-transform: none;
   --spectrum-statuslight-yellow-text-size: var(--spectrum-alias-font-size-default);

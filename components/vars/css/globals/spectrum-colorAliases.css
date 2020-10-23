@@ -3,7 +3,7 @@
   --spectrum-alias-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-alias-background-color-transparent: transparent;
   --spectrum-alias-background-color-quickactions-overlay: rgba(0,0,0,0.2);
-  --spectrum-alias-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-alias-placeholder-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-alias-placeholder-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-alias-placeholder-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-alias-placeholder-text-color-selected: var(--spectrum-global-color-gray-800);
@@ -17,6 +17,7 @@
   --spectrum-alias-text-color-invalid: var(--spectrum-global-color-red-500);
   --spectrum-alias-text-color-selected: var(--spectrum-global-color-blue-600);
   --spectrum-alias-text-color-selected-neutral: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-text-color-over-background-disabled: rgba(255,255,255,0.2);
   --spectrum-alias-heading-text-color: var(--spectrum-global-color-gray-900);
   --spectrum-alias-border-color: var(--spectrum-global-color-gray-400);
   --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-500);
@@ -47,6 +48,7 @@
   --spectrum-alias-icon-color-selected-hover: var(--spectrum-global-color-blue-600);
   --spectrum-alias-icon-color-selected-down: var(--spectrum-global-color-blue-700);
   --spectrum-alias-icon-color-selected-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-image-opacity-disabled: var(--spectrum-global-color-opacity-30);
   --spectrum-alias-toolbar-background-color: var(--spectrum-global-color-gray-100);
   --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
   --spectrum-alias-code-highlight-color-default: var(--spectrum-global-color-gray-800);

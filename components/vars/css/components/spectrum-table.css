@@ -44,7 +44,7 @@
   --spectrum-table-header-min-height: var(--spectrum-global-dimension-size-150);
   --spectrum-table-header-border-radius: 0px;
   --spectrum-table-cell-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-table-cell-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-table-cell-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-table-cell-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-table-cell-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-table-cell-padding-y: var(--spectrum-global-dimension-size-175);
@@ -98,7 +98,7 @@
   --spectrum-table-quiet-header-min-height: var(--spectrum-global-dimension-size-150);
   --spectrum-table-quiet-header-border-radius: 0px;
   --spectrum-table-quiet-cell-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-table-quiet-cell-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-table-quiet-cell-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-table-quiet-cell-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-table-quiet-cell-padding-x: var(--spectrum-global-dimension-size-200);
   --spectrum-table-quiet-cell-padding-y: var(--spectrum-global-dimension-size-175);
