@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @import "../commons/index.css";
+@import "../vars/css/components/spectrum-picker.css";
 
 :root {
   --spectrum-picker-popover-max-width: var(
@@ -20,6 +21,17 @@ governing permissions and limitations under the License.
 
   /* This needs to be a variable so it overrides when using multiStops */
   --spectrum-picker-quiet-width: auto;
+}
+
+.spectrum-Picker {
+  /* todo: remove when fixed in DNA */
+  --spectrum-picker-min-width: var(--spectrum-global-dimension-size-400);
+
+  @remapvars {
+    find: /--spectrum-picker-m(.*)/;
+    filter: color;
+    replace: --spectrum-picker$1;
+  }
 }
 
 .spectrum-Picker {
@@ -46,7 +58,7 @@ governing permissions and limitations under the License.
 
     & + .spectrum-Picker-icon {
       position: absolute;
-      inset-inline-end: var(--spectrum-picker-padding-x);
+      inset-inline-end: var(--spectrum-picker-icon-gap);
       inset-block-start: 50%;
       margin-block-start: calc(
         var(--spectrum-icon-chevron-down-medium-height) / -2
@@ -91,16 +103,17 @@ governing permissions and limitations under the License.
 
 /* Only apply margin to the icon if there's a label */
 .spectrum-Picker-label + .spectrum-Picker-icon {
-  margin-inline-start: var(--spectrum-picker-icon-margin-left);
+  margin-inline-start: var(--spectrum-picker-icon-gap);
 }
 
 .spectrum-Icon + .spectrum-Picker-label {
-  margin-inline-start: var(--spectrum-listitem-thumbnail-image-padding-x);
+  /* todo not sure if this is right */
+  margin-inline-start: var(--spectrum-picker-icon-gap);
 }
 
 /* Only apply margin if there's a label */
 .spectrum-Picker-label ~ .spectrum-Picker-icon {
-  margin-inline-start: var(--spectrum-picker-icon-margin-left);
+  margin-inline-start: var(--spectrum-picker-icon-gap);
 }
 
 .spectrum-Picker-icon {
@@ -151,7 +164,7 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Picker-label + .spectrum-Icon:not(.spectrum-Picker-icon) {
-    margin-inline-start: var(--spectrum-picker-icon-margin-left);
+    margin-inline-start: var(--spectrum-picker-icon-gap);
   }
 }
 
@@ -160,8 +173,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Picker--quiet {
+  @remapvars {
+    find: /--spectrum-picker-quiet-m(.*)/;
+    filter: color;
+    replace: --spectrum-picker$1;
+  }
+
   inline-size: var(--spectrum-picker-quiet-width);
-  min-inline-size: var(--spectrum-picker-quiet-min-width);
 }
 
 .spectrum-Picker-popover {
