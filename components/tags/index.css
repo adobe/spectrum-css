@@ -11,6 +11,22 @@ governing permissions and limitations under the License.
 */
 
 @import '../commons/index.css';
+@import "../vars/css/components/spectrum-tag.css";
+
+.spectrum-Tags {
+  @remapvars {
+    find: /--spectrum-tag-m(.*)/;
+    filter: color;
+    replace: --spectrum-tag$1;
+  }
+
+  /* todo: figure out how to get this from DNA */
+  --spectrum-tag-avatar-padding-x: var(--spectrum-tag-icon-gap);
+
+  /* todo: get this added back to DNA */
+  --spectrum-taggroup-tag-gap-x: var(--spectrum-global-dimension-size-100);
+  --spectrum-taggroup-tag-gap-y: var(--spectrum-global-dimension-size-100);
+}
 
 .spectrum-Tags {
   display: inline-block;
@@ -28,7 +44,8 @@ governing permissions and limitations under the License.
   margin-block: calc(var(--spectrum-taggroup-tag-gap-y)/2);
   margin-inline: calc(var(--spectrum-taggroup-tag-gap-x)/2);
   padding-block: 0;
-  padding-inline: calc(var(--spectrum-tag-padding-x)-var(--spectrum-tag-border-size));
+  padding-inline-start: calc(var(--spectrum-tag-padding-left)-var(--spectrum-tag-border-size));
+  padding-inline-end: calc(var(--spectrum-tag-padding-right)-var(--spectrum-tag-border-size));
   block-size: var(--spectrum-tag-height);
   max-inline-size: 100%;
 
@@ -49,18 +66,18 @@ governing permissions and limitations under the License.
 
   > .spectrum-Icon,
   > .spectrum-Avatar {
-    margin-inline-end: var(--spectrum-tag-icon-padding-x);
+    margin-inline-end: var(--spectrum-tag-icon-gap);
 
     /* Add padding for "avatar" variant */
-    margin-inline-start: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
+    margin-inline-start: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-left));
 
     ~ .spectrum-Tags-itemLabel {
-      margin-inline-end: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-x));
+      margin-inline-end: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-right));
     }
   }
 
   .spectrum-ClearButton {
-    margin-inline-end: calc(-1 * var(--spectrum-tag-padding-x));
+    margin-inline-end: calc(-1 * var(--spectrum-tag-padding-right));
   }
 }
 
