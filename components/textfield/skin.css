@@ -12,158 +12,158 @@ governing permissions and limitations under the License.
 
 :root {
   /* todo: remove with DNA updated */
-  --spectrum-textfield-validation-icon-color-valid: var(--spectrum-semantic-positive-color-icon);
+  --spectrum-textfield-m-validation-icon-color-valid: var(--spectrum-semantic-positive-color-icon);
 }
 
 .spectrum-Textfield {
   &:hover {
     .spectrum-Textfield-input {
-      border-color: var(--spectrum-textfield-border-color-hover);
+      border-color: var(--spectrum-textfield-m-border-color-hover);
       box-shadow: none; /* todo: required? */
 
       &::placeholder {
-        color: var(--spectrum-textfield-placeholder-text-color-hover);
+        color: var(--spectrum-textfield-m-placeholder-text-color-hover);
       }
     }
 
     .spectrum-Textfield-icon {
-      color: var(--spectrum-textfield-icon-color-hover);
+      color: var(--spectrum-textfield-m-icon-color-hover);
     }
   }
 
   &:active {
     .spectrum-Textfield-input {
-      border-color: var(--spectrum-textfield-border-color-down);
+      border-color: var(--spectrum-textfield-m-border-color-down);
     }
 
     .spectrum-Textfield-icon {
-      color: var(--spectrum-textfield-icon-color-down);
+      color: var(--spectrum-textfield-m-icon-color-down);
     }
   }
 
   &.is-valid {
     .spectrum-Textfield-validationIcon {
-      color: var(--spectrum-textfield-validation-icon-color-valid);
+      color: var(--spectrum-textfield-m-validation-icon-color-valid);
     }
   }
 
   &.is-invalid {
     .spectrum-Textfield-validationIcon {
-      color: var(--spectrum-textfield-validation-icon-color-error);
+      color: var(--spectrum-textfield-m-validation-icon-color-error);
     }
 
     &:hover {
       .spectrum-Textfield-input {
-        border-color: var(--spectrum-textfield-border-color-error-hover);
+        border-color: var(--spectrum-textfield-m-border-color-error-hover);
       }
     }
   }
 
   &.is-disabled {
     .spectrum-Textfield-validationIcon {
-      color: var(--spectrum-textfield-validation-icon-color-disabled);
+      color: var(--spectrum-textfield-m-validation-icon-color-disabled);
     }
 
     .spectrum-Textfield-icon {
-      color: var(--spectrum-textfield-icon-color-disabled);
+      color: var(--spectrum-textfield-m-icon-color-disabled);
     }
   }
 }
 
 .spectrum-Textfield-icon {
-  color: var(--spectrum-textfield-icon-color);
+  color: var(--spectrum-textfield-m-icon-color);
 }
 
 .spectrum-Textfield-input {
-  background-color: var(--spectrum-textfield-background-color);
-  border-color: var(--spectrum-textfield-border-color);
-  color: var(--spectrum-textfield-text-color);
+  background-color: var(--spectrum-textfield-m-background-color);
+  border-color: var(--spectrum-textfield-m-border-color);
+  color: var(--spectrum-textfield-m-text-color);
 
   &::placeholder {
-    color: var(--spectrum-textfield-placeholder-text-color);
+    color: var(--spectrum-textfield-m-placeholder-text-color);
   }
 
   .spectrum-Textfield.is-focused &,
   &:focus {
-    border-color: var(--spectrum-textfield-border-color-down);
+    border-color: var(--spectrum-textfield-m-border-color-down);
   }
 
   .spectrum-Textfield.is-keyboardFocused &,
   &:focus-ring {
-    border-color: var(--spectrum-textfield-border-color-key-focus);
-    box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-key-focus);
+    border-color: var(--spectrum-textfield-m-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-textfield-m-border-color-key-focus);
   }
 
   .spectrum-Textfield.is-invalid & {
-    border-color: var(--spectrum-textfield-border-color-error);
+    border-color: var(--spectrum-textfield-m-border-color-error);
 
     .is-keyboardFocused&,
     &:focus-ring {
-      border-color: var(--spectrum-textfield-border-color-error-key-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-textfield-border-color-error-key-focus);
+      border-color: var(--spectrum-textfield-m-border-color-error-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-textfield-m-border-color-error-key-focus);
     }
   }
 
   .spectrum-Textfield.is-disabled &,
   .spectrum-Textfield.is-disabled:hover &,
   [disabled] {
-    background-color: var(--spectrum-textfield-background-color-disabled);
-    border-color: var(--spectrum-textfield-border-color-disabled);
-    color: var(--spectrum-textfield-text-color-disabled);
+    background-color: var(--spectrum-textfield-m-background-color-disabled);
+    border-color: var(--spectrum-textfield-m-border-color-disabled);
+    color: var(--spectrum-textfield-m-text-color-disabled);
 
     /* For safari mobile browser */
-    -webkit-text-fill-color: var(--spectrum-textfield-text-color-disabled);
+    -webkit-text-fill-color: var(--spectrum-textfield-m-text-color-disabled);
 
     &::placeholder {
-      color: var(--spectrum-textfield-placeholder-text-color-disabled);
+      color: var(--spectrum-textfield-m-placeholder-text-color-disabled);
     }
   }
 }
 
 .spectrum-Textfield--quiet {
   .spectrum-Textfield-input {
-    background-color: var(--spectrum-textfield-quiet-background-color);
-    border-color: var(--spectrum-textfield-quiet-border-color);
+    background-color: var(--spectrum-textfield-quiet-m-background-color);
+    border-color: var(--spectrum-textfield-quiet-m-border-color);
 
     :hover& {
-      border-color: var(--spectrum-textfield-quiet-border-color-hover);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-hover);
     }
 
     :active& {
-      border-color: var(--spectrum-textfield-quiet-border-color-down);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-down);
     }
 
     .is-focused&,
     &:focus {
-      border-color: var(--spectrum-textfield-quiet-border-color-mouse-focus);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-mouse-focus);
     }
 
     .is-keyboardFocused&,
     &:focus-ring {
-      border-color: var(--spectrum-textfield-border-color-key-focus);
-      box-shadow: 0 1px 0 var(--spectrum-textfield-border-color-key-focus);
+      border-color: var(--spectrum-textfield-m-border-color-key-focus);
+      box-shadow: 0 1px 0 var(--spectrum-textfield-m-border-color-key-focus);
     }
 
     .is-invalid& {
-      border-color: var(--spectrum-textfield-quiet-border-color-error);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-error);
 
       .is-focused&,
       &:focus {
-        border-color: var(--spectrum-textfield-quiet-border-color-error-mouse-focus);
+        border-color: var(--spectrum-textfield-quiet-m-border-color-error-mouse-focus);
       }
 
       .is-keyboardFocused&,
       &:focus-ring {
-        border-color: var(--spectrum-textfield-quiet-border-color-error-key-focus);
-        box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-border-color-error-key-focus);
+        border-color: var(--spectrum-textfield-quiet-m-border-color-error-key-focus);
+        box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-m-border-color-error-key-focus);
       }
     }
 
     .is-disabled:hover&,
     .is-disabled&,
     [disabled] {
-      background-color: var(--spectrum-textfield-quiet-background-color-disabled);
-      border-color: var(--spectrum-textfield-quiet-border-color-disabled);
+      background-color: var(--spectrum-textfield-quiet-m-background-color-disabled);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-disabled);
     }
   }
 }
