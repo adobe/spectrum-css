@@ -35,6 +35,7 @@
   --spectrum-global-dimension-size-800: 64px;
   --spectrum-global-dimension-size-900: 72px;
   --spectrum-global-dimension-size-1000: 80px;
+  --spectrum-global-dimension-size-1125: 90px;
   --spectrum-global-dimension-size-1200: 96px;
   --spectrum-global-dimension-size-1250: 100px;
   --spectrum-global-dimension-size-1600: 128px;
@@ -239,8 +240,10 @@
   --spectrum-button-cta-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-cta-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-cta-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-cta-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-cta-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-cta-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-cta-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-cta-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-cta-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-cta-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -255,8 +258,10 @@
   --spectrum-button-over-background-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-over-background-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-over-background-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-over-background-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-over-background-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-over-background-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-over-background-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-over-background-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-over-background-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-over-background-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -271,8 +276,10 @@
   --spectrum-button-quiet-over-background-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-over-background-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-over-background-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-over-background-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-over-background-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-over-background-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-over-background-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-over-background-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-over-background-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-over-background-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -287,8 +294,10 @@
   --spectrum-button-primary-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-primary-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-primary-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-primary-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-primary-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-primary-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-primary-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-primary-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-primary-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-primary-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -303,8 +312,10 @@
   --spectrum-button-quiet-primary-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-primary-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-primary-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-primary-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-primary-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-primary-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-primary-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-primary-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-primary-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-primary-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -319,8 +330,10 @@
   --spectrum-button-quiet-secondary-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-secondary-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-secondary-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-secondary-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-secondary-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-secondary-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-secondary-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-secondary-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-secondary-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-secondary-s-textonly`-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -335,8 +348,10 @@
   --spectrum-button-secondary-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-secondary-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-secondary-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-secondary-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-secondary-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-secondary-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-secondary-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-secondary-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-secondary-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-secondary-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -351,8 +366,10 @@
   --spectrum-button-quiet-warning-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-warning-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-warning-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-warning-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-warning-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-warning-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-quiet-warning-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-quiet-warning-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-warning-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-quiet-warning-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
@@ -367,8 +384,10 @@
   --spectrum-button-warning-l-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-warning-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-warning-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-warning-m-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-warning-m-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-warning-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-button-warning-m-textonly-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-button-warning-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-warning-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-button-warning-s-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);

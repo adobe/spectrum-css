@@ -41,6 +41,7 @@
   --spectrum-button-cta-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-cta-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-cta-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-cta-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-cta-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-cta-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-cta-l-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -79,6 +80,7 @@
   --spectrum-button-cta-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-cta-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-cta-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-cta-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-cta-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-cta-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-cta-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -201,6 +203,7 @@
   --spectrum-button-cta-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-cta-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-cta-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-cta-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-cta-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-cta-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-cta-s-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -239,6 +242,7 @@
   --spectrum-button-cta-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-cta-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-cta-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-cta-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-cta-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-cta-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-cta-xl-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -281,6 +285,7 @@
   --spectrum-button-cta-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-cta-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-cta-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-cta-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-cta-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-cta-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-cta-xl-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -319,6 +324,7 @@
   --spectrum-button-cta-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-cta-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-cta-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-cta-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-over-background-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-over-background-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-over-background-l-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -355,6 +361,7 @@
   --spectrum-button-over-background-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-over-background-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-over-background-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-over-background-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-over-background-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-over-background-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-over-background-l-textonly-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -387,6 +394,7 @@
   --spectrum-button-over-background-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-over-background-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-over-background-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-over-background-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-over-background-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-over-background-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-over-background-m-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -491,6 +499,7 @@
   --spectrum-button-over-background-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-over-background-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-over-background-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-over-background-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-over-background-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-over-background-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-over-background-s-textonly-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -523,6 +532,7 @@
   --spectrum-button-over-background-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-over-background-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-over-background-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-over-background-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-over-background-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-over-background-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-over-background-xl-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -559,6 +569,7 @@
   --spectrum-button-over-background-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-over-background-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-over-background-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-over-background-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-over-background-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-over-background-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-over-background-xl-textonly-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -591,6 +602,7 @@
   --spectrum-button-over-background-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-over-background-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-over-background-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-over-background-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-over-background-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-over-background-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-over-background-l-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -633,6 +645,7 @@
   --spectrum-button-quiet-over-background-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-over-background-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-quiet-over-background-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-over-background-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-over-background-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-over-background-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-over-background-l-textonly-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -671,6 +684,7 @@
   --spectrum-button-quiet-over-background-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-over-background-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-over-background-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-over-background-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-over-background-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-over-background-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-over-background-m-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -793,6 +807,7 @@
   --spectrum-button-quiet-over-background-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-over-background-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-quiet-over-background-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-over-background-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-over-background-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-over-background-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-over-background-s-textonly-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -831,6 +846,7 @@
   --spectrum-button-quiet-over-background-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-over-background-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-over-background-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-over-background-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-over-background-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-over-background-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-over-background-xl-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -873,6 +889,7 @@
   --spectrum-button-quiet-over-background-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-over-background-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-quiet-over-background-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-over-background-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-over-background-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-over-background-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-over-background-xl-textonly-focus-ring-color-key-focus: var(--spectrum-global-color-static-white);
@@ -911,6 +928,7 @@
   --spectrum-button-quiet-over-background-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-over-background-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-over-background-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-over-background-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-primary-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-primary-l-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -953,6 +971,7 @@
   --spectrum-button-primary-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-primary-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-primary-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-primary-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-primary-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-primary-l-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -991,6 +1010,7 @@
   --spectrum-button-primary-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-primary-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-primary-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-primary-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-primary-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-primary-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1113,6 +1133,7 @@
   --spectrum-button-primary-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-primary-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-primary-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-primary-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-primary-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-primary-s-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1151,6 +1172,7 @@
   --spectrum-button-primary-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-primary-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-primary-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-primary-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-primary-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-primary-xl-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1193,6 +1215,7 @@
   --spectrum-button-primary-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-primary-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-primary-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-primary-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-primary-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-primary-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-primary-xl-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1231,6 +1254,7 @@
   --spectrum-button-primary-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-primary-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-primary-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-primary-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-primary-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-primary-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-primary-l-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1273,6 +1297,7 @@
   --spectrum-button-quiet-primary-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-primary-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-quiet-primary-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-primary-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-primary-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-primary-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-primary-l-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1311,6 +1336,7 @@
   --spectrum-button-quiet-primary-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-primary-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-primary-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-primary-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-primary-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-primary-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-primary-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1433,6 +1459,7 @@
   --spectrum-button-quiet-primary-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-primary-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-quiet-primary-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-primary-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-primary-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-primary-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-primary-s-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1471,6 +1498,7 @@
   --spectrum-button-quiet-primary-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-primary-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-primary-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-primary-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-primary-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-primary-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-primary-xl-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1513,6 +1541,7 @@
   --spectrum-button-quiet-primary-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-primary-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-quiet-primary-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-primary-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-primary-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-primary-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-primary-xl-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1551,6 +1580,7 @@
   --spectrum-button-quiet-primary-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-primary-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-primary-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-primary-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-secondary-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-secondary-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-secondary-l-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1593,6 +1623,7 @@
   --spectrum-button-quiet-secondary-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-secondary-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-quiet-secondary-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-secondary-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-secondary-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-secondary-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-secondary-l-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1631,6 +1662,7 @@
   --spectrum-button-quiet-secondary-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-secondary-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-secondary-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-secondary-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-secondary-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-secondary-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-secondary-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1753,6 +1785,7 @@
   --spectrum-button-quiet-secondary-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-secondary-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-quiet-secondary-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-secondary-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-secondary-s-textonly`-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-secondary-s-textonly`-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-secondary-s-textonly`-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1791,6 +1824,7 @@
   --spectrum-button-quiet-secondary-s-textonly`-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-secondary-s-textonly`-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-secondary-s-textonly`-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-secondary-s-textonly`-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-secondary-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-secondary-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-secondary-xl-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1833,6 +1867,7 @@
   --spectrum-button-quiet-secondary-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-secondary-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-quiet-secondary-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-secondary-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-secondary-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-secondary-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-secondary-xl-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1871,6 +1906,7 @@
   --spectrum-button-quiet-secondary-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-secondary-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-secondary-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-secondary-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-secondary-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-secondary-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-secondary-l-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1913,6 +1949,7 @@
   --spectrum-button-secondary-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-secondary-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-secondary-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-secondary-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-secondary-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-secondary-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-secondary-l-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -1951,6 +1988,7 @@
   --spectrum-button-secondary-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-secondary-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-secondary-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-secondary-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-secondary-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-secondary-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-secondary-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2073,6 +2111,7 @@
   --spectrum-button-secondary-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-secondary-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-secondary-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-secondary-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-secondary-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-secondary-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-secondary-s-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2111,6 +2150,7 @@
   --spectrum-button-secondary-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-secondary-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-secondary-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-secondary-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-secondary-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-secondary-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-secondary-xl-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2153,6 +2193,7 @@
   --spectrum-button-secondary-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-secondary-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-secondary-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-secondary-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-secondary-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-secondary-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-secondary-xl-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2191,6 +2232,7 @@
   --spectrum-button-secondary-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-secondary-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-secondary-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-secondary-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-warning-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-warning-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-warning-l-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2233,6 +2275,7 @@
   --spectrum-button-quiet-warning-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-warning-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-quiet-warning-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-warning-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-warning-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-warning-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-warning-l-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2271,6 +2314,7 @@
   --spectrum-button-quiet-warning-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-warning-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-quiet-warning-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-quiet-warning-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-quiet-warning-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-warning-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-warning-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2393,6 +2437,7 @@
   --spectrum-button-quiet-warning-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-warning-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-quiet-warning-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-warning-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-warning-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-warning-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-warning-s-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2431,6 +2476,7 @@
   --spectrum-button-quiet-warning-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-warning-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-quiet-warning-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-quiet-warning-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-quiet-warning-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-warning-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-warning-xl-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2473,6 +2519,7 @@
   --spectrum-button-quiet-warning-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-warning-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-quiet-warning-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-warning-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-quiet-warning-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-quiet-warning-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-quiet-warning-xl-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2511,6 +2558,7 @@
   --spectrum-button-quiet-warning-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-warning-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-quiet-warning-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-quiet-warning-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-warning-l-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-warning-l-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-warning-l-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2553,6 +2601,7 @@
   --spectrum-button-warning-l-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-warning-l-padding-right: var(--spectrum-alias-item-rounded-padding-l);
   --spectrum-button-warning-l-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-warning-l-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-warning-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-warning-l-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-warning-l-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2591,6 +2640,7 @@
   --spectrum-button-warning-l-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-warning-l-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-l);
   --spectrum-button-warning-l-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-l);
+  --spectrum-button-warning-l-textonly-min-width: var(--spectrum-global-dimension-size-1125);
   --spectrum-button-warning-m-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-warning-m-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-warning-m-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2713,6 +2763,7 @@
   --spectrum-button-warning-s-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-warning-s-padding-right: var(--spectrum-alias-item-rounded-padding-s);
   --spectrum-button-warning-s-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-warning-s-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-warning-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-warning-s-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-warning-s-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2751,6 +2802,7 @@
   --spectrum-button-warning-s-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-warning-s-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-s);
   --spectrum-button-warning-s-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-s);
+  --spectrum-button-warning-s-textonly-min-width: var(--spectrum-global-dimension-size-675);
   --spectrum-button-warning-xl-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-warning-xl-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-warning-xl-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2793,6 +2845,7 @@
   --spectrum-button-warning-xl-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-warning-xl-padding-right: var(--spectrum-alias-item-rounded-padding-xl);
   --spectrum-button-warning-xl-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-warning-xl-min-width: var(--spectrum-global-dimension-size-1250);
   --spectrum-button-warning-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-button-warning-xl-textonly-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-button-warning-xl-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
@@ -2831,4 +2884,5 @@
   --spectrum-button-warning-xl-textonly-padding-left: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-warning-xl-textonly-padding-right: var(--spectrum-alias-item-rounded-workflow-padding-left-xl);
   --spectrum-button-warning-xl-textonly-border-radius: var(--spectrum-alias-item-rounded-border-radius-xl);
+  --spectrum-button-warning-xl-textonly-min-width: var(--spectrum-global-dimension-size-1250);
 }
