@@ -32,6 +32,11 @@ governing permissions and limitations under the License.
     filter: color;
     replace: --spectrum-picker$1;
   }
+  @remapvars {
+    find: /--spectrum-picker-quiet-m(.*)/;
+    filter: color;
+    replace: --spectrum-picker-quiet$1;
+  }
 }
 
 .spectrum-Picker {
