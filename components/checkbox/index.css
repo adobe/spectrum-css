@@ -10,9 +10,17 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../vars/css/scales/spectrum-large.css";
+@import "../vars/css/scales/spectrum-medium.css";
+@import "../vars/css/components/spectrum-checkbox.css";
 
-:root {
+.spectrum-Checkbox {
+  @remapvars {
+    find: /--spectrum-checkbox-m(.*)/;
+    filter: color;
+    replace: --spectrum-checkbox$1;
+  }
+
   /* Hardcoded for wrapping study.
   Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
   --spectrum-checkbox-label-margin-top: var(--spectrum-global-dimension-size-65);
@@ -180,14 +188,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Checkbox-checkmark {
-  margin-block-start: calc(var(--spectrum-icon-checkmark-small-height) / -2);
-  margin-inline-start: calc(var(--spectrum-icon-checkmark-small-width) / -2);
+  margin-block-start: calc(var(--spectrum-alias-ui-icon-checkmark-size-75) / -2);
+  margin-inline-start: calc(var(--spectrum-alias-ui-icon-checkmark-size-75) / -2);
 }
 
-/* TODO DNA bug ? should be replaced with dedicated DNA token */
 .spectrum-Checkbox-partialCheckmark {
-  margin-block-start: calc(var(--spectrum-global-dimension-size-100) / -2);
-  margin-inline-start: calc(var(--spectrum-global-dimension-size-100) / -2);
+  margin-block-start: calc(var(--spectrum-alias-ui-icon-dash-size-75) / -2);
+  margin-inline-start: calc(var(--spectrum-alias-ui-icon-dash-size-75) / -2);
 }
 
 .spectrum-Checkbox-partialCheckmark {
