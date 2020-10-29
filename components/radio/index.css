@@ -10,9 +10,17 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+@import "../vars/css/scales/spectrum-medium.css";
+@import "../vars/css/scales/spectrum-large.css";
+@import "../vars/css/components/spectrum-radio.css";
 
-:root {
+.spectrum-Radio {
+  @remapvars {
+    find: /--spectrum-radio-m(.*)/;
+    filter: color;
+    replace: --spectrum-radio$1;
+  }
+
   --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
   --spectrum-radio-border-width-checked: calc(
     calc(var(--spectrum-radio-circle-diameter) / 2) -
