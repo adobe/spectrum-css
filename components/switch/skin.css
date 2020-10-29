@@ -12,23 +12,23 @@ governing permissions and limitations under the License.
 
 /* Default */
 .spectrum-Switch-switch {
-  background-color: var(--spectrum-switch-track-color);
+  background-color: var(--spectrum-switch-m-track-color);
   /* :after is the focus ring */
   /* :before is used for the handle of the switch */
   &:before {
-    background-color: var(--spectrum-switch-handle-background-color);
-    border-color: var(--spectrum-switch-handle-border-color);
+    background-color: var(--spectrum-switch-m-handle-background-color);
+    border-color: var(--spectrum-switch-m-handle-border-color);
   }
 }
 .spectrum-Switch-input ~ .spectrum-Switch-label {
-  color: var(--spectrum-switch-text-color);
+  color: var(--spectrum-switch-m-text-color);
 }
 /* Selected */
 .spectrum-Switch-input {
   &:checked + .spectrum-Switch-switch {
-    background-color: var(--spectrum-switch-track-color-selected);
+    background-color: var(--spectrum-switch-m-track-color-selected);
     &:before {
-      border-color: var(--spectrum-switch-handle-border-color-selected);
+      border-color: var(--spectrum-switch-m-handle-border-color-selected);
     }
   }
 }
@@ -37,18 +37,18 @@ governing permissions and limitations under the License.
   .spectrum-Switch-input {
     & + .spectrum-Switch-switch {
       &:before {
-        border-color: var(--spectrum-switch-handle-border-color-hover);
+        border-color: var(--spectrum-switch-m-handle-border-color-hover);
         box-shadow: none;
       }
     }
     & ~ .spectrum-Switch-label {
-      color: var(--spectrum-switch-text-color-hover);
+      color: var(--spectrum-switch-m-text-color-hover);
     }
     /* Selected Hover */
     &:checked:enabled + .spectrum-Switch-switch {
-      background-color: var(--spectrum-switch-track-color-selected-hover);
+      background-color: var(--spectrum-switch-m-track-color-selected-hover);
       &:before {
-        border-color: var(--spectrum-switch-handle-border-color-selected-hover);
+        border-color: var(--spectrum-switch-m-handle-border-color-selected-hover);
       }
     }
   }
@@ -58,17 +58,17 @@ governing permissions and limitations under the License.
   .spectrum-Switch-input {
     & + .spectrum-Switch-switch {
       &:before {
-        border-color: var(--spectrum-switch-handle-border-color-down);
+        border-color: var(--spectrum-switch-m-handle-border-color-down);
       }
     }
     & ~ .spectrum-Switch-label {
-      color: var(--spectrum-switch-text-color-down);
+      color: var(--spectrum-switch-m-text-color-down);
     }
     /* Selected Down */
     &:checked:enabled + .spectrum-Switch-switch {
-      background-color: var(--spectrum-switch-track-color-selected-down);
+      background-color: var(--spectrum-switch-m-track-color-selected-down);
       &:before {
-        border-color: var(--spectrum-switch-handle-border-color-selected-down);
+        border-color: var(--spectrum-switch-m-handle-border-color-selected-down);
       }
     }
   }
@@ -76,26 +76,26 @@ governing permissions and limitations under the License.
 /* Disabled */
 .spectrum-Switch .spectrum-Switch-input:disabled {
   & + .spectrum-Switch-switch {
-    background-color: var(--spectrum-switch-track-color-disabled);
+    background-color: var(--spectrum-switch-m-track-color-disabled);
     &:before {
-      border-color: var(--spectrum-switch-handle-border-color-disabled);
+      border-color: var(--spectrum-switch-m-handle-border-color-disabled);
     }
   }
   & ~ .spectrum-Switch-label {
-    color: var(--spectrum-switch-text-color-disabled);
+    color: var(--spectrum-switch-m-text-color-disabled);
   }
   /* Selected Disabled */
   &:checked {
     & + .spectrum-Switch-switch {
-      background-color: var(--spectrum-switch-track-color-selected-disabled);
+      background-color: var(--spectrum-switch-m-track-color-selected-disabled);
       &:before {
         border-color: var(
-          --spectrum-switch-handle-border-color-selected-disabled
+          --spectrum-switch-m-handle-border-color-selected-disabled
         );
       }
     }
     & ~ .spectrum-Switch-label {
-      color: var(--spectrum-switch-text-color-selected-disabled);
+      color: var(--spectrum-switch-m-text-color-selected-disabled);
     }
   }
 }
@@ -103,10 +103,10 @@ governing permissions and limitations under the License.
 /* Emphasized Selected */
 .spectrum-Switch--emphasized {
   .spectrum-Switch-input:checked + .spectrum-Switch-switch {
-    background-color: var(--spectrum-switch-emphasized-track-color-selected);
+    background-color: var(--spectrum-switch-m-emphasized-track-color-selected);
     &:before {
       border-color: var(
-        --spectrum-switch-emphasized-handle-border-color-selected
+        --spectrum-switch-m-emphasized-handle-border-color-selected
       );
     }
   }
@@ -115,11 +115,11 @@ governing permissions and limitations under the License.
 .spectrum-Switch--emphasized:hover {
   .spectrum-Switch-input:checked:enabled + .spectrum-Switch-switch {
     background-color: var(
-      --spectrum-switch-emphasized-track-color-selected-hover
+      --spectrum-switch-m-emphasized-track-color-selected-hover
     );
     &:before {
       border-color: var(
-        --spectrum-switch-emphasized-handle-border-color-selected-hover
+        --spectrum-switch-m-emphasized-handle-border-color-selected-hover
       );
     }
   }
@@ -128,11 +128,11 @@ governing permissions and limitations under the License.
 .spectrum-Switch.spectrum-Switch--emphasized:active {
   .spectrum-Switch-input:checked:enabled + .spectrum-Switch-switch {
     background-color: var(
-      --spectrum-switch-emphasized-track-color-selected-down
+      --spectrum-switch-m-emphasized-track-color-selected-down
     );
     &:before {
       border-color: var(
-        --spectrum-switch-emphasized-handle-border-color-selected-down
+        --spectrum-switch-m-emphasized-handle-border-color-selected-down
       );
     }
   }
@@ -143,20 +143,20 @@ governing permissions and limitations under the License.
   .spectrum-Switch-input:focus-ring {
     & + .spectrum-Switch-switch {
       &:after {
-        box-shadow: 0 0 0 var(--spectrum-switch-focus-ring-size-key-focus)
-          var(--spectrum-switch-focus-ring-color-key-focus);
+        box-shadow: 0 0 0 var(--spectrum-switch-m-focus-ring-size-key-focus)
+          var(--spectrum-switch-m-focus-ring-color-key-focus);
       }
       &:before {
-        border-color: var(--spectrum-switch-handle-border-color-key-focus);
+        border-color: var(--spectrum-switch-m-handle-border-color-key-focus);
       }
     }
     /* Selected Key Focus */
     &:checked {
       & + .spectrum-Switch-switch {
-        background-color: var(--spectrum-switch-track-color-selected-key-focus);
+        background-color: var(--spectrum-switch-m-track-color-selected-key-focus);
         &:before {
           border-color: var(
-            --spectrum-switch-handle-border-color-selected-key-focus
+            --spectrum-switch-m-handle-border-color-selected-key-focus
           );
         }
       }
@@ -171,11 +171,11 @@ governing permissions and limitations under the License.
     &:checked {
       & + .spectrum-Switch-switch {
         background-color: var(
-          --spectrum-switch-emphasized-track-color-selected-key-focus
+          --spectrum-switch-m-emphasized-track-color-selected-key-focus
         );
         &:before {
           border-color: var(
-            --spectrum-switch-emphasized-handle-border-color-selected-key-focus
+            --spectrum-switch-m-emphasized-handle-border-color-selected-key-focus
           );
         }
       }
