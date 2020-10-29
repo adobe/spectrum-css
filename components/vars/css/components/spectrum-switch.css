@@ -107,6 +107,7 @@
   --spectrum-switch-l-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-l-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-l-emphasized-track-height: var(--spectrum-alias-item-control-3-height-l);
+  --spectrum-switch-l-emphasized-track-width: var(--spectrum-alias-item-control-3-width-l);
   --spectrum-switch-l-emphasized-handle-size: var(--spectrum-alias-item-control-2-size-l);
   --spectrum-switch-l-emphasized-text-gap: var(--spectrum-alias-item-control-gap-l);
   --spectrum-switch-l-emphasized-text-baseline: var(--spectrum-global-dimension-font-size-75);
@@ -218,6 +219,7 @@
   --spectrum-switch-m-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-m-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-m-emphasized-track-height: var(--spectrum-alias-item-control-3-height-m);
+  --spectrum-switch-m-emphasized-track-width: var(--spectrum-alias-item-control-3-width-m);
   --spectrum-switch-m-emphasized-handle-size: var(--spectrum-alias-item-control-2-size-m);
   --spectrum-switch-m-emphasized-text-gap: var(--spectrum-alias-item-control-gap-m);
   --spectrum-switch-m-emphasized-text-baseline: var(--spectrum-global-dimension-font-size-75);
@@ -329,6 +331,7 @@
   --spectrum-switch-s-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-s-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-s-emphasized-track-height: var(--spectrum-alias-item-control-3-height-s);
+  --spectrum-switch-s-emphasized-track-width: var(--spectrum-alias-item-control-3-width-s);
   --spectrum-switch-s-emphasized-handle-size: var(--spectrum-alias-item-control-2-size-s);
   --spectrum-switch-s-emphasized-text-gap: var(--spectrum-alias-item-control-gap-s);
   --spectrum-switch-s-emphasized-text-baseline: var(--spectrum-global-dimension-font-size-75);
@@ -440,6 +443,7 @@
   --spectrum-switch-xl-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-xl-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-xl-emphasized-track-height: var(--spectrum-alias-item-control-3-height-xl);
+  --spectrum-switch-xl-emphasized-track-width: var(--spectrum-alias-item-control-3-width-xl);
   --spectrum-switch-xl-emphasized-handle-size: var(--spectrum-alias-item-control-2-size-xl);
   --spectrum-switch-xl-emphasized-text-gap: var(--spectrum-alias-item-control-gap-xl);
   --spectrum-switch-xl-emphasized-text-baseline: var(--spectrum-global-dimension-font-size-75);
@@ -551,6 +555,7 @@
   --spectrum-switch-l-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-l-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-l-track-height: var(--spectrum-alias-item-control-3-height-l);
+  --spectrum-switch-l-track-width: var(--spectrum-alias-item-control-3-width-l);
   --spectrum-switch-l-handle-size: var(--spectrum-alias-item-control-2-size-l);
   --spectrum-switch-l-text-gap: var(--spectrum-alias-item-control-gap-l);
   --spectrum-switch-l-text-baseline: var(--spectrum-global-dimension-font-size-75);
@@ -662,6 +667,7 @@
   --spectrum-switch-m-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-m-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-m-track-height: var(--spectrum-alias-item-control-3-height-m);
+  --spectrum-switch-m-track-width: var(--spectrum-alias-item-control-3-width-m);
   --spectrum-switch-m-handle-size: var(--spectrum-alias-item-control-2-size-m);
   --spectrum-switch-m-text-gap: var(--spectrum-alias-item-control-gap-m);
   --spectrum-switch-m-text-baseline: var(--spectrum-global-dimension-font-size-75);
@@ -773,6 +779,7 @@
   --spectrum-switch-s-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-s-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-s-track-height: var(--spectrum-alias-item-control-3-height-s);
+  --spectrum-switch-s-track-width: var(--spectrum-alias-item-control-3-width-s);
   --spectrum-switch-s-handle-size: var(--spectrum-alias-item-control-2-size-s);
   --spectrum-switch-s-text-gap: var(--spectrum-alias-item-control-gap-s);
   --spectrum-switch-s-text-baseline: var(--spectrum-global-dimension-font-size-75);
@@ -884,6 +891,7 @@
   --spectrum-switch-xl-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-xl-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-switch-xl-track-height: var(--spectrum-alias-item-control-3-height-xl);
+  --spectrum-switch-xl-track-width: var(--spectrum-alias-item-control-3-width-xl);
   --spectrum-switch-xl-handle-size: var(--spectrum-alias-item-control-2-size-xl);
   --spectrum-switch-xl-text-gap: var(--spectrum-alias-item-control-gap-xl);
   --spectrum-switch-xl-text-baseline: var(--spectrum-global-dimension-font-size-75);
