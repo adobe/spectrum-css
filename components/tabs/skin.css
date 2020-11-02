@@ -11,76 +11,76 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Tabs {
-  border-block-end-color: var(--spectrum-tabs-rule-color);
+  border-block-end-color: var(--spectrum-tabs-m-rule-color);
 }
 
 .spectrum-Tabs--vertical {
-  border-inline-start-color: var(--spectrum-tabs-vertical-rule-color);
+  border-inline-start-color: var(--spectrum-tabs-m-vertical-rule-color);
 }
 
 .spectrum-Tabs-selectionIndicator {
-  background-color: var(--spectrum-tabs-selection-indicator-color);
+  background-color: var(--spectrum-tabs-m-selection-indicator-color);
 }
 
 .spectrum-Tabs-item {
-  color: var(--spectrum-tabs-text-color);
+  color: var(--spectrum-tabs-m-text-color);
 
   .spectrum-Icon {
-    color: var(--spectrum-tabs-icon-color)
+    color: var(--spectrum-tabs-m-icon-color)
   }
 
   &:hover {
-    color: var(--spectrum-tabs-text-color-hover);
+    color: var(--spectrum-tabs-m-text-color-hover);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-icon-color-hover)
+      color: var(--spectrum-tabs-m-icon-color-hover)
     }
   }
 
   &.is-selected {
-    color: var(--spectrum-tabs-text-color-selected);
+    color: var(--spectrum-tabs-m-text-color-selected);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-icon-color-selected)
+      color: var(--spectrum-tabs-m-icon-color-selected)
     }
   }
 
   &:focus-ring {
-    color: var(--spectrum-tabs-text-color-key-focus);
+    color: var(--spectrum-tabs-m-text-color-key-focus);
 
     &::before {
-      border-color: var(--spectrum-tabs-focus-ring-color);
+      border-color: var(--spectrum-tabs-m-focus-ring-color);
     }
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-icon-color-key-focus)
+      color: var(--spectrum-tabs-m-icon-color-key-focus)
     }
   }
 
   &.is-disabled {
-    color: var(--spectrum-tabs-text-color-disabled);
+    color: var(--spectrum-tabs-m-text-color-disabled);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-icon-color-disabled)
+      color: var(--spectrum-tabs-m-icon-color-disabled)
     }
   }
 }
 
 .spectrum-Tabs--quiet {
-  border-block-end-color: var(--spectrum-tabs-quiet-rule-color);
+  border-block-end-color: var(--spectrum-tabs-quiet-m-rule-color);
 
   .spectrum-Tabs-selectionIndicator {
-    background-color: var(--spectrum-tabs-quiet-selection-indicator-color);
+    background-color: var(--spectrum-tabs-quiet-m-selection-indicator-color);
   }
 }
 
 .spectrum-Tabs--vertical {
   &.spectrum-Tabs--quiet,
   &.spectrum-Tabs--compact {
-    border-inline-start-color: var(--spectrum-tabs-quiet-vertical-rule-color);
+    border-inline-start-color: var(--spectrum-tabs-quiet-m-vertical-rule-color);
 
     .spectrum-Tabs-selectionIndicator {
-      background-color: var(--spectrum-tabs-quiet-selection-indicator-color);
+      background-color: var(--spectrum-tabs-quiet-m-selection-indicator-color);
     }
   }
 }
