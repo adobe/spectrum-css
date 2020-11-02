@@ -42,7 +42,7 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   min-inline-size: inherit;
   margin-inline-start: calc(
-    -1 * var(--spectrum-textfield-border-size)
+    -1 * var(--spectrum-textfield-m-border-size)
   ); /* hides left border */
   border-start-start-radius: var(--spectrum-searchwithin-border-radius);
   border-end-start-radius: var(--spectrum-searchwithin-border-radius);
