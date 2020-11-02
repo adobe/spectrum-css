@@ -60,7 +60,7 @@ governing permissions and limitations under the License.
 .spectrum-ProgressBar-track {
   /* Visually apply border radius to child elements */
   overflow: hidden;
-  inline-size: var(--spectrum-progressbar-width);
+  inline-size: 100%;
   block-size: var(--spectrum-progressbar-height);
   border-radius: var(--spectrum-progressbar-border-radius);
   z-index: 1; /* to fix a weird webkit bug with rounded corners and masking */
@@ -83,7 +83,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ProgressBar-label {
-  flex: 1 1 0%;
+  flex: 0 1 0%;
 }
 
 .spectrum-ProgressBar-percentage {
@@ -96,6 +96,10 @@ governing permissions and limitations under the License.
   flex-flow: row;
   justify-content: space-between;
   inline-size: auto;
+
+  .spectrum-ProgressBar-track {
+    flex: 1 1 var(--spectrum-progressbar-width);
+  }
 
   .spectrum-ProgressBar-label {
     margin-inline-end: var(--spectrum-progressbar-label-gap-x);
