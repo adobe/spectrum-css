@@ -3,14 +3,73 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/progress-bar/
 sections:
   - name: Migration Guide
     description: |
-        ### Component renamed
-        Bar loader is now known as Progress bar. Replace all `.spectrum-BarLoader*` classnames with `.spectrum-ProgressBar*`.
+      ### Component renamed
+      Bar loader is now known as Progress bar. Replace all `.spectrum-BarLoader*` classnames with `.spectrum-ProgressBar*`.
+
+      ### T-shirt sizing
+      Progresse bar now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ProgressBar--size*` class.
+
+      ### Size changes
+
+      Previous sizes map as follows:
+
+      | Previous size class             | New size class                    |
+      | ------------------------------- | --------------------------------- |
+      | `.spectrum-ProgressBar--small`  | `.spectrum-ProgressBar--sizeS`    |
+      | `.spectrum-ProgressBar--large`  | `.spectrum-ProgressBar--sizeM`    |
 examples:
+  - id: progressbar
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">S</h4>
+
+          <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-track">
+              <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
+            </div>
+            <div class="spectrum-ProgressBar-label" hidden=""></div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-track">
+              <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
+            </div>
+            <div class="spectrum-ProgressBar-label" hidden=""></div>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">L</h4>
+
+          <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeL" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-track">
+              <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
+            </div>
+            <div class="spectrum-ProgressBar-label" hidden=""></div>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">XL</h4>
+
+          <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeXL" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-track">
+              <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
+            </div>
+            <div class="spectrum-ProgressBar-label" hidden=""></div>
+          </div>
+        </div>
+      </div>
   - id: progressbar-small
     name: Standard
     markup: |
       <div style="width: 200px; height: 25px; padding-top: 10px;">
-        <div class="spectrum-ProgressBar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
           </div>
@@ -19,7 +78,7 @@ examples:
       </div>
 
       <div style="width: 200px; height: 25px; padding-top: 10px;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
           </div>
@@ -28,7 +87,7 @@ examples:
       </div>
 
       <div style="margin: 20px 0;">
-        <div class="spectrum-ProgressBar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-percentage">50%</div>
           <div class="spectrum-ProgressBar-track">
@@ -38,7 +97,7 @@ examples:
       </div>
 
       <div style="margin: 20px 0;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-percentage">50%</div>
           <div class="spectrum-ProgressBar-track">
@@ -48,7 +107,7 @@ examples:
       </div>
 
       <div style="margin: 50px 0;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--small spectrum-ProgressBar--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS spectrum-ProgressBar--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-percentage">50%</div>
           <div class="spectrum-ProgressBar-track">
@@ -58,7 +117,7 @@ examples:
       </div>
 
       <div style="margin: 20px 0;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-percentage">50%</div>
           <div class="spectrum-ProgressBar-track">
@@ -71,7 +130,7 @@ examples:
     markup: |
       <div style="width: 400px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
 
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--overBackground" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--overBackground" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-percentage">50%</div>
           <div class="spectrum-ProgressBar-track">
@@ -79,7 +138,7 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--small spectrum-ProgressBar--overBackground" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS spectrum-ProgressBar--overBackground" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-percentage">50%</div>
           <div class="spectrum-ProgressBar-track">
@@ -92,7 +151,7 @@ examples:
     name: Indeterminate
     markup: |
       <div style="width: 200px; height: 25px; padding-top: 10px;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--indeterminate">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill"></div>
           </div>
@@ -101,7 +160,7 @@ examples:
       </div>
 
       <div style="width: 200px; height: 25px; padding-top: 10px;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--small spectrum-ProgressBar--indeterminate">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS spectrum-ProgressBar--indeterminate">
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill"></div>
           </div>
@@ -110,7 +169,7 @@ examples:
       </div>
 
       <div style="margin: 20px 0;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--indeterminate">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM spectrum-ProgressBar--indeterminate">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill"></div>
@@ -119,7 +178,7 @@ examples:
       </div>
 
       <div style="margin: 20px 0;">
-        <div class="spectrum-ProgressBar spectrum-ProgressBar--small spectrum-ProgressBar--indeterminate">
+        <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS spectrum-ProgressBar--indeterminate">
           <div class="spectrum-ProgressBar-label">Loading</div>
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill"></div>
