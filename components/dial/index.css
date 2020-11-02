@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
   display: flex;
   position: relative;
   inline-size: auto;
-  padding-block-start: var(--spectrum-fieldlabel-padding-top);
+  padding-block-start: var(--spectrum-fieldlabel-m-padding-top);
   font-size: var(--spectrum-dial-label-text-size);
   line-height: var(--spectrum-dial-label-line-height);
   margin-block-end: var(--spectrum-dial-label-gap-y);
