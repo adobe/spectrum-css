@@ -45,8 +45,9 @@ governing permissions and limitations under the License.
   transition: background-color var(--spectrum-global-animation-duration-100)
     ease-in-out;
 
-  font-size: var(--spectrum-listitem-option-text-size);
-  font-weight: var(--spectrum-listitem-option-text-font-weight);
+  /* todo: replace with proper DNA variables */
+  font-size: var(--spectrum-listitem-m-text-size);
+  font-weight: var(--spectrum-listitem-m-text-font-weight);
   font-style: normal;
 
   cursor: pointer;
