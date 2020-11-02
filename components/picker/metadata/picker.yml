@@ -15,7 +15,7 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Picker" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Picker-trigger" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger" aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country with a very long label, too long in fact</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -25,7 +25,7 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-Picker is-open" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
           <span class="spectrum-Picker-label">Donaudampfschifffahrtsgesellschaftskapitän</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -66,7 +66,7 @@ examples:
 
       <h4>With Thumbnails</h4>
       <div class="spectrum-Picker is-open" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
@@ -122,7 +122,7 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-Picker is-disabled" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Picker-trigger" disabled aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger" disabled aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -132,7 +132,7 @@ examples:
 
       <h4>Closed</h4>
       <div class="spectrum-Picker is-invalid" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Picker-trigger is-invalid" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger is-invalid" aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -145,7 +145,7 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-Picker is-open is-invalid" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Picker-trigger is-invalid is-selected" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger is-invalid is-selected" aria-haspopup="listbox">
           <span class="spectrum-Picker-label">Ballard</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -189,7 +189,7 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-Picker is-invalid is-disabled" style="width: 240px;">
-        <button class="spectrum-FieldButton spectrum-Picker-trigger is-invalid" disabled aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger is-invalid" disabled aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -205,7 +205,7 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Picker spectrum-Picker--quiet">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger" aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -215,7 +215,7 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-Picker spectrum-Picker--quiet is-open">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
           <span class="spectrum-Picker-label">Ballard</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -256,7 +256,7 @@ examples:
 
       <h4>With Thumbnails</h4>
       <div class="spectrum-Picker spectrum-Picker--quiet is-open">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="listbox">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
             <use xlink:href="#spectrum-icon-18-Image" />
           </svg>
@@ -312,7 +312,7 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-Picker spectrum-Picker--quiet is-disabled">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-Picker-trigger" disabled aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger" disabled aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -322,7 +322,7 @@ examples:
 
       <h4>Closed</h4>
       <div class="spectrum-Picker spectrum-Picker--quiet is-invalid">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Picker-trigger" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-invalid spectrum-Picker-trigger" aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -335,7 +335,7 @@ examples:
 
       <h4>Open</h4>
       <div class="spectrum-Picker spectrum-Picker--quiet is-open is-invalid">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Picker-trigger" aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-invalid spectrum-Picker-trigger" aria-haspopup="listbox">
           <span class="spectrum-Picker-label">Ballard</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />
@@ -379,7 +379,7 @@ examples:
 
       <h4>Disabled</h4>
       <div class="spectrum-Picker spectrum-Picker--quiet is-invalid is-disabled">
-        <button class="spectrum-FieldButton spectrum-FieldButton--quiet is-invalid spectrum-Picker-trigger" disabled aria-haspopup="listbox">
+        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-invalid spectrum-Picker-trigger" disabled aria-haspopup="listbox">
           <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Alert" />

@@ -409,7 +409,7 @@ function toggleInputGroupFocus(event) {
   var closestSelector;
   // target within InputGroup
   if (classList.contains('spectrum-InputGroup-input') ||
-    classList.contains('spectrum-FieldButton')) {
+    classList.contains('spectrum-ActionButton spectrum-ActionButton--sizeM')) {
     closestSelector = '.spectrum-InputGroup';
   }
   // target within a Slider
