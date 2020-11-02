@@ -15,11 +15,11 @@ governing permissions and limitations under the License.
     &:not(.is-invalid) {
       .spectrum-InputGroup-textfield {
         .spectrum-InputGroup-input {
-          border-color: var(--spectrum-textfield-border-color-key-focus);
+          border-color: var(--spectrum-textfield-m-border-color-key-focus);
         }
       }
      .spectrum-InputGroup-button {
-        border-color: var(--spectrum-textfield-border-color-key-focus);
+        border-color: var(--spectrum-textfield-m-border-color-key-focus);
       }
     }
   }
@@ -27,23 +27,23 @@ governing permissions and limitations under the License.
     &:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) {
       .spectrum-InputGroup-textfield {
         .spectrum-InputGroup-input {
-          border-color: var(--spectrum-textfield-border-color-hover);
+          border-color: var(--spectrum-textfield-m-border-color-hover);
         }
       }
 
       .spectrum-InputGroup-button {
-        border-color: var(--spectrum-textfield-border-color-hover);
+        border-color: var(--spectrum-textfield-m-border-color-hover);
       }
 
       &.is-invalid {
         .spectrum-InputGroup-textfield {
           .spectrum-InputGroup-input {
-            border-color: var(--spectrum-textfield-border-color-error-hover);
+            border-color: var(--spectrum-textfield-m-border-color-error-hover);
           }
         }
 
         .spectrum-InputGroup-button {
-          border-color: var(--spectrum-textfield-border-color-error-hover);
+          border-color: var(--spectrum-textfield-m-border-color-error-hover);
         }
       }
     }
@@ -59,13 +59,13 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup.is-focused {
   .spectrum-InputGroup-button,
   .spectrum-InputGroup-input {
-    border-color: var(--spectrum-picker-border-color-key-focus);
+    border-color: var(--spectrum-picker-m-border-color-key-focus);
   }
 
   &.is-invalid {
     .spectrum-InputGroup-button,
     .spectrum-InputGroup-input {
-      border-color: var(--spectrum-picker-border-color-error);
+      border-color: var(--spectrum-picker-m-border-color-error);
     }
   }
 }
@@ -73,7 +73,7 @@ governing permissions and limitations under the License.
 /* Only add the 2px ring for keyboard focus */
 .spectrum-InputGroup:not(.spectrum-InputGroup--quiet).is-keyboardFocused {
   & {
-    box-shadow: 0 0 0 1px var(--spectrum-picker-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-picker-m-border-color-key-focus);
   }
 
   .spectrum-InputGroup-input,
@@ -83,12 +83,12 @@ governing permissions and limitations under the License.
 
   &.is-invalid {
     & {
-      box-shadow: 0 0 0 1px var(--spectrum-picker-border-color-error-key-focus);
+      box-shadow: 0 0 0 1px var(--spectrum-picker-m-border-color-error-key-focus);
     }
 
     .spectrum-InputGroup-button,
     .spectrum-InputGroup-input {
-      border-color: var(--spectrum-picker-border-color-error-key-focus);
+      border-color: var(--spectrum-picker-m-border-color-error-key-focus);
     }
   }
 
@@ -107,33 +107,33 @@ governing permissions and limitations under the License.
     &.is-invalid,
     &:disabled,
     &:disabled:hover {
-      border-color: var(--spectrum-textfield-quiet-border-color);
+      border-color: var(--spectrum-textfield-quiet-m-border-color);
     }
   }
 
   &:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled) {
     .spectrum-InputGroup-input,
     .spectrum-InputGroup-button {
-      border-color: var(--spectrum-textfield-quiet-border-color-hover);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-hover);
     }
   }
 
   &.is-invalid {
     .spectrum-InputGroup-input,
     .spectrum-InputGroup-button {
-      border-color: var(--spectrum-textfield-quiet-border-color-error);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-error);
     }
   }
 
   &.is-focused {
     .spectrum-InputGroup-input,
     .spectrum-InputGroup-button {
-      border-color: var(--spectrum-textfield-quiet-border-color-mouse-focus);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-mouse-focus);
     }
     &.is-invalid {
       .spectrum-InputGroup-input,
       .spectrum-InputGroup-button {
-        border-color: var(--spectrum-textfield-quiet-border-color-error-mouse-focus);
+        border-color: var(--spectrum-textfield-quiet-m-border-color-error-mouse-focus);
       }
     }
   }
@@ -141,14 +141,14 @@ governing permissions and limitations under the License.
   &.is-keyboardFocused {
     .spectrum-InputGroup-input,
     .spectrum-InputGroup-button {
-      box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-border-color-key-focus);
-      border-color: var(--spectrum-textfield-quiet-border-color-key-focus);
+      box-shadow: 0 1px 0 var(--spectrum-textfield-quiet-m-border-color-key-focus);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-key-focus);
     }
     &.is-invalid {
       .spectrum-InputGroup-input,
       .spectrum-InputGroup-button {
-        box-shadow: 0 1px 0 var(--spectrum-picker-border-color-error-key-focus);
-        border-color: var(--spectrum-picker-border-color-error-key-focus);
+        box-shadow: 0 1px 0 var(--spectrum-picker-m-border-color-error-key-focus);
+        border-color: var(--spectrum-picker-m-border-color-error-key-focus);
       }
     }
   }
