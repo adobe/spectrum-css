@@ -10,14 +10,28 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../commons/index.css";
+@import "../vars/css/components/spectrum-tabs.css";
+@import "../vars/css/scales/spectrum-large.css";
+@import "../vars/css/scales/spectrum-medium.css";
 
 :root {
-  --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-height));
-  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-height));
+  --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-size));
+  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-size));
 
   /* todo: remove when this is added back to DNA */
   --spectrum-tabs-text-size: var(--spectrum-alias-font-size-default);
+}
+
+.spectrum-Tabs {
+  @remapvars {
+    find: --spectrum-tabs-m-;
+    replace: --spectrum-tabs-;
+  }
+  @remapvars {
+    find: --spectrum-tabs-quiet-m-;
+    replace: --spectrum-tabs-quiet-;
+  }
 }
 
 .spectrum-Tabs {
@@ -81,7 +95,7 @@ governing permissions and limitations under the License.
     box-sizing: border-box;
 
     block-size: var(--spectrum-tabs-focus-ring-height);
-    margin-block-start: calc(calc(var(--spectrum-tabs-focus-ring-height) / -2) + calc(var(--spectrum-tabs-rule-height) / 2));
+    margin-block-start: calc(calc(var(--spectrum-tabs-focus-ring-height) / -2) + calc(var(--spectrum-tabs-rule-size) / 2));
     inset-inline-start: calc(-1 * var(--spectrum-tabs-focus-ring-padding-x));
     inset-inline-end: calc(-1 * var(--spectrum-tabs-focus-ring-padding-x));
     border: var(--spectrum-tabs-focus-ring-size) solid transparent;
@@ -136,7 +150,7 @@ governing permissions and limitations under the License.
 .spectrum-Tabs--horizontal {
   align-items: center;
 
-  border-block-end: var(--spectrum-tabs-rule-height) solid;
+  border-block-end: var(--spectrum-tabs-rule-size) solid;
 
   .spectrum-Tabs-item {
     vertical-align: top;
@@ -150,9 +164,9 @@ governing permissions and limitations under the License.
   .spectrum-Tabs-selectionIndicator {
     position: absolute;
     inset-block-end: 0;
-    block-size: var(--spectrum-tabs-rule-height);
+    block-size: var(--spectrum-tabs-rule-size);
 
-    inset-block-end: calc(-1 * var(--spectrum-tabs-rule-height));
+    inset-block-end: calc(-1 * var(--spectrum-tabs-rule-size));
   }
 
 
@@ -173,7 +187,7 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: column;
   padding: 0;
-  border-inline-start: var(--spectrum-tabs-vertical-rule-width) solid;
+  border-inline-start: var(--spectrum-tabs-vertical-rule-size) solid;
 
   .spectrum-Tabs-item {
     block-size: var(--spectrum-tabs-vertical-item-height);
@@ -207,8 +221,8 @@ governing permissions and limitations under the License.
   .spectrum-Tabs-selectionIndicator {
     position: absolute;
     inset-inline-start: 0px;
-    inline-size: var(--spectrum-tabs-vertical-rule-width);
+    inline-size: var(--spectrum-tabs-vertical-rule-size);
 
-    inset-inline-start: calc(-1 * var(--spectrum-tabs-vertical-rule-width));
+    inset-inline-start: calc(-1 * var(--spectrum-tabs-vertical-rule-size));
   }
 }
