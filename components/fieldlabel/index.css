@@ -11,11 +11,17 @@ governing permissions and limitations under the License.
 */
 
 @import '../commons/index.css';
+@import "../vars/css/components/spectrum-fieldlabel.css";
 
-:root {
+.spectrum-FieldLabel {
+  @remapvars {
+    find: --spectrum-fieldlabel-m-;
+    replace: --spectrum-fieldlabel-;
+  }
+
   --spectrum-tableform-border-spacing: 0 var(--spectrum-global-dimension-size-300);
   --spectrum-tableform-margin: calc(var(--spectrum-global-dimension-size-250) * -1) 0;
-  --spectrum-fieldlabel-m-margin: var(--spectrum-global-dimension-size-100);
+  --spectrum-fieldlabel-margin: var(--spectrum-global-dimension-size-100);
 }
 
 .spectrum-FieldLabel {
@@ -23,12 +29,12 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
 
-  padding-block: var(--spectrum-fieldlabel-m-padding-top) var(--spectrum-fieldlabel-m-padding-bottom);
+  padding-block: var(--spectrum-fieldlabel-padding-top) var(--spectrum-fieldlabel-padding-bottom);
   padding-inline: 0;
 
-  font-size: var(--spectrum-fieldlabel-m-text-size);
-  font-weight: var(--spectrum-fieldlabel-m-text-font-weight);
-  line-height: var(--spectrum-fieldlabel-m-text-line-height);
+  font-size: var(--spectrum-fieldlabel-text-size);
+  font-weight: var(--spectrum-fieldlabel-text-font-weight);
+  line-height: var(--spectrum-fieldlabel-text-line-height);
 
   vertical-align: top;
 
@@ -38,8 +44,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel-requiredIcon {
-  margin-block: var(--spectrum-fieldlabel-m-asterisk-margin-y) 0;
-  margin-inline: var(--spectrum-fieldlabel-m-asterisk-gap) 0;
+  margin-block: var(--spectrum-fieldlabel-asterisk-margin-y) 0;
+  margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
 }
 
 .spectrum-FieldLabel--left {
@@ -49,7 +55,7 @@ governing permissions and limitations under the License.
 
   & .spectrum-FieldLabel-requiredIcon {
     margin-block: var(--spectrum-fieldlabel-side-m-asterisk-margin-y) 0;
-    margin-inline: var(--spectrum-fieldlabel-m-asterisk-gap) 0;
+    margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
   }
 }
 
@@ -91,7 +97,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
 
     & + .spectrum-Form-item {
-      margin-block-start: var(--spectrum-fieldlabel-m-margin);
+      margin-block-start: var(--spectrum-fieldlabel-margin);
     }
   }
 }
