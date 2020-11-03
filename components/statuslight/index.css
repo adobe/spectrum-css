@@ -11,8 +11,38 @@ governing permissions and limitations under the License.
 */
 
 @import "../commons/index.css";
+@import "../vars/css/components/spectrum-statuslight.css";
 
-:root {
+.spectrum-StatusLight--sizeS {
+  @remapvars {
+    find: /--spectrum-statuslight-(.*?)-s-/;
+    replace: --spectrum-statuslight-$1-;
+  }
+}
+
+.spectrum-StatusLight--sizeM {
+  @remapvars {
+    find: /--spectrum-statuslight-(.*?)-m-/;
+    replace: --spectrum-statuslight-$1-;
+  }
+}
+
+.spectrum-StatusLight--sizeL {
+  @remapvars {
+    find: /--spectrum-statuslight-(.*?)-l-/;
+    replace: --spectrum-statuslight-$1-;
+  }
+}
+
+.spectrum-StatusLight--sizeXL {
+  @remapvars {
+    find: /--spectrum-statuslight-(.*?)-xl-/;
+    replace: --spectrum-statuslight-$1-;
+  }
+  cxow:1
+}
+
+.spectrum-StatusLight {
   /* Hardcoded for wrapping study.
   Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
   --spectrum-statuslight-info-padding-y: var(
