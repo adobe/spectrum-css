@@ -6,8 +6,8 @@ sections:
       ### New Textfield markup
       Stepper now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
 
-      ### Use FieldButton instead of ActionButton
-      Stepper now uses FieldButtons instead of ActionButtons for the up/down buttons.
+      ### Use ActionButton instead of FieldButton
+      Stepper now uses ActionButtons instead of FieldButtons for the up/down buttons.
 
       ### Icon classes removed
       `.spectrum-Stepper-stepUpIcon` and `.spectrum-Stepper-stepDownIcon` are no longer needed and have been removed.
