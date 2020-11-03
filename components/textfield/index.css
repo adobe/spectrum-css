@@ -59,10 +59,6 @@ governing permissions and limitations under the License.
   /* missing in DNA */
   --spectrum-textarea-padding-top: var(--spectrum-textfield-padding-top);
   --spectrum-textarea-padding-bottom: var(--spectrum-textfield-padding-bottom);
-
-  /* todo: remove when fixed in DNA */
-  --spectrum-textfield-quiet-padding-left: 0;
-  --spectrum-textfield-quiet-padding-right: 0;
 }
 
 .spectrum-Textfield {
