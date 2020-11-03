@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   }
 
   /* Fixup alignment of text on small */
-  --spectrum-button-padding-y: calc(var(--spectrum-button-primary-text-padding-top) - 2px);
+  --spectrum-button-primary-text-padding-top: calc(var(--spectrum-button-primary-s-text-padding-top) - 3px);
 }
 
 .spectrum-Button--sizeM {
