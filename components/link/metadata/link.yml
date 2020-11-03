@@ -8,14 +8,44 @@ sections:
       Subtle variant was removed. Please use Quiet.
 examples:
   - id: link-primary-m
-    status: Verified
+    name: Sizing
     markup: |
-      <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">No size</h4>
+
+          <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+          <a href="#" class="spectrum-Link spectrum-Link--sizeS">Link using spectrum-Link</a>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <a href="#" class="spectrum-Link spectrum-Link--sizeM">Link using spectrum-Link</a>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+          <a href="#" class="spectrum-Link spectrum-Link--sizeL">Link using spectrum-Link</a>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+          <a href="#" class="spectrum-Link spectrum-Link--sizeXL">Link using spectrum-Link</a>
+        </div>
+      </div>
   - id: link-secondary-m
+    name: Secondary
     status: Verified
     markup: |
       <a href="#" class="spectrum-Link spectrum-Link--secondary">Link using spectrum-Link--secondary</a>
   - id: link-over-background-m
+    name: Over Background
     status: Verified
     markup: |
       <div style="background-color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
@@ -24,17 +54,17 @@ examples:
         </p>
       </div>
   - id: link-quiet-primary-m
-    name: Link - Quiet (Primary)
+    name: Quiet (Primary)
     status: Verified
     markup: |
       <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
   - id: link-quiet-secondary-m
-    name: Link - Quiet (Secondary)
+    name: Quiet (Secondary)
     status: Verified
     markup: |
-      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--secondary spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
+      <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet spectrum-Link--secondary">spectrum-Link--quiet</a>.</p>
   - id: link-quiet-over-background-m
-    name: Link - Quiet (Over Background)
+    name: Quiet (Over Background)
     status: Verified
     markup: |
       <div style="background-color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
