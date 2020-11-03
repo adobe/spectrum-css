@@ -7,15 +7,15 @@ sections:
       ### Subtle variant
       Subtle variant was removed. Please use Quiet.
 examples:
-  - id: link-primary
+  - id: link-primary-m
     status: Verified
     markup: |
       <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
-  - id: link-secondary
+  - id: link-secondary-m
     status: Verified
     markup: |
       <a href="#" class="spectrum-Link spectrum-Link--secondary">Link using spectrum-Link--secondary</a>
-  - id: link-over-background
+  - id: link-over-background-m
     status: Verified
     markup: |
       <div style="background-color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
@@ -23,17 +23,17 @@ examples:
           Hello, this is my <a href="#" class="spectrum-Link spectrum-Link--overBackground"> spectrum-Link--overBackground</a>. This is just filler text, but if you keep reading maybe something good will happen.
         </p>
       </div>
-  - id: link-quiet-primary
+  - id: link-quiet-primary-m
     name: Link - Quiet (Primary)
     status: Verified
     markup: |
       <p> This uses <a href="#" class="spectrum-Link spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
-  - id: link-quiet-secondary
+  - id: link-quiet-secondary-m
     name: Link - Quiet (Secondary)
     status: Verified
     markup: |
       <p> This uses <a href="#" class="spectrum-Link spectrum-Link--secondary spectrum-Link--quiet">spectrum-Link--quiet</a>.</p>
-  - id: link-quiet-over-background
+  - id: link-quiet-over-background-m
     name: Link - Quiet (Over Background)
     status: Verified
     markup: |

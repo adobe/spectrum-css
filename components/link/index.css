@@ -12,6 +12,15 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
+@import "../vars/css/components/spectrum-link.css";
+
+.spectrum-Link {
+  @remapvars {
+    find: /--spectrum-link-(.*?)-m-/;
+    replace: --spectrum-link-$1-;
+  }
+}
+
 .spectrum-Link {
   /* Remove the gray background on active links in IE 10. */
   background-color: transparent;

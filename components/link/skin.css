@@ -10,6 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/components/spectrum-link.css";
+
+.spectrum-Link {
+  @remapvars {
+    find: /--spectrum-link-(.*?)-m-/;
+    replace: --spectrum-link-$1-;
+  }
+}
+
 .spectrum-Link {
   color: var(--spectrum-link-primary-text-color);
 
