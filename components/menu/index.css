@@ -107,10 +107,7 @@ governing permissions and limitations under the License.
   padding: var(--spectrum-listitem-padding-y)
     var(--spectrum-listitem-padding-right)
     var(--spectrum-listitem-padding-y)
-    calc(
-      var(--spectrum-listitem-padding-left) -
-        var(--spectrum-listitem-focus-indicator-size)
-    );
+    var(--spectrum-listitem-padding-left);
 
   margin: 0;
 
