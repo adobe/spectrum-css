@@ -62,9 +62,6 @@ governing permissions and limitations under the License.
 
   /* Adjust padding to make things look right */
   --spectrum-button-padding-y: calc(var(--spectrum-button-primary-text-padding-top) - 1px);
-
-  /* todo: remove when fixed in DNA */
-  --spectrum-button-primary-text-font-weight: var(--spectrum-global-font-weight-bold);
 }
 
 .spectrum-Button {
