@@ -47,6 +47,9 @@ governing permissions and limitations under the License.
   --spectrum-dialog-confirm-close-button-padding: calc(
     26px - var(--spectrum-global-dimension-size-175)
   );
+
+  /* todo: remove once fixed in DNA */
+  --spectrum-dialog-confirm-description-text-line-height: var(--spectrum-alias-body-text-line-height);
 }
 
 .spectrum-Dialog {
