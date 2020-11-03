@@ -43,11 +43,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ProgressBar {
-  /* todo: remove when fixed in DNA */
-  --spectrum-progressbar-label-gap-x: var(--spectrum-global-dimension-size-75);
-}
-
-.spectrum-ProgressBar {
   position: relative;
   display: inline-flex;
   flex-flow: row wrap;
@@ -88,7 +83,7 @@ governing permissions and limitations under the License.
 
 .spectrum-ProgressBar-percentage {
   align-self: flex-start;
-  margin-inline-start: var(--spectrum-progressbar-label-gap-x);
+  margin-inline-start: var(--spectrum-fieldlabel-side-m-padding-right);
 }
 
 .spectrum-ProgressBar--sideLabel {
@@ -98,17 +93,18 @@ governing permissions and limitations under the License.
   inline-size: auto;
 
   .spectrum-ProgressBar-track {
+    min-width: var(--spectrum-progressbar-width);
     flex: 1 1 var(--spectrum-progressbar-width);
   }
 
   .spectrum-ProgressBar-label {
-    margin-inline-end: var(--spectrum-progressbar-label-gap-x);
+    margin-inline-end: var(--spectrum-fieldlabel-side-m-padding-right);
     margin-block-end: 0;
   }
   .spectrum-ProgressBar-percentage {
     order: 3;
     text-align: end;
-    margin-inline-start: var(--spectrum-progressbar-label-gap-x);
+    margin-inline-start: var(--spectrum-fieldlabel-side-m-padding-right);
     margin-block-end: 0;
   }
 }
