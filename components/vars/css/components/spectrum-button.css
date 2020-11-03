@@ -25,7 +25,7 @@
   --spectrum-button-cta-l-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-l-text-transform: none;
@@ -68,7 +68,7 @@
   --spectrum-button-cta-l-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-l-textonly-text-transform: none;
@@ -107,7 +107,7 @@
   --spectrum-button-cta-m-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-m-text-transform: none;
@@ -149,7 +149,7 @@
   --spectrum-button-cta-m-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-m-textonly-text-transform: none;
@@ -187,7 +187,7 @@
   --spectrum-button-cta-s-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-s-text-transform: none;
@@ -230,7 +230,7 @@
   --spectrum-button-cta-s-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-s-textonly-text-transform: none;
@@ -269,7 +269,7 @@
   --spectrum-button-cta-xl-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-xl-text-transform: none;
@@ -312,7 +312,7 @@
   --spectrum-button-cta-xl-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-cta-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-cta-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-cta-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-cta-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-cta-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-cta-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-cta-xl-textonly-text-transform: none;
@@ -345,7 +345,7 @@
   --spectrum-button-over-background-l-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-l-text-transform: none;
@@ -382,7 +382,7 @@
   --spectrum-button-over-background-l-textonly-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-l-textonly-text-transform: none;
@@ -415,7 +415,7 @@
   --spectrum-button-over-background-m-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-m-text-transform: none;
@@ -451,7 +451,7 @@
   --spectrum-button-over-background-m-textonly-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-m-textonly-text-transform: none;
@@ -483,7 +483,7 @@
   --spectrum-button-over-background-s-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-s-text-transform: none;
@@ -520,7 +520,7 @@
   --spectrum-button-over-background-s-textonly-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-s-textonly-text-transform: none;
@@ -553,7 +553,7 @@
   --spectrum-button-over-background-xl-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-xl-text-transform: none;
@@ -590,7 +590,7 @@
   --spectrum-button-over-background-xl-textonly-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-over-background-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-over-background-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-over-background-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-over-background-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-over-background-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-over-background-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-over-background-xl-textonly-text-transform: none;
@@ -629,7 +629,7 @@
   --spectrum-button-quiet-over-background-l-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-l-text-transform: none;
@@ -672,7 +672,7 @@
   --spectrum-button-quiet-over-background-l-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-l-textonly-text-transform: none;
@@ -711,7 +711,7 @@
   --spectrum-button-quiet-over-background-m-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-m-text-transform: none;
@@ -753,7 +753,7 @@
   --spectrum-button-quiet-over-background-m-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-m-textonly-text-transform: none;
@@ -791,7 +791,7 @@
   --spectrum-button-quiet-over-background-s-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-s-text-transform: none;
@@ -834,7 +834,7 @@
   --spectrum-button-quiet-over-background-s-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-s-textonly-text-transform: none;
@@ -873,7 +873,7 @@
   --spectrum-button-quiet-over-background-xl-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-xl-text-transform: none;
@@ -916,7 +916,7 @@
   --spectrum-button-quiet-over-background-xl-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-button-quiet-over-background-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-over-background-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-over-background-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-over-background-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-over-background-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-over-background-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-over-background-xl-textonly-text-transform: none;
@@ -955,7 +955,7 @@
   --spectrum-button-primary-l-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-l-text-transform: none;
@@ -998,7 +998,7 @@
   --spectrum-button-primary-l-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-l-textonly-text-transform: none;
@@ -1037,7 +1037,7 @@
   --spectrum-button-primary-m-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-m-text-transform: none;
@@ -1079,7 +1079,7 @@
   --spectrum-button-primary-m-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-m-textonly-text-transform: none;
@@ -1117,7 +1117,7 @@
   --spectrum-button-primary-s-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-s-text-transform: none;
@@ -1160,7 +1160,7 @@
   --spectrum-button-primary-s-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-s-textonly-text-transform: none;
@@ -1199,7 +1199,7 @@
   --spectrum-button-primary-xl-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-xl-text-transform: none;
@@ -1242,7 +1242,7 @@
   --spectrum-button-primary-xl-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-primary-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-primary-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-primary-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-primary-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-primary-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-primary-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-primary-xl-textonly-text-transform: none;
@@ -1281,7 +1281,7 @@
   --spectrum-button-quiet-primary-l-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-l-text-transform: none;
@@ -1324,7 +1324,7 @@
   --spectrum-button-quiet-primary-l-textonly-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-l-textonly-text-transform: none;
@@ -1363,7 +1363,7 @@
   --spectrum-button-quiet-primary-m-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-m-text-transform: none;
@@ -1405,7 +1405,7 @@
   --spectrum-button-quiet-primary-m-textonly-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-m-textonly-text-transform: none;
@@ -1443,7 +1443,7 @@
   --spectrum-button-quiet-primary-s-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-s-text-transform: none;
@@ -1486,7 +1486,7 @@
   --spectrum-button-quiet-primary-s-textonly-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-s-textonly-text-transform: none;
@@ -1525,7 +1525,7 @@
   --spectrum-button-quiet-primary-xl-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-xl-text-transform: none;
@@ -1568,7 +1568,7 @@
   --spectrum-button-quiet-primary-xl-textonly-icon-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-button-quiet-primary-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-primary-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-primary-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-primary-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-primary-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-primary-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-primary-xl-textonly-text-transform: none;
@@ -1607,7 +1607,7 @@
   --spectrum-button-quiet-secondary-l-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-l-text-transform: none;
@@ -1650,7 +1650,7 @@
   --spectrum-button-quiet-secondary-l-textonly-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-l-textonly-text-transform: none;
@@ -1689,7 +1689,7 @@
   --spectrum-button-quiet-secondary-m-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-m-text-transform: none;
@@ -1731,7 +1731,7 @@
   --spectrum-button-quiet-secondary-m-textonly-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-m-textonly-text-transform: none;
@@ -1769,7 +1769,7 @@
   --spectrum-button-quiet-secondary-s-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-s-text-transform: none;
@@ -1812,7 +1812,7 @@
   --spectrum-button-quiet-secondary-s-textonly`-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-s-textonly`-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-s-textonly`-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-s-textonly`-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-s-textonly`-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-s-textonly`-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-s-textonly`-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-s-textonly`-text-transform: none;
@@ -1851,7 +1851,7 @@
   --spectrum-button-quiet-secondary-xl-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-xl-text-transform: none;
@@ -1894,7 +1894,7 @@
   --spectrum-button-quiet-secondary-xl-textonly-icon-color-down: var(--spectrum-global-color-gray-800);
   --spectrum-button-quiet-secondary-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-secondary-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-secondary-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-secondary-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-secondary-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-secondary-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-secondary-xl-textonly-text-transform: none;
@@ -1933,7 +1933,7 @@
   --spectrum-button-secondary-l-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-l-text-transform: none;
@@ -1976,7 +1976,7 @@
   --spectrum-button-secondary-l-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-l-textonly-text-transform: none;
@@ -2015,7 +2015,7 @@
   --spectrum-button-secondary-m-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-m-text-transform: none;
@@ -2057,7 +2057,7 @@
   --spectrum-button-secondary-m-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-m-textonly-text-transform: none;
@@ -2095,7 +2095,7 @@
   --spectrum-button-secondary-s-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-s-text-transform: none;
@@ -2138,7 +2138,7 @@
   --spectrum-button-secondary-s-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-s-textonly-text-transform: none;
@@ -2177,7 +2177,7 @@
   --spectrum-button-secondary-xl-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-xl-text-transform: none;
@@ -2220,7 +2220,7 @@
   --spectrum-button-secondary-xl-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-secondary-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-secondary-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-secondary-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-secondary-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-secondary-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-secondary-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-secondary-xl-textonly-text-transform: none;
@@ -2259,7 +2259,7 @@
   --spectrum-button-quiet-warning-l-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-l-text-transform: none;
@@ -2302,7 +2302,7 @@
   --spectrum-button-quiet-warning-l-textonly-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-l-textonly-text-transform: none;
@@ -2341,7 +2341,7 @@
   --spectrum-button-quiet-warning-m-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-m-text-transform: none;
@@ -2383,7 +2383,7 @@
   --spectrum-button-quiet-warning-m-textonly-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-m-textonly-text-transform: none;
@@ -2421,7 +2421,7 @@
   --spectrum-button-quiet-warning-s-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-s-text-transform: none;
@@ -2464,7 +2464,7 @@
   --spectrum-button-quiet-warning-s-textonly-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-s-textonly-text-transform: none;
@@ -2503,7 +2503,7 @@
   --spectrum-button-quiet-warning-xl-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-xl-text-transform: none;
@@ -2546,7 +2546,7 @@
   --spectrum-button-quiet-warning-xl-textonly-icon-color-down: var(--spectrum-global-color-red-700);
   --spectrum-button-quiet-warning-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-quiet-warning-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-quiet-warning-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-quiet-warning-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-quiet-warning-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-quiet-warning-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-quiet-warning-xl-textonly-text-transform: none;
@@ -2585,7 +2585,7 @@
   --spectrum-button-warning-l-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-l-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-l-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-l-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-l-text-transform: none;
@@ -2628,7 +2628,7 @@
   --spectrum-button-warning-l-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-l-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-l-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-l-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-l-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-l-textonly-text-transform: none;
@@ -2667,7 +2667,7 @@
   --spectrum-button-warning-m-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-m-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-m-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-m-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-m-text-transform: none;
@@ -2709,7 +2709,7 @@
   --spectrum-button-warning-m-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-m-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-m-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-m-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-m-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-m-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-m-textonly-text-transform: none;
@@ -2747,7 +2747,7 @@
   --spectrum-button-warning-s-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-s-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-s-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-s-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-s-text-transform: none;
@@ -2790,7 +2790,7 @@
   --spectrum-button-warning-s-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-s-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-s-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-s-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-s-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-s-textonly-text-transform: none;
@@ -2829,7 +2829,7 @@
   --spectrum-button-warning-xl-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-xl-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-xl-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-xl-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-xl-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-xl-text-transform: none;
@@ -2872,7 +2872,7 @@
   --spectrum-button-warning-xl-textonly-icon-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-button-warning-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-button-warning-xl-textonly-text-font-style: var(--spectrum-global-font-style-regular);
-  --spectrum-button-warning-xl-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-button-warning-xl-textonly-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-button-warning-xl-textonly-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-button-warning-xl-textonly-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-button-warning-xl-textonly-text-transform: none;

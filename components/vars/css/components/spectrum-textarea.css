@@ -135,8 +135,8 @@
   --spectrum-textarea-quiet-l-text-padding-top: var(--spectrum-alias-item-text-padding-top-l);
   --spectrum-textarea-quiet-l-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-l);
   --spectrum-textarea-quiet-l-height: var(--spectrum-alias-item-height-l);
-  --spectrum-textarea-quiet-l-padding-left: var(--spectrum-alias-item-padding-l);
-  --spectrum-textarea-quiet-l-padding-right: var(--spectrum-alias-item-padding-l);
+  --spectrum-textarea-quiet-l-padding-left: 0;
+  --spectrum-textarea-quiet-l-padding-right: 0;
   --spectrum-textarea-quiet-l-min-width: var(--spectrum-global-dimension-size-750);
   --spectrum-textarea-quiet-l-text-baseline: var(--spectrum-global-dimension-size-185);
   --spectrum-textarea-quiet-l-placeholder-text-size: var(--spectrum-alias-item-text-size-l);
@@ -150,7 +150,6 @@
   --spectrum-textarea-quiet-l-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-l-border-radius: 0px;
   --spectrum-textarea-quiet-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-quiet-l-padding-x: 0;
   --spectrum-textarea-quiet-l-label-gap-y: 0;
   --spectrum-textarea-quiet-l-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-quiet-m-border-size: var(--spectrum-alias-border-size-thin);
@@ -289,8 +288,8 @@
   --spectrum-textarea-quiet-m-text-padding-top: var(--spectrum-alias-item-text-padding-top-m);
   --spectrum-textarea-quiet-m-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-m);
   --spectrum-textarea-quiet-m-height: var(--spectrum-alias-item-height-m);
-  --spectrum-textarea-quiet-m-padding-left: var(--spectrum-alias-item-padding-m);
-  --spectrum-textarea-quiet-m-padding-right: var(--spectrum-alias-item-padding-m);
+  --spectrum-textarea-quiet-m-padding-left: 0;
+  --spectrum-textarea-quiet-m-padding-right: 0;
   --spectrum-textarea-quiet-m-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-textarea-quiet-m-text-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-quiet-m-placeholder-text-size: var(--spectrum-alias-item-text-size-m);
@@ -304,7 +303,6 @@
   --spectrum-textarea-quiet-m-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-m-border-radius: 0px;
   --spectrum-textarea-quiet-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-quiet-m-padding-x: 0;
   --spectrum-textarea-quiet-m-label-gap-y: 0;
   --spectrum-textarea-quiet-m-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-quiet-s-border-size: var(--spectrum-alias-border-size-thin);
@@ -443,8 +441,8 @@
   --spectrum-textarea-quiet-s-text-padding-top: var(--spectrum-alias-item-text-padding-top-s);
   --spectrum-textarea-quiet-s-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-s);
   --spectrum-textarea-quiet-s-height: var(--spectrum-alias-item-height-s);
-  --spectrum-textarea-quiet-s-padding-left: var(--spectrum-alias-item-padding-s);
-  --spectrum-textarea-quiet-s-padding-right: var(--spectrum-alias-item-padding-s);
+  --spectrum-textarea-quiet-s-padding-left: 0;
+  --spectrum-textarea-quiet-s-padding-right: 0;
   --spectrum-textarea-quiet-s-min-width: var(--spectrum-global-dimension-size-450);
   --spectrum-textarea-quiet-s-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-textarea-quiet-s-placeholder-text-size: var(--spectrum-alias-item-text-size-s);
@@ -458,7 +456,6 @@
   --spectrum-textarea-quiet-s-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-s-border-radius: 0px;
   --spectrum-textarea-quiet-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-quiet-s-padding-x: 0;
   --spectrum-textarea-quiet-s-label-gap-y: 0;
   --spectrum-textarea-quiet-s-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-quiet-xl-border-size: var(--spectrum-alias-border-size-thin);
@@ -597,8 +594,8 @@
   --spectrum-textarea-quiet-xl-text-padding-top: var(--spectrum-alias-item-text-padding-top-xl);
   --spectrum-textarea-quiet-xl-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-xl);
   --spectrum-textarea-quiet-xl-height: var(--spectrum-alias-item-height-xl);
-  --spectrum-textarea-quiet-xl-padding-left: var(--spectrum-alias-item-padding-xl);
-  --spectrum-textarea-quiet-xl-padding-right: var(--spectrum-alias-item-padding-xl);
+  --spectrum-textarea-quiet-xl-padding-left: 0;
+  --spectrum-textarea-quiet-xl-padding-right: 0;
   --spectrum-textarea-quiet-xl-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-textarea-quiet-xl-text-baseline: var(--spectrum-global-dimension-size-225);
   --spectrum-textarea-quiet-xl-placeholder-text-size: var(--spectrum-alias-item-text-size-xl);
@@ -612,7 +609,6 @@
   --spectrum-textarea-quiet-xl-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-xl-border-radius: 0px;
   --spectrum-textarea-quiet-xl-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-quiet-xl-padding-x: 0;
   --spectrum-textarea-quiet-xl-label-gap-y: 0;
   --spectrum-textarea-quiet-xl-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-l-border-size: var(--spectrum-alias-border-size-thin);

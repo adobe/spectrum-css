@@ -139,8 +139,8 @@
   --spectrum-search-quiet-l-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-l);
   --spectrum-search-quiet-l-icon-gap: var(--spectrum-alias-item-workflow-icon-gap-l);
   --spectrum-search-quiet-l-height: var(--spectrum-alias-item-height-l);
-  --spectrum-search-quiet-l-padding-left: var(--spectrum-alias-item-workflow-padding-left-l);
-  --spectrum-search-quiet-l-padding-right: var(--spectrum-alias-item-padding-l);
+  --spectrum-search-quiet-l-padding-left: 0;
+  --spectrum-search-quiet-l-padding-right: 0;
   --spectrum-search-quiet-l-min-width: var(--spectrum-global-dimension-size-750);
   --spectrum-search-quiet-l-text-baseline: var(--spectrum-global-dimension-size-185);
   --spectrum-search-quiet-l-placeholder-text-size: var(--spectrum-alias-item-text-size-l);
@@ -154,7 +154,6 @@
   --spectrum-search-quiet-l-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-quiet-l-border-radius: 0px;
   --spectrum-search-quiet-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-search-quiet-l-padding-x: 0;
   --spectrum-search-quiet-l-label-gap-y: 0;
   --spectrum-search-quiet-l-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-quiet-m-border-size: var(--spectrum-alias-border-size-thin);
@@ -297,8 +296,8 @@
   --spectrum-search-quiet-m-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-m);
   --spectrum-search-quiet-m-height: var(--spectrum-alias-item-height-m);
   --spectrum-search-quiet-m-icon-gap: var(--spectrum-alias-item-workflow-icon-gap-m);
-  --spectrum-search-quiet-m-padding-left: var(--spectrum-alias-item-workflow-padding-left-m);
-  --spectrum-search-quiet-m-padding-right: var(--spectrum-alias-item-padding-m);
+  --spectrum-search-quiet-m-padding-left: 0;
+  --spectrum-search-quiet-m-padding-right: 0;
   --spectrum-search-quiet-m-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-search-quiet-m-text-baseline: var(--spectrum-global-dimension-size-150);
   --spectrum-search-quiet-m-placeholder-text-size: var(--spectrum-alias-item-text-size-m);
@@ -312,7 +311,6 @@
   --spectrum-search-quiet-m-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-quiet-m-border-radius: 0px;
   --spectrum-search-quiet-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-search-quiet-m-padding-x: 0;
   --spectrum-search-quiet-m-label-gap-y: 0;
   --spectrum-search-quiet-m-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-quiet-s-border-size: var(--spectrum-alias-border-size-thin);
@@ -455,8 +453,8 @@
   --spectrum-search-quiet-s-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-s);
   --spectrum-search-quiet-s-icon-gap: var(--spectrum-alias-item-workflow-icon-gap-s);
   --spectrum-search-quiet-s-height: var(--spectrum-alias-item-height-s);
-  --spectrum-search-quiet-s-padding-left: var(--spectrum-alias-item-workflow-padding-left-s);
-  --spectrum-search-quiet-s-padding-right: var(--spectrum-alias-item-padding-s);
+  --spectrum-search-quiet-s-padding-left: 0;
+  --spectrum-search-quiet-s-padding-right: 0;
   --spectrum-search-quiet-s-min-width: var(--spectrum-global-dimension-size-450);
   --spectrum-search-quiet-s-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-search-quiet-s-placeholder-text-size: var(--spectrum-alias-item-text-size-s);
@@ -470,7 +468,6 @@
   --spectrum-search-quiet-s-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-quiet-s-border-radius: 0px;
   --spectrum-search-quiet-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-search-quiet-s-padding-x: 0;
   --spectrum-search-quiet-s-label-gap-y: 0;
   --spectrum-search-quiet-s-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-quiet-xl-border-size: var(--spectrum-alias-border-size-thin);
@@ -613,8 +610,8 @@
   --spectrum-search-quiet-xl-text-padding-top: var(--spectrum-alias-item-text-padding-top-xl);
   --spectrum-search-quiet-xl-text-padding-bottom: var(--spectrum-alias-item-text-padding-bottom-xl);
   --spectrum-search-quiet-xl-height: var(--spectrum-alias-item-height-xl);
-  --spectrum-search-quiet-xl-padding-left: var(--spectrum-alias-item-workflow-padding-left-xl);
-  --spectrum-search-quiet-xl-padding-right: var(--spectrum-alias-item-padding-xl);
+  --spectrum-search-quiet-xl-padding-left: 0;
+  --spectrum-search-quiet-xl-padding-right: 0;
   --spectrum-search-quiet-xl-min-width: var(--spectrum-global-dimension-size-900);
   --spectrum-search-quiet-xl-text-baseline: var(--spectrum-global-dimension-size-225);
   --spectrum-search-quiet-xl-placeholder-text-size: var(--spectrum-alias-item-text-size-xl);
@@ -628,7 +625,6 @@
   --spectrum-search-quiet-xl-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-quiet-xl-border-radius: 0px;
   --spectrum-search-quiet-xl-cursor-hit-x: var(--spectrum-global-dimension-size-50);
-  --spectrum-search-quiet-xl-padding-x: 0;
   --spectrum-search-quiet-xl-label-gap-y: 0;
   --spectrum-search-quiet-xl-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-l-border-size: var(--spectrum-alias-border-size-thin);

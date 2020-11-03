@@ -93,6 +93,12 @@
   --spectrum-colorwheel-border-color-hover: rgba(25,25,25,0.1);
   --spectrum-colorwheel-border-color-down: rgba(25,25,25,0.1);
   --spectrum-colorwheel-border-color-key-focus: rgba(25,25,25,0.1);
+  --spectrum-divider-s-background-color: colorStopData.midlight.colorTokens.gray-300;
+  --spectrum-divider-s-vertical-background-color: colorStopData.midlight.colorTokens.gray-300;
+  --spectrum-divider-m-background-color: colorStopData.midlight.colorTokens.gray-300;
+  --spectrum-divider-m-vertical-background-color: colorStopData.midlight.colorTokens.gray-300;
+  --spectrum-divider-l-background-color: colorStopData.midlight.colorTokens.gray-800;
+  --spectrum-divider-l-vertical-background-color: colorStopData.midlight.colorTokens.gray-800;
   --spectrum-miller-column-item-background-color-selected: rgba(13,102,208,0.1);
   --spectrum-miller-column-item-background-color-selected-hover: rgba(13,102,208,0.2);
   --spectrum-panel-l-divider-color: colorStopData.midlight.colorAliases.appframe-border-color;
