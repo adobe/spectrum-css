@@ -123,6 +123,10 @@ governing permissions and limitations under the License.
       --spectrum-combobox-quiet-fieldbutton-padding-right
     );
 
+
+    border-block-start: 0;
+    border-inline-start: 0;
+    border-inline-end: 0;
     border-block-end: var(--spectrum-textfield-quiet-m-border-size) solid;
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
