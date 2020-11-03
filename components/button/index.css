@@ -18,68 +18,6 @@ governing permissions and limitations under the License.
 @import "./logicbutton.css";
 @import "./clearbutton.css";
 
-.spectrum-Button {
-  /* Adjustments for inset/outset padding in DNA */
-  --spectrum-button-primary-padding-left-adjusted: calc(var(--spectrum-button-primary-padding-left) - var(--spectrum-button-primary-border-size));
-  --spectrum-button-primary-padding-right-adjusted: calc(var(--spectrum-button-primary-padding-right) - var(--spectrum-button-primary-border-size));
-  --spectrum-button-primary-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-textonly-padding-left) - var(--spectrum-button-primary-border-size));
-  --spectrum-button-primary-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-textonly-padding-right) - var(--spectrum-button-primary-border-size));
-
-  /* Adjust padding to make things look right */
-  --spectrum-button-padding-y: calc(var(--spectrum-button-primary-text-padding-top) - 1px);
-
-  /* todo: remove when fixed in DNA */
-  --spectrum-button-primary-min-width: var(--spectrum-global-dimension-size-900);
-}
-
-.spectrum-Button {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
-
-  border-width: var(--spectrum-button-primary-border-size);
-  border-style: solid;
-  border-radius: var(--spectrum-button-primary-border-radius);
-
-  min-block-size: var(--spectrum-button-primary-height);
-  block-size: auto;
-  min-inline-size: var(--spectrum-button-primary-min-width);
-
-  /* @hack: fix button text vertical alignment at 14px */
-  padding-block-end: calc(var(--spectrum-button-padding-y) + 1px);
-  padding-block-start: calc(var(--spectrum-button-padding-y) - 1px);
-/*  padding-block-end: calc(var(--spectrum-button-primary-icon-padding-top) + 1px);
-  padding-block-start: calc(var(--spectrum-button-primary-icon-padding-bottom) - 1px);*/
-
-  /* Start with text-only padding */
-  padding-inline: var(--spectrum-button-primary-textonly-padding-left-adjusted) var(--spectrum-button-primary-textonly-padding-right-adjusted);
-
-  font-size: var(--spectrum-button-primary-text-size);
-  font-weight: var(--spectrum-button-primary-text-font-weight);
-
-  &:hover,
-  &:active {
-    box-shadow: none;
-  }
-
-  .spectrum-Icon {
-    @inherit: %spectrum-ButtonIcon;
-
-    /* Scoot over, assuming we have both icon and text */
-    margin-inline-start: calc(-1 * (var(--spectrum-button-primary-textonly-padding-left-adjusted) - var(--spectrum-button-primary-padding-left-adjusted)));
-  }
-
-  .spectrum-Icon + .spectrum-Button-label {
-    /* Have gap on on the left */
-    padding-inline-start: var(--spectrum-button-primary-icon-gap);
-
-    /*
-      Have no padding on the right (it's built into the element)
-      This will fail if --spectrum-button-primary-textonly-padding-right !== --spectrum-button-padding-right
-    */
-    padding-inline-end: 0;
-  }
-}
-
 .spectrum-Button--sizeS {
   @remapvars {
     find: /--spectrum-button(.*)-s-/;
@@ -112,6 +50,66 @@ governing permissions and limitations under the License.
     find: /--spectrum-button(.*)-xl-/;
     filter: color;
     replace: --spectrum-button$1-;
+  }
+}
+
+.spectrum-Button {
+  /* Adjustments for inset/outset padding in DNA */
+  --spectrum-button-primary-padding-left-adjusted: calc(var(--spectrum-button-primary-padding-left) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-padding-right-adjusted: calc(var(--spectrum-button-primary-padding-right) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-textonly-padding-left) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-textonly-padding-right) - var(--spectrum-button-primary-border-size));
+
+  /* Adjust padding to make things look right */
+  --spectrum-button-padding-y: calc(var(--spectrum-button-primary-text-padding-top) - 1px);
+
+  /* todo: remove when fixed in DNA */
+  --spectrum-button-primary-text-font-weight: var(--spectrum-global-font-weight-bold);
+}
+
+.spectrum-Button {
+  @inherit: %spectrum-BaseButton;
+  @inherit: %spectrum-ButtonWithFocusRing;
+
+  border-width: var(--spectrum-button-primary-border-size);
+  border-style: solid;
+  border-radius: var(--spectrum-button-primary-border-radius);
+
+  min-block-size: var(--spectrum-button-primary-height);
+  block-size: auto;
+  min-inline-size: var(--spectrum-button-primary-min-width);
+
+  /* @hack: fix button text vertical alignment at 14px */
+  padding-block-end: calc(var(--spectrum-button-padding-y) + 1px);
+  padding-block-start: calc(var(--spectrum-button-padding-y) - 1px);
+
+  /* Start with text-only padding */
+  padding-inline: var(--spectrum-button-primary-textonly-padding-left-adjusted) var(--spectrum-button-primary-textonly-padding-right-adjusted);
+
+  font-size: var(--spectrum-button-primary-text-size);
+  font-weight: var(--spectrum-button-primary-text-font-weight);
+
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+
+  .spectrum-Icon {
+    @inherit: %spectrum-ButtonIcon;
+
+    /* Scoot over, assuming we have both icon and text */
+    margin-inline-start: calc(-1 * (var(--spectrum-button-primary-textonly-padding-left-adjusted) - var(--spectrum-button-primary-padding-left-adjusted)));
+  }
+
+  .spectrum-Icon + .spectrum-Button-label {
+    /* Have gap on on the left */
+    padding-inline-start: var(--spectrum-button-primary-icon-gap);
+
+    /*
+      Have no padding on the right (it's built into the element)
+      This will fail if --spectrum-button-primary-textonly-padding-right !== --spectrum-button-padding-right
+    */
+    padding-inline-end: 0;
   }
 }
 
