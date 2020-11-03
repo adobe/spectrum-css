@@ -11,7 +11,6 @@ governing permissions and limitations under the License.
 */
 
 @import '../commons/index.css';
-
 @import "../vars/css/components/spectrum-link.css";
 
 .spectrum-Link {
@@ -19,6 +18,45 @@ governing permissions and limitations under the License.
     find: /--spectrum-link-(.*?)-m-/;
     replace: --spectrum-link-$1-;
   }
+}
+
+.spectrum-Link--sizeS {
+  @remapvars {
+    find: /--spectrum-link-(.*?)-s-/;
+    replace: --spectrum-link-$1-;
+    filter: color;
+  }
+}
+
+.spectrum-Link--sizeM {
+  @remapvars {
+    find: /--spectrum-link-(.*?)-m-/;
+    replace: --spectrum-link-$1-;
+    filter: color;
+  }
+}
+
+.spectrum-Link--sizeL {
+  @remapvars {
+    find: /--spectrum-link-(.*?)-l-/;
+    replace: --spectrum-link-$1-;
+    filter: color;
+  }
+}
+
+.spectrum-Link--sizeXL {
+  @remapvars {
+    find: /--spectrum-link-(.*?)-xl-/;
+    replace: --spectrum-link-$1-;
+    filter: color;
+  }
+}
+
+.spectrum-Link--sizeS,
+.spectrum-Link--sizeM,
+.spectrum-Link--sizeL,
+.spectrum-Link--sizeXL {
+  font-size: var(--spectrum-link-primary-text-size);
 }
 
 .spectrum-Link {
