@@ -39,17 +39,17 @@ governing permissions and limitations under the License.
   }
   &.is-positive {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-positive-m-track-color);
+      background: var(--spectrum-meter-positive-m-track-fill-color);
     }
   }
   &.is-notice {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-notice-m-track-color);
+      background: var(--spectrum-meter-notice-m-track-fill-color);
     }
   }
   &.is-negative {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-negative-m-track-color);
+      background: var(--spectrum-meter-negative-m-track-fill-color);
     }
   }
 }
