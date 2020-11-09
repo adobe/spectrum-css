@@ -23,6 +23,9 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-25);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-25);
+
+  --spectrum-icon-height-size: var(--spectrum-alias-workflow-icon-size-s);
+  --spectrum-icon-width-size: var(--spectrum-alias-workflow-icon-size-s);
 }
 
 .spectrum-ActionButton--sizeM {
@@ -34,6 +37,9 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-40);
+
+  --spectrum-icon-height-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-icon-width-size: var(--spectrum-alias-workflow-icon-size-m);
 }
 
 .spectrum-ActionButton--sizeL {
@@ -45,6 +51,9 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-50);
+
+  --spectrum-icon-height-size: var(--spectrum-alias-workflow-icon-size-l);
+  --spectrum-icon-width-size: var(--spectrum-alias-workflow-icon-size-l);
 }
 
 .spectrum-ActionButton--sizeXL {
@@ -56,6 +65,9 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-65);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-65);
+
+  --spectrum-icon-height-size: var(--spectrum-alias-workflow-icon-size-xl);
+  --spectrum-icon-width-size: var(--spectrum-alias-workflow-icon-size-xl);
 }
 
 .spectrum-ActionButton {

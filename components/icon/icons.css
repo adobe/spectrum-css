@@ -27,4 +27,11 @@ governing permissions and limitations under the License.
 
   /* Don't catch clicks or hover, otherwise they may not escape the SVG */
   pointer-events: none;
+
+  &,
+  img,
+  svg {
+    block-size: var(--spectrum-icon-height-size);
+    inline-size: var(--spectrum-icon-width-size);
+  }
 }
