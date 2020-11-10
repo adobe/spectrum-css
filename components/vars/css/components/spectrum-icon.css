@@ -42,10 +42,18 @@
   --spectrum-icon-success-small-height: var(--spectrum-global-dimension-size-175);
   --spectrum-icon-triplegripper-height: var(--spectrum-global-dimension-size-85);
   --spectrum-icon-workflow-medium-size: var(--spectrum-alias-workflow-icon-size-m);
+
   --spectrum-icon-user-defined-height: var(--spectrum-icon-tshirt-size-height);
-  --spectrum-icon-user-defined-width: var(--spectrum-icon-tshirt-size-height);
+  --spectrum-icon-user-defined-width: var(--spectrum-icon-tshirt-size-width);
   --spectrum-icon-tshirt-size-height: var(--spectrum-icon-default-height);
   --spectrum-icon-tshirt-size-width: var(--spectrum-icon-default-width);
   --spectrum-icon-default-height: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-icon-default-width: var(--spectrum-alias-workflow-icon-size-m);
+
+  --spectrum-ui-icon-user-defined-height: var(--spectrum-ui-icon-tshirt-size-height);
+  --spectrum-ui-icon-user-defined-width: var(--spectrum-ui-icon-tshirt-size-width);
+  --spectrum-ui-icon-tshirt-size-height: var(--spectrum-ui-icon-default-height);
+  --spectrum-ui-icon-tshirt-size-width: var(--spectrum-ui-icon-default-width);
+  --spectrum-ui-icon-default-height: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-ui-icon-default-width: var(--spectrum-alias-workflow-icon-size-m);
 }
