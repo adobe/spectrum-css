@@ -31,7 +31,7 @@ governing permissions and limitations under the License.
   &,
   img,
   svg {
-    block-size: var(--spectrum-icon-height-size);
-    inline-size: var(--spectrum-icon-width-size);
+    block-size: var(--spectrum-icon-user-defined-height);
+    inline-size: var(--spectrum-icon-user-defined-width);
   }
 }
