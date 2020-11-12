@@ -19,12 +19,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel {
-  display: block;
+  display: flex;
 
   box-sizing: border-box;
 
-  padding-block: var(--spectrum-fieldlabel-padding-top) var(--spectrum-fieldlabel-padding-bottom);
-  padding-inline: 0;
+  padding: var(--spectrum-fieldlabel-padding-top) 0 var(--spectrum-fieldlabel-padding-bottom);
 
   font-size: var(--spectrum-fieldlabel-text-size);
   font-weight: var(--spectrum-fieldlabel-text-font-weight);
@@ -35,62 +34,97 @@ governing permissions and limitations under the License.
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
+  text-align: start;
+}
+
+.spectrum-FieldLabel--positionSide {
+  display: inline-flex;
+  padding-top: var(--spectrum-fieldlabel-side-padding-top);
+  padding-inline-end: var(--spectrum-fieldlabel-side-padding-x);
 }
 
 .spectrum-FieldLabel-requiredIcon {
-  margin-block: var(--spectrum-fieldlabel-asterisk-margin-y) 0;
-  margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
+  margin-top: var(--spectrum-fieldlabel-asterisk-margin-y);
+  margin-inline-end: 0;
+  margin-bottom: 0;
+  margin-inline-start: var(--spectrum-fieldlabel-asterisk-gap);
 }
 
-.spectrum-FieldLabel--left {
-  display: inline-block;
-  padding-block: var(--spectrum-fieldlabel-side-padding-top) 0;
-  padding-inline: 0 var(--spectrum-fieldlabel-side-padding-x);
+.spectrum-FieldLabel--alignEnd {
+  justify-content: flex-end; /* labelPosition=top case */
+  text-align: end; /* labelPosition=side case */
+}
 
-  & .spectrum-FieldLabel-requiredIcon {
-    margin-block: var(--spectrum-fieldlabel-side-asterisk-margin-y) 0;
-    margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
+/* A Field is a wrapper for a FieldLabel and a field component (e.g. textfield).
+ * By default, labels are placed above the field. Fields have a default width, and the
+ * label will wrap within this width. The width of the whole field can be overridden by the user,
+ * and this causes both the label and inner field to resize as well. */
+.spectrum-Field {
+  &.spectrum-Field--positionTop {
+    display: inline-block;
+    width: var(--spectrum-component-single-line-width);
+
+    .spectrum-Field-field {
+      /* If the user overrides the width of the field, propagate to the inner component */
+      width: 100%;
+    }
+  }
+
+  /* The side label variant of Field is inline, and fills as much space as needed
+   * by default. If an explicit width is set, then the field flexes to fill available space. */
+  &.spectrum-Field--positionSide {
+    display: inline-flex;
+    align-items: flex-start;
+
+    .spectrum-Field-field {
+      flex: 1;
+    }
   }
 }
 
-.spectrum-FieldLabel--right {
-  display: inline-block;
-  text-align: end;
-  padding-block: var(--spectrum-fieldlabel-side-padding-top) 0;
-  padding-inline: 0 var(--spectrum-fieldlabel-side-padding-x);
-}
+/* topdoc
+{{ form/index.yml }}
+*/
 
 .spectrum-Form {
-  display: table;
-  border-collapse: separate;
-  border-spacing: var(--spectrum-tableform-border-spacing);
-  margin: var(--spectrum-tableform-margin);
-}
+  /* With labelPosition=side, we override field layout to use a CSS table 
+   * so that all the labels and fields line up automatically. */
+  &.spectrum-Form--positionSide {
+    display: table;
+    border-collapse: separate;
+    border-spacing: var(--spectrum-tableform-border-spacing);
+    margin: var(--spectrum-tableform-margin);
+    text-align: start;
 
-.spectrum-Form-item {
-  display: table-row;
-}
+    .spectrum-Field {
+      display: table-row;
+      width: 100%;
+    }
 
-.spectrum-Form-itemLabel {
-  @extend .spectrum-FieldLabel;
-  display: table-cell;
-}
+    .spectrum-FieldLabel {
+      display: table-cell;
+    }
 
-.spectrum-Form-itemField {
-  display: table-cell;
-}
+    .spectrum-Field-field {
+      display: table-cell;
+      width: auto;
+      min-width: var(--spectrum-component-single-line-width);
+    }
+  }
 
-.spectrum-Form--labelsAbove {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-
-  .spectrum-Form-item {
+  /* With labelPosition=top, we use a normal flex stack */
+  &.spectrum-Form--positionTop {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    min-width: var(--spectrum-component-single-line-width);
 
-    & + .spectrum-Form-item {
-      margin-block-start: var(--spectrum-fieldlabel-margin);
+    /* Users may want to make multiple fields appear next to each other.
+     * We want to ensure that all items inside the form get the proper
+     * margin and widths applied, even if wrapped in extra divs for example. */
+    > * {
+      margin-top: var(--spectrum-fieldlabel-margin);
+      width: 100%;
     }
   }
 }
