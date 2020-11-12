@@ -104,10 +104,13 @@ governing permissions and limitations under the License.
     &:focus,
     &:active,
     &.is-selected,
-    &.is-invalid,
+    &.is-invalid {
+      border-color: var(--spectrum-textfield-quiet-m-border-color);
+    }
+
     &:disabled,
     &:disabled:hover {
-      border-color: var(--spectrum-textfield-quiet-m-border-color);
+      border-color: var(--spectrum-textfield-quiet-m-border-color-disabled);
     }
   }
 
