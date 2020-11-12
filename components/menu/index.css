@@ -146,7 +146,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Icon + .spectrum-Menu-itemLabel,
   .spectrum-Menu-itemIcon + .spectrum-Menu-itemLabel {
-    margin-inline-start: var(--spectrum-listitem-thumbnail-padding-left);
+    margin-inline-start: var(--spectrum-listitem-icon-gap);
 
     inline-size: calc(
       100% - var(--spectrum-icon-checkmark-medium-width) -
