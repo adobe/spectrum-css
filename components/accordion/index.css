@@ -44,8 +44,8 @@ governing permissions and limitations under the License.
   position: absolute;
   inset-inline-start: var(--spectrum-accordion-item-padding-x);
   inset-block-start: calc(
-    var(--spectrum-accordion-item-height-actual) / 2 -
-      var(--spectrum-accordion-icon-height) / 2
+    50% -
+    var(--spectrum-accordion-icon-height) / 2
   );
 
   transition: transform ease var(--spectrum-accordion-animation-duration);
@@ -69,7 +69,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Accordion-itemHeading {
   margin: 0;
-  block-size: var(--spectrum-accordion-item-height);
+  position: relative;
   box-sizing: border-box;
 }
 
@@ -91,7 +91,10 @@ governing permissions and limitations under the License.
   padding-inline-end: var(--spectrum-accordion-item-padding-x);
   margin: 0;
 
-  min-block-size: var(--spectrum-accordion-item-height-actual);
+  min-block-size: calc(
+    100% -
+      var(--spectrum-accordion-item-border-size)
+  );
 
   font-size: var(--spectrum-accordion-item-title-text-size);
   line-height: var(--spectrum-accordion-item-line-height);
@@ -149,7 +152,10 @@ governing permissions and limitations under the License.
 
     > .spectrum-Accordion-itemHeader::after {
       /* No bottom border when open, so be less tall */
-      block-size: var(--spectrum-accordion-item-height-actual);
+      block-size: calc(
+        100% -
+            var(--spectrum-accordion-item-border-size)
+      );
     }
 
     > .spectrum-Accordion-itemContent {
