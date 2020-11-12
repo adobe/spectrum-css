@@ -106,7 +106,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Textfield.is-disabled &,
   .spectrum-Textfield.is-disabled:hover &,
-  [disabled] {
+  :disabled {
     background-color: var(--spectrum-textfield-m-background-color-disabled);
     border-color: var(--spectrum-textfield-m-border-color-disabled);
     color: var(--spectrum-textfield-m-text-color-disabled);
@@ -161,7 +161,7 @@ governing permissions and limitations under the License.
 
     .is-disabled:hover&,
     .is-disabled&,
-    [disabled] {
+    :disabled {
       background-color: var(--spectrum-textfield-quiet-m-background-color-disabled);
       border-color: var(--spectrum-textfield-quiet-m-border-color-disabled);
     }
