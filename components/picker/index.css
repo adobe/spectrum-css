@@ -65,10 +65,6 @@ governing permissions and limitations under the License.
     cursor: default;
   }
 
-  &.is-open {
-    border-width: var(--spectrum-picker-border-size);
-  }
-
   .spectrum-Picker-icon {
     flex-shrink: 0;
 
