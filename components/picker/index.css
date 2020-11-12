@@ -132,16 +132,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Only apply margin to the icon if there's a label */
-.spectrum-Picker-label + .spectrum-Picker-validationIcon {
-  margin-inline-start: var(--spectrum-picker-icon-gap);
-}
-
-/* Only apply margin if there's a label */
-.spectrum-Picker-label ~ .spectrum-Picker-menuIcon {
-  margin-inline-start: var(--spectrum-picker-icon-gap);
-}
-
 /* The picker chevron */
 .spectrum-Picker-menuIcon {
   display: inline-block;
@@ -151,8 +141,19 @@ governing permissions and limitations under the License.
   flex-shrink: 0;
 }
 
+/* Only apply margin to the icon if there's a label */
+.spectrum-Picker-label + .spectrum-Picker-validationIcon {
+  margin-inline-start: var(--spectrum-picker-error-icon-margin-left);
+}
+
+/* Apply the bigly margin by default */
+.spectrum-Picker-label ~ .spectrum-Picker-menuIcon {
+  margin-inline-start: var(--spectrum-picker-error-icon-margin-left);
+}
+
+/* If there's a validation icon, we need less margin */
 .spectrum-Picker-validationIcon + .spectrum-Picker-menuIcon {
-  margin-inline-start: var(--spectrum-picker-icon-gap);
+  margin-inline-start: var(--spectrum-picker-ui-icon-gap);
 }
 
 .spectrum-Picker-popover {
