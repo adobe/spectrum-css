@@ -30,9 +30,6 @@ governing permissions and limitations under the License.
   inline-size: auto;
   min-inline-size: 0;
   flex-shrink: 0;
-}
-
-.spectrum-SearchWithin-pickerTrigger {
   border-start-end-radius: var(--spectrum-searchwithin-border-radius);
   border-end-end-radius: var(--spectrum-searchwithin-border-radius);
 }
