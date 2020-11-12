@@ -358,27 +358,23 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
-          <div class="spectrum-Picker spectrum-Picker--quiet">
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
-              </svg>
-            </button>
-          </div>
+        <button class="spectrum-Picker spectrum-Picker--quiet" aria-haspopup="true">
+          <span class="spectrum-Picker-label">Tab 1</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
+          </svg>
+        </button>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
-          <div class="spectrum-Picker spectrum-Picker--quiet is-open">
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
-              </svg>
-            </button>
-          </div>
+        <button class="spectrum-Picker spectrum-Picker--quiet is-selected" aria-haspopup="true">
+          <span class="spectrum-Picker-label">Tab 1</span>
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
+          </svg>
+        </button>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
       <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
@@ -408,27 +404,23 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
-          <div class="spectrum-Picker spectrum-Picker--quiet">
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
-              </svg>
-            </button>
-          </div>
+          <button class="spectrum-Picker spectrum-Picker--quiet is-selected" aria-haspopup="true">
+            <span class="spectrum-Picker-label">Tab 1</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
+            </svg>
+          </button>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
-          <div class="spectrum-Picker spectrum-Picker--quiet is-open">
-            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-Picker-trigger is-selected" aria-haspopup="true">
-              <span class="spectrum-Picker-label">Tab 1</span>
-              <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Chevron100" />
-              </svg>
-            </button>
-          </div>
+          <button class="spectrum-Picker spectrum-Picker--quiet is-open is-selected" aria-haspopup="true">
+            <span class="spectrum-Picker-label">Tab 1</span>
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron100" />
+            </svg>
+          </button>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
       </div>
       <br>
