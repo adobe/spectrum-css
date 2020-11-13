@@ -3,6 +3,9 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/combo-box/
 sections:
   - name: Migration Guide
     description: |
+      ### New Picker markup
+      Instead of a `.spectrum-FieldButton`, Combobox now uses `.spectrum-Picker`. See [Picker migration guide](picker.html#migrationguide) for details.
+
       ### New Textfield markup
       InputGroup now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
 

@@ -4,7 +4,12 @@ sections:
   - name: Migration Guide
     description: |
       ### Component renamed
-      Since Dropdown is now known as Picker. Replace all `.spectrum-Dropdown*` classnames with `.spectrum-Picker*` and replace all `.spectrum-SearchWithin-dropdown*` with `.spectrum-SearchWithin-picker*`.
+      Since Dropdown is now known as Picker, Replace all `.spectrum-Dropdown*` classnames with `.spectrum-Picker*` and replace all `.spectrum-SearchWithin-dropdown` with `.spectrum-SearchWithin-picker`.
+
+      ### New Picker markup
+      Combobox now uses `.spectrum-Picker`. See [Picker migration guide](picker.html#migrationguide) for details.
+
+      Since Picker's markup has changed, `.spectrum-SearchWithin-pickerTrigger` is no longer required.
 
 examples:
   - id: searchwithin

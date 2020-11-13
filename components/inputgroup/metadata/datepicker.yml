@@ -3,12 +3,14 @@ description: A date picker uses the input group component to display a field wit
 sections:
   - name: Migration Guide
     description: |
-      ### Textfiled markup change
+      ### Combobox markup change
       See the [Combobox migration guide](combobox.html#migrationguide) for migration information.
-      
+
+      ### New Picker markup
+      Instead of a `.spectrum-FieldButton`, Combobox now uses `.spectrum-Picker`. See [Picker migration guide](picker.html#migrationguide) for details.
+
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
-
 
 examples:
   - id: datepicker
@@ -31,10 +33,10 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
         </div>
-          <button type="button" class="spectrum-Picker spectrum-Picker--quiet spectrum-InputGroup-button" tabindex="-1">
-            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
-              <use xlink:href="#spectrum-icon-18-Calendar" />
-            </svg>
+        <button type="button" class="spectrum-Picker spectrum-Picker--quiet spectrum-InputGroup-button" tabindex="-1">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Calendar">
+            <use xlink:href="#spectrum-icon-18-Calendar" />
+          </svg>
         </button>
       </div>
   - id: datepicker-range
