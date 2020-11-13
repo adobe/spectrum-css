@@ -9,10 +9,9 @@ sections:
       Bar loader is now known as Progress bar. Replace all `.spectrum-BarLoader*` classnames with `.spectrum-ProgressBar*`.
 
       ### T-shirt sizing
-      Progresse bar now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ProgressBar--size*` class.
+      Progress bar now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ProgressBar--size*` class.
 
       ### Size classnames changed
-
       Previous size classnames map as follows:
 
       | Previous size classname         | New size classname                |
