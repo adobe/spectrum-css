@@ -153,7 +153,8 @@ function getAllVars() {
       `${varDir}/css/themes/*.css`,
       `${varDir}/css/scales/*.css`,
       `${varDir}/css/components/*.css`,
-      `${varDir}/css/globals/*.css`
+      `${varDir}/css/globals/*.css`,
+      `${varDir}/dynamic/*.css`,
     ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
@@ -174,7 +175,8 @@ function getAllComponentVars() {
 
     gulp.src([
       `${varDir}/css/components/*.css`,
-      `${varDir}/css/globals/*.css`
+      `${varDir}/css/globals/*.css`,
+      `${varDir}/dynamic/*.css`
     ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
