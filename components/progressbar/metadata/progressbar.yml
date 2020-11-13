@@ -28,6 +28,8 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeS" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-label">Loading</div>
+            <div class="spectrum-ProgressBar-percentage">50%</div>
             <div class="spectrum-ProgressBar-track">
               <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
             </div>
@@ -38,6 +40,8 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-label">Loading</div>
+            <div class="spectrum-ProgressBar-percentage">50%</div>
             <div class="spectrum-ProgressBar-track">
               <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
             </div>
@@ -49,6 +53,8 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeL" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-label">Loading</div>
+            <div class="spectrum-ProgressBar-percentage">50%</div>
             <div class="spectrum-ProgressBar-track">
               <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
             </div>
@@ -60,6 +66,8 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
 
           <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeXL" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="spectrum-ProgressBar-label">Loading</div>
+            <div class="spectrum-ProgressBar-percentage">50%</div>
             <div class="spectrum-ProgressBar-track">
               <div class="spectrum-ProgressBar-fill" style="width: 50%;"></div>
             </div>
