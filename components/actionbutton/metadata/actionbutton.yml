@@ -9,7 +9,7 @@ sections:
   - name: Migration Guide
     description: |
       ### T-shirt sizing
-      Action Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ActionButton--size*` class.
+      Action Button now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-ActionButton--size*` class.
 
       ### Action Button is now a separate component
       Action Button has been moved to the [Action Button](actionbutton.html) component.
