@@ -13,13 +13,32 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 @import "../vars/css/components/spectrum-fieldlabel.css";
 
-.spectrum-FieldLabel {
+.spectrum-FieldLabel--sizeS {
+  @remapvars {
+    find: --spectrum-fieldlabel-s-;
+    replace: --spectrum-fieldlabel-;
+  }
+}
+
+.spectrum-FieldLabel--sizeM {
   @remapvars {
     find: --spectrum-fieldlabel-m-;
     replace: --spectrum-fieldlabel-;
   }
+}
 
-  --spectrum-fieldlabel-margin: var(--spectrum-global-dimension-size-100);
+.spectrum-FieldLabel--sizeL {
+  @remapvars {
+    find: --spectrum-fieldlabel-l-;
+    replace: --spectrum-fieldlabel-;
+  }
+}
+
+.spectrum-FieldLabel--sizeXL {
+  @remapvars {
+    find: --spectrum-fieldlabel-xl-;
+    replace: --spectrum-fieldlabel-;
+  }
 }
 
 .spectrum-FieldLabel {
