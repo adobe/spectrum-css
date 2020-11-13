@@ -11,11 +11,11 @@ sections:
       ### T-shirt sizing
       Progresse bar now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ProgressBar--size*` class.
 
-      ### Size changes
+      ### Size classnames changed
 
-      Previous sizes map as follows:
+      Previous size classnames map as follows:
 
-      | Previous size class             | New size class                    |
+      | Previous size classname         | New size classname                |
       | ------------------------------- | --------------------------------- |
       | `.spectrum-ProgressBar--small`  | `.spectrum-ProgressBar--sizeS`    |
       | `.spectrum-ProgressBar--large`  | `.spectrum-ProgressBar--sizeM`    |
