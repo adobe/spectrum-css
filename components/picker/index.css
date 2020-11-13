@@ -68,7 +68,8 @@ governing permissions and limitations under the License.
   .spectrum-Picker-icon {
     flex-shrink: 0;
 
-    margin-inline-start: calc(var(--spectrum-picker-padding-left) - var(--spectrum-picker-textonly-padding-left));
+    /* todo: In theory, this is right -- there should be more gap with an icon -- but in practice, it does not match */
+    /* margin-inline-start: calc(var(--spectrum-picker-padding-left) - var(--spectrum-picker-textonly-padding-left)); */
     margin-inline-end: var(--spectrum-picker-icon-gap);
   }
 
