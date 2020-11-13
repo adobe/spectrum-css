@@ -360,7 +360,7 @@ examples:
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
         <button class="spectrum-Picker spectrum-Picker--quiet" aria-haspopup="true">
           <span class="spectrum-Picker-label">Tab 1</span>
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
@@ -371,7 +371,7 @@ examples:
       <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 409px">
         <button class="spectrum-Picker spectrum-Picker--quiet is-selected" aria-haspopup="true">
           <span class="spectrum-Picker-label">Tab 1</span>
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
@@ -406,7 +406,7 @@ examples:
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
           <button class="spectrum-Picker spectrum-Picker--quiet is-selected" aria-haspopup="true">
             <span class="spectrum-Picker-label">Tab 1</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </button>
@@ -417,7 +417,7 @@ examples:
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
           <button class="spectrum-Picker spectrum-Picker--quiet is-open is-selected" aria-haspopup="true">
             <span class="spectrum-Picker-label">Tab 1</span>
-            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+            <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </button>
