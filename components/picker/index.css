@@ -173,7 +173,7 @@ governing permissions and limitations under the License.
   }
 
   &:active,
-  &.is-selected {
+  &.is-open {
     background-color: var(--spectrum-picker-m-background-color-down);
     border-color: var(--spectrum-picker-m-border-color-down);
 
@@ -208,7 +208,7 @@ governing permissions and limitations under the License.
     }
 
     &:active,
-    &.is-selected {
+    &.is-open {
       border-color: var(--spectrum-picker-m-border-color-error-down);
     }
 
@@ -280,7 +280,7 @@ governing permissions and limitations under the License.
   }
 
   &:active,
-  &.is-selected {
+  &.is-open {
     background-color: var(--spectrum-picker-quiet-m-background-color-down);
     border-color: var(--spectrum-picker-quiet-m-border-color-down);
 

@@ -30,7 +30,7 @@ examples:
 
       <h4>Open</h4>
       <form class="spectrum-SearchWithin" style="margin-bottom: 180px;">
-        <button type="button" class="spectrum-Picker spectrum-SearchWithin-picker is-open is-selected" aria-haspopup="true">
+        <button type="button" class="spectrum-Picker spectrum-SearchWithin-picker is-open" aria-haspopup="true">
           <span class="spectrum-Picker-label">All</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
