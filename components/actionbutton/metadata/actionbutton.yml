@@ -9,7 +9,7 @@ sections:
   - name: Migration Guide
     description: |
       ### T-shirt sizing
-      Action Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ActionButton--size*` class.
+      Action Button now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-ActionButton--size*` class.
 
       ### Action Button is now a separate component
       Action Button has been moved to the [Action Button](actionbutton.html) component.
@@ -18,7 +18,7 @@ sections:
 
       Previously, all Action Buttons used `.spectrum-Icon--sizeS`. This has changed:
 
-      | Action Button Class              | Workflow Icon Class               |
+      | Action button classname          | Workflow icon classname           |
       | -------------------------------- | --------------------------------- |
       | `.spectrum-ActionButton--sizeS`  | `.spectrum-Icon--sizeS`           |
       | `.spectrum-ActionButton--sizeM`  | `.spectrum-Icon--sizeM`           |
@@ -29,7 +29,7 @@ sections:
 
       Hold icon classnames must be set as follows:
 
-      | Action Button Class              | Hold Icon Class                      |
+      | Action button classname          | Hold icon classname                  |
       | -------------------------------- | ------------------------------------ |
       | `.spectrum-ActionButton--sizeS`  | `.spectrum-UIIcon-CornerTriangle75`  |
       | `.spectrum-ActionButton--sizeM`  | `.spectrum-UIIcon-CornerTriangle100` |

@@ -158,19 +158,24 @@ governing permissions and limitations under the License.
 
   function toggleOpen(picker, force) {
     var isOpen = force !== undefined ? force : !picker.classList.contains('is-open');
-    var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
-    var popover = picker.querySelector('.spectrum-Picker-popover');
+    var popover = getPopoverForPicker(picker);
 
     picker[isOpen ? 'setAttribute' : 'removeAttribute']('aria-expanded', 'true');
     picker.classList[isOpen ? 'add' : 'remove']('is-open');
-    fieldButton.classList[isOpen ? 'add' : 'remove']('is-selected');
+    picker.classList[isOpen ? 'add' : 'remove']('is-selected');
 
     if (popover) {
       popover.style.zIndex = 1;
+      var rect = picker.getBoundingClientRect();
+      popover.style.top = rect.bottom + 'px';
       popover.classList[isOpen ? 'add' : 'remove']('is-open');
+      popover.querySelector('.spectrum-Menu-item').focus();
     }
 
     if (isOpen) {
+      if (openPicker && openPicker !== picker) {
+        toggleOpen(openPicker, false);
+      }
       openPicker = picker;
     }
   }
@@ -178,10 +183,7 @@ governing permissions and limitations under the License.
   function closeAndFocusPicker(picker) {
     if (picker) {
       toggleOpen(picker, false);
-      var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
-      if (fieldButton) {
-        fieldButton.focus();
-      }
+      picker.focus();
     }
   }
 
@@ -207,8 +209,7 @@ governing permissions and limitations under the License.
         } else if (event.key === 'Enter') {
           handleMenuChange(menu, menuItem);
 
-          var picker = event.target.closest('.spectrum-Picker');
-          closeAndFocusPicker(picker);
+          closeAndFocusPicker(getPickerForMenu(menu));
           event.preventDefault();
         }
         if (newItemIndex !== -1) {
@@ -222,22 +223,15 @@ governing permissions and limitations under the License.
       if (event.key === 'ArrowDown') {
         var picker = event.target.closest('.spectrum-Picker');
         if (picker) {
-          var menu = picker.querySelector('.spectrum-Menu');
-          if (menu) {
-            var menuItem = menu.querySelector('.spectrum-Menu-item');
-            if (menuItem) {
-              event.preventDefault();
-              menuItem.focus();
-            }
-          }
+          toggleOpen(picker, true);
         }
       }
     }
   });
 
   function setPickerValue(picker, value, label) {
-    var menu = picker.querySelector('.spectrum-Menu');
-    var menuItem = picker.querySelector('.spectrum-Menu-item[value="' + value + '"]');
+    var menu = picker.nextElementSibling.querySelector('.spectrum-Menu');
+    var menuItem = menu.querySelector('.spectrum-Menu-item[value="' + value + '"]');
 
     if (menuItem) {
       var selectedMenuItem = menu.querySelector('.spectrum-Menu-item.is-selected');
@@ -258,7 +252,7 @@ governing permissions and limitations under the License.
     }
 
     picker.setAttribute('value', value);
-    var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
+    var fieldButton = picker;
     if (fieldButton && label) {
       var pickerLabel = fieldButton.querySelector('.spectrum-Picker-label');
       if (pickerLabel) {
@@ -277,12 +271,21 @@ governing permissions and limitations under the License.
     picker.dispatchEvent(event);
   }
 
+  function getPickerForMenu(menuOrMenuItem) {
+    var popover = menuOrMenuItem.closest('.spectrum-Popover');
+    return popover && popover.previousElementSibling && popover.previousElementSibling.matches('.spectrum-Picker') ? popover.previousElementSibling : null;
+  }
+
+  function getPopoverForPicker(picker) {
+    return picker && picker.nextElementSibling && picker.nextElementSibling.matches('.spectrum-Popover') ? picker.nextElementSibling : null;
+  }
+
   function handleMenuChange(menu, menuItem) {
     var value = menuItem.getAttribute('value');
     var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
     var label = menuLabel.innerHTML;
 
-    var picker = menu.closest('.spectrum-Picker');
+    var picker = getPickerForMenu(menu);
     if (picker) {
       toggleOpen(picker, false);
       setPickerValue(picker, value, label);
@@ -290,17 +293,21 @@ governing permissions and limitations under the License.
   }
 
   window.addEventListener('click', function(event) {
-    var picker = event.target.closest('.spectrum-Picker');
+    var menu = event.target.closest('.spectrum-Menu');
 
+    var picker = event.target.closest('.spectrum-Picker');
     if (picker) {
       toggleOpen(picker);
+    }
+    else if (menu) {
+      var popover = menu.closest('.spectrum-Popover');
+      picker = popover.previousElementSibling && popover.previousElementSibling.matches('.spectrum-Picker') ? popover.previousElementSibling : null;
 
       var menuItem = event.target.closest('.spectrum-Menu-item');
       if (menuItem) {
-        var fieldButton = picker.querySelector('.spectrum-Picker-trigger');
         var menuLabel = menuItem.querySelector('.spectrum-Menu-itemLabel');
         if (menuLabel) {
-          var pickerLabel = fieldButton.querySelector('.spectrum-Picker-label');
+          var pickerLabel = picker.querySelector('.spectrum-Picker-label');
           if (pickerLabel) {
             pickerLabel.innerHTML = menuLabel.innerHTML;
 
@@ -309,7 +316,8 @@ governing permissions and limitations under the License.
           }
         }
       }
-    } else {
+    }
+    else {
       if (openPicker) {
         toggleOpen(openPicker, false);
       }

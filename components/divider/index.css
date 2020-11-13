@@ -42,6 +42,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Divider {
   inline-size: 100%;
+  block-size: var(--spectrum-divider-height);
 
   /* Show the overflow for hr in Edge and IE. */
   overflow: visible;

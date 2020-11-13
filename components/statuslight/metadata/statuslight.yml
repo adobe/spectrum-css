@@ -10,10 +10,30 @@ examples:
     name: Sizing
     status: Verified
     markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Small</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--info">Medium</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeL spectrum-StatusLight--info">Large</div>
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeXL spectrum-StatusLight--info">Extra Large</div>
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Small</div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--info">Medium</div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeL spectrum-StatusLight--info">Large</div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeXL spectrum-StatusLight--info">Extra Large</div>
+        </div>
+      </div>
   - id: statuslight
     name: Colors
     status: Verified
