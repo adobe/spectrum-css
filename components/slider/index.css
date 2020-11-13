@@ -24,6 +24,9 @@ governing permissions and limitations under the License.
     replace: --spectrum-slider-tick-;
   }
 
+  /* todo: this is 0px in DNA, which seems wrong */
+  --spectrum-slider-label-gap-y: var(--spectrum-global-dimension-size-85);
+
   --spectrum-slider-controls-margin: calc(
     var(--spectrum-slider-handle-width) / 2
   );
@@ -365,7 +368,7 @@ governing permissions and limitations under the License.
     align-items: center;
     justify-content: center;
 
-    margin-block: var(--spectrum-slider-label-gap-x) 0;
+    margin-block: calc(var(--spectrum-slider-label-gap-y) + var(--spectrum-slider-tick-mark-height)) 0;
     margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
       calc(var(--spectrum-slider-label-gap-x) * -1);
 
@@ -378,7 +381,6 @@ governing permissions and limitations under the License.
     .spectrum-Slider-tickLabel {
       display: block;
       position: absolute;
-      margin-block: var(--spectrum-slider-label-gap-x) 0;
       margin-inline: 0;
     }
   }
