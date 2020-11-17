@@ -119,3 +119,13 @@ a.spectrum-Button {
 
   line-height: var(--spectrum-button-primary-text-line-height);
 }
+
+.spectrum-LogicButton,
+.spectrum-Button {
+  &:focus-ring,
+  &.is-focused {
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-m-focus-ring-color-key-focus);
+    }
+  }
+}
