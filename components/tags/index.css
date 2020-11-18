@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Tags {
   @remapvars {
-    find: /--spectrum-tag-m(.*)/;
+    find: /--spectrum-tag-s(.*)/;
     filter: color;
     replace: --spectrum-tag$1;
   }
