@@ -338,3 +338,57 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+@media (forced-colors: active) {
+  .spectrum-ActionButton {
+    &:not(.is-selected) {
+      .spectrum-Icon {
+        color: ButtonText;
+      }      
+    }
+    &:disabled,
+    &.is-disabled {
+      .spectrum-Icon {
+        color: GrayText;
+      } 
+      &.is-selected {
+        color: ButtonFace;
+        background-color: GrayText;
+        .spectrum-Icon {
+          color: ButtonFace;
+        }
+      }        
+    }
+    &.is-selected {
+      forced-color-adjust: none;
+      background-color: ButtonText;
+      color: ButtonFace;
+      border-color: ButtonFace;
+      .spectrum-Icon {
+        color: ButtonFace;
+      }
+      &.spectrum-ActionButton--emphasized {
+        forced-color-adjust: none;
+        background-color: ButtonText;
+        color: ButtonFace;
+        border-color: ButtonFace;
+        .spectrum-Icon {
+          color: ButtonFace;
+        }
+        &:disabled,
+        &.is-disabled {
+          .spectrum-Icon {
+            color: GrayText;
+          } 
+          &.is-selected {
+            color: ButtonFace;
+            background-color: GrayText;
+            .spectrum-Icon {
+              color: ButtonFace;
+            }
+          }        
+        }
+      }   
+    }
+  }
+}
