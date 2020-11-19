@@ -148,7 +148,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                         <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
                           <div class="spectrum-Dialog-grid">
                             <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-                            <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+                            <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
                             <section class="spectrum-Dialog-content">Smart filters are nondestructive and will preserve your original images.</section>
                             <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
                               <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
@@ -316,8 +316,8 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                   .spectrum-CSSExample-example
                     <div style="margin: 20px 0; width: 168px">
                       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
-                        <div class="spectrum-ProgressBar-label">Laden ihrer Creative Cloud dateien</div>
-                        <div class="spectrum-ProgressBar-percentage">26%</div>
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Laden ihrer Creative Cloud dateien</div>
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-percentage">26%</div>
                         <div class="spectrum-ProgressBar-track">
                           <div class="spectrum-ProgressBar-fill" style="width: 26%;"></div>
                         </div>
@@ -330,8 +330,8 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                   .spectrum-CSSExample-example
                     <div style="margin: 20px 0;">
                       <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM is-positive" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
-                        <div class="spectrum-ProgressBar-label">Creative Cloud datennutzung insgesamt</div>
-                        <div class="spectrum-ProgressBar-percentage">26%</div>
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Creative Cloud datennutzung insgesamt</div>
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-percentage">26%</div>
                         <div class="spectrum-ProgressBar-track">
                           <div class="spectrum-ProgressBar-fill" style="width: 26%;"></div>
                         </div>
@@ -343,13 +343,13 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
-                      <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
                       <div class="spectrum-InputGroup">
                         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
                           <input type="text" placeholder="Type here" name="field" value="" id="spectrum-combobox-instance" class="spectrum-Textfield-input spectrum-InputGroup-input">
                         </div>
-                        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-InputGroup-button" aria-haspopup="true">
-                          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+                        <button class="spectrum-Picker spectrum-InputGroup-button" tabindex="-1" aria-haspopup="true">
+                          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
                             <use xlink:href="#spectrum-css-icon-Chevron100" />
                           </svg>
                         </button>
@@ -360,10 +360,10 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
-                      <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
                       <button class="spectrum-Picker" style="width: 195px;" aria-haspopup="true">
                         <span class="spectrum-Picker-label is-placeholder">Select an option</span>
-                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                           <use xlink:href="#spectrum-css-icon-Chevron100" />
                         </svg>
                       </button>
@@ -374,7 +374,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
-                      <label class="spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
                       <div class="spectrum-Textfield">
                         <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
                       </div>

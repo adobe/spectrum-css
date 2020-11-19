@@ -52,13 +52,13 @@ governing permissions and limitations under the License.
   --spectrum-textfield-icon-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-textfield-quiet-icon-gap: var(--spectrum-global-dimension-size-75);
 
-  /* multiline textfields don't have height, just min-height */
+  /* height is incorrectly named in DNA, should be min-height */
   --spectrum-textarea-min-height: var(--spectrum-textarea-height);
   --spectrum-textarea-height-adjusted: auto;
 
-  /* missing in DNA */
-  --spectrum-textarea-padding-top: var(--spectrum-textfield-padding-top);
-  --spectrum-textarea-padding-bottom: var(--spectrum-textfield-padding-bottom);
+  /* padding is incorrectly named in DNA, should drop text */
+  --spectrum-textarea-padding-top: var(--spectrum-textarea-text-padding-top);
+  --spectrum-textarea-padding-bottom: var(--spectrum-textarea-text-padding-bottom);
 }
 
 .spectrum-Textfield {
