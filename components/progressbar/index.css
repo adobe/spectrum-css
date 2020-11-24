@@ -124,10 +124,6 @@ governing permissions and limitations under the License.
   }
 }
 
-/*.spectrum-ProgressBar--small {
-  min-inline-size: var(--spectrum-progressbar-small-width);
-}*/
-
 .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
   inline-size: var(--spectrum-progressbar-indeterminate-fill-width);
   position: relative;
