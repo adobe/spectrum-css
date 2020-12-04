@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.5"></a>
+# 3.0.0-beta.5
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.0.0-beta.4...@spectrum-css/slider@3.0.0-beta.5)
+
+### 🐛 Bug fixes
+
+* correct tick label position to match contribution ([4201733](https://github.com/adobe/spectrum-css/commit/4201733))
+* make Slider build again ([fb2b901](https://github.com/adobe/spectrum-css/commit/fb2b901))
+
+
+
+
+
 <a name="3.0.0-beta.4"></a>
 # 3.0.0-beta.4
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.0.0-beta.3...@spectrum-css/slider@3.0.0-beta.4)

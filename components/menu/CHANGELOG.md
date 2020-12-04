@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.5"></a>
+# 3.0.0-beta.5
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.4...@spectrum-css/menu@3.0.0-beta.5)
+
+### 🐛 Bug fixes
+
+* correct Menu icon gap ([e68bc31](https://github.com/adobe/spectrum-css/commit/e68bc31))
+* correct Menu left padding ([1ea92ac](https://github.com/adobe/spectrum-css/commit/1ea92ac))
+* make Menu work again ([35d1302](https://github.com/adobe/spectrum-css/commit/35d1302))
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+
+
+
+
+
 <a name="3.0.0-beta.4"></a>
 # 3.0.0-beta.4
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.3...@spectrum-css/menu@3.0.0-beta.4)

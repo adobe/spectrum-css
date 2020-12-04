@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.3"></a>
+# 1.0.0-beta.3
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.0-beta.2...@spectrum-css/picker@1.0.0-beta.3)
+
+### ✨ Features
+
+* change all instances of .is-selected to .is-open ([e28af42](https://github.com/adobe/spectrum-css/commit/e28af42))
+* migrate Picker from FieldButton to Picker... button ([6fbc452](https://github.com/adobe/spectrum-css/commit/6fbc452))
+* replace all FieldButton with ActionButton ([2fcbaaf](https://github.com/adobe/spectrum-css/commit/2fcbaaf))
+
+
+### 🐛 Bug fixes
+
+* correct chevron icon size, closes [#1045](https://github.com/adobe/spectrum-css/issues/1045) ([#1056](https://github.com/adobe/spectrum-css/issues/1056)) ([12fb3cc](https://github.com/adobe/spectrum-css/commit/12fb3cc))
+* correct dependencies for FieldButton -> ActionButton change ([29d69f8](https://github.com/adobe/spectrum-css/commit/29d69f8))
+* correct margin between icons and text ([0d7453b](https://github.com/adobe/spectrum-css/commit/0d7453b))
+* correct Thumbnail indentation for Picker ([93602c2](https://github.com/adobe/spectrum-css/commit/93602c2))
+* make Picker build again ([dc541b9](https://github.com/adobe/spectrum-css/commit/dc541b9))
+* make Picker work again ([91f6e09](https://github.com/adobe/spectrum-css/commit/91f6e09))
+* quiet width, alignment of menu icon when it's alone, margin bits ([98d06e1](https://github.com/adobe/spectrum-css/commit/98d06e1))
+* remove useless state ([e442338](https://github.com/adobe/spectrum-css/commit/e442338))
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+
+
+### 🛑 BREAKING CHANGES
+
+* Use .is-open to indicate the popover is shown, not .is-selected
+* Picker markup changed completely
+* markup now requires spectrum-ActionButton where all uses of spectrum-FieldButton were
+
+
+
+
+
 <a name="1.0.0-beta.2"></a>
 # 1.0.0-beta.2
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.0-beta.1...@spectrum-css/picker@1.0.0-beta.2)
