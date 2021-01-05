@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-TreeView {
   --spectrum-treeview-item-background-color-selected: var(--spectrum-alias-highlight-selected);
   --spectrum-treeview-item-border-color-selected: var(--spectrum-global-color-blue-500);
 

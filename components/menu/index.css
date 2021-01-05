@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "../commons/index.css";
 @import "../vars/css/components/spectrum-listitem.css";
 
-:root {
+.spectrum-Menu {
   --spectrum-menu-margin-x: var(--spectrum-global-dimension-size-40);
   --spectrum-listitem-heading-text-size: var(
     --spectrum-global-dimension-font-size-50

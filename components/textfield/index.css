@@ -46,7 +46,7 @@ governing permissions and limitations under the License.
   --spectrum-textfield-padding-bottom: 5px;
 
   /* todo: DNA uses incorrect font family "Adobe Clean" */
-  --spectrum-textfield-text-font-family: var(--spectrum-font-family-base);
+  --spectrum-textfield-text-font-family: var(--spectrum-alias-body-text-font-family);
 
   /* todo: add to DNA */
   --spectrum-textfield-icon-gap: var(--spectrum-global-dimension-size-65);
@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
   display: inline-flex;
   position: relative;
   min-inline-size: var(--spectrum-textfield-min-width);
-  inline-size: var(--spectrum-component-single-line-width);
+  inline-size: var(--spectrum-alias-single-line-width);
 
   &.spectrum-Textfield--quiet.spectrum-Textfield--multiline
     .spectrum-Textfield-input {

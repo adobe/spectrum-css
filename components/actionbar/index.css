@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
-:root {
+.spectrum-ActionBar {
   --spectrum-actionbar-height: var(--spectrum-global-dimension-size-600);
   --spectrum-actionbar-padding-left: var(--spectrum-global-dimension-size-200);
   --spectrum-actionbar-padding-right: calc(var(--spectrum-global-dimension-size-200) / 2);

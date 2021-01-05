@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Thumbnail {
   --spectrum-thumbnail-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-border-size-selected: var(--spectrum-alias-border-size-thick);
   --spectrum-thumbnail-border-size-focus: var(--spectrum-alias-border-size-thick);

@@ -3,7 +3,7 @@
   stroke: var(--spectrum-colorloupe-outer-border-color);
 }
 @media (forced-colors: active) {
-  :root {
+  .spectrum-ColorLoupe {
     --spectrum-colorloupe-outer-border-color: CanvasText;
   }
 }

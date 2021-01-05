@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Slider {
   --spectrum-slider-m-focus-ring-size-key-focus: var(
     --spectrum-alias-focus-ring-size
   );
@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
   );
   --spectrum-slider-m-label-text-color: var(--spectrum-alias-label-text-color);
 
-  --spectrum-slider-m-label-text-color-disabled:   var(--spectrum-label-text-color-disabled, var(--spectrum-alias-text-color-disabled));
+  --spectrum-slider-m-label-text-color-disabled: var(--spectrum-alias-text-color-disabled);
 }
 
 .spectrum-Slider-track {

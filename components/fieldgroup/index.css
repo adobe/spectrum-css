@@ -10,11 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+@import '../commons/index.css';
+
+.spectrum-FieldGroup {
   --spectrum-fieldgroup-margin: var(--spectrum-global-dimension-size-200);
 }
-
-@import '../commons/index.css';
 
 .spectrum-FieldGroup {
   display: flex;

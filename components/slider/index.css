@@ -64,8 +64,8 @@ governing permissions and limitations under the License.
 
   --spectrum-slider-ramp-margin-top: 0;
   --spectrum-slider-range-track-reset: 0;
-  --spectrum-label-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-label-text-line-height: var(
+  --spectrum-slide-label-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slide-label-text-line-height: var(
     --spectrum-global-font-line-height-small
   );
 }
@@ -310,8 +310,8 @@ governing permissions and limitations under the License.
 
   padding-block-start: var(--spectrum-fieldlabel-m-padding-top);
 
-  font-size: var(--spectrum-text-size-text-label);
-  line-height: var(--spectrum-line-height-text-label);
+  font-size: var(--spectrum-slide-label-text-size);
+  line-height: var(--spectrum-slide-label-text-line-height);
 }
 
 .spectrum-Slider-label {
@@ -372,8 +372,8 @@ governing permissions and limitations under the License.
     margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
       calc(var(--spectrum-slider-label-gap-x) * -1);
 
-    font-size: var(--spectrum-text-size-text-label);
-    line-height: var(--spectrum-line-height-text-label);
+    font-size: var(--spectrum-slide-label-text-size);
+    line-height: var(--spectrum-slide-label-text-line-height);
   }
 
   &:first-of-type,

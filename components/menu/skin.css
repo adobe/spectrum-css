@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Menu {
   /* these need to be removed but we don't have a full design spec */
   --spectrum-listheading-text-color: var(--spectrum-global-color-gray-700);
 }

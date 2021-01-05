@@ -60,11 +60,6 @@ null {
   vertical-align: top;
 }
 
-/* Spacing for buttons placed inline */
-.spectrum-Button + .spectrum-SplitButton {
-  margin-inline-start: var(--spectrum-margin);
-}
-
 .spectrum-SplitButton-action {
   margin-inline-start: 0;
 

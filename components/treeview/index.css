@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 @import '../commons/index.css';
 
-:root {
+.spectrum-TreeView {
   --spectrum-treeview-item-min-height: var(--spectrum-global-dimension-size-400);
   --spectrum-treeview-item-padding-y: var(--spectrum-global-dimension-size-75);
   --spectrum-treeview-item-icon-margin-right: var(--spectrum-global-dimension-size-125);

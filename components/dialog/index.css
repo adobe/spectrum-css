@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "../commons/index.css";
 @import "../overlay/index.css";
 
-:root {
+.spectrum-Dialog {
   /* The font-size of the fullscreen dialog header */
   --spectrum-dialog-fullscreen-header-text-size: 28px;
 
@@ -47,6 +47,7 @@ governing permissions and limitations under the License.
   --spectrum-dialog-confirm-close-button-padding: calc(
     26px - var(--spectrum-global-dimension-size-175)
   );
+  --spectrum-dialog-confirm-divider-height: var(--spectrum-global-dimension-static-size-25);
 }
 
 .spectrum-Dialog {
@@ -157,18 +158,9 @@ governing permissions and limitations under the License.
   }
   .spectrum-Dialog-heading {
     padding-bottom: calc(
-      var(
-          --spectrum-dialog-confirm-divider-margin-top,
-          var(--spectrum-global-dimension-static-size-150)
-        ) +
-        var(
-          --spectrum-dialog-confirm-divider-margin-bottom,
-          var(--spectrum-global-dimension-static-size-200)
-        ) +
-        var(
-          --spectrum-dialog-confirm-divider-height,
-          var(--spectrum-global-dimension-static-size-25)
-        )
+      var(--spectrum-dialog-confirm-divider-margin-top) +
+        var(--spectrum-dialog-confirm-divider-margin-bottom) +
+        var(--spectrum-dialog-confirm-divider-height)
     );
   }
 }
