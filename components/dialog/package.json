@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/dialog",
-  "version": "3.0.0-beta.5",
+  "version": "3.0.0-beta.6",
   "description": "The Spectrum CSS dialog component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,8 +16,8 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/button": "^3.0.0-beta.3",
     "@spectrum-css/actionbutton": "^1.0.0-beta.0",
+    "@spectrum-css/button": "^3.0.0-beta.3",
     "@spectrum-css/buttongroup": "^3.0.0-beta.4",
     "@spectrum-css/divider": "^1.0.0-beta.0",
     "@spectrum-css/icon": "^3.0.0-beta.0",
@@ -26,15 +26,15 @@
     "@spectrum-css/vars": "^3.0.0-beta.1"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^3.0.0-beta.5",
-    "@spectrum-css/actionbutton": "^1.0.0-beta.0",
-    "@spectrum-css/buttongroup": "^3.0.0-beta.5",
-    "@spectrum-css/component-builder": "^2.0.0-beta.0",
-    "@spectrum-css/divider": "^1.0.0-beta.2",
-    "@spectrum-css/icon": "^3.0.0-beta.1",
-    "@spectrum-css/modal": "^3.0.0-beta.2",
-    "@spectrum-css/underlay": "^2.0.8-beta.1",
-    "@spectrum-css/vars": "^3.0.0-beta.1",
+    "@spectrum-css/actionbutton": "^1.0.0-beta.1",
+    "@spectrum-css/button": "^3.0.0-beta.6",
+    "@spectrum-css/buttongroup": "^3.0.0-beta.6",
+    "@spectrum-css/component-builder": "^2.0.0-beta.1",
+    "@spectrum-css/divider": "^1.0.0-beta.3",
+    "@spectrum-css/icon": "^3.0.0-beta.2",
+    "@spectrum-css/modal": "^3.0.0-beta.3",
+    "@spectrum-css/underlay": "^2.0.8-beta.2",
+    "@spectrum-css/vars": "^3.0.0-beta.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

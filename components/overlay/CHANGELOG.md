@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1-beta.1"></a>
+## 2.0.1-beta.1
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/overlay@2.0.1-beta.0...@spectrum-css/overlay@2.0.1-beta.1)
+
+### 🐛 Bug fixes
+
+* make Popover and friends build again ([a6c8a17](https://github.com/adobe/spectrum-css/commit/a6c8a17))
+
+
+
+
+
 <a name="2.0.1-beta.0"></a>
 ## 2.0.1-beta.0
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/overlay@2.0.0...@spectrum-css/overlay@2.0.1-beta.0)

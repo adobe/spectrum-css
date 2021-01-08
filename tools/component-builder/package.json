@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/component-builder",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.0-beta.1",
   "description": "The Spectrum CSS component builder",
   "repository": {
     "type": "git",
@@ -34,6 +34,8 @@
     "postcss-custom-properties": "^6.0.1",
     "postcss-dir-pseudo-class": "^5.0.0",
     "postcss-discard-empty": "^4.0.1",
+    "postcss-dropdupedvars": "^1.1.0",
+    "postcss-dropunusedvars": "^1.1.0",
     "postcss-focus-ring": "^1.0.0",
     "postcss-functions": "^3.0.0",
     "postcss-import": "^10.0.0",
@@ -41,9 +43,7 @@
     "postcss-logical": "^4.0.2",
     "postcss-mixins": "^6.2.1",
     "postcss-nested": "^3.0.0",
-    "postcss-remapvars": "^1.0.0",
-    "postcss-dropdupedvars": "^1.0.0",
-    "postcss-dropunusedvars": "^1.0.0",
+    "postcss-remapvars": "^1.1.0",
     "postcss-selector-parser": "^6.0.2",
     "postcss-svg": "^3.0.0",
     "postcss-values-parser": "^3.1.1",

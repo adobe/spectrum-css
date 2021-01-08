@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.6"></a>
+# 3.0.0-beta.6
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.0-beta.5...@spectrum-css/miller@3.0.0-beta.6)
+
+### 🐛 Bug fixes
+
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+
+
+
+
+
 <a name="3.0.0-beta.5"></a>
 # 3.0.0-beta.5
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/miller@3.0.0-beta.4...@spectrum-css/miller@3.0.0-beta.5)
