@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
-
 /* todo: find a way to make this silly little dead block not required */
 null {
   --spectrum-button-primary-border-radius: 0;
@@ -58,11 +56,6 @@ null {
   display: inline-flex;
   flex-direction: row;
   vertical-align: top;
-}
-
-/* Spacing for buttons placed inline */
-.spectrum-Button + .spectrum-SplitButton {
-  margin-inline-start: var(--spectrum-margin);
 }
 
 .spectrum-SplitButton-action {

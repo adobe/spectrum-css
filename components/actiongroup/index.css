@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-ActionGroup {
   --spectrum-actiongroup-button-gap-reset: 0;
   --spectrum-actiongroup-quiet-compact-button-gap: var(
     --spectrum-global-dimension-size-25

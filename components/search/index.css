@@ -10,9 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
-
-:root {
+.spectrum-Search {
   --spectrum-search-quiet-button-offset: calc(var(--spectrum-actionbutton-m-min-width) / 2 - var(--spectrum-icon-cross-small-width) / 2);
 }
 

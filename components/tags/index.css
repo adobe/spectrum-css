@@ -10,7 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
 @import "../vars/css/components/spectrum-tag.css";
 
 .spectrum-Tags {
@@ -51,7 +50,7 @@ governing permissions and limitations under the License.
 
   border-width: var(--spectrum-tag-border-size);
   border-style: solid;
-  border-radius: var(--spectrum-border-radius);
+  border-radius: var(--spectrum-alias-border-radius-regular);
   outline: none;
   user-select: none;
 

@@ -1,4 +1,4 @@
-:root {
+.spectrum-ColorWheel {
   /* todo: fix this in DNA */
   --spectrum-colorwheel-border-color: var(--spectrum-colorarea-border-color);
 }
@@ -31,7 +31,7 @@
 }
 
 @media (forced-colors: active) {
-  :root {
+  .spectrum-ColorWheel {
     --spectrum-colorwheel-border-color-disabled : GrayText;
     --spectrum-colorwheel-fill-color-disabled : Canvas;
   }

@@ -10,11 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
-  --spectrum-overlay-animation-distance: var(--spectrum-picker-m-popover-offset-y);
-}
-
 %spectrum-overlay {
+  --spectrum-overlay-animation-distance: var(--spectrum-picker-m-popover-offset-y);
+
   visibility: hidden;
 
   opacity: 0;
