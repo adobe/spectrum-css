@@ -3,8 +3,6 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
   head
     title Truncation - Spectrum CSS
 
-    include includes/dependencies.pug
-
     -
       var exampleDependencies = [
         'actionbutton',
@@ -17,8 +15,9 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
         'textfield'
       ];
 
-    each dep in exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1)
-      link(rel='stylesheet', type='text/css', href='../components/' + dep + '/index-vars.css', data-dependency=dep)
+      dependencyOrder = dependencyOrder.concat(exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1))
+
+    include includes/dependencies.pug
 
   body
 

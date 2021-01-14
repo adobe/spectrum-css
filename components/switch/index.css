@@ -67,12 +67,12 @@ governing permissions and limitations under the License.
   &:checked + .spectrum-Switch-switch {
     [dir="ltr"] &::before {
       transform: translateX(
-        calc(100% - var(--spectrum-switch-handle-border-size))
+        calc(var(--spectrum-switch-track-width) - 100%)
       );
     }
     [dir="rtl"] &::before {
       transform: translateX(
-        calc(-100% + var(--spectrum-switch-handle-border-size))
+        calc(-1 * (var(--spectrum-switch-track-width) - 100%))
       );
     }
   }

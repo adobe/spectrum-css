@@ -38,7 +38,6 @@ governing permissions and limitations under the License.
     find: /--spectrum-statuslight-(.*?)-xl-/;
     replace: --spectrum-statuslight-$1-;
   }
-  cxow:1
 }
 
 .spectrum-StatusLight {

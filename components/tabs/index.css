@@ -15,14 +15,6 @@ governing permissions and limitations under the License.
 @import "../vars/css/scales/spectrum-medium.css";
 
 .spectrum-Tabs {
-  --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-size));
-  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-size));
-
-  /* todo: remove when this is added back to DNA */
-  --spectrum-tabs-text-size: var(--spectrum-alias-font-size-default);
-}
-
-.spectrum-Tabs {
   @remapvars {
     find: --spectrum-tabs-m-;
     replace: --spectrum-tabs-;
@@ -31,6 +23,14 @@ governing permissions and limitations under the License.
     find: --spectrum-tabs-quiet-m-;
     replace: --spectrum-tabs-quiet-;
   }
+}
+
+.spectrum-Tabs {
+  --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-size));
+  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-size));
+
+  /* todo: remove when this is added back to DNA */
+  --spectrum-tabs-text-size: var(--spectrum-alias-font-size-default);
 }
 
 .spectrum-Tabs {

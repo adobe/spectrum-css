@@ -45,7 +45,7 @@
     "@commitlint/config-conventional": "^8.3.3",
     "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.21",
     "audit-ci": "^2.0.1",
-    "backstopjs-spectrum": "^5.0.8",
+    "backstopjs-spectrum": "^5.0.14",
     "del": "^5.1.0",
     "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
@@ -61,6 +61,7 @@
     "through2": "^3.0.1"
   },
   "resolutions": {
+    "axios": "^0.21.1",
     "dot-prop": "^5.2.0",
     "handlebars": "^4.5.2",
     "https-proxy-agent": "^3.0.0",
