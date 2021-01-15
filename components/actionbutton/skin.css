@@ -73,6 +73,7 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
+    forced-color-adjust: auto;
     background-color: var(--spectrum-actionbutton-m-background-color-disabled);
     border-color: var(--spectrum-actionbutton-m-border-color-disabled);
     color: var(--spectrum-actionbutton-m-text-color-disabled);
@@ -341,54 +342,52 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-ActionButton {
-    &:not(.is-selected) {
-      .spectrum-Icon {
-        color: ButtonText;
-      }      
-    }
-    &:disabled,
-    &.is-disabled {
-      .spectrum-Icon {
-        color: GrayText;
-      } 
-      &.is-selected {
-        color: ButtonFace;
-        background-color: GrayText;
-        .spectrum-Icon {
-          color: ButtonFace;
-        }
-      }        
-    }
+    --spectrum-actionbutton-m-quiet-background-color-selected-disabled: GrayText;
+    --spectrum-actionbutton-m-quiet-border-color-selected-disabled: ButtonFace;
+    --spectrum-actionbutton-m-quiet-text-color-selected-disabled: ButtonFace;
+    --spectrum-actionbutton-m-background-color-disabled: ButtonFace;
+    --spectrum-actionbutton-m-border-color-disabled: GrayText;
+    --spectrum-actionbutton-m-text-color-disabled: GrayText;
+    --spectrum-actionbutton-m-emphasized-background-color-disabled: ButtonFace;
+    --spectrum-actionbutton-m-emphasized-border-color-disabled: GrayText;
+    --spectrum-actionbutton-m-emphasized-text-color-disabled: GrayText;
+    --spectrum-actionbutton-m-background-color-selected-key-focus: ButtonText;
+    --spectrum-actionbutton-m-border-color-selected-key-focus: Highlight;
+    --spectrum-actionbutton-m-text-color-selected-key-focus: ButtonFace;
+    --spectrum-actionbutton-m-background-color-selected-hover: ButtonText;
+    --spectrum-actionbutton-m-border-color-selected-hover: Highlight;
+    --spectrum-actionbutton-m-text-color-selected-hover: ButtonFace;
+    --spectrum-actionbutton-m-background-color-selected-down: ButtonText;
+    --spectrum-actionbutton-m-border-color-selected-down: Highlight;
+    --spectrum-actionbutton-m-text-color-selected-down: ButtonFace;
+    --spectrum-actionbutton-m-background-color-selected-disabled: GrayText;
+    --spectrum-actionbutton-m-border-color-selected-disabled: ButtonFace;
+    --spectrum-actionbutton-m-text-color-selected-disabled: ButtonFace;
+    --spectrum-actionbutton-m-background-color-selected: ButtonText;
+    --spectrum-actionbutton-m-border-color-selected: ButtonFace;
+    --spectrum-actionbutton-m-text-color-selected: ButtonFace;    
+    --spectrum-actionbutton-m-emphasized-background-color-selected-key-focus: ButtonText;
+    --spectrum-actionbutton-m-emphasized-border-color-selected-key-focus: Highlight;
+    --spectrum-actionbutton-m-emphasized-text-color-selected-key-focus: ButtonFace;
+    --spectrum-actionbutton-m-emphasized-background-color-selected-hover: ButtonText;
+    --spectrum-actionbutton-m-emphasized-border-color-selected-hover: Highlight;
+    --spectrum-actionbutton-m-emphasized-text-color-selected-hover: ButtonFace;
+    --spectrum-actionbutton-m-emphasized-background-color-selected-down: ButtonText;
+    --spectrum-actionbutton-m-emphasized-border-color-selected-down: Highlight;
+    --spectrum-actionbutton-m-emphasized-text-color-selected-down: ButtonFace;
+    --spectrum-actionbutton-m-emphasized-background-color-selected-disabled: GrayText;
+    --spectrum-actionbutton-m-emphasized-border-color-selected-disabled: ButtonFace;
+    --spectrum-actionbutton-m-emphasized-text-color-selected-disabled: ButtonFace;
+    --spectrum-actionbutton-m-emphasized-background-color-selected: ButtonText;
+    --spectrum-actionbutton-m-emphasized-border-color-selected: ButtonFace;
+    --spectrum-actionbutton-m-emphasized-text-color-selected: ButtonFace;
     &.is-selected {
       forced-color-adjust: none;
-      background-color: ButtonText;
-      color: ButtonFace;
-      border-color: ButtonFace;
-      .spectrum-Icon {
-        color: ButtonFace;
-      }
-      &.spectrum-ActionButton--emphasized {
-        forced-color-adjust: none;
-        background-color: ButtonText;
-        color: ButtonFace;
-        border-color: ButtonFace;
-        .spectrum-Icon {
-          color: ButtonFace;
-        }
-        &:disabled,
-        &.is-disabled {
-          .spectrum-Icon {
-            color: GrayText;
-          } 
-          &.is-selected {
-            color: ButtonFace;
-            background-color: GrayText;
-            .spectrum-Icon {
-              color: ButtonFace;
-            }
-          }        
-        }
-      }   
+    }
+    &:focus-ring, &:active {
+      outline: 2px solid Highlight;
+      outline-offset: 2px;
     }
   }
 }
+
