@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.3"></a>
+# 1.0.0-beta.3
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.0-beta.2...@spectrum-css/tray@1.0.0-beta.3)
+
+### ✨ Features
+
+* implement t-shirt sizing for Divider, closes [#972](https://github.com/adobe/spectrum-css/issues/972) ([bb10aa9](https://github.com/adobe/spectrum-css/commit/bb10aa9))
+
+
+### 🛑 BREAKING CHANGES
+
+* .spectrum-Divider--size* is now required
+* .spectrum-Divider--small is now .spectrum-Divider--sizeS, .spectrum-Divider--medium is now .spectrum-Divider--sizeM, .spectrum-Divider--large is now .spectrum-Divider--sizeL
+
+
+
+
+
+<a name="1.0.0-beta.2"></a>
+# 1.0.0-beta.2
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.0-beta.1...@spectrum-css/tray@1.0.0-beta.2)
+
+**Note:** Version bump only for package @spectrum-css/tray
+
+
+
+
+
 <a name="1.0.0-beta.1"></a>
 # 1.0.0-beta.1
 🗓 2020-09-23

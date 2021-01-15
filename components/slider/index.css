@@ -10,9 +10,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+@import "../vars/css/components/spectrum-slider.css";
 
-:root {
+.spectrum-Slider {
+  @remapvars {
+    find: --spectrum-slider-m-;
+    replace: --spectrum-slider-;
+  }
+  @remapvars {
+    find: --spectrum-slider-tick-m-;
+    replace: --spectrum-slider-tick-;
+  }
+
+  /* todo: this is 0px in DNA, which seems wrong */
+  --spectrum-slider-label-gap-y: var(--spectrum-global-dimension-size-85);
+
   --spectrum-slider-controls-margin: calc(
     var(--spectrum-slider-handle-width) / 2
   );
@@ -47,11 +59,11 @@ governing permissions and limitations under the License.
   --spectrum-slider-color-track-margin-left: 0;
   --spectrum-slider-color-track-margin-right: 0;
   --spectrum-slider-color-handle-top: 50%;
-  
+
   --spectrum-slider-ramp-margin-top: 0;
   --spectrum-slider-range-track-reset: 0;
-  --spectrum-label-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-label-text-line-height: var(
+  --spectrum-slide-label-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-slide-label-text-line-height: var(
     --spectrum-global-font-line-height-small
   );
 }
@@ -94,7 +106,7 @@ governing permissions and limitations under the License.
   inset-inline-start: 0;
   inset-inline-end: auto;
 
-  margin-block-start: calc(var(--spectrum-slider-fill-track-height) / -2);
+  margin-block-start: calc(var(--spectrum-slider-track-height) / -2);
 
   pointer-events: none;
 }
@@ -294,10 +306,10 @@ governing permissions and limitations under the License.
 
   inline-size: auto;
 
-  padding-block-start: var(--spectrum-fieldlabel-padding-top);
+  padding-block-start: var(--spectrum-fieldlabel-m-padding-top);
 
-  font-size: var(--spectrum-text-size-text-label);
-  line-height: var(--spectrum-line-height-text-label);
+  font-size: var(--spectrum-slide-label-text-size);
+  line-height: var(--spectrum-slide-label-text-line-height);
 }
 
 .spectrum-Slider-label {
@@ -354,12 +366,12 @@ governing permissions and limitations under the License.
     align-items: center;
     justify-content: center;
 
-    margin-block: var(--spectrum-slider-label-gap-x) 0;
+    margin-block: calc(var(--spectrum-slider-label-gap-y) + var(--spectrum-slider-tick-mark-height)) 0;
     margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
       calc(var(--spectrum-slider-label-gap-x) * -1);
 
-    font-size: var(--spectrum-text-size-text-label);
-    line-height: var(--spectrum-line-height-text-label);
+    font-size: var(--spectrum-slide-label-text-size);
+    line-height: var(--spectrum-slide-label-text-line-height);
   }
 
   &:first-of-type,
@@ -367,7 +379,6 @@ governing permissions and limitations under the License.
     .spectrum-Slider-tickLabel {
       display: block;
       position: absolute;
-      margin-block: var(--spectrum-slider-label-gap-x) 0;
       margin-inline: 0;
     }
   }

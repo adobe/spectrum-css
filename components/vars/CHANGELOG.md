@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.2"></a>
+# 3.0.0-beta.2
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.0.0-beta.1...@spectrum-css/vars@3.0.0-beta.2)
+
+### ✨ Features
+
+* update to Spectrum Tokens 6.0.0-beta.28 ([e78216a](https://github.com/adobe/spectrum-css/commit/e78216a))
+* updated spectrum tokens to 6.0.0-beta.18.9 ([83c393f](https://github.com/adobe/spectrum-css/commit/83c393f))
+* upgrade to @adobe/spectrum-tokens@6.0.0-beta.18.10 ([8b327b2](https://github.com/adobe/spectrum-css/commit/8b327b2))
+* upgrade to @adobe/spectrum-tokens@6.0.0-beta.18.11 ([1442b61](https://github.com/adobe/spectrum-css/commit/1442b61))
+* upgrade to @adobe/spectrum-tokens@6.0.0-beta.18.12 ([6b915ae](https://github.com/adobe/spectrum-css/commit/6b915ae))
+* upgrade to @adobe/spectrum-tokens@6.0.0-beta.20.2 ([9f11d44](https://github.com/adobe/spectrum-css/commit/9f11d44))
+* upgrade to @adobe/spectrum-tokens@6.0.0-beta.26 ([56423cd](https://github.com/adobe/spectrum-css/commit/56423cd))
+* upgrade to @adobe/spectrum-tokens@6.0.0-beta.27 ([551eb7e](https://github.com/adobe/spectrum-css/commit/551eb7e))
+
+
+### 🐛 Bug fixes
+
+* correct a few more broken backticks ([13fb792](https://github.com/adobe/spectrum-css/commit/13fb792))
+* **vars:** remove errant backtick in custom property names ([3620398](https://github.com/adobe/spectrum-css/commit/3620398))
+* correct DNA update ([e585195](https://github.com/adobe/spectrum-css/commit/e585195))
+* temporary patch DNA ([4950589](https://github.com/adobe/spectrum-css/commit/4950589))
+
+
+### 🛑 BREAKING CHANGES
+
+* some tokens removed, some changed, life goes on
+
+
+
+
+
 <a name="3.0.0-beta.1"></a>
 # 3.0.0-beta.1
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@2.3.0...@spectrum-css/vars@3.0.0-beta.1)

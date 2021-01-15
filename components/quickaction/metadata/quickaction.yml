@@ -15,17 +15,17 @@ examples:
       <div class="spectrum-QuickActions-overlay" style="padding: 40px;">
 
         <div class="spectrum-QuickActions is-open">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
           </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Copy">
               <use xlink:href="#spectrum-icon-18-Copy" />
             </svg>
           </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Delete">
               <use xlink:href="#spectrum-icon-18-Delete" />
             </svg>
@@ -37,13 +37,13 @@ examples:
       <div class="spectrum-QuickActions-overlay" style="padding: 40px;">
 
         <div class="spectrum-QuickActions spectrum-QuickActions--textOnly is-open">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
             <span class="spectrum-ActionButton-label">Edit</span>
           </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
             <span class="spectrum-ActionButton-label">Copy</span>
           </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
             <span class="spectrum-ActionButton-label">Delete</span>
           </button>
         </div>

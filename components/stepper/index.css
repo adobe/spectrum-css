@@ -10,16 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
-
-:root {
+.spectrum-Stepper {
   --spectrum-stepper-width: var(--spectrum-global-dimension-size-900);
   --spectrum-stepper-border-size: var(--spectrum-alias-border-size-thin);
 
-  --spectrum-stepper-button-height: calc(var(--spectrum-component-single-line-height) / 2);
+  --spectrum-stepper-button-height: calc(var(--spectrum-alias-single-line-height) / 2);
   --spectrum-stepper-button-width: calc(var(--spectrum-global-dimension-size-300) - var(--spectrum-stepper-border-size));
 
-  --spectrum-stepper-button-padding: calc(var(--spectrum-padding) / 2);
+  --spectrum-stepper-button-padding: calc(var(--spectrum-global-dimension-size-150) / 2);
   --spectrum-stepper-border-radius-reset: 0;
   --spectrum-stepper-border-size-reset: 0;
 
@@ -38,7 +36,7 @@ governing permissions and limitations under the License.
 
   inline-size: var(--spectrum-stepper-width);
   line-height: 0;
-  border-radius: var(--spectrum-border-radius);
+  border-radius: var(--spectrum-alias-border-radius-regular);
   transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 .spectrum-Stepper::before {
@@ -48,8 +46,8 @@ governing permissions and limitations under the License.
 .spectrum-Stepper-buttons {
   display: block;
   border-start-start-radius: 0;
-  border-start-end-radius: var(--spectrum-border-radius);
-  border-end-end-radius: var(--spectrum-border-radius);
+  border-start-end-radius: var(--spectrum-alias-border-radius-regular);
+  border-end-end-radius: var(--spectrum-alias-border-radius-regular);
   border-end-start-radius: 0;
   transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
 }

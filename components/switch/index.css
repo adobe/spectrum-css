@@ -10,9 +10,17 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+@import "../vars/css/scales/spectrum-large.css";
+@import "../vars/css/scales/spectrum-medium.css";
+@import "../vars/css/components/spectrum-switch.css";
 
-:root {
+.spectrum-Switch {
+  @remapvars {
+    find: /--spectrum-switch-m(.*)/;
+    filter: color;
+    replace: --spectrum-switch$1;
+  }
+
   /* Hardcoded for wrapping study.
   Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
   --spectrum-switch-label-margin-top: var(--spectrum-global-dimension-size-65);
@@ -59,12 +67,12 @@ governing permissions and limitations under the License.
   &:checked + .spectrum-Switch-switch {
     [dir="ltr"] &::before {
       transform: translateX(
-        calc(100% - var(--spectrum-switch-handle-border-size))
+        calc(var(--spectrum-switch-track-width) - 100%)
       );
     }
     [dir="rtl"] &::before {
       transform: translateX(
-        calc(-100% + var(--spectrum-switch-handle-border-size))
+        calc(-1 * (var(--spectrum-switch-track-width) - 100%))
       );
     }
   }

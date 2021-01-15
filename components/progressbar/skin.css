@@ -12,56 +12,56 @@ governing permissions and limitations under the License.
 
 .spectrum-ProgressBar {
   .spectrum-ProgressBar-fill {
-    background: var(--spectrum-progressbar-large-track-fill-color);
+    background: var(--spectrum-progressbar-m-track-fill-color);
   }
 
   .spectrum-ProgressBar-track {
-    background-color: var(--spectrum-progressbar-large-track-color);
+    background-color: var(--spectrum-progressbar-m-track-color);
   }
 
   &.spectrum-ProgressBar--overBackground {
     .spectrum-ProgressBar-fill {
       background: var(
-        --spectrum-progressbar-large-over-background-track-fill-color
+        --spectrum-progressbar-m-over-background-track-fill-color
       );
     }
 
     .spectrum-ProgressBar-label,
     .spectrum-ProgressBar-percentage {
-      color: var(--spectrum-progressbar-large-over-background-track-fill-color);
+      color: var(--spectrum-progressbar-m-over-background-track-fill-color);
     }
 
     .spectrum-ProgressBar-track {
       background-color: var(
-        --spectrum-progressbar-large-over-background-track-color
+        --spectrum-progressbar-m-over-background-track-color
       );
     }
   }
   &.is-positive {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-large-track-color-positive);
+      background: var(--spectrum-meter-positive-m-track-fill-color);
     }
   }
-  &.is-warning {
+  &.is-notice {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-large-track-color-warning);
+      background: var(--spectrum-meter-notice-m-track-fill-color);
     }
   }
-  &.is-critical {
+  &.is-negative {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-large-track-color-critical);
+      background: var(--spectrum-meter-negative-m-track-fill-color);
     }
   }
 }
 .spectrum-ProgressBar-label,
 .spectrum-ProgressBar-percentage {
-  color: var(--spectrum-fieldlabel-text-color);
+  color: var(--spectrum-fieldlabel-m-text-color);
 }
 .spectrum-ProgressBar-label,
 .spectrum-ProgressBar-percentage {
-  color: var(--spectrum-fieldlabel-text-color);
+  color: var(--spectrum-fieldlabel-m-text-color);
 }
 .spectrum-ProgressBar-label,
 .spectrum-ProgressBar-percentage {
-  color: var(--spectrum-fieldlabel-text-color);
+  color: var(--spectrum-fieldlabel-m-text-color);
 }

@@ -39,13 +39,13 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
-    "@adobe/spectrum-tokens": "6.0.0-beta.17",
+    "@adobe/spectrum-css-workflow-icons": "^1.1.0",
+    "@adobe/spectrum-tokens": "6.0.0-beta.28",
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
-    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.3",
+    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.21",
     "audit-ci": "^2.0.1",
-    "backstopjs-spectrum": "^5.0.4",
+    "backstopjs-spectrum": "^5.0.14",
     "del": "^5.1.0",
     "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
@@ -60,11 +60,8 @@
     "semver": "^6.3.0",
     "through2": "^3.0.1"
   },
-  "optionalDependencies": {
-    "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0",
-    "@spectrum/spectrum-icons": "^2.3.0"
-  },
   "resolutions": {
+    "axios": "^0.21.1",
     "dot-prop": "^5.2.0",
     "handlebars": "^4.5.2",
     "https-proxy-agent": "^3.0.0",

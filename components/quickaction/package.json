@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/quickaction",
-  "version": "3.0.0-beta.4",
+  "version": "3.0.0-beta.6",
   "description": "The Spectrum CSS quickaction component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,14 +16,15 @@
     "build": "gulp"
   },
   "peerDependencies": {
+    "@spectrum-css/actionbutton": "^1.0.0-beta.0",
     "@spectrum-css/checkbox": "^3.0.0-beta.0",
-    "@spectrum-css/vars": "^2.3.0"
+    "@spectrum-css/vars": "^3.0.0-beta.1"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^3.0.0-beta.4",
-    "@spectrum-css/checkbox": "^3.0.0-beta.4",
-    "@spectrum-css/component-builder": "^1.2.1-beta.0",
-    "@spectrum-css/vars": "^2.3.0",
+    "@spectrum-css/actionbutton": "^1.0.0-beta.1",
+    "@spectrum-css/checkbox": "^3.0.0-beta.6",
+    "@spectrum-css/component-builder": "^2.0.0-beta.1",
+    "@spectrum-css/vars": "^3.0.0-beta.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

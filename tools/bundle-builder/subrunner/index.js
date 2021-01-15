@@ -91,6 +91,11 @@ function runTaskOnPackages(task, packages) {
 
       if (packageDir) {
         runComponentTask(packageDir, task, function(err) {
+          if (err) {
+            if (!process.env.FORCE) {
+              process.exit();
+            }
+          }
           processPackage();
         });
       }

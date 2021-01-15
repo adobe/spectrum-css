@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.5"></a>
+# 3.0.0-beta.5
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.0-beta.4...@spectrum-css/radio@3.0.0-beta.5)
+
+### ✨ Features
+
+* implement Checkbox/Radio emphasized variant, closes [#349](https://github.com/adobe/spectrum-css/issues/349) ([#1057](https://github.com/adobe/spectrum-css/issues/1057)) ([3ac8b31](https://github.com/adobe/spectrum-css/commit/3ac8b31))
+
+
+### 🐛 Bug fixes
+
+* make Radio build again ([6dcde84](https://github.com/adobe/spectrum-css/commit/6dcde84))
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+
+
+### 🛑 BREAKING CHANGES
+
+* colors change in a way that may be unexpected
+
+docs: add docs explaining quiet/emphasized Checkbox/Radio
+
+
+
+
+
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.0-beta.3...@spectrum-css/radio@3.0.0-beta.4)
+
+* fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+
+
+### 🛑 BREAKING CHANGES
+
+* all typography sizing classes now have --size* instead of --*, see migration guides
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.0-beta.2...@spectrum-css/radio@3.0.0-beta.3)

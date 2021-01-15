@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.7"></a>
+# 3.0.0-beta.7
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@3.0.0-beta.6...@spectrum-css/pagination@3.0.0-beta.7)
+
+### 🐛 Bug fixes
+
+* add missing Action Button dependency ([735a361](https://github.com/adobe/spectrum-css/commit/735a361))
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+* use new Action Button markup ([0fb0279](https://github.com/adobe/spectrum-css/commit/0fb0279))
+* use new Button markup ([502a1b0](https://github.com/adobe/spectrum-css/commit/502a1b0))
+
+
+### 🛑 BREAKING CHANGES
+
+* markup has changed and now requires new Button markup (.spectrum-Button--sizeM)
+
+
+
+
+
+<a name="3.0.0-beta.6"></a>
+# 3.0.0-beta.6
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@3.0.0-beta.5...@spectrum-css/pagination@3.0.0-beta.6)
+
+**Note:** Version bump only for package @spectrum-css/pagination
+
+
+
+
+
 <a name="3.0.0-beta.5"></a>
 # 3.0.0-beta.5
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@3.0.0-beta.4...@spectrum-css/pagination@3.0.0-beta.5)

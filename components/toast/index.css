@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Toast {
   --spectrum-toast-icon-padding-y: var(--spectrum-global-dimension-size-85);
   --spectrum-toast-neutral-content-padding-top: var(
     --spectrum-global-dimension-size-65

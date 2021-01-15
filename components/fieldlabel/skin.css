@@ -12,16 +12,16 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel,
 .spectrum-Form-itemLabel {
-  color: var(--spectrum-fieldlabel-text-color);
+  color: var(--spectrum-fieldlabel-m-text-color);
 
   &.is-disabled {
-    color: var(--spectrum-fieldlabel-text-color-disabled);
+    color: var(--spectrum-fieldlabel-m-text-color-disabled);
 
     .spectrum-FieldLabel-requiredIcon {
-      color: var(--spectrum-fieldlabel-asterisk-color-disabled);
+      color: var(--spectrum-fieldlabel-m-asterisk-color-disabled);
     }
   }
 }
 .spectrum-FieldLabel-requiredIcon {
-  color: var(--spectrum-fieldlabel-asterisk-color);
+  color: var(--spectrum-fieldlabel-m-asterisk-color);
 }

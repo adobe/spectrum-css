@@ -10,11 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-FieldGroup {
   --spectrum-fieldgroup-margin: var(--spectrum-global-dimension-size-200);
 }
-
-@import '../commons/index.css';
 
 .spectrum-FieldGroup {
   display: flex;
@@ -23,8 +21,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldGroup--horizontal {
-  .spectrum-FieldGroup-item + .spectrum-FieldGroup-item {
-    margin: 0 0 0 var(--spectrum-fieldgroup-margin);
+  .spectrum-FieldGroup-item:not(:last-child) {
+    margin-inline-end: var(--spectrum-fieldgroup-margin);
   }
 }
 

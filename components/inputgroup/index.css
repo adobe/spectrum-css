@@ -10,16 +10,16 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
-
-:root {
+.spectrum-InputGroup {
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
   --spectrum-combobox-field-border-width-right: 0;
   --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
 
+  --spectrum-inputgroup-generic-padding: var(--spectrum-global-dimension-size-150);
+
   --spectrum-datepicker-range-input-width-first: calc(
-    var(--spectrum-global-dimension-size-1600) - 2 * var(--spectrum-padding)
+    var(--spectrum-global-dimension-size-1600) - 2 * var(--spectrum-inputgroup-generic-padding)
   );
   --spectrum-datepicker-input-width: calc(
     var(--spectrum-datepicker-range-input-width-first) +
@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
   );
   --spectrum-datepicker-range-dash-padding-top: 0;
   --spectrum-datepicker-range-dash-line-height: calc(
-    var(--spectrum-textfield-height) - var(--spectrum-global-dimension-size-100)
+    var(--spectrum-textfield-m-height) - var(--spectrum-global-dimension-size-100)
   );
 
   /* be square: we're a little ahead of DNA at the time of writing, but Nate said so */
@@ -66,7 +66,7 @@ governing permissions and limitations under the License.
   );
 
   --spectrum-combobox-quiet-button-offset: calc(
-    var(--spectrum-fieldbutton-min-width) / 2 -
+    var(--spectrum-actionbutton-m-min-width) / 2 -
       var(--spectrum-icon-chevron-down-medium-width) / 2
   );
 }
@@ -76,8 +76,8 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  min-inline-size: var(--spectrum-component-single-line-width);
-  border-radius: var(--spectrum-border-radius);
+  min-inline-size: var(--spectrum-alias-single-line-width);
+  border-radius: var(--spectrum-alias-border-radius-regular);
 
   .spectrum-InputGroup-button {
     padding: 0;
@@ -123,7 +123,11 @@ governing permissions and limitations under the License.
       --spectrum-combobox-quiet-fieldbutton-padding-right
     );
 
-    border-block-end: var(--spectrum-textfield-quiet-border-size) solid;
+
+    border-block-start: 0;
+    border-inline-start: 0;
+    border-inline-end: 0;
+    border-block-end: var(--spectrum-textfield-quiet-m-border-size) solid;
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
     /* More hitarea */
@@ -142,7 +146,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Datepicker--range {
-  border-radius: var(--spectrum-border-radius);
+  border-radius: var(--spectrum-alias-border-radius-regular);
   /* Input Group */
   &.spectrum-InputGroup--quiet {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
@@ -195,7 +199,7 @@ governing permissions and limitations under the License.
     }
     &.is-invalid {
       .spectrum-InputGroup-input {
-        padding-inline-end: var(--spectrum-padding);
+        padding-inline-end: var(--spectrum-inputgroup-generic-padding);
       }
     }
   }
@@ -204,12 +208,12 @@ governing permissions and limitations under the License.
 
     &.spectrum-Datepicker-startField {
       border-inline-end: 0;
-      padding-inline-end: var(--spectrum-padding);
+      padding-inline-end: var(--spectrum-inputgroup-generic-padding);
     }
     &.spectrum-Datepicker-endField {
       border-inline-start: 0;
       border-radius: 0;
-      padding-inline-start: var(--spectrum-padding);
+      padding-inline-start: var(--spectrum-inputgroup-generic-padding);
     }
   }
   /* Em dash */

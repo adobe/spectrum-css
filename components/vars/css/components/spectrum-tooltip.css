@@ -18,7 +18,7 @@
   --spectrum-tooltip-info-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-info-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-info-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-tooltip-info-text-line-height: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tooltip-info-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-tooltip-info-entry-animation-delay: var(--spectrum-global-animation-duration-0);
   --spectrum-tooltip-info-entry-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-info-entry-animation-duration: var(--spectrum-global-animation-duration-200);
@@ -50,7 +50,7 @@
   --spectrum-tooltip-negative-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-negative-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-negative-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-tooltip-negative-text-line-height: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tooltip-negative-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-tooltip-negative-entry-animation-delay: var(--spectrum-global-animation-duration-0);
   --spectrum-tooltip-negative-entry-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-negative-entry-animation-duration: var(--spectrum-global-animation-duration-200);
@@ -82,7 +82,7 @@
   --spectrum-tooltip-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-tooltip-text-line-height: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tooltip-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-tooltip-entry-animation-delay: var(--spectrum-global-animation-duration-0);
   --spectrum-tooltip-entry-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-entry-animation-duration: var(--spectrum-global-animation-duration-200);
@@ -114,7 +114,7 @@
   --spectrum-tooltip-positive-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-tooltip-positive-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-positive-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-tooltip-positive-text-line-height: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tooltip-positive-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-tooltip-positive-entry-animation-delay: var(--spectrum-global-animation-duration-0);
   --spectrum-tooltip-positive-entry-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-positive-entry-animation-duration: var(--spectrum-global-animation-duration-200);

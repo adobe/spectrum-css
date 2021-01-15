@@ -8,14 +8,14 @@ examples:
     description: A small dialog
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Small Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Small Dialog</button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open">
           <div class="spectrum-Dialog spectrum-Dialog--small" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.</section>
             </div>
           </div>
@@ -27,14 +27,14 @@ examples:
     description: A medium dialog
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Medium Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Medium Dialog</button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open">
           <div class="spectrum-Dialog spectrum-Dialog--medium" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.</section>
             </div>
           </div>
@@ -46,14 +46,14 @@ examples:
     description: A large dialog
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Large Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Large Dialog</button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open">
           <div class="spectrum-Dialog spectrum-Dialog--large" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.</section>
             </div>
           </div>
@@ -65,21 +65,21 @@ examples:
     description: A dialog that can be dismissed without taking an action. Dismissible dialogs should never have buttons.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Dismissible Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Dismissible Dialog</button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissable" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu.
                 Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id
                 faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper
                 dignissim cras lobortis.</section>
               <button aria-label="Dismiss" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
-                <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CrossLarge"></use>
+                <svg class="spectrum-Icon spectrum-UIIcon-Cross500" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross500"></use>
                 </svg>
               </button>
             </div>
@@ -92,7 +92,7 @@ examples:
     description: Dialogs can forgo the divider if they have content that spans the entire width of the dialog.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open No Divider Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open No Divider Dialog</button>
 
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
@@ -104,8 +104,8 @@ examples:
                 faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper
                 dignissim cras lobortis.</section>
               <button aria-label="Dismiss" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
-                <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CrossLarge"></use>
+                <svg class="spectrum-Icon spectrum-UIIcon-Cross500" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross500"></use>
                 </svg>
               </button>
             </div>
@@ -118,7 +118,7 @@ examples:
     description: Dialogs can have a hero header.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Hero Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Hero Dialog</button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissable spectrum-Dialog--noDivider" role="dialog" tabindex="-1" aria-modal="true">
@@ -129,8 +129,8 @@ examples:
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.
               </section>
               <button aria-label="Dismiss" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Dialog-closeButton" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
-                <svg class="spectrum-Icon spectrum-UIIcon-CrossLarge" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CrossLarge"></use>
+                <svg class="spectrum-Icon spectrum-UIIcon-Cross500" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross500"></use>
                 </svg>
               </button>
             </div>
@@ -143,19 +143,19 @@ examples:
     description: A confirmation alert dialog has specific button styles that should be used.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Confirmation Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Confirmation Dialog</button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--confirmation" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Enable Smart Filters?</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Smart filters are nondestructive and will preserve your original images.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Enable</span>
                 </button>
               </div>
@@ -169,19 +169,19 @@ examples:
     description: An information alert dialog has specific button styles that should be used.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Information Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Information Dialog</button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--information" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Connect to WiFi</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Please connect to WiFi to sync your projects or go to Settings to change your preferences.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Continue</span>
                 </button>
               </div>
@@ -195,19 +195,19 @@ examples:
     description: An destructive alert dialog has specific button styles that should be used.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Destructive Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Destructive Dialog</button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Delete 3 Documents</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">Are you sure you want to delete the 3 selected documents?</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--warning spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--warning spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Delete</span>
                 </button>
               </div>
@@ -221,19 +221,19 @@ examples:
     description: An error alert dialog has an error icon in the header.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Error Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Error Dialog</button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Unable to Share</h1>
-              <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert"></use>
               </svg>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">An error occurred while sharing your project. Please verify the email address and try again.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">OK</span>
                 </button>
               </div>
@@ -247,19 +247,19 @@ examples:
     description: An error alert dialog has an error icon in the header and long title text.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Error Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Error Dialog</button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--error" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Unable to Share Project to the Behance Community</h1>
-              <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-AlertMedium"></use>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert"></use>
               </svg>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">An error occurred while sharing your project. Please verify the email address and try again.</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Ok</span>
                 </button>
               </div>
@@ -273,22 +273,22 @@ examples:
     description: An alert dialog can have up to 3 buttons.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Error Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Alert Error Dialog</button>
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
         <div class="spectrum-Modal is-open" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Rate This App</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">If you enjoy our app, would you mind taking a moment to rate it?</section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">No, Thanks</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Remind Me Later</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Rate Now</span>
                 </button>
               </div>
@@ -303,13 +303,13 @@ examples:
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Scrolling Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Scrolling Dialog</button>
       <div class="spectrum-Modal-wrapper">
         <div class="spectrum-Modal" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--large" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">EULA</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                   aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -343,10 +343,10 @@ examples:
                   rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
               </section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Decline</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Accept</span>
                 </button>
               </div>
@@ -360,13 +360,13 @@ examples:
     description: A fullscreen dialog will automatically fill almost all of the available screen space.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
       <div class="spectrum-Modal-wrapper">
         <div class="spectrum-Modal spectrum-Modal--fullscreen" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--fullscreen" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Default Dialog - Fullscreen</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
                   aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -400,10 +400,10 @@ examples:
                   rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
               </section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Buy</span>
                 </button>
               </div>
@@ -417,13 +417,13 @@ examples:
     description: A fullscreen takeover dialog will fill all of the available screen space.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
-      <button class="spectrum-Button spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Takeover Dialog</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Takeover Dialog</button>
       <div class="spectrum-Modal-wrapper">
         <div class="spectrum-Modal spectrum-Modal--fullscreenTakeover" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Fullscreen Takeover</h1>
-              <hr class="spectrum-Divider spectrum-Divider--medium spectrum-Divider--horizontal spectrum-Dialog-divider">
+              <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
               <section class="spectrum-Dialog-content"> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover
                 dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a
                 fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover
@@ -449,10 +449,10 @@ examples:
                 fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br> This is a fullscreen takeover dialog.<br>
               </section>
               <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-                <button class="spectrum-Button spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Save</span>
                 </button>
               </div>

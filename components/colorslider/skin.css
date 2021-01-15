@@ -1,4 +1,4 @@
-:root {
+.spectrum-ColorSlider {
   /* todo: fix this in DNA */
   --spectrum-colorslider-border-color: var(--spectrum-colorarea-border-color);
 }
@@ -33,5 +33,15 @@
     .spectrum-ColorSlider-gradient {
       display: none
     }
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-ColorSlider {
+    --spectrum-colorslider-border-color-disabled : GrayText;
+    --spectrum-colorslider-fill-color-disabled : Canvas;
+  }
+  .spectrum-ColorSlider {
+    forced-color-adjust: none;
   }
 }

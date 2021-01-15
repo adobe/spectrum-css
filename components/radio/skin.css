@@ -9,10 +9,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Radio {
   /* todo: fix in DNA */
-  --spectrum-radio-emphasized-circle-border-color-selected-key-focus: var(
-    --spectrum-radio-emphasized-circle-border-color-selected-hover
+  --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus: var(
+    --spectrum-radio-m-emphasized-circle-border-color-selected-hover
   );
 }
 
@@ -20,21 +20,20 @@ governing permissions and limitations under the License.
   &:checked + .spectrum-Radio-button {
     &:before {
       border-color: var(
-        --spectrum-radio-emphasized-circle-border-color-selected
+        --spectrum-radio-m-circle-border-color-selected
       );
     }
   }
 }
 
 .spectrum-Radio-label {
-  color: var(--spectrum-radio-emphasized-text-color);
+  color: var(--spectrum-radio-m-text-color);
 }
 
 .spectrum-Radio-button {
   &:before {
-    forced-color-adjust: none;
-    background-color: var(--spectrum-radio-emphasized-circle-background-color);
-    border-color: var(--spectrum-radio-emphasized-circle-border-color);
+    background-color: var(--spectrum-radio-m-circle-background-color);
+    border-color: var(--spectrum-radio-m-circle-border-color);
   }
 }
 
@@ -43,7 +42,7 @@ governing permissions and limitations under the License.
     .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-hover
+          --spectrum-radio-m-circle-border-color-hover
         );
         box-shadow: none;
       }
@@ -52,33 +51,33 @@ governing permissions and limitations under the License.
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-selected-hover
+          --spectrum-radio-m-circle-border-color-selected-hover
         );
       }
     }
 
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-text-color-hover);
+      color: var(--spectrum-radio-m-text-color-hover);
     }
   }
 
   &:active {
     .spectrum-Radio-button {
       &:before {
-        border-color: var(--spectrum-radio-emphasized-circle-border-color-down);
+        border-color: var(--spectrum-radio-m-circle-border-color-down);
       }
     }
 
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-selected-down
+          --spectrum-radio-m-circle-border-color-selected-down
         );
       }
     }
 
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-text-color-down);
+      color: var(--spectrum-radio-m-text-color-down);
     }
   }
 }
@@ -87,7 +86,7 @@ governing permissions and limitations under the License.
   .spectrum-Radio-input:checked + .spectrum-Radio-button {
     &:before {
       border-color: var(
-        --spectrum-radio-emphasized-circle-border-color-selected
+        --spectrum-radio-m-emphasized-circle-border-color-selected
       );
     }
   }
@@ -95,7 +94,7 @@ governing permissions and limitations under the License.
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-selected-hover
+          --spectrum-radio-m-emphasized-circle-border-color-selected-hover
         );
       }
     }
@@ -104,7 +103,7 @@ governing permissions and limitations under the License.
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-selected-down
+          --spectrum-radio-m-emphasized-circle-border-color-selected-down
         );
       }
     }
@@ -117,24 +116,24 @@ governing permissions and limitations under the License.
     .spectrum-Radio-input + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-error-hover
+          --spectrum-radio-m-emphasized-circle-border-color-error-hover
         );
       }
     }
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-text-color-error-hover);
+      color: var(--spectrum-radio-m-emphasized-text-color-error-hover);
     }
   }
   &.is-invalid:active {
     .spectrum-Radio-input + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-error-down
+          --spectrum-radio-m-emphasized-circle-border-color-error-down
         );
       }
     }
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-text-color-error-down);
+      color: var(--spectrum-radio-m-emphasized-text-color-error-down);
     }
   }
   &.is-invalid {
@@ -142,12 +141,12 @@ governing permissions and limitations under the License.
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-error
+          --spectrum-radio-m-emphasized-circle-border-color-error
         );
       }
     }
     .spectrum-Radio-label {
-      color: var(--spectrum-radio-emphasized-text-color-error);
+      color: var(--spectrum-radio-m-emphasized-text-color-error);
     }
   }
 }
@@ -157,14 +156,13 @@ governing permissions and limitations under the License.
   &:disabled + .spectrum-Radio-button {
     &:before {
       border-color: var(
-        --spectrum-radio-emphasized-circle-border-color-disabled
+        --spectrum-radio-m-emphasized-circle-border-color-disabled
       );
     }
   }
 
   &:disabled ~ .spectrum-Radio-label {
-    forced-color-adjust: none;
-    color: var(--spectrum-radio-emphasized-text-color-disabled);
+    color: var(--spectrum-radio-m-emphasized-text-color-disabled);
   }
 }
 
@@ -175,17 +173,17 @@ governing permissions and limitations under the License.
   &:hover .spectrum-Radio-input:focus-ring {
     & + .spectrum-Radio-button {
       &:before {
-        border-color: var(--spectrum-radio-circle-border-color-key-focus);
+        border-color: var(--spectrum-radio-m-circle-border-color-key-focus);
       }
       &:after {
-        box-shadow: 0 0 0 var(--spectrum-radio-focus-ring-size-key-focus)
-          var(--spectrum-radio-focus-ring-color-key-focus);
+        box-shadow: 0 0 0 var(--spectrum-radio-m-focus-ring-size-key-focus)
+          var(--spectrum-radio-m-focus-ring-color-key-focus);
       }
     }
     &:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-emphasized-circle-border-color-selected-key-focus
+          --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus
         );
       }
     }

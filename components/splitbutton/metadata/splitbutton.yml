@@ -5,10 +5,10 @@ examples:
     description: A CTA split button.
     markup: |
       <div class="spectrum-SplitButton">
-        <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>
-        <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-trigger">
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-SplitButton-trigger">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
       </div>
@@ -17,22 +17,22 @@ examples:
       <br>
 
       <div class="spectrum-SplitButton spectrum-SplitButton--left">
-        <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-trigger">
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-SplitButton-trigger">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
-        <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>
       </div>
   - id: splitbutton
     name: Primary
     description: A primary split button.
     markup: |
       <div class="spectrum-SplitButton">
-        <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
-        <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger">
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-SplitButton-trigger">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
       </div>
@@ -41,22 +41,22 @@ examples:
       <br>
 
       <div class="spectrum-SplitButton spectrum-SplitButton--left">
-        <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger">
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-SplitButton-trigger">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
-        <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
       </div>
   - id: splitbutton
     name: Secondary
     description: A secondary split button.
     markup: |
       <div class="spectrum-SplitButton">
-        <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
-        <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-SplitButton-trigger">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
       </div>
@@ -65,10 +65,10 @@ examples:
       <br>
 
       <div class="spectrum-SplitButton spectrum-SplitButton--left">
-        <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">
-          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-SplitButton-trigger">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
-        <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
       </div>

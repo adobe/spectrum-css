@@ -80,21 +80,21 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
     article.spectrum-CSSComponent
 
       header(id=component.slug).spectrum-CSSComponent-heading
-        h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--XXXL.spectrum-Heading--serif
+        h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--sizeXXXL.spectrum-Heading--serif
           a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
-        p.spectrum-CSSComponent-version.spectrum-Body.spectrum-Body--S Version #{pkg.version}
+        p.spectrum-CSSComponent-version.spectrum-Body.spectrum-Body--sizeS Version #{pkg.version}
 
       if component.description
-        section.spectrum-CSSComponent-description.spectrum-Body.spectrum-Body--L!= util.markdown.render(component.description)
+        section.spectrum-CSSComponent-description.spectrum-Body.spectrum-Body--sizeL!= util.markdown.render(component.description)
 
       each example in examples
         article.spectrum-CSSExample
           if example != component
             header(id=example.slug)
-              h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--S #{example.name}
+              h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS #{example.name}
 
             if example.description
-              section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--L!= util.markdown.render(example.description)
+              section.spectrum-CSSExample-description.spectrum-Body.spectrum-Body--sizeL!= util.markdown.render(example.description)
 
           if example.markup
 

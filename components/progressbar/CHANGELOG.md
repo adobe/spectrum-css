@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.3"></a>
+# 1.0.0-beta.3
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.0-beta.2...@spectrum-css/progressbar@1.0.0-beta.3)
+
+### ♻️ Code refactoring
+
+* use Field label instead of custom classes ([dd9d369](https://github.com/adobe/spectrum-css/commit/dd9d369))
+
+
+### ✨ Features
+
+* t-shirt sizing for ProgressBar, update notice classes, closes [#955](https://github.com/adobe/spectrum-css/issues/955) ([440ce85](https://github.com/adobe/spectrum-css/commit/440ce85))
+
+
+### 🐛 Bug fixes
+
+* allow customizing ProgressBar width, fixes [#1064](https://github.com/adobe/spectrum-css/issues/1064) ([5b39f67](https://github.com/adobe/spectrum-css/commit/5b39f67))
+* correct label wrapping ([0ecbc19](https://github.com/adobe/spectrum-css/commit/0ecbc19))
+* correct Meter notice colors ([97fd959](https://github.com/adobe/spectrum-css/commit/97fd959))
+* correct padding and font size of Progress Bar label ([ee08255](https://github.com/adobe/spectrum-css/commit/ee08255))
+* correct width of track for side label ([eca67dc](https://github.com/adobe/spectrum-css/commit/eca67dc))
+
+
+### 🛑 BREAKING CHANGES
+
+* Progress bar now uses Field label
+* .spectrum-ProgressBar--large renamed to .spectrum-ProgressBar--sizeM, .spectrum-ProgressBar--large renamed to .spectrum-ProgressBar--sizeS is required for previous
+* ProgressBar .is-warning renamed to .is-notice, .is-critical renamed to .is-negative
+
+
+
+
+
+<a name="1.0.0-beta.2"></a>
+# 1.0.0-beta.2
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.0-beta.1...@spectrum-css/progressbar@1.0.0-beta.2)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
 <a name="1.0.0-beta.1"></a>
 # 1.0.0-beta.1
 🗓 2020-09-23

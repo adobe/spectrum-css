@@ -6,8 +6,8 @@ sections:
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
       ### Use Spectrum Heading for title and Spectrum Detail for subtitle
       To make the card component more flexible, products can have more fine control over the typography by using the Heading and Detail components with their corresponding sizes. To be more consistent with previous card designs you can use the following:
-        * Add the `spectrum-Heading` and `spectrum-Heading--XS` or `spectrum-Heading--XXS` to the `spectrum-Card-title` element.
-        * Add the `spectrum-Detail` and `spectrum-Detail--S` classes to `spectrum-Card-subtitle`.
+        * Add the `spectrum-Heading` and `spectrum-Heading--sizeXS` or `spectrum-Heading--sizeXXS` to the `spectrum-Card-title` element.
+        * Add the `spectrum-Detail` and `spectrum-Detail--sizeS` classes to `spectrum-Card-subtitle`.
 examples:
   - id: card
     name: Standard
@@ -18,9 +18,9 @@ examples:
           <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Card Title</div>
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
               <div class="spectrum-Card-actionButton">
-                <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-More" />
                   </svg>
@@ -28,7 +28,7 @@ examples:
               </div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
             </div>
           </div>
           <div class="spectrum-Card-footer">
@@ -38,11 +38,11 @@ examples:
             <div class="spectrum-Checkbox">
               <input type="checkbox" class="spectrum-Checkbox-input" aria-checked="false" title="Select" value="">
               <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark75" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-DashSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash75" />
                 </svg>
               </span>
             </div>
@@ -59,9 +59,9 @@ examples:
             <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
             <div class="spectrum-Card-body">
               <div class="spectrum-Card-header">
-                <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Card Title</div>
+                <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
                 <div class="spectrum-Card-actionButton">
-                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                     <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-icon-18-More" />
                     </svg>
@@ -69,7 +69,7 @@ examples:
                 </div>
               </div>
               <div class="spectrum-Card-content">
-                <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
+                <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
               </div>
             </div>
             <div class="spectrum-Card-footer">
@@ -79,11 +79,11 @@ examples:
               <div class="spectrum-Checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" tabindex="-1">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
-                  <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-DashSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Dash75" />
                   </svg>
                 </span>
               </div>
@@ -104,10 +104,10 @@ examples:
           </div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Name</div>
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
               <div class="spectrum-Card-actionButton">
                 <div style="display: inline-block;">
-                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                  <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                     <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-icon-18-More" />
                     </svg>
@@ -116,7 +116,7 @@ examples:
               </div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
               <div class="spectrum-Card-description">10/15/18</div>
             </div>
           </div>
@@ -124,11 +124,11 @@ examples:
             <div class="spectrum-Checkbox">
               <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
               <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark75" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-DashSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash75" />
                 </svg>
               </span>
             </div>
@@ -151,21 +151,21 @@ examples:
           </div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">FileName</div>
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">FileName</div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">pdf</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">pdf</div>
             </div>
           </div>
           <div class="spectrum-QuickActions spectrum-Card-quickActions">
             <div class="spectrum-Checkbox">
               <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
                 <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark75" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-DashSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash75" />
                 </svg>
               </span>
             </div>
@@ -191,18 +191,18 @@ examples:
               <div class="spectrum-Card-title">FolderName</div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">folder</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">folder</div>
             </div>
           </div>
           <div class="spectrum-QuickActions spectrum-Card-quickActions">
             <div class="spectrum-Checkbox">
               <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
               <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark75" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-DashSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash75" />
                 </svg>
               </span>
             </div>
@@ -218,10 +218,10 @@ examples:
           <div class="spectrum-Card-coverPhoto" style="background-image: url(img/example-card-portrait.jpg)"></div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Card Title</div>
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
             </div>
           </div>
           <div class="spectrum-Card-footer">
@@ -231,11 +231,11 @@ examples:
             <div class="spectrum-Checkbox">
               <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
               <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark75" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-DashSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash75" />
                 </svg>
               </span>
             </div>
@@ -249,16 +249,16 @@ examples:
       <div style="width: 208px;">
         <div class="spectrum-Card spectrum-Card--small spectrum-Card--horizontal" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
-            <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true" aria-label="FileTxt">
+            <svg class="spectrum-Icon spectrum-Icon--sizeXXL" focusable="false" aria-hidden="true" aria-label="FileTxt">
               <use xlink:href="#spectrum-icon-18-FileTxt"></use>
             </svg>
           </div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Card Title</div>
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
             </div>
           </div>
         </div>
@@ -276,15 +276,15 @@ examples:
           </div>
           <div class="spectrum-Card-body">
             <div class="spectrum-Card-header">
-              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Name</div>
+              <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
             </div>
             <div class="spectrum-Card-content">
-              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
+              <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
             </div>
           </div>
           <div class="spectrum-QuickActions spectrum-Card-actions">
             <div style="display: inline-block;">
-              <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--quiet">
+              <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-icon-18-More" />
                 </svg>
@@ -295,11 +295,11 @@ examples:
             <div class="spectrum-Checkbox">
               <input type="checkbox" class="spectrum-Checkbox-input" aria-checked="false" title="Select" value="" tabindex="-1">
               <span class="spectrum-Checkbox-box">
-                <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark75" />
                 </svg>
-                <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-DashSmall" />
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash75" />
                 </svg>
               </span>
             </div>
@@ -319,15 +319,15 @@ examples:
             </div>
             <div class="spectrum-Card-body">
               <div class="spectrum-Card-header">
-                <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--XS">Name</div>
+                <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Name</div>
               </div>
               <div class="spectrum-Card-content">
-                <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--S">jpg</div>
+                <div class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
               </div>
             </div>
             <div class="spectrum-QuickActions spectrum-Card-actions">
               <div style="display: inline-block;">
-                <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                   <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-More" />
                   </svg>
@@ -338,11 +338,11 @@ examples:
               <div class="spectrum-Checkbox">
                 <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" tabindex="-1">
                 <span class="spectrum-Checkbox-box">
-                  <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark75 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark75" />
                   </svg>
-                  <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-DashSmall" />
+                  <svg class="spectrum-Icon spectrum-UIIcon-Dash75 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Dash75" />
                   </svg>
                 </span>
               </div>

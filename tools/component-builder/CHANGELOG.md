@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0-beta.1"></a>
+# 2.0.0-beta.1
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@2.0.0-beta.0...@spectrum-css/component-builder@2.0.0-beta.1)
+
+### ✨ Features
+
+* disable legacy build in output ([f1ef983](https://github.com/adobe/spectrum-css/commit/f1ef983))
+* error and warning reporting for variable use ([0460d39](https://github.com/adobe/spectrum-css/commit/0460d39))
+* implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
+* use postcss-dropdupedvars ([46d19ea](https://github.com/adobe/spectrum-css/commit/46d19ea))
+* use postcss-dropunusedvars ([955e7e2](https://github.com/adobe/spectrum-css/commit/955e7e2))
+* use postcss-remap vars ([807fd8f](https://github.com/adobe/spectrum-css/commit/807fd8f))
+
+
+### 🐛 Bug fixes
+
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+
+
+### 🛑 BREAKING CHANGES
+
+* this completely removes legacy build artifacts and IE 11 support
+* .spectrum-ActionButton is no longer part of the button component, use the actionbutton component
+
+
+
+
+
+<a name="2.0.0-beta.0"></a>
+# 2.0.0-beta.0
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.2.1-beta.0...@spectrum-css/component-builder@2.0.0-beta.0)
+
+* fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+
+
+### 🛑 BREAKING CHANGES
+
+* all typography sizing classes now have --size* instead of --*, see migration guides
+
+
+
+
+
 <a name="1.2.1-beta.0"></a>
 ## 1.2.1-beta.0
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@1.2.0...@spectrum-css/component-builder@1.2.1-beta.0)

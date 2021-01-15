@@ -44,6 +44,9 @@ function bakeVars() {
     // Find all custom properties used in the component
     let variableList = varUtils.getVarsFromCSS(file.contents);
 
+    // Get vars defined inside of the component
+    let componentVars = varUtils.getVarsDefinedInCSS(file.contents);
+
     // Get vars in ALL components
     let vars = await varUtils.getAllComponentVars();
 
@@ -51,18 +54,28 @@ function bakeVars() {
     let allVars = await varUtils.getAllVars();
 
     // For each color stop and scale, filter the variables for those matching the component
+    let errors = [];
     let usedVars = {};
     variableList.forEach(varName => {
       if (varName.indexOf('spectrum-global') !== -1) {
-        logger.warn(`${pkg.name} directly uses global variable ${varName}`);
+        logger.warn(`⚠️  ${pkg.name} directly uses global variable ${varName}`);
       }
       else if (!allVars[varName]) {
-        logger.warn(`${pkg.name} uses undefined variable ${varName}`);
+        if (componentVars.indexOf(varName) === -1) {
+          errors.push(`${pkg.name} uses undefined variable ${varName}`);
+        }
+        else {
+          logger.warn(`🔶 ${pkg.name} uses locally defined variable ${varName}`);
+        }
       }
       else {
         usedVars[varName] = vars[varName];
       }
     });
+
+    if (errors.length) {
+      return cb(new Error(errors.join('\n')), file);
+    }
 
     let contents = varUtils.getVariableDeclarations(classNames, usedVars);
     let newFile = file.clone({contents: false});

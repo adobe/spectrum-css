@@ -10,13 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
-
 .spectrum-CycleButton {
   /* Be square */
   padding-block: 0;
-  padding-inline: var(--spectrum-actionbutton-icon-padding-x);
-
+  padding-inline: var(--spectrum-actionbutton-m-icononly-padding-left) var(--spectrum-actionbutton-m-icononly-padding-right);
   .spectrum-CycleButton-item:not(.is-selected) {
     display: none
   }

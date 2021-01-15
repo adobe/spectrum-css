@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
-
 .spectrum-Table {
   border-collapse: separate;
   border-spacing: 0;
@@ -57,7 +55,7 @@ governing permissions and limitations under the License.
 
   &.is-sorted-asc {
     .spectrum-Table-sortedIcon {
-      transform: rotateZ(180deg);
+      transform: rotateZ(-90deg);
     }
   }
 }
@@ -200,7 +198,7 @@ governing permissions and limitations under the License.
   .spectrum-Table-row {
     &.is-drop-target {
       &::before {
-        border-radius: var(--spectrum-border-radius);
+        border-radius: var(--spectrum-alias-border-radius-regular);
       }
     }
   }

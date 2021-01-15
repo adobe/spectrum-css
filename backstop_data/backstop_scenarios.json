@@ -275,13 +275,17 @@
     "label": "progressbar",
     "url": "progressbar.html",
     "removeSelectors": [
-      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
+      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example",
+      "#indeterminatewithlabel + .spectrum-CSSExample-container .spectrum-CSSExample-example"
     ],
     "package": "@spectrum-css/progressbar"
   },
   {
     "label": "progresscircle",
     "url": "progresscircle.html",
+    "removeSelectors": [
+      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
+    ],
     "package": "@spectrum-css/progresscircle"
   },
   {

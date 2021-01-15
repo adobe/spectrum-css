@@ -18,36 +18,18 @@ const sort = require('gulp-sort');
 const svgcombiner = require('gulp-svgcombiner');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
-
-// Blocked by https://jira.corp.adobe.com/browse/A4U-177
-// const a4uPath = require.resolve('@a4u/a4u-collection-essential-ui-icons-release');
-const a4uPath = path.join(process.cwd(), '..', '..', 'node_modules', '@a4u/a4u-collection-essential-ui-icons-release');
+const vinylPaths = require('vinyl-paths');
 
 function clean() {
   return del([
-    'combined/**',
-    'medium/**',
-    'large/**',
+    'combined/**'
   ]);
-}
-
-function copyLargeIcons() {
-  return gulp.src(path.join(a4uPath, 'assets', 'UI_Icons_SVG_Large/*.svg'))
-    .pipe(gulp.dest('large/'));
-}
-
-function copyMediumIcons() {
-  return gulp.src(path.join(a4uPath, 'assets', 'UI_Icons_SVG_Medium/*.svg'))
-    .pipe(gulp.dest('medium/'));
 }
 
 function sanitizeIcons() {
   return gulp.src('{medium,large}/*.svg')
-    .pipe(replace(/ data-name=".*?"/g, ''))
-    .pipe(replace(/ id=".*?"/g, ''))
-    .pipe(replace(/ class=".*?"/g, ''))
     .pipe(replace(/<defs>[\s\S]*?<\/defs>/m, ''))
-    .pipe(replace(/<title>[\s\S]*?<\/title>/m, ''))
+    .pipe(replace(/<rect[\s\S]*?\/>/m, ''))
     .pipe(svgmin({
       plugins: [
         {
@@ -62,6 +44,8 @@ function sanitizeIcons() {
         { collapseGroups: true }
       ]
     }))
+    .pipe(vinylPaths(del)) // delete the original file
+    .pipe(rename(path => path.basename = path.basename.split('_').pop().replace('Size', '')))
     .pipe(gulp.dest('./'));
 }
 
@@ -82,19 +66,13 @@ function generateCombinedIcons() {
 }
 
 // Only ran by Adobe
-let updateIcons = gulp.series(
-  gulp.series(
-    clean,
-    gulp.parallel(
-      copyMediumIcons,
-      copyLargeIcons
-    )
-  ),
+const updateIcons = gulp.series(
+  clean,
   sanitizeIcons,
   generateCombinedIcons
 );
 
-var tasks = require('@spectrum-css/component-builder');
+const tasks = require('@spectrum-css/component-builder');
 
 function generateSVGSprite() {
   return gulp.src('combined/*.svg')
@@ -122,16 +100,16 @@ function getSVGSpriteTask(size) {
   };
 }
 
-let generateSVGSpriteMedium = getSVGSpriteTask('medium');
-let generateSVGSpriteLarge = getSVGSpriteTask('large');
+const generateSVGSpriteMedium = getSVGSpriteTask('medium');
+const generateSVGSpriteLarge = getSVGSpriteTask('large');
 
-let buildIcons = gulp.parallel(
+const buildIcons = gulp.parallel(
   generateSVGSpriteMedium,
   generateSVGSpriteLarge,
   generateSVGSprite
 );
 
-let build = gulp.parallel(
+const build = gulp.parallel(
   buildIcons,
   tasks.buildCSS
 );

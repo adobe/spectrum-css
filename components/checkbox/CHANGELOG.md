@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.6"></a>
+# 3.0.0-beta.6
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.0-beta.5...@spectrum-css/checkbox@3.0.0-beta.6)
+
+### ✨ Features
+
+* implement Checkbox/Radio emphasized variant, closes [#349](https://github.com/adobe/spectrum-css/issues/349) ([#1057](https://github.com/adobe/spectrum-css/issues/1057)) ([3ac8b31](https://github.com/adobe/spectrum-css/commit/3ac8b31))
+
+
+### 🐛 Bug fixes
+
+* checkbox top margin ([47944bb](https://github.com/adobe/spectrum-css/commit/47944bb))
+* correct Checkbox line-height, it's now component height ([c3f0a16](https://github.com/adobe/spectrum-css/commit/c3f0a16))
+* line-height for Checkbox ([01901a3](https://github.com/adobe/spectrum-css/commit/01901a3))
+* make Checkbox build again ([7873da0](https://github.com/adobe/spectrum-css/commit/7873da0))
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+
+
+### 🛑 BREAKING CHANGES
+
+* colors change in a way that may be unexpected
+
+docs: add docs explaining quiet/emphasized Checkbox/Radio
+
+
+
+
+
+<a name="3.0.0-beta.5"></a>
+# 3.0.0-beta.5
+🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.0-beta.4...@spectrum-css/checkbox@3.0.0-beta.5)
+
+* fix!: updated type sizes to use consistent syntax, related to #972 (#1031) ([1a604c4](https://github.com/adobe/spectrum-css/commit/1a604c4)), closes [#972](https://github.com/adobe/spectrum-css/issues/972) [#1031](https://github.com/adobe/spectrum-css/issues/1031)
+
+
+### 🛑 BREAKING CHANGES
+
+* all typography sizing classes now have --size* instead of --*, see migration guides
+
+
+
+
+
 <a name="3.0.0-beta.4"></a>
 # 3.0.0-beta.4
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.0-beta.3...@spectrum-css/checkbox@3.0.0-beta.4)

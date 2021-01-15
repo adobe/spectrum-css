@@ -10,117 +10,57 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
+@import "../commons/basebutton.css";
+@import "../vars/css/components/spectrum-button.css";
 
-:root {
-  /* Todo: fix in DNA, should have been zero */
-  --spectrum-fieldbutton-quiet-border-size: 0;
-  --spectrum-fieldbutton-disabled-border-size: 0;
-  --spectrum-fieldbutton-quiet-margin: 0;
-  --spectrum-fieldbutton-quiet-padding: 0;
+/* include the other button components that have been broken out */
+@import "./logicbutton.css";
+@import "./clearbutton.css";
 
-  /* Hardcoded for wrapping study, needs to be in DNA */
-  --spectrum-button-padding-y: var(--spectrum-global-dimension-size-50);
-  --spectrum-button-line-height: 1.3;
+.spectrum-Button--sizeS {
+  @remapvars {
+    find: /--spectrum-button(.*)-s-/;
+    filter: color;
+    replace: --spectrum-button$1-;
+  }
+
+  /* Fixup alignment of text on small */
+  --spectrum-button-primary-text-padding-top: calc(var(--spectrum-button-primary-s-text-padding-top) - 3px);
 }
 
-%spectrum-BaseButton {
-  /* Contain halo */
-  position: relative;
-
-  display: inline-flex;
-  box-sizing: border-box;
-
-  align-items: center;
-  justify-content: center;
-
-  /* Show the button overflow in Edge. */
-  overflow: visible;
-
-  /* Remove button the margin in Firefox and Safari. */
-  margin: 0;
-
-  border-style: solid;
-
-  /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  /* Font smoothing for Firefox */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Correct the inability to style clickable types in iOS and Safari. */
-  -webkit-appearance: button;
-
-  /* Adjacent buttons should be aligned correctly */
-  vertical-align: top;
-
-  transition: background var(--spectrum-global-animation-duration-100) ease-out,
-    border-color var(--spectrum-global-animation-duration-100) ease-out,
-    color var(--spectrum-global-animation-duration-100) ease-out,
-    box-shadow var(--spectrum-global-animation-duration-100) ease-out;
-
-  text-decoration: none;
-  font-family: var(--spectrum-font-family-base);
-
-  line-height: var(--spectrum-button-line-height);
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: none; /* prevent touch scrolling on buttons */
-
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
-
-  /* Fix Firefox */
-  &::-moz-focus-inner {
-    border: 0;
-
-    /* Remove the inner border and padding for button in Firefox. */
-    border-style: none;
-    padding: 0;
-
-    /* Use uppercase PX so values don't get converted to rem */
-    margin-block-start: -2px;
-    margin-block-end: -2px;
-  }
-
-  &:disabled,
-  &.is-disabled {
-    cursor: default;
-  }
-
-  .spectrum-Icon {
-    max-block-size: 100%;
-    flex-shrink: 0;
+.spectrum-Button--sizeM {
+  @remapvars {
+    find: /--spectrum-button(.*)-m-/;
+    filter: color;
+    replace: --spectrum-button$1-;
   }
 }
 
-%spectrum-ButtonWithFocusRing {
-  &:after {
-    border-radius: calc(
-      var(--spectrum-button-primary-border-radius) +
-        var(--spectrum-alias-focus-ring-gap)
-    );
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
-    transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
-                margin var(--spectrum-global-animation-duration-100) ease-out;
+.spectrum-Button--sizeL {
+  @remapvars {
+    find: /--spectrum-button(.*)-l-/;
+    filter: color;
+    replace: --spectrum-button$1-;
   }
+}
 
-  &:focus-ring {
-    &:after {
-      margin: calc(var(--spectrum-alias-focus-ring-gap) * -2);
-    }
+.spectrum-Button--sizeXL {
+  @remapvars {
+    find: /--spectrum-button(.*)-xl-/;
+    filter: color;
+    replace: --spectrum-button$1-;
   }
+}
+
+.spectrum-Button {
+  /* Adjustments for inset/outset padding in DNA */
+  --spectrum-button-primary-padding-left-adjusted: calc(var(--spectrum-button-primary-padding-left) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-padding-right-adjusted: calc(var(--spectrum-button-primary-padding-right) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-textonly-padding-left) - var(--spectrum-button-primary-border-size));
+  --spectrum-button-primary-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-textonly-padding-right) - var(--spectrum-button-primary-border-size));
+
+  /* Adjust padding to make things look right */
+  --spectrum-button-padding-y: calc(var(--spectrum-button-primary-text-padding-top) - 1px);
 }
 
 .spectrum-Button {
@@ -135,15 +75,12 @@ governing permissions and limitations under the License.
   block-size: auto;
   min-inline-size: var(--spectrum-button-primary-min-width);
 
-  padding: var(--spectrum-button-padding-y)
-    calc(
-      var(--spectrum-button-primary-text-padding-x) -
-        var(--spectrum-button-primary-border-size)
-    );
-
   /* @hack: fix button text vertical alignment at 14px */
   padding-block-end: calc(var(--spectrum-button-padding-y) + 1px);
   padding-block-start: calc(var(--spectrum-button-padding-y) - 1px);
+
+  /* Start with text-only padding */
+  padding-inline: var(--spectrum-button-primary-textonly-padding-left-adjusted) var(--spectrum-button-primary-textonly-padding-right-adjusted);
 
   font-size: var(--spectrum-button-primary-text-size);
   font-weight: var(--spectrum-button-primary-text-font-weight);
@@ -153,231 +90,41 @@ governing permissions and limitations under the License.
     box-shadow: none;
   }
 
+  .spectrum-Icon {
+    @inherit: %spectrum-ButtonIcon;
+
+    /* Scoot over, assuming we have both icon and text */
+    margin-inline-start: calc(-1 * (var(--spectrum-button-primary-textonly-padding-left-adjusted) - var(--spectrum-button-primary-padding-left-adjusted)));
+  }
+
   .spectrum-Icon + .spectrum-Button-label {
-    margin-inline-start: var(--spectrum-button-primary-text-gap);
-  }
+    /* Have gap on on the left */
+    padding-inline-start: var(--spectrum-button-primary-icon-gap);
 
-  .spectrum-Button-label + .spectrum-Icon {
-    margin-inline-start: calc(var(--spectrum-button-primary-text-gap) / 2);
-  }
-}
-
-a.spectrum-Button,
-a.spectrum-ActionButton {
-  /* Remove appearance for clickable types in iOS and Safari. */
-  -webkit-appearance: none;
-  /* Make link text not selectable  */
-  user-select: none;
-}
-
-.spectrum-ActionButton {
-  @inherit: %spectrum-BaseButton;
-  position: relative;
-
-  block-size: var(--spectrum-actionbutton-height);
-  min-inline-size: var(--spectrum-actionbutton-min-width);
-
-  /* Use icon padding by default as it's smaller */
-  padding: 0
-    calc(
-      var(--spectrum-actionbutton-icon-padding-x) -
-        var(--spectrum-actionbutton-border-size)
-    );
-
-  border-width: var(--spectrum-actionbutton-border-size);
-  border-radius: var(--spectrum-actionbutton-border-radius);
-
-  font-size: var(--spectrum-actionbutton-text-size);
-  font-weight: var(--spectrum-actionbutton-text-font-weight);
-
-  .spectrum-Icon + .spectrum-ActionButton-label {
-    /* Have icon padding on the left */
-    padding-inline-start: var(--spectrum-actionbutton-icon-padding-x);
-
-    /* Have text padding on the right */
-    padding-inline-end: calc(
-      var(--spectrum-actionbutton-text-padding-x) -
-        var(--spectrum-actionbutton-icon-padding-x)
-    );
-  }
-
-  .spectrum-Icon--sizeS:only-child {
-    /* Position absolutely to avoid layout errors introduced by padding */
-    position: absolute;
-    inset-block-start: calc(
-      50% - calc(var(--spectrum-actionbutton-icon-size) / 2)
-    );
-    inset-inline-start: calc(
-      50% - calc(var(--spectrum-actionbutton-icon-size) / 2)
-    );
-  }
-
-  .spectrum-ActionButton-label:only-child {
-    /* Add padding for text only buttons */
-    padding: 0
-      calc(
-        var(--spectrum-actionbutton-text-padding-x) -
-          var(--spectrum-actionbutton-icon-padding-x)
-      );
+    /*
+      Have no padding on the right (it's built into the element)
+      This will fail if --spectrum-button-primary-textonly-padding-right !== --spectrum-button-padding-right
+    */
+    padding-inline-end: 0;
   }
 }
 
-.spectrum-ActionButton-hold {
-  position: absolute;
-  inset-inline-end: var(--spectrum-actionbutton-hold-icon-padding-right);
-  inset-block-end: var(--spectrum-actionbutton-hold-icon-padding-bottom);
-
-  transform: logical rotate(0deg);
+a.spectrum-Button {
+  @inherit: %spectrum-AnchorButton;
 }
 
-.spectrum-ActionButton-label,
 .spectrum-Button-label {
-  align-self: center;
-  justify-self: center;
+  @inherit: %spectrum-ButtonLabel;
 
-  /* Fixes horizontal alignment of text in anchor buttons */
-  text-align: center;
-
-  /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-  /*inline-size: 100%;*/
-
-  &:empty {
-    display: none;
-  }
+  line-height: var(--spectrum-button-primary-text-line-height);
 }
 
-.spectrum-ActionButton-label {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.spectrum-ActionButton--quiet {
-  border-width: var(--spectrum-actionbutton-quiet-border-size);
-  border-radius: var(--spectrum-actionbutton-quiet-border-radius);
-
-  font-size: var(--spectrum-actionbutton-quiet-text-size);
-  font-weight: var(--spectrum-actionbutton-quiet-text-font-weight);
-}
-
-.spectrum-LogicButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
-
-  block-size: var(--spectrum-logicbutton-and-height);
-  padding: var(--spectrum-logicbutton-and-padding-x);
-
-  border-width: var(--spectrum-logicbutton-and-border-size);
-  border-radius: var(--spectrum-logicbutton-and-border-radius);
-
-  font-size: var(--spectrum-logicbutton-and-text-size);
-  font-weight: var(--spectrum-logicbutton-and-text-font-weight);
-  line-height: 0;
-
-  &:after {
-    /* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
-    border-radius: calc(
-      var(--spectrum-logicbutton-and-border-radius) +
-        var(--spectrum-alias-focus-ring-gap)
-    );
-  }
-}
-
-.spectrum-FieldButton {
-  @inherit: %spectrum-BaseButton;
-
-  block-size: var(--spectrum-picker-height);
-
-  padding: 0 var(--spectrum-picker-padding-x);
-
-  font-family: inherit;
-  font-weight: normal;
-  font-size: var(--spectrum-picker-text-size);
-  line-height: normal;
-  -webkit-font-smoothing: initial;
-
-  cursor: pointer;
-  outline: none;
-}
-
-.spectrum-FieldButton {
-  margin: 0;
-  padding-block: 0;
-  padding-inline: var(--spectrum-picker-padding-x);
-
-  border-width: var(--spectrum-picker-border-size);
-  border-style: solid;
-  border-radius: var(--spectrum-border-radius);
-
-  transition: background-color var(--spectrum-global-animation-duration-100),
-    box-shadow var(--spectrum-global-animation-duration-100),
-    border-color var(--spectrum-global-animation-duration-100);
-
-  &:disabled,
-  &.is-disabled {
-    border-width: var(--spectrum-fieldbutton-disabled-border-size);
-    cursor: default;
-  }
-
-  &.is-open {
-    border-width: var(--spectrum-picker-border-size);
-  }
-}
-
-.spectrum-FieldButton--quiet {
-  margin: var(--spectrum-fieldbutton-quiet-margin);
-  padding: var(--spectrum-fieldbutton-quiet-padding);
-
-  border-width: var(--spectrum-fieldbutton-quiet-border-size);
-  border-radius: var(--spectrum-fieldbutton-quiet-border-radius);
-  &:disabled,
-  &.is-disabled {
-    &:focus-ring {
-      box-shadow: none;
-    }
-  }
-}
-
-.spectrum-ClearButton {
-  @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
-
-  inline-size: var(--spectrum-clearbutton-medium-width);
-  block-size: var(--spectrum-clearbutton-medium-height);
-
-  border-radius: 100%;
-
-  padding: 0;
-  margin: 0;
-
-  border: none;
-
-  > .spectrum-Icon {
-    /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-    margin-block: 0;
-    margin-inline: auto;
-  }
-}
-
-.spectrum-ClearButton--overBackground {
-  &:focus-ring {
+.spectrum-LogicButton,
+.spectrum-Button {
+  &:focus-ring,
+  &.is-focused {
     &:after {
-      /* Adjust margin because ClearButton does not have a border */
-      margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
+      box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-m-focus-ring-color-key-focus);
     }
   }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .spectrum-ClearButton {
-    > .spectrum-Icon {
-      /* @ie11 Workaround for regression caused by fix for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-      margin: 0;
-    }
-  }
-}
-
-.spectrum-ClearButton--small {
-  inline-size: var(--spectrum-clearbutton-small-width);
-  block-size: var(--spectrum-clearbutton-small-height);
 }
