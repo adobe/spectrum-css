@@ -32,6 +32,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Radio-button {
   &:before {
+    forced-color-adjust: none;
     background-color: var(--spectrum-radio-m-circle-background-color);
     border-color: var(--spectrum-radio-m-circle-border-color);
   }
@@ -128,8 +129,7 @@ governing permissions and limitations under the License.
     .spectrum-Radio-input + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-m-emphasized-circle-border-color-error-down
-        );
+          --spectrum-radio-m-emphasized-text-color-error-hover        );
       }
     }
     .spectrum-Radio-label {
@@ -176,6 +176,7 @@ governing permissions and limitations under the License.
         border-color: var(--spectrum-radio-m-circle-border-color-key-focus);
       }
       &:after {
+        forced-color-adjust: none;
         box-shadow: 0 0 0 var(--spectrum-radio-m-focus-ring-size-key-focus)
           var(--spectrum-radio-m-focus-ring-color-key-focus);
       }
@@ -208,10 +209,10 @@ governing permissions and limitations under the License.
     --spectrum-radio-m-emphasized-circle-border-color-selected-down: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected-hover: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus: Highlight;
-    --spectrum-radio-m-emphasized-circle-border-color-selected: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-selected: Highlight; 
     --spectrum-radio-m-emphasized-text-color-disabled: GrayText;
     --spectrum-radio-m-emphasized-text-color-error-down: CanvasText;
-    --spectrum-radio-m-emphasized-text-color-error-hover: CanvasText;
+    --spectrum-radio-m-emphasized-text-color-error-hover: CanvasText;  
     --spectrum-radio-m-emphasized-text-color-error: CanvasText;
     --spectrum-radio-m-focus-ring-color-key-focus: CanvasText;
     --spectrum-radio-m-text-color-down: CanvasText;
@@ -228,5 +229,6 @@ governing permissions and limitations under the License.
         }
       }
     }
-  }
+  }        
 }
+
