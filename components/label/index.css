@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
-
 .spectrum-Label {
   display: inline-block;
   position: relative;
@@ -20,7 +18,7 @@ governing permissions and limitations under the License.
 
   padding: var(--spectrum-global-dimension-size-50) var(--spectrum-global-dimension-size-125);
 
-  border-radius: var(--spectrum-border-radius);
+  border-radius: var(--spectrum-alias-border-radius-regular);
 
   font-size: var(--spectrum-global-dimension-size-150);
   line-height: var(--spectrum-global-font-line-height-medium);

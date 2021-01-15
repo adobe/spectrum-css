@@ -10,9 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
-
-:root {
+.spectrum-AssetList {
   --spectrum-miller-column-chevron-height: 10px;
   --spectrum-miller-column-chevron-width: 6px;
   --spectrum-miller-column-checkbox-margin: 0;
@@ -45,8 +43,9 @@ governing permissions and limitations under the License.
   transition: background-color var(--spectrum-global-animation-duration-100)
     ease-in-out;
 
-  font-size: var(--spectrum-listitem-option-text-size);
-  font-weight: var(--spectrum-listitem-option-text-font-weight);
+  /* todo: replace with proper DNA variables */
+  font-size: var(--spectrum-listitem-m-text-size);
+  font-weight: var(--spectrum-listitem-m-text-font-weight);
   font-style: normal;
 
   cursor: pointer;

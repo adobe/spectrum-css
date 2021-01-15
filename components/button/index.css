@@ -10,14 +10,47 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/index.css";
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-button.css";
 
 /* include the other button components that have been broken out */
-@import "./fieldbutton.css";
 @import "./logicbutton.css";
 @import "./clearbutton.css";
+
+.spectrum-Button--sizeS {
+  @remapvars {
+    find: /--spectrum-button(.*)-s-/;
+    filter: color;
+    replace: --spectrum-button$1-;
+  }
+
+  /* Fixup alignment of text on small */
+  --spectrum-button-primary-text-padding-top: calc(var(--spectrum-button-primary-s-text-padding-top) - 3px);
+}
+
+.spectrum-Button--sizeM {
+  @remapvars {
+    find: /--spectrum-button(.*)-m-/;
+    filter: color;
+    replace: --spectrum-button$1-;
+  }
+}
+
+.spectrum-Button--sizeL {
+  @remapvars {
+    find: /--spectrum-button(.*)-l-/;
+    filter: color;
+    replace: --spectrum-button$1-;
+  }
+}
+
+.spectrum-Button--sizeXL {
+  @remapvars {
+    find: /--spectrum-button(.*)-xl-/;
+    filter: color;
+    replace: --spectrum-button$1-;
+  }
+}
 
 .spectrum-Button {
   /* Adjustments for inset/outset padding in DNA */
@@ -45,8 +78,6 @@ governing permissions and limitations under the License.
   /* @hack: fix button text vertical alignment at 14px */
   padding-block-end: calc(var(--spectrum-button-padding-y) + 1px);
   padding-block-start: calc(var(--spectrum-button-padding-y) - 1px);
-/*  padding-block-end: calc(var(--spectrum-button-primary-icon-padding-top) + 1px);
-  padding-block-start: calc(var(--spectrum-button-primary-icon-padding-bottom) - 1px);*/
 
   /* Start with text-only padding */
   padding-inline: var(--spectrum-button-primary-textonly-padding-left-adjusted) var(--spectrum-button-primary-textonly-padding-right-adjusted);
@@ -78,41 +109,6 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Button--sizeS {
-  @remapvars {
-    find: /--spectrum-button(.*)-s-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
-
-  /* Fixup alignment of text on small */
-  --spectrum-button-padding-y: calc(var(--spectrum-button-primary-text-padding-top) - 2px);
-}
-
-.spectrum-Button--sizeM {
-  @remapvars {
-    find: /--spectrum-button(.*)-m-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
-}
-
-.spectrum-Button--sizeL {
-  @remapvars {
-    find: /--spectrum-button(.*)-l-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
-}
-
-.spectrum-Button--sizeXL {
-  @remapvars {
-    find: /--spectrum-button(.*)-xl-/;
-    filter: color;
-    replace: --spectrum-button$1-;
-  }
-}
-
 a.spectrum-Button {
   @inherit: %spectrum-AnchorButton;
 }
@@ -121,4 +117,14 @@ a.spectrum-Button {
   @inherit: %spectrum-ButtonLabel;
 
   line-height: var(--spectrum-button-primary-text-line-height);
+}
+
+.spectrum-LogicButton,
+.spectrum-Button {
+  &:focus-ring,
+  &.is-focused {
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-button-primary-focus-ring-size-key-focus) var(--spectrum-button-primary-m-focus-ring-color-key-focus);
+    }
+  }
 }

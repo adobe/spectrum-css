@@ -10,12 +10,34 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
+@import "../vars/css/components/spectrum-fieldlabel.css";
 
-:root {
-  --spectrum-tableform-border-spacing: 0 var(--spectrum-global-dimension-size-300);
-  --spectrum-tableform-margin: calc(var(--spectrum-global-dimension-size-250) * -1) 0;
-  --spectrum-fieldlabel-margin: var(--spectrum-global-dimension-size-100);
+.spectrum-FieldLabel--sizeS {
+  @remapvars {
+    find: --spectrum-fieldlabel-s-;
+    replace: --spectrum-fieldlabel-;
+  }
+}
+
+.spectrum-FieldLabel--sizeM {
+  @remapvars {
+    find: --spectrum-fieldlabel-m-;
+    replace: --spectrum-fieldlabel-;
+  }
+}
+
+.spectrum-FieldLabel--sizeL {
+  @remapvars {
+    find: --spectrum-fieldlabel-l-;
+    replace: --spectrum-fieldlabel-;
+  }
+}
+
+.spectrum-FieldLabel--sizeXL {
+  @remapvars {
+    find: --spectrum-fieldlabel-xl-;
+    replace: --spectrum-fieldlabel-;
+  }
 }
 
 .spectrum-FieldLabel {
@@ -44,11 +66,11 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel--left {
   display: inline-block;
-  padding-block: var(--spectrum-fieldlabel-side-padding-top) 0;
-  padding-inline: 0 var(--spectrum-fieldlabel-side-padding-x);
+  padding-block: var(--spectrum-fieldlabel-side-m-padding-top) 0;
+  padding-inline: 0 var(--spectrum-fieldlabel-side-m-padding-right);
 
   & .spectrum-FieldLabel-requiredIcon {
-    margin-block: var(--spectrum-fieldlabel-side-asterisk-margin-y) 0;
+    margin-block: var(--spectrum-fieldlabel-side-m-asterisk-margin-y) 0;
     margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
   }
 }
@@ -56,11 +78,16 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel--right {
   display: inline-block;
   text-align: end;
-  padding-block: var(--spectrum-fieldlabel-side-padding-top) 0;
-  padding-inline: 0 var(--spectrum-fieldlabel-side-padding-x);
+  padding-block: var(--spectrum-fieldlabel-side-m-padding-top) 0;
+  /* todo: correct missing DNA variable */
+  padding-inline: 0 var(--spectrum-fieldlabel-side-m-padding-right);
 }
 
 .spectrum-Form {
+  --spectrum-tableform-border-spacing: 0 var(--spectrum-global-dimension-size-300);
+  --spectrum-tableform-margin: calc(var(--spectrum-global-dimension-size-250) * -1) 0;
+  --spectrum-tableform-labelsabove-item-gap: var(--spectrum-global-dimension-size-100);
+
   display: table;
   border-collapse: separate;
   border-spacing: var(--spectrum-tableform-border-spacing);
@@ -90,7 +117,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
 
     & + .spectrum-Form-item {
-      margin-block-start: var(--spectrum-fieldlabel-margin);
+      margin-block-start: var(--spectrum-tableform-labelsabove-item-gap);
     }
   }
 }

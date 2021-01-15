@@ -23,7 +23,7 @@
   --spectrum-coachmark-title-text-line-height: var(--spectrum-alias-heading-text-line-height);
   --spectrum-coachmark-content-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-coachmark-content-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-coachmark-content-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-coachmark-content-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-coachmark-step-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-coachmark-step-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-coachmark-step-text-line-height: var(--spectrum-alias-body-text-line-height);
@@ -84,7 +84,7 @@
   --spectrum-coachmark-quiet-title-text-line-height: var(--spectrum-alias-heading-text-line-height);
   --spectrum-coachmark-quiet-content-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-coachmark-quiet-content-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-coachmark-quiet-content-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-coachmark-quiet-content-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-coachmark-quiet-step-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-coachmark-quiet-step-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-coachmark-quiet-step-text-line-height: var(--spectrum-alias-body-text-line-height);

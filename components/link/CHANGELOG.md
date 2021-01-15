@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0-beta.0"></a>
+# 3.1.0-beta.0
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.1-beta.1...@spectrum-css/link@3.1.0-beta.0)
+
+### ✨ Features
+
+* implement t-shirt sizing for Link, closes [#1066](https://github.com/adobe/spectrum-css/issues/1066) ([d8be754](https://github.com/adobe/spectrum-css/commit/d8be754))
+
+
+### 🐛 Bug fixes
+
+* make Link build again ([19513a3](https://github.com/adobe/spectrum-css/commit/19513a3))
+
+
+
+
+
 <a name="3.0.1-beta.1"></a>
 ## 3.0.1-beta.1
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.1-beta.0...@spectrum-css/link@3.0.1-beta.1)

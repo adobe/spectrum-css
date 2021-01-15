@@ -10,10 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../commons/index.css';
 @import '../overlay/index.css';
 
-:root {
+.spectrum-Popover {
   --spectrum-popover-target-offset: 13px;
   --spectrum-popover-dialog-padding: 30px 29px;
   --spectrum-popover-dialog-min-width: 270px;

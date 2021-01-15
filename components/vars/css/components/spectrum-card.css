@@ -8,6 +8,7 @@
   --spectrum-card-coverphoto-border-color: var(--spectrum-global-color-gray-200);
   --spectrum-card-description-text-color: var(--spectrum-global-color-gray-700);
   --spectrum-card-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-card-body-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-card-min-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-card-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-card-coverphoto-height: var(--spectrum-global-dimension-size-1700);
@@ -34,6 +35,7 @@
   --spectrum-card-quiet-border-color-selected: var(--spectrum-global-color-blue-500);
   --spectrum-card-quiet-title-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-card-quiet-subtitle-text-color: var(--spectrum-global-color-gray-700);
+  --spectrum-card-quiet-body-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-card-quiet-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-card-quiet-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-card-quiet-min-size: var(--spectrum-global-dimension-size-1700);
@@ -42,6 +44,7 @@
   --spectrum-card-quiet-body-margin-top: var(--spectrum-global-dimension-size-175);
   --spectrum-card-quiet-body-header-height: var(--spectrum-global-dimension-size-225);
   --spectrum-card-quiet-body-header-margin-top: var(--spectrum-global-dimension-size-175);
+  --spectrum-card-quiet-small-body-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-card-quiet-small-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-card-quiet-small-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-card-quiet-small-body-header-height: var(--spectrum-global-dimension-size-150);

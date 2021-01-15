@@ -1,4 +1,4 @@
-:root {
+.spectrum-ColorHandle {
   /* redefine this var so it can be used in skin.css */
   --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-static-size-25));
   --spectrum-colorhandle-checkerboard-size: var(--spectrum-global-dimension-static-size-100);
@@ -36,7 +36,7 @@
 }
 
 @media (forced-colors: active) {
-  :root {
+  .spectrum-ColorHandle {
     --spectrum-colorhandle-inner-border-color-disabled : GrayText;
     --spectrum-colorhandle-fill-color-disabled: Canvas;
     --spectrum-colorhandle-inner-border-color: CanvasText;

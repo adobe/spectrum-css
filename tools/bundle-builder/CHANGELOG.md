@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@2.0.2-beta.0...@spectrum-css/bundle-builder@3.0.0-beta.0)
+
+### ✨ Features
+
+* disable legacy build in output ([f1ef983](https://github.com/adobe/spectrum-css/commit/f1ef983))
+* error and warning reporting for variable use ([0460d39](https://github.com/adobe/spectrum-css/commit/0460d39))
+* support FORCE=true environment variable to allow broken components ([f725a17](https://github.com/adobe/spectrum-css/commit/f725a17))
+
+
+### 🐛 Bug fixes
+
+* correct usage of ActionButton in site templates ([be0c83a](https://github.com/adobe/spectrum-css/commit/be0c83a))
+
+
+### 🛑 BREAKING CHANGES
+
+* this completely removes legacy build artifacts and IE 11 support
+
+
+
+
+
 <a name="2.0.2-beta.0"></a>
 ## 2.0.2-beta.0
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@2.0.1...@spectrum-css/bundle-builder@2.0.2-beta.0)

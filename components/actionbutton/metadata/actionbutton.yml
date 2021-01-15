@@ -9,7 +9,7 @@ sections:
   - name: Migration Guide
     description: |
       ### T-shirt sizing
-      Action Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ActionButton--size*` class.
+      Action Button now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-ActionButton--size*` class.
 
       ### Action Button is now a separate component
       Action Button has been moved to the [Action Button](actionbutton.html) component.
@@ -18,7 +18,7 @@ sections:
 
       Previously, all Action Buttons used `.spectrum-Icon--sizeS`. This has changed:
 
-      | Action Button Class              | Workflow Icon Class               |
+      | Action button classname          | Workflow icon classname           |
       | -------------------------------- | --------------------------------- |
       | `.spectrum-ActionButton--sizeS`  | `.spectrum-Icon--sizeS`           |
       | `.spectrum-ActionButton--sizeM`  | `.spectrum-Icon--sizeM`           |
@@ -29,7 +29,7 @@ sections:
 
       Hold icon classnames must be set as follows:
 
-      | Action Button Class              | Hold Icon Class                      |
+      | Action button classname          | Hold icon classname                  |
       | -------------------------------- | ------------------------------------ |
       | `.spectrum-ActionButton--sizeS`  | `.spectrum-UIIcon-CornerTriangle75`  |
       | `.spectrum-ActionButton--sizeM`  | `.spectrum-UIIcon-CornerTriangle100` |
@@ -44,7 +44,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">S</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeS">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -73,7 +73,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">M (default)</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -103,7 +103,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">L</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeL">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -133,7 +133,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">XL</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeXL">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -168,7 +168,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -197,7 +197,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -226,7 +226,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -255,7 +255,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -291,7 +291,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -320,7 +320,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -349,7 +349,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -378,7 +378,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -414,7 +414,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -443,7 +443,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -472,7 +472,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -501,7 +501,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -536,7 +536,7 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Default</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -565,7 +565,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected">
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -594,7 +594,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>
@@ -623,7 +623,7 @@ examples:
           </button>
         </div>
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--XS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
 
           <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected" disabled>
             <span class="spectrum-ActionButton-label">Edit</span>

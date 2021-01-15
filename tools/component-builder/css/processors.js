@@ -295,10 +295,6 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
     require('postcss-logical')(),
     require('./plugins/postcss-transform-logical')(),
     require('postcss-dir-pseudo-class')(),
-    require('postcss-custom-properties')({
-      noValueNotifications: 'error',
-      warnings: !keepVars
-    }),
     require('./plugins/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
     keepVars ? require('./plugins/postcss-custom-properties-mapping') : null,
@@ -317,6 +313,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
     require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
     require('postcss-dropunusedvars'),
     require('postcss-dropdupedvars'),
+    require('postcss-droproot'),
     require('postcss-focus-ring'),
     secondNotNested ? require('./plugins/postcss-notnested')() : null, // Second one to catch all stray &
     require('postcss-discard-empty'),

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@2.1.0...@spectrum-css/commons@3.0.0)
+
+### ✨ Features
+
+* fixup padding ([612dd0c](https://github.com/adobe/spectrum-css/commit/612dd0c))
+* implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
+
+
+### 🛑 BREAKING CHANGES
+
+* .spectrum-ActionButton is no longer part of the button component, use the actionbutton component
+
+
+
+
+
 <a name="2.1.0"></a>
 # 2.1.0
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@2.0.0...@spectrum-css/commons@2.1.0)

@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.6"></a>
+# 3.0.0-beta.6
+🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.5...@spectrum-css/button@3.0.0-beta.6)
+
+### ✨ Features
+
+* button t-shirt sizing ([643c1bf](https://github.com/adobe/spectrum-css/commit/643c1bf))
+* fixup padding ([612dd0c](https://github.com/adobe/spectrum-css/commit/612dd0c))
+* implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
+* remove FieldButton, fix Button ([44026f8](https://github.com/adobe/spectrum-css/commit/44026f8))
+* t-shirt sizing for Button, closes [#938](https://github.com/adobe/spectrum-css/issues/938) ([7d9b1d1](https://github.com/adobe/spectrum-css/commit/7d9b1d1))
+
+
+### 🐛 Bug fixes
+
+* add back missing Button focus-ring ([bfe3692](https://github.com/adobe/spectrum-css/commit/bfe3692))
+* correct height of small Button ([2221e0a](https://github.com/adobe/spectrum-css/commit/2221e0a))
+* missing token used by SplitButton ([0828cb1](https://github.com/adobe/spectrum-css/commit/0828cb1))
+* override Button font-weight while we wait for it to be fixed in DNA ([7ffd05a](https://github.com/adobe/spectrum-css/commit/7ffd05a))
+* remove Button font-weight hack ([5261e40](https://github.com/adobe/spectrum-css/commit/5261e40))
+* unbreak the build for SplitButton ([7c98dd5](https://github.com/adobe/spectrum-css/commit/7c98dd5))
+* update main, resolved conflicts ([d7880a2](https://github.com/adobe/spectrum-css/commit/d7880a2))
+
+
+### 🛑 BREAKING CHANGES
+
+* .spectrum-FieldButton has been removed, use .spectrum-ActionButton instead
+* t-shirt size must be added for button to work (i.e. .spectrum-Button--sizeM)
+* .spectrum-ActionButton is no longer part of the button component, use the actionbutton component
+
+
+
+
+
 <a name="3.0.0-beta.5"></a>
 # 3.0.0-beta.5
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.4...@spectrum-css/button@3.0.0-beta.5)
