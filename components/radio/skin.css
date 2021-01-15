@@ -32,6 +32,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Radio-button {
   &:before {
+    forced-color-adjust: none;
     background-color: var(--spectrum-radio-m-circle-background-color);
     border-color: var(--spectrum-radio-m-circle-border-color);
   }
@@ -128,8 +129,7 @@ governing permissions and limitations under the License.
     .spectrum-Radio-input + .spectrum-Radio-button {
       &:before {
         border-color: var(
-          --spectrum-radio-m-emphasized-circle-border-color-error-down
-        );
+          --spectrum-radio-m-emphasized-text-color-error-hover        );
       }
     }
     .spectrum-Radio-label {
@@ -162,6 +162,7 @@ governing permissions and limitations under the License.
   }
 
   &:disabled ~ .spectrum-Radio-label {
+    forced-color-adjust: none;
     color: var(--spectrum-radio-m-emphasized-text-color-disabled);
   }
 }
@@ -194,31 +195,44 @@ governing permissions and limitations under the License.
   .spectrum-Radio-input {
     &:focus-ring + .spectrum-Radio-button {
       forced-color-adjust: none;
-      outline-color: var(--spectrum-radio-focus-ring-color-key-focus);
+      outline-color: var(--spectrum-radio-m-focus-ring-color-key-focus);
       outline-style: auto;
-      outline-offset: var(--spectrum-radio-focus-ring-gap-key-focus);
-      outline-width: var(--spectrum-radio-focus-ring-size-key-focus);    }
+      outline-offset: var(--spectrum-radio-m-focus-ring-gap-key-focus);
+      outline-width: var(--spectrum-radio-m-focus-ring-size-key-focus);    }
   }
-  :root {
-    --spectrum-radio-emphasized-circle-background-color : var(--spectrum-alias-background-color-transparent);
-    --spectrum-radio-emphasized-circle-background-color-disabled : var(--spectrum-alias-background-color-transparent);
-    --spectrum-radio-emphasized-circle-border-color-disabled : GrayText;
-    --spectrum-radio-text-color-disabled : GrayText;
-    --spectrum-radio-circle-border-color-key-focus: FieldText;
-    --spectrum-radio-emphasized-circle-border-color: FieldText;
-    --spectrum-radio-quiet-circle-border-color: FieldText; 
-    --spectrum-radio-circle-border-color-selected-hover : Highlight;
-    --spectrum-radio-emphasized-circle-border-color-selected-hover : Highlight;
-    --spectrum-radio-quiet-circle-border-color-selected-hover : Highlight;
-    --spectrum-radio-emphasized-circle-border-color-selected: Highlight; 
-    --spectrum-radio-quiet-circle-border-color-selected: Highlight;
-    --spectrum-radio-checkmark-color: HighlightText;
-    --spectrum-radio-focus-ring-color-key-focus: Highlight;
-    --spectrum-radio-focus-ring-gap-key-focus: var(--spectrum-global-dimension-static-size-25);
-    --spectrum-radio-focus-ring-size-key-focus: var(--spectrum-global-dimension-static-size-40);
-    --spectrum-radio-emphasized-circle-border-color-error: FieldText;
-    --spectrum-radio-emphasized-circle-border-color-error-hover: FieldText;
-    --spectrum-radio-emphasized-circle-border-color-error-selected: FieldText;
-    --spectrum-radio-text-color-error: FieldText;
+  .spectrum-Radio {
+    --spectrum-radio-m-checkmark-color: HighlightText;
+    --spectrum-radio-m-circle-background-color: ButtonFace;
+    --spectrum-radio-m-circle-border-color: ButtonText;
+    --spectrum-radio-m-circle-border-color-hover: Highlight;
+    --spectrum-radio-m-circle-border-color-key-focus: Highlight;
+    --spectrum-radio-m-circle-border-color-selected: Highlight;
+    --spectrum-radio-m-circle-border-color-selected-down: Highlight;
+    --spectrum-radio-m-circle-border-color-selected-hover : Highlight;
+    --spectrum-radio-m-emphasized-circle-background-color : var(--spectrum-alias-background-color-transparent);
+    --spectrum-radio-m-emphasized-circle-background-color-disabled : var(--spectrum-alias-background-color-transparent);
+    --spectrum-radio-m-emphasized-circle-border-color-disabled : GrayText;
+    --spectrum-radio-m-emphasized-circle-border-color-error: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-error-hover: FieldText;
+    --spectrum-radio-m-emphasized-circle-border-color-error-selected: FieldText;
+    --spectrum-radio-m-emphasized-circle-border-color-error: FieldText;
+    --spectrum-radio-m-emphasized-circle-border-color-selected-down: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-selected-hover: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-selected: Highlight; 
+    --spectrum-radio-m-emphasized-circle-border-color: FieldText;
+    --spectrum-radio-m-emphasized-text-color-disabled: GrayText;
+    --spectrum-radio-m-emphasized-text-color-error: Highlight;
+    --spectrum-radio-m-emphasized-text-color-error-down: Highlight;
+    --spectrum-radio-m-emphasized-text-color-error-hover: Highlight;  
+    --spectrum-radio-m-focus-ring-color-key-focus: FieldText;
+    --spectrum-radio-m-quiet-circle-border-color-selected-hover : Highlight;
+    --spectrum-radio-m-quiet-circle-border-color-selected: Highlight;
+    --spectrum-radio-m-quiet-circle-border-color: FieldText; 
+    --spectrum-radio-m-text-color: FieldText;
+    --spectrum-radio-m-text-color-disabled : GrayText;
+    --spectrum-radio-m-text-color-error: FieldText;
+    --spectrum-radio-m-text-color-hover: Highlight;
   }        
 }
+
