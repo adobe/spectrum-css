@@ -17,3 +17,12 @@ governing permissions and limitations under the License.
     opacity: var(--spectrum-avatar-size-100-opacity-disabled);
   }
 }
+@media (forced-colors: active) {
+  .spectrum-Avatar {
+    &.is-disabled {
+      forced-color-adjust: none;
+      border: 2px solid GrayText;
+    }
+  }
+}
+
