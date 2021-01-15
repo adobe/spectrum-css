@@ -162,7 +162,6 @@ governing permissions and limitations under the License.
   }
 
   &:disabled ~ .spectrum-Radio-label {
-    forced-color-adjust: none;
     color: var(--spectrum-radio-m-emphasized-text-color-disabled);
   }
 }
@@ -177,6 +176,7 @@ governing permissions and limitations under the License.
         border-color: var(--spectrum-radio-m-circle-border-color-key-focus);
       }
       &:after {
+        forced-color-adjust: none;
         box-shadow: 0 0 0 var(--spectrum-radio-m-focus-ring-size-key-focus)
           var(--spectrum-radio-m-focus-ring-color-key-focus);
       }
@@ -192,14 +192,6 @@ governing permissions and limitations under the License.
 }
 
 @media (forced-colors: active) {
-  .spectrum-Radio-input {
-    &:focus-ring + .spectrum-Radio-button {
-      forced-color-adjust: none;
-      outline-color: var(--spectrum-radio-m-focus-ring-color-key-focus);
-      outline-style: auto;
-      outline-offset: var(--spectrum-radio-m-focus-ring-gap-key-focus);
-      outline-width: var(--spectrum-radio-m-focus-ring-size-key-focus);    }
-  }
   .spectrum-Radio {
     --spectrum-radio-m-checkmark-color: HighlightText;
     --spectrum-radio-m-circle-background-color: ButtonFace;
@@ -213,9 +205,9 @@ governing permissions and limitations under the License.
     --spectrum-radio-m-emphasized-circle-background-color-disabled : var(--spectrum-alias-background-color-transparent);
     --spectrum-radio-m-emphasized-circle-border-color-disabled : GrayText;
     --spectrum-radio-m-emphasized-circle-border-color-error: Highlight;
-    --spectrum-radio-m-emphasized-circle-border-color-error-hover: FieldText;
-    --spectrum-radio-m-emphasized-circle-border-color-error-selected: FieldText;
-    --spectrum-radio-m-emphasized-circle-border-color-error: FieldText;
+    --spectrum-radio-m-emphasized-circle-border-color-error-hover: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-error-selected: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-error: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected-down: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected-hover: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus: Highlight;
