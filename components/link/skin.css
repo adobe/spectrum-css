@@ -11,18 +11,18 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Link {
-  color: var(--spectrum-link-primary-text-color);
+  color: var(--spectrum-link-primary-m-text-color);
 
   &:hover {
-    color: var(--spectrum-link-primary-text-color-hover);
+    color: var(--spectrum-link-primary-m-text-color-hover);
   }
 
   &:active {
-    color: var(--spectrum-link-primary-text-color-down);
+    color: var(--spectrum-link-primary-m-text-color-down);
   }
 
   &:focus-ring {
-    color: var(--spectrum-link-primary-text-color-key-focus);
+    color: var(--spectrum-link-primary-m-text-color-key-focus);
   }
 }
 
@@ -43,17 +43,17 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Link--overBackground {
-  color: var(--spectrum-link-over-background-text-color);
+  color: var(--spectrum-link-over-background-m-text-color);
 
   &:hover {
-    color: var(--spectrum-link-over-background-text-color-hover);
+    color: var(--spectrum-link-over-background-m-text-color-hover);
   }
 
   &:active {
-    color: var(--spectrum-link-over-background-text-color-down);
+    color: var(--spectrum-link-over-background-m-text-color-down);
   }
 
   &:focus {
-    color: var(--spectrum-link-over-background-text-color-key-focus);
+    color: var(--spectrum-link-over-background-m-text-color-key-focus);
   }
 }
