@@ -15,18 +15,6 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-checkbox.css";
 
 .spectrum-Checkbox {
-  @remapvars {
-    find: /--spectrum-checkbox-m(.*)/;
-    filter: color;
-    replace: --spectrum-checkbox$1;
-  }
-
-  /* Hardcoded for wrapping study.
-  Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-2984 */
-  --spectrum-checkbox-label-margin-top: var(--spectrum-global-dimension-size-75);
-}
-
-.spectrum-Checkbox {
   display: inline-flex;
   align-items: flex-start;
 
@@ -89,6 +77,38 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-Checkbox--sizeS {
+  @remapvars {
+    find: /--spectrum-checkbox-s(.*)/;
+    filter: color;
+    replace: --spectrum-checkbox$1;
+  }
+}
+
+.spectrum-Checkbox--sizeM {
+  @remapvars {
+    find: /--spectrum-checkbox-m(.*)/;
+    filter: color;
+    replace: --spectrum-checkbox$1;
+  }
+}
+
+.spectrum-Checkbox--sizeL {
+  @remapvars {
+    find: /--spectrum-checkbox-l(.*)/;
+    filter: color;
+    replace: --spectrum-checkbox$1;
+  }
+}
+
+.spectrum-Checkbox--sizeXL {
+  @remapvars {
+    find: /--spectrum-checkbox-xl(.*)/;
+    filter: color;
+    replace: --spectrum-checkbox$1;
+  }
+}
+
 .spectrum-Checkbox.is-indeterminate {
   .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
@@ -112,7 +132,7 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-label {
   text-align: start;
   margin-inline-start: var(--spectrum-checkbox-text-gap);
-  margin-block-start: var(--spectrum-checkbox-label-margin-top);
+  margin-block-start: var(--spectrum-checkbox-text-padding-top);
 
   font-size: var(--spectrum-checkbox-text-size);
   font-weight: var(--spectrum-checkbox-text-font-weight);
@@ -184,13 +204,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Checkbox-checkmark {
-  margin-block-start: calc(var(--spectrum-alias-ui-icon-checkmark-size-75) / -2);
-  margin-inline-start: calc(var(--spectrum-alias-ui-icon-checkmark-size-75) / -2);
+  margin-block-start: calc(var(--spectrum-checkbox-checkmark-size) / -2);
+  margin-inline-start: calc(var(--spectrum-checkbox-checkmark-size) / -2);
 }
 
 .spectrum-Checkbox-partialCheckmark {
-  margin-block-start: calc(var(--spectrum-alias-ui-icon-dash-size-75) / -2);
-  margin-inline-start: calc(var(--spectrum-alias-ui-icon-dash-size-75) / -2);
+  margin-block-start: calc(var(--spectrum-checkbox-checkmark-size) / -2);
+  margin-inline-start: calc(var(--spectrum-checkbox-checkmark-size) / -2);
 }
 
 .spectrum-Checkbox-partialCheckmark {
