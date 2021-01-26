@@ -12,13 +12,6 @@ governing permissions and limitations under the License.
 
 @import "../vars/css/components/spectrum-link.css";
 
-.spectrum-Link {
-  @remapvars {
-    find: /--spectrum-link-(.*?)-m-/;
-    replace: --spectrum-link-$1-;
-  }
-}
-
 .spectrum-Link--sizeS {
   @remapvars {
     find: /--spectrum-link-(.*?)-s-/;
