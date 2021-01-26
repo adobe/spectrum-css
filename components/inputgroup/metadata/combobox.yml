@@ -44,7 +44,7 @@ examples:
         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button class="spectrum-Picker spectrum-InputGroup-button" tabindex="-1" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-InputGroup-button" tabindex="-1" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -56,7 +56,7 @@ examples:
         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button class="spectrum-Picker spectrum-InputGroup-button is-open" tabindex="-1" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-InputGroup-button is-open" tabindex="-1" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -87,7 +87,7 @@ examples:
         <div class="spectrum-Textfield spectrum-InputGroup-textfield is-disabled">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input" disabled>
         </div>
-        <button class="spectrum-Picker spectrum-InputGroup-button" aria-haspopup="true" disabled>
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-InputGroup-button" aria-haspopup="true" disabled>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -102,7 +102,7 @@ examples:
           </svg>
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button class="spectrum-Picker spectrum-InputGroup-button is-invalid" tabindex="-1" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-InputGroup-button is-invalid" tabindex="-1" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -116,7 +116,7 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button class="spectrum-Picker spectrum-Picker--quiet spectrum-InputGroup-button" tabindex="-1" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-InputGroup-button" tabindex="-1" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -128,7 +128,7 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button class="spectrum-Picker spectrum-Picker--quiet spectrum-InputGroup-button is-open" tabindex="-1" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-InputGroup-button is-open" tabindex="-1" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -159,7 +159,7 @@ examples:
         <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-textfield is-disabled">
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input" disabled>
         </div>
-        <button class="spectrum-Picker spectrum-Picker--quiet spectrum-InputGroup-button" aria-haspopup="true" disabled>
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-InputGroup-button" aria-haspopup="true" disabled>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -174,7 +174,7 @@ examples:
           </svg>
           <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
         </div>
-        <button class="spectrum-Picker spectrum-Picker--quiet spectrum-InputGroup-button is-invalid" tabindex="-1" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet spectrum-InputGroup-button is-invalid" tabindex="-1" aria-haspopup="true">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>

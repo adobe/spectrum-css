@@ -14,12 +14,6 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-picker.css";
 
 .spectrum-Picker {
-  @remapvars {
-    find: /--spectrum-picker-m(.*)/;
-    filter: color;
-    replace: --spectrum-picker$1;
-  }
-
   /* todo: remove when fixed in DNA */
   --spectrum-picker-min-width: var(--spectrum-global-dimension-size-400);
 
@@ -74,6 +68,38 @@ governing permissions and limitations under the License.
 
   .spectrum-Picker-label + .spectrum-Picker-icon {
     margin-inline-start: var(--spectrum-picker-icon-gap);
+  }
+}
+
+.spectrum-Picker--sizeS {
+  @remapvars {
+    find: /--spectrum-picker-s(.*)/;
+    filter: color;
+    replace: --spectrum-picker$1;
+  }
+}
+
+.spectrum-Picker--sizeM {
+  @remapvars {
+    find: /--spectrum-picker-m(.*)/;
+    filter: color;
+    replace: --spectrum-picker$1;
+  }
+}
+
+.spectrum-Picker--sizeL {
+  @remapvars {
+    find: /--spectrum-picker-l(.*)/;
+    filter: color;
+    replace: --spectrum-picker$1;
+  }
+}
+
+.spectrum-Picker--sizeXL {
+  @remapvars {
+    find: /--spectrum-picker-xl(.*)/;
+    filter: color;
+    replace: --spectrum-picker$1;
   }
 }
 
