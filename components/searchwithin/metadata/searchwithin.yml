@@ -17,7 +17,7 @@ examples:
     markup: |
       <h4>Default</h4>
       <form class="spectrum-SearchWithin">
-        <button type="button" class="spectrum-Picker spectrum-SearchWithin-picker" aria-haspopup="true">
+        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-SearchWithin-picker" aria-haspopup="true">
           <span class="spectrum-Picker-label">All</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -35,7 +35,7 @@ examples:
 
       <h4>Open</h4>
       <form class="spectrum-SearchWithin" style="margin-bottom: 180px;">
-        <button type="button" class="spectrum-Picker spectrum-SearchWithin-picker is-open" aria-haspopup="true">
+        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-SearchWithin-picker is-open" aria-haspopup="true">
           <span class="spectrum-Picker-label">All</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -70,7 +70,7 @@ examples:
 
       <h4>Default (Changed Selection)</h4>
       <form class="spectrum-SearchWithin">
-        <button type="button" class="spectrum-Picker spectrum-SearchWithin-picker" aria-haspopup="true">
+        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-SearchWithin-picker" aria-haspopup="true">
           <span class="spectrum-Picker-label">Campaigns</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -88,7 +88,7 @@ examples:
 
       <h4>Disabled</h4>
       <form class="spectrum-SearchWithin">
-        <button type="button" class="spectrum-Picker spectrum-SearchWithin-picker" disabled aria-haspopup="true">
+        <button type="button" class="spectrum-Picker spectrum-Picker--sizeM spectrum-SearchWithin-picker" disabled aria-haspopup="true">
           <span class="spectrum-Picker-label">All</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
