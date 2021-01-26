@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@adobe/spectrum-css-workflow-icons/-/spectrum-css-workflow-icons-1.1.0.tgz#79e97f86130e1a30b84c8524cebff93a600dbb8a"
   integrity sha512-07ec4Pfr+W5II4a36nto3jShBZTbpe39lB977ULYN436UTQsnAdYupezBwFd7eEvOMUawgKfqnxyR2oPxp1SMQ==
 
-"@adobe/spectrum-tokens@6.0.0-beta.28":
-  version "6.0.0-beta.28"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-6.0.0-beta.28.tgz#6109debad81029be84ba326aae21a00da8280aa4"
-  integrity sha512-oOXC8URGMrrADADXtLUsdR6HJ5v7VLindirnBZAwthMSsgfYMgh1v0qHiW6caUBPM7bU4ZQyYjWMPpJF+wVtLA==
+"@adobe/spectrum-tokens@^6.0.6":
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-6.0.6.tgz#1ebb89944444a4961cefc73fd1e41071e52297a0"
+  integrity sha512-7xXhi0040TgAnXX86hj1wyNcNa8y+n5mhqw9CfGbtadeHLxEZwc7ziPsoHJ0TITW9G+pxBrCvCHOR21lVz1zTw==
 
 "@babel/code-frame@^7.0.0":
   version "7.5.5"
@@ -2034,7 +2034,7 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.10.0.tgz#a17b3a8ea811060e74d47d306122400ad4497ae2"
   integrity sha512-3YDiu347mtVtjpyV3u5kVqQLP242c06zwDOgpeRnybmXlYYsLbtTrUBUm8i8srONt+FWobl5aibnU1030PeeuA==
 
-axios@0.19.0, axios@>=0.21.1:
+axios@0.19.0, axios@^0.21.1:
   version "0.21.1"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
   integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==

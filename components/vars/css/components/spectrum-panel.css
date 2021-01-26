@@ -11,6 +11,7 @@
   --spectrum-panel-header-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-panel-content-padding-bottom: var(--spectrum-global-dimension-size-300);
   --spectrum-panel-l-background-color: var(--spectrum-alias-toolbar-background-color);
+  --spectrum-panel-l-divider-color: var(--spectrum-alias-appframe-border-color);
   --spectrum-panel-l-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-l-header-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-l-title-margin-right: var(--spectrum-global-dimension-size-200);
@@ -28,6 +29,7 @@
   --spectrum-panel-l-collapsible-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
   --spectrum-panel-l-collapsible-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-panel-l-collapsible-background-color: var(--spectrum-alias-toolbar-background-color);
+  --spectrum-panel-l-collapsible-divider-color: var(--spectrum-alias-appframe-border-color);
   --spectrum-panel-l-collapsible-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-l-collapsible-header-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-l-collapsible-title-margin-right: var(--spectrum-global-dimension-size-200);
@@ -43,6 +45,7 @@
   --spectrum-panel-l-collapsible-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-l-collapsible-width: var(--spectrum-global-dimension-static-size-3800);
   --spectrum-panel-s-background-color: var(--spectrum-alias-toolbar-background-color);
+  --spectrum-panel-s-divider-color: var(--spectrum-alias-appframe-border-color);
   --spectrum-panel-s-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-s-header-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-s-title-margin-right: var(--spectrum-global-dimension-size-200);
@@ -60,6 +63,7 @@
   --spectrum-panel-s-collapsible-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
   --spectrum-panel-s-collapsible-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-panel-s-collapsible-background-color: var(--spectrum-alias-toolbar-background-color);
+  --spectrum-panel-s-collapsible-divider-color: var(--spectrum-alias-appframe-border-color);
   --spectrum-panel-s-collapsible-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-s-collapsible-header-padding-bottom: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-s-collapsible-title-margin-right: var(--spectrum-global-dimension-size-200);
