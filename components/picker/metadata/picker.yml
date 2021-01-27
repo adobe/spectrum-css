@@ -31,8 +31,15 @@ sections:
       ### T-shirt sizing
       Picker now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Picker--size*` class.
       Using the classes `.spectrum-Picker .spectrum-Picker--sizeM` will get result in the previous default picker size.
-      Also, use the correct icon size for chevron icons.
-      `sizeS` uses `spectrum-css-icon-Chevron75`, `sizeM` uses `spectrum-css-icon-Chevron100`, `sizeL` uses `spectrum-css-icon-Chevron200`, `sizeXL` uses `spectrum-css-icon-Chevron300`.
+
+      Also, use the correct icon size for chevron icons:
+
+      | T-shirt Size              | Icon Size                      |
+      |---------------------------|--------------------------------|
+      | `spectrum-Picker--sizeS`  | `spectrum-css-icon-Chevron75`  |
+      | `spectrum-Picker--sizeM`  | `spectrum-css-icon-Chevron100` |
+      | `spectrum-Picker--sizeL`  | `spectrum-css-icon-Chevron200` |
+      | `spectrum-Picker--sizeXL` | `spectrum-css-icon-Chevron300` |
 examples:
   - id: picker
     name: Standard
