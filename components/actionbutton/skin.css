@@ -73,7 +73,6 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    /* forced-color-adjust: auto; */
     background-color: var(--spectrum-actionbutton-m-background-color-disabled);
     border-color: var(--spectrum-actionbutton-m-border-color-disabled);
     color: var(--spectrum-actionbutton-m-text-color-disabled);
