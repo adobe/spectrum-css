@@ -257,5 +257,24 @@ governing permissions and limitations under the License.
     --spectrum-checkbox-m-text-color-hover: FieldText;
     --spectrum-checkbox-m-text-color-key-focus: FieldText;
     --spectrum-checkbox-m-text-color: FieldText;
+    &.is-invalid {
+      .spectrum-Checkbox-box {
+        &:before {
+          border-color: var(--spectrum-checkbox-m-box-border-color);
+        }        
+      }
+      &.is-indeterminate .spectrum-Checkbox-box {
+          &:before {
+            border-color: var(--spectrum-checkbox-m-box-border-color-error);
+          }          
+        }
+      /* Extra-specific selectors added here to handle checked state */
+      .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box
+      {
+        &:before {
+          border-color: var(--spectrum-checkbox-m-box-border-color-error);
+        }
+      }
+    }
   }
 }
