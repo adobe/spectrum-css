@@ -193,38 +193,42 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-Radio {
-    --spectrum-radio-m-checkmark-color: HighlightText;
     --spectrum-radio-m-circle-background-color: ButtonFace;
-    --spectrum-radio-m-circle-border-color: ButtonText;
+    --spectrum-radio-m-circle-border-color-down: Highlight;
     --spectrum-radio-m-circle-border-color-hover: Highlight;
     --spectrum-radio-m-circle-border-color-key-focus: Highlight;
-    --spectrum-radio-m-circle-border-color-selected: Highlight;
     --spectrum-radio-m-circle-border-color-selected-down: Highlight;
     --spectrum-radio-m-circle-border-color-selected-hover : Highlight;
+    --spectrum-radio-m-circle-border-color-selected: Highlight;
+    --spectrum-radio-m-circle-border-color: ButtonText;
     --spectrum-radio-m-emphasized-circle-background-color : var(--spectrum-alias-background-color-transparent);
     --spectrum-radio-m-emphasized-circle-background-color-disabled : var(--spectrum-alias-background-color-transparent);
     --spectrum-radio-m-emphasized-circle-border-color-disabled : GrayText;
-    --spectrum-radio-m-emphasized-circle-border-color-error: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-error-hover: Highlight;
-    --spectrum-radio-m-emphasized-circle-border-color-error-selected: Highlight;
-    --spectrum-radio-m-emphasized-circle-border-color-error: Highlight;
+    --spectrum-radio-m-emphasized-circle-border-color-error: ButtonText;
     --spectrum-radio-m-emphasized-circle-border-color-selected-down: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected-hover: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus: Highlight;
     --spectrum-radio-m-emphasized-circle-border-color-selected: Highlight; 
-    --spectrum-radio-m-emphasized-circle-border-color: FieldText;
     --spectrum-radio-m-emphasized-text-color-disabled: GrayText;
-    --spectrum-radio-m-emphasized-text-color-error: Highlight;
-    --spectrum-radio-m-emphasized-text-color-error-down: Highlight;
-    --spectrum-radio-m-emphasized-text-color-error-hover: Highlight;  
-    --spectrum-radio-m-focus-ring-color-key-focus: FieldText;
-    --spectrum-radio-m-quiet-circle-border-color-selected-hover : Highlight;
-    --spectrum-radio-m-quiet-circle-border-color-selected: Highlight;
-    --spectrum-radio-m-quiet-circle-border-color: FieldText; 
-    --spectrum-radio-m-text-color: FieldText;
-    --spectrum-radio-m-text-color-disabled : GrayText;
-    --spectrum-radio-m-text-color-error: FieldText;
-    --spectrum-radio-m-text-color-hover: Highlight;
+    --spectrum-radio-m-emphasized-text-color-error-down: CanvasText;
+    --spectrum-radio-m-emphasized-text-color-error-hover: CanvasText;  
+    --spectrum-radio-m-emphasized-text-color-error: CanvasText;
+    --spectrum-radio-m-focus-ring-color-key-focus: CanvasText;
+    --spectrum-radio-m-text-color-down: CanvasText;
+    --spectrum-radio-m-text-color-hover: CanvasText;
+    --spectrum-radio-m-text-color: CanvasText;
+    &.is-invalid {
+      .spectrum-Radio-input {
+        &:checked + .spectrum-Radio-button {
+          &:before {
+            border-color: var(
+              --spectrum-radio-m-circle-border-color-selected
+            );
+          }
+        }
+      }
+    }
   }        
 }
 
