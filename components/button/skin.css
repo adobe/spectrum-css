@@ -325,7 +325,7 @@ governing permissions and limitations under the License.
     --spectrum-button-over-background-m-border-color-disabled: GrayText;
     --spectrum-button-over-background-m-border-color-down: Highlight;
     --spectrum-button-over-background-m-border-color-hover: Highlight;
-    --spectrum-button-over-background-m-border-color-key-focus: CanvasText;
+    --spectrum-button-over-background-m-border-color-key-focus: ButtonText;
     --spectrum-button-over-background-m-border-color: ButtonText;
     --spectrum-button-over-background-m-text-color-disabled: GrayText;
     --spectrum-button-over-background-m-text-color-down: ButtonText;
@@ -435,6 +435,7 @@ governing permissions and limitations under the License.
     --spectrum-button-quiet-warning-m-text-color: ButtonText;       
     --spectrum-button-secondary-m-background-color-disabled: ButtonFace;
     --spectrum-button-warning-m-background-color-disabled: ButtonFace;
+    --spectrum-button-primary-m-focus-ring-color-key-focus: ButtonText;
   }
   .spectrum-Button {
     forced-color-adjust:none;
