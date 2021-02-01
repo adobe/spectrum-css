@@ -1,6 +1,6 @@
 :root {
   --spectrum-search-quiet-l-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-quiet-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-quiet-l-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-quiet-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-quiet-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-quiet-l-background-color: var(--spectrum-alias-background-color-transparent);
@@ -157,7 +157,7 @@
   --spectrum-search-quiet-l-label-gap-y: 0;
   --spectrum-search-quiet-l-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-quiet-m-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-quiet-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-quiet-m-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-quiet-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-quiet-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-quiet-m-background-color: var(--spectrum-alias-background-color-transparent);
@@ -314,7 +314,7 @@
   --spectrum-search-quiet-m-label-gap-y: 0;
   --spectrum-search-quiet-m-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-quiet-s-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-quiet-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-quiet-s-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-quiet-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-quiet-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-quiet-s-background-color: var(--spectrum-alias-background-color-transparent);
@@ -471,7 +471,7 @@
   --spectrum-search-quiet-s-label-gap-y: 0;
   --spectrum-search-quiet-s-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-quiet-xl-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-quiet-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-quiet-xl-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-quiet-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-quiet-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-quiet-xl-background-color: var(--spectrum-alias-background-color-transparent);
@@ -628,7 +628,7 @@
   --spectrum-search-quiet-xl-label-gap-y: 0;
   --spectrum-search-quiet-xl-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-search-l-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-l-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-l-background-color: var(--spectrum-global-color-gray-50);
@@ -783,7 +783,7 @@
   --spectrum-search-l-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-search-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-search-m-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-m-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-m-background-color: var(--spectrum-global-color-gray-50);
@@ -938,7 +938,7 @@
   --spectrum-search-m-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-search-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-search-s-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-s-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-s-background-color: var(--spectrum-global-color-gray-50);
@@ -1093,7 +1093,7 @@
   --spectrum-search-s-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-search-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-search-xl-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-search-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
+  --spectrum-search-xl-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
   --spectrum-search-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-search-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-xl-background-color: var(--spectrum-global-color-gray-50);
