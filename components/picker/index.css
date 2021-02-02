@@ -14,20 +14,6 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-picker.css";
 
 .spectrum-Picker {
-  /* todo: remove when fixed in DNA */
-  --spectrum-picker-min-width: var(--spectrum-global-dimension-size-400);
-
-  /* Todo: fix in DNA, should have been zero */
-  --spectrum-picker-disabled-border-size: 0;
-
-  --spectrum-picker-popover-max-width: var(--spectrum-global-dimension-size-3000);
-  --spectrum-picker-width: var(--spectrum-global-dimension-size-2400);
-
-  /* todo: use real DNA var */
-  --spectrum-picker-border-size-increase-focus: 1px;
-}
-
-.spectrum-Picker {
   @inherit: %spectrum-BaseButton;
 
   display: flex;
@@ -101,6 +87,20 @@ governing permissions and limitations under the License.
     filter: color;
     replace: --spectrum-picker$1;
   }
+}
+
+.spectrum-Picker {
+  /* todo: remove when fixed in DNA */
+  --spectrum-picker-min-width: var(--spectrum-global-dimension-size-400);
+
+  /* Todo: fix in DNA, should have been zero */
+  --spectrum-picker-disabled-border-size: 0;
+
+  --spectrum-picker-popover-max-width: var(--spectrum-global-dimension-size-3000);
+  --spectrum-picker-width: var(--spectrum-global-dimension-size-2400);
+
+  /* todo: use real DNA var */
+  --spectrum-picker-border-size-increase-focus: 1px;
 }
 
 .spectrum-Picker--quiet {
