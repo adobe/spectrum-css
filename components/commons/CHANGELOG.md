@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.1"></a>
+## 3.0.1
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.0...@spectrum-css/commons@3.0.1)
+
+**Note:** Version bump only for package @spectrum-css/commons
+
+
+
+
+
 <a name="3.0.0"></a>
 # 3.0.0
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@2.1.0...@spectrum-css/commons@3.0.0)

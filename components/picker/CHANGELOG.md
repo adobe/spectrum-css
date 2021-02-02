@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0"></a>
+# 1.0.0
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.0-beta.3...@spectrum-css/picker@1.0.0)
+
+### ✨ Features
+
+* added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
+
+
+### 🐛 Bug fixes
+
+* correct icononly Picker width ([b165e11](https://github.com/adobe/spectrum-css/commit/b165e11))
+* updated icon sizes for picker examples ([ad054f6](https://github.com/adobe/spectrum-css/commit/ad054f6))
+
+
+
+
+
 <a name="1.0.0-beta.3"></a>
 # 1.0.0-beta.3
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.0-beta.2...@spectrum-css/picker@1.0.0-beta.3)

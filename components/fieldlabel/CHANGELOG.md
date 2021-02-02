@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.7...@spectrum-css/fieldlabel@3.0.0)
+
+### ✨ Features
+
+* added t-shirt sizes to checkbox ([f4c59bd](https://github.com/adobe/spectrum-css/commit/f4c59bd)), closes [#951](https://github.com/adobe/spectrum-css/issues/951)
+* added t-shirt sizes to picker ([35bf08f](https://github.com/adobe/spectrum-css/commit/35bf08f)), closes [#940](https://github.com/adobe/spectrum-css/issues/940)
+
+
+### 🛑 BREAKING CHANGES
+
+* a t-shirt size class is now required for checkbox.
+
+
+
+
+
 <a name="3.0.0-beta.7"></a>
 # 3.0.0-beta.7
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.6...@spectrum-css/fieldlabel@3.0.0-beta.7)

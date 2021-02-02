@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# 3.1.0
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.0-beta.0...@spectrum-css/link@3.1.0)
+
+### 🐛 Bug fixes
+
+* link shouldn't remap color variables, fixes [#1108](https://github.com/adobe/spectrum-css/issues/1108) ([#1110](https://github.com/adobe/spectrum-css/issues/1110)) ([52dc759](https://github.com/adobe/spectrum-css/commit/52dc759))
+
+
+
+
+
 <a name="3.1.0-beta.0"></a>
 # 3.1.0-beta.0
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.1-beta.1...@spectrum-css/link@3.1.0-beta.0)

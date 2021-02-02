@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.8"></a>
+## 2.0.8
+🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/label@2.0.8-beta.2...@spectrum-css/label@2.0.8)
+
+**Note:** Version bump only for package @spectrum-css/label
+
+
+
+
+
 <a name="2.0.8-beta.2"></a>
 ## 2.0.8-beta.2
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/label@2.0.8-beta.1...@spectrum-css/label@2.0.8-beta.2)
