@@ -6,7 +6,6 @@
     "build": "gulp build",
     "prepack": "gulp prePack",
     "postpublish": "gulp postPublish",
-    "publishpages": "gulp ghPages",
     "release": "gulp release"
   },
   "repository": {
