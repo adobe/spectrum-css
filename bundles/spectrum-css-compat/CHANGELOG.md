@@ -1,3 +1,92 @@
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2021-02-09 • 📑 [Documentation](https://opensource.adobe.com/spectrum-css/) • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@adobe/spectrum-css@2.18.0...@adobe/spectrum-css@3.0.0)
+
+### ➡️ Renamed/Moved Components
+
+* **actiongroup**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/actiongroup/CHANGELOG.md) split out from button group
+* **actionbutton** [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/actionbutton/CHANGELOG.md) split out from button
+* **divider** [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/divider/CHANGELOG.md) renamed from rule to divider
+* **picker** [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/picker/CHANGELOG.md) renamed from dropdown to picker
+* **progressbar** [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/progressbar/CHANGELOG.md) renamed from barloader to progressbar
+* **progresscircle** [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/progresscircle/CHANGELOG.md) renamed from circleloader to progresscircle
+* **switch**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/switch/CHANGELOG.md) renamed from toggle to switch
+* **thumbnail**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/thumbnail/CHANGELOG.md) split out from treeview as a subcomponent
+
+
+### 🆕 New Components
+
+* **colorarea**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dial/colorarea.md)
+* **colorhandle**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dial/colorhandle.md)
+* **colorloupe**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dial/colorloupe.md)
+* **colorslider**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dial/colorslider.md)
+* **colorwheel**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dial/colorwheel.md)
+* **dial**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dial/CHANGELOG.md)
+* **overlay**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/overlay/CHANGELOG.md)
+* **tray**:  [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/tray/CHANGELOG.md)
+
+
+### 🐛 Bug fixes
+
+* **link**: link shouldn't remap color variables. [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/link/CHANGELOG.md)
+
+### ✨ Features
+
+* **accordion**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/accordion/CHANGELOG.md)
+* **actionbar**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/actionbar/CHANGELOG.md)
+* **actionmenu**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/actionmenu/CHANGELOG.md)
+* **asset**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/asset/CHANGELOG.md)
+* **assetlist**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/assetlist/CHANGELOG.md)
+* **avatar**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/avatar/CHANGELOG.md)
+* **breadcrumb**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/breadcrumb/CHANGELOG.md)
+* **button**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/button/CHANGELOG.md)
+* **buttongroup**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/buttongroup/CHANGELOG.md)
+* **calendar**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/calendar/CHANGELOG.md)
+* **card**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/card/CHANGELOG.md)
+* **checkbox**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/checkbox/CHANGELOG.md)
+* **coachmark**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/coachmark/CHANGELOG.md)
+* **cyclebutton**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/cyclebutton/CHANGELOG.md)
+* **dialog**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dialog/CHANGELOG.md)
+* **dropindicator**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dropindicator/CHANGELOG.md)
+* **dropzone**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/dropzone/CHANGELOG.md)
+* **fieldgroup**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/fieldgroup/CHANGELOG.md)
+* **fieldlabel**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/fieldlabel/CHANGELOG.md)
+* **icon**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/icon/CHANGELOG.md)
+* **illustratedmessage**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/illustratedmessage/CHANGELOG.md)
+* **inputgroup**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/inputgroup/CHANGELOG.md)
+* **menu**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/menu/CHANGELOG.md)
+* **miller**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/miller/CHANGELOG.md)
+* **modal**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/modal/CHANGELOG.md)
+* **page**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/page/CHANGELOG.md)
+* **pagination**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/pagination/CHANGELOG.md)
+* **popover**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/popover/CHANGELOG.md)
+* **quickaction**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/quickaction/CHANGELOG.md)
+* **radio**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/radio/CHANGELOG.md)
+* **rating**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/rating/CHANGELOG.md)
+* **search**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/search/CHANGELOG.md)
+* **searchwithin**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/searchwithin/CHANGELOG.md)
+* **sidenav**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/sidenav/CHANGELOG.md)
+* **slider**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/slider/CHANGELOG.md)
+* **splitbutton**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/splitbutton/CHANGELOG.md)
+* **splitview**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/splitview/CHANGELOG.md)
+* **statuslight**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/statuslight/CHANGELOG.md)
+* **steplist**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/steplist/CHANGELOG.md)
+* **stepper**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/stepper/CHANGELOG.md)
+* **table**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/table/CHANGELOG.md)
+* **tabs**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/tabs/CHANGELOG.md)
+* **tags**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/tags/CHANGELOG.md)
+* **textfield**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/textfield/CHANGELOG.md)
+* **toast**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/toast/CHANGELOG.md)
+* **tooltip**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/tooltip/CHANGELOG.md)
+* **treeview**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/treeview/CHANGELOG.md)
+* **typography**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/typography/CHANGELOG.md)
+* **vars**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/vars/CHANGELOG.md)
+* **well**: [CHANGELOG](https://github.com/adobe/spectrum-css/blob/main/components/well/CHANGELOG.md)
+
+
+
+
+
 <a name="2.18.0"></a>
 # 2.18.0
 🗓 2020-03-06 • 📑 [Documentation](https://opensource.adobe.com/spectrum-css/2.18.0/docs/) • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@adobe/spectrum-css@2.17.0...@adobe/spectrum-css@2.18.0)
@@ -467,6 +556,3 @@
 * **underlay**: update [@spectrum-css/underlay](/components/underlay) from [2.0.0-alpha.5](/components/underlay/CHANGELOG.md#user-content-2.0.0-alpha.5) to [2.0.0](/components/underlay/CHANGELOG.md#user-content-2.0.0) ([63d7f4e](https://github.com/adobe/spectrum-css/commit/63d7f4e))
 * **vars**: update [@spectrum-css/vars](/components/vars) from [2.0.0-alpha.3](/components/vars/CHANGELOG.md#user-content-2.0.0-alpha.3) to [2.0.0](/components/vars/CHANGELOG.md#user-content-2.0.0) ([63d7f4e](https://github.com/adobe/spectrum-css/commit/63d7f4e))
 * **well**: update [@spectrum-css/well](/components/well) from [2.0.0-alpha.5](/components/well/CHANGELOG.md#user-content-2.0.0-alpha.5) to [2.0.0](/components/well/CHANGELOG.md#user-content-2.0.0) ([63d7f4e](https://github.com/adobe/spectrum-css/commit/63d7f4e))
-
-
-
