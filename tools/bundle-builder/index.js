@@ -216,3 +216,5 @@ exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
 exports.default = buildLite;
+
+exports.updateAndTagRelease = release.updateAndTagRelease;
