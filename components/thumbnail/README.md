@@ -1,5 +1,5 @@
-# @spectrum-css/tabs
-> The Spectrum CSS tabs component
+# @spectrum-css/thumbnail
+> The Spectrum CSS thumbnail component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
