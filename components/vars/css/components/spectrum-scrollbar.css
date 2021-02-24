@@ -9,8 +9,8 @@
   --spectrum-scrollbar-bar-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-scrollbar-track-width: var(--spectrum-global-dimension-size-50);
   --spectrum-scrollbar-track-border-radius: var(--spectrum-alias-border-radius-small);
-  --spectrum-scrollbar-quiet-bar-color-quiet: var(--spectrum-global-color-gray-400);
-  --spectrum-scrollbar-quiet-track-color-quiet: var(--spectrum-alias-background-color-transparent);
+  --spectrum-scrollbar-quiet-bar-color: var(--spectrum-global-color-gray-400);
+  --spectrum-scrollbar-quiet-track-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-scrollbar-quiet-bar-color-hover: var(--spectrum-global-color-gray-600);
   --spectrum-scrollbar-quiet-track-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-scrollbar-quiet-bar-color-down: var(--spectrum-global-color-gray-600);

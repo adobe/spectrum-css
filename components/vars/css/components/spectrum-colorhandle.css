@@ -36,8 +36,14 @@
   --spectrum-colorhandle-touch-hit-height-key-focus: var(--spectrum-global-dimension-static-size-600);
   --spectrum-colorhandle-touch-hit-border-radius-key-focus: var(--spectrum-global-dimension-static-percent-50);
   --spectrum-colorhandle-inner-border-color-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-colorhandle-outer-border-color-disabled: rgba(0,0,0,0);
-  --spectrum-colorhandle-fill-color-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-colorhandle-outer-border-color-disabled: var(--spectrum-alias-border-color-transparent);
+  --spectrum-colorhandle-fill-color-disabled: var(--spectrum-alias-track-color-disabled);
+  --spectrum-colorhandle-cursor-hit-width-disabled: var(--spectrum-global-dimension-size-300);
+  --spectrum-colorhandle-cursor-hit-height-disabled: var(--spectrum-global-dimension-size-300);
+  --spectrum-colorhandle-cursor-hit-border-radius-disabled: var(--spectrum-global-dimension-static-percent-50);
+  --spectrum-colorhandle-touch-hit-width-disabled: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-colorhandle-touch-hit-height-disabled: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-colorhandle-touch-hit-border-radius-disabled: var(--spectrum-global-dimension-static-percent-50);
   --spectrum-colorhandle-size: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-inner-border-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorhandle-outer-border-size: var(--spectrum-global-dimension-static-size-10);

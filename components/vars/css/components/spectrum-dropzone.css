@@ -2,6 +2,12 @@
   --spectrum-dropzone-border-color: var(--spectrum-global-color-gray-300);
   --spectrum-dropzone-background-color: var(--spectrum-global-color-gray-100);
   --spectrum-dropzone-icon-color: var(--spectrum-global-color-gray-500);
+  --spectrum-dropzone-border-color-hover: var(--spectrum-global-color-gray-300);
+  --spectrum-dropzone-background-color-hover: var(--spectrum-global-color-gray-100);
+  --spectrum-dropzone-icon-color-hover: var(--spectrum-global-color-gray-500);
+  --spectrum-dropzone-border-color-selected: var(--spectrum-global-color-blue-400);
+  --spectrum-dropzone-background-color-selected: var(--spectrum-global-color-blue-400);
+  --spectrum-dropzone-icon-color-selected: var(--spectrum-global-color-blue-500);
   --spectrum-dropzone-border-color-selected-hover: var(--spectrum-global-color-blue-400);
   --spectrum-dropzone-background-color-selected-hover: var(--spectrum-alias-highlight-selected);
   --spectrum-dropzone-icon-color-selected-hover: var(--spectrum-global-color-blue-500);

@@ -12,10 +12,12 @@
   resolved "https://registry.yarnpkg.com/@adobe/spectrum-css-workflow-icons/-/spectrum-css-workflow-icons-1.1.0.tgz#79e97f86130e1a30b84c8524cebff93a600dbb8a"
   integrity sha512-07ec4Pfr+W5II4a36nto3jShBZTbpe39lB977ULYN436UTQsnAdYupezBwFd7eEvOMUawgKfqnxyR2oPxp1SMQ==
 
-"@adobe/spectrum-tokens@^6.0.6":
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-6.0.6.tgz#1ebb89944444a4961cefc73fd1e41071e52297a0"
-  integrity sha512-7xXhi0040TgAnXX86hj1wyNcNa8y+n5mhqw9CfGbtadeHLxEZwc7ziPsoHJ0TITW9G+pxBrCvCHOR21lVz1zTw==
+"@adobe/spectrum-tokens@^7.0.0-beta.2":
+  version "7.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-7.0.0-beta.2.tgz#45b0f84beb7ccd328dbf50cfaadd5b1987174fc5"
+  integrity sha512-3mldHdQrn1mMvLSFZLMlb2V/gb9TZ8X36+w5rH9yF613rYlNikWpWI6RSHHzTW8dRGiLW3M957VD2jeESIFgfg==
+  dependencies:
+    json2md "^1.9.0"
 
 "@babel/code-frame@^7.0.0":
   version "7.5.5"
@@ -5726,6 +5728,11 @@ indent-string@^4.0.0:
   resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-4.0.0.tgz#624f8f4497d619b2d9768531d58f4122854d7251"
   integrity sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==
 
+indento@^1.1.7:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/indento/-/indento-1.1.13.tgz#751331b327c04740eeb7be40c5606e6e255c9e36"
+  integrity sha512-YZWk3mreBEM7sBPddsiQnW9Z8SGg/gNpFfscJq00HCDS7pxcQWWWMSVKJU7YkTRyDu1Zv2s8zaK8gQWKmCXHlg==
+
 indexes-of@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/indexes-of/-/indexes-of-1.0.1.tgz#f30f716c8e2bd346c7b67d3df3915566a7c05607"
@@ -6325,6 +6332,13 @@ json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
+
+json2md@^1.9.0:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/json2md/-/json2md-1.9.2.tgz#2490367e4efae65dcb77438f21ca6ee9e4c33ae4"
+  integrity sha512-/8jCvHQI+uVC7Gr/aZFtPR378NW8gHchkjnHDoG+yGREywoGPIeaiQRAhN7YeO+VTFlyv0br5pdtLw7Te53pbQ==
+  dependencies:
+    indento "^1.1.7"
 
 jsonfile@^2.1.0:
   version "2.4.0"

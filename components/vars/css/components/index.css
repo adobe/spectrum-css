@@ -24,7 +24,6 @@
 @import 'spectrum-colorloupe.css';
 @import 'spectrum-colorslider.css';
 @import 'spectrum-colorwheel.css';
-@import 'spectrum-column.css';
 @import 'spectrum-combobox.css';
 @import 'spectrum-cyclebutton.css';
 @import 'spectrum-detail.css';
@@ -39,6 +38,7 @@
 @import 'spectrum-dropzone.css';
 @import 'spectrum-fieldlabel.css';
 @import 'spectrum-heading.css';
+@import 'spectrum-helptext.css';
 @import 'spectrum-icon.css';
 @import 'spectrum-illustratedmessage.css';
 @import 'spectrum-inlinealert.css';
@@ -47,13 +47,13 @@
 @import 'spectrum-listitem.css';
 @import 'spectrum-logicbutton.css';
 @import 'spectrum-meter.css';
+@import 'spectrum-millercolumn.css';
 @import 'spectrum-opacitycheckerboard.css';
 @import 'spectrum-pagination.css';
 @import 'spectrum-panel.css';
 @import 'spectrum-picker.css';
 @import 'spectrum-popover.css';
 @import 'spectrum-progressbar.css';
-@import 'spectrum-progresscircle-indeterminate.css';
 @import 'spectrum-progresscircle.css';
 @import 'spectrum-quickactions.css';
 @import 'spectrum-radio.css';
@@ -72,6 +72,7 @@
 @import 'spectrum-table.css';
 @import 'spectrum-tabs.css';
 @import 'spectrum-tag.css';
+@import 'spectrum-taggroup.css';
 @import 'spectrum-textarea.css';
 @import 'spectrum-textfield.css';
 @import 'spectrum-thumbnail.css';

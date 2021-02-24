@@ -41,13 +41,14 @@
   --spectrum-alias-heading-text-line-height: var(--spectrum-global-font-line-height-small);
   --spectrum-alias-heading-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-heading-text-font-weight-regular-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-heading-text-font-weight-quiet: var(--spectrum-global-font-weight-light);
-  --spectrum-alias-heading-text-font-weight-quiet-strong: var(--spectrum-global-font-weight-bold);
-  --spectrum-alias-heading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-heading-text-font-weight-light: var(--spectrum-global-font-weight-light);
+  --spectrum-alias-heading-text-font-weight-light-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-heading-text-font-weight-heavy: var(--spectrum-global-font-weight-black);
+  --spectrum-alias-heading-text-font-weight-heavy-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-subheading-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-detail-text-font-weight-regular: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-detail-text-font-weight-light: var(--spectrum-global-font-weight-regular);
   --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-serif-text-font-family: var(--spectrum-global-font-family-serif);
@@ -86,6 +87,7 @@
   --spectrum-alias-code-text-font-weight-regular: var(--spectrum-global-font-weight-regular);
   --spectrum-alias-code-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-code-text-line-height: var(--spectrum-global-font-line-height-medium);
+  --spectrum-alias-code-margin-bottom: var(--spectrum-global-font-multiplier-0);
   --spectrum-alias-heading-margin-bottom: var(--spectrum-global-font-multiplier-25);
   --spectrum-alias-body-margin-bottom: var(--spectrum-global-font-multiplier-75);
   --spectrum-alias-focus-ring-gap: var(--spectrum-global-dimension-static-size-25);

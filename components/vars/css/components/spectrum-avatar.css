@@ -1,4 +1,22 @@
 :root {
+  --spectrum-avatar-size-50-opacity: 1;
+  --spectrum-avatar-size-50-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
+  --spectrum-avatar-size-50-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
+  --spectrum-avatar-size-50-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-avatar-size-50-focus-ring-border-radius-key-focus: 50%;
+  --spectrum-avatar-size-50-opacity-disabled: 0.3;
+  --spectrum-avatar-size-50-border-radius: 50%;
+  --spectrum-avatar-size-50-width: var(--spectrum-alias-avatar-size-50);
+  --spectrum-avatar-size-50-height: var(--spectrum-alias-avatar-size-50);
+  --spectrum-avatar-size-75-opacity: 1;
+  --spectrum-avatar-size-75-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
+  --spectrum-avatar-size-75-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
+  --spectrum-avatar-size-75-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-avatar-size-75-focus-ring-border-radius-key-focus: 50%;
+  --spectrum-avatar-size-75-opacity-disabled: 0.3;
+  --spectrum-avatar-size-75-border-radius: 50%;
+  --spectrum-avatar-size-75-width: var(--spectrum-alias-avatar-size-75);
+  --spectrum-avatar-size-75-height: var(--spectrum-alias-avatar-size-75);
   --spectrum-avatar-size-100-opacity: 1;
   --spectrum-avatar-size-100-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-avatar-size-100-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
@@ -35,15 +53,6 @@
   --spectrum-avatar-size-400-border-radius: 50%;
   --spectrum-avatar-size-400-width: var(--spectrum-alias-avatar-size-400);
   --spectrum-avatar-size-400-height: var(--spectrum-alias-avatar-size-400);
-  --spectrum-avatar-size-50-opacity: 1;
-  --spectrum-avatar-size-50-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
-  --spectrum-avatar-size-50-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
-  --spectrum-avatar-size-50-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-avatar-size-50-focus-ring-border-radius-key-focus: 50%;
-  --spectrum-avatar-size-50-opacity-disabled: 0.3;
-  --spectrum-avatar-size-50-border-radius: 50%;
-  --spectrum-avatar-size-50-width: var(--spectrum-alias-avatar-size-50);
-  --spectrum-avatar-size-50-height: var(--spectrum-alias-avatar-size-50);
   --spectrum-avatar-size-500-opacity: 1;
   --spectrum-avatar-size-500-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-avatar-size-500-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
@@ -71,13 +80,4 @@
   --spectrum-avatar-size-700-border-radius: 50%;
   --spectrum-avatar-size-700-width: var(--spectrum-alias-avatar-size-700);
   --spectrum-avatar-size-700-height: var(--spectrum-alias-avatar-size-700);
-  --spectrum-avatar-size-75-opacity: 1;
-  --spectrum-avatar-size-75-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
-  --spectrum-avatar-size-75-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
-  --spectrum-avatar-size-75-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-avatar-size-75-focus-ring-border-radius-key-focus: 50%;
-  --spectrum-avatar-size-75-opacity-disabled: 0.3;
-  --spectrum-avatar-size-75-border-radius: 50%;
-  --spectrum-avatar-size-75-width: var(--spectrum-alias-avatar-size-75);
-  --spectrum-avatar-size-75-height: var(--spectrum-alias-avatar-size-75);
 }
