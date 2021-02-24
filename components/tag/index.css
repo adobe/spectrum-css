@@ -12,39 +12,44 @@ governing permissions and limitations under the License.
 
 @import "../vars/css/components/spectrum-tag.css";
 
-.spectrum-Tags {
+.spectrum-Tag--sizeS {
   @remapvars {
     find: /--spectrum-tag-s(.*)/;
     filter: color;
     replace: --spectrum-tag$1;
   }
+}
 
-  /* todo: figure out how to get this from DNA */
+.spectrum-Tag--sizeM {
+  @remapvars {
+    find: /--spectrum-tag-m(.*)/;
+    filter: color;
+    replace: --spectrum-tag$1;
+  }
+}
+
+.spectrum-Tag--sizeL {
+  @remapvars {
+    find: /--spectrum-tag-l(.*)/;
+    filter: color;
+    replace: --spectrum-tag$1;
+  }
+}
+
+.spectrum-Tag {
+  /* todo: these are in Spectrum DNA 7.0-beta */
   --spectrum-tag-avatar-padding-x: var(--spectrum-tag-icon-gap);
-
-  /* todo: get this added back to DNA */
-  --spectrum-taggroup-tag-gap-x: var(--spectrum-global-dimension-size-100);
-  --spectrum-taggroup-tag-gap-y: var(--spectrum-global-dimension-size-100);
 }
 
-.spectrum-Tags {
-  display: inline-block;
-
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.spectrum-Tags-item {
+.spectrum-Tag {
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
+  vertical-align: bottom;
 
-  margin-block: calc(var(--spectrum-taggroup-tag-gap-y)/2);
-  margin-inline: calc(var(--spectrum-taggroup-tag-gap-x)/2);
   padding-block: 0;
-  padding-inline-start: calc(var(--spectrum-tag-padding-left)-var(--spectrum-tag-border-size));
-  padding-inline-end: calc(var(--spectrum-tag-padding-right)-var(--spectrum-tag-border-size));
+  padding-inline-start: calc(var(--spectrum-tag-padding-left) - var(--spectrum-tag-border-size));
+  padding-inline-end: calc(var(--spectrum-tag-padding-right) - var(--spectrum-tag-border-size));
   block-size: var(--spectrum-tag-height);
   max-inline-size: 100%;
 
@@ -70,7 +75,7 @@ governing permissions and limitations under the License.
     /* Add padding for "avatar" variant */
     margin-inline-start: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-left));
 
-    ~ .spectrum-Tags-itemLabel {
+    ~ .spectrum-Tag-label {
       margin-inline-end: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-right));
     }
   }
@@ -80,7 +85,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Tags-itemLabel {
+.spectrum-Tag-label {
   block-size: 100%;
   line-height: calc(var(--spectrum-tag-height) - calc(var(--spectrum-tag-border-size) * 2));
   flex: 1 1 auto;
@@ -89,4 +94,13 @@ governing permissions and limitations under the License.
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.spectrum-Tag.is-selected {
+  &:focus-ring,
+  &.is-focused {
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-tag-focus-ring-size-key-focus) var(--spectrum-tag-m-focus-ring-color-key-focus);
+    }
+  }
 }
