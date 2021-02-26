@@ -34,6 +34,7 @@ const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '.
 
 const baseImports = `
 @import "${varDir}css/globals/index.css";
+@import "${varDir}dynamic/index.css";
 `;
 
 /**

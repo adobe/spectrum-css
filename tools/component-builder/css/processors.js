@@ -43,6 +43,12 @@ governing permissions and limitations under the License.
  *
  */
 const postcssReal = require('postcss');
+const varUtils = require('./lib/varUtils');
+
+let exceptionTokens;
+(async () => {
+  exceptionTokens = await varUtils.getAllDynamicVars();
+})();
 
 /**
  *  Helper: get a Spectrum CSS T-shirt class name
@@ -311,7 +317,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
       }
     }),
     require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
-    require('postcss-dropunusedvars'),
+    require('postcss-dropunusedvars')({ isException: tokenName => !!exceptionTokens[tokenName] }),
     require('postcss-dropdupedvars'),
     require('postcss-droproot'),
     require('postcss-focus-ring'),

@@ -26,7 +26,7 @@ function getVarsFromCSS(css) {
     rule.walkDecls((decl) => {
       let matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
-        matches.forEach(function(match) {
+        matches.forEach(function (match) {
           let varName = match.replace(/var\((--[\w\-]+),?.*?\)/, '$1').trim();
           if (variableList.indexOf(varName) === -1) {
             variableList.push(varName);
@@ -153,12 +153,31 @@ function getAllVars() {
       `${varDir}/css/themes/*.css`,
       `${varDir}/css/scales/*.css`,
       `${varDir}/css/components/*.css`,
-      `${varDir}/css/globals/*.css`
+      `${varDir}/css/globals/*.css`,
+      `${varDir}/dynamic/*.css`,
     ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
         variableList = getVarValues(file.contents.toString());
 
+        cb(null, file);
+      }))
+      .on('finish', () => {
+        resolve(variableList);
+      })
+      .on('error', reject);
+  });
+}
+
+function getAllDynamicVars() {
+  return new Promise((resolve, reject) => {
+    let variableList;
+    gulp.src([
+      `${varDir}/dynamic/*.css`
+    ])
+      .pipe(concat('everything.css'))
+      .pipe(through.obj(function getAllVars(file, enc, cb) {
+        variableList = getVarValues(file.contents.toString());
         cb(null, file);
       }))
       .on('finish', () => {
@@ -174,7 +193,8 @@ function getAllComponentVars() {
 
     gulp.src([
       `${varDir}/css/components/*.css`,
-      `${varDir}/css/globals/*.css`
+      `${varDir}/css/globals/*.css`,
+      `${varDir}/dynamic/*.css`
     ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
@@ -193,6 +213,7 @@ exports.getAllComponentVars = getAllComponentVars;
 exports.getAllVars = getAllVars;
 exports.getVarsDefinedInCSS = getVarsDefinedInCSS;
 exports.getVarsFromCSS = getVarsFromCSS;
+exports.getAllDynamicVars = getAllDynamicVars;
 exports.getVarValues = getVarValues;
 exports.getClassNames = getClassNames;
 exports.resolveValue = resolveValue;

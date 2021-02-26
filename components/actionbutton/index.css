@@ -22,6 +22,11 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-25);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-25);
+
+  --spectrum-icon-tshirt-size-height: var(--spectrum-alias-workflow-icon-size-s);
+  --spectrum-icon-tshirt-size-width: var(--spectrum-alias-workflow-icon-size-s);
+  --spectrum-ui-icon-tshirt-size-height: var(--spectrum-alias-ui-icon-cornertriangle-size-75);
+  --spectrum-ui-icon-tshirt-size-width: var(--spectrum-alias-ui-icon-cornertriangle-size-75);
 }
 
 .spectrum-ActionButton--sizeM {
@@ -33,6 +38,11 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-40);
+
+  --spectrum-icon-tshirt-size-height: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-icon-tshirt-size-width: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-ui-icon-tshirt-size-height: var(--spectrum-alias-ui-icon-cornertriangle-size-100);
+  --spectrum-ui-icon-tshirt-size-width: var(--spectrum-alias-ui-icon-cornertriangle-size-100);
 }
 
 .spectrum-ActionButton--sizeL {
@@ -44,6 +54,11 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-50);
+
+  --spectrum-icon-tshirt-size-height: var(--spectrum-alias-workflow-icon-size-l);
+  --spectrum-icon-tshirt-size-width: var(--spectrum-alias-workflow-icon-size-l);
+  --spectrum-ui-icon-tshirt-size-height: var(--spectrum-alias-ui-icon-cornertriangle-size-200);
+  --spectrum-ui-icon-tshirt-size-width: var(--spectrum-alias-ui-icon-cornertriangle-size-200);
 }
 
 .spectrum-ActionButton--sizeXL {
@@ -55,6 +70,11 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-65);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-65);
+
+  --spectrum-icon-tshirt-size-height: var(--spectrum-alias-workflow-icon-size-xl);
+  --spectrum-icon-tshirt-size-width: var(--spectrum-alias-workflow-icon-size-xl);
+  --spectrum-ui-icon-tshirt-size-height: var(--spectrum-alias-ui-icon-cornertriangle-size-300);
+  --spectrum-ui-icon-tshirt-size-width: var(--spectrum-alias-ui-icon-cornertriangle-size-300);
 }
 
 .spectrum-ActionButton {

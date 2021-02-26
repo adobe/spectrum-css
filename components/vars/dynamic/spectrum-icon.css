@@ -1,0 +1,13 @@
+/* custom properties defined here are for compile time placeholder, they will not be included by any output css files.
+   The actual value of them will provided by runtime */
+:root {
+  --spectrum-icon-user-defined-height: var(--spectrum-icon-tshirt-size-height);
+  --spectrum-icon-user-defined-width: var(--spectrum-icon-tshirt-size-width);
+  --spectrum-icon-tshirt-size-height: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-icon-tshirt-size-width: var(--spectrum-alias-workflow-icon-size-m);
+
+  --spectrum-ui-icon-user-defined-height: var(--spectrum-ui-icon-tshirt-size-height);
+  --spectrum-ui-icon-user-defined-width: var(--spectrum-ui-icon-tshirt-size-width);
+  --spectrum-ui-icon-tshirt-size-height: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-ui-icon-tshirt-size-width: var(--spectrum-alias-workflow-icon-size-m);
+}

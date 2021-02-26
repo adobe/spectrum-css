@@ -7,7 +7,7 @@ function getUsedVars(root) {
     rule.walkDecls((decl) => {
       let matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
-        matches.forEach(function(match) {
+        matches.forEach(function (match) {
           let varName = match.replace(/var\((--[\w\-]+),?.*?\)/, '$1').trim();
           if (variableList.indexOf(varName) === -1) {
             variableList.push(varName);
@@ -24,7 +24,7 @@ function dropUnused(root, variableList) {
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
       if (decl.prop.startsWith('--')) {
-        if (!variableList.includes(decl.prop)) {
+        if (!variableList.includes(decl.prop) && !isException(decl.prop)) {
           decl.remove();
         }
       }
@@ -40,9 +40,13 @@ function process(root) {
   dropUnused(root, variableList);
 }
 
+const noop = () => {};
+
 let allVariables;
-module.exports = postcss.plugin('postcss-remapvars', function() {
+let isException;
+module.exports = postcss.plugin('postcss-remapvars', (opts = {}) => {
   allVariables = [];
+  isException = opts.isException || noop;
   return (root, result) => {
     process(root);
   }
