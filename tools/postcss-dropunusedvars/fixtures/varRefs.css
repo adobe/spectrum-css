@@ -1,0 +1,16 @@
+:root {
+  --gray: gray;
+  --blue: blue;
+  --green: green;
+  --default: var(--gray);
+  --focus: var(--blue);
+  --selected: var(--green);
+}
+
+.component {
+  background-color: var(--default);
+}
+
+.component:focus {
+  background-color: var(--focus);
+}
