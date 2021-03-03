@@ -1,6 +1,7 @@
 :root {
   --gray: gray;
   --blue: blue;
+  --orange: orange;
   --default: var(--gray);
   --focus: var(--blue);
 }
@@ -11,4 +12,8 @@
 
 .component:focus {
   background-color: var(--focus);
+}
+
+.component:active {
+  background-color: var(--orange);
 }

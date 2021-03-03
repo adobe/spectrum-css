@@ -3,12 +3,14 @@ const valueParser = require('postcss-value-parser');
 
 function getUsedVars(root) {
   const usedAnywhere = [];
+  const usedInProps = [];
   const variableRelationships = {};
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
       const usedInDecl = [];
 
+      const isVar = decl.prop.startsWith('--');
       const matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
         // Parse value and get a list of variables used
@@ -19,13 +21,16 @@ function getUsedVars(root) {
               const varName = node.nodes[0].value;
               usedInDecl.push(varName);
               usedAnywhere.push(varName);
+              if (!isVar) {
+                usedInProps.push(varName);
+              }
             }
           }
         });
       }
 
       // Store every variable referenced by this var
-      if (usedInDecl.length && decl.prop.startsWith('--')) {
+      if (isVar && usedInDecl.length) {
         for (let varName of usedInDecl) {
           variableRelationships[varName] = variableRelationships[varName] || [];
           variableRelationships[varName].push(decl.prop);
@@ -36,12 +41,14 @@ function getUsedVars(root) {
 
   return {
     usedAnywhere,
+    usedInProps,
     variableRelationships
   };
 }
 
 function dropUnused(root, {
   usedAnywhere,
+  usedInProps,
   variableRelationships
 }) {
   root.walkRules((rule, ruleIndex) => {
@@ -52,7 +59,7 @@ function dropUnused(root, {
         if (!usedAnywhere.includes(varName)) {
           decl.remove();
         }
-        else {
+        else if (!usedInProps.includes(varName)) {
           // Drop a variable if everything that references it has been removed
           let relatedVars = variableRelationships[varName];
           if (relatedVars && relatedVars.length) {
@@ -81,7 +88,6 @@ function process(root) {
   // Drop unused variable definitions
   dropUnused(root, variableUsage);
 }
-
 
 module.exports = postcss.plugin('postcss-remapvars', function() {
   return (root, result) => {
