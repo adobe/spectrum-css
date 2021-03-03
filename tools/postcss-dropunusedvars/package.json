@@ -9,7 +9,8 @@
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "postcss": "^7.0.32"
+    "postcss": "^7.0.32",
+    "postcss-value-parser": "^4.1.0"
   },
   "devDependencies": {
     "ava": "^3.9.0"

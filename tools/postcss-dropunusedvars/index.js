@@ -1,16 +1,21 @@
 const postcss = require('postcss');
+const valueParser = require('postcss-value-parser');
 
 function getUsedVars(root) {
-  let variableList = [];
+  const variableList = [];
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
-      let matches = decl.value.match(/var\(.*?\)/g);
+      const matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
-        matches.forEach(function(match) {
-          let varName = match.replace(/var\((--[\w\-]+),?.*?\)/, '$1').trim();
-          if (variableList.indexOf(varName) === -1) {
-            variableList.push(varName);
+        // Parse value and get a list of variables used
+        const parsed = valueParser(decl.value);
+        parsed.walk(node => {
+          if (node.type === 'function' && node.value === 'var') {
+            if (node.nodes.length) {
+              const varName = node.nodes[0].value;
+              variableList.push(varName);
+            }
           }
         });
       }
@@ -34,7 +39,7 @@ function dropUnused(root, variableList) {
 
 function process(root) {
   // Find all used variables
-  let variableList = getUsedVars(root);
+  const variableList = getUsedVars(root);
 
   // Drop unused variable definitions
   dropUnused(root, variableList);
