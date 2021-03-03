@@ -2,10 +2,13 @@ const postcss = require('postcss');
 const valueParser = require('postcss-value-parser');
 
 function getUsedVars(root) {
-  const variableList = [];
+  const usedAnywhere = [];
+  const variableRelationships = {};
 
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
+      const usedInDecl = [];
+
       const matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
         // Parse value and get a list of variables used
@@ -14,23 +17,57 @@ function getUsedVars(root) {
           if (node.type === 'function' && node.value === 'var') {
             if (node.nodes.length) {
               const varName = node.nodes[0].value;
-              variableList.push(varName);
+              usedInDecl.push(varName);
+              usedAnywhere.push(varName);
             }
           }
         });
       }
+
+      // Store every variable referenced by this var
+      if (usedInDecl.length && decl.prop.startsWith('--')) {
+        for (let varName of usedInDecl) {
+          variableRelationships[varName] = variableRelationships[varName] || [];
+          variableRelationships[varName].push(decl.prop);
+        }
+      }
     });
   });
 
-  return variableList;
+  return {
+    usedAnywhere,
+    variableRelationships
+  };
 }
 
-function dropUnused(root, variableList) {
+function dropUnused(root, {
+  usedAnywhere,
+  variableRelationships
+}) {
   root.walkRules((rule, ruleIndex) => {
     rule.walkDecls((decl) => {
       if (decl.prop.startsWith('--')) {
-        if (!variableList.includes(decl.prop)) {
+        const varName = decl.prop;
+        // Definitely drop it if it's never used
+        if (!usedAnywhere.includes(varName)) {
           decl.remove();
+        }
+        else {
+          // Drop a variable if everything that references it has been removed
+          let relatedVars = variableRelationships[varName];
+          if (relatedVars && relatedVars.length) {
+            let keep = false;
+            // Check if everything that references this variable has been removed
+            for (let relatedVar of relatedVars) {
+              if (usedAnywhere.includes(relatedVar)) {
+                keep = true;
+                break;
+              }
+            }
+            if (!keep) {
+              decl.remove();
+            }
+          }
         }
       }
     });
@@ -39,15 +76,14 @@ function dropUnused(root, variableList) {
 
 function process(root) {
   // Find all used variables
-  const variableList = getUsedVars(root);
+  const variableUsage = getUsedVars(root);
 
   // Drop unused variable definitions
-  dropUnused(root, variableList);
+  dropUnused(root, variableUsage);
 }
 
-let allVariables;
+
 module.exports = postcss.plugin('postcss-remapvars', function() {
-  allVariables = [];
   return (root, result) => {
     process(root);
   }
