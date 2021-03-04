@@ -145,6 +145,60 @@ When this file is imported, if in updated version of `@spectrum-css/vars` change
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
 
+### Optimizing Spectrum CSS
+
+Spectrum CSS is designed to be as flexible as possible, and as such, leaves room for optimization. Let's assume you've included a few components as dependencies in your `package.json`:
+
+```
+{
+  "name": "my-project",
+  "devDependencies": {
+    "@spectrum-css/button": "^3.0.0",
+    "@spectrum-css/page": "^3.0.0",
+    "@spectrum-css/vars": "^3.0.0"
+  }
+}
+```
+
+You've created an `index.css` that imports a few components, a scale, and a color-theme:
+
+```
+@import 'node_modules/@spectrum-css/vars/dist/spectrum-global.css';
+@import 'node_modules/@spectrum-css/vars/dist/spectrum-medium.css';
+@import 'node_modules/@spectrum-css/vars/dist/spectrum-light.css';
+@import 'node_modules/@spectrum-css/page/dist/index-vars.css';
+@import 'node_modules/@spectrum-css/button/dist/index-vars.css';
+```
+
+To build an more optimized bundle, you can employ a few simple PostCSS plugins. First, install them:
+
+```sh
+npm i postcss-import postcss-varfallback postcss-dropunusedvars cssnano
+```
+
+Next, create a `postcss.config.js`:
+
+```js
+module.exports = {
+  plugins: [
+    require('postcss-import'),
+    require('postcss-varfallback'),
+    require('postcss-dropunusedvars'),
+    require('cssnano')
+  ],
+};
+```
+
+Finally, include PostCSS in your build process, or run it from the command line:
+
+```sh
+postcss -o dist/index.min.css index.css
+```
+
+The `dist/index.min.css` file will contain a much slimmer version of Spectrum CSS customized to only include the variables that the components you employed require. If you've referenced any of variables Spectrum CSS defines in your CSS, they will be perserved as well.
+
+If you want to go further, you can employ a tool such as [PurifyCSS](https://github.com/purifycss/purifycss) to strip unused CSS classes from the output, optimizing it further.
+
 
 ## Contributing
 
