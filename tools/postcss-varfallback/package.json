@@ -1,0 +1,18 @@
+{
+  "name": "postcss-varfallback",
+  "version": "1.0.0",
+  "description": "Use the fallback value of any var reference",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Larry Davis <lazdnet@gmail.com>",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "postcss": "^8.2.6",
+    "postcss-value-parser": "^4.1.0"
+  },
+  "devDependencies": {
+    "ava": "^3.9.0"
+  }
+}

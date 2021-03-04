@@ -1,0 +1,8 @@
+:root {
+  --component-width: 12px;
+  --component-border-width: 12px;
+}
+
+.component {
+  width: calc(var(--custom-width, var(--component-width)) - var(--custom-border-width, var(--component-border-width)));
+}
