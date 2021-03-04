@@ -9,7 +9,7 @@ function process(root) {
 }
 
 let allVariables;
-module.exports = postcss.plugin('postcss-remapvars', function() {
+module.exports = postcss.plugin('postcss-droproot', function() {
   allVariables = [];
   return (root, result) => {
     process(root);

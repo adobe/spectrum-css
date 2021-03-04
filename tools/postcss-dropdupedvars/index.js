@@ -15,7 +15,7 @@ function dropDupes(root, variableList) {
   });
 }
 
-module.exports = postcss.plugin('postcss-remapvars', function() {
+module.exports = postcss.plugin('postcss-dropdupedvars', function() {
   return (root, result) => {
     dropDupes(root);
   }
