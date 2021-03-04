@@ -173,7 +173,7 @@ You've created an `index.css` that imports a few components, a scale, and a colo
 To build an more optimized bundle, you can employ a few simple PostCSS plugins. First, install them:
 
 ```sh
-npm i postcss-import postcss-varfallback postcss-dropunusedvars cssnano
+npm i postcss-import postcss-varfallback postcss-dropunusedvars cssnano --save-dev
 ```
 
 Next, create a `postcss.config.js`:
@@ -199,6 +199,47 @@ The `dist/index.min.css` file will contain a much slimmer version of Spectrum CS
 
 If you want to go further, you can employ a tool such as [PurifyCSS](https://github.com/purifycss/purifycss) to strip unused CSS classes from the output, optimizing it further.
 
+### Customizing Spectrum CSS
+
+You can employ `postcss-transformselectors` to change the way selectors are defined in Spectrum CSS. For instance, you may want to use bare `h1`/`h2`/`h3` instead of `.spectrum-Heading.spectrum-Heading--size*`.
+
+To do this, first install the plugin:
+
+```js
+npm i postcss-transformselectors --save-dev
+```
+
+Then, add something like this to your `postcss.config.js`:
+
+```js
+module.exports = {
+  plugins: [
+    require('postcss-transformselectors')({
+      replace: [
+        { search: '.spectrum-Heading--sizeXXL', replace: 'h1' },
+        { search: '.spectrum-Heading--sizeXL', replace: 'h2' },
+        { search: '.spectrum-Heading--sizeL', replace: 'h3' }
+      ],
+      transform: (selector) => {
+        if (selector.startsWith('.spectrum-Heading')) {
+          // Operate on each selector in a selector list
+          return selector.split(',')
+            .map(selectorPart => {
+              // Create separate selectors for each reference to .spectrum-Heading
+              return ['h1', 'h2', 'h3'].map(h => {
+                return selectorPart.replace('.spectrum-Heading', h);
+              }).join(',');
+            })
+            .join(',');
+        }
+
+        // Don't mess with things that don't have .spectrum-Heading in them
+        return selector;
+      }
+    })
+  ]
+};
+```
 
 ## Contributing
 
