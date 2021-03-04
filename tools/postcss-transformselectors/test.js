@@ -45,3 +45,26 @@ test('support options.transform', t => {
     }
   });
 });
+
+test('support complex examples', t => {
+  return compare(t, 'complex.css', 'complex.css', {
+    replace: [
+      { search: '.spectrum-Heading--sizeXXL', replace: 'h1' },
+      { search: '.spectrum-Heading--sizeXL', replace: 'h2' },
+      { search: '.spectrum-Heading--sizeL', replace: 'h3' }
+    ],
+    transform: (selector) => {
+      if (selector.startsWith('.spectrum-Heading')) {
+        return selector.split(',')
+          .map(selectorPart => {
+            return ['h1', 'h2', 'h3'].map(h => {
+              return selectorPart.replace('.spectrum-Heading', h);
+            }).join(',');
+          })
+          .join(',');
+      }
+
+      return selector;
+    }
+  });
+});
