@@ -149,7 +149,7 @@ In most cases, this file will not be required, so you can safely ignore it. If y
 
 Spectrum CSS is designed to be as flexible as possible, and as such, leaves room for optimization. Let's assume you've included a few components as dependencies in your `package.json`:
 
-```
+```json
 {
   "name": "my-project",
   "devDependencies": {
@@ -162,7 +162,7 @@ Spectrum CSS is designed to be as flexible as possible, and as such, leaves room
 
 You've created an `index.css` that imports a few components, a scale, and a color-theme:
 
-```
+```css
 @import 'node_modules/@spectrum-css/vars/dist/spectrum-global.css';
 @import 'node_modules/@spectrum-css/vars/dist/spectrum-medium.css';
 @import 'node_modules/@spectrum-css/vars/dist/spectrum-light.css';
@@ -195,13 +195,13 @@ Finally, include PostCSS in your build process, or run it from the command line:
 postcss -o dist/index.min.css index.css
 ```
 
-The `dist/index.min.css` file will contain a much slimmer version of Spectrum CSS customized to only include the variables that the components you employed require. If you've referenced any of variables Spectrum CSS defines in your CSS, they will be perserved as well.
+`dist/index.min.css` file will contain a much slimmer version of Spectrum CSS customized to only include the variables used by the components that you imported. If you've referenced any of variables Spectrum CSS defines in your CSS, they will be perserved as well.
 
-If you want to go further, you can employ a tool such as [PurifyCSS](https://github.com/purifycss/purifycss) to strip unused CSS classes from the output, optimizing it further.
+If you need an even smaller bundle, you can employ a tool such as [PurifyCSS](https://github.com/purifycss/purifycss) to strip unused CSS classes from the output.
 
 ### Customizing Spectrum CSS
 
-You can employ `postcss-transformselectors` to change the way selectors are defined in Spectrum CSS. For instance, you may want to use bare `h1`/`h2`/`h3` instead of `.spectrum-Heading.spectrum-Heading--size*`.
+You can employ `postcss-transformselectors` to change the classnames Spectrum CSS uses. For instance, you may want to use bare `h1`/`h2`/`h3` instead of `.spectrum-Heading.spectrum-Heading--size*`.
 
 To do this, first install the plugin:
 
