@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.2"></a>
+## 3.0.2
+🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.1...@spectrum-css/commons@3.0.2)
+
+### 🐛 Bug fixes
+
+* re-enable touch scrolling for buttons. ([ad649f9](https://github.com/adobe/spectrum-css/commit/ad649f9))
+
+
+
+
+
 <a name="3.0.1"></a>
 ## 3.0.1
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.0...@spectrum-css/commons@3.0.1)

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# 1.2.0
+🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-dropunusedvars@1.1.0...postcss-dropunusedvars@1.2.0)
+
+### ✨ Features
+
+* drop unused vars, even if other vars once referred to them ([772851e](https://github.com/adobe/spectrum-css/commit/772851e))
+
+
+### 🐛 Bug fixes
+
+* correct PostCSS plugin names ([81ad868](https://github.com/adobe/spectrum-css/commit/81ad868))
+* correctly catch usage of fallback vars ([3bccaf5](https://github.com/adobe/spectrum-css/commit/3bccaf5))
+* don't remove vars that are ref'd by dead vars but used in props ([4030d40](https://github.com/adobe/spectrum-css/commit/4030d40))
+
+
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0
 🗓 2020-12-04
