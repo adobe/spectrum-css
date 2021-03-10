@@ -1,5 +1,5 @@
 # postcss-dropunusedvars
-> Remap variables to create variable-driven CSS components
+> Remove unused variable definitions
 
 ## Installation
 

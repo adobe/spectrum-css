@@ -89,7 +89,7 @@ function process(root) {
   dropUnused(root, variableUsage);
 }
 
-module.exports = postcss.plugin('postcss-remapvars', function() {
+module.exports = postcss.plugin('postcss-dropunusedvars', function() {
   return (root, result) => {
     process(root);
   }

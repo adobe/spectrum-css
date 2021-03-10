@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.1"></a>
+## 3.0.1
+🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.0.0...@spectrum-css/vars@3.0.1)
+
+### 🐛 Bug fixes
+
+* **#1123:** placeholder text color alias for search, textarea, textfield ([011ca54](https://github.com/adobe/spectrum-css/commit/011ca54)), closes [#1123](https://github.com/adobe/spectrum-css/issues/1123)
+
+
+
+
+
 <a name="3.0.0"></a>
 # 3.0.0
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.0.0-beta.2...@spectrum-css/vars@3.0.0)

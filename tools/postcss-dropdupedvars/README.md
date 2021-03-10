@@ -1,5 +1,5 @@
 # postcss-dropdupedvars
-> Remap variables to create variable-driven CSS components
+> Drop duplicate vars
 
 ## Installation
 
