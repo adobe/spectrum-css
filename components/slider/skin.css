@@ -59,8 +59,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider-handle {
   border-color: var(--spectrum-slider-m-handle-border-color);
-  background: var(--spectrum-slider-m-handle-background-color);
-
+  background: var(--spectrum-alias-background-color-default);
   &:hover {
     border-color: var(--spectrum-slider-m-handle-border-color-hover);
   }
@@ -102,7 +101,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider-handle {
   &.is-dragged {
     border-color: var(--spectrum-slider-m-handle-border-color-down);
-    background: var(--spectrum-slider-m-handle-background-color-down);
+    background: var(--spectrum-alias-background-color-default);
   }
 }
 
