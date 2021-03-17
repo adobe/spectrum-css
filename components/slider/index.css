@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import '../vars/css/components/spectrum-slider.css';
+@import "../vars/css/components/spectrum-slider.css";
 
 .spectrum-Slider {
   @remapvars {
@@ -62,9 +62,7 @@ governing permissions and limitations under the License.
 
   --spectrum-slider-ramp-margin-top: 0;
   --spectrum-slider-range-track-reset: 0;
-  --spectrum-slide-label-text-size: var(
-    --spectrum-global-dimension-font-size-75
-  );
+  --spectrum-slide-label-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-slide-label-text-line-height: var(
     --spectrum-global-font-line-height-small
   );
@@ -120,7 +118,7 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--spectrum-slider-track-margin-offset);
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     block-size: 100%;
 
@@ -246,7 +244,7 @@ governing permissions and limitations under the License.
   }
 
   &:before {
-    content: ' ';
+    content: " ";
     display: block;
     position: absolute;
     left: 50%;
@@ -322,7 +320,7 @@ governing permissions and limitations under the License.
   flex-grow: 0;
   padding-inline-end: 0;
   cursor: default;
-  font-feature-settings: 'tnum';
+  font-feature-settings: "tnum";
   text-align: end;
 }
 
@@ -355,7 +353,7 @@ governing permissions and limitations under the License.
     inset-inline-start: calc(
       50% - calc(var(--spectrum-slider-tick-mark-width) / 2)
     );
-    content: '';
+    content: "";
     inline-size: var(--spectrum-slider-tick-mark-width);
     block-size: var(--spectrum-slider-tick-mark-height);
 
@@ -367,11 +365,7 @@ governing permissions and limitations under the License.
     align-items: center;
     justify-content: center;
 
-    margin-block: calc(
-        var(--spectrum-slider-label-gap-y) +
-          var(--spectrum-slider-tick-mark-height)
-      )
-      0;
+    margin-block: calc(var(--spectrum-slider-label-gap-y) + var(--spectrum-slider-tick-mark-height)) 0;
     margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
       calc(var(--spectrum-slider-label-gap-x) * -1);
 
