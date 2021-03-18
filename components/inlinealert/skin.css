@@ -11,55 +11,55 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-InLineAlert {
-  background-color: var(--spectrum-alert-background-color);
+  background-color: var(--spectrum-inlinealert-background-color);
   /* default color set to body color, header element overwrites this */
-  color: var(--spectrum-alert-text-color);
+  color: var(--spectrum-inlinealert-text-color);
 }
 
 .spectrum-InLineAlert-header {
-  color: var(--spectrum-alert-title-text-color);
+  color: var(--spectrum-inlinealert-title-text-color);
 }
 
 .spectrum-InLineAlert-content {
-  color: var(--spectrum-alert-text-color);
+  color: var(--spectrum-inlinealert-text-color);
 }
 
 .spectrum-InLineAlert--info {
-  border-color: var(--spectrum-alert-info-border-color);
+  border-color: var(--spectrum-inlinealert-info-border-color);
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-alert-info-icon-color);
+    color: var(--spectrum-inlinealert-info-icon-color);
   }
 }
 
 .spectrum-InLineAlert--help {
-  border-color: var(--spectrum-alert-info-border-color);
+  border-color: var(--spectrum-inlinealert-info-border-color);
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-alert-info-icon-color);
+    color: var(--spectrum-inlinealert-info-icon-color);
   }
 }
 
 .spectrum-InLineAlert--error {
-  border-color: var(--spectrum-alert-error-border-color);
+  border-color: var(--spectrum-inlinealert-error-border-color);
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-alert-error-icon-color);
+    color: var(--spectrum-inlinealert-error-icon-color);
   }
 }
 
 .spectrum-InLineAlert--success {
-  border-color: var(--spectrum-alert-success-border-color);
+  border-color: var(--spectrum-inlinealert-success-border-color);
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-alert-success-icon-color);
+    color: var(--spectrum-inlinealert-success-icon-color);
   }
 }
 
 .spectrum-InLineAlert--warning {
-  border-color: var(--spectrum-alert-warning-border-color);
+  border-color: var(--spectrum-inlinealert-warning-border-color);
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-alert-warning-icon-color);
+    color: var(--spectrum-inlinealert-warning-icon-color);
   }
 }

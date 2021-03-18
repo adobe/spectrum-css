@@ -12,12 +12,12 @@ governing permissions and limitations under the License.
 
 @import "../vars/css/components/spectrum-inlinealert.css";
 
-:root {
-  --spectrum-alert-header-height: 38px;
-  --spectrum-alert-corner-radius: 4px;
+.spectrum-InLineAlert {
+  --spectrum-inlinealert-title-height: 38px;
+  --spectrum-inlinealert-corner-radius: 4px;
 
   /* DNA */
-  --spectrum-alert-border-width: 2px;
+  --spectrum-inlinealert-border-width: 2px;
 }
 
 .spectrum-InLineAlert {
@@ -25,16 +25,16 @@ governing permissions and limitations under the License.
 
   display: inline-block;
   box-sizing: border-box;
-  min-inline-size: var(--spectrum-alert-min-width);
-  min-block-size: var(--spectrum-alert-header-height);
+  min-inline-size: var(--spectrum-inlinealert-min-width);
+  min-block-size: var(--spectrum-inlinealert-title-height);
   margin-block: 8px;
   margin-inline: 0;
-  padding-block: var(--spectrum-alert-padding-y);
-  padding-inline: var(--spectrum-alert-padding-x);
+  padding-block: var(--spectrum-inlinealert-padding-y);
+  padding-inline: var(--spectrum-inlinealert-padding-x);
 
-  border-width: var(--spectrum-alert-border-width);
+  border-width: var(--spectrum-inlinealert-border-width);
   border-style: solid;
-  border-radius: var(--spectrum-alert-corner-radius);
+  border-radius: var(--spectrum-inlinealert-corner-radius);
 }
 
 .spectrum-InLineAlert-icon {
@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
 
 .spectrum-InLineAlert-content {
   display: block;
-  margin: var(--spectrum-alert-content-margin-top) 0 0 0;
+  margin: var(--spectrum-inlinealert-content-margin-top) 0 0 0;
   padding: 0;
 
   font-size: 14px;

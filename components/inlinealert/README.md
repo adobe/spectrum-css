@@ -1,5 +1,5 @@
-# @spectrum-css/alert
-> The Spectrum CSS alert component
+# @spectrum-css/inlinealert
+> The Spectrum CSS in-line alert component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
