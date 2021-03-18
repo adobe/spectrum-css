@@ -1,11 +1,12 @@
-name: In-Line in-line alert
+name: In-Line Alert
+SpectrumSiteSlug: https://spectrum.adobe.com/page/in-line-alert/
 examples:
   - id: inlinealert-info
     name: Info
     markup: |
       <div class="spectrum-InLineAlert spectrum-InLineAlert--info">
-        <svg class="spectrum-Icon spectrum-UIIcon-InfoMedium spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-InfoMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
         </svg>
         <div class="spectrum-InLineAlert-header">Information in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
@@ -14,8 +15,8 @@ examples:
     name: Success
     markup: |
       <div class="spectrum-InLineAlert spectrum-InLineAlert--success">
-        <svg class="spectrum-Icon spectrum-UIIcon-SuccessMedium spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-SuccessMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
         </svg>
         <div class="spectrum-InLineAlert-header">Successful in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
@@ -24,8 +25,8 @@ examples:
     name: Warning
     markup: |
       <div class="spectrum-InLineAlert spectrum-InLineAlert--warning">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-InLineAlert-header">Warning in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
@@ -34,8 +35,8 @@ examples:
     name: Help
     markup: |
       <div class="spectrum-InLineAlert spectrum-InLineAlert--help">
-        <svg class="spectrum-Icon spectrum-UIIcon-HelpMedium spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-HelpMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Help" />
         </svg>
         <div class="spectrum-InLineAlert-header">Information in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
@@ -44,8 +45,8 @@ examples:
     name: Error
     markup: |
       <div class="spectrum-InLineAlert spectrum-InLineAlert--error">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-InLineAlert-header">Error in-line alert - Oh no</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
@@ -56,8 +57,8 @@ examples:
     description: An in-line alert with a close button in the footer. Combine this strategy with any variant.
     markup: |
       <div class="spectrum-InLineAlert spectrum-InLineAlert--error">
-        <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-AlertMedium" />
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
         <div class="spectrum-InLineAlert-header">Incorrect Payment Information - Error</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
