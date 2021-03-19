@@ -68,11 +68,11 @@ function getTShirtTokenName(name) {
  * @param {string} name class name
  * @param {string} tokenName token name
  * @param {string} textTransformIgnore ignore text transforms
- * @param {string} [addStrongAndEmphasisChildren=false] add legacy support for strong, em children
+ * @param {string} [addStrongAndEmphasizedChildren=false] add legacy support for strong, em children
  * @param {boolean} [showIndicatorBorder=false] shows a blue border around the items. Useful for debugging.
  * @returns {string} CSS output
  */
-function getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasisChildren = false, showIndicatorBorder = false) {
+function getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasizedChildren = false, showIndicatorBorder = false) {
   var output = '';
   var propMap = {
     'font-size': 'text-size',
@@ -103,15 +103,15 @@ function getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEm
   var indicatorBorder = (showIndicatorBorder === true) ? 'border: solid 1px blue;' : '';
 
   // Add classnames as an alternative for <strong> and <em> for typography items with a classname.
-  // -emphasis & -strong will be added to the last provided classname or to provided ID.
-  // Example classname:  "em, .spectrum-Heading2--quiet-emphasis"
+  // -emphasized & -strong will be added to the last provided classname or to provided ID.
+  // Example classname:  "em, .spectrum-Heading2--quiet-emphasized"
   emStrongClassName = (name.indexOf('.') !== -1) ? '.' + name.split('.').pop() : name;
 
-  // Fallback to add <em> and <strong> overwrites if addStrongAndEmphasisChildren is set to true.
+  // Fallback to add <em> and <strong> overwrites if addStrongAndEmphasizedChildren is set to true.
   // This is only used for the pre-t-shirt sized typography.
-  var strongAndEmphasisChildren = (addStrongAndEmphasisChildren === true) ? `
+  var strongAndEmphasizedChildren = (addStrongAndEmphasizedChildren === true) ? `
     em {
-      ${buildProperties(`${tokenName}-emphasis`)}
+      ${buildProperties(`${tokenName}-emphasized`)}
     }
     strong {
       ${buildProperties(`${tokenName}-strong`)}
@@ -122,7 +122,7 @@ function getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEm
   ${indicatorBorder}
 
   ${buildProperties(tokenName)}
-    ${strongAndEmphasisChildren}
+    ${strongAndEmphasizedChildren}
   }`;
   return output;
 }
@@ -202,9 +202,9 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
           // overwrite-support for the Typography-V3 <em> & <strong> selectors
           // sharing the same classname ".spectrum-Detail". This will be added like
           // ".spectrum-Detail--sizeXL em {}"
-          addStrongAndEmphasisChildren = (name.includes('.spectrum-Detail')) ? true : false;
+          addStrongAndEmphasizedChildren = (name.includes('.spectrum-Detail')) ? true : false;
 
-          var output = getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasisChildren, showIndicatorBorder = false);
+          var output = getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasizedChildren, showIndicatorBorder = false);
           addNodesToCSS(mixin, output);
         },
 
@@ -221,7 +221,7 @@ function getProcessors(keepVars = false, notNested = true, secondNotNested = tru
             tokenName = tokenName.replace('.spectrum--', '');
           }
 
-          var output = getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasisChildren = false, showIndicatorBorder = false);
+          var output = getTypographySizes(name, tokenName, textTransformIgnore, addStrongAndEmphasizedChildren = false, showIndicatorBorder = false);
           addNodesToCSS(mixin, output);
         },
 
