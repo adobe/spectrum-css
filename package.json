@@ -40,7 +40,7 @@
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/spectrum-css-workflow-icons": "^1.1.0",
-    "@adobe/spectrum-tokens": "^7.0.0-beta.2",
+    "@adobe/spectrum-tokens": "^7.0.0-beta.3",
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
     "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.21",
@@ -56,7 +56,7 @@
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
     "markdown-it": "^10.0.0",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.23.0",
     "semver": "^6.3.0",
     "through2": "^3.0.1"
   },
@@ -70,7 +70,7 @@
     "node-fetch": "^2.6.1",
     "lodash": "^4.17.19",
     "yargs-parser": "^18.1.2",
-    "minimist": "^1.2.3",
+    "minimist": "^1.2.5",
     "is-url-superb": "^4.0.0",
     "postcss-values-parser": "^4.0.0"
   },

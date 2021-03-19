@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.1"></a>
+## 3.0.1
+🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0...@spectrum-css/table@3.0.1)
+
+### 🐛 Bug fixes
+
+* table row dropzone shows extra blue, fix [#225](https://github.com/adobe/spectrum-css/issues/225) ([421985c](https://github.com/adobe/spectrum-css/commit/421985c))
+
+
+
+
+
 <a name="3.0.0"></a>
 # 3.0.0
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.6...@spectrum-css/table@3.0.0)

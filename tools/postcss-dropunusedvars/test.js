@@ -24,3 +24,7 @@ function readFile(filename) {
 test('drop unused vars', t => {
   return compare(t, 'unused.css', 'unused.css');
 });
+
+test('drop unused vars, even if referenced by other vars', t => {
+  return compare(t, 'varRefs.css', 'varRefs.css');
+});
