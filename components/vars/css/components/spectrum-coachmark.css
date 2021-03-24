@@ -33,7 +33,7 @@
   --spectrum-coachmark-shadow-offset-y: var(--spectrum-alias-dropshadow-offset-y);
   --spectrum-coachmark-animation-indicator-ring-duration: 3000ms;
   --spectrum-coachmark-animation-indicator-ring-ease: var(--spectrum-global-animation-linear);
-  --spectrum-coachmark-animation-inticator-ring-outer-delay-multiple: -1;
+  --spectrum-coachmark-animation-indicator-ring-outer-delay-multiple: -1;
   --spectrum-coachmark-animation-indicator-keyframe-0-opacity: 0;
   --spectrum-coachmark-animation-indicator-keyframe-50-scale: 1.5;
   --spectrum-coachmark-animation-indicator-keyframe-50-opacity: 1;
@@ -94,7 +94,7 @@
   --spectrum-coachmark-quiet-shadow-offset-y: var(--spectrum-alias-dropshadow-offset-y);
   --spectrum-coachmark-quiet-animation-indicator-ring-duration: 3000ms;
   --spectrum-coachmark-quiet-animation-indicator-ring-ease: var(--spectrum-global-animation-linear);
-  --spectrum-coachmark-quiet-animation-inticator-ring-outer-delay-multiple: -1;
+  --spectrum-coachmark-quiet-animation-indicator-ring-outer-delay-multiple: -1;
   --spectrum-coachmark-quiet-animation-indicator-keyframe-0-opacity: 0;
   --spectrum-coachmark-quiet-animation-indicator-keyframe-50-scale: 1.5;
   --spectrum-coachmark-quiet-animation-indicator-keyframe-50-opacity: 1;
