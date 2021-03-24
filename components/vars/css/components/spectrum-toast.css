@@ -4,7 +4,7 @@
   --spectrum-toast-neutral-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-neutral-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-neutral-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-toast-neutral-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-toast-neutral-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-toast-neutral-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-toast-neutral-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-toast-neutral-max-width: var(--spectrum-global-dimension-size-6000);
@@ -49,7 +49,7 @@
   --spectrum-toast-info-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-info-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-info-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-toast-info-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-toast-info-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-toast-info-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-toast-info-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-toast-info-max-width: var(--spectrum-global-dimension-size-6000);
@@ -94,7 +94,7 @@
   --spectrum-toast-positive-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-positive-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-positive-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-toast-positive-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-toast-positive-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-toast-positive-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-toast-positive-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-toast-positive-max-width: var(--spectrum-global-dimension-size-6000);
@@ -139,7 +139,7 @@
   --spectrum-toast-negative-text-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-negative-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-toast-negative-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-toast-negative-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-toast-negative-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-toast-negative-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-toast-negative-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-toast-negative-max-width: var(--spectrum-global-dimension-size-6000);
