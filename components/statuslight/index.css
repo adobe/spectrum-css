@@ -14,29 +14,33 @@ governing permissions and limitations under the License.
 
 .spectrum-StatusLight--sizeS {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-s-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-s-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
 .spectrum-StatusLight--sizeM {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-m-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-m-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
 .spectrum-StatusLight--sizeL {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-l-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-l-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
 .spectrum-StatusLight--sizeXL {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-xl-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-xl-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
