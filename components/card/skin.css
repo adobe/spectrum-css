@@ -11,41 +11,41 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Card {
-  border-color: var(--spectrum-card-border-color);
-  background-color: var(--spectrum-card-background-color);
+  border-color: var(--spectrum-card-m-border-color);
+  background-color: var(--spectrum-card-m-background-color);
 
   &:hover {
-    border-color: var(--spectrum-card-border-color-hover);
+    border-color: var(--spectrum-card-m-border-color-hover);
   }
 
   &.is-selected,
   &:focus-ring {
-    border-color: var(--spectrum-card-border-color-key-focus);
-    box-shadow: 0 0 0 1px var(--spectrum-card-border-color-key-focus);
+    border-color: var(--spectrum-card-m-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-card-m-border-color-key-focus);
   }
 
   &.is-drop-target {
-    border-color: var(--spectrum-card-border-color-key-focus);
-    box-shadow: 0 0 0 1px var(--spectrum-card-border-color-key-focus);
+    border-color: var(--spectrum-card-m-border-color-key-focus);
+    box-shadow: 0 0 0 1px var(--spectrum-card-m-border-color-key-focus);
     background-color: var(--spectrum-alias-highlight-selected);
   }
 
   .spectrum-Card-subtitle {
-    color: var(--spectrum-card-description-text-color);
+    color: var(--spectrum-card-m-description-text-color);
   }
 }
 
 .spectrum-Card-description {
-  color: var(--spectrum-card-description-text-color);
+  color: var(--spectrum-card-m-description-text-color);
 }
 
 .spectrum-Card-coverPhoto {
-  background-color: var(--spectrum-card-coverphoto-background-color);
-  border-block-end-color: var(--spectrum-card-coverphoto-border-color);
+  background-color: var(--spectrum-card-m-coverphoto-background-color);
+  border-block-end-color: var(--spectrum-card-m-coverphoto-border-color);
 }
 
 .spectrum-Card-footer {
-  border-color: var(--spectrum-card-border-color);
+  border-color: var(--spectrum-card-m-border-color);
 }
 
 .spectrum-Card--quiet,
@@ -54,13 +54,13 @@ governing permissions and limitations under the License.
   background-color: transparent;
 
   .spectrum-Card-preview {
-    background-color: var(--spectrum-card-quiet-preview-background-color);
+    background-color: var(--spectrum-card-m-quiet-preview-background-color);
   }
 
   &:hover {
     border-color: transparent;
     .spectrum-Card-preview {
-      background-color: var(--spectrum-card-quiet-preview-background-color-hover);
+      background-color: var(--spectrum-card-m-quiet-preview-background-color-hover);
     }
   }
 
@@ -69,11 +69,11 @@ governing permissions and limitations under the License.
     border-color: transparent;
     box-shadow: none;
     .spectrum-Card-preview {
-      background-color: var(--spectrum-card-quiet-preview-background-color);
+      background-color: var(--spectrum-card-m-quiet-preview-background-color);
 
       &:before {
-        border-color: var(--spectrum-card-quiet-border-color-selected);
-        box-shadow: 0 0 0 1px var(--spectrum-card-quiet-border-color-selected);
+        border-color: var(--spectrum-card-m-quiet-border-color-selected);
+        box-shadow: 0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected);
       }
     }
   }
@@ -87,8 +87,8 @@ governing permissions and limitations under the License.
       background-color: var(--spectrum-alias-highlight-selected);
 
       &:before {
-        border-color: var(--spectrum-card-quiet-border-color-selected);
-        box-shadow: 0 0 0 1px var(--spectrum-card-quiet-border-color-selected);
+        border-color: var(--spectrum-card-m-quiet-border-color-selected);
+        box-shadow: 0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected);
       }
     }
 
@@ -99,29 +99,29 @@ governing permissions and limitations under the License.
 
     .spectrum-Asset-folderOutline,
     .spectrum-Asset-fileOutline {
-      fill: var(--spectrum-card-quiet-border-color-selected);
+      fill: var(--spectrum-card-m-quiet-border-color-selected);
     }
   }
 
   .spectrum-Card-title {
-    color: var(--spectrum-card-quiet-title-text-color);
+    color: var(--spectrum-card-m-quiet-title-text-color);
   }
 
   .spectrum-Card-subtitle {
-    color: var(--spectrum-card-quiet-subtitle-text-color);
+    color: var(--spectrum-card-m-quiet-subtitle-text-color);
   }
 }
 
 .spectrum-Card--horizontal {
   &:hover {
     .spectrum-Card-preview {
-      border-color: var(--spectrum-card-border-color-hover);
+      border-color: var(--spectrum-card-m-border-color-hover);
     }
   }
 
   .spectrum-Card-preview {
-    background-color: var(--spectrum-card-quiet-preview-background-color);
+    background-color: var(--spectrum-card-m-quiet-preview-background-color);
 
-    border-color: var(--spectrum-card-border-color);
+    border-color: var(--spectrum-card-m-border-color);
   }
 }
