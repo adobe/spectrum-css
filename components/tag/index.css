@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Tag {
   /* todo: these are in Spectrum DNA 7.0-beta */
-  --spectrum-tag-avatar-padding-x: var(--spectrum-tag-icon-gap);
+  --spectrum-tag-texticon-avatar-padding-x: var(--spectrum-tag-texticon-icon-gap);
 }
 
 .spectrum-Tag {
@@ -48,12 +48,12 @@ governing permissions and limitations under the License.
   vertical-align: bottom;
 
   padding-block: 0;
-  padding-inline-start: calc(var(--spectrum-tag-padding-left) - var(--spectrum-tag-border-size));
-  padding-inline-end: calc(var(--spectrum-tag-padding-right) - var(--spectrum-tag-border-size));
-  block-size: var(--spectrum-tag-height);
+  padding-inline-start: calc(var(--spectrum-tag-texticon-padding-left) - var(--spectrum-tag-texticon-border-size));
+  padding-inline-end: calc(var(--spectrum-tag-texticon-padding-right) - var(--spectrum-tag-texticon-border-size));
+  block-size: var(--spectrum-tag-texticon-height);
   max-inline-size: 100%;
 
-  border-width: var(--spectrum-tag-border-size);
+  border-width: var(--spectrum-tag-texticon-border-size);
   border-style: solid;
   border-radius: var(--spectrum-alias-border-radius-regular);
   outline: none;
@@ -70,26 +70,26 @@ governing permissions and limitations under the License.
 
   > .spectrum-Icon,
   > .spectrum-Avatar {
-    margin-inline-end: var(--spectrum-tag-icon-gap);
+    margin-inline-end: var(--spectrum-tag-texticon-icon-gap);
 
     /* Add padding for "avatar" variant */
-    margin-inline-start: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-left));
+    margin-inline-start: calc(var(--spectrum-tag-texticon-avatar-padding-x) - var(--spectrum-tag-texticon-padding-left));
 
     ~ .spectrum-Tag-label {
-      margin-inline-end: calc(var(--spectrum-tag-avatar-padding-x) - var(--spectrum-tag-padding-right));
+      margin-inline-end: calc(var(--spectrum-tag-texticon-avatar-padding-x) - var(--spectrum-tag-texticon-padding-right));
     }
   }
 
   .spectrum-ClearButton {
-    margin-inline-end: calc(-1 * var(--spectrum-tag-padding-right));
+    margin-inline-end: calc(-1 * var(--spectrum-tag-texticon-padding-right));
   }
 }
 
 .spectrum-Tag-label {
   block-size: 100%;
-  line-height: calc(var(--spectrum-tag-height) - calc(var(--spectrum-tag-border-size) * 2));
+  line-height: calc(var(--spectrum-tag-texticon-height) - calc(var(--spectrum-tag-texticon-border-size) * 2));
   flex: 1 1 auto;
-  font-size: var(--spectrum-tag-text-size);
+  font-size: var(--spectrum-tag-texticon-text-size);
   cursor: default;
   overflow: hidden;
   white-space: nowrap;
@@ -100,7 +100,7 @@ governing permissions and limitations under the License.
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-tag-focus-ring-size-key-focus) var(--spectrum-tag-m-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-tag-texticon-focus-ring-size-key-focus) var(--spectrum-tag-m-texticon-focus-ring-color-key-focus);
     }
   }
 }
