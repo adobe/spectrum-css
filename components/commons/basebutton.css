@@ -87,7 +87,7 @@ governing permissions and limitations under the License.
 %spectrum-ButtonWithFocusRing {
   &:after {
     border-radius: calc(
-      var(--spectrum-button-primary-border-radius) +
+      var(--spectrum-button-primary-texticon-border-radius) +
         var(--spectrum-alias-focus-ring-gap)
     );
     content: "";
