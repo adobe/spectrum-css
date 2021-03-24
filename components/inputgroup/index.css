@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
   );
   --spectrum-datepicker-range-dash-padding-top: 0;
   --spectrum-datepicker-range-dash-line-height: calc(
-    var(--spectrum-textfield-m-height) - var(--spectrum-global-dimension-size-100)
+    var(--spectrum-textfield-m-texticon-height) - var(--spectrum-global-dimension-size-100)
   );
 
   /* be square: we're a little ahead of DNA at the time of writing, but Nate said so */
@@ -66,7 +66,7 @@ governing permissions and limitations under the License.
   );
 
   --spectrum-combobox-quiet-button-offset: calc(
-    var(--spectrum-actionbutton-m-min-width) / 2 -
+    var(--spectrum-actionbutton-m-texticon-min-width) / 2 -
       var(--spectrum-icon-chevron-down-medium-width) / 2
   );
 }
@@ -127,7 +127,7 @@ governing permissions and limitations under the License.
     border-block-start: 0;
     border-inline-start: 0;
     border-inline-end: 0;
-    border-block-end: var(--spectrum-textfield-quiet-m-border-size) solid;
+    border-block-end: var(--spectrum-textfield-m-quiet-texticon-border-size) solid;
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
     /* More hitarea */
