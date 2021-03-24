@@ -31,7 +31,7 @@ governing permissions and limitations under the License.
     replace: --spectrum-progressbar-;
   }
   @remapvars {
-    find: --spectrum-fieldlabel-side-m-;
+    find: --spectrum-fieldlabel-m-side-;
     replace: --spectrum-fieldlabel-side-;
   }
 }
