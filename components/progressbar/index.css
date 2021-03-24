@@ -87,7 +87,7 @@ governing permissions and limitations under the License.
 .spectrum-ProgressBar-label,
 .spectrum-ProgressBar-percentage {
   text-align: start;
-  margin-block-end: var(--spectrum-progressbar-label-gap-y);
+  margin-block-end: var(--spectrum-progressbar-value-gap-y);
 }
 
 .spectrum-ProgressBar-label {
