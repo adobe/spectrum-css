@@ -66,11 +66,11 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel--left {
   display: inline-block;
-  padding-block: var(--spectrum-fieldlabel-side-m-padding-top) 0;
-  padding-inline: 0 var(--spectrum-fieldlabel-side-m-padding-right);
+  padding-block: var(--spectrum-fieldlabel-m-side-padding-top) 0;
+  padding-inline: 0 var(--spectrum-fieldlabel-m-side-padding-right);
 
   & .spectrum-FieldLabel-requiredIcon {
-    margin-block: var(--spectrum-fieldlabel-side-m-asterisk-margin-y) 0;
+    margin-block: var(--spectrum-fieldlabel-m-side-asterisk-margin-y) 0;
     margin-inline: var(--spectrum-fieldlabel-asterisk-gap) 0;
   }
 }
@@ -78,9 +78,9 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel--right {
   display: inline-block;
   text-align: end;
-  padding-block: var(--spectrum-fieldlabel-side-m-padding-top) 0;
+  padding-block: var(--spectrum-fieldlabel-m-side-padding-top) 0;
   /* todo: correct missing DNA variable */
-  padding-inline: 0 var(--spectrum-fieldlabel-side-m-padding-right);
+  padding-inline: 0 var(--spectrum-fieldlabel-m-side-padding-right);
 }
 
 .spectrum-Form {
