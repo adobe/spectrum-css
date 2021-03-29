@@ -3,6 +3,9 @@
   "version": "1.0.0-beta.3",
   "description": "The Spectrum CSS diet vars package (a slightly changed subset of components)",
   "license": "Apache-2.0",
+  "files": [
+    "/dist/**.*"
+  ],
   "main": "dist/spectrum-metadata.json",
   "scripts": {
     "update": "gulp update"
