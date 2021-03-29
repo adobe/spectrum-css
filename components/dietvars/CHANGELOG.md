@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.3"></a>
+# 1.0.0-beta.3
+🗓 2021-03-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dietvars@1.0.0-beta.2...@spectrum-css/dietvars@1.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* adjusted another cta color ([d36cc72](https://github.com/adobe/spectrum-css/commit/d36cc72))
+
+
+
+
+
 <a name="1.0.0-beta.2"></a>
 # 1.0.0-beta.2
 🗓 2021-03-29
