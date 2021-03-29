@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.4"></a>
+# 1.0.0-beta.4
+🗓 2021-03-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dietvars@1.0.0-beta.3...@spectrum-css/dietvars@1.0.0-beta.4)
+
+### 🐛 Bug fixes
+
+* whitelist dist in npm package ([4b57e11](https://github.com/adobe/spectrum-css/commit/4b57e11))
+
+
+
+
+
 <a name="1.0.0-beta.3"></a>
 # 1.0.0-beta.3
 🗓 2021-03-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dietvars@1.0.0-beta.2...@spectrum-css/dietvars@1.0.0-beta.3)
