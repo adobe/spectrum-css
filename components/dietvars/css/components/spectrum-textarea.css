@@ -1,6 +1,6 @@
 :root {
   --spectrum-textarea-quiet-l-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-quiet-l-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-quiet-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-quiet-l-background-color: var(--spectrum-alias-background-color-transparent);
@@ -149,11 +149,13 @@
   --spectrum-textarea-quiet-l-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-quiet-l-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-l-border-radius: 0px;
+  --spectrum-textarea-quiet-l-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-quiet-l-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-quiet-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-quiet-l-label-gap-y: 0;
   --spectrum-textarea-quiet-l-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-quiet-m-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-quiet-m-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-quiet-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-quiet-m-background-color: var(--spectrum-alias-background-color-transparent);
@@ -302,11 +304,13 @@
   --spectrum-textarea-quiet-m-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-quiet-m-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-m-border-radius: 0px;
+  --spectrum-textarea-quiet-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-quiet-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-quiet-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-quiet-m-label-gap-y: 0;
   --spectrum-textarea-quiet-m-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-quiet-s-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-quiet-s-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-quiet-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-quiet-s-background-color: var(--spectrum-alias-background-color-transparent);
@@ -455,11 +459,13 @@
   --spectrum-textarea-quiet-s-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-quiet-s-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-s-border-radius: 0px;
+  --spectrum-textarea-quiet-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-quiet-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-quiet-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-quiet-s-label-gap-y: 0;
   --spectrum-textarea-quiet-s-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-quiet-xl-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-quiet-xl-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-quiet-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-quiet-xl-background-color: var(--spectrum-alias-background-color-transparent);
@@ -608,11 +614,13 @@
   --spectrum-textarea-quiet-xl-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-quiet-xl-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-quiet-xl-border-radius: 0px;
+  --spectrum-textarea-quiet-xl-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-quiet-xl-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-quiet-xl-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-quiet-xl-label-gap-y: 0;
   --spectrum-textarea-quiet-xl-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-l-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-l-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-l-background-color: var(--spectrum-global-color-gray-50);
@@ -761,9 +769,11 @@
   --spectrum-textarea-l-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-l-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-l-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textarea-l-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-l-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-m-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-m-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-m-background-color: var(--spectrum-global-color-gray-50);
@@ -912,9 +922,11 @@
   --spectrum-textarea-m-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-m-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-m-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textarea-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-s-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-s-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-s-background-color: var(--spectrum-global-color-gray-50);
@@ -1063,9 +1075,11 @@
   --spectrum-textarea-s-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-s-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-s-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textarea-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-xl-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textarea-xl-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textarea-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textarea-xl-background-color: var(--spectrum-global-color-gray-50);
@@ -1214,5 +1228,7 @@
   --spectrum-textarea-xl-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textarea-xl-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textarea-xl-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textarea-xl-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textarea-xl-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textarea-xl-cursor-hit-x: var(--spectrum-global-dimension-size-50);
 }

@@ -56,9 +56,9 @@
   --spectrum-semantic-informative-background-color-hover: var(--spectrum-global-color-static-blue-700);
   --spectrum-semantic-informative-background-color-down: var(--spectrum-global-color-static-blue-800);
   --spectrum-semantic-informative-background-color-key-focus: var(--spectrum-global-color-static-blue-700);
-  --spectrum-semantic-cta-color-background-default: rgb(92,92,224); /* var(--spectrum-global-color-static-blue-600) */
-  --spectrum-semantic-cta-color-background-hover: rgb(70,70,198); /* var(--spectrum-global-color-static-blue-700) */
-  --spectrum-semantic-cta-color-background-down: rgb(61,61,180); /* var(--spectrum-global-color-static-blue-800) */
+  --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-static-blue-600);
+  --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-static-blue-700);
+  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-static-blue-800);
   --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-static-blue-600);
   --spectrum-semantic-neutral-background-color-default: var(--spectrum-global-color-static-gray-700);
   --spectrum-semantic-neutral-background-color-hover: var(--spectrum-global-color-static-gray-800);

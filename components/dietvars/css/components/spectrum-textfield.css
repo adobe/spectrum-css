@@ -1,6 +1,6 @@
 :root {
   --spectrum-textfield-quiet-l-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-quiet-l-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-quiet-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-quiet-l-background-color: var(--spectrum-alias-background-color-transparent);
@@ -149,11 +149,13 @@
   --spectrum-textfield-quiet-l-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-quiet-l-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-quiet-l-border-radius: 0px;
+  --spectrum-textfield-quiet-l-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-quiet-l-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-quiet-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-quiet-l-label-gap-y: 0;
   --spectrum-textfield-quiet-l-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textfield-quiet-m-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-quiet-m-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-quiet-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-quiet-m-background-color: var(--spectrum-alias-background-color-transparent);
@@ -302,11 +304,13 @@
   --spectrum-textfield-quiet-m-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-quiet-m-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-quiet-m-border-radius: 0px;
+  --spectrum-textfield-quiet-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-quiet-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-quiet-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-quiet-m-label-gap-y: 0;
   --spectrum-textfield-quiet-m-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textfield-quiet-s-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-quiet-s-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-quiet-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-quiet-s-background-color: var(--spectrum-alias-background-color-transparent);
@@ -455,11 +459,13 @@
   --spectrum-textfield-quiet-s-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-quiet-s-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-quiet-s-border-radius: 0px;
+  --spectrum-textfield-quiet-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-quiet-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-quiet-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-quiet-s-label-gap-y: 0;
   --spectrum-textfield-quiet-s-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textfield-quiet-xl-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-quiet-xl-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-quiet-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-quiet-xl-background-color: var(--spectrum-alias-background-color-transparent);
@@ -608,11 +614,13 @@
   --spectrum-textfield-quiet-xl-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-quiet-xl-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-quiet-xl-border-radius: 0px;
+  --spectrum-textfield-quiet-xl-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-quiet-xl-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-quiet-xl-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-quiet-xl-label-gap-y: 0;
   --spectrum-textfield-quiet-xl-label-gap-x: var(--spectrum-global-dimension-size-150);
   --spectrum-textfield-l-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-l-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-background-color: var(--spectrum-global-color-gray-50);
@@ -761,9 +769,11 @@
   --spectrum-textfield-l-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-l-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-l-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textfield-l-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-l-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-m-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-m-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-background-color: var(--spectrum-global-color-gray-50);
@@ -912,9 +922,11 @@
   --spectrum-textfield-m-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-m-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-m-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textfield-m-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-m-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-s-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-background-color: var(--spectrum-global-color-gray-50);
@@ -1063,9 +1075,11 @@
   --spectrum-textfield-s-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-s-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-s-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textfield-s-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-s-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-xl-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-textfield-xl-placeholder-text-color: var(--spectrum-alias-placeholder-text-color);
+  --spectrum-textfield-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-background-color: var(--spectrum-global-color-gray-50);
@@ -1214,5 +1228,7 @@
   --spectrum-textfield-xl-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-textfield-xl-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-textfield-xl-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-textfield-xl-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-textfield-xl-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-xl-cursor-hit-x: var(--spectrum-global-dimension-size-50);
 }
