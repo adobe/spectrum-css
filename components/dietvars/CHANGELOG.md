@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.7"></a>
+# 1.0.0-beta.7
+🗓 2021-04-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dietvars@1.0.0-beta.6...@spectrum-css/dietvars@1.0.0-beta.7)
+
+### ✨ Features
+
+* added quiet for border vs fill button variants ([eec999a](https://github.com/adobe/spectrum-css/commit/eec999a))
+
+
+
+
+
 <a name="1.0.0-beta.6"></a>
 # 1.0.0-beta.6
 🗓 2021-04-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dietvars@1.0.0-beta.5...@spectrum-css/dietvars@1.0.0-beta.6)
