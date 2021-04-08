@@ -1,6 +1,6 @@
 {
     "dna": {
-        "version": "6.1.1-dietvars-beta",
+        "version": "6.1.1",
         "KEYS": {
             "COLORS": "colorGlobals",
             "FONT": "fontGlobals",
@@ -464,11 +464,11 @@
                     "text-color-over-background": "$colorGlobals.static-white",
                     "text-color-over-background-disabled": "rgba(255,255,255,0.2)",
                     "heading-text-color": "$colorStopData.light.colorTokens.gray-900",
-                    "border-color": "$colorStopData.light.colorTokens.gray-400",
-                    "border-color-hover": "$colorStopData.light.colorTokens.gray-500",
-                    "border-color-down": "$colorStopData.light.colorTokens.gray-500",
-                    "border-color-focus": "$colorStopData.light.colorTokens.blue-400",
-                    "border-color-mouse-focus": "$colorStopData.light.colorTokens.blue-500",
+                    "border-color": "$colorStopData.light.colorTokens.gray-300",
+                    "border-color-hover": "$colorStopData.light.colorTokens.gray-400",
+                    "border-color-down": "$colorStopData.light.colorTokens.gray-800",
+                    "border-color-focus": "$colorStopData.light.colorTokens.gray-800",
+                    "border-color-mouse-focus": "$colorStopData.light.colorTokens.gray-800",
                     "border-color-selected": "$colorStopData.light.colorTokens.blue-500",
                     "border-color-disabled": "$colorStopData.light.colorTokens.gray-200",
                     "border-color-extralight": "$colorStopData.light.colorTokens.gray-100",
@@ -10796,9 +10796,9 @@
                                 "value-text-letter-spacing": "$fontGlobals.letter-spacing-none",
                                 "value-text-transform": "none",
                                 "height": "$scaleData.medium.dimensionAliases.item-height-m",
-                                "text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "icon-size": "$scaleData.medium.dimensionAliases.workflow-icon-size-m",
-                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "asterisk-size": "$scaleData.medium.dimensionAliases.ui-icon-asterisk-size-100",
                                 "asterisk-gap": "$scaleData.medium.dimensionTokens.size-25",
                                 "asterisk-margin-y": "$scaleData.medium.dimensionTokens.size-50",
@@ -10812,7 +10812,7 @@
                             "states": {
                                 "default": {
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color",
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
@@ -10823,17 +10823,17 @@
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color-disabled"
                                 },
                                 "hover": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "down": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "key-focus": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 }
@@ -10923,9 +10923,9 @@
                                 "value-text-letter-spacing": "$fontGlobals.letter-spacing-none",
                                 "value-text-transform": "none",
                                 "height": "$scaleData.medium.dimensionAliases.item-height-m",
-                                "text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "icon-size": "$scaleData.medium.dimensionAliases.workflow-icon-size-m",
-                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "asterisk-size": "$scaleData.medium.dimensionAliases.ui-icon-asterisk-size-100",
                                 "asterisk-gap": "$scaleData.medium.dimensionTokens.size-25",
                                 "asterisk-margin-y": "$scaleData.medium.dimensionTokens.size-50",
@@ -11134,7 +11134,7 @@
                             "states": {
                                 "default": {
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color",
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
@@ -11145,17 +11145,17 @@
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color-disabled"
                                 },
                                 "hover": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "down": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "key-focus": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 }
@@ -11196,7 +11196,7 @@
                             "states": {
                                 "default": {
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color",
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
@@ -11207,17 +11207,17 @@
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color-disabled"
                                 },
                                 "hover": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "down": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "key-focus": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 }
@@ -11257,7 +11257,7 @@
                             "states": {
                                 "default": {
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color",
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
@@ -11268,17 +11268,17 @@
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color-disabled"
                                 },
                                 "hover": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "down": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "key-focus": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 }
@@ -11303,9 +11303,9 @@
                                 "value-text-letter-spacing": "$fontGlobals.letter-spacing-none",
                                 "value-text-transform": "none",
                                 "height": "$scaleData.medium.dimensionAliases.item-height-m",
-                                "text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "icon-size": "$scaleData.medium.dimensionAliases.workflow-icon-size-m",
-                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "asterisk-size": "$scaleData.medium.dimensionAliases.ui-icon-asterisk-size-100",
                                 "asterisk-gap": "$scaleData.medium.dimensionTokens.size-25",
                                 "asterisk-margin-y": "$scaleData.medium.dimensionTokens.size-50",
@@ -11318,7 +11318,7 @@
                             "states": {
                                 "default": {
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color",
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
@@ -11329,17 +11329,17 @@
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color-disabled"
                                 },
                                 "hover": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "down": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "key-focus": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 }
@@ -11428,9 +11428,9 @@
                                 "value-text-letter-spacing": "$fontGlobals.letter-spacing-none",
                                 "value-text-transform": "none",
                                 "height": "$scaleData.medium.dimensionAliases.item-height-m",
-                                "text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "icon-size": "$scaleData.medium.dimensionAliases.workflow-icon-size-m",
-                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-75",
+                                "value-text-size": "$scaleData.medium.dimensionTokens.font-size-100",
                                 "asterisk-size": "$scaleData.medium.dimensionAliases.ui-icon-asterisk-size-100",
                                 "asterisk-gap": "$scaleData.medium.dimensionTokens.size-25",
                                 "asterisk-margin-y": "$scaleData.medium.dimensionTokens.size-50",
@@ -11635,7 +11635,7 @@
                             "states": {
                                 "default": {
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color",
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
@@ -11646,17 +11646,17 @@
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color-disabled"
                                 },
                                 "hover": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "down": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "key-focus": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 }
@@ -11696,7 +11696,7 @@
                             "states": {
                                 "default": {
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color",
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
@@ -11707,17 +11707,17 @@
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color-disabled"
                                 },
                                 "hover": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "down": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 },
                                 "key-focus": {
-                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-600",
+                                    "asterisk-color": "$colorStopData.light.colorTokens.gray-700",
                                     "text-color": "$colorStopData.light.colorAliases.label-text-color",
                                     "value-text-color": "$colorStopData.light.colorAliases.text-color"
                                 }
@@ -12121,7 +12121,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12130,7 +12130,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12139,7 +12139,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12157,7 +12157,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -12166,7 +12166,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12175,7 +12175,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12184,7 +12184,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12193,7 +12193,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12211,7 +12211,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12220,7 +12220,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12229,7 +12229,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12238,7 +12238,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12247,7 +12247,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12265,7 +12265,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12274,7 +12274,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12327,7 +12327,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12336,7 +12336,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12345,7 +12345,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12363,7 +12363,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -12372,7 +12372,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12381,7 +12381,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12390,7 +12390,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12399,7 +12399,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12417,7 +12417,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12426,7 +12426,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12435,7 +12435,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12444,7 +12444,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12453,7 +12453,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12471,7 +12471,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12480,7 +12480,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12533,7 +12533,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12542,7 +12542,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12551,7 +12551,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12569,7 +12569,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -12578,7 +12578,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12587,7 +12587,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12596,7 +12596,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12605,7 +12605,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12623,7 +12623,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12632,7 +12632,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12641,7 +12641,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12650,7 +12650,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12659,7 +12659,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12677,7 +12677,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12686,7 +12686,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12739,7 +12739,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12748,7 +12748,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12757,7 +12757,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12775,7 +12775,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -12784,7 +12784,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12793,7 +12793,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12802,7 +12802,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12811,7 +12811,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12829,7 +12829,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -12838,7 +12838,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12847,7 +12847,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12856,7 +12856,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12865,7 +12865,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12883,7 +12883,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -12892,7 +12892,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12942,7 +12942,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12951,7 +12951,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12960,7 +12960,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -12978,7 +12978,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -12987,7 +12987,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -12996,7 +12996,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13005,7 +13005,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13014,7 +13014,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13032,7 +13032,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13041,7 +13041,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13050,7 +13050,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13059,7 +13059,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13068,7 +13068,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13086,7 +13086,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13095,7 +13095,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13145,7 +13145,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13154,7 +13154,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13163,7 +13163,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13181,7 +13181,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -13190,7 +13190,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13199,7 +13199,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13208,7 +13208,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13217,7 +13217,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13235,7 +13235,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13244,7 +13244,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13253,7 +13253,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13262,7 +13262,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13271,7 +13271,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13289,7 +13289,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13298,7 +13298,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13348,7 +13348,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13357,7 +13357,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13366,7 +13366,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13384,7 +13384,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -13393,7 +13393,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13402,7 +13402,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13411,7 +13411,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13420,7 +13420,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13438,7 +13438,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13447,7 +13447,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13456,7 +13456,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13465,7 +13465,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13474,7 +13474,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13492,7 +13492,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13501,7 +13501,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13551,7 +13551,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13560,7 +13560,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13569,7 +13569,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13587,7 +13587,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -13596,7 +13596,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13605,7 +13605,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13614,7 +13614,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13623,7 +13623,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13641,7 +13641,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13650,7 +13650,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13659,7 +13659,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13668,7 +13668,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13677,7 +13677,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13695,7 +13695,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13704,7 +13704,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13769,7 +13769,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13778,7 +13778,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13787,7 +13787,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13805,7 +13805,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -13814,7 +13814,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13823,7 +13823,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13832,7 +13832,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13841,7 +13841,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13859,7 +13859,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -13868,7 +13868,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13877,7 +13877,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13886,7 +13886,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13895,7 +13895,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13913,7 +13913,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -13922,7 +13922,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -13975,7 +13975,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13984,7 +13984,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -13993,7 +13993,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14011,7 +14011,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -14020,7 +14020,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14029,7 +14029,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14038,7 +14038,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14047,7 +14047,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14065,7 +14065,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14074,7 +14074,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14083,7 +14083,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14092,7 +14092,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14101,7 +14101,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14119,7 +14119,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14128,7 +14128,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14181,7 +14181,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14190,7 +14190,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14199,7 +14199,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14217,7 +14217,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -14226,7 +14226,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14235,7 +14235,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14244,7 +14244,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14253,7 +14253,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14271,7 +14271,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14280,7 +14280,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14289,7 +14289,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14298,7 +14298,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14307,7 +14307,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14325,7 +14325,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14334,7 +14334,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14387,7 +14387,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14396,7 +14396,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14405,7 +14405,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14423,7 +14423,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -14432,7 +14432,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14441,7 +14441,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14450,7 +14450,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14459,7 +14459,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14477,7 +14477,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14486,7 +14486,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14495,7 +14495,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14504,7 +14504,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14513,7 +14513,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14531,7 +14531,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14540,7 +14540,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14590,7 +14590,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14599,7 +14599,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14608,7 +14608,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14626,7 +14626,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -14635,7 +14635,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14644,7 +14644,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14653,7 +14653,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14662,7 +14662,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14680,7 +14680,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14689,7 +14689,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14698,7 +14698,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14707,7 +14707,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14716,7 +14716,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14734,7 +14734,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14743,7 +14743,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14793,7 +14793,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14802,7 +14802,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14811,7 +14811,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -14829,7 +14829,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -14838,7 +14838,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14847,7 +14847,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14856,7 +14856,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14865,7 +14865,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14883,7 +14883,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -14892,7 +14892,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14901,7 +14901,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14910,7 +14910,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14919,7 +14919,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14937,7 +14937,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -14946,7 +14946,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -14996,7 +14996,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -15005,7 +15005,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -15014,7 +15014,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -15032,7 +15032,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -15041,7 +15041,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -15050,7 +15050,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15059,7 +15059,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15068,7 +15068,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15086,7 +15086,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15095,7 +15095,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -15104,7 +15104,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15113,7 +15113,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15122,7 +15122,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15140,7 +15140,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15149,7 +15149,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -15199,7 +15199,7 @@
                             },
                             "states": {
                                 "default": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorTokens.gray-600",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -15208,7 +15208,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -15217,7 +15217,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-900"
                                 },
                                 "down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
@@ -15235,7 +15235,7 @@
                                     "border-color": "$colorStopData.light.colorAliases.border-color-focus"
                                 },
                                 "mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "validation-icon-color": "$colorStopData.light.colorAliases.background-color-transparent",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
@@ -15244,7 +15244,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-700"
                                 },
                                 "disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -15253,7 +15253,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "error": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15262,7 +15262,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15271,7 +15271,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15289,7 +15289,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorSemantics.negative-color-icon",
@@ -15298,7 +15298,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "error-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",
@@ -15307,7 +15307,7 @@
                                     "icon-color": "$colorStopData.light.colorTokens.gray-500"
                                 },
                                 "valid": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15316,7 +15316,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-hover": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-hover",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15325,7 +15325,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-down": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color-down",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-down",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15343,7 +15343,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-mouse-focus": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.placeholder-text-color",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-hover",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.green-400",
@@ -15352,7 +15352,7 @@
                                     "icon-color": "$colorStopData.light.colorAliases.icon-color"
                                 },
                                 "valid-disabled": {
-                                    "border-size": "$staticAliases.border-size-thin",
+                                    "border-size": "$staticAliases.border-size-thick",
                                     "placeholder-text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "text-color": "$colorStopData.light.colorAliases.text-color-disabled",
                                     "validation-icon-color": "$colorStopData.light.colorTokens.gray-500",

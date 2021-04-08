@@ -33,11 +33,11 @@
   --spectrum-alias-text-color-over-background: var(--spectrum-global-color-static-white);
   --spectrum-alias-text-color-over-background-disabled: rgba(255,255,255,0.2);
   --spectrum-alias-heading-text-color: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-border-color: var(--spectrum-global-color-gray-400);
-  --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-500);
-  --spectrum-alias-border-color-down: var(--spectrum-global-color-gray-500);
-  --spectrum-alias-border-color-focus: var(--spectrum-global-color-blue-400);
-  --spectrum-alias-border-color-mouse-focus: var(--spectrum-global-color-blue-500);
+  --spectrum-alias-border-color: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-400);
+  --spectrum-alias-border-color-down: var(--spectrum-global-color-gray-800);
+  --spectrum-alias-border-color-focus: var(--spectrum-global-color-gray-800);
+  --spectrum-alias-border-color-mouse-focus: var(--spectrum-global-color-gray-800);
   --spectrum-alias-border-color-selected: var(--spectrum-global-color-blue-500);
   --spectrum-alias-border-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-alias-border-color-extralight: var(--spectrum-global-color-gray-100);
