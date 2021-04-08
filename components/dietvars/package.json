@@ -31,5 +31,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://opensource.adobe.com/spectrum-css/"
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "dependencies": {
+    "@adobe/spectrum-css-workflow-icons": "^1.2.0"
+  }
 }
