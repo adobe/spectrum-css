@@ -1,4 +1,5 @@
 :root {
+  --spectrum-textfield-quiet-l-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textfield-quiet-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
@@ -153,6 +154,7 @@
   --spectrum-textfield-quiet-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-quiet-l-label-gap-y: 0;
   --spectrum-textfield-quiet-l-label-gap-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-textfield-quiet-m-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textfield-quiet-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
@@ -307,6 +309,7 @@
   --spectrum-textfield-quiet-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-quiet-m-label-gap-y: 0;
   --spectrum-textfield-quiet-m-label-gap-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-textfield-quiet-s-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textfield-quiet-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
@@ -461,6 +464,7 @@
   --spectrum-textfield-quiet-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-quiet-s-label-gap-y: 0;
   --spectrum-textfield-quiet-s-label-gap-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-textfield-quiet-xl-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textfield-quiet-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-quiet-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-textfield-quiet-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);

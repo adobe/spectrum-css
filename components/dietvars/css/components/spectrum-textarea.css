@@ -1,4 +1,5 @@
 :root {
+  --spectrum-textarea-quiet-l-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textarea-quiet-l-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-l-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-l-validation-icon-color: var(--spectrum-alias-background-color-transparent);
@@ -153,6 +154,7 @@
   --spectrum-textarea-quiet-l-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-quiet-l-label-gap-y: 0;
   --spectrum-textarea-quiet-l-label-gap-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-textarea-quiet-m-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textarea-quiet-m-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-m-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-m-validation-icon-color: var(--spectrum-alias-background-color-transparent);
@@ -307,6 +309,7 @@
   --spectrum-textarea-quiet-m-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-quiet-m-label-gap-y: 0;
   --spectrum-textarea-quiet-m-label-gap-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-textarea-quiet-s-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textarea-quiet-s-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-s-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-s-validation-icon-color: var(--spectrum-alias-background-color-transparent);
@@ -461,6 +464,7 @@
   --spectrum-textarea-quiet-s-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textarea-quiet-s-label-gap-y: 0;
   --spectrum-textarea-quiet-s-label-gap-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-textarea-quiet-xl-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-textarea-quiet-xl-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textarea-quiet-xl-text-color: var(--spectrum-alias-text-color);
   --spectrum-textarea-quiet-xl-validation-icon-color: var(--spectrum-alias-background-color-transparent);
