@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.11"></a>
+# 1.0.0-beta.11
+🗓 2021-04-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dietvars@1.0.0-beta.10...@spectrum-css/dietvars@1.0.0-beta.11)
+
+### 🐛 Bug fixes
+
+* latest actionbutton and textfield ([51fdefd](https://github.com/adobe/spectrum-css/commit/51fdefd))
+
+
+
+
+
 <a name="1.0.0-beta.10"></a>
 # 1.0.0-beta.10
 🗓 2021-04-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dietvars@1.0.0-beta.9...@spectrum-css/dietvars@1.0.0-beta.10)
