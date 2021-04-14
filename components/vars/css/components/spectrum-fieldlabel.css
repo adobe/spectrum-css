@@ -41,7 +41,7 @@
   --spectrum-fieldlabel-side-l-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-l-padding-top: var(--spectrum-global-dimension-size-130);
   --spectrum-fieldlabel-side-l-padding-bottom: var(--spectrum-global-dimension-size-150);
-  --spectrum-fieldlabel-side-l-padding-right: var(--spectrum-global-dimension-size-150);
+  --spectrum-fieldlabel-side-l-padding-right: var(--spectrum-global-dimension-size-175);
   --spectrum-fieldlabel-side-l-icon-margin-y: var(--spectrum-global-dimension-size-85);
   --spectrum-fieldlabel-side-m-icon-color: var(--spectrum-alias-icon-color);
   --spectrum-fieldlabel-side-m-asterisk-color: var(--spectrum-global-color-gray-600);
@@ -82,7 +82,7 @@
   --spectrum-fieldlabel-side-m-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-m-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-fieldlabel-side-m-padding-bottom: var(--spectrum-global-dimension-size-115);
-  --spectrum-fieldlabel-side-m-padding-right: var(--spectrum-global-dimension-size-100);
+  --spectrum-fieldlabel-side-m-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-fieldlabel-side-m-icon-margin-y: var(--spectrum-global-dimension-size-85);
   --spectrum-fieldlabel-side-over-background-l-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-fieldlabel-side-over-background-l-asterisk-color: var(--spectrum-global-color-static-white);
@@ -126,7 +126,7 @@
   --spectrum-fieldlabel-side-over-background-l-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-over-background-l-padding-top: var(--spectrum-global-dimension-size-130);
   --spectrum-fieldlabel-side-over-background-l-padding-bottom: var(--spectrum-global-dimension-size-150);
-  --spectrum-fieldlabel-side-over-background-l-padding-right: var(--spectrum-global-dimension-size-150);
+  --spectrum-fieldlabel-side-over-background-l-padding-right: var(--spectrum-global-dimension-size-175);
   --spectrum-fieldlabel-side-over-background-l-icon-margin-y: var(--spectrum-global-dimension-size-85);
   --spectrum-fieldlabel-side-over-background-m-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-fieldlabel-side-over-background-m-asterisk-color: var(--spectrum-global-color-static-white);
@@ -170,7 +170,7 @@
   --spectrum-fieldlabel-side-over-background-m-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-over-background-m-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-fieldlabel-side-over-background-m-padding-bottom: var(--spectrum-global-dimension-size-115);
-  --spectrum-fieldlabel-side-over-background-m-padding-right: var(--spectrum-global-dimension-size-100);
+  --spectrum-fieldlabel-side-over-background-m-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-fieldlabel-side-over-background-m-icon-margin-y: var(--spectrum-global-dimension-size-85);
   --spectrum-fieldlabel-side-over-background-s-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-fieldlabel-side-over-background-s-asterisk-color: var(--spectrum-global-color-static-white);
@@ -214,7 +214,7 @@
   --spectrum-fieldlabel-side-over-background-s-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-over-background-s-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-over-background-s-padding-bottom: var(--spectrum-global-dimension-size-65);
-  --spectrum-fieldlabel-side-over-background-s-padding-right: var(--spectrum-global-dimension-size-75);
+  --spectrum-fieldlabel-side-over-background-s-padding-right: var(--spectrum-global-dimension-size-130);
   --spectrum-fieldlabel-side-over-background-s-icon-margin-y: var(--spectrum-global-dimension-size-40);
   --spectrum-fieldlabel-side-over-background-xl-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-fieldlabel-side-over-background-xl-asterisk-color: var(--spectrum-global-color-static-white);
@@ -258,7 +258,7 @@
   --spectrum-fieldlabel-side-over-background-xl-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-over-background-xl-padding-top: var(--spectrum-global-dimension-size-175);
   --spectrum-fieldlabel-side-over-background-xl-padding-bottom: var(--spectrum-global-dimension-size-175);
-  --spectrum-fieldlabel-side-over-background-xl-padding-right: var(--spectrum-global-dimension-size-200);
+  --spectrum-fieldlabel-side-over-background-xl-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-fieldlabel-side-over-background-xl-icon-margin-y: var(--spectrum-global-dimension-size-85);
   --spectrum-fieldlabel-side-s-icon-color: var(--spectrum-alias-icon-color);
   --spectrum-fieldlabel-side-s-asterisk-color: var(--spectrum-global-color-gray-600);
@@ -299,7 +299,7 @@
   --spectrum-fieldlabel-side-s-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-s-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-s-padding-bottom: var(--spectrum-global-dimension-size-65);
-  --spectrum-fieldlabel-side-s-padding-right: var(--spectrum-global-dimension-size-75);
+  --spectrum-fieldlabel-side-s-padding-right: var(--spectrum-global-dimension-size-130);
   --spectrum-fieldlabel-side-s-icon-margin-y: var(--spectrum-global-dimension-size-40);
   --spectrum-fieldlabel-side-xl-icon-color: var(--spectrum-alias-icon-color);
   --spectrum-fieldlabel-side-xl-asterisk-color: var(--spectrum-global-color-gray-600);
@@ -340,7 +340,7 @@
   --spectrum-fieldlabel-side-xl-asterisk-margin-y: var(--spectrum-global-dimension-size-50);
   --spectrum-fieldlabel-side-xl-padding-top: var(--spectrum-global-dimension-size-175);
   --spectrum-fieldlabel-side-xl-padding-bottom: var(--spectrum-global-dimension-size-175);
-  --spectrum-fieldlabel-side-xl-padding-right: var(--spectrum-global-dimension-size-200);
+  --spectrum-fieldlabel-side-xl-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-fieldlabel-side-xl-icon-margin-y: var(--spectrum-global-dimension-size-85);
   --spectrum-fieldlabel-l-icon-color: var(--spectrum-alias-icon-color);
   --spectrum-fieldlabel-l-asterisk-color: var(--spectrum-global-color-gray-600);

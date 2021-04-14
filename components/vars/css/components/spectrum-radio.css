@@ -50,7 +50,7 @@
   --spectrum-radio-l-emphasized-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-l-emphasized-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-l-emphasized-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-l-emphasized-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-l-emphasized-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-l-emphasized-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-l-emphasized-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-l-emphasized-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -69,7 +69,7 @@
   --spectrum-radio-l-emphasized-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-l-emphasized-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-l-emphasized-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-l-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-l-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-l-emphasized-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-l-emphasized-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-l-emphasized-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -146,7 +146,7 @@
   --spectrum-radio-m-emphasized-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-m-emphasized-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-m-emphasized-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-m-emphasized-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-m-emphasized-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-m-emphasized-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-m-emphasized-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-m-emphasized-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -165,7 +165,7 @@
   --spectrum-radio-m-emphasized-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-m-emphasized-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-m-emphasized-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-m-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-m-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-m-emphasized-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-m-emphasized-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-m-emphasized-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -243,7 +243,7 @@
   --spectrum-radio-s-emphasized-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-s-emphasized-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-s-emphasized-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-s-emphasized-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-s-emphasized-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-s-emphasized-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-s-emphasized-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-s-emphasized-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -262,7 +262,7 @@
   --spectrum-radio-s-emphasized-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-s-emphasized-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-s-emphasized-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-s-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-s-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-s-emphasized-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-s-emphasized-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-s-emphasized-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -339,7 +339,7 @@
   --spectrum-radio-xl-emphasized-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-xl-emphasized-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-xl-emphasized-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-xl-emphasized-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-xl-emphasized-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-xl-emphasized-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-xl-emphasized-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-xl-emphasized-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -358,7 +358,7 @@
   --spectrum-radio-xl-emphasized-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-xl-emphasized-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-xl-emphasized-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-xl-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-xl-emphasized-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-xl-emphasized-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-xl-emphasized-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-xl-emphasized-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -435,7 +435,7 @@
   --spectrum-radio-l-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-l-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-l-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-l-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-l-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-l-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-l-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-l-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -454,7 +454,7 @@
   --spectrum-radio-l-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-l-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-l-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-l-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-l-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-l-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-l-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-l-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -531,7 +531,7 @@
   --spectrum-radio-m-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-m-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-m-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-m-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-m-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-m-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-m-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-m-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -550,7 +550,7 @@
   --spectrum-radio-m-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-m-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-m-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-m-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-m-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-m-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-m-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-m-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -628,7 +628,7 @@
   --spectrum-radio-s-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-s-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-s-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-s-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-s-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-s-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-s-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-s-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -647,7 +647,7 @@
   --spectrum-radio-s-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-s-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-s-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-s-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-s-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-s-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-s-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-s-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
@@ -724,7 +724,7 @@
   --spectrum-radio-xl-focus-ring-gap-error-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-xl-focus-ring-size-error-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-xl-focus-ring-border-radius-error-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-xl-text-color-error-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-xl-text-color-error-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-xl-circle-border-color-error-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-xl-focus-ring-color-error-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-xl-circle-border-size-error-disabled: var(--spectrum-alias-border-size-thick);
@@ -743,7 +743,7 @@
   --spectrum-radio-xl-focus-ring-gap-error-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-radio-xl-focus-ring-size-error-selected-key-focus: var(--spectrum-alias-focus-ring-size);
   --spectrum-radio-xl-focus-ring-border-radius-error-selected-key-focus: var(--spectrum-global-dimension-size-75);
-  --spectrum-radio-xl-text-color-error-selected-key-focus: var(--spectrum-global-color-blue-600);
+  --spectrum-radio-xl-text-color-error-selected-key-focus: var(--spectrum-global-color-red-700);
   --spectrum-radio-xl-circle-border-color-error-selected-key-focus: var(--spectrum-global-color-red-600);
   --spectrum-radio-xl-focus-ring-color-error-selected-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-radio-xl-circle-border-size-error-selected-disabled: var(--spectrum-alias-border-size-thick);
