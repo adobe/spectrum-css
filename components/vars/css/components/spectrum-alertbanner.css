@@ -4,8 +4,8 @@
   --spectrum-alertbanner-info-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-alertbanner-info-rule-color: var(--spectrum-alias-track-color-over-background);
   --spectrum-alertbanner-info-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-alertbanner-info-text-font-weight: var(--spectrum-global-font-weight-bold);
-  --spectrum-alertbanner-info-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-alertbanner-info-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alertbanner-info-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-alertbanner-info-text-baseline: var(--spectrum-global-dimension-size-250);
   --spectrum-alertbanner-info-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-alertbanner-info-max-width: var(--spectrum-global-dimension-size-6000);
@@ -31,8 +31,8 @@
   --spectrum-alertbanner-negative-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-alertbanner-negative-rule-color: var(--spectrum-alias-track-color-over-background);
   --spectrum-alertbanner-negative-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-alertbanner-negative-text-font-weight: var(--spectrum-global-font-weight-bold);
-  --spectrum-alertbanner-negative-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-alertbanner-negative-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alertbanner-negative-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-alertbanner-negative-text-baseline: var(--spectrum-global-dimension-size-250);
   --spectrum-alertbanner-negative-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-alertbanner-negative-max-width: var(--spectrum-global-dimension-size-6000);
@@ -58,8 +58,8 @@
   --spectrum-alertbanner-neutral-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-alertbanner-neutral-rule-color: var(--spectrum-alias-track-color-over-background);
   --spectrum-alertbanner-neutral-text-size: var(--spectrum-alias-font-size-default);
-  --spectrum-alertbanner-neutral-text-font-weight: var(--spectrum-global-font-weight-bold);
-  --spectrum-alertbanner-neutral-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-alertbanner-neutral-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-alertbanner-neutral-text-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-alertbanner-neutral-text-baseline: var(--spectrum-global-dimension-size-250);
   --spectrum-alertbanner-neutral-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-alertbanner-neutral-max-width: var(--spectrum-global-dimension-size-6000);
