@@ -11,17 +11,17 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-InLineAlert {
-  background-color: var(--spectrum-inlinealert-background-color);
+  background-color: var(--spectrum-inlinealert-neutral-background-color);
   /* default color set to body color, header element overwrites this */
-  color: var(--spectrum-inlinealert-text-color);
+  color: var(--spectrum-inlinealert-neutral-text-color);
 }
 
 .spectrum-InLineAlert-header {
-  color: var(--spectrum-inlinealert-title-text-color);
+  color: var(--spectrum-inlinealert-neutral-title-text-color);
 }
 
 .spectrum-InLineAlert-content {
-  color: var(--spectrum-inlinealert-text-color);
+  color: var(--spectrum-inlinealert-neutral-text-color);
 }
 
 .spectrum-InLineAlert--info {
