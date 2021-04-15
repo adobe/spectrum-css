@@ -150,7 +150,7 @@ governing permissions and limitations under the License.
     inline-size: calc(
       100% - var(--spectrum-icon-checkmark-medium-width) -
         var(--spectrum-listitem-texticon-icon-gap) -
-        var(--spectrum-listitem-thumbnail-padding-left) -
+        var(--spectrum-listitem-textthumbnail-padding-left) -
         var(--spectrum-alias-workflow-icon-size-m)
     );
   }

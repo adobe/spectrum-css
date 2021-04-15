@@ -14,18 +14,18 @@ governing permissions and limitations under the License.
 
 .spectrum-ProgressCircle {
   display: inline-block;
-  inline-size: var(--spectrum-progresscircle-medium-width);
-  block-size: var(--spectrum-progresscircle-medium-height);
+  inline-size: var(--spectrum-progresscircle-m-width);
+  block-size: var(--spectrum-progresscircle-m-height);
   position: relative;
   direction: ltr;
 }
 .spectrum-ProgressCircle-track {
   box-sizing: border-box;
-  inline-size: calc(var(--spectrum-progresscircle-medium-width));
-  block-size: calc(var(--spectrum-progresscircle-medium-height));
+  inline-size: calc(var(--spectrum-progresscircle-m-width));
+  block-size: calc(var(--spectrum-progresscircle-m-height));
   border-style: solid;
-  border-width: var(--spectrum-progresscircle-medium-border-size);
-  border-radius: var(--spectrum-progresscircle-medium-width);
+  border-width: var(--spectrum-progresscircle-m-border-size);
+  border-radius: var(--spectrum-progresscircle-m-width);
 }
 .spectrum-ProgressCircle-fills {
   position: absolute;
@@ -36,11 +36,11 @@ governing permissions and limitations under the License.
 }
 .spectrum-ProgressCircle-fill {
   box-sizing: border-box;
-  inline-size: calc(var(--spectrum-progresscircle-medium-width));
-  block-size: calc(var(--spectrum-progresscircle-medium-height));
+  inline-size: calc(var(--spectrum-progresscircle-m-width));
+  block-size: calc(var(--spectrum-progresscircle-m-height));
   border-style: solid;
-  border-width: var(--spectrum-progresscircle-medium-border-size);
-  border-radius: var(--spectrum-progresscircle-medium-width);
+  border-width: var(--spectrum-progresscircle-m-border-size);
+  border-radius: var(--spectrum-progresscircle-m-width);
 }
 .spectrum-ProgressCircle-fillMask1,
 .spectrum-ProgressCircle-fillMask2 {
@@ -64,43 +64,43 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ProgressCircle--small {
-  inline-size: var(--spectrum-progresscircle-small-width);
-  block-size: var(--spectrum-progresscircle-small-height);
+  inline-size: var(--spectrum-progresscircle-s-width);
+  block-size: var(--spectrum-progresscircle-s-height);
 
   .spectrum-ProgressCircle-track {
-    inline-size: calc(var(--spectrum-progresscircle-small-width));
-    block-size: calc(var(--spectrum-progresscircle-small-height));
+    inline-size: calc(var(--spectrum-progresscircle-s-width));
+    block-size: calc(var(--spectrum-progresscircle-s-height));
     border-style: solid;
-    border-width: var(--spectrum-progresscircle-small-border-size);
-    border-radius: var(--spectrum-progresscircle-small-width);
+    border-width: var(--spectrum-progresscircle-s-border-size);
+    border-radius: var(--spectrum-progresscircle-s-width);
   }
   .spectrum-ProgressCircle-fill {
-    inline-size: calc(var(--spectrum-progresscircle-small-width));
-    block-size: calc(var(--spectrum-progresscircle-small-height));
+    inline-size: calc(var(--spectrum-progresscircle-s-width));
+    block-size: calc(var(--spectrum-progresscircle-s-height));
     border-style: solid;
-    border-width: var(--spectrum-progresscircle-small-border-size);
-    border-radius: var(--spectrum-progresscircle-small-width);
+    border-width: var(--spectrum-progresscircle-s-border-size);
+    border-radius: var(--spectrum-progresscircle-s-width);
   }
 }
 
 .spectrum-ProgressCircle--large {
-  inline-size: var(--spectrum-progresscircle-large-width);
-  block-size: var(--spectrum-progresscircle-large-height);
+  inline-size: var(--spectrum-progresscircle-l-width);
+  block-size: var(--spectrum-progresscircle-l-height);
 
   .spectrum-ProgressCircle-track {
-    inline-size: calc(var(--spectrum-progresscircle-large-width));
-    block-size: calc(var(--spectrum-progresscircle-large-height));
+    inline-size: calc(var(--spectrum-progresscircle-l-width));
+    block-size: calc(var(--spectrum-progresscircle-l-height));
     border-style: solid;
-    border-width: var(--spectrum-progresscircle-large-border-size);
-    border-radius: var(--spectrum-progresscircle-large-width);
+    border-width: var(--spectrum-progresscircle-l-border-size);
+    border-radius: var(--spectrum-progresscircle-l-width);
   }
 
   .spectrum-ProgressCircle-fill {
-    inline-size: calc(var(--spectrum-progresscircle-large-width));
-    block-size: calc(var(--spectrum-progresscircle-large-height));
+    inline-size: calc(var(--spectrum-progresscircle-l-width));
+    block-size: calc(var(--spectrum-progresscircle-l-height));
     border-style: solid;
-    border-width: var(--spectrum-progresscircle-large-border-size);
-    border-radius: var(--spectrum-progresscircle-large-width);
+    border-width: var(--spectrum-progresscircle-l-border-size);
+    border-radius: var(--spectrum-progresscircle-l-width);
   }
 }
 
