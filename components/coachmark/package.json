@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/coachmark",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The Spectrum CSS coachmark component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -20,9 +20,9 @@
     "@spectrum-css/vars": "^3.0.1"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^3.0.1",
+    "@spectrum-css/button": "^3.0.2",
     "@spectrum-css/component-builder": "^2.0.1",
-    "@spectrum-css/vars": "^3.0.1",
+    "@spectrum-css/vars": "^3.0.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
