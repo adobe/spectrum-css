@@ -51,7 +51,7 @@
   --spectrum-link-s-primary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-s-primary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-s-primary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-s-primary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-s-primary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-s-primary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-s-primary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-s-primary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);
@@ -119,7 +119,7 @@
   --spectrum-link-s-secondary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-s-secondary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-s-secondary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-s-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-s-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-s-secondary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-s-secondary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-s-secondary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);
@@ -187,7 +187,7 @@
   --spectrum-link-m-primary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-m-primary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-m-primary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-m-primary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-m-primary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-m-primary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-m-primary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-m-primary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);
@@ -255,7 +255,7 @@
   --spectrum-link-m-secondary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-m-secondary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-m-secondary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-m-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-m-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-m-secondary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-m-secondary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-m-secondary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);
@@ -323,7 +323,7 @@
   --spectrum-link-l-primary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-l-primary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-l-primary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-l-primary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-l-primary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-l-primary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-l-primary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-l-primary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);
@@ -391,7 +391,7 @@
   --spectrum-link-l-secondary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-l-secondary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-l-secondary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-l-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-l-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-l-secondary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-l-secondary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-l-secondary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);
@@ -459,7 +459,7 @@
   --spectrum-link-xl-primary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-xl-primary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-xl-primary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-xl-primary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-xl-primary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-xl-primary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-xl-primary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-xl-primary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);
@@ -527,7 +527,7 @@
   --spectrum-link-xl-secondary-quiet-underline-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-link-xl-secondary-quiet-underline-size: var(--spectrum-alias-border-size-thin);
   --spectrum-link-xl-secondary-quiet-overbackground-text-color: var(--spectrum-alias-text-color-overbackground);
-  --spectrum-link-xl-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-text-color-overbackground);
+  --spectrum-link-xl-secondary-quiet-overbackground-underline-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-link-xl-secondary-quiet-overbackground-text-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-xl-secondary-quiet-overbackground-underline-color-hover: var(--spectrum-alias-text-color-overbackground);
   --spectrum-link-xl-secondary-quiet-overbackground-text-color-down: var(--spectrum-alias-text-color-overbackground);

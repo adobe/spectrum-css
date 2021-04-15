@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/splitview",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The Spectrum CSS splitview component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,11 +16,11 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^3.0.0-beta.1"
+    "@spectrum-css/vars": "^3.0.1"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^2.0.1",
-    "@spectrum-css/vars": "^3.0.1",
+    "@spectrum-css/vars": "^3.0.2",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -1,13 +1,13 @@
 :root {
-  --spectrum-inlinealert-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-inlinealert-title-text-color: var(--spectrum-global-color-gray-900);
-  --spectrum-inlinealert-text-color: var(--spectrum-global-color-gray-700);
-  --spectrum-inlinealert-border-color: var(--spectrum-global-color-gray-600);
-  --spectrum-inlinealert-icon-color: var(--spectrum-alias-icon-color);
-  --spectrum-inlinealert-padding-x: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-inlinealert-padding-y: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-inlinealert-min-width: var(--spectrum-global-dimension-static-size-4600);
-  --spectrum-inlinealert-content-margin-top: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-inlinealert-neutral-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-inlinealert-neutral-title-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-inlinealert-neutral-text-color: var(--spectrum-global-color-gray-700);
+  --spectrum-inlinealert-neutral-border-color: var(--spectrum-global-color-gray-600);
+  --spectrum-inlinealert-neutral-icon-color: var(--spectrum-alias-icon-color);
+  --spectrum-inlinealert-neutral-padding-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-inlinealert-neutral-padding-y: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-inlinealert-neutral-min-width: var(--spectrum-global-dimension-static-size-4600);
+  --spectrum-inlinealert-neutral-content-margin-top: var(--spectrum-global-dimension-static-size-100);
   --spectrum-inlinealert-info-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-inlinealert-info-title-text-color: var(--spectrum-global-color-gray-900);
   --spectrum-inlinealert-info-text-color: var(--spectrum-global-color-gray-700);

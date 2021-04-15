@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# 1.1.0
+🗓 2021-04-15
+
+### ✨ Features
+
+* added inlinealert ([bf26b56](https://github.com/adobe/spectrum-css/commit/bf26b56))
+
+
+
+
+
 <a name="3.0.0-beta.3"></a>
 # 3.0.0-beta.3
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/alert@3.0.0-beta.2...@spectrum-css/alert@3.0.0-beta.3)
