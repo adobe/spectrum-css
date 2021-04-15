@@ -32,7 +32,7 @@
   --spectrum-card-s-body-padding-left: var(--spectrum-global-dimension-size-300);
   --spectrum-card-s-body-padding-bottom: var(--spectrum-global-dimension-size-250);
   --spectrum-card-s-body-header-height: var(--spectrum-global-dimension-size-150);
-  --spectrum-card-s-body-content-height: var(--spectrum-global-dimension-size-175);
+  --spectrum-card-s-body-content-min-height: var(--spectrum-global-dimension-size-175);
   --spectrum-card-s-body-content-margin-top: var(--spectrum-global-dimension-size-75);
   --spectrum-card-s-checkbox-margin: var(--spectrum-global-dimension-size-125);
   --spectrum-card-s-title-padding-right: var(--spectrum-global-dimension-size-100);
@@ -83,7 +83,7 @@
   --spectrum-card-s-quiet-body-padding-left: var(--spectrum-global-dimension-static-size-0);
   --spectrum-card-s-quiet-body-padding-bottom: var(--spectrum-global-dimension-static-size-0);
   --spectrum-card-s-quiet-body-header-height: var(--spectrum-global-dimension-size-150);
-  --spectrum-card-s-quiet-body-content-height: var(--spectrum-global-dimension-size-175);
+  --spectrum-card-s-quiet-body-content-min-height: var(--spectrum-global-dimension-size-175);
   --spectrum-card-s-quiet-body-content-margin-top: var(--spectrum-global-dimension-size-75);
   --spectrum-card-s-quiet-checkbox-margin: var(--spectrum-global-dimension-size-125);
   --spectrum-card-s-quiet-title-padding-right: var(--spectrum-global-dimension-size-100);
@@ -128,7 +128,7 @@
   --spectrum-card-m-body-padding-left: var(--spectrum-global-dimension-size-300);
   --spectrum-card-m-body-padding-bottom: var(--spectrum-global-dimension-size-250);
   --spectrum-card-m-body-header-height: var(--spectrum-global-dimension-size-225);
-  --spectrum-card-m-body-content-height: var(--spectrum-global-dimension-size-175);
+  --spectrum-card-m-body-content-min-height: var(--spectrum-global-dimension-size-175);
   --spectrum-card-m-body-content-margin-top: var(--spectrum-global-dimension-size-75);
   --spectrum-card-m-checkbox-margin: var(--spectrum-global-dimension-size-200);
   --spectrum-card-m-title-padding-right: var(--spectrum-global-dimension-size-100);
@@ -179,7 +179,7 @@
   --spectrum-card-m-quiet-body-padding-left: var(--spectrum-global-dimension-static-size-0);
   --spectrum-card-m-quiet-body-padding-bottom: var(--spectrum-global-dimension-static-size-0);
   --spectrum-card-m-quiet-body-header-height: var(--spectrum-global-dimension-size-225);
-  --spectrum-card-m-quiet-body-content-height: var(--spectrum-global-dimension-size-175);
+  --spectrum-card-m-quiet-body-content-min-height: var(--spectrum-global-dimension-size-175);
   --spectrum-card-m-quiet-body-content-margin-top: var(--spectrum-global-dimension-size-75);
   --spectrum-card-m-quiet-checkbox-margin: var(--spectrum-global-dimension-size-200);
   --spectrum-card-m-quiet-title-padding-right: var(--spectrum-global-dimension-size-100);

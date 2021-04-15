@@ -1,7 +1,7 @@
 :root {
   --spectrum-colorhandle-inner-border-color: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color: var(--spectrum-alias-colorhandle-outer-border-color);
-  --spectrum-colorhandle-fill-color: none;
+  --spectrum-colorhandle-fill-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-colorhandle-cursor-hit-width: var(--spectrum-global-dimension-size-300);
   --spectrum-colorhandle-cursor-hit-height: var(--spectrum-global-dimension-size-300);
   --spectrum-colorhandle-cursor-hit-border-radius: var(--spectrum-global-dimension-static-percent-50);
@@ -10,7 +10,7 @@
   --spectrum-colorhandle-touch-hit-border-radius: var(--spectrum-global-dimension-static-percent-50);
   --spectrum-colorhandle-inner-border-color-hover: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-hover: var(--spectrum-alias-colorhandle-outer-border-color);
-  --spectrum-colorhandle-fill-color-hover: none;
+  --spectrum-colorhandle-fill-color-hover: var(--spectrum-alias-border-color-transparent);
   --spectrum-colorhandle-cursor-hit-width-hover: var(--spectrum-global-dimension-size-300);
   --spectrum-colorhandle-cursor-hit-height-hover: var(--spectrum-global-dimension-size-300);
   --spectrum-colorhandle-cursor-hit-border-radius-hover: var(--spectrum-global-dimension-static-percent-50);
@@ -19,7 +19,7 @@
   --spectrum-colorhandle-touch-hit-border-radius-hover: var(--spectrum-global-dimension-static-percent-50);
   --spectrum-colorhandle-inner-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-down: var(--spectrum-alias-colorhandle-outer-border-color);
-  --spectrum-colorhandle-fill-color-down: none;
+  --spectrum-colorhandle-fill-color-down: var(--spectrum-alias-border-color-transparent);
   --spectrum-colorhandle-cursor-hit-width-down: var(--spectrum-global-dimension-size-300);
   --spectrum-colorhandle-cursor-hit-height-down: var(--spectrum-global-dimension-size-300);
   --spectrum-colorhandle-cursor-hit-border-radius-down: var(--spectrum-global-dimension-static-percent-50);
@@ -28,7 +28,7 @@
   --spectrum-colorhandle-touch-hit-border-radius-down: var(--spectrum-global-dimension-static-percent-50);
   --spectrum-colorhandle-inner-border-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-key-focus: var(--spectrum-alias-colorhandle-outer-border-color);
-  --spectrum-colorhandle-fill-color-key-focus: none;
+  --spectrum-colorhandle-fill-color-key-focus: var(--spectrum-alias-border-color-transparent);
   --spectrum-colorhandle-cursor-hit-width-key-focus: var(--spectrum-global-dimension-size-400);
   --spectrum-colorhandle-cursor-hit-height-key-focus: var(--spectrum-global-dimension-size-400);
   --spectrum-colorhandle-cursor-hit-border-radius-key-focus: var(--spectrum-global-dimension-static-percent-50);

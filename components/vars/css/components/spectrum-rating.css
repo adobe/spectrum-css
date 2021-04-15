@@ -5,7 +5,7 @@
   --spectrum-rating-icon-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-border-color-down: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-rating-border-color-key-focus: var(--spectrum-alias-border-color-transparent);
+  --spectrum-rating-border-color-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
   --spectrum-rating-border-color-disabled: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -15,7 +15,7 @@
   --spectrum-rating-icon-color-selected-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-border-color-selected-down: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-rating-border-color-selected-key-focus: var(--spectrum-alias-border-color-transparent);
+  --spectrum-rating-border-color-selected-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-icon-color-selected-key-focus: var(--spectrum-alias-icon-color-focus);
   --spectrum-rating-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -34,7 +34,7 @@
   --spectrum-rating-emphasized-icon-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-emphasized-border-color-down: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-emphasized-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-rating-emphasized-border-color-key-focus: var(--spectrum-alias-border-color-transparent);
+  --spectrum-rating-emphasized-border-color-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
   --spectrum-rating-emphasized-border-color-disabled: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-emphasized-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -44,7 +44,7 @@
   --spectrum-rating-emphasized-icon-color-selected-hover: var(--spectrum-alias-icon-color-selected-hover);
   --spectrum-rating-emphasized-border-color-selected-down: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-emphasized-icon-color-selected-down: var(--spectrum-alias-icon-color-selected-down);
-  --spectrum-rating-emphasized-border-color-selected-key-focus: var(--spectrum-alias-border-color-transparent);
+  --spectrum-rating-emphasized-border-color-selected-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-emphasized-icon-color-selected-key-focus: var(--spectrum-alias-icon-color-selected-focus);
   --spectrum-rating-emphasized-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
   --spectrum-rating-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);

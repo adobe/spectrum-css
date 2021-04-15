@@ -35,7 +35,7 @@
   --spectrum-panel-s-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-s-collapsible-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-s-collapsible-header-padding-bottom: var(--spectrum-global-dimension-size-100);
-  --spectrum-panel-s-collapsible-header-padding-left: var(--spectrum-global-dimension-size-200);
+  --spectrum-panel-s-collapsible-header-padding-left: var(--spectrum-global-dimension-size-50);
   --spectrum-panel-s-collapsible-header-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-panel-s-collapsible-header-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-panel-s-collapsible-header-text-font-weight: var(--spectrum-global-font-weight-bold);
@@ -81,7 +81,7 @@
   --spectrum-panel-s-spacious-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-s-spacious-collapsible-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-s-spacious-collapsible-header-padding-bottom: var(--spectrum-global-dimension-size-100);
-  --spectrum-panel-s-spacious-collapsible-header-padding-left: var(--spectrum-global-dimension-size-300);
+  --spectrum-panel-s-spacious-collapsible-header-padding-left: var(--spectrum-global-dimension-size-150);
   --spectrum-panel-s-spacious-collapsible-header-padding-right: var(--spectrum-global-dimension-size-300);
   --spectrum-panel-s-spacious-collapsible-header-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-panel-s-spacious-collapsible-header-text-font-weight: var(--spectrum-global-font-weight-bold);
@@ -127,7 +127,7 @@
   --spectrum-panel-l-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-l-collapsible-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-l-collapsible-header-padding-bottom: var(--spectrum-global-dimension-size-100);
-  --spectrum-panel-l-collapsible-header-padding-left: var(--spectrum-global-dimension-size-200);
+  --spectrum-panel-l-collapsible-header-padding-left: var(--spectrum-global-dimension-size-50);
   --spectrum-panel-l-collapsible-header-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-panel-l-collapsible-header-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-panel-l-collapsible-header-text-font-weight: var(--spectrum-global-font-weight-bold);
@@ -173,7 +173,7 @@
   --spectrum-panel-l-spacious-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-l-spacious-collapsible-header-padding-top: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-l-spacious-collapsible-header-padding-bottom: var(--spectrum-global-dimension-size-100);
-  --spectrum-panel-l-spacious-collapsible-header-padding-left: var(--spectrum-global-dimension-size-300);
+  --spectrum-panel-l-spacious-collapsible-header-padding-left: var(--spectrum-global-dimension-size-150);
   --spectrum-panel-l-spacious-collapsible-header-padding-right: var(--spectrum-global-dimension-size-300);
   --spectrum-panel-l-spacious-collapsible-header-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-panel-l-spacious-collapsible-header-text-font-weight: var(--spectrum-global-font-weight-bold);
