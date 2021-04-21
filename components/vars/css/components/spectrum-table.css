@@ -5,6 +5,7 @@
   --spectrum-table-cell-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-cell-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-cell-border-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-table-header-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-header-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-header-border-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-table-row-background-color-hover: var(--spectrum-alias-highlight-hover);
@@ -125,6 +126,7 @@
   --spectrum-table-quiet-cell-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-quiet-cell-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-quiet-cell-border-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-table-quiet-header-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-quiet-header-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-quiet-header-border-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-table-quiet-row-background-color-hover: var(--spectrum-alias-highlight-hover);

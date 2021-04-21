@@ -30,7 +30,7 @@
   --spectrum-tabs-s-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -40,8 +40,8 @@
   --spectrum-tabs-s-text-transform: none;
   --spectrum-tabs-s-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -86,7 +86,7 @@
   --spectrum-tabs-s-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -96,8 +96,8 @@
   --spectrum-tabs-s-emphasized-text-transform: none;
   --spectrum-tabs-s-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -142,7 +142,7 @@
   --spectrum-tabs-s-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -152,8 +152,8 @@
   --spectrum-tabs-s-quiet-text-transform: none;
   --spectrum-tabs-s-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-quiet-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -198,7 +198,7 @@
   --spectrum-tabs-s-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -208,8 +208,8 @@
   --spectrum-tabs-s-quiet-emphasized-text-transform: none;
   --spectrum-tabs-s-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -254,7 +254,7 @@
   --spectrum-tabs-s-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -264,8 +264,8 @@
   --spectrum-tabs-s-vertical-text-transform: none;
   --spectrum-tabs-s-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -312,7 +312,7 @@
   --spectrum-tabs-s-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -322,8 +322,8 @@
   --spectrum-tabs-s-vertical-emphasized-text-transform: none;
   --spectrum-tabs-s-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -370,7 +370,7 @@
   --spectrum-tabs-s-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -380,8 +380,8 @@
   --spectrum-tabs-s-vertical-quiet-text-transform: none;
   --spectrum-tabs-s-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -428,7 +428,7 @@
   --spectrum-tabs-s-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -438,8 +438,8 @@
   --spectrum-tabs-s-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-s-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -486,7 +486,7 @@
   --spectrum-tabs-s-compact-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-compact-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-text-font-style: var(--spectrum-global-font-style-regular);
@@ -496,8 +496,8 @@
   --spectrum-tabs-s-compact-text-transform: none;
   --spectrum-tabs-s-compact-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -542,7 +542,7 @@
   --spectrum-tabs-s-compact-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-compact-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -552,8 +552,8 @@
   --spectrum-tabs-s-compact-emphasized-text-transform: none;
   --spectrum-tabs-s-compact-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -598,7 +598,7 @@
   --spectrum-tabs-s-compact-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-compact-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -608,8 +608,8 @@
   --spectrum-tabs-s-compact-quiet-text-transform: none;
   --spectrum-tabs-s-compact-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-quiet-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -654,7 +654,7 @@
   --spectrum-tabs-s-compact-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-compact-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -664,8 +664,8 @@
   --spectrum-tabs-s-compact-quiet-emphasized-text-transform: none;
   --spectrum-tabs-s-compact-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -710,7 +710,7 @@
   --spectrum-tabs-s-compact-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-compact-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -720,8 +720,8 @@
   --spectrum-tabs-s-compact-vertical-text-transform: none;
   --spectrum-tabs-s-compact-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -768,7 +768,7 @@
   --spectrum-tabs-s-compact-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-s-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-compact-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -778,8 +778,8 @@
   --spectrum-tabs-s-compact-vertical-emphasized-text-transform: none;
   --spectrum-tabs-s-compact-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -826,7 +826,7 @@
   --spectrum-tabs-s-compact-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-s-compact-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -836,8 +836,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-text-transform: none;
   --spectrum-tabs-s-compact-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -884,7 +884,7 @@
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -894,8 +894,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-s);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-s);
@@ -942,7 +942,7 @@
   --spectrum-tabs-m-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-text-font-style: var(--spectrum-global-font-style-regular);
@@ -952,8 +952,8 @@
   --spectrum-tabs-m-text-transform: none;
   --spectrum-tabs-m-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -998,7 +998,7 @@
   --spectrum-tabs-m-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1008,8 +1008,8 @@
   --spectrum-tabs-m-emphasized-text-transform: none;
   --spectrum-tabs-m-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1054,7 +1054,7 @@
   --spectrum-tabs-m-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1064,8 +1064,8 @@
   --spectrum-tabs-m-quiet-text-transform: none;
   --spectrum-tabs-m-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-quiet-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1110,7 +1110,7 @@
   --spectrum-tabs-m-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1120,8 +1120,8 @@
   --spectrum-tabs-m-quiet-emphasized-text-transform: none;
   --spectrum-tabs-m-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1166,7 +1166,7 @@
   --spectrum-tabs-m-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1176,8 +1176,8 @@
   --spectrum-tabs-m-vertical-text-transform: none;
   --spectrum-tabs-m-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1224,7 +1224,7 @@
   --spectrum-tabs-m-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1234,8 +1234,8 @@
   --spectrum-tabs-m-vertical-emphasized-text-transform: none;
   --spectrum-tabs-m-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1282,7 +1282,7 @@
   --spectrum-tabs-m-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1292,8 +1292,8 @@
   --spectrum-tabs-m-vertical-quiet-text-transform: none;
   --spectrum-tabs-m-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1340,7 +1340,7 @@
   --spectrum-tabs-m-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1350,8 +1350,8 @@
   --spectrum-tabs-m-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-m-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1398,7 +1398,7 @@
   --spectrum-tabs-m-compact-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-compact-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1408,8 +1408,8 @@
   --spectrum-tabs-m-compact-text-transform: none;
   --spectrum-tabs-m-compact-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1454,7 +1454,7 @@
   --spectrum-tabs-m-compact-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-compact-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1464,8 +1464,8 @@
   --spectrum-tabs-m-compact-emphasized-text-transform: none;
   --spectrum-tabs-m-compact-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1510,7 +1510,7 @@
   --spectrum-tabs-m-compact-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-compact-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1520,8 +1520,8 @@
   --spectrum-tabs-m-compact-quiet-text-transform: none;
   --spectrum-tabs-m-compact-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-quiet-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1566,7 +1566,7 @@
   --spectrum-tabs-m-compact-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-compact-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1576,8 +1576,8 @@
   --spectrum-tabs-m-compact-quiet-emphasized-text-transform: none;
   --spectrum-tabs-m-compact-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1622,7 +1622,7 @@
   --spectrum-tabs-m-compact-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-compact-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1632,8 +1632,8 @@
   --spectrum-tabs-m-compact-vertical-text-transform: none;
   --spectrum-tabs-m-compact-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1680,7 +1680,7 @@
   --spectrum-tabs-m-compact-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-m-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-compact-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1690,8 +1690,8 @@
   --spectrum-tabs-m-compact-vertical-emphasized-text-transform: none;
   --spectrum-tabs-m-compact-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1738,7 +1738,7 @@
   --spectrum-tabs-m-compact-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-m-compact-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1748,8 +1748,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-text-transform: none;
   --spectrum-tabs-m-compact-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1796,7 +1796,7 @@
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1806,8 +1806,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-m);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -1854,7 +1854,7 @@
   --spectrum-tabs-l-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1864,8 +1864,8 @@
   --spectrum-tabs-l-text-transform: none;
   --spectrum-tabs-l-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -1910,7 +1910,7 @@
   --spectrum-tabs-l-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1920,8 +1920,8 @@
   --spectrum-tabs-l-emphasized-text-transform: none;
   --spectrum-tabs-l-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -1966,7 +1966,7 @@
   --spectrum-tabs-l-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1976,8 +1976,8 @@
   --spectrum-tabs-l-quiet-text-transform: none;
   --spectrum-tabs-l-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-quiet-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2022,7 +2022,7 @@
   --spectrum-tabs-l-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2032,8 +2032,8 @@
   --spectrum-tabs-l-quiet-emphasized-text-transform: none;
   --spectrum-tabs-l-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2078,7 +2078,7 @@
   --spectrum-tabs-l-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2088,8 +2088,8 @@
   --spectrum-tabs-l-vertical-text-transform: none;
   --spectrum-tabs-l-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2136,7 +2136,7 @@
   --spectrum-tabs-l-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2146,8 +2146,8 @@
   --spectrum-tabs-l-vertical-emphasized-text-transform: none;
   --spectrum-tabs-l-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2194,7 +2194,7 @@
   --spectrum-tabs-l-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2204,8 +2204,8 @@
   --spectrum-tabs-l-vertical-quiet-text-transform: none;
   --spectrum-tabs-l-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2252,7 +2252,7 @@
   --spectrum-tabs-l-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2262,8 +2262,8 @@
   --spectrum-tabs-l-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-l-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2310,7 +2310,7 @@
   --spectrum-tabs-l-compact-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-compact-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2320,8 +2320,8 @@
   --spectrum-tabs-l-compact-text-transform: none;
   --spectrum-tabs-l-compact-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2366,7 +2366,7 @@
   --spectrum-tabs-l-compact-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-compact-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2376,8 +2376,8 @@
   --spectrum-tabs-l-compact-emphasized-text-transform: none;
   --spectrum-tabs-l-compact-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2422,7 +2422,7 @@
   --spectrum-tabs-l-compact-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-compact-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2432,8 +2432,8 @@
   --spectrum-tabs-l-compact-quiet-text-transform: none;
   --spectrum-tabs-l-compact-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-quiet-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2478,7 +2478,7 @@
   --spectrum-tabs-l-compact-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-compact-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2488,8 +2488,8 @@
   --spectrum-tabs-l-compact-quiet-emphasized-text-transform: none;
   --spectrum-tabs-l-compact-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2534,7 +2534,7 @@
   --spectrum-tabs-l-compact-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-compact-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2544,8 +2544,8 @@
   --spectrum-tabs-l-compact-vertical-text-transform: none;
   --spectrum-tabs-l-compact-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2592,7 +2592,7 @@
   --spectrum-tabs-l-compact-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-l-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-compact-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2602,8 +2602,8 @@
   --spectrum-tabs-l-compact-vertical-emphasized-text-transform: none;
   --spectrum-tabs-l-compact-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2650,7 +2650,7 @@
   --spectrum-tabs-l-compact-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-l-compact-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2660,8 +2660,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-text-transform: none;
   --spectrum-tabs-l-compact-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2708,7 +2708,7 @@
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2718,8 +2718,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-l);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-l);
@@ -2766,7 +2766,7 @@
   --spectrum-tabs-xl-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2776,8 +2776,8 @@
   --spectrum-tabs-xl-text-transform: none;
   --spectrum-tabs-xl-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -2822,7 +2822,7 @@
   --spectrum-tabs-xl-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2832,8 +2832,8 @@
   --spectrum-tabs-xl-emphasized-text-transform: none;
   --spectrum-tabs-xl-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -2878,7 +2878,7 @@
   --spectrum-tabs-xl-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2888,8 +2888,8 @@
   --spectrum-tabs-xl-quiet-text-transform: none;
   --spectrum-tabs-xl-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-quiet-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -2934,7 +2934,7 @@
   --spectrum-tabs-xl-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2944,8 +2944,8 @@
   --spectrum-tabs-xl-quiet-emphasized-text-transform: none;
   --spectrum-tabs-xl-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -2990,7 +2990,7 @@
   --spectrum-tabs-xl-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3000,8 +3000,8 @@
   --spectrum-tabs-xl-vertical-text-transform: none;
   --spectrum-tabs-xl-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3048,7 +3048,7 @@
   --spectrum-tabs-xl-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3058,8 +3058,8 @@
   --spectrum-tabs-xl-vertical-emphasized-text-transform: none;
   --spectrum-tabs-xl-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3106,7 +3106,7 @@
   --spectrum-tabs-xl-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3116,8 +3116,8 @@
   --spectrum-tabs-xl-vertical-quiet-text-transform: none;
   --spectrum-tabs-xl-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3164,7 +3164,7 @@
   --spectrum-tabs-xl-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3174,8 +3174,8 @@
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-xl-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3222,7 +3222,7 @@
   --spectrum-tabs-xl-compact-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-compact-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3232,8 +3232,8 @@
   --spectrum-tabs-xl-compact-text-transform: none;
   --spectrum-tabs-xl-compact-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3278,7 +3278,7 @@
   --spectrum-tabs-xl-compact-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-compact-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3288,8 +3288,8 @@
   --spectrum-tabs-xl-compact-emphasized-text-transform: none;
   --spectrum-tabs-xl-compact-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3334,7 +3334,7 @@
   --spectrum-tabs-xl-compact-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-compact-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3344,8 +3344,8 @@
   --spectrum-tabs-xl-compact-quiet-text-transform: none;
   --spectrum-tabs-xl-compact-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-quiet-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3390,7 +3390,7 @@
   --spectrum-tabs-xl-compact-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-compact-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3400,8 +3400,8 @@
   --spectrum-tabs-xl-compact-quiet-emphasized-text-transform: none;
   --spectrum-tabs-xl-compact-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3446,7 +3446,7 @@
   --spectrum-tabs-xl-compact-vertical-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-vertical-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-compact-vertical-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-vertical-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3456,8 +3456,8 @@
   --spectrum-tabs-xl-compact-vertical-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-vertical-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-vertical-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-vertical-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-vertical-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3504,7 +3504,7 @@
   --spectrum-tabs-xl-compact-vertical-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-vertical-emphasized-rule-color: var(--spectrum-alias-border-color-light);
+  --spectrum-tabs-xl-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-compact-vertical-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-vertical-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3514,8 +3514,8 @@
   --spectrum-tabs-xl-compact-vertical-emphasized-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-vertical-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-vertical-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-vertical-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-vertical-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3562,7 +3562,7 @@
   --spectrum-tabs-xl-compact-vertical-quiet-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-quiet-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-vertical-quiet-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
   --spectrum-tabs-xl-compact-vertical-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-vertical-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3572,8 +3572,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-quiet-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-vertical-quiet-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-vertical-quiet-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-vertical-quiet-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-quiet-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-quiet-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-vertical-quiet-icon-size: var(--spectrum-alias-workflow-icon-size-xl);
@@ -3620,7 +3620,7 @@
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-ui-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-color-selected-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-rule-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3630,8 +3630,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-padding-left: var(--spectrum-global-dimension-size-0);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-padding-right: var(--spectrum-global-dimension-size-0);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-rule-border-radius: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-rule-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-size: var(--spectrum-alias-item-text-size-xl);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-size: var(--spectrum-alias-workflow-icon-size-xl);

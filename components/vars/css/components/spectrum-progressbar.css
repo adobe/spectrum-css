@@ -59,8 +59,10 @@
   --spectrum-progressbar-s-indeterminate-fill-border-radius: 0;
   --spectrum-progressbar-s-indeterminate-height: var(--spectrum-global-dimension-size-50);
   --spectrum-progressbar-s-indeterminate-width: var(--spectrum-global-dimension-static-size-2400);
-  --spectrum-progressbar-s-indeterminate-fill-width: var(--spectrum-global-dimension-size-1700);
+  --spectrum-progressbar-s-indeterminate-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-s-indeterminate-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-s-indeterminate-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-s-indeterminate-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-s-indeterminate-duration: var(--spectrum-global-animation-duration-2000);
   --spectrum-progressbar-s-indeterminate-overbackground-value-text-color: var(--spectrum-alias-text-color-overbackground);
   --spectrum-progressbar-s-indeterminate-overbackground-track-color: var(--spectrum-alias-track-color-overbackground);
@@ -82,8 +84,10 @@
   --spectrum-progressbar-s-indeterminate-overbackground-fill-border-radius: 0;
   --spectrum-progressbar-s-indeterminate-overbackground-height: var(--spectrum-global-dimension-size-50);
   --spectrum-progressbar-s-indeterminate-overbackground-width: var(--spectrum-global-dimension-static-size-2400);
-  --spectrum-progressbar-s-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-size-1700);
+  --spectrum-progressbar-s-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-s-indeterminate-overbackground-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-s-indeterminate-overbackground-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-s-indeterminate-overbackground-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-s-indeterminate-overbackground-duration: var(--spectrum-global-animation-duration-2000);
   --spectrum-progressbar-m-value-text-color: var(--spectrum-alias-text-color);
   --spectrum-progressbar-m-track-color: var(--spectrum-alias-track-color-default);
@@ -145,8 +149,10 @@
   --spectrum-progressbar-m-indeterminate-fill-border-radius: 0;
   --spectrum-progressbar-m-indeterminate-height: var(--spectrum-global-dimension-size-75);
   --spectrum-progressbar-m-indeterminate-width: var(--spectrum-global-dimension-static-size-2400);
-  --spectrum-progressbar-m-indeterminate-fill-width: var(--spectrum-global-dimension-size-1700);
+  --spectrum-progressbar-m-indeterminate-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-m-indeterminate-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-m-indeterminate-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-m-indeterminate-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-m-indeterminate-duration: var(--spectrum-global-animation-duration-2000);
   --spectrum-progressbar-m-indeterminate-overbackground-value-text-color: var(--spectrum-alias-text-color-overbackground);
   --spectrum-progressbar-m-indeterminate-overbackground-track-color: var(--spectrum-alias-track-color-overbackground);
@@ -168,8 +174,10 @@
   --spectrum-progressbar-m-indeterminate-overbackground-fill-border-radius: 0;
   --spectrum-progressbar-m-indeterminate-overbackground-height: var(--spectrum-global-dimension-size-75);
   --spectrum-progressbar-m-indeterminate-overbackground-width: var(--spectrum-global-dimension-static-size-2400);
-  --spectrum-progressbar-m-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-size-1700);
+  --spectrum-progressbar-m-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-m-indeterminate-overbackground-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-m-indeterminate-overbackground-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-m-indeterminate-overbackground-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-m-indeterminate-overbackground-duration: var(--spectrum-global-animation-duration-2000);
   --spectrum-progressbar-l-value-text-color: var(--spectrum-alias-text-color);
   --spectrum-progressbar-l-track-color: var(--spectrum-alias-track-color-default);
@@ -234,8 +242,10 @@
   --spectrum-progressbar-l-indeterminate-height: var(--spectrum-global-dimension-size-100);
   --spectrum-progressbar-l-indeterminate-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-progressbar-l-indeterminate-width: var(--spectrum-global-dimension-static-size-2500);
-  --spectrum-progressbar-l-indeterminate-fill-width: var(--spectrum-global-dimension-size-1800);
+  --spectrum-progressbar-l-indeterminate-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-l-indeterminate-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-l-indeterminate-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-l-indeterminate-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-l-indeterminate-duration: var(--spectrum-global-animation-duration-2000);
   --spectrum-progressbar-l-indeterminate-overbackground-value-text-color: var(--spectrum-alias-text-color-overbackground);
   --spectrum-progressbar-l-indeterminate-overbackground-track-color: var(--spectrum-alias-track-color-overbackground);
@@ -258,8 +268,10 @@
   --spectrum-progressbar-l-indeterminate-overbackground-height: var(--spectrum-global-dimension-size-100);
   --spectrum-progressbar-l-indeterminate-overbackground-border-radius: var(--spectrum-global-dimension-size-50);
   --spectrum-progressbar-l-indeterminate-overbackground-width: var(--spectrum-global-dimension-static-size-2500);
-  --spectrum-progressbar-l-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-size-1800);
+  --spectrum-progressbar-l-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-l-indeterminate-overbackground-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-l-indeterminate-overbackground-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-l-indeterminate-overbackground-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-l-indeterminate-overbackground-duration: var(--spectrum-global-animation-duration-2000);
   --spectrum-progressbar-xl-value-text-color: var(--spectrum-alias-text-color);
   --spectrum-progressbar-xl-track-color: var(--spectrum-alias-track-color-default);
@@ -321,8 +333,10 @@
   --spectrum-progressbar-xl-indeterminate-fill-border-radius: 0;
   --spectrum-progressbar-xl-indeterminate-height: var(--spectrum-global-dimension-size-125);
   --spectrum-progressbar-xl-indeterminate-width: var(--spectrum-global-dimension-static-size-2800);
-  --spectrum-progressbar-xl-indeterminate-fill-width: var(--spectrum-global-dimension-size-2000);
+  --spectrum-progressbar-xl-indeterminate-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-xl-indeterminate-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-xl-indeterminate-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-xl-indeterminate-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-xl-indeterminate-duration: var(--spectrum-global-animation-duration-2000);
   --spectrum-progressbar-xl-indeterminate-overbackground-value-text-color: var(--spectrum-alias-text-color-overbackground);
   --spectrum-progressbar-xl-indeterminate-overbackground-track-color: var(--spectrum-alias-track-color-overbackground);
@@ -344,7 +358,9 @@
   --spectrum-progressbar-xl-indeterminate-overbackground-fill-border-radius: 0;
   --spectrum-progressbar-xl-indeterminate-overbackground-height: var(--spectrum-global-dimension-size-125);
   --spectrum-progressbar-xl-indeterminate-overbackground-width: var(--spectrum-global-dimension-static-size-2800);
-  --spectrum-progressbar-xl-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-size-2000);
+  --spectrum-progressbar-xl-indeterminate-overbackground-fill-width: var(--spectrum-global-dimension-static-percent-70);
   --spectrum-progressbar-xl-indeterminate-overbackground-animation-ease: var(--spectrum-global-animation-ease-in-out);
+  --spectrum-progressbar-xl-indeterminate-overbackground-animation-fill-offset-start: -70%;
+  --spectrum-progressbar-xl-indeterminate-overbackground-animation-fill-offset-end: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-progressbar-xl-indeterminate-overbackground-duration: var(--spectrum-global-animation-duration-2000);
 }

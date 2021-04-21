@@ -45,33 +45,33 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ClearButton {
-  background-color: var(--spectrum-clearbutton-medium-background-color);
+  background-color: var(--spectrum-clearbutton-m-background-color);
 
-  color: var(--spectrum-clearbutton-medium-icon-color);
+  color: var(--spectrum-clearbutton-m-icon-color);
 
   &:hover {
-    background-color: var(--spectrum-clearbutton-medium-background-color-hover);
+    background-color: var(--spectrum-clearbutton-m-background-color-hover);
 
-    color: var(--spectrum-clearbutton-medium-icon-color-hover);
+    color: var(--spectrum-clearbutton-m-icon-color-hover);
   }
 
   &:active {
-    background-color: var(--spectrum-clearbutton-medium-background-color-down);
+    background-color: var(--spectrum-clearbutton-m-background-color-down);
 
-    color: var(--spectrum-clearbutton-medium-icon-color-down);
+    color: var(--spectrum-clearbutton-m-icon-color-down);
   }
 
   &:focus-ring {
-    background-color: var(--spectrum-clearbutton-medium-background-color-key-focus);
+    background-color: var(--spectrum-clearbutton-m-background-color-key-focus);
 
-    color: var(--spectrum-clearbutton-medium-icon-color-key-focus);
+    color: var(--spectrum-clearbutton-m-icon-color-key-focus);
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-clearbutton-medium-background-color-disabled);
+    background-color: var(--spectrum-clearbutton-m-background-color-disabled);
 
-    color: var(--spectrum-clearbutton-medium-icon-color-disabled);
+    color: var(--spectrum-clearbutton-m-icon-color-disabled);
   }
 }
 

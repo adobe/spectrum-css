@@ -23,8 +23,8 @@
   --spectrum-alertbanner-neutral-content-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-alertbanner-neutral-content-padding-top: var(--spectrum-global-dimension-size-65);
   --spectrum-alertbanner-neutral-content-padding-bottom: var(--spectrum-global-dimension-size-65);
-  --spectrum-alertbanner-neutral-dismiss-duration: 5000ms;
   --spectrum-alertbanner-neutral-offset-y: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-alertbanner-neutral-dismiss-duration: 5000ms;
   --spectrum-alertbanner-info-rule-color: var(--spectrum-alias-track-color-overbackground);
   --spectrum-alertbanner-info-background-color: var(--spectrum-semantic-informative-color-background);
   --spectrum-alertbanner-info-text-color: var(--spectrum-global-color-static-white);
@@ -49,8 +49,8 @@
   --spectrum-alertbanner-info-content-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-alertbanner-info-content-padding-top: var(--spectrum-global-dimension-size-65);
   --spectrum-alertbanner-info-content-padding-bottom: var(--spectrum-global-dimension-size-65);
-  --spectrum-alertbanner-info-dismiss-duration: 5000ms;
   --spectrum-alertbanner-info-offset-y: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-alertbanner-info-dismiss-duration: 5000ms;
   --spectrum-alertbanner-negative-rule-color: var(--spectrum-alias-track-color-overbackground);
   --spectrum-alertbanner-negative-background-color: var(--spectrum-semantic-negative-color-background);
   --spectrum-alertbanner-negative-text-color: var(--spectrum-global-color-static-white);
@@ -75,6 +75,6 @@
   --spectrum-alertbanner-negative-content-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-alertbanner-negative-content-padding-top: var(--spectrum-global-dimension-size-65);
   --spectrum-alertbanner-negative-content-padding-bottom: var(--spectrum-global-dimension-size-65);
-  --spectrum-alertbanner-negative-dismiss-duration: 5000ms;
   --spectrum-alertbanner-negative-offset-y: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-alertbanner-negative-dismiss-duration: 5000ms;
 }

@@ -31,14 +31,6 @@
   --spectrum-coachmark-indicator-ring-diameter: var(--spectrum-global-dimension-size-200);
   --spectrum-coachmark-shadow-blur: var(--spectrum-alias-dropshadow-blur);
   --spectrum-coachmark-shadow-offset-y: var(--spectrum-alias-dropshadow-offset-y);
-  --spectrum-coachmark-animation-indicator-ring-duration: 3000ms;
-  --spectrum-coachmark-animation-indicator-ring-ease: var(--spectrum-global-animation-linear);
-  --spectrum-coachmark-animation-indicator-ring-outer-delay-multiple: -1;
-  --spectrum-coachmark-animation-indicator-keyframe-0-opacity: 0;
-  --spectrum-coachmark-animation-indicator-keyframe-50-scale: 1.5;
-  --spectrum-coachmark-animation-indicator-keyframe-50-opacity: 1;
-  --spectrum-coachmark-animation-indicator-keyframe-100-scale: 2;
-  --spectrum-coachmark-animation-indicator-keyframe-100-opacity: 0;
   --spectrum-coachmark-indicator-entry-animation-delay: 0ms;
   --spectrum-coachmark-indicator-entry-animation-duration: var(--spectrum-global-animation-duration-800);
   --spectrum-coachmark-indicator-entry-animation-ease: var(--spectrum-global-animation-ease-out);
@@ -60,6 +52,14 @@
   --spectrum-coachmark-animation-indicator-ring-inner-delay-multiple: -0.5;
   --spectrum-coachmark-animation-indicator-ring-center-delay-multiple: -0.66;
   --spectrum-coachmark-animation-indicator-keyframe-0-scale: 1;
+  --spectrum-coachmark-animation-indicator-ring-duration: 3000ms;
+  --spectrum-coachmark-animation-indicator-ring-ease: var(--spectrum-global-animation-linear);
+  --spectrum-coachmark-animation-indicator-ring-outer-delay-multiple: -1;
+  --spectrum-coachmark-animation-indicator-keyframe-0-opacity: 0;
+  --spectrum-coachmark-animation-indicator-keyframe-50-scale: 1.5;
+  --spectrum-coachmark-animation-indicator-keyframe-50-opacity: 1;
+  --spectrum-coachmark-animation-indicator-keyframe-100-scale: 2;
+  --spectrum-coachmark-animation-indicator-keyframe-100-opacity: 0;
   --spectrum-coachmark-quiet-indicator-ring-default-color: var(--spectrum-alias-focus-color);
   --spectrum-coachmark-quiet-indicator-ring-low-contrast-color: var(--spectrum-global-color-gray-50);
   --spectrum-coachmark-quiet-indicator-ring-high-contrast-color: var(--spectrum-global-color-gray-900);
@@ -92,14 +92,6 @@
   --spectrum-coachmark-quiet-indicator-ring-diameter: var(--spectrum-global-dimension-size-100);
   --spectrum-coachmark-quiet-shadow-blur: var(--spectrum-alias-dropshadow-blur);
   --spectrum-coachmark-quiet-shadow-offset-y: var(--spectrum-alias-dropshadow-offset-y);
-  --spectrum-coachmark-quiet-animation-indicator-ring-duration: 3000ms;
-  --spectrum-coachmark-quiet-animation-indicator-ring-ease: var(--spectrum-global-animation-linear);
-  --spectrum-coachmark-quiet-animation-indicator-ring-outer-delay-multiple: -1;
-  --spectrum-coachmark-quiet-animation-indicator-keyframe-0-opacity: 0;
-  --spectrum-coachmark-quiet-animation-indicator-keyframe-50-scale: 1.5;
-  --spectrum-coachmark-quiet-animation-indicator-keyframe-50-opacity: 1;
-  --spectrum-coachmark-quiet-animation-indicator-keyframe-100-scale: 2;
-  --spectrum-coachmark-quiet-animation-indicator-keyframe-100-opacity: 0;
   --spectrum-coachmark-quiet-indicator-entry-animation-delay: 0ms;
   --spectrum-coachmark-quiet-indicator-entry-animation-duration: var(--spectrum-global-animation-duration-800);
   --spectrum-coachmark-quiet-indicator-entry-animation-ease: var(--spectrum-global-animation-ease-out);
@@ -121,4 +113,12 @@
   --spectrum-coachmark-quiet-animation-indicator-ring-inner-delay-multiple: -0.33;
   --spectrum-coachmark-quiet-animation-indicator-ring-center-delay-multiple: -0.66;
   --spectrum-coachmark-quiet-animation-indicator-keyframe-0-scale: 0.8;
+  --spectrum-coachmark-quiet-animation-indicator-ring-duration: 3000ms;
+  --spectrum-coachmark-quiet-animation-indicator-ring-ease: var(--spectrum-global-animation-linear);
+  --spectrum-coachmark-quiet-animation-indicator-ring-outer-delay-multiple: -1;
+  --spectrum-coachmark-quiet-animation-indicator-keyframe-0-opacity: 0;
+  --spectrum-coachmark-quiet-animation-indicator-keyframe-50-scale: 1.5;
+  --spectrum-coachmark-quiet-animation-indicator-keyframe-50-opacity: 1;
+  --spectrum-coachmark-quiet-animation-indicator-keyframe-100-scale: 2;
+  --spectrum-coachmark-quiet-animation-indicator-keyframe-100-opacity: 0;
 }
