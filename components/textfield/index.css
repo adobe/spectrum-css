@@ -175,7 +175,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield.is-valid & {
     padding-inline-end: calc(
       var(--spectrum-textfield-texticon-padding-right) +
-        var(--spectrum-icon-checkmark-medium-width) +
+        var(--spectrum-textfield-texticon-success-icon-width) +
         var(--spectrum-textfield-texticon-success-icon-margin-left)
     );
   }
@@ -183,7 +183,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield.is-invalid & {
     padding-inline-end: calc(
       var(--spectrum-textfield-texticon-padding-right) +
-        var(--spectrum-icon-alert-medium-width) +
+        var(--spectrum-textfield-texticon-invalid-icon-width) +
         var(--spectrum-textfield-texticon-invalid-icon-margin-left)
     );
   }
@@ -216,13 +216,13 @@ governing permissions and limitations under the License.
 
     .is-invalid& {
       padding-inline-end: calc(
-        var(--spectrum-icon-alert-medium-width) +
+        var(--spectrum-textfield-texticon-invalid-icon-width) +
           var(--spectrum-textfield-quiet-texticon-invalid-icon-margin-left)
       );
     }
     .is-valid& {
       padding-inline-end: calc(
-        var(--spectrum-icon-checkmark-medium-width) +
+        var(--spectrum-textfield-texticon-success-icon-width) +
           var(--spectrum-textfield-quiet-texticon-success-icon-margin-left)
       );
     }
