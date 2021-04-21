@@ -10,9 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Search {
-  --spectrum-search-quiet-button-offset: calc(var(--spectrum-actionbutton-m-texticon-min-width) / 2 - var(--spectrum-icon-cross-small-width) / 2);
-}
+@import "../vars/css/components/spectrum-search.css";
 
 .spectrum-Search {
   display: inline-block;
@@ -42,6 +40,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Search--quiet {
   .spectrum-Search-clearButton {
-    transform: translateX(var(--spectrum-search-quiet-button-offset));
+    transform: translateX(var(--spectrum-search-s-icon-gap));
   }
 }
