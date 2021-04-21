@@ -23,7 +23,7 @@ governing permissions and limitations under the License.
   );
   --spectrum-datepicker-input-width: calc(
     var(--spectrum-datepicker-range-input-width-first) +
-      var(--spectrum-icon-alert-medium-width)
+      var(--spectrum-textfield-m-texticon-icon-size)
   );
   --spectrum-datepicker-range-input-width-quiet-first: calc(
     var(--spectrum-global-dimension-size-900) +
@@ -31,7 +31,7 @@ governing permissions and limitations under the License.
   );
   --spectrum-datepicker-input-width-quiet: calc(
     var(--spectrum-datepicker-range-input-width-quiet-first) +
-      var(--spectrum-icon-alert-medium-width)
+      var(--spectrum-textfield-m-texticon-icon-size)
   );
 
   --spectrum-datepicker-datetime-input-width-first: calc(
@@ -40,7 +40,7 @@ governing permissions and limitations under the License.
   );
   --spectrum-datepicker-datetime-input-width: calc(
     var(--spectrum-datepicker-datetime-input-width-first) +
-      var(--spectrum-icon-alert-medium-width)
+      var(--spectrum-textfield-m-texticon-icon-size)
   );
 
   --spectrum-datepicker-datetime-quiet-input-width-first: calc(
@@ -49,7 +49,7 @@ governing permissions and limitations under the License.
   );
   --spectrum-datepicker-datetime-quiet-input-width: calc(
     var(--spectrum-datepicker-datetime-quiet-input-width-first) +
-      var(--spectrum-icon-alert-medium-width)
+      var(--spectrum-textfield-m-texticon-icon-size)
   );
 
   --spectrum-datepicker-range-dash-margin-left: calc(
@@ -67,7 +67,7 @@ governing permissions and limitations under the License.
 
   --spectrum-combobox-quiet-button-offset: calc(
     var(--spectrum-actionbutton-m-texticon-min-width) / 2 -
-      var(--spectrum-icon-chevron-down-medium-width) / 2
+      var(--spectrum-alias-ui-icon-chevron-size-100) / 2
   );
 }
 
