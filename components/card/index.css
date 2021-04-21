@@ -131,7 +131,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-content {
   display: flex;
-  block-size: var(--spectrum-card-body-content-height);
+  block-size: var(--spectrum-card-body-content-min-height);
   margin-block-start: var(--spectrum-card-body-content-margin-top);
 }
 
