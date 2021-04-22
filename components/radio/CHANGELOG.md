@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3"></a>
+## 3.0.3
+🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.2...@spectrum-css/radio@3.0.3)
+
+### 🐛 Bug fixes
+
+* ensure invalid raadio button gets correct styling ([69da95b](https://github.com/adobe/spectrum-css/commit/69da95b))
+* high contrast for Radio Buttons ([9d7acde](https://github.com/adobe/spectrum-css/commit/9d7acde))
+
+
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2021-04-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.1...@spectrum-css/radio@3.0.2)
