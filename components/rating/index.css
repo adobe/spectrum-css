@@ -10,6 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+.spectrum-Rating {
+  --spectrum-icon-star-height: var(--spectrum-global-dimension-size-225);
+}
+
 /* A solid star */
 %spectrum-Rating-filledStar {
   .spectrum-Rating-starActive {
@@ -99,7 +103,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  inline-size: var(--spectrum-icon-star-width);
-  block-size: var(--spectrum-icon-star-width);
+  inline-size: var(--spectrum-rating-icon-width);
+  block-size: var(--spectrum-rating-icon-width);
   margin: 0 auto;
 }

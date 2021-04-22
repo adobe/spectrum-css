@@ -66,6 +66,7 @@ governing permissions and limitations under the License.
   --spectrum-slide-label-text-line-height: var(
     --spectrum-global-font-line-height-small
   );
+  --spectrum-slider-label-gap-x: var(--spectrum-alias-item-control-gap-m);
 }
 
 .spectrum-Slider {
@@ -234,7 +235,7 @@ governing permissions and limitations under the License.
   &:active,
   &.is-focused,
   &.is-dragged {
-    border-width: var(--spectrum-slider-handle-border-size-down);
+    border-width: var(--spectrum-slider-handle-border-size);
   }
 
   &:active,

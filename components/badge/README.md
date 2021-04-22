@@ -1,5 +1,5 @@
-# @spectrum-css/tags
-> The Spectrum CSS tags component
+# @spectrum-css/badge
+> The Spectrum CSS badge component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 

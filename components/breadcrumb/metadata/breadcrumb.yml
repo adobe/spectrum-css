@@ -5,7 +5,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -28,7 +28,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -51,7 +51,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
@@ -84,7 +84,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -117,7 +117,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -140,7 +140,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -163,7 +163,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
@@ -196,7 +196,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--multiline">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -229,7 +229,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -252,7 +252,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
               <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
@@ -285,7 +285,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -318,7 +318,7 @@ examples:
     status: Verified
     markup: |
       <nav>
-        <ul class="spectrum-Breadcrumbs">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
           <li class="spectrum-Breadcrumbs-item">
             <div class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Nav Root</div>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
@@ -337,7 +337,7 @@ examples:
         </ul>
       </nav>
       <nav>
-        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--compact">
+        <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
           <li class="spectrum-Breadcrumbs-item">
             <a class="spectrum-Breadcrumbs-itemLink" href="#">Nav Root</a>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">

@@ -1,4 +1,5 @@
 :root {
+  --spectrum-tray-background-color: var(--spectrum-alias-background-color-primary);
   --spectrum-tray-underlay-background-color: var(--spectrum-alias-background-color-modal-overlay);
   --spectrum-tray-padding-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-tray-padding-y: 0;

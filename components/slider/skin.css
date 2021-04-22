@@ -94,7 +94,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider-tick {
   &:after {
-    background-color: var(--spectrum-slider-tick-m-mark-color);
+    background-color: var(--spectrum-slider-m-tick-mark-color);
   }
 }
 

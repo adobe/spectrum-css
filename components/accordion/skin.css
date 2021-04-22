@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
   &:hover {
     color: var(--spectrum-accordion-text-color-hover);
 
-    background-color: var(--spectrum-accordion-background-color-hover);
+    background-color: var(--spectrum-accordion-item-background-color-hover);
 
     + .spectrum-Accordion-itemIndicator {
       color: var(--spectrum-accordion-icon-color-hover);

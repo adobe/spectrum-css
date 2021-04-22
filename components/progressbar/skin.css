@@ -22,34 +22,34 @@ governing permissions and limitations under the License.
   &.spectrum-ProgressBar--overBackground {
     .spectrum-ProgressBar-fill {
       background: var(
-        --spectrum-progressbar-m-over-background-track-fill-color
+        --spectrum-progressbar-m-overbackground-track-fill-color
       );
     }
 
     .spectrum-ProgressBar-label,
     .spectrum-ProgressBar-percentage {
-      color: var(--spectrum-progressbar-m-over-background-track-fill-color);
+      color: var(--spectrum-progressbar-m-overbackground-track-fill-color);
     }
 
     .spectrum-ProgressBar-track {
       background-color: var(
-        --spectrum-progressbar-m-over-background-track-color
+        --spectrum-progressbar-m-overbackground-track-color
       );
     }
   }
   &.is-positive {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-positive-m-track-fill-color);
+      background: var(--spectrum-meter-m-positive-track-fill-color);
     }
   }
   &.is-notice {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-notice-m-track-fill-color);
+      background: var(--spectrum-meter-m-notice-track-fill-color);
     }
   }
   &.is-negative {
     .spectrum-ProgressBar-fill {
-      background: var(--spectrum-meter-negative-m-track-fill-color);
+      background: var(--spectrum-meter-m-negative-track-fill-color);
     }
   }
 }

@@ -91,11 +91,11 @@ governing permissions and limitations under the License.
   border-radius: 50%;
 
   &:nth-child(2) {
-    animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-inticator-ring-center-delay-multiple));
+    animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-indicator-ring-center-delay-multiple));
   }
 
   &:nth-child(3) {
-    animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-inticator-ring-outer-delay-multiple))
+    animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-indicator-ring-outer-delay-multiple))
   }
 }
 
@@ -113,7 +113,7 @@ governing permissions and limitations under the License.
   animation: pulse var(--spectrum-coachmark-animation-indicator-ring-duration) linear infinite;
 
   &:nth-child(1) {
-    animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-inticator-ring-inner-delay-multiple));
+    animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-animation-indicator-ring-inner-delay-multiple));
   }
 }
 
@@ -130,7 +130,7 @@ governing permissions and limitations under the License.
     animation: pulse--quiet var(--spectrum-coachmark-animation-indicator-ring-duration) linear infinite;
 
     &:nth-child(1) {
-      animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-quiet-animation-inticator-ring-inner-delay-multiple));
+      animation-delay: calc(var(--spectrum-coachmark-animation-indicator-ring-duration) * var(--spectrum-coachmark-quiet-animation-indicator-ring-inner-delay-multiple));
     }
   }
 }

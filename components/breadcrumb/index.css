@@ -10,6 +10,30 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/components/spectrum-breadcrumb.css";
+
+.spectrum-Breadcrumbs--sizeS {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-s-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs--sizeM {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-m-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs--sizeL {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-l-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+
 .spectrum-Breadcrumbs {
   display: flex;
   justify-content: start;
@@ -32,6 +56,28 @@ governing permissions and limitations under the License.
   transform: logical scale(1) rotate(0deg);
 
   opacity: 1;
+}
+
+.spectrum-Breadcrumbs-item--sizeS {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-s-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs-item--sizeM {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-m-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
+}
+.spectrum-Breadcrumbs-item--sizeL {
+  @remapvars {
+    find: /--spectrum-breadcrumb(.*)-l-/;
+    filter: color;
+    replace: --spectrum-breadcrumb$1-;
+  }
 }
 
 .spectrum-Breadcrumbs-item {
@@ -110,12 +156,6 @@ governing permissions and limitations under the License.
 
   content: "";
   pointer-events: none;
-}
-
-.spectrum-Breadcrumbs--compact {
-  .spectrum-Breadcrumbs-item {
-    font-size: var(--spectrum-breadcrumb-compact-item-text-size);
-  }
 }
 
 .spectrum-Breadcrumbs--multiline {

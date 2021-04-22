@@ -37,22 +37,22 @@ governing permissions and limitations under the License.
 @mixin typographyTShirtColor .spectrum-Heading--sizeXXS {
 }
 
-@mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--light, heading-light-XXXL {
+@mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--light, heading-XXXL-light {
 }
-@mixin typographyTShirtColor .spectrum-Heading-sizeXXL--light, heading-light-XXL {
+@mixin typographyTShirtColor .spectrum-Heading-sizeXXL--light, heading-XXL-light {
 }
-@mixin typographyTShirtColor .spectrum-Heading-sizeXL--light, heading-light-XL {
+@mixin typographyTShirtColor .spectrum-Heading-sizeXL--light, heading-XL-light {
 }
-@mixin typographyTShirtColor .spectrum-Heading-sizeL--light, heading-light-L {
+@mixin typographyTShirtColor .spectrum-Heading-sizeL--light, heading-L-light {
 }
 
-@mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--heavy, heading-heavy-XXXL {
+@mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--heavy, heading-XXXL-heavy {
 }
-@mixin typographyTShirtColor .spectrum-Heading-sizeXXL--heavy, heading-heavy-XXL {
+@mixin typographyTShirtColor .spectrum-Heading-sizeXXL--heavy, heading-XXL-heavy {
 }
-@mixin typographyTShirtColor .spectrum-Heading-sizeXL--heavy, heading-heavy-XL {
+@mixin typographyTShirtColor .spectrum-Heading-sizeXL--heavy, heading-XL-heavy {
 }
-@mixin typographyTShirtColor .spectrum-Heading-sizeL--heavy, heading-heavy-L {
+@mixin typographyTShirtColor .spectrum-Heading-sizeL--heavy, heading-L-heavy {
 }
 
 @mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--heading, heading-XXXL {
@@ -136,23 +136,23 @@ governing permissions and limitations under the License.
     }
 
     @mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--light,
-      heading-light-XXXL {
+      heading-XXXL-light {
     }
-    @mixin typographyTShirtColor .spectrum-Heading-sizeXXL--light, heading-light-XXL {
+    @mixin typographyTShirtColor .spectrum-Heading-sizeXXL--light, heading-XXL-light {
     }
-    @mixin typographyTShirtColor .spectrum-Heading-sizeXL--light, heading-light-XL {
+    @mixin typographyTShirtColor .spectrum-Heading-sizeXL--light, heading-XL-light {
     }
-    @mixin typographyTShirtColor .spectrum-Heading-sizeL--light, heading-light-L {
+    @mixin typographyTShirtColor .spectrum-Heading-sizeL--light, heading-L-light {
     }
 
     @mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--heavy,
-      heading-heavy-XXXL {
+      heading-XXXL-heavy {
     }
-    @mixin typographyTShirtColor .spectrum-Heading-sizeXXL--heavy, heading-heavy-XXL {
+    @mixin typographyTShirtColor .spectrum-Heading-sizeXXL--heavy, heading-XXL-heavy {
     }
-    @mixin typographyTShirtColor .spectrum-Heading-sizeXL--heavy, heading-heavy-XL {
+    @mixin typographyTShirtColor .spectrum-Heading-sizeXL--heavy, heading-XL-heavy {
     }
-    @mixin typographyTShirtColor .spectrum-Heading-sizeL--heavy, heading-heavy-L {
+    @mixin typographyTShirtColor .spectrum-Heading-sizeL--heavy, heading-L-heavy {
     }
 
     @mixin typographyTShirtColor .spectrum-Heading-sizeXXXL--heading, heading-XXXL {

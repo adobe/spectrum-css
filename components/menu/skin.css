@@ -16,21 +16,21 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu {
-  background-color: var(--spectrum-listitem-m-background-color);
+  background-color: var(--spectrum-listitem-m-texticon-background-color);
 }
 
 .spectrum-Menu-item {
-  background-color: var(--spectrum-listitem-m-background-color);
-  color: var(--spectrum-listitem-m-text-color);
+  background-color: var(--spectrum-listitem-m-texticon-background-color);
+  color: var(--spectrum-listitem-m-texticon-text-color);
 
   &:focus-ring,
   &.is-focused {
     background-color: var(
-      --spectrum-listitem-m-background-color-key-focus
+      --spectrum-listitem-m-texticon-background-color-key-focus
     );
-    color: var(--spectrum-listitem-m-text-color-key-focus);
+    color: var(--spectrum-listitem-m-texticon-text-color-key-focus);
     border-inline-start-color: var(
-      --spectrum-listitem-m-focus-indicator-color
+      --spectrum-listitem-m-texticon-focus-indicator-color
     );
   }
 
@@ -38,27 +38,27 @@ governing permissions and limitations under the License.
   &:focus,
   &.is-highlighted,
   &.is-open {
-    background-color: var(--spectrum-listitem-m-background-color-hover);
-    color: var(--spectrum-listitem-m-text-color-hover);
+    background-color: var(--spectrum-listitem-m-texticon-background-color-hover);
+    color: var(--spectrum-listitem-m-texticon-text-color-hover);
   }
 
   &.is-selected {
-    color: var(--spectrum-listitem-m-text-color-selected);
+    color: var(--spectrum-listitem-m-texticon-text-color-selected);
 
     .spectrum-Menu-checkmark {
-      color: var(--spectrum-listitem-m-icon-color-selected);
+      color: var(--spectrum-listitem-m-texticon-icon-color-selected);
     }
   }
 
   .is-active,
   &:active {
-    background-color: var(--spectrum-listitem-m-background-color-down);
+    background-color: var(--spectrum-listitem-m-texticon-background-color-down);
   }
 
   &.is-disabled {
-    background-color: var(--spectrum-listitem-m-background-color-disabled);
+    background-color: var(--spectrum-listitem-m-texticon-background-color-disabled);
     background-image: none;
-    color: var(--spectrum-listitem-m-text-color-disabled);
+    color: var(--spectrum-listitem-m-texticon-text-color-disabled);
     cursor: default;
   }
 }
@@ -68,5 +68,5 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Menu-divider {
-  background-color: var(--spectrum-listitem-m-divider-color);
+  background-color: var(--spectrum-listitem-m-texticon-divider-color);
 }

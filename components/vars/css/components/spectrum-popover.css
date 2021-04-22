@@ -1,7 +1,7 @@
 :root {
+  --spectrum-popover-shadow-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-popover-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-popover-border-color: var(--spectrum-alias-border-color-dark);
-  --spectrum-popover-shadow-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-popover-shadow-blur: var(--spectrum-alias-dropshadow-blur);
   --spectrum-popover-shadow-offset-y: var(--spectrum-alias-dropshadow-offset-y);
   --spectrum-popover-elevation: 2dp;

@@ -1,4 +1,10 @@
 :root {
+  --spectrum-searchwithin-text-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-searchwithin-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-searchwithin-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-searchwithin-text-line-height: var(--spectrum-alias-component-text-line-height);
+  --spectrum-searchwithin-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-searchwithin-text-transform: none;
   --spectrum-searchwithin-padding-left: 36px;
   --spectrum-searchwithin-padding-right: 28px;
   --spectrum-searchwithin-icon-width: var(--spectrum-global-dimension-static-size-200);

@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Stepper {
+
   --spectrum-stepper-width: var(--spectrum-global-dimension-size-900);
   --spectrum-stepper-border-size: var(--spectrum-alias-border-size-thin);
 
@@ -25,7 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-stepper-icon-nudge: var(--spectrum-global-dimension-size-25);
 
   --spectrum-stepper-quiet-width: var(--spectrum-global-dimension-size-600);
-  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-icon-chevron-down-small-width) / 2);
+  --spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2 - var(--spectrum-alias-ui-icon-chevron-size-75) / 2);
   --spectrum-stepper-quiet-button-width: calc(var(--spectrum-stepper-button-width) - var(--spectrum-stepper-button-offset));
 }
 

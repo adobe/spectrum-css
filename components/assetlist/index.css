@@ -11,9 +11,9 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-AssetList {
-  --spectrum-miller-column-chevron-height: 10px;
-  --spectrum-miller-column-chevron-width: 6px;
-  --spectrum-miller-column-checkbox-margin: 0;
+  --spectrum-millercolumn-chevron-height: 10px;
+  --spectrum-millercolumn-chevron-width: 6px;
+  --spectrum-millercolumn-checkbox-margin: 0;
 }
 
 .spectrum-AssetList {
@@ -29,23 +29,23 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   align-items: center;
 
-  inline-size: var(--spectrum-miller-column-width);
-  block-size: var(--spectrum-miller-column-item-height);
+  inline-size: var(--spectrum-millercolumn-width);
+  block-size: var(--spectrum-millercolumn-item-height);
 
   padding-block: 0;
-  padding-inline: var(--spectrum-miller-column-item-padding-left)
-    var(--spectrum-miller-column-item-padding-right);
-  margin-block: 0 var(--spectrum-miller-column-item-margin-bottom);
+  padding-inline: var(--spectrum-millercolumn-item-padding-left)
+    var(--spectrum-millercolumn-item-padding-right);
+  margin-block: 0 var(--spectrum-millercolumn-item-margin-bottom);
   margin-inline: 0;
 
-  border-radius: var(--spectrum-miller-column-item-border-radius);
+  border-radius: var(--spectrum-millercolumn-item-border-radius);
 
   transition: background-color var(--spectrum-global-animation-duration-100)
     ease-in-out;
 
   /* todo: replace with proper DNA variables */
-  font-size: var(--spectrum-listitem-m-text-size);
-  font-weight: var(--spectrum-listitem-m-text-font-weight);
+  font-size: var(--spectrum-listitem-m-texticon-text-size);
+  font-weight: var(--spectrum-listitem-m-texticon-text-font-weight);
   font-style: normal;
 
   cursor: pointer;
@@ -59,11 +59,11 @@ governing permissions and limitations under the License.
     inset-inline-start: 0;
     inset-inline-end: 0;
 
-    block-size: var(--spectrum-miller-column-item-height);
+    block-size: var(--spectrum-millercolumn-item-height);
 
     background-color: transparent;
 
-    border-radius: var(--spectrum-miller-column-item-border-radius);
+    border-radius: var(--spectrum-millercolumn-item-border-radius);
   }
 
   &.is-selectable,
@@ -87,9 +87,9 @@ governing permissions and limitations under the License.
     /* Remove the border on images inside links in IE 10-. */
     border-style: none;
 
-    inline-size: var(--spectrum-miller-column-thumbnail-width);
-    block-size: var(--spectrum-miller-column-thumbnail-height);
-    margin-inline-start: var(--spectrum-miller-column-thumbnail-margin-left);
+    inline-size: var(--spectrum-millercolumn-thumbnail-width);
+    block-size: var(--spectrum-millercolumn-thumbnail-height);
+    margin-inline-start: var(--spectrum-millercolumn-thumbnail-margin-left);
     vertical-align: middle;
   }
 }
@@ -97,7 +97,7 @@ governing permissions and limitations under the License.
 .spectrum-AssetList-itemSelector {
   display: none;
   /* hack: this needs to be specified as margin-right to override Checkbox's margin for LTR */
-  margin-inline-end: var(--spectrum-miller-column-checkbox-margin);
+  margin-inline-end: var(--spectrum-millercolumn-checkbox-margin);
 }
 
 .spectrum-AssetList-itemChildIndicator {
@@ -109,7 +109,7 @@ governing permissions and limitations under the License.
 
 .spectrum-AssetList-itemLabel {
   flex: 1;
-  padding-inline-start: var(--spectrum-miller-column-item-label-padding-left);
+  padding-inline-start: var(--spectrum-millercolumn-item-label-padding-left);
 
   text-overflow: ellipsis;
   overflow: hidden;

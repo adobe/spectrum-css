@@ -11,8 +11,6 @@ governing permissions and limitations under the License.
 */
 
 %spectrum-BaseButton {
-  /* Hardcoded for wrapping study, needs to be in DNA */
-  --spectrum-button-line-height: 1.3;
 
   /* Contain halo */
   position: relative;
@@ -51,7 +49,7 @@ governing permissions and limitations under the License.
   text-decoration: none;
   font-family: var(--spectrum-alias-body-text-font-family);
 
-  line-height: var(--spectrum-button-line-height);
+  line-height: var(--spectrum-alias-component-text-line-height);
 
   user-select: none;
   -webkit-user-select: none;
@@ -89,7 +87,7 @@ governing permissions and limitations under the License.
 %spectrum-ButtonWithFocusRing {
   &:after {
     border-radius: calc(
-      var(--spectrum-button-primary-border-radius) +
+      var(--spectrum-button-primary-texticon-border-radius) +
         var(--spectrum-alias-focus-ring-gap)
     );
     content: "";

@@ -11,22 +11,22 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ProgressCircle-track {
-  border-color: var(--spectrum-progresscircle-medium-track-color);
+  border-color: var(--spectrum-progresscircle-m-track-color);
 }
 
 .spectrum-ProgressCircle-fill {
-  border-color: var(--spectrum-progresscircle-medium-track-fill-color);
+  border-color: var(--spectrum-progresscircle-m-track-fill-color);
 }
 
 .spectrum-ProgressCircle--overBackground {
   .spectrum-ProgressCircle-track {
     border-color: var(
-      --spectrum-progresscircle-medium-over-background-track-color
+      --spectrum-progresscircle-m-over-background-track-color
     );
   }
   .spectrum-ProgressCircle-fill {
     border-color: var(
-      --spectrum-progresscircle-medium-over-background-track-fill-color
+      --spectrum-progresscircle-m-over-background-track-fill-color
     );
   }
 }
@@ -34,12 +34,12 @@ governing permissions and limitations under the License.
 .spectrum-ProgressCircle--indeterminate.spectrum-ProgressCircle--overBackground {
   .spectrum-ProgressCircle-track {
     border-color: var(
-      --spectrum-progresscircle-medium-over-background-track-color
+      --spectrum-progresscircle-m-over-background-track-color
     );
   }
   .spectrum-ProgressCircle-fill {
     border-color: var(
-      --spectrum-progresscircle-medium-over-background-track-fill-color
+      --spectrum-progresscircle-m-over-background-track-fill-color
     );
   }
 }

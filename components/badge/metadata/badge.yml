@@ -1,0 +1,43 @@
+name: Badge
+SpectrumSiteSlug: https://spectrum.adobe.com/page/badge/
+examples:
+  - id: badge
+    name: Standard
+    markup: |
+      <span class="spectrum-Badge spectrum-Badge--grey">Grey Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--red">Red Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--orange">Orange Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--yellow">Yellow Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--seafoam">Seafoam Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--green">Green Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--blue">Blue Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--fuchsia">Fuchsia Badge</span>
+  - id: badge
+    name: Activity badges
+    markup: |
+      <span class="spectrum-Badge spectrum-Badge--active">Active</span>
+      <span class="spectrum-Badge spectrum-Badge--inactive">Inactive</span>
+  - id: badge
+    name: Small
+    description: A small badge.
+    markup: |
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--grey">Grey Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--red">Red Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--orange">Orange Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--yellow">Yellow Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--seafoam">Seafoam Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--green">Green Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--blue">Blue Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--small spectrum-Badge--fuchsia">Fuchsia Badge</span>
+  - id: badge
+    name: Large
+    description: A large badge.
+    markup: |
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--grey">Grey Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--red">Red Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--orange">Orange Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--yellow">Yellow Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--seafoam">Seafoam Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--green">Green Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--blue">Blue Badge</span>
+      <span class="spectrum-Badge spectrum-Badge--large spectrum-Badge--fuchsia">Fuchsia Badge</span>

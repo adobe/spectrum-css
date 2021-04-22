@@ -1,5 +1,5 @@
-# @spectrum-css/label
-> The Spectrum CSS label component
+# @spectrum-css/taggroup
+> The Spectrum CSS tags component
 
 This package is part of the [Spectrum CSS project](https://github.com/adobe/spectrum-css).
 
