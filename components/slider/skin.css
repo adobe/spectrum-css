@@ -102,7 +102,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider-handle {
   &.is-dragged {
     border-color: var(--spectrum-slider-m-handle-border-color-down);
-    background: var(--spectrum-slider-m-handle-background-color-down);
+    background: var(--spectrum-slider-m-handle-background-color);
   }
 }
 

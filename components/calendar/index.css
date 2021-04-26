@@ -155,12 +155,12 @@ governing permissions and limitations under the License.
   margin: var(--spectrum-calendar-day-padding);
 
   border-radius: var(--spectrum-calendar-day-width);
-  border: var(--spectrum-calendar-day-border-size-key-focus) solid transparent;
+  border: var(--spectrum-calendar-day-border-size) solid transparent;
 
   font-size: var(--spectrum-calendar-day-text-size);
   line-height: calc(
     var(--spectrum-calendar-day-width) -
-      var(--spectrum-calendar-day-border-size-key-focus) * 2
+      var(--spectrum-calendar-day-border-size) * 2
   );
   white-space: nowrap;
 
@@ -192,7 +192,7 @@ governing permissions and limitations under the License.
     inline-size: var(--spectrum-calendar-day-width);
     block-size: var(--spectrum-calendar-day-height);
     border-radius: var(--spectrum-calendar-day-width);
-    border: var(--spectrum-calendar-day-border-size-key-focus) solid transparent;
+    border: var(--spectrum-calendar-day-border-size) solid transparent;
   }
 
   &.is-selected:not(.is-range-selection) {
