@@ -176,7 +176,7 @@ governing permissions and limitations under the License.
         border-color: var(--spectrum-radio-m-circle-border-color-key-focus);
       }
       &:after {
-        box-shadow: 0 0 0 var(--spectrum-radio-m-focus-ring-size-key-focus)
+        box-shadow: 0 0 0 var(--spectrum-radio-m-focus-ring-size)
           var(--spectrum-radio-m-focus-ring-color-key-focus);
       }
     }

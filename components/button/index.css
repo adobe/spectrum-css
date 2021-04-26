@@ -124,7 +124,7 @@ a.spectrum-Button {
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-primary-texticon-focus-ring-size-key-focus) var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-button-primary-texticon-focus-ring-size) var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
     }
   }
 }

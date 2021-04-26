@@ -32,7 +32,7 @@ governing permissions and limitations under the License.
   &:focus-ring {
     background-color: var(--spectrum-tag-s-texticon-background-color-key-focus);
     border-color: var(--spectrum-tag-s-texticon-border-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-tag-s-texticon-focus-ring-size-key-focus) var(--spectrum-tag-s-texticon-focus-ring-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-tag-s-texticon-focus-ring-size) var(--spectrum-tag-s-texticon-focus-ring-color-key-focus);
     color: var(--spectrum-tag-s-texticon-text-color-key-focus);
 
     .spectrum-ClearButton {
