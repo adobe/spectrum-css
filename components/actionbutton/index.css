@@ -57,14 +57,14 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-65);
 }
 
-.spectrum-ActionButton {
+.spectrum-ActionButton {/* --spectrum-actionbutton-textonly-padding-left 12px */ /* --spectrum-actionbutton-textonly-border-size 1px */
   /* Adjustments for inset/outset padding in DNA */
-  --spectrum-actionbutton-padding-left-adjusted: calc(var(--spectrum-actionbutton-textonly-padding-left) - var(--spectrum-actionbutton-textonly-border-size));
-  --spectrum-actionbutton-padding-right-adjusted: calc(var(--spectrum-actionbutton-textonly-padding-right) - var(--spectrum-actionbutton-textonly-border-size));
+  --spectrum-actionbutton-padding-left-adjusted: calc(var(--spectrum-actionbutton-texticon-padding-left) - var(--spectrum-actionbutton-texticon-border-size));
+  --spectrum-actionbutton-padding-right-adjusted: calc(var(--spectrum-actionbutton-texticon-padding-right) - var(--spectrum-actionbutton-texticon-border-size));
   --spectrum-actionbutton-textonly-padding-left-adjusted: calc(var(--spectrum-actionbutton-textonly-padding-left) - var(--spectrum-actionbutton-textonly-border-size));
   --spectrum-actionbutton-textonly-padding-right-adjusted: calc(var(--spectrum-actionbutton-textonly-padding-right) - var(--spectrum-actionbutton-textonly-border-size));
-  --spectrum-actionbutton-icononly-padding-left-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-left) - var(--spectrum-actionbutton-textonly-border-size));
-  --spectrum-actionbutton-icononly-padding-right-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-right) - var(--spectrum-actionbutton-textonly-border-size));
+  --spectrum-actionbutton-icononly-padding-left-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-left) - var(--spectrum-actionbutton-icononly-border-size));
+  --spectrum-actionbutton-icononly-padding-right-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-right) - var(--spectrum-actionbutton-icononly-border-size));
 }
 
 a.spectrum-ActionButton {
