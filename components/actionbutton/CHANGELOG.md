@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.3-alpha.0"></a>
+## 1.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.0.2...@spectrum-css/actionbutton@1.0.3-alpha.0)
+
+### 🐛 Bug fixes
+
+* adjusted spacing on actionbutton icon ([4829271](https://github.com/adobe/spectrum-css/commit/4829271))
+
+
+
+
+
 <a name="1.0.2"></a>
 ## 1.0.2
 🗓 2021-04-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.0.1...@spectrum-css/actionbutton@1.0.2)

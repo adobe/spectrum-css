@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/actionbar",
-  "version": "3.0.2",
+  "version": "3.0.3-alpha.0",
   "description": "The Spectrum CSS actionbar component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,22 +16,22 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^1.0.1",
-    "@spectrum-css/actiongroup": "^1.0.1",
-    "@spectrum-css/checkbox": "^3.0.1",
-    "@spectrum-css/icon": "^3.0.1",
-    "@spectrum-css/popover": "^3.0.1",
-    "@spectrum-css/vars": "^3.0.1"
+    "@spectrum-css/actionbutton": "^1.0.3-alpha.0",
+    "@spectrum-css/actiongroup": "^1.0.3-alpha.0",
+    "@spectrum-css/checkbox": "^3.0.3-alpha.0",
+    "@spectrum-css/icon": "^3.0.3-alpha.0",
+    "@spectrum-css/popover": "^3.0.3-alpha.0",
+    "@spectrum-css/vars": "^3.1.0-alpha.0"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^1.0.2",
-    "@spectrum-css/actiongroup": "^1.0.2",
-    "@spectrum-css/checkbox": "^3.0.2",
-    "@spectrum-css/component-builder": "^2.0.1",
-    "@spectrum-css/icon": "^3.0.2",
-    "@spectrum-css/popover": "^3.0.2",
-    "@spectrum-css/table": "^3.0.2",
-    "@spectrum-css/vars": "^3.0.2",
+    "@spectrum-css/actionbutton": "^1.0.3-alpha.0",
+    "@spectrum-css/actiongroup": "^1.0.3-alpha.0",
+    "@spectrum-css/checkbox": "^3.0.3-alpha.0",
+    "@spectrum-css/component-builder": "^3.0.0-alpha.0",
+    "@spectrum-css/icon": "^3.0.3-alpha.0",
+    "@spectrum-css/popover": "^3.0.3-alpha.0",
+    "@spectrum-css/table": "^3.0.3-alpha.0",
+    "@spectrum-css/vars": "^3.1.0-alpha.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

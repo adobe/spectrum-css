@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-alpha.0"></a>
+# 4.0.0-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.2...@spectrum-css/breadcrumb@4.0.0-alpha.0)
+
+### ✨ Features
+
+* added t-shirt sizes to Breadcrumbs ([a040693](https://github.com/adobe/spectrum-css/commit/a040693))
+
+
+### 🐛 Bug fixes
+
+* updated docs for breadcrumb ([85769ea](https://github.com/adobe/spectrum-css/commit/85769ea))
+
+
+### 🛑 BREAKING CHANGES
+
+* a t-shirt size class has to be added to breadcrumb
+
+
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2021-04-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.1...@spectrum-css/breadcrumb@3.0.2)

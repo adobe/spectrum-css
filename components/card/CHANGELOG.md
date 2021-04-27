@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-alpha.0"></a>
+# 4.0.0-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.2...@spectrum-css/card@4.0.0-alpha.0)
+
+### ♻️ Code refactoring
+
+* changed sized cards to t-shirt sizes ([7fe32e4](https://github.com/adobe/spectrum-css/commit/7fe32e4))
+
+
+### 🐛 Bug fixes
+
+* switch height to min-height ([594873b](https://github.com/adobe/spectrum-css/commit/594873b))
+* updating min-width on card ([f15db2a](https://github.com/adobe/spectrum-css/commit/f15db2a))
+
+
+### 🛑 BREAKING CHANGES
+
+* .spectrum-Card--small is now .spectrum-Card--sizeS
+
+
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2021-04-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.1...@spectrum-css/card@3.0.2)
