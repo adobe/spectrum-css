@@ -26,6 +26,9 @@ jobs:
       node_js: 12
       script:
         - audit-ci --moderate
+    - language: node_js
+      node_js: 12
+      script:
         - yarn run build
       after_success:
         - ./backstop_data/deploy_site.sh
