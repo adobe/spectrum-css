@@ -74,6 +74,11 @@ governing permissions and limitations under the License.
   color: var(--spectrum-textfield-m-icon-color);
 }
 
+.spectrum-Textfield-icon,
+.spectrum-Textfield-validationIcon {
+  pointer-events: none;
+}
+
 .spectrum-Textfield-input {
   background-color: var(--spectrum-textfield-m-background-color);
   border-color: var(--spectrum-textfield-m-border-color);
