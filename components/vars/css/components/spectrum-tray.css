@@ -1,13 +1,13 @@
 :root {
-  --spectrum-tray-background-color: var(--spectrum-alias-background-color-primary);
   --spectrum-tray-underlay-background-color: var(--spectrum-alias-background-color-modal-overlay);
-  --spectrum-tray-padding-x: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-tray-padding-y: 0;
+  --spectrum-tray-background-color: var(--spectrum-alias-background-color-primary);
+  --spectrum-tray-full-width-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tray-width: 100%;
   --spectrum-tray-max-width: 375px;
   --spectrum-tray-min-height: var(--spectrum-global-dimension-static-size-800);
+  --spectrum-tray-padding-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tray-padding-y: 0;
   --spectrum-tray-border-radius: 0px;
-  --spectrum-tray-full-width-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tray-background-entry-animation-delay: 0ms;
   --spectrum-tray-background-entry-animation-duration: var(--spectrum-global-animation-duration-600);
   --spectrum-tray-background-entry-animation-ease: var(--spectrum-global-animation-linear);
