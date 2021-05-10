@@ -44,13 +44,13 @@
   --spectrum-inlinealert-success-padding-y: var(--spectrum-global-dimension-static-size-250);
   --spectrum-inlinealert-success-min-width: var(--spectrum-global-dimension-static-size-4600);
   --spectrum-inlinealert-success-content-margin-top: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-inlinealert-warning-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-inlinealert-warning-title-text-color: var(--spectrum-global-color-gray-900);
-  --spectrum-inlinealert-warning-text-color: var(--spectrum-global-color-gray-700);
-  --spectrum-inlinealert-warning-border-color: var(--spectrum-semantic-notice-color-border);
-  --spectrum-inlinealert-warning-icon-color: var(--spectrum-semantic-notice-color-icon);
-  --spectrum-inlinealert-warning-padding-x: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-inlinealert-warning-padding-y: var(--spectrum-global-dimension-static-size-250);
-  --spectrum-inlinealert-warning-min-width: var(--spectrum-global-dimension-static-size-4600);
-  --spectrum-inlinealert-warning-content-margin-top: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-inlinealert-negative-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-inlinealert-negative-title-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-inlinealert-negative-text-color: var(--spectrum-global-color-gray-700);
+  --spectrum-inlinealert-negative-border-color: var(--spectrum-semantic-notice-color-border);
+  --spectrum-inlinealert-negative-icon-color: var(--spectrum-semantic-notice-color-icon);
+  --spectrum-inlinealert-negative-padding-x: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-inlinealert-negative-padding-y: var(--spectrum-global-dimension-static-size-250);
+  --spectrum-inlinealert-negative-min-width: var(--spectrum-global-dimension-static-size-4600);
+  --spectrum-inlinealert-negative-content-margin-top: var(--spectrum-global-dimension-static-size-100);
 }
