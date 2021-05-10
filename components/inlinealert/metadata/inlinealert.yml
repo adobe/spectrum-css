@@ -21,14 +21,14 @@ examples:
         <div class="spectrum-InLineAlert-header">Successful in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
-  - id: inlinealert-warning
-    name: Warning
+  - id: inlinealert-negative
+    name: Negative
     markup: |
-      <div class="spectrum-InLineAlert spectrum-InLineAlert--warning">
+      <div class="spectrum-InLineAlert spectrum-InLineAlert--negative">
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Alert" />
         </svg>
-        <div class="spectrum-InLineAlert-header">Warning in-line alert header</div>
+        <div class="spectrum-InLineAlert-header">negative in-line alert header</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
       </div>
   - id: inlinealert-help

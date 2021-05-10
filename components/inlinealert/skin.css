@@ -56,10 +56,10 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-InLineAlert--warning {
-  border-color: var(--spectrum-inlinealert-warning-border-color);
+.spectrum-InLineAlert--negative {
+  border-color: var(--spectrum-inlinealert-negative-border-color);
 
   .spectrum-InLineAlert-icon {
-    color: var(--spectrum-inlinealert-warning-icon-color);
+    color: var(--spectrum-inlinealert-negative-icon-color);
   }
 }
