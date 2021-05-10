@@ -58,7 +58,7 @@
   --spectrum-switch-s-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-s-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-s-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-s-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-s-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-s-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -144,7 +144,7 @@
   --spectrum-switch-s-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-s-emphasized-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-s-emphasized-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-s-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-s-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-s-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-s-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-s-emphasized-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -230,7 +230,7 @@
   --spectrum-switch-m-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-m-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-m-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-m-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-m-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-m-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-m-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -316,7 +316,7 @@
   --spectrum-switch-m-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-m-emphasized-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-m-emphasized-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-m-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-m-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-m-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-m-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-m-emphasized-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -402,7 +402,7 @@
   --spectrum-switch-l-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-l-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-l-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-l-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-l-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-l-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-l-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -488,7 +488,7 @@
   --spectrum-switch-l-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-l-emphasized-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-l-emphasized-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-l-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-l-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-l-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-l-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-l-emphasized-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -574,7 +574,7 @@
   --spectrum-switch-xl-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-xl-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-xl-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-xl-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-xl-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-xl-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-xl-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -660,7 +660,7 @@
   --spectrum-switch-xl-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-switch-xl-emphasized-handle-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-xl-emphasized-handle-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
-  --spectrum-switch-xl-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-switch-xl-emphasized-track-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-switch-xl-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-xl-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-switch-xl-emphasized-text-font-weight: var(--spectrum-alias-body-text-font-weight);
