@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.1-alpha.1"></a>
+## 1.0.1-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/badge@1.0.1-alpha.0...@spectrum-css/badge@1.0.1-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/badge
+
+
+
+
+
 <a name="1.0.1-alpha.0"></a>
 ## 1.0.1-alpha.0
 🗓 2021-04-27

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/dropindicator",
-  "version": "3.0.3-alpha.0",
+  "version": "3.0.3-alpha.1",
   "description": "The Spectrum CSS dropindicator component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -20,9 +20,9 @@
     "@spectrum-css/vars": "^3.1.0-alpha.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.0.0-alpha.0",
-    "@spectrum-css/icon": "^3.0.3-alpha.0",
-    "@spectrum-css/vars": "^3.1.0-alpha.0",
+    "@spectrum-css/component-builder": "^3.0.0-alpha.1",
+    "@spectrum-css/icon": "^3.0.3-alpha.1",
+    "@spectrum-css/vars": "^3.1.0-alpha.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

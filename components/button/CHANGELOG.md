@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-alpha.0"></a>
+# 4.0.0-alpha.0
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.3-alpha.0...@spectrum-css/button@4.0.0-alpha.0)
+
+### 🐛 Bug fixes
+
+* add missing scale imports for button ([c32a552](https://github.com/adobe/spectrum-css/commit/c32a552))
+* renamed `warning` button variant to `negative` ([1e029eb](https://github.com/adobe/spectrum-css/commit/1e029eb))
+
+
+### 🛑 BREAKING CHANGES
+
+* `.spectrum-Button--warning` is now
+`.spectrum-Button--negative`
+
+
+
+
+
 <a name="3.0.3-alpha.0"></a>
 ## 3.0.3-alpha.0
 🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.2...@spectrum-css/button@3.0.3-alpha.0)
