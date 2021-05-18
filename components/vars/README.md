@@ -1,6 +1,6 @@
-# `@spectrum-css/vars`
+# `@spectrum-css/dietvars`
 
-The vars component contains all the variables that drive the presentation of a component.
+The vars component contains all the variables that drive the presentation of a component. This is the diet version.
 
 ## CSS Usage
 
