@@ -499,9 +499,10 @@ governing permissions and limitations under the License.
   flex-direction: column;
 }
 
-.spectrum-Examples-item {
+/* .spectrum-Examples-item {
   margin-bottom: var(--spectrum-global-dimension-size-200);
 }
+*/
 
 .spectrum-Examples-item .spectrum-Examples-itemHeading {
   margin-bottom: var(--spectrum-global-dimension-size-100);
