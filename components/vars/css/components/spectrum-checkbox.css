@@ -22,7 +22,7 @@
   --spectrum-checkbox-s-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -47,7 +47,7 @@
   --spectrum-checkbox-s-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -72,7 +72,7 @@
   --spectrum-checkbox-s-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -97,7 +97,7 @@
   --spectrum-checkbox-s-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -122,7 +122,7 @@
   --spectrum-checkbox-s-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -147,7 +147,7 @@
   --spectrum-checkbox-s-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -197,7 +197,7 @@
   --spectrum-checkbox-s-emphasized-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-emphasized-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-emphasized-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-emphasized-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -222,7 +222,7 @@
   --spectrum-checkbox-s-emphasized-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-emphasized-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-emphasized-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -247,7 +247,7 @@
   --spectrum-checkbox-s-emphasized-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-emphasized-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-emphasized-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-emphasized-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -272,7 +272,7 @@
   --spectrum-checkbox-s-emphasized-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-emphasized-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-emphasized-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-emphasized-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -297,7 +297,7 @@
   --spectrum-checkbox-s-emphasized-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-emphasized-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-emphasized-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-emphasized-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -322,7 +322,7 @@
   --spectrum-checkbox-s-emphasized-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-s-emphasized-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-s-emphasized-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-s-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-s-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-emphasized-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-s-emphasized-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-s-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -372,7 +372,7 @@
   --spectrum-checkbox-m-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -397,7 +397,7 @@
   --spectrum-checkbox-m-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -422,7 +422,7 @@
   --spectrum-checkbox-m-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -447,7 +447,7 @@
   --spectrum-checkbox-m-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -472,7 +472,7 @@
   --spectrum-checkbox-m-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -497,7 +497,7 @@
   --spectrum-checkbox-m-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -547,7 +547,7 @@
   --spectrum-checkbox-m-emphasized-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-emphasized-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-emphasized-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-emphasized-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -572,7 +572,7 @@
   --spectrum-checkbox-m-emphasized-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-emphasized-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-emphasized-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -597,7 +597,7 @@
   --spectrum-checkbox-m-emphasized-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-emphasized-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-emphasized-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-emphasized-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -622,7 +622,7 @@
   --spectrum-checkbox-m-emphasized-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-emphasized-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-emphasized-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-emphasized-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -647,7 +647,7 @@
   --spectrum-checkbox-m-emphasized-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-emphasized-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-emphasized-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-emphasized-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -672,7 +672,7 @@
   --spectrum-checkbox-m-emphasized-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-m-emphasized-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-m-emphasized-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-m-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-m-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-emphasized-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-m-emphasized-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-m-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -722,7 +722,7 @@
   --spectrum-checkbox-l-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -747,7 +747,7 @@
   --spectrum-checkbox-l-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -772,7 +772,7 @@
   --spectrum-checkbox-l-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -797,7 +797,7 @@
   --spectrum-checkbox-l-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -822,7 +822,7 @@
   --spectrum-checkbox-l-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -847,7 +847,7 @@
   --spectrum-checkbox-l-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -897,7 +897,7 @@
   --spectrum-checkbox-l-emphasized-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-emphasized-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-emphasized-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-emphasized-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -922,7 +922,7 @@
   --spectrum-checkbox-l-emphasized-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-emphasized-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-emphasized-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -947,7 +947,7 @@
   --spectrum-checkbox-l-emphasized-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-emphasized-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-emphasized-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-emphasized-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -972,7 +972,7 @@
   --spectrum-checkbox-l-emphasized-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-emphasized-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-emphasized-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-emphasized-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -997,7 +997,7 @@
   --spectrum-checkbox-l-emphasized-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-emphasized-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-emphasized-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-emphasized-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -1022,7 +1022,7 @@
   --spectrum-checkbox-l-emphasized-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-l-emphasized-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-l-emphasized-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-l-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-l-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-emphasized-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-l-emphasized-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-l-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1072,7 +1072,7 @@
   --spectrum-checkbox-xl-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -1097,7 +1097,7 @@
   --spectrum-checkbox-xl-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -1122,7 +1122,7 @@
   --spectrum-checkbox-xl-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -1147,7 +1147,7 @@
   --spectrum-checkbox-xl-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -1172,7 +1172,7 @@
   --spectrum-checkbox-xl-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -1197,7 +1197,7 @@
   --spectrum-checkbox-xl-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1247,7 +1247,7 @@
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-emphasized-text-color-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-emphasized-box-background-color-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-emphasized-box-border-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-selected: var(--spectrum-alias-background-color-transparent);
@@ -1272,7 +1272,7 @@
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-emphasized-text-color-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-emphasized-box-background-color-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-emphasized-box-border-color-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -1297,7 +1297,7 @@
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-emphasized-text-color-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-emphasized-box-background-color-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-emphasized-box-border-color-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-error: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-error: var(--spectrum-alias-background-color-transparent);
@@ -1322,7 +1322,7 @@
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-error-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-error-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-emphasized-text-color-error-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-emphasized-box-background-color-error-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-emphasized-box-border-color-error-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-error-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-error-selected: var(--spectrum-alias-background-color-transparent);
@@ -1347,7 +1347,7 @@
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-error-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-error-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-emphasized-text-color-error-selected-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-emphasized-box-background-color-error-selected-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-emphasized-box-border-color-error-selected-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-error-indeterminate: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-error-indeterminate: var(--spectrum-alias-background-color-transparent);
@@ -1372,7 +1372,7 @@
   --spectrum-checkbox-xl-emphasized-focus-ring-gap-error-indeterminate-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-checkbox-xl-emphasized-focus-ring-color-error-indeterminate-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-checkbox-xl-emphasized-text-color-error-indeterminate-disabled: var(--spectrum-alias-text-color-disabled);
-  --spectrum-checkbox-xl-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
+  --spectrum-checkbox-xl-emphasized-box-background-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-emphasized-box-border-color-error-indeterminate-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-checkbox-xl-emphasized-checkmark-color: var(--spectrum-global-color-gray-75);
   --spectrum-checkbox-xl-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
