@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
   /* Apply padding by default to center text, giving consistency between input and textfield */
   padding: var(--spectrum-textfield-texticon-padding-top)
     var(--spectrum-textfield-texticon-padding-right) var(--spectrum-textfield-texticon-padding-bottom)
-    calc(var(--spectrum-textfield-texticon-padding-left) - 1px);
+    calc(var(--spectrum-textfield-texticon-padding-left) + 1px);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
