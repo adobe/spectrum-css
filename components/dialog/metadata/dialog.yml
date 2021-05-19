@@ -207,7 +207,7 @@ examples:
                 <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Cancel</span>
                 </button>
-                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--warning spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--negative spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
                   <span class="spectrum-Button-label">Delete</span>
                 </button>
               </div>
