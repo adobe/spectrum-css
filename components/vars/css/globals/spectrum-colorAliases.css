@@ -1,4 +1,5 @@
 :root {
+  --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
   --spectrum-alias-background-color-default: var(--spectrum-global-color-gray-100);
   --spectrum-alias-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-alias-background-color-transparent: transparent;
@@ -63,7 +64,6 @@
   --spectrum-alias-icon-color-selected-focus: var(--spectrum-global-color-blue-600);
   --spectrum-alias-image-opacity-disabled: var(--spectrum-global-color-opacity-30);
   --spectrum-alias-toolbar-background-color: var(--spectrum-global-color-gray-100);
-  --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
   --spectrum-alias-code-highlight-color-default: var(--spectrum-global-color-gray-800);
   --spectrum-alias-code-highlight-color-background: var(--spectrum-global-color-gray-75);
   --spectrum-alias-code-highlight-color-keyword: var(--spectrum-global-color-fuchsia-600);
