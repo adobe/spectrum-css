@@ -1,4 +1,15 @@
 :root {
+  --spectrum-global-dimension-static-percent-50: 50%;
+  --spectrum-global-dimension-static-percent-70: 70%;
+  --spectrum-global-dimension-static-percent-100: 100%;
+  --spectrum-global-dimension-static-breakpoint-xsmall: 304px;
+  --spectrum-global-dimension-static-breakpoint-small: 768px;
+  --spectrum-global-dimension-static-breakpoint-medium: 1280px;
+  --spectrum-global-dimension-static-breakpoint-large: 1768px;
+  --spectrum-global-dimension-static-breakpoint-xlarge: 2160px;
+  --spectrum-global-dimension-static-grid-columns: 12;
+  --spectrum-global-dimension-static-grid-fluid-width: 100%;
+  --spectrum-global-dimension-static-grid-fixed-max-width: 1280px;
   --spectrum-global-dimension-static-size-0: 0px;
   --spectrum-global-dimension-static-size-10: 1px;
   --spectrum-global-dimension-static-size-25: 2px;
@@ -57,15 +68,4 @@
   --spectrum-global-dimension-static-font-size-800: 32px;
   --spectrum-global-dimension-static-font-size-900: 36px;
   --spectrum-global-dimension-static-font-size-1000: 40px;
-  --spectrum-global-dimension-static-percent-50: 50%;
-  --spectrum-global-dimension-static-percent-70: 70%;
-  --spectrum-global-dimension-static-percent-100: 100%;
-  --spectrum-global-dimension-static-breakpoint-xsmall: 304px;
-  --spectrum-global-dimension-static-breakpoint-small: 768px;
-  --spectrum-global-dimension-static-breakpoint-medium: 1280px;
-  --spectrum-global-dimension-static-breakpoint-large: 1768px;
-  --spectrum-global-dimension-static-breakpoint-xlarge: 2160px;
-  --spectrum-global-dimension-static-grid-columns: 12;
-  --spectrum-global-dimension-static-grid-fluid-width: 100%;
-  --spectrum-global-dimension-static-grid-fixed-max-width: 1280px;
 }
