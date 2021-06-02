@@ -13,6 +13,10 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-search.css";
 
 .spectrum-Search {
+  --spectrum-search-quiet-button-offset: calc(var(--spectrum-actionbutton-m-icononly-min-width) / 2 - var(--spectrum-alias-ui-icon-cross-size-100) / 2); /* TODO this seems more complicated than necessary */
+}
+
+.spectrum-Search {
   display: inline-block;
   position: relative;
 }
@@ -40,6 +44,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Search--quiet {
   .spectrum-Search-clearButton {
-    transform: translateX(var(--spectrum-search-s-icon-gap));
+    transform: translateX(var(--spectrum-search-quiet-button-offset));
   }
 }
