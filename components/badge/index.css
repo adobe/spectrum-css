@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/scales/spectrum-large.css";
+@import "../vars/css/scales/spectrum-medium.css";
 @import "../vars/css/components/spectrum-badge.css";
 
 .spectrum-Badge--sizeS {
@@ -50,13 +52,13 @@ governing permissions and limitations under the License.
 
   inline-size: auto;
 
-  padding-block: var(--spectrum-badge-neutral-texticon-text-padding-top) var(--spectrum-badge-neutral-texticon-text-padding-bottom);
-  padding-inline: var(--spectrum-badge-neutral-texticon-padding-right) var(--spectrum-badge-neutral-texticon-padding-left);
+  padding-block: var(--spectrum-badge-neutral-textonly-text-padding-top) var(--spectrum-badge-neutral-textonly-text-padding-bottom);
+  padding-inline: var(--spectrum-badge-neutral-textonly-padding-right) var(--spectrum-badge-neutral-textonly-padding-left);
 
-  border-radius: var(--spectrum-badge-neutral-texticon-border-top-left-radius) var(--spectrum-badge-neutral-texticon-border-top-right-radius) var(--spectrum-badge-neutral-texticon-border-bottom-right-radius) var(--spectrum-badge-neutral-texticon-border-bottom-left-radius);
+  border-radius: var(--spectrum-badge-neutral-textonly-border-top-left-radius) var(--spectrum-badge-neutral-textonly-border-top-right-radius) var(--spectrum-badge-neutral-textonly-border-bottom-right-radius) var(--spectrum-badge-neutral-textonly-border-bottom-left-radius);
 
-  font-size: var(--spectrum-badge-neutral-texticon-text-size);
-  line-height: var(--spectrum-badge-neutral-texticon-text-line-height);
+  font-size: var(--spectrum-badge-neutral-textonly-text-size);
+  line-height: var(--spectrum-badge-neutral-textonly-text-line-height);
 
   cursor: default;
 
