@@ -82,9 +82,9 @@ governing permissions and limitations under the License.
 
 .spectrum-Badge {
   color: var(--spectrum-badge-m-texticon-text-color);
-  background-color: var(--spectrum-badge-m-texticon-background-color);
+  background-color: var(--spectrum-badge-m-textonly-background-color);
   &:hover {
-    color: var(--spectrum-badge-m-texticon-text-color-hover);
-    background-color: var(--spectrum-badge-m-texticon-background-color-hover);
+    color: var(--spectrum-badge-m-textonly-text-color-hover);
+    background-color: var(--spectrum-badge-m-textonly-background-color-hover);
   }
 }
