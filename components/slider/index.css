@@ -177,7 +177,7 @@ governing permissions and limitations under the License.
       inset-inline-start: auto;
       inset-inline-end: auto;
       margin-inline: var(--spectrum-slider-range-track-reset);
-      margin-block: var(--spectrum-slider-range-track-reset);
+      margin-block: calc(var(--spectrum-slider-track-height) / -2) var(--spectrum-slider-range-track-reset);
     }
     &:last-of-type {
       padding-block: 0;
