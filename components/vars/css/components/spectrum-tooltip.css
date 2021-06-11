@@ -46,9 +46,9 @@
   --spectrum-tooltip-neutral-entry-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-neutral-exit-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-info-text-color: var(--spectrum-global-color-static-white);
-  --spectrum-tooltip-info-tip-color: var(--spectrum-semantic-informative-color-background);
+  --spectrum-tooltip-info-tip-color: var(--spectrum-semantic-informative-background-color);
   --spectrum-tooltip-info-icon-color: var(--spectrum-global-color-static-white);
-  --spectrum-tooltip-info-background-color: var(--spectrum-semantic-informative-color-background);
+  --spectrum-tooltip-info-background-color: var(--spectrum-semantic-informative-background-color);
   --spectrum-tooltip-info-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tooltip-info-text-transform: none;
   --spectrum-tooltip-info-text-size: var(--spectrum-global-dimension-font-size-75);
@@ -92,9 +92,9 @@
   --spectrum-tooltip-info-entry-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-info-exit-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-positive-text-color: var(--spectrum-global-color-static-white);
-  --spectrum-tooltip-positive-tip-color: var(--spectrum-semantic-positive-color-background);
+  --spectrum-tooltip-positive-tip-color: var(--spectrum-semantic-positive-background-color);
   --spectrum-tooltip-positive-icon-color: var(--spectrum-global-color-static-white);
-  --spectrum-tooltip-positive-background-color: var(--spectrum-semantic-positive-color-background);
+  --spectrum-tooltip-positive-background-color: var(--spectrum-semantic-positive-background-color);
   --spectrum-tooltip-positive-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tooltip-positive-text-transform: none;
   --spectrum-tooltip-positive-text-size: var(--spectrum-global-dimension-font-size-75);
@@ -138,9 +138,9 @@
   --spectrum-tooltip-positive-entry-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-positive-exit-warmup-animation-delay: var(--spectrum-global-animation-duration-4000);
   --spectrum-tooltip-negative-text-color: var(--spectrum-global-color-static-white);
-  --spectrum-tooltip-negative-tip-color: var(--spectrum-semantic-negative-color-background);
+  --spectrum-tooltip-negative-tip-color: var(--spectrum-semantic-negative-background-color);
   --spectrum-tooltip-negative-icon-color: var(--spectrum-global-color-static-white);
-  --spectrum-tooltip-negative-background-color: var(--spectrum-semantic-negative-color-background);
+  --spectrum-tooltip-negative-background-color: var(--spectrum-semantic-negative-background-color);
   --spectrum-tooltip-negative-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tooltip-negative-text-transform: none;
   --spectrum-tooltip-negative-text-size: var(--spectrum-global-dimension-font-size-75);

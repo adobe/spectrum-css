@@ -18,7 +18,7 @@
   --spectrum-logicbutton-and-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-and-text-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-and-background-color-key-focus: var(--spectrum-global-color-blue-700);
-  --spectrum-logicbutton-and-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-logicbutton-and-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-logicbutton-and-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-and-text-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-and-background-color-mouse-focus: var(--spectrum-global-color-blue-500);
@@ -57,7 +57,7 @@
   --spectrum-logicbutton-or-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-or-text-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-or-background-color-key-focus: var(--spectrum-global-color-magenta-700);
-  --spectrum-logicbutton-or-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-logicbutton-or-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-logicbutton-or-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-or-text-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-or-background-color-mouse-focus: var(--spectrum-global-color-magenta-500);

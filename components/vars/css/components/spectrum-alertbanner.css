@@ -45,7 +45,7 @@
   --spectrum-alertbanner-info-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-alertbanner-info-content-color: var(--spectrum-global-color-static-white);
   --spectrum-alertbanner-info-text-color: var(--spectrum-global-color-static-white);
-  --spectrum-alertbanner-info-background-color: var(--spectrum-semantic-informative-color-background);
+  --spectrum-alertbanner-info-background-color: var(--spectrum-semantic-informative-background-color);
   --spectrum-alertbanner-info-rule-border-size: var(--spectrum-global-dimension-size-10);
   --spectrum-alertbanner-info-rule-border-radius: var(--spectrum-global-dimension-size-10);
   --spectrum-alertbanner-info-rule-height: var(--spectrum-global-dimension-static-percent-100);
@@ -86,7 +86,7 @@
   --spectrum-alertbanner-negative-icon-color: var(--spectrum-global-color-static-white);
   --spectrum-alertbanner-negative-content-color: var(--spectrum-global-color-static-white);
   --spectrum-alertbanner-negative-text-color: var(--spectrum-global-color-static-white);
-  --spectrum-alertbanner-negative-background-color: var(--spectrum-semantic-negative-color-background);
+  --spectrum-alertbanner-negative-background-color: var(--spectrum-semantic-negative-background-color);
   --spectrum-alertbanner-negative-rule-border-size: var(--spectrum-global-dimension-size-10);
   --spectrum-alertbanner-negative-rule-border-radius: var(--spectrum-global-dimension-size-10);
   --spectrum-alertbanner-negative-rule-height: var(--spectrum-global-dimension-static-percent-100);
