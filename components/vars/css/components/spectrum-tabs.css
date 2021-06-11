@@ -42,7 +42,7 @@
   --spectrum-tabs-s-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -50,7 +50,7 @@
   --spectrum-tabs-s-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -65,8 +65,8 @@
   --spectrum-tabs-s-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-s-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -121,8 +121,8 @@
   --spectrum-tabs-s-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -130,7 +130,7 @@
   --spectrum-tabs-s-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-quiet-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-quiet-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -145,8 +145,8 @@
   --spectrum-tabs-s-quiet-text-text-transform: none;
   --spectrum-tabs-s-quiet-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-quiet-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-quiet-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-quiet-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-quiet-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -202,7 +202,7 @@
   --spectrum-tabs-s-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -210,7 +210,7 @@
   --spectrum-tabs-s-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-emphasized-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-emphasized-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -225,8 +225,8 @@
   --spectrum-tabs-s-emphasized-text-text-transform: none;
   --spectrum-tabs-s-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -281,8 +281,8 @@
   --spectrum-tabs-s-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -290,7 +290,7 @@
   --spectrum-tabs-s-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -305,8 +305,8 @@
   --spectrum-tabs-s-text-text-transform: none;
   --spectrum-tabs-s-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-divider-size: var(--spectrum-alias-border-size-thick);
@@ -362,7 +362,7 @@
   --spectrum-tabs-s-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -370,7 +370,7 @@
   --spectrum-tabs-s-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-450);
   --spectrum-tabs-s-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -385,8 +385,8 @@
   --spectrum-tabs-s-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-s-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-vertical-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -443,8 +443,8 @@
   --spectrum-tabs-s-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -452,7 +452,7 @@
   --spectrum-tabs-s-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-vertical-quiet-item-height: var(--spectrum-global-dimension-size-450);
   --spectrum-tabs-s-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -467,8 +467,8 @@
   --spectrum-tabs-s-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-s-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-vertical-quiet-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -526,7 +526,7 @@
   --spectrum-tabs-s-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -534,7 +534,7 @@
   --spectrum-tabs-s-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-450);
   --spectrum-tabs-s-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -549,8 +549,8 @@
   --spectrum-tabs-s-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-s-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-vertical-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -607,8 +607,8 @@
   --spectrum-tabs-s-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -616,7 +616,7 @@
   --spectrum-tabs-s-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-vertical-item-height: var(--spectrum-global-dimension-size-450);
   --spectrum-tabs-s-vertical-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -631,8 +631,8 @@
   --spectrum-tabs-s-vertical-text-text-transform: none;
   --spectrum-tabs-s-vertical-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-vertical-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-vertical-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-vertical-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-vertical-divider-size: var(--spectrum-alias-border-size-thick);
@@ -690,7 +690,7 @@
   --spectrum-tabs-s-compact-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -698,7 +698,7 @@
   --spectrum-tabs-s-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-compact-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -713,8 +713,8 @@
   --spectrum-tabs-s-compact-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-s-compact-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -769,8 +769,8 @@
   --spectrum-tabs-s-compact-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-compact-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -778,7 +778,7 @@
   --spectrum-tabs-s-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-quiet-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-quiet-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-compact-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -793,8 +793,8 @@
   --spectrum-tabs-s-compact-quiet-text-text-transform: none;
   --spectrum-tabs-s-compact-quiet-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-quiet-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-quiet-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-quiet-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-quiet-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -850,7 +850,7 @@
   --spectrum-tabs-s-compact-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -858,7 +858,7 @@
   --spectrum-tabs-s-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-emphasized-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-emphasized-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-compact-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -873,8 +873,8 @@
   --spectrum-tabs-s-compact-emphasized-text-text-transform: none;
   --spectrum-tabs-s-compact-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -929,8 +929,8 @@
   --spectrum-tabs-s-compact-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-compact-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -938,7 +938,7 @@
   --spectrum-tabs-s-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-item-gap: var(--spectrum-global-dimension-size-250);
   --spectrum-tabs-s-compact-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -953,8 +953,8 @@
   --spectrum-tabs-s-compact-text-text-transform: none;
   --spectrum-tabs-s-compact-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1010,7 +1010,7 @@
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -1018,7 +1018,7 @@
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1033,8 +1033,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1091,8 +1091,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-compact-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -1100,7 +1100,7 @@
   --spectrum-tabs-s-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-s-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-vertical-quiet-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1115,8 +1115,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-s-compact-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-vertical-quiet-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1174,7 +1174,7 @@
   --spectrum-tabs-s-compact-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-s-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -1182,7 +1182,7 @@
   --spectrum-tabs-s-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-s-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1197,8 +1197,8 @@
   --spectrum-tabs-s-compact-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-s-compact-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-vertical-emphasized-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1255,8 +1255,8 @@
   --spectrum-tabs-s-compact-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-s-compact-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-s-compact-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-s-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-s-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-s-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-s-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-s-compact-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-s-compact-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -1264,7 +1264,7 @@
   --spectrum-tabs-s-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-s-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-s-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-s-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-s-compact-vertical-item-height: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-s-compact-vertical-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1279,8 +1279,8 @@
   --spectrum-tabs-s-compact-vertical-text-text-transform: none;
   --spectrum-tabs-s-compact-vertical-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-tabs-s-compact-vertical-icon-size: var(--spectrum-global-dimension-size-200);
-  --spectrum-tabs-s-compact-vertical-icon-padding-top: var(--spectrum-global-dimension-size-50);
-  --spectrum-tabs-s-compact-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-icon-margin-top: var(--spectrum-global-dimension-size-50);
+  --spectrum-tabs-s-compact-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-s-compact-vertical-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-s-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1338,7 +1338,7 @@
   --spectrum-tabs-m-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -1346,7 +1346,7 @@
   --spectrum-tabs-m-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -1362,8 +1362,8 @@
   --spectrum-tabs-m-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-m-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1418,8 +1418,8 @@
   --spectrum-tabs-m-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -1427,7 +1427,7 @@
   --spectrum-tabs-m-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-quiet-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-quiet-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -1443,8 +1443,8 @@
   --spectrum-tabs-m-quiet-text-text-transform: none;
   --spectrum-tabs-m-quiet-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-quiet-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-quiet-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-quiet-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-quiet-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1500,7 +1500,7 @@
   --spectrum-tabs-m-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -1508,7 +1508,7 @@
   --spectrum-tabs-m-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-emphasized-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-emphasized-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -1524,8 +1524,8 @@
   --spectrum-tabs-m-emphasized-text-text-transform: none;
   --spectrum-tabs-m-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1580,8 +1580,8 @@
   --spectrum-tabs-m-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -1589,7 +1589,7 @@
   --spectrum-tabs-m-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -1605,8 +1605,8 @@
   --spectrum-tabs-m-text-text-transform: none;
   --spectrum-tabs-m-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1662,7 +1662,7 @@
   --spectrum-tabs-m-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -1670,7 +1670,7 @@
   --spectrum-tabs-m-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-550);
   --spectrum-tabs-m-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1686,8 +1686,8 @@
   --spectrum-tabs-m-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-m-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-vertical-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1744,8 +1744,8 @@
   --spectrum-tabs-m-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -1753,7 +1753,7 @@
   --spectrum-tabs-m-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-vertical-quiet-item-height: var(--spectrum-global-dimension-size-550);
   --spectrum-tabs-m-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1769,8 +1769,8 @@
   --spectrum-tabs-m-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-m-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-vertical-quiet-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1828,7 +1828,7 @@
   --spectrum-tabs-m-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -1836,7 +1836,7 @@
   --spectrum-tabs-m-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-550);
   --spectrum-tabs-m-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1852,8 +1852,8 @@
   --spectrum-tabs-m-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-m-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-vertical-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1910,8 +1910,8 @@
   --spectrum-tabs-m-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -1919,7 +1919,7 @@
   --spectrum-tabs-m-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-vertical-item-height: var(--spectrum-global-dimension-size-550);
   --spectrum-tabs-m-vertical-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-vertical-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -1935,8 +1935,8 @@
   --spectrum-tabs-m-vertical-text-text-transform: none;
   --spectrum-tabs-m-vertical-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-vertical-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-vertical-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-vertical-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-vertical-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1994,7 +1994,7 @@
   --spectrum-tabs-m-compact-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -2002,7 +2002,7 @@
   --spectrum-tabs-m-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-compact-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2018,8 +2018,8 @@
   --spectrum-tabs-m-compact-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-m-compact-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2074,8 +2074,8 @@
   --spectrum-tabs-m-compact-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-compact-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -2083,7 +2083,7 @@
   --spectrum-tabs-m-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-quiet-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-quiet-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-compact-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2099,8 +2099,8 @@
   --spectrum-tabs-m-compact-quiet-text-text-transform: none;
   --spectrum-tabs-m-compact-quiet-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-quiet-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-quiet-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-quiet-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-quiet-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2156,7 +2156,7 @@
   --spectrum-tabs-m-compact-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -2164,7 +2164,7 @@
   --spectrum-tabs-m-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-emphasized-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-emphasized-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-compact-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2180,8 +2180,8 @@
   --spectrum-tabs-m-compact-emphasized-text-text-transform: none;
   --spectrum-tabs-m-compact-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2236,8 +2236,8 @@
   --spectrum-tabs-m-compact-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-compact-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -2245,7 +2245,7 @@
   --spectrum-tabs-m-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-item-gap: var(--spectrum-global-dimension-size-300);
   --spectrum-tabs-m-compact-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2261,8 +2261,8 @@
   --spectrum-tabs-m-compact-text-text-transform: none;
   --spectrum-tabs-m-compact-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2318,7 +2318,7 @@
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -2326,7 +2326,7 @@
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -2342,8 +2342,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2400,8 +2400,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-compact-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -2409,7 +2409,7 @@
   --spectrum-tabs-m-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-m-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-vertical-quiet-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-compact-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -2425,8 +2425,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-m-compact-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2484,7 +2484,7 @@
   --spectrum-tabs-m-compact-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-m-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -2492,7 +2492,7 @@
   --spectrum-tabs-m-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-m-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-compact-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -2508,8 +2508,8 @@
   --spectrum-tabs-m-compact-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-m-compact-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-vertical-emphasized-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2566,8 +2566,8 @@
   --spectrum-tabs-m-compact-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-m-compact-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-m-compact-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-m-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-m-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-m-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-m-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-m-compact-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-m-compact-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -2575,7 +2575,7 @@
   --spectrum-tabs-m-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-m-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-m-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-m-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-m-compact-vertical-item-height: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-m-compact-vertical-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-tabs-m-compact-vertical-item-margin-left: var(--spectrum-global-dimension-size-150);
@@ -2591,8 +2591,8 @@
   --spectrum-tabs-m-compact-vertical-text-text-transform: none;
   --spectrum-tabs-m-compact-vertical-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-tabs-m-compact-vertical-icon-size: var(--spectrum-global-dimension-size-225);
-  --spectrum-tabs-m-compact-vertical-icon-padding-top: var(--spectrum-global-dimension-size-85);
-  --spectrum-tabs-m-compact-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-icon-margin-top: var(--spectrum-global-dimension-size-85);
+  --spectrum-tabs-m-compact-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-m-compact-vertical-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-m-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2650,7 +2650,7 @@
   --spectrum-tabs-l-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -2658,7 +2658,7 @@
   --spectrum-tabs-l-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2672,8 +2672,8 @@
   --spectrum-tabs-l-quiet-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-l-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2728,8 +2728,8 @@
   --spectrum-tabs-l-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -2737,7 +2737,7 @@
   --spectrum-tabs-l-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-quiet-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-quiet-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2751,8 +2751,8 @@
   --spectrum-tabs-l-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-quiet-text-text-transform: none;
   --spectrum-tabs-l-quiet-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-quiet-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-quiet-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-quiet-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2808,7 +2808,7 @@
   --spectrum-tabs-l-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -2816,7 +2816,7 @@
   --spectrum-tabs-l-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-emphasized-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-emphasized-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2830,8 +2830,8 @@
   --spectrum-tabs-l-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-emphasized-text-text-transform: none;
   --spectrum-tabs-l-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2886,8 +2886,8 @@
   --spectrum-tabs-l-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -2895,7 +2895,7 @@
   --spectrum-tabs-l-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -2909,8 +2909,8 @@
   --spectrum-tabs-l-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-text-text-transform: none;
   --spectrum-tabs-l-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-divider-size: var(--spectrum-alias-border-size-thick);
@@ -2966,7 +2966,7 @@
   --spectrum-tabs-l-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -2974,7 +2974,7 @@
   --spectrum-tabs-l-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-650);
   --spectrum-tabs-l-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -2988,8 +2988,8 @@
   --spectrum-tabs-l-vertical-quiet-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-l-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3046,8 +3046,8 @@
   --spectrum-tabs-l-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -3055,7 +3055,7 @@
   --spectrum-tabs-l-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-vertical-quiet-item-height: var(--spectrum-global-dimension-size-650);
   --spectrum-tabs-l-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -3069,8 +3069,8 @@
   --spectrum-tabs-l-vertical-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-l-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3128,7 +3128,7 @@
   --spectrum-tabs-l-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -3136,7 +3136,7 @@
   --spectrum-tabs-l-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-650);
   --spectrum-tabs-l-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -3150,8 +3150,8 @@
   --spectrum-tabs-l-vertical-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-l-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3208,8 +3208,8 @@
   --spectrum-tabs-l-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -3217,7 +3217,7 @@
   --spectrum-tabs-l-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-vertical-item-height: var(--spectrum-global-dimension-size-650);
   --spectrum-tabs-l-vertical-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-vertical-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -3231,8 +3231,8 @@
   --spectrum-tabs-l-vertical-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-vertical-text-text-transform: none;
   --spectrum-tabs-l-vertical-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-vertical-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-vertical-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-vertical-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3290,7 +3290,7 @@
   --spectrum-tabs-l-compact-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -3298,7 +3298,7 @@
   --spectrum-tabs-l-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-compact-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -3312,8 +3312,8 @@
   --spectrum-tabs-l-compact-quiet-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-l-compact-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3368,8 +3368,8 @@
   --spectrum-tabs-l-compact-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-compact-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -3377,7 +3377,7 @@
   --spectrum-tabs-l-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-quiet-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-quiet-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-compact-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -3391,8 +3391,8 @@
   --spectrum-tabs-l-compact-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-quiet-text-text-transform: none;
   --spectrum-tabs-l-compact-quiet-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-quiet-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-quiet-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-quiet-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3448,7 +3448,7 @@
   --spectrum-tabs-l-compact-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -3456,7 +3456,7 @@
   --spectrum-tabs-l-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-emphasized-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-emphasized-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-compact-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -3470,8 +3470,8 @@
   --spectrum-tabs-l-compact-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-emphasized-text-text-transform: none;
   --spectrum-tabs-l-compact-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3526,8 +3526,8 @@
   --spectrum-tabs-l-compact-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-compact-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -3535,7 +3535,7 @@
   --spectrum-tabs-l-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-item-gap: var(--spectrum-global-dimension-size-350);
   --spectrum-tabs-l-compact-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -3549,8 +3549,8 @@
   --spectrum-tabs-l-compact-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-text-text-transform: none;
   --spectrum-tabs-l-compact-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3606,7 +3606,7 @@
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -3614,7 +3614,7 @@
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -3628,8 +3628,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3686,8 +3686,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-compact-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -3695,7 +3695,7 @@
   --spectrum-tabs-l-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-l-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-vertical-quiet-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-compact-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -3709,8 +3709,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-l-compact-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3768,7 +3768,7 @@
   --spectrum-tabs-l-compact-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-l-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -3776,7 +3776,7 @@
   --spectrum-tabs-l-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-l-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-compact-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -3790,8 +3790,8 @@
   --spectrum-tabs-l-compact-vertical-emphasized-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-l-compact-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3848,8 +3848,8 @@
   --spectrum-tabs-l-compact-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-l-compact-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-l-compact-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-l-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-l-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-l-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-l-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-l-compact-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-l-compact-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -3857,7 +3857,7 @@
   --spectrum-tabs-l-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-l-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-l-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-l-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-l-compact-vertical-item-height: var(--spectrum-global-dimension-size-500);
   --spectrum-tabs-l-compact-vertical-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-l-compact-vertical-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -3871,8 +3871,8 @@
   --spectrum-tabs-l-compact-vertical-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-tabs-l-compact-vertical-text-text-transform: none;
   --spectrum-tabs-l-compact-vertical-text-font-size: var(--spectrum-global-dimension-font-size-200);
-  --spectrum-tabs-l-compact-vertical-icon-padding-top: var(--spectrum-global-dimension-size-125);
-  --spectrum-tabs-l-compact-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-icon-margin-top: var(--spectrum-global-dimension-size-125);
+  --spectrum-tabs-l-compact-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-l-compact-vertical-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-l-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);
@@ -3930,7 +3930,7 @@
   --spectrum-tabs-xl-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -3938,7 +3938,7 @@
   --spectrum-tabs-xl-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -3954,8 +3954,8 @@
   --spectrum-tabs-xl-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4010,8 +4010,8 @@
   --spectrum-tabs-xl-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -4019,7 +4019,7 @@
   --spectrum-tabs-xl-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-quiet-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-quiet-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -4035,8 +4035,8 @@
   --spectrum-tabs-xl-quiet-text-text-transform: none;
   --spectrum-tabs-xl-quiet-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-quiet-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-quiet-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-quiet-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-quiet-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4092,7 +4092,7 @@
   --spectrum-tabs-xl-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -4100,7 +4100,7 @@
   --spectrum-tabs-xl-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-emphasized-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -4116,8 +4116,8 @@
   --spectrum-tabs-xl-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4172,8 +4172,8 @@
   --spectrum-tabs-xl-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -4181,7 +4181,7 @@
   --spectrum-tabs-xl-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -4197,8 +4197,8 @@
   --spectrum-tabs-xl-text-text-transform: none;
   --spectrum-tabs-xl-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4254,7 +4254,7 @@
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -4262,7 +4262,7 @@
   --spectrum-tabs-xl-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-750);
   --spectrum-tabs-xl-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -4278,8 +4278,8 @@
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-vertical-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4336,8 +4336,8 @@
   --spectrum-tabs-xl-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -4345,7 +4345,7 @@
   --spectrum-tabs-xl-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-vertical-quiet-item-height: var(--spectrum-global-dimension-size-750);
   --spectrum-tabs-xl-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -4361,8 +4361,8 @@
   --spectrum-tabs-xl-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-xl-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-vertical-quiet-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4420,7 +4420,7 @@
   --spectrum-tabs-xl-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -4428,7 +4428,7 @@
   --spectrum-tabs-xl-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-750);
   --spectrum-tabs-xl-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -4444,8 +4444,8 @@
   --spectrum-tabs-xl-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-vertical-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4502,8 +4502,8 @@
   --spectrum-tabs-xl-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -4511,7 +4511,7 @@
   --spectrum-tabs-xl-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-vertical-item-height: var(--spectrum-global-dimension-size-750);
   --spectrum-tabs-xl-vertical-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-vertical-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -4527,8 +4527,8 @@
   --spectrum-tabs-xl-vertical-text-text-transform: none;
   --spectrum-tabs-xl-vertical-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-vertical-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-vertical-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-vertical-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-vertical-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4586,7 +4586,7 @@
   --spectrum-tabs-xl-compact-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -4594,7 +4594,7 @@
   --spectrum-tabs-xl-compact-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-compact-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -4610,8 +4610,8 @@
   --spectrum-tabs-xl-compact-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-compact-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4666,8 +4666,8 @@
   --spectrum-tabs-xl-compact-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-compact-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-compact-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -4675,7 +4675,7 @@
   --spectrum-tabs-xl-compact-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-quiet-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-quiet-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-compact-quiet-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -4691,8 +4691,8 @@
   --spectrum-tabs-xl-compact-quiet-text-text-transform: none;
   --spectrum-tabs-xl-compact-quiet-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-quiet-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-quiet-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-quiet-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-quiet-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4748,7 +4748,7 @@
   --spectrum-tabs-xl-compact-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -4756,7 +4756,7 @@
   --spectrum-tabs-xl-compact-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-emphasized-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-compact-emphasized-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -4772,8 +4772,8 @@
   --spectrum-tabs-xl-compact-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-compact-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4828,8 +4828,8 @@
   --spectrum-tabs-xl-compact-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-compact-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-compact-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -4837,7 +4837,7 @@
   --spectrum-tabs-xl-compact-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-compact-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-item-gap: var(--spectrum-global-dimension-size-400);
   --spectrum-tabs-xl-compact-item-margin-left: var(--spectrum-global-dimension-size-0);
@@ -4853,8 +4853,8 @@
   --spectrum-tabs-xl-compact-text-text-transform: none;
   --spectrum-tabs-xl-compact-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4910,7 +4910,7 @@
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -4918,7 +4918,7 @@
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -4934,8 +4934,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -4992,8 +4992,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-compact-vertical-quiet-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-vertical-quiet-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-vertical-quiet-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-compact-vertical-quiet-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-quiet-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-quiet-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -5001,7 +5001,7 @@
   --spectrum-tabs-xl-compact-vertical-quiet-divider-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-vertical-quiet-divider-background-color: var(--spectrum-alias-border-color-transparent);
   --spectrum-tabs-xl-compact-vertical-quiet-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-vertical-quiet-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-quiet-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-vertical-quiet-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-compact-vertical-quiet-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -5017,8 +5017,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-text-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-quiet-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-vertical-quiet-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-vertical-quiet-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-vertical-quiet-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-quiet-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-quiet-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-vertical-quiet-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-quiet-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-vertical-quiet-divider-size: var(--spectrum-alias-border-size-thick);
@@ -5076,7 +5076,7 @@
   --spectrum-tabs-xl-compact-vertical-emphasized-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-vertical-emphasized-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-vertical-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-selected-focus);
-  --spectrum-tabs-xl-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-vertical-emphasized-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-emphasized-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-emphasized-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color-selected);
@@ -5084,7 +5084,7 @@
   --spectrum-tabs-xl-compact-vertical-emphasized-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-vertical-emphasized-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-vertical-emphasized-selection-indicator-color: var(--spectrum-global-color-blue-500);
-  --spectrum-tabs-xl-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-vertical-emphasized-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-emphasized-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-vertical-emphasized-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-compact-vertical-emphasized-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -5100,8 +5100,8 @@
   --spectrum-tabs-xl-compact-vertical-emphasized-text-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-emphasized-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-vertical-emphasized-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-vertical-emphasized-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-vertical-emphasized-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-emphasized-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-emphasized-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-vertical-emphasized-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-emphasized-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-vertical-emphasized-divider-size: var(--spectrum-alias-border-size-thick);
@@ -5158,8 +5158,8 @@
   --spectrum-tabs-xl-compact-vertical-ui-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-tabs-xl-compact-vertical-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-tabs-xl-compact-vertical-text-text-color-key-focus: var(--spectrum-alias-text-color-hover);
-  --spectrum-tabs-xl-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-tabs-xl-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-tabs-xl-compact-vertical-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-tabs-xl-compact-vertical-ui-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-tabs-xl-compact-vertical-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -5167,7 +5167,7 @@
   --spectrum-tabs-xl-compact-vertical-divider-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-vertical-divider-background-color: var(--spectrum-alias-border-color-light);
   --spectrum-tabs-xl-compact-vertical-selection-indicator-color: var(--spectrum-global-color-gray-900);
-  --spectrum-tabs-xl-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-focus);
+  --spectrum-tabs-xl-compact-vertical-focus-ring-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-tabs-xl-compact-vertical-item-height: var(--spectrum-global-dimension-size-600);
   --spectrum-tabs-xl-compact-vertical-item-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-tabs-xl-compact-vertical-item-margin-left: var(--spectrum-global-dimension-size-160);
@@ -5183,8 +5183,8 @@
   --spectrum-tabs-xl-compact-vertical-text-text-transform: none;
   --spectrum-tabs-xl-compact-vertical-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-tabs-xl-compact-vertical-icon-size: var(--spectrum-global-dimension-size-275);
-  --spectrum-tabs-xl-compact-vertical-icon-padding-top: var(--spectrum-global-dimension-size-160);
-  --spectrum-tabs-xl-compact-vertical-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-icon-margin-top: var(--spectrum-global-dimension-size-160);
+  --spectrum-tabs-xl-compact-vertical-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-tabs-xl-compact-vertical-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-divider-border-radius: var(--spectrum-global-dimension-static-size-10);
   --spectrum-tabs-xl-compact-vertical-divider-size: var(--spectrum-alias-border-size-thick);

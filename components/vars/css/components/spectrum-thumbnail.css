@@ -18,7 +18,7 @@
   --spectrum-thumbnail-xxs-layer-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xxs-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xxs-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xxs-layer-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -42,7 +42,7 @@
   --spectrum-thumbnail-xxs-layer-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xxs-layer-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xxs-layer-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xxs-layer-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -71,7 +71,7 @@
   --spectrum-thumbnail-xxs-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xxs-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xxs-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xxs-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -95,7 +95,7 @@
   --spectrum-thumbnail-xxs-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xxs-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xxs-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xxs-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xxs-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -124,7 +124,7 @@
   --spectrum-thumbnail-xs-layer-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xs-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xs-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xs-layer-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -148,7 +148,7 @@
   --spectrum-thumbnail-xs-layer-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xs-layer-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xs-layer-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xs-layer-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -177,7 +177,7 @@
   --spectrum-thumbnail-xs-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xs-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xs-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xs-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -201,7 +201,7 @@
   --spectrum-thumbnail-xs-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-xs-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-xs-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-xs-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-xs-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -230,7 +230,7 @@
   --spectrum-thumbnail-s-layer-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-s-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-s-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-s-layer-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -254,7 +254,7 @@
   --spectrum-thumbnail-s-layer-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-s-layer-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-s-layer-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-s-layer-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -283,7 +283,7 @@
   --spectrum-thumbnail-s-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-s-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-s-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-s-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -307,7 +307,7 @@
   --spectrum-thumbnail-s-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-s-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-s-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-s-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-s-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -336,7 +336,7 @@
   --spectrum-thumbnail-m-layer-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-m-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-m-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-m-layer-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -360,7 +360,7 @@
   --spectrum-thumbnail-m-layer-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-m-layer-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-m-layer-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-m-layer-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -389,7 +389,7 @@
   --spectrum-thumbnail-m-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-m-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-m-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-m-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -413,7 +413,7 @@
   --spectrum-thumbnail-m-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-m-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-m-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-m-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-m-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -442,7 +442,7 @@
   --spectrum-thumbnail-l-layer-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-l-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-l-layer-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-l-layer-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -466,7 +466,7 @@
   --spectrum-thumbnail-l-layer-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-l-layer-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-l-layer-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-l-layer-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -495,7 +495,7 @@
   --spectrum-thumbnail-l-image-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-opacity-selected-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-l-border-color-selected-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-l-border-color-selected-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-l-image-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-opacity-selected-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
@@ -519,7 +519,7 @@
   --spectrum-thumbnail-l-image-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-opacity-key-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-border-size-key-focus: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-l-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-thumbnail-l-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-l-image-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-opacity-mouse-focus: var(--spectrum-global-color-opacity-100);
   --spectrum-thumbnail-l-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);

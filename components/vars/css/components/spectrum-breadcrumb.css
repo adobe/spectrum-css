@@ -67,7 +67,7 @@
   --spectrum-breadcrumb-s-multiline-item-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-s-multiline-item-underline-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-s-multiline-item-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-breadcrumb-s-multiline-item-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-breadcrumb-s-multiline-item-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-breadcrumb-s-multiline-item-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-breadcrumb-s-multiline-item-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-breadcrumb-s-multiline-item-text-underline-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
@@ -180,7 +180,7 @@
   --spectrum-breadcrumb-s-item-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-s-item-underline-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-s-item-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-breadcrumb-s-item-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-breadcrumb-s-item-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-breadcrumb-s-item-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-breadcrumb-s-item-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-breadcrumb-s-item-text-underline-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
@@ -293,7 +293,7 @@
   --spectrum-breadcrumb-m-multiline-item-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-m-multiline-item-underline-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-m-multiline-item-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-breadcrumb-m-multiline-item-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-breadcrumb-m-multiline-item-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-breadcrumb-m-multiline-item-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-breadcrumb-m-multiline-item-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-breadcrumb-m-multiline-item-text-underline-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
@@ -407,7 +407,7 @@
   --spectrum-breadcrumb-m-item-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-m-item-underline-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-m-item-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-breadcrumb-m-item-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-breadcrumb-m-item-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-breadcrumb-m-item-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-breadcrumb-m-item-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-breadcrumb-m-item-text-underline-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
@@ -521,7 +521,7 @@
   --spectrum-breadcrumb-l-multiline-item-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-l-multiline-item-underline-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-l-multiline-item-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-breadcrumb-l-multiline-item-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-breadcrumb-l-multiline-item-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-breadcrumb-l-multiline-item-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-breadcrumb-l-multiline-item-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-breadcrumb-l-multiline-item-text-underline-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
@@ -634,7 +634,7 @@
   --spectrum-breadcrumb-l-item-text-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-l-item-underline-color-key-focus: var(--spectrum-alias-text-color-hover);
   --spectrum-breadcrumb-l-item-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-breadcrumb-l-item-border-color-key-focus: var(--spectrum-alias-border-color-focus);
+  --spectrum-breadcrumb-l-item-border-color-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-breadcrumb-l-item-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-breadcrumb-l-item-text-text-color-mouse-focus: var(--spectrum-alias-label-text-color);
   --spectrum-breadcrumb-l-item-text-underline-color-mouse-focus: var(--spectrum-alias-border-color-transparent);

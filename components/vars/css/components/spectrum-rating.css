@@ -14,7 +14,7 @@
   --spectrum-rating-emphasized-icon-#color-not-emphasized-selected-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-emphasized-icon-color-selected-hover: var(--spectrum-alias-icon-color-selected-hover);
   --spectrum-rating-emphasized-border-color-selected-hover: var(--spectrum-alias-border-color-transparent);
-  --spectrum-rating-emphasized-icon-#color-not-emphasized-selected-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-rating-emphasized-icon-#color-not-emphasized-selected-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-rating-emphasized-icon-color-selected-key-focus: var(--spectrum-alias-icon-color-selected-focus);
   --spectrum-rating-emphasized-border-color-selected-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-emphasized-icon-#color-not-emphasized-selected-mouse-focus: var(--spectrum-alias-icon-color);
@@ -29,8 +29,8 @@
   --spectrum-rating-emphasized-icon-#color-not-emphasized-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-emphasized-icon-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-emphasized-border-color-hover: var(--spectrum-alias-border-color-transparent);
-  --spectrum-rating-emphasized-icon-#color-not-emphasized-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-rating-emphasized-icon-#color-not-emphasized-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-rating-emphasized-border-color-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-emphasized-icon-#color-not-emphasized-mouse-focus: var(--spectrum-alias-icon-color);
   --spectrum-rating-emphasized-icon-color-mouse-focus: var(--spectrum-alias-icon-color);
@@ -63,8 +63,8 @@
   --spectrum-rating-icon-#color-not-emphasized-selected-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-icon-color-selected-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-border-color-selected-hover: var(--spectrum-alias-border-color-transparent);
-  --spectrum-rating-icon-#color-not-emphasized-selected-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-rating-icon-color-selected-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-rating-icon-#color-not-emphasized-selected-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-rating-icon-color-selected-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-rating-border-color-selected-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-icon-#color-not-emphasized-selected-mouse-focus: var(--spectrum-alias-icon-color);
   --spectrum-rating-icon-color-selected-mouse-focus: var(--spectrum-alias-icon-color);
@@ -78,8 +78,8 @@
   --spectrum-rating-icon-#color-not-emphasized-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-icon-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-rating-border-color-hover: var(--spectrum-alias-border-color-transparent);
-  --spectrum-rating-icon-#color-not-emphasized-key-focus: var(--spectrum-alias-icon-color-focus);
-  --spectrum-rating-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-rating-icon-#color-not-emphasized-key-focus: var(--spectrum-alias-icon-color-key-focus);
+  --spectrum-rating-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-rating-border-color-key-focus: var(--spectrum-alias-focus-color);
   --spectrum-rating-icon-#color-not-emphasized-mouse-focus: var(--spectrum-alias-icon-color);
   --spectrum-rating-icon-color-mouse-focus: var(--spectrum-alias-icon-color);

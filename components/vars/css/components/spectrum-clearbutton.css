@@ -24,7 +24,10 @@
   --spectrum-clearbutton-s-overbackground-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-overbackground-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-overbackground-padding-left: var(--spectrum-global-dimension-size-150);
+  --spectrum-clearbutton-s-overbackground-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-clearbutton-s-overbackground-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-clearbutton-s-overbackground-#padding-text: var(--spectrum-global-dimension-size-115);
+  --spectrum-clearbutton-s-overbackground-#padding-icon: var(--spectrum-global-dimension-size-50);
   --spectrum-clearbutton-s-overbackground-#control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-clearbutton-s-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-clearbutton-s-background-color-disabled: var(--spectrum-alias-background-color-transparent);
@@ -38,10 +41,10 @@
   --spectrum-clearbutton-s-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-clearbutton-s-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-s-border-color-hover: var(--spectrum-global-color-gray-200);
-  --spectrum-clearbutton-s-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-clearbutton-s-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-clearbutton-s-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-s-border-color-key-focus: var(--spectrum-global-color-gray-200);
-  --spectrum-clearbutton-s-icon-color-mouse-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-clearbutton-s-icon-color-mouse-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-clearbutton-s-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-s-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-s-icon-size: var(--spectrum-global-dimension-size-100);
@@ -51,7 +54,10 @@
   --spectrum-clearbutton-s-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-padding-left: var(--spectrum-global-dimension-size-150);
+  --spectrum-clearbutton-s-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-clearbutton-s-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-clearbutton-s-#padding-text: var(--spectrum-global-dimension-size-115);
+  --spectrum-clearbutton-s-#padding-icon: var(--spectrum-global-dimension-size-50);
   --spectrum-clearbutton-s-#control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-clearbutton-m-overbackground-icon-color-disabled: var(--spectrum-alias-icon-color-overbackground-disabled);
   --spectrum-clearbutton-m-overbackground-background-color-disabled: var(--spectrum-alias-background-color-transparent);
@@ -78,7 +84,10 @@
   --spectrum-clearbutton-m-overbackground-border-radius: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-overbackground-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-overbackground-padding-left: var(--spectrum-global-dimension-size-200);
+  --spectrum-clearbutton-m-overbackground-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-m-overbackground-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-clearbutton-m-overbackground-#padding-text: var(--spectrum-global-dimension-size-150);
+  --spectrum-clearbutton-m-overbackground-#padding-icon: var(--spectrum-global-dimension-size-85);
   --spectrum-clearbutton-m-overbackground-#control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-clearbutton-m-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-clearbutton-m-background-color-disabled: var(--spectrum-alias-background-color-transparent);
@@ -92,10 +101,10 @@
   --spectrum-clearbutton-m-icon-color-hover: var(--spectrum-alias-icon-color-hover);
   --spectrum-clearbutton-m-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-m-border-color-hover: var(--spectrum-global-color-gray-200);
-  --spectrum-clearbutton-m-icon-color-key-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-clearbutton-m-icon-color-key-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-clearbutton-m-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-m-border-color-key-focus: var(--spectrum-global-color-gray-200);
-  --spectrum-clearbutton-m-icon-color-mouse-focus: var(--spectrum-alias-icon-color-focus);
+  --spectrum-clearbutton-m-icon-color-mouse-focus: var(--spectrum-alias-icon-color-key-focus);
   --spectrum-clearbutton-m-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-m-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-m-icon-size: var(--spectrum-global-dimension-size-100);
@@ -105,6 +114,9 @@
   --spectrum-clearbutton-m-border-radius: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-padding-left: var(--spectrum-global-dimension-size-200);
+  --spectrum-clearbutton-m-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-m-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-clearbutton-m-#padding-text: var(--spectrum-global-dimension-size-150);
+  --spectrum-clearbutton-m-#padding-icon: var(--spectrum-global-dimension-size-85);
   --spectrum-clearbutton-m-#control-gap: var(--spectrum-global-dimension-size-125);
 }
