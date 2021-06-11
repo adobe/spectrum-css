@@ -167,7 +167,7 @@ governing permissions and limitations under the License.
   transform: logical rotate(0deg);
   transition: transform ease var(--spectrum-global-animation-duration-100);
 
-  pointer-events: all !important;
+  pointer-events: all;
 }
 
 /* Close nested treeviews by default */
