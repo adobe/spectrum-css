@@ -14,7 +14,6 @@ jobs:
     - language: node_js
       node_js: 12
       script:
-        - audit-ci --moderate
         - VRT=true yarn run build
         - yarn run watch &
         - yarn upgrade @spectrum-css/spectrum-css-vr-test-assets-essential
