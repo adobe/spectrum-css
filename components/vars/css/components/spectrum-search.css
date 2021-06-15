@@ -33,7 +33,7 @@
   --spectrum-search-s-quiet-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-s-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-s-quiet-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-search-s-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-s-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-s-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-s-quiet-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-s-quiet-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -99,7 +99,7 @@
   --spectrum-search-s-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-s-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-s-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
-  --spectrum-search-s-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-s-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-s-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-s-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-s-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -165,7 +165,7 @@
   --spectrum-search-m-quiet-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-m-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-m-quiet-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-search-m-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-m-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-m-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-m-quiet-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-m-quiet-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -232,7 +232,7 @@
   --spectrum-search-m-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-m-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-m-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
-  --spectrum-search-m-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-m-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-m-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-m-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-m-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -298,7 +298,7 @@
   --spectrum-search-l-quiet-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-l-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-l-quiet-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-search-l-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-l-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-l-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-l-quiet-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-l-quiet-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -363,7 +363,7 @@
   --spectrum-search-l-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-l-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-l-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
-  --spectrum-search-l-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-l-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-l-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-l-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-l-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -428,7 +428,7 @@
   --spectrum-search-xl-quiet-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-xl-quiet-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-xl-quiet-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-search-xl-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-xl-quiet-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-xl-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-xl-quiet-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-xl-quiet-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
@@ -495,7 +495,7 @@
   --spectrum-search-xl-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-search-xl-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-search-xl-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
-  --spectrum-search-xl-border-color-mouse-focus: var(--spectrum-alias-border-color);
+  --spectrum-search-xl-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
   --spectrum-search-xl-border-bottom-size-mouse-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-search-xl-placeholder-text-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-xl-placeholder-text-font-weight: var(--spectrum-global-font-weight-regular);
