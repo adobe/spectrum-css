@@ -11,7 +11,7 @@
   --spectrum-scrollbar-quiet-bar-width: var(--spectrum-global-dimension-size-50);
   --spectrum-scrollbar-quiet-bar-height: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-scrollbar-quiet-bar-border-radius: var(--spectrum-alias-border-radius-small);
-  --spectrum-scrollbar-quiet-#width: var(--spectrum-global-dimension-size-50);
+  --spectrum-scrollbar-quiet-_width: var(--spectrum-global-dimension-size-50);
   --spectrum-scrollbar-bar-color: var(--spectrum-global-color-gray-400);
   --spectrum-scrollbar-bar-color-down: var(--spectrum-global-color-gray-600);
   --spectrum-scrollbar-bar-color-hover: var(--spectrum-global-color-gray-600);
@@ -24,5 +24,5 @@
   --spectrum-scrollbar-bar-width: var(--spectrum-global-dimension-size-50);
   --spectrum-scrollbar-bar-height: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-scrollbar-bar-border-radius: var(--spectrum-alias-border-radius-small);
-  --spectrum-scrollbar-#width: var(--spectrum-global-dimension-size-50);
+  --spectrum-scrollbar-_width: var(--spectrum-global-dimension-size-50);
 }

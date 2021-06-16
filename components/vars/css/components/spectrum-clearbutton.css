@@ -26,9 +26,9 @@
   --spectrum-clearbutton-s-overbackground-padding-left: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-overbackground-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-clearbutton-s-overbackground-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-clearbutton-s-overbackground-#padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-clearbutton-s-overbackground-#padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-clearbutton-s-overbackground-#control-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-clearbutton-s-overbackground-_padding-text: var(--spectrum-global-dimension-size-115);
+  --spectrum-clearbutton-s-overbackground-_padding-icon: var(--spectrum-global-dimension-size-50);
+  --spectrum-clearbutton-s-overbackground-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-clearbutton-s-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-clearbutton-s-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-s-border-color-disabled: var(--spectrum-alias-border-color-transparent);
@@ -56,9 +56,9 @@
   --spectrum-clearbutton-s-padding-left: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-clearbutton-s-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-clearbutton-s-#padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-clearbutton-s-#padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-clearbutton-s-#control-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-clearbutton-s-_padding-text: var(--spectrum-global-dimension-size-115);
+  --spectrum-clearbutton-s-_padding-icon: var(--spectrum-global-dimension-size-50);
+  --spectrum-clearbutton-s-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-clearbutton-m-overbackground-icon-color-disabled: var(--spectrum-alias-icon-color-overbackground-disabled);
   --spectrum-clearbutton-m-overbackground-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-m-overbackground-border-color-disabled: var(--spectrum-alias-border-color-transparent);
@@ -86,9 +86,9 @@
   --spectrum-clearbutton-m-overbackground-padding-left: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-overbackground-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-m-overbackground-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-clearbutton-m-overbackground-#padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-clearbutton-m-overbackground-#padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-clearbutton-m-overbackground-#control-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-clearbutton-m-overbackground-_padding-text: var(--spectrum-global-dimension-size-150);
+  --spectrum-clearbutton-m-overbackground-_padding-icon: var(--spectrum-global-dimension-size-85);
+  --spectrum-clearbutton-m-overbackground-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-clearbutton-m-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
   --spectrum-clearbutton-m-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-clearbutton-m-border-color-disabled: var(--spectrum-alias-border-color-transparent);
@@ -116,7 +116,7 @@
   --spectrum-clearbutton-m-padding-left: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-m-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-clearbutton-m-#padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-clearbutton-m-#padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-clearbutton-m-#control-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-clearbutton-m-_padding-text: var(--spectrum-global-dimension-size-150);
+  --spectrum-clearbutton-m-_padding-icon: var(--spectrum-global-dimension-size-85);
+  --spectrum-clearbutton-m-_control-gap: var(--spectrum-global-dimension-size-125);
 }
