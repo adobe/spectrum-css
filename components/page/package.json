@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/page",
-  "version": "3.0.3-alpha.1",
+  "version": "3.0.3-alpha.2",
   "description": "The Spectrum CSS page component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,7 +16,7 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/vars": "^3.1.0-alpha.1"
+    "@spectrum-css/vars": "^3.1.0-alpha.2"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.0.0-alpha.1",

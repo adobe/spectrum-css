@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.3-alpha.2"></a>
+## 1.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.1...@spectrum-css/thumbnail@1.0.3-alpha.2)
+
+### 🐛 Bug fixes
+
+* use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
+
+
+
+
+
 <a name="1.0.3-alpha.1"></a>
 ## 1.0.3-alpha.1
 🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.0...@spectrum-css/thumbnail@1.0.3-alpha.1)
