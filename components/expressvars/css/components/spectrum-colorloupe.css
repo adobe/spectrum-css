@@ -1,0 +1,26 @@
+:root {
+  --spectrum-colorloupe-inner-border-color: var(--spectrum-global-color-static-white);
+  --spectrum-colorloupe-outer-border-color: var(--spectrum-alias-border-color-translucent);
+  --spectrum-colorloupe-background-color: var(--spectrum-global-color-static-white);
+  --spectrum-colorloupe-border-color: var(--spectrum-alias-border-color-translucent);
+  --spectrum-colorloupe-shadow-color: var(--spectrum-alias-dropshadow-color);
+  --spectrum-colorloupe-inner-border-size: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-colorloupe-outer-border-size: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-colorloupe-width: var(--spectrum-global-dimension-static-size-600);
+  --spectrum-colorloupe-height: var(--spectrum-global-dimension-static-size-800);
+  --spectrum-colorloupe-padding: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-colorloupe-border-size: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-colorloupe-elevation: 2dp;
+  --spectrum-colorloupe-shadow-blur: var(--spectrum-alias-dropshadow-blur);
+  --spectrum-colorloupe-shadow-offset-y: var(--spectrum-alias-dropshadow-offset-y);
+  --spectrum-colorloupe-entry-animation-delay: var(--spectrum-global-animation-duration-0);
+  --spectrum-colorloupe-entry-animation-opacity: var(--spectrum-global-color-opacity-0);
+  --spectrum-colorloupe-entry-animation-duration: var(--spectrum-global-animation-duration-300);
+  --spectrum-colorloupe-entry-animation-ease: var(--spectrum-global-animation-ease-out);
+  --spectrum-colorloupe-entry-animation-properties: opacity;
+  --spectrum-colorloupe-exit-animation-delay: var(--spectrum-global-animation-duration-0);
+  --spectrum-colorloupe-exit-animation-opacity: var(--spectrum-global-color-opacity-0);
+  --spectrum-colorloupe-exit-animation-duration: var(--spectrum-global-animation-duration-300);
+  --spectrum-colorloupe-exit-animation-ease: var(--spectrum-global-animation-ease-out);
+  --spectrum-colorloupe-exit-animation-properties: opacity;
+}

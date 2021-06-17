@@ -1,0 +1,14 @@
+:root {
+  --spectrum-illustratedmessage-heading-color: var(--spectrum-alias-heading-text-color);
+  --spectrum-illustratedmessage-illustration-color: var(--spectrum-global-color-gray-500);
+  --spectrum-illustratedmessage-heading-margin-top: var(--spectrum-global-dimension-size-300);
+  --spectrum-illustratedmessage-heading-margin-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-illustratedmessage-heading-font-weight: var(--spectrum-alias-heading-text-font-weight-light);
+  --spectrum-illustratedmessage-heading-font-size: var(--spectrum-alias-heading-l-text-size);
+  --spectrum-illustratedmessage-heading-margin-bottom-multiplier: var(--spectrum-alias-heading-margin-bottom);
+  --spectrum-illustratedmessage-heading-line-height: var(--spectrum-alias-heading-text-line-height);
+  --spectrum-illustratedmessage-heading-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-illustratedmessage-heading-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-illustratedmessage-heading-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-illustratedmessage-heading-text-transform: none;
+}
