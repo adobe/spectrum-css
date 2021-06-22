@@ -91,7 +91,12 @@ async function getFolderDependencyOrder(packagesDir) {
     .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
     .map((dirent) => path.join(packagesDir, dirent.name));
 
-  return solveDependencies(packages);
+  let solution = await solveDependencies(packages);
+
+  // Nobody relies on it, so it gets clipped, weird
+  solution.push('@spectrum-css/expressvars');
+
+  return solution;
 }
 
 exports.getDependencies = getDependencies;
