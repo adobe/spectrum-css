@@ -83,7 +83,7 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-statuslight-info-dot-size);
     border-radius: 50%;
 
-    /* margin on the dog is the opposite of the padding in order to align the dot as if the padding hack was not present */
+    /* margin on the dot is the opposite of the padding in order to align the dot as if the padding hack was not present */
     margin-block: var(--spectrum-statuslight-info-padding-bottom)
       var(--spectrum-statuslight-info-padding-top);
     margin-inline: var(--spectrum-statuslight-info-text-gap)
