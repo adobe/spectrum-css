@@ -26,23 +26,23 @@ governing permissions and limitations under the License.
   --spectrum-slider-label-gap-y: var(--spectrum-global-dimension-size-85);
 
   --spectrum-slider-controls-margin: calc(
-    var(--spectrum-slider-handle-width) / 2
+    var(--spectrum-slider-handle-width-adjusted) / 2
   );
   --spectrum-slider-track-margin-offset: calc(
     var(--spectrum-slider-controls-margin) * -1
   );
 
   --spectrum-slider-handle-margin-top: calc(
-    var(--spectrum-slider-handle-width) / -2
+    var(--spectrum-slider-handle-width-adjusted) / -2
   );
   --spectrum-slider-handle-margin-left: calc(
-    var(--spectrum-slider-handle-width) / -2
+    var(--spectrum-slider-handle-width-adjusted) / -2
   );
 
   --spectrum-slider-track-handleoffset: calc(var(--spectrum-slider-handle-gap));
   --spectrum-slider-track-middle-handleoffset: calc(
     var(--spectrum-slider-handle-gap) +
-      calc(var(--spectrum-slider-handle-width) / 2)
+      calc(var(--spectrum-slider-handle-width-adjusted) / 2)
   );
 
   --spectrum-slider-input-top: calc(
@@ -66,7 +66,10 @@ governing permissions and limitations under the License.
   --spectrum-slide-label-text-line-height: var(
     --spectrum-global-font-line-height-small
   );
+  --spectrum-slide-label-margin-bottom: -3px;
   --spectrum-slider-label-gap-x: var(--spectrum-alias-item-control-gap-m);
+  --spectrum-slider-handle-width-adjusted: calc(var(--spectrum-slider-handle-width) + var(--spectrum-slider-handle-border-size));
+  --spectrum-slider-handle-height-adjusted: var(--spectrum-slider-handle-width-adjusted);
 }
 
 .spectrum-Slider {
@@ -217,11 +220,11 @@ governing permissions and limitations under the License.
   display: inline-block;
   box-sizing: border-box;
 
-  inline-size: var(--spectrum-slider-handle-width);
-  block-size: var(--spectrum-slider-handle-height);
+  inline-size: var(--spectrum-slider-handle-width-adjusted);
+  block-size: var(--spectrum-slider-handle-height-adjusted);
 
   margin-block: var(--spectrum-slider-handle-margin-top) 0;
-  margin-inline: calc(var(--spectrum-slider-handle-width) / -2) 0;
+  margin-inline: calc(var(--spectrum-slider-handle-width-adjusted) / -2) 0;
 
   border-width: var(--spectrum-slider-handle-border-size);
   border-style: solid;
@@ -257,8 +260,8 @@ governing permissions and limitations under the License.
       width var(--spectrum-global-animation-duration-100) ease-out,
       height var(--spectrum-global-animation-duration-100) ease-out;
 
-    width: var(--spectrum-slider-handle-width);
-    height: var(--spectrum-slider-handle-height);
+    width: var(--spectrum-slider-handle-width-adjusted);
+    height: var(--spectrum-slider-handle-height-adjusted);
 
     transform: translate(-50%, -50%);
 
@@ -268,11 +271,11 @@ governing permissions and limitations under the License.
   &.is-focused {
     &:before {
       width: calc(
-        var(--spectrum-slider-handle-width) +
+        var(--spectrum-slider-handle-width-adjusted) +
           var(--spectrum-alias-focus-ring-gap) * 2
       );
       height: calc(
-        var(--spectrum-slider-handle-height) +
+        var(--spectrum-slider-handle-height-adjusted) +
           var(--spectrum-alias-focus-ring-gap) * 2
       );
     }
@@ -283,8 +286,8 @@ governing permissions and limitations under the License.
   /*  Remove the margin for input in Firefox and Safari. */
   margin: 0;
 
-  inline-size: var(--spectrum-slider-handle-width);
-  block-size: var(--spectrum-slider-handle-height);
+  inline-size: var(--spectrum-slider-handle-width-adjusted);
+  block-size: var(--spectrum-slider-handle-height-adjusted);
   padding: 0;
   position: absolute;
   inset-block-start: var(--spectrum-slider-input-top);
@@ -311,6 +314,7 @@ governing permissions and limitations under the License.
 
   font-size: var(--spectrum-slide-label-text-size);
   line-height: var(--spectrum-slide-label-text-line-height);
+  margin-block-end: var(--spectrum-slide-label-margin-bottom);
 }
 
 .spectrum-Slider-label {
