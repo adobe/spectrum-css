@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-alpha.0"></a>
+# 4.0.0-alpha.0
+🗓 2021-07-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.3-alpha.2...@spectrum-css/fieldlabel@4.0.0-alpha.0)
+
+### 🐛 Bug fixes
+
+* adjusted margin on require asterisk ([af15ec8](https://github.com/adobe/spectrum-css/commit/af15ec8))
+
+
+### 🛑 BREAKING CHANGES
+
+* the margin change impacts layout
+
+
+
+
+
 <a name="3.0.3-alpha.2"></a>
 ## 3.0.3-alpha.2
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.3-alpha.1...@spectrum-css/fieldlabel@3.0.3-alpha.2)

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-07-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rating@3.0.3-alpha.2...@spectrum-css/rating@3.0.3-alpha.3)
+
+### 🐛 Bug fixes
+
+* sizing of star icons broken by tokens update ([adf0483](https://github.com/adobe/spectrum-css/commit/adf0483))
+
+
+
+
+
 <a name="3.0.3-alpha.2"></a>
 ## 3.0.3-alpha.2
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rating@3.0.3-alpha.1...@spectrum-css/rating@3.0.3-alpha.2)

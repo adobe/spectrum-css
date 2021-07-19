@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-07-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.0.3-alpha.2...@spectrum-css/slider@3.0.3-alpha.3)
+
+### 🐛 Bug fixes
+
+* adjust handle sizing broken by border sizing change in tokens ([b926e64](https://github.com/adobe/spectrum-css/commit/b926e64))
+
+
+
+
+
 <a name="3.0.3-alpha.2"></a>
 ## 3.0.3-alpha.2
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.0.3-alpha.1...@spectrum-css/slider@3.0.3-alpha.2)
