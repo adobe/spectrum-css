@@ -1,4 +1,4 @@
-validation-icon-color-invalid-disabled/*
+/*
 Copyright 2019 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield {
   /* todo: remove with DNA updated */
   --spectrum-textfield-m-texticon-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
+  --spectrum-textfield-m-texticon-validation-icon-color-invalid-disabled: var(--spectrum-global-color-gray-500);
 }
 
 .spectrum-Textfield {
