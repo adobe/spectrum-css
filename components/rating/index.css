@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating {
   --spectrum-icon-star-height: var(--spectrum-global-dimension-size-225);
+  --spectrum-icon-star-width: var(--spectrum-global-dimension-size-225);
 }
 
 /* A solid star */
@@ -103,7 +104,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  inline-size: var(--spectrum-rating-icon-width);
-  block-size: var(--spectrum-rating-icon-width);
+  inline-size: var(--spectrum-icon-star-width);
+  block-size: var(--spectrum-icon-star-height);
   margin: 0 auto;
 }
