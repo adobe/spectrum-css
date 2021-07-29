@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-alpha.3"></a>
+# 4.0.0-alpha.3
+🗓 2021-07-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.0-alpha.2...@spectrum-css/card@4.0.0-alpha.3)
+
+### 🐛 Bug fixes
+
+* gave card a width to avoid it expanding to full width ([db9c0c7](https://github.com/adobe/spectrum-css/commit/db9c0c7))
+
+
+### 🛑 BREAKING CHANGES
+
+* with the width being set and a min width, it's like to
+not have the same width as before and will break layout
+
+
+
+
+
 <a name="4.0.0-alpha.2"></a>
 # 4.0.0-alpha.2
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.0-alpha.1...@spectrum-css/card@4.0.0-alpha.2)
