@@ -184,7 +184,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu-chevron {
   flex-grow: 0;
   margin-inline-start: var(--spectrum-listitem-texticon-icon-gap);
-  margin-block-start: var(--spectrum-listitem-texticon-icon-margin-top);
+  margin-block-start: calc(var(--spectrum-listitem-texticon-ui-icon-margin-top) - var(--spectrum-listitem-texticon-padding-y) + 1px);
 }
 
 .spectrum-Menu-chevron {
