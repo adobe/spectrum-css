@@ -11,12 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Textfield {
-  /* todo: remove with DNA updated */
-  --spectrum-textfield-m-texticon-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
-  --spectrum-textfield-m-texticon-validation-icon-color-invalid-disabled: var(--spectrum-global-color-gray-500);
-}
-
-.spectrum-Textfield {
   &:hover {
     .spectrum-Textfield-input {
       border-color: var(--spectrum-textfield-m-texticon-border-color-hover);
