@@ -3,6 +3,9 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/tabs/
 sections:
   - name: Migration Guide
     description: |
+      ### T-shirt sizing
+      Tabs now support t-shirt sizing and require that you specify the size by adding a `.spectrum-Tabs--size*` class.
+      
       ### Change workflow icon size to medium
       If you use a workflow icon with tab items, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
