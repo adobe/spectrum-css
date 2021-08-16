@@ -106,7 +106,7 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
 
   padding: var(--spectrum-listitem-texticon-padding-y)
-    var(--spectrum-listitem-texticon-padding-right)
+    calc(var(--spectrum-listitem-texticon-padding-right) + var(--spectrum-listitem-texticon-ui-icon-width) + var(--spectrum-listitem-texticon-ui-icon-gap) - 2px)
     var(--spectrum-listitem-texticon-padding-y)
     var(--spectrum-listitem-texticon-padding-left);
 
