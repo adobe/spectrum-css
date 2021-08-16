@@ -14,7 +14,18 @@ governing permissions and limitations under the License.
 @import "../vars/css/scales/spectrum-large.css";
 @import "../vars/css/scales/spectrum-medium.css";
 
-.spectrum-Tabs {
+.spectrum-Tabs--sizeS {
+  @remapvars {
+    find: --spectrum-tabs-s-;
+    replace: --spectrum-tabs-;
+  }
+  @remapvars {
+    find: --spectrum-tabs-quiet-s-;
+    replace: --spectrum-tabs-quiet-;
+  }
+}
+
+.spectrum-Tabs--sizeM {
   @remapvars {
     find: --spectrum-tabs-m-;
     replace: --spectrum-tabs-;
@@ -25,12 +36,31 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Tabs {
-  --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-divider-size));
-  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-compact-quiet-height) - var(--spectrum-tabs-divider-size));
+.spectrum-Tabs--sizeL {
+  @remapvars {
+    find: --spectrum-tabs-l-;
+    replace: --spectrum-tabs-;
+  }
+  @remapvars {
+    find: --spectrum-tabs-quiet-l-;
+    replace: --spectrum-tabs-quiet-;
+  }
+}
 
-  /* todo: remove when this is added back to DNA */
-  --spectrum-tabs-text-size: var(--spectrum-alias-font-size-default);
+.spectrum-Tabs--sizeXL {
+  @remapvars {
+    find: --spectrum-tabs-xl-;
+    replace: --spectrum-tabs-;
+  }
+  @remapvars {
+    find: --spectrum-tabs-quiet-xl-;
+    replace: --spectrum-tabs-quiet-;
+  }
+}
+
+.spectrum-Tabs {
+  --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-rule-size));
+  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-quiet-compact-height) - var(--spectrum-tabs-rule-size));
 }
 
 .spectrum-Tabs {
