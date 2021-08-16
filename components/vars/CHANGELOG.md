@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0-alpha.3"></a>
+# 3.1.0-alpha.3
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.2...@spectrum-css/vars@3.1.0-alpha.3)
+
+### 🐛 Bug fixes
+
+* added padding to unselected listitem back ([f167013](https://github.com/adobe/spectrum-css/commit/f167013))
+
+
+
+
+
 <a name="3.1.0-alpha.2"></a>
 # 3.1.0-alpha.2
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.1...@spectrum-css/vars@3.1.0-alpha.2)
