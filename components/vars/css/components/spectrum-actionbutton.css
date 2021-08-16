@@ -16,7 +16,7 @@
   --spectrum-actionbutton-s-quiet-emphasized-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-s-quiet-emphasized-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-s-quiet-emphasized-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-s-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-s-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-s-quiet-emphasized-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-s-quiet-emphasized-texticon-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-s-quiet-emphasized-texticon-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -163,7 +163,7 @@
   --spectrum-actionbutton-s-quiet-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-s-quiet-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-s-quiet-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-s-quiet-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-s-quiet-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-s-quiet-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-s-quiet-texticon-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-s-quiet-texticon-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -604,7 +604,7 @@
   --spectrum-actionbutton-s-quiet-emphasized-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-s-quiet-emphasized-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-s-quiet-emphasized-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-s-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-s-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-s-quiet-emphasized-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-s-quiet-emphasized-textonly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-s-quiet-emphasized-textonly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -751,7 +751,7 @@
   --spectrum-actionbutton-s-quiet-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-s-quiet-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-s-quiet-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-s-quiet-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-s-quiet-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-s-quiet-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-s-quiet-textonly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-s-quiet-textonly-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -1192,7 +1192,7 @@
   --spectrum-actionbutton-s-quiet-emphasized-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-s-quiet-emphasized-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-s-quiet-emphasized-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-s-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-s-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-s-quiet-emphasized-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-s-quiet-emphasized-icononly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-s-quiet-emphasized-icononly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -1339,7 +1339,7 @@
   --spectrum-actionbutton-s-quiet-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-s-quiet-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-s-quiet-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-s-quiet-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-s-quiet-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-s-quiet-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-s-quiet-icononly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-s-quiet-icononly-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -1780,7 +1780,7 @@
   --spectrum-actionbutton-m-quiet-emphasized-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-m-quiet-emphasized-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-m-quiet-emphasized-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-m-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-m-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-m-quiet-emphasized-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-m-quiet-emphasized-texticon-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-m-quiet-emphasized-texticon-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -1927,7 +1927,7 @@
   --spectrum-actionbutton-m-quiet-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-m-quiet-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-m-quiet-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-m-quiet-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-m-quiet-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-m-quiet-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-m-quiet-texticon-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-m-quiet-texticon-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -2368,7 +2368,7 @@
   --spectrum-actionbutton-m-quiet-emphasized-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-m-quiet-emphasized-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-m-quiet-emphasized-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-m-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-m-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-m-quiet-emphasized-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-m-quiet-emphasized-textonly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-m-quiet-emphasized-textonly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -2516,7 +2516,7 @@
   --spectrum-actionbutton-m-quiet-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-m-quiet-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-m-quiet-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-m-quiet-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-m-quiet-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-m-quiet-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-m-quiet-textonly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-m-quiet-textonly-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -2960,7 +2960,7 @@
   --spectrum-actionbutton-m-quiet-emphasized-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-m-quiet-emphasized-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-m-quiet-emphasized-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-m-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-m-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-m-quiet-emphasized-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-m-quiet-emphasized-icononly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-m-quiet-emphasized-icononly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -3108,7 +3108,7 @@
   --spectrum-actionbutton-m-quiet-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-m-quiet-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-m-quiet-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-m-quiet-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-m-quiet-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-m-quiet-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-m-quiet-icononly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-m-quiet-icononly-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -3552,7 +3552,7 @@
   --spectrum-actionbutton-l-quiet-emphasized-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-l-quiet-emphasized-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-l-quiet-emphasized-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-l-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-l-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-l-quiet-emphasized-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-l-quiet-emphasized-texticon-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-l-quiet-emphasized-texticon-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -3698,7 +3698,7 @@
   --spectrum-actionbutton-l-quiet-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-l-quiet-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-l-quiet-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-l-quiet-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-l-quiet-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-l-quiet-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-l-quiet-texticon-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-l-quiet-texticon-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -4136,7 +4136,7 @@
   --spectrum-actionbutton-l-quiet-emphasized-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-l-quiet-emphasized-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-l-quiet-emphasized-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-l-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-l-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-l-quiet-emphasized-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-l-quiet-emphasized-textonly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-l-quiet-emphasized-textonly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -4282,7 +4282,7 @@
   --spectrum-actionbutton-l-quiet-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-l-quiet-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-l-quiet-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-l-quiet-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-l-quiet-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-l-quiet-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-l-quiet-textonly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-l-quiet-textonly-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -4720,7 +4720,7 @@
   --spectrum-actionbutton-l-quiet-emphasized-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-l-quiet-emphasized-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-l-quiet-emphasized-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-l-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-l-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-l-quiet-emphasized-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-l-quiet-emphasized-icononly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-l-quiet-emphasized-icononly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -4866,7 +4866,7 @@
   --spectrum-actionbutton-l-quiet-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-l-quiet-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-l-quiet-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-l-quiet-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-l-quiet-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-l-quiet-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-l-quiet-icononly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-l-quiet-icononly-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -5304,7 +5304,7 @@
   --spectrum-actionbutton-xl-quiet-emphasized-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-xl-quiet-emphasized-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-xl-quiet-emphasized-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-xl-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-xl-quiet-emphasized-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-xl-quiet-emphasized-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-xl-quiet-emphasized-texticon-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-xl-quiet-emphasized-texticon-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -5452,7 +5452,7 @@
   --spectrum-actionbutton-xl-quiet-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-xl-quiet-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-xl-quiet-texticon-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-xl-quiet-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-xl-quiet-texticon-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-xl-quiet-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-xl-quiet-texticon-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-xl-quiet-texticon-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -5896,7 +5896,7 @@
   --spectrum-actionbutton-xl-quiet-emphasized-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-xl-quiet-emphasized-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-xl-quiet-emphasized-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-xl-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-xl-quiet-emphasized-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-xl-quiet-emphasized-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-xl-quiet-emphasized-textonly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-xl-quiet-emphasized-textonly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -6044,7 +6044,7 @@
   --spectrum-actionbutton-xl-quiet-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-xl-quiet-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-xl-quiet-textonly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-xl-quiet-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-xl-quiet-textonly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-xl-quiet-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-xl-quiet-textonly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-xl-quiet-textonly-text-color-selected-down: var(--spectrum-global-color-gray-900);
@@ -6488,7 +6488,7 @@
   --spectrum-actionbutton-xl-quiet-emphasized-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-xl-quiet-emphasized-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-xl-quiet-emphasized-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-xl-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-xl-quiet-emphasized-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-xl-quiet-emphasized-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-xl-quiet-emphasized-icononly-hold-icon-color-selected-down: var(--spectrum-global-color-static-white);
   --spectrum-actionbutton-xl-quiet-emphasized-icononly-text-color-selected-down: var(--spectrum-global-color-static-white);
@@ -6636,7 +6636,7 @@
   --spectrum-actionbutton-xl-quiet-icononly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-actionbutton-xl-quiet-icononly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-actionbutton-xl-quiet-icononly-border-color-selected-disabled: var(--spectrum-alias-border-color-transparent);
-  --spectrum-actionbutton-xl-quiet-icononly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-actionbutton-xl-quiet-icononly-background-color-selected-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-actionbutton-xl-quiet-icononly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-actionbutton-xl-quiet-icononly-hold-icon-color-selected-down: var(--spectrum-alias-icon-color-down);
   --spectrum-actionbutton-xl-quiet-icononly-text-color-selected-down: var(--spectrum-global-color-gray-900);
