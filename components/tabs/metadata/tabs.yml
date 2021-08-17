@@ -26,7 +26,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 24px; left: 0px;"></div>
       </div>
       <h4 style="margin-top: 62px;" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal">
@@ -42,7 +42,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
       <h4 style="margin-top: 62px;" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
       <div class="spectrum-Tabs spectrum-Tabs--sizeL spectrum-Tabs--horizontal">
@@ -58,7 +58,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 32px; left: 0px;"></div>
       </div>
       <h4 style="margin-top: 62px;" class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
       <div class="spectrum-Tabs spectrum-Tabs--sizeXL spectrum-Tabs--horizontal">
@@ -74,7 +74,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 36px; left: 0px;"></div>
       </div>
   - id: tabs
     name: Basic tabs
@@ -93,7 +93,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-icon
     name: Tabs with icons
@@ -143,7 +143,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-icon
     name: Quiet tabs with icons
@@ -193,7 +193,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-compact-icon
     name: Compact tabs with icons and text
@@ -268,7 +268,7 @@ examples:
         <div class="spectrum-Tabs-item" tabindex="0">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </div>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
   - id: tabs-quiet-compact
     name: Compact tabs with icons and text (quiet)
@@ -434,7 +434,7 @@ examples:
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 0;"></div>
       </div>
 
       <h4 style="margin-top: 62px;">Open</h4>
@@ -445,7 +445,7 @@ examples:
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
         </button>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 0;"></div>
       </div>
       <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
         <ul class="spectrum-Menu" role="listbox">
@@ -480,7 +480,7 @@ examples:
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </button>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 0;"></div>
       </div>
 
       <h4 style="margin-top: 62px;">Open</h4>
@@ -491,7 +491,7 @@ examples:
               <use xlink:href="#spectrum-css-icon-Chevron100" />
             </svg>
           </button>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 8px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 50px; left: 0;"></div>
       </div>
       <br>
       <div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover spectrum-Picker-popover--quiet is-open" style="margin-left: -5px; margin-top: -9px;">
@@ -532,5 +532,5 @@ examples:
         <a href="#4" class="spectrum-Tabs-item">
           <span class="spectrum-Tabs-itemLabel">Tab 4</span>
         </a>
-        <div class="spectrum-Tabs-selectionIndicator" style="width: 27px; left: 0px;"></div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0;"></div>
       </div>
