@@ -33,9 +33,10 @@ governing permissions and limitations under the License.
   );
 
   --spectrum-listitem-texticon-selectable-padding-right: calc(
-    var(--spectrum-global-dimension-size-100) +
       var(--spectrum-listitem-texticon-ui-icon-width) +
-      var(--spectrum-listitem-texticon-icon-gap)
+      var(--spectrum-listitem-texticon-ui-icon-gap) +
+      var(--spectrum-listitem-texticon-padding-right) -
+      var(--spectrum-popover-border-size)
   );
 
   --spectrum-listitem-texticon-icon-margin-top: var(
@@ -78,9 +79,7 @@ governing permissions and limitations under the License.
 
   &.is-selectable {
     .spectrum-Menu-item {
-      padding-inline-end: var(
-        --spectrum-listitem-texticon-selectable-padding-right
-      );
+      padding-inline-end: var(--spectrum-listitem-texticon-selectable-padding-right);
 
       &.is-selected {
         padding-inline-end: calc(
@@ -106,7 +105,7 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
 
   padding: var(--spectrum-listitem-texticon-padding-y)
-    calc(var(--spectrum-listitem-texticon-padding-right) + var(--spectrum-listitem-texticon-ui-icon-width) + var(--spectrum-listitem-texticon-ui-icon-gap) - 2px)
+    var(--spectrum-listitem-texticon-padding-right)
     var(--spectrum-listitem-texticon-padding-y)
     var(--spectrum-listitem-texticon-padding-left);
 
@@ -183,7 +182,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu-checkmark,
 .spectrum-Menu-chevron {
   flex-grow: 0;
-  margin-inline-start: var(--spectrum-listitem-texticon-icon-gap);
+  padding-inline-start: var(--spectrum-listitem-texticon-icon-gap);
   margin-block-start: calc(var(--spectrum-listitem-texticon-ui-icon-margin-top) - var(--spectrum-listitem-texticon-padding-y) + 1px);
 }
 
