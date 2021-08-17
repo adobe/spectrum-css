@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3-alpha.7"></a>
+## 3.0.3-alpha.7
+🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@3.0.3-alpha.6...@spectrum-css/inputgroup@3.0.3-alpha.7)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
 <a name="3.0.3-alpha.6"></a>
 ## 3.0.3-alpha.6
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@3.0.3-alpha.5...@spectrum-css/inputgroup@3.0.3-alpha.6)

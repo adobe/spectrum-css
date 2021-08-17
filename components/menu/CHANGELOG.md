@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3-alpha.5"></a>
+## 3.0.3-alpha.5
+🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.3-alpha.4...@spectrum-css/menu@3.0.3-alpha.5)
+
+### 🐛 Bug fixes
+
+* adjust menu item selectable padding again ([034a2df](https://github.com/adobe/spectrum-css/commit/034a2df))
+
+
+
+
+
 <a name="3.0.3-alpha.4"></a>
 ## 3.0.3-alpha.4
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.3-alpha.3...@spectrum-css/menu@3.0.3-alpha.4)

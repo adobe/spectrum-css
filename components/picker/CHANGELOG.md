@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.3-alpha.5"></a>
+## 1.0.3-alpha.5
+🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.3-alpha.4...@spectrum-css/picker@1.0.3-alpha.5)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
 <a name="1.0.3-alpha.4"></a>
 ## 1.0.3-alpha.4
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.3-alpha.3...@spectrum-css/picker@1.0.3-alpha.4)
