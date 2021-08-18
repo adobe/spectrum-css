@@ -59,7 +59,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tabs {
-  --spectrum-tabs-item-height: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-divider-size));
+  --spectrum-tabs-item-height-adjusted: calc(var(--spectrum-tabs-height) - var(--spectrum-tabs-divider-size));
   --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-compact-quiet-height) - var(--spectrum-tabs-divider-size));
 }
 
@@ -219,6 +219,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Tabs-item {
     block-size: var(--spectrum-tabs-vertical-item-height);
+    line-height: var(--spectrum-tabs-vertical-item-height);
     padding-block: 0;
     padding-inline: var(--spectrum-tabs-focus-ring-padding-x);
     /* Subtract focus ring padding from margin-left since the padding value already offsets tabs-items */
@@ -231,6 +232,11 @@ governing permissions and limitations under the License.
       inset-inline-end: calc(-1 * var(--spectrum-tabs-focus-ring-size));
       margin-block-start: calc(calc(var(--spectrum-tabs-focus-ring-height) / -2));
     }
+  }
+
+  .spectrum-Icon {
+    height: var(--spectrum-tabs-vertical-item-height);
+    line-height: var(--spectrum-tabs-vertical-item-height);
   }
 
   &.spectrum-Tabs--compact {
