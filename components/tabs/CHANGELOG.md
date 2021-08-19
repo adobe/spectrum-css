@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0-alpha.1"></a>
+# 3.1.0-alpha.1
+🗓 2021-08-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.0-alpha.0...@spectrum-css/tabs@3.1.0-alpha.1)
+
+### 🐛 Bug fixes
+
+* **tabs:** vertically center tab item text in vertical tabs ([c7c0b29](https://github.com/adobe/spectrum-css/commit/c7c0b29))
+
+
+
+
+
 <a name="3.1.0-alpha.0"></a>
 # 3.1.0-alpha.0
 🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.4...@spectrum-css/tabs@3.1.0-alpha.0)
