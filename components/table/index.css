@@ -10,14 +10,71 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/components/spectrum-table.css";
+
 .spectrum-Table {
   border-collapse: separate;
   border-spacing: 0;
 }
 
+.spectrum-Table--sizeS {
+  @remapvars {
+    find: /--spectrum-table(.*)-s-/;
+    filter: color;
+    replace: --spectrum-table$1-;
+  }
+}
+
+.spectrum-Table--sizeM {
+  @remapvars {
+    find: /--spectrum-table(.*)-m-/;
+    filter: color;
+    replace: --spectrum-table$1-;
+  }
+}
+
+.spectrum-Table--compact {
+  @remapvars {
+    find: /--spectrum-table(.*)-s-compact-/;
+    filter: color;
+    replace: --spectrum-table-s-compact-$1;
+  }
+  @remapvars {
+    find: /--spectrum-table(.*)-m-compact-/;
+    filter: color;
+    replace: --spectrum-table-m-compact-$1;
+  }
+}
+
+.spectrum-Table--regular {
+  @remapvars {
+    find: /--spectrum-table(.*)-s-regular-/;
+    filter: color;
+    replace: --spectrum-table-s-regular-$1;
+  }
+  @remapvars {
+    find: /--spectrum-table(.*)-m-regular-/;
+    filter: color;
+    replace: --spectrum-table-m-regular-$1;
+  }
+}
+
+.spectrum-Table--spacious {
+  @remapvars {
+    find: /--spectrum-table(.*)-s-spacious-/;
+    filter: color;
+    replace: --spectrum-table-s-spacious-$1;
+  }
+  @remapvars {
+    find: /--spectrum-table(.*)-m-spacious-/;
+    filter: color;
+    replace: --spectrum-table-m-spacious-$1;
+  }
+}
+
 .spectrum-Table-sortedIcon {
   display: none;
-  margin-inline-start: var(--spectrum-table-header-sort-icon-gap);
+  margin-inline-start: var(--spectrum-table-spacious-header-sort-icon-gap);
 
   vertical-align: middle;
 
@@ -27,18 +84,18 @@ governing permissions and limitations under the License.
 .spectrum-Table-headCell {
   box-sizing: border-box;
   text-align: start;
-  font-size: var(--spectrum-table-header-text-size);
-  font-weight: var(--spectrum-table-header-text-font-weight);
-  line-height: var(--spectrum-table-header-text-line-height);
-  min-block-size: var(--spectrum-table-header-min-height);
-  letter-spacing: var(--spectrum-table-header-text-letter-spacing);
+  font-size: var(--spectrum-table-spacious-header-text-size);
+  font-weight: var(--spectrum-table-spacious-header-text-font-weight);
+  line-height: var(--spectrum-table-spacious-header-text-line-height);
+  min-block-size: var(--spectrum-table-spacious-header-min-height);
+  letter-spacing: var(--spectrum-table-spacious-header-text-letter-spacing);
   text-transform: uppercase;
-  padding-block: var(--spectrum-table-header-padding-y);
-  padding-inline: var(--spectrum-table-header-padding-x);
+  padding-block: var(--spectrum-table-spacious-header-padding-top) var(--spectrum-table-spacious-header-padding-bottom);
+  padding-inline: var(--spectrum-table-spacious-header-padding-left) var(--spectrum-table-spacious-header-padding-right);
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   cursor: default;
   outline: 0;
-  border-radius: var(--spectrum-table-header-border-radius);
+  border-radius: var(--spectrum-table-spacious-header-border-radius);
 
   &.is-sortable {
     cursor: pointer;
@@ -84,10 +141,10 @@ governing permissions and limitations under the License.
 .spectrum-Table-body {
   position: relative;
 
-  border-width: var(--spectrum-table-border-size);
-  border-radius: var(--spectrum-table-border-radius);
+  border-width: var(--spectrum-table-spacious-border-size);
+  border-radius: var(--spectrum-table-spacious-border-radius);
   overflow: auto;
-  vertical-align: var(--spectrum-table-cell-vertical-alignment);
+  vertical-align: var(--spectrum-table-spacious-cell-vertical-alignment);
 
   &.is-drop-target {
     @inherit: %drop-target;
@@ -98,36 +155,36 @@ governing permissions and limitations under the License.
    by putting it on the individual cells instead. */
 .spectrum-Table:not(.spectrum-Table--quiet) {
   tbody.spectrum-Table-body {
-    border-width: var(--spectrum-table-border-size);
-    border-radius: var(--spectrum-table-border-radius);
+    border-width: var(--spectrum-table-spacious-border-size);
+    border-radius: var(--spectrum-table-spacious-border-radius);
 
     .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
-      border-start-start-radius: var(--spectrum-table-border-radius);
+      border-start-start-radius: var(--spectrum-table-spacious-border-radius);
     }
 
     .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
-      border-start-end-radius: var(--spectrum-table-border-radius);
+      border-start-end-radius: var(--spectrum-table-spacious-border-radius);
     }
 
     .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
-      border-end-start-radius: var(--spectrum-table-border-radius);
+      border-end-start-radius: var(--spectrum-table-spacious-border-radius);
     }
 
     .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
-      border-end-end-radius: var(--spectrum-table-border-radius);
+      border-end-end-radius: var(--spectrum-table-spacious-border-radius);
     }
   }
 }
 
 .spectrum-Table-cell {
   box-sizing: border-box;
-  font-size: var(--spectrum-table-cell-text-size);
-  font-weight: var(--spectrum-table-cell-text-font-weight);
-  line-height: var(--spectrum-table-cell-text-line-height);
-  padding-block: var(--spectrum-table-cell-padding-y);
-  padding-inline: var(--spectrum-table-cell-padding-x);
+  font-size: var(--spectrum-table-spacious-cell-text-size);
+  /* font-weight: var(--spectrum-table-spacious-cell-text-font-weight); */
+  line-height: var(--spectrum-table-spacious-cell-text-line-height);
+  padding-block: var(--spectrum-table-spacious-cell-padding-top) var(--spectrum-table-spacious-cell-padding-bottom);
+  padding-inline: var(--spectrum-table-spacious-cell-padding-left) var(--spectrum-table-spacious-cell-padding-right);
   /* Subtract top/bottom padding for this value to be correct in this implementation */
-  min-block-size: calc(var(--spectrum-table-cell-min-height) - calc(var(--spectrum-table-cell-padding-y) * 2));
+  min-block-size: calc(var(--spectrum-table-spacious-cell-min-height) - calc(var(--spectrum-table-spacious-cell-padding-top) + var(--spectrum-table-spacious-cell-padding-bottom)));
 }
 
 .spectrum-Table-cell,
@@ -150,7 +207,7 @@ governing permissions and limitations under the License.
       inset-block-end: 0;
       inset-inline-start: 0;
 
-      border-radius: calc(var(--spectrum-table-cell-border-radius-key-focus) - 1px);
+      border-radius: calc(var(--spectrum-table-spacious-cell-border-radius-key-focus) - 1px);
     }
   }
 }
@@ -159,16 +216,16 @@ governing permissions and limitations under the License.
   &:focus-ring,
   &.is-focused {
     &::before {
-      inset-block-start: var(--spectrum-table-border-size);
-      inset-inline-end: var(--spectrum-table-border-size);
-      inset-block-end: var(--spectrum-table-border-size);
-      inset-inline-start: var(--spectrum-table-border-size);
+      inset-block-start: var(--spectrum-table-spacious-border-size);
+      inset-inline-end: var(--spectrum-table-spacious-border-size);
+      inset-block-end: var(--spectrum-table-spacious-border-size);
+      inset-inline-start: var(--spectrum-table-spacious-border-size);
     }
   }
 }
 
 .spectrum-Table-cell--divider {
-  border-inline-end-width: var(--spectrum-table-divider-border-size);
+  border-inline-end-width: var(--spectrum-table-spacious-divider-border-size);
 }
 
 .spectrum-Table-row {
@@ -191,7 +248,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Table--quiet {
   .spectrum-Table-body {
-    border-radius: var(--spectrum-table-quiet-border-radius);
+    border-radius: var(--spectrum-table-spacious-quiet-border-radius);
   }
 
   .spectrum-Table-body,
@@ -205,11 +262,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Table-checkboxCell {
-  padding-inline-end: var(--spectrum-table-cell-checkbox-padding-right);
+  padding-inline-end: var(--spectrum-table-spacious-cell-checkbox-padding-right);
   /* have to eliminate vertical padding to allow proper vertical alignment */
   padding-block-start: 0px;
   padding-block-end: 0px;
-  vertical-align: var(--spectrum-table-cell-checkbox-vertical-alignment);
+  vertical-align: var(--spectrum-table-spacious-cell-checkbox-vertical-alignment);
 }
 
 .spectrum-Table-checkbox {
