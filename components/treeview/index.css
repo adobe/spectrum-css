@@ -23,6 +23,46 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-height-layers: var(--spectrum-global-dimension-size-550);
 }
 
+.spectrum-TreeView--sizeS {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-s-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
+  --spectrum-treeview-item-border-size: var(--spectrum-treeview-s-item-border-size);
+  --spectrum-treeview-item-border-radius: var(--spectrum-treeview-s-item-border-radius);
+}
+
+.spectrum-TreeView--sizeM {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-m-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
+  --spectrum-treeview-item-border-size: var(--spectrum-treeview-m-item-border-size);
+  --spectrum-treeview-item-border-radius: var(--spectrum-treeview-m-item-border-radius);
+}
+
+.spectrum-TreeView--sizeL {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-l-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
+  --spectrum-treeview-item-border-size: var(--spectrum-treeview-l-item-border-size);
+  --spectrum-treeview-item-border-radius: var(--spectrum-treeview-l-item-border-radius);
+}
+
+.spectrum-TreeView--sizeXL {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-xl-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
+  --spectrum-treeview-item-border-size: var(--spectrum-treeview-xl-item-border-size);
+  --spectrum-treeview-item-border-radius: var(--spectrum-treeview-xl-item-border-radius);
+}
+
 .spectrum-TreeView {
   display: block;
   position: relative;
@@ -108,7 +148,7 @@ governing permissions and limitations under the License.
     inset-inline-start: var(--spectrum-treeview-item-border-size);
     inset-inline-end: 0;
 
-    block-size: calc(var(--spectrum-treeview-item-height) - var(--spectrum-treeview-item-hover-offset) * 2);
+    block-size: calc(var(--spectrum-treeview-item-min-height) - var(--spectrum-treeview-item-hover-offset) * 2);
 
     border-style: solid;
     border-color: transparent;
