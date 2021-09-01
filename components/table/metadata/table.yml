@@ -1,10 +1,157 @@
 name: Table
 SpectrumSiteSlug: https://spectrum.adobe.com/page/table/
 examples:
-  - id: table
-    name: Standard
+  - id: table-small
+    name: Size Small
     markup: |
-      <table class="spectrum-Table">
+      <table class="spectrum-Table spectrum-Table--sizeS">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell">Column Title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-medium
+    name: Size Medium
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--sizeM">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell">Column Title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-compact
+    name: Compact
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--compact">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none">
+              Column Title
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+            </th>
+            <th class="spectrum-Table-headCell">Column Title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+            <td class="spectrum-Table-cell" tabindex="0">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-spacious
+    name: Spacious
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--spacious">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
@@ -54,7 +201,7 @@ examples:
     name: Multi-select
     description: The standard multi-select table
     markup: |
-      <table class="spectrum-Table">
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--sizeM">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
@@ -174,7 +321,7 @@ examples:
     name: Quiet
     description: The quiet table
     markup: |
-      <table class="spectrum-Table spectrum-Table--quiet">
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
@@ -224,7 +371,7 @@ examples:
     name: Quiet multi-select
     description: The quiet multi-select table
     markup: |
-      <table class="spectrum-Table spectrum-Table--quiet">
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
@@ -344,7 +491,7 @@ examples:
     name: Column dividers
     description: The standard table with column dividers
     markup: |
-      <table class="spectrum-Table">
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--sizeM">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
@@ -394,7 +541,7 @@ examples:
     name: Divs
     description: A table composed with `<div>` tags.
     markup: |
-      <div class="spectrum-Table" role="grid">
+      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--sizeM" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
           <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
             Column Title
@@ -441,7 +588,7 @@ examples:
   - id: table
     name: Divs (quiet)
     markup: |
-      <div class="spectrum-Table spectrum-Table--quiet" role="grid">
+      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
           <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
             Column Title
@@ -489,7 +636,7 @@ examples:
     name: Body dropzone
     description: Tables that accept dropped content.
     markup: |
-      <div class="spectrum-Table" role="grid">
+      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--sizeM" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
           <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
             Column Title
@@ -536,7 +683,7 @@ examples:
   - id: table-body-dropzone-quiet
     name: Body dropzone (quiet)
     markup: |
-      <div class="spectrum-Table spectrum-Table--quiet" role="grid">
+      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
           <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
             Column Title
@@ -583,7 +730,7 @@ examples:
   - id: table-row-dropzone
     name: Row dropzone
     markup: |
-      <div class="spectrum-Table" role="grid">
+      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--sizeM" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
           <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
             Column Title
@@ -630,7 +777,7 @@ examples:
   - id: table-row-dropzone-quiet
     name: Row dropzone (quiet)
     markup: |
-      <div class="spectrum-Table spectrum-Table--quiet" role="grid">
+      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
           <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1" role="columnheader" aria-sort="descending" tabindex="0">
             Column Title
