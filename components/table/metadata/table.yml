@@ -197,7 +197,7 @@ examples:
           </tr>
         </tbody>
       </table>
-  - id: table
+  - id: table-multi-select
     name: Multi-select
     description: The standard multi-select table
     markup: |
@@ -317,7 +317,7 @@ examples:
           </tr>
         </tbody>
       </table>
-  - id: table
+  - id: table-quiet
     name: Quiet
     description: The quiet table
     markup: |
@@ -367,7 +367,7 @@ examples:
           </tr>
         </tbody>
       </table>
-  - id: table
+  - id: table-quiet-multi-select
     name: Quiet multi-select
     description: The quiet multi-select table
     markup: |
@@ -487,7 +487,7 @@ examples:
           </tr>
         </tbody>
       </table>
-  - id: table
+  - id: table-column-dividers
     name: Column dividers
     description: The standard table with column dividers
     markup: |
@@ -537,7 +537,7 @@ examples:
           </tr>
         </tbody>
       </table>
-  - id: table
+  - id: table-divs
     name: Divs
     description: A table composed with `<div>` tags.
     markup: |
@@ -585,7 +585,7 @@ examples:
           </div>
         </div>
       </div>
-  - id: table
+  - id: table-divs-quiet
     name: Divs (quiet)
     markup: |
       <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
