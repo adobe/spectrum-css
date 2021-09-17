@@ -126,23 +126,24 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                         span.spectrum-Menu-itemLabel RTL
                         svg.spectrum-Icon.spectrum-UIIcon-Checkmark100.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
                           use(xlink:href='#spectrum-css-icon-Checkmark100')
-                div.spectrum-CSS-switcherContainer
-                  label.spectrum-FieldLabel.spectrum-FieldLabel--left(for='switcher-theme') Vars Version
+                if (process.env.NODE_ENV === 'development')
+                  div.spectrum-CSS-switcherContainer
+                    label.spectrum-FieldLabel.spectrum-FieldLabel--left(for='switcher-theme') Vars Version
 
-                  button.spectrum-Picker.spectrum-Picker--quiet(aria-haspopup="true",id="switcher-vars-version")
-                    span.spectrum-Picker-label Default
-                    svg.spectrum-Icon.spectrum-UIIcon-ChevronDown100.spectrum-Picker-menuIcon(focusable="false" aria-hidden="true")
-                      use(xlink:href="#spectrum-css-icon-Chevron100")
-                  .spectrum-Popover.spectrum-Popover--bottom.spectrum-Picker-popover.spectrum-Picker-popover--quiet
-                    ul.spectrum-Menu(role='listbox')
-                      li.spectrum-Menu-item.is-selected(role='option' aria-selected='true' tabindex='0' value="default")
-                        span.spectrum-Menu-itemLabel Default
-                        svg.spectrum-Icon.spectrum-UIIcon-Checkmark100.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
-                          use(xlink:href='#spectrum-css-icon-Checkmark100')
-                      li.spectrum-Menu-item(role='option' tabindex='0' value="express")
-                        span.spectrum-Menu-itemLabel Express
-                        svg.spectrum-Icon.spectrum-UIIcon-Checkmark100.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
-                          use(xlink:href='#spectrum-css-icon-Checkmark100')
+                    button.spectrum-Picker.spectrum-Picker--quiet(aria-haspopup="true",id="switcher-vars-version")
+                      span.spectrum-Picker-label Default
+                      svg.spectrum-Icon.spectrum-UIIcon-ChevronDown100.spectrum-Picker-menuIcon(focusable="false" aria-hidden="true")
+                        use(xlink:href="#spectrum-css-icon-Chevron100")
+                    .spectrum-Popover.spectrum-Popover--bottom.spectrum-Picker-popover.spectrum-Picker-popover--quiet
+                      ul.spectrum-Menu(role='listbox')
+                        li.spectrum-Menu-item.is-selected(role='option' aria-selected='true' tabindex='0' value="default")
+                          span.spectrum-Menu-itemLabel Default
+                          svg.spectrum-Icon.spectrum-UIIcon-Checkmark100.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
+                            use(xlink:href='#spectrum-css-icon-Checkmark100')
+                        li.spectrum-Menu-item(role='option' tabindex='0' value="express")
+                          span.spectrum-Menu-itemLabel Express
+                          svg.spectrum-Icon.spectrum-UIIcon-Checkmark100.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
+                            use(xlink:href='#spectrum-css-icon-Checkmark100')
 
               header(id=component.slug).spectrum-CSSComponent-heading
                 h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--sizeXXXL.spectrum-Heading--serif
