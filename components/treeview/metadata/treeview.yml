@@ -32,7 +32,7 @@ examples:
     description: |
       Standard treeviews span the entire width of their parent container and are used within panels.
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -44,7 +44,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Design Files</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
             </li>
@@ -68,7 +68,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Group 2</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item is-open">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -76,7 +76,7 @@ examples:
                 </svg>
                 <span class="spectrum-TreeView-itemLabel">Group 3</span>
               </a>
-              <ul class="spectrum-TreeView">
+              <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                 <li class="spectrum-TreeView-item">
                   <a class="spectrum-TreeView-itemLink" href="#">
                     <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -84,7 +84,7 @@ examples:
                     </svg>
                     <span class="spectrum-TreeView-itemLabel">Group 4</span>
                   </a>
-                  <ul class="spectrum-TreeView">
+                  <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                     <li class="spectrum-TreeView-item">
                       <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 6</span></a>
                     </li>
@@ -110,7 +110,7 @@ examples:
     description: |
       A treeview with a selected item.
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -125,7 +125,7 @@ examples:
     description: |
       A treeview with quiet selection.
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--quiet" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--quiet" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -141,7 +141,7 @@ examples:
       Standalone treeviews are meant to be used outside of a panel.
       Items in standalone treeviews have rounded corners.
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--standalone" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--standalone" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -156,7 +156,7 @@ examples:
     description: |
       A standalone, quiet treeview.
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--quiet spectrum-TreeView--standalone" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--quiet spectrum-TreeView--standalone" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -170,7 +170,7 @@ examples:
     name: Folders & Files
     description: A nested treeview with folders and files.
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
           <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -181,7 +181,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Design Files</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -203,7 +203,7 @@ examples:
                 </svg>
                 <span class="spectrum-TreeView-itemLabel">Work in Progress</span>
               </a>
-              <ul class="spectrum-TreeView">
+              <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                 <li class="spectrum-TreeView-item is-open">
                   <a class="spectrum-TreeView-itemLink" href="#">
                     <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -214,7 +214,7 @@ examples:
                     </svg>
                     <span class="spectrum-TreeView-itemLabel">Branding</span>
                   </a>
-                  <ul class="spectrum-TreeView">
+                  <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                     <li class="spectrum-TreeView-item">
                       <a class="spectrum-TreeView-itemLink" href="#">
                         <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -236,7 +236,7 @@ examples:
                         </svg>
                         <span class="spectrum-TreeView-itemLabel">Explorations</span>
                       </a>
-                      <ul class="spectrum-TreeView">
+                      <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                         <li class="spectrum-TreeView-item">
                           <a class="spectrum-TreeView-itemLink" href="#">
                             <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Document">
@@ -289,7 +289,7 @@ examples:
     name: Thumbnail
     description: A treeview with Thumbnails.
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--thumbnail" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--thumbnail" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
           <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -301,7 +301,7 @@ examples:
             </div>
             <span class="spectrum-TreeView-itemLabel">Composition</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
@@ -326,7 +326,7 @@ examples:
     name: Thumbnail (quiet)
     description: A quiet treeview with Thumbnails.
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--thumbnail spectrum-TreeView--quiet" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--thumbnail spectrum-TreeView--quiet" style="width: 250px">
         <li class="spectrum-TreeView-item is-open">
           <a class="spectrum-TreeView-itemLink" href="#" style="width: 250px">
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -338,7 +338,7 @@ examples:
             </div>
             <span class="spectrum-TreeView-itemLabel">Composition</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <div class="spectrum-Thumbnail spectrum-TreeView-itemThumbnail">
@@ -362,7 +362,7 @@ examples:
   - id: treeview
     name: Disabled
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -374,7 +374,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Group 1</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
             </li>
@@ -398,7 +398,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Group 2</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item is-open">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -406,7 +406,7 @@ examples:
                 </svg>
                 <span class="spectrum-TreeView-itemLabel">Group 3</span>
               </a>
-              <ul class="spectrum-TreeView">
+              <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                 <li class="spectrum-TreeView-item">
                   <a class="spectrum-TreeView-itemLink" href="#">
                     <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -414,7 +414,7 @@ examples:
                     </svg>
                     <span class="spectrum-TreeView-itemLabel">Group 4</span>
                   </a>
-                  <ul class="spectrum-TreeView">
+                  <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                     <li class="spectrum-TreeView-item">
                       <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 6</span></a>
                     </li>
@@ -437,7 +437,7 @@ examples:
   - id: treeview
     name: Sections
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <div class="spectrum-TreeView-heading"><span class="spectrum-TreeView-itemLabel">Section 1</span></div>
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#">
@@ -446,7 +446,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Group 1</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
             </li>
@@ -470,7 +470,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Group 2</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item is-open">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -478,7 +478,7 @@ examples:
                 </svg>
                 <span class="spectrum-TreeView-itemLabel">Group 3</span>
               </a>
-              <ul class="spectrum-TreeView">
+              <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                 <li class="spectrum-TreeView-item">
                   <a class="spectrum-TreeView-itemLink" href="#">
                     <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -486,7 +486,7 @@ examples:
                     </svg>
                     <span class="spectrum-TreeView-itemLabel">Group 4</span>
                   </a>
-                  <ul class="spectrum-TreeView">
+                  <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                     <li class="spectrum-TreeView-item">
                       <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 6</span></a>
                     </li>
@@ -511,7 +511,7 @@ examples:
     description: |
       A treeview with an item that's a drop target.
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -525,7 +525,7 @@ examples:
     name: Icons
     description: A treeview with icons.
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#">
             <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Layers">
@@ -545,7 +545,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Group 1</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Layers">
@@ -592,7 +592,7 @@ examples:
             </svg>
             <span class="spectrum-TreeView-itemLabel">Group 2</span>
           </a>
-          <ul class="spectrum-TreeView">
+          <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
             <li class="spectrum-TreeView-item is-open">
               <a class="spectrum-TreeView-itemLink" href="#">
                 <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -603,7 +603,7 @@ examples:
                 </svg>
                 <span class="spectrum-TreeView-itemLabel">Group 3</span>
               </a>
-              <ul class="spectrum-TreeView">
+              <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                 <li class="spectrum-TreeView-item">
                   <a class="spectrum-TreeView-itemLink" href="#">
                     <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
@@ -614,7 +614,7 @@ examples:
                     </svg>
                     <span class="spectrum-TreeView-itemLabel">Group 4</span>
                   </a>
-                  <ul class="spectrum-TreeView">
+                  <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
                     <li class="spectrum-TreeView-item">
                       <a class="spectrum-TreeView-itemLink" href="#">
                         <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Layers">
@@ -648,7 +648,7 @@ examples:
       A treeview drawn without nesting, suitable for infinite scrolling.
       With this version of the treeview, you must manage the visibility of "child items" manually based on the open state of the "parent item."
     markup: |
-      <ul class="spectrum-TreeView" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1 with a long name that doesn't fit at all</span></a>
         </li>
@@ -718,5 +718,3 @@ examples:
           </a>
         </li>
       </ul>
-
-
