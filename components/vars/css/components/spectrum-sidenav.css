@@ -82,6 +82,9 @@
   --spectrum-sidenav-multilevel-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-sidenav-multilevel-item-touch-hit-top: var(--spectrum-global-dimension-static-size-25);
   --spectrum-sidenav-multilevel-item-indentation: var(--spectrum-global-dimension-size-150);
+  --spectrum-sidenav-multilevel-item-layout: row;
+  --spectrum-sidenav-multilevel-item-align-items: center;
+  --spectrum-sidenav-multilevel-item-text-decoration: none;
   --spectrum-sidenav-multilevel-main-item-indentation: 0;
   --spectrum-sidenav-multilevel-main-item-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-sidenav-multilevel-main-item-text-size: var(--spectrum-alias-font-size-default);
@@ -93,6 +96,9 @@
   --spectrum-sidenav-multilevel-main-item-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-sidenav-multilevel-main-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-sidenav-multilevel-main-item-touch-hit-top: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-sidenav-multilevel-main-item-layout: row;
+  --spectrum-sidenav-multilevel-main-item-align-items: center;
+  --spectrum-sidenav-multilevel-main-item-text-decoration: none;
   --spectrum-sidenav-multilevel-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-sidenav-multilevel-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-sidenav-multilevel-icon-padding-y: var(--spectrum-global-dimension-size-85);
@@ -190,6 +196,9 @@
   --spectrum-sidenav-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-sidenav-item-touch-hit-top: var(--spectrum-global-dimension-static-size-25);
   --spectrum-sidenav-item-indentation: 0;
+  --spectrum-sidenav-item-layout: row;
+  --spectrum-sidenav-item-align-items: center;
+  --spectrum-sidenav-item-text-decoration: none;
   --spectrum-sidenav-main-item-indentation: 0;
   --spectrum-sidenav-main-item-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-sidenav-main-item-text-size: var(--spectrum-alias-font-size-default);
@@ -201,6 +210,9 @@
   --spectrum-sidenav-main-item-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-sidenav-main-item-gap: var(--spectrum-global-dimension-size-50);
   --spectrum-sidenav-main-item-touch-hit-top: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-sidenav-main-item-layout: row;
+  --spectrum-sidenav-main-item-align-items: center;
+  --spectrum-sidenav-main-item-text-decoration: none;
   --spectrum-sidenav-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-sidenav-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-sidenav-icon-padding-y: var(--spectrum-global-dimension-size-85);

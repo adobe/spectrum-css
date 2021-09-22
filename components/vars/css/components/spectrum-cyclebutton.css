@@ -29,6 +29,7 @@
   --spectrum-cyclebutton-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
   --spectrum-cyclebutton-border-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
   --spectrum-cyclebutton-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-cyclebutton-hold-icon-render: no;
   --spectrum-cyclebutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-cyclebutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-40);
   --spectrum-cyclebutton-hold-icon-size: var(--spectrum-alias-ui-icon-cornertriangle-size-100);
@@ -38,9 +39,10 @@
   --spectrum-cyclebutton-icon-margin-bottom: 0;
   --spectrum-cyclebutton-icon-render: yes;
   --spectrum-cyclebutton-icon-order: 1;
+  --spectrum-cyclebutton-icon-type: icon;
   --spectrum-cyclebutton-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-cyclebutton-icon-gap: var(--spectrum-global-dimension-size-100);
-  --spectrum-cyclebutton-layout: row;
+  --spectrum-cyclebutton-layout: inline-row;
   --spectrum-cyclebutton-min-width: 0;
   --spectrum-cyclebutton-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-cyclebutton-height: var(--spectrum-global-dimension-size-400);

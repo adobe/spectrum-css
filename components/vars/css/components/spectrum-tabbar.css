@@ -28,6 +28,7 @@
   --spectrum-tabbar-primary-border-size: 1px;
   --spectrum-tabbar-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tabbar-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-tabbar-primary-item-icon-type: icon;
   --spectrum-tabbar-primary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-primary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-primary-item-text-size: var(--spectrum-global-dimension-static-font-size-50);
@@ -73,6 +74,7 @@
   --spectrum-tabbar-sidelabel-primary-border-size: 1px;
   --spectrum-tabbar-sidelabel-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-tabbar-sidelabel-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-tabbar-sidelabel-primary-item-icon-type: icon;
   --spectrum-tabbar-sidelabel-primary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-sidelabel-primary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-sidelabel-primary-item-text-size: var(--spectrum-global-dimension-static-font-size-150);
@@ -118,6 +120,7 @@
   --spectrum-tabbar-secondary-border-size: 1px;
   --spectrum-tabbar-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tabbar-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-tabbar-secondary-item-icon-type: icon;
   --spectrum-tabbar-secondary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-secondary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-secondary-item-text-size: var(--spectrum-global-dimension-static-font-size-50);
@@ -163,6 +166,7 @@
   --spectrum-tabbar-sidelabel-secondary-border-size: 1px;
   --spectrum-tabbar-sidelabel-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-tabbar-sidelabel-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-tabbar-sidelabel-secondary-item-icon-type: icon;
   --spectrum-tabbar-sidelabel-secondary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-sidelabel-secondary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-tabbar-sidelabel-secondary-item-text-size: var(--spectrum-global-dimension-static-font-size-150);

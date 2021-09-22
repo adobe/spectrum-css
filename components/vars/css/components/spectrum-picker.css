@@ -83,6 +83,7 @@
   --spectrum-picker-s-quiet-texticon-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-picker-s-quiet-texticon-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-picker-s-quiet-texticon-icon-type: icon;
   --spectrum-picker-s-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-picker-s-quiet-texticon-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-quiet-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -201,6 +202,7 @@
   --spectrum-picker-s-texticon-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-picker-s-texticon-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-picker-s-texticon-icon-type: icon;
   --spectrum-picker-s-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-picker-s-texticon-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -319,6 +321,7 @@
   --spectrum-picker-s-quiet-textonly-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-picker-s-quiet-textonly-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-picker-s-quiet-textonly-icon-type: icon;
   --spectrum-picker-s-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-picker-s-quiet-textonly-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-quiet-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -437,6 +440,7 @@
   --spectrum-picker-s-textonly-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-picker-s-textonly-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-picker-s-textonly-icon-type: icon;
   --spectrum-picker-s-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-picker-s-textonly-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -555,6 +559,7 @@
   --spectrum-picker-s-quiet-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-picker-s-quiet-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-quiet-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-picker-s-quiet-textthumbnail-icon-type: icon;
   --spectrum-picker-s-quiet-textthumbnail-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-picker-s-quiet-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-quiet-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -673,6 +678,7 @@
   --spectrum-picker-s-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-picker-s-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-picker-s-textthumbnail-icon-type: icon;
   --spectrum-picker-s-textthumbnail-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-picker-s-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-picker-s-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -792,6 +798,7 @@
   --spectrum-picker-m-quiet-texticon-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-picker-m-quiet-texticon-icon-padding-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-m-quiet-texticon-icon-type: icon;
   --spectrum-picker-m-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-m-quiet-texticon-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-quiet-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -911,6 +918,7 @@
   --spectrum-picker-m-texticon-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-picker-m-texticon-icon-padding-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-m-texticon-icon-type: icon;
   --spectrum-picker-m-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-m-texticon-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -1028,6 +1036,7 @@
   --spectrum-picker-m-quiet-textonly-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-picker-m-quiet-textonly-icon-padding-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-m-quiet-textonly-icon-type: icon;
   --spectrum-picker-m-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-m-quiet-textonly-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-quiet-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -1147,6 +1156,7 @@
   --spectrum-picker-m-textonly-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-picker-m-textonly-icon-padding-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-m-textonly-icon-type: icon;
   --spectrum-picker-m-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-m-textonly-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -1266,6 +1276,7 @@
   --spectrum-picker-m-quiet-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-picker-m-quiet-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-quiet-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-m-quiet-textthumbnail-icon-type: icon;
   --spectrum-picker-m-quiet-textthumbnail-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-m-quiet-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-quiet-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -1385,6 +1396,7 @@
   --spectrum-picker-m-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-picker-m-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-m-textthumbnail-icon-type: icon;
   --spectrum-picker-m-textthumbnail-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-m-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-m-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -1501,6 +1513,7 @@
   --spectrum-picker-l-quiet-texticon-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-picker-l-quiet-texticon-icon-padding-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-picker-l-quiet-texticon-icon-type: icon;
   --spectrum-picker-l-quiet-texticon-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -1618,6 +1631,7 @@
   --spectrum-picker-l-texticon-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-picker-l-texticon-icon-padding-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-picker-l-texticon-icon-type: icon;
   --spectrum-picker-l-texticon-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -1735,6 +1749,7 @@
   --spectrum-picker-l-quiet-textonly-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-picker-l-quiet-textonly-icon-padding-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-picker-l-quiet-textonly-icon-type: icon;
   --spectrum-picker-l-quiet-textonly-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -1852,6 +1867,7 @@
   --spectrum-picker-l-textonly-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-picker-l-textonly-icon-padding-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-picker-l-textonly-icon-type: icon;
   --spectrum-picker-l-textonly-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -1969,6 +1985,7 @@
   --spectrum-picker-l-quiet-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-picker-l-quiet-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-picker-l-quiet-textthumbnail-icon-type: icon;
   --spectrum-picker-l-quiet-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-quiet-textthumbnail-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -2086,6 +2103,7 @@
   --spectrum-picker-l-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-picker-l-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-picker-l-textthumbnail-icon-type: icon;
   --spectrum-picker-l-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-l-textthumbnail-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -2204,6 +2222,7 @@
   --spectrum-picker-xl-quiet-texticon-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-picker-xl-quiet-texticon-icon-padding-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-xl-quiet-texticon-icon-type: icon;
   --spectrum-picker-xl-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-picker-xl-quiet-texticon-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-quiet-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -2323,6 +2342,7 @@
   --spectrum-picker-xl-texticon-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-picker-xl-texticon-icon-padding-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-xl-texticon-icon-type: icon;
   --spectrum-picker-xl-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-picker-xl-texticon-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -2442,6 +2462,7 @@
   --spectrum-picker-xl-quiet-textonly-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-picker-xl-quiet-textonly-icon-padding-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-xl-quiet-textonly-icon-type: icon;
   --spectrum-picker-xl-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-picker-xl-quiet-textonly-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-quiet-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -2561,6 +2582,7 @@
   --spectrum-picker-xl-textonly-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-picker-xl-textonly-icon-padding-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-xl-textonly-icon-type: icon;
   --spectrum-picker-xl-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-picker-xl-textonly-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -2680,6 +2702,7 @@
   --spectrum-picker-xl-quiet-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-picker-xl-quiet-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-quiet-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-xl-quiet-textthumbnail-icon-type: icon;
   --spectrum-picker-xl-quiet-textthumbnail-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-picker-xl-quiet-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-quiet-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -2799,6 +2822,7 @@
   --spectrum-picker-xl-textthumbnail-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-picker-xl-textthumbnail-icon-padding-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-textthumbnail-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-xl-textthumbnail-icon-type: icon;
   --spectrum-picker-xl-textthumbnail-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-picker-xl-textthumbnail-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-picker-xl-textthumbnail-icon-margin-bottom: var(--spectrum-global-dimension-size-160);

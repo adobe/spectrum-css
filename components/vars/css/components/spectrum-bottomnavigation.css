@@ -27,6 +27,7 @@
   --spectrum-bottomnavigation-primary-elevation: 8dp;
   --spectrum-bottomnavigation-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-bottomnavigation-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-bottomnavigation-primary-item-icon-type: icon;
   --spectrum-bottomnavigation-primary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-primary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-primary-item-text-size: var(--spectrum-global-dimension-static-font-size-75);
@@ -71,6 +72,7 @@
   --spectrum-bottomnavigation-sidelabel-primary-elevation: 8dp;
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-bottomnavigation-sidelabel-primary-item-icon-type: icon;
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-sidelabel-primary-item-text-size: var(--spectrum-global-dimension-static-font-size-150);
@@ -115,6 +117,7 @@
   --spectrum-bottomnavigation-secondary-elevation: 8dp;
   --spectrum-bottomnavigation-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-bottomnavigation-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-bottomnavigation-secondary-item-icon-type: icon;
   --spectrum-bottomnavigation-secondary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-secondary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-secondary-item-text-size: var(--spectrum-global-dimension-static-font-size-75);
@@ -159,6 +162,7 @@
   --spectrum-bottomnavigation-sidelabel-secondary-elevation: 8dp;
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
+  --spectrum-bottomnavigation-sidelabel-secondary-item-icon-type: icon;
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-bottomnavigation-sidelabel-secondary-item-text-size: var(--spectrum-global-dimension-static-font-size-150);

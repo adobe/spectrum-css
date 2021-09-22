@@ -161,6 +161,7 @@
   --spectrum-textfield-s-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-s-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-s-quiet-texticon-icon-type: icon;
   --spectrum-textfield-s-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-quiet-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-75);
@@ -340,6 +341,7 @@
   --spectrum-textfield-s-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-s-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-s-quiet-textonly-icon-type: icon;
   --spectrum-textfield-s-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-quiet-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-75);
@@ -519,6 +521,7 @@
   --spectrum-textfield-s-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-texticon-icon-margin-top: 0;
   --spectrum-textfield-s-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-s-texticon-icon-type: icon;
   --spectrum-textfield-s-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-75);
@@ -698,6 +701,7 @@
   --spectrum-textfield-s-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-textonly-icon-margin-top: 0;
   --spectrum-textfield-s-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-s-textonly-icon-type: icon;
   --spectrum-textfield-s-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-75);
@@ -878,6 +882,7 @@
   --spectrum-textfield-m-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-m-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-m-quiet-texticon-icon-type: icon;
   --spectrum-textfield-m-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-quiet-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-100);
@@ -1058,6 +1063,7 @@
   --spectrum-textfield-m-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-m-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-m-quiet-textonly-icon-type: icon;
   --spectrum-textfield-m-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-quiet-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-100);
@@ -1238,6 +1244,7 @@
   --spectrum-textfield-m-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-texticon-icon-margin-top: 0;
   --spectrum-textfield-m-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-m-texticon-icon-type: icon;
   --spectrum-textfield-m-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-100);
@@ -1417,6 +1424,7 @@
   --spectrum-textfield-m-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-textonly-icon-margin-top: 0;
   --spectrum-textfield-m-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-m-textonly-icon-type: icon;
   --spectrum-textfield-m-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-100);
@@ -1596,6 +1604,7 @@
   --spectrum-textfield-l-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-l-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-l-quiet-texticon-icon-type: icon;
   --spectrum-textfield-l-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-quiet-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-200);
   --spectrum-textfield-l-quiet-texticon-success-icon-width: var(--spectrum-alias-ui-icon-checkmark-size-200);
@@ -1774,6 +1783,7 @@
   --spectrum-textfield-l-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-l-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-l-quiet-textonly-icon-type: icon;
   --spectrum-textfield-l-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-quiet-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-200);
   --spectrum-textfield-l-quiet-textonly-success-icon-width: var(--spectrum-alias-ui-icon-checkmark-size-200);
@@ -1952,6 +1962,7 @@
   --spectrum-textfield-l-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-texticon-icon-margin-top: 0;
   --spectrum-textfield-l-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-l-texticon-icon-type: icon;
   --spectrum-textfield-l-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-200);
   --spectrum-textfield-l-texticon-success-icon-width: var(--spectrum-alias-ui-icon-checkmark-size-200);
@@ -2130,6 +2141,7 @@
   --spectrum-textfield-l-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-textonly-icon-margin-top: 0;
   --spectrum-textfield-l-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-l-textonly-icon-type: icon;
   --spectrum-textfield-l-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-200);
   --spectrum-textfield-l-textonly-success-icon-width: var(--spectrum-alias-ui-icon-checkmark-size-200);
@@ -2309,6 +2321,7 @@
   --spectrum-textfield-xl-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-xl-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-quiet-texticon-icon-type: icon;
   --spectrum-textfield-xl-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-quiet-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-300);
@@ -2489,6 +2502,7 @@
   --spectrum-textfield-xl-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-xl-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-quiet-textonly-icon-type: icon;
   --spectrum-textfield-xl-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-quiet-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-300);
@@ -2669,6 +2683,7 @@
   --spectrum-textfield-xl-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-texticon-icon-margin-top: 0;
   --spectrum-textfield-xl-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-texticon-icon-type: icon;
   --spectrum-textfield-xl-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-texticon-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-300);
@@ -2849,6 +2864,7 @@
   --spectrum-textfield-xl-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-textonly-icon-margin-top: 0;
   --spectrum-textfield-xl-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-textonly-icon-type: icon;
   --spectrum-textfield-xl-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-textonly-success-icon-height: var(--spectrum-alias-ui-icon-checkmark-size-300);
