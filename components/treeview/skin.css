@@ -26,9 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
 
   /*--spectrum-treeview-m-item-text-color-down: var(--spectrum-alias-text-color-down);*/ /* not used */
-  --spectrum-treeview-m-item-text-color-focus: var(--spectrum-alias-text-color-down);
   --spectrum-treeview-m-item-text-color-selected: var(--spectrum-alias-text-color-selected-neutral);
-  --spectrum-treeview-m-item-text-color-disabled: var(--spectrum-alias-text-color-disabled);
 }
 
 .spectrum-TreeView-item {
@@ -106,7 +104,7 @@ governing permissions and limitations under the License.
   }
 
   &:focus-ring {
-    color: var(--spectrum-treeview-m-item-text-color-focus);
+    color: var(--spectrum-treeview-m-item-text-color-mouse-focus);
 
     &::before {
       background-color: var(--spectrum-treeview-m-item-background-color-key-focus);
