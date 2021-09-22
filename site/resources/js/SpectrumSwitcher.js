@@ -16,6 +16,7 @@ function SpectrumSwitcher(options) {
   this._theme = options.theme || 'light';
   this._scale = options.scale || 'medium';
   this._direction = options.direction || 'ltr';
+  this._varsVersion = options.varsVersion || 'default';
   this._callback = options.callback || null;
 
   document.addEventListener('keydown', function(event) {
@@ -30,6 +31,9 @@ function SpectrumSwitcher(options) {
       }
       else if (value = SpectrumSwitcher.DirectionKeys[event.key]) {
         property = 'direction';
+      }
+      else if (value = SpectrumSwitcher.VarsVersionKeys[event.key]) {
+        property = 'varsVersion';
       }
 
       this[property] = value;
@@ -60,6 +64,16 @@ SpectrumSwitcher.Direction = [
   'ltr',
   'rtl'
 ];
+
+SpectrumSwitcher.VarsVersion = [
+  'default',
+  'express'
+];
+
+SpectrumSwitcher.VarsVersionKeys = {
+  'd': 'default',
+  'e': 'express',
+};
 
 SpectrumSwitcher.ThemeKeys = {
   '1': 'lightest',
@@ -112,6 +126,33 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'theme', {
     return this._theme;
   }
 });
+
+Object.defineProperty(SpectrumSwitcher.prototype, 'varsVersion', {
+  set: function(varsVersion) {
+    // default and express path names
+    const defaultName = 'vars';
+    const expressName = 'expressvars';
+
+    // if the selection is 'default', switch the path to be 'express', and vice-versa
+    const pathNameToUpdate = (varsVersion === 'default') ? expressName : defaultName;
+
+    // get all relevant stylesheets that need to be switched
+    const styleSheets = document.querySelectorAll(`link[href*="/components/${pathNameToUpdate}/"]`);
+
+    // update each relevant stylesheet with the selected path
+    [...styleSheets].map(sheet => {
+      if (pathNameToUpdate === defaultName) {
+        sheet.setAttribute('href', sheet.href.replaceAll(defaultName, expressName));
+      } else {
+        sheet.setAttribute('href', sheet.href.replaceAll(expressName, defaultName));
+      }
+    });
+    this._varsVersion = varsVersion;
+  },
+  get: function() {
+    return this._varsVersion;
+  }
+})
 
 Object.defineProperty(SpectrumSwitcher.prototype, 'scale', {
   set: function(scale) {

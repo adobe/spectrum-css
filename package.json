@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "gulp -LL",
-    "dev": "gulp dev",
+    "dev": "NODE_ENV=development gulp dev",
     "clean": "gulp clean",
     "start": "npm run dev",
     "ci-all": "npm run build",
@@ -40,10 +40,11 @@
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/spectrum-css-workflow-icons": "^1.1.0",
-    "@adobe/spectrum-tokens": "^6.1.1",
+    "@adobe/spectrum-express-tokens": "^1.0.0-beta.2",
+    "@adobe/spectrum-tokens": "^7.0.0-beta.29",
     "@commitlint/cli": "^8.3.3",
     "@commitlint/config-conventional": "^8.3.3",
-    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.21",
+    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.29",
     "audit-ci": "^2.0.1",
     "backstopjs-spectrum": "^5.0.14",
     "del": "^5.1.0",
@@ -73,6 +74,7 @@
     "minimist": "^1.2.5",
     "is-url-superb": "^4.0.0",
     "postcss-values-parser": "^4.0.0",
+    "xmlhttprequest-ssl": "^1.6.2",
     "y18n": "^5.0.5"
   },
   "workspaces": [

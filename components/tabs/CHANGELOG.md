@@ -3,9 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.2...@spectrum-css/tabs@3.0.3)
+<a name="3.1.0-alpha.1"></a>
+# 3.1.0-alpha.1
+🗓 2021-08-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.1.0-alpha.0...@spectrum-css/tabs@3.1.0-alpha.1)
+
+### 🐛 Bug fixes
+
+* **tabs:** vertically center tab item text in vertical tabs ([c7c0b29](https://github.com/adobe/spectrum-css/commit/c7c0b29))
+
+
+
+
+
+<a name="3.1.0-alpha.0"></a>
+# 3.1.0-alpha.0
+🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.4...@spectrum-css/tabs@3.1.0-alpha.0)
+
+### ✨ Features
+
+* **tabs:** add t-shirt size classes and styles ([4b818f2](https://github.com/adobe/spectrum-css/commit/4b818f2))
+
+
+### 🐛 Bug fixes
+
+* **tabs:** remove improper indentation for horizontal tabs ([79b7a82](https://github.com/adobe/spectrum-css/commit/79b7a82)), closes [#1107](https://github.com/adobe/spectrum-css/issues/1107)
+* switched to dna-7.0 token names ([7e848dc](https://github.com/adobe/spectrum-css/commit/7e848dc))
+
+
+
+
+
+<a name="3.0.3-alpha.4"></a>
+## 3.0.3-alpha.4
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.3...@spectrum-css/tabs@3.0.3-alpha.4)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-07-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.2...@spectrum-css/tabs@3.0.3-alpha.3)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.0.3-alpha.2"></a>
+## 3.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.1...@spectrum-css/tabs@3.0.3-alpha.2)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.0.3-alpha.1"></a>
+## 3.0.3-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.3-alpha.0...@spectrum-css/tabs@3.0.3-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/tabs
+
+
+
+
+
+<a name="3.0.3-alpha.0"></a>
+## 3.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.2...@spectrum-css/tabs@3.0.3-alpha.0)
 
 **Note:** Version bump only for package @spectrum-css/tabs
 

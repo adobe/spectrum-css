@@ -10,6 +10,24 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/components/spectrum-card.css";
+
+.spectrum-Card--sizeS {
+  @remapvars {
+    find: /--spectrum-card(.*)-s-/;
+    filter: color;
+    replace: --spectrum-card$1-;
+  }
+}
+
+.spectrum-Card--sizeM {
+  @remapvars {
+    find: /--spectrum-card(.*)-m-/;
+    filter: color;
+    replace: --spectrum-card$1-;
+  }
+}
+
 .spectrum-Card {
   position: relative;
 
@@ -17,7 +35,7 @@ governing permissions and limitations under the License.
   flex-direction: column;
 
   box-sizing: border-box;
-  min-inline-size: var(--spectrum-card-min-width);
+  min-inline-size: var(--spectrum-card-min-width); /* setting min-width incase a product overrides width */
 
   border: var(--spectrum-card-border-size) solid transparent;
   border-radius: var(--spectrum-card-border-radius);
@@ -113,7 +131,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-content {
   display: flex;
-  block-size: var(--spectrum-card-body-content-height);
+  block-size: var(--spectrum-card-body-content-min-height);
   margin-block-start: var(--spectrum-card-body-content-margin-top);
 }
 
@@ -160,15 +178,14 @@ governing permissions and limitations under the License.
 
 .spectrum-Card--quiet {
   .spectrum-Card-preview {
-    min-block-size: var(--spectrum-card-quiet-min-size);
+    min-block-size: var(--spectrum-card-quiet-min-height);
   }
 }
 
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
-  inline-size: 100%;
   block-size: 100%;
-  min-inline-size: var(--spectrum-card-quiet-min-size);
+  min-inline-size: var(--spectrum-card-quiet-min-width);
   border-width: 0;
   border-radius: 0;
   overflow: visible;
@@ -212,29 +229,6 @@ governing permissions and limitations under the License.
 
   .spectrum-Card-body {
     padding: 0;
-  }
-}
-
-.spectrum-Card--small {
-  min-inline-size: var(--spectrum-card-quiet-small-min-size);
-
-  .spectrum-Card-quickActions {
-    inset-inline-start: var(--spectrum-card-quiet-small-checkbox-margin);
-    inset-block-start: var(--spectrum-card-quiet-small-checkbox-margin);
-  }
-
-  .spectrum-Card-preview {
-    padding: var(--spectrum-card-quiet-small-preview-padding);
-    min-block-size: var(--spectrum-card-quiet-small-min-size);
-  }
-
-  .spectrum-Card-header {
-    margin-block-start: var(--spectrum-card-quiet-small-body-margin-top);
-    block-size: var(--spectrum-card-quiet-small-body-header-height);
-  }
-
-  .spectrum-Card-title {
-    font-size: var(--spectrum-card-quiet-small-title-text-size);
   }
 }
 

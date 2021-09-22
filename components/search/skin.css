@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Search-icon {
-  color: var(--spectrum-textfield-m-icon-color);
+  color: var(--spectrum-textfield-m-texticon-icon-color);
 }
 
 .spectrum-Search-input {
@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
 
   &:disabled {
     & ~ .spectrum-Search-icon {
-      color: var(--spectrum-textfield-m-text-color-disabled);
+      color: var(--spectrum-textfield-m-texticon-text-color-disabled);
     }
   }
 }

@@ -1,0 +1,23 @@
+name: Badge
+SpectrumSiteSlug: https://spectrum.adobe.com/page/badge/
+examples:
+  - id: badge
+    name: Standard
+    markup: |
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">Neutral</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--informative">Informative</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--positive">Positive</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--negative">Negative</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--fuchsia">Fuchsia</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--indigo">Indigo</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--magenta">Magenta</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--purple">Purple</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--seafoam">Seafoam</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--yellow">Yellow</span>
+  - id: badge
+    name: Sizing
+    markup: |
+      <span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">Small</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">Medium</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeL spectrum-Badge--neutral">Large</span>
+      <span class="spectrum-Badge spectrum-Badge--sizeXL spectrum-Badge--neutral">Extra Large</span>

@@ -16,8 +16,8 @@ governing permissions and limitations under the License.
   @inherit: %spectrum-BaseButton;
   @inherit: %spectrum-ButtonWithFocusRing;
 
-  inline-size: var(--spectrum-clearbutton-medium-width);
-  block-size: var(--spectrum-clearbutton-medium-height);
+  inline-size: var(--spectrum-clearbutton-m-width);
+  block-size: var(--spectrum-clearbutton-m-height);
 
   border-radius: 100%;
 
@@ -52,6 +52,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ClearButton--small {
-  inline-size: var(--spectrum-clearbutton-small-width);
-  block-size: var(--spectrum-clearbutton-small-height);
+  inline-size: var(--spectrum-clearbutton-s-width);
+  block-size: var(--spectrum-clearbutton-s-height);
 }

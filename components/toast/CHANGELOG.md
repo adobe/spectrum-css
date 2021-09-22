@@ -3,11 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@3.0.2...@spectrum-css/toast@3.0.3)
+<a name="4.0.0-alpha.3"></a>
+# 4.0.0-alpha.3
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.0.0-alpha.2...@spectrum-css/toast@4.0.0-alpha.3)
 
 **Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="4.0.0-alpha.2"></a>
+# 4.0.0-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.0.0-alpha.1...@spectrum-css/toast@4.0.0-alpha.2)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="4.0.0-alpha.1"></a>
+# 4.0.0-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.0.0-alpha.0...@spectrum-css/toast@4.0.0-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="4.0.0-alpha.0"></a>
+# 4.0.0-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@3.0.2...@spectrum-css/toast@4.0.0-alpha.0)
+
+### 🐛 Bug fixes
+
+* removed warning variant for toast to align with DNA and design ([b679f0b](https://github.com/adobe/spectrum-css/commit/b679f0b))
+
+
+### 🛑 BREAKING CHANGES
+
+* spectrum-Toast--warning has been removed
 
 
 

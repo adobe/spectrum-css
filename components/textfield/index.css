@@ -20,36 +20,22 @@ governing permissions and limitations under the License.
     replace: --spectrum-textfield$1;
   }
 
-  /* pull in quiet vars with incorrect property ordering */
-  @remapvars {
-    find: /--spectrum-textfield-quiet-m(.*)/;
-    filter: color;
-    replace: --spectrum-textfield-quiet$1;
-  }
-
   @remapvars {
     find: /--spectrum-textarea-m(.*)/;
     filter: color;
     replace: --spectrum-textarea$1;
   }
 
-  /* pull in quiet vars with incorrect property ordering */
-  @remapvars {
-    find: /--spectrum-textarea-quiet-m(.*)/;
-    filter: color;
-    replace: --spectrum-textarea-quiet$1;
-  }
-
   /* todo: unclear how to use --spectrum-textfield-m-text-padding-top and friends */
-  --spectrum-textfield-padding-top: 3px;
-  --spectrum-textfield-padding-bottom: 5px;
+  --spectrum-textfield-texticon-padding-top: 3px;
+  --spectrum-textfield-texticon-padding-bottom: 5px;
 
   /* todo: DNA uses incorrect font family "Adobe Clean" */
-  --spectrum-textfield-text-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-textfield-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
 
   /* todo: add to DNA */
-  --spectrum-textfield-icon-gap: var(--spectrum-global-dimension-size-65);
-  --spectrum-textfield-quiet-icon-gap: var(--spectrum-global-dimension-size-75);
+  --spectrum-textfield-texticon-icon-gap: var(--spectrum-global-dimension-size-65);
+  --spectrum-textfield-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-75);
 
   /* height is incorrectly named in DNA, should be min-height */
   --spectrum-textarea-min-height: var(--spectrum-textarea-height);
@@ -63,31 +49,31 @@ governing permissions and limitations under the License.
 .spectrum-Textfield {
   display: inline-flex;
   position: relative;
-  min-inline-size: var(--spectrum-textfield-min-width);
+  min-inline-size: var(--spectrum-textfield-texticon-min-width);
   inline-size: var(--spectrum-alias-single-line-width);
 
   &.spectrum-Textfield--quiet.spectrum-Textfield--multiline
     .spectrum-Textfield-input {
-    block-size: var(--spectrum-textfield-height);
-    min-block-size: var(--spectrum-textfield-height);
+    block-size: var(--spectrum-textfield-texticon-height);
+    min-block-size: var(--spectrum-textfield-texticon-height);
   }
 }
 
 .spectrum-Textfield-input {
   /* box */
   box-sizing: border-box;
-  border: var(--spectrum-textfield-border-size) solid;
-  border-radius: var(--spectrum-textfield-border-radius);
+  border: var(--spectrum-textfield-texticon-border-size) solid;
+  border-radius: var(--spectrum-textfield-texticon-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: var(--spectrum-textfield-padding-top)
-    var(--spectrum-textfield-padding-right) var(--spectrum-textfield-padding-bottom)
-    calc(var(--spectrum-textfield-padding-left) - 1px);
+  padding: var(--spectrum-textfield-texticon-padding-top)
+    var(--spectrum-textfield-texticon-padding-right) var(--spectrum-textfield-texticon-padding-bottom)
+    calc(var(--spectrum-textfield-texticon-padding-left) + 1px);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
   inline-size: 100%;
-  block-size: var(--spectrum-textfield-height);
+  block-size: var(--spectrum-textfield-texticon-height);
 
   vertical-align: top; /* used to align them correctly in forms. */
 
@@ -98,9 +84,9 @@ governing permissions and limitations under the License.
   overflow: visible;
 
   /* Change the input font styles in all browsers */
-  font-family: var(--spectrum-textfield-text-font-family);
-  font-size: var(--spectrum-textfield-text-size);
-  line-height: var(--spectrum-textfield-text-line-height);
+  font-family: var(--spectrum-textfield-texticon-text-font-family);
+  font-size: var(--spectrum-textfield-texticon-text-size);
+  line-height: var(--spectrum-textfield-texticon-text-line-height);
   text-overflow: ellipsis;
 
   transition: border-color var(--spectrum-global-animation-duration-100)
@@ -121,8 +107,8 @@ governing permissions and limitations under the License.
   -moz-appearance: textfield;
 
   &::placeholder {
-    font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
-    font-style: var(--spectrum-textfield-placeholder-text-font-style);
+    font-weight: var(--spectrum-textfield-texticon-placeholder-text-font-weight);
+    font-style: var(--spectrum-textfield-texticon-placeholder-text-font-style);
     transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
     opacity: 1;
   }
@@ -131,8 +117,8 @@ governing permissions and limitations under the License.
    * not single : which is what autoprefixer will add
    */
   &::-ms-input-placeholder {
-    font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
-    font-style: var(--spectrum-textfield-placeholder-text-font-style);
+    font-weight: var(--spectrum-textfield-texticon-placeholder-text-font-weight);
+    font-style: var(--spectrum-textfield-texticon-placeholder-text-font-style);
     transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
     opacity: 1;
   }
@@ -151,7 +137,7 @@ governing permissions and limitations under the License.
 
   &:hover {
     &::placeholder {
-      font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
+      font-weight: var(--spectrum-textfield-texticon-placeholder-text-font-weight);
     }
   }
 
@@ -162,7 +148,7 @@ governing permissions and limitations under the License.
     /* The opacity must be set to 1 */
     opacity: 1;
     &::placeholder {
-      font-weight: var(--spectrum-textfield-placeholder-text-font-weight);
+      font-weight: var(--spectrum-textfield-texticon-placeholder-text-font-weight);
     }
   }
 
@@ -188,17 +174,17 @@ governing permissions and limitations under the License.
 
   .spectrum-Textfield.is-valid & {
     padding-inline-end: calc(
-      var(--spectrum-textfield-padding-right) +
-        var(--spectrum-icon-checkmark-medium-width) +
-        var(--spectrum-textfield-success-icon-margin-left)
+      var(--spectrum-textfield-texticon-padding-right) +
+        var(--spectrum-textfield-texticon-success-icon-width) +
+        var(--spectrum-textfield-texticon-success-icon-margin-left)
     );
   }
 
   .spectrum-Textfield.is-invalid & {
     padding-inline-end: calc(
-      var(--spectrum-textfield-padding-right) +
-        var(--spectrum-icon-alert-medium-width) +
-        var(--spectrum-textfield-error-icon-margin-left)
+      var(--spectrum-textfield-texticon-padding-right) +
+        var(--spectrum-textfield-texticon-invalid-icon-width) +
+        var(--spectrum-textfield-texticon-invalid-icon-margin-left)
     );
   }
 
@@ -215,14 +201,14 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Textfield--quiet & {
-    border-radius: var(--spectrum-textfield-quiet-border-radius);
+    border-radius: var(--spectrum-textfield-quiet-texticon-border-radius);
     border-block-start-width: 0;
-    border-block-end-width: var(--spectrum-textfield-quiet-border-size);
+    border-block-end-width: var(--spectrum-textfield-quiet-texticon-border-size);
     border-inline-width: 0;
 
     /* removes the side padding to align the text properly */
-    padding-inline-start: var(--spectrum-textfield-quiet-padding-left);
-    padding-inline-end: var(--spectrum-textfield-quiet-padding-right);
+    padding-inline-start: var(--spectrum-textfield-quiet-texticon-padding-left);
+    padding-inline-end: var(--spectrum-textfield-quiet-texticon-padding-right);
 
     /* Treat all quiet inputs and textareas the same */
     resize: none;
@@ -230,14 +216,14 @@ governing permissions and limitations under the License.
 
     .is-invalid& {
       padding-inline-end: calc(
-        var(--spectrum-icon-alert-medium-width) +
-          var(--spectrum-textfield-quiet-error-icon-margin-left)
+        var(--spectrum-textfield-texticon-invalid-icon-width) +
+          var(--spectrum-textfield-quiet-texticon-invalid-icon-margin-left)
       );
     }
     .is-valid& {
       padding-inline-end: calc(
-        var(--spectrum-icon-checkmark-medium-width) +
-          var(--spectrum-textfield-quiet-success-icon-margin-left)
+        var(--spectrum-textfield-texticon-success-icon-width) +
+          var(--spectrum-textfield-quiet-texticon-success-icon-margin-left)
       );
     }
   }
@@ -252,14 +238,14 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Textfield.is-invalid & {
-    inline-size: var(--spectrum-textfield-error-icon-width);
-    block-size: var(--spectrum-textfield-error-icon-height);
+    inline-size: var(--spectrum-textfield-texticon-invalid-icon-width);
+    block-size: var(--spectrum-textfield-texticon-invalid-icon-height);
     inset-block-end: calc(
-      calc(var(--spectrum-textfield-height) / 2) -
-        calc(var(--spectrum-textfield-error-icon-height) / 2)
+      calc(var(--spectrum-textfield-texticon-height) / 2) -
+        calc(var(--spectrum-textfield-texticon-invalid-icon-height) / 2)
     );
 
-    inset-inline-end: var(--spectrum-textfield-error-icon-margin-left);
+    inset-inline-end: var(--spectrum-textfield-texticon-invalid-icon-margin-left);
 
     .spectrum-Textfield--quiet& {
       inset-inline-end: 0;
@@ -267,13 +253,13 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Textfield.is-valid & {
-    inline-size: var(--spectrum-textfield-success-icon-width);
-    block-size: var(--spectrum-textfield-success-icon-height);
+    inline-size: var(--spectrum-textfield-texticon-success-icon-width);
+    block-size: var(--spectrum-textfield-texticon-success-icon-height);
     inset-block-end: calc(
-      calc(var(--spectrum-textfield-height) / 2) -
-        calc(var(--spectrum-textfield-success-icon-height) / 2)
+      calc(var(--spectrum-textfield-texticon-height) / 2) -
+        calc(var(--spectrum-textfield-texticon-success-icon-height) / 2)
     );
-    inset-inline-end: var(--spectrum-textfield-success-icon-margin-left);
+    inset-inline-end: var(--spectrum-textfield-texticon-success-icon-margin-left);
 
     .spectrum-Textfield--quiet& {
       inset-inline-end: 0;
@@ -288,9 +274,9 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-alias-workflow-icon-size-m);
   inline-size: var(--spectrum-alias-workflow-icon-size-m);
   /* todo what token is this? */
-  inset-inline-start: var(--spectrum-textfield-error-icon-margin-left);
+  inset-inline-start: var(--spectrum-textfield-texticon-invalid-icon-margin-left);
   inset-block-start: calc(
-    var(--spectrum-textfield-height) / 2 -
+    var(--spectrum-textfield-texticon-height) / 2 -
       var(--spectrum-alias-workflow-icon-size-m) / 2
   );
 
@@ -301,7 +287,7 @@ governing permissions and limitations under the License.
     & ~ .spectrum-Textfield-input {
       padding-inline-start: calc(
         var(--spectrum-alias-workflow-icon-size-m) +
-          var(--spectrum-textfield-quiet-icon-gap)
+          var(--spectrum-textfield-quiet-texticon-icon-gap)
       );
     }
   }
@@ -311,9 +297,9 @@ governing permissions and limitations under the License.
     /* Use padding instead of text-indent so long strings don't overlap the icon */
     /* todo what token is this? */
     padding-inline-start: calc(
-      var(--spectrum-textfield-error-icon-margin-left) +
+      var(--spectrum-textfield-texticon-invalid-icon-margin-left) +
         var(--spectrum-alias-workflow-icon-size-m) +
-        var(--spectrum-textfield-icon-gap)
+        var(--spectrum-textfield-texticon-icon-gap)
     );
   }
 }
@@ -321,8 +307,8 @@ governing permissions and limitations under the License.
 .spectrum-Textfield--multiline {
   .spectrum-Textfield-icon {
     & ~ .spectrum-Textfield-input {
-      block-size: var(--spectrum-textfield-height);
-      min-block-size: var(--spectrum-textfield-height);
+      block-size: var(--spectrum-textfield-texticon-height);
+      min-block-size: var(--spectrum-textfield-texticon-height);
     }
   }
 }

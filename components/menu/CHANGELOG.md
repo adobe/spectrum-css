@@ -3,11 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.2...@spectrum-css/menu@3.0.3)
+<a name="3.0.3-alpha.5"></a>
+## 3.0.3-alpha.5
+🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.3-alpha.4...@spectrum-css/menu@3.0.3-alpha.5)
+
+### 🐛 Bug fixes
+
+* adjust menu item selectable padding again ([034a2df](https://github.com/adobe/spectrum-css/commit/034a2df))
+
+
+
+
+
+<a name="3.0.3-alpha.4"></a>
+## 3.0.3-alpha.4
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.3-alpha.3...@spectrum-css/menu@3.0.3-alpha.4)
+
+### 🐛 Bug fixes
+
+* added padding to unselected listitem back ([f167013](https://github.com/adobe/spectrum-css/commit/f167013))
+
+
+
+
+
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-07-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.3-alpha.2...@spectrum-css/menu@3.0.3-alpha.3)
+
+### 🐛 Bug fixes
+
+* moved menu item selected checkmark back ([1fa03a6](https://github.com/adobe/spectrum-css/commit/1fa03a6))
+
+
+
+
+
+<a name="3.0.3-alpha.2"></a>
+## 3.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.3-alpha.1...@spectrum-css/menu@3.0.3-alpha.2)
 
 **Note:** Version bump only for package @spectrum-css/menu
+
+
+
+
+
+<a name="3.0.3-alpha.1"></a>
+## 3.0.3-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.3-alpha.0...@spectrum-css/menu@3.0.3-alpha.1)
+
+### 🐛 Bug fixes
+
+* import scales since padding-left can change according to scale ([c9f0162](https://github.com/adobe/spectrum-css/commit/c9f0162))
+
+
+
+
+
+<a name="3.0.3-alpha.0"></a>
+## 3.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.2...@spectrum-css/menu@3.0.3-alpha.0)
+
+### 🐛 Bug fixes
+
+* updated progresscircle to use correct t-shirt tokens ([3dbed89](https://github.com/adobe/spectrum-css/commit/3dbed89))
 
 
 

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0-alpha.0"></a>
+# 2.0.0-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-transformselectors@1.1.0...postcss-transformselectors@2.0.0-alpha.0)
+
+### ✨ Features
+
+* updated typography token names to use standardorder ([50145fe](https://github.com/adobe/spectrum-css/commit/50145fe))
+
+
+### 🛑 BREAKING CHANGES
+
+* realigned classnames
+
+
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0
 🗓 2021-03-10

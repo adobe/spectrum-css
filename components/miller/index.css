@@ -11,28 +11,28 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-MillerColumns {
-  --spectrum-miller-column-margin: 8px;
+  --spectrum-millercolumn-margin: 8px;
 }
 
 .spectrum-MillerColumns {
   overflow-x: auto;
   white-space: nowrap;
   user-select: none;
-  padding: var(--spectrum-miller-column-margin) 0;
+  padding: var(--spectrum-millercolumn-margin) 0;
 }
 
 .spectrum-MillerColumns-item {
   display: inline-block;
-  inline-size: var(--spectrum-miller-column-width);
+  inline-size: var(--spectrum-millercolumn-width);
   vertical-align: top;
   outline: none;
   margin: 0;
   padding: 0;
-  margin-inline-end: var(--spectrum-miller-column-margin);
+  margin-inline-end: var(--spectrum-millercolumn-margin);
   overflow: auto;
   block-size: 100%;
 
   &:first-child {
-    margin-inline-start: var(--spectrum-miller-column-margin);
+    margin-inline-start: var(--spectrum-millercolumn-margin);
   }
 }

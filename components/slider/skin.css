@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Slider {
-  --spectrum-slider-m-focus-ring-size-key-focus: var(
+  --spectrum-slider-m-focus-ring-size: var(
     --spectrum-alias-focus-ring-size
   );
 
@@ -69,7 +69,7 @@ governing permissions and limitations under the License.
     border-color: var(--spectrum-slider-m-handle-border-color-key-focus);
 
     &:before {
-      box-shadow: 0 0 0 var(--spectrum-slider-m-focus-ring-size-key-focus)
+      box-shadow: 0 0 0 var(--spectrum-slider-m-focus-ring-size)
         var(--spectrum-slider-m-handle-focus-ring-color-key-focus);
     }
   }
@@ -94,7 +94,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Slider-tick {
   &:after {
-    background-color: var(--spectrum-slider-tick-m-mark-color);
+    background-color: var(--spectrum-slider-m-tick-mark-color);
   }
 }
 
@@ -102,7 +102,7 @@ governing permissions and limitations under the License.
 .spectrum-Slider-handle {
   &.is-dragged {
     border-color: var(--spectrum-slider-m-handle-border-color-down);
-    background: var(--spectrum-slider-m-handle-background-color-down);
+    background: var(--spectrum-slider-m-handle-background-color);
   }
 }
 

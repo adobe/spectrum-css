@@ -68,7 +68,7 @@ examples:
           </li>
         </ul>
 
-        <ul class="spectrum-Menu" role="listbox">
+        <ul class="spectrum-Menu is-selectable" role="listbox">
           <li role="presentation">
             <span class="spectrum-Menu-sectionHeading" id="menu-heading-sf" aria-hidden="true">San Francisco</span>
             <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-sf">

@@ -1,0 +1,32 @@
+{
+  "name": "@spectrum-css/expressvars",
+  "version": "1.0.0-beta.14",
+  "description": "The Spectrum CSS vars for Express package",
+  "license": "Apache-2.0",
+  "main": "dist/spectrum-metadata.json",
+  "scripts": {
+    "update": "gulp update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/vars"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "devDependencies": {
+    "del": "^5.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "gulplog": "^1.0.0",
+    "postcss": "^5.2.18",
+    "replace-ext": "^1.0.0",
+    "through2": "^3.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
+}

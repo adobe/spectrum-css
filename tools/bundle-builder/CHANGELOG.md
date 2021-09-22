@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.2-alpha.1"></a>
+## 3.0.2-alpha.1
+🗓 2021-07-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.0.2-alpha.0...@spectrum-css/bundle-builder@3.0.2-alpha.1)
+
+### 🐛 Bug fixes
+
+* added expressvars build to release task ([bc447b1](https://github.com/adobe/spectrum-css/commit/bc447b1))
+
+
+
+
+
+<a name="3.0.2-alpha.0"></a>
+## 3.0.2-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.0.1...@spectrum-css/bundle-builder@3.0.2-alpha.0)
+
+**Note:** Version bump only for package @spectrum-css/bundle-builder
+
+
+
+
+
 <a name="3.0.1"></a>
 ## 3.0.1
 🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.0.0...@spectrum-css/bundle-builder@3.0.1)

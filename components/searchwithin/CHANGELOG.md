@@ -3,9 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.2...@spectrum-css/searchwithin@3.0.3)
+<a name="3.0.3-alpha.7"></a>
+## 3.0.3-alpha.7
+🗓 2021-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.3-alpha.6...@spectrum-css/searchwithin@3.0.3-alpha.7)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.0.3-alpha.6"></a>
+## 3.0.3-alpha.6
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.3-alpha.5...@spectrum-css/searchwithin@3.0.3-alpha.6)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.0.3-alpha.5"></a>
+## 3.0.3-alpha.5
+🗓 2021-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.3-alpha.4...@spectrum-css/searchwithin@3.0.3-alpha.5)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.0.3-alpha.4"></a>
+## 3.0.3-alpha.4
+🗓 2021-07-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.3-alpha.3...@spectrum-css/searchwithin@3.0.3-alpha.4)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-07-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.3-alpha.2...@spectrum-css/searchwithin@3.0.3-alpha.3)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.0.3-alpha.2"></a>
+## 3.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.3-alpha.1...@spectrum-css/searchwithin@3.0.3-alpha.2)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.0.3-alpha.1"></a>
+## 3.0.3-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.3-alpha.0...@spectrum-css/searchwithin@3.0.3-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.0.3-alpha.0"></a>
+## 3.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.0.2...@spectrum-css/searchwithin@3.0.3-alpha.0)
 
 **Note:** Version bump only for package @spectrum-css/searchwithin
 

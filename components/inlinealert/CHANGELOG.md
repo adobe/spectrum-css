@@ -3,11 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="1.1.1"></a>
-## 1.1.1
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@1.1.0...@spectrum-css/inlinealert@1.1.1)
+<a name="2.0.0-alpha.2"></a>
+# 2.0.0-alpha.2
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.0-alpha.1...@spectrum-css/inlinealert@2.0.0-alpha.2)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="2.0.0-alpha.1"></a>
+# 2.0.0-alpha.1
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.0-alpha.0...@spectrum-css/inlinealert@2.0.0-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="2.0.0-alpha.0"></a>
+# 2.0.0-alpha.0
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@1.1.1-alpha.0...@spectrum-css/inlinealert@2.0.0-alpha.0)
+
+### 🐛 Bug fixes
+
+* rename `warning` inlinealert to `negative` ([27a50fc](https://github.com/adobe/spectrum-css/commit/27a50fc))
+
+
+### 🛑 BREAKING CHANGES
+
+* `.spectrum-InLineAlert--warning` renamed to
+`.spectrum-InLineAlert--negative`
+
+
+
+
+
+<a name="1.1.1-alpha.0"></a>
+## 1.1.1-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@1.1.0...@spectrum-css/inlinealert@1.1.1-alpha.0)
+
+### 🐛 Bug fixes
+
+* adding neutral to inlinealert tokens ([409be21](https://github.com/adobe/spectrum-css/commit/409be21))
 
 
 

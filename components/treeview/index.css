@@ -10,17 +10,44 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/components/spectrum-treeview.css";
+
 .spectrum-TreeView {
-  --spectrum-treeview-item-min-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-treeview-item-padding-y: var(--spectrum-global-dimension-size-75);
-  --spectrum-treeview-item-icon-margin-right: var(--spectrum-global-dimension-size-125);
-  --spectrum-treeview-item-affordance-width: var(--spectrum-global-dimension-size-400);
-  --spectrum-treeview-item-indentation: var(--spectrum-global-dimension-size-200);
   --spectrum-treeview-heading-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-treeview-item-hover-offset: var(--spectrum-global-dimension-size-25);
   --spectrum-treeview-item-border-size-selected: var(--spectrum-alias-border-size-thin);
+}
 
-  --spectrum-treeview-item-height-layers: var(--spectrum-global-dimension-size-550);
+.spectrum-TreeView--sizeS {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-s-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
+}
+
+.spectrum-TreeView--sizeM {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-m-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
+}
+
+.spectrum-TreeView--sizeL {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-l-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
+}
+
+.spectrum-TreeView--sizeXL {
+  @remapvars {
+    find: /--spectrum-treeview(.*)-xl-/;
+    filter: color;
+    replace: --spectrum-treeview$1-;
+  }
 }
 
 .spectrum-TreeView {
@@ -82,7 +109,7 @@ governing permissions and limitations under the License.
   cursor: pointer;
 
   padding-block: var(--spectrum-treeview-item-padding-y);
-  padding-inline: var(--spectrum-treeview-item-affordance-width);
+  padding-inline: var(--spectrum-treeview-item-affordance-size);
 
   text-decoration: none;
 
@@ -96,7 +123,7 @@ governing permissions and limitations under the License.
 
   .spectrum-TreeView-itemIcon {
     vertical-align: top;
-    margin-inline-end: var(--spectrum-treeview-item-icon-margin-right);
+    margin-inline-end: var(--spectrum-treeview-s-item-icon-gap);
   }
 
   &:before {
@@ -108,7 +135,7 @@ governing permissions and limitations under the License.
     inset-inline-start: var(--spectrum-treeview-item-border-size);
     inset-inline-end: 0;
 
-    block-size: calc(var(--spectrum-treeview-item-height) - var(--spectrum-treeview-item-hover-offset) * 2);
+    block-size: calc(var(--spectrum-treeview-item-min-height) - var(--spectrum-treeview-item-hover-offset) * 2);
 
     border-style: solid;
     border-color: transparent;
@@ -134,13 +161,13 @@ governing permissions and limitations under the License.
 
 .spectrum-TreeView--thumbnail {
   .spectrum-TreeView-itemThumbnail {
-    margin-inline-end: var(--spectrum-treeview-item-icon-margin-right);
+    margin-inline-end: var(--spectrum-treeview-s-item-icon-gap);
   }
   .spectrum-TreeView-itemLink {
-    height: var(--spectrum-treeview-item-height-layers);
+    block-size: var(--spectrum-treeview-item-affordance-size);
 
     &:before {
-      block-size: var(--spectrum-treeview-item-height-layers);
+      block-size: var(--spectrum-treeview-item-affordance-size);
     }
   }
 }
@@ -167,7 +194,7 @@ governing permissions and limitations under the License.
   transform: logical rotate(0deg);
   transition: transform ease var(--spectrum-global-animation-duration-100);
 
-  pointer-events: all !important;
+  pointer-events: all;
 }
 
 /* Close nested treeviews by default */

@@ -147,7 +147,7 @@ examples:
     name: Table with ActionBar
     description: Example usage within a table.
     markup: |
-      <div class="spectrum-Table spectrum-Table--quiet" role="grid">
+      <div class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" role="grid">
         <div class="spectrum-Table-head" style="display: flex" role="row">
           <div class="spectrum-Table-headCell spectrum-Table-checkboxCell" role="columnheader">
             <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-indeterminate">

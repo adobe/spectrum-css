@@ -1,7 +1,7 @@
 name: Clear Button
 description: Used in search and tags.
 examples:
-  - id: clearbutton-medium
+  - id: clearbutton-m
     name: Standard
     markup: |
       <button class="spectrum-ClearButton">
@@ -14,7 +14,7 @@ examples:
           <use xlink:href="#spectrum-css-icon-Cross75" />
         </svg>
       </button>
-  - id: clearbutton-small
+  - id: clearbutton-s
     name: Small
     markup: |
       <button class="spectrum-ClearButton spectrum-ClearButton--small">

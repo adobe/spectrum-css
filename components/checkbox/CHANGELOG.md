@@ -3,15 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.2...@spectrum-css/checkbox@3.0.3)
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.3-alpha.2...@spectrum-css/checkbox@3.0.3-alpha.3)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
+
+
+
+
+<a name="3.0.3-alpha.2"></a>
+## 3.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.3-alpha.1...@spectrum-css/checkbox@3.0.3-alpha.2)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
+
+
+
+
+<a name="3.0.3-alpha.1"></a>
+## 3.0.3-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.3-alpha.0...@spectrum-css/checkbox@3.0.3-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/checkbox
+
+
+
+
+
+<a name="3.0.3-alpha.0"></a>
+## 3.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.2...@spectrum-css/checkbox@3.0.3-alpha.0)
 
 ### 🐛 Bug fixes
 
-* adjust the focus outline ([4692cc1](https://github.com/adobe/spectrum-css/commit/4692cc1))
-* high contrast mode for checkbox ([b2ed46c](https://github.com/adobe/spectrum-css/commit/b2ed46c))
-* more changes to support indeterminate correctly ([ad32c52](https://github.com/adobe/spectrum-css/commit/ad32c52))
+* updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
 
 
 

@@ -14,44 +14,38 @@ governing permissions and limitations under the License.
 
 .spectrum-Link--sizeS {
   @remapvars {
-    find: /--spectrum-link-(.*?)-s-/;
-    replace: --spectrum-link-$1-;
+    find: /--spectrum-link(.*)-s-/;
     filter: color;
+    replace: --spectrum-link$1-;
   }
 }
 
 .spectrum-Link--sizeM {
   @remapvars {
-    find: /--spectrum-link-(.*?)-m-/;
-    replace: --spectrum-link-$1-;
+    find: /--spectrum-link(.*)-m-/;
     filter: color;
+    replace: --spectrum-link$1-;
   }
 }
 
 .spectrum-Link--sizeL {
   @remapvars {
-    find: /--spectrum-link-(.*?)-l-/;
-    replace: --spectrum-link-$1-;
+    find: /--spectrum-link(.*)-l-/;
     filter: color;
+    replace: --spectrum-link$1-;
   }
 }
 
 .spectrum-Link--sizeXL {
   @remapvars {
-    find: /--spectrum-link-(.*?)-xl-/;
-    replace: --spectrum-link-$1-;
+    find: /--spectrum-link(.*)-xl-/;
     filter: color;
+    replace: --spectrum-link$1-;
   }
 }
 
-.spectrum-Link--sizeS,
-.spectrum-Link--sizeM,
-.spectrum-Link--sizeL,
-.spectrum-Link--sizeXL {
-  font-size: var(--spectrum-link-primary-text-size);
-}
-
 .spectrum-Link {
+  font-size: var(--spectrum-link-primary-text-size);
   /* Remove the gray background on active links in IE 10. */
   background-color: transparent;
   /* Remove gaps in links underline in iOS 8+ and Safari 8+. */

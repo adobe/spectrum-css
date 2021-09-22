@@ -3,6 +3,75 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3-alpha.5"></a>
+## 3.0.3-alpha.5
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.3-alpha.4...@spectrum-css/textfield@3.0.3-alpha.5)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.0.3-alpha.4"></a>
+## 3.0.3-alpha.4
+🗓 2021-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.3-alpha.3...@spectrum-css/textfield@3.0.3-alpha.4)
+
+### 🐛 Bug fixes
+
+* removed placeholder token values, updated spectrum-tokens beta ([0d76eeb](https://github.com/adobe/spectrum-css/commit/0d76eeb))
+
+
+
+
+
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-07-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.3-alpha.2...@spectrum-css/textfield@3.0.3-alpha.3)
+
+### 🐛 Bug fixes
+
+* missing validation icon ([613e849](https://github.com/adobe/spectrum-css/commit/613e849))
+
+
+
+
+
+<a name="3.0.3-alpha.2"></a>
+## 3.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.3-alpha.1...@spectrum-css/textfield@3.0.3-alpha.2)
+
+### 🐛 Bug fixes
+
+* use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
+* **textfield:** prevent pointer-events on icons over the form element ([f900265](https://github.com/adobe/spectrum-css/commit/f900265))
+* adjusted left padding in textinput ([47d38db](https://github.com/adobe/spectrum-css/commit/47d38db))
+* picked the correct invalid icon color for disabled ([56fcb4c](https://github.com/adobe/spectrum-css/commit/56fcb4c))
+
+
+
+
+
+<a name="3.0.3-alpha.1"></a>
+## 3.0.3-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.3-alpha.0...@spectrum-css/textfield@3.0.3-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
+<a name="3.0.3-alpha.0"></a>
+## 3.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.2...@spectrum-css/textfield@3.0.3-alpha.0)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2021-04-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.0.1...@spectrum-css/textfield@3.0.2)

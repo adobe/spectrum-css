@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2-alpha.0"></a>
+## 2.0.2-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/overlay@2.0.1...@spectrum-css/overlay@2.0.2-alpha.0)
+
+**Note:** Version bump only for package @spectrum-css/overlay
+
+
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/overlay@2.0.1-beta.1...@spectrum-css/overlay@2.0.1)
