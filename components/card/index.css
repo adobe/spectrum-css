@@ -36,7 +36,6 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
   min-inline-size: var(--spectrum-card-min-width); /* setting min-width incase a product overrides width */
-  inline-size: var(--spectrum-card-min-width);
 
   border: var(--spectrum-card-border-size) solid transparent;
   border-radius: var(--spectrum-card-border-radius);
@@ -185,7 +184,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
-  inline-size: var(--spectrum-card-quiet-min-width);
   block-size: 100%;
   min-inline-size: var(--spectrum-card-quiet-min-width);
   border-width: 0;

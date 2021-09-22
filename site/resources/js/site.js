@@ -224,6 +224,9 @@ window.addEventListener('DOMContentLoaded', function() {
     else if (event.target.id === 'switcher-direction') {
       switcher.direction = event.detail.value;
     }
+    else if (event.target.id === 'switcher-vars-version') {
+      switcher.varsVersion = event.detail.value;
+    }
   });
 
   let scalePicker = document.querySelector('#switcher-scale');
