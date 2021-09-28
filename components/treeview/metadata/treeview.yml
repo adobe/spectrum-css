@@ -6,6 +6,9 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/tree-view/
 sections:
   - name: Migration Guide
     description: |
+      ### T-shirt sizing
+      TreeView now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-TreeView--size*` class.
+
       ### Additional clases
 
       The following classes must be added:
@@ -521,6 +524,60 @@ examples:
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
         </li>
       </ul>
+
+  - id: treeview
+    name: Sizing
+    description: |
+      Treeview supports t-shirt sizing (`s`, `m`, `l`, `xl`)
+    markup: |
+      <div>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <ul class="spectrum-TreeView spectrum-TreeView--sizeS" style="width: 250px">
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
+          </li>
+
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+        <ul class="spectrum-TreeView spectrum-TreeView--sizeM" style="width: 250px">
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
+          </li>
+
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <ul class="spectrum-TreeView spectrum-TreeView--sizeL" style="width: 250px">
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
+          </li>
+
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <ul class="spectrum-TreeView spectrum-TreeView--sizeXL" style="width: 250px">
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
+          </li>
+
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
+          </li>
+        </ul>
+      </div>
 
   - id: treeview
     name: Icons

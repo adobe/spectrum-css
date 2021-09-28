@@ -102,6 +102,7 @@ governing permissions and limitations under the License.
 .spectrum-TreeView-itemLabel {
   overflow: hidden;
   text-overflow: ellipsis;
+  position: relative;
 }
 
 .spectrum-TreeView-itemLink {
@@ -112,12 +113,12 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   cursor: pointer;
 
-  padding-block: var(--spectrum-treeview-item-padding-top);
+  padding-block: var(--spectrum-treeview-item-text-padding-top) var(--spectrum-treeview-item-text-padding-bottom);
   padding-inline: var(--spectrum-treeview-item-affordance-size);
 
   text-decoration: none;
 
-  height: var(--spectrum-treeview-item-min-height);
+  min-height: var(--spectrum-treeview-item-min-height);
 
   /* Prevent weirdness that can cause the vertical bar to fall down */
   white-space: nowrap;
@@ -131,20 +132,22 @@ governing permissions and limitations under the License.
   }
 
   &:before {
-    content: '';
+    content: '\00a0';
 
-    box-sizing: border-box;
 
     position: absolute;
     inset-inline-start: var(--spectrum-treeview-item-border-size);
     inset-inline-end: 0;
 
-    block-size: calc(var(--spectrum-treeview-item-min-height) - var(--spectrum-treeview-item-hover-offset) * 2);
+    block-size: calc(var(--spectrum-treeview-item-min-height) - var(--spectrum-treeview-item-hover-offset) * 2));
+    padding-block-start: calc(var(--spectrum-treeview-item-text-padding-top) - var(--spectrum-treeview-item-border-size));
+    padding-block-end: calc(var(--spectrum-treeview-item-text-padding-bottom) - var(--spectrum-treeview-item-border-size));
 
     border-style: solid;
     border-color: transparent;
     border-width: var(--spectrum-treeview-item-border-size) 0 var(--spectrum-treeview-item-border-size) 0;
     background-color: transparent;
+    color: transparent;
   }
 
   &:focus-ring {

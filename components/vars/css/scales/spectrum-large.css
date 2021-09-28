@@ -798,13 +798,13 @@
   --spectrum-clearbutton-m-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
   --spectrum-colorloupe-colorhandle-gap: var(--spectrum-global-dimension-static-size-100);
   --spectrum-colorloupe-offset-y: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-colorslider-vertical-touch-hit-x: var(--spectrum-global-dimension-size-85);
-  --spectrum-colorslider-touch-hit-y: var(--spectrum-global-dimension-size-85);
   --spectrum-colorwheel-min-size: var(--spectrum-global-dimension-static-size-2600);
   --spectrum-colorwheel-touch-hit-outer: var(--spectrum-global-dimension-size-85);
   --spectrum-colorwheel-touch-hit-inner: var(--spectrum-global-dimension-size-85);
   --spectrum-colorwheel-min-width: var(--spectrum-global-dimension-static-size-2600);
   --spectrum-colorwheel-min-height: var(--spectrum-global-dimension-static-size-2600);
+  --spectrum-colorslider-vertical-touch-hit-x: var(--spectrum-global-dimension-size-85);
+  --spectrum-colorslider-touch-hit-y: var(--spectrum-global-dimension-size-85);
   --spectrum-cyclebutton-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-cyclebutton-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
   --spectrum-dialog-confirm-title-text-size: var(--spectrum-global-dimension-font-size-200);
@@ -903,14 +903,6 @@
   --spectrum-pagination-button-page-button-line-height: 32px;
   --spectrum-pagination-explicit-page-button-line-height: 32px;
   --spectrum-pagination-listing-page-button-line-height: 32px;
-  --spectrum-panel-s-collapsible-header-height: var(--spectrum-global-dimension-size-550);
-  --spectrum-panel-s-header-height: var(--spectrum-global-dimension-size-550);
-  --spectrum-panel-s-spacious-collapsible-header-height: var(--spectrum-global-dimension-size-550);
-  --spectrum-panel-s-spacious-header-height: var(--spectrum-global-dimension-size-550);
-  --spectrum-panel-l-collapsible-header-height: var(--spectrum-global-dimension-size-550);
-  --spectrum-panel-l-header-height: var(--spectrum-global-dimension-size-550);
-  --spectrum-panel-l-spacious-collapsible-header-height: var(--spectrum-global-dimension-size-550);
-  --spectrum-panel-l-spacious-header-height: var(--spectrum-global-dimension-size-550);
   --spectrum-picker-s-quiet-texticon-text-padding-bottom: var(--spectrum-global-dimension-static-size-85);
   --spectrum-picker-s-quiet-texticon-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-s-quiet-texticon-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
@@ -981,6 +973,14 @@
   --spectrum-picker-xl-quiet-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-xl-textthumbnail-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-xl-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-panel-s-collapsible-header-height: var(--spectrum-global-dimension-size-550);
+  --spectrum-panel-s-header-height: var(--spectrum-global-dimension-size-550);
+  --spectrum-panel-s-spacious-collapsible-header-height: var(--spectrum-global-dimension-size-550);
+  --spectrum-panel-s-spacious-header-height: var(--spectrum-global-dimension-size-550);
+  --spectrum-panel-l-collapsible-header-height: var(--spectrum-global-dimension-size-550);
+  --spectrum-panel-l-header-height: var(--spectrum-global-dimension-size-550);
+  --spectrum-panel-l-spacious-collapsible-header-height: var(--spectrum-global-dimension-size-550);
+  --spectrum-panel-l-spacious-header-height: var(--spectrum-global-dimension-size-550);
   --spectrum-progressbar-s-indeterminate-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-static-size-85);
   --spectrum-progressbar-s-indeterminate-overbackground-border-radius: var(--spectrum-global-dimension-static-size-40);
   --spectrum-progressbar-s-indeterminate-value-text-padding-bottom: var(--spectrum-global-dimension-static-size-85);
@@ -1619,4 +1619,7 @@
   --spectrum-tooltip-info-padding-bottom: 6px;
   --spectrum-tooltip-positive-padding-bottom: 6px;
   --spectrum-tooltip-negative-padding-bottom: 6px;
+  --spectrum-treeview-s-item-text-padding-bottom: var(--spectrum-global-dimension-static-size-85);
+  --spectrum-treeview-l-item-icon-size: var(--spectrum-global-dimension-static-size-300);
+  --spectrum-treeview-l-item-text-padding-top: var(--spectrum-global-dimension-static-size-150);
 }
