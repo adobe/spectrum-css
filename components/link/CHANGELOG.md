@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.5"></a>
+## 3.1.5
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.3-alpha.3...@spectrum-css/link@3.1.5)
+
+### 🐛 Bug fixes
+
+* secondary links use high contrast mode colours ([433c74c](https://github.com/adobe/spectrum-css/commit/433c74c))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
 <a name="3.1.3"></a>
 ## 3.1.3
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.3-alpha.3...@spectrum-css/link@3.1.3)

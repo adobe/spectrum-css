@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.0"></a>
+# 4.1.0
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.3-alpha.3...@spectrum-css/table@4.1.0)
+
+### ✨ Features
+
+* add compact & spacious cell selectors ([b97b222](https://github.com/adobe/spectrum-css/commit/b97b222))
+
+
+### 🐛 Bug fixes
+
+* update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
 <a name="3.1.0"></a>
 # 3.1.0
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.3-alpha.3...@spectrum-css/table@3.1.0)
