@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.3"></a>
+## 1.0.3
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-droproot@1.0.3-alpha.0...postcss-droproot@1.0.3)
+
+**Note:** Version bump only for package postcss-droproot
+
+
+
+
+
 <a name="1.0.3-alpha.0"></a>
 ## 1.0.3-alpha.0
 🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-droproot@1.0.2...postcss-droproot@1.0.3-alpha.0)

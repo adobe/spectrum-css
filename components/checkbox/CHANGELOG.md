@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3"></a>
+## 3.0.3
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.3-alpha.3...@spectrum-css/checkbox@3.0.3)
+
+### 🐛 Bug fixes
+
+* adjust the focus outline ([4692cc1](https://github.com/adobe/spectrum-css/commit/4692cc1))
+* high contrast mode for checkbox ([b2ed46c](https://github.com/adobe/spectrum-css/commit/b2ed46c))
+* more changes to support indeterminate correctly ([ad32c52](https://github.com/adobe/spectrum-css/commit/ad32c52))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
 <a name="3.0.3-alpha.3"></a>
 ## 3.0.3-alpha.3
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/checkbox@3.0.3-alpha.2...@spectrum-css/checkbox@3.0.3-alpha.3)

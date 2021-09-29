@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.1"></a>
+## 1.2.1
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-dropunusedvars@1.2.1-alpha.0...postcss-dropunusedvars@1.2.1)
+
+**Note:** Version bump only for package postcss-dropunusedvars
+
+
+
+
+
 <a name="1.2.1-alpha.0"></a>
 ## 1.2.1-alpha.0
 🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-dropunusedvars@1.2.0...postcss-dropunusedvars@1.2.1-alpha.0)

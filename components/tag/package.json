@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tag",
-  "version": "2.0.0-alpha.3",
+  "version": "2.0.0",
   "description": "The Spectrum CSS tags component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -17,13 +17,13 @@
   },
   "peerDependencies": {
     "@spectrum-css/button": "^4.0.0-alpha.0",
-    "@spectrum-css/vars": "^4.0.0-alpha.0"
+    "@spectrum-css/vars": "^3.1.0-alpha.3"
   },
   "devDependencies": {
-    "@spectrum-css/avatar": "^4.0.0-alpha.3",
-    "@spectrum-css/button": "^4.0.0-alpha.2",
-    "@spectrum-css/component-builder": "^3.0.0-alpha.1",
-    "@spectrum-css/icon": "^3.0.3-alpha.3",
+    "@spectrum-css/avatar": "^4.0.0",
+    "@spectrum-css/button": "^4.0.0",
+    "@spectrum-css/component-builder": "^3.0.0",
+    "@spectrum-css/icon": "^3.0.3",
     "@spectrum-css/vars": "^3.1.0-alpha.3",
     "gulp": "^4.0.0"
   },
