@@ -57,3 +57,21 @@ governing permissions and limitations under the License.
     color: var(--spectrum-link-m-primary-overbackground-text-color-key-focus);
   }
 }
+
+@media (forced-colors: active) {
+  .spectrum-Link--secondary {
+    color: linktext;
+  
+    &:hover {
+      color: linktext;
+    }
+  
+    &:active {
+      color: linktext;
+    }
+  
+    &:focus {
+      color: linktext;
+    }
+  }
+}
