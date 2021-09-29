@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.3...@spectrum-css/vars@4.0.0)
+
+### 🐛 Bug fixes
+
+* adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+* resolve failing test by applying t-shirt size to actionbar example ([1d55f90](https://github.com/adobe/spectrum-css/commit/1d55f90))
+* update spectrum-tokens to 7.0.0-beta.27 ([fffd834](https://github.com/adobe/spectrum-css/commit/fffd834))
+* updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+
+
+### 🛑 BREAKING CHANGES
+
+* t-shirt sizes added.
+
+
+
+
+
 <a name="3.1.0-alpha.3"></a>
 # 3.1.0-alpha.3
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.2...@spectrum-css/vars@3.1.0-alpha.3)
