@@ -171,7 +171,10 @@ governing permissions and limitations under the License.
     margin-inline-end: var(--spectrum-treeview-s-item-icon-gap);
   }
   .spectrum-TreeView-itemLink {
+    box-sizing: content-box;
     block-size: var(--spectrum-treeview-item-affordance-size);
+    padding-block-start: var(--spectrum-treeview-item-text-padding-top);
+    padding-block-end: calc(var(--spectrum-treeview-item-text-padding-bottom) - var(--spectrum-treeview-item-border-size));
 
     &:before {
       block-size: var(--spectrum-treeview-item-affordance-size);
