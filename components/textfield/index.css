@@ -203,7 +203,7 @@ governing permissions and limitations under the License.
   .spectrum-Textfield--quiet & {
     border-radius: var(--spectrum-textfield-quiet-texticon-border-radius);
     border-block-start-width: 0;
-    border-block-end-width: var(--spectrum-textfield-quiet-texticon-border-size);
+    border-block-end-width: var(--spectrum-textfield-quiet-texticon-border-bottom-size);
     border-inline-width: 0;
 
     /* removes the side padding to align the text properly */
