@@ -195,7 +195,7 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
-  - id: tabs-quiet-compact-icon
+  - id: tabs-quiet-compact-icons-text
     name: Compact tabs with icons and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact">
@@ -270,7 +270,7 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
-  - id: tabs-quiet-compact
+  - id: tabs-quiet-compact-icons-text
     name: Compact tabs with icons and text (quiet)
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
@@ -300,7 +300,7 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
-  - id: tabs-quiet-compact
+  - id: tabs-quiet-compact-only-icons
     name: Compact tabs with icons only (quiet)
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
@@ -344,7 +344,7 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
       </div>
-  - id: tabs-vertical
+  - id: tabs-vertical-icon
     name: Vertical tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical">
@@ -392,7 +392,7 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
-  - id: tabs-compact-vertical
+  - id: tabs-compact-vertical-icon
     name: Compact vertical tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact">
@@ -422,7 +422,7 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
-  - id: tabs
+  - id: tabs-with-overflow
     name: Basic tabs with overflow
     status: Verified
     markup: |
@@ -468,7 +468,7 @@ examples:
       </div>
 
       <div class="dummy-spacing"></div>
-  - id: tabs-compact
+  - id: tabs-compact-overflow
     name: Compact tabs with overflow
     status: Verified
     markup: |
@@ -515,7 +515,7 @@ examples:
       </div>
 
       <div class="dummy-spacing"></div>
-  - id: tabs
+  - id: tabs-with-anchors
     name: Tabs with anchors
     status: Verified
     markup: |
