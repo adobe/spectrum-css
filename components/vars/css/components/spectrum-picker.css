@@ -104,7 +104,7 @@
   --spectrum-picker-s-quiet-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-s-quiet-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-s-quiet-texticon-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-s-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-static-size-115);
+  --spectrum-picker-s-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-s-quiet-texticon-popover-max-height: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-quiet-texticon-popover-max-width: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-quiet-texticon-gap: var(--spectrum-global-dimension-size-85);
@@ -342,7 +342,7 @@
   --spectrum-picker-s-quiet-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-s-quiet-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-s-quiet-textonly-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-s-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-s-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-s-quiet-textonly-popover-max-height: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-quiet-textonly-popover-max-width: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-quiet-textonly-gap: var(--spectrum-global-dimension-size-85);
@@ -580,7 +580,7 @@
   --spectrum-picker-s-quiet-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-s-quiet-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-s-quiet-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-s-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-s-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-s-quiet-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-quiet-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-quiet-textthumbnail-gap: var(--spectrum-global-dimension-size-85);
@@ -819,7 +819,7 @@
   --spectrum-picker-m-quiet-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-m-quiet-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-picker-m-quiet-texticon-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-m-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-static-size-150);
+  --spectrum-picker-m-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-size-150);
   --spectrum-picker-m-quiet-texticon-popover-max-height: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-quiet-texticon-popover-max-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-quiet-texticon-gap: var(--spectrum-global-dimension-size-100);
@@ -1057,7 +1057,7 @@
   --spectrum-picker-m-quiet-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-m-quiet-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-picker-m-quiet-textonly-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-m-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-m-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-size-150);
   --spectrum-picker-m-quiet-textonly-popover-max-height: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-quiet-textonly-popover-max-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-quiet-textonly-gap: var(--spectrum-global-dimension-size-100);
@@ -1297,7 +1297,7 @@
   --spectrum-picker-m-quiet-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-m-quiet-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-picker-m-quiet-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-m-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-m-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-150);
   --spectrum-picker-m-quiet-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-quiet-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-quiet-textthumbnail-gap: var(--spectrum-global-dimension-size-100);
@@ -1533,7 +1533,7 @@
   --spectrum-picker-l-quiet-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-l-quiet-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-l-quiet-texticon-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-l-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-static-size-185);
+  --spectrum-picker-l-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-size-185);
   --spectrum-picker-l-quiet-texticon-popover-max-height: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-quiet-texticon-popover-max-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-quiet-texticon-gap: var(--spectrum-global-dimension-size-115);
@@ -1769,7 +1769,7 @@
   --spectrum-picker-l-quiet-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-l-quiet-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-l-quiet-textonly-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-l-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-l-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-size-185);
   --spectrum-picker-l-quiet-textonly-popover-max-height: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-quiet-textonly-popover-max-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-quiet-textonly-gap: var(--spectrum-global-dimension-size-115);
@@ -2005,7 +2005,7 @@
   --spectrum-picker-l-quiet-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-l-quiet-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-l-quiet-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-l-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-l-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-185);
   --spectrum-picker-l-quiet-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-quiet-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-quiet-textthumbnail-gap: var(--spectrum-global-dimension-size-115);
@@ -2243,7 +2243,7 @@
   --spectrum-picker-xl-quiet-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-xl-quiet-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-xl-quiet-texticon-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-xl-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-static-size-225);
+  --spectrum-picker-xl-quiet-texticon-popover-offset-x: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-xl-quiet-texticon-popover-max-height: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-quiet-texticon-popover-max-width: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-quiet-texticon-gap: var(--spectrum-global-dimension-size-125);
@@ -2483,7 +2483,7 @@
   --spectrum-picker-xl-quiet-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-xl-quiet-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-xl-quiet-textonly-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-xl-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-xl-quiet-textonly-popover-offset-x: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-xl-quiet-textonly-popover-max-height: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-quiet-textonly-popover-max-width: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-quiet-textonly-gap: var(--spectrum-global-dimension-size-125);
@@ -2723,7 +2723,7 @@
   --spectrum-picker-xl-quiet-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-xl-quiet-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-xl-quiet-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-picker-xl-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-picker-xl-quiet-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-225);
   --spectrum-picker-xl-quiet-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-quiet-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-quiet-textthumbnail-gap: var(--spectrum-global-dimension-size-125);
