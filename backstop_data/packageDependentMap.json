@@ -8,9 +8,28 @@
     []
   ],
   [
+    "@spectrum-css/actionbutton",
+    [
+      "@spectrum-css/actionbar",
+      "@spectrum-css/actiongroup",
+      "@spectrum-css/actionmenu",
+      "@spectrum-css/breadcrumb",
+      "@spectrum-css/calendar",
+      "@spectrum-css/card",
+      "@spectrum-css/cyclebutton",
+      "@spectrum-css/dialog",
+      "@spectrum-css/divider",
+      "@spectrum-css/pagination",
+      "@spectrum-css/picker",
+      "@spectrum-css/quickaction",
+      "@spectrum-css/stepper"
+    ]
+  ],
+  [
     "@spectrum-css/actiongroup",
     [
-      "@spectrum-css/actionbar"
+      "@spectrum-css/actionbar",
+      "@spectrum-css/divider"
     ]
   ],
   [
@@ -32,8 +51,13 @@
   [
     "@spectrum-css/avatar",
     [
-      "@spectrum-css/tags"
+      "@spectrum-css/tag",
+      "@spectrum-css/taggroup"
     ]
+  ],
+  [
+    "@spectrum-css/badge",
+    []
   ],
   [
     "@spectrum-css/breadcrumb",
@@ -42,35 +66,25 @@
   [
     "@spectrum-css/button",
     [
-      "@spectrum-css/actionbar",
-      "@spectrum-css/actiongroup",
-      "@spectrum-css/actionmenu",
-      "@spectrum-css/breadcrumb",
       "@spectrum-css/buttongroup",
-      "@spectrum-css/calendar",
-      "@spectrum-css/card",
       "@spectrum-css/coachmark",
-      "@spectrum-css/cyclebutton",
       "@spectrum-css/dialog",
-      "@spectrum-css/divider",
-      "@spectrum-css/inputgroup",
+      "@spectrum-css/inlinealert",
       "@spectrum-css/pagination",
-      "@spectrum-css/picker",
       "@spectrum-css/popover",
-      "@spectrum-css/quickaction",
       "@spectrum-css/search",
       "@spectrum-css/searchwithin",
       "@spectrum-css/splitbutton",
-      "@spectrum-css/stepper",
-      "@spectrum-css/tags",
-      "@spectrum-css/toast"
+      "@spectrum-css/tag",
+      "@spectrum-css/taggroup",
+      "@spectrum-css/toast",
+      "@spectrum-css/tray"
     ]
   ],
   [
     "@spectrum-css/buttongroup",
     [
-      "@spectrum-css/dialog",
-      "@spectrum-css/divider"
+      "@spectrum-css/dialog"
     ]
   ],
   [
@@ -163,10 +177,12 @@
   ],
   [
     "@spectrum-css/fieldlabel",
-    []
+    [
+      "@spectrum-css/progressbar"
+    ]
   ],
   [
-    "@spectrum-css/form",
+    "@spectrum-css/helptext",
     []
   ],
   [
@@ -176,7 +192,7 @@
     ]
   ],
   [
-    "@spectrum-css/label",
+    "@spectrum-css/inlinealert",
     []
   ],
   [
@@ -218,7 +234,7 @@
     "@spectrum-css/picker",
     [
       "@spectrum-css/fieldlabel",
-      "@spectrum-css/form",
+      "@spectrum-css/inputgroup",
       "@spectrum-css/searchwithin",
       "@spectrum-css/tabs"
     ]
@@ -312,7 +328,7 @@
     []
   ],
   [
-    "@spectrum-css/tags",
+    "@spectrum-css/taggroup",
     []
   ],
   [
