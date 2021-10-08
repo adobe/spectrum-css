@@ -478,7 +478,7 @@ function makeDoubleSlider(slider) {
     var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
     var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
-    var percent = (x / sliderOffsetWidth) * 100;
+    var percent = Math.round((x / sliderOffsetWidth) * 100);
 
     if (isRTL()) {
       percent = 100 - percent;
@@ -545,6 +545,7 @@ function makeSlider(slider) {
   var handle = handles[0];
   var isColor = slider.classList.contains('spectrum-Slider--color');
   var fill = slider.querySelector('.spectrum-Slider-fill');
+  var value = slider.querySelector('.spectrum-Slider-value');
 
   if (handles.length > 1) {
     makeDoubleSlider(slider);
@@ -575,10 +576,14 @@ function makeSlider(slider) {
     var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
 
     var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
-    var percent = (x / sliderOffsetWidth) * 100;
+    var percent = Math.round((x / sliderOffsetWidth) * 100);
 
     if (isRTL()) {
       percent = 100 - percent;
+    }
+
+    if (value) {
+      value.innerText = percent;
     }
 
     if (leftTrack && rightTrack && !isColor) {
