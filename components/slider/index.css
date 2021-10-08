@@ -389,12 +389,16 @@ governing permissions and limitations under the License.
   }
 
   &:first-of-type {
+    /* fix off-by-one alignment */
+    inset-inline-start: calc(var(--spectrum-slider-tick-mark-width) / -2);
     .spectrum-Slider-tickLabel {
       inset-inline-start: 0;
     }
   }
 
   &:last-of-type {
+    /* fix off-by-one alignment */
+    inset-inline-end: calc(var(--spectrum-slider-tick-mark-width) / -2);
     .spectrum-Slider-tickLabel {
       inset-inline-end: 0;
     }
@@ -411,4 +415,22 @@ governing permissions and limitations under the License.
       pointer-events: none;
     }
   }
+}
+
+/* backwards compatibility: these are not required, but they make the handle go to the edegs and align right */
+.spectrum-Slider-handleContainer,
+.spectrum-Slider-trackContainer {
+  width: calc(100% + var(--spectrum-slider-handle-width-adjusted));
+
+  position: absolute;
+  top: calc(var(--spectrum-slider-track-height) / 2 - 1px);
+
+  margin-left: calc(var(--spectrum-slider-handle-width-adjusted) / 2 * -1);
+}
+
+.spectrum-Slider-trackContainer {
+  height: var(--spectrum-slider-height);
+
+  /* stop edges from peeking out */
+  overflow: hidden;
 }
