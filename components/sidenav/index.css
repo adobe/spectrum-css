@@ -112,7 +112,7 @@ governing permissions and limitations under the License.
       font-weight: var(--spectrum-sidenav-item-text-font-weight);
 
       padding-inline-start: calc(
-        var(--spectrum-sidenav-multilevel-item-indentation) +
+        var(--spectrum-sidenav-multilevel-item-margin-left) +
           var(--spectrum-sidenav-item-padding-x)
       );
     }
@@ -120,7 +120,7 @@ governing permissions and limitations under the License.
     .spectrum-SideNav {
       .spectrum-SideNav-itemLink {
         padding-inline-start: calc(
-          var(--spectrum-sidenav-multilevel-item-indentation) +
+          var(--spectrum-sidenav-multilevel-item-margin-left) +
             var(--spectrum-sidenav-item-padding-x)
         );
       }
