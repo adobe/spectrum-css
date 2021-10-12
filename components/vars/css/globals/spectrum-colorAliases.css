@@ -92,6 +92,18 @@
   --spectrum-alias-component-border-color-emphasized-selected-down: var(--spectrum-semantic-cta-background-color-down);
   --spectrum-alias-component-border-color-emphasized-selected-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
   --spectrum-alias-component-border-color-emphasized-selected: var(--spectrum-semantic-cta-background-color-default);
+  --spectrum-alias-avatar-border-color-default: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-key-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-selected-default: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-selected-key-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-selected: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-avatar-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-alias-toggle-background-color-default: var(--spectrum-global-color-gray-700);
   --spectrum-alias-toggle-background-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-alias-toggle-background-color-down: var(--spectrum-global-color-gray-900);

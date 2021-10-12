@@ -293,6 +293,8 @@
   --spectrum-checkbox-s-emphasized-box-padding-bottom: var(--spectrum-global-dimension-size-75);
   --spectrum-checkbox-s-emphasized-box-margin-bottom: 0;
   --spectrum-checkbox-s-emphasized-box-layout: row;
+  --spectrum-checkbox-s-emphasized-box-align-items: center;
+  --spectrum-checkbox-s-emphasized-box-justify-content: center;
   --spectrum-checkbox-s-emphasized-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-s-emphasized-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-s-emphasized-box-padding: 0;
@@ -616,6 +618,8 @@
   --spectrum-checkbox-s-box-padding-bottom: var(--spectrum-global-dimension-size-75);
   --spectrum-checkbox-s-box-margin-bottom: 0;
   --spectrum-checkbox-s-box-layout: row;
+  --spectrum-checkbox-s-box-align-items: center;
+  --spectrum-checkbox-s-box-justify-content: center;
   --spectrum-checkbox-s-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-s-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-s-box-padding: 0;
@@ -939,6 +943,8 @@
   --spectrum-checkbox-m-emphasized-box-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-checkbox-m-emphasized-box-margin-bottom: 0;
   --spectrum-checkbox-m-emphasized-box-layout: row;
+  --spectrum-checkbox-m-emphasized-box-align-items: center;
+  --spectrum-checkbox-m-emphasized-box-justify-content: center;
   --spectrum-checkbox-m-emphasized-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-m-emphasized-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-m-emphasized-box-padding: 0;
@@ -1264,6 +1270,8 @@
   --spectrum-checkbox-m-box-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-checkbox-m-box-margin-bottom: 0;
   --spectrum-checkbox-m-box-layout: row;
+  --spectrum-checkbox-m-box-align-items: center;
+  --spectrum-checkbox-m-box-justify-content: center;
   --spectrum-checkbox-m-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-m-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-m-box-padding: 0;
@@ -1589,6 +1597,8 @@
   --spectrum-checkbox-l-emphasized-box-padding-bottom: var(--spectrum-global-dimension-size-150);
   --spectrum-checkbox-l-emphasized-box-margin-bottom: 0;
   --spectrum-checkbox-l-emphasized-box-layout: row;
+  --spectrum-checkbox-l-emphasized-box-align-items: center;
+  --spectrum-checkbox-l-emphasized-box-justify-content: center;
   --spectrum-checkbox-l-emphasized-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-l-emphasized-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-l-emphasized-box-padding: 0;
@@ -1913,6 +1923,8 @@
   --spectrum-checkbox-l-box-padding-bottom: var(--spectrum-global-dimension-size-150);
   --spectrum-checkbox-l-box-margin-bottom: 0;
   --spectrum-checkbox-l-box-layout: row;
+  --spectrum-checkbox-l-box-align-items: center;
+  --spectrum-checkbox-l-box-justify-content: center;
   --spectrum-checkbox-l-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-l-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-l-box-padding: 0;
@@ -2237,6 +2249,8 @@
   --spectrum-checkbox-xl-emphasized-box-padding-bottom: var(--spectrum-global-dimension-size-185);
   --spectrum-checkbox-xl-emphasized-box-margin-bottom: 0;
   --spectrum-checkbox-xl-emphasized-box-layout: row;
+  --spectrum-checkbox-xl-emphasized-box-align-items: center;
+  --spectrum-checkbox-xl-emphasized-box-justify-content: center;
   --spectrum-checkbox-xl-emphasized-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-xl-emphasized-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-xl-emphasized-box-padding: 0;
@@ -2562,6 +2576,8 @@
   --spectrum-checkbox-xl-box-padding-bottom: var(--spectrum-global-dimension-size-185);
   --spectrum-checkbox-xl-box-margin-bottom: 0;
   --spectrum-checkbox-xl-box-layout: row;
+  --spectrum-checkbox-xl-box-align-items: center;
+  --spectrum-checkbox-xl-box-justify-content: center;
   --spectrum-checkbox-xl-box-border-radius: var(--spectrum-alias-border-radius-small);
   --spectrum-checkbox-xl-box-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-checkbox-xl-box-padding: 0;

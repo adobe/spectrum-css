@@ -10,6 +10,7 @@
   --spectrum-dialog-confirm-icon-margin-left: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-confirm-icon-gap: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-confirm-icon-type: icon;
+  --spectrum-dialog-confirm-icon-render: no;
   --spectrum-dialog-confirm-icon-width: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-confirm-icon-height: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-confirm-divider-margin-top: var(--spectrum-global-dimension-static-size-150);
@@ -54,6 +55,7 @@
   --spectrum-dialog-destructive-icon-margin-left: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-destructive-icon-gap: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-destructive-icon-type: icon;
+  --spectrum-dialog-destructive-icon-render: no;
   --spectrum-dialog-destructive-icon-width: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-destructive-icon-height: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-destructive-divider-margin-top: var(--spectrum-global-dimension-static-size-150);
@@ -98,6 +100,7 @@
   --spectrum-dialog-error-icon-margin-left: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-error-icon-gap: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-error-icon-type: icon;
+  --spectrum-dialog-error-icon-render: yes;
   --spectrum-dialog-error-icon-width: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-error-icon-height: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-error-divider-margin-top: var(--spectrum-global-dimension-static-size-150);
@@ -142,6 +145,7 @@
   --spectrum-dialog-info-icon-margin-left: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-info-icon-gap: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-info-icon-type: icon;
+  --spectrum-dialog-info-icon-render: no;
   --spectrum-dialog-info-icon-width: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-info-icon-height: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-info-divider-margin-top: var(--spectrum-global-dimension-static-size-150);
@@ -186,6 +190,7 @@
   --spectrum-dialog-fullscreen-icon-margin-left: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-fullscreen-icon-gap: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-fullscreen-icon-type: icon;
+  --spectrum-dialog-fullscreen-icon-render: no;
   --spectrum-dialog-fullscreen-icon-width: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-fullscreen-icon-height: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-fullscreen-divider-margin-top: var(--spectrum-global-dimension-static-size-150);
@@ -230,6 +235,7 @@
   --spectrum-dialog-fullscreentakeover-icon-margin-left: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-fullscreentakeover-icon-gap: var(--spectrum-global-dimension-static-size-300);
   --spectrum-dialog-fullscreentakeover-icon-type: icon;
+  --spectrum-dialog-fullscreentakeover-icon-render: no;
   --spectrum-dialog-fullscreentakeover-icon-width: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-fullscreentakeover-icon-height: var(--spectrum-global-dimension-size-225);
   --spectrum-dialog-fullscreentakeover-divider-margin-top: var(--spectrum-global-dimension-static-size-150);
