@@ -2,7 +2,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-quiet-texticon-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-s-quiet-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-disabled: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -10,7 +10,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-quiet-texticon-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-s-quiet-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-valid: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-valid: var(--spectrum-alias-border-color);
@@ -18,7 +18,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-quiet-texticon-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-s-quiet-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-valid-disabled: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -26,7 +26,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-quiet-texticon-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-s-quiet-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-invalid: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -34,7 +34,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-quiet-texticon-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-s-quiet-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-invalid-disabled: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -42,7 +42,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-quiet-texticon-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-s-quiet-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color: var(--spectrum-alias-border-color);
@@ -50,7 +50,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-texticon-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-down: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -58,7 +58,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-texticon-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-hover: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -66,7 +66,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-texticon-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-s-quiet-texticon-border-size-key-focus: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -74,7 +74,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-texticon-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-mouse-focus: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -82,7 +82,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-texticon-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-valid-down: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -90,7 +90,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-texticon-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-valid-hover: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -98,7 +98,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-texticon-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-texticon-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-s-quiet-texticon-border-size-valid-key-focus: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -106,7 +106,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-texticon-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -114,7 +114,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-texticon-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-invalid-down: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -122,7 +122,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-texticon-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-invalid-hover: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -130,7 +130,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-texticon-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-texticon-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-s-quiet-texticon-border-size-invalid-key-focus: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -138,7 +138,7 @@
   --spectrum-textfield-s-quiet-texticon-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-texticon-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-texticon-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-s-quiet-texticon-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-texticon-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-texticon-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -158,6 +158,7 @@
   --spectrum-textfield-s-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-s-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-s-quiet-texticon-icon-type: icon;
   --spectrum-textfield-s-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-quiet-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -181,7 +182,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-quiet-textonly-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-s-quiet-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -189,7 +190,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-quiet-textonly-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-s-quiet-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-valid: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-valid: var(--spectrum-alias-border-color);
@@ -197,7 +198,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-quiet-textonly-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-s-quiet-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-valid-disabled: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -205,7 +206,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-quiet-textonly-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-s-quiet-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-invalid: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -213,7 +214,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-quiet-textonly-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-s-quiet-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-invalid-disabled: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -221,7 +222,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-quiet-textonly-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-s-quiet-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color: var(--spectrum-alias-border-color);
@@ -229,7 +230,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-textonly-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-down: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -237,7 +238,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-textonly-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-hover: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -245,7 +246,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-textonly-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-s-quiet-textonly-border-size-key-focus: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -253,7 +254,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-textonly-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-mouse-focus: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -261,7 +262,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-textonly-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-valid-down: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -269,7 +270,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-textonly-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-valid-hover: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -277,7 +278,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-textonly-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-textonly-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-s-quiet-textonly-border-size-valid-key-focus: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -285,7 +286,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-textonly-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -293,7 +294,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-textonly-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-invalid-down: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -301,7 +302,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-textonly-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-invalid-hover: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -309,7 +310,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-quiet-textonly-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-s-quiet-textonly-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-s-quiet-textonly-border-size-invalid-key-focus: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -317,7 +318,7 @@
   --spectrum-textfield-s-quiet-textonly-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-quiet-textonly-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-s-quiet-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-quiet-textonly-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-s-quiet-textonly-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-s-quiet-textonly-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-s-quiet-textonly-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -337,6 +338,7 @@
   --spectrum-textfield-s-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-s-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-s-quiet-textonly-icon-type: icon;
   --spectrum-textfield-s-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-quiet-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -516,6 +518,7 @@
   --spectrum-textfield-s-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-texticon-icon-margin-top: 0;
   --spectrum-textfield-s-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-s-texticon-icon-type: icon;
   --spectrum-textfield-s-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -695,6 +698,7 @@
   --spectrum-textfield-s-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-s-textonly-icon-margin-top: 0;
   --spectrum-textfield-s-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-s-textonly-icon-type: icon;
   --spectrum-textfield-s-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-textfield-s-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -718,7 +722,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-quiet-texticon-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-m-quiet-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-disabled: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -726,7 +730,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-quiet-texticon-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-m-quiet-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-valid: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-valid: var(--spectrum-alias-border-color);
@@ -734,7 +738,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-quiet-texticon-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-m-quiet-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-valid-disabled: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -742,7 +746,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-quiet-texticon-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-m-quiet-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-invalid: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -750,7 +754,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-quiet-texticon-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-m-quiet-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-invalid-disabled: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -758,7 +762,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-quiet-texticon-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-m-quiet-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color: var(--spectrum-alias-border-color);
@@ -766,7 +770,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-texticon-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-down: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -774,7 +778,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-texticon-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-hover: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -782,7 +786,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-texticon-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-m-quiet-texticon-border-size-key-focus: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -790,7 +794,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-texticon-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-mouse-focus: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -798,7 +802,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-texticon-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-valid-down: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -806,7 +810,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-texticon-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-valid-hover: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -814,7 +818,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-texticon-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-texticon-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-m-quiet-texticon-border-size-valid-key-focus: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -822,7 +826,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-texticon-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -830,7 +834,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-texticon-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-invalid-down: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -838,7 +842,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-texticon-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-invalid-hover: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -846,7 +850,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-texticon-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-texticon-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-m-quiet-texticon-border-size-invalid-key-focus: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -854,7 +858,7 @@
   --spectrum-textfield-m-quiet-texticon-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-texticon-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-texticon-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-m-quiet-texticon-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-texticon-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-texticon-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -875,6 +879,7 @@
   --spectrum-textfield-m-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-m-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-m-quiet-texticon-icon-type: icon;
   --spectrum-textfield-m-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-quiet-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -898,7 +903,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-quiet-textonly-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-m-quiet-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -906,7 +911,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-quiet-textonly-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-m-quiet-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-valid: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-valid: var(--spectrum-alias-border-color);
@@ -914,7 +919,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-quiet-textonly-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-m-quiet-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-valid-disabled: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -922,7 +927,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-quiet-textonly-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-m-quiet-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-invalid: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -930,7 +935,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-quiet-textonly-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-m-quiet-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-invalid-disabled: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -938,7 +943,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-quiet-textonly-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-m-quiet-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color: var(--spectrum-alias-border-color);
@@ -946,7 +951,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-textonly-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-down: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -954,7 +959,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-textonly-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-hover: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -962,7 +967,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-textonly-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-m-quiet-textonly-border-size-key-focus: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -970,7 +975,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-textonly-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-mouse-focus: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -978,7 +983,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-textonly-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-valid-down: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -986,7 +991,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-textonly-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-valid-hover: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -994,7 +999,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-textonly-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-textonly-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-m-quiet-textonly-border-size-valid-key-focus: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -1002,7 +1007,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-textonly-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -1010,7 +1015,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-textonly-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-invalid-down: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -1018,7 +1023,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-textonly-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-invalid-hover: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -1026,7 +1031,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-quiet-textonly-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-m-quiet-textonly-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-m-quiet-textonly-border-size-invalid-key-focus: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -1034,7 +1039,7 @@
   --spectrum-textfield-m-quiet-textonly-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-quiet-textonly-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-m-quiet-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-quiet-textonly-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-m-quiet-textonly-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-m-quiet-textonly-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-m-quiet-textonly-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -1055,6 +1060,7 @@
   --spectrum-textfield-m-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-m-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-m-quiet-textonly-icon-type: icon;
   --spectrum-textfield-m-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-quiet-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -1235,6 +1241,7 @@
   --spectrum-textfield-m-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-texticon-icon-margin-top: 0;
   --spectrum-textfield-m-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-m-texticon-icon-type: icon;
   --spectrum-textfield-m-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -1414,6 +1421,7 @@
   --spectrum-textfield-m-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-m-textonly-icon-margin-top: 0;
   --spectrum-textfield-m-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-m-textonly-icon-type: icon;
   --spectrum-textfield-m-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-m-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -1437,7 +1445,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-quiet-texticon-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-l-quiet-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-disabled: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -1445,7 +1453,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-quiet-texticon-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-l-quiet-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-valid: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-valid: var(--spectrum-alias-border-color);
@@ -1453,7 +1461,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-quiet-texticon-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-l-quiet-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-valid-disabled: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -1461,7 +1469,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-quiet-texticon-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-l-quiet-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-invalid: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -1469,7 +1477,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-quiet-texticon-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-l-quiet-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-invalid-disabled: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -1477,7 +1485,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-quiet-texticon-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-l-quiet-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color: var(--spectrum-alias-border-color);
@@ -1485,7 +1493,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-texticon-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-down: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -1493,7 +1501,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-texticon-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-hover: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -1501,7 +1509,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-texticon-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-l-quiet-texticon-border-size-key-focus: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -1509,7 +1517,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-texticon-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-mouse-focus: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -1517,7 +1525,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-texticon-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-valid-down: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -1525,7 +1533,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-texticon-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-valid-hover: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -1533,7 +1541,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-texticon-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-texticon-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-l-quiet-texticon-border-size-valid-key-focus: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -1541,7 +1549,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-texticon-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -1549,7 +1557,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-texticon-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-invalid-down: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -1557,7 +1565,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-texticon-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-invalid-hover: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -1565,7 +1573,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-texticon-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-texticon-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-l-quiet-texticon-border-size-invalid-key-focus: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -1573,7 +1581,7 @@
   --spectrum-textfield-l-quiet-texticon-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-texticon-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-texticon-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-l-quiet-texticon-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-texticon-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-texticon-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -1593,6 +1601,7 @@
   --spectrum-textfield-l-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-l-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-l-quiet-texticon-icon-type: icon;
   --spectrum-textfield-l-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-quiet-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-l-quiet-texticon-text-transform: none;
@@ -1615,7 +1624,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-quiet-textonly-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-l-quiet-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -1623,7 +1632,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-quiet-textonly-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-l-quiet-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-valid: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-valid: var(--spectrum-alias-border-color);
@@ -1631,7 +1640,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-quiet-textonly-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-l-quiet-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-valid-disabled: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -1639,7 +1648,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-quiet-textonly-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-l-quiet-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-invalid: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -1647,7 +1656,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-quiet-textonly-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-l-quiet-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-invalid-disabled: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -1655,7 +1664,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-quiet-textonly-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-l-quiet-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color: var(--spectrum-alias-border-color);
@@ -1663,7 +1672,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-textonly-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-down: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -1671,7 +1680,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-textonly-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-hover: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -1679,7 +1688,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-textonly-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-l-quiet-textonly-border-size-key-focus: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -1687,7 +1696,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-textonly-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-mouse-focus: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -1695,7 +1704,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-textonly-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-valid-down: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -1703,7 +1712,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-textonly-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-valid-hover: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -1711,7 +1720,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-textonly-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-textonly-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-l-quiet-textonly-border-size-valid-key-focus: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -1719,7 +1728,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-textonly-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -1727,7 +1736,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-textonly-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-invalid-down: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -1735,7 +1744,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-textonly-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-invalid-hover: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -1743,7 +1752,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-quiet-textonly-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-l-quiet-textonly-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-l-quiet-textonly-border-size-invalid-key-focus: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -1751,7 +1760,7 @@
   --spectrum-textfield-l-quiet-textonly-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-quiet-textonly-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-l-quiet-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-quiet-textonly-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-l-quiet-textonly-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-l-quiet-textonly-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-l-quiet-textonly-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -1771,6 +1780,7 @@
   --spectrum-textfield-l-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-l-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-l-quiet-textonly-icon-type: icon;
   --spectrum-textfield-l-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-quiet-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-l-quiet-textonly-text-transform: none;
@@ -1949,6 +1959,7 @@
   --spectrum-textfield-l-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-texticon-icon-margin-top: 0;
   --spectrum-textfield-l-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-l-texticon-icon-type: icon;
   --spectrum-textfield-l-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-l-texticon-text-transform: none;
@@ -2127,6 +2138,7 @@
   --spectrum-textfield-l-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-textonly-icon-margin-top: 0;
   --spectrum-textfield-l-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-l-textonly-icon-type: icon;
   --spectrum-textfield-l-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-textfield-l-textonly-text-transform: none;
@@ -2149,7 +2161,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-quiet-texticon-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-xl-quiet-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-disabled: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -2157,7 +2169,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-quiet-texticon-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-xl-quiet-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-valid: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-valid: var(--spectrum-alias-border-color);
@@ -2165,7 +2177,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-quiet-texticon-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-xl-quiet-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-valid-disabled: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -2173,7 +2185,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-quiet-texticon-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-xl-quiet-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-invalid: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -2181,7 +2193,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-quiet-texticon-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-disabled: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -2189,7 +2201,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-quiet-texticon-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-xl-quiet-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color: var(--spectrum-alias-border-color);
@@ -2197,7 +2209,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-texticon-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-down: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -2205,7 +2217,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-texticon-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-hover: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -2213,7 +2225,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-texticon-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-xl-quiet-texticon-border-size-key-focus: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -2221,7 +2233,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-texticon-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-mouse-focus: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -2229,7 +2241,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-texticon-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-valid-down: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -2237,7 +2249,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-texticon-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-valid-hover: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -2245,7 +2257,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-texticon-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-texticon-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-xl-quiet-texticon-border-size-valid-key-focus: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -2253,7 +2265,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-texticon-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -2261,7 +2273,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-texticon-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-down: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -2269,7 +2281,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-texticon-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-hover: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -2277,7 +2289,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-texticon-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-key-focus: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -2285,7 +2297,7 @@
   --spectrum-textfield-xl-quiet-texticon-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-texticon-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-texticon-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-xl-quiet-texticon-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-texticon-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-texticon-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -2306,6 +2318,7 @@
   --spectrum-textfield-xl-quiet-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-quiet-texticon-icon-margin-top: 0;
   --spectrum-textfield-xl-quiet-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-quiet-texticon-icon-type: icon;
   --spectrum-textfield-xl-quiet-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-quiet-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-quiet-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -2329,7 +2342,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-quiet-textonly-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-xl-quiet-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-disabled: var(--spectrum-alias-border-color-mid);
@@ -2337,7 +2350,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-valid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-quiet-textonly-icon-color-valid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-xl-quiet-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-valid: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-valid: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-valid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-valid: var(--spectrum-alias-border-color);
@@ -2345,7 +2358,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-valid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-quiet-textonly-icon-color-valid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-xl-quiet-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-valid-disabled: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color-valid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-valid-disabled: var(--spectrum-alias-border-color-mid);
@@ -2353,7 +2366,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-invalid: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-quiet-textonly-icon-color-invalid: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-xl-quiet-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-invalid: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-invalid: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-invalid: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-invalid: var(--spectrum-semantic-negative-color-default);
@@ -2361,7 +2374,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-invalid-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-quiet-textonly-icon-color-invalid-disabled: var(--spectrum-alias-icon-color-disabled);
-  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-disabled: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color-invalid-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-invalid-disabled: var(--spectrum-alias-border-color-mid);
@@ -2369,7 +2382,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color: var(--spectrum-global-color-gray-800);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-quiet-textonly-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-textfield-xl-quiet-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color: var(--spectrum-alias-border-color);
@@ -2377,7 +2390,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-textonly-icon-color-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-down: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -2385,7 +2398,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-textonly-icon-color-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-hover: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -2393,7 +2406,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-textonly-icon-color-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-xl-quiet-textonly-border-size-key-focus: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-key-focus: var(--spectrum-global-color-gray-900);
@@ -2401,7 +2414,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-textonly-icon-color-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-mouse-focus: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -2409,7 +2422,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-valid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-textonly-icon-color-valid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-valid-down: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-valid-down: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-valid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-valid-down: var(--spectrum-alias-border-color-mouse-focus);
@@ -2417,7 +2430,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-valid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-textonly-icon-color-valid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-valid-hover: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-valid-hover: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-valid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-valid-hover: var(--spectrum-alias-border-color-hover);
@@ -2425,7 +2438,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-valid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-valid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-textonly-icon-color-valid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-textonly-border-size-valid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-xl-quiet-textonly-border-size-valid-key-focus: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-valid-key-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-valid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-valid-key-focus: var(--spectrum-global-color-gray-900);
@@ -2433,7 +2446,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-valid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-textonly-icon-color-valid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-valid-mouse-focus: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-valid-mouse-focus: var(--spectrum-semantic-positive-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-valid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-border-color-mouse-focus);
@@ -2441,7 +2454,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-invalid-down: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-textonly-icon-color-invalid-down: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-down: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-invalid-down: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-invalid-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-invalid-down: var(--spectrum-semantic-negative-color-down);
@@ -2449,7 +2462,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-invalid-hover: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-textonly-icon-color-invalid-hover: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-hover: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-invalid-hover: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-invalid-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-invalid-hover: var(--spectrum-semantic-negative-color-hover);
@@ -2457,7 +2470,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-invalid-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-invalid-key-focus: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-quiet-textonly-icon-color-invalid-key-focus: var(--spectrum-alias-icon-color-hover);
-  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-key-focus: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-invalid-key-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-invalid-key-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
@@ -2465,7 +2478,7 @@
   --spectrum-textfield-xl-quiet-textonly-text-color-invalid-mouse-focus: var(--spectrum-global-color-gray-900);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-quiet-textonly-icon-color-invalid-mouse-focus: var(--spectrum-alias-icon-color-down);
-  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-quiet-textonly-border-size-invalid-mouse-focus: 0;
   --spectrum-textfield-xl-quiet-textonly-validation-icon-color-invalid-mouse-focus: var(--spectrum-semantic-negative-icon-color);
   --spectrum-textfield-xl-quiet-textonly-background-color-invalid-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-textfield-xl-quiet-textonly-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
@@ -2486,6 +2499,7 @@
   --spectrum-textfield-xl-quiet-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-quiet-textonly-icon-margin-top: 0;
   --spectrum-textfield-xl-quiet-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-quiet-textonly-icon-type: icon;
   --spectrum-textfield-xl-quiet-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-quiet-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-quiet-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -2666,6 +2680,7 @@
   --spectrum-textfield-xl-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-texticon-icon-margin-top: 0;
   --spectrum-textfield-xl-texticon-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-texticon-icon-type: icon;
   --spectrum-textfield-xl-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-texticon-cursor-hit-x: var(--spectrum-global-dimension-size-50);
@@ -2846,6 +2861,7 @@
   --spectrum-textfield-xl-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-textonly-icon-margin-top: 0;
   --spectrum-textfield-xl-textonly-icon-margin-bottom: 0;
+  --spectrum-textfield-xl-textonly-icon-type: icon;
   --spectrum-textfield-xl-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-textfield-xl-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-textonly-cursor-hit-x: var(--spectrum-global-dimension-size-50);
