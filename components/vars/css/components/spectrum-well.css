@@ -1,5 +1,7 @@
 :root {
   --spectrum-well-label-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-well-background-color: toAlpha(@Color.gray-800, .02);
+  --spectrum-well-border-color: toAlpha(@Color.gray-900, .05);
   --spectrum-well-border-width: var(--spectrum-alias-border-size-thin);
   --spectrum-well-padding: var(--spectrum-global-dimension-size-200);
   --spectrum-well-border-size: var(--spectrum-alias-border-size-thin);

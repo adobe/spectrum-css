@@ -53,6 +53,7 @@
   --spectrum-slider-s-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -141,6 +142,7 @@
   --spectrum-slider-s-ramp-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-ramp-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-ramp-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-ramp-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-ramp-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -229,6 +231,7 @@
   --spectrum-slider-s-range-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-range-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-range-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-range-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-range-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -317,6 +320,7 @@
   --spectrum-slider-s-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -405,6 +409,7 @@
   --spectrum-slider-s-ramp-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-ramp-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-ramp-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-ramp-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-ramp-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -493,6 +498,7 @@
   --spectrum-slider-s-range-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-range-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-range-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-range-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-range-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -581,6 +587,7 @@
   --spectrum-slider-s-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -669,6 +676,7 @@
   --spectrum-slider-s-ramp-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-ramp-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-ramp-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-ramp-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-ramp-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -757,6 +765,7 @@
   --spectrum-slider-s-range-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-range-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-range-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-range-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-range-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -845,6 +854,7 @@
   --spectrum-slider-s-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -933,6 +943,7 @@
   --spectrum-slider-s-ramp-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-ramp-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-ramp-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-ramp-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-ramp-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-ramp-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1021,6 +1032,7 @@
   --spectrum-slider-s-range-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-s-range-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-s-range-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-s-range-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-s-range-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-s-range-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1109,6 +1121,7 @@
   --spectrum-slider-m-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1200,6 +1213,7 @@
   --spectrum-slider-m-ramp-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-ramp-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-ramp-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-ramp-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-ramp-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1291,6 +1305,7 @@
   --spectrum-slider-m-range-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-range-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-range-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-range-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-range-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1382,6 +1397,7 @@
   --spectrum-slider-m-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1473,6 +1489,7 @@
   --spectrum-slider-m-ramp-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-ramp-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-ramp-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-ramp-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-ramp-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1564,6 +1581,7 @@
   --spectrum-slider-m-range-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-range-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-range-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-range-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-range-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1655,6 +1673,7 @@
   --spectrum-slider-m-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1746,6 +1765,7 @@
   --spectrum-slider-m-ramp-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-ramp-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-ramp-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-ramp-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-ramp-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1837,6 +1857,7 @@
   --spectrum-slider-m-range-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-range-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-range-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-range-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-range-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1928,6 +1949,7 @@
   --spectrum-slider-m-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2019,6 +2041,7 @@
   --spectrum-slider-m-ramp-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-ramp-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-ramp-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-ramp-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-ramp-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-ramp-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2110,6 +2133,7 @@
   --spectrum-slider-m-range-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-m-range-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-m-range-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-m-range-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-m-range-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-m-range-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2201,6 +2225,7 @@
   --spectrum-slider-l-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2291,6 +2316,7 @@
   --spectrum-slider-l-ramp-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-ramp-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-ramp-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-ramp-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-ramp-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2381,6 +2407,7 @@
   --spectrum-slider-l-range-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-range-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-range-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-range-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-range-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2471,6 +2498,7 @@
   --spectrum-slider-l-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2561,6 +2589,7 @@
   --spectrum-slider-l-ramp-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-ramp-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-ramp-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-ramp-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-ramp-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2651,6 +2680,7 @@
   --spectrum-slider-l-range-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-range-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-range-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-range-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-range-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2741,6 +2771,7 @@
   --spectrum-slider-l-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2831,6 +2862,7 @@
   --spectrum-slider-l-ramp-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-ramp-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-ramp-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-ramp-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-ramp-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2921,6 +2953,7 @@
   --spectrum-slider-l-range-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-range-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-range-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-range-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-range-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3011,6 +3044,7 @@
   --spectrum-slider-l-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3101,6 +3135,7 @@
   --spectrum-slider-l-ramp-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-ramp-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-ramp-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-ramp-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-ramp-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-ramp-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3191,6 +3226,7 @@
   --spectrum-slider-l-range-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-l-range-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-l-range-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-l-range-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-l-range-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-l-range-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3281,6 +3317,7 @@
   --spectrum-slider-xl-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3372,6 +3409,7 @@
   --spectrum-slider-xl-ramp-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-ramp-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-ramp-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-ramp-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-ramp-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3463,6 +3501,7 @@
   --spectrum-slider-xl-range-tick-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-tick-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-tick-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-range-tick-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-range-tick-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-range-tick-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-range-tick-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3554,6 +3593,7 @@
   --spectrum-slider-xl-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3645,6 +3685,7 @@
   --spectrum-slider-xl-ramp-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-ramp-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-ramp-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-ramp-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-ramp-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3736,6 +3777,7 @@
   --spectrum-slider-xl-range-tick-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-tick-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-tick-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-range-tick-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-range-tick-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-range-tick-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-range-tick-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3827,6 +3869,7 @@
   --spectrum-slider-xl-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3918,6 +3961,7 @@
   --spectrum-slider-xl-ramp-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-ramp-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-ramp-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-ramp-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-ramp-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4009,6 +4053,7 @@
   --spectrum-slider-xl-range-editable-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-editable-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-editable-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-range-editable-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-range-editable-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-range-editable-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-range-editable-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4100,6 +4145,7 @@
   --spectrum-slider-xl-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4191,6 +4237,7 @@
   --spectrum-slider-xl-ramp-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-ramp-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-ramp-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-ramp-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-ramp-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-ramp-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4282,6 +4329,7 @@
   --spectrum-slider-xl-range-track-fill-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-handle-border-color-mouse-focus: var(--spectrum-global-color-gray-700);
   --spectrum-slider-xl-range-mark-color-mouse-focus: var(--spectrum-global-color-gray-400);
+  --spectrum-slider-xl-range-radial-reaction-color: toAlpha(@Color.gray-800, @Color.opacity-60);
   --spectrum-slider-xl-range-handle-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-slider-xl-range-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-slider-xl-range-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
