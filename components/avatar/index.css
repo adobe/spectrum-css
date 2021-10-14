@@ -89,7 +89,8 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-avatar-height);
 
   border-radius: var(--spectrum-avatar-border-radius);
-  border-style: none;
+  border-width: var(--spectrum-avatar-border-size);
+  border-style: solid;
 
   -webkit-user-drag: none;
   user-select: none;
