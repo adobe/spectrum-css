@@ -27,6 +27,8 @@ const dirs = require('../lib/dirs');
 const exec = require('../lib/exec');
 const depUtils = require('../lib/depUtils');
 
+const npmFetch = require('npm-registry-fetch');
+
 let minimumDeps = [
   'icon',
   'statuslight',
@@ -94,8 +96,8 @@ async function buildDocs_forDep(dep) {
 
         let date;
         try {
-          date = await exec.promise(`git log -1 --format=%ai ${pkg.name}@${pkg.version}`, { pipe: false });
-
+          const data = await npmFetch.json(pkg.name);
+          date = data.time[pkg.version];
           date = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         }
         catch (err) {
