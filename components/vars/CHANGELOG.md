@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.1"></a>
+# 4.0.1
+🗓 2021-10-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.0.0...@spectrum-css/vars@4.0.1)
+
+### 🐛 Bug fixes
+
+* fixed picker quiet popover offset-x tokens ([36c7551](https://github.com/adobe/spectrum-css/commit/36c7551))
+* update to spectrum-tokens 7.0.1([b88d6ce](https://github.com/adobe/spectrum-css/commit/b88d6ce))
+
+
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.3...@spectrum-css/vars@4.0.0)
