@@ -805,6 +805,11 @@
   --spectrum-colorwheel-touch-hit-inner: var(--spectrum-global-dimension-size-150);
   --spectrum-colorwheel-min-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-colorwheel-min-height: var(--spectrum-global-dimension-size-2400);
+  --spectrum-combobox-quiet-fieldbutton-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-combobox-quiet-fieldbutton-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-combobox-fieldbutton-padding-left: var(--spectrum-global-dimension-size-125);
+  --spectrum-combobox-fieldbutton-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-combobox-fieldbutton-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-cyclebutton-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-cyclebutton-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-dialog-confirm-title-text-size: var(--spectrum-global-dimension-font-size-300);
