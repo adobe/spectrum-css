@@ -24,7 +24,7 @@
   --spectrum-colorhandle-width: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-height: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-background-color: var(--spectrum-global-color-static-white);
-  --spectrum-colorhandle-border-color: toAlpha(@Color.static.black, @Color.opacity-42);
+  --spectrum-colorhandle-border-color: rgba(0,0,0,0.42);
   --spectrum-colorhandle-inner-border-color-down: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-down: rgba(0,0,0,0.42);
   --spectrum-colorhandle-fill-color-down: var(--spectrum-alias-background-color-transparent);
@@ -37,7 +37,7 @@
   --spectrum-colorhandle-width-down: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-height-down: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-background-color-down: var(--spectrum-global-color-static-white);
-  --spectrum-colorhandle-border-color-down: toAlpha(@Color.static.black, @Color.opacity-42);
+  --spectrum-colorhandle-border-color-down: rgba(0,0,0,0.42);
   --spectrum-colorhandle-inner-border-color-hover: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-hover: rgba(0,0,0,0.42);
   --spectrum-colorhandle-fill-color-hover: var(--spectrum-alias-background-color-transparent);
@@ -50,7 +50,7 @@
   --spectrum-colorhandle-width-hover: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-height-hover: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-background-color-hover: var(--spectrum-global-color-static-white);
-  --spectrum-colorhandle-border-color-hover: toAlpha(@Color.static.black, @Color.opacity-42);
+  --spectrum-colorhandle-border-color-hover: rgba(0,0,0,0.42);
   --spectrum-colorhandle-inner-border-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-key-focus: rgba(0,0,0,0.42);
   --spectrum-colorhandle-fill-color-key-focus: var(--spectrum-alias-background-color-transparent);
@@ -63,7 +63,7 @@
   --spectrum-colorhandle-width-key-focus: var(--spectrum-global-dimension-size-400);
   --spectrum-colorhandle-height-key-focus: var(--spectrum-global-dimension-size-400);
   --spectrum-colorhandle-background-color-key-focus: var(--spectrum-global-color-static-white);
-  --spectrum-colorhandle-border-color-key-focus: toAlpha(@Color.static.black, @Color.opacity-42);
+  --spectrum-colorhandle-border-color-key-focus: rgba(0,0,0,0.42);
   --spectrum-colorhandle-inner-border-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-colorhandle-outer-border-color-mouse-focus: rgba(0,0,0,0.42);
   --spectrum-colorhandle-fill-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
@@ -76,7 +76,7 @@
   --spectrum-colorhandle-width-mouse-focus: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-height-mouse-focus: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-background-color-mouse-focus: var(--spectrum-global-color-static-white);
-  --spectrum-colorhandle-border-color-mouse-focus: toAlpha(@Color.static.black, @Color.opacity-42);
+  --spectrum-colorhandle-border-color-mouse-focus: rgba(0,0,0,0.42);
   --spectrum-colorhandle-size: var(--spectrum-global-dimension-size-200);
   --spectrum-colorhandle-size-focus: var(--spectrum-global-dimension-size-400);
   --spectrum-colorhandle-inner-border-size: var(--spectrum-global-dimension-static-size-25);
