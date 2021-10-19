@@ -13,7 +13,9 @@ governing permissions and limitations under the License.
 .spectrum-Avatar {
   opacity: var(--spectrum-avatar-size-100-opacity);
 
-  border-color: var(--spectrum-avatar-size-100-border-color);
+  &:after {
+    border-color: var(--spectrum-avatar-size-100-border-color);
+  }
 
   &.is-disabled {
     opacity: var(--spectrum-avatar-size-100-opacity-disabled);
