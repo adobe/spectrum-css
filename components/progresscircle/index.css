@@ -18,6 +18,10 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-progresscircle-m-height);
   position: relative;
   direction: ltr;
+
+  /* Fix for Safari rendering bug */
+  /* more info: https://github.com/adobe/spectrum-web-components/issues/1392 */
+  transform: translate3d(0, 0, 0);
 }
 .spectrum-ProgressCircle-track {
   box-sizing: border-box;
