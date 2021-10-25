@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.5"></a>
+## 3.0.5
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.4...@spectrum-css/sidenav@3.0.5)
+
+### 🐛 Bug fixes
+
+* replaced indentation with margin left in sidenav item ([7cb96d1](https://github.com/adobe/spectrum-css/commit/7cb96d1))
+
+
+
+
+
 <a name="3.0.3"></a>
 ## 3.0.3
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.3-alpha.3...@spectrum-css/sidenav@3.0.3)

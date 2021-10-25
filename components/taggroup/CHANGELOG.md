@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@2.0.1...@spectrum-css/taggroup@3.0.0)
+
+* fix!: avatar needs a div wrapper for to support express border overlay ([f54b645](https://github.com/adobe/spectrum-css/commit/f54b645))
+
+
+### 🛑 BREAKING CHANGES
+
+* for express to support the transparent border overlay,
+the avatar needs to be wrapped in a div to support pseudo elements.
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@2.0.0-alpha.3...@spectrum-css/taggroup@2.0.0)

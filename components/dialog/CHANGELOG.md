@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.6"></a>
+## 3.0.6
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.5...@spectrum-css/dialog@3.0.6)
+
+### 🐛 Bug fixes
+
+* **dialog:** apply the same color to footer content as content content ([4eabc72](https://github.com/adobe/spectrum-css/commit/4eabc72))
+
+
+
+
+
 <a name="3.0.3"></a>
 ## 3.0.3
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.3-alpha.3...@spectrum-css/dialog@3.0.3)

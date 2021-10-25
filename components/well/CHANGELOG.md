@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.4"></a>
+## 3.0.4
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.3-alpha.3...@spectrum-css/well@3.0.4)
+
+### 🐛 Bug fixes
+
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
 <a name="3.0.3"></a>
 ## 3.0.3
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/well@3.0.3-alpha.3...@spectrum-css/well@3.0.3)
