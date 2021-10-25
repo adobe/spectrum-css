@@ -9,6 +9,7 @@
   --spectrum-alertbanner-neutral-rule-border-radius: var(--spectrum-global-dimension-size-10);
   --spectrum-alertbanner-neutral-rule-height: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-alertbanner-neutral-rule-width: var(--spectrum-global-dimension-size-10);
+  --spectrum-alertbanner-neutral-icon-type: icon;
   --spectrum-alertbanner-neutral-icon-padding-y: var(--spectrum-global-dimension-size-85);
   --spectrum-alertbanner-neutral-icon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-alertbanner-neutral-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -37,8 +38,8 @@
   --spectrum-alertbanner-neutral-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-alertbanner-neutral-padding-y: var(--spectrum-global-dimension-size-100);
   --spectrum-alertbanner-neutral-margin-x: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-alertbanner-neutral-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-alertbanner-neutral-offset-y: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-alertbanner-neutral-layout: inline-row;
   --spectrum-alertbanner-neutral-dismiss-duration: 5000ms;
   --spectrum-alertbanner-info-rule-color: var(--spectrum-alias-track-color-overbackground);
   --spectrum-alertbanner-info-rule-background-color: var(--spectrum-global-color-gray-300);
@@ -50,6 +51,7 @@
   --spectrum-alertbanner-info-rule-border-radius: var(--spectrum-global-dimension-size-10);
   --spectrum-alertbanner-info-rule-height: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-alertbanner-info-rule-width: var(--spectrum-global-dimension-size-10);
+  --spectrum-alertbanner-info-icon-type: icon;
   --spectrum-alertbanner-info-icon-padding-y: var(--spectrum-global-dimension-size-85);
   --spectrum-alertbanner-info-icon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-alertbanner-info-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -78,8 +80,8 @@
   --spectrum-alertbanner-info-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-alertbanner-info-padding-y: var(--spectrum-global-dimension-size-100);
   --spectrum-alertbanner-info-margin-x: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-alertbanner-info-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-alertbanner-info-offset-y: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-alertbanner-info-layout: inline-row;
   --spectrum-alertbanner-info-dismiss-duration: 5000ms;
   --spectrum-alertbanner-negative-rule-color: var(--spectrum-alias-track-color-overbackground);
   --spectrum-alertbanner-negative-rule-background-color: var(--spectrum-global-color-gray-300);
@@ -91,6 +93,7 @@
   --spectrum-alertbanner-negative-rule-border-radius: var(--spectrum-global-dimension-size-10);
   --spectrum-alertbanner-negative-rule-height: var(--spectrum-global-dimension-static-percent-100);
   --spectrum-alertbanner-negative-rule-width: var(--spectrum-global-dimension-size-10);
+  --spectrum-alertbanner-negative-icon-type: icon;
   --spectrum-alertbanner-negative-icon-padding-y: var(--spectrum-global-dimension-size-85);
   --spectrum-alertbanner-negative-icon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-alertbanner-negative-icon-size: var(--spectrum-alias-workflow-icon-size-m);
@@ -119,7 +122,7 @@
   --spectrum-alertbanner-negative-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-alertbanner-negative-padding-y: var(--spectrum-global-dimension-size-100);
   --spectrum-alertbanner-negative-margin-x: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-alertbanner-negative-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-alertbanner-negative-offset-y: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-alertbanner-negative-layout: inline-row;
   --spectrum-alertbanner-negative-dismiss-duration: 5000ms;
 }

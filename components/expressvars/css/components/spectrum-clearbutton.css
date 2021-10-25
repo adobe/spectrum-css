@@ -20,6 +20,7 @@
   --spectrum-clearbutton-s-overbackground-icon-size: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-s-overbackground-width: var(--spectrum-global-dimension-size-300);
   --spectrum-clearbutton-s-overbackground-min-width: var(--spectrum-global-dimension-size-300);
+  --spectrum-clearbutton-s-overbackground-layout: inline-row;
   --spectrum-clearbutton-s-overbackground-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-clearbutton-s-overbackground-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-overbackground-padding-right: var(--spectrum-global-dimension-size-150);
@@ -50,6 +51,7 @@
   --spectrum-clearbutton-s-icon-size: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-s-width: var(--spectrum-global-dimension-size-300);
   --spectrum-clearbutton-s-min-width: var(--spectrum-global-dimension-size-300);
+  --spectrum-clearbutton-s-layout: inline-row;
   --spectrum-clearbutton-s-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-clearbutton-s-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-clearbutton-s-padding-right: var(--spectrum-global-dimension-size-150);
@@ -80,6 +82,7 @@
   --spectrum-clearbutton-m-overbackground-icon-size: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-m-overbackground-width: var(--spectrum-global-dimension-size-400);
   --spectrum-clearbutton-m-overbackground-min-width: var(--spectrum-global-dimension-size-400);
+  --spectrum-clearbutton-m-overbackground-layout: inline-row;
   --spectrum-clearbutton-m-overbackground-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-clearbutton-m-overbackground-border-radius: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-overbackground-padding-right: var(--spectrum-global-dimension-size-200);
@@ -110,6 +113,7 @@
   --spectrum-clearbutton-m-icon-size: var(--spectrum-global-dimension-size-100);
   --spectrum-clearbutton-m-width: var(--spectrum-global-dimension-size-400);
   --spectrum-clearbutton-m-min-width: var(--spectrum-global-dimension-size-400);
+  --spectrum-clearbutton-m-layout: inline-row;
   --spectrum-clearbutton-m-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-clearbutton-m-border-radius: var(--spectrum-global-dimension-size-200);
   --spectrum-clearbutton-m-padding-right: var(--spectrum-global-dimension-size-200);
