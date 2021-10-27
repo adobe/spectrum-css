@@ -24,6 +24,7 @@
   --spectrum-bottomnavigation-primary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-bottomnavigation-primary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-bottomnavigation-primary-background-color: var(--spectrum-alias-background-color-primary);
+  --spectrum-bottomnavigation-primary-elevation: 8dp;
   --spectrum-bottomnavigation-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-bottomnavigation-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-bottomnavigation-primary-item-icon-type: icon;
@@ -42,7 +43,6 @@
   --spectrum-bottomnavigation-primary-item-text-text-transform: none;
   --spectrum-bottomnavigation-primary-item-padding-top: var(--spectrum-global-dimension-static-size-100);
   --spectrum-bottomnavigation-primary-item-padding-bottom: var(--spectrum-global-dimension-static-size-115);
-  --spectrum-bottomnavigation-primary-elevation: 8dp;
   --spectrum-bottomnavigation-primary-height: var(--spectrum-global-dimension-static-size-700);
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-color-selected: var(--spectrum-alias-icon-color-selected);
   --spectrum-bottomnavigation-sidelabel-primary-item-text-color-selected: var(--spectrum-alias-text-color-selected);
@@ -69,6 +69,7 @@
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-bottomnavigation-sidelabel-primary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-bottomnavigation-sidelabel-primary-background-color: var(--spectrum-alias-background-color-primary);
+  --spectrum-bottomnavigation-sidelabel-primary-elevation: 8dp;
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-bottomnavigation-sidelabel-primary-item-icon-type: icon;
@@ -87,7 +88,6 @@
   --spectrum-bottomnavigation-sidelabel-primary-item-text-text-transform: none;
   --spectrum-bottomnavigation-sidelabel-primary-item-padding-top: var(--spectrum-global-dimension-static-size-200);
   --spectrum-bottomnavigation-sidelabel-primary-item-padding-bottom: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-bottomnavigation-sidelabel-primary-elevation: 8dp;
   --spectrum-bottomnavigation-sidelabel-primary-height: var(--spectrum-global-dimension-static-size-700);
   --spectrum-bottomnavigation-secondary-item-icon-color-selected: var(--spectrum-alias-icon-color-selected);
   --spectrum-bottomnavigation-secondary-item-text-color-selected: var(--spectrum-alias-text-color-selected);
@@ -114,6 +114,7 @@
   --spectrum-bottomnavigation-secondary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-bottomnavigation-secondary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-bottomnavigation-secondary-background-color: var(--spectrum-alias-background-color-secondary);
+  --spectrum-bottomnavigation-secondary-elevation: 8dp;
   --spectrum-bottomnavigation-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-bottomnavigation-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-bottomnavigation-secondary-item-icon-type: icon;
@@ -132,7 +133,6 @@
   --spectrum-bottomnavigation-secondary-item-text-text-transform: none;
   --spectrum-bottomnavigation-secondary-item-padding-top: var(--spectrum-global-dimension-static-size-100);
   --spectrum-bottomnavigation-secondary-item-padding-bottom: var(--spectrum-global-dimension-static-size-115);
-  --spectrum-bottomnavigation-secondary-elevation: 8dp;
   --spectrum-bottomnavigation-secondary-height: var(--spectrum-global-dimension-static-size-700);
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-color-selected: var(--spectrum-alias-icon-color-selected);
   --spectrum-bottomnavigation-sidelabel-secondary-item-text-color-selected: var(--spectrum-alias-text-color-selected);
@@ -159,6 +159,7 @@
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-bottomnavigation-sidelabel-secondary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-bottomnavigation-sidelabel-secondary-background-color: var(--spectrum-alias-background-color-secondary);
+  --spectrum-bottomnavigation-sidelabel-secondary-elevation: 8dp;
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-bottomnavigation-sidelabel-secondary-item-icon-type: icon;
@@ -177,6 +178,5 @@
   --spectrum-bottomnavigation-sidelabel-secondary-item-text-text-transform: none;
   --spectrum-bottomnavigation-sidelabel-secondary-item-padding-top: var(--spectrum-global-dimension-static-size-200);
   --spectrum-bottomnavigation-sidelabel-secondary-item-padding-bottom: var(--spectrum-global-dimension-static-size-225);
-  --spectrum-bottomnavigation-sidelabel-secondary-elevation: 8dp;
   --spectrum-bottomnavigation-sidelabel-secondary-height: var(--spectrum-global-dimension-static-size-700);
 }

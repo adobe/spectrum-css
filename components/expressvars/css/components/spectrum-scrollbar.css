@@ -1,7 +1,7 @@
 :root {
   --spectrum-scrollbar-s-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-s-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-s-bar-background-color-hover: rgba(110,110,110,0.6);
+  --spectrum-scrollbar-s-bar-background-color-hover: rgba(149,149,149,0.6);
   --spectrum-scrollbar-s-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-s-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-s-track-background-color: transparent;
@@ -24,7 +24,7 @@
   --spectrum-scrollbar-s-bar-touch-hit-end: var(--spectrum-global-dimension-size-40);
   --spectrum-scrollbar-m-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-m-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-m-bar-background-color-hover: rgba(110,110,110,0.6);
+  --spectrum-scrollbar-m-bar-background-color-hover: rgba(149,149,149,0.6);
   --spectrum-scrollbar-m-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-m-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-m-track-background-color: transparent;
@@ -47,7 +47,7 @@
   --spectrum-scrollbar-m-bar-touch-hit-end: var(--spectrum-global-dimension-size-40);
   --spectrum-scrollbar-l-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-l-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-l-bar-background-color-hover: rgba(110,110,110,0.6);
+  --spectrum-scrollbar-l-bar-background-color-hover: rgba(149,149,149,0.6);
   --spectrum-scrollbar-l-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-l-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-l-track-background-color: transparent;

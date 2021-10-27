@@ -23,6 +23,7 @@
   --spectrum-logicbutton-and-text-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-and-background-color-mouse-focus: var(--spectrum-global-color-blue-500);
   --spectrum-logicbutton-and-border-color-mouse-focus: var(--spectrum-global-color-blue-500);
+  --spectrum-logicbutton-and-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-logicbutton-and-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-logicbutton-and-text-transform: none;
   --spectrum-logicbutton-and-text-font-weight: var(--spectrum-global-font-weight-bold);
@@ -32,7 +33,6 @@
   --spectrum-logicbutton-and-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-logicbutton-and-text-text-transform: none;
   --spectrum-logicbutton-and-text-font-size: var(--spectrum-global-dimension-font-size-100);
-  --spectrum-logicbutton-and-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-logicbutton-and-height: var(--spectrum-global-dimension-static-size-300);
   --spectrum-logicbutton-and-padding-left: var(--spectrum-global-dimension-size-100);
   --spectrum-logicbutton-and-padding-right: var(--spectrum-global-dimension-size-100);
@@ -62,6 +62,7 @@
   --spectrum-logicbutton-or-text-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-logicbutton-or-background-color-mouse-focus: var(--spectrum-global-color-magenta-500);
   --spectrum-logicbutton-or-border-color-mouse-focus: var(--spectrum-global-color-magenta-500);
+  --spectrum-logicbutton-or-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-logicbutton-or-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-logicbutton-or-text-transform: none;
   --spectrum-logicbutton-or-text-font-weight: var(--spectrum-global-font-weight-bold);
@@ -71,7 +72,6 @@
   --spectrum-logicbutton-or-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-logicbutton-or-text-text-transform: none;
   --spectrum-logicbutton-or-text-font-size: var(--spectrum-global-dimension-font-size-100);
-  --spectrum-logicbutton-or-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-logicbutton-or-height: var(--spectrum-global-dimension-static-size-300);
   --spectrum-logicbutton-or-padding-left: var(--spectrum-global-dimension-size-100);
   --spectrum-logicbutton-or-padding-right: var(--spectrum-global-dimension-size-100);

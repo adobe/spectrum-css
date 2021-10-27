@@ -97,6 +97,7 @@
   --spectrum-badge-s-fuchsia-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-fuchsia-texticon-icon-margin-top: 0;
   --spectrum-badge-s-fuchsia-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-fuchsia-texticon-icon-render: yes;
   --spectrum-badge-s-fuchsia-texticon-icon-type: icon;
   --spectrum-badge-s-fuchsia-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-fuchsia-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -224,6 +225,7 @@
   --spectrum-badge-s-indigo-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-indigo-texticon-icon-margin-top: 0;
   --spectrum-badge-s-indigo-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-indigo-texticon-icon-render: yes;
   --spectrum-badge-s-indigo-texticon-icon-type: icon;
   --spectrum-badge-s-indigo-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-indigo-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -351,6 +353,7 @@
   --spectrum-badge-s-informative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-informative-texticon-icon-margin-top: 0;
   --spectrum-badge-s-informative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-informative-texticon-icon-render: yes;
   --spectrum-badge-s-informative-texticon-icon-type: icon;
   --spectrum-badge-s-informative-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-informative-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -478,6 +481,7 @@
   --spectrum-badge-s-magenta-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-magenta-texticon-icon-margin-top: 0;
   --spectrum-badge-s-magenta-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-magenta-texticon-icon-render: yes;
   --spectrum-badge-s-magenta-texticon-icon-type: icon;
   --spectrum-badge-s-magenta-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-magenta-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -605,6 +609,7 @@
   --spectrum-badge-s-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-negative-texticon-icon-margin-top: 0;
   --spectrum-badge-s-negative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-negative-texticon-icon-render: yes;
   --spectrum-badge-s-negative-texticon-icon-type: icon;
   --spectrum-badge-s-negative-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-negative-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -732,6 +737,7 @@
   --spectrum-badge-s-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-neutral-texticon-icon-margin-top: 0;
   --spectrum-badge-s-neutral-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-neutral-texticon-icon-render: yes;
   --spectrum-badge-s-neutral-texticon-icon-type: icon;
   --spectrum-badge-s-neutral-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -859,6 +865,7 @@
   --spectrum-badge-s-positive-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-positive-texticon-icon-margin-top: 0;
   --spectrum-badge-s-positive-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-positive-texticon-icon-render: yes;
   --spectrum-badge-s-positive-texticon-icon-type: icon;
   --spectrum-badge-s-positive-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-positive-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -986,6 +993,7 @@
   --spectrum-badge-s-purple-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-purple-texticon-icon-margin-top: 0;
   --spectrum-badge-s-purple-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-purple-texticon-icon-render: yes;
   --spectrum-badge-s-purple-texticon-icon-type: icon;
   --spectrum-badge-s-purple-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-purple-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -1113,6 +1121,7 @@
   --spectrum-badge-s-seafoam-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-seafoam-texticon-icon-margin-top: 0;
   --spectrum-badge-s-seafoam-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-seafoam-texticon-icon-render: yes;
   --spectrum-badge-s-seafoam-texticon-icon-type: icon;
   --spectrum-badge-s-seafoam-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-seafoam-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -1240,6 +1249,7 @@
   --spectrum-badge-s-yellow-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-yellow-texticon-icon-margin-top: 0;
   --spectrum-badge-s-yellow-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-s-yellow-texticon-icon-render: yes;
   --spectrum-badge-s-yellow-texticon-icon-type: icon;
   --spectrum-badge-s-yellow-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-yellow-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -1367,6 +1377,7 @@
   --spectrum-badge-s-fuchsia-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-fuchsia-textonly-icon-margin-top: 0;
   --spectrum-badge-s-fuchsia-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-fuchsia-textonly-icon-render: no;
   --spectrum-badge-s-fuchsia-textonly-icon-type: icon;
   --spectrum-badge-s-fuchsia-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-fuchsia-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -1494,6 +1505,7 @@
   --spectrum-badge-s-indigo-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-indigo-textonly-icon-margin-top: 0;
   --spectrum-badge-s-indigo-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-indigo-textonly-icon-render: no;
   --spectrum-badge-s-indigo-textonly-icon-type: icon;
   --spectrum-badge-s-indigo-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-indigo-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -1621,6 +1633,7 @@
   --spectrum-badge-s-informative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-informative-textonly-icon-margin-top: 0;
   --spectrum-badge-s-informative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-informative-textonly-icon-render: no;
   --spectrum-badge-s-informative-textonly-icon-type: icon;
   --spectrum-badge-s-informative-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-informative-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -1748,6 +1761,7 @@
   --spectrum-badge-s-magenta-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-magenta-textonly-icon-margin-top: 0;
   --spectrum-badge-s-magenta-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-magenta-textonly-icon-render: no;
   --spectrum-badge-s-magenta-textonly-icon-type: icon;
   --spectrum-badge-s-magenta-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-magenta-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -1875,6 +1889,7 @@
   --spectrum-badge-s-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-negative-textonly-icon-margin-top: 0;
   --spectrum-badge-s-negative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-negative-textonly-icon-render: no;
   --spectrum-badge-s-negative-textonly-icon-type: icon;
   --spectrum-badge-s-negative-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-negative-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2002,6 +2017,7 @@
   --spectrum-badge-s-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-neutral-textonly-icon-margin-top: 0;
   --spectrum-badge-s-neutral-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-neutral-textonly-icon-render: no;
   --spectrum-badge-s-neutral-textonly-icon-type: icon;
   --spectrum-badge-s-neutral-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-neutral-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2129,6 +2145,7 @@
   --spectrum-badge-s-positive-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-positive-textonly-icon-margin-top: 0;
   --spectrum-badge-s-positive-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-positive-textonly-icon-render: no;
   --spectrum-badge-s-positive-textonly-icon-type: icon;
   --spectrum-badge-s-positive-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-positive-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2256,6 +2273,7 @@
   --spectrum-badge-s-purple-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-purple-textonly-icon-margin-top: 0;
   --spectrum-badge-s-purple-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-purple-textonly-icon-render: no;
   --spectrum-badge-s-purple-textonly-icon-type: icon;
   --spectrum-badge-s-purple-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-purple-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2383,6 +2401,7 @@
   --spectrum-badge-s-seafoam-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-seafoam-textonly-icon-margin-top: 0;
   --spectrum-badge-s-seafoam-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-seafoam-textonly-icon-render: no;
   --spectrum-badge-s-seafoam-textonly-icon-type: icon;
   --spectrum-badge-s-seafoam-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-seafoam-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2510,6 +2529,7 @@
   --spectrum-badge-s-yellow-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-yellow-textonly-icon-margin-top: 0;
   --spectrum-badge-s-yellow-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-s-yellow-textonly-icon-render: no;
   --spectrum-badge-s-yellow-textonly-icon-type: icon;
   --spectrum-badge-s-yellow-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-yellow-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2637,6 +2657,7 @@
   --spectrum-badge-s-fuchsia-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-fuchsia-icononly-icon-margin-top: 0;
   --spectrum-badge-s-fuchsia-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-fuchsia-icononly-icon-render: yes;
   --spectrum-badge-s-fuchsia-icononly-icon-type: icon;
   --spectrum-badge-s-fuchsia-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-fuchsia-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2764,6 +2785,7 @@
   --spectrum-badge-s-indigo-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-indigo-icononly-icon-margin-top: 0;
   --spectrum-badge-s-indigo-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-indigo-icononly-icon-render: yes;
   --spectrum-badge-s-indigo-icononly-icon-type: icon;
   --spectrum-badge-s-indigo-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-indigo-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -2891,6 +2913,7 @@
   --spectrum-badge-s-informative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-informative-icononly-icon-margin-top: 0;
   --spectrum-badge-s-informative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-informative-icononly-icon-render: yes;
   --spectrum-badge-s-informative-icononly-icon-type: icon;
   --spectrum-badge-s-informative-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-informative-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3018,6 +3041,7 @@
   --spectrum-badge-s-magenta-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-magenta-icononly-icon-margin-top: 0;
   --spectrum-badge-s-magenta-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-magenta-icononly-icon-render: yes;
   --spectrum-badge-s-magenta-icononly-icon-type: icon;
   --spectrum-badge-s-magenta-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-magenta-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3145,6 +3169,7 @@
   --spectrum-badge-s-negative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-negative-icononly-icon-margin-top: 0;
   --spectrum-badge-s-negative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-negative-icononly-icon-render: yes;
   --spectrum-badge-s-negative-icononly-icon-type: icon;
   --spectrum-badge-s-negative-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-negative-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3272,6 +3297,7 @@
   --spectrum-badge-s-neutral-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-neutral-icononly-icon-margin-top: 0;
   --spectrum-badge-s-neutral-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-neutral-icononly-icon-render: yes;
   --spectrum-badge-s-neutral-icononly-icon-type: icon;
   --spectrum-badge-s-neutral-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-neutral-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3399,6 +3425,7 @@
   --spectrum-badge-s-positive-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-positive-icononly-icon-margin-top: 0;
   --spectrum-badge-s-positive-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-positive-icononly-icon-render: yes;
   --spectrum-badge-s-positive-icononly-icon-type: icon;
   --spectrum-badge-s-positive-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-positive-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3526,6 +3553,7 @@
   --spectrum-badge-s-purple-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-purple-icononly-icon-margin-top: 0;
   --spectrum-badge-s-purple-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-purple-icononly-icon-render: yes;
   --spectrum-badge-s-purple-icononly-icon-type: icon;
   --spectrum-badge-s-purple-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-purple-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3653,6 +3681,7 @@
   --spectrum-badge-s-seafoam-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-seafoam-icononly-icon-margin-top: 0;
   --spectrum-badge-s-seafoam-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-seafoam-icononly-icon-render: yes;
   --spectrum-badge-s-seafoam-icononly-icon-type: icon;
   --spectrum-badge-s-seafoam-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-seafoam-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3780,6 +3809,7 @@
   --spectrum-badge-s-yellow-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-badge-s-yellow-icononly-icon-margin-top: 0;
   --spectrum-badge-s-yellow-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-s-yellow-icononly-icon-render: yes;
   --spectrum-badge-s-yellow-icononly-icon-type: icon;
   --spectrum-badge-s-yellow-icononly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-badge-s-yellow-icononly-icon-gap: var(--spectrum-global-dimension-size-85);
@@ -3908,6 +3938,7 @@
   --spectrum-badge-m-fuchsia-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-fuchsia-texticon-icon-margin-top: 0;
   --spectrum-badge-m-fuchsia-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-fuchsia-texticon-icon-render: yes;
   --spectrum-badge-m-fuchsia-texticon-icon-type: icon;
   --spectrum-badge-m-fuchsia-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-fuchsia-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4035,6 +4066,7 @@
   --spectrum-badge-m-indigo-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-indigo-texticon-icon-margin-top: 0;
   --spectrum-badge-m-indigo-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-indigo-texticon-icon-render: yes;
   --spectrum-badge-m-indigo-texticon-icon-type: icon;
   --spectrum-badge-m-indigo-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-indigo-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4162,6 +4194,7 @@
   --spectrum-badge-m-informative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-informative-texticon-icon-margin-top: 0;
   --spectrum-badge-m-informative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-informative-texticon-icon-render: yes;
   --spectrum-badge-m-informative-texticon-icon-type: icon;
   --spectrum-badge-m-informative-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-informative-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4289,6 +4322,7 @@
   --spectrum-badge-m-magenta-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-magenta-texticon-icon-margin-top: 0;
   --spectrum-badge-m-magenta-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-magenta-texticon-icon-render: yes;
   --spectrum-badge-m-magenta-texticon-icon-type: icon;
   --spectrum-badge-m-magenta-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-magenta-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4416,6 +4450,7 @@
   --spectrum-badge-m-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-negative-texticon-icon-margin-top: 0;
   --spectrum-badge-m-negative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-negative-texticon-icon-render: yes;
   --spectrum-badge-m-negative-texticon-icon-type: icon;
   --spectrum-badge-m-negative-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-negative-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4543,6 +4578,7 @@
   --spectrum-badge-m-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-neutral-texticon-icon-margin-top: 0;
   --spectrum-badge-m-neutral-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-neutral-texticon-icon-render: yes;
   --spectrum-badge-m-neutral-texticon-icon-type: icon;
   --spectrum-badge-m-neutral-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4670,6 +4706,7 @@
   --spectrum-badge-m-positive-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-positive-texticon-icon-margin-top: 0;
   --spectrum-badge-m-positive-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-positive-texticon-icon-render: yes;
   --spectrum-badge-m-positive-texticon-icon-type: icon;
   --spectrum-badge-m-positive-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-positive-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4797,6 +4834,7 @@
   --spectrum-badge-m-purple-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-purple-texticon-icon-margin-top: 0;
   --spectrum-badge-m-purple-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-purple-texticon-icon-render: yes;
   --spectrum-badge-m-purple-texticon-icon-type: icon;
   --spectrum-badge-m-purple-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-purple-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -4924,6 +4962,7 @@
   --spectrum-badge-m-seafoam-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-seafoam-texticon-icon-margin-top: 0;
   --spectrum-badge-m-seafoam-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-seafoam-texticon-icon-render: yes;
   --spectrum-badge-m-seafoam-texticon-icon-type: icon;
   --spectrum-badge-m-seafoam-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-seafoam-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5051,6 +5090,7 @@
   --spectrum-badge-m-yellow-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-yellow-texticon-icon-margin-top: 0;
   --spectrum-badge-m-yellow-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-m-yellow-texticon-icon-render: yes;
   --spectrum-badge-m-yellow-texticon-icon-type: icon;
   --spectrum-badge-m-yellow-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-yellow-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5178,6 +5218,7 @@
   --spectrum-badge-m-fuchsia-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-fuchsia-textonly-icon-margin-top: 0;
   --spectrum-badge-m-fuchsia-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-fuchsia-textonly-icon-render: no;
   --spectrum-badge-m-fuchsia-textonly-icon-type: icon;
   --spectrum-badge-m-fuchsia-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-fuchsia-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5306,6 +5347,7 @@
   --spectrum-badge-m-indigo-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-indigo-textonly-icon-margin-top: 0;
   --spectrum-badge-m-indigo-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-indigo-textonly-icon-render: no;
   --spectrum-badge-m-indigo-textonly-icon-type: icon;
   --spectrum-badge-m-indigo-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-indigo-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5434,6 +5476,7 @@
   --spectrum-badge-m-informative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-informative-textonly-icon-margin-top: 0;
   --spectrum-badge-m-informative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-informative-textonly-icon-render: no;
   --spectrum-badge-m-informative-textonly-icon-type: icon;
   --spectrum-badge-m-informative-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-informative-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5562,6 +5605,7 @@
   --spectrum-badge-m-magenta-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-magenta-textonly-icon-margin-top: 0;
   --spectrum-badge-m-magenta-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-magenta-textonly-icon-render: no;
   --spectrum-badge-m-magenta-textonly-icon-type: icon;
   --spectrum-badge-m-magenta-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-magenta-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5690,6 +5734,7 @@
   --spectrum-badge-m-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-negative-textonly-icon-margin-top: 0;
   --spectrum-badge-m-negative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-negative-textonly-icon-render: no;
   --spectrum-badge-m-negative-textonly-icon-type: icon;
   --spectrum-badge-m-negative-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-negative-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5818,6 +5863,7 @@
   --spectrum-badge-m-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-neutral-textonly-icon-margin-top: 0;
   --spectrum-badge-m-neutral-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-neutral-textonly-icon-render: no;
   --spectrum-badge-m-neutral-textonly-icon-type: icon;
   --spectrum-badge-m-neutral-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-neutral-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -5946,6 +5992,7 @@
   --spectrum-badge-m-positive-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-positive-textonly-icon-margin-top: 0;
   --spectrum-badge-m-positive-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-positive-textonly-icon-render: no;
   --spectrum-badge-m-positive-textonly-icon-type: icon;
   --spectrum-badge-m-positive-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-positive-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6074,6 +6121,7 @@
   --spectrum-badge-m-purple-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-purple-textonly-icon-margin-top: 0;
   --spectrum-badge-m-purple-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-purple-textonly-icon-render: no;
   --spectrum-badge-m-purple-textonly-icon-type: icon;
   --spectrum-badge-m-purple-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-purple-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6202,6 +6250,7 @@
   --spectrum-badge-m-seafoam-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-seafoam-textonly-icon-margin-top: 0;
   --spectrum-badge-m-seafoam-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-seafoam-textonly-icon-render: no;
   --spectrum-badge-m-seafoam-textonly-icon-type: icon;
   --spectrum-badge-m-seafoam-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-seafoam-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6330,6 +6379,7 @@
   --spectrum-badge-m-yellow-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-yellow-textonly-icon-margin-top: 0;
   --spectrum-badge-m-yellow-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-m-yellow-textonly-icon-render: no;
   --spectrum-badge-m-yellow-textonly-icon-type: icon;
   --spectrum-badge-m-yellow-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-yellow-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6458,6 +6508,7 @@
   --spectrum-badge-m-fuchsia-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-fuchsia-icononly-icon-margin-top: 0;
   --spectrum-badge-m-fuchsia-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-fuchsia-icononly-icon-render: yes;
   --spectrum-badge-m-fuchsia-icononly-icon-type: icon;
   --spectrum-badge-m-fuchsia-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-fuchsia-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6586,6 +6637,7 @@
   --spectrum-badge-m-indigo-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-indigo-icononly-icon-margin-top: 0;
   --spectrum-badge-m-indigo-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-indigo-icononly-icon-render: yes;
   --spectrum-badge-m-indigo-icononly-icon-type: icon;
   --spectrum-badge-m-indigo-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-indigo-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6714,6 +6766,7 @@
   --spectrum-badge-m-informative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-informative-icononly-icon-margin-top: 0;
   --spectrum-badge-m-informative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-informative-icononly-icon-render: yes;
   --spectrum-badge-m-informative-icononly-icon-type: icon;
   --spectrum-badge-m-informative-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-informative-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6842,6 +6895,7 @@
   --spectrum-badge-m-magenta-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-magenta-icononly-icon-margin-top: 0;
   --spectrum-badge-m-magenta-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-magenta-icononly-icon-render: yes;
   --spectrum-badge-m-magenta-icononly-icon-type: icon;
   --spectrum-badge-m-magenta-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-magenta-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -6970,6 +7024,7 @@
   --spectrum-badge-m-negative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-negative-icononly-icon-margin-top: 0;
   --spectrum-badge-m-negative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-negative-icononly-icon-render: yes;
   --spectrum-badge-m-negative-icononly-icon-type: icon;
   --spectrum-badge-m-negative-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-negative-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -7098,6 +7153,7 @@
   --spectrum-badge-m-neutral-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-neutral-icononly-icon-margin-top: 0;
   --spectrum-badge-m-neutral-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-neutral-icononly-icon-render: yes;
   --spectrum-badge-m-neutral-icononly-icon-type: icon;
   --spectrum-badge-m-neutral-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-neutral-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -7226,6 +7282,7 @@
   --spectrum-badge-m-positive-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-positive-icononly-icon-margin-top: 0;
   --spectrum-badge-m-positive-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-positive-icononly-icon-render: yes;
   --spectrum-badge-m-positive-icononly-icon-type: icon;
   --spectrum-badge-m-positive-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-positive-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -7354,6 +7411,7 @@
   --spectrum-badge-m-purple-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-purple-icononly-icon-margin-top: 0;
   --spectrum-badge-m-purple-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-purple-icononly-icon-render: yes;
   --spectrum-badge-m-purple-icononly-icon-type: icon;
   --spectrum-badge-m-purple-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-purple-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -7482,6 +7540,7 @@
   --spectrum-badge-m-seafoam-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-seafoam-icononly-icon-margin-top: 0;
   --spectrum-badge-m-seafoam-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-seafoam-icononly-icon-render: yes;
   --spectrum-badge-m-seafoam-icononly-icon-type: icon;
   --spectrum-badge-m-seafoam-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-seafoam-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -7610,6 +7669,7 @@
   --spectrum-badge-m-yellow-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
   --spectrum-badge-m-yellow-icononly-icon-margin-top: 0;
   --spectrum-badge-m-yellow-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-m-yellow-icononly-icon-render: yes;
   --spectrum-badge-m-yellow-icononly-icon-type: icon;
   --spectrum-badge-m-yellow-icononly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-badge-m-yellow-icononly-icon-gap: var(--spectrum-global-dimension-size-100);
@@ -7737,6 +7797,7 @@
   --spectrum-badge-l-fuchsia-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-fuchsia-texticon-icon-margin-top: 0;
   --spectrum-badge-l-fuchsia-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-fuchsia-texticon-icon-render: yes;
   --spectrum-badge-l-fuchsia-texticon-icon-type: icon;
   --spectrum-badge-l-fuchsia-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-fuchsia-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -7863,6 +7924,7 @@
   --spectrum-badge-l-indigo-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-indigo-texticon-icon-margin-top: 0;
   --spectrum-badge-l-indigo-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-indigo-texticon-icon-render: yes;
   --spectrum-badge-l-indigo-texticon-icon-type: icon;
   --spectrum-badge-l-indigo-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-indigo-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -7989,6 +8051,7 @@
   --spectrum-badge-l-informative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-informative-texticon-icon-margin-top: 0;
   --spectrum-badge-l-informative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-informative-texticon-icon-render: yes;
   --spectrum-badge-l-informative-texticon-icon-type: icon;
   --spectrum-badge-l-informative-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-informative-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8115,6 +8178,7 @@
   --spectrum-badge-l-magenta-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-magenta-texticon-icon-margin-top: 0;
   --spectrum-badge-l-magenta-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-magenta-texticon-icon-render: yes;
   --spectrum-badge-l-magenta-texticon-icon-type: icon;
   --spectrum-badge-l-magenta-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-magenta-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8241,6 +8305,7 @@
   --spectrum-badge-l-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-negative-texticon-icon-margin-top: 0;
   --spectrum-badge-l-negative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-negative-texticon-icon-render: yes;
   --spectrum-badge-l-negative-texticon-icon-type: icon;
   --spectrum-badge-l-negative-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-negative-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8367,6 +8432,7 @@
   --spectrum-badge-l-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-neutral-texticon-icon-margin-top: 0;
   --spectrum-badge-l-neutral-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-neutral-texticon-icon-render: yes;
   --spectrum-badge-l-neutral-texticon-icon-type: icon;
   --spectrum-badge-l-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-neutral-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8493,6 +8559,7 @@
   --spectrum-badge-l-positive-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-positive-texticon-icon-margin-top: 0;
   --spectrum-badge-l-positive-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-positive-texticon-icon-render: yes;
   --spectrum-badge-l-positive-texticon-icon-type: icon;
   --spectrum-badge-l-positive-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-positive-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8619,6 +8686,7 @@
   --spectrum-badge-l-purple-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-purple-texticon-icon-margin-top: 0;
   --spectrum-badge-l-purple-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-purple-texticon-icon-render: yes;
   --spectrum-badge-l-purple-texticon-icon-type: icon;
   --spectrum-badge-l-purple-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-purple-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8745,6 +8813,7 @@
   --spectrum-badge-l-seafoam-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-seafoam-texticon-icon-margin-top: 0;
   --spectrum-badge-l-seafoam-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-seafoam-texticon-icon-render: yes;
   --spectrum-badge-l-seafoam-texticon-icon-type: icon;
   --spectrum-badge-l-seafoam-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-seafoam-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8871,6 +8940,7 @@
   --spectrum-badge-l-yellow-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-yellow-texticon-icon-margin-top: 0;
   --spectrum-badge-l-yellow-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-l-yellow-texticon-icon-render: yes;
   --spectrum-badge-l-yellow-texticon-icon-type: icon;
   --spectrum-badge-l-yellow-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-yellow-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -8997,6 +9067,7 @@
   --spectrum-badge-l-fuchsia-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-fuchsia-textonly-icon-margin-top: 0;
   --spectrum-badge-l-fuchsia-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-fuchsia-textonly-icon-render: no;
   --spectrum-badge-l-fuchsia-textonly-icon-type: icon;
   --spectrum-badge-l-fuchsia-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-fuchsia-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -9123,6 +9194,7 @@
   --spectrum-badge-l-indigo-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-indigo-textonly-icon-margin-top: 0;
   --spectrum-badge-l-indigo-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-indigo-textonly-icon-render: no;
   --spectrum-badge-l-indigo-textonly-icon-type: icon;
   --spectrum-badge-l-indigo-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-indigo-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -9249,6 +9321,7 @@
   --spectrum-badge-l-informative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-informative-textonly-icon-margin-top: 0;
   --spectrum-badge-l-informative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-informative-textonly-icon-render: no;
   --spectrum-badge-l-informative-textonly-icon-type: icon;
   --spectrum-badge-l-informative-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-informative-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -9375,6 +9448,7 @@
   --spectrum-badge-l-magenta-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-magenta-textonly-icon-margin-top: 0;
   --spectrum-badge-l-magenta-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-magenta-textonly-icon-render: no;
   --spectrum-badge-l-magenta-textonly-icon-type: icon;
   --spectrum-badge-l-magenta-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-magenta-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -9501,6 +9575,7 @@
   --spectrum-badge-l-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-negative-textonly-icon-margin-top: 0;
   --spectrum-badge-l-negative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-negative-textonly-icon-render: no;
   --spectrum-badge-l-negative-textonly-icon-type: icon;
   --spectrum-badge-l-negative-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-negative-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -9627,6 +9702,7 @@
   --spectrum-badge-l-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-neutral-textonly-icon-margin-top: 0;
   --spectrum-badge-l-neutral-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-neutral-textonly-icon-render: no;
   --spectrum-badge-l-neutral-textonly-icon-type: icon;
   --spectrum-badge-l-neutral-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-neutral-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -9753,6 +9829,7 @@
   --spectrum-badge-l-positive-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-positive-textonly-icon-margin-top: 0;
   --spectrum-badge-l-positive-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-positive-textonly-icon-render: no;
   --spectrum-badge-l-positive-textonly-icon-type: icon;
   --spectrum-badge-l-positive-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-positive-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -9879,6 +9956,7 @@
   --spectrum-badge-l-purple-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-purple-textonly-icon-margin-top: 0;
   --spectrum-badge-l-purple-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-purple-textonly-icon-render: no;
   --spectrum-badge-l-purple-textonly-icon-type: icon;
   --spectrum-badge-l-purple-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-purple-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10005,6 +10083,7 @@
   --spectrum-badge-l-seafoam-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-seafoam-textonly-icon-margin-top: 0;
   --spectrum-badge-l-seafoam-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-seafoam-textonly-icon-render: no;
   --spectrum-badge-l-seafoam-textonly-icon-type: icon;
   --spectrum-badge-l-seafoam-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-seafoam-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10131,6 +10210,7 @@
   --spectrum-badge-l-yellow-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-yellow-textonly-icon-margin-top: 0;
   --spectrum-badge-l-yellow-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-l-yellow-textonly-icon-render: no;
   --spectrum-badge-l-yellow-textonly-icon-type: icon;
   --spectrum-badge-l-yellow-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-yellow-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10257,6 +10337,7 @@
   --spectrum-badge-l-fuchsia-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-fuchsia-icononly-icon-margin-top: 0;
   --spectrum-badge-l-fuchsia-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-fuchsia-icononly-icon-render: yes;
   --spectrum-badge-l-fuchsia-icononly-icon-type: icon;
   --spectrum-badge-l-fuchsia-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-fuchsia-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10383,6 +10464,7 @@
   --spectrum-badge-l-indigo-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-indigo-icononly-icon-margin-top: 0;
   --spectrum-badge-l-indigo-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-indigo-icononly-icon-render: yes;
   --spectrum-badge-l-indigo-icononly-icon-type: icon;
   --spectrum-badge-l-indigo-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-indigo-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10509,6 +10591,7 @@
   --spectrum-badge-l-informative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-informative-icononly-icon-margin-top: 0;
   --spectrum-badge-l-informative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-informative-icononly-icon-render: yes;
   --spectrum-badge-l-informative-icononly-icon-type: icon;
   --spectrum-badge-l-informative-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-informative-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10635,6 +10718,7 @@
   --spectrum-badge-l-magenta-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-magenta-icononly-icon-margin-top: 0;
   --spectrum-badge-l-magenta-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-magenta-icononly-icon-render: yes;
   --spectrum-badge-l-magenta-icononly-icon-type: icon;
   --spectrum-badge-l-magenta-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-magenta-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10761,6 +10845,7 @@
   --spectrum-badge-l-negative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-negative-icononly-icon-margin-top: 0;
   --spectrum-badge-l-negative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-negative-icononly-icon-render: yes;
   --spectrum-badge-l-negative-icononly-icon-type: icon;
   --spectrum-badge-l-negative-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-negative-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -10887,6 +10972,7 @@
   --spectrum-badge-l-neutral-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-neutral-icononly-icon-margin-top: 0;
   --spectrum-badge-l-neutral-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-neutral-icononly-icon-render: yes;
   --spectrum-badge-l-neutral-icononly-icon-type: icon;
   --spectrum-badge-l-neutral-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-neutral-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -11013,6 +11099,7 @@
   --spectrum-badge-l-positive-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-positive-icononly-icon-margin-top: 0;
   --spectrum-badge-l-positive-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-positive-icononly-icon-render: yes;
   --spectrum-badge-l-positive-icononly-icon-type: icon;
   --spectrum-badge-l-positive-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-positive-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -11139,6 +11226,7 @@
   --spectrum-badge-l-purple-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-purple-icononly-icon-margin-top: 0;
   --spectrum-badge-l-purple-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-purple-icononly-icon-render: yes;
   --spectrum-badge-l-purple-icononly-icon-type: icon;
   --spectrum-badge-l-purple-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-purple-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -11265,6 +11353,7 @@
   --spectrum-badge-l-seafoam-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-seafoam-icononly-icon-margin-top: 0;
   --spectrum-badge-l-seafoam-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-seafoam-icononly-icon-render: yes;
   --spectrum-badge-l-seafoam-icononly-icon-type: icon;
   --spectrum-badge-l-seafoam-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-seafoam-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -11391,6 +11480,7 @@
   --spectrum-badge-l-yellow-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-badge-l-yellow-icononly-icon-margin-top: 0;
   --spectrum-badge-l-yellow-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-l-yellow-icononly-icon-render: yes;
   --spectrum-badge-l-yellow-icononly-icon-type: icon;
   --spectrum-badge-l-yellow-icononly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-badge-l-yellow-icononly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -11518,6 +11608,7 @@
   --spectrum-badge-xl-fuchsia-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-fuchsia-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-fuchsia-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-fuchsia-texticon-icon-render: yes;
   --spectrum-badge-xl-fuchsia-texticon-icon-type: icon;
   --spectrum-badge-xl-fuchsia-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-fuchsia-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -11646,6 +11737,7 @@
   --spectrum-badge-xl-indigo-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-indigo-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-indigo-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-indigo-texticon-icon-render: yes;
   --spectrum-badge-xl-indigo-texticon-icon-type: icon;
   --spectrum-badge-xl-indigo-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-indigo-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -11774,6 +11866,7 @@
   --spectrum-badge-xl-informative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-informative-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-informative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-informative-texticon-icon-render: yes;
   --spectrum-badge-xl-informative-texticon-icon-type: icon;
   --spectrum-badge-xl-informative-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-informative-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -11902,6 +11995,7 @@
   --spectrum-badge-xl-magenta-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-magenta-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-magenta-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-magenta-texticon-icon-render: yes;
   --spectrum-badge-xl-magenta-texticon-icon-type: icon;
   --spectrum-badge-xl-magenta-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-magenta-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12030,6 +12124,7 @@
   --spectrum-badge-xl-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-negative-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-negative-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-negative-texticon-icon-render: yes;
   --spectrum-badge-xl-negative-texticon-icon-type: icon;
   --spectrum-badge-xl-negative-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-negative-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12158,6 +12253,7 @@
   --spectrum-badge-xl-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-neutral-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-neutral-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-neutral-texticon-icon-render: yes;
   --spectrum-badge-xl-neutral-texticon-icon-type: icon;
   --spectrum-badge-xl-neutral-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12286,6 +12382,7 @@
   --spectrum-badge-xl-positive-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-positive-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-positive-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-positive-texticon-icon-render: yes;
   --spectrum-badge-xl-positive-texticon-icon-type: icon;
   --spectrum-badge-xl-positive-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-positive-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12414,6 +12511,7 @@
   --spectrum-badge-xl-purple-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-purple-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-purple-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-purple-texticon-icon-render: yes;
   --spectrum-badge-xl-purple-texticon-icon-type: icon;
   --spectrum-badge-xl-purple-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-purple-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12542,6 +12640,7 @@
   --spectrum-badge-xl-seafoam-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-seafoam-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-seafoam-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-seafoam-texticon-icon-render: yes;
   --spectrum-badge-xl-seafoam-texticon-icon-type: icon;
   --spectrum-badge-xl-seafoam-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-seafoam-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12670,6 +12769,7 @@
   --spectrum-badge-xl-yellow-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-yellow-texticon-icon-margin-top: 0;
   --spectrum-badge-xl-yellow-texticon-icon-margin-bottom: 0;
+  --spectrum-badge-xl-yellow-texticon-icon-render: yes;
   --spectrum-badge-xl-yellow-texticon-icon-type: icon;
   --spectrum-badge-xl-yellow-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-yellow-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12798,6 +12898,7 @@
   --spectrum-badge-xl-fuchsia-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-fuchsia-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-fuchsia-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-fuchsia-textonly-icon-render: no;
   --spectrum-badge-xl-fuchsia-textonly-icon-type: icon;
   --spectrum-badge-xl-fuchsia-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-fuchsia-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -12926,6 +13027,7 @@
   --spectrum-badge-xl-indigo-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-indigo-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-indigo-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-indigo-textonly-icon-render: no;
   --spectrum-badge-xl-indigo-textonly-icon-type: icon;
   --spectrum-badge-xl-indigo-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-indigo-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13054,6 +13156,7 @@
   --spectrum-badge-xl-informative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-informative-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-informative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-informative-textonly-icon-render: no;
   --spectrum-badge-xl-informative-textonly-icon-type: icon;
   --spectrum-badge-xl-informative-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-informative-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13182,6 +13285,7 @@
   --spectrum-badge-xl-magenta-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-magenta-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-magenta-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-magenta-textonly-icon-render: no;
   --spectrum-badge-xl-magenta-textonly-icon-type: icon;
   --spectrum-badge-xl-magenta-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-magenta-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13310,6 +13414,7 @@
   --spectrum-badge-xl-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-negative-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-negative-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-negative-textonly-icon-render: no;
   --spectrum-badge-xl-negative-textonly-icon-type: icon;
   --spectrum-badge-xl-negative-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-negative-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13438,6 +13543,7 @@
   --spectrum-badge-xl-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-neutral-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-neutral-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-neutral-textonly-icon-render: no;
   --spectrum-badge-xl-neutral-textonly-icon-type: icon;
   --spectrum-badge-xl-neutral-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-neutral-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13566,6 +13672,7 @@
   --spectrum-badge-xl-positive-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-positive-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-positive-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-positive-textonly-icon-render: no;
   --spectrum-badge-xl-positive-textonly-icon-type: icon;
   --spectrum-badge-xl-positive-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-positive-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13694,6 +13801,7 @@
   --spectrum-badge-xl-purple-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-purple-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-purple-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-purple-textonly-icon-render: no;
   --spectrum-badge-xl-purple-textonly-icon-type: icon;
   --spectrum-badge-xl-purple-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-purple-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13822,6 +13930,7 @@
   --spectrum-badge-xl-seafoam-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-seafoam-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-seafoam-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-seafoam-textonly-icon-render: no;
   --spectrum-badge-xl-seafoam-textonly-icon-type: icon;
   --spectrum-badge-xl-seafoam-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-seafoam-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -13950,6 +14059,7 @@
   --spectrum-badge-xl-yellow-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-yellow-textonly-icon-margin-top: 0;
   --spectrum-badge-xl-yellow-textonly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-yellow-textonly-icon-render: no;
   --spectrum-badge-xl-yellow-textonly-icon-type: icon;
   --spectrum-badge-xl-yellow-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-yellow-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14078,6 +14188,7 @@
   --spectrum-badge-xl-fuchsia-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-fuchsia-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-fuchsia-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-fuchsia-icononly-icon-render: yes;
   --spectrum-badge-xl-fuchsia-icononly-icon-type: icon;
   --spectrum-badge-xl-fuchsia-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-fuchsia-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14206,6 +14317,7 @@
   --spectrum-badge-xl-indigo-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-indigo-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-indigo-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-indigo-icononly-icon-render: yes;
   --spectrum-badge-xl-indigo-icononly-icon-type: icon;
   --spectrum-badge-xl-indigo-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-indigo-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14334,6 +14446,7 @@
   --spectrum-badge-xl-informative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-informative-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-informative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-informative-icononly-icon-render: yes;
   --spectrum-badge-xl-informative-icononly-icon-type: icon;
   --spectrum-badge-xl-informative-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-informative-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14462,6 +14575,7 @@
   --spectrum-badge-xl-magenta-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-magenta-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-magenta-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-magenta-icononly-icon-render: yes;
   --spectrum-badge-xl-magenta-icononly-icon-type: icon;
   --spectrum-badge-xl-magenta-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-magenta-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14590,6 +14704,7 @@
   --spectrum-badge-xl-negative-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-negative-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-negative-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-negative-icononly-icon-render: yes;
   --spectrum-badge-xl-negative-icononly-icon-type: icon;
   --spectrum-badge-xl-negative-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-negative-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14718,6 +14833,7 @@
   --spectrum-badge-xl-neutral-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-neutral-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-neutral-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-neutral-icononly-icon-render: yes;
   --spectrum-badge-xl-neutral-icononly-icon-type: icon;
   --spectrum-badge-xl-neutral-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-neutral-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14846,6 +14962,7 @@
   --spectrum-badge-xl-positive-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-positive-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-positive-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-positive-icononly-icon-render: yes;
   --spectrum-badge-xl-positive-icononly-icon-type: icon;
   --spectrum-badge-xl-positive-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-positive-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -14974,6 +15091,7 @@
   --spectrum-badge-xl-purple-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-purple-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-purple-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-purple-icononly-icon-render: yes;
   --spectrum-badge-xl-purple-icononly-icon-type: icon;
   --spectrum-badge-xl-purple-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-purple-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -15102,6 +15220,7 @@
   --spectrum-badge-xl-seafoam-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-seafoam-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-seafoam-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-seafoam-icononly-icon-render: yes;
   --spectrum-badge-xl-seafoam-icononly-icon-type: icon;
   --spectrum-badge-xl-seafoam-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-seafoam-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
@@ -15230,6 +15349,7 @@
   --spectrum-badge-xl-yellow-icononly-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
   --spectrum-badge-xl-yellow-icononly-icon-margin-top: 0;
   --spectrum-badge-xl-yellow-icononly-icon-margin-bottom: 0;
+  --spectrum-badge-xl-yellow-icononly-icon-render: yes;
   --spectrum-badge-xl-yellow-icononly-icon-type: icon;
   --spectrum-badge-xl-yellow-icononly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-badge-xl-yellow-icononly-icon-gap: var(--spectrum-global-dimension-size-125);
