@@ -44,38 +44,6 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-ClearButton {
-  background-color: var(--spectrum-clearbutton-m-background-color);
-
-  color: var(--spectrum-clearbutton-m-icon-color);
-
-  &:hover {
-    background-color: var(--spectrum-clearbutton-m-background-color-hover);
-
-    color: var(--spectrum-clearbutton-m-icon-color-hover);
-  }
-
-  &:active {
-    background-color: var(--spectrum-clearbutton-m-background-color-down);
-
-    color: var(--spectrum-clearbutton-m-icon-color-down);
-  }
-
-  &:focus-ring {
-    background-color: var(--spectrum-clearbutton-m-background-color-key-focus);
-
-    color: var(--spectrum-clearbutton-m-icon-color-key-focus);
-  }
-
-  &:disabled,
-  &.is-disabled {
-    background-color: var(--spectrum-clearbutton-m-background-color-disabled);
-
-    color: var(--spectrum-clearbutton-m-icon-color-disabled);
-  }
-}
-
-
 .spectrum-LogicButton--and {
   background-color: var(--spectrum-logicbutton-and-background-color);
   border-color: var(--spectrum-logicbutton-and-border-color);

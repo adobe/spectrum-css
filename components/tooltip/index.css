@@ -33,7 +33,7 @@ governing permissions and limitations under the License.
   vertical-align: top;
 
   width: auto;
-  padding: var(--spectrum-tooltip-neutral-padding-top) var(--spectrum-tooltip-neutral-padding-x);
+  padding: var(--spectrum-tooltip-neutral-text-padding-top) var(--spectrum-tooltip-neutral-padding-x);
   border-radius: var(--spectrum-tooltip-neutral-border-radius);
   min-height: var(--spectrum-tooltip-neutral-min-height);
   max-inline-size: var(--spectrum-tooltip-neutral-max-width);

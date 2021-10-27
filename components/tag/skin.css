@@ -16,7 +16,7 @@ governing permissions and limitations under the License.
   border-color: var(--spectrum-tag-s-texticon-border-color);
 
   .spectrum-ClearButton {
-    color: var(--spectrum-tag-s-removable-texticon-icon-color);
+    color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color);
   }
 
   &:hover {
@@ -25,7 +25,7 @@ governing permissions and limitations under the License.
     border-color: var(--spectrum-tag-s-texticon-border-color-hover);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-hover);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-hover);
     }
   }
 
@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-tag-s-texticon-text-color-key-focus);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-key-focus);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-key-focus);
     }
 
   }
@@ -51,14 +51,14 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-selected);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-selected);
     }
 
     &:hover {
       background-color: var(--spectrum-tag-s-texticon-background-color-selected-hover);
 
       .spectrum-ClearButton {
-        color: var(--spectrum-tag-s-removable-texticon-icon-color-selected-hover);
+        color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-selected-hover);
       }
     }
 
@@ -67,7 +67,7 @@ governing permissions and limitations under the License.
       border-color: var(--spectrum-tag-s-texticon-text-color-selected-key-focus);
 
       .spectrum-ClearButton {
-        color: var(--spectrum-tag-s-removable-texticon-icon-color-selected-key-focus);
+        color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-selected-key-focus);
       }
     }
 
@@ -77,7 +77,7 @@ governing permissions and limitations under the License.
       .spectrum-Tag-icon,
       .spectrum-Tag-label,
       .spectrum-Tag-clearButton {
-        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-selected);
+        color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-error-selected);
       }
       &.focus-ring {
         box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-tag-s-texticon-border-color-error-selected-key-focus);
@@ -121,7 +121,7 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-error);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-error);
     }
 
   }
@@ -141,7 +141,7 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-disabled);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-disabled);
     }
   }
 }
@@ -151,7 +151,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-tag-s-removable-texticon-text-color-hover);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-hover);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-hover);
     }
   }
 
@@ -159,7 +159,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-tag-s-removable-texticon-text-color-down);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-down);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-down);
     }
   }
 
@@ -169,7 +169,7 @@ governing permissions and limitations under the License.
       color: var(--spectrum-tag-s-removable-texticon-text-color-error-hover);
 
       .spectrum-ClearButton {
-        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-hover);
+        color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-error-hover);
       }
     }
 
@@ -178,7 +178,7 @@ governing permissions and limitations under the License.
       color: var(--spectrum-tag-s-removable-texticon-text-color-error-down);
 
       .spectrum-ClearButton {
-        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-down);
+        color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-error-down);
       }
     }
   }
@@ -187,7 +187,7 @@ governing permissions and limitations under the License.
     color: var(--spectrum-tag-s-removable-texticon-text-color-key-focus);
 
     .spectrum-ClearButton {
-      color: var(--spectrum-tag-s-removable-texticon-icon-color-key-focus);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-key-focus);
     }
   }
 
@@ -197,9 +197,9 @@ governing permissions and limitations under the License.
        color: var(--spectrum-tag-s-removable-texticon-text-color-selected-key-focus);
     }
     .spectrum-Tag-clearButton {
-      color: var(--spectrum-tag-s-removable-texticon-button-icon-color-selected);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-selected);
       &:hover {
-         color: var(--spectrum-tag-s-removable-texticon-button-icon-color-selected-hover);
+         color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-selected-hover);
       }
     }
     &.is-invalid {
@@ -210,14 +210,14 @@ governing permissions and limitations under the License.
   .spectrum-Tag-clearButton {
     &.is-focused {
       border-color: var(--spectrum-tag-s-removable-texticon-border-color-key-focus);
-      background-color: var(--spectrum-tag-s-removable-texticon-button-background-color-key-focus);
-      color: var(--spectrum-tag-s-removable-texticon-button-icon-color-key-focus);
+      background-color: var(--spectrum-tag-s-removable-texticon-button-fill-background-color-key-focus);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-key-focus);
     }
     &:hover {
-      color: var(--spectrum-tag-s-removable-texticon-button-icon-color-hover);
+      color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-hover);
     }
     &:active {
-      background-color: var(--spectrum-tag-s-removable-texticon-button-background-color-hover);
+      background-color: var(--spectrum-tag-s-removable-texticon-button-fill-background-color-hover);
     }
   }
 }

@@ -16,8 +16,8 @@ governing permissions and limitations under the License.
   @inherit: %spectrum-BaseButton;
   @inherit: %spectrum-ButtonWithFocusRing;
 
-  inline-size: var(--spectrum-clearbutton-m-width);
-  block-size: var(--spectrum-clearbutton-m-height);
+  inline-size: var(--spectrum-clearbutton-m-fill-width);
+  block-size: var(--spectrum-clearbutton-m-fill-height);
 
   border-radius: 100%;
 
@@ -52,6 +52,38 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ClearButton--small {
-  inline-size: var(--spectrum-clearbutton-s-width);
-  block-size: var(--spectrum-clearbutton-s-height);
+  inline-size: var(--spectrum-clearbutton-s-fill-width);
+  block-size: var(--spectrum-clearbutton-s-fill-height);
 }
+
+.spectrum-ClearButton {
+  background-color: var(--spectrum-clearbutton-m-fill-background-color);
+
+  color: var(--spectrum-clearbutton-m-fill-uiicon-color);
+
+  &:hover {
+    background-color: var(--spectrum-clearbutton-m-fill-background-color-hover);
+
+    color: var(--spectrum-clearbutton-m-fill-uiicon-color-hover);
+  }
+
+  &:active {
+    background-color: var(--spectrum-clearbutton-m-fill-background-color-down);
+
+    color: var(--spectrum-clearbutton-m-fill-uiicon-color-down);
+  }
+
+  &:focus-ring {
+    background-color: var(--spectrum-clearbutton-m-fill-background-color-key-focus);
+
+    color: var(--spectrum-clearbutton-m-fill-uiicon-color-key-focus);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: var(--spectrum-clearbutton-m-fill-background-color-disabled);
+
+    color: var(--spectrum-clearbutton-m-fill-uiicon-color-disabled);
+  }
+}
+
