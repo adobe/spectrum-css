@@ -156,10 +156,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -187,10 +189,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeM" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -218,10 +222,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeL" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -236,10 +242,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -248,10 +256,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -260,10 +270,12 @@ examples:
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -273,10 +285,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -285,10 +299,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -297,10 +313,12 @@ examples:
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -310,10 +328,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -322,10 +342,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -334,10 +356,12 @@ examples:
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -347,10 +371,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled" tabindex="-1">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -359,10 +385,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -371,10 +399,12 @@ examples:
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
         </div>
@@ -383,10 +413,12 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -395,10 +427,12 @@ examples:
               <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
             </div>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
@@ -407,10 +441,12 @@ examples:
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
             <span class="spectrum-Tag-label">Shantanu</span>
-            <button class="spectrum-ClearButton spectrum-ClearButton--small spectrum-Tag-clearButton" aria-label="Remove tag 1" tabindex="-1">
-              <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
+            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Search-clearButton">
+              <div class="spectrum-ClearButton-fill">
+                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Cross75" />
+                </svg>
+              </div>
             </button>
           </div>
 
