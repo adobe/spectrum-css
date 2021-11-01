@@ -22,7 +22,8 @@
     "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepare": "gulp prepare",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -43,41 +44,26 @@
     "@adobe/spectrum-css-workflow-icons": "^1.1.0",
     "@adobe/spectrum-express-tokens": "^1.0.0-beta.6",
     "@adobe/spectrum-tokens": "^7.1.2",
-    "@commitlint/cli": "^8.3.3",
-    "@commitlint/config-conventional": "^8.3.3",
-    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.30",
-    "audit-ci": "^2.0.1",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.31",
+    "audit-ci": "^5.1.2",
     "backstopjs-spectrum": "^6.9.0",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-replace": "^1.0.0",
     "gulplog": "^1.0.0",
-    "husky": "^3.0.5",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.2.0",
     "prismjs": "^1.23.0",
-    "semver": "^6.3.0",
-    "through2": "^3.0.1"
+    "semver": "^7.3.5",
+    "through2": "^4.0.2"
   },
-  "resolutions": {
-    "axios": "^0.21.1",
-    "dot-prop": "^5.2.0",
-    "handlebars": "^4.5.2",
-    "https-proxy-agent": "^3.0.0",
-    "http-proxy": "^1.18.1",
-    "jimp": "^0.16.1",
-    "node-fetch": "^2.6.1",
-    "lodash": "^4.17.19",
-    "yargs-parser": "^20.2.7",
-    "minimist": "^1.2.5",
-    "is-url-superb": "^4.0.0",
-    "postcss-values-parser": "^4.0.0",
-    "xmlhttprequest-ssl": "^1.6.2",
-    "y18n": "^5.0.5"
-  },
+  "resolutions": {},
   "workspaces": [
     "components/*",
     "tools/*"
@@ -86,5 +72,14 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dot-prop": "^6.0.1",
+    "https-proxy-agent": "^5.0.0",
+    "is-url-superb": "^6.0.0",
+    "node-fetch": "^3.0.0",
+    "postcss-values-parser": "^6.0.1",
+    "xmlhttprequest-ssl": "^2.0.0"
   }
 }
