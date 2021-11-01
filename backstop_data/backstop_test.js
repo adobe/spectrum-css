@@ -152,5 +152,5 @@ module.exports = {
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
-  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m jianliao/backstopjs:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m --user "$(id -u):$(id -g)" docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
 };
