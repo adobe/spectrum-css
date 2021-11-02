@@ -74,8 +74,12 @@ governing permissions and limitations under the License.
     &.is-invalid {
       border-color: var(--spectrum-tag-s-texticon-border-color-error-selected);
       background-color: var(--spectrum-tag-s-texticon-background-color-error-selected);
-      .spectrum-Tag-icon,
-      .spectrum-Tag-label,
+      .spectrum-Tag-label {
+        color: var(--spectrum-tag-s-removable-texticon-text-color-error-selected);
+      }
+      .spectrum-Tag-icon {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-selected);
+      }
       .spectrum-Tag-clearButton {
         color: var(--spectrum-tag-s-removable-texticon-button-fill-uiicon-color-error-selected);
       }
