@@ -127,8 +127,6 @@
   --spectrum-table-s-compact-quiet-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-s-compact-quiet-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-s-compact-quiet-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-table-s-compact-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-table-s-compact-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-compact-quiet-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-compact-quiet-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-compact-quiet-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -166,6 +164,8 @@
   --spectrum-table-s-compact-quiet-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-compact-quiet-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-compact-quiet-cell-vertical-alignment: top;
+  --spectrum-table-s-compact-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-table-s-compact-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-compact-quiet-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-compact-quiet-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-compact-quiet-border-top-size: var(--spectrum-global-dimension-static-size-0);
@@ -300,8 +300,6 @@
   --spectrum-table-s-compact-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-s-compact-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-s-compact-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-table-s-compact-border-x-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-table-s-compact-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-compact-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-compact-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-compact-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -339,6 +337,8 @@
   --spectrum-table-s-compact-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-compact-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-compact-cell-vertical-alignment: top;
+  --spectrum-table-s-compact-border-x-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-table-s-compact-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-compact-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-table-s-compact-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-compact-border-top-size: var(--spectrum-alias-border-size-thin);
@@ -473,8 +473,6 @@
   --spectrum-table-s-regular-quiet-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-s-regular-quiet-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-s-regular-quiet-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-table-s-regular-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-table-s-regular-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-regular-quiet-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-regular-quiet-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-regular-quiet-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -512,6 +510,8 @@
   --spectrum-table-s-regular-quiet-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-regular-quiet-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-regular-quiet-cell-vertical-alignment: top;
+  --spectrum-table-s-regular-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-table-s-regular-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-regular-quiet-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-regular-quiet-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-regular-quiet-border-top-size: var(--spectrum-global-dimension-static-size-0);
@@ -646,8 +646,6 @@
   --spectrum-table-s-regular-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-s-regular-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-s-regular-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-table-s-regular-border-x-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-table-s-regular-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-regular-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-regular-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-regular-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -685,6 +683,8 @@
   --spectrum-table-s-regular-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-regular-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-regular-cell-vertical-alignment: top;
+  --spectrum-table-s-regular-border-x-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-table-s-regular-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-regular-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-table-s-regular-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-regular-border-top-size: var(--spectrum-alias-border-size-thin);
@@ -819,8 +819,6 @@
   --spectrum-table-s-spacious-quiet-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-s-spacious-quiet-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-s-spacious-quiet-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-table-s-spacious-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-table-s-spacious-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-spacious-quiet-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-spacious-quiet-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-spacious-quiet-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -858,6 +856,8 @@
   --spectrum-table-s-spacious-quiet-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-spacious-quiet-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-spacious-quiet-cell-vertical-alignment: top;
+  --spectrum-table-s-spacious-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-table-s-spacious-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-spacious-quiet-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-spacious-quiet-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-s-spacious-quiet-border-top-size: var(--spectrum-global-dimension-static-size-0);
@@ -992,8 +992,6 @@
   --spectrum-table-s-spacious-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-s-spacious-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-s-spacious-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-table-s-spacious-border-x-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-table-s-spacious-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-spacious-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-spacious-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-spacious-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -1031,6 +1029,8 @@
   --spectrum-table-s-spacious-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-spacious-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-s-spacious-cell-vertical-alignment: top;
+  --spectrum-table-s-spacious-border-x-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-table-s-spacious-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-spacious-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-table-s-spacious-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-s-spacious-border-top-size: var(--spectrum-alias-border-size-thin);
@@ -1165,8 +1165,6 @@
   --spectrum-table-m-compact-quiet-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-m-compact-quiet-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-m-compact-quiet-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-table-m-compact-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-table-m-compact-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-compact-quiet-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-compact-quiet-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-compact-quiet-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -1204,6 +1202,8 @@
   --spectrum-table-m-compact-quiet-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-compact-quiet-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-compact-quiet-cell-vertical-alignment: top;
+  --spectrum-table-m-compact-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-table-m-compact-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-compact-quiet-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-compact-quiet-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-compact-quiet-border-top-size: var(--spectrum-global-dimension-static-size-0);
@@ -1338,8 +1338,6 @@
   --spectrum-table-m-compact-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-m-compact-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-m-compact-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-table-m-compact-border-x-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-table-m-compact-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-compact-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-compact-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-compact-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -1377,6 +1375,8 @@
   --spectrum-table-m-compact-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-compact-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-compact-cell-vertical-alignment: top;
+  --spectrum-table-m-compact-border-x-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-table-m-compact-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-compact-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-table-m-compact-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-compact-border-top-size: var(--spectrum-alias-border-size-thin);
@@ -1511,8 +1511,6 @@
   --spectrum-table-m-regular-quiet-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-m-regular-quiet-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-m-regular-quiet-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-table-m-regular-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-table-m-regular-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-regular-quiet-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-regular-quiet-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-regular-quiet-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -1550,6 +1548,8 @@
   --spectrum-table-m-regular-quiet-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-regular-quiet-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-regular-quiet-cell-vertical-alignment: top;
+  --spectrum-table-m-regular-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-table-m-regular-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-regular-quiet-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-regular-quiet-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-regular-quiet-border-top-size: var(--spectrum-global-dimension-static-size-0);
@@ -1684,8 +1684,6 @@
   --spectrum-table-m-regular-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-m-regular-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-m-regular-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-table-m-regular-border-x-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-table-m-regular-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-regular-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-regular-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-regular-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -1723,6 +1721,8 @@
   --spectrum-table-m-regular-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-regular-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-regular-cell-vertical-alignment: top;
+  --spectrum-table-m-regular-border-x-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-table-m-regular-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-regular-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-table-m-regular-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-regular-border-top-size: var(--spectrum-alias-border-size-thin);
@@ -1857,8 +1857,6 @@
   --spectrum-table-m-spacious-quiet-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-m-spacious-quiet-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-m-spacious-quiet-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-table-m-spacious-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-table-m-spacious-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-spacious-quiet-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-spacious-quiet-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-spacious-quiet-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -1896,6 +1894,8 @@
   --spectrum-table-m-spacious-quiet-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-spacious-quiet-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-spacious-quiet-cell-vertical-alignment: top;
+  --spectrum-table-m-spacious-quiet-border-x-size: var(--spectrum-global-dimension-static-size-0);
+  --spectrum-table-m-spacious-quiet-border-y-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-spacious-quiet-border-radius: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-spacious-quiet-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-table-m-spacious-quiet-border-top-size: var(--spectrum-global-dimension-static-size-0);
@@ -2030,8 +2030,6 @@
   --spectrum-table-m-spacious-cell-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-table-m-spacious-border-color: var(--spectrum-alias-border-color-mid);
   --spectrum-table-m-spacious-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-table-m-spacious-border-x-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-table-m-spacious-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-spacious-divider-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-spacious-row-border-bottom-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-spacious-header-text-size: var(--spectrum-global-dimension-font-size-50);
@@ -2069,6 +2067,8 @@
   --spectrum-table-m-spacious-cell-padding-left: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-spacious-cell-padding-right: var(--spectrum-global-dimension-static-size-200);
   --spectrum-table-m-spacious-cell-vertical-alignment: top;
+  --spectrum-table-m-spacious-border-x-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-table-m-spacious-border-y-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-spacious-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-table-m-spacious-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-table-m-spacious-border-top-size: var(--spectrum-alias-border-size-thin);

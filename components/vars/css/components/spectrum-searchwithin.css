@@ -70,9 +70,6 @@
   --spectrum-searchwithin-s-quiet-border-size: 0;
   --spectrum-searchwithin-s-quiet-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-searchwithin-s-quiet-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-searchwithin-s-quiet-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-searchwithin-s-quiet-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-searchwithin-s-quiet-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-searchwithin-s-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-searchwithin-s-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-searchwithin-s-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -144,9 +141,6 @@
   --spectrum-searchwithin-s-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-searchwithin-s-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-searchwithin-s-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-searchwithin-s-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-searchwithin-s-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-searchwithin-s-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-searchwithin-m-quiet-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-searchwithin-m-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-searchwithin-m-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -220,9 +214,6 @@
   --spectrum-searchwithin-m-quiet-border-size: 0;
   --spectrum-searchwithin-m-quiet-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-searchwithin-m-quiet-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-searchwithin-m-quiet-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-searchwithin-m-quiet-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-searchwithin-m-quiet-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-searchwithin-m-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-searchwithin-m-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-searchwithin-m-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -296,9 +287,6 @@
   --spectrum-searchwithin-m-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-searchwithin-m-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-searchwithin-m-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-searchwithin-m-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-searchwithin-m-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-searchwithin-m-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-searchwithin-l-quiet-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-searchwithin-l-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-searchwithin-l-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -369,9 +357,6 @@
   --spectrum-searchwithin-l-quiet-border-size: 0;
   --spectrum-searchwithin-l-quiet-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-searchwithin-l-quiet-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-searchwithin-l-quiet-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-searchwithin-l-quiet-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-searchwithin-l-quiet-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-searchwithin-l-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-searchwithin-l-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-searchwithin-l-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -442,9 +427,6 @@
   --spectrum-searchwithin-l-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-searchwithin-l-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-searchwithin-l-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-searchwithin-l-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-searchwithin-l-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-searchwithin-l-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-searchwithin-xl-quiet-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-searchwithin-xl-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-searchwithin-xl-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -518,9 +500,6 @@
   --spectrum-searchwithin-xl-quiet-border-size: 0;
   --spectrum-searchwithin-xl-quiet-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-searchwithin-xl-quiet-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-searchwithin-xl-quiet-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-searchwithin-xl-quiet-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-searchwithin-xl-quiet-_control-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-searchwithin-xl-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-searchwithin-xl-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-searchwithin-xl-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -594,7 +573,4 @@
   --spectrum-searchwithin-xl-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-searchwithin-xl-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-searchwithin-xl-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-searchwithin-xl-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-searchwithin-xl-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-searchwithin-xl-_control-gap: var(--spectrum-global-dimension-size-160);
 }

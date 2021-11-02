@@ -205,9 +205,6 @@
   --spectrum-textfield-s-quiet-texticon-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-s-quiet-texticon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-quiet-texticon-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textfield-s-quiet-texticon-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textfield-s-quiet-texticon-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textfield-s-quiet-texticon-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-s-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-s-quiet-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -414,9 +411,6 @@
   --spectrum-textfield-s-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-s-quiet-textonly-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-quiet-textonly-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textfield-s-quiet-textonly-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textfield-s-quiet-textonly-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textfield-s-quiet-textonly-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-s-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-s-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -623,9 +617,6 @@
   --spectrum-textfield-s-texticon-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-s-texticon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-texticon-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textfield-s-texticon-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textfield-s-texticon-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textfield-s-texticon-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-s-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-s-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -832,9 +823,6 @@
   --spectrum-textfield-s-textonly-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-s-textonly-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-textonly-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textfield-s-textonly-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textfield-s-textonly-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textfield-s-textonly-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-m-quiet-texticon-border-size-disabled: 0;
   --spectrum-textfield-m-quiet-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-quiet-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1043,9 +1031,6 @@
   --spectrum-textfield-m-quiet-texticon-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-m-quiet-texticon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-quiet-texticon-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textfield-m-quiet-texticon-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textfield-m-quiet-texticon-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textfield-m-quiet-texticon-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-m-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-m-quiet-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1254,9 +1239,6 @@
   --spectrum-textfield-m-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-m-quiet-textonly-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-quiet-textonly-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textfield-m-quiet-textonly-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textfield-m-quiet-textonly-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textfield-m-quiet-textonly-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-m-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-m-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1464,9 +1446,6 @@
   --spectrum-textfield-m-texticon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-textfield-m-texticon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-texticon-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textfield-m-texticon-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textfield-m-texticon-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textfield-m-texticon-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-m-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-m-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1675,9 +1654,6 @@
   --spectrum-textfield-m-textonly-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-textfield-m-textonly-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-textonly-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textfield-m-textonly-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textfield-m-textonly-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textfield-m-textonly-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-l-quiet-texticon-border-size-disabled: 0;
   --spectrum-textfield-l-quiet-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-quiet-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1883,9 +1859,6 @@
   --spectrum-textfield-l-quiet-texticon-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-l-quiet-texticon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-quiet-texticon-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textfield-l-quiet-texticon-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textfield-l-quiet-texticon-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textfield-l-quiet-texticon-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textfield-l-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-l-quiet-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2091,9 +2064,6 @@
   --spectrum-textfield-l-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-l-quiet-textonly-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-quiet-textonly-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textfield-l-quiet-textonly-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textfield-l-quiet-textonly-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textfield-l-quiet-textonly-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textfield-l-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-l-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2299,9 +2269,6 @@
   --spectrum-textfield-l-texticon-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-textfield-l-texticon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-texticon-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textfield-l-texticon-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textfield-l-texticon-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textfield-l-texticon-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textfield-l-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-l-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2507,9 +2474,6 @@
   --spectrum-textfield-l-textonly-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-textfield-l-textonly-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-textonly-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textfield-l-textonly-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textfield-l-textonly-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textfield-l-textonly-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textfield-xl-quiet-texticon-border-size-disabled: 0;
   --spectrum-textfield-xl-quiet-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-quiet-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2718,9 +2682,6 @@
   --spectrum-textfield-xl-quiet-texticon-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-xl-quiet-texticon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-quiet-texticon-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textfield-xl-quiet-texticon-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textfield-xl-quiet-texticon-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textfield-xl-quiet-texticon-_control-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-quiet-textonly-border-size-disabled: 0;
   --spectrum-textfield-xl-quiet-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-quiet-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2929,9 +2890,6 @@
   --spectrum-textfield-xl-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-xl-quiet-textonly-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-quiet-textonly-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textfield-xl-quiet-textonly-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textfield-xl-quiet-textonly-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textfield-xl-quiet-textonly-_control-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-xl-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -3140,9 +3098,6 @@
   --spectrum-textfield-xl-texticon-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-xl-texticon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-texticon-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textfield-xl-texticon-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textfield-xl-texticon-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textfield-xl-texticon-_control-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-textfield-xl-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textfield-xl-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -3351,7 +3306,4 @@
   --spectrum-textfield-xl-textonly-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-xl-textonly-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-textonly-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textfield-xl-textonly-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textfield-xl-textonly-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textfield-xl-textonly-_control-gap: var(--spectrum-global-dimension-size-160);
 }

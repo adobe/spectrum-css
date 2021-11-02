@@ -158,9 +158,6 @@
   --spectrum-textarea-s-multiline-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-s-multiline-quiet-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textarea-s-multiline-quiet-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textarea-s-multiline-quiet-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textarea-s-multiline-quiet-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-s-multiline-quiet-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-s-quiet-border-size-disabled: 0;
   --spectrum-textarea-s-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-s-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -320,9 +317,6 @@
   --spectrum-textarea-s-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-s-quiet-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textarea-s-quiet-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textarea-s-quiet-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textarea-s-quiet-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-s-quiet-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-s-multiline-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-s-multiline-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-s-multiline-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -482,9 +476,6 @@
   --spectrum-textarea-s-multiline-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-s-multiline-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textarea-s-multiline-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textarea-s-multiline-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textarea-s-multiline-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-s-multiline-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-s-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-s-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-s-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -644,9 +635,6 @@
   --spectrum-textarea-s-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-s-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textarea-s-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textarea-s-_padding-text: var(--spectrum-global-dimension-size-115);
-  --spectrum-textarea-s-_padding-icon: var(--spectrum-global-dimension-size-50);
-  --spectrum-textarea-s-_control-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-m-multiline-quiet-border-size-disabled: 0;
   --spectrum-textarea-m-multiline-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-m-multiline-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -808,9 +796,6 @@
   --spectrum-textarea-m-multiline-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-m-multiline-quiet-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textarea-m-multiline-quiet-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textarea-m-multiline-quiet-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textarea-m-multiline-quiet-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textarea-m-multiline-quiet-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-m-quiet-border-size-disabled: 0;
   --spectrum-textarea-m-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-m-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -972,9 +957,6 @@
   --spectrum-textarea-m-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-m-quiet-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textarea-m-quiet-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textarea-m-quiet-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textarea-m-quiet-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textarea-m-quiet-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-m-multiline-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-m-multiline-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-m-multiline-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1136,9 +1118,6 @@
   --spectrum-textarea-m-multiline-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-m-multiline-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textarea-m-multiline-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textarea-m-multiline-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textarea-m-multiline-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textarea-m-multiline-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-m-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-m-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-m-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1300,9 +1279,6 @@
   --spectrum-textarea-m-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-textarea-m-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textarea-m-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textarea-m-_padding-text: var(--spectrum-global-dimension-size-150);
-  --spectrum-textarea-m-_padding-icon: var(--spectrum-global-dimension-size-85);
-  --spectrum-textarea-m-_control-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-l-multiline-quiet-border-size-disabled: 0;
   --spectrum-textarea-l-multiline-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-l-multiline-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1462,9 +1438,6 @@
   --spectrum-textarea-l-multiline-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-l-multiline-quiet-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-l-multiline-quiet-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textarea-l-multiline-quiet-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textarea-l-multiline-quiet-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textarea-l-multiline-quiet-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textarea-l-quiet-border-size-disabled: 0;
   --spectrum-textarea-l-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-l-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1624,9 +1597,6 @@
   --spectrum-textarea-l-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-l-quiet-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-l-quiet-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textarea-l-quiet-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textarea-l-quiet-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textarea-l-quiet-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textarea-l-multiline-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-l-multiline-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-l-multiline-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1786,9 +1756,6 @@
   --spectrum-textarea-l-multiline-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-textarea-l-multiline-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-l-multiline-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textarea-l-multiline-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textarea-l-multiline-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textarea-l-multiline-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textarea-l-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-l-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-l-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1948,9 +1915,6 @@
   --spectrum-textarea-l-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-textarea-l-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textarea-l-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textarea-l-_padding-text: var(--spectrum-global-dimension-size-185);
-  --spectrum-textarea-l-_padding-icon: var(--spectrum-global-dimension-size-125);
-  --spectrum-textarea-l-_control-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-textarea-xl-multiline-quiet-border-size-disabled: 0;
   --spectrum-textarea-xl-multiline-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-xl-multiline-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2112,9 +2076,6 @@
   --spectrum-textarea-xl-multiline-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-xl-multiline-quiet-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-xl-multiline-quiet-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textarea-xl-multiline-quiet-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textarea-xl-multiline-quiet-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textarea-xl-multiline-quiet-_control-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-textarea-xl-quiet-border-size-disabled: 0;
   --spectrum-textarea-xl-quiet-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-xl-quiet-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2276,9 +2237,6 @@
   --spectrum-textarea-xl-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textarea-xl-quiet-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-xl-quiet-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textarea-xl-quiet-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textarea-xl-quiet-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textarea-xl-quiet-_control-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-textarea-xl-multiline-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-xl-multiline-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-xl-multiline-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2440,9 +2398,6 @@
   --spectrum-textarea-xl-multiline-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-textarea-xl-multiline-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-xl-multiline-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textarea-xl-multiline-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textarea-xl-multiline-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textarea-xl-multiline-_control-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-textarea-xl-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-textarea-xl-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textarea-xl-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2604,7 +2559,4 @@
   --spectrum-textarea-xl-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-textarea-xl-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textarea-xl-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textarea-xl-_padding-text: var(--spectrum-global-dimension-size-225);
-  --spectrum-textarea-xl-_padding-icon: var(--spectrum-global-dimension-size-160);
-  --spectrum-textarea-xl-_control-gap: var(--spectrum-global-dimension-size-160);
 }

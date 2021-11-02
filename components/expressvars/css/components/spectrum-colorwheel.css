@@ -17,11 +17,11 @@
   --spectrum-colorwheel-fill-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
   --spectrum-colorwheel-border-color-mouse-focus: var(--spectrum-alias-border-color-translucent);
   --spectrum-colorwheel-background-color-mouse-focus: var(--spectrum-alias-border-color-transparent);
+  --spectrum-colorwheel-colorarea-margin: var(--spectrum-global-dimension-size-150);
+  --spectrum-colorwheel-track-width: var(--spectrum-global-dimension-size-300);
   --spectrum-colorwheel-default-size: var(--spectrum-global-dimension-size-2400);
   --spectrum-colorwheel-cursor-hit-outer: var(--spectrum-global-dimension-size-0);
   --spectrum-colorwheel-cursor-hit-inner: var(--spectrum-global-dimension-size-0);
-  --spectrum-colorwheel-colorarea-margin: var(--spectrum-global-dimension-size-150);
-  --spectrum-colorwheel-track-width: var(--spectrum-global-dimension-size-300);
   --spectrum-colorwheel-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-colorwheel-height: var(--spectrum-global-dimension-size-2400);
   --spectrum-colorwheel-border-size: var(--spectrum-alias-border-size-thin);

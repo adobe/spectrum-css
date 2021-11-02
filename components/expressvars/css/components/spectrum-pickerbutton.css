@@ -6,6 +6,7 @@
   --spectrum-pickerbutton-s-left-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-s-left-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-s-left-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-s-left-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -13,6 +14,7 @@
   --spectrum-pickerbutton-s-left-texticon-focusring-render: no;
   --spectrum-pickerbutton-s-left-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-s-left-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-s-left-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -20,6 +22,7 @@
   --spectrum-pickerbutton-s-left-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-s-left-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-s-left-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-s-left-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -27,6 +30,7 @@
   --spectrum-pickerbutton-s-left-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-s-left-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-s-left-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-s-left-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -34,6 +38,7 @@
   --spectrum-pickerbutton-s-left-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-s-left-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-left-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-s-left-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-left-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-s-left-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-s-left-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -41,6 +46,7 @@
   --spectrum-pickerbutton-s-left-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-s-left-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-s-left-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-s);
   --spectrum-pickerbutton-s-left-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-s);
@@ -67,14 +73,10 @@
   --spectrum-pickerbutton-s-left-texticon-fill-padding-left: var(--spectrum-global-dimension-size-115);
   --spectrum-pickerbutton-s-left-texticon-fill-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-pickerbutton-s-left-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-left-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-s-left-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-left-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-s-left-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-left-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-  --spectrum-pickerbutton-s-left-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-  --spectrum-pickerbutton-s-left-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-left-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-left-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-s-left-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-left-texticon-padding: var(--spectrum-alias-infieldbutton-padding-s);
   --spectrum-pickerbutton-s-right-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-s-right-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -83,6 +85,7 @@
   --spectrum-pickerbutton-s-right-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-s-right-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-s-right-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-s-right-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -90,6 +93,7 @@
   --spectrum-pickerbutton-s-right-texticon-focusring-render: no;
   --spectrum-pickerbutton-s-right-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-s-right-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-s-right-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -97,6 +101,7 @@
   --spectrum-pickerbutton-s-right-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-s-right-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-s-right-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-s-right-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -104,6 +109,7 @@
   --spectrum-pickerbutton-s-right-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-s-right-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-s-right-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-s-right-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -111,6 +117,7 @@
   --spectrum-pickerbutton-s-right-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-s-right-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-right-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-s-right-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-right-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-s-right-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-s-right-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -118,6 +125,7 @@
   --spectrum-pickerbutton-s-right-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-s-right-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-s-right-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-s);
   --spectrum-pickerbutton-s-right-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-s);
@@ -144,14 +152,10 @@
   --spectrum-pickerbutton-s-right-texticon-fill-padding-left: var(--spectrum-global-dimension-size-115);
   --spectrum-pickerbutton-s-right-texticon-fill-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-pickerbutton-s-right-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-right-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-s-right-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-right-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-s-right-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-right-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-  --spectrum-pickerbutton-s-right-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-  --spectrum-pickerbutton-s-right-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-right-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-s-right-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-s-right-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-right-texticon-padding: var(--spectrum-alias-infieldbutton-padding-s);
   --spectrum-pickerbutton-s-none-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-s-none-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -160,6 +164,7 @@
   --spectrum-pickerbutton-s-none-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-s-none-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-s-none-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-s-none-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -167,6 +172,7 @@
   --spectrum-pickerbutton-s-none-texticon-focusring-render: no;
   --spectrum-pickerbutton-s-none-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-s-none-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-s-none-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -174,6 +180,7 @@
   --spectrum-pickerbutton-s-none-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-s-none-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-s-none-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-s-none-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -181,6 +188,7 @@
   --spectrum-pickerbutton-s-none-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-s-none-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-s-none-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-s-none-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -188,6 +196,7 @@
   --spectrum-pickerbutton-s-none-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-s-none-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-none-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-s-none-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-none-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-s-none-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-s-none-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -195,6 +204,7 @@
   --spectrum-pickerbutton-s-none-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-s-none-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-s-none-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-s);
   --spectrum-pickerbutton-s-none-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-s);
@@ -221,14 +231,10 @@
   --spectrum-pickerbutton-s-none-texticon-fill-padding-left: var(--spectrum-global-dimension-size-115);
   --spectrum-pickerbutton-s-none-texticon-fill-padding-right: var(--spectrum-global-dimension-size-100);
   --spectrum-pickerbutton-s-none-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-none-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-s-none-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-none-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-s-none-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-none-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-  --spectrum-pickerbutton-s-none-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-  --spectrum-pickerbutton-s-none-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-none-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-none-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-s-none-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-none-texticon-padding: var(--spectrum-alias-infieldbutton-padding-s);
   --spectrum-pickerbutton-s-left-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-s-left-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -237,6 +243,7 @@
   --spectrum-pickerbutton-s-left-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-s-left-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-s-left-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-s-left-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -244,6 +251,7 @@
   --spectrum-pickerbutton-s-left-icononly-focusring-render: no;
   --spectrum-pickerbutton-s-left-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-s-left-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-s-left-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -251,6 +259,7 @@
   --spectrum-pickerbutton-s-left-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-s-left-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-s-left-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-s-left-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -258,6 +267,7 @@
   --spectrum-pickerbutton-s-left-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-s-left-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-s-left-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-s-left-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -265,6 +275,7 @@
   --spectrum-pickerbutton-s-left-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-s-left-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-left-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-s-left-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-left-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-s-left-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-s-left-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -272,6 +283,7 @@
   --spectrum-pickerbutton-s-left-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-s-left-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-left-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-left-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-s-left-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-s);
   --spectrum-pickerbutton-s-left-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-s);
@@ -298,14 +310,10 @@
   --spectrum-pickerbutton-s-left-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-left-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-left-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-s-left-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-left-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-  --spectrum-pickerbutton-s-left-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-  --spectrum-pickerbutton-s-left-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-left-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-left-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-s-left-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-left-icononly-padding: var(--spectrum-alias-infieldbutton-padding-s);
   --spectrum-pickerbutton-s-right-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-s-right-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -314,6 +322,7 @@
   --spectrum-pickerbutton-s-right-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-s-right-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-s-right-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-s-right-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -321,6 +330,7 @@
   --spectrum-pickerbutton-s-right-icononly-focusring-render: no;
   --spectrum-pickerbutton-s-right-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-s-right-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-s-right-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -328,6 +338,7 @@
   --spectrum-pickerbutton-s-right-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-s-right-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-s-right-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-s-right-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -335,6 +346,7 @@
   --spectrum-pickerbutton-s-right-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-s-right-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-s-right-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-s-right-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -342,6 +354,7 @@
   --spectrum-pickerbutton-s-right-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-s-right-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-right-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-s-right-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-right-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-s-right-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-s-right-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -349,6 +362,7 @@
   --spectrum-pickerbutton-s-right-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-s-right-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-right-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-right-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-s-right-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-s);
   --spectrum-pickerbutton-s-right-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-s);
@@ -375,14 +389,10 @@
   --spectrum-pickerbutton-s-right-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-right-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-right-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-s-right-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-right-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-  --spectrum-pickerbutton-s-right-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-  --spectrum-pickerbutton-s-right-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-right-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-s-right-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-s-right-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-right-icononly-padding: var(--spectrum-alias-infieldbutton-padding-s);
   --spectrum-pickerbutton-s-none-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-s-none-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -391,6 +401,7 @@
   --spectrum-pickerbutton-s-none-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-s-none-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-s-none-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-s-none-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -398,6 +409,7 @@
   --spectrum-pickerbutton-s-none-icononly-focusring-render: no;
   --spectrum-pickerbutton-s-none-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-s-none-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-s-none-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -405,6 +417,7 @@
   --spectrum-pickerbutton-s-none-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-s-none-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-s-none-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-s-none-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -412,6 +425,7 @@
   --spectrum-pickerbutton-s-none-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-s-none-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-s-none-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-s-none-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -419,6 +433,7 @@
   --spectrum-pickerbutton-s-none-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-s-none-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-none-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-s-none-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-s-none-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-s-none-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-s-none-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -426,6 +441,7 @@
   --spectrum-pickerbutton-s-none-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-s-none-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-s-none-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-s-none-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-s-none-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-s);
   --spectrum-pickerbutton-s-none-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-s);
@@ -452,14 +468,10 @@
   --spectrum-pickerbutton-s-none-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-none-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-none-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-s-none-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-none-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
-  --spectrum-pickerbutton-s-none-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-s);
-  --spectrum-pickerbutton-s-none-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-none-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-s-none-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-s-none-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-s-none-icononly-padding: var(--spectrum-alias-infieldbutton-padding-s);
   --spectrum-pickerbutton-m-left-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-m-left-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -468,6 +480,7 @@
   --spectrum-pickerbutton-m-left-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-m-left-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-m-left-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-m-left-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -475,6 +488,7 @@
   --spectrum-pickerbutton-m-left-texticon-focusring-render: no;
   --spectrum-pickerbutton-m-left-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-m-left-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-m-left-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -482,6 +496,7 @@
   --spectrum-pickerbutton-m-left-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-m-left-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-m-left-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-m-left-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -489,6 +504,7 @@
   --spectrum-pickerbutton-m-left-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-m-left-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-m-left-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-m-left-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -496,6 +512,7 @@
   --spectrum-pickerbutton-m-left-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-m-left-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-left-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-m-left-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-left-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-m-left-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-m-left-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -503,6 +520,7 @@
   --spectrum-pickerbutton-m-left-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-m-left-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-m-left-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-m);
   --spectrum-pickerbutton-m-left-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-m);
@@ -529,14 +547,10 @@
   --spectrum-pickerbutton-m-left-texticon-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-m-left-texticon-fill-padding-right: var(--spectrum-global-dimension-size-125);
   --spectrum-pickerbutton-m-left-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-left-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-m-left-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-left-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-pickerbutton-m-left-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-left-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-  --spectrum-pickerbutton-m-left-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-  --spectrum-pickerbutton-m-left-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-left-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-left-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-m-left-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-left-texticon-padding: var(--spectrum-alias-infieldbutton-padding-m);
   --spectrum-pickerbutton-m-right-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-m-right-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -545,6 +559,7 @@
   --spectrum-pickerbutton-m-right-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-m-right-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-m-right-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-m-right-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -552,6 +567,7 @@
   --spectrum-pickerbutton-m-right-texticon-focusring-render: no;
   --spectrum-pickerbutton-m-right-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-m-right-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-m-right-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -559,6 +575,7 @@
   --spectrum-pickerbutton-m-right-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-m-right-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-m-right-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-m-right-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -566,6 +583,7 @@
   --spectrum-pickerbutton-m-right-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-m-right-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-m-right-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-m-right-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -573,6 +591,7 @@
   --spectrum-pickerbutton-m-right-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-m-right-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-right-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-m-right-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-right-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-m-right-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-m-right-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -580,6 +599,7 @@
   --spectrum-pickerbutton-m-right-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-m-right-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-m-right-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-m);
   --spectrum-pickerbutton-m-right-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-m);
@@ -606,14 +626,10 @@
   --spectrum-pickerbutton-m-right-texticon-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-m-right-texticon-fill-padding-right: var(--spectrum-global-dimension-size-125);
   --spectrum-pickerbutton-m-right-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-right-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-m-right-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-right-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-pickerbutton-m-right-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-right-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-  --spectrum-pickerbutton-m-right-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-  --spectrum-pickerbutton-m-right-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-right-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-m-right-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-m-right-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-right-texticon-padding: var(--spectrum-alias-infieldbutton-padding-m);
   --spectrum-pickerbutton-m-none-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-m-none-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -622,6 +638,7 @@
   --spectrum-pickerbutton-m-none-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-m-none-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-m-none-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-m-none-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -629,6 +646,7 @@
   --spectrum-pickerbutton-m-none-texticon-focusring-render: no;
   --spectrum-pickerbutton-m-none-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-m-none-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-m-none-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -636,6 +654,7 @@
   --spectrum-pickerbutton-m-none-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-m-none-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-m-none-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-m-none-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -643,6 +662,7 @@
   --spectrum-pickerbutton-m-none-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-m-none-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-m-none-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-m-none-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -650,6 +670,7 @@
   --spectrum-pickerbutton-m-none-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-m-none-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-none-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-m-none-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-none-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-m-none-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-m-none-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -657,6 +678,7 @@
   --spectrum-pickerbutton-m-none-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-m-none-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-m-none-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-m);
   --spectrum-pickerbutton-m-none-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-m);
@@ -683,14 +705,10 @@
   --spectrum-pickerbutton-m-none-texticon-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-m-none-texticon-fill-padding-right: var(--spectrum-global-dimension-size-125);
   --spectrum-pickerbutton-m-none-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-none-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-m-none-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-none-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-pickerbutton-m-none-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-none-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-  --spectrum-pickerbutton-m-none-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-  --spectrum-pickerbutton-m-none-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-none-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-none-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-m-none-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-none-texticon-padding: var(--spectrum-alias-infieldbutton-padding-m);
   --spectrum-pickerbutton-m-left-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-m-left-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -699,6 +717,7 @@
   --spectrum-pickerbutton-m-left-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-m-left-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-m-left-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-m-left-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -706,6 +725,7 @@
   --spectrum-pickerbutton-m-left-icononly-focusring-render: no;
   --spectrum-pickerbutton-m-left-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-m-left-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-m-left-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -713,6 +733,7 @@
   --spectrum-pickerbutton-m-left-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-m-left-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-m-left-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-m-left-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -720,6 +741,7 @@
   --spectrum-pickerbutton-m-left-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-m-left-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-m-left-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-m-left-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -727,6 +749,7 @@
   --spectrum-pickerbutton-m-left-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-m-left-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-left-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-m-left-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-left-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-m-left-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-m-left-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -734,6 +757,7 @@
   --spectrum-pickerbutton-m-left-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-m-left-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-left-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-left-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-m-left-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-m);
   --spectrum-pickerbutton-m-left-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-m);
@@ -760,14 +784,10 @@
   --spectrum-pickerbutton-m-left-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-left-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-left-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-pickerbutton-m-left-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-left-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-  --spectrum-pickerbutton-m-left-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-  --spectrum-pickerbutton-m-left-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-left-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-left-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-m-left-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-left-icononly-padding: var(--spectrum-alias-infieldbutton-padding-m);
   --spectrum-pickerbutton-m-right-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-m-right-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -776,6 +796,7 @@
   --spectrum-pickerbutton-m-right-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-m-right-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-m-right-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-m-right-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -783,6 +804,7 @@
   --spectrum-pickerbutton-m-right-icononly-focusring-render: no;
   --spectrum-pickerbutton-m-right-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-m-right-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-m-right-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -790,6 +812,7 @@
   --spectrum-pickerbutton-m-right-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-m-right-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-m-right-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-m-right-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -797,6 +820,7 @@
   --spectrum-pickerbutton-m-right-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-m-right-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-m-right-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-m-right-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -804,6 +828,7 @@
   --spectrum-pickerbutton-m-right-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-m-right-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-right-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-m-right-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-right-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-m-right-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-m-right-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -811,6 +836,7 @@
   --spectrum-pickerbutton-m-right-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-m-right-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-right-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-right-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-m-right-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-m);
   --spectrum-pickerbutton-m-right-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-m);
@@ -837,14 +863,10 @@
   --spectrum-pickerbutton-m-right-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-right-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-right-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-pickerbutton-m-right-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-right-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-  --spectrum-pickerbutton-m-right-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-  --spectrum-pickerbutton-m-right-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-right-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-m-right-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-m-right-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-right-icononly-padding: var(--spectrum-alias-infieldbutton-padding-m);
   --spectrum-pickerbutton-m-none-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-m-none-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -853,6 +875,7 @@
   --spectrum-pickerbutton-m-none-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-m-none-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-m-none-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-m-none-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -860,6 +883,7 @@
   --spectrum-pickerbutton-m-none-icononly-focusring-render: no;
   --spectrum-pickerbutton-m-none-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-m-none-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-m-none-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -867,6 +891,7 @@
   --spectrum-pickerbutton-m-none-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-m-none-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-m-none-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-m-none-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -874,6 +899,7 @@
   --spectrum-pickerbutton-m-none-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-m-none-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-m-none-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-m-none-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -881,6 +907,7 @@
   --spectrum-pickerbutton-m-none-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-m-none-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-none-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-m-none-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-m-none-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-m-none-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-m-none-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -888,6 +915,7 @@
   --spectrum-pickerbutton-m-none-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-m-none-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-m-none-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-m-none-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-m-none-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-m);
   --spectrum-pickerbutton-m-none-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-m);
@@ -914,14 +942,10 @@
   --spectrum-pickerbutton-m-none-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-none-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-none-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-pickerbutton-m-none-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-none-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
-  --spectrum-pickerbutton-m-none-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-m);
-  --spectrum-pickerbutton-m-none-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-none-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-m-none-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-m-none-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-m-none-icononly-padding: var(--spectrum-alias-infieldbutton-padding-m);
   --spectrum-pickerbutton-l-left-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-l-left-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -930,6 +954,7 @@
   --spectrum-pickerbutton-l-left-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-l-left-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-l-left-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-l-left-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -937,6 +962,7 @@
   --spectrum-pickerbutton-l-left-texticon-focusring-render: no;
   --spectrum-pickerbutton-l-left-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-l-left-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-l-left-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -944,6 +970,7 @@
   --spectrum-pickerbutton-l-left-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-l-left-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-l-left-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-l-left-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -951,6 +978,7 @@
   --spectrum-pickerbutton-l-left-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-l-left-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-l-left-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-l-left-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -958,6 +986,7 @@
   --spectrum-pickerbutton-l-left-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-l-left-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-left-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-l-left-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-left-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-l-left-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-l-left-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -965,6 +994,7 @@
   --spectrum-pickerbutton-l-left-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-l-left-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-l-left-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-l);
   --spectrum-pickerbutton-l-left-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-l);
@@ -991,14 +1021,10 @@
   --spectrum-pickerbutton-l-left-texticon-fill-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-pickerbutton-l-left-texticon-fill-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-pickerbutton-l-left-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-left-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-l-left-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-left-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-left-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-left-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-  --spectrum-pickerbutton-l-left-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-  --spectrum-pickerbutton-l-left-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-left-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-left-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-l-left-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-left-texticon-padding: var(--spectrum-alias-infieldbutton-padding-l);
   --spectrum-pickerbutton-l-right-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-l-right-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1007,6 +1033,7 @@
   --spectrum-pickerbutton-l-right-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-l-right-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-l-right-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-l-right-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1014,6 +1041,7 @@
   --spectrum-pickerbutton-l-right-texticon-focusring-render: no;
   --spectrum-pickerbutton-l-right-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-l-right-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-l-right-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1021,6 +1049,7 @@
   --spectrum-pickerbutton-l-right-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-l-right-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-l-right-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-l-right-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1028,6 +1057,7 @@
   --spectrum-pickerbutton-l-right-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-l-right-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-l-right-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-l-right-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1035,6 +1065,7 @@
   --spectrum-pickerbutton-l-right-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-l-right-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-right-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-l-right-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-right-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-l-right-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-l-right-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1042,6 +1073,7 @@
   --spectrum-pickerbutton-l-right-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-l-right-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-l-right-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-l);
   --spectrum-pickerbutton-l-right-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-l);
@@ -1068,14 +1100,10 @@
   --spectrum-pickerbutton-l-right-texticon-fill-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-pickerbutton-l-right-texticon-fill-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-pickerbutton-l-right-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-right-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-l-right-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-right-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-right-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-right-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-  --spectrum-pickerbutton-l-right-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-  --spectrum-pickerbutton-l-right-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-right-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-l-right-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-l-right-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-right-texticon-padding: var(--spectrum-alias-infieldbutton-padding-l);
   --spectrum-pickerbutton-l-none-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-l-none-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1084,6 +1112,7 @@
   --spectrum-pickerbutton-l-none-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-l-none-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-l-none-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-l-none-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1091,6 +1120,7 @@
   --spectrum-pickerbutton-l-none-texticon-focusring-render: no;
   --spectrum-pickerbutton-l-none-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-l-none-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-l-none-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1098,6 +1128,7 @@
   --spectrum-pickerbutton-l-none-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-l-none-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-l-none-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-l-none-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1105,6 +1136,7 @@
   --spectrum-pickerbutton-l-none-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-l-none-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-l-none-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-l-none-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1112,6 +1144,7 @@
   --spectrum-pickerbutton-l-none-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-l-none-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-none-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-l-none-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-none-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-l-none-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-l-none-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1119,6 +1152,7 @@
   --spectrum-pickerbutton-l-none-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-l-none-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-l-none-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-l);
   --spectrum-pickerbutton-l-none-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-l);
@@ -1145,14 +1179,10 @@
   --spectrum-pickerbutton-l-none-texticon-fill-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-pickerbutton-l-none-texticon-fill-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-pickerbutton-l-none-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-none-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-l-none-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-none-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-none-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-none-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-  --spectrum-pickerbutton-l-none-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-  --spectrum-pickerbutton-l-none-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-none-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-none-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-l-none-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-none-texticon-padding: var(--spectrum-alias-infieldbutton-padding-l);
   --spectrum-pickerbutton-l-left-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-l-left-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1161,6 +1191,7 @@
   --spectrum-pickerbutton-l-left-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-l-left-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-l-left-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-l-left-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1168,6 +1199,7 @@
   --spectrum-pickerbutton-l-left-icononly-focusring-render: no;
   --spectrum-pickerbutton-l-left-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-l-left-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-l-left-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1175,6 +1207,7 @@
   --spectrum-pickerbutton-l-left-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-l-left-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-l-left-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-l-left-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1182,6 +1215,7 @@
   --spectrum-pickerbutton-l-left-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-l-left-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-l-left-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-l-left-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1189,6 +1223,7 @@
   --spectrum-pickerbutton-l-left-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-l-left-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-left-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-l-left-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-left-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-l-left-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-l-left-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1196,6 +1231,7 @@
   --spectrum-pickerbutton-l-left-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-l-left-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-left-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-left-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-l-left-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-l);
   --spectrum-pickerbutton-l-left-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-l);
@@ -1222,14 +1258,10 @@
   --spectrum-pickerbutton-l-left-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-left-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-left-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-left-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-left-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-  --spectrum-pickerbutton-l-left-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-  --spectrum-pickerbutton-l-left-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-left-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-left-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-l-left-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-left-icononly-padding: var(--spectrum-alias-infieldbutton-padding-l);
   --spectrum-pickerbutton-l-right-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-l-right-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1238,6 +1270,7 @@
   --spectrum-pickerbutton-l-right-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-l-right-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-l-right-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-l-right-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1245,6 +1278,7 @@
   --spectrum-pickerbutton-l-right-icononly-focusring-render: no;
   --spectrum-pickerbutton-l-right-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-l-right-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-l-right-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1252,6 +1286,7 @@
   --spectrum-pickerbutton-l-right-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-l-right-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-l-right-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-l-right-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1259,6 +1294,7 @@
   --spectrum-pickerbutton-l-right-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-l-right-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-l-right-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-l-right-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1266,6 +1302,7 @@
   --spectrum-pickerbutton-l-right-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-l-right-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-right-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-l-right-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-right-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-l-right-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-l-right-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1273,6 +1310,7 @@
   --spectrum-pickerbutton-l-right-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-l-right-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-right-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-right-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-l-right-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-l);
   --spectrum-pickerbutton-l-right-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-l);
@@ -1299,14 +1337,10 @@
   --spectrum-pickerbutton-l-right-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-right-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-right-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-right-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-right-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-  --spectrum-pickerbutton-l-right-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-  --spectrum-pickerbutton-l-right-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-right-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-l-right-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-l-right-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-right-icononly-padding: var(--spectrum-alias-infieldbutton-padding-l);
   --spectrum-pickerbutton-l-none-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-l-none-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1315,6 +1349,7 @@
   --spectrum-pickerbutton-l-none-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-l-none-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-l-none-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-l-none-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1322,6 +1357,7 @@
   --spectrum-pickerbutton-l-none-icononly-focusring-render: no;
   --spectrum-pickerbutton-l-none-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-l-none-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-l-none-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1329,6 +1365,7 @@
   --spectrum-pickerbutton-l-none-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-l-none-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-l-none-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-l-none-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1336,6 +1373,7 @@
   --spectrum-pickerbutton-l-none-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-l-none-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-l-none-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-l-none-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1343,6 +1381,7 @@
   --spectrum-pickerbutton-l-none-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-l-none-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-none-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-l-none-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-l-none-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-l-none-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-l-none-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1350,6 +1389,7 @@
   --spectrum-pickerbutton-l-none-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-l-none-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-l-none-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-l-none-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-l-none-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-l);
   --spectrum-pickerbutton-l-none-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-l);
@@ -1376,14 +1416,10 @@
   --spectrum-pickerbutton-l-none-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-none-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-none-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-none-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-none-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
-  --spectrum-pickerbutton-l-none-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-l);
-  --spectrum-pickerbutton-l-none-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-none-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-l-none-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-l-none-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-l-none-icononly-padding: var(--spectrum-alias-infieldbutton-padding-l);
   --spectrum-pickerbutton-xl-left-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-xl-left-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1392,6 +1428,7 @@
   --spectrum-pickerbutton-xl-left-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-xl-left-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-xl-left-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-xl-left-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1399,6 +1436,7 @@
   --spectrum-pickerbutton-xl-left-texticon-focusring-render: no;
   --spectrum-pickerbutton-xl-left-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-xl-left-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-xl-left-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1406,6 +1444,7 @@
   --spectrum-pickerbutton-xl-left-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-xl-left-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-xl-left-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-xl-left-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1413,6 +1452,7 @@
   --spectrum-pickerbutton-xl-left-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-xl-left-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-xl-left-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-xl-left-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1420,6 +1460,7 @@
   --spectrum-pickerbutton-xl-left-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-xl-left-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-left-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-xl-left-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-xl-left-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1427,6 +1468,7 @@
   --spectrum-pickerbutton-xl-left-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-xl-left-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-xl-left-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
   --spectrum-pickerbutton-xl-left-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
@@ -1453,14 +1495,10 @@
   --spectrum-pickerbutton-xl-left-texticon-fill-padding-left: var(--spectrum-global-dimension-size-225);
   --spectrum-pickerbutton-xl-left-texticon-fill-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-pickerbutton-xl-left-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-left-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-pickerbutton-xl-left-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-left-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-  --spectrum-pickerbutton-xl-left-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
-  --spectrum-pickerbutton-xl-left-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-left-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-left-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-xl-left-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-left-texticon-padding: var(--spectrum-alias-infieldbutton-padding-xl);
   --spectrum-pickerbutton-xl-right-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-xl-right-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1469,6 +1507,7 @@
   --spectrum-pickerbutton-xl-right-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-xl-right-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-xl-right-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-xl-right-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1476,6 +1515,7 @@
   --spectrum-pickerbutton-xl-right-texticon-focusring-render: no;
   --spectrum-pickerbutton-xl-right-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-xl-right-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-xl-right-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1483,6 +1523,7 @@
   --spectrum-pickerbutton-xl-right-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-xl-right-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-xl-right-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-xl-right-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1490,6 +1531,7 @@
   --spectrum-pickerbutton-xl-right-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-xl-right-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-xl-right-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-xl-right-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1497,6 +1539,7 @@
   --spectrum-pickerbutton-xl-right-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-xl-right-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-right-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-xl-right-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-xl-right-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1504,6 +1547,7 @@
   --spectrum-pickerbutton-xl-right-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-xl-right-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-xl-right-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
   --spectrum-pickerbutton-xl-right-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
@@ -1530,14 +1574,10 @@
   --spectrum-pickerbutton-xl-right-texticon-fill-padding-left: var(--spectrum-global-dimension-size-225);
   --spectrum-pickerbutton-xl-right-texticon-fill-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-pickerbutton-xl-right-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-right-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-pickerbutton-xl-right-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-right-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-  --spectrum-pickerbutton-xl-right-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
-  --spectrum-pickerbutton-xl-right-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-right-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-xl-right-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-xl-right-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-right-texticon-padding: var(--spectrum-alias-infieldbutton-padding-xl);
   --spectrum-pickerbutton-xl-none-texticon-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-xl-none-texticon-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1546,6 +1586,7 @@
   --spectrum-pickerbutton-xl-none-texticon-focusring-render-disabled: no;
   --spectrum-pickerbutton-xl-none-texticon-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-xl-none-texticon-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-xl-none-texticon-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1553,6 +1594,7 @@
   --spectrum-pickerbutton-xl-none-texticon-focusring-render: no;
   --spectrum-pickerbutton-xl-none-texticon-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-xl-none-texticon-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-xl-none-texticon-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1560,6 +1602,7 @@
   --spectrum-pickerbutton-xl-none-texticon-focusring-render-down: no;
   --spectrum-pickerbutton-xl-none-texticon-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-xl-none-texticon-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-xl-none-texticon-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1567,6 +1610,7 @@
   --spectrum-pickerbutton-xl-none-texticon-focusring-render-hover: no;
   --spectrum-pickerbutton-xl-none-texticon-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-xl-none-texticon-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-xl-none-texticon-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1574,6 +1618,7 @@
   --spectrum-pickerbutton-xl-none-texticon-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-xl-none-texticon-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-none-texticon-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-xl-none-texticon-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-xl-none-texticon-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1581,6 +1626,7 @@
   --spectrum-pickerbutton-xl-none-texticon-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-xl-none-texticon-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-texticon-fill-border-color: transparent;
   --spectrum-pickerbutton-xl-none-texticon-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
   --spectrum-pickerbutton-xl-none-texticon-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
@@ -1607,14 +1653,10 @@
   --spectrum-pickerbutton-xl-none-texticon-fill-padding-left: var(--spectrum-global-dimension-size-225);
   --spectrum-pickerbutton-xl-none-texticon-fill-padding-right: var(--spectrum-global-dimension-size-200);
   --spectrum-pickerbutton-xl-none-texticon-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-type: focusring;
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-none-texticon-focusring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-pickerbutton-xl-none-texticon-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-none-texticon-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-  --spectrum-pickerbutton-xl-none-texticon-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
-  --spectrum-pickerbutton-xl-none-texticon-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-none-texticon-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-none-texticon-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-xl-none-texticon-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-none-texticon-padding: var(--spectrum-alias-infieldbutton-padding-xl);
   --spectrum-pickerbutton-xl-left-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-xl-left-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1623,6 +1665,7 @@
   --spectrum-pickerbutton-xl-left-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-xl-left-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-xl-left-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-xl-left-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1630,6 +1673,7 @@
   --spectrum-pickerbutton-xl-left-icononly-focusring-render: no;
   --spectrum-pickerbutton-xl-left-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-xl-left-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-xl-left-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1637,6 +1681,7 @@
   --spectrum-pickerbutton-xl-left-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-xl-left-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-xl-left-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-xl-left-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1644,6 +1689,7 @@
   --spectrum-pickerbutton-xl-left-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-xl-left-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-xl-left-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-xl-left-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1651,6 +1697,7 @@
   --spectrum-pickerbutton-xl-left-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-xl-left-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-left-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-xl-left-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-xl-left-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1658,6 +1705,7 @@
   --spectrum-pickerbutton-xl-left-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-xl-left-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-left-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-xl-left-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
   --spectrum-pickerbutton-xl-left-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
@@ -1684,14 +1732,10 @@
   --spectrum-pickerbutton-xl-left-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-left-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-pickerbutton-xl-left-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-left-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-  --spectrum-pickerbutton-xl-left-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
-  --spectrum-pickerbutton-xl-left-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-left-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-left-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+  --spectrum-pickerbutton-xl-left-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-left-icononly-padding: var(--spectrum-alias-infieldbutton-padding-xl);
   --spectrum-pickerbutton-xl-right-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-xl-right-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1700,6 +1744,7 @@
   --spectrum-pickerbutton-xl-right-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-xl-right-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-xl-right-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-xl-right-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1707,6 +1752,7 @@
   --spectrum-pickerbutton-xl-right-icononly-focusring-render: no;
   --spectrum-pickerbutton-xl-right-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-xl-right-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-xl-right-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1714,6 +1760,7 @@
   --spectrum-pickerbutton-xl-right-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-xl-right-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-xl-right-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-xl-right-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1721,6 +1768,7 @@
   --spectrum-pickerbutton-xl-right-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-xl-right-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-xl-right-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-xl-right-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1728,6 +1776,7 @@
   --spectrum-pickerbutton-xl-right-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-xl-right-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-right-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-xl-right-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-xl-right-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1735,6 +1784,7 @@
   --spectrum-pickerbutton-xl-right-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-xl-right-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-right-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-xl-right-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
   --spectrum-pickerbutton-xl-right-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
@@ -1761,14 +1811,10 @@
   --spectrum-pickerbutton-xl-right-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-right-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-pickerbutton-xl-right-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-right-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-  --spectrum-pickerbutton-xl-right-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
-  --spectrum-pickerbutton-xl-right-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-right-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
-  --spectrum-pickerbutton-xl-right-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-xl-right-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-right-icononly-padding: var(--spectrum-alias-infieldbutton-padding-xl);
   --spectrum-pickerbutton-xl-none-icononly-fill-label-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-pickerbutton-xl-none-icononly-fill-uiicon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
@@ -1777,6 +1823,7 @@
   --spectrum-pickerbutton-xl-none-icononly-focusring-render-disabled: no;
   --spectrum-pickerbutton-xl-none-icononly-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-fill-label-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-pickerbutton-xl-none-icononly-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-pickerbutton-xl-none-icononly-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1784,6 +1831,7 @@
   --spectrum-pickerbutton-xl-none-icononly-focusring-render: no;
   --spectrum-pickerbutton-xl-none-icononly-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-color: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-fill-label-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-pickerbutton-xl-none-icononly-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-pickerbutton-xl-none-icononly-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
@@ -1791,6 +1839,7 @@
   --spectrum-pickerbutton-xl-none-icononly-focusring-render-down: no;
   --spectrum-pickerbutton-xl-none-icononly-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-fill-label-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-pickerbutton-xl-none-icononly-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-pickerbutton-xl-none-icononly-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
@@ -1798,6 +1847,7 @@
   --spectrum-pickerbutton-xl-none-icononly-focusring-render-hover: no;
   --spectrum-pickerbutton-xl-none-icononly-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-fill-label-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-pickerbutton-xl-none-icononly-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
   --spectrum-pickerbutton-xl-none-icononly-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
@@ -1805,6 +1855,7 @@
   --spectrum-pickerbutton-xl-none-icononly-focusring-render-key-focus: yes;
   --spectrum-pickerbutton-xl-none-icononly-focusring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-pickerbutton-xl-none-icononly-fill-label-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-pickerbutton-xl-none-icononly-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-pickerbutton-xl-none-icononly-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
@@ -1812,6 +1863,7 @@
   --spectrum-pickerbutton-xl-none-icononly-focusring-render-mouse-focus: no;
   --spectrum-pickerbutton-xl-none-icononly-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-pickerbutton-xl-none-icononly-fill-border-color: transparent;
   --spectrum-pickerbutton-xl-none-icononly-fill-label-padding-top: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
   --spectrum-pickerbutton-xl-none-icononly-fill-label-padding-bottom: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
@@ -1838,13 +1890,9 @@
   --spectrum-pickerbutton-xl-none-icononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-none-icononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-pickerbutton-xl-none-icononly-_icononly-padding-x: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-none-icononly-_icon-margin-y: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
-  --spectrum-pickerbutton-xl-none-icononly-_label-padding-y: var(--spectrum-alias-pickerbutton-label-padding-y-xl);
-  --spectrum-pickerbutton-xl-none-icononly-_border-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-none-icononly-_border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
-  --spectrum-pickerbutton-xl-none-icononly-_border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-pickerbutton-xl-none-icononly-focusring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-pickerbutton-xl-none-icononly-padding: var(--spectrum-alias-infieldbutton-padding-xl);
 }

@@ -24,8 +24,6 @@
   --spectrum-tabbar-primary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-tabbar-primary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-tabbar-primary-background-color: var(--spectrum-alias-background-color-primary);
-  --spectrum-tabbar-primary-height: 49px;
-  --spectrum-tabbar-primary-border-size: 1px;
   --spectrum-tabbar-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tabbar-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-primary-item-icon-type: icon;
@@ -44,6 +42,8 @@
   --spectrum-tabbar-primary-item-text-text-transform: none;
   --spectrum-tabbar-primary-item-padding-bottom: var(--spectrum-global-dimension-static-size-40);
   --spectrum-tabbar-primary-item-padding-top: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tabbar-primary-height: 49px;
+  --spectrum-tabbar-primary-border-size: 1px;
   --spectrum-tabbar-primary-title-position-offset: -2px;
   --spectrum-tabbar-sidelabel-primary-item-icon-color-selected: var(--spectrum-alias-icon-color-selected);
   --spectrum-tabbar-sidelabel-primary-item-text-color-selected: var(--spectrum-alias-text-color-selected);
@@ -70,8 +70,6 @@
   --spectrum-tabbar-sidelabel-primary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-tabbar-sidelabel-primary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-tabbar-sidelabel-primary-background-color: var(--spectrum-alias-background-color-primary);
-  --spectrum-tabbar-sidelabel-primary-height: 49px;
-  --spectrum-tabbar-sidelabel-primary-border-size: 1px;
   --spectrum-tabbar-sidelabel-primary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-tabbar-sidelabel-primary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-sidelabel-primary-item-icon-type: icon;
@@ -90,6 +88,8 @@
   --spectrum-tabbar-sidelabel-primary-item-text-text-transform: none;
   --spectrum-tabbar-sidelabel-primary-item-padding-bottom: var(--spectrum-global-dimension-static-size-225);
   --spectrum-tabbar-sidelabel-primary-item-padding-top: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-tabbar-sidelabel-primary-height: 49px;
+  --spectrum-tabbar-sidelabel-primary-border-size: 1px;
   --spectrum-tabbar-sidelabel-primary-title-position-offset: -2px;
   --spectrum-tabbar-secondary-item-icon-color-selected: var(--spectrum-alias-icon-color-selected);
   --spectrum-tabbar-secondary-item-text-color-selected: var(--spectrum-alias-text-color-selected);
@@ -116,8 +116,6 @@
   --spectrum-tabbar-secondary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-tabbar-secondary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-tabbar-secondary-background-color: var(--spectrum-alias-background-color-secondary);
-  --spectrum-tabbar-secondary-height: 49px;
-  --spectrum-tabbar-secondary-border-size: 1px;
   --spectrum-tabbar-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tabbar-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-secondary-item-icon-type: icon;
@@ -136,6 +134,8 @@
   --spectrum-tabbar-secondary-item-text-text-transform: none;
   --spectrum-tabbar-secondary-item-padding-bottom: var(--spectrum-global-dimension-static-size-40);
   --spectrum-tabbar-secondary-item-padding-top: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tabbar-secondary-height: 49px;
+  --spectrum-tabbar-secondary-border-size: 1px;
   --spectrum-tabbar-secondary-title-position-offset: -2px;
   --spectrum-tabbar-sidelabel-secondary-item-icon-color-selected: var(--spectrum-alias-icon-color-selected);
   --spectrum-tabbar-sidelabel-secondary-item-text-color-selected: var(--spectrum-alias-text-color-selected);
@@ -162,8 +162,6 @@
   --spectrum-tabbar-sidelabel-secondary-item-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-tabbar-sidelabel-secondary-item-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-tabbar-sidelabel-secondary-background-color: var(--spectrum-alias-background-color-secondary);
-  --spectrum-tabbar-sidelabel-secondary-height: 49px;
-  --spectrum-tabbar-sidelabel-secondary-border-size: 1px;
   --spectrum-tabbar-sidelabel-secondary-item-icon-gap: var(--spectrum-global-dimension-static-size-115);
   --spectrum-tabbar-sidelabel-secondary-item-icon-size: var(--spectrum-alias-workflow-icon-size-m);
   --spectrum-tabbar-sidelabel-secondary-item-icon-type: icon;
@@ -182,5 +180,7 @@
   --spectrum-tabbar-sidelabel-secondary-item-text-text-transform: none;
   --spectrum-tabbar-sidelabel-secondary-item-padding-bottom: var(--spectrum-global-dimension-static-size-225);
   --spectrum-tabbar-sidelabel-secondary-item-padding-top: var(--spectrum-global-dimension-static-size-200);
+  --spectrum-tabbar-sidelabel-secondary-height: 49px;
+  --spectrum-tabbar-sidelabel-secondary-border-size: 1px;
   --spectrum-tabbar-sidelabel-secondary-title-position-offset: -2px;
 }

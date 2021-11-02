@@ -52,10 +52,10 @@
   --spectrum-alias-button-negative-background-color-default: var(--spectrum-alias-button-negative-border-color-default);
   --spectrum-alias-button-negative-text-color-default: var(--spectrum-alias-button-negative-text-color-hover);
   --spectrum-alias-button-negative-icon-color-default: var(--spectrum-alias-button-negative-text-color-default);
-  --spectrum-alias-input-border-color-default: var(--spectrum-global-color-gray-300);
-  --spectrum-alias-input-border-color-hover: var(--spectrum-global-color-gray-400);
-  --spectrum-alias-input-border-color-down: var(--spectrum-global-color-gray-900);
-  --spectrum-alias-input-border-color-key-focus: var(--spectrum-alias-input-border-color-down);
+  --spectrum-alias-input-border-color-default: var(--spectrum-alias-border-color);
+  --spectrum-alias-input-border-color-hover: var(--spectrum-alias-border-color-hover);
+  --spectrum-alias-input-border-color-down: var(--spectrum-alias-border-color-mouse-focus);
+  --spectrum-alias-input-border-color-key-focus: var(--spectrum-global-color-gray-900);
   --spectrum-alias-yellow-background-color-default: var(--spectrum-global-color-static-yellow-400);
   --spectrum-alias-yellow-background-color-hover: var(--spectrum-global-color-static-yellow-500);
   --spectrum-alias-yellow-background-color-key-focus: var(--spectrum-global-color-static-yellow-500);
