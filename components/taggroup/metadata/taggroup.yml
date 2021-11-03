@@ -74,12 +74,12 @@ examples:
           <span class="spectrum-Tag-label">Shantanu</span>
         </div>
       </div>
-  - id: tag-deletable
-    name: Deletable
+  - id: tag-removable
+    name: Removable
     description: An editable taglist.
     markup: |
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--deletable" tabindex="0" role="listitem">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" tabindex="0" role="listitem">
           <span class="spectrum-Tag-label">Tag 1</span>
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 1" tabindex="-1">
             <div class="spectrum-ClearButton-fill">
@@ -89,7 +89,7 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--deletable is-invalid" tabindex="0" role="listitem">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" tabindex="0" role="listitem">
           <span class="spectrum-Tag-label">Tag 2</span>
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 2" tabindex="-1">
             <div class="spectrum-ClearButton-fill">
@@ -99,7 +99,7 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--deletable is-disabled" role="listitem">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable is-disabled" role="listitem">
           <span class="spectrum-Tag-label">Tag 2</span>
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Remove tag 3" tabindex="-1" disabled>
             <div class="spectrum-ClearButton-fill">
@@ -114,7 +114,7 @@ examples:
       <br><br>
 
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--deletable" role="listitem" tabindex="0">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" role="listitem" tabindex="0">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
@@ -127,7 +127,7 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--deletable is-invalid" role="listitem" tabindex="0">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" role="listitem" tabindex="0">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
@@ -140,7 +140,7 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--deletable is-disabled" role="listitem">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable is-disabled" role="listitem">
           <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
             <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
           </div>
@@ -158,7 +158,7 @@ examples:
       <br><br>
 
       <div class= "spectrum-TagGroup" role="list" aria-label="Tags">
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--deletable" role="listitem" tabindex="0">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable" role="listitem" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
             <use xlink:href="#spectrum-icon-24-SentimentPositive" />
           </svg>
@@ -171,7 +171,7 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--deletable is-invalid" role="listitem" tabindex="0">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item spectrum-Tag--removable is-invalid" role="listitem" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
             <use xlink:href="#spectrum-icon-24-SentimentPositive" />
           </svg>
@@ -184,7 +184,7 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--deletable is-disabled" role="listitem">
+        <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable is-disabled" role="listitem">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Tag">
             <use xlink:href="#spectrum-icon-24-SentimentPositive" />
           </svg>

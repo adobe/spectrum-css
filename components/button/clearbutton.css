@@ -83,29 +83,38 @@ governing permissions and limitations under the License.
 .spectrum-ClearButton {
   color: var(--spectrum-clearbutton-m-fill-uiicon-color);
 
+  &:hover {
+    color: var(--spectrum-clearbutton-fill-uiicon-color-hover);
+  }
+
+  &:active {
+    color: var(--spectrum-clearbutton-fill-uiicon-color-down);
+  }
+
+  &:focus-ring {
+    color: var(--spectrum-clearbutton-fill-uiicon-color-key-focus);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    color: var(--spectrum-clearbutton-fill-uiicon-color-disabled);
+  }
+
   &:hover .spectrum-ClearButton-fill {
     background-color: var(--spectrum-clearbutton-fill-background-color-hover);
-
-    color: var(--spectrum-clearbutton-fill-uiicon-color-hover);
   }
 
   &:active .spectrum-ClearButton-fill {
     background-color: var(--spectrum-clearbutton-fill-background-color-down);
-
-    color: var(--spectrum-clearbutton-fill-uiicon-color-down);
   }
 
   &:focus-ring .spectrum-ClearButton-fill {
     background-color: var(--spectrum-clearbutton-fill-background-color-key-focus);
-
-    color: var(--spectrum-clearbutton-fill-uiicon-color-key-focus);
   }
 
   &:disabled,
   &.is-disabled .spectrum-ClearButton-fill {
     background-color: var(--spectrum-clearbutton-fill-background-color-disabled);
-
-    color: var(--spectrum-clearbutton-fill-uiicon-color-disabled);
   }
 }
 
