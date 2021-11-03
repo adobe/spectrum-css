@@ -84,7 +84,7 @@ governing permissions and limitations under the License.
   color: var(--spectrum-clearbutton-m-fill-uiicon-color);
 
   &:hover {
-    color: var(--spectrum-clearbutton-fill-uiicon-color-hover);
+    color: var(--spectrum-clearbutton-fill-uiicon-color);
   }
 
   &:active {
@@ -118,3 +118,23 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-ClearButton--overBackground {
+  color: var(--spectrum-alias-icon-color-overbackground);
+
+  &:hover {
+    color: var(--spectrum-alias-icon-color-overbackground);
+  }
+
+  &:active {
+    color: var(--spectrum-alias-icon-color-overbackground);
+  }
+
+  &:focus-ring {
+    color: var(--spectrum-alias-icon-color-overbackground);
+  }
+
+  &:disabled,
+  &.is-disabled .spectrum-ClearButton-fill {
+    background-color: var(--spectrum-alias-icon-color-overbackground-disabled);
+  }
+}
