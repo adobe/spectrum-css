@@ -21,8 +21,8 @@ examples:
 
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeM">
             <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100" />
               </svg>
             </div>
           </button>
@@ -33,8 +33,8 @@ examples:
 
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeL">
             <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross200" />
               </svg>
             </div>
           </button>
@@ -45,8 +45,8 @@ examples:
 
           <button class="spectrum-ClearButton spectrum-ClearButton--sizeXL">
             <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross300" />
               </svg>
             </div>
           </button>
@@ -57,8 +57,8 @@ examples:
     markup: |
       <button class="spectrum-ClearButton spectrum-ClearButton--sizeM" disabled>
         <div class="spectrum-ClearButton-fill">
-          <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Cross75" />
+          <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Cross100" />
           </svg>
         </div>
       </button>
