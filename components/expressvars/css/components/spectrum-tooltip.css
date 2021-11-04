@@ -7,10 +7,9 @@
   --spectrum-tooltip-neutral-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-neutral-text-transform: none;
   --spectrum-tooltip-neutral-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tooltip-neutral-text-margin-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tooltip-neutral-text-padding-top: 0;
   --spectrum-tooltip-neutral-text-padding-bottom: 0;
-  --spectrum-tooltip-neutral-text-margin-top: 0;
-  --spectrum-tooltip-neutral-text-margin-bottom: 0;
   --spectrum-tooltip-neutral-text-render: yes;
   --spectrum-tooltip-neutral-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tooltip-neutral-text-font-style: var(--spectrum-global-font-style-regular);
@@ -65,10 +64,9 @@
   --spectrum-tooltip-info-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-info-text-transform: none;
   --spectrum-tooltip-info-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tooltip-info-text-margin-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tooltip-info-text-padding-top: 0;
   --spectrum-tooltip-info-text-padding-bottom: 0;
-  --spectrum-tooltip-info-text-margin-top: 0;
-  --spectrum-tooltip-info-text-margin-bottom: 0;
   --spectrum-tooltip-info-text-render: yes;
   --spectrum-tooltip-info-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tooltip-info-text-font-style: var(--spectrum-global-font-style-regular);
@@ -123,10 +121,9 @@
   --spectrum-tooltip-positive-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-positive-text-transform: none;
   --spectrum-tooltip-positive-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tooltip-positive-text-margin-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tooltip-positive-text-padding-top: 0;
   --spectrum-tooltip-positive-text-padding-bottom: 0;
-  --spectrum-tooltip-positive-text-margin-top: 0;
-  --spectrum-tooltip-positive-text-margin-bottom: 0;
   --spectrum-tooltip-positive-text-render: yes;
   --spectrum-tooltip-positive-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tooltip-positive-text-font-style: var(--spectrum-global-font-style-regular);
@@ -181,10 +178,9 @@
   --spectrum-tooltip-negative-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-tooltip-negative-text-transform: none;
   --spectrum-tooltip-negative-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tooltip-negative-text-margin-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tooltip-negative-text-padding-top: 0;
   --spectrum-tooltip-negative-text-padding-bottom: 0;
-  --spectrum-tooltip-negative-text-margin-top: 0;
-  --spectrum-tooltip-negative-text-margin-bottom: 0;
   --spectrum-tooltip-negative-text-render: yes;
   --spectrum-tooltip-negative-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tooltip-negative-text-font-style: var(--spectrum-global-font-style-regular);
