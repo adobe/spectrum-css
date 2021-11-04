@@ -411,7 +411,7 @@
   --spectrum-textfield-s-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-s-quiet-textonly-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-quiet-textonly-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textfield-s-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-texticon-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -420,7 +420,7 @@
   --spectrum-textfield-s-texticon-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-s-texticon-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-s-texticon-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-s-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-texticon-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -429,7 +429,7 @@
   --spectrum-textfield-s-texticon-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-s-texticon-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-texticon-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -438,7 +438,7 @@
   --spectrum-textfield-s-texticon-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-s-texticon-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-s-texticon-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-s-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-texticon-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -447,7 +447,7 @@
   --spectrum-textfield-s-texticon-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-s-texticon-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-texticon-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -456,7 +456,7 @@
   --spectrum-textfield-s-texticon-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-s-texticon-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-s-texticon-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-s-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-texticon-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -465,7 +465,7 @@
   --spectrum-textfield-s-texticon-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-s-texticon-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -474,7 +474,7 @@
   --spectrum-textfield-s-texticon-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-s-texticon-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-s-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-texticon-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -492,7 +492,7 @@
   --spectrum-textfield-s-texticon-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-s-texticon-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-s-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -501,7 +501,7 @@
   --spectrum-textfield-s-texticon-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-s-texticon-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -510,7 +510,7 @@
   --spectrum-textfield-s-texticon-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-s-texticon-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-s-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-texticon-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -528,7 +528,7 @@
   --spectrum-textfield-s-texticon-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-s-texticon-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-s-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -537,7 +537,7 @@
   --spectrum-textfield-s-texticon-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-s-texticon-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -546,7 +546,7 @@
   --spectrum-textfield-s-texticon-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-s-texticon-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-s-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-texticon-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -564,7 +564,7 @@
   --spectrum-textfield-s-texticon-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-texticon-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-s-texticon-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-texticon-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-s-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-texticon-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -617,7 +617,7 @@
   --spectrum-textfield-s-texticon-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-s-texticon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-textfield-s-texticon-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-textfield-s-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-textonly-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -626,7 +626,7 @@
   --spectrum-textfield-s-textonly-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-s-textonly-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-s-textonly-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-s-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-textonly-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -635,7 +635,7 @@
   --spectrum-textfield-s-textonly-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-s-textonly-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-textonly-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -644,7 +644,7 @@
   --spectrum-textfield-s-textonly-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-s-textonly-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-s-textonly-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-s-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-textonly-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -653,7 +653,7 @@
   --spectrum-textfield-s-textonly-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-s-textonly-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-s-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-s-textonly-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -662,7 +662,7 @@
   --spectrum-textfield-s-textonly-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-s-textonly-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-s-textonly-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-s-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-s-textonly-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -671,7 +671,7 @@
   --spectrum-textfield-s-textonly-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-s-textonly-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -680,7 +680,7 @@
   --spectrum-textfield-s-textonly-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-s-textonly-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-s-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-textonly-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -698,7 +698,7 @@
   --spectrum-textfield-s-textonly-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-s-textonly-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-s-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -707,7 +707,7 @@
   --spectrum-textfield-s-textonly-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-s-textonly-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -716,7 +716,7 @@
   --spectrum-textfield-s-textonly-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-s-textonly-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-s-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-textonly-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -734,7 +734,7 @@
   --spectrum-textfield-s-textonly-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-s-textonly-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-s-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -743,7 +743,7 @@
   --spectrum-textfield-s-textonly-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-s-textonly-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -752,7 +752,7 @@
   --spectrum-textfield-s-textonly-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-s-textonly-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-s-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-s-textonly-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -770,7 +770,7 @@
   --spectrum-textfield-s-textonly-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-s-textonly-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-s-textonly-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-s-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-s-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-s-textonly-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-s-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-s-textonly-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -1239,7 +1239,7 @@
   --spectrum-textfield-m-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-m-quiet-textonly-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-quiet-textonly-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textfield-m-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-texticon-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1248,7 +1248,7 @@
   --spectrum-textfield-m-texticon-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-m-texticon-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-m-texticon-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-m-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-texticon-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -1257,7 +1257,7 @@
   --spectrum-textfield-m-texticon-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-m-texticon-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-texticon-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1266,7 +1266,7 @@
   --spectrum-textfield-m-texticon-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-m-texticon-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-m-texticon-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-m-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-texticon-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -1275,7 +1275,7 @@
   --spectrum-textfield-m-texticon-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-m-texticon-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-texticon-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1284,7 +1284,7 @@
   --spectrum-textfield-m-texticon-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-m-texticon-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-m-texticon-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-m-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-texticon-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -1293,7 +1293,7 @@
   --spectrum-textfield-m-texticon-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-m-texticon-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -1302,7 +1302,7 @@
   --spectrum-textfield-m-texticon-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-m-texticon-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-m-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-texticon-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -1320,7 +1320,7 @@
   --spectrum-textfield-m-texticon-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-m-texticon-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-m-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -1329,7 +1329,7 @@
   --spectrum-textfield-m-texticon-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-m-texticon-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -1338,7 +1338,7 @@
   --spectrum-textfield-m-texticon-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-m-texticon-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-m-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-texticon-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -1356,7 +1356,7 @@
   --spectrum-textfield-m-texticon-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-m-texticon-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-m-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -1365,7 +1365,7 @@
   --spectrum-textfield-m-texticon-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-m-texticon-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -1374,7 +1374,7 @@
   --spectrum-textfield-m-texticon-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-m-texticon-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-m-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-texticon-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -1392,7 +1392,7 @@
   --spectrum-textfield-m-texticon-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-texticon-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-m-texticon-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-texticon-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-m-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-texticon-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -1446,7 +1446,7 @@
   --spectrum-textfield-m-texticon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-textfield-m-texticon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-textfield-m-texticon-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-textfield-m-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-textonly-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1455,7 +1455,7 @@
   --spectrum-textfield-m-textonly-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-m-textonly-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-m-textonly-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-m-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-textonly-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -1464,7 +1464,7 @@
   --spectrum-textfield-m-textonly-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-m-textonly-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-textonly-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1473,7 +1473,7 @@
   --spectrum-textfield-m-textonly-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-m-textonly-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-m-textonly-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-m-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-textonly-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -1482,7 +1482,7 @@
   --spectrum-textfield-m-textonly-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-m-textonly-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-m-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-m-textonly-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1491,7 +1491,7 @@
   --spectrum-textfield-m-textonly-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-m-textonly-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-m-textonly-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-m-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-m-textonly-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -1500,7 +1500,7 @@
   --spectrum-textfield-m-textonly-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-m-textonly-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -1509,7 +1509,7 @@
   --spectrum-textfield-m-textonly-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-m-textonly-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-m-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-textonly-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -1527,7 +1527,7 @@
   --spectrum-textfield-m-textonly-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-m-textonly-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-m-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -1536,7 +1536,7 @@
   --spectrum-textfield-m-textonly-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-m-textonly-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -1545,7 +1545,7 @@
   --spectrum-textfield-m-textonly-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-m-textonly-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-m-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-textonly-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -1563,7 +1563,7 @@
   --spectrum-textfield-m-textonly-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-m-textonly-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-m-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -1572,7 +1572,7 @@
   --spectrum-textfield-m-textonly-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-m-textonly-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -1581,7 +1581,7 @@
   --spectrum-textfield-m-textonly-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-m-textonly-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-m-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-m-textonly-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -1599,7 +1599,7 @@
   --spectrum-textfield-m-textonly-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-m-textonly-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-m-textonly-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-m-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-m-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-m-textonly-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-m-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-m-textonly-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2064,7 +2064,7 @@
   --spectrum-textfield-l-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-l-quiet-textonly-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-quiet-textonly-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textfield-l-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-texticon-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2073,7 +2073,7 @@
   --spectrum-textfield-l-texticon-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-l-texticon-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-l-texticon-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-l-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-texticon-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -2082,7 +2082,7 @@
   --spectrum-textfield-l-texticon-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-l-texticon-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-texticon-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2091,7 +2091,7 @@
   --spectrum-textfield-l-texticon-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-l-texticon-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-l-texticon-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-l-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-texticon-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -2100,7 +2100,7 @@
   --spectrum-textfield-l-texticon-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-l-texticon-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-texticon-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2109,7 +2109,7 @@
   --spectrum-textfield-l-texticon-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-l-texticon-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-l-texticon-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-l-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-texticon-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -2118,7 +2118,7 @@
   --spectrum-textfield-l-texticon-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-l-texticon-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2127,7 +2127,7 @@
   --spectrum-textfield-l-texticon-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-l-texticon-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-l-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-texticon-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -2145,7 +2145,7 @@
   --spectrum-textfield-l-texticon-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-l-texticon-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-l-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2154,7 +2154,7 @@
   --spectrum-textfield-l-texticon-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-l-texticon-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2163,7 +2163,7 @@
   --spectrum-textfield-l-texticon-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-l-texticon-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-l-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-texticon-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -2181,7 +2181,7 @@
   --spectrum-textfield-l-texticon-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-l-texticon-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-l-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2190,7 +2190,7 @@
   --spectrum-textfield-l-texticon-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-l-texticon-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2199,7 +2199,7 @@
   --spectrum-textfield-l-texticon-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-l-texticon-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-l-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-texticon-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -2217,7 +2217,7 @@
   --spectrum-textfield-l-texticon-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-texticon-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-l-texticon-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-texticon-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-l-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-texticon-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2269,7 +2269,7 @@
   --spectrum-textfield-l-texticon-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-textfield-l-texticon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-textfield-l-texticon-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-textfield-l-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-textonly-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2278,7 +2278,7 @@
   --spectrum-textfield-l-textonly-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-l-textonly-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-l-textonly-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-l-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-textonly-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -2287,7 +2287,7 @@
   --spectrum-textfield-l-textonly-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-l-textonly-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-textonly-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2296,7 +2296,7 @@
   --spectrum-textfield-l-textonly-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-l-textonly-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-l-textonly-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-l-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-textonly-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -2305,7 +2305,7 @@
   --spectrum-textfield-l-textonly-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-l-textonly-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-l-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-l-textonly-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2314,7 +2314,7 @@
   --spectrum-textfield-l-textonly-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-l-textonly-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-l-textonly-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-l-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-l-textonly-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -2323,7 +2323,7 @@
   --spectrum-textfield-l-textonly-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-l-textonly-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2332,7 +2332,7 @@
   --spectrum-textfield-l-textonly-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-l-textonly-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-l-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-textonly-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -2350,7 +2350,7 @@
   --spectrum-textfield-l-textonly-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-l-textonly-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-l-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2359,7 +2359,7 @@
   --spectrum-textfield-l-textonly-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-l-textonly-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2368,7 +2368,7 @@
   --spectrum-textfield-l-textonly-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-l-textonly-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-l-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-textonly-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -2386,7 +2386,7 @@
   --spectrum-textfield-l-textonly-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-l-textonly-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-l-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2395,7 +2395,7 @@
   --spectrum-textfield-l-textonly-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-l-textonly-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2404,7 +2404,7 @@
   --spectrum-textfield-l-textonly-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-l-textonly-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-l-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-l-textonly-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -2422,7 +2422,7 @@
   --spectrum-textfield-l-textonly-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-l-textonly-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-l-textonly-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-l-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-l-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-l-textonly-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-l-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-l-textonly-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2890,7 +2890,7 @@
   --spectrum-textfield-xl-quiet-textonly-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-textfield-xl-quiet-textonly-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-quiet-textonly-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textfield-xl-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-texticon-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-texticon-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2899,7 +2899,7 @@
   --spectrum-textfield-xl-texticon-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-xl-texticon-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-xl-texticon-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-xl-texticon-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-texticon-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -2908,7 +2908,7 @@
   --spectrum-textfield-xl-texticon-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-xl-texticon-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-texticon-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-texticon-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2917,7 +2917,7 @@
   --spectrum-textfield-xl-texticon-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-xl-texticon-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-xl-texticon-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-xl-texticon-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-texticon-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -2926,7 +2926,7 @@
   --spectrum-textfield-xl-texticon-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-xl-texticon-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-texticon-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-texticon-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -2935,7 +2935,7 @@
   --spectrum-textfield-xl-texticon-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-xl-texticon-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-xl-texticon-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-xl-texticon-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-texticon-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -2944,7 +2944,7 @@
   --spectrum-textfield-xl-texticon-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-xl-texticon-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2953,7 +2953,7 @@
   --spectrum-textfield-xl-texticon-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-xl-texticon-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-xl-texticon-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-texticon-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -2971,7 +2971,7 @@
   --spectrum-textfield-xl-texticon-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-xl-texticon-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-xl-texticon-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -2980,7 +2980,7 @@
   --spectrum-textfield-xl-texticon-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-xl-texticon-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -2989,7 +2989,7 @@
   --spectrum-textfield-xl-texticon-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-xl-texticon-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-xl-texticon-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-texticon-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -3007,7 +3007,7 @@
   --spectrum-textfield-xl-texticon-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-xl-texticon-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-xl-texticon-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -3016,7 +3016,7 @@
   --spectrum-textfield-xl-texticon-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-xl-texticon-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -3025,7 +3025,7 @@
   --spectrum-textfield-xl-texticon-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-xl-texticon-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-xl-texticon-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-texticon-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -3043,7 +3043,7 @@
   --spectrum-textfield-xl-texticon-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-texticon-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-xl-texticon-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-texticon-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-texticon-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-xl-texticon-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-texticon-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -3098,7 +3098,7 @@
   --spectrum-textfield-xl-texticon-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-textfield-xl-texticon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-textfield-xl-texticon-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-textfield-xl-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-textonly-placeholder-text-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-textonly-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -3107,7 +3107,7 @@
   --spectrum-textfield-xl-textonly-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-xl-textonly-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-xl-textonly-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-valid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-valid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-valid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-xl-textonly-placeholder-text-color-valid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-textonly-placeholder-color-valid: var(--spectrum-global-color-gray-600);
@@ -3116,7 +3116,7 @@
   --spectrum-textfield-xl-textonly-background-color-valid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-valid: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-xl-textonly-border-bottom-size-valid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-valid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-valid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-valid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-textonly-placeholder-text-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-textonly-placeholder-color-valid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -3125,7 +3125,7 @@
   --spectrum-textfield-xl-textonly-background-color-valid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-xl-textonly-border-color-valid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-xl-textonly-border-bottom-size-valid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-invalid: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-invalid: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-invalid: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-xl-textonly-placeholder-text-color-invalid: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-textonly-placeholder-color-invalid: var(--spectrum-global-color-gray-600);
@@ -3134,7 +3134,7 @@
   --spectrum-textfield-xl-textonly-background-color-invalid: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
   --spectrum-textfield-xl-textonly-border-bottom-size-invalid: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-invalid-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-invalid-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-invalid-disabled: var(--spectrum-alias-component-text-color-disabled);
   --spectrum-textfield-xl-textonly-placeholder-text-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-textfield-xl-textonly-placeholder-color-invalid-disabled: var(--spectrum-alias-text-color-disabled);
@@ -3143,7 +3143,7 @@
   --spectrum-textfield-xl-textonly-background-color-invalid-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-textfield-xl-textonly-border-color-invalid-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-textfield-xl-textonly-border-bottom-size-invalid-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-textfield-xl-textonly-placeholder-text-color: var(--spectrum-global-color-gray-600);
   --spectrum-textfield-xl-textonly-placeholder-color: var(--spectrum-global-color-gray-600);
@@ -3152,7 +3152,7 @@
   --spectrum-textfield-xl-textonly-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-textfield-xl-textonly-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-text-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -3161,7 +3161,7 @@
   --spectrum-textfield-xl-textonly-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-xl-textonly-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-xl-textonly-placeholder-text-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-textonly-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -3179,7 +3179,7 @@
   --spectrum-textfield-xl-textonly-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-xl-textonly-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-xl-textonly-placeholder-text-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -3188,7 +3188,7 @@
   --spectrum-textfield-xl-textonly-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-xl-textonly-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-valid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-valid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-valid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-text-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-color-valid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -3197,7 +3197,7 @@
   --spectrum-textfield-xl-textonly-background-color-valid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-valid-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-textfield-xl-textonly-border-bottom-size-valid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-valid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-valid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-valid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-xl-textonly-placeholder-text-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-textonly-placeholder-color-valid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -3215,7 +3215,7 @@
   --spectrum-textfield-xl-textonly-background-color-valid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-valid-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-textfield-xl-textonly-border-bottom-size-valid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-valid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-xl-textonly-placeholder-text-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-color-valid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
@@ -3224,7 +3224,7 @@
   --spectrum-textfield-xl-textonly-background-color-valid-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-valid-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-textfield-xl-textonly-border-bottom-size-valid-mouse-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-invalid-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-invalid-down: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-invalid-down: var(--spectrum-alias-component-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-text-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-color-invalid-down: var(--spectrum-alias-placeholder-text-color-down);
@@ -3233,7 +3233,7 @@
   --spectrum-textfield-xl-textonly-background-color-invalid-down: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-invalid-down: var(--spectrum-alias-input-border-color-invalid-down);
   --spectrum-textfield-xl-textonly-border-bottom-size-invalid-down: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-invalid-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-invalid-hover: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-invalid-hover: var(--spectrum-alias-component-text-color-hover);
   --spectrum-textfield-xl-textonly-placeholder-text-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-textfield-xl-textonly-placeholder-color-invalid-hover: var(--spectrum-alias-placeholder-text-color-hover);
@@ -3251,7 +3251,7 @@
   --spectrum-textfield-xl-textonly-background-color-invalid-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-textfield-xl-textonly-border-color-invalid-key-focus: var(--spectrum-alias-input-border-color-invalid-key-focus);
   --spectrum-textfield-xl-textonly-border-bottom-size-invalid-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-textfield-xl-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-textfield-xl-textonly-border-size-invalid-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-textfield-xl-textonly-text-color-invalid-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-textfield-xl-textonly-placeholder-text-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-textfield-xl-textonly-placeholder-color-invalid-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);

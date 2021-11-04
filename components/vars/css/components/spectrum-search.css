@@ -147,7 +147,7 @@
   --spectrum-search-s-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-search-s-quiet-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-search-s-quiet-height: var(--spectrum-global-dimension-size-300);
-  --spectrum-search-s-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-search-s-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-search-s-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -161,7 +161,7 @@
   --spectrum-search-s-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-s-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-s-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-search-s-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-icon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-search-s-placeholder-color: var(--spectrum-global-color-gray-600);
   --spectrum-search-s-text-color: var(--spectrum-alias-component-text-color-default);
@@ -175,7 +175,7 @@
   --spectrum-search-s-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-s-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-s-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-search-s-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-icon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-search-s-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-s-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -189,7 +189,7 @@
   --spectrum-search-s-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-s-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-s-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-search-s-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-icon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-search-s-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-search-s-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -217,7 +217,7 @@
   --spectrum-search-s-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-s-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-search-s-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-search-s-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-search-s-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-s-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -445,7 +445,7 @@
   --spectrum-search-m-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-search-m-quiet-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-search-m-quiet-height: var(--spectrum-global-dimension-size-400);
-  --spectrum-search-m-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-search-m-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-search-m-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -459,7 +459,7 @@
   --spectrum-search-m-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-m-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-m-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-search-m-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-icon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-search-m-placeholder-color: var(--spectrum-global-color-gray-600);
   --spectrum-search-m-text-color: var(--spectrum-alias-component-text-color-default);
@@ -473,7 +473,7 @@
   --spectrum-search-m-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-m-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-m-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-search-m-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-icon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-search-m-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-m-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -487,7 +487,7 @@
   --spectrum-search-m-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-m-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-m-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-search-m-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-icon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-search-m-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-search-m-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -515,7 +515,7 @@
   --spectrum-search-m-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-m-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-search-m-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-search-m-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-search-m-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-m-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -741,7 +741,7 @@
   --spectrum-search-l-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-search-l-quiet-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-search-l-quiet-height: var(--spectrum-global-dimension-size-500);
-  --spectrum-search-l-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-search-l-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-search-l-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -755,7 +755,7 @@
   --spectrum-search-l-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-l-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-l-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-search-l-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-icon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-search-l-placeholder-color: var(--spectrum-global-color-gray-600);
   --spectrum-search-l-text-color: var(--spectrum-alias-component-text-color-default);
@@ -769,7 +769,7 @@
   --spectrum-search-l-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-l-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-l-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-search-l-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-icon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-search-l-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-l-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -783,7 +783,7 @@
   --spectrum-search-l-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-l-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-l-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-search-l-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-icon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-search-l-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-search-l-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -811,7 +811,7 @@
   --spectrum-search-l-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-l-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-search-l-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-search-l-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-search-l-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-l-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1038,7 +1038,7 @@
   --spectrum-search-xl-quiet-padding-right: var(--spectrum-global-dimension-size-0);
   --spectrum-search-xl-quiet-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-search-xl-quiet-height: var(--spectrum-global-dimension-size-600);
-  --spectrum-search-xl-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-icon-color-disabled: var(--spectrum-alias-component-icon-color-disabled);
   --spectrum-search-xl-placeholder-color-disabled: var(--spectrum-alias-text-color-disabled);
   --spectrum-search-xl-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1052,7 +1052,7 @@
   --spectrum-search-xl-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-xl-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-xl-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
-  --spectrum-search-xl-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-icon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-search-xl-placeholder-color: var(--spectrum-global-color-gray-600);
   --spectrum-search-xl-text-color: var(--spectrum-alias-component-text-color-default);
@@ -1066,7 +1066,7 @@
   --spectrum-search-xl-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-xl-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-xl-border-bottom-size: var(--spectrum-alias-input-border-size);
-  --spectrum-search-xl-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-icon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-search-xl-placeholder-color-down: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-xl-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -1080,7 +1080,7 @@
   --spectrum-search-xl-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-xl-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-xl-border-bottom-size-down: var(--spectrum-alias-input-border-size);
-  --spectrum-search-xl-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-icon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-search-xl-placeholder-color-hover: var(--spectrum-alias-placeholder-text-color-hover);
   --spectrum-search-xl-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1108,7 +1108,7 @@
   --spectrum-search-xl-background-color-key-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-xl-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-search-xl-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
-  --spectrum-search-xl-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-icon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
   --spectrum-search-xl-placeholder-color-mouse-focus: var(--spectrum-alias-placeholder-text-color-down);
   --spectrum-search-xl-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);

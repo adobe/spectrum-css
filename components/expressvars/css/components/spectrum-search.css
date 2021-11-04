@@ -157,7 +157,7 @@
   --spectrum-search-s-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-s-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-s-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-s-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-s-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-s-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
@@ -171,7 +171,7 @@
   --spectrum-search-s-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-s-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-s-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-s-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-s-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-s-border-bottom-size: var(--spectrum-alias-input-border-size);
@@ -185,7 +185,7 @@
   --spectrum-search-s-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-s-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-s-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-s-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-s-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-s-border-bottom-size-down: var(--spectrum-alias-input-border-size);
@@ -199,7 +199,7 @@
   --spectrum-search-s-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-s-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-s-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-s-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-background-color-hover: var(--spectrum-global-color-gray-50);
   --spectrum-search-s-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-search-s-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
@@ -227,7 +227,7 @@
   --spectrum-search-s-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-s-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-s-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-s-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-s-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-s-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-s-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-search-s-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
@@ -455,7 +455,7 @@
   --spectrum-search-m-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-m-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-m-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-m-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-m-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-m-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
@@ -469,7 +469,7 @@
   --spectrum-search-m-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-m-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-m-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-m-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-m-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-m-border-bottom-size: var(--spectrum-alias-input-border-size);
@@ -483,7 +483,7 @@
   --spectrum-search-m-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-m-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-m-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-m-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-m-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-m-border-bottom-size-down: var(--spectrum-alias-input-border-size);
@@ -497,7 +497,7 @@
   --spectrum-search-m-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-m-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-m-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-m-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-background-color-hover: var(--spectrum-global-color-gray-50);
   --spectrum-search-m-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-search-m-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
@@ -525,7 +525,7 @@
   --spectrum-search-m-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-m-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-m-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-m-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-m-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-m-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-m-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-search-m-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
@@ -751,7 +751,7 @@
   --spectrum-search-l-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-l-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-l-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-l-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-l-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-l-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
@@ -765,7 +765,7 @@
   --spectrum-search-l-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-l-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-l-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-l-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-l-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-l-border-bottom-size: var(--spectrum-alias-input-border-size);
@@ -779,7 +779,7 @@
   --spectrum-search-l-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-l-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-l-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-l-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-l-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-l-border-bottom-size-down: var(--spectrum-alias-input-border-size);
@@ -793,7 +793,7 @@
   --spectrum-search-l-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-l-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-l-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-l-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-background-color-hover: var(--spectrum-global-color-gray-50);
   --spectrum-search-l-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-search-l-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
@@ -821,7 +821,7 @@
   --spectrum-search-l-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-l-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-l-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-l-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-l-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-l-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-l-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-search-l-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
@@ -1048,7 +1048,7 @@
   --spectrum-search-xl-focusring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-xl-focusring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-xl-focusring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-xl-border-size-disabled: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-disabled: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-search-xl-border-color-disabled: var(--spectrum-alias-input-border-color-disabled);
   --spectrum-search-xl-border-bottom-size-disabled: var(--spectrum-alias-input-border-size);
@@ -1062,7 +1062,7 @@
   --spectrum-search-xl-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-xl-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-xl-focusring-ringgap: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-xl-border-size: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-search-xl-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-search-xl-border-bottom-size: var(--spectrum-alias-input-border-size);
@@ -1076,7 +1076,7 @@
   --spectrum-search-xl-focusring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-xl-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-xl-focusring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-xl-border-size-down: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-background-color-down: var(--spectrum-global-color-gray-50);
   --spectrum-search-xl-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-search-xl-border-bottom-size-down: var(--spectrum-alias-input-border-size);
@@ -1090,7 +1090,7 @@
   --spectrum-search-xl-focusring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-xl-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-xl-focusring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-xl-border-size-hover: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-background-color-hover: var(--spectrum-global-color-gray-50);
   --spectrum-search-xl-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-search-xl-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
@@ -1118,7 +1118,7 @@
   --spectrum-search-xl-focusring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-search-xl-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-search-xl-focusring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
-  --spectrum-search-xl-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
+  --spectrum-search-xl-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-search-xl-background-color-mouse-focus: var(--spectrum-global-color-gray-50);
   --spectrum-search-xl-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-search-xl-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);

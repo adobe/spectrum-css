@@ -1854,6 +1854,10 @@
   --spectrum-textfield-xl-texticon-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-xl-textonly-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-textfield-xl-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
+  --spectrum-tooltip-neutral-text-margin-bottom: var(--spectrum-global-dimension-static-size-65);
+  --spectrum-tooltip-info-text-margin-bottom: var(--spectrum-global-dimension-static-size-65);
+  --spectrum-tooltip-positive-text-margin-bottom: var(--spectrum-global-dimension-static-size-65);
+  --spectrum-tooltip-negative-text-margin-bottom: var(--spectrum-global-dimension-static-size-65);
   --spectrum-treeview-s-item-text-padding-bottom: var(--spectrum-global-dimension-static-size-65);
   --spectrum-treeview-l-item-icon-size: var(--spectrum-global-dimension-static-size-250);
   --spectrum-treeview-l-item-text-padding-top: var(--spectrum-global-dimension-size-115);
