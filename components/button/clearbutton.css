@@ -113,8 +113,10 @@ governing permissions and limitations under the License.
   }
 
   &:disabled,
-  &.is-disabled .spectrum-ClearButton-fill {
-    background-color: var(--spectrum-clearbutton-fill-background-color-disabled);
+  &.is-disabled {
+    .spectrum-ClearButton-fill {
+      background-color: var(--spectrum-clearbutton-fill-background-color-disabled);
+    }
   }
 }
 
