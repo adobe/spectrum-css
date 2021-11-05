@@ -11,17 +11,15 @@ governing permissions and limitations under the License.
 */
 
 @import "../commons/basebutton.css";
+@import "../vars/css/components/spectrum-clearbutton.css";
 
 .spectrum-ClearButton {
   @inherit: %spectrum-BaseButton;
-  @inherit: %spectrum-ButtonWithFocusRing;
-
-  inline-size: var(--spectrum-clearbutton-m-width);
-  block-size: var(--spectrum-clearbutton-m-height);
 
   border-radius: 100%;
 
-  padding: 0;
+  background-color: transparent;
+  padding: var(--spectrum-clearbutton-padding);
   margin: 0;
 
   border: none;
@@ -30,15 +28,6 @@ governing permissions and limitations under the License.
     /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
     margin-block: 0;
     margin-inline: auto;
-  }
-}
-
-.spectrum-ClearButton--overBackground {
-  &:focus-ring {
-    &:after {
-      /* Adjust margin because ClearButton does not have a border */
-      margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
-    }
   }
 }
 
@@ -51,7 +40,103 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-ClearButton--small {
-  inline-size: var(--spectrum-clearbutton-s-width);
-  block-size: var(--spectrum-clearbutton-s-height);
+.spectrum-ClearButton--sizeS {
+  @remapvars {
+    find: --spectrum-clearbutton-s-;
+    replace: --spectrum-clearbutton-;
+  }
+}
+
+.spectrum-ClearButton--sizeM {
+  @remapvars {
+    find: --spectrum-clearbutton-m-;
+    replace: --spectrum-clearbutton-;
+  }
+}
+
+.spectrum-ClearButton--sizeL {
+  @remapvars {
+    find: --spectrum-clearbutton-l-;
+    replace: --spectrum-clearbutton-;
+  }
+}
+
+.spectrum-ClearButton--sizeXL {
+  @remapvars {
+    find: --spectrum-clearbutton-xl-;
+    replace: --spectrum-clearbutton-;
+  }
+}
+
+.spectrum-ClearButton-fill {
+  background-color: var(--spectrum-clearbutton-fill-background-color);
+
+  inline-size: var(--spectrum-clearbutton-fill-width);
+  block-size: var(--spectrum-clearbutton-fill-height);
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spectrum-ClearButton {
+  color: var(--spectrum-clearbutton-m-fill-uiicon-color);
+
+  &:hover {
+    color: var(--spectrum-clearbutton-fill-uiicon-color);
+  }
+
+  &:active {
+    color: var(--spectrum-clearbutton-fill-uiicon-color-down);
+  }
+
+  &:focus-ring {
+    color: var(--spectrum-clearbutton-fill-uiicon-color-key-focus);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    color: var(--spectrum-clearbutton-fill-uiicon-color-disabled);
+  }
+
+  &:hover .spectrum-ClearButton-fill {
+    background-color: var(--spectrum-clearbutton-fill-background-color-hover);
+  }
+
+  &:active .spectrum-ClearButton-fill {
+    background-color: var(--spectrum-clearbutton-fill-background-color-down);
+  }
+
+  &:focus-ring .spectrum-ClearButton-fill {
+    background-color: var(--spectrum-clearbutton-fill-background-color-key-focus);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    .spectrum-ClearButton-fill {
+      background-color: var(--spectrum-clearbutton-fill-background-color-disabled);
+    }
+  }
+}
+
+.spectrum-ClearButton--overBackground {
+  color: var(--spectrum-alias-icon-color-overbackground);
+
+  &:hover {
+    color: var(--spectrum-alias-icon-color-overbackground);
+  }
+
+  &:active {
+    color: var(--spectrum-alias-icon-color-overbackground);
+  }
+
+  &:focus-ring {
+    color: var(--spectrum-alias-icon-color-overbackground);
+  }
+
+  &:disabled,
+  &.is-disabled .spectrum-ClearButton-fill {
+    background-color: var(--spectrum-alias-icon-color-overbackground-disabled);
+  }
 }

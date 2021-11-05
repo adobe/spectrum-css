@@ -60,7 +60,9 @@
   --spectrum-global-color-opacity-100: 1;
   --spectrum-global-color-opacity-90: 0.9;
   --spectrum-global-color-opacity-80: 0.8;
+  --spectrum-global-color-opacity-70: 0.7;
   --spectrum-global-color-opacity-60: 0.6;
+  --spectrum-global-color-opacity-55: 0.55;
   --spectrum-global-color-opacity-50: 0.5;
   --spectrum-global-color-opacity-42: 0.42;
   --spectrum-global-color-opacity-40: 0.4;
@@ -83,6 +85,7 @@
   --spectrum-alias-avatar-border-color-down: rgba(255,255,255,0.4);
   --spectrum-alias-avatar-border-color-key-focus: rgba(255,255,255,0.25);
   --spectrum-alias-avatar-border-color-selected-disabled: rgba(255,255,255,0.1);
+  --spectrum-alias-border-color-selected: rgba(255,255,255,0.9);
   --spectrum-alias-background-color-primary: var(--spectrum-global-color-gray-100);
   --spectrum-alias-background-color-secondary: var(--spectrum-global-color-gray-75);
   --spectrum-alias-background-color-tertiary: var(--spectrum-global-color-gray-50);
@@ -95,7 +98,6 @@
   --spectrum-alias-highlight-selected-hover: rgba(45,138,245,0.25);
   --spectrum-alias-text-highlight-color: rgba(45,138,245,0.25);
   --spectrum-alias-background-color-quickactions: rgba(29,29,29,0.9);
-  --spectrum-alias-border-color-selected: var(--spectrum-global-color-blue-600);
   --spectrum-alias-border-color-translucent: rgba(255,255,255,0.1);
   --spectrum-alias-radial-reaction-color-default: rgba(235,235,235,0.6);
   --spectrum-alias-pasteboard-background-color: var(--spectrum-global-color-gray-50);

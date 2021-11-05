@@ -23,10 +23,12 @@ function Search(el) {
       </svg>
       <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input js-input" autocomplete="off">
     </div>
-    <button type="reset" value="Reset" class="spectrum-ClearButton spectrum-Search-clearButton js-clearButton" tabindex="-1" hidden>
-      <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-Cross75" />
-      </svg>
+    <button type="reset" value="Reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton js-clearButton" tabindex="-1" hidden>
+      <div class="spectrum-ClearButton-fill">
+        <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross100" />
+        </svg>
+      </div>
     </button>
   </form>
   <div class="spectrum-Popover spectrum-Site-searchResults js-popover">

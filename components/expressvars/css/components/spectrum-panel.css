@@ -25,7 +25,6 @@
   --spectrum-panel-s-collapsible-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-s-collapsible-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-s-collapsible-width: var(--spectrum-global-dimension-static-size-3200);
-  --spectrum-panel-s-collapsible-_padding: var(--spectrum-global-dimension-size-200);
   --spectrum-panel-s-collapsible-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-s-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-s-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -54,7 +53,6 @@
   --spectrum-panel-s-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-s-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-s-width: var(--spectrum-global-dimension-static-size-3200);
-  --spectrum-panel-s-_padding: var(--spectrum-global-dimension-size-200);
   --spectrum-panel-s-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-s-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-s-spacious-collapsible-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -83,7 +81,6 @@
   --spectrum-panel-s-spacious-collapsible-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-s-spacious-collapsible-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-s-spacious-collapsible-width: var(--spectrum-global-dimension-static-size-3200);
-  --spectrum-panel-s-spacious-collapsible-_padding: var(--spectrum-global-dimension-size-300);
   --spectrum-panel-s-spacious-collapsible-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-s-spacious-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-s-spacious-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -112,7 +109,6 @@
   --spectrum-panel-s-spacious-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-s-spacious-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-s-spacious-width: var(--spectrum-global-dimension-static-size-3200);
-  --spectrum-panel-s-spacious-_padding: var(--spectrum-global-dimension-size-300);
   --spectrum-panel-s-spacious-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-s-spacious-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-l-collapsible-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -141,7 +137,6 @@
   --spectrum-panel-l-collapsible-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-l-collapsible-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-l-collapsible-width: var(--spectrum-global-dimension-static-size-3800);
-  --spectrum-panel-l-collapsible-_padding: var(--spectrum-global-dimension-size-200);
   --spectrum-panel-l-collapsible-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-l-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-l-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -170,7 +165,6 @@
   --spectrum-panel-l-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-l-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-l-width: var(--spectrum-global-dimension-static-size-3800);
-  --spectrum-panel-l-_padding: var(--spectrum-global-dimension-size-200);
   --spectrum-panel-l-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-l-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-l-spacious-collapsible-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -199,7 +193,6 @@
   --spectrum-panel-l-spacious-collapsible-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-l-spacious-collapsible-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-l-spacious-collapsible-width: var(--spectrum-global-dimension-static-size-3800);
-  --spectrum-panel-l-spacious-collapsible-_padding: var(--spectrum-global-dimension-size-300);
   --spectrum-panel-l-spacious-collapsible-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-l-spacious-collapsible-border-size: var(--spectrum-alias-border-size-thick);
   --spectrum-panel-l-spacious-ui-icon-color-disabled: var(--spectrum-alias-icon-color-disabled);
@@ -228,7 +221,6 @@
   --spectrum-panel-l-spacious-button-width: var(--spectrum-alias-single-line-height);
   --spectrum-panel-l-spacious-ui-icon-size: var(--spectrum-alias-ui-icon-chevron-size-100);
   --spectrum-panel-l-spacious-width: var(--spectrum-global-dimension-static-size-3800);
-  --spectrum-panel-l-spacious-_padding: var(--spectrum-global-dimension-size-300);
   --spectrum-panel-l-spacious-padding: var(--spectrum-global-dimension-static-size-0);
   --spectrum-panel-l-spacious-border-size: var(--spectrum-alias-border-size-thick);
 }
