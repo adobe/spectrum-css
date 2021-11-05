@@ -311,7 +311,7 @@ governing permissions and limitations under the License.
   }
 }
 
-@media screen and (max-inline-size: 700px) {
+@media screen and (max-width: 700px) {
   .spectrum-Dialog .spectrum-Dialog-grid {
     grid-template-columns:
       var(--spectrum-dialog-confirm-padding) auto 1fr auto minmax(0, auto)

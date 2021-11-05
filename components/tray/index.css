@@ -72,7 +72,7 @@ governing permissions and limitations under the License.
 }
 
 /* Should match --spectrum-tray-max-width above */
-@media (max-inline-size: 375px) {
+@media (max-width: 375px) {
   .spectrum-Tray {
     border-radius: var(--spectrum-tray-border-radius);
   }
