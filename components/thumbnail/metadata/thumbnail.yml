@@ -5,7 +5,7 @@ examples:
     description: Rectangular images will fill the entire space.
     name: Thumbnail
     markup: |
-      <div class="spectrum-Thumbnail">
+      <div class="spectrum-Thumbnail" tabindex="0">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
   - id: thumbnail
@@ -17,21 +17,21 @@ examples:
   - id: thumbnail
     name: Thumbnail (focused)
     markup: |
-      <div class="spectrum-Thumbnail is-focused" tabindex="0">
+      <div class="spectrum-Thumbnail is-focused">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
   - id: thumbnail
     name: Thumbnail (landscape image)
     description: Landscape images will fill horizontally and have space above and below.
     markup: |
-      <div class="spectrum-Thumbnail is-focused">
+      <div class="spectrum-Thumbnail">
         <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
       </div>
   - id: thumbnail
     name: Thumbnail (portrait image)
     description: Portrait images will fill vertically and have space on either side.
     markup: |
-      <div class="spectrum-Thumbnail is-focused">
+      <div class="spectrum-Thumbnail">
         <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
       </div>
   - id: thumbnail
