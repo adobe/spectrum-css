@@ -17,7 +17,7 @@ examples:
   - id: thumbnail
     name: Thumbnail (focused)
     markup: |
-      <div class="spectrum-Thumbnail is-focused">
+      <div class="spectrum-Thumbnail is-focused" tabindex="0">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
   - id: thumbnail
