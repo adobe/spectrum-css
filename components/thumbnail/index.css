@@ -10,9 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Thumbnail {
-  --spectrum-thumbnail-border-radius: var(--spectrum-alias-border-radius-small);
-}
+@import "../vars/css/components/spectrum-thumbnail.css";
 
 .spectrum-Thumbnail {
   position: relative;
@@ -23,8 +21,8 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  width: var(--spectrum-thumbnail-m-width);
-  height: var(--spectrum-thumbnail-m-height);
+  width: var(--spectrum-thumbnail-width);
+  height: var(--spectrum-thumbnail-height);
 
   border-radius: var(--spectrum-thumbnail-border-radius);
 
@@ -48,28 +46,38 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail--sizeXXS {
-  height: var(--spectrum-thumbnail-xxs-height);
-  width: var(--spectrum-thumbnail-xxs-width);
+  @remapvars {
+    find: /--spectrum-thumbnail(.*)-xxs-/;
+    replace: --spectrum-thumbnail$1-;
+  }
 }
 
 .spectrum-Thumbnail--sizeXS {
-  height: var(--spectrum-thumbnail-xs-height);
-  width: var(--spectrum-thumbnail-xs-width);
+  @remapvars {
+    find: /--spectrum-thumbnail(.*)-xs-/;
+    replace: --spectrum-thumbnail$1-;
+  }
 }
 
 .spectrum-Thumbnail--sizeS {
-  height: var(--spectrum-thumbnail-s-height);
-  width: var(--spectrum-thumbnail-s-width);
+  @remapvars {
+    find: /--spectrum-thumbnail(.*)-s-/;
+    replace: --spectrum-thumbnail$1-;
+  }
 }
 
 .spectrum-Thumbnail--sizeM {
-  height: var(--spectrum-thumbnail-m-height);
-  width: var(--spectrum-thumbnail-m-width);
+  @remapvars {
+    find: /--spectrum-thumbnail(.*)-m-/;
+    replace: --spectrum-thumbnail$1-;
+  }
 }
 
 .spectrum-Thumbnail--sizeL {
-  height: var(--spectrum-thumbnail-l-height);
-  width: var(--spectrum-thumbnail-l-width);
+  @remapvars {
+    find: /--spectrum-thumbnail(.*)-l-/;
+    replace: --spectrum-thumbnail$1-;
+  }
 }
 
 .spectrum-Thumbnail-image {
