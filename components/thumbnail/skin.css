@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Thumbnail {
+/* .spectrum-Thumbnail {
   --spectrum-thumbnail-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-border-size-selected: var(--spectrum-alias-border-size-thick);
   --spectrum-thumbnail-border-size-focus: var(--spectrum-alias-border-size-thick);
@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
   --spectrum-thumbnail-border-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-thumbnail-border-color-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-thumbnail-border-color-selected: var(--spectrum-alias-border-color-selected);
-}
+} */
 
 .spectrum-Thumbnail {
   background-color: var(--spectrum-global-color-static-white);
@@ -35,9 +35,9 @@ governing permissions and limitations under the License.
   }
 
   &.is-selected {
-    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected) / 2) var(--spectrum-thumbnail-border-color-selected);
+    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
     &:before {
-      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected) / 2) var(--spectrum-thumbnail-border-color-selected);
+      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
     }
   }
 
@@ -48,7 +48,7 @@ governing permissions and limitations under the License.
     overflow: visible;
 
     &:before {
-      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected) / 2) var(--spectrum-thumbnail-border-color-selected);
+      box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
     }
 
     &:after {
