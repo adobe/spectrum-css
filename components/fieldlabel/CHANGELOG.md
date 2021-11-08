@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@4.0.0-alpha.4...@spectrum-css/fieldlabel@4.0.2)
+
+### 🐛 Bug fixes
+
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@4.0.0-alpha.4...@spectrum-css/fieldlabel@4.0.1)

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@5.0.0...@spectrum-css/avatar@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/avatar
+
+
+
+
+
 <a name="5.0.0"></a>
 # 5.0.0
 🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@4.0.0-alpha.3...@spectrum-css/avatar@5.0.0)

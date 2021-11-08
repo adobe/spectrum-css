@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.5"></a>
+## 1.0.5
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@1.0.3-alpha.3...@spectrum-css/colorhandle@1.0.5)
+
+### 🐛 Bug fixes
+
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
 <a name="1.0.4"></a>
 ## 1.0.4
 🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@1.0.3-alpha.3...@spectrum-css/colorhandle@1.0.4)

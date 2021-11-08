@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.0"></a>
+# 4.1.0
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.2...@spectrum-css/button@4.1.0)
+
+### ✨ Features
+
+* make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+
+
+### 🐛 Bug fixes
+
+* refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* windows HCM ([48bc74e](https://github.com/adobe/spectrum-css/commit/48bc74e))
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.2...@spectrum-css/button@4.0.1)
