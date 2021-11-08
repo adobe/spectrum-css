@@ -12,12 +12,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Thumbnail {
   --spectrum-thumbnail-border-radius: var(--spectrum-alias-border-radius-small);
-
-  --spectrum-thumbnail-size-S: var(--spectrum-global-dimension-size-300);
-  --spectrum-thumbnail-size-M: var(--spectrum-global-dimension-size-400);
-  --spectrum-thumbnail-size-L: var(--spectrum-global-dimension-size-500);
-  --spectrum-thumbnail-size-XL: var(--spectrum-global-dimension-size-600);
-  --spectrum-thumbnail-size-XXL: var(--spectrum-global-dimension-size-700);
 }
 
 .spectrum-Thumbnail {
@@ -29,8 +23,8 @@ governing permissions and limitations under the License.
   align-items: center;
   justify-content: center;
 
-  width: var(--spectrum-thumbnail-size-M);
-  height: var(--spectrum-thumbnail-size-M);
+  width: var(--spectrum-thumbnail-m-width);
+  height: var(--spectrum-thumbnail-m-height);
 
   border-radius: var(--spectrum-thumbnail-border-radius);
 
@@ -53,29 +47,29 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Thumbnail--S {
-  width: var(--spectrum-thumbnail-size-S);
-  height: var(--spectrum-thumbnail-size-S);
+.spectrum-Thumbnail--sizeXXS {
+  height: var(--spectrum-thumbnail-xxs-height);
+  width: var(--spectrum-thumbnail-xxs-width);
 }
 
-.spectrum-Thumbnail--M {
-  width: var(--spectrum-thumbnail-size-M);
-  height: var(--spectrum-thumbnail-size-M);
+.spectrum-Thumbnail--sizeXS {
+  height: var(--spectrum-thumbnail-xs-height);
+  width: var(--spectrum-thumbnail-xs-width);
 }
 
-.spectrum-Thumbnail--L {
-  width: var(--spectrum-thumbnail-size-L);
-  height: var(--spectrum-thumbnail-size-L);
+.spectrum-Thumbnail--sizeS {
+  height: var(--spectrum-thumbnail-s-height);
+  width: var(--spectrum-thumbnail-s-width);
 }
 
-.spectrum-Thumbnail--XL {
-  width: var(--spectrum-thumbnail-size-XL);
-  height: var(--spectrum-thumbnail-size-XL);
+.spectrum-Thumbnail--sizeM {
+  height: var(--spectrum-thumbnail-m-height);
+  width: var(--spectrum-thumbnail-m-width);
 }
 
-.spectrum-Thumbnail--XXL {
-  width: var(--spectrum-thumbnail-size-XXL);
-  height: var(--spectrum-thumbnail-size-XXL);
+.spectrum-Thumbnail--sizeL {
+  height: var(--spectrum-thumbnail-l-height);
+  width: var(--spectrum-thumbnail-l-width);
 }
 
 .spectrum-Thumbnail-image {
