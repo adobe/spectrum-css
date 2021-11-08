@@ -48,6 +48,8 @@
   --spectrum-thumbnail-xxs-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-xxs-layer-border-color-mouse-focus: var(--spectrum-global-color-gray-600);
   --spectrum-thumbnail-xxs-layer-inset-border-color: var(--spectrum-global-color-gray-50);
+  --spectrum-thumbnail-xxs-layer-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-xxs-layer-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-xxs-layer-inset-width: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-layer-inset-height: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-layer-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -57,6 +59,10 @@
   --spectrum-thumbnail-xxs-layer-inset-left: 0;
   --spectrum-thumbnail-xxs-layer-image-width: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-layer-image-height: var(--spectrum-global-dimension-size-225);
+  --spectrum-thumbnail-xxs-layer-darksquare-render: no;
+  --spectrum-thumbnail-xxs-layer-darksquare-size: var(--spectrum-global-dimension-size-225);
+  --spectrum-thumbnail-xxs-layer-lightsquare-render: no;
+  --spectrum-thumbnail-xxs-layer-lightsquare-size: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-layer-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-xxs-layer-width: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-layer-height: var(--spectrum-global-dimension-size-225);
@@ -109,6 +115,8 @@
   --spectrum-thumbnail-xxs-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-xxs-border-color-mouse-focus: var(--spectrum-alias-border-color-translucent);
   --spectrum-thumbnail-xxs-inset-border-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-thumbnail-xxs-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-xxs-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-xxs-inset-width: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-inset-height: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -118,6 +126,10 @@
   --spectrum-thumbnail-xxs-inset-left: 0;
   --spectrum-thumbnail-xxs-image-width: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-image-height: var(--spectrum-global-dimension-size-225);
+  --spectrum-thumbnail-xxs-darksquare-render: no;
+  --spectrum-thumbnail-xxs-darksquare-size: var(--spectrum-global-dimension-size-225);
+  --spectrum-thumbnail-xxs-lightsquare-render: no;
+  --spectrum-thumbnail-xxs-lightsquare-size: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-xxs-width: var(--spectrum-global-dimension-size-225);
   --spectrum-thumbnail-xxs-height: var(--spectrum-global-dimension-size-225);
@@ -170,6 +182,8 @@
   --spectrum-thumbnail-xs-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-xs-layer-border-color-mouse-focus: var(--spectrum-global-color-gray-600);
   --spectrum-thumbnail-xs-layer-inset-border-color: var(--spectrum-global-color-gray-50);
+  --spectrum-thumbnail-xs-layer-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-xs-layer-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-xs-layer-inset-width: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-layer-inset-height: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-layer-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -179,6 +193,10 @@
   --spectrum-thumbnail-xs-layer-inset-left: 0;
   --spectrum-thumbnail-xs-layer-image-width: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-layer-image-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-thumbnail-xs-layer-darksquare-render: no;
+  --spectrum-thumbnail-xs-layer-darksquare-size: var(--spectrum-global-dimension-size-300);
+  --spectrum-thumbnail-xs-layer-lightsquare-render: no;
+  --spectrum-thumbnail-xs-layer-lightsquare-size: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-layer-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-xs-layer-width: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-layer-height: var(--spectrum-global-dimension-size-300);
@@ -231,6 +249,8 @@
   --spectrum-thumbnail-xs-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-xs-border-color-mouse-focus: var(--spectrum-alias-border-color-translucent);
   --spectrum-thumbnail-xs-inset-border-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-thumbnail-xs-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-xs-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-xs-inset-width: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-inset-height: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -240,6 +260,10 @@
   --spectrum-thumbnail-xs-inset-left: 0;
   --spectrum-thumbnail-xs-image-width: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-image-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-thumbnail-xs-darksquare-render: no;
+  --spectrum-thumbnail-xs-darksquare-size: var(--spectrum-global-dimension-size-300);
+  --spectrum-thumbnail-xs-lightsquare-render: no;
+  --spectrum-thumbnail-xs-lightsquare-size: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-xs-width: var(--spectrum-global-dimension-size-300);
   --spectrum-thumbnail-xs-height: var(--spectrum-global-dimension-size-300);
@@ -292,6 +316,8 @@
   --spectrum-thumbnail-s-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-s-layer-border-color-mouse-focus: var(--spectrum-global-color-gray-600);
   --spectrum-thumbnail-s-layer-inset-border-color: var(--spectrum-global-color-gray-50);
+  --spectrum-thumbnail-s-layer-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-s-layer-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-s-layer-inset-width: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-layer-inset-height: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-layer-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -301,6 +327,10 @@
   --spectrum-thumbnail-s-layer-inset-left: 0;
   --spectrum-thumbnail-s-layer-image-width: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-layer-image-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-thumbnail-s-layer-darksquare-render: no;
+  --spectrum-thumbnail-s-layer-darksquare-size: var(--spectrum-global-dimension-size-200);
+  --spectrum-thumbnail-s-layer-lightsquare-render: no;
+  --spectrum-thumbnail-s-layer-lightsquare-size: var(--spectrum-global-dimension-size-200);
   --spectrum-thumbnail-s-layer-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-s-layer-width: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-layer-height: var(--spectrum-global-dimension-size-400);
@@ -353,6 +383,8 @@
   --spectrum-thumbnail-s-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-s-border-color-mouse-focus: var(--spectrum-alias-border-color-translucent);
   --spectrum-thumbnail-s-inset-border-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-thumbnail-s-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-s-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-s-inset-width: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-inset-height: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -362,6 +394,10 @@
   --spectrum-thumbnail-s-inset-left: 0;
   --spectrum-thumbnail-s-image-width: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-image-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-thumbnail-s-darksquare-render: no;
+  --spectrum-thumbnail-s-darksquare-size: var(--spectrum-global-dimension-size-200);
+  --spectrum-thumbnail-s-lightsquare-render: no;
+  --spectrum-thumbnail-s-lightsquare-size: var(--spectrum-global-dimension-size-200);
   --spectrum-thumbnail-s-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-s-width: var(--spectrum-global-dimension-size-400);
   --spectrum-thumbnail-s-height: var(--spectrum-global-dimension-size-400);
@@ -414,6 +450,8 @@
   --spectrum-thumbnail-m-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-m-layer-border-color-mouse-focus: var(--spectrum-global-color-gray-600);
   --spectrum-thumbnail-m-layer-inset-border-color: var(--spectrum-global-color-gray-50);
+  --spectrum-thumbnail-m-layer-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-m-layer-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-m-layer-inset-width: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-layer-inset-height: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-layer-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -423,6 +461,10 @@
   --spectrum-thumbnail-m-layer-inset-left: 0;
   --spectrum-thumbnail-m-layer-image-width: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-layer-image-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-thumbnail-m-layer-darksquare-render: no;
+  --spectrum-thumbnail-m-layer-darksquare-size: var(--spectrum-global-dimension-size-250);
+  --spectrum-thumbnail-m-layer-lightsquare-render: no;
+  --spectrum-thumbnail-m-layer-lightsquare-size: var(--spectrum-global-dimension-size-250);
   --spectrum-thumbnail-m-layer-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-m-layer-width: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-layer-height: var(--spectrum-global-dimension-size-500);
@@ -475,6 +517,8 @@
   --spectrum-thumbnail-m-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-m-border-color-mouse-focus: var(--spectrum-alias-border-color-translucent);
   --spectrum-thumbnail-m-inset-border-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-thumbnail-m-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-m-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-m-inset-width: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-inset-height: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -484,6 +528,10 @@
   --spectrum-thumbnail-m-inset-left: 0;
   --spectrum-thumbnail-m-image-width: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-image-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-thumbnail-m-darksquare-render: no;
+  --spectrum-thumbnail-m-darksquare-size: var(--spectrum-global-dimension-size-250);
+  --spectrum-thumbnail-m-lightsquare-render: no;
+  --spectrum-thumbnail-m-lightsquare-size: var(--spectrum-global-dimension-size-250);
   --spectrum-thumbnail-m-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-m-width: var(--spectrum-global-dimension-size-500);
   --spectrum-thumbnail-m-height: var(--spectrum-global-dimension-size-500);
@@ -536,6 +584,8 @@
   --spectrum-thumbnail-l-layer-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-l-layer-border-color-mouse-focus: var(--spectrum-global-color-gray-600);
   --spectrum-thumbnail-l-layer-inset-border-color: var(--spectrum-global-color-gray-50);
+  --spectrum-thumbnail-l-layer-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-l-layer-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-l-layer-inset-width: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-layer-inset-height: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-layer-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -545,6 +595,10 @@
   --spectrum-thumbnail-l-layer-inset-left: 0;
   --spectrum-thumbnail-l-layer-image-width: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-layer-image-height: var(--spectrum-global-dimension-size-700);
+  --spectrum-thumbnail-l-layer-darksquare-render: no;
+  --spectrum-thumbnail-l-layer-darksquare-size: var(--spectrum-global-dimension-size-350);
+  --spectrum-thumbnail-l-layer-lightsquare-render: no;
+  --spectrum-thumbnail-l-layer-lightsquare-size: var(--spectrum-global-dimension-size-350);
   --spectrum-thumbnail-l-layer-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-l-layer-width: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-layer-height: var(--spectrum-global-dimension-size-700);
@@ -597,6 +651,8 @@
   --spectrum-thumbnail-l-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-thumbnail-l-border-color-mouse-focus: var(--spectrum-alias-border-color-translucent);
   --spectrum-thumbnail-l-inset-border-color: var(--spectrum-alias-border-color-transparent);
+  --spectrum-thumbnail-l-darksquare-background-color: var(--spectrum-global-color-static-gray-200);
+  --spectrum-thumbnail-l-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-thumbnail-l-inset-width: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-inset-height: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-inset-border-radius: var(--spectrum-alias-border-radius-xsmall);
@@ -606,6 +662,10 @@
   --spectrum-thumbnail-l-inset-left: 0;
   --spectrum-thumbnail-l-image-width: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-image-height: var(--spectrum-global-dimension-size-700);
+  --spectrum-thumbnail-l-darksquare-render: no;
+  --spectrum-thumbnail-l-darksquare-size: var(--spectrum-global-dimension-size-350);
+  --spectrum-thumbnail-l-lightsquare-render: no;
+  --spectrum-thumbnail-l-lightsquare-size: var(--spectrum-global-dimension-size-350);
   --spectrum-thumbnail-l-border-radius: var(--spectrum-alias-thumbnail-border-radius-small);
   --spectrum-thumbnail-l-width: var(--spectrum-global-dimension-size-700);
   --spectrum-thumbnail-l-height: var(--spectrum-global-dimension-size-700);

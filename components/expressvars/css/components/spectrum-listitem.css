@@ -7,7 +7,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-selected: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-texticon-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -18,7 +17,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-texticon-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -29,7 +27,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-selected-down: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -40,7 +37,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-selected-hover: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-texticon-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -51,7 +47,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-s-texticon-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-texticon-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-texticon-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-texticon-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-s-texticon-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -62,7 +57,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-texticon-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -73,7 +67,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-disabled: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color: var(--spectrum-alias-component-text-color-default);
@@ -84,7 +77,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render: no;
   --spectrum-listitem-s-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-texticon-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -95,7 +87,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-down: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -106,7 +97,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-hover: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -117,7 +107,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-key-focus: yes;
   --spectrum-listitem-s-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-texticon-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-s-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -128,7 +117,6 @@
   --spectrum-listitem-s-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-s-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-texticon-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-texticon-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -168,7 +156,6 @@
   --spectrum-listitem-s-texticon-focus-ring-type: focusring;
   --spectrum-listitem-s-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-s-texticon-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-listitem-s-texticon-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-s-texticon-padding-left: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-texticon-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-s-texticon-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -186,7 +173,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-selected: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textonly-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -197,7 +183,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textonly-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -208,7 +193,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-selected-down: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -219,7 +203,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-selected-hover: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textonly-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -230,7 +213,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-s-textonly-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textonly-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textonly-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textonly-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-s-textonly-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -241,7 +223,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textonly-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -252,7 +233,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-disabled: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color: var(--spectrum-alias-component-text-color-default);
@@ -263,7 +243,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render: no;
   --spectrum-listitem-s-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textonly-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -274,7 +253,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-down: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -285,7 +263,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-hover: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -296,7 +273,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-key-focus: yes;
   --spectrum-listitem-s-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textonly-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-s-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -307,7 +283,6 @@
   --spectrum-listitem-s-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-s-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textonly-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textonly-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -347,7 +322,6 @@
   --spectrum-listitem-s-textonly-focus-ring-type: focusring;
   --spectrum-listitem-s-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-s-textonly-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-listitem-s-textonly-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-s-textonly-padding-left: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-s-textonly-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-s-textonly-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -365,7 +339,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-selected: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textthumbnail-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -376,7 +349,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textthumbnail-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -387,7 +359,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-selected-down: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textthumbnail-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -398,7 +369,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-selected-hover: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textthumbnail-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -409,7 +379,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textthumbnail-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textthumbnail-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-s-textthumbnail-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -420,7 +389,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textthumbnail-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -431,7 +399,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-disabled: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textthumbnail-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color: var(--spectrum-alias-component-text-color-default);
@@ -442,7 +409,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textthumbnail-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -453,7 +419,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-down: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textthumbnail-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -464,7 +429,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-hover: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textthumbnail-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -475,7 +439,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-key-focus: yes;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-s-textthumbnail-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-s-textthumbnail-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-s-textthumbnail-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -486,7 +449,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-s-textthumbnail-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-s-textthumbnail-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-s-textthumbnail-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-s-textthumbnail-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -526,7 +488,6 @@
   --spectrum-listitem-s-textthumbnail-focus-ring-type: focusring;
   --spectrum-listitem-s-textthumbnail-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-s-textthumbnail-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
-  --spectrum-listitem-s-textthumbnail-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-s-textthumbnail-padding-left: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-textthumbnail-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-s-textthumbnail-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -544,7 +505,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-selected: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-texticon-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -555,7 +515,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-texticon-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -566,7 +525,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-selected-down: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -577,7 +535,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-selected-hover: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-texticon-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -588,7 +545,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-m-texticon-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-texticon-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-texticon-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-texticon-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-texticon-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -599,7 +555,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-texticon-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -610,7 +565,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-disabled: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color: var(--spectrum-alias-component-text-color-default);
@@ -621,7 +575,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render: no;
   --spectrum-listitem-m-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-texticon-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -632,7 +585,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-down: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -643,7 +595,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-hover: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -654,7 +605,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-key-focus: yes;
   --spectrum-listitem-m-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-texticon-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -665,7 +615,6 @@
   --spectrum-listitem-m-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-m-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-texticon-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-texticon-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -706,7 +655,6 @@
   --spectrum-listitem-m-texticon-focus-ring-type: focusring;
   --spectrum-listitem-m-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-m-texticon-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-listitem-m-texticon-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-m-texticon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-m-texticon-focus-indicator-size: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-texticon-gap: var(--spectrum-global-dimension-size-100);
@@ -723,7 +671,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-selected: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textonly-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -734,7 +681,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textonly-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -745,7 +691,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-selected-down: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -756,7 +701,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-selected-hover: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textonly-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -767,7 +711,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-m-textonly-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textonly-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textonly-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textonly-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-textonly-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -778,7 +721,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textonly-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -789,7 +731,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-disabled: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color: var(--spectrum-alias-component-text-color-default);
@@ -800,7 +741,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render: no;
   --spectrum-listitem-m-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textonly-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -811,7 +751,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-down: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -822,7 +761,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-hover: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -833,7 +771,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-key-focus: yes;
   --spectrum-listitem-m-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textonly-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -844,7 +781,6 @@
   --spectrum-listitem-m-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-m-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textonly-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textonly-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -885,7 +821,6 @@
   --spectrum-listitem-m-textonly-focus-ring-type: focusring;
   --spectrum-listitem-m-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-m-textonly-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-listitem-m-textonly-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-m-textonly-padding-left: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-m-textonly-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-m-textonly-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -903,7 +838,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-selected: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textthumbnail-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -914,7 +848,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textthumbnail-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -925,7 +858,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-selected-down: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textthumbnail-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -936,7 +868,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-selected-hover: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textthumbnail-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -947,7 +878,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textthumbnail-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textthumbnail-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-textthumbnail-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -958,7 +888,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textthumbnail-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -969,7 +898,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-disabled: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textthumbnail-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color: var(--spectrum-alias-component-text-color-default);
@@ -980,7 +908,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textthumbnail-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -991,7 +918,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-down: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textthumbnail-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1002,7 +928,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-hover: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textthumbnail-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1013,7 +938,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-key-focus: yes;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-m-textthumbnail-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-m-textthumbnail-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-textthumbnail-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1024,7 +948,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-m-textthumbnail-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-m-textthumbnail-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-m-textthumbnail-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-m-textthumbnail-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -1065,7 +988,6 @@
   --spectrum-listitem-m-textthumbnail-focus-ring-type: focusring;
   --spectrum-listitem-m-textthumbnail-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-m-textthumbnail-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
-  --spectrum-listitem-m-textthumbnail-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-m-textthumbnail-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-m-textthumbnail-focus-indicator-size: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-m-textthumbnail-gap: var(--spectrum-global-dimension-size-100);
@@ -1082,7 +1004,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-selected: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-texticon-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1093,7 +1014,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-texticon-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -1104,7 +1024,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-selected-down: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1115,7 +1034,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-selected-hover: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-texticon-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1126,7 +1044,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-l-texticon-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-texticon-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-texticon-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-texticon-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-texticon-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1137,7 +1054,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-texticon-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1148,7 +1064,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-disabled: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color: var(--spectrum-alias-component-text-color-default);
@@ -1159,7 +1074,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render: no;
   --spectrum-listitem-l-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-texticon-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -1170,7 +1084,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-down: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1181,7 +1094,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-hover: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1192,7 +1104,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-key-focus: yes;
   --spectrum-listitem-l-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-texticon-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1203,7 +1114,6 @@
   --spectrum-listitem-l-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-l-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-texticon-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-texticon-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -1241,7 +1151,6 @@
   --spectrum-listitem-l-texticon-focus-ring-type: focusring;
   --spectrum-listitem-l-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-texticon-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-listitem-l-texticon-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-texticon-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-listitem-l-texticon-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-listitem-l-texticon-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -1259,7 +1168,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-selected: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textonly-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1270,7 +1178,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textonly-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -1281,7 +1188,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-selected-down: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1292,7 +1198,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-selected-hover: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textonly-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1303,7 +1208,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-l-textonly-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textonly-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textonly-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textonly-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-textonly-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1314,7 +1218,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textonly-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1325,7 +1228,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-disabled: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color: var(--spectrum-alias-component-text-color-default);
@@ -1336,7 +1238,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render: no;
   --spectrum-listitem-l-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textonly-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -1347,7 +1248,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-down: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1358,7 +1258,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-hover: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1369,7 +1268,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-key-focus: yes;
   --spectrum-listitem-l-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textonly-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1380,7 +1278,6 @@
   --spectrum-listitem-l-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-l-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textonly-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textonly-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -1418,7 +1315,6 @@
   --spectrum-listitem-l-textonly-focus-ring-type: focusring;
   --spectrum-listitem-l-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-textonly-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-listitem-l-textonly-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-textonly-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-listitem-l-textonly-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-listitem-l-textonly-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -1436,7 +1332,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-selected: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textthumbnail-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1447,7 +1342,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textthumbnail-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -1458,7 +1352,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-selected-down: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textthumbnail-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1469,7 +1362,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-selected-hover: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textthumbnail-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1480,7 +1372,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textthumbnail-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textthumbnail-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-textthumbnail-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1491,7 +1382,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textthumbnail-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1502,7 +1392,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-disabled: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textthumbnail-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color: var(--spectrum-alias-component-text-color-default);
@@ -1513,7 +1402,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textthumbnail-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -1524,7 +1412,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-down: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textthumbnail-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1535,7 +1422,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-hover: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textthumbnail-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1546,7 +1432,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-key-focus: yes;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-l-textthumbnail-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-l-textthumbnail-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-textthumbnail-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1557,7 +1442,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-l-textthumbnail-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-l-textthumbnail-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-l-textthumbnail-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-l-textthumbnail-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -1595,7 +1479,6 @@
   --spectrum-listitem-l-textthumbnail-focus-ring-type: focusring;
   --spectrum-listitem-l-textthumbnail-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-textthumbnail-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
-  --spectrum-listitem-l-textthumbnail-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-textthumbnail-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-listitem-l-textthumbnail-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-listitem-l-textthumbnail-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -1613,7 +1496,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-selected: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-texticon-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1624,7 +1506,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-texticon-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -1635,7 +1516,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-selected-down: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-texticon-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1646,7 +1526,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-selected-hover: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-texticon-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1657,7 +1536,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-xl-texticon-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-texticon-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-texticon-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-xl-texticon-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1668,7 +1546,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-texticon-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1679,7 +1556,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-disabled: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-texticon-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color: var(--spectrum-alias-component-text-color-default);
@@ -1690,7 +1566,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-texticon-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -1701,7 +1576,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-down: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-texticon-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1712,7 +1586,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-hover: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-texticon-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1723,7 +1596,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-key-focus: yes;
   --spectrum-listitem-xl-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-texticon-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-texticon-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-xl-texticon-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1734,7 +1606,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-xl-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-texticon-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-texticon-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-texticon-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-texticon-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -1775,7 +1646,6 @@
   --spectrum-listitem-xl-texticon-focus-ring-type: focusring;
   --spectrum-listitem-xl-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-xl-texticon-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-listitem-xl-texticon-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-xl-texticon-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-listitem-xl-texticon-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-xl-texticon-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -1793,7 +1663,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-selected: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textonly-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1804,7 +1673,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textonly-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -1815,7 +1683,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-selected-down: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textonly-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1826,7 +1693,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-selected-hover: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textonly-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1837,7 +1703,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-xl-textonly-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textonly-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textonly-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-xl-textonly-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1848,7 +1713,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textonly-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1859,7 +1723,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-disabled: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textonly-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color: var(--spectrum-alias-component-text-color-default);
@@ -1870,7 +1733,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textonly-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -1881,7 +1743,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-down: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textonly-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -1892,7 +1753,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-hover: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textonly-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -1903,7 +1763,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-key-focus: yes;
   --spectrum-listitem-xl-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textonly-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textonly-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-xl-textonly-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -1914,7 +1773,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-xl-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textonly-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textonly-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textonly-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textonly-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -1955,7 +1813,6 @@
   --spectrum-listitem-xl-textonly-focus-ring-type: focusring;
   --spectrum-listitem-xl-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-xl-textonly-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-listitem-xl-textonly-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-xl-textonly-padding-left: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-xl-textonly-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-xl-textonly-focus-indicator-size: var(--spectrum-alias-border-size-thick);
@@ -1973,7 +1830,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-selected: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-selected: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-selected: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-selected: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textthumbnail-border-size-selected: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-selected-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -1984,7 +1840,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-selected-disabled: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-selected-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-selected-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textthumbnail-border-size-selected-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-selected-down: var(--spectrum-alias-component-text-color-down);
@@ -1995,7 +1850,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-selected-down: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-selected-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-selected-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-selected-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textthumbnail-border-size-selected-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-selected-hover: var(--spectrum-alias-component-text-color-hover);
@@ -2006,7 +1860,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-selected-hover: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-selected-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-selected-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-selected-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textthumbnail-border-size-selected-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-selected-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -2017,7 +1870,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-selected-key-focus: yes;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-selected-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-selected-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textthumbnail-background-color-selected-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textthumbnail-border-size-selected-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-xl-textthumbnail-text-color-selected-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -2028,7 +1880,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-selected-mouse-focus: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-selected-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-selected-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textthumbnail-border-size-selected-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-disabled: var(--spectrum-alias-component-text-color-disabled);
@@ -2039,7 +1890,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-disabled: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-disabled: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-disabled: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-disabled: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textthumbnail-border-size-disabled: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color: var(--spectrum-alias-component-text-color-default);
@@ -2050,7 +1900,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textthumbnail-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-down: var(--spectrum-alias-component-text-color-down);
@@ -2061,7 +1910,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-down: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-down: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-down: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-down: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textthumbnail-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-hover: var(--spectrum-alias-component-text-color-hover);
@@ -2072,7 +1920,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-hover: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textthumbnail-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
@@ -2083,7 +1930,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-key-focus: yes;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-listitem-xl-textthumbnail-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
   --spectrum-listitem-xl-textthumbnail-border-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-xl-textthumbnail-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
@@ -2094,7 +1940,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-render-mouse-focus: no;
   --spectrum-listitem-xl-textthumbnail-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringgap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-listitem-xl-textthumbnail-background-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-listitem-xl-textthumbnail-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-listitem-xl-textthumbnail-divider-color: var(--spectrum-alias-border-color-extralight);
@@ -2135,7 +1980,6 @@
   --spectrum-listitem-xl-textthumbnail-focus-ring-type: focusring;
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-xl-textthumbnail-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
-  --spectrum-listitem-xl-textthumbnail-focus-ring-ringsize: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-xl-textthumbnail-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-listitem-xl-textthumbnail-padding-right: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-xl-textthumbnail-focus-indicator-size: var(--spectrum-alias-border-size-thick);
