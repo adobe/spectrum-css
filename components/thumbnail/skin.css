@@ -10,25 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* .spectrum-Thumbnail {
-  --spectrum-thumbnail-border-size: var(--spectrum-alias-border-size-thin);
-  --spectrum-thumbnail-border-size-selected: var(--spectrum-alias-border-size-thick);
-  --spectrum-thumbnail-border-size-focus: var(--spectrum-alias-border-size-thick);
-
-  --spectrum-thumbnail-border-color: var(--spectrum-alias-dropshadow-color);
-  --spectrum-thumbnail-border-color-focus: var(--spectrum-alias-border-color-key-focus);
-  --spectrum-thumbnail-border-color-selected: var(--spectrum-alias-border-color-selected);
-} */
-
 .spectrum-Thumbnail {
   background-color: var(--spectrum-global-color-static-white);
 
   /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
   background-image:
-    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
-    linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
-    linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%),
-    linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%);
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-200) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-200) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-global-color-static-gray-200) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-global-color-static-gray-200) 25.5%, transparent 25.5%);
 
   &:before {
     box-shadow: inset 0 0 0 var(--spectrum-thumbnail-border-size) var(--spectrum-thumbnail-border-color);
@@ -65,8 +55,6 @@ governing permissions and limitations under the License.
       bottom: 0;
       top: 0;
       margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
-      transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
-                  margin var(--spectrum-global-animation-duration-100) ease-out;
     }
   }
 }

@@ -268,6 +268,8 @@
   --spectrum-alias-track-color-default: var(--spectrum-global-color-gray-400);
   --spectrum-alias-track-fill-color-overbackground: var(--spectrum-global-color-static-white);
   --spectrum-alias-track-color-disabled: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-thumbnail-darksquare-background-color: var(--spectrum-global-color-gray-300);
+  --spectrum-alias-thumbnail-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-alias-track-color-overbackground: rgba(255,255,255,0.2);
   --spectrum-alias-icon-color: var(--spectrum-global-color-gray-700);
   --spectrum-alias-icon-color-overbackground: var(--spectrum-global-color-static-white);

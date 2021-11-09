@@ -84,6 +84,8 @@
   --spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down);
   --spectrum-alias-infieldbutton-fill-loudnessLow-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-key-focus);
   --spectrum-alias-infieldbutton-fill-loudnessLow-background-color-disabled: transparent;
+  --spectrum-alias-thumbnail-darksquare-background-color: var(--spectrum-global-color-gray-200);
+  --spectrum-alias-thumbnail-lightsquare-background-color: var(--spectrum-global-color-static-white);
   --spectrum-alias-component-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-alias-component-text-color-default: var(--spectrum-global-color-gray-800);
   --spectrum-alias-component-text-color-hover: var(--spectrum-global-color-gray-900);
