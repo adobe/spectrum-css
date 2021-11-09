@@ -40,10 +40,10 @@ governing permissions and limitations under the License.
       box-shadow: inset 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
     }
   }
-
+  
   &.is-focused,
   &:focus-ring {
-    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-size-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
+    box-shadow: 0 0 0 calc(var(--spectrum-thumbnail-border-size-selected-key-focus) / 2) var(--spectrum-thumbnail-border-color-selected);
     outline: none;
     overflow: visible;
 
@@ -52,7 +52,7 @@ governing permissions and limitations under the License.
     }
 
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-thumbnail-border-size-focus) var(--spectrum-thumbnail-border-color-focus);
+      box-shadow: 0 0 0 var(--spectrum-thumbnail-border-size-selected-key-focus) var(--spectrum-thumbnail-border-color-key-focus);
       border-radius: calc(
         var(--spectrum-thumbnail-border-radius) +
           var(--spectrum-alias-focus-ring-gap)
