@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.1"></a>
+## 3.1.1
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.1.0...@spectrum-css/search@3.1.1)
+
+**Note:** Version bump only for package @spectrum-css/search
+
+
+
+
+
 <a name="3.1.0"></a>
 # 3.1.0
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.0.4...@spectrum-css/search@3.1.0)

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.16"></a>
+# 1.0.0-beta.16
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.15...@spectrum-css/expressvars@1.0.0-beta.16)
+
+### 🐛 Bug fixes
+
+* update DNA versions ([c85446e](https://github.com/adobe/spectrum-css/commit/c85446e))
+* update DNA versions for checkbox, radio, switch ([dcdcb7f](https://github.com/adobe/spectrum-css/commit/dcdcb7f))
+
+
+
+
+
 <a name="1.0.0-beta.15"></a>
 # 1.0.0-beta.15
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.14...@spectrum-css/expressvars@1.0.0-beta.15)

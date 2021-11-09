@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.1"></a>
+## 4.1.1
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.1.0...@spectrum-css/vars@4.1.1)
+
+### 🐛 Bug fixes
+
+* update DNA versions ([c85446e](https://github.com/adobe/spectrum-css/commit/c85446e))
+* update DNA versions for checkbox, radio, switch ([dcdcb7f](https://github.com/adobe/spectrum-css/commit/dcdcb7f))
+
+
+
+
+
 <a name="4.1.0"></a>
 # 4.1.0
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.0.2...@spectrum-css/vars@4.1.0)
