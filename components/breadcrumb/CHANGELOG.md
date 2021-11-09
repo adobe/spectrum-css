@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.3"></a>
+## 4.0.3
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.2...@spectrum-css/breadcrumb@4.0.3)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
 <a name="4.0.2"></a>
 ## 4.0.2
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.0-alpha.3...@spectrum-css/breadcrumb@4.0.2)

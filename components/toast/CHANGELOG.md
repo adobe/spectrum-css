@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.1"></a>
+## 4.1.1
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.1.0...@spectrum-css/toast@4.1.1)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
 <a name="4.1.0"></a>
 # 4.1.0
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.0.0-alpha.3...@spectrum-css/toast@4.1.0)
