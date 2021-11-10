@@ -1,5 +1,23 @@
 name: Thumbnail
 status: Contribution
+sections:
+  - name: Migration Guide
+    description: |
+      ### T-shirt sizing
+      Thumbnail now supports t-shirt sizing with the standard naming convention and requires that you specify the size by adding a `.spectrum-Thumbnail--size*` class.
+      
+      Additionally, the available sizes have changed: `XXL` and `XL` have been completely removed, and `XS` and `XXS` have been added.
+
+      | Deprecated Classname | New Classname           |
+      | -------------------- | ----------------------- |
+      | `~.spectrum-Thumbnail--XXL~` | REMOVED |
+      | `~.spectrum-Thumbnail--XL~` | REMOVED |
+      | `~.spectrum-Thumbnail--L~` | `.spectrum-Thumbnail--sizeL` |
+      | `~.spectrum-Thumbnail--M~` | `.spectrum-Thumbnail--sizeM` |
+      | `~.spectrum-Thumbnail--S~` | `.spectrum-Thumbnail--sizeS` |
+      | | `.spectrum-Thumbnail--sizeXS` |
+      | | `.spectrum-Thumbnail--sizeXXS` |
+
 examples:
   - id: thumbnail
     description: Rectangular images will fill the entire space.
