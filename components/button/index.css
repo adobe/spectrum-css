@@ -122,7 +122,6 @@ a.spectrum-Button {
   padding-block-end: calc(var(--spectrum-button-primary-textonly-text-padding-bottom) - var(--spectrum-button-primary-textonly-border-size));
 }
 
-.spectrum-LogicButton,
 .spectrum-Button {
   &:focus-ring,
   &.is-focused {

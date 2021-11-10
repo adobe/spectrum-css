@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.7"></a>
+## 3.0.7
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@3.0.6...@spectrum-css/buttongroup@3.0.7)
+
+**Note:** Version bump only for package @spectrum-css/buttongroup
+
+
+
+
+
+<a name="3.0.6"></a>
+## 3.0.6
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@3.0.4...@spectrum-css/buttongroup@3.0.6)
+
+**Note:** Version bump only for package @spectrum-css/buttongroup
+
+
+
+
+
+<a name="3.0.5"></a>
+## 3.0.5
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@3.0.4...@spectrum-css/buttongroup@3.0.5)
+
+**Note:** Version bump only for package @spectrum-css/buttongroup
+
+
+
+
+
 <a name="3.0.3"></a>
 ## 3.0.3
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@3.0.3-alpha.3...@spectrum-css/buttongroup@3.0.3)

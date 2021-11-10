@@ -85,12 +85,32 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Avatar {
+  display: inline-block;
+  position: relative;
   inline-size: var(--spectrum-avatar-width);
   block-size: var(--spectrum-avatar-height);
 
   border-radius: var(--spectrum-avatar-border-radius);
-  border-style: none;
+  border-width: 0;
 
   -webkit-user-drag: none;
   user-select: none;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    box-sizing: border-box;
+    border-width: var(--spectrum-avatar-border-size);
+    border-style: solid;
+    border-radius: var(--spectrum-avatar-border-radius);
+  }
+}
+.spectrum-Avatar-image {
+  inline-size: var(--spectrum-avatar-width);
+  block-size: var(--spectrum-avatar-height);
 }

@@ -149,8 +149,8 @@ governing permissions and limitations under the License.
   text-align: start;
 
   &.is-placeholder {
-    font-weight: var(--spectrum-picker-texticon-placeholder-text-font-weight);
-    font-style: var(--spectrum-picker-texticon-placeholder-text-font-style);
+    font-weight: var(--spectrum-picker-texticon-placeholder-font-weight);
+    font-style: var(--spectrum-picker-texticon-placeholder-font-style);
     transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 }

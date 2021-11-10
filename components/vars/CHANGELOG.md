@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.1"></a>
+## 4.1.1
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.1.0...@spectrum-css/vars@4.1.1)
+
+### 🐛 Bug fixes
+
+* update DNA versions ([c85446e](https://github.com/adobe/spectrum-css/commit/c85446e))
+* update DNA versions for checkbox, radio, switch ([dcdcb7f](https://github.com/adobe/spectrum-css/commit/dcdcb7f))
+
+
+
+
+
+<a name="4.1.0"></a>
+# 4.1.0
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.0.2...@spectrum-css/vars@4.1.0)
+
+### ✨ Features
+
+* make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+
+
+
+
+
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.0.1...@spectrum-css/vars@4.0.2)
+
+### 🐛 Bug fixes
+
+* fixed picker quiet popover offset-x tokens ([36c7551](https://github.com/adobe/spectrum-css/commit/36c7551))
+* update to spectrum-tokens 7.0.1 ([b88d6ce](https://github.com/adobe/spectrum-css/commit/b88d6ce))
+* wip adding aliases back into linked DSS data ([e1d6667](https://github.com/adobe/spectrum-css/commit/e1d6667))
+
+
+
+
+
+<a name="4.0.1"></a>
+# 4.0.1
+🗓 2021-10-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.0.0...@spectrum-css/vars@4.0.1)
+
+### 🐛 Bug fixes
+
+* fixed picker quiet popover offset-x tokens ([36c7551](https://github.com/adobe/spectrum-css/commit/36c7551))
+* update to spectrum-tokens 7.0.1([b88d6ce](https://github.com/adobe/spectrum-css/commit/b88d6ce))
+
+
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@3.1.0-alpha.3...@spectrum-css/vars@4.0.0)

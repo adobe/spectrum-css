@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@5.0.1...@spectrum-css/avatar@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/avatar
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@5.0.0...@spectrum-css/avatar@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/avatar
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@4.0.0-alpha.3...@spectrum-css/avatar@5.0.0)
+
+### ✨ Features
+
+* add support for border values for avatar ([58a76ed](https://github.com/adobe/spectrum-css/commit/58a76ed))
+
+
+### 🐛 Bug fixes
+
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* wip adding avatar express css properties ([1e06175](https://github.com/adobe/spectrum-css/commit/1e06175))
+
+
+* fix!: avatar needs a div wrapper for to support express border overlay ([f54b645](https://github.com/adobe/spectrum-css/commit/f54b645))
+
+
+### 🛑 BREAKING CHANGES
+
+* for express to support the transparent border overlay,
+the avatar needs to be wrapped in a div to support pseudo elements.
+
+
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/avatar@4.0.0-alpha.3...@spectrum-css/avatar@4.0.0)

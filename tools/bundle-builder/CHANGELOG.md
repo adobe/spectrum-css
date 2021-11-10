@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.3"></a>
+## 3.0.3
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.0.2-alpha.1...@spectrum-css/bundle-builder@3.0.3)
+
+### 🐛 Bug fixes
+
+* fetch package publish date from npm registry ([71fd187](https://github.com/adobe/spectrum-css/commit/71fd187))
+
+
+
+
+
 <a name="3.0.2"></a>
 ## 3.0.2
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.0.2-alpha.1...@spectrum-css/bundle-builder@3.0.2)

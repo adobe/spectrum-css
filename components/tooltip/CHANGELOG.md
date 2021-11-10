@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.1"></a>
+## 3.1.1
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.0...@spectrum-css/tooltip@3.1.1)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+
+
+
+
+<a name="3.1.0"></a>
+# 3.1.0
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.0.4...@spectrum-css/tooltip@3.1.0)
+
+### ✨ Features
+
+* make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+
+
+
+
+
+<a name="3.0.5"></a>
+## 3.0.5
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.0.4...@spectrum-css/tooltip@3.0.5)
+
+**Note:** Version bump only for package @spectrum-css/tooltip
+
+
+
+
+
 <a name="3.0.3"></a>
 ## 3.0.3
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.0.3-alpha.3...@spectrum-css/tooltip@3.0.3)
