@@ -60,7 +60,7 @@ governing permissions and limitations under the License.
     outline: none;
   }
 
-  &:focus-ring::before {
+  &:focus-ring:before {
     content: "";
     position: absolute;
     inset-block-start: 0;
@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
     inset-inline-end: 0;
     inset-block-end: 0;
 
-    border-block: var(--spectrum-tabs-m-focus-ring-size) solid transparent;
+    border: var(--spectrum-tabs-m-focus-ring-size) solid transparent;
     border-radius: var(--spectrum-sidenav-item-border-radius);
   }
 
