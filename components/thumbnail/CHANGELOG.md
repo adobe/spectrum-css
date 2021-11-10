@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.6...@spectrum-css/thumbnail@2.0.0)
+
+### ✨ Features
+
+* **thumbnail:** add migration guide ([3b31b11](https://github.com/adobe/spectrum-css/commit/3b31b11))
+* **thumbnail:** apply new focus-ring state ([f6c3898](https://github.com/adobe/spectrum-css/commit/f6c3898))
+* **thumbnail:** update vars with new names ([f1c35dd](https://github.com/adobe/spectrum-css/commit/f1c35dd))
+* **thumbnail:** use different color for checkerboard background ([0331f62](https://github.com/adobe/spectrum-css/commit/0331f62))
+* **thumbnail:** use new square token for checkerboard background ([8544239](https://github.com/adobe/spectrum-css/commit/8544239))
+* **thumbnail:** use remap vars for better vars updating ([bad1481](https://github.com/adobe/spectrum-css/commit/bad1481))
+
+
+* feat(thumbnail)!: new tshirt sized classnames and vars ([ba4fc87](https://github.com/adobe/spectrum-css/commit/ba4fc87))
+
+
+### 🛑 BREAKING CHANGES
+
+* t-shirt sizes fixed in thumbnail.
+
+
+
+
+
 <a name="1.0.6"></a>
 ## 1.0.6
 🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.5...@spectrum-css/thumbnail@1.0.6)

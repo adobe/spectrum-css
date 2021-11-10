@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.7"></a>
+## 1.0.7
+🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.6...@spectrum-css/switch@1.0.7)
+
+**Note:** Version bump only for package @spectrum-css/switch
+
+
+
+
+
 <a name="1.0.6"></a>
 ## 1.0.6
 🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.5...@spectrum-css/switch@1.0.6)

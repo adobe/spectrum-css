@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.17"></a>
+# 1.0.0-beta.17
+🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.16...@spectrum-css/expressvars@1.0.0-beta.17)
+
+### ✨ Features
+
+* **thumbnail:** use different color for checkerboard background ([0331f62](https://github.com/adobe/spectrum-css/commit/0331f62))
+
+
+
+
+
 <a name="1.0.0-beta.16"></a>
 # 1.0.0-beta.16
 🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.15...@spectrum-css/expressvars@1.0.0-beta.16)
