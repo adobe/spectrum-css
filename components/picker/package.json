@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/picker",
-  "version": "1.0.3",
+  "version": "1.1.2",
   "description": "The Spectrum CSS picker component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,19 +16,19 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/actionbutton": "^1.0.1",
-    "@spectrum-css/icon": "^3.0.1",
-    "@spectrum-css/menu": "^3.0.1",
-    "@spectrum-css/popover": "^3.0.1",
-    "@spectrum-css/vars": "^3.0.1"
+    "@spectrum-css/actionbutton": "^1.0.4",
+    "@spectrum-css/icon": "^3.0.4",
+    "@spectrum-css/menu": "^3.0.4",
+    "@spectrum-css/popover": "^3.0.4",
+    "@spectrum-css/vars": "^4.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^1.0.3",
-    "@spectrum-css/component-builder": "^2.0.1",
-    "@spectrum-css/icon": "^3.0.3",
-    "@spectrum-css/menu": "^3.0.3",
-    "@spectrum-css/popover": "^3.0.3",
-    "@spectrum-css/vars": "^3.0.2",
+    "@spectrum-css/actionbutton": "^1.0.8",
+    "@spectrum-css/component-builder": "^3.0.0",
+    "@spectrum-css/icon": "^3.0.8",
+    "@spectrum-css/menu": "^3.0.8",
+    "@spectrum-css/popover": "^3.0.8",
+    "@spectrum-css/vars": "^4.2.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -40,6 +40,11 @@
     "package": "@spectrum-css/avatar"
   },
   {
+    "label": "badge",
+    "url": "badge.html",
+    "package": "@spectrum-css/badge"
+  },
+  {
     "label": "breadcrumb",
     "url": "breadcrumb.html",
     "package": "@spectrum-css/breadcrumb"
@@ -190,6 +195,21 @@
     "package": "@spectrum-css/form"
   },
   {
+    "label": "get-started",
+    "url": "get-started.html",
+    "package": "@spectrum-css/get"
+  },
+  {
+    "label": "halo-focus",
+    "url": "halo-focus.html",
+    "package": "@spectrum-css/halo"
+  },
+  {
+    "label": "helptext",
+    "url": "helptext.html",
+    "package": "@spectrum-css/helptext"
+  },
+  {
     "label": "illustratedmessage",
     "url": "illustratedmessage.html",
     "package": "@spectrum-css/illustratedmessage"
@@ -207,9 +227,9 @@
     ]
   },
   {
-    "label": "label",
-    "url": "label.html",
-    "package": "@spectrum-css/label"
+    "label": "inlinealert",
+    "url": "inlinealert.html",
+    "package": "@spectrum-css/inlinealert"
   },
   {
     "label": "link",
@@ -364,9 +384,14 @@
     "package": "@spectrum-css/tabs"
   },
   {
-    "label": "tags",
-    "url": "tags.html",
+    "label": "tag",
+    "url": "tag.html",
     "package": "@spectrum-css/tags"
+  },
+  {
+    "label": "taggroup",
+    "url": "taggroup.html",
+    "package": "@spectrum-css/taggroup"
   },
   {
     "label": "textarea",

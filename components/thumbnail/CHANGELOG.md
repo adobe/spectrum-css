@@ -3,6 +3,119 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.6...@spectrum-css/thumbnail@2.0.0)
+
+### ✨ Features
+
+* **thumbnail:** add migration guide ([3b31b11](https://github.com/adobe/spectrum-css/commit/3b31b11))
+* **thumbnail:** apply new focus-ring state ([f6c3898](https://github.com/adobe/spectrum-css/commit/f6c3898))
+* **thumbnail:** update vars with new names ([f1c35dd](https://github.com/adobe/spectrum-css/commit/f1c35dd))
+* **thumbnail:** use different color for checkerboard background ([0331f62](https://github.com/adobe/spectrum-css/commit/0331f62))
+* **thumbnail:** use new square token for checkerboard background ([8544239](https://github.com/adobe/spectrum-css/commit/8544239))
+* **thumbnail:** use remap vars for better vars updating ([bad1481](https://github.com/adobe/spectrum-css/commit/bad1481))
+
+
+* feat(thumbnail)!: new tshirt sized classnames and vars ([ba4fc87](https://github.com/adobe/spectrum-css/commit/ba4fc87))
+
+
+### 🛑 BREAKING CHANGES
+
+* t-shirt sizes fixed in thumbnail.
+
+
+
+
+
+<a name="1.0.6"></a>
+## 1.0.6
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.5...@spectrum-css/thumbnail@1.0.6)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="1.0.5"></a>
+## 1.0.5
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.3...@spectrum-css/thumbnail@1.0.5)
+
+### 🐛 Bug fixes
+
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
+<a name="1.0.4"></a>
+## 1.0.4
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.3...@spectrum-css/thumbnail@1.0.4)
+
+### 🐛 Bug fixes
+
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
+<a name="1.0.3"></a>
+## 1.0.3
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.3...@spectrum-css/thumbnail@1.0.3)
+
+### 🐛 Bug fixes
+
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
+<a name="1.0.3-alpha.3"></a>
+## 1.0.3-alpha.3
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.2...@spectrum-css/thumbnail@1.0.3-alpha.3)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="1.0.3-alpha.2"></a>
+## 1.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.1...@spectrum-css/thumbnail@1.0.3-alpha.2)
+
+### 🐛 Bug fixes
+
+* use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
+
+
+
+
+
+<a name="1.0.3-alpha.1"></a>
+## 1.0.3-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.3-alpha.0...@spectrum-css/thumbnail@1.0.3-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
+<a name="1.0.3-alpha.0"></a>
+## 1.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.2...@spectrum-css/thumbnail@1.0.3-alpha.0)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
 <a name="1.0.2"></a>
 ## 1.0.2
 🗓 2021-04-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@1.0.1...@spectrum-css/thumbnail@1.0.2)

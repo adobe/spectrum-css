@@ -335,6 +335,9 @@ function generateDNAFiles() {
       let overriddenTokens = {};
 
       function addColorVariable(componentName, varName, value, varBaseName, stopName, stateName) {
+        // Strip invalid # from placeholder variables
+        varName = varName.replace('#', '_');
+
         if (stateName && stateName !== 'default') {
           varName += `-${stateName}`;
         }
@@ -359,6 +362,9 @@ function generateDNAFiles() {
       }
 
       function addDimensionVariable(componentName, varName, value, varBaseName, scaleName, stateName) {
+        // Strip invalid # from placeholder variables
+        varName = varName.replace('#', '_');
+
         if (stateName && stateName !== 'default') {
           varName += `-${stateName}`;
         }

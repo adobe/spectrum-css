@@ -1,0 +1,90 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-Badge--neutral {
+  @remapvars {
+    find: /--spectrum-badge-m-neutral-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--informative {
+  @remapvars {
+    find: /--spectrum-badge-m-informative-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--positive {
+  @remapvars {
+    find: /--spectrum-badge-m-positive-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--negative {
+  @remapvars {
+    find: /--spectrum-badge-m-negative-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--fuchsia {
+  @remapvars {
+    find: /--spectrum-badge-m-fuchsia-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--indigo {
+  @remapvars {
+    find: /--spectrum-badge-m-indigo-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--magenta {
+  @remapvars {
+    find: /--spectrum-badge-m-magenta-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--purple {
+  @remapvars {
+    find: /--spectrum-badge-m-purple-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--seafoam {
+  @remapvars {
+    find: /--spectrum-badge-m-seafoam-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge--yellow {
+  @remapvars {
+    find: /--spectrum-badge-m-yellow-((?:texticon|textonly|icononly)(?!-color)(?:-\w*)(?:-color)(?!-color)(?:-\w*)*)/;
+    replace: --spectrum-badge-m-$1;
+  }
+}
+
+.spectrum-Badge {
+  color: var(--spectrum-badge-m-texticon-text-color);
+  background-color: var(--spectrum-badge-m-textonly-background-color);
+  &:hover {
+    color: var(--spectrum-badge-m-textonly-text-color-hover);
+    background-color: var(--spectrum-badge-m-textonly-background-color-hover);
+  }
+}

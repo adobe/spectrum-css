@@ -26,7 +26,7 @@ let env = 'local';
 let host = LOCALHOST_MAC;
 let report = 'CI';
 let bitmapsRef = 'node_modules/@spectrum-css/spectrum-css-vr-test-assets-essential/bitmaps_reference';
-let captureLimit = 5;
+let captureLimit = 2;
 
 // Shared scenario configuration
 const baseScenarioConfig = {

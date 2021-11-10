@@ -18,6 +18,10 @@ governing permissions and limitations under the License.
   color: var(--spectrum-dialog-confirm-description-text-color);
 }
 
+.spectrum-Dialog-footer {
+  color: var(--spectrum-dialog-confirm-description-text-color);
+}
+
 .spectrum-Dialog-typeIcon {
   color: var(--spectrum-dialog-confirm-icon-color);
 }

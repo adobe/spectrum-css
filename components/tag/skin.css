@@ -1,0 +1,227 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-Tag {
+  color: var(--spectrum-tag-s-texticon-text-color);
+  background-color: var(--spectrum-tag-s-texticon-background-color);
+  border-color: var(--spectrum-tag-s-texticon-border-color);
+
+  .spectrum-Tag-clearButton {
+    color: var(--spectrum-tag-s-removable-texticon-icon-color);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-tag-s-texticon-background-color-hover);
+    color: var(--spectrum-tag-s-texticon-text-color-hover);
+    border-color: var(--spectrum-tag-s-texticon-border-color-hover);
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-hover);
+    }
+  }
+
+  &:focus-ring {
+    background-color: var(--spectrum-tag-s-texticon-background-color-key-focus);
+    border-color: var(--spectrum-tag-s-texticon-border-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-tag-s-texticon-focus-ring-size) var(--spectrum-tag-s-texticon-focus-ring-color-key-focus);
+    color: var(--spectrum-tag-s-texticon-text-color-key-focus);
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-key-focus);
+    }
+
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-tag-s-texticon-background-color-selected);
+    color: var(--spectrum-tag-s-texticon-text-color-selected);
+    border-color: var(--spectrum-tag-s-texticon-border-color-selected);
+
+    .spectrum-TagIcon {
+      color: var(--spectrum-tag-s-texticon-icon-color-selected);
+    }
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-selected);
+    }
+
+    &:hover {
+      background-color: var(--spectrum-tag-s-texticon-background-color-selected-hover);
+
+      .spectrum-Tag-clearButton {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-selected-hover);
+      }
+    }
+
+    &.focus-ring {
+      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-tag-s-texticon-focus-ring-color-selected-key-focus);
+      border-color: var(--spectrum-tag-s-texticon-text-color-selected-key-focus);
+
+      .spectrum-Tag-clearButton {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-selected-key-focus);
+      }
+    }
+
+    &.is-invalid {
+      border-color: var(--spectrum-tag-s-texticon-border-color-error-selected);
+      background-color: var(--spectrum-tag-s-texticon-background-color-error-selected);
+      .spectrum-Tag-label {
+        color: var(--spectrum-tag-s-removable-texticon-text-color-error-selected);
+      }
+      .spectrum-Tag-icon {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-selected);
+      }
+      .spectrum-Tag-clearButton {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-selected);
+      }
+      &.focus-ring {
+        box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-tag-s-texticon-border-color-error-selected-key-focus);
+        border-color: var(--spectrum-tag-s-texticon-text-color-selected-key-focus);
+      }
+      &:hover {
+        border-color: var(--spectrum-tag-s-texticon-border-color-error-selected-hover);
+        background-color: var(--spectrum-tag-s-texticon-background-color-error-selected-hover);
+        .spectrum-Tag-icon,
+        .spectrum-Tag-label,
+        .spectrum-Tag-clearButton {
+          color: var(--spectrum-tag-s-texticon-icon-color-error-selected-hover);
+        }
+      }
+    }
+  }
+
+  &.is-invalid {
+    color: var(--spectrum-tag-s-texticon-icon-color-error);
+    border-color: var(--spectrum-tag-s-texticon-border-color-error);
+
+    &:hover {
+      color: var(--spectrum-tag-s-texticon-icon-color-error-hover);
+      border-color: var(--spectrum-tag-s-texticon-border-color-error-hover);
+
+      .spectrum-Tag-icon,
+      .spectrum-Tag-clearButton {
+        color: var(--spectrum-tag-s-texticon-icon-color-error-hover);
+      }
+    }
+
+    &.focus-ring {
+      color: var(--spectrum-tag-s-texticon-icon-color-error-hover);
+      border-color: var(--spectrum-tag-s-texticon-border-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-tag-s-texticon-border-color-key-focus);
+    }
+
+    .spectrum-Tag-icon,
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-texticon-icon-color-error);
+    }
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-error);
+    }
+
+  }
+
+  &.is-disabled {
+    color: var(--spectrum-tag-s-texticon-text-color-disabled);
+    background-color: var(--spectrum-tag-s-texticon-background-color-disabled);
+    border-color: var(--spectrum-tag-s-texticon-border-color-disabled);
+
+    .spectrum-Avatar {
+      /* Duplicated so state is on the tag */
+      opacity: var(--spectrum-avatar-size-100-opacity-disabled);
+    }
+
+    .spectrum-Tag-icon {
+      color: var(--spectrum-tag-s-texticon-icon-color-disabled);
+    }
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-disabled);
+    }
+  }
+}
+
+.spectrum-Tag--removable {
+  &:hover {
+    color: var(--spectrum-tag-s-removable-texticon-text-color-hover);
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-hover);
+    }
+  }
+
+  &:active {
+    color: var(--spectrum-tag-s-removable-texticon-text-color-down);
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-down);
+    }
+  }
+
+  &.is-invalid {
+    &:hover {
+      border-color: var(--spectrum-tag-s-removable-texticon-border-color-error-hover);
+      color: var(--spectrum-tag-s-removable-texticon-text-color-error-hover);
+
+      .spectrum-Tag-clearButton {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-hover);
+      }
+    }
+
+    &:active {
+      border-color: var(--spectrum-tag-s-removable-texticon-border-color-error-down);
+      color: var(--spectrum-tag-s-removable-texticon-text-color-error-down);
+
+      .spectrum-Tag-clearButton {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-error-down);
+      }
+    }
+  }
+
+  &:focus-ring {
+    color: var(--spectrum-tag-s-removable-texticon-text-color-key-focus);
+
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-key-focus);
+    }
+  }
+
+  &.is-selected {
+    color: var(--spectrum-tag-s-removable-texticon-text-color-selected);
+    &.is-focused {
+       color: var(--spectrum-tag-s-removable-texticon-text-color-selected-key-focus);
+    }
+    .spectrum-Tag-clearButton {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-selected);
+      &:hover {
+        color: var(--spectrum-tag-s-removable-texticon-icon-color-selected-hover);
+      }
+    }
+    &.is-invalid {
+      color: var(--spectrum-tag-s-removable-texticon-text-color-error-key-focus);
+    }
+  }
+
+  .spectrum-Tag-clearButton {
+    &.is-focused {
+      border-color: var(--spectrum-tag-s-removable-texticon-border-color-key-focus);
+      background-color: var(--spectrum-tag-s-removable-texticon-button-fill-background-color-key-focus);
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-key-focus);
+    }
+    &:hover {
+      color: var(--spectrum-tag-s-removable-texticon-icon-color-hover);
+    }
+    &:active {
+      background-color: var(--spectrum-tag-s-removable-texticon-button-fill-background-color-hover);
+    }
+  }
+}

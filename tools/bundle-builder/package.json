@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/bundle-builder",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "description": "The Spectrum CSS top-level builder",
   "repository": {
     "type": "git",
@@ -33,5 +33,8 @@
     "replace-ext": "^1.0.0",
     "semver": "^6.3.0",
     "through2": "^3.0.1"
+  },
+  "dependencies": {
+    "npm-registry-fetch": "^11.0.0"
   }
 }

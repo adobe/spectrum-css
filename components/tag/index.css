@@ -1,0 +1,106 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../vars/css/components/spectrum-tag.css";
+
+.spectrum-Tag--sizeS {
+  @remapvars {
+    find: /--spectrum-tag-s(.*)/;
+    filter: color;
+    replace: --spectrum-tag$1;
+  }
+}
+
+.spectrum-Tag--sizeM {
+  @remapvars {
+    find: /--spectrum-tag-m(.*)/;
+    filter: color;
+    replace: --spectrum-tag$1;
+  }
+}
+
+.spectrum-Tag--sizeL {
+  @remapvars {
+    find: /--spectrum-tag-l(.*)/;
+    filter: color;
+    replace: --spectrum-tag$1;
+  }
+}
+
+.spectrum-Tag {
+  /* todo: these are in Spectrum DNA 7.0-beta */
+  --spectrum-tag-texticon-avatar-padding-x: var(--spectrum-tag-texticon-icon-gap);
+}
+
+.spectrum-Tag {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  vertical-align: bottom;
+
+  padding-block: 0;
+  padding-inline-start: calc(var(--spectrum-tag-texticon-padding-left) - var(--spectrum-tag-texticon-border-size));
+  padding-inline-end: calc(var(--spectrum-tag-texticon-padding-right) - var(--spectrum-tag-texticon-border-size));
+  block-size: var(--spectrum-tag-texticon-height);
+  max-inline-size: 100%;
+
+  border-width: var(--spectrum-tag-texticon-border-size);
+  border-style: solid;
+  border-radius: var(--spectrum-alias-border-radius-regular);
+  outline: none;
+  user-select: none;
+
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out,
+    color var(--spectrum-global-animation-duration-100) ease-in-out,
+    box-shadow var(--spectrum-global-animation-duration-100) ease-in-out,
+    background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  &.is-disabled {
+    pointer-events: none;
+  }
+
+  > .spectrum-Icon,
+  > .spectrum-Avatar {
+    margin-inline-end: var(--spectrum-tag-texticon-icon-gap);
+
+    /* Add padding for "avatar" variant */
+    margin-inline-start: calc(var(--spectrum-tag-texticon-avatar-padding-x) - var(--spectrum-tag-texticon-padding-left));
+
+    ~ .spectrum-Tag-label {
+      margin-inline-end: calc(var(--spectrum-tag-texticon-avatar-padding-x) - var(--spectrum-tag-texticon-padding-right));
+    }
+  }
+
+  .spectrum-ClearButton {
+    margin-inline-end: calc(-1 * var(--spectrum-tag-texticon-padding-right));
+  }
+}
+
+.spectrum-Tag-label {
+  block-size: 100%;
+  line-height: calc(var(--spectrum-tag-texticon-height) - calc(var(--spectrum-tag-texticon-border-size) * 2));
+  flex: 1 1 auto;
+  font-size: var(--spectrum-tag-texticon-text-size);
+  cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.spectrum-Tag.is-selected {
+  &:focus-ring,
+  &.is-focused {
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-tag-texticon-focus-ring-size) var(--spectrum-tag-m-texticon-focus-ring-color-key-focus);
+    }
+  }
+}

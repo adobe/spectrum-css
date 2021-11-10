@@ -88,11 +88,16 @@ async function getPackageDependencyOrder(packageDir) {
 async function getFolderDependencyOrder(packagesDir) {
   // Get list of all packages
   let packages = (await fsp.readdir(packagesDir, { withFileTypes: true }))
-    .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
-    .map((dirent) => path.join(packagesDir, dirent.name));
+     .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+     .map((dirent) => path.join(packagesDir, dirent.name));
 
-  return solveDependencies(packages);
-}
+   let solution = await solveDependencies(packages);
+
+   // Nobody relies on it, so it gets clipped, weird
+   solution.push('@spectrum-css/expressvars');
+
+   return solution;
+ }
 
 exports.getDependencies = getDependencies;
 exports.solveDependencies = solveDependencies;

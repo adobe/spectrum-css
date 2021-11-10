@@ -39,42 +39,10 @@ governing permissions and limitations under the License.
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-primary-m-focus-ring-size-key-focus) var(--spectrum-button-primary-m-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-button-m-primary-texticon-focus-ring-size) var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
     }
   }
 }
-
-.spectrum-ClearButton {
-  background-color: var(--spectrum-clearbutton-medium-background-color);
-
-  color: var(--spectrum-clearbutton-medium-icon-color);
-
-  &:hover {
-    background-color: var(--spectrum-clearbutton-medium-background-color-hover);
-
-    color: var(--spectrum-clearbutton-medium-icon-color-hover);
-  }
-
-  &:active {
-    background-color: var(--spectrum-clearbutton-medium-background-color-down);
-
-    color: var(--spectrum-clearbutton-medium-icon-color-down);
-  }
-
-  &:focus-ring {
-    background-color: var(--spectrum-clearbutton-medium-background-color-key-focus);
-
-    color: var(--spectrum-clearbutton-medium-icon-color-key-focus);
-  }
-
-  &:disabled,
-  &.is-disabled {
-    background-color: var(--spectrum-clearbutton-medium-background-color-disabled);
-
-    color: var(--spectrum-clearbutton-medium-icon-color-disabled);
-  }
-}
-
 
 .spectrum-LogicButton--and {
   background-color: var(--spectrum-logicbutton-and-background-color);
@@ -108,8 +76,8 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-button-secondary-m-background-color-disabled);
-    border-color: var(--spectrum-button-secondary-m-border-color-disabled);
+    background-color: var(--spectrum-button-m-secondary-texticon-background-color-disabled);
+    border-color: var(--spectrum-button-m-secondary-texticon-border-color-disabled);
     color: var(--spectrum-logicbutton-and-text-color-disabled);
   }
 }

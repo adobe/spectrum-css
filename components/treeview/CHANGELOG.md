@@ -3,9 +3,144 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.2...@spectrum-css/treeview@3.0.3)
+<a name="6.0.2"></a>
+## 6.0.2
+🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@6.0.1...@spectrum-css/treeview@6.0.2)
+
+**Note:** Version bump only for package @spectrum-css/treeview
+
+
+
+
+
+<a name="6.0.1"></a>
+## 6.0.1
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@6.0.0...@spectrum-css/treeview@6.0.1)
+
+**Note:** Version bump only for package @spectrum-css/treeview
+
+
+
+
+
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.3-alpha.3...@spectrum-css/treeview@6.0.0)
+
+### 🐛 Bug fixes
+
+* adjusted thumbnail version of treeview; closes [#1276](https://github.com/adobe/spectrum-css/issues/1276) ([e949df5](https://github.com/adobe/spectrum-css/commit/e949df5))
+* adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+* extra closing parenthesis in treeview component ([99772b9](https://github.com/adobe/spectrum-css/commit/99772b9))
+* removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
+* removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
+* update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
+* update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
+* updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
+* use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+* wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
+
+
+### 🛑 BREAKING CHANGES
+
+* t-shirt sizes added.
+
+
+
+
+
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.3-alpha.3...@spectrum-css/treeview@5.0.0)
+
+### 🐛 Bug fixes
+
+* adjusted thumbnail version of treeview; closes [#1276](https://github.com/adobe/spectrum-css/issues/1276) ([e949df5](https://github.com/adobe/spectrum-css/commit/e949df5))
+* adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+* extra closing parenthesis in treeview component ([99772b9](https://github.com/adobe/spectrum-css/commit/99772b9))
+* removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
+* removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
+* update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
+* update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
+* updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
+* use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+* wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
+
+
+### 🛑 BREAKING CHANGES
+
+* t-shirt sizes added.
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.3-alpha.3...@spectrum-css/treeview@4.0.0)
+
+### 🐛 Bug fixes
+
+* adjusted tokens for treeview from DSS ([6d9168a](https://github.com/adobe/spectrum-css/commit/6d9168a))
+* removed a couple local variables in treeview ([f946e92](https://github.com/adobe/spectrum-css/commit/f946e92))
+* removing local vars in treeview ([1d393f6](https://github.com/adobe/spectrum-css/commit/1d393f6))
+* update vars & add compact, spacious examples ([c50aaf2](https://github.com/adobe/spectrum-css/commit/c50aaf2))
+* update vars & add compact, spacious examples ([dd8caa8](https://github.com/adobe/spectrum-css/commit/dd8caa8))
+* updating latest spectrum-tokens ([d35b957](https://github.com/adobe/spectrum-css/commit/d35b957))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* use updated tokens & resolve treeview build errors ([67f4112](https://github.com/adobe/spectrum-css/commit/67f4112))
+* use updated tokens & resolve treeview build errors ([c892536](https://github.com/adobe/spectrum-css/commit/c892536))
+* wip, fixed treeview build ([2fc4e66](https://github.com/adobe/spectrum-css/commit/2fc4e66))
+
+
+### 🛑 BREAKING CHANGES
+
+* t-shirt sizes added.
+
+
+
+
+
+<a name="3.0.3-alpha.3"></a>
+## 3.0.3-alpha.3
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.3-alpha.2...@spectrum-css/treeview@3.0.3-alpha.3)
+
+**Note:** Version bump only for package @spectrum-css/treeview
+
+
+
+
+
+<a name="3.0.3-alpha.2"></a>
+## 3.0.3-alpha.2
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.3-alpha.1...@spectrum-css/treeview@3.0.3-alpha.2)
+
+### 🐛 Bug fixes
+
+* **tree-view:** reduce rule specificity for easier customization ([b998abd](https://github.com/adobe/spectrum-css/commit/b998abd))
+* use renamed aliases ([91f6c04](https://github.com/adobe/spectrum-css/commit/91f6c04))
+
+
+
+
+
+<a name="3.0.3-alpha.1"></a>
+## 3.0.3-alpha.1
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.3-alpha.0...@spectrum-css/treeview@3.0.3-alpha.1)
+
+**Note:** Version bump only for package @spectrum-css/treeview
+
+
+
+
+
+<a name="3.0.3-alpha.0"></a>
+## 3.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@3.0.2...@spectrum-css/treeview@3.0.3-alpha.0)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 

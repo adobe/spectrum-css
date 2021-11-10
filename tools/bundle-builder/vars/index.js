@@ -153,9 +153,16 @@ function copyVars() {
     .pipe(gulp.dest('dist/vars/'))
 }
 
+const expressVarDir = path.join(dirs.components, 'expressvars', 'dist');
+ function copyExpressVars() {
+   return gulp.src(path.join(expressVarDir, 'spectrum-*.css'))
+     .pipe(gulp.dest('dist/expressvars/'))
+ }
+
 exports.buildUnique = buildUnique;
 
 exports.copyVars = gulp.parallel(
   buildUnique,
-  copyVars
+  copyVars,
+  copyExpressVars
 );

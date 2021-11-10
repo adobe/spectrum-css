@@ -1,5 +1,6 @@
 name: Card - Asset preview
 description: A standard cards with a full-sized asset preview.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
 sections:
   - name: Migration Guide
     description: |
@@ -12,7 +13,7 @@ examples:
     name: Standard
     markup: |
       <div style="width: 208px;">
-        <div class="spectrum-Card" tabindex="0" role="figure">
+        <div class="spectrum-Card spectrum-Card--sizeM" tabindex="0" role="figure">
           <div class="spectrum-Card-preview">
             <div class="spectrum-Asset">
               <img class="spectrum-Asset-image" src="img/example-card-portrait.jpg" />

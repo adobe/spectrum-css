@@ -14,29 +14,33 @@ governing permissions and limitations under the License.
 
 .spectrum-StatusLight--sizeS {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-s-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-s-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
 .spectrum-StatusLight--sizeM {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-m-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-m-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
 .spectrum-StatusLight--sizeL {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-l-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-l-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
 .spectrum-StatusLight--sizeXL {
   @remapvars {
-    find: /--spectrum-statuslight-(.*?)-xl-/;
-    replace: --spectrum-statuslight-$1-;
+    find: /--spectrum-statuslight(.*)-xl-/;
+    filter: color;
+    replace: --spectrum-statuslight$1-;
   }
 }
 
@@ -83,7 +87,7 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-statuslight-info-dot-size);
     border-radius: 50%;
 
-    /* margin on the dog is the opposite of the padding in order to align the dot as if the padding hack was not present */
+    /* margin on the dot is the opposite of the padding in order to align the dot as if the padding hack was not present */
     margin-block: var(--spectrum-statuslight-info-padding-bottom)
       var(--spectrum-statuslight-info-padding-top);
     margin-inline: var(--spectrum-statuslight-info-text-gap)

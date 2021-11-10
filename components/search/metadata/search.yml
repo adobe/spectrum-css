@@ -26,10 +26,12 @@ examples:
           </svg>
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off">
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-Search-clearButton">
-          <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Cross75" />
-          </svg>
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+          <div class="spectrum-ClearButton-fill">
+            <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </div>
         </button>
       </form>
 
@@ -40,10 +42,15 @@ examples:
           </svg>
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off" disabled>
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-Search-clearButton" disabled>
-          <svg class="spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Cross75" />
-          </svg>
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton" disabled>
+          <div class="spectrum-ClearButton-fill">
+            <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+
+
+
+          </div>
         </button>
       </form>
   - id: search-quiet
@@ -56,10 +63,12 @@ examples:
           </svg>
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off">
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-Search-clearButton">
-          <svg class="spectrum-Icon spectrum-UIIcon-Cross100 focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Cross100" />
-          </svg>
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+          <div class="spectrum-ClearButton-fill">
+            <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100 focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </div>
         </button>
       </form>
 
@@ -70,9 +79,11 @@ examples:
           </svg>
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input" autocomplete="off" disabled>
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-Search-clearButton" disabled>
-          <svg class="spectrum-Icon spectrum-UIIcon-Cross100 focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-Cross100" />
-          </svg>
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton" disabled>
+          <div class="spectrum-ClearButton-fill">
+            <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100 focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </div>
         </button>
       </form>

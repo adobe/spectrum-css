@@ -14,6 +14,7 @@ const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const processors = require('./processors').processors;
+const rename = require('gulp-rename');
 
 const legacyBuild = require('./legacyBuild');
 const vars = require('./vars');
@@ -41,11 +42,23 @@ let buildVars = gulp.series(
 
 exports.buildVars = buildVars;
 
-exports.buildCSS = gulp.parallel(
+exports.buildCSS = gulp.series(
   buildVars,
-  legacyBuild.buildDiff,
-  legacyBuild.buildMedium,
-  legacyBuild.buildLarge,
-  legacyBuild.buildSingleStops,
-  legacyBuild.buildMultiStops
+  function copyIndex() {
+    // Just copy index.vars as index.css to maintain backwards compat
+    return gulp.src('dist/index-vars.css')
+      .pipe(rename((file) => {
+        file.basename = 'index';
+      }))
+      .pipe(gulp.dest('dist/'))
+  }
+  /*
+  ,gulp.parallel(
+    legacyBuild.buildDiff,
+    legacyBuild.buildMedium,
+    legacyBuild.buildLarge,
+    legacyBuild.buildSingleStops,
+    legacyBuild.buildMultiStops
+  )
+  */
 );

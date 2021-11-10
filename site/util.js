@@ -25,7 +25,7 @@ function defaultRenderer(tokens, idx, options, env, self) {
 
 let ruleClassnames = {
   'link_open': 'spectrum-Link',
-  'table_open': 'spectrum-Table',
+  'table_open': 'spectrum-Table spectrum-Table--sizeM',
   'thead_open': 'spectrum-Table-head',
   'tr_open': 'spectrum-Table-row',
   'tbody_open': 'spectrum-Table-body',

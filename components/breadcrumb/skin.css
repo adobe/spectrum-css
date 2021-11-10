@@ -11,62 +11,62 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Breadcrumbs-item {
-  color: var(--spectrum-breadcrumb-item-text-color);
+  color: var(--spectrum-breadcrumb-m-item-text-color);
 
   &.is-dragged {
     .spectrum-Breadcrumbs-itemLink {
-      color: var(--spectrum-breadcrumb-item-text-color-drop);
-      background-color: var(--spectrum-breadcrumb-item-background-color-drop);
+      color: var(--spectrum-breadcrumb-m-item-text-color-drop);
+      background-color: var(--spectrum-breadcrumb-m-item-background-color-drop);
 
       &:before {
-        border-color: var(--spectrum-breadcrumb-item-border-color-drop);
+        border-color: var(--spectrum-breadcrumb-m-item-border-color-drop);
       }
     }
   }
 
   .spectrum-Breadcrumbs-itemSeparator {
-    color: var(--spectrum-breadcrumb-separator-icon-color);
+    color: var(--spectrum-breadcrumb-m-separator-icon-color);
   }
 
   .spectrum-Breadcrumbs-itemLink {
     color: inherit;
 
     &:hover {
-      color: var(--spectrum-breadcrumb-item-text-color-hover);
+      color: var(--spectrum-breadcrumb-m-item-text-color-hover);
     }
 
     &:focus-ring {
-      color: var(--spectrum-breadcrumb-item-text-color-key-focus);
+      color: var(--spectrum-breadcrumb-m-item-text-color-key-focus);
 
       &:before {
-        border-color: var(--spectrum-breadcrumb-item-border-color-key-focus);
+        border-color: var(--spectrum-breadcrumb-m-item-border-color-key-focus);
       }
     }
 
     &:active {
-      color: var(--spectrum-breadcrumb-item-text-color-down);
+      color: var(--spectrum-breadcrumb-m-item-text-color-down);
       border-block-end: 0;
     }
 
     &.is-disabled {
-      color: var(--spectrum-breadcrumb-item-text-color-disabled);
+      color: var(--spectrum-breadcrumb-m-item-text-color-disabled);
     }
   }
 
   &.is-selected,
   &:last-of-type {
-    color: var(--spectrum-breadcrumb-item-text-color-down);
+    color: var(--spectrum-breadcrumb-m-item-text-color-down);
   }
 
   &.is-selected {
     ~ .spectrum-Breadcrumb {
       &:last-of-type {
-        color: var(--spectrum-breadcrumb-item-text-color);
+        color: var(--spectrum-breadcrumb-m-item-text-color);
       }
     }
     .spectrum-Breadcrumbs-itemLink {
       &:focus-ring {
-        color: var(--spectrum-breadcrumb-item-text-color-down);
+        color: var(--spectrum-breadcrumb-m-item-text-color-down);
         border-block-end: 0;
       }
     }

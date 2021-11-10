@@ -14,8 +14,7 @@ const {src, dest, task, series} = require('gulp');
 const scenarioList = require('./plugins/scenarioList');
 const fs = require('fs');
 const {getPackages} = require('@lerna/project');
-const PackageGraph = require('@lerna/package-graph');
-const File = require('vinyl');
+const { PackageGraph } = require('@lerna/package-graph');
 
 const buildBaseScenarioList = () =>
   src('dist/docs/*.html')

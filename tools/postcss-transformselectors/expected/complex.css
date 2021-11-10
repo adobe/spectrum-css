@@ -37,10 +37,10 @@ h1,h2,h3 {
 }
 
 h1 em,h2 em,h3 em,
-h1 .spectrum-Heading-emphasis,
-h2 .spectrum-Heading-emphasis,
-h3 .spectrum-Heading-emphasis {
-  font-style: var(--spectrum-heading-m-emphasis-text-font-style, var(--spectrum-global-font-style-italic));
+h1 .spectrum-Heading-emphasized,
+h2 .spectrum-Heading-emphasized,
+h3 .spectrum-Heading-emphasized {
+  font-style: var(--spectrum-heading-m-emphasized-text-font-style, var(--spectrum-global-font-style-italic));
 }
 
 h1 strong,h2 strong,h3 strong,

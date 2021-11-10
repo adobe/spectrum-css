@@ -3,13 +3,120 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
-## 3.0.3
-🗓 2021-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.2...@spectrum-css/button@3.0.3)
+<a name="4.1.2"></a>
+## 4.1.2
+🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.1.1...@spectrum-css/button@4.1.2)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="4.1.1"></a>
+## 4.1.1
+🗓 2021-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.1.0...@spectrum-css/button@4.1.1)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="4.1.0"></a>
+# 4.1.0
+🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.2...@spectrum-css/button@4.1.0)
+
+### ✨ Features
+
+* make ClearButton build again, unblock CCX ([#1304](https://github.com/adobe/spectrum-css/issues/1304)) ([ae9399a](https://github.com/adobe/spectrum-css/commit/ae9399a))
+
 
 ### 🐛 Bug fixes
 
 * refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+* windows HCM ([48bc74e](https://github.com/adobe/spectrum-css/commit/48bc74e))
+
+
+
+
+
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.2...@spectrum-css/button@4.0.1)
+
+### 🐛 Bug fixes
+
+* refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.2...@spectrum-css/button@4.0.0)
+
+### 🐛 Bug fixes
+
+* refine the focus indicator per spectrum ([094e115](https://github.com/adobe/spectrum-css/commit/094e115))
+* updating version number on vars ([f535b49](https://github.com/adobe/spectrum-css/commit/f535b49))
+
+
+
+
+
+<a name="4.0.0-alpha.2"></a>
+# 4.0.0-alpha.2
+🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.1...@spectrum-css/button@4.0.0-alpha.2)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
+<a name="4.0.0-alpha.1"></a>
+# 4.0.0-alpha.1
+🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.0...@spectrum-css/button@4.0.0-alpha.1)
+
+### 🐛 Bug fixes
+
+* adjusted button label padding ([2c8ba8c](https://github.com/adobe/spectrum-css/commit/2c8ba8c))
+* adjusted left padding in button ([fc655a5](https://github.com/adobe/spectrum-css/commit/fc655a5))
+
+
+
+
+
+<a name="4.0.0-alpha.0"></a>
+# 4.0.0-alpha.0
+🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.3-alpha.0...@spectrum-css/button@4.0.0-alpha.0)
+
+### 🐛 Bug fixes
+
+* add missing scale imports for button ([c32a552](https://github.com/adobe/spectrum-css/commit/c32a552))
+* renamed `warning` button variant to `negative` ([1e029eb](https://github.com/adobe/spectrum-css/commit/1e029eb))
+
+
+### 🛑 BREAKING CHANGES
+
+* `.spectrum-Button--warning` is now
+`.spectrum-Button--negative`
+
+
+
+
+
+<a name="3.0.3-alpha.0"></a>
+## 3.0.3-alpha.0
+🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.2...@spectrum-css/button@3.0.3-alpha.0)
+
+### 🐛 Bug fixes
+
+* updated focus ring tokens to assume keyboard focus state ([2db4755](https://github.com/adobe/spectrum-css/commit/2db4755))
 
 
 

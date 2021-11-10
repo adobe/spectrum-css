@@ -10,13 +10,107 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Avatar {
-  inline-size: var(--spectrum-avatar-size-50-width);
-  block-size: var(--spectrum-avatar-size-50-height);
+@import "../vars/css/components/spectrum-avatar.css";
 
-  border-radius: var(--spectrum-avatar-size-50-border-radius);
-  border-style: none;
+.spectrum-Avatar--size50 {
+  @remapvars {
+    find: /--spectrum-avatar-size-50(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size75 {
+  @remapvars {
+    find: /--spectrum-avatar-size-75(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size100 {
+  @remapvars {
+    find: /--spectrum-avatar-size-100(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size200 {
+  @remapvars {
+    find: /--spectrum-avatar-size-200(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size300 {
+  @remapvars {
+    find: /--spectrum-avatar-size-300(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size400 {
+  @remapvars {
+    find: /--spectrum-avatar-size-400(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size500 {
+  @remapvars {
+    find: /--spectrum-avatar-size-500(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size600 {
+  @remapvars {
+    find: /--spectrum-avatar-size-600(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar--size700 {
+  @remapvars {
+    find: /--spectrum-avatar-size-700(.*)/;
+    filter: color;
+    replace: --spectrum-avatar$1;
+  }
+}
+
+.spectrum-Avatar {
+  display: inline-block;
+  position: relative;
+  inline-size: var(--spectrum-avatar-width);
+  block-size: var(--spectrum-avatar-height);
+
+  border-radius: var(--spectrum-avatar-border-radius);
+  border-width: 0;
 
   -webkit-user-drag: none;
   user-select: none;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    box-sizing: border-box;
+    border-width: var(--spectrum-avatar-border-size);
+    border-style: solid;
+    border-radius: var(--spectrum-avatar-border-radius);
+  }
+}
+.spectrum-Avatar-image {
+  inline-size: var(--spectrum-avatar-width);
+  block-size: var(--spectrum-avatar-height);
 }

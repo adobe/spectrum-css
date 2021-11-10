@@ -11,13 +11,13 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Tooltip {
-  background-color: var(--spectrum-tooltip-background-color);
+  background-color: var(--spectrum-tooltip-neutral-background-color);
 
-  color: var(--spectrum-tooltip-text-color);
+  color: var(--spectrum-tooltip-neutral-text-color);
 }
 
 .spectrum-Tooltip-tip {
-  border-top-color: var(--spectrum-tooltip-background-color);
+  border-top-color: var(--spectrum-tooltip-neutral-background-color);
 }
 
 .spectrum-Tooltip--negative,

@@ -13,9 +13,9 @@ governing permissions and limitations under the License.
 @import "../overlay/index.css";
 
 .spectrum-Tooltip {
-  --spectrum-tooltip-target-offset: 3px;
+  --spectrum-tooltip-neutral-target-offset: 3px;
   /* This variable needs to be updated in Spectrum DNA. Using the height variable so it scales to spectrum-large */
-  --spectrum-tooltip-tip-width: var(--spectrum-tooltip-tip-height);
+  --spectrum-tooltip-neutral-tip-width: var(--spectrum-tooltip-neutral-tip-height);
 }
 
 .spectrum-Tooltip {
@@ -33,14 +33,14 @@ governing permissions and limitations under the License.
   vertical-align: top;
 
   width: auto;
-  padding: var(--spectrum-tooltip-padding-top) var(--spectrum-tooltip-padding-x);
-  border-radius: var(--spectrum-tooltip-border-radius);
-  min-height: var(--spectrum-tooltip-min-height);
-  max-inline-size: var(--spectrum-tooltip-max-width);
+  padding: 0 var(--spectrum-tooltip-neutral-padding-x);
+  border-radius: var(--spectrum-tooltip-neutral-border-radius);
+  min-height: var(--spectrum-tooltip-neutral-min-height);
+  max-inline-size: var(--spectrum-tooltip-neutral-max-width);
 
-  font-size: var(--spectrum-tooltip-text-size);
-  font-weight: var(--spectrum-tooltip-text-font-weight);
-  line-height: var(--spectrum-tooltip-text-line-height);
+  font-size: var(--spectrum-tooltip-neutral-text-size);
+  font-weight: var(--spectrum-tooltip-neutral-text-font-weight);
+  line-height: var(--spectrum-tooltip-neutral-text-line-height);
   word-break: break-word;
   -webkit-font-smoothing: antialiased;
 
@@ -67,7 +67,7 @@ governing permissions and limitations under the License.
   height: 0;
   width: 0;
 
-  border-width: var(--spectrum-tooltip-tip-width);
+  border-width: var(--spectrum-tooltip-neutral-tip-width);
   border-style: solid;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -78,12 +78,12 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--left {
   .spectrum-Tooltip-tip {
     top: 50%;
-    margin-top: calc(-1 * var(--spectrum-tooltip-tip-width));
+    margin-top: calc(-1 * var(--spectrum-tooltip-neutral-tip-width));
   }
 }
 
 .spectrum-Tooltip--right {
-  margin-left: var(--spectrum-tooltip-target-offset);
+  margin-left: var(--spectrum-tooltip-neutral-target-offset);
   &.is-open {
     @inherit: %spectrum-overlay--right--open;
   }
@@ -94,7 +94,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip--left {
-  margin-right: var(--spectrum-tooltip-target-offset);
+  margin-right: var(--spectrum-tooltip-neutral-target-offset);
   &.is-open {
     @inherit: %spectrum-overlay--left--open;
   }
@@ -105,7 +105,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip--top {
-  margin-bottom: var(--spectrum-tooltip-target-offset);
+  margin-bottom: var(--spectrum-tooltip-neutral-target-offset);
   &.is-open {
     @inherit: %spectrum-overlay--top--open;
   }
@@ -115,7 +115,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tooltip--bottom {
-  margin-top: var(--spectrum-tooltip-target-offset);
+  margin-top: var(--spectrum-tooltip-neutral-target-offset);
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
   }
@@ -129,27 +129,28 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--top {
   .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: calc(-1 * var(--spectrum-tooltip-tip-width));
+    margin-left: calc(-1 * var(--spectrum-tooltip-neutral-tip-width));
   }
 }
 
 .spectrum-Tooltip-typeIcon {
   margin-inline-start: calc(
-    var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x)
+    var(--spectrum-tooltip-neutral-icon-margin-x) - var(--spectrum-tooltip-neutral-padding-x)
   );
-  margin-inline-end: var(--spectrum-tooltip-icon-margin-x);
-  width: var(--spectrum-tooltip-icon-size);
-  height: var(--spectrum-tooltip-icon-size);
+  margin-inline-end: var(--spectrum-tooltip-neutral-icon-margin-x);
+  margin-block-start: var(--spectrum-tooltip-neutral-icon-margin-y);
+  margin-block-end: var(--spectrum-tooltip-neutral-icon-margin-y);
+  width: var(--spectrum-tooltip-neutral-icon-size);
+  height: var(--spectrum-tooltip-neutral-icon-size);
   align-self: flex-start;
   flex-shrink: 0;
-
-  /* Adjusts for weird misalignment */
-  margin-block-start: 1px;
 }
 
 .spectrum-Tooltip-label {
   /* Make sure line height is correct to prevent problems in Windows */
-  line-height: var(--spectrum-tooltip-text-line-height);
+  line-height: var(--spectrum-tooltip-neutral-text-line-height);
+  margin-block-start: var(--spectrum-tooltip-neutral-text-margin-top);
+  margin-block-end: var(--spectrum-tooltip-neutral-text-margin-bottom);
 }
 
 .u-tooltip-showOnHover {
@@ -198,11 +199,11 @@ governing permissions and limitations under the License.
 
   .spectrum-Tooltip--bottom {
     top: 100%;
-    transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-tip-margin)));
+    transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-neutral-tip-margin)));
   }
 
   .spectrum-Tooltip--top {
-    transform: translate(-50%, var(--spectrum-tooltip-tip-margin));
+    transform: translate(-50%, var(--spectrum-tooltip-neutral-tip-margin));
   }
 
   &:hover .spectrum-Tooltip,
@@ -223,7 +224,7 @@ governing permissions and limitations under the License.
   &:focus .spectrum-Tooltip.spectrum-Tooltip--top,
   &.is-focused .spectrum-Tooltip.spectrum-Tooltip--top,
   *:focus .spectrum-Tooltip.spectrum-Tooltip--top {
-    transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-tip-margin)));
+    transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-neutral-tip-margin)));
   }
 
   &:hover .spectrum-Tooltip.spectrum-Tooltip--left,
@@ -231,7 +232,7 @@ governing permissions and limitations under the License.
   &.is-focused .spectrum-Tooltip.spectrum-Tooltip--left,
   *:focus .spectrum-Tooltip.spectrum-Tooltip--left {
     transform: translate(
-      calc(-100% - var(--spectrum-tooltip-tip-margin)),
+      calc(-100% - var(--spectrum-tooltip-neutral-tip-margin)),
       -50%
     );
   }
@@ -240,6 +241,6 @@ governing permissions and limitations under the License.
   &:focus .spectrum-Tooltip.spectrum-Tooltip--right,
   &.is-focused .spectrum-Tooltip.spectrum-Tooltip--right,
   *:focus .spectrum-Tooltip.spectrum-Tooltip--right {
-    transform: translate(var(--spectrum-tooltip-tip-margin), -50%);
+    transform: translate(var(--spectrum-tooltip-neutral-tip-margin), -50%);
   }
 }
