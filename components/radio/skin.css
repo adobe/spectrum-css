@@ -155,20 +155,17 @@ governing permissions and limitations under the License.
 .spectrum-Radio .spectrum-Radio-input:checked {
   &:disabled + .spectrum-Radio-button {
     &:before {
-      border-color: var(
-        --spectrum-radio-m-emphasized-circle-border-color-disabled
-      );
+      border-color: var(--spectrum-radio-m-circle-border-color-disabled);
     }
   }
 
   &:disabled ~ .spectrum-Radio-label {
-    color: var(--spectrum-radio-m-emphasized-text-color-disabled);
+    color: var(--spectrum-radio-m-text-color-disabled);
   }
 }
 
 /* Focus Overrides all */
-.spectrum-Radio,
-.spectrum-Radio--emphasized {
+.spectrum-Radio {
   & .spectrum-Radio-input:focus-ring,
   &:hover .spectrum-Radio-input:focus-ring {
     & + .spectrum-Radio-button {
@@ -181,6 +178,19 @@ governing permissions and limitations under the License.
           var(--spectrum-radio-m-focus-ring-color-key-focus);
       }
     }
+    &:checked + .spectrum-Radio-button {
+      &:before {
+        border-color: var(
+          --spectrum-radio-m-circle-border-color-selected-key-focus
+        );
+      }
+    }
+  }
+}
+
+.spectrum-Radio--emphasized {
+  & .spectrum-Radio-input:focus-ring,
+  &:hover .spectrum-Radio-input:focus-ring {
     &:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(
