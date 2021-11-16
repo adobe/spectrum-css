@@ -93,7 +93,7 @@ function runTaskOnPackages(task, packages) {
         runComponentTask(packageDir, task, function(err) {
           if (err) {
             if (!process.env.FORCE) {
-              process.exit();
+              process.exit(1);
             }
           }
           processPackage();
