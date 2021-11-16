@@ -6,7 +6,6 @@
   --spectrum-combobox-s-quiet-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-s-quiet-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-quiet-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-s-quiet-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-quiet-border-size-down: 0;
@@ -16,7 +15,6 @@
   --spectrum-combobox-s-quiet-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-s-quiet-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-quiet-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-s-quiet-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-quiet-border-size-hover: 0;
@@ -26,7 +24,6 @@
   --spectrum-combobox-s-quiet-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-s-quiet-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-quiet-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-s-quiet-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-quiet-border-size-key-focus: 0;
@@ -34,9 +31,8 @@
   --spectrum-combobox-s-quiet-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-s-quiet-focusring-render-key-focus: yes;
   --spectrum-combobox-s-quiet-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-s-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-s-quiet-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-s-quiet-border-bottom-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-combobox-s-quiet-border-size-mouse-focus: 0;
@@ -44,9 +40,8 @@
   --spectrum-combobox-s-quiet-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-s-quiet-focusring-render-mouse-focus: no;
   --spectrum-combobox-s-quiet-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-s-quiet-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-quiet-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-s-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-quiet-pickerbutton-fill-border-color: transparent;
@@ -71,11 +66,10 @@
   --spectrum-combobox-s-quiet-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-s-quiet-focusring-border-radius: 0;
   --spectrum-combobox-s-quiet-focusring-border-width: 0;
-  --spectrum-combobox-s-quiet-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-s-quiet-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-s-quiet-focusring-ringsize: 0;
+  --spectrum-combobox-s-quiet-focusring-border-bottom-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-combobox-s-quiet-focusring-type: focusring;
   --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
   --spectrum-combobox-s-quiet-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
@@ -90,6 +84,7 @@
   --spectrum-combobox-s-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-combobox-s-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-combobox-s-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-combobox-s-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-s-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-s-quiet-pickerbutton-width: auto;
   --spectrum-combobox-s-quiet-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -107,7 +102,6 @@
   --spectrum-combobox-s-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-s-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-s-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-s-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-s-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-border-size-down: var(--spectrum-alias-input-border-size);
@@ -117,7 +111,6 @@
   --spectrum-combobox-s-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-s-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-s-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-s-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-s-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-border-size-hover: var(--spectrum-alias-input-border-size);
@@ -127,7 +120,6 @@
   --spectrum-combobox-s-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-s-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-s-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-s-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-s-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-border-size-key-focus: var(--spectrum-alias-border-size-thick);
@@ -135,9 +127,8 @@
   --spectrum-combobox-s-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-s-focusring-render-key-focus: yes;
   --spectrum-combobox-s-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-s-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-s-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-s-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-s-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-s-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-s-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-s-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
@@ -145,9 +136,8 @@
   --spectrum-combobox-s-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-s-focusring-render-mouse-focus: no;
   --spectrum-combobox-s-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-s-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-s-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-s-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-s-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-s-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-s-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-s-pickerbutton-fill-border-color: transparent;
@@ -172,11 +162,10 @@
   --spectrum-combobox-s-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-s-focusring-border-radius: var(--spectrum-alias-component-focusring-border-radius);
   --spectrum-combobox-s-focusring-border-width: var(--spectrum-alias-component-focusring-size);
-  --spectrum-combobox-s-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-s-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-s-focusring-ringsize: var(--spectrum-alias-component-focusring-size);
+  --spectrum-combobox-s-focusring-border-bottom-width: var(--spectrum-alias-component-focusring-size);
   --spectrum-combobox-s-focusring-type: focusring;
   --spectrum-combobox-s-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-s-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-s-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-s-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
   --spectrum-combobox-s-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-s);
@@ -191,6 +180,7 @@
   --spectrum-combobox-s-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-combobox-s-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-combobox-s-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-combobox-s-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-s-pickerbutton-min-width: 0;
   --spectrum-combobox-s-pickerbutton-width: auto;
   --spectrum-combobox-s-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -208,7 +198,6 @@
   --spectrum-combobox-m-quiet-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-m-quiet-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-quiet-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-m-quiet-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-quiet-border-size-down: 0;
@@ -218,7 +207,6 @@
   --spectrum-combobox-m-quiet-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-m-quiet-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-quiet-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-m-quiet-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-quiet-border-size-hover: 0;
@@ -228,7 +216,6 @@
   --spectrum-combobox-m-quiet-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-m-quiet-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-quiet-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-m-quiet-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-quiet-border-size-key-focus: 0;
@@ -236,9 +223,8 @@
   --spectrum-combobox-m-quiet-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-m-quiet-focusring-render-key-focus: yes;
   --spectrum-combobox-m-quiet-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-m-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-m-quiet-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-m-quiet-border-bottom-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-combobox-m-quiet-border-size-mouse-focus: 0;
@@ -246,9 +232,8 @@
   --spectrum-combobox-m-quiet-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-m-quiet-focusring-render-mouse-focus: no;
   --spectrum-combobox-m-quiet-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-m-quiet-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-quiet-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-m-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-quiet-pickerbutton-fill-border-color: transparent;
@@ -275,11 +260,10 @@
   --spectrum-combobox-m-quiet-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-m-quiet-focusring-border-radius: 0;
   --spectrum-combobox-m-quiet-focusring-border-width: 0;
-  --spectrum-combobox-m-quiet-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-m-quiet-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-m-quiet-focusring-ringsize: 0;
+  --spectrum-combobox-m-quiet-focusring-border-bottom-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-combobox-m-quiet-focusring-type: focusring;
   --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
   --spectrum-combobox-m-quiet-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
@@ -294,6 +278,7 @@
   --spectrum-combobox-m-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-combobox-m-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-combobox-m-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-combobox-m-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-m-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-m-quiet-pickerbutton-width: auto;
   --spectrum-combobox-m-quiet-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -311,7 +296,6 @@
   --spectrum-combobox-m-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-m-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-m-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-m-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-m-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-border-size-down: var(--spectrum-alias-input-border-size);
@@ -321,7 +305,6 @@
   --spectrum-combobox-m-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-m-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-m-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-m-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-m-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-border-size-hover: var(--spectrum-alias-input-border-size);
@@ -331,7 +314,6 @@
   --spectrum-combobox-m-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-m-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-m-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-m-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-m-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-border-size-key-focus: var(--spectrum-alias-border-size-thick);
@@ -339,9 +321,8 @@
   --spectrum-combobox-m-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-m-focusring-render-key-focus: yes;
   --spectrum-combobox-m-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-m-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-m-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-m-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-m-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-m-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-m-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-m-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
@@ -349,9 +330,8 @@
   --spectrum-combobox-m-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-m-focusring-render-mouse-focus: no;
   --spectrum-combobox-m-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-m-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-m-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-m-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-m-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-m-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-m-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-m-pickerbutton-fill-border-color: transparent;
@@ -378,11 +358,10 @@
   --spectrum-combobox-m-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-m-focusring-border-radius: var(--spectrum-alias-component-focusring-border-radius);
   --spectrum-combobox-m-focusring-border-width: var(--spectrum-alias-component-focusring-size);
-  --spectrum-combobox-m-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-m-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-m-focusring-ringsize: var(--spectrum-alias-component-focusring-size);
+  --spectrum-combobox-m-focusring-border-bottom-width: var(--spectrum-alias-component-focusring-size);
   --spectrum-combobox-m-focusring-type: focusring;
   --spectrum-combobox-m-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-m-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-m-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-m-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
   --spectrum-combobox-m-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-m);
@@ -397,6 +376,7 @@
   --spectrum-combobox-m-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-combobox-m-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-combobox-m-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-combobox-m-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-m-pickerbutton-min-width: 0;
   --spectrum-combobox-m-pickerbutton-width: auto;
   --spectrum-combobox-m-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -414,7 +394,6 @@
   --spectrum-combobox-l-quiet-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-l-quiet-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-quiet-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-l-quiet-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-quiet-border-size-down: 0;
@@ -424,7 +403,6 @@
   --spectrum-combobox-l-quiet-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-l-quiet-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-quiet-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-l-quiet-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-quiet-border-size-hover: 0;
@@ -434,7 +412,6 @@
   --spectrum-combobox-l-quiet-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-l-quiet-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-quiet-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-l-quiet-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-quiet-border-size-key-focus: 0;
@@ -442,9 +419,8 @@
   --spectrum-combobox-l-quiet-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-l-quiet-focusring-render-key-focus: yes;
   --spectrum-combobox-l-quiet-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-l-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-l-quiet-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-l-quiet-border-bottom-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-combobox-l-quiet-border-size-mouse-focus: 0;
@@ -452,9 +428,8 @@
   --spectrum-combobox-l-quiet-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-l-quiet-focusring-render-mouse-focus: no;
   --spectrum-combobox-l-quiet-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-l-quiet-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-quiet-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-l-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-quiet-pickerbutton-fill-border-color: transparent;
@@ -479,11 +454,10 @@
   --spectrum-combobox-l-quiet-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-l-quiet-focusring-border-radius: 0;
   --spectrum-combobox-l-quiet-focusring-border-width: 0;
-  --spectrum-combobox-l-quiet-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-l-quiet-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-l-quiet-focusring-ringsize: 0;
+  --spectrum-combobox-l-quiet-focusring-border-bottom-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-combobox-l-quiet-focusring-type: focusring;
   --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
   --spectrum-combobox-l-quiet-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
@@ -498,6 +472,7 @@
   --spectrum-combobox-l-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-combobox-l-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-combobox-l-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-combobox-l-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-l-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-l-quiet-pickerbutton-width: auto;
   --spectrum-combobox-l-quiet-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-l);
@@ -515,7 +490,6 @@
   --spectrum-combobox-l-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-l-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-l-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-l-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-l-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-border-size-down: var(--spectrum-alias-input-border-size);
@@ -525,7 +499,6 @@
   --spectrum-combobox-l-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-l-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-l-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-l-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-l-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-border-size-hover: var(--spectrum-alias-input-border-size);
@@ -535,7 +508,6 @@
   --spectrum-combobox-l-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-l-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-l-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-l-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-l-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-border-size-key-focus: var(--spectrum-alias-border-size-thick);
@@ -543,9 +515,8 @@
   --spectrum-combobox-l-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-l-focusring-render-key-focus: yes;
   --spectrum-combobox-l-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-l-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-l-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-l-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-l-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-l-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-l-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-l-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
@@ -553,9 +524,8 @@
   --spectrum-combobox-l-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-l-focusring-render-mouse-focus: no;
   --spectrum-combobox-l-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-l-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-l-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-l-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-l-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-l-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-l-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-l-pickerbutton-fill-border-color: transparent;
@@ -580,11 +550,10 @@
   --spectrum-combobox-l-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-l-focusring-border-radius: var(--spectrum-alias-component-focusring-border-radius);
   --spectrum-combobox-l-focusring-border-width: var(--spectrum-alias-component-focusring-size);
-  --spectrum-combobox-l-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-l-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-l-focusring-ringsize: var(--spectrum-alias-component-focusring-size);
+  --spectrum-combobox-l-focusring-border-bottom-width: var(--spectrum-alias-component-focusring-size);
   --spectrum-combobox-l-focusring-type: focusring;
   --spectrum-combobox-l-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-l-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-l-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-l-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
   --spectrum-combobox-l-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-l);
@@ -599,6 +568,7 @@
   --spectrum-combobox-l-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-combobox-l-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-combobox-l-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-combobox-l-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-l-pickerbutton-min-width: 0;
   --spectrum-combobox-l-pickerbutton-width: auto;
   --spectrum-combobox-l-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-l);
@@ -616,7 +586,6 @@
   --spectrum-combobox-xl-quiet-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-quiet-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-xl-quiet-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-quiet-border-size-down: 0;
@@ -626,7 +595,6 @@
   --spectrum-combobox-xl-quiet-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-quiet-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-xl-quiet-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-quiet-border-size-hover: 0;
@@ -636,7 +604,6 @@
   --spectrum-combobox-xl-quiet-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-quiet-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-xl-quiet-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-quiet-border-size-key-focus: 0;
@@ -644,9 +611,8 @@
   --spectrum-combobox-xl-quiet-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-xl-quiet-focusring-render-key-focus: yes;
   --spectrum-combobox-xl-quiet-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-xl-quiet-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-xl-quiet-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-xl-quiet-border-bottom-size-key-focus: var(--spectrum-alias-border-size-thick);
   --spectrum-combobox-xl-quiet-border-size-mouse-focus: 0;
@@ -654,9 +620,8 @@
   --spectrum-combobox-xl-quiet-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-xl-quiet-focusring-render-mouse-focus: no;
   --spectrum-combobox-xl-quiet-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-quiet-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-xl-quiet-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-border-color: transparent;
@@ -683,11 +648,10 @@
   --spectrum-combobox-xl-quiet-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-xl-quiet-focusring-border-radius: 0;
   --spectrum-combobox-xl-quiet-focusring-border-width: 0;
-  --spectrum-combobox-xl-quiet-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-xl-quiet-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-xl-quiet-focusring-ringsize: 0;
+  --spectrum-combobox-xl-quiet-focusring-border-bottom-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-combobox-xl-quiet-focusring-type: focusring;
   --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
@@ -702,6 +666,7 @@
   --spectrum-combobox-xl-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-combobox-xl-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-xl-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-xl-quiet-pickerbutton-width: auto;
   --spectrum-combobox-xl-quiet-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-xl);
@@ -719,7 +684,6 @@
   --spectrum-combobox-xl-focusring-border-color: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-xl-pickerbutton-fill-uiicon-color: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-xl-pickerbutton-fill-background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-xl-pickerbutton-fill-border-size: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-border-color: var(--spectrum-alias-input-border-color-default);
   --spectrum-combobox-xl-border-bottom-size: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-border-size-down: var(--spectrum-alias-input-border-size);
@@ -729,7 +693,6 @@
   --spectrum-combobox-xl-focusring-border-color-down: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-xl-pickerbutton-fill-uiicon-color-down: var(--spectrum-alias-component-icon-color-down);
   --spectrum-combobox-xl-pickerbutton-fill-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down);
-  --spectrum-combobox-xl-pickerbutton-fill-border-size-down: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-border-color-down: var(--spectrum-alias-input-border-color-down);
   --spectrum-combobox-xl-border-bottom-size-down: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-border-size-hover: var(--spectrum-alias-input-border-size);
@@ -739,7 +702,6 @@
   --spectrum-combobox-xl-focusring-border-color-hover: var(--spectrum-alias-background-color-transparent);
   --spectrum-combobox-xl-pickerbutton-fill-uiicon-color-hover: var(--spectrum-alias-component-icon-color-hover);
   --spectrum-combobox-xl-pickerbutton-fill-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover);
-  --spectrum-combobox-xl-pickerbutton-fill-border-size-hover: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-combobox-xl-border-bottom-size-hover: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-border-size-key-focus: var(--spectrum-alias-border-size-thick);
@@ -747,9 +709,8 @@
   --spectrum-combobox-xl-text-color-key-focus: var(--spectrum-alias-component-text-color-key-focus);
   --spectrum-combobox-xl-focusring-render-key-focus: yes;
   --spectrum-combobox-xl-focusring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-combobox-xl-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-key-focus);
-  --spectrum-combobox-xl-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus);
-  --spectrum-combobox-xl-pickerbutton-fill-border-size-key-focus: var(--spectrum-alias-border-size-thick);
+  --spectrum-combobox-xl-pickerbutton-fill-uiicon-color-key-focus: var(--spectrum-alias-component-icon-color-default);
+  --spectrum-combobox-xl-pickerbutton-fill-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
   --spectrum-combobox-xl-border-color-key-focus: var(--spectrum-alias-input-border-color-key-focus);
   --spectrum-combobox-xl-border-bottom-size-key-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-border-size-mouse-focus: var(--spectrum-alias-input-border-size);
@@ -757,9 +718,8 @@
   --spectrum-combobox-xl-text-color-mouse-focus: var(--spectrum-alias-component-text-color-mouse-focus);
   --spectrum-combobox-xl-focusring-render-mouse-focus: no;
   --spectrum-combobox-xl-focusring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-combobox-xl-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-mouse-focus);
+  --spectrum-combobox-xl-pickerbutton-fill-uiicon-color-mouse-focus: var(--spectrum-alias-component-icon-color-default);
   --spectrum-combobox-xl-pickerbutton-fill-background-color-mouse-focus: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default);
-  --spectrum-combobox-xl-pickerbutton-fill-border-size-mouse-focus: var(--spectrum-alias-border-size-thin);
   --spectrum-combobox-xl-border-color-mouse-focus: var(--spectrum-alias-input-border-color-mouse-focus);
   --spectrum-combobox-xl-border-bottom-size-mouse-focus: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-xl-pickerbutton-fill-border-color: transparent;
@@ -786,11 +746,10 @@
   --spectrum-combobox-xl-focusring-gap: var(--spectrum-alias-input-focusring-gap);
   --spectrum-combobox-xl-focusring-border-radius: var(--spectrum-alias-component-focusring-border-radius);
   --spectrum-combobox-xl-focusring-border-width: var(--spectrum-alias-component-focusring-size);
-  --spectrum-combobox-xl-focusring-border-bottom-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-combobox-xl-focusring-ringgap: var(--spectrum-alias-input-focusring-gap);
-  --spectrum-combobox-xl-focusring-ringsize: var(--spectrum-alias-component-focusring-size);
+  --spectrum-combobox-xl-focusring-border-bottom-width: var(--spectrum-alias-component-focusring-size);
   --spectrum-combobox-xl-focusring-type: focusring;
   --spectrum-combobox-xl-pickerbutton-fill-uiicon-type: ui-icon;
+  --spectrum-combobox-xl-pickerbutton-fill-uiicon-render: yes;
   --spectrum-combobox-xl-pickerbutton-fill-uiicon-rotate: 90deg;
   --spectrum-combobox-xl-pickerbutton-fill-uiicon-margin-top: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
   --spectrum-combobox-xl-pickerbutton-fill-uiicon-margin-bottom: var(--spectrum-alias-pickerbutton-icon-margin-y-xl);
@@ -805,6 +764,7 @@
   --spectrum-combobox-xl-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-combobox-xl-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-combobox-xl-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-combobox-xl-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-xl-pickerbutton-min-width: 0;
   --spectrum-combobox-xl-pickerbutton-width: auto;
   --spectrum-combobox-xl-pickerbutton-padding: var(--spectrum-alias-infieldbutton-padding-xl);

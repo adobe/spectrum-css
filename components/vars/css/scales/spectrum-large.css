@@ -90,6 +90,7 @@
   --spectrum-alias-control-three-width-m: var(--spectrum-global-dimension-static-size-450);
   --spectrum-alias-control-three-width-l: 41px;
   --spectrum-alias-control-three-width-xl: 46px;
+  --spectrum-alias-search-padding-left-m: var(--spectrum-global-dimension-static-size-150);
   --spectrum-alias-focus-ring-radius-default: var(--spectrum-global-dimension-static-size-115);
   --spectrum-alias-workflow-icon-size-l: var(--spectrum-global-dimension-static-size-300);
   --spectrum-alias-ui-icon-chevron-size-75: var(--spectrum-global-dimension-static-size-150);
@@ -1320,7 +1321,6 @@
   --spectrum-search-m-quiet-touch-hit-y: var(--spectrum-global-dimension-size-50);
   --spectrum-search-m-touch-hit-x: var(--spectrum-global-dimension-size-50);
   --spectrum-search-m-touch-hit-y: var(--spectrum-global-dimension-size-50);
-  --spectrum-search-m-padding-left: var(--spectrum-global-dimension-static-size-150);
   --spectrum-search-l-quiet-icon-size: var(--spectrum-global-dimension-static-size-300);
   --spectrum-search-l-quiet-placeholder-padding-top: var(--spectrum-global-dimension-static-size-150);
   --spectrum-search-l-quiet-text-padding-top: var(--spectrum-global-dimension-static-size-150);
