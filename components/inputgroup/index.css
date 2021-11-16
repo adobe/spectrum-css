@@ -21,9 +21,14 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-range-input-width-first: calc(
     var(--spectrum-global-dimension-size-1600) - 2 * var(--spectrum-inputgroup-generic-padding)
   );
-  --spectrum-datepicker-input-width: calc(
+  --spectrum-datepicker-input-width-base: calc(
     var(--spectrum-datepicker-range-input-width-first) +
       var(--spectrum-textfield-m-texticon-icon-size)
+  );
+  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+  --spectrum-datepicker-input-width: calc(
+    var(--spectrum-datepicker-input-width-base) +
+      var(--spectrum-alias-infieldbutton-full-height-m)
   );
   --spectrum-datepicker-range-input-width-quiet-first: calc(
     var(--spectrum-global-dimension-size-900) +
@@ -31,31 +36,37 @@ governing permissions and limitations under the License.
   );
   --spectrum-datepicker-input-width-quiet: calc(
     var(--spectrum-datepicker-range-input-width-quiet-first) +
-      var(--spectrum-textfield-m-texticon-icon-size)
+      var(--spectrum-textfield-m-texticon-icon-size) +
+      var(--spectrum-alias-infieldbutton-full-height-m)
   );
 
   --spectrum-datepicker-datetime-input-width-first: calc(
-    var(--spectrum-datepicker-input-width) +
+    var(--spectrum-datepicker-input-width-base) +
       var(--spectrum-global-dimension-size-450)
   );
+  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
   --spectrum-datepicker-datetime-input-width: calc(
     var(--spectrum-datepicker-datetime-input-width-first) +
-      var(--spectrum-textfield-m-texticon-icon-size)
+      var(--spectrum-textfield-m-texticon-icon-size) +
+      var(--spectrum-alias-infieldbutton-full-height-m)
   );
 
   --spectrum-datepicker-datetime-quiet-input-width-first: calc(
-    var(--spectrum-datepicker-input-width) +
+    var(--spectrum-datepicker-input-width-base) +
       var(--spectrum-global-dimension-size-300)
   );
   --spectrum-datepicker-datetime-quiet-input-width: calc(
     var(--spectrum-datepicker-datetime-quiet-input-width-first) +
-      var(--spectrum-textfield-m-texticon-icon-size)
+      var(--spectrum-textfield-m-texticon-icon-size) +
+      var(--spectrum-alias-infieldbutton-full-height-m)
   );
 
   --spectrum-datepicker-range-dash-margin-left: calc(
     -0.5 * var(--spectrum-global-dimension-static-font-size-100)
   );
   --spectrum-datepicker-range-dash-padding-top: 0;
+
+  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
   --spectrum-datepicker-range-dash-line-height: calc(
     var(--spectrum-textfield-m-texticon-height) - var(--spectrum-global-dimension-size-100)
   );
@@ -69,6 +80,14 @@ governing permissions and limitations under the License.
     var(--spectrum-actionbutton-m-texticon-min-width) / 2 -
       var(--spectrum-alias-ui-icon-chevron-size-100) / 2
   );
+
+  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+  --spectrum-textfield-icon-inline-end-override: calc(var(--spectrum-alias-infieldbutton-full-height-m) + var(--spectrum-global-dimension-size-100));
+}
+
+/* hack: use var so it doesn't disappear */
+.🤫 {
+  width: var(--spectrum-textfield-icon-inline-end-override);
 }
 
 .spectrum-InputGroup {
@@ -78,75 +97,73 @@ governing permissions and limitations under the License.
   flex-wrap: nowrap;
   min-inline-size: var(--spectrum-alias-single-line-width);
   border-radius: var(--spectrum-alias-border-radius-regular);
-
-  .spectrum-InputGroup-button {
-    padding: 0;
-    inline-size: var(--spectrum-combobox-button-width);
-    border-start-start-radius: var(
-      --spectrum-combobox-fieldbutton-border-top-left-radius
-    );
-    border-end-start-radius: var(
-      --spectrum-combobox-fieldbutton-border-bottom-left-radius
-    );
-  }
-
-  .spectrum-InputGroup-input {
-    inline-size: auto;
-  }
 }
 
 .spectrum-InputGroup-button {
   /* Be above textfield so box shadow shines through */
-  position: relative;
+  position: absolute;
+  inset-inline-end: 0;
 }
 
 .spectrum-InputGroup-input {
-  border-start-end-radius: var(
-    --spectrum-combobox-textfield-border-top-right-radius
-  );
-  border-end-end-radius: var(
-    --spectrum-combobox-textfield-border-bottom-right-radius
-  );
-  border-inline-end-width: var(--spectrum-combobox-field-border-width-right);
+  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+  padding-right: var(--spectrum-alias-infieldbutton-full-height-m);
+
+  /* fill space */
   flex: 1;
 }
 
 .spectrum-InputGroup--quiet {
   border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
+  /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+  --spectrum-textfield-icon-inline-end-override: var(--spectrum-alias-infieldbutton-full-height-m);
+
   .spectrum-InputGroup-button {
     inline-size: auto;
-    position: relative;
 
-    padding-inline-start: var(--spectrum-combobox-quiet-button-offset);
-    padding-inline-end: var(
-      --spectrum-combobox-quiet-fieldbutton-padding-right
-    );
-
-
-    border-block-start: 0;
-    border-inline-start: 0;
-    border-inline-end: 0;
-    border-block-end: var(--spectrum-textfield-m-quiet-texticon-border-size) solid;
-    border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
-
-    /* More hitarea */
-    &:after {
-      content: "";
-      position: absolute;
-      block-size: 100%;
-      inline-size: var(--spectrum-combobox-quiet-button-offset);
-      inset-inline-end: calc(var(--spectrum-combobox-quiet-button-offset) * -1);
-    }
-  }
-
-  .spectrum-InputGroup-icon {
-    inset-inline-end: 0;
+    inset-inline-end: calc(-1 * var(--spectrum-alias-combobox-quiet-button-offset-x));
   }
 }
 
 .spectrum-Datepicker--range {
   border-radius: var(--spectrum-alias-border-radius-regular);
+
+  /* focus-ring */
+  &:after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc(var(--spectrum-textfield-m-texticon-focus-ring-gap) * -1);
+    border-radius: calc(var(--spectrum-textfield-m-texticon-border-radius) + var(--spectrum-textfield-m-texticon-focus-ring-gap));
+    border-color: transparent;
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out, border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  &.is-keyboardFocused:not(.spectrum-InputGroup--quiet) {
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-textfield-m-texticon-focus-ring-border-width) var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
+    }
+
+    .spectrum-InputGroup-textfield:after {
+      display: none;
+    }
+  }
+
+  &.is-keyboardFocused.spectrum-InputGroup--quiet {
+    &:after {
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+      border-bottom: 2px solid var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
+      bottom: calc(-1 * var(--spectrum-alias-input-quiet-focusline-gap));
+    }
+  }
+
   /* Input Group */
   &.spectrum-InputGroup--quiet {
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
@@ -208,11 +225,14 @@ governing permissions and limitations under the License.
 
     &.spectrum-Datepicker-startField {
       border-inline-end: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
       padding-inline-end: var(--spectrum-inputgroup-generic-padding);
     }
     &.spectrum-Datepicker-endField {
       border-inline-start: 0;
-      border-radius: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       padding-inline-start: var(--spectrum-inputgroup-generic-padding);
     }
   }
