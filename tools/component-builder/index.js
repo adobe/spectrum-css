@@ -30,6 +30,11 @@ const build = gulp.series(
 
 const buildLite = gulp.series(
   clean,
+  css.buildIndexVars
+);
+
+const buildMedium = gulp.series(
+  clean,
   css.buildVars
 );
 
@@ -41,6 +46,7 @@ const buildHeavy = gulp.series(
 exports.default = build;
 exports.build = build;
 exports.buildLite = buildLite;
+exports.buildMedium = buildMedium;
 exports.buildHeavy = buildHeavy;
 exports.clean = clean;
 

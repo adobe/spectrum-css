@@ -40,6 +40,7 @@ let buildVars = gulp.series(
   vars.bakeVars
 );
 
+exports.buildIndexVars = buildIndexVars;
 exports.buildVars = buildVars;
 
 exports.buildCSS = gulp.series(
