@@ -74,6 +74,27 @@ governing permissions and limitations under the License.
   pointer-events: none;
 }
 
+.spectrum-Textfield {
+  &.is-keyboardFocused {
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-textfield-m-texticon-focus-ring-border-width) var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
+    }
+
+    &.spectrum-Textfield--quiet {
+      .spectrum-Textfield-input {
+        box-shadow: none;
+      }
+
+      &:after {
+        margin: 0;
+        box-shadow: none;
+        border-bottom: 2px solid var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
+        bottom: calc(-1 * var(--spectrum-alias-input-quiet-focusline-gap));
+      }
+    }
+  }
+}
+
 .spectrum-Textfield-input {
   background-color: var(--spectrum-textfield-m-texticon-background-color);
   border-color: var(--spectrum-textfield-m-texticon-border-color);
@@ -91,16 +112,19 @@ governing permissions and limitations under the License.
   .spectrum-Textfield.is-keyboardFocused &,
   &:focus-ring {
     border-color: var(--spectrum-textfield-m-texticon-border-color-key-focus);
-    box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-key-focus);
   }
 
   .spectrum-Textfield.is-invalid & {
     border-color: var(--spectrum-textfield-m-texticon-border-color-invalid);
 
+    .is-focused&,
+    &:focus {
+      border-color: var(--spectrum-textfield-m-texticon-border-color-invalid-mouse-focus);
+    }
+
     .is-keyboardFocused&,
     &:focus-ring {
       border-color: var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
-      box-shadow: 0 0 0 1px var(--spectrum-textfield-m-texticon-border-color-invalid-key-focus);
     }
   }
 
