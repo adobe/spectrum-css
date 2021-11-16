@@ -140,6 +140,7 @@
   --spectrum-alias-component-focusring-size-emphasized: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-component-focusring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-alias-input-focusring-gap: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-alias-input-quiet-focusline-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-alias-border-radius-xsmall: var(--spectrum-global-dimension-size-25);
   --spectrum-alias-border-radius-small: var(--spectrum-global-dimension-size-40);
   --spectrum-alias-border-radius-regular: var(--spectrum-global-dimension-size-75);
@@ -171,6 +172,7 @@
   --spectrum-alias-infieldbutton-padding-xl: var(--spectrum-global-dimension-size-50);
   --spectrum-alias-infieldbutton-border-radius: var(--spectrum-global-dimension-size-40);
   --spectrum-alias-infieldbutton-border-radius-sided: var(--spectrum-global-dimension-size-40);
+  --spectrum-alias-infieldbutton-border-size: var(--spectrum-global-dimension-static-size-0);
   --spectrum-alias-infieldbutton-fill-padding-s: var(--spectrum-global-dimension-size-10);
   --spectrum-alias-infieldbutton-fill-padding-m: var(--spectrum-global-dimension-size-40);
   --spectrum-alias-infieldbutton-fill-padding-l: var(--spectrum-global-dimension-size-75);
@@ -220,11 +222,16 @@
   --spectrum-alias-pickerbutton-label-padding-y-xl: var(--spectrum-global-dimension-size-100);
   --spectrum-alias-pickerbutton-border-radius-rounded: var(--spectrum-global-dimension-size-150);
   --spectrum-alias-search-border-radius: var(--spectrum-global-dimension-size-300);
+  --spectrum-alias-combobox-quiet-button-offset-x: var(--spectrum-global-dimension-size-50);
   --spectrum-alias-thumbnail-border-radius-small: var(--spectrum-global-dimension-size-75);
   --spectrum-alias-focus-ring-gap-small: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-focus-ring-size-small: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-input-border-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-avatar-border-size: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-alias-search-padding-left-s: var(--spectrum-global-dimension-size-125);
+  --spectrum-alias-search-padding-left-m: var(--spectrum-global-dimension-size-175);
+  --spectrum-alias-search-padding-left-l: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-search-padding-left-xl: var(--spectrum-global-dimension-size-225);
   --spectrum-alias-search-border-radius-quiet: 0;
   --spectrum-alias-percent-50: 50%;
   --spectrum-alias-percent-70: 70%;

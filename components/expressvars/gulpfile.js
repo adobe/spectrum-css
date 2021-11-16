@@ -159,4 +159,4 @@ exports.update = gulp.series(
 
 exports.clean = clean;
 exports.default = build;
-exports.build = exports.buildLite = exports.buildHeavy = build;
+exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = build;

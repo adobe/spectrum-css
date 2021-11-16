@@ -40,6 +40,7 @@
   --spectrum-alias-component-icon-color-emphasized-selected: var(--spectrum-alias-component-icon-color-emphasized-selected-default);
   --spectrum-alias-component-background-color-disabled: var(--spectrum-global-color-gray-200);
   --spectrum-alias-component-background-color-quiet-disabled: var(--spectrum-alias-background-color-transparent);
+  --spectrum-alias-component-background-color-quiet-selected-disabled: var(--spectrum-alias-component-background-color-disabled);
   --spectrum-alias-component-background-color-default: var(--spectrum-global-color-gray-75);
   --spectrum-alias-component-background-color-hover: var(--spectrum-global-color-gray-50);
   --spectrum-alias-component-background-color-down: var(--spectrum-global-color-gray-200);
@@ -201,6 +202,9 @@
   --spectrum-alias-background-color-yellow-down: var(--spectrum-global-color-static-yellow-800);
   --spectrum-alias-background-color-yellow: var(--spectrum-alias-background-color-yellow-default);
   --spectrum-alias-infieldbutton-background-color: var(--spectrum-global-color-gray-200);
+  --spectrum-alias-infieldbutton-fill-loudnessLow-border-color-disabled: transparent;
+  --spectrum-alias-infieldbutton-fill-loudnessMedium-border-color-disabled: transparent;
+  --spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled: var(--spectrum-alias-component-background-color-disabled);
   --spectrum-alias-infieldbutton-fill-border-color-default: var(--spectrum-alias-input-border-color-default);
   --spectrum-alias-infieldbutton-fill-border-color-hover: var(--spectrum-alias-input-border-color-hover);
   --spectrum-alias-infieldbutton-fill-border-color-down: var(--spectrum-alias-input-border-color-down);
@@ -215,7 +219,7 @@
   --spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-hover);
   --spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down);
   --spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-key-focus);
-  --spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-disabled: var(--spectrum-alias-component-background-color-disabled);
+  --spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-disabled: transparent;
   --spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default: var(--spectrum-alias-component-background-color-default);
   --spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover: var(--spectrum-alias-component-background-color-hover);
   --spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down: var(--spectrum-alias-component-background-color-down);
