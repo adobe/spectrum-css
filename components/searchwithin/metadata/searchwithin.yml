@@ -11,6 +11,12 @@ sections:
 
       Since Picker's markup has changed, `.spectrum-SearchWithin-pickerTrigger` is no longer required.
 
+      ### `.spectrum-SearchWithin-clearButton` must be added to `.spectrum-ClearButton`
+      The `.spectrum-SearchWithin-clearButton` class is now required on the `.spectrum-ClearButton`.
+
+      ### New ClearButton markup
+      See the [ClearButton migration guide](clearbutton.html#migrationguide) for more information.
+
 examples:
   - id: searchwithin
     name: Standard
@@ -26,7 +32,7 @@ examples:
         <div class="spectrum-Textfield">
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-SearchWithin-input" autocomplete="off">
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton">
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
@@ -46,7 +52,7 @@ examples:
         <div class="spectrum-Textfield">
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-SearchWithin-input" autocomplete="off">
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton">
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
@@ -83,7 +89,7 @@ examples:
         <div class="spectrum-Textfield">
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-SearchWithin-input" autocomplete="off">
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton">
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
@@ -103,7 +109,7 @@ examples:
         <div class="spectrum-Textfield is-disabled">
           <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-SearchWithin-input" autocomplete="off" value="Term" disabled>
         </div>
-        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton">
+        <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton">
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross100" />
