@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.3.0"></a>
+# 4.3.0
+🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.2.0...@spectrum-css/vars@4.3.0)
+
+### ✨ Features
+
+* spectrum-tokens@8.4.0, spectrum-express-tokens@1.0.0-beta.13 ([bb059fb](https://github.com/adobe/spectrum-css/commit/bb059fb))
+* spectrum-tokens@8.5.0, spectrum-express-tokens@1.0.0-beta.14 ([910c43a](https://github.com/adobe/spectrum-css/commit/910c43a))
+
+
+
+
+
 <a name="4.2.0"></a>
 # 4.2.0
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.1.1...@spectrum-css/vars@4.2.0)

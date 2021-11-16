@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.1.2...@spectrum-css/search@4.0.0)
+
+### ✨ Features
+
+* make Search use tokens for its Textfield radius to support Express ([785b57f](https://github.com/adobe/spectrum-css/commit/785b57f))
+
+
+### 🛑 BREAKING CHANGES
+
+* a new classname is required to enable this. See migration guide
+
+
+
+
+
 <a name="3.1.2"></a>
 ## 3.1.2
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@3.1.1...@spectrum-css/search@3.1.2)

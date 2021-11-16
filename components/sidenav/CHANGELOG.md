@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.9"></a>
+## 3.0.9
+🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.8...@spectrum-css/sidenav@3.0.9)
+
+### 🐛 Bug fixes
+
+* focus-ring on SideNav ([3e91b5b](https://github.com/adobe/spectrum-css/commit/3e91b5b)), closes [#1317](https://github.com/adobe/spectrum-css/issues/1317)
+* focus-ring on SideNav, closes [#1317](https://github.com/adobe/spectrum-css/issues/1317) ([8006ff0](https://github.com/adobe/spectrum-css/commit/8006ff0))
+* make focus-ring animate nicely ([45b22e4](https://github.com/adobe/spectrum-css/commit/45b22e4))
+
+
+
+
+
 <a name="3.0.8"></a>
 ## 3.0.8
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/sidenav@3.0.7...@spectrum-css/sidenav@3.0.8)

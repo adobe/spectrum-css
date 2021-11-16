@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.0"></a>
+# 3.2.0
+🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.1.2...@spectrum-css/searchwithin@3.2.0)
+
+### ✨ Features
+
+* add classname to position clearbutton ([694cc40](https://github.com/adobe/spectrum-css/commit/694cc40))
+
+
+
+
+
 <a name="3.1.2"></a>
 ## 3.1.2
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.1.1...@spectrum-css/searchwithin@3.1.2)

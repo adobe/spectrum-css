@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@3.0.8...@spectrum-css/inputgroup@4.0.0)
+
+### ✨ Features
+
+* use PickerButton in Combobox and DatePicker ([22aaea5](https://github.com/adobe/spectrum-css/commit/22aaea5))
+
+
+### 🛑 BREAKING CHANGES
+
+* InputGroup now uses PickerButton, see migration guide
+
+
+
+
+
 <a name="3.0.8"></a>
 ## 3.0.8
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@3.0.7...@spectrum-css/inputgroup@3.0.8)

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.10"></a>
+## 3.0.10
+🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.9...@spectrum-css/dialog@3.0.10)
+
+### 🐛 Bug fixes
+
+* add missing classes to Dialog's ActionButton, fixes [#1314](https://github.com/adobe/spectrum-css/issues/1314) ([96950fe](https://github.com/adobe/spectrum-css/commit/96950fe))
+
+
+
+
+
 <a name="3.0.9"></a>
 ## 3.0.9
 🗓 2021-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.8...@spectrum-css/dialog@3.0.9)
