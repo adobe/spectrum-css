@@ -40,10 +40,44 @@ governing permissions and limitations under the License.
   &::-webkit-search-decoration {
     -webkit-appearance: none;
   }
+
+  border-radius: var(--spectrum-alias-search-border-radius);
+}
+
+.spectrum-Search-textfield {
+  &:after {
+    border-radius: var(--spectrum-alias-search-border-radius);
+  }
+}
+
+.spectrum-Search:not(.spectrum-Search--quiet) {
+  .spectrum-Search-icon {
+    /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+    inset-inline-start: var(--spectrum-alias-search-padding-left-m);
+  }
+  .spectrum-Search-input {
+    /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
+    padding-inline-start: calc(
+      var(--spectrum-alias-search-padding-left-m) +
+        var(--spectrum-alias-workflow-icon-size-m) +
+        var(--spectrum-textfield-m-texticon-icon-gap) -
+        var(--spectrum-textfield-m-texticon-border-size)
+    );
+  }
 }
 
 .spectrum-Search--quiet {
   .spectrum-Search-clearButton {
     transform: translateX(var(--spectrum-search-quiet-button-offset));
+  }
+
+  .spectrum-Search-input {
+    border-radius: var(--spectrum-alias-search-border-radius-quiet);
+  }
+
+  .spectrum-Search-textfield {
+    &:after {
+      border-radius: var(--spectrum-alias-search-border-radius-quiet);
+    }
   }
 }
