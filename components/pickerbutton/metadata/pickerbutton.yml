@@ -1,0 +1,138 @@
+name: Picker Button
+status: Contribution
+SpectrumSiteSlug: https://spectrum.adobe.com/page/picker/
+examples:
+  - id: pickerbutton-sizing
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <button class="spectrum-PickerButton spectrum-PickerButton--sizeS spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right" aria-haspopup="listbox">
+            <div class="spectrum-PickerButton-fill">
+              <span class="spectrum-PickerButton-label is-placeholder">All</span>
+              <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown100" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right" aria-haspopup="listbox">
+            <div class="spectrum-PickerButton-fill">
+              <span class="spectrum-PickerButton-label is-placeholder">All</span>
+              <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <button class="spectrum-PickerButton spectrum-PickerButton--sizeL spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right" aria-haspopup="listbox">
+            <div class="spectrum-PickerButton-fill">
+              <span class="spectrum-PickerButton-label is-placeholder">All</span>
+              <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown300" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <button class="spectrum-PickerButton spectrum-PickerButton--sizeXL spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right" aria-haspopup="listbox">
+            <div class="spectrum-PickerButton-fill">
+              <span class="spectrum-PickerButton-label is-placeholder">All</span>
+              <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown400" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron400" />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+
+  - id: pickerbutton-texticon
+    name: Text icon
+    markup: |
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right" aria-haspopup="listbox">
+        <div class="spectrum-PickerButton-fill">
+          <span class="spectrum-PickerButton-label is-placeholder">All</span>
+          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron200" />
+          </svg>
+        </div>
+      </button>
+
+  - id: pickerbutton-icononly
+    name: UI icon only
+    markup: |
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--high spectrum-PickerButton--right" aria-haspopup="listbox">
+        <div class="spectrum-PickerButton-fill">
+          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron200" />
+          </svg>
+        </div>
+      </button>
+
+  - id: pickerbutton-icononly
+    name: Workflow icon only
+    markup: |
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--icononly spectrum-PickerButton--high spectrum-PickerButton--right" aria-haspopup="listbox">
+        <div class="spectrum-PickerButton-fill">
+          <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-PickerButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+            <use href="#spectrum-icon-18-Add"></use>
+          </svg>
+        </div>
+      </button>
+
+  - id: pickerbutton-rounded
+    name: Rounded
+    markup: |
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right spectrum-PickerButton--rounded" aria-haspopup="listbox">
+        <div class="spectrum-PickerButton-fill">
+          <span class="spectrum-PickerButton-label is-placeholder">All</span>
+          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron200" />
+          </svg>
+        </div>
+      </button>
+
+  - id: pickerbutton-open
+    name: Open
+    markup: |
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right is-open" aria-haspopup="listbox">
+        <div class="spectrum-PickerButton-fill">
+          <span class="spectrum-PickerButton-label is-placeholder">All</span>
+          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron200" />
+          </svg>
+        </div>
+      </button>
+
+  - id: pickerbutton-disabled
+    name: Disabled
+    markup: |
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right" disabled aria-haspopup="listbox">
+        <div class="spectrum-PickerButton-fill">
+          <span class="spectrum-PickerButton-label is-placeholder">All</span>
+          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron200" />
+          </svg>
+        </div>
+      </button>
+
+  - id: pickerbutton-invalid
+    name: Invalid
+    markup: |
+      <button class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--textuiicon spectrum-PickerButton--high spectrum-PickerButton--right is-invalid" aria-haspopup="listbox">
+        <div class="spectrum-PickerButton-fill">
+          <span class="spectrum-PickerButton-label is-placeholder">All</span>
+          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron200" />
+          </svg>
+        </div>
+      </button>
