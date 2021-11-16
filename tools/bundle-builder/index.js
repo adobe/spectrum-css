@@ -148,6 +148,17 @@ let buildLite = gulp.series(
   )
 );
 
+let buildMedium = gulp.series(
+  clean,
+  function buildComponentsLite() {
+    return subrunner.runTaskOnAllComponents('buildMedium');
+  },
+  gulp.parallel(
+    docs.build,
+    copyPackages
+  )
+);
+
 let buildHeavy = gulp.series(
   clean,
   function buildComponentsLite() {
@@ -215,6 +226,6 @@ exports.dev = devTask;
 exports.clean = clean;
 exports.build = build;
 exports.watch = dev.watch;
-exports.default = buildLite;
+exports.default = buildMedium;
 
 exports.updateAndTagRelease = release.updateAndTagRelease;
