@@ -17,8 +17,9 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
         'menu',
         'modal',
         'progressbar',
-        'inputgroup',
         'picker',
+        'pickerbutton',
+        'inputgroup',
         'slider',
         'checkbox',
         'radio',
@@ -352,10 +353,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
                           <input type="text" placeholder="Type here" name="field" value="" id="spectrum-combobox-instance" class="spectrum-Textfield-input spectrum-InputGroup-input">
                         </div>
-                        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-InputGroup-button" tabindex="-1" aria-haspopup="true">
-                          <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
-                            <use xlink:href="#spectrum-css-icon-Chevron100" />
-                          </svg>
+                        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
+                          <div class="spectrum-PickerButton-fill">
+                            <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                              <use xlink:href="#spectrum-css-icon-Chevron200" />
+                            </svg>
+                          </div>
                         </button>
                       </div>
 
@@ -364,7 +367,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
-                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Vorhergesagtes jährliches wachstum</label>
                       <button class="spectrum-Picker spectrum-Picker--sizeM" style="width: 195px;" aria-haspopup="true">
                         <span class="spectrum-Picker-label is-placeholder">Select an option</span>
                         <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
@@ -378,7 +381,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
                     <div style="width: 160px">
-                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Vorhergesagtes jährliches wachstum</label>
                       <div class="spectrum-Textfield">
                         <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
                       </div>

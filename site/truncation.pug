@@ -11,8 +11,9 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
         'taggroup',
         'tag',
         'tabs',
-        'inputgroup',
         'picker',
+        'pickerbutton',
+        'inputgroup',
         'textfield'
       ];
 
@@ -112,7 +113,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                     <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 212px">
                       <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="true">
                         <span class="spectrum-Picker-label">A comparative study of artificial intelligence as applied to choosing outfits for small dogs</span>
-                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                           <use xlink:href="#spectrum-css-icon-Chevron100" />
                         </svg>
                       </button>
@@ -127,10 +128,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                       <div class="spectrum-Textfield spectrum-InputGroup-textfield">
                         <input type="text" placeholder="Type here" name="field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="spectrum-Textfield-input spectrum-InputGroup-input">
                       </div>
-                      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-InputGroup-button" aria-haspopup="true">
-                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
-                          <use xlink:href="#spectrum-css-icon-Chevron100" />
-                        </svg>
+                      <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
+                        <div class="spectrum-PickerButton-fill">
+                          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                            <use xlink:href="#spectrum-css-icon-Chevron200" />
+                          </svg>
+                        </div>
                       </button>
                     </div>
 
@@ -138,9 +141,9 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Picker (truncated)
                 section.spectrum-CSSExample-container
                   .spectrum-CSSExample-example
-                    <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="true">
+                    <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
                       <span class="spectrum-Picker-label is-placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true">
+                      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
                         <use xlink:href="#spectrum-css-icon-Chevron100" />
                       </svg>
                     </button>
