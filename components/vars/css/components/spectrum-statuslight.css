@@ -33,6 +33,7 @@
   --spectrum-statuslight-s-celery-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-celery-layout: inline-row;
   --spectrum-statuslight-s-celery-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-celery-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-chartreuse-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-chartreuse-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-chartreuse-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -67,6 +68,7 @@
   --spectrum-statuslight-s-chartreuse-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-chartreuse-layout: inline-row;
   --spectrum-statuslight-s-chartreuse-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-chartreuse-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-fuchsia-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-fuchsia-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-fuchsia-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -101,6 +103,7 @@
   --spectrum-statuslight-s-fuchsia-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-fuchsia-layout: inline-row;
   --spectrum-statuslight-s-fuchsia-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-fuchsia-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-indigo-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-indigo-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-indigo-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -135,6 +138,7 @@
   --spectrum-statuslight-s-indigo-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-indigo-layout: inline-row;
   --spectrum-statuslight-s-indigo-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-indigo-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-info-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-info-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-info-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -169,6 +173,7 @@
   --spectrum-statuslight-s-info-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-info-layout: inline-row;
   --spectrum-statuslight-s-info-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-info-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-magenta-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-magenta-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-magenta-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -203,6 +208,7 @@
   --spectrum-statuslight-s-magenta-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-magenta-layout: inline-row;
   --spectrum-statuslight-s-magenta-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-magenta-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-neutral-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-neutral-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-neutral-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -237,6 +243,7 @@
   --spectrum-statuslight-s-neutral-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-neutral-layout: inline-row;
   --spectrum-statuslight-s-neutral-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-neutral-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-negative-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-negative-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-negative-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -271,6 +278,7 @@
   --spectrum-statuslight-s-negative-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-negative-layout: inline-row;
   --spectrum-statuslight-s-negative-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-negative-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-notice-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-notice-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-notice-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -305,6 +313,7 @@
   --spectrum-statuslight-s-notice-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-notice-layout: inline-row;
   --spectrum-statuslight-s-notice-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-notice-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-positive-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-positive-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-positive-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -339,6 +348,7 @@
   --spectrum-statuslight-s-positive-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-positive-layout: inline-row;
   --spectrum-statuslight-s-positive-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-positive-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-purple-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-purple-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-purple-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -373,6 +383,7 @@
   --spectrum-statuslight-s-purple-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-purple-layout: inline-row;
   --spectrum-statuslight-s-purple-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-purple-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-seafoam-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-seafoam-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-seafoam-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -407,6 +418,7 @@
   --spectrum-statuslight-s-seafoam-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-seafoam-layout: inline-row;
   --spectrum-statuslight-s-seafoam-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-seafoam-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-s-yellow-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-yellow-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-s-yellow-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -441,6 +453,7 @@
   --spectrum-statuslight-s-yellow-text-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-statuslight-s-yellow-layout: inline-row;
   --spectrum-statuslight-s-yellow-gap: var(--spectrum-global-dimension-size-115);
+  --spectrum-statuslight-s-yellow-height: var(--spectrum-global-dimension-size-300);
   --spectrum-statuslight-m-celery-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-celery-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-celery-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -475,6 +488,7 @@
   --spectrum-statuslight-m-celery-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-celery-layout: inline-row;
   --spectrum-statuslight-m-celery-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-celery-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-chartreuse-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-chartreuse-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-chartreuse-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -509,6 +523,7 @@
   --spectrum-statuslight-m-chartreuse-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-chartreuse-layout: inline-row;
   --spectrum-statuslight-m-chartreuse-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-chartreuse-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-fuchsia-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-fuchsia-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-fuchsia-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -543,6 +558,7 @@
   --spectrum-statuslight-m-fuchsia-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-fuchsia-layout: inline-row;
   --spectrum-statuslight-m-fuchsia-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-fuchsia-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-indigo-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-indigo-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-indigo-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -577,6 +593,7 @@
   --spectrum-statuslight-m-indigo-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-indigo-layout: inline-row;
   --spectrum-statuslight-m-indigo-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-indigo-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-info-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-info-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-info-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -611,6 +628,7 @@
   --spectrum-statuslight-m-info-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-info-layout: inline-row;
   --spectrum-statuslight-m-info-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-info-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-magenta-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-magenta-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-magenta-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -645,6 +663,7 @@
   --spectrum-statuslight-m-magenta-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-magenta-layout: inline-row;
   --spectrum-statuslight-m-magenta-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-magenta-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-neutral-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-neutral-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-neutral-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -679,6 +698,7 @@
   --spectrum-statuslight-m-neutral-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-neutral-layout: inline-row;
   --spectrum-statuslight-m-neutral-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-neutral-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-negative-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-negative-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-negative-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -713,6 +733,7 @@
   --spectrum-statuslight-m-negative-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-negative-layout: inline-row;
   --spectrum-statuslight-m-negative-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-negative-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-notice-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-notice-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-notice-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -747,6 +768,7 @@
   --spectrum-statuslight-m-notice-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-notice-layout: inline-row;
   --spectrum-statuslight-m-notice-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-notice-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-positive-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-positive-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-positive-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -781,6 +803,7 @@
   --spectrum-statuslight-m-positive-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-positive-layout: inline-row;
   --spectrum-statuslight-m-positive-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-positive-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-purple-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-purple-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-purple-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -815,6 +838,7 @@
   --spectrum-statuslight-m-purple-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-purple-layout: inline-row;
   --spectrum-statuslight-m-purple-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-purple-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-seafoam-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-seafoam-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-seafoam-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -849,6 +873,7 @@
   --spectrum-statuslight-m-seafoam-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-seafoam-layout: inline-row;
   --spectrum-statuslight-m-seafoam-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-seafoam-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-m-yellow-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-yellow-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-m-yellow-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -883,6 +908,7 @@
   --spectrum-statuslight-m-yellow-text-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-statuslight-m-yellow-layout: inline-row;
   --spectrum-statuslight-m-yellow-gap: var(--spectrum-global-dimension-size-125);
+  --spectrum-statuslight-m-yellow-height: var(--spectrum-global-dimension-size-400);
   --spectrum-statuslight-l-celery-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-celery-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-celery-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -916,6 +942,7 @@
   --spectrum-statuslight-l-celery-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-celery-layout: inline-row;
   --spectrum-statuslight-l-celery-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-celery-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-chartreuse-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-chartreuse-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-chartreuse-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -949,6 +976,7 @@
   --spectrum-statuslight-l-chartreuse-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-chartreuse-layout: inline-row;
   --spectrum-statuslight-l-chartreuse-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-chartreuse-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-fuchsia-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-fuchsia-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-fuchsia-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -982,6 +1010,7 @@
   --spectrum-statuslight-l-fuchsia-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-fuchsia-layout: inline-row;
   --spectrum-statuslight-l-fuchsia-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-fuchsia-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-indigo-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-indigo-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-indigo-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1015,6 +1044,7 @@
   --spectrum-statuslight-l-indigo-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-indigo-layout: inline-row;
   --spectrum-statuslight-l-indigo-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-indigo-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-info-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-info-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-info-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1048,6 +1078,7 @@
   --spectrum-statuslight-l-info-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-info-layout: inline-row;
   --spectrum-statuslight-l-info-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-info-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-magenta-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-magenta-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-magenta-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1081,6 +1112,7 @@
   --spectrum-statuslight-l-magenta-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-magenta-layout: inline-row;
   --spectrum-statuslight-l-magenta-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-magenta-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-neutral-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-neutral-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-neutral-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1114,6 +1146,7 @@
   --spectrum-statuslight-l-neutral-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-neutral-layout: inline-row;
   --spectrum-statuslight-l-neutral-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-neutral-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-negative-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-negative-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-negative-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1147,6 +1180,7 @@
   --spectrum-statuslight-l-negative-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-negative-layout: inline-row;
   --spectrum-statuslight-l-negative-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-negative-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-notice-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-notice-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-notice-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1180,6 +1214,7 @@
   --spectrum-statuslight-l-notice-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-notice-layout: inline-row;
   --spectrum-statuslight-l-notice-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-notice-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-positive-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-positive-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-positive-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1213,6 +1248,7 @@
   --spectrum-statuslight-l-positive-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-positive-layout: inline-row;
   --spectrum-statuslight-l-positive-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-positive-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-purple-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-purple-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-purple-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1246,6 +1282,7 @@
   --spectrum-statuslight-l-purple-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-purple-layout: inline-row;
   --spectrum-statuslight-l-purple-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-purple-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-seafoam-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-seafoam-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-seafoam-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1279,6 +1316,7 @@
   --spectrum-statuslight-l-seafoam-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-seafoam-layout: inline-row;
   --spectrum-statuslight-l-seafoam-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-seafoam-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-l-yellow-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-yellow-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-l-yellow-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1312,6 +1350,7 @@
   --spectrum-statuslight-l-yellow-text-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-statuslight-l-yellow-layout: inline-row;
   --spectrum-statuslight-l-yellow-gap: var(--spectrum-global-dimension-size-130);
+  --spectrum-statuslight-l-yellow-height: var(--spectrum-global-dimension-size-500);
   --spectrum-statuslight-xl-celery-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-celery-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-celery-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1345,6 +1384,7 @@
   --spectrum-statuslight-xl-celery-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-celery-layout: inline-row;
   --spectrum-statuslight-xl-celery-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-celery-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-chartreuse-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-chartreuse-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-chartreuse-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1378,6 +1418,7 @@
   --spectrum-statuslight-xl-chartreuse-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-chartreuse-layout: inline-row;
   --spectrum-statuslight-xl-chartreuse-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-chartreuse-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-fuchsia-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-fuchsia-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-fuchsia-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1411,6 +1452,7 @@
   --spectrum-statuslight-xl-fuchsia-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-fuchsia-layout: inline-row;
   --spectrum-statuslight-xl-fuchsia-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-fuchsia-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-indigo-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-indigo-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-indigo-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1444,6 +1486,7 @@
   --spectrum-statuslight-xl-indigo-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-indigo-layout: inline-row;
   --spectrum-statuslight-xl-indigo-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-indigo-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-info-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-info-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-info-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1477,6 +1520,7 @@
   --spectrum-statuslight-xl-info-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-info-layout: inline-row;
   --spectrum-statuslight-xl-info-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-info-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-magenta-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-magenta-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-magenta-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1510,6 +1554,7 @@
   --spectrum-statuslight-xl-magenta-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-magenta-layout: inline-row;
   --spectrum-statuslight-xl-magenta-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-magenta-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-neutral-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-neutral-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-neutral-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1543,6 +1588,7 @@
   --spectrum-statuslight-xl-neutral-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-neutral-layout: inline-row;
   --spectrum-statuslight-xl-neutral-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-neutral-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-negative-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-negative-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-negative-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1576,6 +1622,7 @@
   --spectrum-statuslight-xl-negative-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-negative-layout: inline-row;
   --spectrum-statuslight-xl-negative-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-negative-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-notice-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-notice-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-notice-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1609,6 +1656,7 @@
   --spectrum-statuslight-xl-notice-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-notice-layout: inline-row;
   --spectrum-statuslight-xl-notice-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-notice-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-positive-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-positive-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-positive-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1642,6 +1690,7 @@
   --spectrum-statuslight-xl-positive-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-positive-layout: inline-row;
   --spectrum-statuslight-xl-positive-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-positive-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-purple-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-purple-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-purple-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1675,6 +1724,7 @@
   --spectrum-statuslight-xl-purple-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-purple-layout: inline-row;
   --spectrum-statuslight-xl-purple-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-purple-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-seafoam-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-seafoam-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-seafoam-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1708,6 +1758,7 @@
   --spectrum-statuslight-xl-seafoam-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-seafoam-layout: inline-row;
   --spectrum-statuslight-xl-seafoam-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-seafoam-height: var(--spectrum-global-dimension-size-600);
   --spectrum-statuslight-xl-yellow-dot-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-yellow-dot-background-color-disabled: var(--spectrum-global-color-gray-400);
   --spectrum-statuslight-xl-yellow-text-color-disabled: var(--spectrum-alias-text-color-disabled);
@@ -1741,4 +1792,5 @@
   --spectrum-statuslight-xl-yellow-text-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-statuslight-xl-yellow-layout: inline-row;
   --spectrum-statuslight-xl-yellow-gap: var(--spectrum-global-dimension-size-160);
+  --spectrum-statuslight-xl-yellow-height: var(--spectrum-global-dimension-size-600);
 }
