@@ -5,7 +5,7 @@ sections:
     description: |
       ### T-shirt sizing
       Thumbnail now supports t-shirt sizing with the standard naming convention and requires that you specify the size by adding a `.spectrum-Thumbnail--size*` class.
-      
+
       Additionally, the available sizes have changed: `XXL` and `XL` have been completely removed, and `XS` and `XXS` have been added.
 
       | Deprecated Classname | New Classname           |
@@ -51,20 +51,6 @@ examples:
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
         <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
-      </div>
-  - id: thumbnail
-    name: Thumbnail (background portrait)
-    description: Portrait images set as the background will fill horizontally
-    markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
-        <div class="spectrum-Thumbnail-background" style="background-image: url(img/example-card-portrait.jpg)" title="Eiffel Tower at night"></div>
-      </div>
-  - id: thumbnail
-    name: Thumbnail (background landscape)
-    description: Portrait images set as the background will fill vertically
-    markup: |
-      <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
-        <div class="spectrum-Thumbnail-background" style="background-image: url(img/example-card-landscape.jpeg)" title="Eiffel Tower at night"></div>
       </div>
   - id: thumbnail
     name: Thumbnail (image against background)
