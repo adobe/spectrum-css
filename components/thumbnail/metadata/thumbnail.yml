@@ -19,72 +19,72 @@ sections:
       | | `.spectrum-Thumbnail--sizeXXS` |
 
 examples:
-  - id: thumbnail
+  - id: thumbnail-image
     description: Rectangular images will fill the entire space.
     name: Thumbnail
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-selected
     name: Thumbnail (selected)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM is-selected">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-focus
     name: Thumbnail (focused)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM is-focused">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-landscape-image
     name: Thumbnail (landscape image)
     description: Landscape images will fill horizontally and have space above and below.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
         <img class="spectrum-Thumbnail-image" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
       </div>
-  - id: thumbnail
+  - id: thumbnail-portrait-image
     name: Thumbnail (portrait image)
     description: Portrait images will fill vertically and have space on either side.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
         <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
       </div>
-  - id: thumbnail
+  - id: thumbnail-image-over-background
     name: Thumbnail (image against background)
-    description: Portrait images set as the background will fill vertically
+    description: Thumbnail supports transparent images with a background (color or image) behind it.
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
         <div class="spectrum-Thumbnail-background" style="background-color: orange"></div>
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-xxs
     name: Thumbnail (XXS)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeXXS">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-xs
     name: Thumbnail (XS)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeXS">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-s
     name: Thumbnail (S)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeS">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-m
     name: Thumbnail (M, default)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
         <img class="spectrum-Thumbnail-image" src="img/thumbnail.png" alt="Woman crouching">
       </div>
-  - id: thumbnail
+  - id: thumbnail-l
     name: Thumbnail (L)
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeL">
