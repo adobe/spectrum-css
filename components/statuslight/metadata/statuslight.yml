@@ -6,7 +6,7 @@ sections:
       ### T-shirt sizing
       Status Light now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-StatusLight--size*` class.
 examples:
-  - id: statuslight
+  - id: statuslight-sizing
     name: Sizing
     status: Verified
     markup: |
@@ -34,7 +34,13 @@ examples:
           <div class="spectrum-StatusLight spectrum-StatusLight--sizeXL spectrum-StatusLight--info">Extra Large</div>
         </div>
       </div>
-  - id: statuslight
+  - id: statuslight-wrapping
+    name: Wrapping
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--celery">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Sollicitudin nibh sit amet commodo nulla facilisi. Auctor urna nunc id cursus. Sem viverra aliquet eget sit amet tellus cras adipiscing.</div>
+
+  - id: statuslight-colors
     name: Colors
     status: Verified
     markup: |
@@ -71,7 +77,7 @@ examples:
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--negative">Rejected</div>
-  - id: statuslight
+  - id: statuslight-disabled
     name: Disabled
     status: Verified
     description: The disabled state of Status Light.
