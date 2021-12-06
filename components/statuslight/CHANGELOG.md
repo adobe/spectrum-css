@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.8...@spectrum-css/statuslight@4.0.0)
+
+### 🐛 Bug fixes
+
+* **statuslight:** provide min-height & use updated vars ([6a3f824](https://github.com/adobe/spectrum-css/commit/6a3f824))
+
+
+* feat(statuslight)!: use new tokens, new spacing ([700abe9](https://github.com/adobe/spectrum-css/commit/700abe9))
+
+
+### 🛑 BREAKING CHANGES
+
+* spacing in StatusLight has changed and may impact layout when it is used with other components.
+
+
+
+
+
 <a name="3.0.8"></a>
 ## 3.0.8
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@3.0.7...@spectrum-css/statuslight@3.0.8)

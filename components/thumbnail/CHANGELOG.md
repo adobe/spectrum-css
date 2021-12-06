@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.1...@spectrum-css/thumbnail@2.0.2)
+
+### 🐛 Bug fixes
+
+* used object-fit for thumbnail images, closes [#1134](https://github.com/adobe/spectrum-css/issues/1134) ([9affce2](https://github.com/adobe/spectrum-css/commit/9affce2))
+
+
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.0...@spectrum-css/thumbnail@2.0.1)
