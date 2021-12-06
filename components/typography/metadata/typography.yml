@@ -150,20 +150,20 @@ sections:
 
       ### Detail
 
-      | Deprecated Classname                     | New Classname                                |
-      |------------------------------------------|----------------------------------------------|
-      | `.spectrum-Detail.spectrum-Detail--XL`   | `.spectrum-Detail.spectrum-Detail--sizeXL`   |
-      | `.spectrum-Detail.spectrum-Detail--L`    | `.spectrum-Detail.spectrum-Detail--sizeL`    |
-      | `.spectrum-Detail.spectrum-Detail--M`    | `.spectrum-Detail.spectrum-Detail--sizeM`    |
-      | `.spectrum-Detail.spectrum-Detail--S`    | `.spectrum-Detail.spectrum-Detail--sizeS`    |
-
-
-      ### Code
-
       | Deprecated Classname                   | New Classname                              |
       |----------------------------------------|--------------------------------------------|
       | `.spectrum-Detail.spectrum-Detail--XL` | `.spectrum-Detail.spectrum-Detail--sizeXL` |
       | `.spectrum-Detail.spectrum-Detail--L`  | `.spectrum-Detail.spectrum-Detail--sizeL`  |
       | `.spectrum-Detail.spectrum-Detail--M`  | `.spectrum-Detail.spectrum-Detail--sizeM`  |
       | `.spectrum-Detail.spectrum-Detail--S`  | `.spectrum-Detail.spectrum-Detail--sizeS`  |
-      | `.spectrum-Detail.spectrum-Detail--XS` | `.spectrum-Detail.spectrum-Detail--sizeXS` |
+
+
+      ### Code
+
+      | Deprecated Classname                 | New Classname                            |
+      |--------------------------------------|------------------------------------------|
+      | `.spectrum-Detail.spectrum-Code--XL` | `.spectrum-Detail.spectrum-Code--sizeXL` |
+      | `.spectrum-Detail.spectrum-Code--L`  | `.spectrum-Detail.spectrum-Code--sizeL`  |
+      | `.spectrum-Detail.spectrum-Code--M`  | `.spectrum-Detail.spectrum-Code--sizeM`  |
+      | `.spectrum-Detail.spectrum-Code--S`  | `.spectrum-Detail.spectrum-Code--sizeS`  |
+      | `.spectrum-Detail.spectrum-Code--XS` | `.spectrum-Detail.spectrum-Code--sizeXS` |
