@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
   padding-inline-start: var(--spectrum-splitbutton-round-edge-padding);
 
   /* CTA is special and doesn't have a border between the buttons */
-  &.spectrum-Button--cta {
+  &.spectrum-Button--accent {
     padding-inline-end: var(--spectrum-splitbutton-cta-flat-edge-padding);
     margin-inline-end: var(--spectrum-button-m-primary-texticon-border-size);
   }
@@ -89,7 +89,7 @@ governing permissions and limitations under the License.
   min-inline-size: var(--spectrum-splitbutton-trigger-min-width);
 
   /* Fix CTA button focus ring alignment */
-  &.spectrum-Button--cta {
+  &.spectrum-Button--accent {
     padding-inline-start: var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
     border-inline-start-width: var(--spectrum-button-m-primary-texticon-border-size);
   }
@@ -138,7 +138,7 @@ governing permissions and limitations under the License.
     padding-inline-end: var(--spectrum-splitbutton-round-edge-padding);
 
     /* CTA is special and doesn't have a border between the buttons */
-    &.spectrum-Button--cta {
+    &.spectrum-Button--accent {
       padding-inline-start: var(--spectrum-splitbutton-cta-flat-edge-padding);
       margin-inline-start: var(--spectrum-button-m-primary-texticon-border-size);
     }
@@ -166,7 +166,7 @@ governing permissions and limitations under the License.
     padding-inline-start: var(--spectrum-splitbutton-trigger-round-edge-padding);
 
     /* Fix CTA button focus ring alignment */
-    &.spectrum-Button--cta {
+    &.spectrum-Button--accent {
       padding-inline-end: var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
       border-inline-end-width: var(--spectrum-button-m-primary-texticon-border-size);
     }
