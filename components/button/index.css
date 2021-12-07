@@ -15,6 +15,8 @@ governing permissions and limitations under the License.
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-button.css";
 
+@import "./button-generated.css";
+
 /* include the other button components that have been broken out */
 @import "./logicbutton.css";
 @import "./clearbutton.css";
@@ -90,6 +92,9 @@ governing permissions and limitations under the License.
   &:active {
     box-shadow: none;
   }
+
+  /* let staticColor variants inherit their color */
+  color: inherit;
 
   .spectrum-Icon {
     @inherit: %spectrum-ButtonIcon;
