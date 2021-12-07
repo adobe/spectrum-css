@@ -75,7 +75,7 @@ examples:
   - id: button-accent-disabled
     name: Disabled
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--accent" disabled>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent" disabled>
         <span class="spectrum-Button-label">Button</span>
       </button>
 
