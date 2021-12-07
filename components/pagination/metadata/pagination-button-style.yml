@@ -4,12 +4,12 @@ examples:
     name: CTA
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">
-        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
+        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft100" focusable="false" aria-hidden="true" aria-label="ChevronLeft">
             <use xlink:href="#spectrum-css-icon-Chevron100"></use>
           </svg>
         </a>
-        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-SplitButton-action spectrum-Pagination-nextButton">
+        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-SplitButton-action spectrum-Pagination-nextButton">
           <span class="spectrum-Button-label">Next</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100" focusable="false" aria-hidden="true" aria-label="ChevronLeft">
             <use xlink:href="#spectrum-css-icon-Chevron100"></use>
@@ -20,12 +20,12 @@ examples:
     name: Primary
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">
-        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
+        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft100" focusable="false" aria-hidden="true" aria-label="ChevronLeft">
             <use xlink:href="#spectrum-css-icon-Chevron100"></use>
           </svg>
         </a>
-        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-SplitButton-action spectrum-Pagination-nextButton">
+        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-SplitButton-action spectrum-Pagination-nextButton">
           <span class="spectrum-Button-label">Next</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100" focusable="false" aria-hidden="true" aria-label="ChevronLeft">
             <use xlink:href="#spectrum-css-icon-Chevron100"></use>
@@ -36,12 +36,12 @@ examples:
     name: Secondary
     markup: |
       <nav class="spectrum-SplitButton spectrum-SplitButton--left">
-        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
+        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-SplitButton-trigger spectrum-Pagination-prevButton">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronLeft100" focusable="false" aria-hidden="true" aria-label="ChevronLeft">
             <use xlink:href="#spectrum-css-icon-Chevron100"></use>
           </svg>
         </a>
-        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-SplitButton-action spectrum-Pagination-nextButton">
+        <a href="#" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-SplitButton-action spectrum-Pagination-nextButton">
           <span class="spectrum-Button-label">Next</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100" focusable="false" aria-hidden="true" aria-label="ChevronLeft">
             <use xlink:href="#spectrum-css-icon-Chevron100"></use>
