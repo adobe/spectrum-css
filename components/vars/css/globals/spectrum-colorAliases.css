@@ -1,5 +1,15 @@
 :root {
   --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
+  --spectrum-alias-transparent-blue-background-color-hover: rgba(13,102,208,0.15);
+  --spectrum-alias-transparent-blue-background-color-down: rgba(9,90,186,0.15);
+  --spectrum-alias-transparent-blue-background-color-key-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
+  --spectrum-alias-transparent-blue-background-color-mouse-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
+  --spectrum-alias-transparent-blue-background-color: var(--spectrum-alias-component-text-color-default);
+  --spectrum-alias-transparent-red-background-color-hover: rgba(201,37,45,0.15);
+  --spectrum-alias-transparent-red-background-color-down: rgba(187,18,26,0.15);
+  --spectrum-alias-transparent-red-background-color-key-focus: var(--spectrum-alias-transparent-red-background-color-hover);
+  --spectrum-alias-transparent-red-background-color-mouse-focus: var(--spectrum-alias-transparent-red-background-color-hover);
+  --spectrum-alias-transparent-red-background-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-alias-component-text-color-disabled: var(--spectrum-global-color-gray-500);
   --spectrum-alias-component-text-color-default: var(--spectrum-global-color-gray-800);
   --spectrum-alias-component-text-color-hover: var(--spectrum-global-color-gray-900);
@@ -275,6 +285,16 @@
   --spectrum-alias-text-color-overbackground-disabled: rgba(255,255,255,0.2);
   --spectrum-alias-text-color-quiet-overbackground-disabled: rgba(255,255,255,0.2);
   --spectrum-alias-heading-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-alias-link-primary-text-color-default: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-link-primary-text-color-hover: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-link-primary-text-color-down: var(--spectrum-global-color-blue-700);
+  --spectrum-alias-link-primary-text-color-key-focus: var(--spectrum-alias-text-color-key-focus);
+  --spectrum-alias-link-primary-text-color: var(--spectrum-alias-link-primary-text-color-default);
+  --spectrum-alias-link-secondary-text-color-default: var(--spectrum-alias-link-primary-text-color-default);
+  --spectrum-alias-link-secondary-text-color-hover: var(--spectrum-alias-link-primary-text-color-hover);
+  --spectrum-alias-link-secondary-text-color-down: var(--spectrum-alias-link-primary-text-color-down);
+  --spectrum-alias-link-secondary-text-color-key-focus: var(--spectrum-alias-link-primary-text-color-key-focus);
+  --spectrum-alias-link-secondary-text-color: var(--spectrum-alias-link-secondary-text-color-default);
   --spectrum-alias-border-color: var(--spectrum-global-color-gray-400);
   --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-500);
   --spectrum-alias-border-color-down: var(--spectrum-global-color-gray-500);
