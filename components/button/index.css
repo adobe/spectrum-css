@@ -113,6 +113,8 @@ governing permissions and limitations under the License.
     */
     padding-inline-end: 0;
   }
+
+  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
 }
 
 a.spectrum-Button {
@@ -131,7 +133,15 @@ a.spectrum-Button {
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-primary-texticon-focus-ring-size) var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-button-primary-texticon-focus-ring-size) var(--spectrum-button-focus-ring-color);
     }
   }
+}
+
+.spectrum-Button--staticWhite {
+  --spectrum-button-focus-ring-color: var(--spectrum-global-color-static-white);
+}
+
+.spectrum-Button--staticBlack {
+  --spectrum-button-focus-ring-color: var(--spectrum-global-color-static-black);
 }
