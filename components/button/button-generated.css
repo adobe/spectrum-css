@@ -12,13 +12,17 @@ governing permissions and limitations under the License.
 
 /* begin generated CSS for button */
 .spectrum-Button {
-  &:disabled {
-    .spectrum-Icon {
-      color: var(--spectrum-global-color-gray-500)
-    }
+  &:not(.spectrum-Button--staticWhite) {
+    &:not(.spectrum-Button--staticBlack) {
+      &:disabled {
+        .spectrum-Icon {
+          color: var(--spectrum-global-color-gray-500)
+        }
 
-    .spectrum-Button-label {
-      color: var(--spectrum-global-color-gray-500)
+        .spectrum-Button-label {
+          color: var(--spectrum-global-color-gray-500)
+        }
+      }
     }
   }
 
@@ -270,152 +274,175 @@ governing permissions and limitations under the License.
 
   &.spectrum-Button--fill {
     &.spectrum-Button--accent {
-      &:not(:disabled) {
-        background-color: var(--spectrum-global-color-static-blue-600);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-static-white)
-        }
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-global-color-static-blue-600);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-static-white)
+            }
 
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-static-white)
-        }
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-static-white)
+            }
 
-        &:hover {
-          background-color: var(--spectrum-global-color-static-blue-700)
-        }
+            &:hover {
+              background-color: var(--spectrum-global-color-static-blue-700)
+            }
 
-        &:active {
-          background-color: var(--spectrum-global-color-static-blue-800)
-        }
+            &:active {
+              background-color: var(--spectrum-global-color-static-blue-800)
+            }
 
-        &:focus-visible {
-          background-color: var(--spectrum-global-color-static-blue-700)
-        }
+            &:focus-visible {
+              background-color: var(--spectrum-global-color-static-blue-700)
+            }
 
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-global-color-static-blue-700)
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-global-color-static-blue-700)
+            }
+          }
         }
       }
     }
 
     &.spectrum-Button--negative {
-      &:not(:disabled) {
-        background-color: var(--spectrum-global-color-static-red-600);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-static-white)
-        }
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-global-color-static-red-600);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-static-white)
+            }
 
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-static-white)
-        }
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-static-white)
+            }
 
-        &:hover {
-          background-color: var(--spectrum-global-color-static-red-700)
-        }
+            &:hover {
+              background-color: var(--spectrum-global-color-static-red-700)
+            }
 
-        &:active {
-          background-color: var(--spectrum-global-color-static-red-800)
-        }
+            &:active {
+              background-color: var(--spectrum-global-color-static-red-800)
+            }
 
-        &:focus-visible {
-          background-color: var(--spectrum-global-color-static-red-700)
-        }
+            &:focus-visible {
+              background-color: var(--spectrum-global-color-static-red-700)
+            }
 
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-global-color-static-red-700)
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-global-color-static-red-700)
+            }
+          }
         }
       }
     }
 
     &.spectrum-Button--primary {
-      &:not(:disabled) {
-        background-color: var(--spectrum-global-color-gray-800);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-gray-50)
-        }
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-global-color-gray-800);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-gray-50)
+            }
 
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-gray-50)
-        }
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-gray-50)
+            }
 
-        &:hover {
-          background-color: var(--spectrum-global-color-gray-900)
-        }
+            &:hover {
+              background-color: var(--spectrum-global-color-gray-900)
+            }
 
-        &:active {
-          background-color: var(--spectrum-global-color-gray-900)
-        }
+            &:active {
+              background-color: var(--spectrum-global-color-gray-900)
+            }
 
-        &:focus-visible {
-          background-color: var(--spectrum-global-color-gray-900)
-        }
+            &:focus-visible {
+              background-color: var(--spectrum-global-color-gray-900)
+            }
 
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-global-color-gray-900)
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-global-color-gray-900)
+            }
+          }
         }
       }
     }
 
     &.spectrum-Button--secondary {
-      &:not(:disabled) {
-        background-color: var(--spectrum-global-color-gray-200);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-gray-800)
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-global-color-gray-200);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-gray-800)
+            }
+
+            &:hover {
+              background-color: var(--spectrum-global-color-gray-300);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &:active {
+              background-color: var(--spectrum-global-color-gray-400);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &:focus-visible {
+              background-color: var(--spectrum-global-color-gray-300);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-global-color-gray-300);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-gray-800)
+            }
+          }
         }
+      }
+    }
 
-        &:hover {
-          background-color: var(--spectrum-global-color-gray-300);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &:active {
-          background-color: var(--spectrum-global-color-gray-400);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &:focus-visible {
-          background-color: var(--spectrum-global-color-gray-300);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-global-color-gray-300);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-gray-800)
+    &:not(.spectrum-Button--staticWhite) {
+      &:not(.spectrum-Button--staticBlack) {
+        &:disabled {
+          background-color: var(--spectrum-global-color-gray-200)
         }
       }
     }
 
     &:disabled {
-      border-color: transparent;
-      background-color: var(--spectrum-global-color-gray-200)
+      border-color: transparent
     }
 
     &:not(:disabled) {
@@ -425,256 +452,276 @@ governing permissions and limitations under the License.
 
   &.spectrum-Button--outline {
     &.spectrum-Button--accent {
-      &:not(:disabled) {
-        background-color: var(--spectrum-alias-background-color-transparent);
-        border-color: var(--spectrum-global-color-blue-500);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-blue-500)
-        }
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-alias-background-color-transparent);
+            border-color: var(--spectrum-global-color-blue-500);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-blue-500)
+            }
 
-        &:hover {
-          background-color: var(--spectrum-alias-transparent-blue-background-color-hover);
-          border-color: var(--spectrum-global-color-blue-600);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-blue-600)
+            &:hover {
+              background-color: var(--spectrum-alias-transparent-blue-background-color-hover);
+              border-color: var(--spectrum-global-color-blue-600);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-blue-600)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-blue-600)
+              }
+            }
+
+            &:active {
+              background-color: var(--spectrum-alias-transparent-blue-background-color-down);
+              border-color: var(--spectrum-global-color-blue-700);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-blue-700)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-blue-700)
+              }
+            }
+
+            &:focus-visible {
+              background-color: var(--spectrum-alias-transparent-blue-background-color-key-focus);
+              border-color: var(--spectrum-global-color-blue-600);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-blue-600)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-blue-600)
+              }
+            }
+
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-alias-transparent-blue-background-color-key-focus);
+              border-color: var(--spectrum-global-color-blue-600);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-blue-600)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-blue-600)
+              }
+            }
+
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-blue-500)
+            }
           }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-blue-600)
-          }
-        }
-
-        &:active {
-          background-color: var(--spectrum-alias-transparent-blue-background-color-down);
-          border-color: var(--spectrum-global-color-blue-700);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-blue-700)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-blue-700)
-          }
-        }
-
-        &:focus-visible {
-          background-color: var(--spectrum-alias-transparent-blue-background-color-key-focus);
-          border-color: var(--spectrum-global-color-blue-600);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-blue-600)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-blue-600)
-          }
-        }
-
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-alias-transparent-blue-background-color-key-focus);
-          border-color: var(--spectrum-global-color-blue-600);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-blue-600)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-blue-600)
-          }
-        }
-
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-blue-500)
         }
       }
     }
 
     &.spectrum-Button--negative {
-      &:not(:disabled) {
-        background-color: var(--spectrum-alias-background-color-transparent);
-        border-color: var(--spectrum-global-color-red-500);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-red-500)
-        }
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-alias-background-color-transparent);
+            border-color: var(--spectrum-global-color-red-500);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-red-500)
+            }
 
-        &:hover {
-          background-color: var(--spectrum-alias-transparent-red-background-color-hover);
-          border-color: var(--spectrum-global-color-red-600);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-red-600)
+            &:hover {
+              background-color: var(--spectrum-alias-transparent-red-background-color-hover);
+              border-color: var(--spectrum-global-color-red-600);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-red-600)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-red-600)
+              }
+            }
+
+            &:active {
+              background-color: var(--spectrum-alias-transparent-red-background-color-down);
+              border-color: var(--spectrum-global-color-red-700);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-red-700)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-red-700)
+              }
+            }
+
+            &:focus-visible {
+              background-color: var(--spectrum-alias-transparent-red-background-color-key-focus);
+              border-color: var(--spectrum-global-color-red-600);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-red-600)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-red-600)
+              }
+            }
+
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-alias-transparent-red-background-color-key-focus);
+              border-color: var(--spectrum-global-color-red-600);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-red-600)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-red-600)
+              }
+            }
+
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-red-500)
+            }
           }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-red-600)
-          }
-        }
-
-        &:active {
-          background-color: var(--spectrum-alias-transparent-red-background-color-down);
-          border-color: var(--spectrum-global-color-red-700);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-red-700)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-red-700)
-          }
-        }
-
-        &:focus-visible {
-          background-color: var(--spectrum-alias-transparent-red-background-color-key-focus);
-          border-color: var(--spectrum-global-color-red-600);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-red-600)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-red-600)
-          }
-        }
-
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-alias-transparent-red-background-color-key-focus);
-          border-color: var(--spectrum-global-color-red-600);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-red-600)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-red-600)
-          }
-        }
-
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-red-500)
         }
       }
     }
 
     &.spectrum-Button--primary {
-      &:not(:disabled) {
-        background-color: var(--spectrum-alias-background-color-transparent);
-        border-color: var(--spectrum-global-color-gray-800);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-gray-800)
-        }
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-alias-background-color-transparent);
+            border-color: var(--spectrum-global-color-gray-800);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-gray-800)
+            }
 
-        &:hover {
-          background-color: var(--spectrum-global-color-gray-300);
-          border-color: var(--spectrum-global-color-gray-900);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
+            &:hover {
+              background-color: var(--spectrum-global-color-gray-300);
+              border-color: var(--spectrum-global-color-gray-900);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &:active {
+              background-color: var(--spectrum-global-color-gray-400);
+              border-color: var(--spectrum-global-color-gray-900);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &:focus-visible {
+              background-color: var(--spectrum-global-color-gray-300);
+              border-color: var(--spectrum-global-color-gray-900);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-global-color-gray-300);
+              border-color: var(--spectrum-global-color-gray-900);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-gray-800)
+            }
           }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &:active {
-          background-color: var(--spectrum-global-color-gray-400);
-          border-color: var(--spectrum-global-color-gray-900);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &:focus-visible {
-          background-color: var(--spectrum-global-color-gray-300);
-          border-color: var(--spectrum-global-color-gray-900);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-global-color-gray-300);
-          border-color: var(--spectrum-global-color-gray-900);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-gray-800)
         }
       }
     }
 
     &.spectrum-Button--secondary {
-      &:not(:disabled) {
-        background-color: var(--spectrum-alias-background-color-transparent);
-        border-color: var(--spectrum-global-color-gray-300);
-        .spectrum-Icon {
-          color: var(--spectrum-global-color-gray-800)
-        }
+      &:not(.spectrum-Button--staticWhite) {
+        &:not(.spectrum-Button--staticBlack) {
+          &:not(:disabled) {
+            background-color: var(--spectrum-alias-background-color-transparent);
+            border-color: var(--spectrum-global-color-gray-300);
+            .spectrum-Icon {
+              color: var(--spectrum-global-color-gray-800)
+            }
 
-        &:hover {
-          background-color: var(--spectrum-global-color-gray-300);
-          border-color: var(--spectrum-global-color-gray-400);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
+            &:hover {
+              background-color: var(--spectrum-global-color-gray-300);
+              border-color: var(--spectrum-global-color-gray-400);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &:active {
+              background-color: var(--spectrum-global-color-gray-400);
+              border-color: var(--spectrum-global-color-gray-500);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &:focus-visible {
+              background-color: var(--spectrum-global-color-gray-300);
+              border-color: var(--spectrum-global-color-gray-400);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            &.is-keyboardFocused {
+              background-color: var(--spectrum-global-color-gray-300);
+              border-color: var(--spectrum-global-color-gray-400);
+              .spectrum-Icon {
+                color: var(--spectrum-global-color-gray-900)
+              }
+
+              .spectrum-Button-label {
+                color: var(--spectrum-global-color-gray-900)
+              }
+            }
+
+            .spectrum-Button-label {
+              color: var(--spectrum-global-color-gray-800)
+            }
           }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &:active {
-          background-color: var(--spectrum-global-color-gray-400);
-          border-color: var(--spectrum-global-color-gray-500);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &:focus-visible {
-          background-color: var(--spectrum-global-color-gray-300);
-          border-color: var(--spectrum-global-color-gray-400);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        &.is-keyboardFocused {
-          background-color: var(--spectrum-global-color-gray-300);
-          border-color: var(--spectrum-global-color-gray-400);
-          .spectrum-Icon {
-            color: var(--spectrum-global-color-gray-900)
-          }
-
-          .spectrum-Button-label {
-            color: var(--spectrum-global-color-gray-900)
-          }
-        }
-
-        .spectrum-Button-label {
-          color: var(--spectrum-global-color-gray-800)
         }
       }
     }
 
-    &:disabled {
-      border-color: var(--spectrum-global-color-gray-200);
-      background-color: var(--spectrum-alias-background-color-transparent)
+    &:not(.spectrum-Button--staticWhite) {
+      &:not(.spectrum-Button--staticBlack) {
+        &:disabled {
+          border-color: var(--spectrum-global-color-gray-200);
+          background-color: var(--spectrum-alias-background-color-transparent)
+        }
+      }
     }
   }
 }
