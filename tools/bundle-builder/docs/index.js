@@ -41,6 +41,7 @@ let minimumDeps = [
   'actionbutton',
   'button',
   'textfield',
+  'clearbutton',
   'search',
   'menu',
   'fieldlabel',

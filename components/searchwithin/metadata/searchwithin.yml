@@ -11,8 +11,8 @@ sections:
 
       Since Picker's markup has changed, `.spectrum-SearchWithin-pickerTrigger` is no longer required.
 
-      ### `.spectrum-SearchWithin-clearButton` must be added to `.spectrum-ClearButton`
-      The `.spectrum-SearchWithin-clearButton` class is now required on the `.spectrum-ClearButton`.
+      ### New ClearButton classes
+      The `.spectrum-SearchWithin-clearButton` class is now required on the `.spectrum-ClearButton` element.
 
       ### New ClearButton markup
       See the [ClearButton migration guide](clearbutton.html#migrationguide) for more information.
