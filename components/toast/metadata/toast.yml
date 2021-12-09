@@ -12,7 +12,7 @@ sections:
       <div class="spectrum-Toast">
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">Button.xd has been archived</div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Undo</span>
           </button>
         </div>
@@ -57,7 +57,7 @@ sections:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -81,7 +81,7 @@ sections:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is golden brown</div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -108,7 +108,7 @@ sections:
           <div class="spectrum-Toast-content">
             A new version of Lightroom Classic is now available
           </div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Update</span>
           </button>
         </div>
@@ -133,7 +133,7 @@ sections:
           <div class="spectrum-Toast-content">
             A new version of Lightroom Classic is now available
           </div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Update</span>
           </button>
         </div>
@@ -199,7 +199,7 @@ sections:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -224,7 +224,7 @@ sections:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is on fire</div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -248,7 +248,7 @@ sections:
         </svg>
         <div class="spectrum-Toast-body">
           <div class="spectrum-Toast-content">The toast is golden brown</div>
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Eject</span>
           </button>
         </div>
@@ -270,7 +270,7 @@ sections:
       <div class="spectrum-Toast">
         <div class="spectrum-Toast-content">Button.xd has been archived</div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Undo</span>
           </button>
           <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
@@ -291,7 +291,7 @@ sections:
         </svg>
         <div class="spectrum-Toast-content">Don't use this markup, it's deprecated</div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
             <span class="spectrum-Button-label">Ok</span>
           </button>
           <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
