@@ -5,6 +5,15 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Secondary
 sections:
   - name: Migration Guide
     description: |
+      ### Fill or Outline class required
+      All buttons now require either the `.spectrum-Button--fill` or `.spectrum-Button--outline` class.
+
+      ### Secondary replaced by Secondary with Fill
+      Replace all `.spectrum-Button--secondary` with `.spectrum-Button--secondary .spectrum-Button--fill`.
+
+      ### Secondary Quiet replaced by Secondary with Outline
+      Replace all `.spectrum-Button--secondary .spectrum-Button--quiet` with `.spectrum-Button--secondary .spectrum-Button--outline`.
+
       ### T-shirt sizing
       Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
 

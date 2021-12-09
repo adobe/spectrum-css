@@ -5,6 +5,15 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Negative
 sections:
   - name: Migration Guide
     description: |
+      ### Fill or Outline class required
+      All buttons now require either the `.spectrum-Button--fill` or `.spectrum-Button--outline` class.
+
+      ### Negative replaced by Negative with Fill
+      Replace all `.spectrum-Button--negative` with `.spectrum-Button--negative .spectrum-Button--fill`.
+
+      ### Negative Quiet replaced by Negative with Outline
+      Replace all `.spectrum-Button--negative .spectrum-Button--quiet` with `.spectrum-Button--negative .spectrum-Button--outline`.
+
       ### T-shirt sizing
       Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
 
