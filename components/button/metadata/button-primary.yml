@@ -8,11 +8,11 @@ sections:
       ### Fill or Outline class required
       All buttons now require either the `.spectrum-Button--fill` or `.spectrum-Button--outline` class.
 
-      ### Primary replaced by Primary with Fill
-      Replace all `.spectrum-Button--primary` with `.spectrum-Button--primary .spectrum-Button--fill`.
+      ### Primary replaced by Primary with Outline
+      Replace all `.spectrum-Button--primary` with `.spectrum-Button--primary .spectrum-Button--outline`.
 
-      ### Primary Quiet replaced by Primary with Outline
-      Replace all `.spectrum-Button--primary .spectrum-Button--quiet` with `.spectrum-Button--primary .spectrum-Button--outline`.
+      ### Primary Quiet replaced by Secondary with Outline
+      Replace all `.spectrum-Button--primary .spectrum-Button--quiet` with `.spectrum-Button--secondary .spectrum-Button--outline`.
 
       ### T-shirt sizing
       Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
