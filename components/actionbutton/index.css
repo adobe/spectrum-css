@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-actionbutton.css";
+@import "./actionbutton-generated.css";
 
 .spectrum-ActionButton--sizeS {
   @remapvars {
@@ -22,6 +23,9 @@ governing permissions and limitations under the License.
   /* todo: remove hardcoded values when we update DNA */
   --spectrum-actionbutton-hold-icon-padding-bottom: var(--spectrum-global-dimension-size-25);
   --spectrum-actionbutton-hold-icon-padding-right: var(--spectrum-global-dimension-size-25);
+
+  /* hack to fix the incorrect min-width */
+  --spectrum-actionbutton-textonly-min-width: var(--spectrum-global-dimension-size-300);
 }
 
 .spectrum-ActionButton--sizeM {
@@ -88,6 +92,9 @@ a.spectrum-ActionButton {
   font-weight: var(--spectrum-actionbutton-textonly-text-font-weight);
   line-height: var(--spectrum-actionbutton-textonly-text-line-height);
 
+  /* Let static variants inherit their color */
+  color: inherit;
+
   .spectrum-Icon {
     @inherit: %spectrum-ButtonIcon;
 
@@ -136,4 +143,50 @@ a.spectrum-ActionButton {
 
   font-size: var(--spectrum-actionbutton-quiet-textonly-text-size);
   font-weight: var(--spectrum-actionbutton-quiet-textonly-text-font-weight);
+}
+
+/* special cases for focus-ring */
+.spectrum-ActionButton {
+  --spectrum-actionbutton-focus-ring-gap: var(--spectrum-alias-component-focusring-gap);
+  --spectrum-actionbutton-focus-ring-size: var(--spectrum-alias-component-focusring-size);
+  --spectrum-actionbutton-focus-ring-color: var(--spectrum-actionbutton-m-textonly-focus-ring-border-color-key-focus);
+
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  &:after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc((var(--spectrum-actionbutton-focus-ring-gap) + var(--spectrum-actionbutton-textonly-border-size)) * -1);
+    border-radius: calc(var(--spectrum-actionbutton-quiet-textonly-border-radius) + var(--spectrum-actionbutton-focus-ring-gap));
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  &:focus-ring {
+    /* kill the default ring */
+    box-shadow: none !important;
+
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-actionbutton-focus-ring-size) var(--spectrum-actionbutton-focus-ring-color);
+    }
+  }
+}
+
+.spectrum-ActionButton--staticWhite {
+  --spectrum-actionbutton-focus-ring-color: var(--spectrum-global-color-static-white);
+}
+
+.spectrum-ActionButton--staticBlack {
+  --spectrum-actionbutton-focus-ring-color: var(--spectrum-global-color-static-black);
+}
+
+.spectrum-ActionButton--emphasized.is-selected,
+.spectrum-ActionButton--staticWhite,
+.spectrum-ActionButton--staticBlack {
+  --spectrum-actionbutton-focus-ring-gap: var(--spectrum-alias-component-focusring-gap-emphasized);
+  --spectrum-actionbutton-focus-ring-size: var(--spectrum-alias-component-focusring-size-emphasized);
 }
