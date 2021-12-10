@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.0"></a>
+# 2.1.0
+🗓 2021-12-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.0.9...@spectrum-css/site@2.1.0)
+
+### ✨ Features
+
+* add classes to space examples out ([9182d54](https://github.com/adobe/spectrum-css/commit/9182d54))
+
+
+
+
+
 <a name="2.0.9"></a>
 ## 2.0.9
 🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.0.8...@spectrum-css/site@2.0.9)
