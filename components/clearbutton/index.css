@@ -64,8 +64,8 @@ governing permissions and limitations under the License.
 .spectrum-ClearButton-fill {
   background-color: var(--spectrum-clearbutton-fill-background-color);
 
-  inline-size: var(--spectrum-clearbutton-fill-width);
-  block-size: var(--spectrum-clearbutton-fill-height);
+  inline-size: var(--spectrum-clearbutton-fill-size);
+  block-size: var(--spectrum-clearbutton-fill-size);
   border-radius: 100%;
 
   display: flex;
@@ -135,38 +135,38 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ClearButton--overBackground {
-  background-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-background-color);
-  border-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-border-color);
-  color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-text-color);
+  background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color);
+  border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color);
+  color: var(--spectrum-button-m-primary-outline-white-texticon-text-color);
 
   &:hover {
-    background-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-background-color-hover);
-    border-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-border-color-hover);
-    color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-text-color-hover);
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-hover);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-hover);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
   }
 
   &:focus-ring {
-    background-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-background-color-hover);
-    border-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-border-color-hover);
-    color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-text-color-hover);
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-hover);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-hover);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
     box-shadow: none;
 
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-m-primary-overbackground-texticon-border-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-m-primary-outline-white-texticon-border-color-key-focus);
     }
   }
 
   &:active {
-    background-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-background-color-down);
-    border-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-border-color-down);
-    color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-text-color-down);
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-down);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-down);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-down);
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-background-color-disabled);
-    border-color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-border-color-disabled);
-    color: var(--spectrum-button-m-primary-quiet-overbackground-texticon-text-color-disabled);
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-disabled);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-disabled);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-disabled);
   }
 }
 
