@@ -12,7 +12,7 @@ sections:
       Replace all `.spectrum-Button--cta` with `.spectrum-Button--accent .spectrum-Button--fill`.
 
       ### T-shirt sizing
-      Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.\
+      Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
 examples:
   - id: button-accent
     name: Sizing
