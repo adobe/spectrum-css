@@ -60,6 +60,7 @@
   --spectrum-slider-s-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-tick-editable-text-transform: none;
+  --spectrum-slider-s-tick-editable-text-render: yes;
   --spectrum-slider-s-tick-editable-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-tick-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -151,6 +152,7 @@
   --spectrum-slider-s-ramp-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-ramp-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-ramp-tick-editable-text-transform: none;
+  --spectrum-slider-s-ramp-tick-editable-text-render: yes;
   --spectrum-slider-s-ramp-tick-editable-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-ramp-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-ramp-tick-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -242,6 +244,7 @@
   --spectrum-slider-s-range-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-range-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-range-tick-editable-text-transform: none;
+  --spectrum-slider-s-range-tick-editable-text-render: yes;
   --spectrum-slider-s-range-tick-editable-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-range-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-range-tick-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -333,6 +336,7 @@
   --spectrum-slider-s-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-tick-text-transform: none;
+  --spectrum-slider-s-tick-text-render: yes;
   --spectrum-slider-s-tick-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-tick-text-font-style: var(--spectrum-global-font-style-regular);
@@ -424,6 +428,7 @@
   --spectrum-slider-s-ramp-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-ramp-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-ramp-tick-text-transform: none;
+  --spectrum-slider-s-ramp-tick-text-render: yes;
   --spectrum-slider-s-ramp-tick-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-ramp-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-ramp-tick-text-font-style: var(--spectrum-global-font-style-regular);
@@ -515,6 +520,7 @@
   --spectrum-slider-s-range-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-range-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-range-tick-text-transform: none;
+  --spectrum-slider-s-range-tick-text-render: yes;
   --spectrum-slider-s-range-tick-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-range-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-range-tick-text-font-style: var(--spectrum-global-font-style-regular);
@@ -606,6 +612,7 @@
   --spectrum-slider-s-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-editable-text-transform: none;
+  --spectrum-slider-s-editable-text-render: yes;
   --spectrum-slider-s-editable-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -697,6 +704,7 @@
   --spectrum-slider-s-ramp-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-ramp-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-ramp-editable-text-transform: none;
+  --spectrum-slider-s-ramp-editable-text-render: yes;
   --spectrum-slider-s-ramp-editable-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-ramp-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-ramp-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -788,6 +796,7 @@
   --spectrum-slider-s-range-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-range-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-range-editable-text-transform: none;
+  --spectrum-slider-s-range-editable-text-render: yes;
   --spectrum-slider-s-range-editable-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-range-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-range-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -879,6 +888,7 @@
   --spectrum-slider-s-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-text-transform: none;
+  --spectrum-slider-s-text-render: yes;
   --spectrum-slider-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -970,6 +980,7 @@
   --spectrum-slider-s-ramp-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-ramp-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-ramp-text-transform: none;
+  --spectrum-slider-s-ramp-text-render: yes;
   --spectrum-slider-s-ramp-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-ramp-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-ramp-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1061,6 +1072,7 @@
   --spectrum-slider-s-range-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-slider-s-range-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-s-range-text-transform: none;
+  --spectrum-slider-s-range-text-render: yes;
   --spectrum-slider-s-range-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-slider-s-range-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-s-range-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1152,6 +1164,7 @@
   --spectrum-slider-m-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-tick-editable-text-transform: none;
+  --spectrum-slider-m-tick-editable-text-render: yes;
   --spectrum-slider-m-tick-editable-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1244,6 +1257,7 @@
   --spectrum-slider-m-ramp-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-ramp-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-ramp-tick-editable-text-transform: none;
+  --spectrum-slider-m-ramp-tick-editable-text-render: yes;
   --spectrum-slider-m-ramp-tick-editable-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-ramp-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-ramp-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1336,6 +1350,7 @@
   --spectrum-slider-m-range-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-range-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-range-tick-editable-text-transform: none;
+  --spectrum-slider-m-range-tick-editable-text-render: yes;
   --spectrum-slider-m-range-tick-editable-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-range-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-range-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1428,6 +1443,7 @@
   --spectrum-slider-m-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-tick-text-transform: none;
+  --spectrum-slider-m-tick-text-render: yes;
   --spectrum-slider-m-tick-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-tick-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1520,6 +1536,7 @@
   --spectrum-slider-m-ramp-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-ramp-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-ramp-tick-text-transform: none;
+  --spectrum-slider-m-ramp-tick-text-render: yes;
   --spectrum-slider-m-ramp-tick-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-ramp-tick-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-ramp-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1612,6 +1629,7 @@
   --spectrum-slider-m-range-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-range-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-range-tick-text-transform: none;
+  --spectrum-slider-m-range-tick-text-render: yes;
   --spectrum-slider-m-range-tick-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-range-tick-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-range-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1704,6 +1722,7 @@
   --spectrum-slider-m-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-editable-text-transform: none;
+  --spectrum-slider-m-editable-text-render: yes;
   --spectrum-slider-m-editable-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-editable-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1796,6 +1815,7 @@
   --spectrum-slider-m-ramp-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-ramp-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-ramp-editable-text-transform: none;
+  --spectrum-slider-m-ramp-editable-text-render: yes;
   --spectrum-slider-m-ramp-editable-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-ramp-editable-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-ramp-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1888,6 +1908,7 @@
   --spectrum-slider-m-range-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-range-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-range-editable-text-transform: none;
+  --spectrum-slider-m-range-editable-text-render: yes;
   --spectrum-slider-m-range-editable-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-range-editable-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-range-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1980,6 +2001,7 @@
   --spectrum-slider-m-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-text-transform: none;
+  --spectrum-slider-m-text-render: yes;
   --spectrum-slider-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -2072,6 +2094,7 @@
   --spectrum-slider-m-ramp-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-ramp-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-ramp-text-transform: none;
+  --spectrum-slider-m-ramp-text-render: yes;
   --spectrum-slider-m-ramp-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-ramp-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-ramp-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -2164,6 +2187,7 @@
   --spectrum-slider-m-range-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-m-range-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-m-range-text-transform: none;
+  --spectrum-slider-m-range-text-render: yes;
   --spectrum-slider-m-range-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-slider-m-range-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-slider-m-range-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -2256,6 +2280,7 @@
   --spectrum-slider-l-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-tick-editable-text-transform: none;
+  --spectrum-slider-l-tick-editable-text-render: yes;
   --spectrum-slider-l-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-tick-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2347,6 +2372,7 @@
   --spectrum-slider-l-ramp-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-ramp-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-ramp-tick-editable-text-transform: none;
+  --spectrum-slider-l-ramp-tick-editable-text-render: yes;
   --spectrum-slider-l-ramp-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-ramp-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-ramp-tick-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2438,6 +2464,7 @@
   --spectrum-slider-l-range-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-range-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-range-tick-editable-text-transform: none;
+  --spectrum-slider-l-range-tick-editable-text-render: yes;
   --spectrum-slider-l-range-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-range-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-range-tick-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2529,6 +2556,7 @@
   --spectrum-slider-l-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-tick-text-transform: none;
+  --spectrum-slider-l-tick-text-render: yes;
   --spectrum-slider-l-tick-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-tick-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2620,6 +2648,7 @@
   --spectrum-slider-l-ramp-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-ramp-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-ramp-tick-text-transform: none;
+  --spectrum-slider-l-ramp-tick-text-render: yes;
   --spectrum-slider-l-ramp-tick-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-ramp-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-ramp-tick-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2711,6 +2740,7 @@
   --spectrum-slider-l-range-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-range-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-range-tick-text-transform: none;
+  --spectrum-slider-l-range-tick-text-render: yes;
   --spectrum-slider-l-range-tick-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-range-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-range-tick-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2802,6 +2832,7 @@
   --spectrum-slider-l-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-editable-text-transform: none;
+  --spectrum-slider-l-editable-text-render: yes;
   --spectrum-slider-l-editable-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2893,6 +2924,7 @@
   --spectrum-slider-l-ramp-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-ramp-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-ramp-editable-text-transform: none;
+  --spectrum-slider-l-ramp-editable-text-render: yes;
   --spectrum-slider-l-ramp-editable-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-ramp-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-ramp-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2984,6 +3016,7 @@
   --spectrum-slider-l-range-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-range-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-range-editable-text-transform: none;
+  --spectrum-slider-l-range-editable-text-render: yes;
   --spectrum-slider-l-range-editable-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-range-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-range-editable-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3075,6 +3108,7 @@
   --spectrum-slider-l-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-text-transform: none;
+  --spectrum-slider-l-text-render: yes;
   --spectrum-slider-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3166,6 +3200,7 @@
   --spectrum-slider-l-ramp-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-ramp-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-ramp-text-transform: none;
+  --spectrum-slider-l-ramp-text-render: yes;
   --spectrum-slider-l-ramp-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-ramp-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-ramp-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3257,6 +3292,7 @@
   --spectrum-slider-l-range-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-l-range-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-l-range-text-transform: none;
+  --spectrum-slider-l-range-text-render: yes;
   --spectrum-slider-l-range-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-slider-l-range-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-slider-l-range-text-font-style: var(--spectrum-global-font-style-regular);
@@ -3348,6 +3384,7 @@
   --spectrum-slider-xl-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-tick-editable-text-transform: none;
+  --spectrum-slider-xl-tick-editable-text-render: yes;
   --spectrum-slider-xl-tick-editable-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3440,6 +3477,7 @@
   --spectrum-slider-xl-ramp-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-ramp-tick-editable-text-transform: none;
+  --spectrum-slider-xl-ramp-tick-editable-text-render: yes;
   --spectrum-slider-xl-ramp-tick-editable-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-ramp-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3532,6 +3570,7 @@
   --spectrum-slider-xl-range-tick-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-tick-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-range-tick-editable-text-transform: none;
+  --spectrum-slider-xl-range-tick-editable-text-render: yes;
   --spectrum-slider-xl-range-tick-editable-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-range-tick-editable-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-tick-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3624,6 +3663,7 @@
   --spectrum-slider-xl-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-tick-text-transform: none;
+  --spectrum-slider-xl-tick-text-render: yes;
   --spectrum-slider-xl-tick-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-tick-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3716,6 +3756,7 @@
   --spectrum-slider-xl-ramp-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-ramp-tick-text-transform: none;
+  --spectrum-slider-xl-ramp-tick-text-render: yes;
   --spectrum-slider-xl-ramp-tick-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-ramp-tick-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3808,6 +3849,7 @@
   --spectrum-slider-xl-range-tick-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-tick-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-range-tick-text-transform: none;
+  --spectrum-slider-xl-range-tick-text-render: yes;
   --spectrum-slider-xl-range-tick-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-range-tick-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-tick-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3900,6 +3942,7 @@
   --spectrum-slider-xl-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-editable-text-transform: none;
+  --spectrum-slider-xl-editable-text-render: yes;
   --spectrum-slider-xl-editable-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-editable-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3992,6 +4035,7 @@
   --spectrum-slider-xl-ramp-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-ramp-editable-text-transform: none;
+  --spectrum-slider-xl-ramp-editable-text-render: yes;
   --spectrum-slider-xl-ramp-editable-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-ramp-editable-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -4084,6 +4128,7 @@
   --spectrum-slider-xl-range-editable-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-editable-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-range-editable-text-transform: none;
+  --spectrum-slider-xl-range-editable-text-render: yes;
   --spectrum-slider-xl-range-editable-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-range-editable-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-editable-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -4176,6 +4221,7 @@
   --spectrum-slider-xl-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-text-transform: none;
+  --spectrum-slider-xl-text-render: yes;
   --spectrum-slider-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -4268,6 +4314,7 @@
   --spectrum-slider-xl-ramp-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-ramp-text-transform: none;
+  --spectrum-slider-xl-ramp-text-render: yes;
   --spectrum-slider-xl-ramp-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-ramp-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-ramp-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -4360,6 +4407,7 @@
   --spectrum-slider-xl-range-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-radial-reaction-size: var(--spectrum-global-dimension-static-size-550);
   --spectrum-slider-xl-range-text-transform: none;
+  --spectrum-slider-xl-range-text-render: yes;
   --spectrum-slider-xl-range-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-slider-xl-range-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-slider-xl-range-text-font-family: var(--spectrum-alias-body-text-font-family);

@@ -21,6 +21,7 @@
   --spectrum-helptext-s-neutral-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-s-neutral-texticon-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-s-neutral-texticon-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-s-neutral-texticon-text-render: yes;
   --spectrum-helptext-s-neutral-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-s-neutral-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-s-neutral-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -30,6 +31,7 @@
   --spectrum-helptext-s-neutral-texticon-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-neutral-texticon-icon-type: icon;
+  --spectrum-helptext-s-neutral-texticon-icon-render: yes;
   --spectrum-helptext-s-neutral-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-helptext-s-neutral-texticon-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-neutral-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -57,6 +59,7 @@
   --spectrum-helptext-s-negative-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-s-negative-texticon-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-s-negative-texticon-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-s-negative-texticon-text-render: yes;
   --spectrum-helptext-s-negative-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-s-negative-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-s-negative-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -66,6 +69,7 @@
   --spectrum-helptext-s-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-negative-texticon-icon-type: icon;
+  --spectrum-helptext-s-negative-texticon-icon-render: yes;
   --spectrum-helptext-s-negative-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-helptext-s-negative-texticon-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-negative-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -93,6 +97,7 @@
   --spectrum-helptext-s-neutral-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-s-neutral-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-s-neutral-textonly-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-s-neutral-textonly-text-render: yes;
   --spectrum-helptext-s-neutral-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-s-neutral-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-s-neutral-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -102,6 +107,7 @@
   --spectrum-helptext-s-neutral-textonly-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-neutral-textonly-icon-type: icon;
+  --spectrum-helptext-s-neutral-textonly-icon-render: no;
   --spectrum-helptext-s-neutral-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-helptext-s-neutral-textonly-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-neutral-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -129,6 +135,7 @@
   --spectrum-helptext-s-negative-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-s-negative-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-s-negative-textonly-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-s-negative-textonly-text-render: yes;
   --spectrum-helptext-s-negative-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-s-negative-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-s-negative-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -138,6 +145,7 @@
   --spectrum-helptext-s-negative-textonly-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-negative-textonly-icon-type: icon;
+  --spectrum-helptext-s-negative-textonly-icon-render: no;
   --spectrum-helptext-s-negative-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-helptext-s-negative-textonly-icon-margin-top: var(--spectrum-global-dimension-size-50);
   --spectrum-helptext-s-negative-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-50);
@@ -165,6 +173,7 @@
   --spectrum-helptext-m-neutral-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-m-neutral-texticon-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-m-neutral-texticon-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-m-neutral-texticon-text-render: yes;
   --spectrum-helptext-m-neutral-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-m-neutral-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-m-neutral-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -174,6 +183,7 @@
   --spectrum-helptext-m-neutral-texticon-icon-padding-top: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-neutral-texticon-icon-type: icon;
+  --spectrum-helptext-m-neutral-texticon-icon-render: yes;
   --spectrum-helptext-m-neutral-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-helptext-m-neutral-texticon-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-helptext-m-neutral-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -201,6 +211,7 @@
   --spectrum-helptext-m-negative-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-m-negative-texticon-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-m-negative-texticon-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-m-negative-texticon-text-render: yes;
   --spectrum-helptext-m-negative-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-m-negative-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-m-negative-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -210,6 +221,7 @@
   --spectrum-helptext-m-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-negative-texticon-icon-type: icon;
+  --spectrum-helptext-m-negative-texticon-icon-render: yes;
   --spectrum-helptext-m-negative-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-helptext-m-negative-texticon-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-helptext-m-negative-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -237,6 +249,7 @@
   --spectrum-helptext-m-neutral-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-m-neutral-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-m-neutral-textonly-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-m-neutral-textonly-text-render: yes;
   --spectrum-helptext-m-neutral-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-m-neutral-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-m-neutral-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -246,6 +259,7 @@
   --spectrum-helptext-m-neutral-textonly-icon-padding-top: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-neutral-textonly-icon-type: icon;
+  --spectrum-helptext-m-neutral-textonly-icon-render: no;
   --spectrum-helptext-m-neutral-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-helptext-m-neutral-textonly-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-helptext-m-neutral-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -273,6 +287,7 @@
   --spectrum-helptext-m-negative-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-helptext-m-negative-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-helptext-m-negative-textonly-text-font-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-helptext-m-negative-textonly-text-render: yes;
   --spectrum-helptext-m-negative-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-m-negative-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-m-negative-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -282,6 +297,7 @@
   --spectrum-helptext-m-negative-textonly-icon-padding-top: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-40);
   --spectrum-helptext-m-negative-textonly-icon-type: icon;
+  --spectrum-helptext-m-negative-textonly-icon-render: no;
   --spectrum-helptext-m-negative-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-helptext-m-negative-textonly-icon-margin-top: var(--spectrum-global-dimension-size-85);
   --spectrum-helptext-m-negative-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-85);
@@ -310,6 +326,7 @@
   --spectrum-helptext-l-neutral-texticon-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-neutral-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-l-neutral-texticon-text-font-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-helptext-l-neutral-texticon-text-render: yes;
   --spectrum-helptext-l-neutral-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-l-neutral-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-l-neutral-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -319,6 +336,7 @@
   --spectrum-helptext-l-neutral-texticon-icon-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-neutral-texticon-icon-type: icon;
+  --spectrum-helptext-l-neutral-texticon-icon-render: yes;
   --spectrum-helptext-l-neutral-texticon-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-neutral-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-neutral-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -346,6 +364,7 @@
   --spectrum-helptext-l-negative-texticon-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-negative-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-l-negative-texticon-text-font-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-helptext-l-negative-texticon-text-render: yes;
   --spectrum-helptext-l-negative-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-l-negative-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-l-negative-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -355,6 +374,7 @@
   --spectrum-helptext-l-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-negative-texticon-icon-type: icon;
+  --spectrum-helptext-l-negative-texticon-icon-render: yes;
   --spectrum-helptext-l-negative-texticon-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-negative-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-negative-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -382,6 +402,7 @@
   --spectrum-helptext-l-neutral-textonly-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-neutral-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-l-neutral-textonly-text-font-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-helptext-l-neutral-textonly-text-render: yes;
   --spectrum-helptext-l-neutral-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-l-neutral-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-l-neutral-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -391,6 +412,7 @@
   --spectrum-helptext-l-neutral-textonly-icon-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-neutral-textonly-icon-type: icon;
+  --spectrum-helptext-l-neutral-textonly-icon-render: no;
   --spectrum-helptext-l-neutral-textonly-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-neutral-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-neutral-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -418,6 +440,7 @@
   --spectrum-helptext-l-negative-textonly-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-negative-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-l-negative-textonly-text-font-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-helptext-l-negative-textonly-text-render: yes;
   --spectrum-helptext-l-negative-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-l-negative-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-l-negative-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -427,6 +450,7 @@
   --spectrum-helptext-l-negative-textonly-icon-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-75);
   --spectrum-helptext-l-negative-textonly-icon-type: icon;
+  --spectrum-helptext-l-negative-textonly-icon-render: no;
   --spectrum-helptext-l-negative-textonly-icon-margin-top: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-negative-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-125);
   --spectrum-helptext-l-negative-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
@@ -453,6 +477,7 @@
   --spectrum-helptext-xl-neutral-texticon-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-helptext-xl-neutral-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-helptext-xl-neutral-texticon-text-font-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-helptext-xl-neutral-texticon-text-render: yes;
   --spectrum-helptext-xl-neutral-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-xl-neutral-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-xl-neutral-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -462,6 +487,7 @@
   --spectrum-helptext-xl-neutral-texticon-icon-padding-top: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-neutral-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-neutral-texticon-icon-type: icon;
+  --spectrum-helptext-xl-neutral-texticon-icon-render: yes;
   --spectrum-helptext-xl-neutral-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-helptext-xl-neutral-texticon-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-helptext-xl-neutral-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -489,6 +515,7 @@
   --spectrum-helptext-xl-negative-texticon-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-helptext-xl-negative-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-helptext-xl-negative-texticon-text-font-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-helptext-xl-negative-texticon-text-render: yes;
   --spectrum-helptext-xl-negative-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-xl-negative-texticon-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-xl-negative-texticon-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -498,6 +525,7 @@
   --spectrum-helptext-xl-negative-texticon-icon-padding-top: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-negative-texticon-icon-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-negative-texticon-icon-type: icon;
+  --spectrum-helptext-xl-negative-texticon-icon-render: yes;
   --spectrum-helptext-xl-negative-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-helptext-xl-negative-texticon-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-helptext-xl-negative-texticon-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -525,6 +553,7 @@
   --spectrum-helptext-xl-neutral-textonly-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-helptext-xl-neutral-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-helptext-xl-neutral-textonly-text-font-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-helptext-xl-neutral-textonly-text-render: yes;
   --spectrum-helptext-xl-neutral-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-xl-neutral-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-xl-neutral-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -534,6 +563,7 @@
   --spectrum-helptext-xl-neutral-textonly-icon-padding-top: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-neutral-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-neutral-textonly-icon-type: icon;
+  --spectrum-helptext-xl-neutral-textonly-icon-render: no;
   --spectrum-helptext-xl-neutral-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-helptext-xl-neutral-textonly-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-helptext-xl-neutral-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-160);
@@ -561,6 +591,7 @@
   --spectrum-helptext-xl-negative-textonly-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-helptext-xl-negative-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-helptext-xl-negative-textonly-text-font-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-helptext-xl-negative-textonly-text-render: yes;
   --spectrum-helptext-xl-negative-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-helptext-xl-negative-textonly-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-helptext-xl-negative-textonly-text-font-weight: var(--spectrum-alias-body-text-font-weight);
@@ -570,6 +601,7 @@
   --spectrum-helptext-xl-negative-textonly-icon-padding-top: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-negative-textonly-icon-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-helptext-xl-negative-textonly-icon-type: icon;
+  --spectrum-helptext-xl-negative-textonly-icon-render: no;
   --spectrum-helptext-xl-negative-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-helptext-xl-negative-textonly-icon-margin-top: var(--spectrum-global-dimension-size-160);
   --spectrum-helptext-xl-negative-textonly-icon-margin-bottom: var(--spectrum-global-dimension-size-160);

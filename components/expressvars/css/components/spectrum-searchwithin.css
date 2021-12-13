@@ -51,6 +51,7 @@
   --spectrum-searchwithin-s-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-s-quiet-placeholder-text-transform: none;
   --spectrum-searchwithin-s-quiet-text-transform: none;
+  --spectrum-searchwithin-s-quiet-text-render: yes;
   --spectrum-searchwithin-s-quiet-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-searchwithin-s-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-searchwithin-s-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -122,6 +123,7 @@
   --spectrum-searchwithin-s-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-s-placeholder-text-transform: none;
   --spectrum-searchwithin-s-text-transform: none;
+  --spectrum-searchwithin-s-text-render: yes;
   --spectrum-searchwithin-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-searchwithin-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-searchwithin-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -194,6 +196,7 @@
   --spectrum-searchwithin-m-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-m-quiet-placeholder-text-transform: none;
   --spectrum-searchwithin-m-quiet-text-transform: none;
+  --spectrum-searchwithin-m-quiet-text-render: yes;
   --spectrum-searchwithin-m-quiet-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-searchwithin-m-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-searchwithin-m-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -267,6 +270,7 @@
   --spectrum-searchwithin-m-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-m-placeholder-text-transform: none;
   --spectrum-searchwithin-m-text-transform: none;
+  --spectrum-searchwithin-m-text-render: yes;
   --spectrum-searchwithin-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-searchwithin-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-searchwithin-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -338,6 +342,7 @@
   --spectrum-searchwithin-l-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-l-quiet-placeholder-text-transform: none;
   --spectrum-searchwithin-l-quiet-text-transform: none;
+  --spectrum-searchwithin-l-quiet-text-render: yes;
   --spectrum-searchwithin-l-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-searchwithin-l-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-searchwithin-l-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -408,6 +413,7 @@
   --spectrum-searchwithin-l-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-l-placeholder-text-transform: none;
   --spectrum-searchwithin-l-text-transform: none;
+  --spectrum-searchwithin-l-text-render: yes;
   --spectrum-searchwithin-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-searchwithin-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-searchwithin-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -480,6 +486,7 @@
   --spectrum-searchwithin-xl-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-xl-quiet-placeholder-text-transform: none;
   --spectrum-searchwithin-xl-quiet-text-transform: none;
+  --spectrum-searchwithin-xl-quiet-text-render: yes;
   --spectrum-searchwithin-xl-quiet-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-searchwithin-xl-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-searchwithin-xl-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -553,6 +560,7 @@
   --spectrum-searchwithin-xl-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-searchwithin-xl-placeholder-text-transform: none;
   --spectrum-searchwithin-xl-text-transform: none;
+  --spectrum-searchwithin-xl-text-render: yes;
   --spectrum-searchwithin-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-searchwithin-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-searchwithin-xl-text-font-family: var(--spectrum-alias-body-text-font-family);

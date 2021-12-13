@@ -47,8 +47,7 @@
   --spectrum-clearbutton-s-fill-padding-bottom: 0;
   --spectrum-clearbutton-s-fill-padding-left: 0;
   --spectrum-clearbutton-s-fill-padding-right: 0;
-  --spectrum-clearbutton-s-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-clearbutton-s-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-clearbutton-s-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-clearbutton-s-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-clearbutton-s-focusring-border-radius: var(--spectrum-alias-clearbutton-border-radius);
   --spectrum-clearbutton-s-focusring-type: focusring;
@@ -102,8 +101,7 @@
   --spectrum-clearbutton-m-fill-padding-bottom: 0;
   --spectrum-clearbutton-m-fill-padding-left: 0;
   --spectrum-clearbutton-m-fill-padding-right: 0;
-  --spectrum-clearbutton-m-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-clearbutton-m-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-clearbutton-m-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-clearbutton-m-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-clearbutton-m-focusring-border-radius: var(--spectrum-alias-clearbutton-border-radius);
   --spectrum-clearbutton-m-focusring-type: focusring;
@@ -157,8 +155,7 @@
   --spectrum-clearbutton-l-fill-padding-bottom: 0;
   --spectrum-clearbutton-l-fill-padding-left: 0;
   --spectrum-clearbutton-l-fill-padding-right: 0;
-  --spectrum-clearbutton-l-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-clearbutton-l-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-clearbutton-l-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-clearbutton-l-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-clearbutton-l-focusring-border-radius: var(--spectrum-alias-clearbutton-border-radius);
   --spectrum-clearbutton-l-focusring-type: focusring;
@@ -212,8 +209,7 @@
   --spectrum-clearbutton-xl-fill-padding-bottom: 0;
   --spectrum-clearbutton-xl-fill-padding-left: 0;
   --spectrum-clearbutton-xl-fill-padding-right: 0;
-  --spectrum-clearbutton-xl-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
-  --spectrum-clearbutton-xl-fill-width: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-clearbutton-xl-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-clearbutton-xl-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-clearbutton-xl-focusring-border-radius: var(--spectrum-alias-clearbutton-border-radius);
   --spectrum-clearbutton-xl-focusring-type: focusring;
