@@ -41,7 +41,7 @@ governing permissions and limitations under the License.
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-m-primary-texticon-focus-ring-size) var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-button-m-primary-outline-texticon-focus-ring-size) var(--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus);
     }
   }
 }
@@ -87,7 +87,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-LogicButton::after {
-    --spectrum-button-m-primary-texticon-focus-ring-color-key-focus: Highlight;
+    --spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus: Highlight;
     forced-color-adjust: none;
   }
 
