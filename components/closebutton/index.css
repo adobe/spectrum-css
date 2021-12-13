@@ -1,0 +1,68 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../commons/basebutton.css";
+@import "./closebutton-generated.css";
+
+.spectrum-CloseButton {
+  @inherit: %spectrum-BaseButton;
+  position: relative;
+  border-color: transparent;
+  border-width: 0;
+  color: inherit;
+
+  --spectrum-global-color-static-black-rgb: 0, 0, 0;
+  --spectrum-global-color-static-white-rgb: 255, 255, 255;
+}
+
+a.spectrum-CloseButton {
+  @inherit: %spectrum-AnchorButton;
+}
+
+/* special cases for focus-ring */
+.spectrum-CloseButton {
+  --spectrum-closebutton-focus-ring-gap: var(--spectrum-alias-component-focusring-gap-emphasized);
+  --spectrum-closebutton-focus-ring-size: var(--spectrum-alias-component-focusring-size-emphasized);
+  --spectrum-closebutton-focus-ring-color: var(--spectrum-alias-focus-ring-color);
+
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  &:after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc(var(--spectrum-closebutton-focus-ring-gap) * -1);
+    border-radius: calc(var(--spectrum-CloseButton-size) + var(--spectrum-closebutton-focus-ring-gap));
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  &:focus-ring {
+    /* kill the default ring */
+    box-shadow: none !important;
+
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-closebutton-focus-ring-size) var(--spectrum-closebutton-focus-ring-color);
+    }
+  }
+}
+
+.spectrum-CloseButton--staticWhite {
+  --spectrum-closebutton-focus-ring-color: var(--spectrum-global-color-static-white);
+}
+
+.spectrum-CloseButton--staticBlack {
+  --spectrum-closebutton-focus-ring-color: var(--spectrum-global-color-static-black);
+}
