@@ -1,0 +1,492 @@
+/*
+Copyright 2021 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* begin generated CSS for actionbutton */
+.spectrum-ActionButton {
+  &.spectrum-ActionButton--staticBlack {
+    &:not(.spectrum-ActionButton--quiet) {
+      &:disabled {
+        border-color: var(--spectrum-alias-actionbutton-staticBlack-border-color-disabled);
+
+        &.is-selected {
+          border-color: var(--spectrum-alias-actionbutton-staticBlack-border-color-disabled-selected)
+        }
+
+        &:not(.is-selected) {
+          background-color: var(--spectrum-alias-actionbutton-staticBlack-background-color-disabled)
+        }
+      }
+
+      &:not(:disabled) {
+        border-color: var(--spectrum-alias-actionbutton-staticBlack-border-color-default);
+
+        &:hover {
+          border-color: var(--spectrum-alias-actionbutton-staticBlack-border-color-hover)
+        }
+
+        &:active {
+          border-color: var(--spectrum-alias-actionbutton-staticBlack-border-color-down)
+        }
+
+        &:focus-visible {
+          border-color: var(--spectrum-alias-actionbutton-staticBlack-border-color-key-focus)
+        }
+
+        &.is-keyboardFocused {
+          border-color: var(--spectrum-alias-actionbutton-staticBlack-border-color-key-focus)
+        }
+
+        &:not(.is-selected) {
+          background-color: var(--spectrum-alias-actionbutton-staticBlack-background-color-default);
+
+          &:hover {
+            background-color: var(--spectrum-alias-actionbutton-staticBlack-background-color-hover)
+          }
+
+          &:active {
+            background-color: var(--spectrum-alias-actionbutton-staticBlack-background-color-down)
+          }
+
+          &:focus-visible {
+            background-color: var(--spectrum-alias-actionbutton-staticBlack-background-color-key-focus)
+          }
+
+          &.is-keyboardFocused {
+            background-color: var(--spectrum-alias-actionbutton-staticBlack-background-color-key-focus)
+          }
+        }
+      }
+    }
+
+    &.spectrum-ActionButton--quiet {
+      &:disabled {
+        border-color: transparent;
+
+        &:not(.is-selected) {
+          background-color: transparent
+        }
+      }
+
+      &:not(:disabled) {
+        border-color: transparent;
+
+        &:not(.is-selected) {
+          background-color: var(--spectrum-alias-component-background-color-quiet-default);
+
+          &:hover {
+            background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-25))
+          }
+
+          &:active {
+            background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+          }
+
+          &:focus-visible {
+            background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-25))
+          }
+
+          &.is-keyboardFocused {
+            background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-25))
+          }
+        }
+      }
+    }
+
+    &:disabled {
+      &.is-selected {
+        background-color: var(--spectrum-alias-actionbutton-staticBlack-background-color-disabled-selected);
+
+        .spectrum-ActionButton-holdIcon {
+          color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+        }
+
+        .spectrum-ActionButton-label {
+          color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+        }
+
+        .spectrum-Icon {
+          color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+        }
+      }
+
+      .spectrum-ActionButton-holdIcon {
+        color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+      }
+
+      .spectrum-ActionButton-label {
+        color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+      }
+
+      .spectrum-Icon {
+        color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+      }
+    }
+
+    &.is-selected {
+      &:not(:disabled) {
+        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-90));
+
+        &:hover {
+          background-color: var(--spectrum-global-color-static-black)
+        }
+
+        &:active {
+          background-color: var(--spectrum-global-color-static-black)
+        }
+
+        &:focus-visible {
+          background-color: var(--spectrum-global-color-static-black)
+        }
+
+        &.is-keyboardFocused {
+          background-color: var(--spectrum-global-color-static-black)
+        }
+
+        .spectrum-ActionButton-holdIcon {
+          color: inherit
+        }
+
+        .spectrum-ActionButton-label {
+          color: inherit
+        }
+
+        .spectrum-Icon {
+          color: inherit
+        }
+      }
+    }
+
+    .spectrum-ActionButton-holdIcon {
+      color: var(--spectrum-ActionButton-static-black-color)
+    }
+
+    &:not(:disabled) {
+      &:not(.is-selected) {
+        .spectrum-ActionButton-holdIcon {
+          color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-90))
+        }
+
+        &:hover {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-black)
+          }
+        }
+
+        &:active {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-black)
+          }
+        }
+
+        &:focus-visible {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-black)
+          }
+        }
+
+        &.is-keyboardFocused {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-black)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-black)
+          }
+        }
+
+        .spectrum-ActionButton-label {
+          color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-90))
+        }
+
+        .spectrum-Icon {
+          color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-90))
+        }
+      }
+    }
+
+    .spectrum-ActionButton-label {
+      color: var(--spectrum-ActionButton-static-black-color)
+    }
+
+    .spectrum-Icon {
+      color: var(--spectrum-ActionButton-static-black-color)
+    }
+  }
+
+  &.spectrum-ActionButton--staticWhite {
+    &:not(.spectrum-ActionButton--quiet) {
+      &:disabled {
+        border-color: var(--spectrum-alias-actionbutton-staticWhite-border-color-disabled);
+
+        &.is-selected {
+          border-color: var(--spectrum-alias-actionbutton-staticWhite-border-color-disabled-selected)
+        }
+
+        &:not(.is-selected) {
+          background-color: var(--spectrum-alias-actionbutton-staticWhite-background-color-disabled)
+        }
+      }
+
+      &:not(:disabled) {
+        border-color: var(--spectrum-alias-actionbutton-staticWhite-border-color-default);
+
+        &:hover {
+          border-color: var(--spectrum-alias-actionbutton-staticWhite-border-color-hover)
+        }
+
+        &:active {
+          border-color: var(--spectrum-alias-actionbutton-staticWhite-border-color-down)
+        }
+
+        &:focus-visible {
+          border-color: var(--spectrum-alias-actionbutton-staticWhite-border-color-key-focus)
+        }
+
+        &.is-keyboardFocused {
+          border-color: var(--spectrum-alias-actionbutton-staticWhite-border-color-key-focus)
+        }
+
+        &:not(.is-selected) {
+          background-color: var(--spectrum-alias-actionbutton-staticWhite-background-color-default);
+
+          &:hover {
+            background-color: var(--spectrum-alias-actionbutton-staticWhite-background-color-hover)
+          }
+
+          &:active {
+            background-color: var(--spectrum-alias-actionbutton-staticWhite-background-color-down)
+          }
+
+          &:focus-visible {
+            background-color: var(--spectrum-alias-actionbutton-staticWhite-background-color-key-focus)
+          }
+
+          &.is-keyboardFocused {
+            background-color: var(--spectrum-alias-actionbutton-staticWhite-background-color-key-focus)
+          }
+        }
+      }
+    }
+
+    &.spectrum-ActionButton--quiet {
+      &:disabled {
+        border-color: transparent;
+
+        &:not(.is-selected) {
+          background-color: transparent
+        }
+      }
+
+      &:not(:disabled) {
+        border-color: transparent;
+
+        &:not(.is-selected) {
+          background-color: var(--spectrum-alias-component-background-color-quiet-default);
+
+          &:hover {
+            background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-25))
+          }
+
+          &:active {
+            background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+          }
+
+          &:focus-visible {
+            background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-25))
+          }
+
+          &.is-keyboardFocused {
+            background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-25))
+          }
+        }
+      }
+    }
+
+    &:disabled {
+      &.is-selected {
+        background-color: var(--spectrum-alias-actionbutton-staticWhite-background-color-disabled-selected);
+
+        .spectrum-ActionButton-holdIcon {
+          color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+        }
+
+        .spectrum-ActionButton-label {
+          color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+        }
+
+        .spectrum-Icon {
+          color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+        }
+      }
+
+      .spectrum-ActionButton-holdIcon {
+        color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+      }
+
+      .spectrum-ActionButton-label {
+        color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+      }
+
+      .spectrum-Icon {
+        color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+      }
+    }
+
+    &.is-selected {
+      &:not(:disabled) {
+        background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-90));
+
+        &:hover {
+          background-color: var(--spectrum-global-color-static-white)
+        }
+
+        &:active {
+          background-color: var(--spectrum-global-color-static-white)
+        }
+
+        &:focus-visible {
+          background-color: var(--spectrum-global-color-static-white)
+        }
+
+        &.is-keyboardFocused {
+          background-color: var(--spectrum-global-color-static-white)
+        }
+
+        .spectrum-ActionButton-holdIcon {
+          color: inherit
+        }
+
+        .spectrum-ActionButton-label {
+          color: inherit
+        }
+
+        .spectrum-Icon {
+          color: inherit
+        }
+      }
+    }
+
+    .spectrum-ActionButton-holdIcon {
+      color: var(--spectrum-ActionButton-static-white-color)
+    }
+
+    &:not(:disabled) {
+      &:not(.is-selected) {
+        .spectrum-ActionButton-holdIcon {
+          color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-90))
+        }
+
+        &:hover {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-white)
+          }
+        }
+
+        &:active {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-white)
+          }
+        }
+
+        &:focus-visible {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-white)
+          }
+        }
+
+        &.is-keyboardFocused {
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-global-color-static-white)
+          }
+
+          .spectrum-Icon {
+            color: var(--spectrum-global-color-static-white)
+          }
+        }
+
+        .spectrum-ActionButton-label {
+          color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-90))
+        }
+
+        .spectrum-Icon {
+          color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-90))
+        }
+      }
+    }
+
+    .spectrum-ActionButton-label {
+      color: var(--spectrum-ActionButton-static-white-color)
+    }
+
+    .spectrum-Icon {
+      color: var(--spectrum-ActionButton-static-white-color)
+    }
+  }
+}
+
+/* end generated CSS for actionbutton */
