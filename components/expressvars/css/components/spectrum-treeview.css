@@ -42,6 +42,7 @@
   --spectrum-treeview-s-item-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-treeview-s-item-icon-padding-top: var(--spectrum-global-dimension-size-50);
   --spectrum-treeview-s-item-icon-padding-bottom: var(--spectrum-global-dimension-size-50);
+  --spectrum-treeview-s-item-text-render: yes;
   --spectrum-treeview-s-item-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-treeview-s-item-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-treeview-s-item-text-font-style: var(--spectrum-global-font-style-regular);
@@ -106,6 +107,7 @@
   --spectrum-treeview-m-item-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-treeview-m-item-icon-padding-top: var(--spectrum-global-dimension-size-85);
   --spectrum-treeview-m-item-icon-padding-bottom: var(--spectrum-global-dimension-size-85);
+  --spectrum-treeview-m-item-text-render: yes;
   --spectrum-treeview-m-item-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-treeview-m-item-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-treeview-m-item-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -170,6 +172,7 @@
   --spectrum-treeview-l-item-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-treeview-l-item-icon-padding-top: var(--spectrum-global-dimension-size-125);
   --spectrum-treeview-l-item-icon-padding-bottom: var(--spectrum-global-dimension-size-125);
+  --spectrum-treeview-l-item-text-render: yes;
   --spectrum-treeview-l-item-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-treeview-l-item-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-treeview-l-item-text-font-style: var(--spectrum-global-font-style-regular);
@@ -234,6 +237,7 @@
   --spectrum-treeview-xl-item-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-treeview-xl-item-icon-padding-top: var(--spectrum-global-dimension-size-160);
   --spectrum-treeview-xl-item-icon-padding-bottom: var(--spectrum-global-dimension-size-160);
+  --spectrum-treeview-xl-item-text-render: yes;
   --spectrum-treeview-xl-item-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-treeview-xl-item-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-treeview-xl-item-text-font-family: var(--spectrum-alias-body-text-font-family);

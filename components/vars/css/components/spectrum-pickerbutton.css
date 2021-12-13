@@ -66,7 +66,7 @@
   --spectrum-pickerbutton-s-left-textuiicon-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-left-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-115);
   --spectrum-pickerbutton-s-left-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-100);
-  --spectrum-pickerbutton-s-left-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-left-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-left-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-left-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-s-left-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -139,7 +139,7 @@
   --spectrum-pickerbutton-s-right-textuiicon-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-right-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-115);
   --spectrum-pickerbutton-s-right-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-100);
-  --spectrum-pickerbutton-s-right-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-right-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-right-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-right-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-s-right-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -212,7 +212,7 @@
   --spectrum-pickerbutton-s-none-textuiicon-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-none-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-115);
   --spectrum-pickerbutton-s-none-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-100);
-  --spectrum-pickerbutton-s-none-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-none-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-none-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-none-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-s-none-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -285,7 +285,7 @@
   --spectrum-pickerbutton-s-left-uiicononly-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-left-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-left-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-left-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-left-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-left-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-left-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-left-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -358,7 +358,7 @@
   --spectrum-pickerbutton-s-right-uiicononly-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-right-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-right-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-right-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-right-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-right-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-right-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-right-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -431,7 +431,7 @@
   --spectrum-pickerbutton-s-none-uiicononly-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-none-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-pickerbutton-s-none-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-pickerbutton-s-none-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-none-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-none-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-none-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-none-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -504,7 +504,7 @@
   --spectrum-pickerbutton-s-left-icononly-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-left-icononly-fill-padding-left: var(--spectrum-global-dimension-size-50);
   --spectrum-pickerbutton-s-left-icononly-fill-padding-right: var(--spectrum-global-dimension-size-50);
-  --spectrum-pickerbutton-s-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-left-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-left-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -577,7 +577,7 @@
   --spectrum-pickerbutton-s-right-icononly-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-right-icononly-fill-padding-left: var(--spectrum-global-dimension-size-50);
   --spectrum-pickerbutton-s-right-icononly-fill-padding-right: var(--spectrum-global-dimension-size-50);
-  --spectrum-pickerbutton-s-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-right-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-right-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -650,7 +650,7 @@
   --spectrum-pickerbutton-s-none-icononly-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-pickerbutton-s-none-icononly-fill-padding-left: var(--spectrum-global-dimension-size-50);
   --spectrum-pickerbutton-s-none-icononly-fill-padding-right: var(--spectrum-global-dimension-size-50);
-  --spectrum-pickerbutton-s-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-pickerbutton-s-none-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-pickerbutton-s-none-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-s-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-s-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -723,7 +723,7 @@
   --spectrum-pickerbutton-m-left-textuiicon-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-left-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-m-left-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-m-left-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-left-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-left-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-left-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-m-left-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -796,7 +796,7 @@
   --spectrum-pickerbutton-m-right-textuiicon-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-right-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-m-right-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-m-right-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-right-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-right-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-right-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-m-right-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -869,7 +869,7 @@
   --spectrum-pickerbutton-m-none-textuiicon-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-none-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-m-none-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-m-none-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-none-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-none-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-none-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-m-none-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -942,7 +942,7 @@
   --spectrum-pickerbutton-m-left-uiicononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-left-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-left-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-left-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-left-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-left-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-left-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-left-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1015,7 +1015,7 @@
   --spectrum-pickerbutton-m-right-uiicononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-right-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-right-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-right-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-right-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-right-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-right-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-right-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1088,7 +1088,7 @@
   --spectrum-pickerbutton-m-none-uiicononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-none-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-pickerbutton-m-none-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-pickerbutton-m-none-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-none-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-none-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-none-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-none-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1161,7 +1161,7 @@
   --spectrum-pickerbutton-m-left-icononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-left-icononly-fill-padding-left: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-left-icononly-fill-padding-right: var(--spectrum-global-dimension-size-85);
-  --spectrum-pickerbutton-m-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-left-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-left-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1234,7 +1234,7 @@
   --spectrum-pickerbutton-m-right-icononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-right-icononly-fill-padding-left: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-right-icononly-fill-padding-right: var(--spectrum-global-dimension-size-85);
-  --spectrum-pickerbutton-m-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-right-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-right-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1307,7 +1307,7 @@
   --spectrum-pickerbutton-m-none-icononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-none-icononly-fill-padding-left: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-m-none-icononly-fill-padding-right: var(--spectrum-global-dimension-size-85);
-  --spectrum-pickerbutton-m-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-pickerbutton-m-none-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-pickerbutton-m-none-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-m-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-m-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1380,7 +1380,7 @@
   --spectrum-pickerbutton-l-left-textuiicon-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-left-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-pickerbutton-l-left-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-left-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-left-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-left-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-left-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-l-left-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1453,7 +1453,7 @@
   --spectrum-pickerbutton-l-right-textuiicon-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-right-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-pickerbutton-l-right-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-right-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-right-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-right-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-right-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-l-right-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1526,7 +1526,7 @@
   --spectrum-pickerbutton-l-none-textuiicon-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-none-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-185);
   --spectrum-pickerbutton-l-none-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-150);
-  --spectrum-pickerbutton-l-none-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-none-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-none-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-none-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-l-none-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1599,7 +1599,7 @@
   --spectrum-pickerbutton-l-left-uiicononly-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-left-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-left-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-left-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-left-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-left-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-left-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-left-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1672,7 +1672,7 @@
   --spectrum-pickerbutton-l-right-uiicononly-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-right-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-right-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-right-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-right-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-right-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-right-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-right-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1745,7 +1745,7 @@
   --spectrum-pickerbutton-l-none-uiicononly-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-none-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-pickerbutton-l-none-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-pickerbutton-l-none-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-none-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-none-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-none-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-none-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1818,7 +1818,7 @@
   --spectrum-pickerbutton-l-left-icononly-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-left-icononly-fill-padding-left: var(--spectrum-global-dimension-size-125);
   --spectrum-pickerbutton-l-left-icononly-fill-padding-right: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-l-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-left-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-left-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1891,7 +1891,7 @@
   --spectrum-pickerbutton-l-right-icononly-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-right-icononly-fill-padding-left: var(--spectrum-global-dimension-size-125);
   --spectrum-pickerbutton-l-right-icononly-fill-padding-right: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-l-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-right-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-right-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1964,7 +1964,7 @@
   --spectrum-pickerbutton-l-none-icononly-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-pickerbutton-l-none-icononly-fill-padding-left: var(--spectrum-global-dimension-size-125);
   --spectrum-pickerbutton-l-none-icononly-fill-padding-right: var(--spectrum-global-dimension-size-125);
-  --spectrum-pickerbutton-l-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-pickerbutton-l-none-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-pickerbutton-l-none-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-l-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-l-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2037,7 +2037,7 @@
   --spectrum-pickerbutton-xl-left-textuiicon-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-left-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-225);
   --spectrum-pickerbutton-xl-left-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-200);
-  --spectrum-pickerbutton-xl-left-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-left-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-left-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-left-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-xl-left-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2110,7 +2110,7 @@
   --spectrum-pickerbutton-xl-right-textuiicon-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-right-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-225);
   --spectrum-pickerbutton-xl-right-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-200);
-  --spectrum-pickerbutton-xl-right-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-right-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-right-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-right-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-xl-right-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2183,7 +2183,7 @@
   --spectrum-pickerbutton-xl-none-textuiicon-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-none-textuiicon-fill-padding-left: var(--spectrum-global-dimension-size-225);
   --spectrum-pickerbutton-xl-none-textuiicon-fill-padding-right: var(--spectrum-global-dimension-size-200);
-  --spectrum-pickerbutton-xl-none-textuiicon-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-none-textuiicon-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-none-textuiicon-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-none-textuiicon-focusring-type: focusring;
   --spectrum-pickerbutton-xl-none-textuiicon-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2256,7 +2256,7 @@
   --spectrum-pickerbutton-xl-left-uiicononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-left-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-left-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-left-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-left-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-left-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-left-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-left-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2329,7 +2329,7 @@
   --spectrum-pickerbutton-xl-right-uiicononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-right-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-right-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-right-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-right-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-right-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-right-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-right-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2402,7 +2402,7 @@
   --spectrum-pickerbutton-xl-none-uiicononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-none-uiicononly-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-pickerbutton-xl-none-uiicononly-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-pickerbutton-xl-none-uiicononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-none-uiicononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-none-uiicononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-none-uiicononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-none-uiicononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2475,7 +2475,7 @@
   --spectrum-pickerbutton-xl-left-icononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-left-icononly-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-xl-left-icononly-fill-padding-right: var(--spectrum-global-dimension-size-160);
-  --spectrum-pickerbutton-xl-left-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-left-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-left-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-left-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-left-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2548,7 +2548,7 @@
   --spectrum-pickerbutton-xl-right-icononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-right-icononly-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-xl-right-icononly-fill-padding-right: var(--spectrum-global-dimension-size-160);
-  --spectrum-pickerbutton-xl-right-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-right-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-right-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-right-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-right-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2621,7 +2621,7 @@
   --spectrum-pickerbutton-xl-none-icononly-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-pickerbutton-xl-none-icononly-fill-padding-left: var(--spectrum-global-dimension-size-160);
   --spectrum-pickerbutton-xl-none-icononly-fill-padding-right: var(--spectrum-global-dimension-size-160);
-  --spectrum-pickerbutton-xl-none-icononly-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-pickerbutton-xl-none-icononly-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-pickerbutton-xl-none-icononly-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-pickerbutton-xl-none-icononly-focusring-type: focusring;
   --spectrum-pickerbutton-xl-none-icononly-focusring-border-width: var(--spectrum-alias-focus-ring-size);

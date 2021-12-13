@@ -102,6 +102,7 @@
   --spectrum-switch-s-emphasized-text-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-switch-s-emphasized-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-switch-s-emphasized-text-transform: none;
+  --spectrum-switch-s-emphasized-text-render: yes;
   --spectrum-switch-s-emphasized-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-switch-s-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-s-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -231,6 +232,7 @@
   --spectrum-switch-s-text-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-switch-s-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-switch-s-text-transform: none;
+  --spectrum-switch-s-text-render: yes;
   --spectrum-switch-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-switch-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -360,6 +362,7 @@
   --spectrum-switch-m-emphasized-text-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-switch-m-emphasized-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-switch-m-emphasized-text-transform: none;
+  --spectrum-switch-m-emphasized-text-render: yes;
   --spectrum-switch-m-emphasized-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-switch-m-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-switch-m-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -490,6 +493,7 @@
   --spectrum-switch-m-text-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-switch-m-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-switch-m-text-transform: none;
+  --spectrum-switch-m-text-render: yes;
   --spectrum-switch-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-switch-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-switch-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -620,6 +624,7 @@
   --spectrum-switch-l-emphasized-text-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-switch-l-emphasized-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-switch-l-emphasized-text-transform: none;
+  --spectrum-switch-l-emphasized-text-render: yes;
   --spectrum-switch-l-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-switch-l-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-l-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -749,6 +754,7 @@
   --spectrum-switch-l-text-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-switch-l-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-switch-l-text-transform: none;
+  --spectrum-switch-l-text-render: yes;
   --spectrum-switch-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-switch-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-switch-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -878,6 +884,7 @@
   --spectrum-switch-xl-emphasized-text-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-switch-xl-emphasized-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-switch-xl-emphasized-text-transform: none;
+  --spectrum-switch-xl-emphasized-text-render: yes;
   --spectrum-switch-xl-emphasized-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-switch-xl-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-switch-xl-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1008,6 +1015,7 @@
   --spectrum-switch-xl-text-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-switch-xl-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-switch-xl-text-transform: none;
+  --spectrum-switch-xl-text-render: yes;
   --spectrum-switch-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-switch-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-switch-xl-text-font-family: var(--spectrum-alias-body-text-font-family);

@@ -95,6 +95,7 @@
   --spectrum-breadcrumb-s-multiline-title-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-breadcrumb-s-multiline-button-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-breadcrumb-s-multiline-button-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-s-multiline-item-text-render: yes;
   --spectrum-breadcrumb-s-multiline-item-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-breadcrumb-s-multiline-item-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-breadcrumb-s-multiline-item-text-font-style: var(--spectrum-global-font-style-regular);
@@ -208,6 +209,7 @@
   --spectrum-breadcrumb-s-title-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-breadcrumb-s-button-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-breadcrumb-s-button-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-s-item-text-render: yes;
   --spectrum-breadcrumb-s-item-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-breadcrumb-s-item-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-breadcrumb-s-item-text-font-style: var(--spectrum-global-font-style-regular);
@@ -321,6 +323,7 @@
   --spectrum-breadcrumb-m-multiline-title-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-breadcrumb-m-multiline-button-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-breadcrumb-m-multiline-button-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-m-multiline-item-text-render: yes;
   --spectrum-breadcrumb-m-multiline-item-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-breadcrumb-m-multiline-item-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-breadcrumb-m-multiline-item-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -435,6 +438,7 @@
   --spectrum-breadcrumb-m-title-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-breadcrumb-m-button-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-breadcrumb-m-button-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-m-item-text-render: yes;
   --spectrum-breadcrumb-m-item-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-breadcrumb-m-item-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-breadcrumb-m-item-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -549,6 +553,7 @@
   --spectrum-breadcrumb-l-multiline-title-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-breadcrumb-l-multiline-button-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-breadcrumb-l-multiline-button-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-l-multiline-item-text-render: yes;
   --spectrum-breadcrumb-l-multiline-item-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-breadcrumb-l-multiline-item-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-breadcrumb-l-multiline-item-text-font-style: var(--spectrum-global-font-style-regular);
@@ -662,6 +667,7 @@
   --spectrum-breadcrumb-l-title-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-breadcrumb-l-button-gap: var(--spectrum-global-dimension-static-size-10);
   --spectrum-breadcrumb-l-button-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
+  --spectrum-breadcrumb-l-item-text-render: yes;
   --spectrum-breadcrumb-l-item-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-breadcrumb-l-item-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-breadcrumb-l-item-text-font-style: var(--spectrum-global-font-style-regular);
