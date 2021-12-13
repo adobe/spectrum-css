@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
     replace: --spectrum-button$1-;
   }
   /* adjust padding above and below button label to compensate for line height rendering differences in css */
-  --spectrum-button-primary-textonly-text-padding-top: calc(var(--spectrum-button-s-primary-textonly-text-padding-top) -1px);
+  --spectrum-button-primary-fill-textonly-text-padding-top: calc(var(--spectrum-button-s-primary-fill-textonly-text-padding-top) -1px);
 }
 
 .spectrum-Button--sizeM {
@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
     replace: --spectrum-button$1-;
   }
   /* adjust padding above and below button label to compensate for line height rendering differences in css */
-  --spectrum-button-primary-textonly-text-padding-bottom: calc(var(--spectrum-button-m-primary-textonly-text-padding-bottom) -1px);
+  --spectrum-button-primary-fill-textonly-text-padding-bottom: calc(var(--spectrum-button-m-primary-fill-textonly-text-padding-bottom) -1px);
 }
 
 .spectrum-Button--sizeL {
@@ -52,37 +52,37 @@ governing permissions and limitations under the License.
     replace: --spectrum-button$1-;
   }
   /* adjust padding above and below button label to compensate for line height rendering differences in css */
-  --spectrum-button-primary-textonly-text-padding-bottom: calc(var(--spectrum-button-xl-primary-textonly-text-padding-bottom) -1px);
+  --spectrum-button-primary-fill-textonly-text-padding-bottom: calc(var(--spectrum-button-xl-primary-fill-textonly-text-padding-bottom) -1px);
 }
 
 .spectrum-Button {
   /* Adjustments for inset/outset padding in DNA */
-  --spectrum-button-primary-padding-left-adjusted: calc(var(--spectrum-button-primary-texticon-padding-left) - var(--spectrum-button-primary-texticon-border-size));
-  --spectrum-button-primary-padding-right-adjusted: calc(var(--spectrum-button-primary-texticon-padding-right) - var(--spectrum-button-primary-texticon-border-size));
-  --spectrum-button-primary-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-textonly-padding-left) - var(--spectrum-button-primary-texticon-border-size));
-  --spectrum-button-primary-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-textonly-padding-right) - var(--spectrum-button-primary-texticon-border-size));
+  --spectrum-button-primary-fill-padding-left-adjusted: calc(var(--spectrum-button-primary-fill-texticon-padding-left) - var(--spectrum-button-primary-fill-texticon-border-size));
+  --spectrum-button-primary-fill-padding-right-adjusted: calc(var(--spectrum-button-primary-fill-texticon-padding-right) - var(--spectrum-button-primary-fill-texticon-border-size));
+  --spectrum-button-primary-fill-textonly-padding-left-adjusted: calc(var(--spectrum-button-primary-fill-textonly-padding-left) - var(--spectrum-button-primary-fill-texticon-border-size));
+  --spectrum-button-primary-fill-textonly-padding-right-adjusted: calc(var(--spectrum-button-primary-fill-textonly-padding-right) - var(--spectrum-button-primary-fill-texticon-border-size));
 }
 
 .spectrum-Button {
   @inherit: %spectrum-BaseButton;
   @inherit: %spectrum-ButtonWithFocusRing;
 
-  border-width: var(--spectrum-button-primary-texticon-border-size);
+  border-width: var(--spectrum-button-primary-fill-texticon-border-size);
   border-style: solid;
-  border-radius: var(--spectrum-button-primary-texticon-border-radius);
+  border-radius: var(--spectrum-button-primary-fill-texticon-border-radius);
 
-  min-block-size: var(--spectrum-button-primary-textonly-height);
+  min-block-size: var(--spectrum-button-primary-fill-textonly-height);
   block-size: auto;
-  min-inline-size: var(--spectrum-button-primary-textonly-min-width);
+  min-inline-size: var(--spectrum-button-primary-fill-textonly-min-width);
 
   padding-block-start: 0;
   padding-block-end: 0;
 
   /* Start with text-only padding */
-  padding-inline: var(--spectrum-button-primary-textonly-padding-left-adjusted) var(--spectrum-button-primary-textonly-padding-right-adjusted);
+  padding-inline: var(--spectrum-button-primary-fill-textonly-padding-left-adjusted) var(--spectrum-button-primary-fill-textonly-padding-right-adjusted);
 
-  font-size: var(--spectrum-button-primary-texticon-text-size);
-  font-weight: var(--spectrum-button-primary-texticon-text-font-weight);
+  font-size: var(--spectrum-button-primary-fill-texticon-text-size);
+  font-weight: var(--spectrum-button-primary-fill-texticon-text-font-weight);
 
   &:hover,
   &:active {
@@ -96,21 +96,21 @@ governing permissions and limitations under the License.
     @inherit: %spectrum-ButtonIcon;
 
     /* Scoot over, assuming we have both icon and text */
-    margin-inline-start: calc(-1 * (var(--spectrum-button-primary-textonly-padding-left-adjusted) - var(--spectrum-button-primary-padding-left-adjusted)));
+    margin-inline-start: calc(-1 * (var(--spectrum-button-primary-fill-textonly-padding-left-adjusted) - var(--spectrum-button-primary-fill-padding-left-adjusted)));
   }
 
   .spectrum-Icon + .spectrum-Button-label {
     /* Have gap on on the left */
-    padding-inline-start: var(--spectrum-button-primary-texticon-icon-gap);
+    padding-inline-start: var(--spectrum-button-primary-fill-texticon-icon-gap);
 
     /*
       Have no padding on the right (it's built into the element)
-      This will fail if --spectrum-button-primary-textonly-padding-right !== --spectrum-button-padding-right
+      This will fail if --spectrum-button-primary-fill-textonly-padding-right !== --spectrum-button-padding-right
     */
     padding-inline-end: 0;
   }
 
-  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
+  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-texticon-focus-ring-color-key-focus);
 }
 
 a.spectrum-Button {
@@ -120,16 +120,16 @@ a.spectrum-Button {
 .spectrum-Button-label {
   @inherit: %spectrum-ButtonLabel;
 
-  line-height: var(--spectrum-button-primary-texticon-text-line-height);
-  padding-block-start: calc(var(--spectrum-button-primary-textonly-text-padding-top) - var(--spectrum-button-primary-textonly-border-size));
-  padding-block-end: calc(var(--spectrum-button-primary-textonly-text-padding-bottom) - var(--spectrum-button-primary-textonly-border-size));
+  line-height: var(--spectrum-button-primary-fill-texticon-text-line-height);
+  padding-block-start: calc(var(--spectrum-button-primary-fill-textonly-text-padding-top) - var(--spectrum-button-primary-fill-textonly-border-size));
+  padding-block-end: calc(var(--spectrum-button-primary-fill-textonly-text-padding-bottom) - var(--spectrum-button-primary-fill-textonly-border-size));
 }
 
 .spectrum-Button {
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-primary-texticon-focus-ring-size) var(--spectrum-button-focus-ring-color);
+      box-shadow: 0 0 0 var(--spectrum-button-primary-fill-texticon-focus-ring-size) var(--spectrum-button-focus-ring-color);
     }
   }
 }
@@ -145,141 +145,84 @@ a.spectrum-Button {
 /* todo all of this will have to change */
 @media (forced-colors: active) {
   .spectrum-Button {
-    --spectrum-button-m-cta-texticon-background-color: ButtonText;
-    --spectrum-button-m-cta-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-cta-texticon-background-color-down: Highlight;
-    --spectrum-button-m-cta-texticon-background-color-hover: Highlight;
-    --spectrum-button-m-cta-texticon-background-color-key-focus: Highlight;
-    --spectrum-button-m-cta-texticon-border-color: ButtonFace;
-    --spectrum-button-m-cta-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-cta-texticon-border-color-down: Highlight;
-    --spectrum-button-m-cta-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-cta-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-cta-texticon-text-color: ButtonFace;
-    --spectrum-button-m-cta-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-cta-texticon-text-color-down: Buttonface;
-    --spectrum-button-m-cta-texticon-text-color-hover: Buttonface;
-    --spectrum-button-m-cta-texticon-text-color-key-focus: Buttonface;
-    --spectrum-button-m-negative-quiet-texticon-background-color: ButtonFace;
-    --spectrum-button-m-negative-quiet-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-negative-quiet-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-negative-quiet-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-negative-quiet-texticon-background-color-key-focus: ButtonFace;
-    --spectrum-button-m-negative-quiet-texticon-border-color: ButtonText;
-    --spectrum-button-m-negative-quiet-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-negative-quiet-texticon-border-color-down: Highlight;
-    --spectrum-button-m-negative-quiet-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-negative-quiet-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-negative-quiet-texticon-text-color: ButtonText;
-    --spectrum-button-m-negative-quiet-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-negative-quiet-texticon-text-color-down: ButtonText;
-    --spectrum-button-m-negative-quiet-texticon-text-color-hover: ButtonText;
-    --spectrum-button-m-negative-quiet-texticon-text-color-key-focus: ButtonText;
-    --spectrum-button-m-negative-texticon-background-color: ButtonFace;
-    --spectrum-button-m-negative-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-negative-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-negative-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-negative-texticon-background-color-key-focus: ButtonFace;
-    --spectrum-button-m-negative-texticon-border-color: ButtonText;
-    --spectrum-button-m-negative-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-negative-texticon-border-color-down: Highlight;
-    --spectrum-button-m-negative-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-negative-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-negative-texticon-text-color: ButtonText;
-    --spectrum-button-m-negative-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-negative-texticon-text-color-down: ButtonText;
-    --spectrum-button-m-negative-texticon-text-color-hover: ButtonText;
-    --spectrum-button-m-negative-texticon-text-color-key-focus: ButtonText;
-    --spectrum-button-m-primary-overbackground-texticon-background-color: ButtonFace;
-    --spectrum-button-m-primary-overbackground-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-primary-overbackground-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-primary-overbackground-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-primary-overbackground-texticon-border-color: ButtonText;
-    --spectrum-button-m-primary-overbackground-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-primary-overbackground-texticon-border-color-down: Highlight;
-    --spectrum-button-m-primary-overbackground-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-primary-overbackground-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-primary-overbackground-texticon-text-color: ButtonText;
-    --spectrum-button-m-primary-overbackground-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-background-color: ButtonFace;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-border-color: ButtonText;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-border-color-down: Highlight;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-text-color: ButtonText;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-text-color-down: ButtonText;
-    --spectrum-button-m-primary-quiet-overbackground-texticon-text-color-hover: ButtonText;
-    --spectrum-button-m-primary-quiet-texticon-background-color: ButtonFace;
-    --spectrum-button-m-primary-quiet-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-primary-quiet-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-primary-quiet-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-primary-quiet-texticon-background-color-key-focus: ButtonFace;
-    --spectrum-button-m-primary-quiet-texticon-border-color: ButtonText;
-    --spectrum-button-m-primary-quiet-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-primary-quiet-texticon-border-color-down: Highlight;
-    --spectrum-button-m-primary-quiet-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-primary-quiet-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-primary-quiet-texticon-text-color: ButtonText;
-    --spectrum-button-m-primary-quiet-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-primary-quiet-texticon-text-color-down: ButtonText;
-    --spectrum-button-m-primary-quiet-texticon-text-color-hover: ButtonText;
-    --spectrum-button-m-primary-quiet-texticon-text-color-key-focus: ButtonText;
-    --spectrum-button-m-primary-texticon-background-color: ButtonFace;
-    --spectrum-button-m-primary-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-primary-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-primary-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-primary-texticon-background-color-key-focus: ButtonFace;
-    --spectrum-button-m-primary-texticon-border-color: ButtonText;
-    --spectrum-button-m-primary-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-primary-texticon-border-color-down: Highlight;
-    --spectrum-button-m-primary-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-primary-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-primary-texticon-text-color: ButtonText;
-    --spectrum-button-m-primary-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-primary-texticon-text-color-down: ButtonText;
-    --spectrum-button-m-primary-texticon-text-color-hover: ButtonText;
-    --spectrum-button-m-primary-texticon-text-color-key-focus: ButtonText;
-    --spectrum-button-m-secondary-quiet-texticon-background-color: ButtonFace;
-    --spectrum-button-m-secondary-quiet-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-secondary-quiet-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-secondary-quiet-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-secondary-quiet-texticon-background-color-key-focus: ButtonFace;
-    --spectrum-button-m-secondary-quiet-texticon-border-color: ButtonText;
-    --spectrum-button-m-secondary-quiet-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-secondary-quiet-texticon-border-color-down: Highlight;
-    --spectrum-button-m-secondary-quiet-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-secondary-quiet-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-secondary-quiet-texticon-text-color: ButtonText;
-    --spectrum-button-m-secondary-quiet-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-secondary-quiet-texticon-text-color-down: ButtonText;
-    --spectrum-button-m-secondary-quiet-texticon-text-color-hover: ButtonText;
-    --spectrum-button-m-secondary-quiet-texticon-text-color-key-focus: ButtonText;
-    --spectrum-button-m-secondary-texticon-background-color: ButtonFace;
-    --spectrum-button-m-secondary-texticon-background-color-disabled: ButtonFace;
-    --spectrum-button-m-secondary-texticon-background-color-down: ButtonFace;
-    --spectrum-button-m-secondary-texticon-background-color-hover: ButtonFace;
-    --spectrum-button-m-secondary-texticon-background-color-key-focus: ButtonFace;
-    --spectrum-button-m-secondary-texticon-border-color: ButtonText;
-    --spectrum-button-m-secondary-texticon-border-color-disabled: GrayText;
-    --spectrum-button-m-secondary-texticon-border-color-down: Highlight;
-    --spectrum-button-m-secondary-texticon-border-color-hover: Highlight;
-    --spectrum-button-m-secondary-texticon-border-color-key-focus: Highlight;
-    --spectrum-button-m-secondary-texticon-text-color: ButtonText;
-    --spectrum-button-m-secondary-texticon-text-color-disabled: GrayText;
-    --spectrum-button-m-secondary-texticon-text-color-down: ButtonText;
-    --spectrum-button-m-secondary-texticon-text-color-hover: ButtonText;
-    --spectrum-button-m-secondary-texticon-text-color-key-focus: ButtonText;
+    --spectrum-button-m-accent-fill-texticon-background-color: ButtonText;
+    --spectrum-button-m-accent-fill-texticon-background-color-disabled: ButtonFace;
+    --spectrum-button-m-accent-fill-texticon-background-color-down: Highlight;
+    --spectrum-button-m-accent-fill-texticon-background-color-hover: Highlight;
+    --spectrum-button-m-accent-fill-texticon-background-color-key-focus: Highlight;
+    --spectrum-button-m-accent-fill-texticon-border-color: ButtonFace;
+    --spectrum-button-m-accent-fill-texticon-border-color-disabled: GrayText;
+    --spectrum-button-m-accent-fill-texticon-border-color-down: Highlight;
+    --spectrum-button-m-accent-fill-texticon-border-color-hover: Highlight;
+    --spectrum-button-m-accent-fill-texticon-border-color-key-focus: Highlight;
+    --spectrum-button-m-accent-fill-texticon-text-color: ButtonFace;
+    --spectrum-button-m-accent-fill-texticon-text-color-disabled: GrayText;
+    --spectrum-button-m-accent-fill-texticon-text-color-down: Buttonface;
+    --spectrum-button-m-accent-fill-texticon-text-color-hover: Buttonface;
+    --spectrum-button-m-accent-fill-texticon-text-color-key-focus: Buttonface;
+    --spectrum-button-m-negative-outline-texticon-background-color: ButtonFace;
+    --spectrum-button-m-negative-outline-texticon-background-color-disabled: ButtonFace;
+    --spectrum-button-m-negative-outline-texticon-background-color-down: ButtonFace;
+    --spectrum-button-m-negative-outline-texticon-background-color-hover: ButtonFace;
+    --spectrum-button-m-negative-outline-texticon-background-color-key-focus: ButtonFace;
+    --spectrum-button-m-negative-outline-texticon-border-color: ButtonText;
+    --spectrum-button-m-negative-outline-texticon-border-color-disabled: GrayText;
+    --spectrum-button-m-negative-outline-texticon-border-color-down: Highlight;
+    --spectrum-button-m-negative-outline-texticon-border-color-hover: Highlight;
+    --spectrum-button-m-negative-outline-texticon-border-color-key-focus: Highlight;
+    --spectrum-button-m-negative-outline-texticon-text-color: ButtonText;
+    --spectrum-button-m-negative-outline-texticon-text-color-disabled: GrayText;
+    --spectrum-button-m-negative-outline-texticon-text-color-down: ButtonText;
+    --spectrum-button-m-negative-outline-texticon-text-color-hover: ButtonText;
+    --spectrum-button-m-negative-outline-texticon-text-color-key-focus: ButtonText;
+    --spectrum-button-m-primary-outline-overbackground-texticon-background-color: ButtonFace;
+    --spectrum-button-m-primary-outline-overbackground-texticon-background-color-disabled: ButtonFace;
+    --spectrum-button-m-primary-outline-overbackground-texticon-background-color-down: ButtonFace;
+    --spectrum-button-m-primary-outline-overbackground-texticon-background-color-hover: ButtonFace;
+    --spectrum-button-m-primary-outline-overbackground-texticon-border-color: ButtonText;
+    --spectrum-button-m-primary-outline-overbackground-texticon-border-color-disabled: GrayText;
+    --spectrum-button-m-primary-outline-overbackground-texticon-border-color-down: Highlight;
+    --spectrum-button-m-primary-outline-overbackground-texticon-border-color-hover: Highlight;
+    --spectrum-button-m-primary-outline-overbackground-texticon-border-color-key-focus: Highlight;
+    --spectrum-button-m-primary-outline-overbackground-texticon-text-color: ButtonText;
+    --spectrum-button-m-primary-outline-overbackground-texticon-text-color-disabled: GrayText;
+    --spectrum-button-m-primary-outline-texticon-background-color: ButtonFace;
+    --spectrum-button-m-primary-outline-texticon-background-color-disabled: ButtonFace;
+    --spectrum-button-m-primary-outline-texticon-background-color-down: ButtonFace;
+    --spectrum-button-m-primary-outline-texticon-background-color-hover: ButtonFace;
+    --spectrum-button-m-primary-outline-texticon-background-color-key-focus: ButtonFace;
+    --spectrum-button-m-primary-outline-texticon-border-color: ButtonText;
+    --spectrum-button-m-primary-outline-texticon-border-color-disabled: GrayText;
+    --spectrum-button-m-primary-outline-texticon-border-color-down: Highlight;
+    --spectrum-button-m-primary-outline-texticon-border-color-hover: Highlight;
+    --spectrum-button-m-primary-outline-texticon-border-color-key-focus: Highlight;
+    --spectrum-button-m-primary-outline-texticon-text-color: ButtonText;
+    --spectrum-button-m-primary-outline-texticon-text-color-disabled: GrayText;
+    --spectrum-button-m-primary-outline-texticon-text-color-down: ButtonText;
+    --spectrum-button-m-primary-outline-texticon-text-color-hover: ButtonText;
+    --spectrum-button-m-primary-outline-texticon-text-color-key-focus: ButtonText;
+    --spectrum-button-m-secondary-outline-texticon-background-color: ButtonFace;
+    --spectrum-button-m-secondary-outline-texticon-background-color-disabled: ButtonFace;
+    --spectrum-button-m-secondary-outline-texticon-background-color-down: ButtonFace;
+    --spectrum-button-m-secondary-outline-texticon-background-color-hover: ButtonFace;
+    --spectrum-button-m-secondary-outline-texticon-background-color-key-focus: ButtonFace;
+    --spectrum-button-m-secondary-outline-texticon-border-color: ButtonText;
+    --spectrum-button-m-secondary-outline-texticon-border-color-disabled: GrayText;
+    --spectrum-button-m-secondary-outline-texticon-border-color-down: Highlight;
+    --spectrum-button-m-secondary-outline-texticon-border-color-hover: Highlight;
+    --spectrum-button-m-secondary-outline-texticon-border-color-key-focus: Highlight;
+    --spectrum-button-m-secondary-outline-texticon-text-color: ButtonText;
+    --spectrum-button-m-secondary-outline-texticon-text-color-disabled: GrayText;
+    --spectrum-button-m-secondary-outline-texticon-text-color-down: ButtonText;
+    --spectrum-button-m-secondary-outline-texticon-text-color-hover: ButtonText;
+    --spectrum-button-m-secondary-outline-texticon-text-color-key-focus: ButtonText;
 
   }
   .spectrum-Button {
     &:focus-ring,
     &.is-focused {
       &:after {
-        box-shadow: 0 0 0 var(--spectrum-button-primary-texticon-focus-ring-size) Highlight;
+        box-shadow: 0 0 0 var(--spectrum-button-primary-fill-texticon-focus-ring-size) Highlight;
       }
     }
   }
