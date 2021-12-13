@@ -291,6 +291,7 @@
   --spectrum-tag-s-removable-texticon-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-s-removable-texticon-text-transform: none;
   --spectrum-tag-s-removable-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tag-s-removable-texticon-text-render: yes;
   --spectrum-tag-s-removable-texticon-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tag-s-removable-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-s-removable-texticon-text-font-style: var(--spectrum-global-font-style-regular);
@@ -305,6 +306,7 @@
   --spectrum-tag-s-removable-texticon-icon-margin-top: 0;
   --spectrum-tag-s-removable-texticon-icon-margin-bottom: 0;
   --spectrum-tag-s-removable-texticon-icon-type: icon;
+  --spectrum-tag-s-removable-texticon-icon-render: yes;
   --spectrum-tag-s-removable-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-tag-s-removable-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tag-s-removable-texticon-button-fill-uiicon-type: ui-icon;
@@ -319,8 +321,7 @@
   --spectrum-tag-s-removable-texticon-button-fill-padding-bottom: 0;
   --spectrum-tag-s-removable-texticon-button-fill-padding-left: 0;
   --spectrum-tag-s-removable-texticon-button-fill-padding-right: 0;
-  --spectrum-tag-s-removable-texticon-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-tag-s-removable-texticon-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-tag-s-removable-texticon-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-tag-s-removable-texticon-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-s-removable-texticon-button-render: yes;
   --spectrum-tag-s-removable-texticon-button-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -624,6 +625,7 @@
   --spectrum-tag-s-texticon-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-s-texticon-text-transform: none;
   --spectrum-tag-s-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tag-s-texticon-text-render: yes;
   --spectrum-tag-s-texticon-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tag-s-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-s-texticon-text-font-style: var(--spectrum-global-font-style-regular);
@@ -638,6 +640,7 @@
   --spectrum-tag-s-texticon-icon-margin-top: 0;
   --spectrum-tag-s-texticon-icon-margin-bottom: 0;
   --spectrum-tag-s-texticon-icon-type: icon;
+  --spectrum-tag-s-texticon-icon-render: yes;
   --spectrum-tag-s-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-tag-s-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tag-s-texticon-button-fill-uiicon-type: ui-icon;
@@ -652,8 +655,7 @@
   --spectrum-tag-s-texticon-button-fill-padding-bottom: 0;
   --spectrum-tag-s-texticon-button-fill-padding-left: 0;
   --spectrum-tag-s-texticon-button-fill-padding-right: 0;
-  --spectrum-tag-s-texticon-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-tag-s-texticon-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-tag-s-texticon-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-tag-s-texticon-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-s-texticon-button-render: no;
   --spectrum-tag-s-texticon-button-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -957,6 +959,7 @@
   --spectrum-tag-s-removable-textonly-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-s-removable-textonly-text-transform: none;
   --spectrum-tag-s-removable-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tag-s-removable-textonly-text-render: yes;
   --spectrum-tag-s-removable-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tag-s-removable-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-s-removable-textonly-text-font-style: var(--spectrum-global-font-style-regular);
@@ -971,6 +974,7 @@
   --spectrum-tag-s-removable-textonly-icon-margin-top: 0;
   --spectrum-tag-s-removable-textonly-icon-margin-bottom: 0;
   --spectrum-tag-s-removable-textonly-icon-type: icon;
+  --spectrum-tag-s-removable-textonly-icon-render: no;
   --spectrum-tag-s-removable-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-tag-s-removable-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tag-s-removable-textonly-button-fill-uiicon-type: ui-icon;
@@ -985,8 +989,7 @@
   --spectrum-tag-s-removable-textonly-button-fill-padding-bottom: 0;
   --spectrum-tag-s-removable-textonly-button-fill-padding-left: 0;
   --spectrum-tag-s-removable-textonly-button-fill-padding-right: 0;
-  --spectrum-tag-s-removable-textonly-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-tag-s-removable-textonly-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-tag-s-removable-textonly-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-tag-s-removable-textonly-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-s-removable-textonly-button-render: yes;
   --spectrum-tag-s-removable-textonly-button-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -1290,6 +1293,7 @@
   --spectrum-tag-s-textonly-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-s-textonly-text-transform: none;
   --spectrum-tag-s-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tag-s-textonly-text-render: yes;
   --spectrum-tag-s-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tag-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1304,6 +1308,7 @@
   --spectrum-tag-s-textonly-icon-margin-top: 0;
   --spectrum-tag-s-textonly-icon-margin-bottom: 0;
   --spectrum-tag-s-textonly-icon-type: icon;
+  --spectrum-tag-s-textonly-icon-render: no;
   --spectrum-tag-s-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-tag-s-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tag-s-textonly-button-fill-uiicon-type: ui-icon;
@@ -1318,8 +1323,7 @@
   --spectrum-tag-s-textonly-button-fill-padding-bottom: 0;
   --spectrum-tag-s-textonly-button-fill-padding-left: 0;
   --spectrum-tag-s-textonly-button-fill-padding-right: 0;
-  --spectrum-tag-s-textonly-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-tag-s-textonly-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-tag-s-textonly-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-tag-s-textonly-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-s-textonly-button-render: no;
   --spectrum-tag-s-textonly-button-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -1623,6 +1627,7 @@
   --spectrum-tag-s-removable-avatartext-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-s-removable-avatartext-text-transform: none;
   --spectrum-tag-s-removable-avatartext-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tag-s-removable-avatartext-text-render: yes;
   --spectrum-tag-s-removable-avatartext-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tag-s-removable-avatartext-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-s-removable-avatartext-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1637,6 +1642,7 @@
   --spectrum-tag-s-removable-avatartext-icon-margin-top: 0;
   --spectrum-tag-s-removable-avatartext-icon-margin-bottom: 0;
   --spectrum-tag-s-removable-avatartext-icon-type: icon;
+  --spectrum-tag-s-removable-avatartext-icon-render: yes;
   --spectrum-tag-s-removable-avatartext-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-tag-s-removable-avatartext-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tag-s-removable-avatartext-button-fill-uiicon-type: ui-icon;
@@ -1651,8 +1657,7 @@
   --spectrum-tag-s-removable-avatartext-button-fill-padding-bottom: 0;
   --spectrum-tag-s-removable-avatartext-button-fill-padding-left: 0;
   --spectrum-tag-s-removable-avatartext-button-fill-padding-right: 0;
-  --spectrum-tag-s-removable-avatartext-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-tag-s-removable-avatartext-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-tag-s-removable-avatartext-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-tag-s-removable-avatartext-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-s-removable-avatartext-button-render: yes;
   --spectrum-tag-s-removable-avatartext-button-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -1956,6 +1961,7 @@
   --spectrum-tag-s-avatartext-padding-right: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-s-avatartext-text-transform: none;
   --spectrum-tag-s-avatartext-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-tag-s-avatartext-text-render: yes;
   --spectrum-tag-s-avatartext-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tag-s-avatartext-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-s-avatartext-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1970,6 +1976,7 @@
   --spectrum-tag-s-avatartext-icon-margin-top: 0;
   --spectrum-tag-s-avatartext-icon-margin-bottom: 0;
   --spectrum-tag-s-avatartext-icon-type: icon;
+  --spectrum-tag-s-avatartext-icon-render: yes;
   --spectrum-tag-s-avatartext-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-tag-s-avatartext-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-tag-s-avatartext-button-fill-uiicon-type: ui-icon;
@@ -1984,8 +1991,7 @@
   --spectrum-tag-s-avatartext-button-fill-padding-bottom: 0;
   --spectrum-tag-s-avatartext-button-fill-padding-left: 0;
   --spectrum-tag-s-avatartext-button-fill-padding-right: 0;
-  --spectrum-tag-s-avatartext-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-tag-s-avatartext-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-tag-s-avatartext-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-tag-s-avatartext-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-s-avatartext-button-render: no;
   --spectrum-tag-s-avatartext-button-padding: var(--spectrum-alias-infieldbutton-padding-s);
@@ -2288,6 +2294,7 @@
   --spectrum-tag-m-removable-texticon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-tag-m-removable-texticon-text-transform: none;
   --spectrum-tag-m-removable-texticon-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-tag-m-removable-texticon-text-render: yes;
   --spectrum-tag-m-removable-texticon-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-tag-m-removable-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-m-removable-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -2303,6 +2310,7 @@
   --spectrum-tag-m-removable-texticon-icon-margin-top: 0;
   --spectrum-tag-m-removable-texticon-icon-margin-bottom: 0;
   --spectrum-tag-m-removable-texticon-icon-type: icon;
+  --spectrum-tag-m-removable-texticon-icon-render: yes;
   --spectrum-tag-m-removable-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-tag-m-removable-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tag-m-removable-texticon-button-fill-uiicon-type: ui-icon;
@@ -2317,8 +2325,7 @@
   --spectrum-tag-m-removable-texticon-button-fill-padding-bottom: 0;
   --spectrum-tag-m-removable-texticon-button-fill-padding-left: 0;
   --spectrum-tag-m-removable-texticon-button-fill-padding-right: 0;
-  --spectrum-tag-m-removable-texticon-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-tag-m-removable-texticon-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-tag-m-removable-texticon-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-tag-m-removable-texticon-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-m-removable-texticon-button-render: yes;
   --spectrum-tag-m-removable-texticon-button-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -2621,6 +2628,7 @@
   --spectrum-tag-m-texticon-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-tag-m-texticon-text-transform: none;
   --spectrum-tag-m-texticon-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-tag-m-texticon-text-render: yes;
   --spectrum-tag-m-texticon-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-tag-m-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-m-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -2636,6 +2644,7 @@
   --spectrum-tag-m-texticon-icon-margin-top: 0;
   --spectrum-tag-m-texticon-icon-margin-bottom: 0;
   --spectrum-tag-m-texticon-icon-type: icon;
+  --spectrum-tag-m-texticon-icon-render: yes;
   --spectrum-tag-m-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-tag-m-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tag-m-texticon-button-fill-uiicon-type: ui-icon;
@@ -2650,8 +2659,7 @@
   --spectrum-tag-m-texticon-button-fill-padding-bottom: 0;
   --spectrum-tag-m-texticon-button-fill-padding-left: 0;
   --spectrum-tag-m-texticon-button-fill-padding-right: 0;
-  --spectrum-tag-m-texticon-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-tag-m-texticon-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-tag-m-texticon-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-tag-m-texticon-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-m-texticon-button-render: no;
   --spectrum-tag-m-texticon-button-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -2955,6 +2963,7 @@
   --spectrum-tag-m-removable-textonly-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-tag-m-removable-textonly-text-transform: none;
   --spectrum-tag-m-removable-textonly-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-tag-m-removable-textonly-text-render: yes;
   --spectrum-tag-m-removable-textonly-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-tag-m-removable-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-m-removable-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -2970,6 +2979,7 @@
   --spectrum-tag-m-removable-textonly-icon-margin-top: 0;
   --spectrum-tag-m-removable-textonly-icon-margin-bottom: 0;
   --spectrum-tag-m-removable-textonly-icon-type: icon;
+  --spectrum-tag-m-removable-textonly-icon-render: no;
   --spectrum-tag-m-removable-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-tag-m-removable-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tag-m-removable-textonly-button-fill-uiicon-type: ui-icon;
@@ -2984,8 +2994,7 @@
   --spectrum-tag-m-removable-textonly-button-fill-padding-bottom: 0;
   --spectrum-tag-m-removable-textonly-button-fill-padding-left: 0;
   --spectrum-tag-m-removable-textonly-button-fill-padding-right: 0;
-  --spectrum-tag-m-removable-textonly-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-tag-m-removable-textonly-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-tag-m-removable-textonly-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-tag-m-removable-textonly-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-m-removable-textonly-button-render: yes;
   --spectrum-tag-m-removable-textonly-button-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -3289,6 +3298,7 @@
   --spectrum-tag-m-textonly-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-tag-m-textonly-text-transform: none;
   --spectrum-tag-m-textonly-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-tag-m-textonly-text-render: yes;
   --spectrum-tag-m-textonly-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-tag-m-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3304,6 +3314,7 @@
   --spectrum-tag-m-textonly-icon-margin-top: 0;
   --spectrum-tag-m-textonly-icon-margin-bottom: 0;
   --spectrum-tag-m-textonly-icon-type: icon;
+  --spectrum-tag-m-textonly-icon-render: no;
   --spectrum-tag-m-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-tag-m-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tag-m-textonly-button-fill-uiicon-type: ui-icon;
@@ -3318,8 +3329,7 @@
   --spectrum-tag-m-textonly-button-fill-padding-bottom: 0;
   --spectrum-tag-m-textonly-button-fill-padding-left: 0;
   --spectrum-tag-m-textonly-button-fill-padding-right: 0;
-  --spectrum-tag-m-textonly-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-tag-m-textonly-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-tag-m-textonly-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-tag-m-textonly-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-m-textonly-button-render: no;
   --spectrum-tag-m-textonly-button-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -3622,6 +3632,7 @@
   --spectrum-tag-m-removable-avatartext-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-tag-m-removable-avatartext-text-transform: none;
   --spectrum-tag-m-removable-avatartext-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-tag-m-removable-avatartext-text-render: yes;
   --spectrum-tag-m-removable-avatartext-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-tag-m-removable-avatartext-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-m-removable-avatartext-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3637,6 +3648,7 @@
   --spectrum-tag-m-removable-avatartext-icon-margin-top: 0;
   --spectrum-tag-m-removable-avatartext-icon-margin-bottom: 0;
   --spectrum-tag-m-removable-avatartext-icon-type: icon;
+  --spectrum-tag-m-removable-avatartext-icon-render: yes;
   --spectrum-tag-m-removable-avatartext-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-tag-m-removable-avatartext-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tag-m-removable-avatartext-button-fill-uiicon-type: ui-icon;
@@ -3651,8 +3663,7 @@
   --spectrum-tag-m-removable-avatartext-button-fill-padding-bottom: 0;
   --spectrum-tag-m-removable-avatartext-button-fill-padding-left: 0;
   --spectrum-tag-m-removable-avatartext-button-fill-padding-right: 0;
-  --spectrum-tag-m-removable-avatartext-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-tag-m-removable-avatartext-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-tag-m-removable-avatartext-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-tag-m-removable-avatartext-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-m-removable-avatartext-button-render: yes;
   --spectrum-tag-m-removable-avatartext-button-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -3955,6 +3966,7 @@
   --spectrum-tag-m-avatartext-padding-right: var(--spectrum-global-dimension-size-150);
   --spectrum-tag-m-avatartext-text-transform: none;
   --spectrum-tag-m-avatartext-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-tag-m-avatartext-text-render: yes;
   --spectrum-tag-m-avatartext-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-tag-m-avatartext-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-m-avatartext-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -3970,6 +3982,7 @@
   --spectrum-tag-m-avatartext-icon-margin-top: 0;
   --spectrum-tag-m-avatartext-icon-margin-bottom: 0;
   --spectrum-tag-m-avatartext-icon-type: icon;
+  --spectrum-tag-m-avatartext-icon-render: yes;
   --spectrum-tag-m-avatartext-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-tag-m-avatartext-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-tag-m-avatartext-button-fill-uiicon-type: ui-icon;
@@ -3984,8 +3997,7 @@
   --spectrum-tag-m-avatartext-button-fill-padding-bottom: 0;
   --spectrum-tag-m-avatartext-button-fill-padding-left: 0;
   --spectrum-tag-m-avatartext-button-fill-padding-right: 0;
-  --spectrum-tag-m-avatartext-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-tag-m-avatartext-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-tag-m-avatartext-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-tag-m-avatartext-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-m-avatartext-button-render: no;
   --spectrum-tag-m-avatartext-button-padding: var(--spectrum-alias-infieldbutton-padding-m);
@@ -4289,6 +4301,7 @@
   --spectrum-tag-l-removable-texticon-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-tag-l-removable-texticon-text-transform: none;
   --spectrum-tag-l-removable-texticon-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tag-l-removable-texticon-text-render: yes;
   --spectrum-tag-l-removable-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-tag-l-removable-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-l-removable-texticon-text-font-style: var(--spectrum-global-font-style-regular);
@@ -4303,6 +4316,7 @@
   --spectrum-tag-l-removable-texticon-icon-margin-top: 0;
   --spectrum-tag-l-removable-texticon-icon-margin-bottom: 0;
   --spectrum-tag-l-removable-texticon-icon-type: icon;
+  --spectrum-tag-l-removable-texticon-icon-render: yes;
   --spectrum-tag-l-removable-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-l-removable-texticon-button-fill-uiicon-type: ui-icon;
   --spectrum-tag-l-removable-texticon-button-fill-uiicon-margin: var(--spectrum-alias-clearbutton-icon-margin-l);
@@ -4316,8 +4330,7 @@
   --spectrum-tag-l-removable-texticon-button-fill-padding-bottom: 0;
   --spectrum-tag-l-removable-texticon-button-fill-padding-left: 0;
   --spectrum-tag-l-removable-texticon-button-fill-padding-right: 0;
-  --spectrum-tag-l-removable-texticon-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-tag-l-removable-texticon-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-tag-l-removable-texticon-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-tag-l-removable-texticon-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-l-removable-texticon-button-render: yes;
   --spectrum-tag-l-removable-texticon-button-padding: var(--spectrum-alias-infieldbutton-padding-l);
@@ -4621,6 +4634,7 @@
   --spectrum-tag-l-texticon-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-tag-l-texticon-text-transform: none;
   --spectrum-tag-l-texticon-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tag-l-texticon-text-render: yes;
   --spectrum-tag-l-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-tag-l-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-l-texticon-text-font-style: var(--spectrum-global-font-style-regular);
@@ -4635,6 +4649,7 @@
   --spectrum-tag-l-texticon-icon-margin-top: 0;
   --spectrum-tag-l-texticon-icon-margin-bottom: 0;
   --spectrum-tag-l-texticon-icon-type: icon;
+  --spectrum-tag-l-texticon-icon-render: yes;
   --spectrum-tag-l-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-l-texticon-button-fill-uiicon-type: ui-icon;
   --spectrum-tag-l-texticon-button-fill-uiicon-margin: var(--spectrum-alias-clearbutton-icon-margin-l);
@@ -4648,8 +4663,7 @@
   --spectrum-tag-l-texticon-button-fill-padding-bottom: 0;
   --spectrum-tag-l-texticon-button-fill-padding-left: 0;
   --spectrum-tag-l-texticon-button-fill-padding-right: 0;
-  --spectrum-tag-l-texticon-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-tag-l-texticon-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-tag-l-texticon-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-tag-l-texticon-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-l-texticon-button-render: no;
   --spectrum-tag-l-texticon-button-padding: var(--spectrum-alias-infieldbutton-padding-l);
@@ -4953,6 +4967,7 @@
   --spectrum-tag-l-removable-textonly-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-tag-l-removable-textonly-text-transform: none;
   --spectrum-tag-l-removable-textonly-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tag-l-removable-textonly-text-render: yes;
   --spectrum-tag-l-removable-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-tag-l-removable-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-l-removable-textonly-text-font-style: var(--spectrum-global-font-style-regular);
@@ -4967,6 +4982,7 @@
   --spectrum-tag-l-removable-textonly-icon-margin-top: 0;
   --spectrum-tag-l-removable-textonly-icon-margin-bottom: 0;
   --spectrum-tag-l-removable-textonly-icon-type: icon;
+  --spectrum-tag-l-removable-textonly-icon-render: no;
   --spectrum-tag-l-removable-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-l-removable-textonly-button-fill-uiicon-type: ui-icon;
   --spectrum-tag-l-removable-textonly-button-fill-uiicon-margin: var(--spectrum-alias-clearbutton-icon-margin-l);
@@ -4980,8 +4996,7 @@
   --spectrum-tag-l-removable-textonly-button-fill-padding-bottom: 0;
   --spectrum-tag-l-removable-textonly-button-fill-padding-left: 0;
   --spectrum-tag-l-removable-textonly-button-fill-padding-right: 0;
-  --spectrum-tag-l-removable-textonly-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-tag-l-removable-textonly-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-tag-l-removable-textonly-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-tag-l-removable-textonly-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-l-removable-textonly-button-render: yes;
   --spectrum-tag-l-removable-textonly-button-padding: var(--spectrum-alias-infieldbutton-padding-l);
@@ -5285,6 +5300,7 @@
   --spectrum-tag-l-textonly-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-tag-l-textonly-text-transform: none;
   --spectrum-tag-l-textonly-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tag-l-textonly-text-render: yes;
   --spectrum-tag-l-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-tag-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
@@ -5299,6 +5315,7 @@
   --spectrum-tag-l-textonly-icon-margin-top: 0;
   --spectrum-tag-l-textonly-icon-margin-bottom: 0;
   --spectrum-tag-l-textonly-icon-type: icon;
+  --spectrum-tag-l-textonly-icon-render: no;
   --spectrum-tag-l-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-l-textonly-button-fill-uiicon-type: ui-icon;
   --spectrum-tag-l-textonly-button-fill-uiicon-margin: var(--spectrum-alias-clearbutton-icon-margin-l);
@@ -5312,8 +5329,7 @@
   --spectrum-tag-l-textonly-button-fill-padding-bottom: 0;
   --spectrum-tag-l-textonly-button-fill-padding-left: 0;
   --spectrum-tag-l-textonly-button-fill-padding-right: 0;
-  --spectrum-tag-l-textonly-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-tag-l-textonly-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-tag-l-textonly-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-tag-l-textonly-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-l-textonly-button-render: no;
   --spectrum-tag-l-textonly-button-padding: var(--spectrum-alias-infieldbutton-padding-l);
@@ -5617,6 +5633,7 @@
   --spectrum-tag-l-removable-avatartext-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-tag-l-removable-avatartext-text-transform: none;
   --spectrum-tag-l-removable-avatartext-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tag-l-removable-avatartext-text-render: yes;
   --spectrum-tag-l-removable-avatartext-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-tag-l-removable-avatartext-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-l-removable-avatartext-text-font-style: var(--spectrum-global-font-style-regular);
@@ -5631,6 +5648,7 @@
   --spectrum-tag-l-removable-avatartext-icon-margin-top: 0;
   --spectrum-tag-l-removable-avatartext-icon-margin-bottom: 0;
   --spectrum-tag-l-removable-avatartext-icon-type: icon;
+  --spectrum-tag-l-removable-avatartext-icon-render: yes;
   --spectrum-tag-l-removable-avatartext-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-l-removable-avatartext-button-fill-uiicon-type: ui-icon;
   --spectrum-tag-l-removable-avatartext-button-fill-uiicon-margin: var(--spectrum-alias-clearbutton-icon-margin-l);
@@ -5644,8 +5662,7 @@
   --spectrum-tag-l-removable-avatartext-button-fill-padding-bottom: 0;
   --spectrum-tag-l-removable-avatartext-button-fill-padding-left: 0;
   --spectrum-tag-l-removable-avatartext-button-fill-padding-right: 0;
-  --spectrum-tag-l-removable-avatartext-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-tag-l-removable-avatartext-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-tag-l-removable-avatartext-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-tag-l-removable-avatartext-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-l-removable-avatartext-button-render: yes;
   --spectrum-tag-l-removable-avatartext-button-padding: var(--spectrum-alias-infieldbutton-padding-l);
@@ -5949,6 +5966,7 @@
   --spectrum-tag-l-avatartext-padding-right: var(--spectrum-global-dimension-size-185);
   --spectrum-tag-l-avatartext-text-transform: none;
   --spectrum-tag-l-avatartext-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-tag-l-avatartext-text-render: yes;
   --spectrum-tag-l-avatartext-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-tag-l-avatartext-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-tag-l-avatartext-text-font-style: var(--spectrum-global-font-style-regular);
@@ -5963,6 +5981,7 @@
   --spectrum-tag-l-avatartext-icon-margin-top: 0;
   --spectrum-tag-l-avatartext-icon-margin-bottom: 0;
   --spectrum-tag-l-avatartext-icon-type: icon;
+  --spectrum-tag-l-avatartext-icon-render: yes;
   --spectrum-tag-l-avatartext-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-tag-l-avatartext-button-fill-uiicon-type: ui-icon;
   --spectrum-tag-l-avatartext-button-fill-uiicon-margin: var(--spectrum-alias-clearbutton-icon-margin-l);
@@ -5976,8 +5995,7 @@
   --spectrum-tag-l-avatartext-button-fill-padding-bottom: 0;
   --spectrum-tag-l-avatartext-button-fill-padding-left: 0;
   --spectrum-tag-l-avatartext-button-fill-padding-right: 0;
-  --spectrum-tag-l-avatartext-button-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-tag-l-avatartext-button-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-tag-l-avatartext-button-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-tag-l-avatartext-button-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-tag-l-avatartext-button-render: no;
   --spectrum-tag-l-avatartext-button-padding: var(--spectrum-alias-infieldbutton-padding-l);

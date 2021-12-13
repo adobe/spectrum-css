@@ -41,8 +41,7 @@
   --spectrum-infieldbutton-s-left-fill-icon-type: icon;
   --spectrum-infieldbutton-s-left-fill-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-infieldbutton-s-left-fill-icon-gap: var(--spectrum-global-dimension-size-85);
-  --spectrum-infieldbutton-s-left-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-infieldbutton-s-left-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-infieldbutton-s-left-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-infieldbutton-s-left-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-s-left-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-s-left-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
@@ -96,8 +95,7 @@
   --spectrum-infieldbutton-s-right-fill-icon-type: icon;
   --spectrum-infieldbutton-s-right-fill-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-infieldbutton-s-right-fill-icon-gap: var(--spectrum-global-dimension-size-85);
-  --spectrum-infieldbutton-s-right-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-infieldbutton-s-right-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-infieldbutton-s-right-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-infieldbutton-s-right-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-s-right-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-s-right-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
@@ -151,8 +149,7 @@
   --spectrum-infieldbutton-s-none-fill-icon-type: icon;
   --spectrum-infieldbutton-s-none-fill-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-infieldbutton-s-none-fill-icon-gap: var(--spectrum-global-dimension-size-85);
-  --spectrum-infieldbutton-s-none-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-infieldbutton-s-none-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-infieldbutton-s-none-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-infieldbutton-s-none-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-s-none-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-s-none-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
@@ -206,8 +203,7 @@
   --spectrum-infieldbutton-m-left-fill-icon-type: icon;
   --spectrum-infieldbutton-m-left-fill-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-infieldbutton-m-left-fill-icon-gap: var(--spectrum-global-dimension-size-100);
-  --spectrum-infieldbutton-m-left-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-infieldbutton-m-left-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-infieldbutton-m-left-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-infieldbutton-m-left-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-m-left-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-m-left-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
@@ -261,8 +257,7 @@
   --spectrum-infieldbutton-m-right-fill-icon-type: icon;
   --spectrum-infieldbutton-m-right-fill-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-infieldbutton-m-right-fill-icon-gap: var(--spectrum-global-dimension-size-100);
-  --spectrum-infieldbutton-m-right-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-infieldbutton-m-right-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-infieldbutton-m-right-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-infieldbutton-m-right-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-m-right-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-m-right-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
@@ -316,8 +311,7 @@
   --spectrum-infieldbutton-m-none-fill-icon-type: icon;
   --spectrum-infieldbutton-m-none-fill-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-infieldbutton-m-none-fill-icon-gap: var(--spectrum-global-dimension-size-100);
-  --spectrum-infieldbutton-m-none-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-infieldbutton-m-none-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-infieldbutton-m-none-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-infieldbutton-m-none-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-m-none-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-m-none-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
@@ -370,8 +364,7 @@
   --spectrum-infieldbutton-l-left-fill-icon-render: yes;
   --spectrum-infieldbutton-l-left-fill-icon-type: icon;
   --spectrum-infieldbutton-l-left-fill-icon-gap: var(--spectrum-global-dimension-size-115);
-  --spectrum-infieldbutton-l-left-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-infieldbutton-l-left-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-infieldbutton-l-left-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-infieldbutton-l-left-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-l-left-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-l-left-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
@@ -424,8 +417,7 @@
   --spectrum-infieldbutton-l-right-fill-icon-render: yes;
   --spectrum-infieldbutton-l-right-fill-icon-type: icon;
   --spectrum-infieldbutton-l-right-fill-icon-gap: var(--spectrum-global-dimension-size-115);
-  --spectrum-infieldbutton-l-right-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-infieldbutton-l-right-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-infieldbutton-l-right-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-infieldbutton-l-right-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-l-right-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-l-right-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
@@ -478,8 +470,7 @@
   --spectrum-infieldbutton-l-none-fill-icon-render: yes;
   --spectrum-infieldbutton-l-none-fill-icon-type: icon;
   --spectrum-infieldbutton-l-none-fill-icon-gap: var(--spectrum-global-dimension-size-115);
-  --spectrum-infieldbutton-l-none-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-infieldbutton-l-none-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-infieldbutton-l-none-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-infieldbutton-l-none-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-l-none-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-l-none-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
@@ -533,8 +524,7 @@
   --spectrum-infieldbutton-xl-left-fill-icon-type: icon;
   --spectrum-infieldbutton-xl-left-fill-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-infieldbutton-xl-left-fill-icon-gap: var(--spectrum-global-dimension-size-125);
-  --spectrum-infieldbutton-xl-left-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
-  --spectrum-infieldbutton-xl-left-fill-width: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-infieldbutton-xl-left-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-infieldbutton-xl-left-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-xl-left-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-xl-left-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
@@ -588,8 +578,7 @@
   --spectrum-infieldbutton-xl-right-fill-icon-type: icon;
   --spectrum-infieldbutton-xl-right-fill-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-infieldbutton-xl-right-fill-icon-gap: var(--spectrum-global-dimension-size-125);
-  --spectrum-infieldbutton-xl-right-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
-  --spectrum-infieldbutton-xl-right-fill-width: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-infieldbutton-xl-right-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-infieldbutton-xl-right-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-xl-right-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
   --spectrum-infieldbutton-xl-right-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
@@ -643,8 +632,7 @@
   --spectrum-infieldbutton-xl-none-fill-icon-type: icon;
   --spectrum-infieldbutton-xl-none-fill-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-infieldbutton-xl-none-fill-icon-gap: var(--spectrum-global-dimension-size-125);
-  --spectrum-infieldbutton-xl-none-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
-  --spectrum-infieldbutton-xl-none-fill-width: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-infieldbutton-xl-none-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-infieldbutton-xl-none-fill-border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-xl-none-fill-border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
   --spectrum-infieldbutton-xl-none-fill-border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);

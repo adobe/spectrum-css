@@ -160,6 +160,7 @@
   --spectrum-radio-s-emphasized-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-radio-s-emphasized-text-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-radio-s-emphasized-text-transform: none;
+  --spectrum-radio-s-emphasized-text-render: yes;
   --spectrum-radio-s-emphasized-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-radio-s-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-radio-s-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -340,6 +341,7 @@
   --spectrum-radio-s-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-radio-s-text-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-radio-s-text-transform: none;
+  --spectrum-radio-s-text-render: yes;
   --spectrum-radio-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-radio-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-radio-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -520,6 +522,7 @@
   --spectrum-radio-m-emphasized-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-radio-m-emphasized-text-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-radio-m-emphasized-text-transform: none;
+  --spectrum-radio-m-emphasized-text-render: yes;
   --spectrum-radio-m-emphasized-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-radio-m-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-radio-m-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -701,6 +704,7 @@
   --spectrum-radio-m-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-radio-m-text-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-radio-m-text-transform: none;
+  --spectrum-radio-m-text-render: yes;
   --spectrum-radio-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-radio-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-radio-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -882,6 +886,7 @@
   --spectrum-radio-l-emphasized-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-radio-l-emphasized-text-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-radio-l-emphasized-text-transform: none;
+  --spectrum-radio-l-emphasized-text-render: yes;
   --spectrum-radio-l-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-radio-l-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-radio-l-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1062,6 +1067,7 @@
   --spectrum-radio-l-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-radio-l-text-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-radio-l-text-transform: none;
+  --spectrum-radio-l-text-render: yes;
   --spectrum-radio-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-radio-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-radio-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1242,6 +1248,7 @@
   --spectrum-radio-xl-emphasized-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-radio-xl-emphasized-text-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-radio-xl-emphasized-text-transform: none;
+  --spectrum-radio-xl-emphasized-text-render: yes;
   --spectrum-radio-xl-emphasized-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-radio-xl-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-radio-xl-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1423,6 +1430,7 @@
   --spectrum-radio-xl-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-radio-xl-text-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-radio-xl-text-transform: none;
+  --spectrum-radio-xl-text-render: yes;
   --spectrum-radio-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-radio-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-radio-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
