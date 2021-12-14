@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0-beta.0"></a>
+# 5.0.0-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.1.4...@spectrum-css/toast@5.0.0-beta.0)
+
+### ✨ Features
+
+* break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+
+
+### 📚 Documentation
+
+* use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+
+
+### 🛑 BREAKING CHANGES
+
+* Button markup has changed
+
+
+
+
+
 <a name="4.1.4"></a>
 ## 4.1.4
 🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.1.3...@spectrum-css/toast@4.1.4)

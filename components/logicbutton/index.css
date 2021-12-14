@@ -41,7 +41,7 @@ governing permissions and limitations under the License.
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-button-m-primary-texticon-focus-ring-size) var(--spectrum-button-m-primary-texticon-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-button-m-primary-outline-texticon-focus-ring-size) var(--spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus);
     }
   }
 }
@@ -78,8 +78,8 @@ governing permissions and limitations under the License.
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--spectrum-button-m-secondary-texticon-background-color-disabled);
-    border-color: var(--spectrum-button-m-secondary-texticon-border-color-disabled);
+    background-color: var(--spectrum-button-m-primary-fill-texticon-background-color-disabled);
+    border-color: var(--spectrum-button-m-primary-fill-texticon-border-color-disabled);
     color: var(--spectrum-logicbutton-and-text-color-disabled);
   }
 }
@@ -87,14 +87,14 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-LogicButton::after {
-    --spectrum-button-m-primary-texticon-focus-ring-color-key-focus: Highlight;
+    --spectrum-button-m-primary-outline-texticon-focus-ring-color-key-focus: Highlight;
     forced-color-adjust: none;
   }
 
   .spectrum-LogicButton {
     forced-color-adjust: none;
     --spectrum-button-primary-texticon-focus-ring-size: 2;
-    --spectrum-button-m-secondary-texticon-background-color-disabled: ButtonFace;
+    --spectrum-button-m-primary-fill-texticon-background-color-disabled: ButtonFace;
     --spectrum-button-m-secondary-texticon-border-color-disabled: GrayText;
     --spectrum-logicbutton-and-background-color: ButtonFace;
     --spectrum-logicbutton-and-background-color-disabled: ButtonFace;

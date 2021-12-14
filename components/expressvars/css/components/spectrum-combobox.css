@@ -55,6 +55,7 @@
   --spectrum-combobox-s-quiet-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-s-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-s-quiet-placeholder-text-transform: none;
+  --spectrum-combobox-s-quiet-text-render: yes;
   --spectrum-combobox-s-quiet-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-combobox-s-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-combobox-s-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -83,7 +84,7 @@
   --spectrum-combobox-s-quiet-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-combobox-s-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-combobox-s-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-combobox-s-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-combobox-s-quiet-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-combobox-s-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-s-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-s-quiet-pickerbutton-width: auto;
@@ -151,6 +152,7 @@
   --spectrum-combobox-s-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-s-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-s-placeholder-text-transform: none;
+  --spectrum-combobox-s-text-render: yes;
   --spectrum-combobox-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-combobox-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-combobox-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -179,7 +181,7 @@
   --spectrum-combobox-s-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-75);
   --spectrum-combobox-s-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
   --spectrum-combobox-s-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-s);
-  --spectrum-combobox-s-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-combobox-s-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-combobox-s-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-s-pickerbutton-min-width: 0;
   --spectrum-combobox-s-pickerbutton-width: auto;
@@ -248,6 +250,7 @@
   --spectrum-combobox-m-quiet-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-m-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-m-quiet-placeholder-text-transform: none;
+  --spectrum-combobox-m-quiet-text-render: yes;
   --spectrum-combobox-m-quiet-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-combobox-m-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-combobox-m-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -277,7 +280,7 @@
   --spectrum-combobox-m-quiet-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-combobox-m-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-combobox-m-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-combobox-m-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-combobox-m-quiet-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-combobox-m-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-m-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-m-quiet-pickerbutton-width: auto;
@@ -346,6 +349,7 @@
   --spectrum-combobox-m-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-m-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-m-placeholder-text-transform: none;
+  --spectrum-combobox-m-text-render: yes;
   --spectrum-combobox-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-combobox-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-combobox-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -375,7 +379,7 @@
   --spectrum-combobox-m-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-combobox-m-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
   --spectrum-combobox-m-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-m);
-  --spectrum-combobox-m-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-combobox-m-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-combobox-m-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-m-pickerbutton-min-width: 0;
   --spectrum-combobox-m-pickerbutton-width: auto;
@@ -443,6 +447,7 @@
   --spectrum-combobox-l-quiet-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-l-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-l-quiet-placeholder-text-transform: none;
+  --spectrum-combobox-l-quiet-text-render: yes;
   --spectrum-combobox-l-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-combobox-l-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-combobox-l-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -471,7 +476,7 @@
   --spectrum-combobox-l-quiet-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-combobox-l-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-combobox-l-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-combobox-l-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-combobox-l-quiet-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-combobox-l-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-l-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-l-quiet-pickerbutton-width: auto;
@@ -539,6 +544,7 @@
   --spectrum-combobox-l-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-l-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-l-placeholder-text-transform: none;
+  --spectrum-combobox-l-text-render: yes;
   --spectrum-combobox-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-combobox-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-combobox-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -567,7 +573,7 @@
   --spectrum-combobox-l-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-65);
   --spectrum-combobox-l-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
   --spectrum-combobox-l-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-l);
-  --spectrum-combobox-l-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-combobox-l-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-combobox-l-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-l-pickerbutton-min-width: 0;
   --spectrum-combobox-l-pickerbutton-width: auto;
@@ -636,6 +642,7 @@
   --spectrum-combobox-xl-quiet-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-xl-quiet-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-xl-quiet-placeholder-text-transform: none;
+  --spectrum-combobox-xl-quiet-text-render: yes;
   --spectrum-combobox-xl-quiet-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-combobox-xl-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-combobox-xl-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -665,7 +672,7 @@
   --spectrum-combobox-xl-quiet-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-combobox-xl-quiet-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-combobox-xl-quiet-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-combobox-xl-quiet-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-xl-quiet-pickerbutton-min-width: 0;
   --spectrum-combobox-xl-quiet-pickerbutton-width: auto;
@@ -734,6 +741,7 @@
   --spectrum-combobox-xl-placeholder-line-height: var(--spectrum-alias-component-text-line-height);
   --spectrum-combobox-xl-placeholder-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
   --spectrum-combobox-xl-placeholder-text-transform: none;
+  --spectrum-combobox-xl-text-render: yes;
   --spectrum-combobox-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-combobox-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-combobox-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -763,7 +771,7 @@
   --spectrum-combobox-xl-pickerbutton-fill-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-combobox-xl-pickerbutton-fill-padding-left: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
   --spectrum-combobox-xl-pickerbutton-fill-padding-right: var(--spectrum-alias-pickerbutton-icononly-padding-x-xl);
-  --spectrum-combobox-xl-pickerbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-combobox-xl-pickerbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-combobox-xl-pickerbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-combobox-xl-pickerbutton-min-width: 0;
   --spectrum-combobox-xl-pickerbutton-width: auto;

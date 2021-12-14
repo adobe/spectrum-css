@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.12-beta.0"></a>
+## 1.0.12-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.11...@spectrum-css/actiongroup@1.0.12-beta.0)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
 <a name="1.0.11"></a>
 ## 1.0.11
 🗓 2021-12-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.10...@spectrum-css/actiongroup@1.0.11)

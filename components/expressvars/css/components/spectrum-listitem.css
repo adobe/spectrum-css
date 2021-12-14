@@ -111,6 +111,7 @@
   --spectrum-listitem-s-texticon-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-s-texticon-text-transform: none;
   --spectrum-listitem-s-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-listitem-s-texticon-text-render: yes;
   --spectrum-listitem-s-texticon-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-listitem-s-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-listitem-s-texticon-text-font-style: var(--spectrum-global-font-style-regular);
@@ -124,6 +125,7 @@
   --spectrum-listitem-s-texticon-icon-margin-top: 0;
   --spectrum-listitem-s-texticon-icon-margin-bottom: 0;
   --spectrum-listitem-s-texticon-icon-type: icon;
+  --spectrum-listitem-s-texticon-icon-render: yes;
   --spectrum-listitem-s-texticon-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-listitem-s-texticon-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-texticon-divider-size: var(--spectrum-alias-border-size-thick);
@@ -138,6 +140,7 @@
   --spectrum-listitem-s-texticon-thumbnail-margin-top: 0;
   --spectrum-listitem-s-texticon-thumbnail-margin-bottom: 0;
   --spectrum-listitem-s-texticon-thumbnail-type: icon;
+  --spectrum-listitem-s-texticon-thumbnail-render: yes;
   --spectrum-listitem-s-texticon-thumbnail-size: var(--spectrum-global-dimension-size-200);
   --spectrum-listitem-s-texticon-thumbnail-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -266,6 +269,7 @@
   --spectrum-listitem-s-textonly-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-s-textonly-text-transform: none;
   --spectrum-listitem-s-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-listitem-s-textonly-text-render: yes;
   --spectrum-listitem-s-textonly-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-listitem-s-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-listitem-s-textonly-text-font-style: var(--spectrum-global-font-style-regular);
@@ -279,6 +283,7 @@
   --spectrum-listitem-s-textonly-icon-margin-top: 0;
   --spectrum-listitem-s-textonly-icon-margin-bottom: 0;
   --spectrum-listitem-s-textonly-icon-type: icon;
+  --spectrum-listitem-s-textonly-icon-render: no;
   --spectrum-listitem-s-textonly-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-listitem-s-textonly-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-textonly-divider-size: var(--spectrum-alias-border-size-thick);
@@ -293,6 +298,7 @@
   --spectrum-listitem-s-textonly-thumbnail-margin-top: 0;
   --spectrum-listitem-s-textonly-thumbnail-margin-bottom: 0;
   --spectrum-listitem-s-textonly-thumbnail-type: icon;
+  --spectrum-listitem-s-textonly-thumbnail-render: no;
   --spectrum-listitem-s-textonly-thumbnail-size: var(--spectrum-global-dimension-size-200);
   --spectrum-listitem-s-textonly-thumbnail-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -421,6 +427,7 @@
   --spectrum-listitem-s-textthumbnail-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-s-textthumbnail-text-transform: none;
   --spectrum-listitem-s-textthumbnail-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-listitem-s-textthumbnail-text-render: yes;
   --spectrum-listitem-s-textthumbnail-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-listitem-s-textthumbnail-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-listitem-s-textthumbnail-text-font-style: var(--spectrum-global-font-style-regular);
@@ -434,6 +441,7 @@
   --spectrum-listitem-s-textthumbnail-icon-margin-top: 0;
   --spectrum-listitem-s-textthumbnail-icon-margin-bottom: 0;
   --spectrum-listitem-s-textthumbnail-icon-type: icon;
+  --spectrum-listitem-s-textthumbnail-icon-render: yes;
   --spectrum-listitem-s-textthumbnail-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-listitem-s-textthumbnail-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-textthumbnail-divider-size: var(--spectrum-alias-border-size-thick);
@@ -448,6 +456,7 @@
   --spectrum-listitem-s-textthumbnail-thumbnail-margin-top: 0;
   --spectrum-listitem-s-textthumbnail-thumbnail-margin-bottom: 0;
   --spectrum-listitem-s-textthumbnail-thumbnail-type: icon;
+  --spectrum-listitem-s-textthumbnail-thumbnail-render: yes;
   --spectrum-listitem-s-textthumbnail-thumbnail-size: var(--spectrum-global-dimension-size-200);
   --spectrum-listitem-s-textthumbnail-thumbnail-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-listitem-s-textthumbnail-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -576,6 +585,7 @@
   --spectrum-listitem-m-texticon-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-m-texticon-text-transform: none;
   --spectrum-listitem-m-texticon-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-listitem-m-texticon-text-render: yes;
   --spectrum-listitem-m-texticon-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-listitem-m-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-m-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -590,6 +600,7 @@
   --spectrum-listitem-m-texticon-icon-margin-top: 0;
   --spectrum-listitem-m-texticon-icon-margin-bottom: 0;
   --spectrum-listitem-m-texticon-icon-type: icon;
+  --spectrum-listitem-m-texticon-icon-render: yes;
   --spectrum-listitem-m-texticon-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-m-texticon-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-listitem-m-texticon-divider-size: var(--spectrum-alias-border-size-thick);
@@ -604,6 +615,7 @@
   --spectrum-listitem-m-texticon-thumbnail-margin-top: 0;
   --spectrum-listitem-m-texticon-thumbnail-margin-bottom: 0;
   --spectrum-listitem-m-texticon-thumbnail-type: icon;
+  --spectrum-listitem-m-texticon-thumbnail-render: yes;
   --spectrum-listitem-m-texticon-thumbnail-size: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-m-texticon-thumbnail-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-listitem-m-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -731,6 +743,7 @@
   --spectrum-listitem-m-textonly-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-m-textonly-text-transform: none;
   --spectrum-listitem-m-textonly-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-listitem-m-textonly-text-render: yes;
   --spectrum-listitem-m-textonly-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-listitem-m-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-m-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -745,6 +758,7 @@
   --spectrum-listitem-m-textonly-icon-margin-top: 0;
   --spectrum-listitem-m-textonly-icon-margin-bottom: 0;
   --spectrum-listitem-m-textonly-icon-type: icon;
+  --spectrum-listitem-m-textonly-icon-render: no;
   --spectrum-listitem-m-textonly-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-m-textonly-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-listitem-m-textonly-divider-size: var(--spectrum-alias-border-size-thick);
@@ -759,6 +773,7 @@
   --spectrum-listitem-m-textonly-thumbnail-margin-top: 0;
   --spectrum-listitem-m-textonly-thumbnail-margin-bottom: 0;
   --spectrum-listitem-m-textonly-thumbnail-type: icon;
+  --spectrum-listitem-m-textonly-thumbnail-render: no;
   --spectrum-listitem-m-textonly-thumbnail-size: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-m-textonly-thumbnail-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-listitem-m-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -887,6 +902,7 @@
   --spectrum-listitem-m-textthumbnail-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-m-textthumbnail-text-transform: none;
   --spectrum-listitem-m-textthumbnail-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-listitem-m-textthumbnail-text-render: yes;
   --spectrum-listitem-m-textthumbnail-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-listitem-m-textthumbnail-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-m-textthumbnail-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -901,6 +917,7 @@
   --spectrum-listitem-m-textthumbnail-icon-margin-top: 0;
   --spectrum-listitem-m-textthumbnail-icon-margin-bottom: 0;
   --spectrum-listitem-m-textthumbnail-icon-type: icon;
+  --spectrum-listitem-m-textthumbnail-icon-render: yes;
   --spectrum-listitem-m-textthumbnail-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-m-textthumbnail-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-listitem-m-textthumbnail-divider-size: var(--spectrum-alias-border-size-thick);
@@ -915,6 +932,7 @@
   --spectrum-listitem-m-textthumbnail-thumbnail-margin-top: 0;
   --spectrum-listitem-m-textthumbnail-thumbnail-margin-bottom: 0;
   --spectrum-listitem-m-textthumbnail-thumbnail-type: icon;
+  --spectrum-listitem-m-textthumbnail-thumbnail-render: yes;
   --spectrum-listitem-m-textthumbnail-thumbnail-size: var(--spectrum-global-dimension-size-225);
   --spectrum-listitem-m-textthumbnail-thumbnail-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-listitem-m-textthumbnail-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -1042,6 +1060,7 @@
   --spectrum-listitem-l-texticon-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-l-texticon-text-transform: none;
   --spectrum-listitem-l-texticon-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-listitem-l-texticon-text-render: yes;
   --spectrum-listitem-l-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-listitem-l-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-listitem-l-texticon-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1055,6 +1074,7 @@
   --spectrum-listitem-l-texticon-icon-margin-top: 0;
   --spectrum-listitem-l-texticon-icon-margin-bottom: 0;
   --spectrum-listitem-l-texticon-icon-type: icon;
+  --spectrum-listitem-l-texticon-icon-render: yes;
   --spectrum-listitem-l-texticon-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-l-texticon-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-texticon-divider-padding: var(--spectrum-global-dimension-static-size-40);
@@ -1068,6 +1088,7 @@
   --spectrum-listitem-l-texticon-thumbnail-margin-top: 0;
   --spectrum-listitem-l-texticon-thumbnail-margin-bottom: 0;
   --spectrum-listitem-l-texticon-thumbnail-type: icon;
+  --spectrum-listitem-l-texticon-thumbnail-render: yes;
   --spectrum-listitem-l-texticon-thumbnail-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-l-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-texticon-focus-ring-type: focusring;
@@ -1195,6 +1216,7 @@
   --spectrum-listitem-l-textonly-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-l-textonly-text-transform: none;
   --spectrum-listitem-l-textonly-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-listitem-l-textonly-text-render: yes;
   --spectrum-listitem-l-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-listitem-l-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-listitem-l-textonly-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1208,6 +1230,7 @@
   --spectrum-listitem-l-textonly-icon-margin-top: 0;
   --spectrum-listitem-l-textonly-icon-margin-bottom: 0;
   --spectrum-listitem-l-textonly-icon-type: icon;
+  --spectrum-listitem-l-textonly-icon-render: no;
   --spectrum-listitem-l-textonly-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-l-textonly-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-textonly-divider-padding: var(--spectrum-global-dimension-static-size-40);
@@ -1221,6 +1244,7 @@
   --spectrum-listitem-l-textonly-thumbnail-margin-top: 0;
   --spectrum-listitem-l-textonly-thumbnail-margin-bottom: 0;
   --spectrum-listitem-l-textonly-thumbnail-type: icon;
+  --spectrum-listitem-l-textonly-thumbnail-render: no;
   --spectrum-listitem-l-textonly-thumbnail-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-l-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-textonly-focus-ring-type: focusring;
@@ -1348,6 +1372,7 @@
   --spectrum-listitem-l-textthumbnail-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-l-textthumbnail-text-transform: none;
   --spectrum-listitem-l-textthumbnail-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-listitem-l-textthumbnail-text-render: yes;
   --spectrum-listitem-l-textthumbnail-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-listitem-l-textthumbnail-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-listitem-l-textthumbnail-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1361,6 +1386,7 @@
   --spectrum-listitem-l-textthumbnail-icon-margin-top: 0;
   --spectrum-listitem-l-textthumbnail-icon-margin-bottom: 0;
   --spectrum-listitem-l-textthumbnail-icon-type: icon;
+  --spectrum-listitem-l-textthumbnail-icon-render: yes;
   --spectrum-listitem-l-textthumbnail-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-l-textthumbnail-divider-size: var(--spectrum-alias-border-size-thick);
   --spectrum-listitem-l-textthumbnail-divider-padding: var(--spectrum-global-dimension-static-size-40);
@@ -1374,6 +1400,7 @@
   --spectrum-listitem-l-textthumbnail-thumbnail-margin-top: 0;
   --spectrum-listitem-l-textthumbnail-thumbnail-margin-bottom: 0;
   --spectrum-listitem-l-textthumbnail-thumbnail-type: icon;
+  --spectrum-listitem-l-textthumbnail-thumbnail-render: yes;
   --spectrum-listitem-l-textthumbnail-thumbnail-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-listitem-l-textthumbnail-focus-ring-size: var(--spectrum-alias-focus-ring-size);
   --spectrum-listitem-l-textthumbnail-focus-ring-type: focusring;
@@ -1501,6 +1528,7 @@
   --spectrum-listitem-xl-texticon-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-xl-texticon-text-transform: none;
   --spectrum-listitem-xl-texticon-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-listitem-xl-texticon-text-render: yes;
   --spectrum-listitem-xl-texticon-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-xl-texticon-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-listitem-xl-texticon-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1515,6 +1543,7 @@
   --spectrum-listitem-xl-texticon-icon-margin-top: 0;
   --spectrum-listitem-xl-texticon-icon-margin-bottom: 0;
   --spectrum-listitem-xl-texticon-icon-type: icon;
+  --spectrum-listitem-xl-texticon-icon-render: yes;
   --spectrum-listitem-xl-texticon-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-listitem-xl-texticon-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-listitem-xl-texticon-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1529,6 +1558,7 @@
   --spectrum-listitem-xl-texticon-thumbnail-margin-top: 0;
   --spectrum-listitem-xl-texticon-thumbnail-margin-bottom: 0;
   --spectrum-listitem-xl-texticon-thumbnail-type: icon;
+  --spectrum-listitem-xl-texticon-thumbnail-render: yes;
   --spectrum-listitem-xl-texticon-thumbnail-size: var(--spectrum-global-dimension-size-275);
   --spectrum-listitem-xl-texticon-thumbnail-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-listitem-xl-texticon-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -1657,6 +1687,7 @@
   --spectrum-listitem-xl-textonly-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-xl-textonly-text-transform: none;
   --spectrum-listitem-xl-textonly-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-listitem-xl-textonly-text-render: yes;
   --spectrum-listitem-xl-textonly-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-xl-textonly-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-listitem-xl-textonly-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1671,6 +1702,7 @@
   --spectrum-listitem-xl-textonly-icon-margin-top: 0;
   --spectrum-listitem-xl-textonly-icon-margin-bottom: 0;
   --spectrum-listitem-xl-textonly-icon-type: icon;
+  --spectrum-listitem-xl-textonly-icon-render: no;
   --spectrum-listitem-xl-textonly-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-listitem-xl-textonly-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-listitem-xl-textonly-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1685,6 +1717,7 @@
   --spectrum-listitem-xl-textonly-thumbnail-margin-top: 0;
   --spectrum-listitem-xl-textonly-thumbnail-margin-bottom: 0;
   --spectrum-listitem-xl-textonly-thumbnail-type: icon;
+  --spectrum-listitem-xl-textonly-thumbnail-render: no;
   --spectrum-listitem-xl-textonly-thumbnail-size: var(--spectrum-global-dimension-size-275);
   --spectrum-listitem-xl-textonly-thumbnail-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-listitem-xl-textonly-focus-ring-size: var(--spectrum-alias-focus-ring-size);
@@ -1813,6 +1846,7 @@
   --spectrum-listitem-xl-textthumbnail-focus-indicator-color: var(--spectrum-alias-border-color-key-focus);
   --spectrum-listitem-xl-textthumbnail-text-transform: none;
   --spectrum-listitem-xl-textthumbnail-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-listitem-xl-textthumbnail-text-render: yes;
   --spectrum-listitem-xl-textthumbnail-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-listitem-xl-textthumbnail-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-listitem-xl-textthumbnail-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1827,6 +1861,7 @@
   --spectrum-listitem-xl-textthumbnail-icon-margin-top: 0;
   --spectrum-listitem-xl-textthumbnail-icon-margin-bottom: 0;
   --spectrum-listitem-xl-textthumbnail-icon-type: icon;
+  --spectrum-listitem-xl-textthumbnail-icon-render: yes;
   --spectrum-listitem-xl-textthumbnail-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-listitem-xl-textthumbnail-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-listitem-xl-textthumbnail-divider-size: var(--spectrum-alias-border-size-thick);
@@ -1841,6 +1876,7 @@
   --spectrum-listitem-xl-textthumbnail-thumbnail-margin-top: 0;
   --spectrum-listitem-xl-textthumbnail-thumbnail-margin-bottom: 0;
   --spectrum-listitem-xl-textthumbnail-thumbnail-type: icon;
+  --spectrum-listitem-xl-textthumbnail-thumbnail-render: yes;
   --spectrum-listitem-xl-textthumbnail-thumbnail-size: var(--spectrum-global-dimension-size-275);
   --spectrum-listitem-xl-textthumbnail-thumbnail-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-listitem-xl-textthumbnail-focus-ring-size: var(--spectrum-alias-focus-ring-size);
