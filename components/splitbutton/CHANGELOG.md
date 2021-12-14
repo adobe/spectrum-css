@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-beta.0"></a>
+# 4.0.0-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@3.0.10...@spectrum-css/splitbutton@4.0.0-beta.0)
+
+### 🐛 Bug fixes
+
+* unbreak the build ([123add2](https://github.com/adobe/spectrum-css/commit/123add2))
+
+
+### 📚 Documentation
+
+* use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+
+
+### 🛑 BREAKING CHANGES
+
+* Button markup has changed
+
+
+
+
+
 <a name="3.0.10"></a>
 ## 3.0.10
 🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@3.0.9...@spectrum-css/splitbutton@3.0.10)

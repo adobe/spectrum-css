@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.0-beta.0"></a>
+# 3.3.0-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.2.2...@spectrum-css/searchwithin@3.3.0-beta.0)
+
+### ✨ Features
+
+* break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+
+
+
+
+
 <a name="3.2.2"></a>
 ## 3.2.2
 🗓 2021-12-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.2.1...@spectrum-css/searchwithin@3.2.2)

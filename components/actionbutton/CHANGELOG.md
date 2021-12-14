@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.1-beta.0"></a>
+## 1.1.1-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.0...@spectrum-css/actionbutton@1.1.1-beta.0)
+
+**Note:** Version bump only for package @spectrum-css/actionbutton
+
+
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0
 🗓 2021-12-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.0.10...@spectrum-css/actionbutton@1.1.0)

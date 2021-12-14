@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0-beta.0"></a>
+# 4.0.0-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.12...@spectrum-css/dialog@4.0.0-beta.0)
+
+### 📚 Documentation
+
+* use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+
+
+### 🛑 BREAKING CHANGES
+
+* Button markup has changed
+
+
+
+
+
 <a name="3.0.12"></a>
 ## 3.0.12
 🗓 2021-12-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.11...@spectrum-css/dialog@3.0.12)

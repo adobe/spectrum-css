@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/colorslider",
-  "version": "1.0.9",
+  "version": "1.0.10-beta.0",
   "description": "The Spectrum CSS Color Slider component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,13 +16,13 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/colorhandle": "^1.0.3",
-    "@spectrum-css/vars": "^4.0.0"
+    "@spectrum-css/colorhandle": "^1.0.10-beta.0",
+    "@spectrum-css/vars": "^5.0.0-beta.0"
   },
   "devDependencies": {
-    "@spectrum-css/colorhandle": "^1.0.9",
+    "@spectrum-css/colorhandle": "^1.0.10-beta.0",
     "@spectrum-css/component-builder": "^3.0.1",
-    "@spectrum-css/vars": "^4.3.1",
+    "@spectrum-css/vars": "^5.0.0-beta.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
