@@ -17,8 +17,6 @@ governing permissions and limitations under the License.
   align-items: center;
   flex-direction: row;
   display: inline-flex;
-  --spectrum-CloseButton-border-radius-left: 0;
-  --spectrum-CloseButton-border-radius-right: 0;
   padding: 0;
 
   &.spectrum-CloseButton--sizeS {
