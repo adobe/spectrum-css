@@ -81,9 +81,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Thumbnail-image {
+  max-height: 100%;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.spectrum-Thumbnail-image--cover {
   height: 100%;
   width: 100%;
-  z-index: 1;
   object-fit: cover;
   object-position: center;
 }
