@@ -18,6 +18,9 @@ sections:
       | | `.spectrum-Thumbnail--sizeXS` |
       | | `.spectrum-Thumbnail--sizeXXS` |
 
+      ### Image Cover
+      Thumbnail now offers a way to control the content inside an `img` tag via the `.spectrum-Thumbnail-image--cover` class.
+
 examples:
   - id: thumbnail-image
     description: Rectangular images will fill the entire space.
@@ -51,6 +54,13 @@ examples:
     markup: |
       <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
         <img class="spectrum-Thumbnail-image" src="img/example-card-portrait.jpg" alt="Eiffel Tower at night">
+      </div>
+  - id: thumbnail-landscape-image-cover
+    name: Thumbnail Cover (landscape image)
+    description: Images will maintain their aspect ratio while filling the entire content box.
+    markup: |
+      <div class="spectrum-Thumbnail spectrum-Thumbnail--sizeM">
+        <img class="spectrum-Thumbnail-image--cover" src="img/example-card-landscape.jpeg" alt="Landscape with mountains and lake">
       </div>
   - id: thumbnail-image-over-background
     name: Thumbnail (image against background)
