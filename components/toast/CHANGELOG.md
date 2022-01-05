@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@5.0.0-beta.0...@spectrum-css/toast@5.0.0)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
 <a name="5.0.0-beta.0"></a>
 # 5.0.0-beta.0
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.1.4...@spectrum-css/toast@5.0.0-beta.0)

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@5.0.0-beta.0...@spectrum-css/button@5.0.0)
+
+### ✨ Features
+
+* add back component-level variables for Button, fix Accent color in Express ([#1342](https://github.com/adobe/spectrum-css/issues/1342)) ([e8ed59e](https://github.com/adobe/spectrum-css/commit/e8ed59e))
+
+
+
+
+
 <a name="5.0.0-beta.0"></a>
 # 5.0.0-beta.0
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.1.4...@spectrum-css/button@5.0.0-beta.0)
