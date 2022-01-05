@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.21"></a>
+# 1.0.0-beta.21
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.19...@spectrum-css/expressvars@1.0.0-beta.21)
+
+### ✨ Features
+
+* temporary update of DNA variables ahead of release ([47ce20c](https://github.com/adobe/spectrum-css/commit/47ce20c))
+* update vars using local branch for testing and development ([b0ceb6b](https://github.com/adobe/spectrum-css/commit/b0ceb6b))
+
+
+### chore
+
+* update @adobe/spectrum-tokens and @adobe/spectrum-express-tokens ([da06f9a](https://github.com/adobe/spectrum-css/commit/da06f9a))
+
+
+### 🛑 BREAKING CHANGES
+
+* changes to button token api for static and style
+variants. Removal of over background.
+
+
+
+
+
 <a name="1.0.0-beta.20"></a>
 # 1.0.0-beta.20
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.19...@spectrum-css/expressvars@1.0.0-beta.20)

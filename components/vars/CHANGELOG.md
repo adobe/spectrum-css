@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.3.1...@spectrum-css/vars@6.0.0)
+
+### ✨ Features
+
+* temporary update of DNA variables ahead of release ([47ce20c](https://github.com/adobe/spectrum-css/commit/47ce20c))
+* update vars using local branch for testing and development ([b0ceb6b](https://github.com/adobe/spectrum-css/commit/b0ceb6b))
+
+
+### chore
+
+* update @adobe/spectrum-tokens and @adobe/spectrum-express-tokens ([da06f9a](https://github.com/adobe/spectrum-css/commit/da06f9a))
+
+
+### 🛑 BREAKING CHANGES
+
+* changes to button token api for static and style
+variants. Removal of over background.
+
+
+
+
+
 <a name="5.0.0"></a>
 # 5.0.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@5.0.0-beta.0...@spectrum-css/vars@5.0.0)

@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.1.4...@spectrum-css/button@6.0.0)
+
+### ✨ Features
+
+* add back component-level variables for Button, fix Accent color in Express ([#1342](https://github.com/adobe/spectrum-css/issues/1342)) ([36bf0c3](https://github.com/adobe/spectrum-css/commit/36bf0c3))
+* break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
+* new Button API ([e0ee36c](https://github.com/adobe/spectrum-css/commit/e0ee36c))
+
+
+### 🐛 Bug fixes
+
+* don't override staticWhite/staticBlack with staticNone ([741c0cf](https://github.com/adobe/spectrum-css/commit/741c0cf))
+* focus-ring color for staticWhite/staticBlack ([52958d9](https://github.com/adobe/spectrum-css/commit/52958d9))
+* unbreak the build ([d595cad](https://github.com/adobe/spectrum-css/commit/d595cad))
+* update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+
+
+### 🛑 BREAKING CHANGES
+
+* CTA was renamed to Accent, Quiet is gone in favor of outline, and Fill is added
+
+
+
+
+
 <a name="5.0.0"></a>
 # 5.0.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@5.0.0-beta.0...@spectrum-css/button@5.0.0)

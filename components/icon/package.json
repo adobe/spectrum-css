@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/icon",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "description": "The Spectrum CSS icon component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -17,11 +17,11 @@
     "update": "gulp updateIcons"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^5.0.0"
+    "@spectrum-css/vars": "^6.0.0"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.0.1",
-    "@spectrum-css/vars": "^5.0.0",
+    "@spectrum-css/vars": "^6.0.0",
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
