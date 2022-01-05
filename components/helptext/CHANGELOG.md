@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.8"></a>
+## 1.0.8
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@1.0.8-beta.0...@spectrum-css/helptext@1.0.8)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
 <a name="1.0.8-beta.0"></a>
 ## 1.0.8-beta.0
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@1.0.7...@spectrum-css/helptext@1.0.8-beta.0)
