@@ -10,7 +10,32 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* begin generated CSS for button */
+.spectrum-Button {
+  --spectrum-button-m-accent-fill-texticon-background-color: var(--spectrum-semantic-cta-background-color-default);
+  --spectrum-button-m-accent-fill-texticon-background-color-hover: var(--spectrum-semantic-cta-background-color-hover);
+  --spectrum-button-m-accent-fill-texticon-background-color-down: var(--spectrum-semantic-cta-background-color-down);
+  --spectrum-button-m-accent-fill-texticon-background-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+  --spectrum-button-m-accent-fill-texticon-background-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+
+  --spectrum-button-m-accent-outline-texticon-border-color: var(--spectrum-semantic-cta-background-color-default);
+  --spectrum-button-m-accent-outline-texticon-border-color-hover: var(--spectrum-semantic-cta-background-color-hover);
+  --spectrum-button-m-accent-outline-texticon-border-color-down: var(--spectrum-semantic-cta-background-color-down);
+  --spectrum-button-m-accent-outline-texticon-border-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+  --spectrum-button-m-accent-outline-texticon-border-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+
+  --spectrum-button-m-accent-outline-texticon-icon-color: var(--spectrum-semantic-cta-background-color-default);
+  --spectrum-button-m-accent-outline-texticon-icon-color-hover: var(--spectrum-semantic-cta-background-color-hover);
+  --spectrum-button-m-accent-outline-texticon-icon-color-down: var(--spectrum-semantic-cta-background-color-down);
+  --spectrum-button-m-accent-outline-texticon-icon-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+  --spectrum-button-m-accent-outline-texticon-icon-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+
+  --spectrum-button-m-accent-outline-texticon-text-color: var(--spectrum-semantic-cta-background-color-default);
+  --spectrum-button-m-accent-outline-texticon-text-color-hover: var(--spectrum-semantic-cta-background-color-hover);
+  --spectrum-button-m-accent-outline-texticon-text-color-down: var(--spectrum-semantic-cta-background-color-down);
+  --spectrum-button-m-accent-outline-texticon-text-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+  --spectrum-button-m-accent-outline-texticon-text-color-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+}
+
 .spectrum-Button {
   &:not(.spectrum-Button--staticWhite) {
     &:not(.spectrum-Button--staticBlack) {
@@ -730,5 +755,3 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-/* end generated CSS for button */
