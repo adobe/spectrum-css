@@ -86,11 +86,13 @@ governing permissions and limitations under the License.
   z-index: 1;
 }
 
-.spectrum-Thumbnail-image--cover {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
+.spectrum-Thumbnail--cover {
+  .spectrum-Thumbnail-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .spectrum-Thumbnail-background {
