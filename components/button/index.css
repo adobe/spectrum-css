@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-button.css";
 
-@import "./button-generated.css";
+@import "./skin.css";
 
 .spectrum-Button--sizeS {
   @remapvars {
@@ -135,11 +135,11 @@ a.spectrum-Button {
 }
 
 .spectrum-Button--staticWhite {
-  --spectrum-button-focus-ring-color: var(--spectrum-global-color-static-white);
+  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-white-texticon-focus-ring-color-key-focus);
 }
 
 .spectrum-Button--staticBlack {
-  --spectrum-button-focus-ring-color: var(--spectrum-global-color-static-black);
+  --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-black-texticon-focus-ring-color-key-focus);
 }
 
 /* todo all of this will have to change */
@@ -241,4 +241,3 @@ a.spectrum-Button {
     }
   }
 }
-
