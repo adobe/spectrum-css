@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2022-01-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.4...@spectrum-css/thumbnail@2.0.5)
+
+### 🐛 Bug fixes
+
+* **thumbnail:** prefer separate class for image covering ([f10dd08](https://github.com/adobe/spectrum-css/commit/f10dd08))
+* **thumbnail:** use SUIT-style naming and structure ([67f2d97](https://github.com/adobe/spectrum-css/commit/67f2d97))
+
+
+
+
+
 <a name="2.0.4"></a>
 ## 2.0.4
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.2...@spectrum-css/thumbnail@2.0.4)
