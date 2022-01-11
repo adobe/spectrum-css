@@ -10,78 +10,77 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* .spectrum-Tabs {
-  border-block-end-color: var(--spectrum-tabs-m-divider-color);
+.spectrum-Tabs {
+  border-block-end-color: var(--spectrum-tabs-textonly-divider-color);
 }
 
 .spectrum-Tabs--vertical {
-  border-inline-start-color: var(--spectrum-tabs-m-vertical-divider-color);
+  border-inline-start-color: var(--spectrum-tabs-vertical-textonly-divider-color);
 }
 
 .spectrum-Tabs-selectionIndicator {
-  background-color: var(--spectrum-tabs-m-selection-indicator-color);
+  background-color: var(--spectrum-tabs-texticon-selection-indicator-color-selected);
 }
 
 .spectrum-Tabs-item {
-  color: var(--spectrum-tabs-m-text-color);
+  color: var(--spectrum-tabs-textonly-text-color);
 
   .spectrum-Icon {
-    color: var(--spectrum-tabs-m-icon-color)
+    color: var(--spectrum-tabs-textonly-icon-color)
   }
 
   &:hover {
-    color: var(--spectrum-tabs-m-text-color-hover);
+    color: var(--spectrum-tabs-textonly-text-color-hover);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-m-icon-color-hover)
+      color: var(--spectrum-tabs-textonly-icon-color-hover)
     }
   }
 
   &.is-selected {
-    color: var(--spectrum-tabs-m-text-color-selected);
+    color: var(--spectrum-tabs-textonly-text-color-selected);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-m-icon-color-selected)
+      color: var(--spectrum-tabs-textonly-icon-color-selected);
     }
   }
 
   &:focus-ring {
-    color: var(--spectrum-tabs-m-text-color-key-focus);
+    color: var(--spectrum-tabs-textonly-text-color-selected-key-focus);
 
     &::before {
-      border-color: var(--spectrum-tabs-m-focus-ring-color);
+      border-color: var(--spectrum-tabs-textonly-focus-ring-color);
     }
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-m-icon-color-key-focus)
+      color: var(--spectrum-tabs-textonly-icon-color-selected-key-focus)
     }
   }
 
   &.is-disabled {
-    color: var(--spectrum-tabs-m-text-color-disabled);
+    color: var(--spectrum-tabs-textonly-text-color-disabled);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-m-icon-color-disabled)
+      color: var(--spectrum-tabs-textonly-icon-color-disabled)
     }
   }
 }
 
 .spectrum-Tabs--quiet {
-  border-block-end-color: var(--spectrum-tabs-m-quiet-divider-color);
+  border-block-end-color: var(--spectrum-tabs-quiet-textonly-divider-color);
 
   .spectrum-Tabs-selectionIndicator {
-    background-color: var(--spectrum-tabs-m-quiet-selection-indicator-color);
+    background-color: var(--spectrum-tabs-quiet-textonly-selection-indicator-color-selected);
   }
 }
 
 .spectrum-Tabs--vertical {
   &.spectrum-Tabs--quiet,
   &.spectrum-Tabs--compact {
-    border-inline-start-color: var(--spectrum-tabs-m-vertical-quiet-divider-color);
+    border-inline-start-color: var(--spectrum-tabs-vertical-quiet-textonly-divider-color);
 
     .spectrum-Tabs-selectionIndicator {
-      background-color: var(--spectrum-tabs-m-quiet-selection-indicator-color);
+      background-color: var(--spectrum-tabs-vertical-textonly-selection-indicator-color-selected);
     }
   }
 }
-*/
