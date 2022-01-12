@@ -2,7 +2,7 @@ name: In-Field Button
 status: Contribution
 SpectrumSiteSlug: https://spectrum.adobe.com/page/picker/
 examples:
-  - id: pickerbutton-sizing
+  - id: infieldbutton-sizing
     name: Sizing
     markup: |
       <div class="spectrum-Examples">
@@ -51,12 +51,12 @@ examples:
         </div>
       </div>
 
-  - id: pickerbutton-loudness
+  - id: infieldbutton-loudness
     name: Loudness
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Low</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--low spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -67,7 +67,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Medium</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--medium spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -78,7 +78,7 @@ examples:
         </div>
 
         <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">High</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--high spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -89,7 +89,33 @@ examples:
         </div>
       </div>
 
-  - id: pickerbutton-icononly
+  - id: infieldbutton-position
+    name: Position
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: space-around;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
+          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--high spectrum-InfieldButton--left" aria-haspopup="listbox">
+            <div class="spectrum-InfieldButton-fill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                <use href="#spectrum-icon-18-Add"></use>
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
+          <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--high spectrum-InfieldButton--right" aria-haspopup="listbox">
+            <div class="spectrum-InfieldButton-fill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
+                <use href="#spectrum-icon-18-Add"></use>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+
+  - id: infieldbutton-icononly
     name: Workflow icon only
     markup: |
       <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--high spectrum-InfieldButton--right" aria-haspopup="listbox">
@@ -100,7 +126,7 @@ examples:
         </div>
       </button>
 
-  - id: pickerbutton-disabled
+  - id: infieldbutton-disabled
     name: Disabled
     markup: |
       <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--high spectrum-InfieldButton--right" disabled aria-haspopup="listbox">
@@ -111,7 +137,7 @@ examples:
         </div>
       </button>
 
-  - id: pickerbutton-invalid
+  - id: infieldbutton-invalid
     name: Invalid
     markup: |
       <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--high spectrum-InfieldButton--right is-invalid" aria-haspopup="listbox">

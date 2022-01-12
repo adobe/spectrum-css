@@ -19,8 +19,8 @@ governing permissions and limitations under the License.
     --spectrum-InfieldButton-border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
 
     .spectrum-InfieldButton-fill {
-      border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
-      border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
+      border-end-start-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
+      border-start-start-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
     }
   }
 
@@ -28,8 +28,8 @@ governing permissions and limitations under the License.
     --spectrum-InfieldButton-border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
 
     .spectrum-InfieldButton-fill {
-      border-bottom-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
-      border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
+      border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
+      border-start-end-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
     }
   }
 
@@ -37,20 +37,20 @@ governing permissions and limitations under the License.
     padding: var(--spectrum-alias-infieldbutton-padding-s);
 
     .spectrum-InfieldButton-fill {
-      padding-right: var(--spectrum-alias-infieldbutton-fill-padding-s);
-      padding-left: var(--spectrum-alias-infieldbutton-fill-padding-s);
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-s);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-s);
       --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
-      height: var(--spectrum-alias-infieldbutton-full-height-s);
-      width: var(--spectrum-alias-infieldbutton-full-height-s)
+      block-size: var(--spectrum-alias-infieldbutton-full-height-s);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-s)
     }
 
     .spectrum-InfieldButton-icon {
       gap: var(--spectrum-global-dimension-size-85);
       --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-size-200);
-      height: var(--spectrum-global-dimension-size-200);
-      width: var(--spectrum-global-dimension-size-200);
-      margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
-      margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-s)
+      block-size: var(--spectrum-global-dimension-size-200);
+      inline-size: var(--spectrum-global-dimension-size-200);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-s)
     }
   }
 
@@ -58,20 +58,20 @@ governing permissions and limitations under the License.
     padding: var(--spectrum-alias-infieldbutton-padding-m);
 
     .spectrum-InfieldButton-fill {
-      padding-right: var(--spectrum-alias-infieldbutton-fill-padding-m);
-      padding-left: var(--spectrum-alias-infieldbutton-fill-padding-m);
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-m);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-m);
       --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
-      height: var(--spectrum-alias-infieldbutton-full-height-m);
-      width: var(--spectrum-alias-infieldbutton-full-height-m)
+      block-size: var(--spectrum-alias-infieldbutton-full-height-m);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-m)
     }
 
     .spectrum-InfieldButton-icon {
       gap: var(--spectrum-global-dimension-size-100);
       --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-size-225);
-      height: var(--spectrum-global-dimension-size-225);
-      width: var(--spectrum-global-dimension-size-225);
-      margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
-      margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-m)
+      block-size: var(--spectrum-global-dimension-size-225);
+      inline-size: var(--spectrum-global-dimension-size-225);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-m)
     }
   }
 
@@ -79,17 +79,17 @@ governing permissions and limitations under the License.
     padding: var(--spectrum-alias-infieldbutton-padding-l);
 
     .spectrum-InfieldButton-fill {
-      padding-right: var(--spectrum-alias-infieldbutton-fill-padding-l);
-      padding-left: var(--spectrum-alias-infieldbutton-fill-padding-l);
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-l);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-l);
       --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
-      height: var(--spectrum-alias-infieldbutton-full-height-l);
-      width: var(--spectrum-alias-infieldbutton-full-height-l)
+      block-size: var(--spectrum-alias-infieldbutton-full-height-l);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-l)
     }
 
     .spectrum-InfieldButton-icon {
       gap: var(--spectrum-global-dimension-size-115);
-      margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
-      margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-l)
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-l)
     }
   }
 
@@ -97,20 +97,20 @@ governing permissions and limitations under the License.
     padding: var(--spectrum-alias-infieldbutton-padding-xl);
 
     .spectrum-InfieldButton-fill {
-      padding-right: var(--spectrum-alias-infieldbutton-fill-padding-xl);
-      padding-left: var(--spectrum-alias-infieldbutton-fill-padding-xl);
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-xl);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-xl);
       --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
-      height: var(--spectrum-alias-infieldbutton-full-height-xl);
-      width: var(--spectrum-alias-infieldbutton-full-height-xl)
+      block-size: var(--spectrum-alias-infieldbutton-full-height-xl);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-xl)
     }
 
     .spectrum-InfieldButton-icon {
       gap: var(--spectrum-global-dimension-size-125);
       --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-size-275);
-      height: var(--spectrum-global-dimension-size-275);
-      width: var(--spectrum-global-dimension-size-275);
-      margin-bottom: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
-      margin-top: var(--spectrum-alias-infieldbutton-icon-margin-y-xl)
+      block-size: var(--spectrum-global-dimension-size-275);
+      inline-size: var(--spectrum-global-dimension-size-275);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-xl)
     }
   }
 
@@ -475,10 +475,10 @@ governing permissions and limitations under the License.
 .spectrum-InfieldButton-fill {
   border-width: var(--spectrum-alias-infieldbutton-border-size);
   border-style: solid;
-  border-bottom-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  border-top-right-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  border-bottom-left-radius: var(--spectrum-alias-infieldbutton-border-radius);
-  border-top-left-radius: var(--spectrum-alias-infieldbutton-border-radius)
+  border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
+  border-start-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
+  border-end-start-radius: var(--spectrum-alias-infieldbutton-border-radius);
+  border-start-start-radius: var(--spectrum-alias-infieldbutton-border-radius)
 }
 
 .spectrum-InfieldButton-icon {
@@ -490,8 +490,8 @@ governing permissions and limitations under the License.
     &.spectrum-InfieldButton--sizeL {
       .spectrum-InfieldButton-icon {
         --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-250);
-        height: var(--spectrum-global-dimension-static-size-250);
-        width: var(--spectrum-global-dimension-static-size-250)
+        block-size: var(--spectrum-global-dimension-static-size-250);
+        inline-size: var(--spectrum-global-dimension-static-size-250)
       }
     }
   }
@@ -502,8 +502,8 @@ governing permissions and limitations under the License.
     &.spectrum-InfieldButton--sizeL {
       .spectrum-InfieldButton-icon {
         --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-300);
-        height: var(--spectrum-global-dimension-static-size-300);
-        width: var(--spectrum-global-dimension-static-size-300)
+        block-size: var(--spectrum-global-dimension-static-size-300);
+        inline-size: var(--spectrum-global-dimension-static-size-300)
       }
     }
   }

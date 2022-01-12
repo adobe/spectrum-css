@@ -31,5 +31,19 @@ a.spectrum-InfieldButton {
 .spectrum-InfieldButton-fill {
   /* override generated CSS */
   padding: 0 !important;
+
+  /* center icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
+.spectrum-InfieldButton-icon {
+  /* don't be small, ever */
+  flex-shrink: 0;
+
+  /* remove margin used for centering */
+  margin: 0 !important;
+}
