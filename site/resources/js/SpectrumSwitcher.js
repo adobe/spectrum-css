@@ -137,7 +137,7 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'varsVersion', {
     const pathNameToUpdate = (varsVersion === 'default') ? expressName : defaultName;
 
     // get all relevant stylesheets that need to be switched
-    const styleSheets = document.querySelectorAll(`link[href*="/components/${pathNameToUpdate}/"]`);
+    const styleSheets = document.querySelectorAll(`link[href*="components/${pathNameToUpdate}/"]`);
 
     // update each relevant stylesheet with the selected path
     [...styleSheets].map(sheet => {
