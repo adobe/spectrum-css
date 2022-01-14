@@ -11,7 +11,6 @@ governing permissions and limitations under the License.
 */
 
 @import "../vars/css/components/spectrum-tabs.css";
-/* @import "../vars/css/components/spectrum-picker.css"; */
 @import "../vars/css/scales/spectrum-large.css";
 @import "../vars/css/scales/spectrum-medium.css";
 
@@ -96,7 +95,7 @@ governing permissions and limitations under the License.
     & + .spectrum-Tabs-itemLabel {
       /* icons are inexplicably offset by 3px. Subtract this value from the icon-gap
          to correct the gap in CSS */
-      margin-inline-start: calc(var(--spectrum-tabs-quiet-textonly-icon-gap) - var(--spectrum-global-dimension-size-40));
+      margin-inline-start: calc(var(--spectrum-tabs-quiet-textonly-tabitem-icon-gap) - var(--spectrum-global-dimension-size-40));
     }
   }
 
@@ -107,13 +106,19 @@ governing permissions and limitations under the License.
 
     box-sizing: border-box;
 
-    block-size: var(--spectrum-tabs-quiet-textonly-focus-ring-height);
-    margin-block-start: calc(calc(var(--spectrum-tabs-quiet-textonly-focus-ring-height) / -2) + calc(var(--spectrum-tabs-quiet-textonly-divider-size) / 2));
-    inset-inline-start: calc(-1 * var(--spectrum-tabs-quiet-textonly-focus-ring-padding-x));
-    inset-inline-end: calc(-1 * var(--spectrum-tabs-quiet-textonly-focus-ring-padding-x));
-    border: var(--spectrum-tabs-quiet-textonly-focus-ring-size) solid transparent;
-    /* TODO */
-    /* border-radius: var(--spectrum-tabs-focus-ring-border-radius); */
+    block-size: calc(var(--spectrum-tabs-textonly-tabitem-padding-top) + var(--spectrum-tabs-textonly-tabitem-padding-top));
+    
+    margin-block-start: calc(calc(var(--spectrum-tabs-compact-textonly-tabitem-height) / -2) + calc(var(--spectrum-tabs-quiet-texticon-divider-size) / 2));
+
+    /* 30,40,50,60 */
+
+    /* margin-block-start: calc(var(--spectrum-tabs-compact-textonly-tabitem-height) / -2); */
+
+    inset-inline-start: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
+    inset-inline-end: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-padding-x));
+    
+    border: var(--spectrum-tabs-textonly-tabitem-focus-ring-size) solid transparent;
+    border-radius: var(--spectrum-tabs-textonly-tabitem-focus-ring-border-radius);
 
     pointer-events: none;
   }
@@ -124,8 +129,8 @@ governing permissions and limitations under the License.
   vertical-align: top;
   display: inline-block;
 
-  font-size: var(--spectrum-tabs-textonly-text-size);
-  font-weight: var(--spectrum-tabs-textonly-text-font-weight);
+  font-size: var(--spectrum-tabs-texticon-tabitem-text-size);
+  font-weight: var(--spectrum-tabs-textonly-tabitem-text-font-weight);
 
   /* support links */
   text-decoration: none;
@@ -143,7 +148,7 @@ governing permissions and limitations under the License.
   /* Be below the tab */
   z-index: 0;
   
-  transition: transform var(--spectrum-tabs-textonly-selection-indicator-animation-duration) var(--spectrum-tabs-textonly-selection-indicator-animation-ease);
+  transition: transform var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-ease);
   transform-origin: top left;
 
   border-radius: var(--spectrum-tabs-textonly-divider-border-radius);
@@ -208,16 +213,17 @@ governing permissions and limitations under the License.
     block-size: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     padding-block: 0;
-    padding-inline: var(--spectrum-tabs-quiet-textonly-focus-ring-padding-x);
+    padding-inline: var(--spectrum-tabs-quiet-textonly-tabitem-focus-ring-padding-x);
+    
     /* Subtract focus ring padding from margin-left since the padding value already offsets tabs-items */
     /* margin-inline-start: calc(var(--spectrum-tabs-vertical-textonly-margin-left) - var(--spectrum-tabs-quiet-textonly-focus-ring-padding-x)); */
     margin-block-end: var(--spectrum-tabs-vertical-textonly-tabitem-gap);
 
     &::before {
       /* padding is included in click area of tab items, so only need to offset by the size of the focus ring's border */
-      inset-inline-start: calc(-1 * var(--spectrum-tabs-quiet-textonly-focus-ring-size));
-      inset-inline-end: calc(-1 * var(--spectrum-tabs-quiet-textonly-focus-ring-size));
-      margin-block-start: calc(calc(var(--spectrum-tabs-quiet-textonly-focus-ring-height) / -2));
+      inset-inline-start: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-size));
+      inset-inline-end: calc(-1 * var(--spectrum-tabs-textonly-tabitem-focus-ring-size));
+      /* margin-block-start: calc(calc(var(--spectrum-tabs-quiet-textonly-focus-ring-height) / -2)); */
     }
   }
 
