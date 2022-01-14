@@ -11,76 +11,107 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Tabs {
-  border-block-end-color: var(--spectrum-tabs-textonly-divider-color);
+  border-block-end-color: var(--spectrum-tabs-textonly-divider-background-color);
 }
 
 .spectrum-Tabs--vertical {
-  border-inline-start-color: var(--spectrum-tabs-vertical-textonly-divider-color);
+  border-inline-start-color: var(--spectrum-tabs-vertical-textonly-divider-background-color);
 }
 
 .spectrum-Tabs-selectionIndicator {
-  background-color: var(--spectrum-tabs-texticon-selection-indicator-color-selected);
+  background-color: var(--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected);
+}
+
+.spectrum-Tabs--emphasized {
+  .spectrum-Tabs-selectionIndicator {
+    background-color: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
+  }
 }
 
 .spectrum-Tabs-item {
-  color: var(--spectrum-tabs-textonly-text-color);
+  color: var(--spectrum-tabs-textonly-tabitem-text-color);
 
   .spectrum-Icon {
-    color: var(--spectrum-tabs-textonly-icon-color)
+    color: var(--spectrum-tabs-textonly-tabitem-icon-color)
   }
 
   &:hover {
-    color: var(--spectrum-tabs-textonly-text-color-hover);
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-hover);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-textonly-icon-color-hover)
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-hover)
     }
   }
 
   &.is-selected {
-    color: var(--spectrum-tabs-textonly-text-color-selected);
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-selected);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-textonly-icon-color-selected);
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-selected);
     }
   }
 
   &:focus-ring {
-    color: var(--spectrum-tabs-textonly-text-color-selected-key-focus);
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-selected-key-focus);
 
     &::before {
-      border-color: var(--spectrum-tabs-textonly-focus-ring-color);
+      border-color: var(--spectrum-tabs-textonly-tabitem-focus-ring-border-color-key-focus);
     }
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-textonly-icon-color-selected-key-focus)
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus)
     }
   }
 
   &.is-disabled {
-    color: var(--spectrum-tabs-textonly-text-color-disabled);
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-disabled);
 
     .spectrum-Icon {
-      color: var(--spectrum-tabs-textonly-icon-color-disabled)
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-disabled)
+    }
+  }
+}
+
+.spectrum-Tabs--emphasized {
+  .spectrum-Tabs-item {
+    &.is-selected {
+      color: var(--spectrum-tabs-emphasized-texticon-tabitem-text-color-selected);
+  
+      .spectrum-Icon {
+        color: var(--spectrum-tabs-emphasized-texticon-tabitem-icon-color-selected);
+      }
     }
   }
 }
 
 .spectrum-Tabs--quiet {
-  border-block-end-color: var(--spectrum-tabs-quiet-textonly-divider-color);
+  border-block-end-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
 
   .spectrum-Tabs-selectionIndicator {
-    background-color: var(--spectrum-tabs-quiet-textonly-selection-indicator-color-selected);
+    background-color: var(--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected);
+  }
+
+  &.spectrum-Tabs--emphasized {
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
+    }
   }
 }
 
 .spectrum-Tabs--vertical {
   &.spectrum-Tabs--quiet,
   &.spectrum-Tabs--compact {
-    border-inline-start-color: var(--spectrum-tabs-vertical-quiet-textonly-divider-color);
+    border-inline-start-color: var(--spectrum-tabs-vertical-quiet-textonly-divider-background-color);
 
     .spectrum-Tabs-selectionIndicator {
-      background-color: var(--spectrum-tabs-vertical-textonly-selection-indicator-color-selected);
+      background-color: var(--spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected);
+    }
+  }
+
+  &.spectrum-Tabs--emphasized {
+    border-inline-start-color: var(--spectrum-tabs-emphasized-textonly-divider-background-color);
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
     }
   }
 }
