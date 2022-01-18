@@ -119,7 +119,8 @@
   --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -269,7 +270,8 @@
   --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -419,7 +421,8 @@
   --spectrum-tabs-s-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -569,7 +572,8 @@
   --spectrum-tabs-s-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -719,7 +723,8 @@
   --spectrum-tabs-s-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -869,7 +874,8 @@
   --spectrum-tabs-s-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1019,7 +1025,8 @@
   --spectrum-tabs-s-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1169,7 +1176,8 @@
   --spectrum-tabs-s-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1319,7 +1327,8 @@
   --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1471,7 +1480,8 @@
   --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1623,7 +1633,8 @@
   --spectrum-tabs-s-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1775,7 +1786,8 @@
   --spectrum-tabs-s-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -1927,7 +1939,8 @@
   --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2079,7 +2092,8 @@
   --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2231,7 +2245,8 @@
   --spectrum-tabs-s-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2383,7 +2398,8 @@
   --spectrum-tabs-s-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2535,7 +2551,8 @@
   --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2685,7 +2702,8 @@
   --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2835,7 +2853,8 @@
   --spectrum-tabs-s-compact-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -2985,7 +3004,8 @@
   --spectrum-tabs-s-compact-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3135,7 +3155,8 @@
   --spectrum-tabs-s-compact-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3285,7 +3306,8 @@
   --spectrum-tabs-s-compact-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3435,7 +3457,8 @@
   --spectrum-tabs-s-compact-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3585,7 +3608,8 @@
   --spectrum-tabs-s-compact-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-s-compact-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3735,7 +3759,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -3887,7 +3912,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4039,7 +4065,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4191,7 +4218,8 @@
   --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4343,7 +4371,8 @@
   --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4495,7 +4524,8 @@
   --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4647,7 +4677,8 @@
   --spectrum-tabs-s-compact-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4799,7 +4830,8 @@
   --spectrum-tabs-s-compact-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-s-compact-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-s-compact-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-s-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-tabs-s-compact-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-300);
+  --spectrum-tabs-s-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-85);
   --spectrum-tabs-s-compact-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-s-compact-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-s-compact-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -4951,7 +4983,8 @@
   --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -5101,7 +5134,8 @@
   --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -5251,7 +5285,8 @@
   --spectrum-tabs-m-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -5401,7 +5436,8 @@
   --spectrum-tabs-m-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -5551,7 +5587,8 @@
   --spectrum-tabs-m-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -5701,7 +5738,8 @@
   --spectrum-tabs-m-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -5851,7 +5889,8 @@
   --spectrum-tabs-m-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -6001,7 +6040,8 @@
   --spectrum-tabs-m-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -6151,7 +6191,8 @@
   --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -6303,7 +6344,8 @@
   --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -6455,7 +6497,8 @@
   --spectrum-tabs-m-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -6607,7 +6650,8 @@
   --spectrum-tabs-m-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -6759,7 +6803,8 @@
   --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -6911,7 +6956,8 @@
   --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -7063,7 +7109,8 @@
   --spectrum-tabs-m-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -7215,7 +7262,8 @@
   --spectrum-tabs-m-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -7367,7 +7415,8 @@
   --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -7517,7 +7566,8 @@
   --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -7667,7 +7717,8 @@
   --spectrum-tabs-m-compact-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -7817,7 +7868,8 @@
   --spectrum-tabs-m-compact-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -7967,7 +8019,8 @@
   --spectrum-tabs-m-compact-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -8117,7 +8170,8 @@
   --spectrum-tabs-m-compact-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -8267,7 +8321,8 @@
   --spectrum-tabs-m-compact-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -8417,7 +8472,8 @@
   --spectrum-tabs-m-compact-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-m-compact-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -8567,7 +8623,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -8719,7 +8776,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -8871,7 +8929,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -9023,7 +9082,8 @@
   --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -9175,7 +9235,8 @@
   --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -9327,7 +9388,8 @@
   --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -9479,7 +9541,8 @@
   --spectrum-tabs-m-compact-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -9631,7 +9694,8 @@
   --spectrum-tabs-m-compact-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-m-compact-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-m-compact-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-m-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-tabs-m-compact-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-400);
+  --spectrum-tabs-m-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-100);
   --spectrum-tabs-m-compact-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-m-compact-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-m-compact-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -9782,7 +9846,8 @@
   --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -9931,7 +9996,8 @@
   --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -10080,7 +10146,8 @@
   --spectrum-tabs-l-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -10229,7 +10296,8 @@
   --spectrum-tabs-l-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -10378,7 +10446,8 @@
   --spectrum-tabs-l-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -10527,7 +10596,8 @@
   --spectrum-tabs-l-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -10676,7 +10746,8 @@
   --spectrum-tabs-l-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -10825,7 +10896,8 @@
   --spectrum-tabs-l-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -10974,7 +11046,8 @@
   --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -11125,7 +11198,8 @@
   --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -11276,7 +11350,8 @@
   --spectrum-tabs-l-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -11427,7 +11502,8 @@
   --spectrum-tabs-l-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -11578,7 +11654,8 @@
   --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -11729,7 +11806,8 @@
   --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -11880,7 +11958,8 @@
   --spectrum-tabs-l-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -12031,7 +12110,8 @@
   --spectrum-tabs-l-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -12182,7 +12262,8 @@
   --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -12331,7 +12412,8 @@
   --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -12480,7 +12562,8 @@
   --spectrum-tabs-l-compact-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -12629,7 +12712,8 @@
   --spectrum-tabs-l-compact-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -12778,7 +12862,8 @@
   --spectrum-tabs-l-compact-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -12927,7 +13012,8 @@
   --spectrum-tabs-l-compact-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -13076,7 +13162,8 @@
   --spectrum-tabs-l-compact-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -13225,7 +13312,8 @@
   --spectrum-tabs-l-compact-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-l-compact-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -13374,7 +13462,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -13525,7 +13614,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -13676,7 +13766,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -13827,7 +13918,8 @@
   --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -13978,7 +14070,8 @@
   --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -14129,7 +14222,8 @@
   --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -14280,7 +14374,8 @@
   --spectrum-tabs-l-compact-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -14431,7 +14526,8 @@
   --spectrum-tabs-l-compact-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-l-compact-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-l-compact-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-l-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-tabs-l-compact-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-500);
+  --spectrum-tabs-l-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-115);
   --spectrum-tabs-l-compact-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-l-compact-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-l-compact-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -14583,7 +14679,8 @@
   --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -14733,7 +14830,8 @@
   --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -14883,7 +14981,8 @@
   --spectrum-tabs-xl-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -15033,7 +15132,8 @@
   --spectrum-tabs-xl-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -15183,7 +15283,8 @@
   --spectrum-tabs-xl-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -15333,7 +15434,8 @@
   --spectrum-tabs-xl-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -15483,7 +15585,8 @@
   --spectrum-tabs-xl-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -15633,7 +15736,8 @@
   --spectrum-tabs-xl-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -15783,7 +15887,8 @@
   --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -15935,7 +16040,8 @@
   --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -16087,7 +16193,8 @@
   --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -16239,7 +16346,8 @@
   --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -16391,7 +16499,8 @@
   --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -16543,7 +16652,8 @@
   --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -16695,7 +16805,8 @@
   --spectrum-tabs-xl-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -16847,7 +16958,8 @@
   --spectrum-tabs-xl-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -16999,7 +17111,8 @@
   --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -17149,7 +17262,8 @@
   --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -17299,7 +17413,8 @@
   --spectrum-tabs-xl-compact-quiet-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -17449,7 +17564,8 @@
   --spectrum-tabs-xl-compact-quiet-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -17599,7 +17715,8 @@
   --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -17749,7 +17866,8 @@
   --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -17899,7 +18017,8 @@
   --spectrum-tabs-xl-compact-texticon-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -18049,7 +18168,8 @@
   --spectrum-tabs-xl-compact-textonly-tabitem-selection-indicator-bottom: 0;
   --spectrum-tabs-xl-compact-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -18199,7 +18319,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -18351,7 +18472,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-quiet-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -18503,7 +18625,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-quiet-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -18655,7 +18778,8 @@
   --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-quiet-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -18807,7 +18931,8 @@
   --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-emphasized-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -18959,7 +19084,8 @@
   --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-emphasized-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -19111,7 +19237,8 @@
   --spectrum-tabs-xl-compact-vertical-texticon-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-texticon-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-texticon-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-texticon-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-texticon-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-texticon-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-texticon-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-texticon-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
@@ -19263,7 +19390,8 @@
   --spectrum-tabs-xl-compact-vertical-textonly-tabitem-selection-indicator-bottom: auto;
   --spectrum-tabs-xl-compact-vertical-textonly-tabitem-selection-indicator-left: 0;
   --spectrum-tabs-xl-compact-vertical-textonly-tabitem-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-tabs-xl-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-tabs-xl-compact-vertical-textonly-tabitem-focus-ring-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-tabs-xl-compact-vertical-textonly-tabitem-focus-ring-padding-x: var(--spectrum-global-dimension-size-125);
   --spectrum-tabs-xl-compact-vertical-textonly-tabitem-focus-ring-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-tabs-xl-compact-vertical-textonly-tabitem-focus-ring-type: focusring;
   --spectrum-tabs-xl-compact-vertical-textonly-tabitem-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
