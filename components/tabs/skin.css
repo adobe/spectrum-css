@@ -115,3 +115,101 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+@media (forced-colors: active) {
+  .spectrum-Tabs {
+    --spectrum-tabs-emphasized-texticon-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-emphasized-texticon-tabitem-text-color-selected: HighlightText;
+    --spectrum-tabs-emphasized-textonly-divider-background-color: transparent;
+    --spectrum-tabs-emphasized-textonly-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-quiet-textonly-divider-background-color: transparent;
+    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color: transparent;
+    --spectrum-tabs-textonly-divider-background-color: transparent;
+    --spectrum-tabs-textonly-tabitem-focus-ring-border-color-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-disabled: GrayText;
+    --spectrum-tabs-textonly-tabitem-icon-color-hover: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-textonly-tabitem-text-color-disabled: GrayText;
+    --spectrum-tabs-textonly-tabitem-text-color-hover: ButtonText;
+    --spectrum-tabs-textonly-tabitem-text-color-selected-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-text-color-selected: HighlightText;
+    --spectrum-tabs-textonly-tabitem-text-color: ButtonText;
+    --spectrum-tabs-vertical-quiet-textonly-divider-background-color: transparent;
+    --spectrum-tabs-vertical-rule-color: transparent;
+    --spectrum-tabs-vertical-textonly-divider-background-color: transparent;
+    --spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    forced-color-adjust: none;
+
+    .spectrum-Tabs-item {
+      &:before {
+        background-color: ButtonFace;
+      }
+
+      .spectrum-Icon {
+        z-index: 1;
+        position: relative;
+      }
+
+      .spectrum-Tabs-itemLabel {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .is-selected {
+      color: HighlightText;
+
+      .spectrum-Icon {
+        color: HighlightText;
+      }
+
+      &:before {
+        background-color: Highlight;
+        color: HighlightText;
+      }
+
+      .spectrum-Tabs-itemLabel {
+        color: HighlightText;
+      }
+    }
+
+    &.spectrum-Tabs--emphasized {
+      .spectrum-Tabs-item {
+        &:before {
+          background-color: ButtonFace;
+        }
+
+        .spectrum-Icon {
+          z-index: 1;
+          position: relative;
+        }
+
+        .spectrum-Tabs-itemLabel {
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      .is-selected {
+        color: HighlightText;
+
+        .spectrum-Icon {
+          color: HighlightText;
+        }
+
+        &:before {
+          background-color: Highlight;
+          color: HighlightText;
+        }
+
+        .spectrum-Tabs-itemLabel {
+          color: HighlightText;
+        }
+      }
+    }
+  }
+}
