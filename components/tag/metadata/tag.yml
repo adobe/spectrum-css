@@ -26,13 +26,6 @@ examples:
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
@@ -45,13 +38,6 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-selected" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected" tabindex="0">
@@ -69,12 +55,6 @@ examples:
             <span class="spectrum-Tag-label">Tag 1</span>
           </div>
 
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
-          </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
@@ -91,12 +71,6 @@ examples:
             <span class="spectrum-Tag-label">Tag 1</span>
           </div>
 
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled" tabindex="-1">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
-          </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled" tabindex="-1">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
@@ -111,13 +85,6 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid" tabindex="0">
@@ -138,13 +105,6 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS" tabindex="0">
@@ -174,13 +134,6 @@ examples:
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeM" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size100 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeM" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
@@ -204,13 +157,6 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeL" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeL" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size100 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeL" tabindex="0">
@@ -252,20 +198,6 @@ examples:
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
-            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton">
-              <div class="spectrum-ClearButton-fill">
-                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Cross75" />
-                </svg>
-              </div>
-            </button>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-Tag--removable" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
@@ -285,20 +217,6 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected spectrum-Tag--removable" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton">
-              <div class="spectrum-ClearButton-fill">
-                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Cross75" />
-                </svg>
-              </div>
-            </button>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-selected spectrum-Tag--removable" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
             <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton">
               <div class="spectrum-ClearButton-fill">
                 <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
@@ -338,20 +256,6 @@ examples:
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid spectrum-Tag--removable" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
-            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton">
-              <div class="spectrum-ClearButton-fill">
-                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Cross75" />
-                </svg>
-              </div>
-            </button>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-invalid spectrum-Tag--removable" tabindex="0">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
@@ -381,20 +285,6 @@ examples:
           </div>
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled spectrum-Tag--removable" tabindex="-1">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
-            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton">
-              <div class="spectrum-ClearButton-fill">
-                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Cross75" />
-                </svg>
-              </div>
-            </button>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-disabled spectrum-Tag--removable" tabindex="-1">
             <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Tag-icon" focusable="false" aria-hidden="true" aria-label="Tag">
               <use xlink:href="#spectrum-icon-24-SentimentPositive" />
             </svg>
@@ -413,20 +303,6 @@ examples:
 
           <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid spectrum-Tag--removable" tabindex="0">
             <span class="spectrum-Tag-label">Tag 1</span>
-            <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton">
-              <div class="spectrum-ClearButton-fill">
-                <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                  <use xlink:href="#spectrum-css-icon-Cross75" />
-                </svg>
-              </div>
-            </button>
-          </div>
-
-          <div class="spectrum-Tag spectrum-Tag--sizeS is-selected is-invalid spectrum-Tag--removable" tabindex="0">
-            <div class="spectrum-Avatar spectrum-Avatar--size50 spectrum-Tag-avatar">
-              <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
-            </div>
-            <span class="spectrum-Tag-label">Shantanu</span>
             <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeS spectrum-Tag-clearButton">
               <div class="spectrum-ClearButton-fill">
                 <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
