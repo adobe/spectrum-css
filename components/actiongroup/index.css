@@ -70,7 +70,6 @@ governing permissions and limitations under the License.
       }
     }
   }
-
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
 
@@ -79,12 +78,20 @@ governing permissions and limitations under the License.
       border-radius: 0;
       z-index: 0;
 
+      &:after {
+        --spectrum-actionbutton-focus-ring-border-radius-adjusted: 0;
+        test: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted);
+      }
+
       &:first-child {
         border-start-start-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
         border-end-start-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
         margin-inline-end: calc(
           -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
         );
+        &:after {
+          --spectrum-actionbutton-focus-ring-border-radius-adjusted: calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) 0 0 calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap));
+        }
       }
 
       &:last-child {
@@ -94,6 +101,9 @@ governing permissions and limitations under the License.
           -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
         );
         margin-inline-end: 0;
+        &:after {
+          --spectrum-actionbutton-focus-ring-border-radius-adjusted: 0 calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) 0;
+        }
       }
 
       &.is-selected {
