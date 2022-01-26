@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
     inset: 0;
     pointer-events: none;
 
-    border: var(--spectrum-tabs-m-focus-ring-size) solid transparent;
+    border: var(--spectrum-alias-focus-ring-size) solid transparent;
     border-radius: var(--spectrum-sidenav-item-border-radius);
 
     transition: border var(--spectrum-global-animation-duration-100) ease-out;

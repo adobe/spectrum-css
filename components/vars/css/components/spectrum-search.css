@@ -90,6 +90,7 @@
   --spectrum-search-s-quiet-placeholder-text-transform: none;
   --spectrum-search-s-quiet-text-transform: none;
   --spectrum-search-s-quiet-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-search-s-quiet-text-render: yes;
   --spectrum-search-s-quiet-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-search-s-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-search-s-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -110,8 +111,7 @@
   --spectrum-search-s-quiet-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-s-quiet-clearbutton-fill-padding-left: 0;
   --spectrum-search-s-quiet-clearbutton-fill-padding-right: 0;
-  --spectrum-search-s-quiet-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-search-s-quiet-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-search-s-quiet-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-search-s-quiet-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-s-quiet-clearbutton-render: no;
   --spectrum-search-s-quiet-clearbutton-position: absolute;
@@ -225,6 +225,7 @@
   --spectrum-search-s-placeholder-text-transform: none;
   --spectrum-search-s-text-transform: none;
   --spectrum-search-s-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-search-s-text-render: yes;
   --spectrum-search-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-search-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-search-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -245,8 +246,7 @@
   --spectrum-search-s-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-s-clearbutton-fill-padding-left: 0;
   --spectrum-search-s-clearbutton-fill-padding-right: 0;
-  --spectrum-search-s-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-s);
-  --spectrum-search-s-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-s);
+  --spectrum-search-s-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
   --spectrum-search-s-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-s-clearbutton-render: no;
   --spectrum-search-s-clearbutton-position: absolute;
@@ -361,6 +361,7 @@
   --spectrum-search-m-quiet-placeholder-text-transform: none;
   --spectrum-search-m-quiet-text-transform: none;
   --spectrum-search-m-quiet-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-search-m-quiet-text-render: yes;
   --spectrum-search-m-quiet-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-search-m-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-search-m-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -382,8 +383,7 @@
   --spectrum-search-m-quiet-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-m-quiet-clearbutton-fill-padding-left: 0;
   --spectrum-search-m-quiet-clearbutton-fill-padding-right: 0;
-  --spectrum-search-m-quiet-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-search-m-quiet-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-search-m-quiet-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-search-m-quiet-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-m-quiet-clearbutton-render: no;
   --spectrum-search-m-quiet-clearbutton-position: absolute;
@@ -498,6 +498,7 @@
   --spectrum-search-m-placeholder-text-transform: none;
   --spectrum-search-m-text-transform: none;
   --spectrum-search-m-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-search-m-text-render: yes;
   --spectrum-search-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-search-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-search-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -519,8 +520,7 @@
   --spectrum-search-m-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-m-clearbutton-fill-padding-left: 0;
   --spectrum-search-m-clearbutton-fill-padding-right: 0;
-  --spectrum-search-m-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-m);
-  --spectrum-search-m-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-m);
+  --spectrum-search-m-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
   --spectrum-search-m-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-m-clearbutton-render: no;
   --spectrum-search-m-clearbutton-position: absolute;
@@ -633,6 +633,7 @@
   --spectrum-search-l-quiet-placeholder-text-transform: none;
   --spectrum-search-l-quiet-text-transform: none;
   --spectrum-search-l-quiet-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-search-l-quiet-text-render: yes;
   --spectrum-search-l-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-search-l-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-search-l-quiet-text-font-style: var(--spectrum-global-font-style-regular);
@@ -653,8 +654,7 @@
   --spectrum-search-l-quiet-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-l-quiet-clearbutton-fill-padding-left: 0;
   --spectrum-search-l-quiet-clearbutton-fill-padding-right: 0;
-  --spectrum-search-l-quiet-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-search-l-quiet-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-search-l-quiet-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-search-l-quiet-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-l-quiet-clearbutton-render: no;
   --spectrum-search-l-quiet-clearbutton-position: absolute;
@@ -767,6 +767,7 @@
   --spectrum-search-l-placeholder-text-transform: none;
   --spectrum-search-l-text-transform: none;
   --spectrum-search-l-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-search-l-text-render: yes;
   --spectrum-search-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-search-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-search-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -787,8 +788,7 @@
   --spectrum-search-l-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-l-clearbutton-fill-padding-left: 0;
   --spectrum-search-l-clearbutton-fill-padding-right: 0;
-  --spectrum-search-l-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-l);
-  --spectrum-search-l-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-l);
+  --spectrum-search-l-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
   --spectrum-search-l-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-l-clearbutton-render: no;
   --spectrum-search-l-clearbutton-position: absolute;
@@ -903,6 +903,7 @@
   --spectrum-search-xl-quiet-placeholder-text-transform: none;
   --spectrum-search-xl-quiet-text-transform: none;
   --spectrum-search-xl-quiet-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-search-xl-quiet-text-render: yes;
   --spectrum-search-xl-quiet-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-search-xl-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-search-xl-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -924,8 +925,7 @@
   --spectrum-search-xl-quiet-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-xl-quiet-clearbutton-fill-padding-left: 0;
   --spectrum-search-xl-quiet-clearbutton-fill-padding-right: 0;
-  --spectrum-search-xl-quiet-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
-  --spectrum-search-xl-quiet-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-search-xl-quiet-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-search-xl-quiet-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-xl-quiet-clearbutton-render: no;
   --spectrum-search-xl-quiet-clearbutton-position: absolute;
@@ -1040,6 +1040,7 @@
   --spectrum-search-xl-placeholder-text-transform: none;
   --spectrum-search-xl-text-transform: none;
   --spectrum-search-xl-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-search-xl-text-render: yes;
   --spectrum-search-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-search-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-search-xl-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1061,8 +1062,7 @@
   --spectrum-search-xl-clearbutton-fill-padding-bottom: 0;
   --spectrum-search-xl-clearbutton-fill-padding-left: 0;
   --spectrum-search-xl-clearbutton-fill-padding-right: 0;
-  --spectrum-search-xl-clearbutton-fill-height: var(--spectrum-alias-infieldbutton-full-height-xl);
-  --spectrum-search-xl-clearbutton-fill-width: var(--spectrum-alias-infieldbutton-full-height-xl);
+  --spectrum-search-xl-clearbutton-fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
   --spectrum-search-xl-clearbutton-fill-border-size: var(--spectrum-alias-infieldbutton-border-size);
   --spectrum-search-xl-clearbutton-render: no;
   --spectrum-search-xl-clearbutton-position: absolute;

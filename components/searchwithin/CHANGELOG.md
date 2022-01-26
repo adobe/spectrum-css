@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.4.1"></a>
+## 3.4.1
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.4.0...@spectrum-css/searchwithin@3.4.1)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.4.0"></a>
+# 3.4.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.2.2...@spectrum-css/searchwithin@3.4.0)
+
+### ✨ Features
+
+* break out ClearButton and LogicButton into their own packages ([3cc0a5f](https://github.com/adobe/spectrum-css/commit/3cc0a5f))
+
+
+
+
+
+<a name="3.3.0"></a>
+# 3.3.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.3.0-beta.0...@spectrum-css/searchwithin@3.3.0)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.3.0-beta.0"></a>
+# 3.3.0-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.2.2...@spectrum-css/searchwithin@3.3.0-beta.0)
+
+### ✨ Features
+
+* break out ClearButton and LogicButton into their own packages ([a2092ab](https://github.com/adobe/spectrum-css/commit/a2092ab))
+
+
+
+
+
+<a name="3.2.2"></a>
+## 3.2.2
+🗓 2021-12-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.2.1...@spectrum-css/searchwithin@3.2.2)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
+<a name="3.2.1"></a>
+## 3.2.1
+🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.2.0...@spectrum-css/searchwithin@3.2.1)
+
+**Note:** Version bump only for package @spectrum-css/searchwithin
+
+
+
+
+
 <a name="3.2.0"></a>
 # 3.2.0
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/searchwithin@3.1.2...@spectrum-css/searchwithin@3.2.0)

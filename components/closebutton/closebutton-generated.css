@@ -1,0 +1,211 @@
+/*
+Copyright 2021 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* begin generated CSS for closebutton */
+.spectrum-CloseButton {
+  border-radius: var(--spectrum-CloseButton-size);
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: inline-flex;
+  padding: 0;
+
+  &.spectrum-CloseButton--sizeS {
+    border-radius: var(--spectrum-global-dimension-size-300);
+    --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-300);
+    height: var(--spectrum-global-dimension-size-300);
+    width: var(--spectrum-global-dimension-size-300)
+  }
+
+  &.spectrum-CloseButton--sizeM {
+    border-radius: var(--spectrum-global-dimension-size-400);
+    --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-400);
+    height: var(--spectrum-global-dimension-size-400);
+    width: var(--spectrum-global-dimension-size-400)
+  }
+
+  &.spectrum-CloseButton--sizeL {
+    border-radius: var(--spectrum-global-dimension-size-500);
+    --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-500);
+    height: var(--spectrum-global-dimension-size-500);
+    width: var(--spectrum-global-dimension-size-500)
+  }
+
+  &.spectrum-CloseButton--sizeXL {
+    border-radius: var(--spectrum-global-dimension-size-600);
+    --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-600);
+    height: var(--spectrum-global-dimension-size-600);
+    width: var(--spectrum-global-dimension-size-600)
+  }
+
+  &:disabled {
+    background-color: transparent;
+
+    .spectrum-CloseButton-UIIcon {
+      color: var(--spectrum-alias-component-icon-color-disabled)
+    }
+  }
+
+  &:not(:disabled) {
+    background-color: transparent;
+
+    &:hover {
+      background-color: var(--spectrum-global-color-gray-200);
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-hover)
+      }
+    }
+
+    &:active {
+      background-color: var(--spectrum-global-color-gray-300);
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-down)
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--spectrum-global-color-gray-300);
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-key-focus)
+      }
+    }
+
+    &.is-keyboardFocused {
+      background-color: var(--spectrum-global-color-gray-300);
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-key-focus)
+      }
+    }
+
+    .spectrum-CloseButton-UIIcon {
+      color: var(--spectrum-alias-component-icon-color-default)
+    }
+
+    &:focus {
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-mouse-focus)
+      }
+    }
+
+    &.is-focused {
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-alias-component-icon-color-mouse-focus)
+      }
+    }
+  }
+
+  &.spectrum-CloseButton--staticBlack {
+    &:not(:disabled) {
+      background-color: transparent;
+
+      &:hover {
+        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40));
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      &:active {
+        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-55));
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      &:focus-visible {
+        background-color: var(--spectrum-global-color-static-black);
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      &.is-keyboardFocused {
+        background-color: var(--spectrum-global-color-static-black);
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-global-color-static-black)
+      }
+    }
+
+    &:disabled {
+      .spectrum-CloseButton-UIIcon {
+        color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+      }
+    }
+  }
+
+  &.spectrum-CloseButton--staticWhite {
+    &:not(:disabled) {
+      background-color: transparent;
+
+      &:hover {
+        background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40));
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      &:active {
+        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-55));
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      &:focus-visible {
+        background-color: var(--spectrum-global-color-static-white);
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      &.is-keyboardFocused {
+        background-color: var(--spectrum-global-color-static-white);
+
+        .spectrum-CloseButton-UIIcon {
+          color: inherit
+        }
+      }
+
+      .spectrum-CloseButton-UIIcon {
+        color: var(--spectrum-global-color-static-white)
+      }
+    }
+
+    &:disabled {
+      .spectrum-CloseButton-UIIcon {
+        color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+      }
+    }
+  }
+}
+
+.spectrum-CloseButton-UIIcon {
+  margin: 0
+}
+
+/* end generated CSS for closebutton */

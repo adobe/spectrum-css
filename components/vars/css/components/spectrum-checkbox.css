@@ -267,6 +267,7 @@
   --spectrum-checkbox-s-emphasized-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-checkbox-s-emphasized-text-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-checkbox-s-emphasized-text-transform: none;
+  --spectrum-checkbox-s-emphasized-text-render: yes;
   --spectrum-checkbox-s-emphasized-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-checkbox-s-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-checkbox-s-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -558,6 +559,7 @@
   --spectrum-checkbox-s-text-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-checkbox-s-text-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-checkbox-s-text-transform: none;
+  --spectrum-checkbox-s-text-render: yes;
   --spectrum-checkbox-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-checkbox-s-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-checkbox-s-text-font-style: var(--spectrum-global-font-style-regular);
@@ -849,6 +851,7 @@
   --spectrum-checkbox-m-emphasized-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-checkbox-m-emphasized-text-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-m-emphasized-text-transform: none;
+  --spectrum-checkbox-m-emphasized-text-render: yes;
   --spectrum-checkbox-m-emphasized-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-checkbox-m-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-checkbox-m-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1141,6 +1144,7 @@
   --spectrum-checkbox-m-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-checkbox-m-text-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-checkbox-m-text-transform: none;
+  --spectrum-checkbox-m-text-render: yes;
   --spectrum-checkbox-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-checkbox-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-checkbox-m-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1433,6 +1437,7 @@
   --spectrum-checkbox-l-emphasized-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-checkbox-l-emphasized-text-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-checkbox-l-emphasized-text-transform: none;
+  --spectrum-checkbox-l-emphasized-text-render: yes;
   --spectrum-checkbox-l-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-checkbox-l-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-checkbox-l-emphasized-text-font-style: var(--spectrum-global-font-style-regular);
@@ -1724,6 +1729,7 @@
   --spectrum-checkbox-l-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-checkbox-l-text-gap: var(--spectrum-global-dimension-size-130);
   --spectrum-checkbox-l-text-transform: none;
+  --spectrum-checkbox-l-text-render: yes;
   --spectrum-checkbox-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-checkbox-l-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-checkbox-l-text-font-style: var(--spectrum-global-font-style-regular);
@@ -2015,6 +2021,7 @@
   --spectrum-checkbox-xl-emphasized-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-checkbox-xl-emphasized-text-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-checkbox-xl-emphasized-text-transform: none;
+  --spectrum-checkbox-xl-emphasized-text-render: yes;
   --spectrum-checkbox-xl-emphasized-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-checkbox-xl-emphasized-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-checkbox-xl-emphasized-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -2307,6 +2314,7 @@
   --spectrum-checkbox-xl-text-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-checkbox-xl-text-gap: var(--spectrum-global-dimension-size-160);
   --spectrum-checkbox-xl-text-transform: none;
+  --spectrum-checkbox-xl-text-render: yes;
   --spectrum-checkbox-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-checkbox-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-checkbox-xl-text-font-family: var(--spectrum-alias-body-text-font-family);

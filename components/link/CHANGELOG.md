@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.13"></a>
+## 3.1.13
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.12...@spectrum-css/link@3.1.13)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="3.1.12"></a>
+## 3.1.12
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.10...@spectrum-css/link@3.1.12)
+
+### 🐛 Bug fixes
+
+* update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+
+
+
+
+
+<a name="3.1.11"></a>
+## 3.1.11
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.11-beta.0...@spectrum-css/link@3.1.11)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="3.1.11-beta.0"></a>
+## 3.1.11-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.10...@spectrum-css/link@3.1.11-beta.0)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
+<a name="3.1.10"></a>
+## 3.1.10
+🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.9...@spectrum-css/link@3.1.10)
+
+**Note:** Version bump only for package @spectrum-css/link
+
+
+
+
+
 <a name="3.1.9"></a>
 ## 3.1.9
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.8...@spectrum-css/link@3.1.9)

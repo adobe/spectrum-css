@@ -3,6 +3,82 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.22"></a>
+# 1.0.0-beta.22
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.21...@spectrum-css/expressvars@1.0.0-beta.22)
+
+### ✨ Features
+
+* **tabs:** regenerate vars ([28302af](https://github.com/adobe/spectrum-css/commit/28302af))
+* update to latest vars release & regenerate custom props ([a2af534](https://github.com/adobe/spectrum-css/commit/a2af534))
+
+
+### 🐛 Bug fixes
+
+* **tabs:** bump versions to get latest vars ([2bc69e9](https://github.com/adobe/spectrum-css/commit/2bc69e9))
+
+
+
+
+
+<a name="1.0.0-beta.21"></a>
+# 1.0.0-beta.21
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.19...@spectrum-css/expressvars@1.0.0-beta.21)
+
+### ✨ Features
+
+* temporary update of DNA variables ahead of release ([47ce20c](https://github.com/adobe/spectrum-css/commit/47ce20c))
+* update vars using local branch for testing and development ([b0ceb6b](https://github.com/adobe/spectrum-css/commit/b0ceb6b))
+
+
+### chore
+
+* update @adobe/spectrum-tokens and @adobe/spectrum-express-tokens ([da06f9a](https://github.com/adobe/spectrum-css/commit/da06f9a))
+
+
+### 🛑 BREAKING CHANGES
+
+* changes to button token api for static and style
+variants. Removal of over background.
+
+
+
+
+
+<a name="1.0.0-beta.20"></a>
+# 1.0.0-beta.20
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.19...@spectrum-css/expressvars@1.0.0-beta.20)
+
+### ✨ Features
+
+* temporary update of DNA variables ahead of release ([9f2a310](https://github.com/adobe/spectrum-css/commit/9f2a310))
+* update vars using local branch for testing and development ([5938f77](https://github.com/adobe/spectrum-css/commit/5938f77))
+
+
+### chore
+
+* update @adobe/spectrum-tokens and @adobe/spectrum-express-tokens ([df3a179](https://github.com/adobe/spectrum-css/commit/df3a179))
+
+
+### 🛑 BREAKING CHANGES
+
+* changes to button token api for static and style
+variants. Removal of over background.
+
+
+
+
+
+<a name="1.0.0-beta.19"></a>
+# 1.0.0-beta.19
+🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.18...@spectrum-css/expressvars@1.0.0-beta.19)
+
+**Note:** Version bump only for package @spectrum-css/expressvars
+
+
+
+
+
 <a name="1.0.0-beta.18"></a>
 # 1.0.0-beta.18
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.17...@spectrum-css/expressvars@1.0.0-beta.18)

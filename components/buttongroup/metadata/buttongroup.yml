@@ -5,13 +5,13 @@ examples:
     name: Horizontal
     markup: |
       <div class="spectrum-ButtonGroup">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
           <span class="spectrum-Button-label">No, thanks</span>
         </button>
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
           <span class="spectrum-Button-label">Remind me later</span>
         </button>
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-ButtonGroup-item">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--primary spectrum-ButtonGroup-item">
           <span class="spectrum-Button-label">Rate now</span>
         </button>
       </div>
@@ -20,13 +20,13 @@ examples:
     name: Vertical
     markup: |
       <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
           <span class="spectrum-Button-label">No, thanks</span>
         </button>
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
           <span class="spectrum-Button-label">Remind me later</span>
         </button>
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-ButtonGroup-item">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--primary spectrum-ButtonGroup-item">
           <span class="spectrum-Button-label">Rate now</span>
         </button>
       </div>

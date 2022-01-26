@@ -3,6 +3,75 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.1"></a>
+## 4.0.1
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@4.0.0...@spectrum-css/inlinealert@4.0.1)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.6...@spectrum-css/inlinealert@4.0.0)
+
+### 🐛 Bug fixes
+
+* update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+
+
+### 📚 Documentation
+
+* use new Button markup ([886b2cb](https://github.com/adobe/spectrum-css/commit/886b2cb))
+
+
+### 🛑 BREAKING CHANGES
+
+* Button markup has changed
+
+
+
+
+
+<a name="3.0.0"></a>
+# 3.0.0
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@3.0.0-beta.0...@spectrum-css/inlinealert@3.0.0)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.6...@spectrum-css/inlinealert@3.0.0-beta.0)
+
+### 📚 Documentation
+
+* use new Button markup ([629bf05](https://github.com/adobe/spectrum-css/commit/629bf05))
+
+
+### 🛑 BREAKING CHANGES
+
+* Button markup has changed
+
+
+
+
+
+<a name="2.0.6"></a>
+## 2.0.6
+🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.5...@spectrum-css/inlinealert@2.0.6)
+
+**Note:** Version bump only for package @spectrum-css/inlinealert
+
+
+
+
+
 <a name="2.0.5"></a>
 ## 2.0.5
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.4...@spectrum-css/inlinealert@2.0.5)

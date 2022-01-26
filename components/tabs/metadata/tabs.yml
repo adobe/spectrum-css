@@ -145,11 +145,78 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
+  - id: tabs-quiet-emphasized
+    name: Quiet and emphasized
+    status: Verified
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
+      </div>
   - id: tabs-quiet-icon
     name: Quiet tabs with icons
     status: Verified
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Comment" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
+      </div>
+  - id: tabs-emphasized
+    name: Emphasized tabs
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
+      </div>
+  - id: tabs-emphasized-icon
+    name: Emphasized tabs with icons
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
@@ -195,6 +262,24 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
       </div>
+  - id: tabs-compact-emphasized
+    name: Compact emphasized
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 28px; left: 0px;"></div>
+      </div>
   - id: tabs-quiet-compact-icons-text
     name: Compact tabs with icons and text
     markup: |
@@ -225,10 +310,66 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
       </div>
+  - id: tabs-quiet-compact-emphasized-icons-text
+    name: Compact, emphasized tabs with icons and text
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Comment" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 55px; left: 0px;"></div>
+      </div>
   - id: tabs-quiet-compact-icon
     name: Compact tabs with icons
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Comment" />
+          </svg>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="width: 17px; left: 0px;"></div>
+      </div>
+  - id: tabs-quiet-compact-emphasized-icon
+    name: Compact, emphasized tabs with icons
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
@@ -344,10 +485,58 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
       </div>
+  - id: tabs-vertical-emphasized
+    name: Vertical, emphasized tabs
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
+      </div>
   - id: tabs-vertical-icon
     name: Vertical tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Comment" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="height: 46px; top: 0px;"></div>
+      </div>
+  - id: tabs-vertical-icon-emphasized
+    name: Vertical, emphasized tabs with icon and text
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
@@ -392,10 +581,58 @@ examples:
         </div>
         <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
       </div>
+  - id: tabs-compact-vertical-emphasized
+    name: Compact, emphasized vertical tabs
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact spectrum-Tabs--emphasized">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
+      </div>
   - id: tabs-compact-vertical-icon
     name: Compact vertical tabs with icon and text
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact">
+        <div class="spectrum-Tabs-item is-selected" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 1</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Image">
+            <use xlink:href="#spectrum-icon-18-Image" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 2</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Filter">
+            <use xlink:href="#spectrum-icon-18-Filter" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 3</span>
+        </div>
+        <div class="spectrum-Tabs-item" tabindex="0">
+          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Comment">
+            <use xlink:href="#spectrum-icon-18-Comment" />
+          </svg>
+          <span class="spectrum-Tabs-itemLabel">Tab 4</span>
+        </div>
+        <div class="spectrum-Tabs-selectionIndicator" style="height: 32px; top: 0px;"></div>
+      </div>
+  - id: tabs-compact-vertical-icon-emphasized
+    name: Compact, emphasized vertical tabs with icon and text
+    markup: |
+      <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--vertical spectrum-Tabs--compact spectrum-Tabs--emphasized">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
             <use xlink:href="#spectrum-icon-18-Folder" />
@@ -428,7 +665,7 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" style="width: 409px">
-        <button class="spectrum-Picker spectrum-Picker--quiet" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="true">
           <span class="spectrum-Picker-label">Tab 1</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -439,7 +676,7 @@ examples:
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal" style="width: 409px">
-        <button class="spectrum-Picker spectrum-Picker--quiet is-open" aria-haspopup="true">
+        <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet is-open" aria-haspopup="true">
           <span class="spectrum-Picker-label">Tab 1</span>
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -474,7 +711,7 @@ examples:
     markup: |
       <h4>Closed</h4>
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
-          <button class="spectrum-Picker spectrum-Picker--quiet is-open" aria-haspopup="true">
+          <button class="spectrum-Picker  spectrum-Picker--sizeM spectrum-Picker--quiet is-open" aria-haspopup="true">
             <span class="spectrum-Picker-label">Tab 1</span>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />
@@ -485,7 +722,7 @@ examples:
 
       <h4 style="margin-top: 62px;">Open</h4>
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--quiet spectrum-Tabs--compact" style="width: 409px">
-          <button class="spectrum-Picker spectrum-Picker--quiet is-open" aria-haspopup="true">
+          <button class="spectrum-Picker  spectrum-Picker--sizeM spectrum-Picker--quiet is-open" aria-haspopup="true">
             <span class="spectrum-Picker-label">Tab 1</span>
             <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Chevron100" />

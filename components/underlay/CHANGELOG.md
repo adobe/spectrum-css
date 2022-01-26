@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.21"></a>
+## 2.0.21
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.20...@spectrum-css/underlay@2.0.21)
+
+**Note:** Version bump only for package @spectrum-css/underlay
+
+
+
+
+
+<a name="2.0.20"></a>
+## 2.0.20
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.18...@spectrum-css/underlay@2.0.20)
+
+### 🐛 Bug fixes
+
+* update peer dependencies ([97810cf](https://github.com/adobe/spectrum-css/commit/97810cf))
+
+
+
+
+
+<a name="2.0.19"></a>
+## 2.0.19
+🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.19-beta.0...@spectrum-css/underlay@2.0.19)
+
+**Note:** Version bump only for package @spectrum-css/underlay
+
+
+
+
+
+<a name="2.0.19-beta.0"></a>
+## 2.0.19-beta.0
+🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.18...@spectrum-css/underlay@2.0.19-beta.0)
+
+**Note:** Version bump only for package @spectrum-css/underlay
+
+
+
+
+
+<a name="2.0.18"></a>
+## 2.0.18
+🗓 2021-12-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.17...@spectrum-css/underlay@2.0.18)
+
+**Note:** Version bump only for package @spectrum-css/underlay
+
+
+
+
+
 <a name="2.0.17"></a>
 ## 2.0.17
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.16...@spectrum-css/underlay@2.0.17)

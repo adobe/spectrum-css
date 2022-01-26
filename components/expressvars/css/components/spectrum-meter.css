@@ -43,6 +43,7 @@
   --spectrum-meter-s-negative-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-meter-s-negative-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-s-negative-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-s-negative-overbackground-value-text-render: yes;
   --spectrum-meter-s-negative-overbackground-value-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-meter-s-negative-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-s-negative-overbackground-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -99,6 +100,7 @@
   --spectrum-meter-s-negative-value-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-meter-s-negative-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-s-negative-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-s-negative-value-text-render: yes;
   --spectrum-meter-s-negative-value-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-meter-s-negative-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-s-negative-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -155,6 +157,7 @@
   --spectrum-meter-s-notice-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-meter-s-notice-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-s-notice-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-s-notice-overbackground-value-text-render: yes;
   --spectrum-meter-s-notice-overbackground-value-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-meter-s-notice-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-s-notice-overbackground-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -211,6 +214,7 @@
   --spectrum-meter-s-notice-value-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-meter-s-notice-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-s-notice-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-s-notice-value-text-render: yes;
   --spectrum-meter-s-notice-value-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-meter-s-notice-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-s-notice-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -267,6 +271,7 @@
   --spectrum-meter-s-positive-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-meter-s-positive-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-s-positive-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-s-positive-overbackground-value-text-render: yes;
   --spectrum-meter-s-positive-overbackground-value-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-meter-s-positive-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-s-positive-overbackground-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -323,6 +328,7 @@
   --spectrum-meter-s-positive-value-font-size: var(--spectrum-global-dimension-font-size-75);
   --spectrum-meter-s-positive-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-s-positive-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-s-positive-value-text-render: yes;
   --spectrum-meter-s-positive-value-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-meter-s-positive-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-s-positive-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -379,6 +385,7 @@
   --spectrum-meter-m-negative-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-meter-m-negative-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-m-negative-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-m-negative-overbackground-value-text-render: yes;
   --spectrum-meter-m-negative-overbackground-value-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-meter-m-negative-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-meter-m-negative-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -436,6 +443,7 @@
   --spectrum-meter-m-negative-value-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-meter-m-negative-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-m-negative-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-m-negative-value-text-render: yes;
   --spectrum-meter-m-negative-value-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-meter-m-negative-value-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-meter-m-negative-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -493,6 +501,7 @@
   --spectrum-meter-m-notice-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-meter-m-notice-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-m-notice-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-m-notice-overbackground-value-text-render: yes;
   --spectrum-meter-m-notice-overbackground-value-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-meter-m-notice-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-meter-m-notice-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -550,6 +559,7 @@
   --spectrum-meter-m-notice-value-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-meter-m-notice-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-m-notice-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-m-notice-value-text-render: yes;
   --spectrum-meter-m-notice-value-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-meter-m-notice-value-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-meter-m-notice-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -607,6 +617,7 @@
   --spectrum-meter-m-positive-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-meter-m-positive-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-m-positive-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-m-positive-overbackground-value-text-render: yes;
   --spectrum-meter-m-positive-overbackground-value-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-meter-m-positive-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-meter-m-positive-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -664,6 +675,7 @@
   --spectrum-meter-m-positive-value-font-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-meter-m-positive-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-m-positive-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-m-positive-value-text-render: yes;
   --spectrum-meter-m-positive-value-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-meter-m-positive-value-text-padding-bottom: var(--spectrum-global-dimension-size-115);
   --spectrum-meter-m-positive-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -721,6 +733,7 @@
   --spectrum-meter-l-negative-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-meter-l-negative-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-l-negative-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-l-negative-overbackground-value-text-render: yes;
   --spectrum-meter-l-negative-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-meter-l-negative-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-l-negative-overbackground-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -778,6 +791,7 @@
   --spectrum-meter-l-negative-value-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-meter-l-negative-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-l-negative-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-l-negative-value-text-render: yes;
   --spectrum-meter-l-negative-value-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-meter-l-negative-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-l-negative-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -835,6 +849,7 @@
   --spectrum-meter-l-notice-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-meter-l-notice-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-l-notice-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-l-notice-overbackground-value-text-render: yes;
   --spectrum-meter-l-notice-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-meter-l-notice-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-l-notice-overbackground-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -892,6 +907,7 @@
   --spectrum-meter-l-notice-value-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-meter-l-notice-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-l-notice-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-l-notice-value-text-render: yes;
   --spectrum-meter-l-notice-value-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-meter-l-notice-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-l-notice-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -949,6 +965,7 @@
   --spectrum-meter-l-positive-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-meter-l-positive-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-l-positive-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-l-positive-overbackground-value-text-render: yes;
   --spectrum-meter-l-positive-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-meter-l-positive-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-l-positive-overbackground-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -1006,6 +1023,7 @@
   --spectrum-meter-l-positive-value-font-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-meter-l-positive-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-l-positive-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-l-positive-value-text-render: yes;
   --spectrum-meter-l-positive-value-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-meter-l-positive-value-text-font-family: var(--spectrum-alias-body-text-font-family);
   --spectrum-meter-l-positive-value-text-line-height: var(--spectrum-alias-component-text-line-height);
@@ -1063,6 +1081,7 @@
   --spectrum-meter-xl-negative-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-meter-xl-negative-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-xl-negative-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-xl-negative-overbackground-value-text-render: yes;
   --spectrum-meter-xl-negative-overbackground-value-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-meter-xl-negative-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-meter-xl-negative-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1120,6 +1139,7 @@
   --spectrum-meter-xl-negative-value-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-meter-xl-negative-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-xl-negative-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-xl-negative-value-text-render: yes;
   --spectrum-meter-xl-negative-value-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-meter-xl-negative-value-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-meter-xl-negative-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1177,6 +1197,7 @@
   --spectrum-meter-xl-notice-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-meter-xl-notice-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-xl-notice-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-xl-notice-overbackground-value-text-render: yes;
   --spectrum-meter-xl-notice-overbackground-value-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-meter-xl-notice-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-meter-xl-notice-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1234,6 +1255,7 @@
   --spectrum-meter-xl-notice-value-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-meter-xl-notice-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-xl-notice-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-xl-notice-value-text-render: yes;
   --spectrum-meter-xl-notice-value-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-meter-xl-notice-value-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-meter-xl-notice-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1291,6 +1313,7 @@
   --spectrum-meter-xl-positive-overbackground-value-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-meter-xl-positive-overbackground-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-xl-positive-overbackground-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-xl-positive-overbackground-value-text-render: yes;
   --spectrum-meter-xl-positive-overbackground-value-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-meter-xl-positive-overbackground-value-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-meter-xl-positive-overbackground-value-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -1348,6 +1371,7 @@
   --spectrum-meter-xl-positive-value-font-size: var(--spectrum-global-dimension-font-size-300);
   --spectrum-meter-xl-positive-value-text-font-style: var(--spectrum-global-font-style-regular);
   --spectrum-meter-xl-positive-value-text-font-weight: var(--spectrum-global-font-weight-regular);
+  --spectrum-meter-xl-positive-value-text-render: yes;
   --spectrum-meter-xl-positive-value-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-meter-xl-positive-value-text-padding-bottom: var(--spectrum-global-dimension-size-175);
   --spectrum-meter-xl-positive-value-text-font-family: var(--spectrum-alias-body-text-font-family);

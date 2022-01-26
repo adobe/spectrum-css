@@ -45,32 +45,15 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-StatusLight {
-  /* Hardcoded for wrapping study.
-  Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
-  --spectrum-statuslight-info-padding-y: var(
-    --spectrum-global-dimension-size-65
-  );
-
-  /* Override line-height to fix Firefox */
-  --spectrum-statuslight-info-text-line-height: 1.44;
-
-  /* Override padding to fix alignment of the first line of text (needs to be moved down 1px) */
-  --spectrum-statuslight-info-padding-top: calc(
-    var(--spectrum-statuslight-info-padding-y) - 1px
-  );
-  --spectrum-statuslight-info-padding-bottom: calc(
-    var(--spectrum-statuslight-info-padding-y) + 1px
-  );
-}
-
-.spectrum-StatusLight {
-  min-block-size: var(--spectrum-statuslight-info-height);
+  --spectrum-statuslight-info-dot-resolved-margin-top: calc(var(--spectrum-statuslight-info-dot-margin-top) - var(--spectrum-statuslight-info-text-padding-top));
+  
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 
-  padding-block: var(--spectrum-statuslight-info-padding-top)
-    var(--spectrum-statuslight-info-padding-bottom);
+  min-height: var(--spectrum-statuslight-info-height);
+
+  padding-block: var(--spectrum-statuslight-info-text-padding-top) var(--spectrum-statuslight-info-text-padding-bottom);
   padding-inline: 0;
   box-sizing: border-box;
 
@@ -85,13 +68,10 @@ governing permissions and limitations under the License.
     display: inline-block;
     inline-size: var(--spectrum-statuslight-info-dot-size);
     block-size: var(--spectrum-statuslight-info-dot-size);
-    border-radius: 50%;
+    border-radius: var(--spectrum-statuslight-info-dot-border-radius);
 
-    /* margin on the dot is the opposite of the padding in order to align the dot as if the padding hack was not present */
-    margin-block: var(--spectrum-statuslight-info-padding-bottom)
-      var(--spectrum-statuslight-info-padding-top);
-    margin-inline: var(--spectrum-statuslight-info-text-gap)
-      var(--spectrum-statuslight-info-text-gap);
+    margin-block: var(--spectrum-statuslight-info-dot-resolved-margin-top) var(--spectrum-global-dimension-size-0);
+    margin-inline: var(--spectrum-global-dimension-size-0) var(--spectrum-statuslight-info-text-gap);
 
     /* support high contrast/forced-color-adjust mode for dot */
     -ms-high-contrast-adjust: none;

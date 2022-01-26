@@ -63,6 +63,6 @@ examples:
         <div class="spectrum-InLineAlert-header">Incorrect Payment Information - Error</div>
         <div class="spectrum-InLineAlert-content">This is an alert.</div>
         <div class="spectrum-InLineAlert-footer">
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary">OK</button>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary"><span class="spectrum-Button-label">Ok</span></button>
         </div>
       </div>

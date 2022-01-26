@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2021 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/scales/spectrum-large.css";
+@import "../vars/css/scales/spectrum-medium.css";
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-clearbutton.css";
 
@@ -28,15 +30,6 @@ governing permissions and limitations under the License.
     /* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
     margin-block: 0;
     margin-inline: auto;
-  }
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .spectrum-ClearButton {
-    > .spectrum-Icon {
-      /* @ie11 Workaround for regression caused by fix for https://bugs.webkit.org/show_bug.cgi?id=169700 */
-      margin: 0;
-    }
   }
 }
 
@@ -71,8 +64,8 @@ governing permissions and limitations under the License.
 .spectrum-ClearButton-fill {
   background-color: var(--spectrum-clearbutton-fill-background-color);
 
-  inline-size: var(--spectrum-clearbutton-fill-width);
-  block-size: var(--spectrum-clearbutton-fill-height);
+  inline-size: var(--spectrum-clearbutton-fill-size);
+  block-size: var(--spectrum-clearbutton-fill-size);
   border-radius: 100%;
 
   display: flex;
@@ -138,5 +131,66 @@ governing permissions and limitations under the License.
   &:disabled,
   &.is-disabled .spectrum-ClearButton-fill {
     background-color: var(--spectrum-alias-icon-color-overbackground-disabled);
+  }
+}
+
+.spectrum-ClearButton--overBackground {
+  background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color);
+  border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color);
+  color: var(--spectrum-button-m-primary-outline-white-texticon-text-color);
+
+  &:hover {
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-hover);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-hover);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
+  }
+
+  &:focus-ring {
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-hover);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-hover);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-hover);
+    box-shadow: none;
+
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-button-m-primary-outline-white-texticon-border-color-key-focus);
+    }
+  }
+
+  &:active {
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-down);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-down);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-down);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: var(--spectrum-button-m-primary-outline-white-texticon-background-color-disabled);
+    border-color: var(--spectrum-button-m-primary-outline-white-texticon-border-color-disabled);
+    color: var(--spectrum-button-m-primary-outline-white-texticon-text-color-disabled);
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .spectrum-ClearButton {
+    > .spectrum-Icon {
+      /* @ie11 Workaround for regression caused by fix for https://bugs.webkit.org/show_bug.cgi?id=169700 */
+      margin: 0;
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-ClearButton {
+    forced-color-adjust: none;
+    --spectrum-clearbutton-m-background-color: ButtonFace;
+    --spectrum-clearbutton-m-background-color-disabled: ButtonFace;
+    --spectrum-clearbutton-m-background-color-down: ButtonFace;
+    --spectrum-clearbutton-m-background-color-hover: ButtonFace;
+    --spectrum-clearbutton-m-background-color-key-focus: ButtonFace;
+    --spectrum-clearbutton-m-icon-color: ButtonText;
+    --spectrum-clearbutton-m-icon-color-disabled: GrayText;
+    --spectrum-clearbutton-m-icon-color-down: Highlight;
+    --spectrum-clearbutton-m-icon-color-hover: Highlight;
+    --spectrum-clearbutton-m-icon-color-key-focus: Highlight;
   }
 }
