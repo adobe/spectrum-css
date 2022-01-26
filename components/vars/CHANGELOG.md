@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.0"></a>
+# 6.1.0
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@6.0.0...@spectrum-css/vars@6.1.0)
+
+### ✨ Features
+
+* **tabs:** regenerate vars ([28302af](https://github.com/adobe/spectrum-css/commit/28302af))
+* update to latest vars release & regenerate custom props ([a2af534](https://github.com/adobe/spectrum-css/commit/a2af534))
+
+
+### 🐛 Bug fixes
+
+* **tabs:** bump versions to get latest vars ([2bc69e9](https://github.com/adobe/spectrum-css/commit/2bc69e9))
+
+
+
+
+
 <a name="6.0.0"></a>
 # 6.0.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@4.3.1...@spectrum-css/vars@6.0.0)

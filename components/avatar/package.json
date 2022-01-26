@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/avatar",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "description": "The Spectrum CSS avatar component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.0.1",
-    "@spectrum-css/vars": "^6.0.0",
+    "@spectrum-css/vars": "^6.1.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

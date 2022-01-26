@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.12"></a>
+## 1.0.12
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@1.0.11...@spectrum-css/colorloupe@1.0.12)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
 <a name="1.0.11"></a>
 ## 1.0.11
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@1.0.9...@spectrum-css/colorloupe@1.0.11)

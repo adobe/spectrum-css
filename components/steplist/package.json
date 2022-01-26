@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/steplist",
-  "version": "3.0.12",
+  "version": "3.0.13",
   "description": "The Spectrum CSS steplist component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -21,9 +21,9 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.0.1",
-    "@spectrum-css/icon": "^3.0.12",
-    "@spectrum-css/tooltip": "^3.1.6",
-    "@spectrum-css/vars": "^6.0.0",
+    "@spectrum-css/icon": "^3.0.13",
+    "@spectrum-css/tooltip": "^3.1.7",
+    "@spectrum-css/vars": "^6.1.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.22"></a>
+# 1.0.0-beta.22
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.21...@spectrum-css/expressvars@1.0.0-beta.22)
+
+### ✨ Features
+
+* **tabs:** regenerate vars ([28302af](https://github.com/adobe/spectrum-css/commit/28302af))
+* update to latest vars release & regenerate custom props ([a2af534](https://github.com/adobe/spectrum-css/commit/a2af534))
+
+
+### 🐛 Bug fixes
+
+* **tabs:** bump versions to get latest vars ([2bc69e9](https://github.com/adobe/spectrum-css/commit/2bc69e9))
+
+
+
+
+
 <a name="1.0.0-beta.21"></a>
 # 1.0.0-beta.21
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.19...@spectrum-css/expressvars@1.0.0-beta.21)

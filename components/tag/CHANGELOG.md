@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.1"></a>
+## 3.3.1
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.0...@spectrum-css/tag@3.3.1)
+
+### 🐛 Bug fixes
+
+* add express support to tag ([92355bb](https://github.com/adobe/spectrum-css/commit/92355bb))
+* update tag for express WIP ([fe2d8d1](https://github.com/adobe/spectrum-css/commit/fe2d8d1))
+
+
+
+
+
 <a name="3.3.0"></a>
 # 3.3.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.1.4...@spectrum-css/tag@3.3.0)
