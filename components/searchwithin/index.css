@@ -12,48 +12,95 @@ governing permissions and limitations under the License.
 
 .spectrum-SearchWithin {
   --spectrum-searchwithin-width: 250px;
-
-  /* Force override */
-  --spectrum-searchwithin-border-radius: 0;
-  --spectrum-searchwithin-picker-min-width: 0;
 }
 
 .spectrum-SearchWithin {
-  inline-size: var(--spectrum-searchwithin-width);
   display: inline-flex;
-  position: relative;
-}
+  flex-direction: row;
 
-.spectrum-SearchWithin-picker {
-  inline-size: auto;
-  min-inline-size: 0;
-  flex-shrink: 0;
-  border-start-end-radius: var(--spectrum-searchwithin-border-radius);
-  border-end-end-radius: var(--spectrum-searchwithin-border-radius);
-}
-
-.spectrum-SearchWithin-input {
-  flex: 1;
   box-sizing: border-box;
-  min-inline-size: inherit;
-  margin-inline-start: calc(
-    -1 * var(--spectrum-textfield-m-texticon-border-size)
-  ); /* hides left border */
-  border-start-start-radius: var(--spectrum-searchwithin-border-radius);
-  border-end-start-radius: var(--spectrum-searchwithin-border-radius);
+  height: var(--spectrum-alias-item-height-m);
+  width: var(--spectrum-searchwithin-width);
 
-  &:hover,
-  &:focus {
-    position: relative; /* shows left border */
+  background: var(--spectrum-alias-background-color-primary);
+  border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-alias-border-color);
+  border-radius: var(--spectrum-searchwithin-border-radius);
+
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: calc(-1 * var(--spectrum-searchwithin-focusring-gap));
+    border: var(--spectrum-alias-focus-ring-size) solid transparent;
+    border-radius: calc(var(--spectrum-searchwithin-border-radius) + var(--spectrum-searchwithin-focusring-gap));
+    pointer-events: none;
+    transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  &:focus-within {
+    &:after {
+      border-color: var(--spectrum-alias-focus-ring-color);
+    }
   }
 }
 
-.spectrum-SearchWithin-clearButton {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+.spectrum-SearchWithin-icon {
+  display: var(--spectrum-searchwithin-icon-display);
 }
 
-.spectrum-SearchWithin > .spectrum-Textfield {
-  flex-grow: 1;
+.spectrum-SearchWithin-input {
+  min-width: 0;
+  flex: 1;
+  flex-shrink: 1;
+
+  order: var(--spectrum-searchwithin-input-order);
+
+  background-color: transparent;
+  border: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.spectrum-SearchWithin-picker {
+  flex-shrink: 0;
+  background: var(--spectrum-alias-background-color-tertiary);
+  border-radius: 4px;
+  padding: 0 4px;
+
+  font-size: var(--spectrum-global-dimension-font-size-75);
+
+  order: var(--spectrum-searchwithin-picker-order);
+}
+
+.spectrum-SearchWithin-clearButton {
+  width: 24px;
+  height: 24px;
+  border-width: 0;
+  border-radius: 100%;
+  background: transparent;
+
+  order: var(--spectrum-searchwithin-clearbutton-order);
+}
+
+.spectrum--standard {
+  --spectrum-searchwithin-focusring-gap: 2px;
+  --spectrum-searchwithin-border-radius: 4px;
+  --spectrum-searchwithin-icon-display: none;
+  --spectrum-searchwithin-input-order: 2;
+  --spectrum-searchwithin-picker-order: 1;
+  --spectrum-searchwithin-clearbutton-order: 4;
+}
+
+.spectrum--express {
+  --spectrum-searchwithin-focusring-gap: 5px;
+  --spectrum-searchwithin-border-radius: 32px;
+  --spectrum-searchwithin-icon-display: initial;
+  --spectrum-searchwithin-input-order: 2;
+  --spectrum-searchwithin-picker-order: 3;
+  --spectrum-searchwithin-clearbutton-order: 4;
 }
