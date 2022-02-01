@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/dialog",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "description": "The Spectrum CSS dialog component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,9 +16,9 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/closebutton": "^1.2.1",
     "@spectrum-css/button": "^6.0.1",
     "@spectrum-css/buttongroup": "^5.0.1",
+    "@spectrum-css/closebutton": "^1.2.1",
     "@spectrum-css/divider": "^1.0.14",
     "@spectrum-css/icon": "^3.0.13",
     "@spectrum-css/modal": "^3.0.12",
@@ -26,9 +26,9 @@
     "@spectrum-css/vars": "^6.1.0"
   },
   "devDependencies": {
+    "@spectrum-css/button": "^6.0.2",
+    "@spectrum-css/buttongroup": "^5.0.2",
     "@spectrum-css/closebutton": "^1.2.1",
-    "@spectrum-css/button": "^6.0.1",
-    "@spectrum-css/buttongroup": "^5.0.1",
     "@spectrum-css/component-builder": "^3.0.1",
     "@spectrum-css/divider": "^1.0.14",
     "@spectrum-css/icon": "^3.0.13",

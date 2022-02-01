@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.0"></a>
+# 6.0.0
+🗓 2022-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@5.0.1...@spectrum-css/dialog@6.0.0)
+
+### 🐛 Bug fixes
+
+* using close button in dialog. ([6788469](https://github.com/adobe/spectrum-css/commit/6788469))
+
+
+### 🛑 BREAKING CHANGES
+
+* replace action button with a close button for dialog
+
+
+
+
+
 <a name="5.0.1"></a>
 ## 5.0.1
 🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@5.0.0...@spectrum-css/dialog@5.0.1)
