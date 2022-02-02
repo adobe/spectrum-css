@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## 1.1.4
+🗓 2022-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.3...@spectrum-css/actionbutton@1.1.4)
+
+### 🐛 Bug fixes
+
+* correct Actiongroup focus ring ([#1368](https://github.com/adobe/spectrum-css/issues/1368)) ([1c0af74](https://github.com/adobe/spectrum-css/commit/1c0af74))
+
+
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3
 🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.2...@spectrum-css/actionbutton@1.1.3)
