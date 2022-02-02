@@ -17,6 +17,11 @@ governing permissions and limitations under the License.
   );
 }
 
+/* hack: use var so it's not reported as unused */
+.🤫 {
+  border-radius: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted);
+}
+
 .spectrum-ActionGroup {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +75,6 @@ governing permissions and limitations under the License.
       }
     }
   }
-
   &:not(.spectrum-ActionGroup--quiet) {
     flex-wrap: nowrap;
 
@@ -78,6 +82,7 @@ governing permissions and limitations under the License.
       position: relative;
       border-radius: 0;
       z-index: 0;
+      --spectrum-actionbutton-focus-ring-border-radius-adjusted: var(--spectrum-alias-border-radius-xsmall);
 
       &:first-child {
         border-start-start-radius: var(--spectrum-actionbutton-m-texticon-border-radius);
@@ -85,6 +90,7 @@ governing permissions and limitations under the License.
         margin-inline-end: calc(
           -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
         );
+        --spectrum-actionbutton-focus-ring-border-radius-adjusted: calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall) var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap));
       }
 
       &:last-child {
@@ -94,6 +100,7 @@ governing permissions and limitations under the License.
           -1 * var(--spectrum-actionbutton-m-texticon-border-size) / 2
         );
         margin-inline-end: 0;
+        --spectrum-actionbutton-focus-ring-border-radius-adjusted: var(--spectrum-alias-border-radius-xsmall) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) calc(var(--spectrum-actionbutton-m-quiet-textonly-border-radius) + var(--spectrum-actionbutton-m-textonly-focus-ring-gap)) var(--spectrum-alias-border-radius-xsmall);
       }
 
       &.is-selected {
