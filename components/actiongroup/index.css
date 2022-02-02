@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
   );
 }
 
-/* hack: define var so it's not reported as undefined */
+/* hack: use var so it's not reported as unused */
 .🤫 {
   border-radius: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted);
 }
