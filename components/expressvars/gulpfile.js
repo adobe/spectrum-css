@@ -66,7 +66,8 @@ function concatGlobalsFinal() {
   return gulp.src([
     '.tmp/spectrum-global.css',
     'dist/globals/spectrum-dimensionAliases.css',
-    'dist/globals/spectrum-colorAliases.css'
+    'dist/globals/spectrum-colorAliases.css',
+    'custom.css'
   ])
     .pipe(replace(/{/, function(match) {
       if (this.file.path.match('Aliases.css')) {
