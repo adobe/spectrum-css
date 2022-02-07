@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2021 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -11,11 +11,9 @@ governing permissions and limitations under the License.
 */
 
 @import "../commons/basebutton.css";
-@import "../vars/css/components/spectrum-pickerbutton.css";
+@import "./infieldbutton-generated.css";
 
-@import "./pickerbutton-generated.css";
-
-.spectrum-PickerButton {
+.spectrum-InfieldButton {
   @inherit: %spectrum-BaseButton;
 
   border-style: none;
@@ -24,21 +22,15 @@ governing permissions and limitations under the License.
   display: flex;
   justify-content: center;
   align-items: center;
-
-  --spectrum-infieldbutton-border-color-override: initial;
 }
 
-.spectrum-PickerButton-label {
-  /* Be the biggest, but also shrink! */
-  flex: 1 1 auto;
-
-  white-space: nowrap;
-  overflow: hidden;
+a.spectrum-InfieldButton {
+  @inherit: %spectrum-AnchorButton;
 }
 
-.spectrum-PickerButton-fill {
-  box-sizing: border-box;
-  border-color: var(--spectrum-infieldbutton-border-color-override);
+.spectrum-InfieldButton-fill {
+  /* override generated CSS */
+  padding: 0 !important;
 
   /* center icon */
   display: flex;
@@ -48,19 +40,7 @@ governing permissions and limitations under the License.
   transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
-.spectrum-PickerButton--uiicononly {
-  .spectrum-PickerButton-fill {
-    /* let icons position correctly */
-    padding: 0 !important;
-  }
-}
-
-.spectrum-PickerButton-UIIcon {
-  /* remove margin used for centering */
-  margin: 0 !important;
-}
-
-.spectrum-PickerButton-icon {
+.spectrum-InfieldButton-icon {
   /* don't be small, ever */
   flex-shrink: 0;
 
