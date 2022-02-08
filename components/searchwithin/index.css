@@ -33,6 +33,12 @@ governing permissions and limitations under the License.
   --spectrum-searchwithin-width: 250px;
 }
 
+/* hack: don't complain they're undefined */
+.🤫 {
+  --spectrum-searchwithin-pickerbutton-left-offset: 0;
+  --spectrum-searchwithin-clearbutton-left-offset: 0;
+}
+
 .spectrum-SearchWithin {
   display: inline-flex;
   flex-direction: row;
@@ -43,7 +49,7 @@ governing permissions and limitations under the License.
   width: var(--spectrum-searchwithin-width);
 
   background: var(--spectrum-alias-background-color-primary);
-  border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-alias-border-color);
+  border: var(--spectrum-searchwithin-border-size) solid var(--spectrum-alias-border-color);
   border-radius: var(--spectrum-searchwithin-border-radius);
 
   position: relative;
@@ -107,9 +113,12 @@ governing permissions and limitations under the License.
   order: var(--spectrum-searchwithin-pickerbutton-order);
 
   /* offset for border width */
-  left: -1px;
+  left: var(--spectrum-searchwithin-pickerbutton-left-offset);
 }
 
 .spectrum-SearchWithin-clearButton {
   order: var(--spectrum-searchwithin-clearbutton-order);
+
+  /* offset to align with pickerbutton */
+  left: var(--spectrum-searchwithin-clearbutton-left-offset);
 }
