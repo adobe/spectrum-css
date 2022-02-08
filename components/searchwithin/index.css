@@ -10,13 +10,33 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/components/spectrum-searchwithin.css";
+@import "../vars/css/components/spectrum-textfield.css";
+
 .spectrum-SearchWithin {
+  @remapvars {
+    find: /--spectrum-textfield-m(.*)/;
+    filter: color;
+    replace: --spectrum-textfield$1;
+  }
+
+  @remapvars {
+    find: /--spectrum-searchwithin-m(.*)/;
+    filter: color;
+    replace: --spectrum-searchwithin$1;
+  }
+
+  /* todo: unclear how to use --spectrum-textfield-m-text-padding-top and friends */
+  --spectrum-textfield-texticon-padding-top: 3px;
+  --spectrum-textfield-texticon-padding-bottom: 5px;
+
   --spectrum-searchwithin-width: 250px;
 }
 
 .spectrum-SearchWithin {
   display: inline-flex;
   flex-direction: row;
+  align-items: center;
 
   box-sizing: border-box;
   height: var(--spectrum-alias-item-height-m);
@@ -32,7 +52,7 @@ governing permissions and limitations under the License.
     content: '';
     display: block;
     position: absolute;
-    inset: calc(-1 * var(--spectrum-searchwithin-focusring-gap));
+    inset: calc(-1 * var(--spectrum-searchwithin-focusring-gap) - var(--spectrum-alias-border-size-thin));
     border: var(--spectrum-alias-focus-ring-size) solid transparent;
     border-radius: calc(var(--spectrum-searchwithin-border-radius) + var(--spectrum-searchwithin-focusring-gap));
     pointer-events: none;
@@ -44,18 +64,28 @@ governing permissions and limitations under the License.
       border-color: var(--spectrum-alias-focus-ring-color);
     }
   }
+
+  &.is-disabled {
+    background-color: var(--spectrum-textfield-m-texticon-background-color-disabled);
+    border-color: var(--spectrum-textfield-m-texticon-border-color-disabled);
+    color: var(--spectrum-textfield-m-texticon-text-color-disabled);
+  }
 }
 
 .spectrum-SearchWithin-icon {
-  display: var(--spectrum-searchwithin-icon-display);
+  display: var(--spectrum-searchwithin-icon-render);
 }
 
 .spectrum-SearchWithin-input {
   min-width: 0;
   flex: 1;
   flex-shrink: 1;
+  order: var(--spectrum-searchwithin-text-order);
 
-  order: var(--spectrum-searchwithin-input-order);
+  /* Apply padding by default to center text, giving consistency between input and textfield */
+  padding: var(--spectrum-textfield-texticon-padding-top)
+    var(--spectrum-textfield-texticon-padding-right) var(--spectrum-textfield-texticon-padding-bottom)
+    calc(var(--spectrum-textfield-texticon-padding-left) + 1px);
 
   background-color: transparent;
   border: none;
@@ -66,41 +96,20 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-SearchWithin-picker {
+.spectrum-SearchWithin-icon {
+  display: var(--spectrum-searchwithin-icon-render);
+  order: var(--spectrum-searchwithin-icon-order);
+  margin-inline-start: var(--spectrum-alias-search-padding-left-m);
+}
+
+.spectrum-SearchWithin-pickerButton {
   flex-shrink: 0;
-  background: var(--spectrum-alias-background-color-tertiary);
-  border-radius: 4px;
-  padding: 0 4px;
+  order: var(--spectrum-searchwithin-pickerbutton-order);
 
-  font-size: var(--spectrum-global-dimension-font-size-75);
-
-  order: var(--spectrum-searchwithin-picker-order);
+  /* offset for border width */
+  left: -1px;
 }
 
 .spectrum-SearchWithin-clearButton {
-  width: 24px;
-  height: 24px;
-  border-width: 0;
-  border-radius: 100%;
-  background: transparent;
-
   order: var(--spectrum-searchwithin-clearbutton-order);
-}
-
-.spectrum--standard {
-  --spectrum-searchwithin-focusring-gap: 2px;
-  --spectrum-searchwithin-border-radius: 4px;
-  --spectrum-searchwithin-icon-display: none;
-  --spectrum-searchwithin-input-order: 2;
-  --spectrum-searchwithin-picker-order: 1;
-  --spectrum-searchwithin-clearbutton-order: 4;
-}
-
-.spectrum--express {
-  --spectrum-searchwithin-focusring-gap: 5px;
-  --spectrum-searchwithin-border-radius: 32px;
-  --spectrum-searchwithin-icon-display: initial;
-  --spectrum-searchwithin-input-order: 2;
-  --spectrum-searchwithin-picker-order: 3;
-  --spectrum-searchwithin-clearbutton-order: 4;
 }
