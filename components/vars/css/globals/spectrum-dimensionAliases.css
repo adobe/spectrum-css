@@ -221,6 +221,10 @@
   --spectrum-alias-search-padding-left-s: var(--spectrum-global-dimension-size-85);
   --spectrum-alias-search-padding-left-l: var(--spectrum-global-dimension-size-160);
   --spectrum-alias-search-padding-left-xl: var(--spectrum-global-dimension-size-185);
+  --spectrum-alias-searchwithin-icon-render: no;
+  --spectrum-alias-searchwithin-text-order: 2;
+  --spectrum-alias-searchwithin-clearbutton-order: 3;
+  --spectrum-alias-searchwithin-picker-order: 1;
   --spectrum-alias-percent-50: 50%;
   --spectrum-alias-percent-70: 70%;
   --spectrum-alias-percent-100: 100%;

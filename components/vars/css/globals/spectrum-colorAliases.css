@@ -1,12 +1,12 @@
 :root {
   --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
   --spectrum-alias-transparent-blue-background-color-hover: rgba(13,102,208,0.15);
-  --spectrum-alias-transparent-blue-background-color-down: rgba(9,90,186,0.15);
+  --spectrum-alias-transparent-blue-background-color-down: rgba(9,90,186,0.3);
   --spectrum-alias-transparent-blue-background-color-key-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color-mouse-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-alias-transparent-red-background-color-hover: rgba(201,37,45,0.15);
-  --spectrum-alias-transparent-red-background-color-down: rgba(187,18,26,0.15);
+  --spectrum-alias-transparent-red-background-color-down: rgba(187,18,26,0.3);
   --spectrum-alias-transparent-red-background-color-key-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color-mouse-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color: var(--spectrum-alias-component-text-color-default);
