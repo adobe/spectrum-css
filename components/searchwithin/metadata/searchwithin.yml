@@ -32,7 +32,7 @@ examples:
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-SearchWithin-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Magnify" />
         </svg>
-        <input type="search" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" autocomplete="off">
+        <input type="text" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" autocomplete="off">
         <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton" tabindex="-1">
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
@@ -55,7 +55,7 @@ examples:
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-SearchWithin-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Magnify" />
         </svg>
-        <input type="search" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" autocomplete="off">
+        <input type="text" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" autocomplete="off">
         <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton" tabindex="-1">
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
@@ -95,7 +95,7 @@ examples:
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-SearchWithin-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Magnify" />
         </svg>
-        <input type="search" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" autocomplete="off">
+        <input type="text" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" autocomplete="off">
         <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton" tabindex="-1">
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
@@ -118,7 +118,7 @@ examples:
         <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-SearchWithin-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Magnify" />
         </svg>
-        <input type="search" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" disabled autocomplete="off">
+        <input type="text" placeholder="Search" name="search" value="" class="spectrum-SearchWithin-input spectrum-Textfield-input" disabled autocomplete="off">
         <button type="reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-SearchWithin-clearButton" tabindex="-1" disabled>
           <div class="spectrum-ClearButton-fill">
             <svg class="spectrum-Icon spectrum-ClearButton-icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
