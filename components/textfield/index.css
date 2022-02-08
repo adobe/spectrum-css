@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-textfield.css";
 @import "../vars/css/components/spectrum-textarea.css";
 
-.spectrum-Textfield {
+.spectrum {
   @remapvars {
     find: /--spectrum-textfield-m(.*)/;
     filter: color;
