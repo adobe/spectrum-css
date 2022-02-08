@@ -221,6 +221,7 @@
   --spectrum-alias-pickerbutton-label-padding-y-l: var(--spectrum-global-dimension-size-65);
   --spectrum-alias-pickerbutton-label-padding-y-xl: var(--spectrum-global-dimension-size-100);
   --spectrum-alias-pickerbutton-border-radius-rounded: var(--spectrum-global-dimension-size-150);
+  --spectrum-alias-pickerbutton-border-radius-rounded-sided: var(--spectrum-global-dimension-size-150);
   --spectrum-alias-search-border-radius: var(--spectrum-global-dimension-size-300);
   --spectrum-alias-combobox-quiet-button-offset-x: var(--spectrum-global-dimension-size-50);
   --spectrum-alias-thumbnail-border-radius-small: var(--spectrum-global-dimension-size-75);
@@ -232,6 +233,10 @@
   --spectrum-alias-search-padding-left-m: var(--spectrum-global-dimension-size-175);
   --spectrum-alias-search-padding-left-l: var(--spectrum-global-dimension-size-200);
   --spectrum-alias-search-padding-left-xl: var(--spectrum-global-dimension-size-225);
+  --spectrum-alias-searchwithin-icon-render: yes;
+  --spectrum-alias-searchwithin-text-order: 1;
+  --spectrum-alias-searchwithin-clearbutton-order: 2;
+  --spectrum-alias-searchwithin-picker-order: 3;
   --spectrum-alias-tag-border-radius: var(--spectrum-global-dimension-size-300);
   --spectrum-alias-tag-border-size-default: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-tag-border-size-disabled: var(--spectrum-global-dimension-static-size-25);

@@ -10,50 +10,106 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "../vars/css/components/spectrum-searchwithin.css";
+@import "../vars/css/components/spectrum-textfield.css";
+
 .spectrum-SearchWithin {
+  @remapvars {
+    find: /--spectrum-textfield-m(.*)/;
+    filter: color;
+    replace: --spectrum-textfield$1;
+  }
+
+  @remapvars {
+    find: /--spectrum-searchwithin-m(.*)/;
+    filter: color;
+    replace: --spectrum-searchwithin$1;
+  }
+
+  /* todo: unclear how to use --spectrum-textfield-m-text-padding-top and friends */
+  --spectrum-textfield-texticon-padding-top: 3px;
+  --spectrum-textfield-texticon-padding-bottom: 5px;
+
   --spectrum-searchwithin-width: 250px;
-
-  /* Force override */
-  --spectrum-searchwithin-border-radius: 0;
-  --spectrum-searchwithin-picker-min-width: 0;
 }
 
 .spectrum-SearchWithin {
-  inline-size: var(--spectrum-searchwithin-width);
   display: inline-flex;
-  position: relative;
-}
+  flex-direction: row;
+  align-items: center;
 
-.spectrum-SearchWithin-picker {
-  inline-size: auto;
-  min-inline-size: 0;
-  flex-shrink: 0;
-  border-start-end-radius: var(--spectrum-searchwithin-border-radius);
-  border-end-end-radius: var(--spectrum-searchwithin-border-radius);
-}
-
-.spectrum-SearchWithin-input {
-  flex: 1;
   box-sizing: border-box;
-  min-inline-size: inherit;
-  margin-inline-start: calc(
-    -1 * var(--spectrum-textfield-m-texticon-border-size)
-  ); /* hides left border */
-  border-start-start-radius: var(--spectrum-searchwithin-border-radius);
-  border-end-start-radius: var(--spectrum-searchwithin-border-radius);
+  height: var(--spectrum-alias-item-height-m);
+  width: var(--spectrum-searchwithin-width);
 
-  &:hover,
-  &:focus {
-    position: relative; /* shows left border */
+  background: var(--spectrum-alias-background-color-primary);
+  border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-alias-border-color);
+  border-radius: var(--spectrum-searchwithin-border-radius);
+
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: calc(-1 * var(--spectrum-searchwithin-focusring-gap) - var(--spectrum-alias-border-size-thin));
+    border: var(--spectrum-alias-focus-ring-size) solid transparent;
+    border-radius: calc(var(--spectrum-searchwithin-border-radius) + var(--spectrum-searchwithin-focusring-gap));
+    pointer-events: none;
+    transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  &:focus-within {
+    &:after {
+      border-color: var(--spectrum-alias-focus-ring-color);
+    }
+  }
+
+  &.is-disabled {
+    background-color: var(--spectrum-textfield-m-texticon-background-color-disabled);
+    border-color: var(--spectrum-textfield-m-texticon-border-color-disabled);
+    color: var(--spectrum-textfield-m-texticon-text-color-disabled);
   }
 }
 
-.spectrum-SearchWithin-clearButton {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+.spectrum-SearchWithin-icon {
+  display: var(--spectrum-searchwithin-icon-render);
 }
 
-.spectrum-SearchWithin > .spectrum-Textfield {
-  flex-grow: 1;
+.spectrum-SearchWithin-input {
+  min-width: 0;
+  flex: 1;
+  flex-shrink: 1;
+  order: var(--spectrum-searchwithin-text-order);
+
+  /* Apply padding by default to center text, giving consistency between input and textfield */
+  padding: var(--spectrum-textfield-texticon-padding-top)
+    var(--spectrum-textfield-texticon-padding-right) var(--spectrum-textfield-texticon-padding-bottom)
+    calc(var(--spectrum-textfield-texticon-padding-left) + 1px);
+
+  background-color: transparent;
+  border: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.spectrum-SearchWithin-icon {
+  display: var(--spectrum-searchwithin-icon-render);
+  order: var(--spectrum-searchwithin-icon-order);
+  margin-inline-start: var(--spectrum-alias-search-padding-left-m);
+}
+
+.spectrum-SearchWithin-pickerButton {
+  flex-shrink: 0;
+  order: var(--spectrum-searchwithin-pickerbutton-order);
+
+  /* offset for border width */
+  left: -1px;
+}
+
+.spectrum-SearchWithin-clearButton {
+  order: var(--spectrum-searchwithin-clearbutton-order);
 }
