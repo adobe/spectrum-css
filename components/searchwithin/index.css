@@ -35,8 +35,8 @@ governing permissions and limitations under the License.
 
 /* hack: don't complain they're undefined */
 .🤫 {
-  --spectrum-searchwithin-pickerbutton-left-offset: 0;
-  --spectrum-searchwithin-clearbutton-left-offset: 0;
+  --spectrum-searchwithin-pickerbutton-right-offset: 0;
+  --spectrum-searchwithin-clearbutton-right-offset: 0;
 }
 
 .spectrum-SearchWithin {
@@ -78,15 +78,10 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-SearchWithin-icon {
-  display: var(--spectrum-searchwithin-icon-render);
-}
-
 .spectrum-SearchWithin-input {
   min-width: 0;
   flex: 1;
   flex-shrink: 1;
-  order: var(--spectrum-searchwithin-text-order);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
   padding: var(--spectrum-textfield-texticon-padding-top)
@@ -103,22 +98,17 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-SearchWithin-icon {
-  display: var(--spectrum-searchwithin-icon-render);
-  order: var(--spectrum-searchwithin-icon-order);
   margin-inline-start: var(--spectrum-alias-search-padding-left-m);
 }
 
 .spectrum-SearchWithin-pickerButton {
   flex-shrink: 0;
-  order: var(--spectrum-searchwithin-pickerbutton-order);
 
   /* offset for border width */
-  left: var(--spectrum-searchwithin-pickerbutton-left-offset);
+  right: var(--spectrum-searchwithin-pickerbutton-right-offset);
 }
 
 .spectrum-SearchWithin-clearButton {
-  order: var(--spectrum-searchwithin-clearbutton-order);
-
   /* offset to align with pickerbutton */
-  left: var(--spectrum-searchwithin-clearbutton-left-offset);
+  right: var(--spectrum-searchwithin-clearbutton-right-offset);
 }
