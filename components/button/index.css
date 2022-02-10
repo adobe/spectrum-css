@@ -111,6 +111,11 @@ governing permissions and limitations under the License.
   }
 
   --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-texticon-focus-ring-color-key-focus);
+
+  /* correct focus-ring radius for t-shirt sizing */
+  &:after {
+    border-radius: calc(var(--spectrum-button-primary-fill-texticon-border-radius) + var(--spectrum-alias-focus-ring-gap));
+  }
 }
 
 a.spectrum-Button {
