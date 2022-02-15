@@ -54,8 +54,6 @@ governing permissions and limitations under the License.
 .spectrum-Textfield {
   display: inline-flex;
   position: relative;
-  min-inline-size: var(--spectrum-textfield-texticon-min-width);
-  inline-size: var(--spectrum-alias-single-line-width);
 
   &.spectrum-Textfield--quiet.spectrum-Textfield--multiline
     .spectrum-Textfield-input {
@@ -98,7 +96,8 @@ governing permissions and limitations under the License.
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
-  inline-size: 100%;
+  min-inline-size: var(--spectrum-textfield-texticon-min-width);
+  inline-size: var(--spectrum-alias-single-line-width);
   block-size: var(--spectrum-textfield-texticon-height);
 
   vertical-align: top; /* used to align them correctly in forms. */
