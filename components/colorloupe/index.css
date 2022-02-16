@@ -43,3 +43,11 @@
 .spectrum-ColorLoupe-outer {
   stroke-width: var(--spectrum-colorloupe-outer-border-size);
 }
+
+.spectrum-ColorLoupe-express {
+  display: var(--spectrum-colorloupe-express-visibility);
+}
+
+.spectrum-ColorLoupe-spectrum {
+  display: var(--spectrum-colorloupe-spectrum-visibility);
+}
