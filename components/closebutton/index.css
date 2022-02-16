@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @import "../commons/basebutton.css";
-@import "./skin.css";
+@import "./closebutton-generated.css";
 
 .spectrum-CloseButton {
   @inherit: %spectrum-BaseButton;
