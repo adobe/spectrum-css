@@ -22,29 +22,29 @@ governing permissions and limitations under the License.
   &.spectrum-CloseButton--sizeS {
     border-radius: var(--spectrum-global-dimension-size-300);
     --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-300);
-    height: var(--spectrum-global-dimension-size-300);
-    width: var(--spectrum-global-dimension-size-300)
+    block-size: var(--spectrum-global-dimension-size-300);
+    inline-size: var(--spectrum-global-dimension-size-300)
   }
 
   &.spectrum-CloseButton--sizeM {
     border-radius: var(--spectrum-global-dimension-size-400);
     --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-400);
-    height: var(--spectrum-global-dimension-size-400);
-    width: var(--spectrum-global-dimension-size-400)
+    block-size: var(--spectrum-global-dimension-size-400);
+    inline-size: var(--spectrum-global-dimension-size-400)
   }
 
   &.spectrum-CloseButton--sizeL {
     border-radius: var(--spectrum-global-dimension-size-500);
     --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-500);
-    height: var(--spectrum-global-dimension-size-500);
-    width: var(--spectrum-global-dimension-size-500)
+    block-size: var(--spectrum-global-dimension-size-500);
+    inline-size: var(--spectrum-global-dimension-size-500)
   }
 
   &.spectrum-CloseButton--sizeXL {
     border-radius: var(--spectrum-global-dimension-size-600);
     --spectrum-CloseButton-size: var(--spectrum-global-dimension-size-600);
-    height: var(--spectrum-global-dimension-size-600);
-    width: var(--spectrum-global-dimension-size-600)
+    block-size: var(--spectrum-global-dimension-size-600);
+    inline-size: var(--spectrum-global-dimension-size-600)
   }
 
   &:disabled {
@@ -115,7 +115,7 @@ governing permissions and limitations under the License.
         background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-black)
         }
       }
 
@@ -123,23 +123,23 @@ governing permissions and limitations under the License.
         background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-55));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-black)
         }
       }
 
       &:focus-visible {
-        background-color: var(--spectrum-global-color-static-black);
+        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-black)
         }
       }
 
       &.is-keyboardFocused {
-        background-color: var(--spectrum-global-color-static-black);
+        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-black)
         }
       }
 
@@ -163,31 +163,31 @@ governing permissions and limitations under the License.
         background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-white)
         }
       }
 
       &:active {
-        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-55));
+        background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-55));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-white)
         }
       }
 
       &:focus-visible {
-        background-color: var(--spectrum-global-color-static-white);
+        background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-white)
         }
       }
 
       &.is-keyboardFocused {
-        background-color: var(--spectrum-global-color-static-white);
+        background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40));
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-global-color-static-white)
         }
       }
 
