@@ -1,4 +1,6 @@
 :root {
-  --spectrum-actiongroup-button-gap-x: var(--spectrum-global-dimension-size-100);
-  --spectrum-actiongroup-button-gap-y: var(--spectrum-global-dimension-size-100);
+  --spectrum-actiongroup-quiet-button-gap-x: var(--spectrum-alias-actiongroup-button-gap-quiet);
+  --spectrum-actiongroup-quiet-button-gap-y: var(--spectrum-alias-actiongroup-button-gap-quiet);
+  --spectrum-actiongroup-button-gap-x: var(--spectrum-alias-actiongroup-button-gap);
+  --spectrum-actiongroup-button-gap-y: var(--spectrum-alias-actiongroup-button-gap);
 }
