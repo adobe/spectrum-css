@@ -2,7 +2,7 @@ name: Color Loupe
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/color-area/
 description: |
-  - Set the `fill` style property of the `.spectrum-ColorLoupe-inner` element to indicate the currently selected color
+  - Set the `--spectrum-loupe-color` custom property to the CSS color value you want to show
   - Apply `.is-open` to display the loupe
   - Color Loupe does not have a disabled style; do not show it when the handle its attached to is disabled.
 examples:
