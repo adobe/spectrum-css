@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.2"></a>
+## 1.2.2
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.1...@spectrum-css/closebutton@1.2.2)
+
+### 🐛 Bug fixes
+
+* removed some issues from the generated css for close button ([0b3aee3](https://github.com/adobe/spectrum-css/commit/0b3aee3))
+
+
+
+
+
 <a name="1.2.1"></a>
 ## 1.2.1
 🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.0...@spectrum-css/closebutton@1.2.1)

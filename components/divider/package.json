@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/divider",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "The Spectrum CSS divider component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,11 +16,11 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/vars": "^6.1.0"
+    "@spectrum-css/vars": "^6.1.1"
   },
   "devDependencies": {
-    "@spectrum-css/actionbutton": "^1.1.4",
-    "@spectrum-css/actiongroup": "^1.0.15",
+    "@spectrum-css/actionbutton": "^1.1.5",
+    "@spectrum-css/actiongroup": "^1.0.16",
     "@spectrum-css/component-builder": "^3.0.1",
     "@spectrum-css/vars": "^3.0.1",
     "gulp": "^4.0.0"
