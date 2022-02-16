@@ -78,6 +78,9 @@
   --spectrum-alias-button-negative-background-color-default: var(--spectrum-alias-button-negative-border-color-default);
   --spectrum-alias-button-negative-text-color-default: var(--spectrum-alias-button-negative-text-color-hover);
   --spectrum-alias-button-negative-icon-color-default: var(--spectrum-alias-button-negative-text-color-default);
+  --spectrum-alias-transparent-blue-background-color-hover: rgba(66,70,203,0.15);
+  --spectrum-alias-transparent-blue-background-color-down: rgba(54,58,178,0.15);
+  --spectrum-alias-transparent-blue-background-color-key-focus: rgba(66,70,203,0.15);
   --spectrum-alias-input-border-color-default: var(--spectrum-alias-border-color);
   --spectrum-alias-input-border-color-hover: var(--spectrum-alias-border-color-hover);
   --spectrum-alias-input-border-color-down: var(--spectrum-global-color-gray-900);
@@ -164,13 +167,10 @@
   --spectrum-alias-tabitem-icon-color-selected: var(--spectrum-alias-tabitem-text-color-selected-default);
   --spectrum-alias-tabitem-icon-color-emphasized: var(--spectrum-alias-tabitem-text-color-default);
   --spectrum-alias-tabitem-icon-color-emphasized-selected: var(--spectrum-alias-tabitem-text-color-emphasized-selected-default);
-  --spectrum-alias-transparent-blue-background-color-hover: rgba(2,97,214,0.15);
-  --spectrum-alias-transparent-blue-background-color-down: rgba(0,85,185,0.15);
-  --spectrum-alias-transparent-blue-background-color-key-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color-mouse-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-alias-transparent-red-background-color-hover: rgba(206,15,11,0.15);
-  --spectrum-alias-transparent-red-background-color-down: rgba(182,0,0,0.15);
+  --spectrum-alias-transparent-red-background-color-down: rgba(182,0,0,0.3);
   --spectrum-alias-transparent-red-background-color-key-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color-mouse-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color: var(--spectrum-alias-component-text-color-default);
