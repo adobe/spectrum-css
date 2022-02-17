@@ -18,7 +18,7 @@ examples:
           <clipPath id="spectrum-loupe-clip">
             <path d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="#fff" />
           </clipPath>
-          <filter id="express-shadow" x="0" y="0" width="44" height="52" filterUnits="userSpaceOnUse">
+          <filter id="loupe-shadow" x="-16px" y="-16px" width="96" height="128" filterUnits="userSpaceOnUse">
             <feOffset input="SourceAlpha" />
             <feGaussianBlur stdDeviation="2" result="d" />
             <feFlood flood-opacity="0.302" />
@@ -26,7 +26,7 @@ examples:
             <feComposite in="SourceGraphic" />
           </filter>
         </defs>
-        <g transform="translate(2 2)" class="spectrum-ColorLoupe-spectrum">
+        <g transform="translate(4 4)" class="spectrum-ColorLoupe-spectrum">
           <g clip-path="url(#spectrum-loupe-clip)">
             <g transform="translate(-353.999 -289)">
               <g transform="translate(338 285)">
@@ -153,11 +153,13 @@ examples:
               </g>
             </g>
           </g>
-          <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="var(--spectrum-loupe-color)" />
+          <g filter="url(#loupe-shadow)">
+            <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="var(--spectrum-loupe-color)" />
+          </g>
           <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
         </g>
 
-        <g transform="translate(-292 -238)" class="spectrum-ColorLoupe-express">
+        <g transform="translate(-290 -235)" class="spectrum-ColorLoupe-express">
           <g transform="translate(-58 -45)" clip-path="url(#express-loupe-clip)">
             <g transform="translate(338 285)">
               <g transform="translate(-338 -285)">
@@ -234,7 +236,7 @@ examples:
               </g>
             </g>
           </g>
-          <g transform="matrix(1, 0, 0, 1, 290, 238)" filter="url(#express-shadow)">
+          <g transform="matrix(1, 0, 0, 1, 290, 238)" filter="url(#loupe-shadow)">
             <g transform="translate(14340 -18024)" fill="var(--spectrum-loupe-color)">
               <path class="spectrum-ColorLoupe-inner" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" stroke="none" />
             </g>
