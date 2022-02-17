@@ -12,4 +12,7 @@
   --spectrum-colorslider-height: var(--spectrum-global-dimension-size-200);
   --spectrum-colorslider-vertical-width: var(--spectrum-colorslider-height);
   --spectrum-colorslider-border-radius: var(--spectrum-alias-border-radius-small);
+
+  --spectrum-colorcontrol-checkerboard-light-color: var(--spectrum-global-color-static-white);
+  --spectrum-colorcontrol-checkerboard-dark-color: var(--spectrum-global-color-static-gray-200);
 }
