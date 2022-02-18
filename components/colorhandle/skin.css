@@ -1,13 +1,3 @@
-/* hack: don't complain about being undefined */
-.🤫 {
-  --spectrum-colorhandle-inner-shadow-color: 0;
-  --spectrum-colorhandle-outer-shadow-color: 0;
-  --spectrum-colorhandle-outer-shadow-blur: 0;
-  --spectrum-colorhandle-outer-shadow-spread: 0;
-  --spectrum-colorcontrol-checkerboard-light-color: 0;
-  --spectrum-colorcontrol-checkerboard-dark-color: 0;
-}
-
 .spectrum-ColorHandle {
   border-color: var(--spectrum-colorhandle-inner-border-color);
   box-shadow: 0 0 var(--spectrum-colorhandle-outer-shadow-blur) var(--spectrum-colorhandle-outer-shadow-spread) var(--spectrum-colorhandle-outer-shadow-color);

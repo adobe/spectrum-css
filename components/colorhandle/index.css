@@ -8,11 +8,6 @@
   --spectrum-colorhandle-hitarea-radius: 100%;
 }
 
-/* hack: define so no complaints */
-.🤫 {
-  --spectrum-colorhandle-background-offset: 0;
-}
-
 %spectrum-ColorControl-handle--focused {
   /* Bigger handle when focused */
   width: calc(var(--spectrum-colorhandle-size) * 2);

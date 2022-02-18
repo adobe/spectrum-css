@@ -20,12 +20,6 @@
   );
 }
 
-/* hack: define var so it's not reported as undefined */
-.🤫 {
-  --spectrum-colorloupe-express-visibility: 0;
-  --spectrum-colorloupe-spectrum-visibility: 0;
-}
-
 .spectrum-ColorLoupe {
   width: var(--spectrum-colorloupe-width-adjusted);
   height: var(--spectrum-colorloupe-height-adjusted);
