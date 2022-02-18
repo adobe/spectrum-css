@@ -26,7 +26,7 @@ examples:
     markup: |
       <div class="spectrum-ColorHandle" style="position: absolute; top: 75%; left: 50%;">
         <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
-        <svg class="spectrum-ColorLoupe is-open" style="--spectrum-loupe-color: rgba(255, 0, 0, 0.5); position: absolute; top: 25%; left: 50%;">
+        <svg class="spectrum-ColorLoupe is-open" style="--spectrum-loupe-color: rgba(255, 0, 0, 0.5);">
           <defs>
             <path id="spectrum-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
             <path id="express-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" />
