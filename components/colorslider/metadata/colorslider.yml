@@ -17,8 +17,8 @@ examples:
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
-          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: rgb(255, 0, 0)">
+          <div class="spectrum-ColorHandle-color"></div>
           <svg class="spectrum-ColorLoupe">
             <!-- use ColorLoupe markup here -->
           </svg>
@@ -35,8 +35,8 @@ examples:
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);"></div>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
-          <div class="spectrum-ColorHandle-color" style="background-color: rgba(0, 0, 0, 1)"></div>
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: rgba(0, 0, 0, 1)">
+          <div class="spectrum-ColorHandle-color"></div>
           <svg class="spectrum-ColorLoupe">
             <!-- use ColorLoupe markup here -->
           </svg>
@@ -53,8 +53,8 @@ examples:
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle is-disabled">
-          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle is-disabled" style="--spectrum-picked-color: rgb(255, 0, 0)">
+          <div class="spectrum-ColorHandle-color"></div>
           <svg class="spectrum-ColorLoupe">
             <!-- use ColorLoupe markup here -->
           </svg>
@@ -71,8 +71,8 @@ examples:
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to bottom, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
-          <div class="spectrum-ColorHandle-color" style="background-color: rgb(255, 0, 0)"></div>
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: rgb(255, 0, 0)">
+          <div class="spectrum-ColorHandle-color"></div>
           <svg class="spectrum-ColorLoupe">
             <!-- use ColorLoupe markup here -->
           </svg>
@@ -89,8 +89,8 @@ examples:
           <canvas class="spectrum-ColorSlider-gradient" role="presentation"></canvas>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
-          <div class="spectrum-ColorHandle-color" style="background-color: #8ED6FF"></div>
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: #8ED6FF">
+          <div class="spectrum-ColorHandle-color"></div>
           <svg class="spectrum-ColorLoupe">
             <g transform="translate(1 1)">
               <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="#8ED6FF" />
@@ -125,8 +125,8 @@ examples:
           <img class="spectrum-ColorSlider-gradient" role="presentation" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAeCAIAAAAkbYJ/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyVpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjNBMTBENzk4QkQzMTFFQThDOTdDN0QyNDNGMUNFMzAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjNBMTBEN0E4QkQzMTFFQThDOTdDN0QyNDNGMUNFMzAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGM0ExMEQ3NzhCRDMxMUVBOEM5N0M3RDI0M0YxQ0UzMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGM0ExMEQ3ODhCRDMxMUVBOEM5N0M3RDI0M0YxQ0UzMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrmQ8p4AAADbSURBVHja7JFLDsMgDAWNc/9L9h7YiQ0Gou66rGaUWHxegDDN5SPiEm/Uo+3S3LPWIzEy2uqu1Vh1dy3q5TM/ks38yprJbGdXK38GdHwVs94sAtXNas9h/LIK2zE11jlHrI5ksa9a5r+mdJ3E8i+OveISurzCvldr3V/dp91XQLTPvWYdgbFCr/tcp81BqW/bzKxLkz2epxLzPWglS7Y1ERX4axCMYEAwIBgQDAgGBAOCEQwIBgQDggHBgGBAMIIBwYBgQDAgGBAMCAYEIxgQDAgGBAOC4RduAQYALiXYw9aNKvcAAAAASUVORK5CYII="></img>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle">
-          <div class="spectrum-ColorHandle-color" style="background-color: #ff00de"></div>
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: #ff00de">
+          <div class="spectrum-ColorHandle-color"></div>
           <svg class="spectrum-ColorLoupe">
             <g transform="translate(1 1)">
               <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="#ff00de" />
@@ -147,12 +147,12 @@ examples:
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%);"></div>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="left: 50%">
-          <div class="spectrum-ColorHandle-color" style="background-color: rgba(143, 254, 254, 1)"></div>
-          <svg class="spectrum-ColorLoupe is-open" style="--spectrum-loupe-color: rgba(143, 254, 254, 1);">
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: rgba(143, 254, 254, 1); left: 50%;">
+          <div class="spectrum-ColorHandle-color"></div>
+          <svg class="spectrum-ColorLoupe is-open">
             <defs>
-              <path id="spectrum-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
-              <path id="express-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" />
+              <path id="spectrum-inner-loupe" class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
+              <path id="express-inner-loupe" class="spectrum-ColorLoupe-inner" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" />
 
               <clipPath id="spectrum-loupe-clip">
                 <use xlink:href="#spectrum-inner-loupe" />
@@ -406,12 +406,12 @@ examples:
           <div class="spectrum-ColorSlider-gradient" role="presentation" style="background: linear-gradient(to right, rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 0, 0.5) 17%, rgba(0, 255, 0, 0.5) 33%, rgba(0, 255, 255, 0.5) 50%, rgba(0, 0, 255, 0.5) 67%, rgba(255, 0, 255, 0.5) 83%, rgba(255, 0, 0, 0.5) 100%);"></div>
         </div>
 
-        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="left: 50%">
-          <div class="spectrum-ColorHandle-color" style="background-color: rgba(143, 254, 254, 0.5)"></div>
-          <svg class="spectrum-ColorLoupe is-open" style="--spectrum-loupe-color: rgba(143, 254, 254, 0.5);">
+        <div class="spectrum-ColorHandle spectrum-ColorSlider-handle" style="--spectrum-picked-color: rgba(143, 254, 254, 0.5); left: 50%">
+          <div class="spectrum-ColorHandle-color"></div>
+          <svg class="spectrum-ColorLoupe is-open">
             <defs>
-              <path id="spectrum-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
-              <path id="express-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" />
+              <path id="spectrum-inner-loupe" class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
+              <path id="express-inner-loupe" class="spectrum-ColorLoupe-inner" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" />
 
               <clipPath id="spectrum-loupe-clip">
                 <use xlink:href="#spectrum-inner-loupe" />
