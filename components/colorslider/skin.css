@@ -1,9 +1,3 @@
-/* hack: don't complain about being undefined */
-.🤫 {
-  --spectrum-colorcontrol-checkerboard-light-color: 0;
-  --spectrum-colorcontrol-checkerboard-dark-color: 0;
-}
-
 .spectrum-ColorSlider {
   /* todo: fix this in DNA */
   --spectrum-colorslider-border-color: var(--spectrum-colorarea-border-color);
