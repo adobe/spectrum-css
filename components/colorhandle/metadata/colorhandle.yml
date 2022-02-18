@@ -26,13 +26,19 @@ examples:
     markup: |
       <div class="spectrum-ColorHandle" style="position: absolute; top: 75%; left: 50%;">
         <div class="spectrum-ColorHandle-color" style="background-color: rgba(255, 0, 0, 0.5)"></div>
-        <svg class="spectrum-ColorLoupe is-open" style="--spectrum-loupe-color: rgba(255, 0, 0, 0.5);">
+        <svg class="spectrum-ColorLoupe is-open" style="--spectrum-loupe-color: rgba(255, 0, 0, 0.5); position: absolute; top: 25%; left: 50%;">
           <defs>
-            <clipPath id="express-loupe-clip">
-              <path d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" transform="translate(14688 -17741)" fill="#fff" />
-            </clipPath>
+            <path id="spectrum-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" />
+            <path id="express-inner-loupe" class="spectrum-ColorLoupe-inner" fill="var(--spectrum-loupe-color)" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" />
+
             <clipPath id="spectrum-loupe-clip">
-              <path d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="#fff" />
+              <use xlink:href="#spectrum-inner-loupe" />
+            </clipPath>
+            <clipPath id="express-loupe-clip">
+              <use xlink:href="#express-inner-loupe" />
+            </clipPath>
+            <clipPath id="express-checkerboard-loupe-clip">
+              <use xlink:href="#express-inner-loupe" transform="translate(14688 -17741)" />
             </clipPath>
             <filter id="loupe-shadow" x="-16px" y="-16px" width="96" height="128" filterUnits="userSpaceOnUse">
               <feOffset input="SourceAlpha" />
@@ -47,214 +53,214 @@ examples:
               <g transform="translate(-353.999 -289)">
                 <g transform="translate(338 285)">
                   <g transform="translate(-338 -285)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-322 -285)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-306 -285)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-290 -285)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-338 -269)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-322 -269)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-306 -269)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-290 -269)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-338 -253)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-322 -253)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-306 -253)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-290 -253)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-338 -237)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-322 -237)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-306 -237)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-290 -237)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-338 -221)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-322 -221)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-306 -221)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                   <g transform="translate(-290 -221)">
-                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                    <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                    <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                    <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                   </g>
                 </g>
               </g>
             </g>
             <g filter="url(#loupe-shadow)">
-              <path class="spectrum-ColorLoupe-inner" d="M24,0A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z" fill="var(--spectrum-loupe-color)" />
+              <use xlink:href="#spectrum-inner-loupe" clip-path="url(#spectrum-loupe-clip)" />
             </g>
             <path class="spectrum-ColorLoupe-outer" d="M24,2A21.98,21.98,0,0,0,2,24c0,6.2,4,14.794,11.568,24.853A144.233,144.233,0,0,0,24,61.132,144.085,144.085,0,0,0,34.4,48.893C41.99,38.816,46,30.209,46,24A21.98,21.98,0,0,0,24,2m0-2A24,24,0,0,1,48,24c0,16.255-24,40-24,40S0,40.255,0,24A24,24,0,0,1,24,0Z"/>
           </g>
 
           <g transform="translate(-290 -235)" class="spectrum-ColorLoupe-express">
-            <g transform="translate(-58 -45)" clip-path="url(#express-loupe-clip)">
+            <g transform="translate(-58 -45)" clip-path="url(#express-checkerboard-loupe-clip)">
               <g transform="translate(338 285)">
                 <g transform="translate(-338 -285)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-322 -285)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-306 -285)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-290 -285)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-338 -269)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-322 -269)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-306 -269)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-290 -269)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-338 -253)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-322 -253)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-306 -253)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
                 <g transform="translate(-290 -253)">
-                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-global-color-static-gray-300)" />
-                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-global-color-static-white)" />
-                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-global-color-static-gray-300)" />
+                  <rect width="8" height="8" transform="translate(338 285)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
+                  <rect width="8" height="8" transform="translate(338 293)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 285)" fill="var(--spectrum-colorcontrol-checkerboard-light-color)" />
+                  <rect width="8" height="8" transform="translate(346 293)" fill="var(--spectrum-colorcontrol-checkerboard-dark-color)" />
                 </g>
               </g>
             </g>
             <g transform="matrix(1, 0, 0, 1, 290, 238)" filter="url(#loupe-shadow)">
-              <g transform="translate(14340 -18024)" fill="var(--spectrum-loupe-color)">
-                <path class="spectrum-ColorLoupe-inner" d="M-14330.692,18055.742A15.922,15.922,0,0,1-14334,18046a16,16,0,0,1,16-16,16,16,0,0,1,16,16,15.925,15.925,0,0,1-3.166,9.555c-.009.016-.018.029-.028.045-2.577,4.033-12.77,14.4-12.77,14.4S-14328.027,18059.484-14330.692,18055.742Z" stroke="none" />
+              <g transform="translate(14340 -18024)">
+                <use xlink:href="#express-inner-loupe" stroke-width="6" stroke="rgba(0, 0, 0, 0.15)" clip-path="url(#express-loupe-clip)" />
               </g>
             </g>
             <g transform="translate(14630 -17786)" fill="none">

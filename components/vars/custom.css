@@ -1,6 +1,8 @@
 .spectrum {
   --spectrum-colorloupe-express-visibility: none;
   --spectrum-colorloupe-spectrum-visibility: initial;
+  --spectrum-colorloupe-outer-border-color: transparent;
+  --spectrum-colorloupe-outer-border-size: 0;
 
   --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-static-size-25));
   --spectrum-colorhandle-outer-shadow-color: rgba(0, 0, 0, 0.42);
