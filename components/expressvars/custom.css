@@ -4,6 +4,9 @@
   --spectrum-colorloupe-outer-border-color: transparent;
   --spectrum-colorloupe-outer-border-size: 0;
 
+  --spectrum-colorloupe-outer-stroke-color: transparent;
+  --spectrum-colorloupe-outer-stroke-width: 0;
+
   --spectrum-colorhandle-size: var(--spectrum-global-dimension-size-250);
   --spectrum-colorhandle-background-offset: 0px;
   --spectrum-colorhandle-inner-shadow-color: rgba(0, 0, 0, 0.15);
