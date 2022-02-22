@@ -1,6 +1,8 @@
 /* hack: make sure we don't complain about this color being undefined */
 .🤫 {
   --spectrum-picked-color: 0;
+  --spectrum-colorloupe-outer-stroke-width: 0;
+  --spectrum-colorloupe-outer-stroke-color: 0;
 }
 
 .spectrum-ColorLoupe-outer {
@@ -10,6 +12,9 @@
 
 .spectrum-ColorLoupe-inner {
   fill: var(--spectrum-picked-color);
+
+  stroke: var(--spectrum-colorloupe-outer-stroke-color);
+  stroke-width: var(--spectrum-colorloupe-outer-stroke-width);
 }
 
 @media (forced-colors: active) {
