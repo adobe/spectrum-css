@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.13...@spectrum-css/colorslider@2.0.0)
+
+### ✨ Features
+
+* remove the need to add define hacks ([8c76829](https://github.com/adobe/spectrum-css/commit/8c76829))
+* use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
+
+
+### 🐛 Bug fixes
+
+* give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
+* make ColorHandle and ColorSlider use the right checkerboard colors ([f7abb74](https://github.com/adobe/spectrum-css/commit/f7abb74))
+* use the correct checkerboard background for Slider and Handle ([cfb2151](https://github.com/adobe/spectrum-css/commit/cfb2151))
+
+
+### 🛑 BREAKING CHANGES
+
+* You must define --spectrum-picked-color instead of setting background-color
+
+
+
+
+
 <a name="1.0.13"></a>
 ## 1.0.13
 🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.12...@spectrum-css/colorslider@1.0.13)

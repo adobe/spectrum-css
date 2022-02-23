@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/assetlist",
-  "version": "3.0.14",
+  "version": "3.0.15",
   "description": "The Spectrum CSS assetlist component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -18,13 +18,13 @@
   "peerDependencies": {
     "@spectrum-css/checkbox": "^3.0.11-beta.0",
     "@spectrum-css/icon": "^3.0.11-beta.0",
-    "@spectrum-css/vars": "^6.0.0"
+    "@spectrum-css/vars": "^7.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^3.0.14",
-    "@spectrum-css/component-builder": "^3.0.1",
-    "@spectrum-css/icon": "^3.0.14",
-    "@spectrum-css/vars": "^6.1.1",
+    "@spectrum-css/checkbox": "^3.0.15",
+    "@spectrum-css/component-builder": "^3.1.0",
+    "@spectrum-css/icon": "^3.0.15",
+    "@spectrum-css/vars": "^7.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

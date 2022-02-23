@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.1"></a>
+## 1.1.1
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@1.1.0...@spectrum-css/infieldbutton@1.1.1)
+
+**Note:** Version bump only for package @spectrum-css/infieldbutton
+
+
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0
 🗓 2022-02-16

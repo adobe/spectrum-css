@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.24"></a>
+# 1.0.0-beta.24
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.23...@spectrum-css/expressvars@1.0.0-beta.24)
+
+### ✨ Features
+
+* ability to add custom variables for Express/Spectrum ([50a4e04](https://github.com/adobe/spectrum-css/commit/50a4e04))
+* combine Express and Spectrum SVGs, toggle visibility with vars ([84f4b8b](https://github.com/adobe/spectrum-css/commit/84f4b8b))
+* update ColorLoupe and ColorSlider for Express ([490c00a](https://github.com/adobe/spectrum-css/commit/490c00a))
+* use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
+
+
+### 🐛 Bug fixes
+
+* correct checkerboard background color ([dc6c297](https://github.com/adobe/spectrum-css/commit/dc6c297))
+* correct checkerboard color, stroke around edges of loupe ([c327261](https://github.com/adobe/spectrum-css/commit/c327261))
+* give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
+
+
+### 🛑 BREAKING CHANGES
+
+* You must define --spectrum-picked-color instead of setting background-color
+
+
+
+
+
 <a name="1.0.0-beta.23"></a>
 # 1.0.0-beta.23
 🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.22...@spectrum-css/expressvars@1.0.0-beta.23)
