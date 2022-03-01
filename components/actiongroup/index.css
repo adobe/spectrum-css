@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionGroup {
   --spectrum-actiongroup-button-gap-reset: 0;
-  --spectrum-actiongroup-quiet-compact-button-gap: var(
-    --spectrum-global-dimension-size-25
-  );
 }
 
 /* hack: use var so it's not reported as unused */
@@ -31,14 +28,14 @@ governing permissions and limitations under the License.
   }
 
   &:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
-    margin-block-start: calc(-1 * var(--spectrum-actiongroup-button-gap-y));
+    margin-block-start: calc(-1 * var(--spectrum-actiongroup-actionbutton-gap-y));
 
     .spectrum-ActionGroup-item {
       flex-shrink: 0;
-      margin-block-start: var(--spectrum-actiongroup-button-gap-y);
+      margin-block-start: var(--spectrum-actiongroup-actionbutton-gap-y);
 
       &:not(:last-child) {
-        margin-inline-end: var(--spectrum-actiongroup-button-gap-x);
+        margin-inline-end: var(--spectrum-actiongroup-actionbutton-gap-x);
       }
     }
   }
@@ -49,20 +46,21 @@ governing permissions and limitations under the License.
   flex-direction: column;
 
   .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-    margin-block-start: var(--spectrum-actiongroup-button-gap-y);
+    margin-block-start: var(--spectrum-actiongroup-actionbutton-gap-y);
     margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
   }
 
   &.spectrum-ActionGroup--vertical {
-    margin-block-start: var(--spectrum-actiongroup-button-gap-y);
+    margin-block-start: var(--spectrum-actiongroup-actionbutton-gap-y);
     margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
   }
 }
 
 .spectrum-ActionGroup--compact {
+  gap: var(--spectrum-actiongroup-compact-actionbutton-gap);
   &.spectrum-ActionGroup--quiet {
     .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-      margin-inline-start: var(--spectrum-actiongroup-quiet-compact-button-gap);
+      margin-inline-start: var(--spectrum-actiongroup-quiet-compact-actionbutton-gap);
       margin-block-start: var(--spectrum-actiongroup-button-gap-reset);
     }
 
@@ -70,7 +68,7 @@ governing permissions and limitations under the License.
       .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
         margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
         margin-block-start: var(
-          --spectrum-actiongroup-quiet-compact-button-gap
+          --spectrum-actiongroup-quiet-compact-actionbutton-gap
         );
       }
     }
@@ -131,6 +129,7 @@ governing permissions and limitations under the License.
     }
 
     &.spectrum-ActionGroup--vertical {
+      gap: 0;
       .spectrum-ActionGroup-item {
         border-radius: 0;
 
