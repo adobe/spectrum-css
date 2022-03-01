@@ -179,10 +179,10 @@
   --spectrum-alias-toggle-background-color-down: var(--spectrum-global-color-gray-900);
   --spectrum-alias-toggle-background-color-key-focus: var(--spectrum-global-color-gray-800);
   --spectrum-alias-toggle-background-color: var(--spectrum-alias-toggle-background-color-default);
-  --spectrum-alias-toggle-background-color-emphasized-selected-default: var(--spectrum-semantic-cta-background-color-default);
-  --spectrum-alias-toggle-background-color-emphasized-selected-hover: var(--spectrum-semantic-cta-background-color-hover);
-  --spectrum-alias-toggle-background-color-emphasized-selected-down: var(--spectrum-semantic-cta-background-color-down);
-  --spectrum-alias-toggle-background-color-emphasized-selected-key-focus: var(--spectrum-semantic-cta-background-color-key-focus);
+  --spectrum-alias-toggle-background-color-emphasized-selected-default: var(--spectrum-global-color-blue-500);
+  --spectrum-alias-toggle-background-color-emphasized-selected-hover: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-toggle-background-color-emphasized-selected-down: var(--spectrum-global-color-blue-700);
+  --spectrum-alias-toggle-background-color-emphasized-selected-key-focus: var(--spectrum-global-color-blue-600);
   --spectrum-alias-toggle-background-color-emphasized-selected: var(--spectrum-alias-toggle-background-color-emphasized-selected-default);
   --spectrum-alias-toggle-border-color-default: var(--spectrum-global-color-gray-700);
   --spectrum-alias-toggle-border-color-hover: var(--spectrum-global-color-gray-800);
@@ -190,7 +190,7 @@
   --spectrum-alias-toggle-border-color-key-focus: var(--spectrum-global-color-gray-800);
   --spectrum-alias-toggle-border-color: var(--spectrum-alias-toggle-border-color-default);
   --spectrum-alias-toggle-icon-color-selected: var(--spectrum-global-color-gray-75);
-  --spectrum-alias-toggle-icon-color-emphasized-selected: var(--spectrum-alias-component-icon-color-emphasized-selected-default);
+  --spectrum-alias-toggle-icon-color-emphasized-selected: var(--spectrum-global-color-gray-75);
   --spectrum-alias-button-primary-background-color-default: var(--spectrum-alias-background-color-transparent);
   --spectrum-alias-button-primary-background-color-hover: var(--spectrum-global-color-gray-800);
   --spectrum-alias-button-primary-background-color-down: var(--spectrum-global-color-gray-900);

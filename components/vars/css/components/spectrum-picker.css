@@ -384,7 +384,7 @@
   --spectrum-picker-s-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-s-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-s-texticon-popover-offset-y: var(--spectrum-global-dimension-size-75);
-  --spectrum-picker-s-texticon-popover-offset-x: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-s-texticon-popover-offset-x: 0;
   --spectrum-picker-s-texticon-popover-max-height: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-texticon-popover-max-width: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -784,7 +784,7 @@
   --spectrum-picker-s-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-s-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-s-textonly-popover-offset-y: var(--spectrum-global-dimension-size-75);
-  --spectrum-picker-s-textonly-popover-offset-x: var(--spectrum-global-dimension-size-115);
+  --spectrum-picker-s-textonly-popover-offset-x: 0;
   --spectrum-picker-s-textonly-popover-max-height: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-textonly-popover-max-width: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-textonly-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -1184,7 +1184,7 @@
   --spectrum-picker-s-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-s-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-85);
   --spectrum-picker-s-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-size-75);
-  --spectrum-picker-s-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-85);
+  --spectrum-picker-s-textthumbnail-popover-offset-x: 0;
   --spectrum-picker-s-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-1800);
   --spectrum-picker-s-textthumbnail-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -1588,6 +1588,7 @@
   --spectrum-picker-m-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-m-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-picker-m-texticon-popover-offset-y: var(--spectrum-global-dimension-size-75);
+  --spectrum-picker-m-texticon-popover-offset-x: 0;
   --spectrum-picker-m-texticon-popover-max-height: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-texticon-popover-max-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -1990,7 +1991,7 @@
   --spectrum-picker-m-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-m-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-picker-m-textonly-popover-offset-y: var(--spectrum-global-dimension-size-75);
-  --spectrum-picker-m-textonly-popover-offset-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-picker-m-textonly-popover-offset-x: 0;
   --spectrum-picker-m-textonly-popover-max-height: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-textonly-popover-max-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-textonly-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -2394,6 +2395,7 @@
   --spectrum-picker-m-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-m-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-100);
   --spectrum-picker-m-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-size-75);
+  --spectrum-picker-m-textthumbnail-popover-offset-x: 0;
   --spectrum-picker-m-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-picker-m-textthumbnail-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -2790,7 +2792,7 @@
   --spectrum-picker-l-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-l-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-l-texticon-popover-offset-y: var(--spectrum-global-dimension-size-85);
-  --spectrum-picker-l-texticon-popover-offset-x: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-l-texticon-popover-offset-x: 0;
   --spectrum-picker-l-texticon-popover-max-height: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-texticon-popover-max-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -3188,7 +3190,7 @@
   --spectrum-picker-l-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-l-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-l-textonly-popover-offset-y: var(--spectrum-global-dimension-size-85);
-  --spectrum-picker-l-textonly-popover-offset-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-picker-l-textonly-popover-offset-x: 0;
   --spectrum-picker-l-textonly-popover-max-height: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-textonly-popover-max-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-textonly-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -3586,7 +3588,7 @@
   --spectrum-picker-l-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-l-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-115);
   --spectrum-picker-l-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-size-85);
-  --spectrum-picker-l-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-160);
+  --spectrum-picker-l-textthumbnail-popover-offset-x: 0;
   --spectrum-picker-l-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-3000);
   --spectrum-picker-l-textthumbnail-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -3990,7 +3992,7 @@
   --spectrum-picker-xl-texticon-ui-icon-rotate: 90deg;
   --spectrum-picker-xl-texticon-ui-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-xl-texticon-popover-offset-y: var(--spectrum-global-dimension-size-100);
-  --spectrum-picker-xl-texticon-popover-offset-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-picker-xl-texticon-popover-offset-x: 0;
   --spectrum-picker-xl-texticon-popover-max-height: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-texticon-popover-max-width: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-texticon-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -4394,7 +4396,7 @@
   --spectrum-picker-xl-textonly-ui-icon-rotate: 90deg;
   --spectrum-picker-xl-textonly-ui-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-xl-textonly-popover-offset-y: var(--spectrum-global-dimension-size-100);
-  --spectrum-picker-xl-textonly-popover-offset-x: var(--spectrum-global-dimension-size-225);
+  --spectrum-picker-xl-textonly-popover-offset-x: 0;
   --spectrum-picker-xl-textonly-popover-max-height: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-textonly-popover-max-width: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-textonly-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
@@ -4798,7 +4800,7 @@
   --spectrum-picker-xl-textthumbnail-ui-icon-rotate: 90deg;
   --spectrum-picker-xl-textthumbnail-ui-icon-gap: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-xl-textthumbnail-popover-offset-y: var(--spectrum-global-dimension-size-100);
-  --spectrum-picker-xl-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-185);
+  --spectrum-picker-xl-textthumbnail-popover-offset-x: 0;
   --spectrum-picker-xl-textthumbnail-popover-max-height: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-textthumbnail-popover-max-width: var(--spectrum-global-dimension-size-3600);
   --spectrum-picker-xl-textthumbnail-focusring-border-width: var(--spectrum-alias-focus-ring-size-small);
