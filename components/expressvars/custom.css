@@ -20,4 +20,8 @@
 
   --spectrum-colorcontrol-checkerboard-light-color: var(--spectrum-global-color-static-white);
   --spectrum-colorcontrol-checkerboard-dark-color: var(--spectrum-global-color-static-gray-200);
+
+  /* no slider gap */
+  --spectrum-slider-m-handle-gap: 0px;
+  --spectrum-slider-m-handle-border-radius: 100%;
 }

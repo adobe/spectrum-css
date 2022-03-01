@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @import "../vars/css/components/spectrum-slider.css";
+@import "../vars/custom.css";
 
 .spectrum-Slider {
   @remapvars {
@@ -39,7 +40,7 @@ governing permissions and limitations under the License.
     var(--spectrum-slider-handle-width) / -2
   );
 
-  --spectrum-slider-track-handleoffset: calc(var(--spectrum-slider-handle-gap));
+  --spectrum-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
   --spectrum-slider-track-middle-handleoffset: calc(
     var(--spectrum-slider-handle-gap) +
       calc(var(--spectrum-slider-handle-width) / 2)
