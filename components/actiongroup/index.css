@@ -28,14 +28,14 @@ governing permissions and limitations under the License.
   }
 
   &:not(.spectrum-ActionGroup--vertical)&:not(.spectrum-ActionGroup--compact) {
-    margin-block-start: calc(-1 * var(--spectrum-actiongroup-actionbutton-gap-y));
+    margin-block-start: calc(-1 * var(--spectrum-actiongroup-button-gap-y));
 
     .spectrum-ActionGroup-item {
       flex-shrink: 0;
-      margin-block-start: var(--spectrum-actiongroup-actionbutton-gap-y);
+      margin-block-start: var(--spectrum-actiongroup-button-gap-y);
 
       &:not(:last-child) {
-        margin-inline-end: var(--spectrum-actiongroup-actionbutton-gap-x);
+        margin-inline-end: var(--spectrum-actiongroup-button-gap-x);
       }
     }
   }
@@ -46,21 +46,21 @@ governing permissions and limitations under the License.
   flex-direction: column;
 
   .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-    margin-block-start: var(--spectrum-actiongroup-actionbutton-gap-y);
+    margin-block-start: var(--spectrum-actiongroup-button-gap-y);
     margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
   }
 
   &.spectrum-ActionGroup--vertical {
-    margin-block-start: var(--spectrum-actiongroup-actionbutton-gap-y);
+    margin-block-start: var(--spectrum-actiongroup-button-gap-y);
     margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
   }
 }
 
 .spectrum-ActionGroup--compact {
-  gap: var(--spectrum-actiongroup-compact-actionbutton-gap);
+  gap: var(--spectrum-actiongroup-compact-button-gap);
   &.spectrum-ActionGroup--quiet {
     .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
-      margin-inline-start: var(--spectrum-actiongroup-quiet-compact-actionbutton-gap);
+      margin-inline-start: var(--spectrum-actiongroup-quiet-compact-button-gap);
       margin-block-start: var(--spectrum-actiongroup-button-gap-reset);
     }
 
@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
       .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
         margin-inline-start: var(--spectrum-actiongroup-button-gap-reset);
         margin-block-start: var(
-          --spectrum-actiongroup-quiet-compact-actionbutton-gap
+          --spectrum-actiongroup-quiet-compact-button-gap
         );
       }
     }
