@@ -335,6 +335,7 @@
   --spectrum-alias-tag-focusring-size: var(--spectrum-global-dimension-size-25);
   --spectrum-alias-tag-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-alias-tag-focusring-gap-selected: var(--spectrum-global-dimension-size-25);
+  --spectrum-alias-checkbox-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-alias-colorloupe-width: var(--spectrum-global-dimension-static-size-600);
   --spectrum-alias-colorloupe-height: var(--spectrum-global-dimension-static-size-800);
 }
