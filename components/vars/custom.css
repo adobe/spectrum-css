@@ -15,4 +15,6 @@
 
   --spectrum-colorcontrol-checkerboard-light-color: var(--spectrum-global-color-static-white);
   --spectrum-colorcontrol-checkerboard-dark-color: var(--spectrum-global-color-static-gray-300);
+
+  --spectrum-slider-m-track-inside-border-radius: var(--spectrum-slider-m-track-border-radius);
 }
