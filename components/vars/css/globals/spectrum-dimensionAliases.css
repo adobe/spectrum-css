@@ -277,6 +277,12 @@
   --spectrum-alias-border-radius-medium: var(--spectrum-global-dimension-size-100);
   --spectrum-alias-border-radius-large: var(--spectrum-global-dimension-size-200);
   --spectrum-alias-border-radius-xlarge: var(--spectrum-global-dimension-size-300);
+  --spectrum-alias-focus-ring-border-radius-xsmall: var(--spectrum-global-dimension-size-50);
+  --spectrum-alias-focus-ring-border-radius-small: var(--spectrum-global-dimension-size-75);
+  --spectrum-alias-focus-ring-border-radius-regular: var(--spectrum-global-dimension-size-100);
+  --spectrum-alias-focus-ring-border-radius-medium: var(--spectrum-global-dimension-size-150);
+  --spectrum-alias-focus-ring-border-radius-large: var(--spectrum-global-dimension-size-250);
+  --spectrum-alias-focus-ring-border-radius-xlarge: var(--spectrum-global-dimension-size-350);
   --spectrum-alias-single-line-height: var(--spectrum-global-dimension-size-400);
   --spectrum-alias-single-line-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-alias-workflow-icon-size-s: var(--spectrum-global-dimension-size-200);
@@ -335,7 +341,6 @@
   --spectrum-alias-tag-focusring-size: var(--spectrum-global-dimension-size-25);
   --spectrum-alias-tag-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-alias-tag-focusring-gap-selected: var(--spectrum-global-dimension-size-25);
-  --spectrum-alias-checkbox-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-alias-colorloupe-width: var(--spectrum-global-dimension-static-size-600);
   --spectrum-alias-colorloupe-height: var(--spectrum-global-dimension-static-size-800);
 }
