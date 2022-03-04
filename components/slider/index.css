@@ -11,7 +11,6 @@ governing permissions and limitations under the License.
 */
 
 @import "../vars/css/components/spectrum-slider.css";
-@import "../vars/custom.css";
 
 .spectrum-Slider {
   @remapvars {
@@ -63,12 +62,11 @@ governing permissions and limitations under the License.
 
   --spectrum-slider-ramp-margin-top: 0;
   --spectrum-slider-range-track-reset: 0;
-  --spectrum-slide-label-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-slide-label-text-line-height: var(
-    --spectrum-global-font-line-height-small
-  );
   --spectrum-slider-label-margin-bottom: -3px;
   --spectrum-slider-label-gap-x: var(--spectrum-alias-item-control-gap-m);
+  --spectrum-slider-label-text-line-height: var(
+    --spectrum-global-font-line-height-small
+  );
 }
 
 .spectrum-Slider {
@@ -349,8 +347,8 @@ governing permissions and limitations under the License.
 
   padding-block-start: var(--spectrum-fieldlabel-m-padding-top);
 
-  font-size: var(--spectrum-slide-label-text-size);
-  line-height: var(--spectrum-slide-label-text-line-height);
+  font-size: var(--spectrum-slider-label-text-size);
+  line-height: var(--spectrum-slider-label-text-line-height);
   margin-block-end: var(--spectrum-slider-label-margin-bottom);
 }
 
@@ -412,8 +410,8 @@ governing permissions and limitations under the License.
     margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
       calc(var(--spectrum-slider-label-gap-x) * -1);
 
-    font-size: var(--spectrum-slide-label-text-size);
-    line-height: var(--spectrum-slide-label-text-line-height);
+    font-size: var(--spectrum-slider-label-text-size);
+    line-height: var(--spectrum-slider-label-text-line-height);
   }
 
   &:first-of-type,
