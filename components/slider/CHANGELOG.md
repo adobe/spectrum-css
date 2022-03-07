@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# 3.1.0
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.0.15...@spectrum-css/slider@3.1.0)
+
+### ✨ Features
+
+* fixup other Express Slider color an size changes ([2fa1ce5](https://github.com/adobe/spectrum-css/commit/2fa1ce5))
+
+
+### 🐛 Bug fixes
+
+* support Express Slider ([bc42722](https://github.com/adobe/spectrum-css/commit/bc42722))
+* updated based on design review ([be41d62](https://github.com/adobe/spectrum-css/commit/be41d62))
+
+
+
+
+
 <a name="3.0.15"></a>
 ## 3.0.15
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.0.14...@spectrum-css/slider@3.0.15)

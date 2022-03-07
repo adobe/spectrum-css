@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.26"></a>
+# 1.0.0-beta.26
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.25...@spectrum-css/expressvars@1.0.0-beta.26)
+
+### ✨ Features
+
+* fixup other Express Slider color an size changes ([2fa1ce5](https://github.com/adobe/spectrum-css/commit/2fa1ce5))
+
+
+### 🐛 Bug fixes
+
+* support Express Slider ([bc42722](https://github.com/adobe/spectrum-css/commit/bc42722))
+* updated based on design review ([be41d62](https://github.com/adobe/spectrum-css/commit/be41d62))
+
+
+
+
+
 <a name="1.0.0-beta.25"></a>
 # 1.0.0-beta.25
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.24...@spectrum-css/expressvars@1.0.0-beta.25)
