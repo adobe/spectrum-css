@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/helptext",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "The Spectrum CSS helptext component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.1.0",
-    "@spectrum-css/icon": "^3.0.15",
-    "@spectrum-css/vars": "^7.0.0",
+    "@spectrum-css/icon": "^3.0.16",
+    "@spectrum-css/vars": "^7.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

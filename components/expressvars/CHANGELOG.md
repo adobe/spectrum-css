@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.25"></a>
+# 1.0.0-beta.25
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.24...@spectrum-css/expressvars@1.0.0-beta.25)
+
+### 🐛 Bug fixes
+
+* correct loupe outer ([fd9f01c](https://github.com/adobe/spectrum-css/commit/fd9f01c))
+
+
+
+
+
 <a name="1.0.0-beta.24"></a>
 # 1.0.0-beta.24
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.23...@spectrum-css/expressvars@1.0.0-beta.24)

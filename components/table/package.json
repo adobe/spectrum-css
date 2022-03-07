@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/table",
-  "version": "4.0.11",
+  "version": "4.0.12",
   "description": "The Spectrum CSS table component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -20,10 +20,10 @@
     "@spectrum-css/vars": "^7.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^3.0.15",
+    "@spectrum-css/checkbox": "^3.0.16",
     "@spectrum-css/component-builder": "^3.1.0",
-    "@spectrum-css/icon": "^3.0.15",
-    "@spectrum-css/vars": "^7.0.0",
+    "@spectrum-css/icon": "^3.0.16",
+    "@spectrum-css/vars": "^7.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
