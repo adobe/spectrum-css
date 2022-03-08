@@ -65,3 +65,11 @@ governing permissions and limitations under the License.
 .spectrum-ProgressBar-percentage {
   color: var(--spectrum-fieldlabel-m-text-color);
 }
+@media (forced-colors: active) {
+  .spectrum-ProgressBar-track {
+    forced-color-adjust: none;
+    --spectrum-progressbar-m-track-fill-color: ButtonText;
+    --spectrum-progressbar-m-track-color: ButtonFace;
+    border: 1px solid ButtonText;
+  }
+}
