@@ -79,3 +79,16 @@ governing permissions and limitations under the License.
 .spectrum-StatusLight--purple::before {
   background-color: var(--spectrum-statuslight-m-purple-dot-color);
 }
+
+@media (forced-colors: active) {
+  .spectrum-StatusLight {
+    forced-color-adjust: none;
+    --spectrum-statuslight-m-info-text-color: CanvasText;
+    --spectrum-statuslight-m-neutral-text-color: CanvasText;
+    --spectrum-statuslight-m-info-text-color-disabled: GrayText;
+    --spectrum-statuslight-m-info-dot-color-disabled: GrayText;
+    &:before { 
+      border: 1px solid ButtonText;
+    }
+  }
+}
