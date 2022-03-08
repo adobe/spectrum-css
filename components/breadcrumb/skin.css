@@ -72,3 +72,38 @@ governing permissions and limitations under the License.
     }
   }
 }
+@media (forced-colors: active) {
+  .spectrum-Breadcrumbs-item {
+    --spectrum-breadcrumb-m-item-background-color-drop: Canvas;
+    --spectrum-breadcrumb-m-item-border-color-drop: CanvasText;
+    --spectrum-breadcrumb-m-item-border-color-key-focus: CanvasText;
+    --spectrum-breadcrumb-m-item-text-color: LinkText;
+    --spectrum-breadcrumb-m-item-text-color-disabled: GrayText;
+    --spectrum-breadcrumb-m-item-text-color-down: CanvasText;
+    --spectrum-breadcrumb-m-item-text-color-drop: LinkText;
+    --spectrum-breadcrumb-m-item-text-color-hover: LinkText;
+    --spectrum-breadcrumb-m-item-text-color-key-focus: LinkText;
+    --spectrum-breadcrumb-m-separator-icon-color: CanvasText;
+    /* Override the selected to be the Standard Text color */
+    &.is-selected,
+    &:last-of-type {
+      color: var(--spectrum-breadcrumb-m-item-text-color-down);
+      .spectrum-Breadcrumbs-itemLink {
+        &:hover {
+          color: var(--spectrum-breadcrumb-m-item-text-color-down);
+        }
+      }
+    }
+    /* Make links stay link color when clicked and disabled links remain disabled color */
+    .spectrum-Breadcrumbs-itemLink {
+      &:active {
+        color: var(--spectrum-breadcrumb-m-item-text-color);
+      }
+      &.is-disabled {
+        &:active {
+          color: var(--spectrum-breadcrumb-m-item-text-color-disabled);
+        }
+      }
+    }
+  }
+}
