@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# 1.2.0
+🗓 2022-03-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.1.14...@spectrum-css/picker@1.2.0)
+
+### ✨ Features
+
+* add support for express picker; closes [#1245](https://github.com/adobe/spectrum-css/issues/1245) ([b07bb3d](https://github.com/adobe/spectrum-css/commit/b07bb3d))
+
+
+### 🐛 Bug fixes
+
+* put back selector I removed accidentally ([6ded29e](https://github.com/adobe/spectrum-css/commit/6ded29e))
+
+
+
+
+
 <a name="1.1.14"></a>
 ## 1.1.14
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.1.13...@spectrum-css/picker@1.1.14)

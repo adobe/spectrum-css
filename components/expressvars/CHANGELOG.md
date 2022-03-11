@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.27"></a>
+# 1.0.0-beta.27
+🗓 2022-03-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.26...@spectrum-css/expressvars@1.0.0-beta.27)
+
+### 🐛 Bug fixes
+
+* added express field label sizes; closes [#1367](https://github.com/adobe/spectrum-css/issues/1367) ([6344ab2](https://github.com/adobe/spectrum-css/commit/6344ab2))
+
+
+
+
+
 <a name="1.0.0-beta.26"></a>
 # 1.0.0-beta.26
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.25...@spectrum-css/expressvars@1.0.0-beta.26)
