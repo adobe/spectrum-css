@@ -47,7 +47,7 @@ governing permissions and limitations under the License.
     cursor: default;
   }
 
-  . {
+  .spectrum-Picker-icon {
     flex-shrink: 0;
 
     /* todo: In theory, this is right -- there should be more gap with an icon -- but in practice, it does not match */
