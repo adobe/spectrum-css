@@ -729,3 +729,44 @@ governing permissions and limitations under the License.
     }
   }
 }
+/* Only override things where the defaults don't work */
+@media (forced-colors: active) {
+  .spectrum-Button {
+    --spectrum-button-m-accent-fill-texticon-background-color-down: Highlight;
+    --spectrum-button-m-accent-fill-texticon-background-color-hover: Highlight;
+    --spectrum-button-m-accent-fill-texticon-background-color-key-focus: Highlight;
+    --spectrum-button-m-accent-fill-texticon-background-color: ButtonText;
+    --spectrum-button-m-accent-fill-texticon-icon-color: ButtonFace;
+    --spectrum-button-m-accent-fill-texticon-text-color: ButtonFace;
+    --spectrum-button-m-accent-outline-texticon-background-color: ButtonFace;
+    --spectrum-button-m-accent-outline-texticon-background-color-down: ButtonFace;
+    --spectrum-button-m-accent-outline-texticon-background-color-hover: ButtonFace;
+    --spectrum-button-m-accent-outline-texticon-background-color-key-focus: ButtonFace;
+    --spectrum-button-m-accent-outline-texticon-border-color: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-border-color-down: Highlight;
+    --spectrum-button-m-accent-outline-texticon-border-color-hover: Highlight;
+    --spectrum-button-m-accent-outline-texticon-border-color-key-focus: Highlight;
+    --spectrum-button-m-accent-outline-texticon-icon-color: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-icon-color-down: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-icon-color-hover: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-icon-color-key-focus: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-text-color: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-text-color-down: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-text-color-hover: ButtonText;
+    --spectrum-button-m-accent-outline-texticon-text-color-key-focus: ButtonText;
+  }
+  .spectrum-Button {
+    &:focus-ring,
+    &.is-focused {
+      &:after {
+        forced-color-adjust:none;
+        box-shadow: 0 0 0 var(--spectrum-button-primary-fill-texticon-focus-ring-size) ButtonText;
+      }
+    }
+  }
+  .spectrum-Button--accent {
+    .spectrum-Button-label {
+      forced-color-adjust:none;
+    }
+  }
+}
