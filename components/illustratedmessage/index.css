@@ -34,19 +34,22 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-IllustratedMessage-heading {
+  color: var(--spectrum-illustratedmessage-heading-color);
+  font-size: var(--spectrum-illustratedmessage-heading-font-size);
+  font-weight: var(--spectrum-illustratedmessage-heading-font-weight);
   max-inline-size: var(--spectrum-illustrated-message-heading-max-width);
   margin: var(--spectrum-illustrated-message-heading-margin);
 }
 
 .spectrum-IllustratedMessage-description {
+  color: var(--spectrum-illustratedmessage-description-color);
+  font-style: var(--spectrum-illustratedmessage-description-font-style);
   max-inline-size: var(--spectrum-illustrated-message-description-max-width);
   margin: var(--spectrum-illustrated-message-description-margin);
-
-  font-style: italic;
 }
 
 .spectrum-IllustratedMessage--cta {
   .spectrum-IllustratedMessage-description {
-    font-style: normal;
+    font-style: var(--spectrum-illustratedmessage-description-font-style);
   }
 }
