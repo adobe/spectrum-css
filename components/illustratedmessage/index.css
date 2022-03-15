@@ -11,11 +11,11 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-IllustratedMessage {
-  --spectrum-illustrated-message-description-max-width: 500px;
-  --spectrum-illustrated-message-heading-max-width: 500px;
-  --spectrum-illustrated-message-illustration-margin-bottom: 24px;
-  --spectrum-illustrated-message-heading-margin: 0;
-  --spectrum-illustrated-message-description-margin: 4px 0 0 0;
+  --spectrum-illustratedmessage-description-max-width: 500px;
+  --spectrum-illustratedmessage-heading-max-width: 500px;
+  --spectrum-illustratedmessage-illustration-margin-bottom: 24px;
+  --spectrum-illustratedmessage-heading-margin: 0;
+  --spectrum-illustratedmessage-description-margin: 4px 0 0 0;
 }
 
 .spectrum-IllustratedMessage {
@@ -30,22 +30,22 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-IllustratedMessage-illustration {
-  margin-block-end: var(--spectrum-illustrated-message-illustration-margin-bottom);
+  margin-block-end: var(--spectrum-illustratedmessage-illustration-margin-bottom);
 }
 
 .spectrum-IllustratedMessage-heading {
   color: var(--spectrum-illustratedmessage-heading-color);
   font-size: var(--spectrum-illustratedmessage-heading-font-size);
   font-weight: var(--spectrum-illustratedmessage-heading-font-weight);
-  max-inline-size: var(--spectrum-illustrated-message-heading-max-width);
-  margin: var(--spectrum-illustrated-message-heading-margin);
+  max-inline-size: var(--spectrum-illustratedmessage-heading-max-width);
+  margin: var(--spectrum-illustratedmessage-heading-margin);
 }
 
 .spectrum-IllustratedMessage-description {
   color: var(--spectrum-illustratedmessage-description-color);
   font-style: var(--spectrum-illustratedmessage-description-font-style);
-  max-inline-size: var(--spectrum-illustrated-message-description-max-width);
-  margin: var(--spectrum-illustrated-message-description-margin);
+  max-inline-size: var(--spectrum-illustratedmessage-description-max-width);
+  margin: var(--spectrum-illustratedmessage-description-margin);
 }
 
 .spectrum-IllustratedMessage--cta {
