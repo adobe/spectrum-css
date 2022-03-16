@@ -2,11 +2,11 @@
   /* size is the same on desktop and mobile */
   --spectrum-colorloupe-width-adjusted: calc(
     var(--spectrum-colorloupe-width) +
-      var(--spectrum-colorhandle-inner-border-size) * 2
+      var(--spectrum-global-dimension-static-size-100) /* room for shadow */
   );
   --spectrum-colorloupe-height-adjusted: calc(
     var(--spectrum-colorloupe-height) +
-      var(--spectrum-colorhandle-inner-border-size) * 2
+      var(--spectrum-global-dimension-static-size-100) /* room for shadow */
   );
 
   /* Distance between the loupe and the handle */
@@ -42,4 +42,12 @@
 
 .spectrum-ColorLoupe-outer {
   stroke-width: var(--spectrum-colorloupe-outer-border-size);
+}
+
+.spectrum-ColorLoupe-express {
+  display: var(--spectrum-colorloupe-express-visibility);
+}
+
+.spectrum-ColorLoupe-spectrum {
+  display: var(--spectrum-colorloupe-spectrum-visibility);
 }

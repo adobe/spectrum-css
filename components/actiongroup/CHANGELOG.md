@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.19"></a>
+## 1.0.19
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.18...@spectrum-css/actiongroup@1.0.19)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
+<a name="1.0.18"></a>
+## 1.0.18
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.17...@spectrum-css/actiongroup@1.0.18)
+
+### 🐛 Bug fixes
+
+* **actiongroup:** update tokens & utilize gap property ([76db1be](https://github.com/adobe/spectrum-css/commit/76db1be)), closes [#1392](https://github.com/adobe/spectrum-css/issues/1392)
+* begin actiongroup update ([1f5b266](https://github.com/adobe/spectrum-css/commit/1f5b266))
+
+
+
+
+
+<a name="1.0.17"></a>
+## 1.0.17
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.16...@spectrum-css/actiongroup@1.0.17)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
+<a name="1.0.16"></a>
+## 1.0.16
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.15...@spectrum-css/actiongroup@1.0.16)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
+<a name="1.0.15"></a>
+## 1.0.15
+🗓 2022-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.14...@spectrum-css/actiongroup@1.0.15)
+
+### 🐛 Bug fixes
+
+* correct Actiongroup focus ring ([#1368](https://github.com/adobe/spectrum-css/issues/1368)) ([1c0af74](https://github.com/adobe/spectrum-css/commit/1c0af74))
+
+
+
+
+
+<a name="1.0.14"></a>
+## 1.0.14
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.13...@spectrum-css/actiongroup@1.0.14)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
 <a name="1.0.13"></a>
 ## 1.0.13
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.11...@spectrum-css/actiongroup@1.0.13)

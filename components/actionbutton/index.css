@@ -69,6 +69,7 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-textonly-padding-right-adjusted: calc(var(--spectrum-actionbutton-textonly-padding-right) - var(--spectrum-actionbutton-textonly-border-size));
   --spectrum-actionbutton-icononly-padding-left-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-left) - var(--spectrum-actionbutton-icononly-border-size));
   --spectrum-actionbutton-icononly-padding-right-adjusted: calc(var(--spectrum-actionbutton-icononly-padding-right) - var(--spectrum-actionbutton-icononly-border-size));
+  --spectrum-actionbutton-focus-ring-border-radius-adjusted: calc(var(--spectrum-actionbutton-quiet-textonly-border-radius) + var(--spectrum-actionbutton-focus-ring-gap));
 }
 
 a.spectrum-ActionButton {
@@ -162,7 +163,7 @@ a.spectrum-ActionButton {
     bottom: 0;
     top: 0;
     margin: calc((var(--spectrum-actionbutton-focus-ring-gap) + var(--spectrum-actionbutton-textonly-border-size)) * -1);
-    border-radius: calc(var(--spectrum-actionbutton-quiet-textonly-border-radius) + var(--spectrum-actionbutton-focus-ring-gap));
+    border-radius: var(--spectrum-actionbutton-focus-ring-border-radius-adjusted);
     transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 

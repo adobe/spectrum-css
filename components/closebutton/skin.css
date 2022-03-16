@@ -10,7 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* begin generated CSS for closebutton */
 .spectrum-CloseButton {
   border-radius: var(--spectrum-CloseButton-size);
   justify-content: center;
@@ -112,45 +111,45 @@ governing permissions and limitations under the License.
       background-color: transparent;
 
       &:hover {
-        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40));
+        background-color: var(--spectrum-closebutton-m-black-background-color-hover);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-black-uiicon-color-hover);
         }
       }
 
       &:active {
-        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-55));
+        background-color: var(--spectrum-closebutton-m-black-background-color-down);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-black-uiicon-color-down);
         }
       }
 
       &:focus-visible {
-        background-color: var(--spectrum-global-color-static-black);
+        background-color: var(--spectrum-closebutton-m-black-background-color-mouse-focus);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-black-uiicon-color-mouse-focus);
         }
       }
 
       &.is-keyboardFocused {
-        background-color: var(--spectrum-global-color-static-black);
+        background-color: var(--spectrum-closebutton-m-black-background-color-key-focus);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-black-uiicon-color-key-focus);
         }
       }
 
       .spectrum-CloseButton-UIIcon {
-        color: var(--spectrum-global-color-static-black)
+        color: var(--spectrum-closebutton-m-black-uiicon-color);
       }
     }
 
     &:disabled {
       .spectrum-CloseButton-UIIcon {
-        color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-40))
+        color: var(--spectrum-closebutton-m-black-uiicon-color-disabled);
       }
     }
   }
@@ -160,45 +159,45 @@ governing permissions and limitations under the License.
       background-color: transparent;
 
       &:hover {
-        background-color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40));
+        background-color: var(--spectrum-closebutton-m-white-background-color-hover);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-white-uiicon-color-hover);
         }
       }
 
       &:active {
-        background-color: rgba(var(--spectrum-global-color-static-black-rgb), var(--spectrum-global-color-opacity-55));
+        background-color: var(--spectrum-closebutton-m-white-background-color-down);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-white-uiicon-color-down);
         }
       }
 
       &:focus-visible {
-        background-color: var(--spectrum-global-color-static-white);
+        background-color: var(--spectrum-closebutton-m-white-background-color-mouse-focus);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-white-uiicon-color-mouse-focus);
         }
       }
 
       &.is-keyboardFocused {
-        background-color: var(--spectrum-global-color-static-white);
+        background-color: var(--spectrum-closebutton-m-white-background-color-key-focus);
 
         .spectrum-CloseButton-UIIcon {
-          color: inherit
+          color: var(--spectrum-closebutton-m-white-uiicon-color-key-focus);
         }
       }
 
       .spectrum-CloseButton-UIIcon {
-        color: var(--spectrum-global-color-static-white)
+        color: var(--spectrum-closebutton-m-white-uiicon-color);
       }
     }
 
     &:disabled {
       .spectrum-CloseButton-UIIcon {
-        color: rgba(var(--spectrum-global-color-static-white-rgb), var(--spectrum-global-color-opacity-40))
+        color: var(--spectrum-closebutton-m-white-uiicon-color-disabled);
       }
     }
   }
@@ -207,5 +206,3 @@ governing permissions and limitations under the License.
 .spectrum-CloseButton-UIIcon {
   margin: 0
 }
-
-/* end generated CSS for closebutton */

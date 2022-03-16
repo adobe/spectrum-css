@@ -3,6 +3,103 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.27"></a>
+# 1.0.0-beta.27
+🗓 2022-03-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.26...@spectrum-css/expressvars@1.0.0-beta.27)
+
+### 🐛 Bug fixes
+
+* added express field label sizes; closes [#1367](https://github.com/adobe/spectrum-css/issues/1367) ([6344ab2](https://github.com/adobe/spectrum-css/commit/6344ab2))
+
+
+
+
+
+<a name="1.0.0-beta.26"></a>
+# 1.0.0-beta.26
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.25...@spectrum-css/expressvars@1.0.0-beta.26)
+
+### ✨ Features
+
+* fixup other Express Slider color an size changes ([2fa1ce5](https://github.com/adobe/spectrum-css/commit/2fa1ce5))
+
+
+### 🐛 Bug fixes
+
+* support Express Slider ([bc42722](https://github.com/adobe/spectrum-css/commit/bc42722))
+* updated based on design review ([be41d62](https://github.com/adobe/spectrum-css/commit/be41d62))
+
+
+
+
+
+<a name="1.0.0-beta.25"></a>
+# 1.0.0-beta.25
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.24...@spectrum-css/expressvars@1.0.0-beta.25)
+
+### 🐛 Bug fixes
+
+* correct loupe outer ([fd9f01c](https://github.com/adobe/spectrum-css/commit/fd9f01c))
+
+
+
+
+
+<a name="1.0.0-beta.24"></a>
+# 1.0.0-beta.24
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.23...@spectrum-css/expressvars@1.0.0-beta.24)
+
+### ✨ Features
+
+* ability to add custom variables for Express/Spectrum ([50a4e04](https://github.com/adobe/spectrum-css/commit/50a4e04))
+* combine Express and Spectrum SVGs, toggle visibility with vars ([84f4b8b](https://github.com/adobe/spectrum-css/commit/84f4b8b))
+* update ColorLoupe and ColorSlider for Express ([490c00a](https://github.com/adobe/spectrum-css/commit/490c00a))
+* use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
+
+
+### 🐛 Bug fixes
+
+* correct checkerboard background color ([dc6c297](https://github.com/adobe/spectrum-css/commit/dc6c297))
+* correct checkerboard color, stroke around edges of loupe ([c327261](https://github.com/adobe/spectrum-css/commit/c327261))
+* give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
+
+
+### 🛑 BREAKING CHANGES
+
+* You must define --spectrum-picked-color instead of setting background-color
+
+
+
+
+
+<a name="1.0.0-beta.23"></a>
+# 1.0.0-beta.23
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.22...@spectrum-css/expressvars@1.0.0-beta.23)
+
+**Note:** Version bump only for package @spectrum-css/expressvars
+
+
+
+
+
+<a name="1.0.0-beta.22"></a>
+# 1.0.0-beta.22
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.21...@spectrum-css/expressvars@1.0.0-beta.22)
+
+### ✨ Features
+
+* **tabs:** regenerate vars ([28302af](https://github.com/adobe/spectrum-css/commit/28302af))
+* update to latest vars release & regenerate custom props ([a2af534](https://github.com/adobe/spectrum-css/commit/a2af534))
+
+
+### 🐛 Bug fixes
+
+* **tabs:** bump versions to get latest vars ([2bc69e9](https://github.com/adobe/spectrum-css/commit/2bc69e9))
+
+
+
+
+
 <a name="1.0.0-beta.21"></a>
 # 1.0.0-beta.21
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.19...@spectrum-css/expressvars@1.0.0-beta.21)
