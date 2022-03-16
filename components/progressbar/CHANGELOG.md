@@ -3,6 +3,86 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.21"></a>
+## 1.0.21
+🗓 2022-03-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.20...@spectrum-css/progressbar@1.0.21)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
+<a name="1.0.20"></a>
+## 1.0.20
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.19...@spectrum-css/progressbar@1.0.20)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
+<a name="1.0.19"></a>
+## 1.0.19
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.18...@spectrum-css/progressbar@1.0.19)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
+<a name="1.0.18"></a>
+## 1.0.18
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.17...@spectrum-css/progressbar@1.0.18)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
+<a name="1.0.17"></a>
+## 1.0.17
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.16...@spectrum-css/progressbar@1.0.17)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
+<a name="1.0.16"></a>
+## 1.0.16
+🗓 2022-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.15...@spectrum-css/progressbar@1.0.16)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
+<a name="1.0.15"></a>
+## 1.0.15
+🗓 2022-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.14...@spectrum-css/progressbar@1.0.15)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
+<a name="1.0.14"></a>
+## 1.0.14
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.13...@spectrum-css/progressbar@1.0.14)
+
+**Note:** Version bump only for package @spectrum-css/progressbar
+
+
+
+
+
 <a name="1.0.13"></a>
 ## 1.0.13
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.11...@spectrum-css/progressbar@1.0.13)

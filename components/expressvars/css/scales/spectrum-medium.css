@@ -85,6 +85,9 @@
   --spectrum-alias-item-control-3-width-l: 29px;
   --spectrum-alias-item-control-3-width-xl: 33px;
   --spectrum-alias-item-mark-size-m: var(--spectrum-global-dimension-size-250);
+  --spectrum-alias-component-focusring-border-radius: var(--spectrum-global-dimension-size-125);
+  --spectrum-alias-focus-ring-border-radius-small: var(--spectrum-global-dimension-size-85);
+  --spectrum-alias-focus-ring-border-radius-regular: var(--spectrum-global-dimension-size-125);
   --spectrum-alias-control-three-width-m: 28px;
   --spectrum-alias-control-three-width-l: var(--spectrum-global-dimension-static-size-450);
   --spectrum-alias-control-three-width-xl: var(--spectrum-global-dimension-static-size-500);
@@ -1666,7 +1669,6 @@
   --spectrum-picker-s-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-picker-m-quiet-texticon-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-picker-m-quiet-texticon-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-picker-m-texticon-popover-offset-x: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-m-texticon-padding-left: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-m-texticon-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-picker-m-texticon-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
@@ -1676,7 +1678,6 @@
   --spectrum-picker-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
   --spectrum-picker-m-quiet-textthumbnail-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-picker-m-quiet-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-100);
-  --spectrum-picker-m-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-m-textthumbnail-padding-left: var(--spectrum-global-dimension-size-125);
   --spectrum-picker-m-textthumbnail-touch-hit-x: var(--spectrum-global-dimension-static-size-100);
   --spectrum-picker-m-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-100);

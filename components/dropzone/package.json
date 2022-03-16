@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/dropzone",
-  "version": "3.0.13",
+  "version": "3.0.18",
   "description": "The Spectrum CSS dropzone component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -18,13 +18,13 @@
   "peerDependencies": {
     "@spectrum-css/illustratedmessage": "^3.0.11-beta.0",
     "@spectrum-css/link": "^3.1.11-beta.0",
-    "@spectrum-css/vars": "^6.0.0"
+    "@spectrum-css/vars": "^7.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.0.1",
-    "@spectrum-css/illustratedmessage": "^3.0.12",
-    "@spectrum-css/link": "^3.1.12",
-    "@spectrum-css/vars": "^6.0.0",
+    "@spectrum-css/component-builder": "^3.1.0",
+    "@spectrum-css/illustratedmessage": "^3.0.17",
+    "@spectrum-css/link": "^3.1.17",
+    "@spectrum-css/vars": "^7.1.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -1,6 +1,4 @@
 .spectrum-ColorHandle {
-  /* redefine this var so it can be used in skin.css */
-  --spectrum-colorhandle-background-offset: calc(-1 * var(--spectrum-global-dimension-static-size-25));
   --spectrum-colorhandle-checkerboard-size: var(--spectrum-global-dimension-static-size-100);
 
   --spectrum-colorhandle-animation-duration: var(--spectrum-global-animation-duration-100);

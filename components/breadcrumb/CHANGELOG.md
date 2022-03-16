@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.15"></a>
+## 4.0.15
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.14...@spectrum-css/breadcrumb@4.0.15)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
+<a name="4.0.14"></a>
+## 4.0.14
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.13...@spectrum-css/breadcrumb@4.0.14)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
+<a name="4.0.13"></a>
+## 4.0.13
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.12...@spectrum-css/breadcrumb@4.0.13)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
+<a name="4.0.12"></a>
+## 4.0.12
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.11...@spectrum-css/breadcrumb@4.0.12)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
+<a name="4.0.11"></a>
+## 4.0.11
+🗓 2022-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.10...@spectrum-css/breadcrumb@4.0.11)
+
+### 🐛 Bug fixes
+
+* **breadcrumb:** use flex-start for justify content ([#1369](https://github.com/adobe/spectrum-css/issues/1369)) ([bd6c56c](https://github.com/adobe/spectrum-css/commit/bd6c56c))
+
+
+
+
+
+<a name="4.0.10"></a>
+## 4.0.10
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.9...@spectrum-css/breadcrumb@4.0.10)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
 <a name="4.0.9"></a>
 ## 4.0.9
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.7...@spectrum-css/breadcrumb@4.0.9)

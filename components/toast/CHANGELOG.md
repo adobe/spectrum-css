@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.3"></a>
+## 7.0.3
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@7.0.2...@spectrum-css/toast@7.0.3)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="7.0.2"></a>
+## 7.0.2
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@7.0.1...@spectrum-css/toast@7.0.2)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="7.0.1"></a>
+## 7.0.1
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@7.0.0...@spectrum-css/toast@7.0.1)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="7.0.0"></a>
+# 7.0.0
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@6.0.2...@spectrum-css/toast@7.0.0)
+
+* feat!: switch toast clear button with close button ([7b9a010](https://github.com/adobe/spectrum-css/commit/7b9a010))
+
+
+### 🛑 BREAKING CHANGES
+
+* replace clear button dom with close button
+
+
+
+
+
+<a name="6.0.2"></a>
+## 6.0.2
+🗓 2022-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@6.0.1...@spectrum-css/toast@6.0.2)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
+<a name="6.0.1"></a>
+## 6.0.1
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@6.0.0...@spectrum-css/toast@6.0.1)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
+
+
+
+
 <a name="6.0.0"></a>
 # 6.0.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@4.1.4...@spectrum-css/toast@6.0.0)

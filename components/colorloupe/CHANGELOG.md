@@ -3,6 +3,86 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.1...@spectrum-css/colorloupe@2.0.2)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.0...@spectrum-css/colorloupe@2.0.1)
+
+### 🐛 Bug fixes
+
+* correct loupe outer ([fd9f01c](https://github.com/adobe/spectrum-css/commit/fd9f01c))
+
+
+
+
+
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@1.0.13...@spectrum-css/colorloupe@2.0.0)
+
+### ✨ Features
+
+* add checkerboard for Spectrum ([ec1feaf](https://github.com/adobe/spectrum-css/commit/ec1feaf))
+* combine Express and Spectrum SVGs, toggle visibility with vars ([84f4b8b](https://github.com/adobe/spectrum-css/commit/84f4b8b))
+* prepare for switcher ([896e1b3](https://github.com/adobe/spectrum-css/commit/896e1b3))
+* remove the need to add define hacks ([8c76829](https://github.com/adobe/spectrum-css/commit/8c76829))
+* start on Express color loupe ([007bae2](https://github.com/adobe/spectrum-css/commit/007bae2))
+* use --spectrum-picked-color for everything ([62e6469](https://github.com/adobe/spectrum-css/commit/62e6469))
+
+
+### 🐛 Bug fixes
+
+* add shadow for Spectrum, leave room for shadow ([13f579e](https://github.com/adobe/spectrum-css/commit/13f579e))
+* center the points of the loupes within their bounding boxes ([9a2a414](https://github.com/adobe/spectrum-css/commit/9a2a414))
+* correct checkerboard background color ([dc6c297](https://github.com/adobe/spectrum-css/commit/dc6c297))
+* correct checkerboard color, stroke around edges of loupe ([c327261](https://github.com/adobe/spectrum-css/commit/c327261))
+* correct markup ([9241121](https://github.com/adobe/spectrum-css/commit/9241121))
+* give the Spectrum loupe a stroke ([486b079](https://github.com/adobe/spectrum-css/commit/486b079))
+
+
+### 📚 Documentation
+
+* add docs for --spectrum-loupe-color ([35704e2](https://github.com/adobe/spectrum-css/commit/35704e2))
+
+
+### 🛑 BREAKING CHANGES
+
+* You must define --spectrum-picked-color instead of setting background-color
+* ColorLoupe now uses --spectrum-loupe-color to set the selected color
+
+
+
+
+
+<a name="1.0.13"></a>
+## 1.0.13
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@1.0.12...@spectrum-css/colorloupe@1.0.13)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
+<a name="1.0.12"></a>
+## 1.0.12
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@1.0.11...@spectrum-css/colorloupe@1.0.12)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
 <a name="1.0.11"></a>
 ## 1.0.11
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@1.0.9...@spectrum-css/colorloupe@1.0.11)

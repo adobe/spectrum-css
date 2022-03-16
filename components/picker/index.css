@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 @import "../commons/basebutton.css";
 @import "../vars/css/components/spectrum-picker.css";
 
+
 .spectrum-Picker {
   @inherit: %spectrum-BaseButton;
 
@@ -28,7 +29,9 @@ governing permissions and limitations under the License.
 
   margin: 0;
   padding-block: 0;
-  padding-inline: var(--spectrum-picker-textonly-padding-left) var(--spectrum-picker-textonly-padding-right);
+
+  /* Start with text-only padding */
+  padding-inline: var(--spectrum-picker-textonly-padding-left-adjusted) var(--spectrum-picker-textonly-padding-right-adjusted);
 
   border-width: var(--spectrum-picker-texticon-border-size);
   border-style: solid;
@@ -53,7 +56,8 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Picker-label + .spectrum-Picker-icon {
-    margin-inline-start: var(--spectrum-picker-texticon-icon-gap);
+    /* Scoot over, assuming we have both icon and text */
+    margin-inline-start: calc(-1 * (var(--spectrum-picker-textonly-padding-left-adjusted) - var(--spectrum-picker-padding-left-adjusted)));
   }
 }
 
@@ -101,6 +105,44 @@ governing permissions and limitations under the License.
 
   /* todo: use real DNA var */
   --spectrum-picker-texticon-border-size-increase-focus: 1px;
+
+  /* Adjustments for inset/outset padding in DNA */
+  --spectrum-picker-padding-left-adjusted: calc(var(--spectrum-picker-texticon-padding-left) - var(--spectrum-picker-texticon-border-size));
+  --spectrum-picker-padding-right-adjusted: calc(var(--spectrum-picker-texticon-padding-right) - var(--spectrum-picker-texticon-border-size));
+  --spectrum-picker-textonly-padding-left-adjusted: calc(var(--spectrum-picker-textonly-padding-left) - var(--spectrum-picker-textonly-border-size));
+  --spectrum-picker-textonly-padding-right-adjusted: calc(var(--spectrum-picker-textonly-padding-right) - var(--spectrum-picker-textonly-border-size));
+  --spectrum-picker-focus-ring-border-radius-adjusted: calc(var(--spectrum-picker-textonly-border-radius) + var(--spectrum-picker-focus-ring-gap));
+}
+
+/* special cases for focus-ring */
+.spectrum-Picker {
+  --spectrum-picker-focus-ring-gap: var(--spectrum-alias-component-focusring-gap);
+  --spectrum-picker-focus-ring-size: var(--spectrum-alias-component-focusring-size);
+  --spectrum-picker-focus-ring-color: var(--spectrum-picker-m-textonly-focusring-border-color-key-focus);
+
+  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  &:after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: calc((var(--spectrum-picker-focus-ring-gap) + var(--spectrum-picker-textonly-border-size)) * -1);
+    border-radius: var(--spectrum-picker-focus-ring-border-radius-adjusted);
+    transition: box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  &:focus-ring {
+    /* kill the default ring */
+    box-shadow: none !important;
+
+    &:after {
+      box-shadow: 0 0 0 var(--spectrum-picker-focus-ring-size) var(--spectrum-picker-focus-ring-color);
+    }
+  }
 }
 
 .spectrum-Picker--quiet {

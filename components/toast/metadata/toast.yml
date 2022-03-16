@@ -3,6 +3,8 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/toast/
 sections:
   - name: Migration Guide
     description: |
+      ### Clear button replaced by Close button
+      Replace `spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM` with `spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite` and remove the `<div class="spectrum-ClearButton-fill">` element.
       ### Over background replaced by Static White with Outline
       Replace all `.spectrum-Button--overBackground .spectrum-Button--quiet` with `.spectrum-Button--staticWhite .spectrum-Button--outline`.
   - id: toast
@@ -17,12 +19,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -38,12 +38,10 @@ sections:
           <div class="spectrum-Toast-content">The toast is done</div>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -62,12 +60,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -86,12 +82,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -113,12 +107,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -138,12 +130,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -160,12 +150,10 @@ sections:
           </div>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -180,12 +168,10 @@ sections:
           <div class="spectrum-Toast-content">An update is available</div>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -204,12 +190,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -229,12 +213,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>
@@ -253,53 +235,10 @@ sections:
           </button>
         </div>
         <div class="spectrum-Toast-buttons">
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
-          </button>
-        </div>
-      </div>
-  - id: toast-oldmarkup
-    name: Old markup
-    status: Deprecated
-    description: 'The old markup for Toast (no `.spectrum-Toast-body` and both buttons inside of `.spectrum-Toast-buttons`) still works, but will be removed in the next major version.'
-    markup: |
-      <div class="spectrum-Toast">
-        <div class="spectrum-Toast-content">Button.xd has been archived</div>
-        <div class="spectrum-Toast-buttons">
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
-            <span class="spectrum-Button-label">Undo</span>
-          </button>
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
-          </button>
-        </div>
-      </div>
-
-      <br><br>
-
-      <div class="spectrum-Toast spectrum-Toast--info">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-icon-18-Info" />
-        </svg>
-        <div class="spectrum-Toast-content">Don't use this markup, it's deprecated</div>
-        <div class="spectrum-Toast-buttons">
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
-            <span class="spectrum-Button-label">Ok</span>
-          </button>
-          <button class="spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM">
-            <div class="spectrum-ClearButton-fill">
-              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </div>
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
           </button>
         </div>
       </div>

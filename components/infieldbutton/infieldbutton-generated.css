@@ -1,0 +1,512 @@
+/*
+Copyright 2021 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* begin generated CSS for infieldbutton */
+.spectrum-InfieldButton {
+  --spectrum-InfieldButton-border-radius-right: var(--spectrum-alias-infieldbutton-border-radius);
+  --spectrum-InfieldButton-border-radius-left: var(--spectrum-alias-infieldbutton-border-radius);
+
+  &.spectrum-InfieldButton--right {
+    --spectrum-InfieldButton-border-radius-left: var(--spectrum-alias-infieldbutton-border-radius-sided);
+
+    .spectrum-InfieldButton-fill {
+      border-end-start-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
+      border-start-start-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
+    }
+  }
+
+  &.spectrum-InfieldButton--left {
+    --spectrum-InfieldButton-border-radius-right: var(--spectrum-alias-infieldbutton-border-radius-sided);
+
+    .spectrum-InfieldButton-fill {
+      border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius-sided);
+      border-start-end-radius: var(--spectrum-alias-infieldbutton-border-radius-sided)
+    }
+  }
+
+  &.spectrum-InfieldButton--sizeS {
+    padding: var(--spectrum-alias-infieldbutton-padding-s);
+
+    .spectrum-InfieldButton-fill {
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-s);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-s);
+      --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-s);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-s);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-s)
+    }
+
+    .spectrum-InfieldButton-icon {
+      gap: var(--spectrum-global-dimension-size-85);
+      --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-size-200);
+      block-size: var(--spectrum-global-dimension-size-200);
+      inline-size: var(--spectrum-global-dimension-size-200);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-s);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-s)
+    }
+  }
+
+  &.spectrum-InfieldButton--sizeM {
+    padding: var(--spectrum-alias-infieldbutton-padding-m);
+
+    .spectrum-InfieldButton-fill {
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-m);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-m);
+      --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-m);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-m);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-m)
+    }
+
+    .spectrum-InfieldButton-icon {
+      gap: var(--spectrum-global-dimension-size-100);
+      --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-size-225);
+      block-size: var(--spectrum-global-dimension-size-225);
+      inline-size: var(--spectrum-global-dimension-size-225);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-m);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-m)
+    }
+  }
+
+  &.spectrum-InfieldButton--sizeL {
+    padding: var(--spectrum-alias-infieldbutton-padding-l);
+
+    .spectrum-InfieldButton-fill {
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-l);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-l);
+      --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-l);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-l);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-l)
+    }
+
+    .spectrum-InfieldButton-icon {
+      gap: var(--spectrum-global-dimension-size-115);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-l);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-l)
+    }
+  }
+
+  &.spectrum-InfieldButton--sizeXL {
+    padding: var(--spectrum-alias-infieldbutton-padding-xl);
+
+    .spectrum-InfieldButton-fill {
+      padding-inline-end: var(--spectrum-alias-infieldbutton-fill-padding-xl);
+      padding-inline-start: var(--spectrum-alias-infieldbutton-fill-padding-xl);
+      --spectrum-InfieldButton-Fill-size: var(--spectrum-alias-infieldbutton-full-height-xl);
+      block-size: var(--spectrum-alias-infieldbutton-full-height-xl);
+      inline-size: var(--spectrum-alias-infieldbutton-full-height-xl)
+    }
+
+    .spectrum-InfieldButton-icon {
+      gap: var(--spectrum-global-dimension-size-125);
+      --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-size-275);
+      block-size: var(--spectrum-global-dimension-size-275);
+      inline-size: var(--spectrum-global-dimension-size-275);
+      margin-block-end: var(--spectrum-alias-infieldbutton-icon-margin-y-xl);
+      margin-block-start: var(--spectrum-alias-infieldbutton-icon-margin-y-xl)
+    }
+  }
+
+  &.spectrum-InfieldButton--low {
+    &:disabled {
+      .spectrum-InfieldButton-fill {
+        border-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-border-color-disabled);
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-disabled)
+      }
+    }
+
+    &:not(:disabled) {
+      .spectrum-InfieldButton-fill {
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-default)
+      }
+
+      &:hover {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-hover)
+        }
+      }
+
+      &:active {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-down)
+        }
+      }
+
+      &:focus-visible {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-key-focus)
+        }
+      }
+
+      &.is-keyboardFocused {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessLow-background-color-key-focus)
+        }
+      }
+    }
+
+    &.is-invalid {
+      &:not(:disabled) {
+        .spectrum-InfieldButton-fill {
+          border-color: transparent
+        }
+      }
+    }
+
+    &:not(.is-invalid) {
+      &:not(:disabled) {
+        .spectrum-InfieldButton-fill {
+          border-color: transparent
+        }
+
+        &:hover {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:active {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:focus {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &.is-focused {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:focus-visible {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &.is-keyboardFocused {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+      }
+    }
+  }
+
+  &.spectrum-InfieldButton--medium {
+    &:disabled {
+      .spectrum-InfieldButton-fill {
+        border-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-border-color-disabled);
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-disabled)
+      }
+    }
+
+    &:not(:disabled) {
+      .spectrum-InfieldButton-fill {
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-default)
+      }
+
+      &:hover {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-hover)
+        }
+      }
+
+      &:active {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-down)
+        }
+      }
+
+      &:focus-visible {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus)
+        }
+      }
+
+      &.is-keyboardFocused {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessMedium-background-color-key-focus)
+        }
+      }
+    }
+
+    &.is-invalid {
+      &:not(:disabled) {
+        .spectrum-InfieldButton-fill {
+          border-color: transparent
+        }
+      }
+    }
+
+    &:not(.is-invalid) {
+      &:not(:disabled) {
+        .spectrum-InfieldButton-fill {
+          border-color: transparent
+        }
+
+        &:hover {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:active {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:focus {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &.is-focused {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &:focus-visible {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+
+        &.is-keyboardFocused {
+          .spectrum-InfieldButton-fill {
+            border-color: transparent
+          }
+        }
+      }
+    }
+  }
+
+  &.spectrum-InfieldButton--high {
+    &:disabled {
+      .spectrum-InfieldButton-fill {
+        border-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-border-color-disabled);
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-disabled)
+      }
+    }
+
+    &:not(:disabled) {
+      .spectrum-InfieldButton-fill {
+        background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-default)
+      }
+
+      &:hover {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-hover)
+        }
+      }
+
+      &:active {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-down)
+        }
+      }
+
+      &:focus-visible {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-key-focus)
+        }
+      }
+
+      &.is-keyboardFocused {
+        .spectrum-InfieldButton-fill {
+          background-color: var(--spectrum-alias-infieldbutton-fill-loudnessHigh-background-color-key-focus)
+        }
+      }
+    }
+
+    &.is-invalid {
+      &:not(:disabled) {
+        .spectrum-InfieldButton-fill {
+          border-color: var(--spectrum-alias-input-border-color-invalid-default)
+        }
+
+        &:hover {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-input-border-color-invalid-hover)
+          }
+        }
+
+        &:active {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-input-border-color-invalid-down)
+          }
+        }
+
+        &:focus {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
+          }
+        }
+
+        &.is-focused {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-input-border-color-invalid-mouse-focus)
+          }
+        }
+
+        &:focus-visible {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
+          }
+        }
+
+        &.is-keyboardFocused {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-input-border-color-invalid-key-focus)
+          }
+        }
+      }
+    }
+
+    &:not(.is-invalid) {
+      &:not(:disabled) {
+        .spectrum-InfieldButton-fill {
+          border-color: var(--spectrum-alias-infieldbutton-fill-border-color-default)
+        }
+
+        &:hover {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-hover)
+          }
+        }
+
+        &:active {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-down)
+          }
+        }
+
+        &:focus {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
+          }
+        }
+
+        &.is-focused {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-mouse-focus)
+          }
+        }
+
+        &:focus-visible {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
+          }
+        }
+
+        &.is-keyboardFocused {
+          .spectrum-InfieldButton-fill {
+            border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus)
+          }
+        }
+      }
+    }
+  }
+
+  &:disabled {
+    .spectrum-InfieldButton-icon {
+      color: var(--spectrum-alias-component-icon-color-disabled)
+    }
+  }
+
+  &:not(:disabled) {
+    .spectrum-InfieldButton-icon {
+      color: var(--spectrum-alias-component-icon-color-default)
+    }
+
+    &:hover {
+      .spectrum-InfieldButton-icon {
+        color: var(--spectrum-alias-component-icon-color-hover)
+      }
+    }
+
+    &:active {
+      .spectrum-InfieldButton-icon {
+        color: var(--spectrum-alias-component-icon-color-down)
+      }
+    }
+
+    &:focus-visible {
+      .spectrum-InfieldButton-icon {
+        color: var(--spectrum-alias-component-icon-color-key-focus)
+      }
+    }
+
+    &.is-keyboardFocused {
+      .spectrum-InfieldButton-icon {
+        color: var(--spectrum-alias-component-icon-color-key-focus)
+      }
+    }
+
+    &:focus {
+      .spectrum-InfieldButton-icon {
+        color: var(--spectrum-alias-component-icon-color-mouse-focus)
+      }
+    }
+
+    &.is-focused {
+      .spectrum-InfieldButton-icon {
+        color: var(--spectrum-alias-component-icon-color-mouse-focus)
+      }
+    }
+  }
+}
+
+.spectrum-InfieldButton-fill {
+  border-width: var(--spectrum-alias-infieldbutton-border-size);
+  border-style: solid;
+  border-end-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
+  border-start-end-radius: var(--spectrum-alias-infieldbutton-border-radius);
+  border-end-start-radius: var(--spectrum-alias-infieldbutton-border-radius);
+  border-start-start-radius: var(--spectrum-alias-infieldbutton-border-radius)
+}
+
+.spectrum-InfieldButton-icon {
+  display: initial
+}
+
+.spectrum--medium {
+  .spectrum-InfieldButton {
+    &.spectrum-InfieldButton--sizeL {
+      .spectrum-InfieldButton-icon {
+        --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-250);
+        block-size: var(--spectrum-global-dimension-static-size-250);
+        inline-size: var(--spectrum-global-dimension-static-size-250)
+      }
+    }
+  }
+}
+
+.spectrum--large {
+  .spectrum-InfieldButton {
+    &.spectrum-InfieldButton--sizeL {
+      .spectrum-InfieldButton-icon {
+        --spectrum-InfieldButton-Fill-Icon-size: var(--spectrum-global-dimension-static-size-300);
+        block-size: var(--spectrum-global-dimension-static-size-300);
+        inline-size: var(--spectrum-global-dimension-static-size-300)
+      }
+    }
+  }
+}
+
+/* end generated CSS for infieldbutton */
