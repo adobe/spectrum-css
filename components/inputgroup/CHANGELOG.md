@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.11"></a>
+## 4.0.11
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.10...@spectrum-css/inputgroup@4.0.11)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="4.0.10"></a>
+## 4.0.10
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.9...@spectrum-css/inputgroup@4.0.10)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="4.0.9"></a>
+## 4.0.9
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.8...@spectrum-css/inputgroup@4.0.9)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="4.0.8"></a>
+## 4.0.8
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.7...@spectrum-css/inputgroup@4.0.8)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="4.0.7"></a>
+## 4.0.7
+🗓 2022-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.6...@spectrum-css/inputgroup@4.0.7)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="4.0.6"></a>
+## 4.0.6
+🗓 2022-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.5...@spectrum-css/inputgroup@4.0.6)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
+<a name="4.0.5"></a>
+## 4.0.5
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.4...@spectrum-css/inputgroup@4.0.5)
+
+**Note:** Version bump only for package @spectrum-css/inputgroup
+
+
+
+
+
 <a name="4.0.4"></a>
 ## 4.0.4
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inputgroup@4.0.2...@spectrum-css/inputgroup@4.0.4)

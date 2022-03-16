@@ -79,7 +79,7 @@
   --spectrum-search-s-quiet-icon-type: icon;
   --spectrum-search-s-quiet-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-search-s-quiet-icon-gap: var(--spectrum-global-dimension-size-85);
-  --spectrum-search-s-quiet-placeholder-render: yes;
+  --spectrum-search-s-quiet-placeholder-render: no;
   --spectrum-search-s-quiet-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-s-quiet-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-s-quiet-placeholder-font-size: var(--spectrum-global-dimension-font-size-75);
@@ -90,6 +90,7 @@
   --spectrum-search-s-quiet-placeholder-text-transform: none;
   --spectrum-search-s-quiet-text-transform: none;
   --spectrum-search-s-quiet-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-search-s-quiet-text-flex-grow: 1;
   --spectrum-search-s-quiet-text-render: yes;
   --spectrum-search-s-quiet-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-search-s-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -214,7 +215,7 @@
   --spectrum-search-s-icon-type: icon;
   --spectrum-search-s-icon-size: var(--spectrum-global-dimension-size-200);
   --spectrum-search-s-icon-gap: var(--spectrum-global-dimension-size-85);
-  --spectrum-search-s-placeholder-render: yes;
+  --spectrum-search-s-placeholder-render: no;
   --spectrum-search-s-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-s-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-s-placeholder-font-size: var(--spectrum-global-dimension-font-size-75);
@@ -225,6 +226,7 @@
   --spectrum-search-s-placeholder-text-transform: none;
   --spectrum-search-s-text-transform: none;
   --spectrum-search-s-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-search-s-text-flex-grow: 1;
   --spectrum-search-s-text-render: yes;
   --spectrum-search-s-text-padding-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-search-s-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -349,7 +351,7 @@
   --spectrum-search-m-quiet-icon-type: icon;
   --spectrum-search-m-quiet-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-search-m-quiet-icon-gap: var(--spectrum-global-dimension-size-100);
-  --spectrum-search-m-quiet-placeholder-render: yes;
+  --spectrum-search-m-quiet-placeholder-render: no;
   --spectrum-search-m-quiet-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-m-quiet-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-m-quiet-placeholder-font-size: var(--spectrum-global-dimension-font-size-100);
@@ -361,6 +363,7 @@
   --spectrum-search-m-quiet-placeholder-text-transform: none;
   --spectrum-search-m-quiet-text-transform: none;
   --spectrum-search-m-quiet-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-search-m-quiet-text-flex-grow: 1;
   --spectrum-search-m-quiet-text-render: yes;
   --spectrum-search-m-quiet-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-search-m-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-115);
@@ -486,7 +489,7 @@
   --spectrum-search-m-icon-type: icon;
   --spectrum-search-m-icon-size: var(--spectrum-global-dimension-size-225);
   --spectrum-search-m-icon-gap: var(--spectrum-global-dimension-size-100);
-  --spectrum-search-m-placeholder-render: yes;
+  --spectrum-search-m-placeholder-render: no;
   --spectrum-search-m-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-m-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-m-placeholder-font-size: var(--spectrum-global-dimension-font-size-100);
@@ -498,6 +501,7 @@
   --spectrum-search-m-placeholder-text-transform: none;
   --spectrum-search-m-text-transform: none;
   --spectrum-search-m-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-search-m-text-flex-grow: 1;
   --spectrum-search-m-text-render: yes;
   --spectrum-search-m-text-padding-top: var(--spectrum-global-dimension-size-75);
   --spectrum-search-m-text-padding-bottom: var(--spectrum-global-dimension-size-115);
@@ -622,7 +626,7 @@
   --spectrum-search-l-quiet-icon-render: yes;
   --spectrum-search-l-quiet-icon-type: icon;
   --spectrum-search-l-quiet-icon-gap: var(--spectrum-global-dimension-size-115);
-  --spectrum-search-l-quiet-placeholder-render: yes;
+  --spectrum-search-l-quiet-placeholder-render: no;
   --spectrum-search-l-quiet-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-l-quiet-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-l-quiet-placeholder-font-size: var(--spectrum-global-dimension-font-size-200);
@@ -633,6 +637,7 @@
   --spectrum-search-l-quiet-placeholder-text-transform: none;
   --spectrum-search-l-quiet-text-transform: none;
   --spectrum-search-l-quiet-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-search-l-quiet-text-flex-grow: 1;
   --spectrum-search-l-quiet-text-render: yes;
   --spectrum-search-l-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-search-l-quiet-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -756,7 +761,7 @@
   --spectrum-search-l-icon-render: yes;
   --spectrum-search-l-icon-type: icon;
   --spectrum-search-l-icon-gap: var(--spectrum-global-dimension-size-115);
-  --spectrum-search-l-placeholder-render: yes;
+  --spectrum-search-l-placeholder-render: no;
   --spectrum-search-l-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-l-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-l-placeholder-font-size: var(--spectrum-global-dimension-font-size-200);
@@ -767,6 +772,7 @@
   --spectrum-search-l-placeholder-text-transform: none;
   --spectrum-search-l-text-transform: none;
   --spectrum-search-l-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-search-l-text-flex-grow: 1;
   --spectrum-search-l-text-render: yes;
   --spectrum-search-l-text-padding-bottom: var(--spectrum-global-dimension-size-130);
   --spectrum-search-l-text-font-family: var(--spectrum-alias-body-text-font-family);
@@ -891,7 +897,7 @@
   --spectrum-search-xl-quiet-icon-type: icon;
   --spectrum-search-xl-quiet-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-search-xl-quiet-icon-gap: var(--spectrum-global-dimension-size-125);
-  --spectrum-search-xl-quiet-placeholder-render: yes;
+  --spectrum-search-xl-quiet-placeholder-render: no;
   --spectrum-search-xl-quiet-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-xl-quiet-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-xl-quiet-placeholder-font-size: var(--spectrum-global-dimension-font-size-300);
@@ -903,6 +909,7 @@
   --spectrum-search-xl-quiet-placeholder-text-transform: none;
   --spectrum-search-xl-quiet-text-transform: none;
   --spectrum-search-xl-quiet-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-search-xl-quiet-text-flex-grow: 1;
   --spectrum-search-xl-quiet-text-render: yes;
   --spectrum-search-xl-quiet-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-search-xl-quiet-text-padding-bottom: var(--spectrum-global-dimension-size-175);
@@ -1028,7 +1035,7 @@
   --spectrum-search-xl-icon-type: icon;
   --spectrum-search-xl-icon-size: var(--spectrum-global-dimension-size-275);
   --spectrum-search-xl-icon-gap: var(--spectrum-global-dimension-size-125);
-  --spectrum-search-xl-placeholder-render: yes;
+  --spectrum-search-xl-placeholder-render: no;
   --spectrum-search-xl-placeholder-font-style: var(--spectrum-global-font-style-italic);
   --spectrum-search-xl-placeholder-font-weight: var(--spectrum-global-font-weight-regular);
   --spectrum-search-xl-placeholder-font-size: var(--spectrum-global-dimension-font-size-300);
@@ -1040,6 +1047,7 @@
   --spectrum-search-xl-placeholder-text-transform: none;
   --spectrum-search-xl-text-transform: none;
   --spectrum-search-xl-text-size: var(--spectrum-global-dimension-font-size-300);
+  --spectrum-search-xl-text-flex-grow: 1;
   --spectrum-search-xl-text-render: yes;
   --spectrum-search-xl-text-padding-top: var(--spectrum-global-dimension-size-150);
   --spectrum-search-xl-text-padding-bottom: var(--spectrum-global-dimension-size-175);

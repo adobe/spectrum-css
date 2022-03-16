@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# 3.1.0
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.0.1...@spectrum-css/component-builder@3.1.0)
+
+### ✨ Features
+
+* remove the need to add define hacks ([8c76829](https://github.com/adobe/spectrum-css/commit/8c76829))
+
+
+
+
+
 <a name="3.0.1"></a>
 ## 3.0.1
 🗓 2021-11-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.0.0-alpha.1...@spectrum-css/component-builder@3.0.1)

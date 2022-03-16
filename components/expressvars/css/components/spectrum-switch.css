@@ -119,9 +119,9 @@
   --spectrum-switch-s-emphasized-track-width: var(--spectrum-alias-control-three-width-s);
   --spectrum-switch-s-emphasized-track-border-radius: var(--spectrum-alias-control-two-border-radius-s);
   --spectrum-switch-s-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-s-emphasized-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-s);
   --spectrum-switch-s-emphasized-focus-ring-type: focusring;
   --spectrum-switch-s-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-s-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-switch-s-emphasized-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-s-emphasized-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-s-emphasized-height: var(--spectrum-global-dimension-size-300);
@@ -249,9 +249,9 @@
   --spectrum-switch-s-track-width: var(--spectrum-alias-control-three-width-s);
   --spectrum-switch-s-track-border-radius: var(--spectrum-alias-control-two-border-radius-s);
   --spectrum-switch-s-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-s-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-s);
   --spectrum-switch-s-focus-ring-type: focusring;
   --spectrum-switch-s-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-s-focus-ring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-switch-s-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-s-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-s-height: var(--spectrum-global-dimension-size-300);
@@ -380,9 +380,9 @@
   --spectrum-switch-m-emphasized-track-width: var(--spectrum-alias-control-three-width-m);
   --spectrum-switch-m-emphasized-track-border-radius: var(--spectrum-alias-control-two-border-radius-m);
   --spectrum-switch-m-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-m-emphasized-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-m);
   --spectrum-switch-m-emphasized-focus-ring-type: focusring;
   --spectrum-switch-m-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-m-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-switch-m-emphasized-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-m-emphasized-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-m-emphasized-height: var(--spectrum-global-dimension-size-400);
@@ -511,9 +511,9 @@
   --spectrum-switch-m-track-width: var(--spectrum-alias-control-three-width-m);
   --spectrum-switch-m-track-border-radius: var(--spectrum-alias-control-two-border-radius-m);
   --spectrum-switch-m-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-m-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-m);
   --spectrum-switch-m-focus-ring-type: focusring;
   --spectrum-switch-m-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-m-focus-ring-border-radius: var(--spectrum-global-dimension-size-130);
   --spectrum-switch-m-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-m-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-m-height: var(--spectrum-global-dimension-size-400);
@@ -641,9 +641,9 @@
   --spectrum-switch-l-emphasized-track-width: var(--spectrum-alias-control-three-width-l);
   --spectrum-switch-l-emphasized-track-border-radius: var(--spectrum-alias-control-two-border-radius-l);
   --spectrum-switch-l-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-l-emphasized-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-l);
   --spectrum-switch-l-emphasized-focus-ring-type: focusring;
   --spectrum-switch-l-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-l-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-switch-l-emphasized-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-l-emphasized-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-l-emphasized-height: var(--spectrum-global-dimension-size-500);
@@ -771,9 +771,9 @@
   --spectrum-switch-l-track-width: var(--spectrum-alias-control-three-width-l);
   --spectrum-switch-l-track-border-radius: var(--spectrum-alias-control-two-border-radius-l);
   --spectrum-switch-l-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-l-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-l);
   --spectrum-switch-l-focus-ring-type: focusring;
   --spectrum-switch-l-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-l-focus-ring-border-radius: var(--spectrum-global-dimension-size-150);
   --spectrum-switch-l-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-l-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-l-height: var(--spectrum-global-dimension-size-500);
@@ -902,9 +902,9 @@
   --spectrum-switch-xl-emphasized-track-width: var(--spectrum-alias-control-three-width-xl);
   --spectrum-switch-xl-emphasized-track-border-radius: var(--spectrum-alias-control-two-border-radius-xl);
   --spectrum-switch-xl-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-xl-emphasized-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-xl);
   --spectrum-switch-xl-emphasized-focus-ring-type: focusring;
   --spectrum-switch-xl-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-xl-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-switch-xl-emphasized-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-xl-emphasized-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-xl-emphasized-height: var(--spectrum-global-dimension-size-600);
@@ -1033,9 +1033,9 @@
   --spectrum-switch-xl-track-width: var(--spectrum-alias-control-three-width-xl);
   --spectrum-switch-xl-track-border-radius: var(--spectrum-alias-control-two-border-radius-xl);
   --spectrum-switch-xl-focus-ring-size: var(--spectrum-alias-focus-ring-size);
+  --spectrum-switch-xl-focus-ring-border-radius: var(--spectrum-alias-control-two-focus-ring-border-radius-xl);
   --spectrum-switch-xl-focus-ring-type: focusring;
   --spectrum-switch-xl-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
-  --spectrum-switch-xl-focus-ring-border-radius: var(--spectrum-global-dimension-size-175);
   --spectrum-switch-xl-cursor-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-xl-touch-hit-x: var(--spectrum-global-dimension-size-100);
   --spectrum-switch-xl-height: var(--spectrum-global-dimension-size-600);

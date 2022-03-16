@@ -50,12 +50,20 @@ governing permissions and limitations under the License.
 
 .spectrum-PickerButton--uiicononly {
   .spectrum-PickerButton-fill {
-    /* let workflow icons position correctly */
+    /* let icons position correctly */
     padding: 0 !important;
   }
 }
 
 .spectrum-PickerButton-UIIcon {
+  /* remove margin used for centering */
+  margin: 0 !important;
+}
+
+.spectrum-PickerButton-icon {
+  /* don't be small, ever */
+  flex-shrink: 0;
+
   /* remove margin used for centering */
   margin: 0 !important;
 }

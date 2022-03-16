@@ -36,7 +36,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Breadcrumbs {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   list-style-type: none;
   flex-wrap: nowrap;
   flex-grow: 1;
@@ -83,7 +83,7 @@ governing permissions and limitations under the License.
 .spectrum-Breadcrumbs-item {
   display: inline-flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 
   box-sizing: border-box;
   block-size: var(--spectrum-breadcrumb-list-height);
@@ -114,7 +114,7 @@ governing permissions and limitations under the License.
 
   display: inline-flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 
   padding-block: 0;
   padding-inline: var(--spectrum-breadcrumb-item-padding-x);

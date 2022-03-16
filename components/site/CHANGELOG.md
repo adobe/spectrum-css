@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.7"></a>
+## 2.1.7
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.6...@spectrum-css/site@2.1.7)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
+<a name="2.1.6"></a>
+## 2.1.6
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.5...@spectrum-css/site@2.1.6)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
+<a name="2.1.5"></a>
+## 2.1.5
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.4...@spectrum-css/site@2.1.5)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
+<a name="2.1.4"></a>
+## 2.1.4
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.3...@spectrum-css/site@2.1.4)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
+<a name="2.1.3"></a>
+## 2.1.3
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.2...@spectrum-css/site@2.1.3)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
 <a name="2.1.2"></a>
 ## 2.1.2
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.0...@spectrum-css/site@2.1.2)

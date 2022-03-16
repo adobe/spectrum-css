@@ -18,6 +18,7 @@ governing permissions and limitations under the License.
     filter: color;
     replace: --spectrum-tag$1;
   }
+  --spectrum-tag-texticon-text-font-size: var(--spectrum-global-dimension-font-size-75);
 }
 
 .spectrum-Tag--sizeM {
@@ -26,6 +27,7 @@ governing permissions and limitations under the License.
     filter: color;
     replace: --spectrum-tag$1;
   }
+  --spectrum-tag-texticon-text-font-size: var(--spectrum-global-dimension-font-size-100);
 }
 
 .spectrum-Tag--sizeL {
@@ -34,11 +36,7 @@ governing permissions and limitations under the License.
     filter: color;
     replace: --spectrum-tag$1;
   }
-}
-
-.spectrum-Tag {
-  /* todo: these are in Spectrum DNA 7.0-beta */
-  --spectrum-tag-texticon-avatar-padding-x: var(--spectrum-tag-texticon-icon-gap);
+  --spectrum-tag-texticon-text-font-size: var(--spectrum-global-dimension-font-size-200);
 }
 
 .spectrum-Tag {
@@ -47,17 +45,17 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   vertical-align: bottom;
 
-  padding-block: 0;
-  padding-inline-start: calc(var(--spectrum-tag-texticon-padding-left) - var(--spectrum-tag-texticon-border-size));
-  padding-inline-end: calc(var(--spectrum-tag-texticon-padding-right) - var(--spectrum-tag-texticon-border-size));
-  block-size: var(--spectrum-tag-texticon-height);
   max-inline-size: 100%;
 
   border-width: var(--spectrum-tag-texticon-border-size);
   border-style: solid;
-  border-radius: var(--spectrum-alias-border-radius-regular);
+  border-radius: var(--spectrum-tag-texticon-border-radius);
   outline: none;
   user-select: none;
+
+  padding-inline-start: var(--spectrum-tag-textonly-padding-right); /* padding left is set to 9px */
+  padding-inline-end: var(--spectrum-tag-textonly-padding-right);
+  min-height: calc(var(--spectrum-tag-texticon-height) + var(--spectrum-tag-texticon-border-size) + var(--spectrum-tag-texticon-border-size));
 
   transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out,
     color var(--spectrum-global-animation-duration-100) ease-in-out,
@@ -70,26 +68,24 @@ governing permissions and limitations under the License.
 
   > .spectrum-Icon,
   > .spectrum-Avatar {
-    margin-inline-end: var(--spectrum-tag-texticon-icon-gap);
+    padding-inline-end: var(--spectrum-tag-texticon-icon-gap);
 
     /* Add padding for "avatar" variant */
-    margin-inline-start: calc(var(--spectrum-tag-texticon-avatar-padding-x) - var(--spectrum-tag-texticon-padding-left));
-
-    ~ .spectrum-Tag-label {
-      margin-inline-end: calc(var(--spectrum-tag-texticon-avatar-padding-x) - var(--spectrum-tag-texticon-padding-right));
-    }
+    margin-inline-start: calc(var(--spectrum-tag-texticon-padding-left) - var(--spectrum-tag-textonly-padding-left));
   }
 
   .spectrum-ClearButton {
+    padding-block: 0;
     margin-inline-end: calc(-1 * var(--spectrum-tag-texticon-padding-right));
   }
 }
 
 .spectrum-Tag-label {
   block-size: 100%;
-  line-height: calc(var(--spectrum-tag-texticon-height) - calc(var(--spectrum-tag-texticon-border-size) * 2));
+  line-height: var(--spectrum-tag-texticon-text-line-height);
+  font-weight: var(--spectrum-tag-removable-texticon-text-font-weight);
   flex: 1 1 auto;
-  font-size: var(--spectrum-tag-texticon-text-size);
+  font-size: var(--spectrum-tag-texticon-text-font-size);
   cursor: default;
   overflow: hidden;
   white-space: nowrap;
@@ -100,7 +96,7 @@ governing permissions and limitations under the License.
   &:focus-ring,
   &.is-focused {
     &:after {
-      box-shadow: 0 0 0 var(--spectrum-tag-texticon-focus-ring-size) var(--spectrum-tag-m-texticon-focus-ring-color-key-focus);
+      box-shadow: 0 0 0 var(--spectrum-tag-texticon-focusring-border-size) var(--spectrum-tag-m-texticon-focusring-border-color-key-focus);
     }
   }
 }

@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
     var(--spectrum-slider-handle-width) / -2
   );
 
-  --spectrum-slider-track-handleoffset: calc(var(--spectrum-slider-handle-gap));
+  --spectrum-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
   --spectrum-slider-track-middle-handleoffset: calc(
     var(--spectrum-slider-handle-gap) +
       calc(var(--spectrum-slider-handle-width) / 2)
@@ -62,12 +62,11 @@ governing permissions and limitations under the License.
 
   --spectrum-slider-ramp-margin-top: 0;
   --spectrum-slider-range-track-reset: 0;
-  --spectrum-slide-label-text-size: var(--spectrum-global-dimension-font-size-75);
-  --spectrum-slide-label-text-line-height: var(
+  --spectrum-slider-label-margin-bottom: -3px;
+  --spectrum-slider-label-gap-x: var(--spectrum-alias-item-control-gap-m);
+  --spectrum-slider-label-text-line-height: var(
     --spectrum-global-font-line-height-small
   );
-  --spectrum-slide-label-margin-bottom: -3px;
-  --spectrum-slider-label-gap-x: var(--spectrum-alias-item-control-gap-m);
 }
 
 .spectrum-Slider {
@@ -119,13 +118,45 @@ governing permissions and limitations under the License.
   padding-inline: 0 var(--spectrum-slider-track-handleoffset);
   margin-inline-start: var(--spectrum-slider-track-margin-offset);
 
-  &::before {
+  &:before {
     content: "";
     display: block;
     block-size: 100%;
 
-    border-radius: var(--spectrum-slider-track-border-radius);
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
   }
+}
+
+.spectrum-Slider-track {
+  &:first-of-type {
+    &:before {
+      border-start-start-radius: var(--spectrum-slider-track-border-radius);
+      border-end-start-radius: var(--spectrum-slider-track-border-radius);
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+    }
+  }
+
+  &:last-of-type {
+    &:before {
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
+      border-start-end-radius: var(--spectrum-slider-track-border-radius);
+      border-end-end-radius: var(--spectrum-slider-track-border-radius);
+    }
+  }
+}
+
+.spectrum-Slider-track ~ .spectrum-Slider-track {
+  inset-inline-start: auto;
+  inset-inline-end: var(--spectrum-slider-range-track-reset);
+  padding-block: 0;
+  padding-inline: var(--spectrum-slider-track-handleoffset) 0;
+  margin-inline-start: var(--spectrum-slider-range-track-reset);
+  margin-inline-end: var(--spectrum-slider-track-margin-offset);
 }
 
 .spectrum-Slider-fill {
@@ -147,46 +178,52 @@ governing permissions and limitations under the License.
     );
 }
 
-.spectrum-Slider-track ~ .spectrum-Slider-track {
-  inset-inline-start: auto;
-  inset-inline-end: var(--spectrum-slider-range-track-reset);
-  padding-block: 0;
-  padding-inline: var(--spectrum-slider-track-handleoffset) 0;
-  margin-inline-start: var(--spectrum-slider-range-track-reset);
-  margin-inline-end: var(--spectrum-slider-track-margin-offset);
-}
-
 .spectrum-Slider--range {
   .spectrum-Slider-value {
     user-select: text;
   }
 
   .spectrum-Slider-track {
+    &:before {
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+    }
+
     &:first-of-type {
-      padding-block: 0;
       padding-inline: 0 var(--spectrum-slider-track-handleoffset);
       inset-inline-start: var(--spectrum-slider-range-track-reset);
       inset-inline-end: auto;
       margin-inline-start: var(--spectrum-slider-track-margin-offset);
+      &:before {
+        border-start-start-radius: var(--spectrum-slider-m-track-border-radius);
+        border-end-start-radius: var(--spectrum-slider-m-track-border-radius);
+        border-start-end-radius: 0;
+        border-end-end-radius: 0;
+      }
     }
 
     /* Force specificity otherwise the ~ rules above override */
     &:dir(ltr),
     &:dir(rtl) {
-      padding-block: 0;
       padding-inline: var(--spectrum-slider-track-middle-handleoffset)
         var(--spectrum-slider-track-middle-handleoffset);
       inset-inline-start: auto;
       inset-inline-end: auto;
       margin-inline: var(--spectrum-slider-range-track-reset);
-      margin-block: var(--spectrum-slider-range-track-reset);
     }
     &:last-of-type {
-      padding-block: 0;
       padding-inline: var(--spectrum-slider-track-handleoffset) 0;
       inset-inline-start: auto;
       inset-inline-end: var(--spectrum-slider-range-track-reset);
       margin-inline-end: var(--spectrum-slider-track-margin-offset);
+      &:before {
+        border-start-end-radius: var(--spectrum-slider-m-track-border-radius);
+        border-end-end-radius: var(--spectrum-slider-m-track-border-radius);
+        border-start-start-radius: 0;
+        border-end-start-radius: 0;
+      }
     }
   }
 }
@@ -310,9 +347,9 @@ governing permissions and limitations under the License.
 
   padding-block-start: var(--spectrum-fieldlabel-m-padding-top);
 
-  font-size: var(--spectrum-slide-label-text-size);
-  line-height: var(--spectrum-slide-label-text-line-height);
-  margin-block-end: var(--spectrum-slide-label-margin-bottom);
+  font-size: var(--spectrum-slider-label-text-size);
+  line-height: var(--spectrum-slider-label-text-line-height);
+  margin-block-end: var(--spectrum-slider-label-margin-bottom);
 }
 
 .spectrum-Slider-label {
@@ -341,7 +378,7 @@ governing permissions and limitations under the License.
   margin: 0 var(--spectrum-slider-track-margin-offset);
   margin-block-start: calc(
     var(--spectrum-slider-tick-mark-height) +
-      calc(var(--spectrum-slider-track-height) / 2)
+    1px
   );
 }
 
@@ -373,8 +410,8 @@ governing permissions and limitations under the License.
     margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
       calc(var(--spectrum-slider-label-gap-x) * -1);
 
-    font-size: var(--spectrum-slide-label-text-size);
-    line-height: var(--spectrum-slide-label-text-line-height);
+    font-size: var(--spectrum-slider-label-text-size);
+    line-height: var(--spectrum-slider-label-text-line-height);
   }
 
   &:first-of-type,

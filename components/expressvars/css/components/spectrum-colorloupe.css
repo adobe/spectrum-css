@@ -6,8 +6,8 @@
   --spectrum-colorloupe-shadow-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-colorloupe-inner-border-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorloupe-outer-border-size: var(--spectrum-global-dimension-static-size-10);
-  --spectrum-colorloupe-width: var(--spectrum-global-dimension-static-size-600);
-  --spectrum-colorloupe-height: var(--spectrum-global-dimension-static-size-800);
+  --spectrum-colorloupe-width: var(--spectrum-alias-colorloupe-width);
+  --spectrum-colorloupe-height: var(--spectrum-alias-colorloupe-height);
   --spectrum-colorloupe-padding: var(--spectrum-global-dimension-static-size-25);
   --spectrum-colorloupe-border-size: var(--spectrum-global-dimension-static-size-10);
   --spectrum-colorloupe-elevation: 2dp;
