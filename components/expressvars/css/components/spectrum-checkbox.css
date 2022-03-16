@@ -280,7 +280,7 @@
   --spectrum-checkbox-s-emphasized-checkmark-render: no;
   --spectrum-checkbox-s-emphasized-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-75);
   --spectrum-checkbox-s-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-s-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-s-emphasized-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-s-emphasized-focus-ring-type: focusring;
   --spectrum-checkbox-s-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-s-emphasized-layout: inline-row;
@@ -572,7 +572,7 @@
   --spectrum-checkbox-s-checkmark-render: no;
   --spectrum-checkbox-s-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-75);
   --spectrum-checkbox-s-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-s-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-s-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-s-focus-ring-type: focusring;
   --spectrum-checkbox-s-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-s-layout: inline-row;
@@ -865,7 +865,7 @@
   --spectrum-checkbox-m-emphasized-checkmark-render: no;
   --spectrum-checkbox-m-emphasized-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-100);
   --spectrum-checkbox-m-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-m-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-m-emphasized-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-m-emphasized-focus-ring-type: focusring;
   --spectrum-checkbox-m-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-m-emphasized-layout: inline-row;
@@ -1158,7 +1158,7 @@
   --spectrum-checkbox-m-checkmark-render: no;
   --spectrum-checkbox-m-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-100);
   --spectrum-checkbox-m-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-m-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-m-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-m-focus-ring-type: focusring;
   --spectrum-checkbox-m-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-m-layout: inline-row;
@@ -1450,7 +1450,7 @@
   --spectrum-checkbox-l-emphasized-checkmark-render: no;
   --spectrum-checkbox-l-emphasized-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-200);
   --spectrum-checkbox-l-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-l-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-l-emphasized-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-l-emphasized-focus-ring-type: focusring;
   --spectrum-checkbox-l-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-l-emphasized-layout: inline-row;
@@ -1742,7 +1742,7 @@
   --spectrum-checkbox-l-checkmark-render: no;
   --spectrum-checkbox-l-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-200);
   --spectrum-checkbox-l-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-l-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-l-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-l-focus-ring-type: focusring;
   --spectrum-checkbox-l-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-l-layout: inline-row;
@@ -2035,7 +2035,7 @@
   --spectrum-checkbox-xl-emphasized-checkmark-render: no;
   --spectrum-checkbox-xl-emphasized-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-300);
   --spectrum-checkbox-xl-emphasized-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-xl-emphasized-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-xl-emphasized-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-xl-emphasized-focus-ring-type: focusring;
   --spectrum-checkbox-xl-emphasized-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-xl-emphasized-layout: inline-row;
@@ -2328,7 +2328,7 @@
   --spectrum-checkbox-xl-checkmark-render: no;
   --spectrum-checkbox-xl-checkmark-size: var(--spectrum-alias-ui-icon-checkmark-size-300);
   --spectrum-checkbox-xl-focus-ring-size: var(--spectrum-alias-focus-ring-size);
-  --spectrum-checkbox-xl-focus-ring-border-radius: var(--spectrum-global-dimension-size-75);
+  --spectrum-checkbox-xl-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-small);
   --spectrum-checkbox-xl-focus-ring-type: focusring;
   --spectrum-checkbox-xl-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
   --spectrum-checkbox-xl-layout: inline-row;

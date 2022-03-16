@@ -3,6 +3,10 @@
   --spectrum-semantic-cta-background-color-hover: var(--spectrum-global-color-static-indigo-700);
   --spectrum-semantic-cta-background-color-down: var(--spectrum-global-color-static-indigo-800);
   --spectrum-semantic-cta-background-color-key-focus: var(--spectrum-global-color-static-indigo-700);
+  --spectrum-semantic-emphasized-border-color-default: var(--spectrum-global-color-indigo-500);
+  --spectrum-semantic-emphasized-border-color-hover: var(--spectrum-global-color-indigo-600);
+  --spectrum-semantic-emphasized-border-color-down: var(--spectrum-global-color-indigo-700);
+  --spectrum-semantic-emphasized-border-color-key-focus: var(--spectrum-global-color-indigo-600);
   --spectrum-semantic-neutral-background-color-default: var(--spectrum-global-color-static-gray-800);
   --spectrum-semantic-informative-background-color: var(--spectrum-global-color-static-blue-500);
   --spectrum-semantic-positive-background-color: var(--spectrum-global-color-static-green-500);
@@ -47,10 +51,10 @@
   --spectrum-semantic-positive-text-color-small: var(--spectrum-global-color-green-600);
   --spectrum-semantic-positive-color-down: var(--spectrum-global-color-green-700);
   --spectrum-semantic-positive-color-key-focus: var(--spectrum-global-color-green-400);
-  --spectrum-semantic-positive-background-color-default: var(--spectrum-global-color-static-green-600);
-  --spectrum-semantic-positive-background-color-hover: var(--spectrum-global-color-static-green-700);
+  --spectrum-semantic-positive-background-color-default: var(--spectrum-global-color-static-green-700);
+  --spectrum-semantic-positive-background-color-hover: var(--spectrum-global-color-static-green-800);
   --spectrum-semantic-positive-background-color-down: var(--spectrum-global-color-static-green-800);
-  --spectrum-semantic-positive-background-color-key-focus: var(--spectrum-global-color-static-green-700);
+  --spectrum-semantic-positive-background-color-key-focus: var(--spectrum-global-color-static-green-800);
   --spectrum-semantic-informative-color-default: var(--spectrum-global-color-blue-500);
   --spectrum-semantic-informative-color-dark: var(--spectrum-global-color-blue-600);
   --spectrum-semantic-informative-border-color: var(--spectrum-global-color-blue-400);

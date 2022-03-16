@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.6"></a>
+## 5.0.6
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.5...@spectrum-css/splitbutton@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+
+
+
+
+<a name="5.0.5"></a>
+## 5.0.5
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.4...@spectrum-css/splitbutton@5.0.5)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+
+
+
+
+<a name="5.0.4"></a>
+## 5.0.4
+🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.3...@spectrum-css/splitbutton@5.0.4)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+
+
+
+
+<a name="5.0.3"></a>
+## 5.0.3
+🗓 2022-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.2...@spectrum-css/splitbutton@5.0.3)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+
+
+
+
+<a name="5.0.2"></a>
+## 5.0.2
+🗓 2022-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.1...@spectrum-css/splitbutton@5.0.2)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+
+
+
+
+<a name="5.0.1"></a>
+## 5.0.1
+🗓 2022-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@5.0.0...@spectrum-css/splitbutton@5.0.1)
+
+**Note:** Version bump only for package @spectrum-css/splitbutton
+
+
+
+
+
 <a name="5.0.0"></a>
 # 5.0.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/splitbutton@3.0.10...@spectrum-css/splitbutton@5.0.0)
