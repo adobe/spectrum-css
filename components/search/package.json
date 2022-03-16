@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/search",
-  "version": "4.2.3",
+  "version": "4.2.5",
   "description": "The Spectrum CSS search component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -22,11 +22,11 @@
     "@spectrum-css/vars": "^7.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/clearbutton": "^1.2.3",
+    "@spectrum-css/clearbutton": "^1.2.5",
     "@spectrum-css/component-builder": "^3.1.0",
-    "@spectrum-css/icon": "^3.0.15",
-    "@spectrum-css/textfield": "^3.1.6",
-    "@spectrum-css/vars": "^7.0.0",
+    "@spectrum-css/icon": "^3.0.17",
+    "@spectrum-css/textfield": "^3.1.8",
+    "@spectrum-css/vars": "^7.1.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

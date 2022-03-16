@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.11"></a>
+## 1.1.11
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.10...@spectrum-css/pickerbutton@1.1.11)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
+<a name="1.1.10"></a>
+## 1.1.10
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.9...@spectrum-css/pickerbutton@1.1.10)
+
+**Note:** Version bump only for package @spectrum-css/pickerbutton
+
+
+
+
+
 <a name="1.1.9"></a>
 ## 1.1.9
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.8...@spectrum-css/pickerbutton@1.1.9)

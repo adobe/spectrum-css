@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.19"></a>
+## 1.0.19
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.18...@spectrum-css/actiongroup@1.0.19)
+
+**Note:** Version bump only for package @spectrum-css/actiongroup
+
+
+
+
+
+<a name="1.0.18"></a>
+## 1.0.18
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.17...@spectrum-css/actiongroup@1.0.18)
+
+### 🐛 Bug fixes
+
+* **actiongroup:** update tokens & utilize gap property ([76db1be](https://github.com/adobe/spectrum-css/commit/76db1be)), closes [#1392](https://github.com/adobe/spectrum-css/issues/1392)
+* begin actiongroup update ([1f5b266](https://github.com/adobe/spectrum-css/commit/1f5b266))
+
+
+
+
+
 <a name="1.0.17"></a>
 ## 1.0.17
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.16...@spectrum-css/actiongroup@1.0.17)

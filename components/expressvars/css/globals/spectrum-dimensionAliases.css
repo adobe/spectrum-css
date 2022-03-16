@@ -138,7 +138,6 @@
   --spectrum-alias-component-focusring-gap-emphasized: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-component-focusring-size: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-component-focusring-size-emphasized: var(--spectrum-global-dimension-static-size-25);
-  --spectrum-alias-component-focusring-border-radius: var(--spectrum-global-dimension-size-125);
   --spectrum-alias-input-focusring-gap: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-input-quiet-focusline-gap: var(--spectrum-global-dimension-static-size-50);
   --spectrum-alias-border-radius-xsmall: var(--spectrum-global-dimension-size-25);
@@ -147,6 +146,10 @@
   --spectrum-alias-border-radius-medium: var(--spectrum-global-dimension-size-125);
   --spectrum-alias-border-radius-large: var(--spectrum-global-dimension-size-150);
   --spectrum-alias-border-radius-xlarge: var(--spectrum-global-dimension-size-300);
+  --spectrum-alias-focus-ring-border-radius-xsmall: var(--spectrum-global-dimension-size-75);
+  --spectrum-alias-focus-ring-border-radius-medium: var(--spectrum-global-dimension-size-175);
+  --spectrum-alias-focus-ring-border-radius-large: var(--spectrum-global-dimension-size-200);
+  --spectrum-alias-focus-ring-border-radius-xlarge: var(--spectrum-global-dimension-size-350);
   --spectrum-alias-control-two-size-s: var(--spectrum-global-dimension-size-175);
   --spectrum-alias-control-two-size-m: var(--spectrum-global-dimension-size-200);
   --spectrum-alias-control-two-size-l: var(--spectrum-global-dimension-size-225);
@@ -157,6 +160,11 @@
   --spectrum-alias-control-two-border-radius-l: var(--spectrum-global-dimension-size-115);
   --spectrum-alias-control-two-border-radius-xl: var(--spectrum-global-dimension-size-125);
   --spectrum-alias-control-two-border-radius-xxl: var(--spectrum-global-dimension-size-130);
+  --spectrum-alias-control-two-focus-ring-border-radius-s: var(--spectrum-global-dimension-size-130);
+  --spectrum-alias-control-two-focus-ring-border-radius-m: var(--spectrum-global-dimension-size-150);
+  --spectrum-alias-control-two-focus-ring-border-radius-l: var(--spectrum-global-dimension-size-160);
+  --spectrum-alias-control-two-focus-ring-border-radius-xl: var(--spectrum-global-dimension-size-175);
+  --spectrum-alias-control-two-focus-ring-border-radius-xxl: var(--spectrum-global-dimension-size-185);
   --spectrum-alias-control-three-height-s: var(--spectrum-global-dimension-size-175);
   --spectrum-alias-control-three-height-m: var(--spectrum-global-dimension-size-200);
   --spectrum-alias-control-three-height-l: var(--spectrum-global-dimension-size-225);

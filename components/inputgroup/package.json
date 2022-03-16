@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/inputgroup",
-  "version": "4.0.9",
+  "version": "4.0.11",
   "description": "The Spectrum CSS inputgroup component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -22,12 +22,12 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.1.0",
-    "@spectrum-css/icon": "^3.0.15",
-    "@spectrum-css/menu": "^3.0.15",
-    "@spectrum-css/pickerbutton": "^1.1.9",
-    "@spectrum-css/popover": "^5.0.5",
-    "@spectrum-css/textfield": "^3.1.6",
-    "@spectrum-css/vars": "^7.0.0",
+    "@spectrum-css/icon": "^3.0.17",
+    "@spectrum-css/menu": "^3.0.17",
+    "@spectrum-css/pickerbutton": "^1.1.11",
+    "@spectrum-css/popover": "^5.0.7",
+    "@spectrum-css/textfield": "^3.1.8",
+    "@spectrum-css/vars": "^7.1.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

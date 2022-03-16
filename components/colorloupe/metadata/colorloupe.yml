@@ -177,7 +177,7 @@ examples:
           </g>
           <g transform="matrix(1, 0, 0, 1, 290, 238)" filter="url(#loupe-shadow)">
             <g transform="translate(14340 -18024)">
-              <use xlink:href="#express-inner-loupe" stroke-width="6" stroke="rgba(0, 0, 0, 0.15)" clip-path="url(#express-loupe-clip)" />
+              <use xlink:href="#express-inner-loupe" clip-path="url(#express-loupe-clip)" />
             </g>
           </g>
           <g transform="translate(14630 -17786)" fill="none">
