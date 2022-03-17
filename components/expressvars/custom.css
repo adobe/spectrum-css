@@ -41,4 +41,13 @@
   --spectrum-fieldlabel-m-text-size: var(--spectrum-global-dimension-font-size-100);
   --spectrum-fieldlabel-l-text-size: var(--spectrum-global-dimension-font-size-200);
   --spectrum-fieldlabel-xl-text-size: var(--spectrum-global-dimension-font-size-300);
+
+  /* Asset card */
+  /* todo: should this be a new top-level alias? */
+  --spectrum-assetcard-order-background-color: var(--spectrum-global-color-indigo-500);
+  /* todo: need a new top-level alias for this, don't hardcode */
+  /* express: indigo-500, 20% */
+  --spectrum-assetcard-overlay-background-color: rgba(92, 92, 224, 0.2);
+  /* todo: need a new top-level alias for this, don't hardcode */
+  --spectrum-assetcard-border-color-selected: var(--spectrum-global-color-indigo-500);
 }
