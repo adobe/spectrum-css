@@ -10,6 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Asset Card
+(function() {
+  function setSelected(card, selected) {
+    var checkbox = card.querySelector('.spectrum-Checkbox-input');
+    if (checkbox) {
+      checkbox.checked = selected;
+    }
+
+    card.classList.toggle('is-selected', selected);
+  }
+
+  document.addEventListener('click', function(event) {
+    var card = event.target.closest('.spectrum-AssetCard');
+    if (card) {
+      var selected = !card.classList.contains('is-selected');
+      setSelected(card, selected);
+    }
+  });
+}());
+
 // Rating
 (function() {
   function setFocus(rating, focused) {

@@ -14,13 +14,41 @@ governing permissions and limitations under the License.
   /*
     theme specific variables (set in custom.css)
   */
-  --spectrum-assetcard-border-color-selected: orange;
-  --spectrum-assetcard-border-radius: 4px;
-  --spectrum-assetcard-background-color: white;
 }
 
 /* outer container, unstyled */
 .spectrum-AssetCard {
+  /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
+  --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
+  --spectrum-assetcard-checkbox-margin: var(--spectrum-global-dimension-size-150);
+
+  --spectrum-assetcard-order-margin: var(--spectrum-global-dimension-size-150);
+  --spectrum-assetcard-order-size: var(--spectrum-global-dimension-static-size-500);
+
+  /* todo: resolve this discrepancy, new top-level alias? */
+  /* spectrum: blue-500 */
+  /* express: indigo-500 */
+  --spectrum-assetcard-order-background-color: var(--spectrum-global-color-blue-500);
+  --spectrum-assetcard-order-border-radius: var(--spectrum-alias-border-radius-regular);
+
+  /* todo: resolve this discrepancy, new top-level alias? */
+  /* spectrum: border-color-selected */
+  /* express: semantic-emphasized-border-color-default */
+  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-border-color-selected);
+  --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-border-color: transparent;
+  --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
+
+  --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary);
+
+  --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
+  --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
+
+  /* todo: --spectrum-alias-transparent-blue-background-color is wrong in DSS, set to text color (!) */
+  /* spectrum: blue-500, 20% */
+  /* express: indigo-500, 20% */
+  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-transparent-blue-background-color-hover);
+
   /* contain quickactions */
   position: relative;
 
@@ -29,24 +57,7 @@ governing permissions and limitations under the License.
 
   width: var(--spectrum-assetcard-asset-size);
 
-  --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
-  --spectrum-assetcard-checkbox-margin: var(--spectrum-global-dimension-size-150);
-  --spectrum-assetcard-border-color: transparent;
-
-  /* temporary hardcoding for testing */
-  --spectrum-assetcard-order-margin: var(--spectrum-global-dimension-size-150);
-  --spectrum-assetcard-order-size: var(--spectrum-global-dimension-static-size-500);
-  --spectrum-assetcard-order-background-color: rgb(68, 115, 226);
-  --spectrum-assetcard-order-border-radius: var(--spectrum-alias-border-radius-regular);
-  --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
-  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-border-color-selected);
-  --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
-  --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary);
-  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-transparent-blue-background-color-hover);
-
-  --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-50);
-  /* todo: --spectrum-alias-transparent-blue-background-color is wrong in DSS */
-
+  cursor: pointer;
 
   &:hover {
     .spectrum-AssetCard-assetContainer {
@@ -79,9 +90,6 @@ governing permissions and limitations under the License.
 
   background-color: var(--spectrum-assetcard-background-color);
 
-  overflow: hidden; /* backwards-compatibility (Safari/iOS) */
-  overflow: clip; /* performance */
-
   transition: border var(--spectrum-global-animation-duration-100) ease-in-out;
 
   /* focus-ring */
@@ -92,6 +100,7 @@ governing permissions and limitations under the License.
     inset: calc(-1 * var(--spectrum-assetcard-focus-ring-gap));
 
     border: var(--spectrum-alias-border-size-thick) solid var(--spectrum-alias-focus-color);
+    border-radius: var(--spectrum-assetcard-focus-ring-border-radius);
 
     opacity: 0;
     pointer-events: none;
@@ -105,15 +114,18 @@ governing permissions and limitations under the License.
 
   width: 100%;
   height: 100%;
+
+  border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
 }
 
 /* header area, contains the header and optional content */
 .spectrum-AssetCard-header {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   /* space between the asset and the header, place it on the header so header can be optional */
-  margin-block-start: var(--spectrum-global-dimension-size-100);
+  margin-block-start: var(--spectrum-global-dimension-static-size-200);
 }
 
 /* bold title */
@@ -129,6 +141,9 @@ governing permissions and limitations under the License.
 /* content area, the last thing in the card */
 .spectrum-AssetCard-content {
   flex-grow: 1;
+
+  /* space between the content and the header, place it on the content so content can be optional */
+  margin-block-start: var(--spectrum-global-dimension-static-size-50);
 }
 
 /*
@@ -141,6 +156,7 @@ governing permissions and limitations under the License.
   background-color: transparent;
 
   pointer-events: none;
+  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 /* the checkbox */
@@ -175,19 +191,25 @@ governing permissions and limitations under the License.
   justify-content: center;
   line-height: 0;
 
-  visibility: hidden;
-
-  opacity: 0;
+  width: var(--spectrum-assetcard-order-size);
+  height: var(--spectrum-assetcard-order-size);
 
   background-color: var(--spectrum-assetcard-order-background-color);
   border-radius: var(--spectrum-assetcard-order-border-radius);
 
-  width: var(--spectrum-assetcard-order-size);
-  height: var(--spectrum-assetcard-order-size);
-
   color: var(--spectrum-global-color-static-white);
   font-weight: var(--spectrum-global-font-weight-bold);
   font-size: var(--spectrum-global-dimension-font-size-400);
+
+  visibility: hidden;
+
+  opacity: 0;
+  transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+}
+
+.spectrum-AssetCard-quickActions,
+.spectrum-AssetCard-order {
+  box-shadow: 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-global-dimension-static-size-75) rgb(0, 0, 0, 0.15);
 }
 
 /* base selection styles shared by every selection mode */
@@ -201,13 +223,6 @@ governing permissions and limitations under the License.
       background-color: var(--spectrum-assetcard-overlay-background-color);
     }
   }
-}
-
-/* all selectable cards should appear clickable */
-.spectrum-AssetCard--highlightSelection,
-.spectrum-AssetCard--checkboxSelection,
-.spectrum-AssetCard--orderedSelection {
-  cursor: pointer;
 }
 
 /* with a quickaction */
