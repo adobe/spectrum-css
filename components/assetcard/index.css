@@ -1,0 +1,184 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "../vars/css/components/spectrum-card.css";
+
+.🤫{
+  /*
+    theme specific variables (set in custom.css)
+  */
+  --spectrum-assetcard-border-color-selected: orange;
+  --spectrum-assetcard-border-radius: 4px;
+  --spectrum-assetcard-background-color: white;
+}
+
+/* outer container, unstyled */
+.spectrum-AssetCard {
+  /* contain quickactions */
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
+  --spectrum-assetcard-checkbox-margin: var(--spectrum-global-dimension-size-150);
+  --spectrum-assetcard-border-color: transparent;
+
+  /* temporary hardcoding for testing */
+  --spectrum-assetcard-order-margin: var(--spectrum-global-dimension-size-150);
+  --spectrum-assetcard-order-size: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-assetcard-order-background-color: rgb(68, 115, 226);
+  --spectrum-assetcard-order-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-border-color-selected);
+  --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary);
+  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-transparent-blue-background-color-hover);
+  /* todo: --spectrum-alias-transparent-blue-background-color is wrong in DSS */
+}
+
+/* the container for the asset (background, border, etc) */
+.spectrum-AssetCard-assetContainer {
+  /* contain overlay */
+  position: relative;
+
+  width: var(--spectrum-assetcard-asset-size);
+  height: var(--spectrum-assetcard-asset-size);
+
+  border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-assetcard-border-color);
+  border-radius: var(--spectrum-assetcard-border-radius);
+
+  background-color: var(--spectrum-assetcard-background-color);
+
+  overflow: hidden;
+  overflow: clip;
+}
+
+/* the actual asset */
+.spectrum-AssetCard-asset {
+  object-fit: contain;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* content area, the last thing in the card */
+.spectrum-AssetCard-header {
+  display: flex;
+  flex-direction: row;
+}
+
+/* bold title */
+.spectrum-AssetCard-title {
+  flex-grow: 1;
+}
+
+/* optional content placed to the right of the title */
+.spectrum-AssetCard-titleContent {
+
+}
+
+/* content area, the last thing in the card */
+.spectrum-AssetCard-content {
+  flex-grow: 1;
+}
+
+/*
+  Selection styles
+*/
+.spectrum-AssetCard-selectionOverlay {
+  position: absolute;
+  inset: 0;
+
+  background-color: transparent;
+
+  pointer-events: none;
+}
+
+/* the checkbox */
+.spectrum-AssetCard-quickActions {
+  position: absolute;
+  inset-inline-start: var(--spectrum-assetcard-checkbox-margin);
+  inset-block-start: var(--spectrum-assetcard-checkbox-margin);
+
+  inline-size: var(--spectrum-quickactions-height);
+  block-size: var(--spectrum-quickactions-height);
+
+  visibility: hidden;
+
+  /* hack to work around #124 */
+  .spectrum-Checkbox:dir(ltr),
+  .spectrum-Checkbox:dir(rtl) {
+    margin: 0;
+  }
+}
+
+/* the order indicator */
+.spectrum-AssetCard-order {
+  position: absolute;
+  inset-inline-start: var(--spectrum-assetcard-order-margin);
+  inset-block-start: var(--spectrum-assetcard-order-margin);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  background-color: var(--spectrum-assetcard-order-background-color);
+  border-radius: var(--spectrum-assetcard-order-border-radius);
+
+  width: var(--spectrum-assetcard-order-size);
+  height: var(--spectrum-assetcard-order-size);
+
+  color: var(--spectrum-global-color-static-white);
+  font-weight: var(--spectrum-global-font-weight-bold);
+  font-size: var(--spectrum-global-dimension-font-size-400);
+}
+
+.spectrum-AssetCard {
+  &.is-selected {
+    .spectrum-AssetCard-assetContainer {
+      border-color: var(--spectrum-assetcard-border-color-selected);
+    }
+
+    .spectrum-AssetCard-selectionOverlay {
+      background-color: var(--spectrum-assetcard-overlay-background-color);
+    }
+  }
+}
+
+.spectrum-AssetCard--checkboxSelection {
+  &.is-focused,
+  &.is-selected,
+  &:focus,
+  &:hover {
+    .spectrum-AssetCard-quickActions {
+      /* Ideally, this would simply apply is-open to the QuickActions component */
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.spectrum-AssetCard--orderedSelection {
+  &.is-selected {
+    .spectrum-AssetCard-order {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
