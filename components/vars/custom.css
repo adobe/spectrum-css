@@ -18,4 +18,13 @@
 
   --spectrum-slider-m-track-inside-border-radius: var(--spectrum-slider-m-track-border-radius);
   --spectrum-slider-label-text-size: var(--spectrum-global-dimension-font-size-75);
+
+  /* Asset card */
+  /* todo: should this be a new top-level alias? */
+  --spectrum-assetcard-order-background-color: var(--spectrum-global-color-blue-500);
+  /* todo: need a new top-level alias for this, don't hardcode */
+  /* spectrum: blue-500, 10% */
+  --spectrum-assetcard-overlay-background-color: rgba(20, 115, 230, 0.1);
+  /* todo: need a new top-level alias for this, don't hardcode */
+  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-border-color-selected);
 }

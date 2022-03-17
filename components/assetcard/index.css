@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -14,27 +14,16 @@ governing permissions and limitations under the License.
   /*
     theme specific variables (set in custom.css)
   */
+  --spectrum-assetcard-order-background-color: pink;
+  --spectrum-assetcard-overlay-background-color: pink;
+  --spectrum-assetcard-border-color-selected: pink;
 }
 
 /* outer container, unstyled */
 .spectrum-AssetCard {
   /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
   --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
-  --spectrum-assetcard-checkbox-margin: var(--spectrum-global-dimension-size-150);
 
-  --spectrum-assetcard-order-margin: var(--spectrum-global-dimension-size-150);
-  --spectrum-assetcard-order-size: var(--spectrum-global-dimension-static-size-500);
-
-  /* todo: resolve this discrepancy, new top-level alias? */
-  /* spectrum: blue-500 */
-  /* express: indigo-500 */
-  --spectrum-assetcard-order-background-color: var(--spectrum-global-color-blue-500);
-  --spectrum-assetcard-order-border-radius: var(--spectrum-alias-border-radius-regular);
-
-  /* todo: resolve this discrepancy, new top-level alias? */
-  /* spectrum: border-color-selected */
-  /* express: semantic-emphasized-border-color-default */
-  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-border-color-selected);
   --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-assetcard-border-color: transparent;
   --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
@@ -44,10 +33,11 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
   --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
 
-  /* todo: --spectrum-alias-transparent-blue-background-color is wrong in DSS, set to text color (!) */
-  /* spectrum: blue-500, 20% */
-  /* express: indigo-500, 20% */
-  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-transparent-blue-background-color-hover);
+  --spectrum-assetcard-checkbox-margin: var(--spectrum-global-dimension-size-150);
+
+  --spectrum-assetcard-order-margin: var(--spectrum-global-dimension-size-150);
+  --spectrum-assetcard-order-size: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-assetcard-order-border-radius: var(--spectrum-alias-border-radius-regular);
 
   /* contain quickactions */
   position: relative;
