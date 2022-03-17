@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.17...@spectrum-css/illustratedmessage@4.0.0)
+
+* chore(illustratedmessage)!: update colors, weights, sizes ([9f9b730](https://github.com/adobe/spectrum-css/commit/9f9b730)), closes [#1399](https://github.com/adobe/spectrum-css/issues/1399)
+
+
+### 🛑 BREAKING CHANGES
+
+* changes heading font size, body font-style, heading color, and heading font-weight. Also updates docs example to prefer sentence case over title case.
+
+
+
+
+
 <a name="3.0.17"></a>
 ## 3.0.17
 🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.16...@spectrum-css/illustratedmessage@3.0.17)

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/fieldgroup",
-  "version": "3.0.17",
+  "version": "3.0.18",
   "description": "The Spectrum CSS fieldgroup component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -22,11 +22,11 @@
     "@spectrum-css/vars": "^7.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/checkbox": "^3.0.17",
-    "@spectrum-css/component-builder": "^3.1.0",
-    "@spectrum-css/icon": "^3.0.17",
-    "@spectrum-css/radio": "^3.0.17",
-    "@spectrum-css/vars": "^7.1.0",
+    "@spectrum-css/checkbox": "^3.0.18",
+    "@spectrum-css/component-builder": "^3.1.1",
+    "@spectrum-css/icon": "^3.0.18",
+    "@spectrum-css/radio": "^3.0.18",
+    "@spectrum-css/vars": "^7.1.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
