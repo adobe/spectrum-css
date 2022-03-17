@@ -1,0 +1,94 @@
+name: Asset Card
+description: A card with an asset preview.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
+examples:
+  - id: assetcard-default
+    name: Default
+    markup: |
+      <div style="width: 208px;">
+        <div class="spectrum-AssetCard" tabindex="0" role="figure">
+          <div class="spectrum-AssetCard-assetContainer">
+            <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+            <div class="spectrum-AssetCard-selectionOverlay"></div>
+          </div>
+          <div class="spectrum-AssetCard-header">
+            <div class="spectrum-AssetCard-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
+            <div class="spectrum-AssetCard-titleContent">(optional)</div>
+          </div>
+          <div class="spectrum-AssetCard-content">
+            <div class="spectrum-AssetCard-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-selected
+    name: Highlight Selection
+    markup: |
+      <div style="width: 208px;">
+        <div class="spectrum-AssetCard spectrum-AssetCard--highlightSelection is-selected" tabindex="0" role="figure">
+          <div class="spectrum-AssetCard-assetContainer">
+            <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+            <div class="spectrum-AssetCard-selectionOverlay"></div>
+          </div>
+          <div class="spectrum-AssetCard-header">
+            <div class="spectrum-AssetCard-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
+            <div class="spectrum-AssetCard-titleContent">(optional)</div>
+          </div>
+          <div class="spectrum-AssetCard-content">
+            <div class="spectrum-AssetCard-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-selected
+    name: Checkbox Selection
+    markup: |
+      <div style="width: 208px;">
+        <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection is-selected" tabindex="0" role="figure">
+          <div class="spectrum-AssetCard-assetContainer">
+            <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+            <div class="spectrum-AssetCard-selectionOverlay"></div>
+          </div>
+          <div class="spectrum-AssetCard-header">
+            <div class="spectrum-AssetCard-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
+            <div class="spectrum-AssetCard-titleContent">(optional)</div>
+          </div>
+          <div class="spectrum-AssetCard-content">
+            <div class="spectrum-AssetCard-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
+          </div>
+          <div class="spectrum-QuickActions spectrum-AssetCard-quickActions">
+            <div class="spectrum-Checkbox spectrum-Checkbox--sizeM">
+              <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" checked>
+              <span class="spectrum-Checkbox-box">
+                <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Dash100" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-selected
+    name: Order Selection
+    markup: |
+      <div style="width: 208px;">
+        <div class="spectrum-AssetCard spectrum-AssetCard--orderedSelection is-selected" tabindex="0" role="figure">
+          <div class="spectrum-AssetCard-assetContainer">
+            <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+            <div class="spectrum-AssetCard-selectionOverlay"></div>
+          </div>
+          <div class="spectrum-AssetCard-header">
+            <div class="spectrum-AssetCard-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
+            <div class="spectrum-AssetCard-titleContent">(optional)</div>
+          </div>
+          <div class="spectrum-AssetCard-content">
+            <div class="spectrum-AssetCard-subtitle spectrum-Detail spectrum-Detail--sizeS">jpg</div>
+          </div>
+          <div class="spectrum-AssetCard-order">1</div>
+        </div>
+      </div>
+
