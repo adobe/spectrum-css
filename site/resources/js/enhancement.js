@@ -24,8 +24,17 @@ governing permissions and limitations under the License.
   document.addEventListener('click', function(event) {
     var card = event.target.closest('.spectrum-AssetCard');
     if (card) {
-      var selected = !card.classList.contains('is-selected');
-      setSelected(card, selected);
+      setSelected(card, !card.classList.contains('is-selected'));
+    }
+  });
+
+  document.addEventListener('keypress', function(event) {
+    var card = event.target.closest('.spectrum-AssetCard');
+    if (card) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        setSelected(card, !card.classList.contains('is-selected'));
+        event.preventDefault();
+      }
     }
   });
 }());

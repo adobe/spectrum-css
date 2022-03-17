@@ -55,10 +55,10 @@ governing permissions and limitations under the License.
     }
   }
 
+  outline: none;
+
   &.is-focused,
   &:focus-ring {
-    outline: none;
-
     .spectrum-AssetCard-assetContainer {
       &:before {
         opacity: 1;
