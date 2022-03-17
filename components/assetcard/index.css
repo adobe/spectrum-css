@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-card.css";
-
 .🤫{
   /*
     theme specific variables (set in custom.css)
@@ -29,6 +27,8 @@ governing permissions and limitations under the License.
   display: flex;
   flex-direction: column;
 
+  width: var(--spectrum-assetcard-asset-size);
+
   --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
   --spectrum-assetcard-checkbox-margin: var(--spectrum-global-dimension-size-150);
   --spectrum-assetcard-border-color: transparent;
@@ -38,11 +38,32 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-order-size: var(--spectrum-global-dimension-static-size-500);
   --spectrum-assetcard-order-background-color: rgb(68, 115, 226);
   --spectrum-assetcard-order-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
   --spectrum-assetcard-border-color-selected: var(--spectrum-alias-border-color-selected);
   --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary);
   --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-transparent-blue-background-color-hover);
+
+  --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-50);
   /* todo: --spectrum-alias-transparent-blue-background-color is wrong in DSS */
+
+
+  &:hover {
+    .spectrum-AssetCard-assetContainer {
+      border-color: var(--spectrum-assetcard-border-color-hover);
+    }
+  }
+
+  &.is-focused,
+  &:focus-ring {
+    outline: none;
+
+    .spectrum-AssetCard-assetContainer {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 /* the container for the asset (background, border, etc) */
@@ -58,8 +79,24 @@ governing permissions and limitations under the License.
 
   background-color: var(--spectrum-assetcard-background-color);
 
-  overflow: hidden;
-  overflow: clip;
+  overflow: hidden; /* backwards-compatibility (Safari/iOS) */
+  overflow: clip; /* performance */
+
+  transition: border var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  /* focus-ring */
+  &:before {
+    content: '';
+
+    position: absolute;
+    inset: calc(-1 * var(--spectrum-assetcard-focus-ring-gap));
+
+    border: var(--spectrum-alias-border-size-thick) solid var(--spectrum-alias-focus-color);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
 }
 
 /* the actual asset */
@@ -70,10 +107,13 @@ governing permissions and limitations under the License.
   height: 100%;
 }
 
-/* content area, the last thing in the card */
+/* header area, contains the header and optional content */
 .spectrum-AssetCard-header {
   display: flex;
   flex-direction: row;
+
+  /* space between the asset and the header, place it on the header so header can be optional */
+  margin-block-start: var(--spectrum-global-dimension-size-100);
 }
 
 /* bold title */
@@ -82,7 +122,7 @@ governing permissions and limitations under the License.
 }
 
 /* optional content placed to the right of the title */
-.spectrum-AssetCard-titleContent {
+.spectrum-AssetCard-headerContent {
 
 }
 
@@ -113,6 +153,9 @@ governing permissions and limitations under the License.
   block-size: var(--spectrum-quickactions-height);
 
   visibility: hidden;
+
+  opacity: 0;
+  transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
 
   /* hack to work around #124 */
   .spectrum-Checkbox:dir(ltr),
@@ -158,6 +201,13 @@ governing permissions and limitations under the License.
       background-color: var(--spectrum-assetcard-overlay-background-color);
     }
   }
+}
+
+/* all selectable cards should appear clickable */
+.spectrum-AssetCard--highlightSelection,
+.spectrum-AssetCard--checkboxSelection,
+.spectrum-AssetCard--orderedSelection {
+  cursor: pointer;
 }
 
 /* with a quickaction */
