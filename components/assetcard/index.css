@@ -80,6 +80,10 @@ governing permissions and limitations under the License.
   /* contain overlay */
   position: relative;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: var(--spectrum-assetcard-asset-size);
   height: var(--spectrum-assetcard-asset-size);
 
@@ -112,6 +116,9 @@ governing permissions and limitations under the License.
 
   width: 100%;
   height: 100%;
+
+  transition: width var(--spectrum-global-animation-duration-100) ease-in-out,
+              height var(--spectrum-global-animation-duration-100) ease-in-out;
 
   border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
 }
@@ -253,6 +260,8 @@ governing permissions and limitations under the License.
 
 /* base selection styles shared by every selection mode */
 .spectrum-AssetCard {
+  /* drop target looks identical to selected */
+  &.is-drop-target,
   &.is-selected {
     .spectrum-AssetCard-assetContainer {
       border-color: var(--spectrum-assetcard-border-color-selected);
@@ -260,6 +269,19 @@ governing permissions and limitations under the License.
 
     .spectrum-AssetCard-selectionOverlay {
       background-color: var(--spectrum-assetcard-overlay-background-color);
+    }
+  }
+}
+
+/* highlight */
+.spectrum-AssetCard--highlightSelection {
+  &.is-selected {
+    .spectrum-AssetCard-asset {
+      width: 90%;
+      height: 90%;
+
+      /* no radius, otherwise square assets get rounded */
+      border-radius: 0;
     }
   }
 }
