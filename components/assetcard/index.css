@@ -10,15 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.🤫{
-  /*
-    theme specific variables (set in custom.css)
-  */
-  --spectrum-assetcard-selectionindicator-background-color-ordered: pink;
-  --spectrum-assetcard-overlay-background-color: pink;
-  --spectrum-assetcard-border-color-selected: pink;
-}
-
 /* outer container, unstyled */
 .spectrum-AssetCard {
   /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
@@ -30,7 +21,8 @@ governing permissions and limitations under the License.
   /* todo: this was hardcoded, it should reference --spectrum-alias-border-color-down once that becomes +200 */
   --spectrum-assetcard-border-color-down: var(--spectrum-global-color-gray-600);
 
-  --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary);
+  --spectrum-assetcard-background-color: var(--spectrum-global-color-gray-200);
+  /* --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary); */
 
   --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
   --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
@@ -40,6 +32,9 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-selectionindicator-margin: var(--spectrum-global-dimension-size-150);
   --spectrum-assetcard-selectionindicator-size: var(--spectrum-global-dimension-static-size-500);
   --spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-alias-border-radius-regular);
+
+  --spectrum-assetcard-heading-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-assetcard-content-text-color: var(--spectrum-global-color-gray-700);
 
   /* contain selection indicator */
   position: relative;
@@ -137,8 +132,9 @@ governing permissions and limitations under the License.
 .spectrum-AssetCard-title {
   flex-grow: 1;
 
-  /* be a XS heading */
-  color: var(--spectrum-heading-xs-text-color);
+  color: var(--spectrum-assetcard-heading-text-color);
+
+  /* be a XS heading, size wise */
   font-family: var(--spectrum-heading-xs-text-font-family);
   font-weight: var(--spectrum-heading-xs-text-font-weight);
   font-size: var(--spectrum-heading-xs-text-size);
@@ -150,7 +146,6 @@ governing permissions and limitations under the License.
 
 /* be a XXS heading on large/mobile */
 .spectrum--large .spectrum-AssetCard-title {
-  color: var(--spectrum-heading-xxs-text-color);
   font-family: var(--spectrum-heading-xxs-text-font-family);
   font-weight: var(--spectrum-heading-xxs-text-font-weight);
   font-size: var(--spectrum-heading-xxs-text-size);
@@ -162,8 +157,9 @@ governing permissions and limitations under the License.
 
 /* optional content placed to the right of the title */
 .spectrum-AssetCard-headerContent {
+  color: var(--spectrum-assetcard-heading-text-color);
+
   /* be a M body */
-  color: var(--spectrum-body-m-text-color);
   font-family: var(--spectrum-body-m-text-font-family);
   font-size: var(--spectrum-body-m-text-size);
   font-weight: var(--spectrum-body-m-text-font-weight);
@@ -174,7 +170,6 @@ governing permissions and limitations under the License.
 
 .spectrum--large .spectrum-AssetCard-headerContent {
   /* be a S body */
-  color: var(--spectrum-body-s-text-color);
   font-family: var(--spectrum-body-s-text-font-family);
   font-size: var(--spectrum-body-s-text-size);
   font-weight: var(--spectrum-body-s-text-font-weight);
@@ -191,8 +186,9 @@ governing permissions and limitations under the License.
   /* space between the content and the header, place it on the content so content can be optional */
   margin-block-start: var(--spectrum-global-dimension-static-size-50);
 
-  /* be a S body */
-  color: var(--spectrum-body-s-text-color);
+  color: var(--spectrum-assetcard-content-text-color);
+
+  /* be a S body, at least size-wise */
   font-family: var(--spectrum-body-s-text-font-family);
   font-size: var(--spectrum-body-s-text-size);
   font-weight: var(--spectrum-body-s-text-font-weight);
@@ -203,7 +199,6 @@ governing permissions and limitations under the License.
 
 /* be a XS body on large/mobile */
 .spectrum--large .spectrum-AssetCard-content {
-  color: var(--spectrum-body-xs-text-color);
   font-family: var(--spectrum-body-xs-text-font-family);
   font-size: var(--spectrum-body-xs-text-size);
   font-weight: var(--spectrum-body-xs-text-font-weight);
@@ -269,6 +264,18 @@ governing permissions and limitations under the License.
 
     .spectrum-AssetCard-selectionOverlay {
       background-color: var(--spectrum-assetcard-overlay-background-color);
+    }
+
+    &:hover {
+      .spectrum-AssetCard-assetContainer {
+        border-color: var(--spectrum-assetcard-border-color-selected-hover);
+      }
+    }
+
+    &:down {
+      .spectrum-AssetCard-assetContainer {
+        border-color: var(--spectrum-assetcard-border-color-selected-down);
+      }
     }
   }
 }
