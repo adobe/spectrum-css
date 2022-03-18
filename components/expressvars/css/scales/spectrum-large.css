@@ -85,9 +85,9 @@
   --spectrum-alias-item-control-3-width-l: 41px;
   --spectrum-alias-item-control-3-width-xl: 46px;
   --spectrum-alias-item-mark-size-m: var(--spectrum-global-dimension-static-size-325);
-  --spectrum-alias-component-focusring-border-radius: var(--spectrum-global-dimension-size-115);
+  --spectrum-alias-component-focusring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
   --spectrum-alias-focus-ring-border-radius-small: var(--spectrum-global-dimension-size-75);
-  --spectrum-alias-focus-ring-border-radius-regular: var(--spectrum-global-dimension-size-115);
+  --spectrum-alias-focus-ring-border-radius-regular: 12px;
   --spectrum-alias-control-three-width-m: 34px;
   --spectrum-alias-control-three-width-l: 38px;
   --spectrum-alias-control-three-width-xl: var(--spectrum-global-dimension-static-size-550);

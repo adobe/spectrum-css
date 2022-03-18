@@ -138,7 +138,6 @@
   --spectrum-alias-component-focusring-gap-emphasized: var(--spectrum-global-dimension-static-size-25);
   --spectrum-alias-component-focusring-size: var(--spectrum-global-dimension-static-size-10);
   --spectrum-alias-component-focusring-size-emphasized: var(--spectrum-global-dimension-static-size-25);
-  --spectrum-alias-component-focusring-border-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-alias-input-border-size: var(--spectrum-global-dimension-static-size-10);
   --spectrum-alias-input-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-alias-input-quiet-focusline-gap: var(--spectrum-global-dimension-static-size-10);
@@ -283,8 +282,7 @@
   --spectrum-alias-border-radius-large: var(--spectrum-global-dimension-size-200);
   --spectrum-alias-border-radius-xlarge: var(--spectrum-global-dimension-size-300);
   --spectrum-alias-focus-ring-border-radius-xsmall: var(--spectrum-global-dimension-size-50);
-  --spectrum-alias-focus-ring-border-radius-small: var(--spectrum-global-dimension-size-75);
-  --spectrum-alias-focus-ring-border-radius-regular: var(--spectrum-global-dimension-size-100);
+  --spectrum-alias-focus-ring-border-radius-small: var(--spectrum-global-dimension-static-size-65);
   --spectrum-alias-focus-ring-border-radius-medium: var(--spectrum-global-dimension-size-150);
   --spectrum-alias-focus-ring-border-radius-large: var(--spectrum-global-dimension-size-250);
   --spectrum-alias-focus-ring-border-radius-xlarge: var(--spectrum-global-dimension-size-350);
@@ -342,7 +340,6 @@
   --spectrum-alias-tag-clearbutton-icon-margin-s: var(--spectrum-global-dimension-size-100);
   --spectrum-alias-tag-clearbutton-icon-margin-m: var(--spectrum-global-dimension-size-150);
   --spectrum-alias-tag-clearbutton-icon-margin-l: var(--spectrum-global-dimension-size-185);
-  --spectrum-alias-tag-focusring-border-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-alias-tag-focusring-size: var(--spectrum-global-dimension-size-25);
   --spectrum-alias-tag-focusring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-alias-tag-focusring-gap-selected: var(--spectrum-global-dimension-size-25);
