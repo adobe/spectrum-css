@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
   /*
     theme specific variables (set in custom.css)
   */
-  --spectrum-assetcard-order-background-color: pink;
+  --spectrum-assetcard-selectionindicator-background-color-ordered: pink;
   --spectrum-assetcard-overlay-background-color: pink;
   --spectrum-assetcard-border-color-selected: pink;
 }
@@ -27,19 +27,20 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-assetcard-border-color: transparent;
   --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
+  --spectrum-assetcard-border-color-down: var(--spectrum-alias-border-color-down);
 
   --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary);
 
   --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
   --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
 
-  --spectrum-assetcard-checkbox-margin: var(--spectrum-global-dimension-size-150);
+  /* todo: design wanted rgba(248, 248, 248, 0.9), but we're using this alias which is rgba(245, 245, 245, 0.9) for light, rgba(50, 50, 50, 0.9) for dark */
+  --spectrum-assetcard-selectionindicator-background-color-default: var(--spectrum-alias-background-color-quickactions);
+  --spectrum-assetcard-selectionindicator-margin: var(--spectrum-global-dimension-size-150);
+  --spectrum-assetcard-selectionindicator-size: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-alias-border-radius-regular);
 
-  --spectrum-assetcard-order-margin: var(--spectrum-global-dimension-size-150);
-  --spectrum-assetcard-order-size: var(--spectrum-global-dimension-static-size-500);
-  --spectrum-assetcard-order-border-radius: var(--spectrum-alias-border-radius-regular);
-
-  /* contain quickactions */
+  /* contain selection indicator */
   position: relative;
 
   display: flex;
@@ -52,6 +53,12 @@ governing permissions and limitations under the License.
   &:hover {
     .spectrum-AssetCard-assetContainer {
       border-color: var(--spectrum-assetcard-border-color-hover);
+    }
+  }
+
+  &:active {
+    .spectrum-AssetCard-assetContainer {
+      border-color: var(--spectrum-assetcard-border-color-down);
     }
   }
 
@@ -134,6 +141,8 @@ governing permissions and limitations under the License.
 
   /* space between the content and the header, place it on the content so content can be optional */
   margin-block-start: var(--spectrum-global-dimension-static-size-50);
+
+
 }
 
 /*
@@ -149,43 +158,22 @@ governing permissions and limitations under the License.
   transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
-/* the checkbox */
-.spectrum-AssetCard-quickActions {
+/* the checkbox or selection order indicator */
+.spectrum-AssetCard-selectionIndicator {
   position: absolute;
-  inset-inline-start: var(--spectrum-assetcard-checkbox-margin);
-  inset-block-start: var(--spectrum-assetcard-checkbox-margin);
-
-  inline-size: var(--spectrum-quickactions-height);
-  block-size: var(--spectrum-quickactions-height);
-
-  visibility: hidden;
-
-  opacity: 0;
-  transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
-
-  /* hack to work around #124 */
-  .spectrum-Checkbox:dir(ltr),
-  .spectrum-Checkbox:dir(rtl) {
-    margin: 0;
-  }
-}
-
-/* the order indicator */
-.spectrum-AssetCard-order {
-  position: absolute;
-  inset-inline-start: var(--spectrum-assetcard-order-margin);
-  inset-block-start: var(--spectrum-assetcard-order-margin);
+  inset-inline-start: var(--spectrum-assetcard-selectionindicator-margin);
+  inset-block-start: var(--spectrum-assetcard-selectionindicator-margin);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 0;
 
-  width: var(--spectrum-assetcard-order-size);
-  height: var(--spectrum-assetcard-order-size);
+  width: var(--spectrum-assetcard-selectionindicator-size);
+  height: var(--spectrum-assetcard-selectionindicator-size);
 
-  background-color: var(--spectrum-assetcard-order-background-color);
-  border-radius: var(--spectrum-assetcard-order-border-radius);
+  border-radius: var(--spectrum-assetcard-selectionindicator-border-radius);
+
+  box-shadow: 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-global-dimension-static-size-75) rgb(0, 0, 0, 0.15);
 
   color: var(--spectrum-global-color-static-white);
   font-weight: var(--spectrum-global-font-weight-bold);
@@ -197,9 +185,8 @@ governing permissions and limitations under the License.
   transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
-.spectrum-AssetCard-quickActions,
-.spectrum-AssetCard-order {
-  box-shadow: 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-global-dimension-static-size-75) rgb(0, 0, 0, 0.15);
+.spectrum-AssetCard-selectionOrder {
+  line-height: 0;
 }
 
 /* base selection styles shared by every selection mode */
@@ -215,14 +202,21 @@ governing permissions and limitations under the License.
   }
 }
 
-/* with a quickaction */
+/* with a checkbox */
 .spectrum-AssetCard--checkboxSelection {
+  .spectrum-AssetCard-selectionIndicator {
+    background-color: var(--spectrum-assetcard-selectionindicator-background-color-default);
+
+    .spectrum-AssetCard-selectionOrder {
+      display: none;
+    }
+  }
+
   &.is-focused,
   &.is-selected,
   &:focus,
   &:hover {
-    .spectrum-AssetCard-quickActions {
-      /* Ideally, this would simply apply is-open to the QuickActions component */
+    .spectrum-AssetCard-selectionIndicator {
       visibility: visible;
       opacity: 1;
       pointer-events: all;
@@ -232,8 +226,16 @@ governing permissions and limitations under the License.
 
 /* with the little order flag that shows the selection order */
 .spectrum-AssetCard--orderedSelection {
+  .spectrum-AssetCard-selectionIndicator {
+    background-color: var(--spectrum-assetcard-selectionindicator-background-color-ordered);
+
+    .spectrum-AssetCard-checkbox {
+      display: none;
+    }
+  }
+
   &.is-selected {
-    .spectrum-AssetCard-order {
+    .spectrum-AssetCard-selectionIndicator {
       visibility: visible;
       opacity: 1;
       pointer-events: all;

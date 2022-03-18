@@ -21,7 +21,7 @@
 
   /* Asset card */
   /* todo: should this be a new top-level alias? */
-  --spectrum-assetcard-order-background-color: var(--spectrum-global-color-blue-500);
+  --spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-global-color-blue-500);
   /* todo: need a new top-level alias for this, don't hardcode */
   /* spectrum: blue-500, 10% */
   --spectrum-assetcard-overlay-background-color: rgba(20, 115, 230, 0.1);
