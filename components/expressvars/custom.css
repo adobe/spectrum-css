@@ -50,4 +50,6 @@
   --spectrum-assetcard-overlay-background-color: rgba(92, 92, 224, 0.2);
   /* todo: need a new top-level alias for this, don't hardcode */
   --spectrum-assetcard-border-color-selected: var(--spectrum-global-color-indigo-500);
+  --spectrum-assetcard-border-color-selected-hover: var(--spectrum-global-color-indigo-500);
+  --spectrum-assetcard-border-color-selected-down: var(--spectrum-global-color-indigo-600);
 }
