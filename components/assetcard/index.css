@@ -27,7 +27,8 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-assetcard-border-color: transparent;
   --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
-  --spectrum-assetcard-border-color-down: var(--spectrum-alias-border-color-down);
+  /* todo: this was hardcoded, it should reference --spectrum-alias-border-color-down once that becomes +200 */
+  --spectrum-assetcard-border-color-down: var(--spectrum-global-color-gray-600);
 
   --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary);
 
@@ -128,12 +129,53 @@ governing permissions and limitations under the License.
 /* bold title */
 .spectrum-AssetCard-title {
   flex-grow: 1;
+
+  /* be a XS heading */
+  color: var(--spectrum-heading-xs-text-color);
+  font-family: var(--spectrum-heading-xs-text-font-family);
+  font-weight: var(--spectrum-heading-xs-text-font-weight);
+  font-size: var(--spectrum-heading-xs-text-size);
+  font-weight: var(--spectrum-heading-xs-text-font-weight);
+  line-height: var(--spectrum-heading-xs-text-line-height);
+  font-style: var(--spectrum-heading-xs-text-font-style);
+  letter-spacing: var(--spectrum-heading-xs-text-letter-spacing);
+}
+
+/* be a XXS heading on large/mobile */
+.spectrum--large .spectrum-AssetCard-title {
+  color: var(--spectrum-heading-xxs-text-color);
+  font-family: var(--spectrum-heading-xxs-text-font-family);
+  font-weight: var(--spectrum-heading-xxs-text-font-weight);
+  font-size: var(--spectrum-heading-xxs-text-size);
+  font-weight: var(--spectrum-heading-xxs-text-font-weight);
+  line-height: var(--spectrum-heading-xxs-text-line-height);
+  font-style: var(--spectrum-heading-xxs-text-font-style);
+  letter-spacing: var(--spectrum-heading-xxs-text-letter-spacing);
 }
 
 /* optional content placed to the right of the title */
 .spectrum-AssetCard-headerContent {
-
+  /* be a M body */
+  color: var(--spectrum-body-m-text-color);
+  font-family: var(--spectrum-body-m-text-font-family);
+  font-size: var(--spectrum-body-m-text-size);
+  font-weight: var(--spectrum-body-m-text-font-weight);
+  line-height: var(--spectrum-body-m-text-line-height);
+  font-style: var(--spectrum-body-m-text-font-style);
+  letter-spacing: var(--spectrum-body-m-text-letter-spacing);
 }
+
+.spectrum--large .spectrum-AssetCard-headerContent {
+  /* be a S body */
+  color: var(--spectrum-body-s-text-color);
+  font-family: var(--spectrum-body-s-text-font-family);
+  font-size: var(--spectrum-body-s-text-size);
+  font-weight: var(--spectrum-body-s-text-font-weight);
+  line-height: var(--spectrum-body-s-text-line-height);
+  font-style: var(--spectrum-body-s-text-font-style);
+  letter-spacing: var(--spectrum-body-s-text-letter-spacing);
+}
+
 
 /* content area, the last thing in the card */
 .spectrum-AssetCard-content {
@@ -142,7 +184,25 @@ governing permissions and limitations under the License.
   /* space between the content and the header, place it on the content so content can be optional */
   margin-block-start: var(--spectrum-global-dimension-static-size-50);
 
+  /* be a S body */
+  color: var(--spectrum-body-s-text-color);
+  font-family: var(--spectrum-body-s-text-font-family);
+  font-size: var(--spectrum-body-s-text-size);
+  font-weight: var(--spectrum-body-s-text-font-weight);
+  line-height: var(--spectrum-body-s-text-line-height);
+  font-style: var(--spectrum-body-s-text-font-style);
+  letter-spacing: var(--spectrum-body-s-text-letter-spacing);
+}
 
+/* be a XS body on large/mobile */
+.spectrum--large .spectrum-AssetCard-content {
+  color: var(--spectrum-body-xs-text-color);
+  font-family: var(--spectrum-body-xs-text-font-family);
+  font-size: var(--spectrum-body-xs-text-size);
+  font-weight: var(--spectrum-body-xs-text-font-weight);
+  line-height: var(--spectrum-body-xs-text-line-height);
+  font-style: var(--spectrum-body-xs-text-font-style);
+  letter-spacing: var(--spectrum-body-xs-text-letter-spacing);
 }
 
 /*
@@ -156,6 +216,8 @@ governing permissions and limitations under the License.
 
   pointer-events: none;
   transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
 }
 
 /* the checkbox or selection order indicator */

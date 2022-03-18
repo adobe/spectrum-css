@@ -27,4 +27,7 @@
   --spectrum-assetcard-overlay-background-color: rgba(20, 115, 230, 0.1);
   /* todo: need a new top-level alias for this, don't hardcode */
   --spectrum-assetcard-border-color-selected: var(--spectrum-alias-border-color-selected);
+
+  /* todo: fix in DSS */
+  --spectrum-alias-focus-ring-border-radius-regular: var(--spectrum-global-dimension-size-75);
 }
