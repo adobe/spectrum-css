@@ -85,8 +85,6 @@ governing permissions and limitations under the License.
   border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-assetcard-border-color);
   border-radius: var(--spectrum-assetcard-border-radius);
 
-  background-color: var(--spectrum-assetcard-background-color);
-
   transition: border var(--spectrum-global-animation-duration-100) ease-in-out;
 
   /* focus-ring */
@@ -103,10 +101,23 @@ governing permissions and limitations under the License.
     pointer-events: none;
     transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
   }
+
+  /* background */
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-color: var(--spectrum-assetcard-background-color);
+    border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
+  }
 }
 
 /* the actual asset */
 .spectrum-AssetCard-asset {
+  position: relative;
+  z-index: 1; /* appear above artificial background */
   object-fit: contain;
 
   width: 100%;
