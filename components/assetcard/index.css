@@ -223,6 +223,7 @@ governing permissions and limitations under the License.
 */
 .spectrum-AssetCard-selectionOverlay {
   position: absolute;
+  z-index: 3;
   inset: 0;
 
   background-color: transparent;
@@ -236,7 +237,7 @@ governing permissions and limitations under the License.
 /* the checkbox or selection order indicator */
 .spectrum-AssetCard-selectionIndicator {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   inset-inline-start: var(--spectrum-assetcard-selectionindicator-margin);
   inset-block-start: var(--spectrum-assetcard-selectionindicator-margin);
 
