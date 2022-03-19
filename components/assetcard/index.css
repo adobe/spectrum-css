@@ -285,7 +285,7 @@ governing permissions and limitations under the License.
       }
     }
 
-    &:down {
+    &:active {
       .spectrum-AssetCard-assetContainer {
         border-color: var(--spectrum-assetcard-border-color-selected-down);
       }
