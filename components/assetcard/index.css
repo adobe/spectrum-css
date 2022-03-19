@@ -236,6 +236,7 @@ governing permissions and limitations under the License.
 /* the checkbox or selection order indicator */
 .spectrum-AssetCard-selectionIndicator {
   position: absolute;
+  z-index: 3;
   inset-inline-start: var(--spectrum-assetcard-selectionindicator-margin);
   inset-block-start: var(--spectrum-assetcard-selectionindicator-margin);
 
