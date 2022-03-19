@@ -48,13 +48,17 @@ governing permissions and limitations under the License.
 
   &:hover {
     .spectrum-AssetCard-assetContainer {
-      border-color: var(--spectrum-assetcard-border-color-hover);
+      &:after {
+        border-color: var(--spectrum-assetcard-border-color-hover);
+      }
     }
   }
 
   &:active {
     .spectrum-AssetCard-assetContainer {
-      border-color: var(--spectrum-assetcard-border-color-down);
+      &:after {
+        border-color: var(--spectrum-assetcard-border-color-down);
+      }
     }
   }
 
@@ -82,8 +86,9 @@ governing permissions and limitations under the License.
   width: var(--spectrum-assetcard-asset-size);
   height: var(--spectrum-assetcard-asset-size);
 
-  border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-assetcard-border-color);
   border-radius: var(--spectrum-assetcard-border-radius);
+
+  background-color: var(--spectrum-assetcard-background-color);
 
   transition: border var(--spectrum-global-animation-duration-100) ease-in-out;
 
@@ -102,22 +107,20 @@ governing permissions and limitations under the License.
     transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
   }
 
-  /* background */
+  /* border */
   &:after {
     content: '';
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 3;
 
-    background-color: var(--spectrum-assetcard-background-color);
+    border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-assetcard-border-color);
     border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
   }
 }
 
 /* the actual asset */
 .spectrum-AssetCard-asset {
-  position: relative;
-  z-index: 1; /* appear above artificial background */
   object-fit: contain;
 
   width: 100%;
@@ -223,7 +226,7 @@ governing permissions and limitations under the License.
 */
 .spectrum-AssetCard-selectionOverlay {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   inset: 0;
 
   background-color: transparent;
@@ -237,7 +240,7 @@ governing permissions and limitations under the License.
 /* the checkbox or selection order indicator */
 .spectrum-AssetCard-selectionIndicator {
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   inset-inline-start: var(--spectrum-assetcard-selectionindicator-margin);
   inset-block-start: var(--spectrum-assetcard-selectionindicator-margin);
 
@@ -272,7 +275,9 @@ governing permissions and limitations under the License.
   &.is-drop-target,
   &.is-selected {
     .spectrum-AssetCard-assetContainer {
-      border-color: var(--spectrum-assetcard-border-color-selected);
+      &:after {
+        border-color: var(--spectrum-assetcard-border-color-selected);
+      }
     }
 
     .spectrum-AssetCard-selectionOverlay {
@@ -281,13 +286,17 @@ governing permissions and limitations under the License.
 
     &:hover {
       .spectrum-AssetCard-assetContainer {
-        border-color: var(--spectrum-assetcard-border-color-selected-hover);
+        &:after {
+          border-color: var(--spectrum-assetcard-border-color-selected-hover);
+        }
       }
     }
 
     &:active {
       .spectrum-AssetCard-assetContainer {
-        border-color: var(--spectrum-assetcard-border-color-selected-down);
+        &:after {
+          border-color: var(--spectrum-assetcard-border-color-selected-down);
+        }
       }
     }
   }
