@@ -1,6 +1,7 @@
 name: Asset Card
-description: A card with an asset preview.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
+description: |
+  - Set the `--spectrum-assetcard-asset-size` custom property to the size you want to display the asset as
 examples:
   - id: assetcard-portrait
     name: Portrait
