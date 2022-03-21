@@ -15,6 +15,12 @@ governing permissions and limitations under the License.
   /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
   --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
 
+  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-assetcard-overlay-background-color);
+  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-assetcard-border-color-selected);
+  --spectrum-assetcard-border-color-selected-hover: var(--spectrum-alias-assetcard-border-color-selected-hover);
+  --spectrum-assetcard-border-color-selected-down: var(--spectrum-alias-assetcard-border-color-selected-down);
+  --spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-alias-assetcard-selectionindicator-background-color-ordered);
+
   --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-assetcard-border-color: transparent;
   --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
