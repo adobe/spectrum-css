@@ -22,12 +22,10 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-border-color-down: var(--spectrum-global-color-gray-600);
 
   --spectrum-assetcard-background-color: var(--spectrum-global-color-gray-200);
-  /* --spectrum-assetcard-background-color: var(--spectrum-alias-background-color-tertiary); */
 
   --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
   --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
 
-  /* todo: design wanted rgba(248, 248, 248, 0.9), but we're using this alias which is rgba(245, 245, 245, 0.9) for light, rgba(50, 50, 50, 0.9) for dark */
   --spectrum-assetcard-selectionindicator-background-color-default: var(--spectrum-alias-background-color-quickactions);
   --spectrum-assetcard-selectionindicator-margin: var(--spectrum-global-dimension-size-150);
   --spectrum-assetcard-selectionindicator-size: var(--spectrum-global-dimension-static-size-500);
