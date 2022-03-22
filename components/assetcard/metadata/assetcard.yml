@@ -1,0 +1,211 @@
+name: Asset Card
+SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
+description: |
+  - Set the `--spectrum-assetcard-asset-size` custom property to the size you want to display the asset as
+examples:
+  - id: assetcard-portrait
+    name: Portrait
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-headerContent"></div>
+        </div>
+        <div class="spectrum-AssetCard-content">
+          Image
+        </div>
+        <div class="spectrum-AssetCard-selectionIndicator">
+          <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-landscape
+    name: Landscape
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-landscape.jpeg" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-headerContent"></div>
+        </div>
+        <div class="spectrum-AssetCard-content">
+          Image
+        </div>
+        <div class="spectrum-AssetCard-selectionIndicator">
+          <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-square
+    name: Square
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-square.png" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-headerContent"></div>
+        </div>
+        <div class="spectrum-AssetCard-content">
+          Image
+        </div>
+        <div class="spectrum-AssetCard-selectionIndicator">
+          <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-optional
+    name: Optional content
+    description: |
+      The `.spectrum-AssetCard-content` and `.spectrum-AssetCard-headerContent` elements are optional.
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-square.png" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">MVI_0123.mp4</div>
+          <div class="spectrum-AssetCard-headerContent">39:02</div>
+        </div>
+        <div class="spectrum-AssetCard-selectionIndicator">
+          <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="">
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-highlight
+    name: Highlight Selection
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--highlightSelection is-selected" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-headerContent"></div>
+        </div>
+        <div class="spectrum-AssetCard-content">
+          Image
+        </div>
+      </div>
+
+  - id: assetcard-checkbox
+    name: Checkbox Selection
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--checkboxSelection is-selected" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-headerContent"></div>
+        </div>
+        <div class="spectrum-AssetCard-content">
+          Image
+        </div>
+        <div class="spectrum-AssetCard-selectionIndicator">
+          <div class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-AssetCard-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" title="Select" value="" checked>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+  - id: assetcard-ordered
+    name: Ordered Selection
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--orderedSelection is-selected" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-headerContent"></div>
+        </div>
+        <div class="spectrum-AssetCard-content">
+          Image
+        </div>
+        <div class="spectrum-AssetCard-selectionIndicator">
+          <div class="spectrum-AssetCard-selectionOrder">1</div>
+        </div>
+      </div>
+
+  - id: assetcard-ordered
+    name: Drop Target
+    markup: |
+      <div class="spectrum-AssetCard spectrum-AssetCard--highlightSelection is-drop-target" tabindex="0" role="figure">
+        <div class="spectrum-AssetCard-assetContainer">
+          <img class="spectrum-AssetCard-asset" src="img/example-card-portrait.jpg" />
+          <div class="spectrum-AssetCard-selectionOverlay"></div>
+        </div>
+        <div class="spectrum-AssetCard-header">
+          <div class="spectrum-AssetCard-title">Card Title</div>
+          <div class="spectrum-AssetCard-headerContent"></div>
+        </div>
+        <div class="spectrum-AssetCard-content">
+          Image
+        </div>
+        <div class="spectrum-AssetCard-selectionIndicator">
+          <div class="spectrum-AssetCard-selectionOrder">1</div>
+        </div>
+      </div>
+

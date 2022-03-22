@@ -168,6 +168,11 @@
   --spectrum-alias-tabitem-icon-color-selected: var(--spectrum-alias-tabitem-text-color-selected-default);
   --spectrum-alias-tabitem-icon-color-emphasized: var(--spectrum-alias-tabitem-text-color-default);
   --spectrum-alias-tabitem-icon-color-emphasized-selected: var(--spectrum-alias-tabitem-text-color-emphasized-selected-default);
+  --spectrum-alias-assetcard-selectionindicator-background-color-ordered: var(--spectrum-global-color-indigo-500);
+  --spectrum-alias-assetcard-overlay-background-color: rgba(87,92,233,0.2);
+  --spectrum-alias-assetcard-border-color-selected: var(--spectrum-global-color-indigo-500);
+  --spectrum-alias-assetcard-border-color-selected-hover: var(--spectrum-global-color-indigo-500);
+  --spectrum-alias-assetcard-border-color-selected-down: var(--spectrum-global-color-indigo-600);
   --spectrum-alias-transparent-blue-background-color-mouse-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color: var(--spectrum-alias-component-text-color-default);
   --spectrum-alias-transparent-red-background-color-hover: rgba(154,0,0,0.15);
