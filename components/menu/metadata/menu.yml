@@ -54,15 +54,15 @@ examples:
             <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-category-1" aria-disabled="true">
               <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="SaveFloppy">
-                  <use xlink:href="#spectrum-icon-18-SaveFloppy"></use>
+                  <use xlink:href="#spectrum-icon-18-Edit"></use>
                 </svg>
-                <span class="spectrum-Menu-itemLabel">Save</span>
+                <span class="spectrum-Menu-itemLabel">Edit</span>
               </li>
               <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="DataDownload">
-                  <use xlink:href="#spectrum-icon-18-DataDownload"></use>
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
                 </svg>
-                <span class="spectrum-Menu-itemLabel">Download</span>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
               </li>
             </ul>
           </li>

@@ -240,15 +240,15 @@ examples:
       <div class="spectrum-ActionGroup spectrum-ActionGroup--justified" style="width: 300px">
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View card">
-            <use xlink:href="#spectrum-icon-18-ViewCard" />
+            <use xlink:href="#spectrum-icon-18-AlignTop" />
           </svg>
-          <span class="spectrum-ActionButton-label">Card View</span>
+          <span class="spectrum-ActionButton-label">Align Top</span>
         </button>
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View list">
-            <use xlink:href="#spectrum-icon-18-ViewList" />
+            <use xlink:href="#spectrum-icon-18-AlignBottom" />
           </svg>
-          <span class="spectrum-ActionButton-label">List View</span>
+          <span class="spectrum-ActionButton-label">Align Bottom</span>
         </button>
       </div>
 
@@ -258,17 +258,17 @@ examples:
       <div class="spectrum-ActionGroup spectrum-ActionGroup--justified" style="width: 300px">
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View card">
-            <use xlink:href="#spectrum-icon-18-ViewCard" />
+            <use xlink:href="#spectrum-icon-18-AlignTop" />
           </svg>
         </button>
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View list">
-            <use xlink:href="#spectrum-icon-18-ViewList" />
+            <use xlink:href="#spectrum-icon-18-AlignBottom" />
           </svg>
         </button>
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View grid">
-            <use xlink:href="#spectrum-icon-18-ViewGrid" />
+            <use xlink:href="#spectrum-icon-18-AlignMiddle" />
           </svg>
         </button>
       </div>
@@ -279,17 +279,17 @@ examples:
       <div class="spectrum-ActionGroup spectrum-ActionGroup--compact spectrum-ActionGroup--justified" style="width: 300px">
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View card">
-            <use xlink:href="#spectrum-icon-18-ViewCard" />
+            <use xlink:href="#spectrum-icon-18-AlignTop" />
           </svg>
         </button>
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View list">
-            <use xlink:href="#spectrum-icon-18-ViewList" />
+            <use xlink:href="#spectrum-icon-18-AlignBottom" />
           </svg>
         </button>
         <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="View grid">
-            <use xlink:href="#spectrum-icon-18-ViewGrid" />
+            <use xlink:href="#spectrum-icon-18-AlignMiddle" />
           </svg>
         </button>
       </div>
