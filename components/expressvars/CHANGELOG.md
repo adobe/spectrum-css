@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.29"></a>
+# 1.0.0-beta.29
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.28...@spectrum-css/expressvars@1.0.0-beta.29)
+
+### ✨ Features
+
+* split-out and Expressify Asset Card ([61a4e96](https://github.com/adobe/spectrum-css/commit/61a4e96))
+* update spectrum-tokens ([891ad14](https://github.com/adobe/spectrum-css/commit/891ad14))
+* update spectrum-tokens, use new token packages ([10c4a13](https://github.com/adobe/spectrum-css/commit/10c4a13))
+
+
+### 🐛 Bug fixes
+
+* more design review updates ([b4bfa90](https://github.com/adobe/spectrum-css/commit/b4bfa90))
+
+
+
+
+
 <a name="1.0.0-beta.28"></a>
 # 1.0.0-beta.28
 🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.27...@spectrum-css/expressvars@1.0.0-beta.28)
