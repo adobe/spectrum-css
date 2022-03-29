@@ -43,6 +43,9 @@ governing permissions and limitations under the License.
 
   outline: none;
 
+  /* don't let double clicking select stuff */
+  user-select: none;
+
   /* rounding = default is default */
   &,
   &:before {
@@ -70,6 +73,10 @@ governing permissions and limitations under the License.
   }
 
   &.is-mixed-value {
+    .spectrum-Swatch-fill {
+      background: var(--spectrum-swatch-background-color-selected);
+    }
+
     .spectrum-Swatch-mixedValueIcon {
       visibility: visible;
     }
@@ -118,6 +125,10 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Swatch-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -158,39 +169,65 @@ governing permissions and limitations under the License.
     position: absolute;
     inset: 0;
 
-    background-color: var(--spectrum-picked-color);
+    z-index: 0;
+
+    background-color: var(--spectrum-picked-color, transparent);
   }
 }
 
 .spectrum-Swatch-mixedValueIcon {
   visibility: hidden;
   pointer-events: none;
+
+  color: var(--spectrum-global-color-gray-700);
 }
 
 .spectrum-Swatch-disabledIcon {
   visibility: hidden;
   pointer-events: none;
+  position: relative;
+  z-index: 2;
 }
 
 /* shape = square is default */
 .spectrum-Swatch--sizeXS {
   width: var(--spectrum-swatch-size-xs);
   height: var(--spectrum-swatch-size-xs);
+
+  .spectrum-Swatch-disabledIcon {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .spectrum-Swatch--sizeS {
   width: var(--spectrum-swatch-size-s);
   height: var(--spectrum-swatch-size-s);
+
+  .spectrum-Swatch-disabledIcon {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .spectrum-Swatch--sizeM {
   width: var(--spectrum-swatch-size-m);
   height: var(--spectrum-swatch-size-m);
+
+  .spectrum-Swatch-disabledIcon {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .spectrum-Swatch--sizeL {
   width: var(--spectrum-swatch-size-l);
   height: var(--spectrum-swatch-size-l);
+
+  .spectrum-Swatch-disabledIcon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .spectrum-Swatch--rectangle {
@@ -239,4 +276,14 @@ governing permissions and limitations under the License.
     }
   }
   */
+}
+
+.spectrum-Swatch-image {
+  object-fit: contain;
+
+  width: 100%;
+  height: 100%;
+
+  transition: width var(--spectrum-global-animation-duration-100) ease-in-out,
+              height var(--spectrum-global-animation-duration-100) ease-in-out;
 }
