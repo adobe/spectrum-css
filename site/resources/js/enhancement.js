@@ -10,6 +10,30 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Swatch
+(function() {
+  function setSelected(swatch, selected) {
+    swatch.classList.toggle('is-selected', selected);
+  }
+
+  document.addEventListener('click', function(event) {
+    var swatch = event.target.closest('.spectrum-Swatch');
+    if (swatch) {
+      setSelected(swatch, !swatch.classList.contains('is-selected'));
+    }
+  });
+
+  document.addEventListener('keypress', function(event) {
+    var swatch = event.target.closest('.spectrum-Swatch');
+    if (swatch) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        setSelected(swatch, !swatch.classList.contains('is-selected'));
+        event.preventDefault();
+      }
+    }
+  });
+}());
+
 // Asset Card
 (function() {
   function setSelected(card, selected) {

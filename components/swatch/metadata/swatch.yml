@@ -1,0 +1,60 @@
+name: Swatch
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/swatch/
+description: |
+  - Set the `--spectrum-picked-color` custom property to the CSS color value you want to show
+examples:
+  - id: swatch-standard
+    name: Standard
+    markup: |
+      <div class="spectrum-Swatch spectrum-Swatch--sizeM" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
+        <div class="spectrum-Swatch-fill">
+        </div>
+      </div>
+      <br>
+      <div class="spectrum-Swatch spectrum-Swatch--sizeM" style="--spectrum-picked-color: rgba(174, 216, 230)" tabindex="0">
+        <div class="spectrum-Swatch-fill">
+        </div>
+      </div>
+  - id: swatch-sizing
+    name: Sizing
+    markup: |
+      xxx
+  - id: swatch-roundingnone
+    name: Rounding None
+    markup: |
+      <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
+        <div class="spectrum-Swatch-fill">
+        </div>
+      </div>
+  - id: swatch-roundingfull
+    name: Rounding Full
+    markup: |
+      <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
+        <div class="spectrum-Swatch-fill">
+        </div>
+      </div>
+  - id: swatch-shape
+    name: Shape
+    markup: |
+      xxx
+  - id: swatch-image
+    name: Image
+    markup: |
+      xxx
+  - id: swatch-gradient
+    name: Gradient
+    markup: |
+      xxx
+  - id: swatch-selection
+    name: Selected
+    markup: |
+      xxx
+  - id: swatch-mixedvalue
+    name: Mixed Value
+    markup: |
+      xxx
+  - id: swatch-selection
+    name: Disabled
+    markup: |
+      xxx

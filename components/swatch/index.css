@@ -1,0 +1,242 @@
+/*
+Copyright 2022 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+/* hack: make sure we don't complain about this color being undefined */
+.🤫 {
+  --spectrum-picked-color: 0;
+}
+
+.spectrum-Swatch {
+  --spectrum-swatch-size-xs: var(--spectrum-global-dimension-size-200);
+  --spectrum-swatch-size-s: var(--spectrum-global-dimension-size-300);
+  --spectrum-swatch-size-m: var(--spectrum-global-dimension-size-400);
+  --spectrum-swatch-size-l: var(--spectrum-global-dimension-size-500);
+
+  --spectrum-swatch-selection-padding: var(--spectrum-global-dimension-size-100);
+  --spectrum-swatch-selection-indicator-border-width: var(--spectrum-global-dimension-size-25);
+  --spectrum-swatch-selection-indicator-border-color: var(--spectrum-global-color-gray-900);
+  --spectrum-swatch-background-color-selected: var(--spectrum-global-color-static-white);
+
+  --spectrum-swatch-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-swatch-fill-border-radius-selected: var(--spectrum-alias-border-radius-small);
+
+  --spectrum-swatch-fill-border-width: var(--spectrum-alias-border-size-thin);
+  --spectrum-swatch-fill-border-color: rgba(44, 44, 44, 0.51);
+
+  --spectrum-swatch-background-offset: -1px; /* align checkerboard center */
+  --spectrum-swatch-checkerboard-size: var(--spectrum-global-dimension-static-size-100);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* contain selection indicator and focus-ring */
+  position: relative;
+
+  outline: none;
+
+  /* rounding = default is default */
+  &,
+  &:before {
+    border-radius: var(--spectrum-swatch-border-radius);
+  }
+
+  &.is-selected {
+    background-color: var(--spectrum-swatch-background-color-selected);
+
+    --spectrum-swatch-background-offset: -4px; /* correct for selected size */
+
+    .spectrum-Swatch-fill {
+      width: calc(100% - var(--spectrum-swatch-selection-padding));
+      height: calc(100% - var(--spectrum-swatch-selection-padding));
+
+      /* no border when selected */
+      border-width: 0px;
+
+      border-radius: var(--spectrum-swatch-fill-border-radius-selected);
+    }
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &.is-mixed-value {
+    .spectrum-Swatch-mixedValueIcon {
+      visibility: visible;
+    }
+  }
+
+  &[disabled],
+  &.is-disabled {
+    .spectrum-Swatch-disabledIcon {
+      visibility: visible;
+    }
+  }
+
+  &:focus-ring {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  /* selection indicator */
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    border: var(--spectrum-swatch-selection-indicator-border-width) solid var(--spectrum-swatch-selection-indicator-border-color);
+
+    opacity: 0;
+
+    /* transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out; */
+    pointer-events: none;
+  }
+
+  /* focus-ring */
+  &:after {
+    content: '';
+    position: absolute;
+    inset: calc(-1 * var(--spectrum-global-dimension-size-50));
+
+    opacity: 0;
+
+    border: var(--spectrum-global-dimension-static-size-25) solid var(--spectrum-alias-focus-ring-color);
+    border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
+
+    transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+}
+
+.spectrum-Swatch-fill {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  position: relative;
+
+  overflow: hidden;
+
+  /*
+  transition: width var(--spectrum-global-animation-duration-100) ease-in-out,
+              height var(--spectrum-global-animation-duration-100) ease-in-out,
+              border-width var(--spectrum-global-animation-duration-100) ease-in-out,
+              border-radius var(--spectrum-global-animation-duration-100) ease-in-out,
+              background-position var(--spectrum-global-animation-duration-100) ease-in-out;
+  */
+
+  border: var(--spectrum-swatch-fill-border-width) solid var(--spectrum-swatch-fill-border-color);
+  border-radius: var(--spectrum-swatch-border-radius);
+
+  background-size:
+    calc(var(--spectrum-swatch-checkerboard-size) * 2)
+    calc(var(--spectrum-swatch-checkerboard-size) * 2);
+  background-position:
+    var(--spectrum-swatch-background-offset) var(--spectrum-swatch-background-offset),
+    var(--spectrum-swatch-background-offset) calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)),
+    calc(var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)),
+    calc(-1 * var(--spectrum-swatch-checkerboard-size) + var(--spectrum-swatch-background-offset)) var(--spectrum-swatch-background-offset);
+
+  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
+  background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-colorcontrol-checkerboard-dark-color) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-colorcontrol-checkerboard-dark-color) 25.5%, transparent 25.5%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background-color: var(--spectrum-picked-color);
+  }
+}
+
+.spectrum-Swatch-mixedValueIcon {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.spectrum-Swatch-disabledIcon {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* shape = square is default */
+.spectrum-Swatch--sizeXS {
+  width: var(--spectrum-swatch-size-xs);
+  height: var(--spectrum-swatch-size-xs);
+}
+
+.spectrum-Swatch--sizeS {
+  width: var(--spectrum-swatch-size-s);
+  height: var(--spectrum-swatch-size-s);
+}
+
+.spectrum-Swatch--sizeM {
+  width: var(--spectrum-swatch-size-m);
+  height: var(--spectrum-swatch-size-m);
+}
+
+.spectrum-Swatch--sizeL {
+  width: var(--spectrum-swatch-size-l);
+  height: var(--spectrum-swatch-size-l);
+}
+
+.spectrum-Swatch--rectangle {
+  &.spectrum-Swatch--sizeXS {
+    width: calc(var(--spectrum-swatch-size-xs) * 2);
+  }
+
+  &.spectrum-Swatch--sizeS {
+    width: calc(var(--spectrum-swatch-size-s) * 2);
+  }
+
+  &.spectrum-Swatch--sizeM {
+    width: calc(var(--spectrum-swatch-size-m) * 2);
+  }
+
+  &.spectrum-Swatch--sizeL {
+    width: calc(var(--spectrum-swatch-size-l) * 2);
+  }
+}
+
+.spectrum-Swatch--roundingNone {
+  &,
+  &:before,
+  &:after,
+  .spectrum-Swatch-fill,
+  &.is-selected .spectrum-Swatch-fill {
+    border-radius: 0;
+  }
+}
+
+.spectrum-Swatch--roundingFull {
+  &,
+  &:before,
+  &:after,
+  .spectrum-Swatch-fill,
+  &.is-selected .spectrum-Swatch-fill {
+    border-radius: 100%;
+  }
+
+  /*
+  &.spectrum-Swatch--rectangle {
+    &,
+    &:before,
+    .spectrum-Swatch-fill {
+      border-radius: ???;
+    }
+  }
+  */
+}
