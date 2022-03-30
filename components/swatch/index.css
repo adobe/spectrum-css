@@ -101,6 +101,14 @@ governing permissions and limitations under the License.
       }
     }
 
+    &.spectrum-Swatch--rectangle {
+      .spectrum-Swatch-fill {
+        &:after {
+          transform: rotate(-25deg);
+        }
+      }
+    }
+
     &.spectrum-Swatch--sizeXS {
       .spectrum-Swatch-fill:after  {
         height: 2px;
