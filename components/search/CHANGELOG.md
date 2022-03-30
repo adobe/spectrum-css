@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.2.8-beta.0"></a>
+## 4.2.8-beta.0
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.7...@spectrum-css/search@4.2.8-beta.0)
+
+**Note:** Version bump only for package @spectrum-css/search
+
+
+
+
+
 <a name="4.2.7"></a>
 ## 4.2.7
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/search@4.2.6...@spectrum-css/search@4.2.7)

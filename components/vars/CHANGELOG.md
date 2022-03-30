@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0-beta.0"></a>
+# 8.0.0-beta.0
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@7.2.0...@spectrum-css/vars@8.0.0-beta.0)
+
+* feat!: updating to the latest color changes from Design ([392f026](https://github.com/adobe/spectrum-css/commit/392f026))
+
+
+### 🛑 BREAKING CHANGES
+
+* colors can impact contrast ratios; ensure accessiblity
+requirements are met.
+
+
+
+
+
 <a name="7.2.0"></a>
 # 7.2.0
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@7.1.1...@spectrum-css/vars@7.2.0)

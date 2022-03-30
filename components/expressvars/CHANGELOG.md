@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.30"></a>
+# 1.0.0-beta.30
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.29...@spectrum-css/expressvars@1.0.0-beta.30)
+
+* feat!: updating to the latest color changes from Design ([392f026](https://github.com/adobe/spectrum-css/commit/392f026))
+
+
+### 🛑 BREAKING CHANGES
+
+* colors can impact contrast ratios; ensure accessiblity
+requirements are met.
+
+
+
+
+
 <a name="1.0.0-beta.29"></a>
 # 1.0.0-beta.29
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.28...@spectrum-css/expressvars@1.0.0-beta.29)
