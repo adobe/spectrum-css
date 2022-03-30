@@ -13,7 +13,9 @@ governing permissions and limitations under the License.
 // Swatch
 (function() {
   function setSelected(swatch, selected) {
-    swatch.classList.toggle('is-selected', selected);
+    if (!swatch.classList.contains('is-disabled')) {
+      swatch.classList.toggle('is-selected', selected);
+    }
   }
 
   document.addEventListener('click', function(event) {
