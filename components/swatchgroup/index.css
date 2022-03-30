@@ -18,12 +18,13 @@ governing permissions and limitations under the License.
   justify-content: flex-start;
 
   /* regular density is default */
+  gap: var(--spectrum-global-dimension-size-50);
 }
 
 .spectrum-SwatchGroup--compact {
-
+  gap: var(--spectrum-global-dimension-size-25);
 }
 
 .spectrum-SwatchGroup--spacious {
-
+  gap: var(--spectrum-global-dimension-size-100);
 }
