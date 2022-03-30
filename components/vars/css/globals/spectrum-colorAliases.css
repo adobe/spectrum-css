@@ -1,12 +1,12 @@
 :root {
   --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
-  --spectrum-alias-transparent-blue-background-color-hover: rgba(13,102,208,0.15);
-  --spectrum-alias-transparent-blue-background-color-down: rgba(9,90,186,0.3);
+  --spectrum-alias-transparent-blue-background-color-hover: rgba(0,72,153,0.15);
+  --spectrum-alias-transparent-blue-background-color-down: rgba(0,56,121,0.3);
   --spectrum-alias-transparent-blue-background-color-key-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color-mouse-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color: var(--spectrum-alias-component-text-color-default);
-  --spectrum-alias-transparent-red-background-color-hover: rgba(201,37,45,0.15);
-  --spectrum-alias-transparent-red-background-color-down: rgba(187,18,26,0.3);
+  --spectrum-alias-transparent-red-background-color-hover: rgba(154,0,0,0.15);
+  --spectrum-alias-transparent-red-background-color-down: rgba(124,0,0,0.3);
   --spectrum-alias-transparent-red-background-color-key-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color-mouse-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color: var(--spectrum-alias-component-text-color-default);
@@ -352,7 +352,7 @@
   --spectrum-alias-tabitem-icon-color-emphasized: var(--spectrum-alias-tabitem-text-color-default);
   --spectrum-alias-tabitem-icon-color-emphasized-selected: var(--spectrum-alias-tabitem-text-color-emphasized-selected-default);
   --spectrum-alias-assetcard-selectionindicator-background-color-ordered: var(--spectrum-global-color-blue-500);
-  --spectrum-alias-assetcard-overlay-background-color: rgba(38,128,235,0.1);
+  --spectrum-alias-assetcard-overlay-background-color: rgba(5,105,227,0.1);
   --spectrum-alias-assetcard-border-color-selected: var(--spectrum-global-color-blue-500);
   --spectrum-alias-assetcard-border-color-selected-hover: var(--spectrum-global-color-blue-500);
   --spectrum-alias-assetcard-border-color-selected-down: var(--spectrum-global-color-blue-600);

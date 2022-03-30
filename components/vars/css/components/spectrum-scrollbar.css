@@ -84,7 +84,7 @@
   --spectrum-scrollbar-android-s-bar-touch-hit-end: var(--spectrum-global-dimension-size-40);
   --spectrum-scrollbar-s-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-s-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-s-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-s-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-s-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-s-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-s-white-track-background-color: transparent;
@@ -105,7 +105,7 @@
   --spectrum-scrollbar-s-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-50);
   --spectrum-scrollbar-mac-s-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-s-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-mac-s-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-mac-s-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-mac-s-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-s-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-s-white-track-background-color: transparent;
@@ -126,7 +126,7 @@
   --spectrum-scrollbar-mac-s-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-50);
   --spectrum-scrollbar-windows-s-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-s-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-windows-s-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-windows-s-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-windows-s-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-s-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-s-white-track-background-color: transparent;
@@ -147,7 +147,7 @@
   --spectrum-scrollbar-windows-s-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-40);
   --spectrum-scrollbar-android-s-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-s-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-android-s-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-android-s-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-android-s-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-s-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-s-white-track-background-color: transparent;
@@ -251,7 +251,7 @@
   --spectrum-scrollbar-android-m-bar-touch-hit-end: var(--spectrum-global-dimension-size-40);
   --spectrum-scrollbar-m-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-m-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-m-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-m-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-m-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-m-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-m-white-track-background-color: transparent;
@@ -272,7 +272,7 @@
   --spectrum-scrollbar-m-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-100);
   --spectrum-scrollbar-mac-m-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-m-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-mac-m-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-mac-m-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-mac-m-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-m-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-m-white-track-background-color: transparent;
@@ -293,7 +293,7 @@
   --spectrum-scrollbar-mac-m-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-100);
   --spectrum-scrollbar-windows-m-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-m-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-windows-m-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-windows-m-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-windows-m-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-m-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-m-white-track-background-color: transparent;
@@ -314,7 +314,7 @@
   --spectrum-scrollbar-windows-m-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-75);
   --spectrum-scrollbar-android-m-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-m-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-android-m-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-android-m-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-android-m-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-m-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-m-white-track-background-color: transparent;
@@ -418,7 +418,7 @@
   --spectrum-scrollbar-android-l-bar-touch-hit-end: var(--spectrum-global-dimension-size-40);
   --spectrum-scrollbar-l-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-l-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-l-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-l-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-l-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-l-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-l-white-track-background-color: transparent;
@@ -439,7 +439,7 @@
   --spectrum-scrollbar-l-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-75);
   --spectrum-scrollbar-mac-l-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-l-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-mac-l-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-mac-l-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-mac-l-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-l-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-mac-l-white-track-background-color: transparent;
@@ -460,7 +460,7 @@
   --spectrum-scrollbar-mac-l-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-75);
   --spectrum-scrollbar-windows-l-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-l-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-windows-l-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-windows-l-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-windows-l-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-l-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-windows-l-white-track-background-color: transparent;
@@ -481,7 +481,7 @@
   --spectrum-scrollbar-windows-l-white-bar-touch-hit-end: var(--spectrum-global-dimension-size-65);
   --spectrum-scrollbar-android-l-white-bar-background-color: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-l-white-bar-background-color-down: rgba(255,255,255,0.2);
-  --spectrum-scrollbar-android-l-white-bar-background-color-hover: rgba(149,149,149,0.6);
+  --spectrum-scrollbar-android-l-white-bar-background-color-hover: rgba(110,110,110,0.6);
   --spectrum-scrollbar-android-l-white-bar-background-color-key-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-l-white-bar-background-color-mouse-focus: rgba(255,255,255,0.2);
   --spectrum-scrollbar-android-l-white-track-background-color: transparent;
