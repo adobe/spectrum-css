@@ -109,10 +109,45 @@ examples:
   - id: swatch-nothing
     name: Nothing
     markup: |
-      <div class="spectrum-Swatch spectrum-Swatch--sizeM is-mixed-value" tabindex="0">
-        <div class="spectrum-Swatch-fill">
-          ???
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XS</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Swatch spectrum-Swatch--sizeXS is-nothing" tabindex="0">
+              <div class="spectrum-Swatch-fill"></div>
+            </div>
+          </div>
         </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Swatch spectrum-Swatch--sizeS is-nothing" tabindex="0">
+              <div class="spectrum-Swatch-fill"></div>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Swatch spectrum-Swatch--sizeM is-nothing" tabindex="0">
+              <div class="spectrum-Swatch-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Swatch spectrum-Swatch--sizeL is-nothing" tabindex="0">
+              <div class="spectrum-Swatch-fill"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
   - id: swatch-selection
     name: Disabled
