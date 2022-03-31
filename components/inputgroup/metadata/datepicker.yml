@@ -36,6 +36,14 @@ examples:
           </div>
         </button>
       </div>
+  - id: datepicker-readonly
+    name: Read-only
+    markup: |
+      <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-Datepicker" aria-readonly="true" aria-required="false">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield is-readOnly">
+          <input type="text" class="spectrum-Textfield-input spectrum-InputGroup-input" placeholder="Choose a date" value="02/14/2020" readonly="readonly">
+        </div>
+      </div>
   - id: datepicker-quiet
     name: Quiet
     markup: |
