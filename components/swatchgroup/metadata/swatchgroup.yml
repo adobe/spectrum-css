@@ -1,63 +1,66 @@
 name: Swatch Group
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/swatchgroup/
+description: |
+  - Grouped swatches must use the `.spectrum-Swatch--lightBorder` class to reduce the likelihood of the UI interfering with color perception and comparisons
+  - Grouped swatches must use the `.spectrum-Swatch--roundingNone` class to help minimize the Hermann grid illusion
 examples:
   - id: swatchgroup-compact
     name: Density - Compact
     markup: |
       <div class="spectrum-SwatchGroup spectrum-SwatchGroup--compact" style="width: 200px">
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
       </div>
@@ -65,58 +68,58 @@ examples:
     name: Density - Regular
     markup: |
       <div class="spectrum-SwatchGroup" style="width: 200px">
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
       </div>
@@ -124,58 +127,58 @@ examples:
     name: Density - Spacious
     markup: |
       <div class="spectrum-SwatchGroup spectrum-SwatchGroup--spacious" style="width: 200px">
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
       </div>
@@ -184,58 +187,58 @@ examples:
     description: Use any size swatches as necessary.
     markup: |
       <div class="spectrum-SwatchGroup" style="width: 140px">
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(225, 234, 119)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 225, 171)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(248, 239, 187)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 205, 215)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(212, 182, 237)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(153, 219, 244)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(171, 238, 221)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(187, 182, 175)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(238, 211, 190)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(0, 143, 242)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(60, 49, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeS spectrum-Swatch--roundingNone spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 71, 144)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
       </div>
