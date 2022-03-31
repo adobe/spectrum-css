@@ -2,8 +2,8 @@ name: Swatch Group
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/swatchgroup/
 description: |
-  - Grouped swatches must use the `.spectrum-Swatch--lightBorder` class to reduce the likelihood of the UI interfering with color perception and comparisons
   - Grouped swatches must use the `.spectrum-Swatch--roundingNone` class to help minimize the Hermann grid illusion
+  - Swatches with a color that have a contrast ratio of less than 3:1 should have `.spectrum-Swatch--lightBorder` class, otherwise, it should have the `.spectrum-Swatch--noBorder` class
 examples:
   - id: swatchgroup-compact
     name: Density - Compact
