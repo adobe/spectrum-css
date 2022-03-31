@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-swatch-disabled-icon-size-m: var(--spectrum-global-dimension-size-225);
   --spectrum-swatch-disabled-icon-size-l: var(--spectrum-global-dimension-size-250);
   --spectrum-swatch-disabled-icon-color: var(--spectrum-global-color-static-gray-50);
-  --spectrum-swatch-disabled-icon-stroke-color: rgba(var(--spectrum-global-color-static-gray-900-rgb), 0.51);
+  --spectrum-swatch-disabled-icon-stroke-color: rgba(var(--spectrum-global-color-static-black-rgb), 0.51);
 
   --spectrum-swatch-selection-padding: var(--spectrum-global-dimension-size-100);
   --spectrum-swatch-selection-indicator-border-width: var(--spectrum-global-dimension-size-25);
@@ -164,7 +164,6 @@ governing permissions and limitations under the License.
 
     opacity: 0;
 
-    /* transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out; */
     pointer-events: none;
   }
 
@@ -195,15 +194,6 @@ governing permissions and limitations under the License.
   position: relative;
 
   overflow: hidden;
-
-  /* these transitions make things look bad */
-  /*
-  transition: width var(--spectrum-global-animation-duration-100) ease-in-out,
-              height var(--spectrum-global-animation-duration-100) ease-in-out,
-              border-width var(--spectrum-global-animation-duration-100) ease-in-out,
-              border-radius var(--spectrum-global-animation-duration-100) ease-in-out,
-              background-position var(--spectrum-global-animation-duration-100) ease-in-out;
-  */
 
   border-radius: var(--spectrum-swatch-border-radius);
 
