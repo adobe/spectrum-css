@@ -242,27 +242,51 @@ examples:
           <div class="spectrum-Swatch-fill"></div>
         </div>
       </div>
-  - id: swatchgroup-sizing
-    name: Rounding
+  - id: swatchgroup-rounding
+    name: Rounding - Regular
     description: Only use rounded swatches if there is a single row.
     markup: |
       <div class="spectrum-SwatchGroup" style="width: 220px">
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
-        <div class="spectrum-Swatch spectrum-Swatch--sizeM" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
+          <div class="spectrum-Swatch-fill"></div>
+        </div>
+      </div>
+  - id: swatchgroup-rounding
+    name: Rounding - Full
+    description: Only use rounded swatches if there is a single row.
+    markup: |
+      <div class="spectrum-SwatchGroup" style="width: 220px">
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(22, 135, 140)">
+          <div class="spectrum-Swatch-fill"></div>
+        </div>
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(33, 132, 113)">
+          <div class="spectrum-Swatch-fill"></div>
+        </div>
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(254, 132, 152)">
+          <div class="spectrum-Swatch-fill"></div>
+        </div>
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 127, 96)">
+          <div class="spectrum-Swatch-fill"></div>
+        </div>
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(255, 209, 24)">
+          <div class="spectrum-Swatch-fill"></div>
+        </div>
+        <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--roundingFull spectrum-Swatch--lightBorder" tabindex="0" style="--spectrum-picked-color: rgb(120, 91, 199)">
           <div class="spectrum-Swatch-fill"></div>
         </div>
       </div>
