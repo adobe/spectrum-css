@@ -469,6 +469,7 @@ function toggleInputGroupFocus(event) {
   var classList = event.target.classList;
   var closestSelector;
   // target within InputGroup
+  if (!classList) return;
   if (classList.contains('spectrum-InputGroup-input') ||
     classList.contains('spectrum-ActionButton spectrum-ActionButton--sizeM')) {
     closestSelector = '.spectrum-InputGroup';
