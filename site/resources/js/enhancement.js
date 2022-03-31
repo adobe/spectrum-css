@@ -133,7 +133,7 @@ governing permissions and limitations under the License.
     var pickerButton = inputgroup.querySelector('.spectrum-PickerButton');
     if (focused) {
       inputgroup.classList.add(focusClass);
-      pickerButton.classList.add(focusClass);
+      if (pickerButton) pickerButton.classList.add(focusClass);
       if (event.target.tagName !== 'INPUT') {
         input.focus();
       }
@@ -142,8 +142,8 @@ governing permissions and limitations under the License.
         textfield.classList.add(focusClass);
       });
     } else {
-      pickerButton.classList.remove('is-keyboardFocused');
-      pickerButton.classList.remove('is-focused');
+      if (pickerButton) pickerButton.classList.remove('is-keyboardFocused');
+      if (pickerButton) pickerButton.classList.remove('is-focused');
       inputgroup.classList.remove('is-keyboardFocused');
       inputgroup.classList.remove('is-focused');
 
