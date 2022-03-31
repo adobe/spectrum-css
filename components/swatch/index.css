@@ -36,6 +36,7 @@ governing permissions and limitations under the License.
 
   --spectrum-swatch-fill-border-width: var(--spectrum-alias-border-size-thin);
   --spectrum-swatch-fill-border-color: rgba(44, 44, 44, 0.51); /* todo: use -rgb suffixed color when pr merged */
+  --spectrum-swatch-fill-border-color-grouped: rgba(44, 44, 44, 0.20); /* todo: use -rgb suffixed color when pr merged */
 
   --spectrum-swatch-background-offset: 0px;
   --spectrum-swatch-checkerboard-size: var(--spectrum-global-dimension-static-size-100);
@@ -232,6 +233,14 @@ governing permissions and limitations under the License.
     box-shadow: inset 0 0 0 var(--spectrum-swatch-fill-border-width) var(--spectrum-swatch-fill-border-color);
 
     border-radius: var(--spectrum-swatch-border-radius);
+  }
+}
+
+.spectrum-Swatch--lightBorder {
+  .spectrum-Swatch-fill {
+    &:before {
+      box-shadow: inset 0 0 0 var(--spectrum-swatch-fill-border-width) var(--spectrum-swatch-fill-border-color-grouped);
+    }
   }
 }
 

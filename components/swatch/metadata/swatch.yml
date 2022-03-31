@@ -73,6 +73,13 @@ examples:
         <div class="spectrum-Swatch-fill">
         </div>
       </div>
+  - id: swatch-lightborder
+    name: Light border
+    markup: |
+      <div class="spectrum-Swatch spectrum-Swatch--sizeM spectrum-Swatch--lightBorder" style="--spectrum-picked-color: rgba(174, 216, 230, 0.25)" tabindex="0">
+        <div class="spectrum-Swatch-fill">
+        </div>
+      </div>
   - id: swatch-rectamgle
     name: Shape - Rectangle
     markup: |
