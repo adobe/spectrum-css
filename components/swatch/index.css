@@ -326,7 +326,8 @@ governing permissions and limitations under the License.
   &:after,
   .spectrum-Swatch-fill,
   .spectrum-Swatch-fill:before,
-  &.is-selected .spectrum-Swatch-fill {
+  &.is-selected .spectrum-Swatch-fill,
+  &.is-selected .spectrum-Swatch-fill:before {
     border-radius: 0;
   }
 }
@@ -338,7 +339,8 @@ governing permissions and limitations under the License.
     &:after,
     .spectrum-Swatch-fill,
     .spectrum-Swatch-fill:before,
-    &.is-selected .spectrum-Swatch-fill {
+    &.is-selected .spectrum-Swatch-fill,
+    &.is-selected .spectrum-Swatch-fill:before {
       border-radius: 100%;
     }
   }
