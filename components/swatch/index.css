@@ -205,6 +205,8 @@ governing permissions and limitations under the License.
 
   border-radius: var(--spectrum-swatch-border-radius);
 
+  background-color: var(--spectrum-colorcontrol-checkerboard-light-color);
+
   background-size:
     calc(var(--spectrum-swatch-checkerboard-size) * 2)
     calc(var(--spectrum-swatch-checkerboard-size) * 2);
