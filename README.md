@@ -388,3 +388,15 @@ npm run release:bundles
 ```
 
 Version numbers for dependencies and then bundle itself will be updated automatically, a changelog generated, the package published, and the documentation site deployed.
+
+### Publishing prereleases
+
+Occasionally, it can be helpful for our subscribers to test CSS changes before they're considered ready to be part of a stable release. To facilitate this, we can publish prerelease versions.
+
+To publish prerelease versions:
+
+* First, be sure that you're working on a branch other than `main`.
+* Once your change(s) are ready to be committed, be aware of the severity of the change(s), and be sure to author your commit message so that Lerna understands how to increase the version number(s) of the affected components.
+* Once your changes are committed, run the following command to bump the version numbers (a `beta` release is shown in this example): `npx lerna publish --conventional-prerelease --preid beta --pre-dist-tag`
+* Depending on the severity of your change(s), Lerna should show a preview of your version numbers that look something like: `@spectrum-css/tag: 3.3.8 => 3.3.9-beta.0`
+* If the version number(s) look correct, you should be ready to publish to npm by running: `npm publish`
