@@ -85,7 +85,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &.is-mixed-value {
+  &.is-mixedValue {
     .spectrum-Swatch-fill {
       background: var(--spectrum-swatch-background-color-selected);
     }
