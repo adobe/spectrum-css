@@ -159,6 +159,53 @@ examples:
             <span class="spectrum-Checkbox-label">Checkbox</span>
           </label>
         </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Read-only</h4>
+
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-disabled is-readOnly">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
+
+          <br>
+
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-disabled is-readOnly">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
+
+          <br>
+
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-disabled is-indeterminate is-readOnly">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
+        </div>
       </div>
 
   - id: checkbox-emphasized
@@ -292,6 +339,53 @@ examples:
           <br>
 
           <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized is-disabled is-indeterminate">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Read-only</h4>
+
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized is-disabled is-readOnly">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
+
+          <br>
+
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized is-disabled is-readOnly">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
+
+          <br>
+
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized is-disabled is-indeterminate is-readOnly">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
             <span class="spectrum-Checkbox-box">
               <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
