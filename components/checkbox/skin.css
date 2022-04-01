@@ -95,6 +95,54 @@ governing permissions and limitations under the License.
   }
 }
 
+/*
+  readonly is not a valid attribute for input[type="checkbox"]
+  so we borrow the immutability of a disabled checkbox
+  while using the colors of a default checkbox
+*/
+.spectrum-Checkbox.is-readOnly {
+  border-color: var(--spectrum-checkbox-m-box-border-color);
+
+  &:hover {
+    .spectrum-Checkbox-box {
+      &:before {
+        border-color: var(
+          --spectrum-checkbox-m-box-border-color-hover
+        );
+      }
+    }
+    .spectrum-Checkbox-label {
+      color: var(--spectrum-checkbox-m-text-color-hover);
+    }
+  }
+
+  &:active {
+    .spectrum-Checkbox-box {
+      &:before {
+        border-color: var(--spectrum-checkbox-m-box-border-color-down);
+      }
+    }
+    .spectrum-Checkbox-label {
+      color: var(--spectrum-checkbox-m-text-color-down);
+    }
+  }
+}
+
+.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input,
+.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked {
+  &:disabled + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--spectrum-checkbox-m-box-border-color);
+      background-color: var(--spectrum-checkbox-m-box-background-color);
+    }
+  }
+
+  &:disabled ~ .spectrum-Checkbox-label {
+    forced-color-adjust: none;
+    color: var(--spectrum-checkbox-m-text-color);
+  }
+}
+
 .spectrum-Checkbox .spectrum-Checkbox-input,
 .spectrum-Checkbox .spectrum-Checkbox-input:checked {
   &:disabled + .spectrum-Checkbox-box {
