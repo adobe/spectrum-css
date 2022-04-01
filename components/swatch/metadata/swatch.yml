@@ -119,7 +119,7 @@ examples:
   - id: swatch-mixedvalue
     name: Mixed Value
     markup: |
-      <div class="spectrum-Swatch spectrum-Swatch--sizeM is-mixed-value" tabindex="0">
+      <div class="spectrum-Swatch spectrum-Swatch--sizeM is-mixedValue" tabindex="0">
         <div class="spectrum-Swatch-fill">
           <svg class="spectrum-Icon spectrum-UIIcon-Dash200 spectrum-Swatch-mixedValueIcon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Dash200" />
