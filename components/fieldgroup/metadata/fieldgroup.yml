@@ -73,6 +73,50 @@ examples:
           <span class="spectrum-Checkbox-label">Bits</span>
         </label>
       </div>
+    
+  - id: fieldgroup-readonly-checkboxes
+    name: Read-only Checkboxes
+    description: A group of read-only checkboxes that have been `checked`. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.
+    markup: |
+      <div class="spectrum-FieldGroup">
+        <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-disabled is-readOnly">
+          <input type="checkbox" class="spectrum-Checkbox-input" checked disabled>
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
+            </svg>
+          </span>
+          <span class="spectrum-Checkbox-label">Apples</span>
+        </label>
+        <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-disabled is-readOnly">
+          <input type="checkbox" class="spectrum-Checkbox-input" checked disabled>
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
+            </svg>
+          </span>
+          <span class="spectrum-Checkbox-label">Peaches</span>
+        </label>
+
+        <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-disabled is-readOnly">
+          <input type="checkbox" class="spectrum-Checkbox-input" checked disabled>
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
+            </svg>
+          </span>
+          <span class="spectrum-Checkbox-label">Grapes</span>
+        </label>
+        <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item is-disabled is-readOnly">
+          <input type="checkbox" class="spectrum-Checkbox-input" checked disabled>
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
+            </svg>
+          </span>
+          <span class="spectrum-Checkbox-label">Bananas</span>
+        </label>
+      </div>
 
   - id: fieldgroup-labelsbelow
     name: Radios with labels below
