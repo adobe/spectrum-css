@@ -148,7 +148,7 @@ governing permissions and limitations under the License.
   grid-area: divider;
   inline-size: 100%;
   margin-top: var(--spectrum-dialog-confirm-divider-margin-top);
-  margin-bottom: var(--spectrum-dialog-confirm-divider-margin-bottom);
+  margin-bottom: 0;
 }
 
 .spectrum-Dialog--noDivider {
@@ -182,7 +182,7 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-dialog-confirm-description-text-line-height);
 
   /* this is kinda dumb, but needed for the keyboard focus rings so they don't get clipped. is there a better way to treat this */
-  padding: 0 var(--spectrum-dialog-confirm-description-padding);
+  padding: var(--spectrum-dialog-confirm-divider-margin-bottom) var(--spectrum-dialog-confirm-description-padding) 0;
   margin: 0 var(--spectrum-dialog-confirm-description-margin);
 }
 
