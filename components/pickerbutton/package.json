@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/pickerbutton",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "description": "The Spectrum CSS picker button component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.1.1",
-    "@spectrum-css/icon": "^3.0.19",
-    "@spectrum-css/menu": "^3.0.20",
-    "@spectrum-css/popover": "^5.0.10",
-    "@spectrum-css/vars": "^7.2.0",
+    "@spectrum-css/icon": "^3.0.20",
+    "@spectrum-css/menu": "^3.0.21",
+    "@spectrum-css/popover": "^5.0.11",
+    "@spectrum-css/vars": "^7.3.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0-beta.31"></a>
+# 1.0.0-beta.31
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.29...@spectrum-css/expressvars@1.0.0-beta.31)
+
+### ✨ Features
+
+* create -rgb suffixed variables for all rgb() values ([b2ccdf3](https://github.com/adobe/spectrum-css/commit/b2ccdf3))
+
+
+
+
+
 <a name="1.0.0-beta.29"></a>
 # 1.0.0-beta.29
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.28...@spectrum-css/expressvars@1.0.0-beta.29)

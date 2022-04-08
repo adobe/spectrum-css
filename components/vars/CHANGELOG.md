@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.3.0"></a>
+# 7.3.0
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@7.2.0...@spectrum-css/vars@7.3.0)
+
+### ✨ Features
+
+* create -rgb suffixed variables for all rgb() values ([b2ccdf3](https://github.com/adobe/spectrum-css/commit/b2ccdf3))
+
+
+
+
+
 <a name="7.2.0"></a>
 # 7.2.0
 🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@7.1.1...@spectrum-css/vars@7.2.0)

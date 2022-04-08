@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/site",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "description": "The Spectrum CSS Site component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.1.1",
-    "@spectrum-css/vars": "^7.2.0",
+    "@spectrum-css/vars": "^7.3.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

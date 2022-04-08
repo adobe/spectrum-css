@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tabs",
-  "version": "3.2.10",
+  "version": "3.2.11",
   "description": "The Spectrum CSS tabs component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -22,10 +22,10 @@
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.1.1",
-    "@spectrum-css/icon": "^3.0.19",
-    "@spectrum-css/menu": "^3.0.20",
-    "@spectrum-css/picker": "^1.2.3",
-    "@spectrum-css/vars": "^7.2.0",
+    "@spectrum-css/icon": "^3.0.20",
+    "@spectrum-css/menu": "^3.0.21",
+    "@spectrum-css/picker": "^1.2.4",
+    "@spectrum-css/vars": "^7.3.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
