@@ -90,6 +90,13 @@ governing permissions and limitations under the License.
       }
     }
   }
+  .spectrum-Menu-divider {
+    overflow: visible;
+
+    inline-size: auto;
+    margin-block: calc(var(--spectrum-listitem-texticon-divider-padding) / 2);
+    margin-inline: var(--spectrum-listitem-texticon-padding-y);
+  }
 }
 
 .spectrum-Menu-checkmark {
