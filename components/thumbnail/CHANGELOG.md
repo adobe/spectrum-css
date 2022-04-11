@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.14"></a>
+## 2.0.14
+🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.13...@spectrum-css/thumbnail@2.0.14)
+
+### 🐛 Bug fixes
+
+* add z-index to thumbnail, closes [#1334](https://github.com/adobe/spectrum-css/issues/1334) ([657a8ca](https://github.com/adobe/spectrum-css/commit/657a8ca))
+
+
+
+
+
 <a name="2.0.13"></a>
 ## 2.0.13
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.12...@spectrum-css/thumbnail@2.0.13)
