@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.21...@spectrum-css/menu@4.0.0)
+
+### 🐛 Bug fixes
+
+* added margin back for dividers in menu ([e4feb9a](https://github.com/adobe/spectrum-css/commit/e4feb9a))
+
+
+* fix!: use divider component in menu, closes #1371 ([5c901f1](https://github.com/adobe/spectrum-css/commit/5c901f1)), closes [#1371](https://github.com/adobe/spectrum-css/issues/1371)
+
+
+### 🛑 BREAKING CHANGES
+
+* Add `.spectrum-Divider` and `spectrum-Divider--sizeM` classes to `spectrum-Menu-divider`
+
+
+
+
+
 <a name="3.0.21"></a>
 ## 3.0.21
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.20...@spectrum-css/menu@3.0.21)
