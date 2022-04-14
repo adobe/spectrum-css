@@ -17,6 +17,11 @@ governing permissions and limitations under the License.
 
 @import "./skin.css";
 
+/* hack: don't complain about this being undefined */
+.🤫 {
+  --spectrum-custom-static-content-color: none;
+}
+
 .spectrum-Button--sizeS {
   @remapvars {
     find: /--spectrum-button(.*)-s-/;
@@ -141,10 +146,12 @@ a.spectrum-Button {
 
 .spectrum-Button--staticWhite {
   --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-white-texticon-focus-ring-color-key-focus);
+  color: var(--spectrum-custom-static-content-color, black);
 }
 
 .spectrum-Button--staticBlack {
   --spectrum-button-focus-ring-color: var(--spectrum-button-m-primary-fill-black-texticon-focus-ring-color-key-focus);
+  color: var(--spectrum-custom-static-content-color, white);
 }
 
 /* todo all of this will have to change */

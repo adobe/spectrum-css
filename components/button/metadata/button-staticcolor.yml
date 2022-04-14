@@ -1,6 +1,8 @@
 name: Button - Static Color
 status: Verified
-description: 'When a button needs to be placed on top of a colored background or a visual, use the over background button. In order to implement this button, you must set the CSS color property of a parent element to the same value as the background the button is placed against.'
+description: |
+  When a button needs to be placed on top of a colored background or a visual, use the static color button.
+  To customize the content color, set the `--spectrum-custom-static-content-color` CSS custom property of a parent element to the same value as the background the button is placed against.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/button/#Over-background
 sections:
   - name: Migration Guide
@@ -30,8 +32,9 @@ sections:
 examples:
   - id: button-staticcolor
     name: Static White
+    description: Use the `--spectrum-custom-static-content-color` custom property to set the text color. The default is black for static white buttons.
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); --spectrum-custom-static-content-color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -97,7 +100,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Disabled
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); --spectrum-custom-static-content-color: rgb(15, 121, 125); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--staticWhite" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -113,7 +116,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Secondary
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); --spectrum-custom-static-content-color: rgb(15, 121, 125); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -128,8 +131,9 @@ examples:
 
   - id: button-staticcolor
     name: Static Black
+    description: Use the `--spectrum-custom-static-content-color` custom property to set the text color. The default is white for static black buttons.
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(181, 209, 211); --spectrum-custom-static-content-color: rgb(181, 209, 211); padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -195,7 +199,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Disabled
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(181, 209, 211); --spectrum-custom-static-content-color: rgb(181, 209, 211); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--staticBlack" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -211,7 +215,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Secondary
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(181, 209, 211); --spectrum-custom-static-content-color: rgb(181, 209, 211); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--staticBlack spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -227,7 +231,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Outline
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); --spectrum-custom-static-content-color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -293,7 +297,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Outline, Disabled
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); --spectrum-custom-static-content-color: rgb(15, 121, 125); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -309,7 +313,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Outline, Secondary
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); --spectrum-custom-static-content-color: rgb(15, 121, 125); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -325,7 +329,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Outline
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(181, 209, 211); --spectrum-custom-static-content-color: rgb(181, 209, 211); padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -391,7 +395,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Outline, Disabled
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(181, 209, 211); --spectrum-custom-static-content-color: rgb(181, 209, 211); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -407,7 +411,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Outline, Secondary
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(181, 209, 211); --spectrum-custom-static-content-color: rgb(181, 209, 211); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>

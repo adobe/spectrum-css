@@ -14,6 +14,11 @@ governing permissions and limitations under the License.
 @import "../vars/css/components/spectrum-actionbutton.css";
 @import "./actionbutton-generated.css";
 
+/* hack: don't complain about this being undefined */
+.🤫 {
+  --spectrum-custom-static-content-color: none;
+}
+
 .spectrum-ActionButton--sizeS {
   @remapvars {
     find: --spectrum-actionbutton-s-;
@@ -173,6 +178,17 @@ a.spectrum-ActionButton {
 
     &:after {
       box-shadow: 0 0 0 var(--spectrum-actionbutton-focus-ring-size) var(--spectrum-actionbutton-focus-ring-color);
+    }
+  }
+}
+
+.spectrum-ActionButton {
+  &.is-selected {
+    &.spectrum-ActionButton--staticWhite {
+      color: var(--spectrum-custom-static-content-color, black);
+    }
+    &.spectrum-ActionButton--staticBlack {
+      color: var(--spectrum-custom-static-content-color, white);
     }
   }
 }

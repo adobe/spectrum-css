@@ -264,11 +264,6 @@ governing permissions and limitations under the License.
   --spectrum-global-color-static-white-rgb: 255, 255, 255;
   --spectrum-ActionButton-static-black-color: var(--spectrum-global-color-static-black);
   --spectrum-ActionButton-static-white-color: var(--spectrum-global-color-static-white);
-
-  &.is-selected {
-    /* let selected styles get their color from parent elements */
-    color: inherit !important;
-  }
 }
 
 @media (forced-colors: active) {
