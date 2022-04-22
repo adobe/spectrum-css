@@ -157,12 +157,19 @@ const expressVarDir = path.join(dirs.components, 'expressvars', 'dist');
  function copyExpressVars() {
    return gulp.src(path.join(expressVarDir, 'spectrum-*.css'))
      .pipe(gulp.dest('dist/expressvars/'))
- }
+}
+
+const coreTokensDir = path.join(dirs.components, 'coretokens', 'dist');
+function copyCoreTokens() {
+  return gulp.src(path.join(varDir, '**/*.css'))
+    .pipe(gulp.dest('dist/coretokens/'))
+}
 
 exports.buildUnique = buildUnique;
 
 exports.copyVars = gulp.parallel(
   buildUnique,
   copyVars,
-  copyExpressVars
+  copyExpressVars,
+  copyCoreTokens
 );
