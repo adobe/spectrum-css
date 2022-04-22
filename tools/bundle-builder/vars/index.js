@@ -48,7 +48,8 @@ function getAllVars() {
       `${dirs.components}/vars/css/themes/*.css`,
       `${dirs.components}/vars/css/scales/*.css`,
       `${dirs.components}/vars/css/components/*.css`,
-      `${dirs.components}/vars/css/globals/*.css`
+      `${dirs.components}/vars/css/globals/*.css`,
+      `${dirs.components}/coretokens/dist/index.css`
     ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
