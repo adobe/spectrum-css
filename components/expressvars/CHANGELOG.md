@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.2"></a>
+## 1.0.2
+🗓 2022-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.31...@spectrum-css/expressvars@1.0.2)
+
+**Note:** Version bump only for package @spectrum-css/expressvars
+
+
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0
 🗓 2022-04-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/expressvars@1.0.0-beta.31...@spectrum-css/expressvars@1.0.0)
