@@ -26,8 +26,7 @@ const legacyProcessors = processors.legacyProcessors;
 var colorStops = [
   'darkest',
   'dark',
-  'light',
-  'lightest'
+  'light'
 ];
 
 const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..') + '/';

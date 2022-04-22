@@ -43,11 +43,9 @@ card      fieldgroup    rating      steplist"
 # index-lg.css
 # index-vars.css
 # colorStops/light.css
-# colorStops/lightest.css
 # colorStops/dark.css
 # colorStops/darkest.css
 # multiStops/light.css
-# multiStops/lightest.css
 # multiStops/dark.css
 # multiStops/darkest.css"
 

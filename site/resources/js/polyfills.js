@@ -47,7 +47,6 @@ if (typeof window.CustomEvent !== 'function') {
   // IE 11 compat
   let stops = [
     'light',
-    'lightest',
     'dark',
     'darkest'
   ];

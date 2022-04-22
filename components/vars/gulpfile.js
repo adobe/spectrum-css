@@ -45,7 +45,6 @@ function copySources() {
     'spectrum-darkest.css': '.spectrum--darkest',
     'spectrum-dark.css': '.spectrum--dark',
     'spectrum-light.css': '.spectrum--light',
-    'spectrum-lightest.css': '.spectrum--lightest',
     'spectrum-large.css': '.spectrum--large',
     'spectrum-medium.css': '.spectrum--medium'
   };
@@ -100,8 +99,7 @@ function processColorAliases() {
   var colorStops = [
     'darkest',
     'dark',
-    'light',
-    'lightest'
+    'light'
   ];
 
   return gulp.src([
