@@ -35,7 +35,7 @@ function styleDictionary(cb) {
 }
 
 exports.clean = clean;
-exports.build = exports.buildLite = exports.default = gulp.series(
+exports.build = exports.buildLite = exports.buildMedium = exports.default = gulp.series(
   clean,
   styleDictionary,
   concatIndex
