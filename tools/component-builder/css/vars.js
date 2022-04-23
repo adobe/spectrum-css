@@ -60,7 +60,7 @@ function bakeVars() {
         logger.warn(`⚠️  ${pkg.name} directly uses global variable ${varName}`);
       }
       else if (!allVars[varName]) {
-        if (componentVars.indexOf(varName) === -1) {
+        if (!varName.startsWith('--custom') && componentVars.indexOf(varName) === -1) {
           errors.push(`${pkg.name} uses undefined variable ${varName}`);
         }
         else {
