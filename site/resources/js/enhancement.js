@@ -10,6 +10,61 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+// Swatch
+(function() {
+  function setSelected(swatch, selected) {
+    if (!swatch.classList.contains('is-disabled')) {
+      swatch.classList.toggle('is-selected', selected);
+    }
+  }
+
+  document.addEventListener('click', function(event) {
+    var swatch = event.target.closest('.spectrum-Swatch');
+    if (swatch) {
+      setSelected(swatch, !swatch.classList.contains('is-selected'));
+    }
+  });
+
+  document.addEventListener('keypress', function(event) {
+    var swatch = event.target.closest('.spectrum-Swatch');
+    if (swatch) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        setSelected(swatch, !swatch.classList.contains('is-selected'));
+        event.preventDefault();
+      }
+    }
+  });
+}());
+
+// Asset Card
+(function() {
+  function setSelected(card, selected) {
+    var checkbox = card.querySelector('.spectrum-Checkbox-input');
+    if (checkbox) {
+      checkbox.checked = selected;
+    }
+
+    card.classList.toggle('is-selected', selected);
+  }
+
+  document.addEventListener('click', function(event) {
+    var card = event.target.closest('.spectrum-AssetCard');
+    if (card) {
+      setSelected(card, !card.classList.contains('is-selected'));
+    }
+  });
+
+  document.addEventListener('keypress', function(event) {
+    var card = event.target.closest('.spectrum-AssetCard');
+    if (card) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        setSelected(card, !card.classList.contains('is-selected'));
+        event.preventDefault();
+      }
+    }
+  });
+}());
+
 // Rating
 (function() {
   function setFocus(rating, focused) {
@@ -104,7 +159,7 @@ governing permissions and limitations under the License.
     var pickerButton = inputgroup.querySelector('.spectrum-PickerButton');
     if (focused) {
       inputgroup.classList.add(focusClass);
-      pickerButton.classList.add(focusClass);
+      if (pickerButton) pickerButton.classList.add(focusClass);
       if (event.target.tagName !== 'INPUT') {
         input.focus();
       }
@@ -113,8 +168,8 @@ governing permissions and limitations under the License.
         textfield.classList.add(focusClass);
       });
     } else {
-      pickerButton.classList.remove('is-keyboardFocused');
-      pickerButton.classList.remove('is-focused');
+      if (pickerButton) pickerButton.classList.remove('is-keyboardFocused');
+      if (pickerButton) pickerButton.classList.remove('is-focused');
       inputgroup.classList.remove('is-keyboardFocused');
       inputgroup.classList.remove('is-focused');
 
@@ -440,6 +495,7 @@ function toggleInputGroupFocus(event) {
   var classList = event.target.classList;
   var closestSelector;
   // target within InputGroup
+  if (!classList) return;
   if (classList.contains('spectrum-InputGroup-input') ||
     classList.contains('spectrum-ActionButton spectrum-ActionButton--sizeM')) {
     closestSelector = '.spectrum-InputGroup';

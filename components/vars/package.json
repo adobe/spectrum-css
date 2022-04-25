@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/vars",
-  "version": "7.0.0",
+  "version": "7.3.0",
   "description": "The Spectrum CSS vars package",
   "license": "Apache-2.0",
   "main": "dist/spectrum-metadata.json",
@@ -21,7 +21,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-replace": "^1.0.0",
     "gulplog": "^1.0.0",
-    "postcss": "^5.2.18",
+    "postcss": "^7.0.36",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.1"
   },

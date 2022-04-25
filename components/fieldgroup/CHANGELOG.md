@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# 3.1.0
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.0.19...@spectrum-css/fieldgroup@3.1.0)
+
+### ✨ Features
+
+* **fieldgroup:** add styles for read-only checkbox group ([33d1d20](https://github.com/adobe/spectrum-css/commit/33d1d20))
+
+
+
+
+
+<a name="3.0.19"></a>
+## 3.0.19
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.0.18...@spectrum-css/fieldgroup@3.0.19)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+
+
+
+
+<a name="3.0.18"></a>
+## 3.0.18
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.0.17...@spectrum-css/fieldgroup@3.0.18)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+
+
+
+
+<a name="3.0.17"></a>
+## 3.0.17
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.0.16...@spectrum-css/fieldgroup@3.0.17)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+
+
+
+
+<a name="3.0.16"></a>
+## 3.0.16
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.0.15...@spectrum-css/fieldgroup@3.0.16)
+
+**Note:** Version bump only for package @spectrum-css/fieldgroup
+
+
+
+
+
 <a name="3.0.15"></a>
 ## 3.0.15
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldgroup@3.0.14...@spectrum-css/fieldgroup@3.0.15)

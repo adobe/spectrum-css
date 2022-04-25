@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.19"></a>
+## 4.0.19
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.18...@spectrum-css/card@4.0.19)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="4.0.18"></a>
+## 4.0.18
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.17...@spectrum-css/card@4.0.18)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="4.0.17"></a>
+## 4.0.17
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.16...@spectrum-css/card@4.0.17)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="4.0.16"></a>
+## 4.0.16
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.15...@spectrum-css/card@4.0.16)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="4.0.15"></a>
+## 4.0.15
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.14...@spectrum-css/card@4.0.15)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
+<a name="4.0.14"></a>
+## 4.0.14
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.13...@spectrum-css/card@4.0.14)
+
+**Note:** Version bump only for package @spectrum-css/card
+
+
+
+
+
 <a name="4.0.13"></a>
 ## 4.0.13
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.12...@spectrum-css/card@4.0.13)

@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionGroup {
   --spectrum-actiongroup-button-gap-reset: 0;
-  --spectrum-actiongroup-quiet-compact-button-gap: var(
-    --spectrum-global-dimension-size-25
-  );
 }
 
 /* hack: use var so it's not reported as unused */
@@ -60,6 +57,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionGroup--compact {
+  gap: var(--spectrum-actiongroup-compact-button-gap);
   &.spectrum-ActionGroup--quiet {
     .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
       margin-inline-start: var(--spectrum-actiongroup-quiet-compact-button-gap);
@@ -131,6 +129,7 @@ governing permissions and limitations under the License.
     }
 
     &.spectrum-ActionGroup--vertical {
+      gap: 0;
       .spectrum-ActionGroup-item {
         border-radius: 0;
 

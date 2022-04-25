@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.4...@spectrum-css/colorloupe@2.0.5)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.3...@spectrum-css/colorloupe@2.0.4)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.2...@spectrum-css/colorloupe@2.0.3)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.1...@spectrum-css/colorloupe@2.0.2)
+
+**Note:** Version bump only for package @spectrum-css/colorloupe
+
+
+
+
+
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@2.0.0...@spectrum-css/colorloupe@2.0.1)
+
+### 🐛 Bug fixes
+
+* correct loupe outer ([fd9f01c](https://github.com/adobe/spectrum-css/commit/fd9f01c))
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorloupe@1.0.13...@spectrum-css/colorloupe@2.0.0)

@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu {
   /* these need to be removed but we don't have a full design spec */
   --spectrum-listheading-text-color: var(--spectrum-global-color-gray-700);
+  --spectrum-listitem-m-texticon-divider-color: var(--spectrum-global-color-gray-300);
 }
 
 .spectrum-Menu {
@@ -65,10 +66,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-sectionHeading {
   color: var(--spectrum-listheading-text-color);
-}
-
-.spectrum-Menu-divider {
-  background-color: var(--spectrum-listitem-m-texticon-divider-color);
 }
 
 @media (forced-colors: active) {

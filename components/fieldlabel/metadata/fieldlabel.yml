@@ -6,7 +6,7 @@ sections:
       ### T-shirt sizing
       Field Label now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-FieldLabel--size*` class.
 examples:
-  - id: fieldlabel-m
+  - id: fieldlabel-sizing
     name: Sizing
     markup: |
       <div class="spectrum-Examples">
@@ -39,13 +39,13 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
 
-          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeL">Life Story</label>
+          <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL">Life Story</label>
           <div class="spectrum-Textfield">
             <input id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input">
           </div>
         </div>
       </div>
-  - id: fieldlabel-m
+  - id: fieldlabel-standard
     name: Standard
     markup: |
       <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Life Story</label>
@@ -57,7 +57,7 @@ examples:
       <div class="spectrum-Textfield is-disabled">
         <input id="lifestory2" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input" disabled>
       </div>
-  - id: fieldlabel-side-m
+  - id: fieldlabel-side-left
     name: Left
     description: A left aligned field label.
     markup: |
@@ -66,7 +66,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <textarea id="lifestory3" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
       </div>
-  - id: fieldlabel-side-m
+  - id: fieldlabel-side-right
     name: Right
     description: A right aligned field label.
     markup: |
@@ -75,7 +75,7 @@ examples:
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <textarea id="lifestory4" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield-input"></textarea>
       </div>
-  - id: fieldlabel-m
+  - id: fieldlabel-required
     name: Required
     description: Field label for a required field.
     markup: |

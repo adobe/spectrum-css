@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.12"></a>
+## 5.0.12
+🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.11...@spectrum-css/popover@5.0.12)
+
+**Note:** Version bump only for package @spectrum-css/popover
+
+
+
+
+
+<a name="5.0.11"></a>
+## 5.0.11
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.10...@spectrum-css/popover@5.0.11)
+
+**Note:** Version bump only for package @spectrum-css/popover
+
+
+
+
+
+<a name="5.0.10"></a>
+## 5.0.10
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.9...@spectrum-css/popover@5.0.10)
+
+**Note:** Version bump only for package @spectrum-css/popover
+
+
+
+
+
+<a name="5.0.9"></a>
+## 5.0.9
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.8...@spectrum-css/popover@5.0.9)
+
+**Note:** Version bump only for package @spectrum-css/popover
+
+
+
+
+
+<a name="5.0.8"></a>
+## 5.0.8
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.7...@spectrum-css/popover@5.0.8)
+
+**Note:** Version bump only for package @spectrum-css/popover
+
+
+
+
+
+<a name="5.0.7"></a>
+## 5.0.7
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.6...@spectrum-css/popover@5.0.7)
+
+**Note:** Version bump only for package @spectrum-css/popover
+
+
+
+
+
+<a name="5.0.6"></a>
+## 5.0.6
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.5...@spectrum-css/popover@5.0.6)
+
+**Note:** Version bump only for package @spectrum-css/popover
+
+
+
+
+
 <a name="5.0.5"></a>
 ## 5.0.5
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/popover@5.0.4...@spectrum-css/popover@5.0.5)

@@ -85,6 +85,9 @@
   --spectrum-alias-item-control-3-width-l: 41px;
   --spectrum-alias-item-control-3-width-xl: 46px;
   --spectrum-alias-item-mark-size-m: var(--spectrum-global-dimension-static-size-325);
+  --spectrum-alias-component-focusring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
+  --spectrum-alias-focus-ring-border-radius-small: var(--spectrum-global-dimension-size-75);
+  --spectrum-alias-focus-ring-border-radius-regular: 12px;
   --spectrum-alias-control-three-width-m: 34px;
   --spectrum-alias-control-three-width-l: 38px;
   --spectrum-alias-control-three-width-xl: var(--spectrum-global-dimension-static-size-550);
@@ -1666,7 +1669,6 @@
   --spectrum-picker-s-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-m-quiet-texticon-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-m-quiet-texticon-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
-  --spectrum-picker-m-texticon-popover-offset-x: var(--spectrum-global-dimension-static-size-150);
   --spectrum-picker-m-texticon-padding-left: var(--spectrum-global-dimension-static-size-150);
   --spectrum-picker-m-texticon-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-m-texticon-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
@@ -1676,7 +1678,6 @@
   --spectrum-picker-m-textonly-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-m-quiet-textthumbnail-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-m-quiet-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
-  --spectrum-picker-m-textthumbnail-popover-offset-x: var(--spectrum-global-dimension-static-size-150);
   --spectrum-picker-m-textthumbnail-padding-left: var(--spectrum-global-dimension-static-size-150);
   --spectrum-picker-m-textthumbnail-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-m-textthumbnail-touch-hit-y: var(--spectrum-global-dimension-static-size-50);

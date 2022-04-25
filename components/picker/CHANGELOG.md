@@ -3,6 +3,93 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.5"></a>
+## 1.2.5
+🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.4...@spectrum-css/picker@1.2.5)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
+<a name="1.2.4"></a>
+## 1.2.4
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.3...@spectrum-css/picker@1.2.4)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
+<a name="1.2.3"></a>
+## 1.2.3
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.2...@spectrum-css/picker@1.2.3)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
+<a name="1.2.2"></a>
+## 1.2.2
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.1...@spectrum-css/picker@1.2.2)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
+<a name="1.2.1"></a>
+## 1.2.1
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.0...@spectrum-css/picker@1.2.1)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
+<a name="1.2.0"></a>
+# 1.2.0
+🗓 2022-03-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.1.14...@spectrum-css/picker@1.2.0)
+
+### ✨ Features
+
+* add support for express picker; closes [#1245](https://github.com/adobe/spectrum-css/issues/1245) ([b07bb3d](https://github.com/adobe/spectrum-css/commit/b07bb3d))
+
+
+### 🐛 Bug fixes
+
+* put back selector I removed accidentally ([6ded29e](https://github.com/adobe/spectrum-css/commit/6ded29e))
+
+
+
+
+
+<a name="1.1.14"></a>
+## 1.1.14
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.1.13...@spectrum-css/picker@1.1.14)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
+<a name="1.1.13"></a>
+## 1.1.13
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.1.12...@spectrum-css/picker@1.1.13)
+
+**Note:** Version bump only for package @spectrum-css/picker
+
+
+
+
+
 <a name="1.1.12"></a>
 ## 1.1.12
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.1.11...@spectrum-css/picker@1.1.12)

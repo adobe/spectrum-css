@@ -1,0 +1,361 @@
+/*
+Copyright 2022 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* outer container, unstyled */
+.spectrum-AssetCard {
+  /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
+  --spectrum-assetcard-asset-size: var(--spectrum-global-dimension-static-size-2800);
+
+  --spectrum-assetcard-overlay-background-color: var(--spectrum-alias-assetcard-overlay-background-color);
+  --spectrum-assetcard-border-color-selected: var(--spectrum-alias-assetcard-border-color-selected);
+  --spectrum-assetcard-border-color-selected-hover: var(--spectrum-alias-assetcard-border-color-selected-hover);
+  --spectrum-assetcard-border-color-selected-down: var(--spectrum-alias-assetcard-border-color-selected-down);
+  --spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-alias-assetcard-selectionindicator-background-color-ordered);
+
+  --spectrum-assetcard-border-radius: var(--spectrum-alias-border-radius-regular);
+  --spectrum-assetcard-border-color: transparent;
+  --spectrum-assetcard-border-color-hover: var(--spectrum-alias-border-color-hover);
+  /* todo: this was hardcoded, it should reference --spectrum-alias-border-color-down once that becomes +200 */
+  --spectrum-assetcard-border-color-down: var(--spectrum-global-color-gray-600);
+
+  --spectrum-assetcard-background-color: var(--spectrum-global-color-gray-200);
+
+  --spectrum-assetcard-focus-ring-gap: var(--spectrum-global-dimension-static-size-65);
+  --spectrum-assetcard-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-regular);
+
+  --spectrum-assetcard-selectionindicator-background-color-default: var(--spectrum-alias-background-color-quickactions);
+  --spectrum-assetcard-selectionindicator-margin: var(--spectrum-global-dimension-size-150);
+  --spectrum-assetcard-selectionindicator-size: var(--spectrum-global-dimension-static-size-500);
+  --spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-alias-border-radius-regular);
+
+  --spectrum-assetcard-heading-text-color: var(--spectrum-global-color-gray-900);
+  --spectrum-assetcard-content-text-color: var(--spectrum-global-color-gray-700);
+
+  /* contain selection indicator */
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: var(--spectrum-assetcard-asset-size);
+
+  cursor: pointer;
+
+  &:hover {
+    .spectrum-AssetCard-assetContainer {
+      &:after {
+        border-color: var(--spectrum-assetcard-border-color-hover);
+      }
+    }
+  }
+
+  &:active {
+    .spectrum-AssetCard-assetContainer {
+      &:after {
+        border-color: var(--spectrum-assetcard-border-color-down);
+      }
+    }
+  }
+
+  outline: none;
+
+  &.is-focused,
+  &:focus-ring {
+    .spectrum-AssetCard-assetContainer {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* the container for the asset (background, border, etc) */
+.spectrum-AssetCard-assetContainer {
+  /* contain overlay */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--spectrum-assetcard-asset-size);
+  height: var(--spectrum-assetcard-asset-size);
+
+  border-radius: var(--spectrum-assetcard-border-radius);
+
+  background-color: var(--spectrum-assetcard-background-color);
+
+  transition: border var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  /* focus-ring */
+  &:before {
+    content: '';
+
+    position: absolute;
+    inset: calc(-1 * var(--spectrum-assetcard-focus-ring-gap));
+
+    border: var(--spectrum-alias-border-size-thick) solid var(--spectrum-alias-focus-color);
+    border-radius: var(--spectrum-assetcard-focus-ring-border-radius);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  /* border */
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    border: var(--spectrum-alias-border-size-thin) solid var(--spectrum-assetcard-border-color);
+    border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
+  }
+}
+
+/* the actual asset */
+.spectrum-AssetCard-asset {
+  object-fit: contain;
+
+  width: 100%;
+  height: 100%;
+
+  transition: width var(--spectrum-global-animation-duration-100) ease-in-out,
+              height var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
+}
+
+/* header area, contains the header and optional content */
+.spectrum-AssetCard-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* space between the asset and the header, place it on the header so header can be optional */
+  margin-block-start: var(--spectrum-global-dimension-static-size-200);
+}
+
+/* bold title */
+.spectrum-AssetCard-title {
+  flex-grow: 1;
+
+  color: var(--spectrum-assetcard-heading-text-color);
+
+  /* be a XS heading, size wise */
+  font-family: var(--spectrum-heading-xs-text-font-family);
+  font-weight: var(--spectrum-heading-xs-text-font-weight);
+  font-size: var(--spectrum-heading-xs-text-size);
+  font-weight: var(--spectrum-heading-xs-text-font-weight);
+  line-height: var(--spectrum-heading-xs-text-line-height);
+  font-style: var(--spectrum-heading-xs-text-font-style);
+  letter-spacing: var(--spectrum-heading-xs-text-letter-spacing);
+}
+
+/* be a XXS heading on large/mobile */
+.spectrum--large .spectrum-AssetCard-title {
+  font-family: var(--spectrum-heading-xxs-text-font-family);
+  font-weight: var(--spectrum-heading-xxs-text-font-weight);
+  font-size: var(--spectrum-heading-xxs-text-size);
+  font-weight: var(--spectrum-heading-xxs-text-font-weight);
+  line-height: var(--spectrum-heading-xxs-text-line-height);
+  font-style: var(--spectrum-heading-xxs-text-font-style);
+  letter-spacing: var(--spectrum-heading-xxs-text-letter-spacing);
+}
+
+/* optional content placed to the right of the title */
+.spectrum-AssetCard-headerContent {
+  color: var(--spectrum-assetcard-heading-text-color);
+
+  /* be a M body */
+  font-family: var(--spectrum-body-m-text-font-family);
+  font-size: var(--spectrum-body-m-text-size);
+  font-weight: var(--spectrum-body-m-text-font-weight);
+  line-height: var(--spectrum-body-m-text-line-height);
+  font-style: var(--spectrum-body-m-text-font-style);
+  letter-spacing: var(--spectrum-body-m-text-letter-spacing);
+}
+
+.spectrum--large .spectrum-AssetCard-headerContent {
+  /* be a S body */
+  font-family: var(--spectrum-body-s-text-font-family);
+  font-size: var(--spectrum-body-s-text-size);
+  font-weight: var(--spectrum-body-s-text-font-weight);
+  line-height: var(--spectrum-body-s-text-line-height);
+  font-style: var(--spectrum-body-s-text-font-style);
+  letter-spacing: var(--spectrum-body-s-text-letter-spacing);
+}
+
+
+/* content area, the last thing in the card */
+.spectrum-AssetCard-content {
+  flex-grow: 1;
+
+  /* space between the content and the header, place it on the content so content can be optional */
+  margin-block-start: var(--spectrum-global-dimension-static-size-50);
+
+  color: var(--spectrum-assetcard-content-text-color);
+
+  /* be a S body, at least size-wise */
+  font-family: var(--spectrum-body-s-text-font-family);
+  font-size: var(--spectrum-body-s-text-size);
+  font-weight: var(--spectrum-body-s-text-font-weight);
+  line-height: var(--spectrum-body-s-text-line-height);
+  font-style: var(--spectrum-body-s-text-font-style);
+  letter-spacing: var(--spectrum-body-s-text-letter-spacing);
+}
+
+/* be a XS body on large/mobile */
+.spectrum--large .spectrum-AssetCard-content {
+  font-family: var(--spectrum-body-xs-text-font-family);
+  font-size: var(--spectrum-body-xs-text-size);
+  font-weight: var(--spectrum-body-xs-text-font-weight);
+  line-height: var(--spectrum-body-xs-text-line-height);
+  font-style: var(--spectrum-body-xs-text-font-style);
+  letter-spacing: var(--spectrum-body-xs-text-letter-spacing);
+}
+
+/*
+  Selection styles
+*/
+.spectrum-AssetCard-selectionOverlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  background-color: transparent;
+
+  pointer-events: none;
+  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+
+  border-radius: calc(var(--spectrum-assetcard-border-radius) - 1px);
+}
+
+/* the checkbox or selection order indicator */
+.spectrum-AssetCard-selectionIndicator {
+  position: absolute;
+  z-index: 2;
+  inset-inline-start: var(--spectrum-assetcard-selectionindicator-margin);
+  inset-block-start: var(--spectrum-assetcard-selectionindicator-margin);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--spectrum-assetcard-selectionindicator-size);
+  height: var(--spectrum-assetcard-selectionindicator-size);
+
+  border-radius: var(--spectrum-assetcard-selectionindicator-border-radius);
+
+  box-shadow: 0 var(--spectrum-global-dimension-static-size-25) var(--spectrum-global-dimension-static-size-75) rgb(0, 0, 0, 0.15);
+
+  color: var(--spectrum-global-color-static-white);
+  font-weight: var(--spectrum-global-font-weight-bold);
+  font-size: var(--spectrum-global-dimension-font-size-400);
+
+  visibility: hidden;
+
+  opacity: 0;
+  transition: opacity var(--spectrum-global-animation-duration-100) ease-in-out;
+}
+
+.spectrum-AssetCard-selectionOrder {
+  line-height: 0;
+}
+
+/* base selection styles shared by every selection mode */
+.spectrum-AssetCard {
+  /* drop target looks identical to selected */
+  &.is-drop-target,
+  &.is-selected {
+    .spectrum-AssetCard-assetContainer {
+      &:after {
+        border-color: var(--spectrum-assetcard-border-color-selected);
+      }
+    }
+
+    .spectrum-AssetCard-selectionOverlay {
+      background-color: var(--spectrum-assetcard-overlay-background-color);
+    }
+
+    &:hover {
+      .spectrum-AssetCard-assetContainer {
+        &:after {
+          border-color: var(--spectrum-assetcard-border-color-selected-hover);
+        }
+      }
+    }
+
+    &:active {
+      .spectrum-AssetCard-assetContainer {
+        &:after {
+          border-color: var(--spectrum-assetcard-border-color-selected-down);
+        }
+      }
+    }
+  }
+}
+
+/* highlight */
+.spectrum-AssetCard--highlightSelection {
+  &.is-selected {
+    .spectrum-AssetCard-asset {
+      width: 90%;
+      height: 90%;
+
+      /* no radius, otherwise square assets get rounded */
+      border-radius: 0;
+    }
+  }
+}
+
+/* with a checkbox */
+.spectrum-AssetCard--checkboxSelection {
+  .spectrum-AssetCard-selectionIndicator {
+    background-color: var(--spectrum-assetcard-selectionindicator-background-color-default);
+
+    .spectrum-AssetCard-selectionOrder {
+      display: none;
+    }
+  }
+
+  &.is-focused,
+  &.is-selected,
+  &:focus,
+  &:hover {
+    .spectrum-AssetCard-selectionIndicator {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+/* with the little order flag that shows the selection order */
+.spectrum-AssetCard--orderedSelection {
+  .spectrum-AssetCard-selectionIndicator {
+    background-color: var(--spectrum-assetcard-selectionindicator-background-color-ordered);
+
+    .spectrum-AssetCard-checkbox {
+      display: none;
+    }
+  }
+
+  &.is-selected {
+    .spectrum-AssetCard-selectionIndicator {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

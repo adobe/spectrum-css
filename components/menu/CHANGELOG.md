@@ -3,6 +3,86 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# 4.0.0
+🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.21...@spectrum-css/menu@4.0.0)
+
+### 🐛 Bug fixes
+
+* added margin back for dividers in menu ([e4feb9a](https://github.com/adobe/spectrum-css/commit/e4feb9a))
+
+
+* fix!: use divider component in menu, closes #1371 ([5c901f1](https://github.com/adobe/spectrum-css/commit/5c901f1)), closes [#1371](https://github.com/adobe/spectrum-css/issues/1371)
+
+
+### 🛑 BREAKING CHANGES
+
+* Add `.spectrum-Divider` and `spectrum-Divider--sizeM` classes to `spectrum-Menu-divider`
+
+
+
+
+
+<a name="3.0.21"></a>
+## 3.0.21
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.20...@spectrum-css/menu@3.0.21)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+
+
+
+
+<a name="3.0.20"></a>
+## 3.0.20
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.19...@spectrum-css/menu@3.0.20)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+
+
+
+
+<a name="3.0.19"></a>
+## 3.0.19
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.18...@spectrum-css/menu@3.0.19)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+
+
+
+
+<a name="3.0.18"></a>
+## 3.0.18
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.17...@spectrum-css/menu@3.0.18)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+
+
+
+
+<a name="3.0.17"></a>
+## 3.0.17
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.16...@spectrum-css/menu@3.0.17)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+
+
+
+
+<a name="3.0.16"></a>
+## 3.0.16
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.15...@spectrum-css/menu@3.0.16)
+
+**Note:** Version bump only for package @spectrum-css/menu
+
+
+
+
+
 <a name="3.0.15"></a>
 ## 3.0.15
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.14...@spectrum-css/menu@3.0.15)

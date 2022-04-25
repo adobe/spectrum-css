@@ -63,6 +63,10 @@
   --spectrum-semantic-cta-background-color-hover: var(--spectrum-global-color-static-blue-700);
   --spectrum-semantic-cta-background-color-down: var(--spectrum-global-color-static-blue-800);
   --spectrum-semantic-cta-background-color-key-focus: var(--spectrum-global-color-static-blue-600);
+  --spectrum-semantic-emphasized-border-color-default: var(--spectrum-global-color-blue-500);
+  --spectrum-semantic-emphasized-border-color-hover: var(--spectrum-global-color-blue-600);
+  --spectrum-semantic-emphasized-border-color-down: var(--spectrum-global-color-blue-700);
+  --spectrum-semantic-emphasized-border-color-key-focus: var(--spectrum-global-color-blue-600);
   --spectrum-semantic-neutral-background-color-default: var(--spectrum-global-color-static-gray-700);
   --spectrum-semantic-neutral-background-color-hover: var(--spectrum-global-color-static-gray-800);
   --spectrum-semantic-neutral-background-color-down: var(--spectrum-global-color-static-gray-900);
@@ -70,9 +74,13 @@
   --spectrum-semantic-presence-color-1: var(--spectrum-global-color-static-red-500);
   --spectrum-semantic-presence-color-2: var(--spectrum-global-color-static-orange-400);
   --spectrum-semantic-presence-color-3: var(--spectrum-global-color-static-yellow-400);
-  --spectrum-semantic-presence-color-4: rgb(75, 204, 162);
-  --spectrum-semantic-presence-color-5: rgb(0, 199, 255);
-  --spectrum-semantic-presence-color-6: rgb(0, 140, 184);
-  --spectrum-semantic-presence-color-7: rgb(126, 75, 243);
+  --spectrum-semantic-presence-color-4-rgb: 75, 204, 162;
+  --spectrum-semantic-presence-color-4: rgb(var(--spectrum-semantic-presence-color-4-rgb));
+  --spectrum-semantic-presence-color-5-rgb: 0, 199, 255;
+  --spectrum-semantic-presence-color-5: rgb(var(--spectrum-semantic-presence-color-5-rgb));
+  --spectrum-semantic-presence-color-6-rgb: 0, 140, 184;
+  --spectrum-semantic-presence-color-6: rgb(var(--spectrum-semantic-presence-color-6-rgb));
+  --spectrum-semantic-presence-color-7-rgb: 126, 75, 243;
+  --spectrum-semantic-presence-color-7: rgb(var(--spectrum-semantic-presence-color-7-rgb));
   --spectrum-semantic-presence-color-8: var(--spectrum-global-color-static-fuchsia-600);
 }

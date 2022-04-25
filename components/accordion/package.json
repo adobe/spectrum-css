@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/accordion",
-  "version": "3.0.15",
+  "version": "3.0.20",
   "description": "The Spectrum CSS accordion component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -20,9 +20,9 @@
     "@spectrum-css/vars": "^7.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.1.0",
-    "@spectrum-css/icon": "^3.0.15",
-    "@spectrum-css/vars": "^7.0.0",
+    "@spectrum-css/component-builder": "^3.1.1",
+    "@spectrum-css/icon": "^3.0.20",
+    "@spectrum-css/vars": "^7.3.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

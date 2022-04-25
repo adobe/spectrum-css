@@ -48,6 +48,13 @@ examples:
         <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input" disabled>
       </div>
 
+  - id: textfield-readonly
+    name: Read-only
+    markup: |
+      <div class="spectrum-Textfield is-readOnly">
+        <input type="text" placeholder="Enter your name" name="field" value="This text is read-only" class="spectrum-Textfield-input" readonly="readonly">
+      </div>
+
   - id: textfield
     name: Valid
     markup: |

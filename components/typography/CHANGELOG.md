@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.17"></a>
+## 4.0.17
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.16...@spectrum-css/typography@4.0.17)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+
+
+
+
+<a name="4.0.16"></a>
+## 4.0.16
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.15...@spectrum-css/typography@4.0.16)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+
+
+
+
+<a name="4.0.15"></a>
+## 4.0.15
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.14...@spectrum-css/typography@4.0.15)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+
+
+
+
+<a name="4.0.14"></a>
+## 4.0.14
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.13...@spectrum-css/typography@4.0.14)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+
+
+
+
+<a name="4.0.13"></a>
+## 4.0.13
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.12...@spectrum-css/typography@4.0.13)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+
+
+
+
 <a name="4.0.12"></a>
 ## 4.0.12
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.11...@spectrum-css/typography@4.0.12)

@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.10"></a>
+## 3.3.10
+🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.9...@spectrum-css/tag@3.3.10)
+
+### 🐛 Bug fixes
+
+* stick to a single selector for consistency in tag clearbutton ([2d8261e](https://github.com/adobe/spectrum-css/commit/2d8261e))
+
+
+
+
+
+<a name="3.3.9"></a>
+## 3.3.9
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.8...@spectrum-css/tag@3.3.9)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="3.3.8"></a>
+## 3.3.8
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.7...@spectrum-css/tag@3.3.8)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="3.3.7"></a>
+## 3.3.7
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.6...@spectrum-css/tag@3.3.7)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="3.3.6"></a>
+## 3.3.6
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.5...@spectrum-css/tag@3.3.6)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="3.3.5"></a>
+## 3.3.5
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.4...@spectrum-css/tag@3.3.5)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
+<a name="3.3.4"></a>
+## 3.3.4
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.3...@spectrum-css/tag@3.3.4)
+
+**Note:** Version bump only for package @spectrum-css/tag
+
+
+
+
+
 <a name="3.3.3"></a>
 ## 3.3.3
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.2...@spectrum-css/tag@3.3.3)

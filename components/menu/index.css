@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 @import "../vars/css/scales/spectrum-large.css";
 @import "../vars/css/scales/spectrum-medium.css";
 @import "../vars/css/components/spectrum-listitem.css";
+@import "../vars/css/components/spectrum-divider.css";
 
 .spectrum-Menu {
   --spectrum-menu-margin-x: var(--spectrum-global-dimension-size-40);
@@ -88,6 +89,13 @@ governing permissions and limitations under the License.
         );
       }
     }
+  }
+  .spectrum-Menu-divider {
+    overflow: visible;
+
+    inline-size: auto;
+    margin-block: calc(var(--spectrum-listitem-texticon-divider-padding) / 2);
+    margin-inline: var(--spectrum-listitem-texticon-padding-y);
   }
 }
 
@@ -188,20 +196,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu-chevron {
   transform: logical rotate(0deg);
-}
-
-.spectrum-Menu-divider {
-  /* Add the correct box sizing for hr in Firefox. */
-  box-sizing: content-box;
-
-  /* Show the overflow for hr in Edge and IE. */
-  overflow: visible;
-
-  block-size: var(--spectrum-listitem-texticon-divider-size);
-  margin-block: calc(var(--spectrum-listitem-texticon-divider-padding) / 2);
-  margin-inline: var(--spectrum-listitem-texticon-padding-y);
-  padding: 0;
-  border: none;
 }
 
 .spectrum-Menu-sectionHeading {

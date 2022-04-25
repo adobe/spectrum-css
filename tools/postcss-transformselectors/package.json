@@ -1,6 +1,6 @@
 {
   "name": "postcss-transformselectors",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Re-map and transform selectors",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "postcss": "^8.2.6"
+    "postcss": "^7.0.36"
   },
   "devDependencies": {
     "ava": "^3.9.0"

@@ -12,12 +12,29 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldGroup {
   --spectrum-fieldgroup-margin: var(--spectrum-global-dimension-size-200);
+  --spectrum-fieldgroup-readonly-delineator: '\002c';
 }
 
 .spectrum-FieldGroup {
   display: flex;
   vertical-align: top;
   flex-wrap: wrap;
+}
+
+.spectrum-FieldGroup {
+  .spectrum-Checkbox.is-readOnly {
+    .spectrum-Checkbox-box {
+      display: none;
+    }
+
+    &:not(:last-child) {
+      .spectrum-Checkbox-label {
+        &:after {
+          content: var(--spectrum-fieldgroup-readonly-delineator)
+        }
+      }
+    }
+  }
 }
 
 .spectrum-FieldGroup--horizontal {

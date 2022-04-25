@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.25"></a>
+## 3.0.25
+🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.24...@spectrum-css/actionmenu@3.0.25)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
+<a name="3.0.24"></a>
+## 3.0.24
+🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.23...@spectrum-css/actionmenu@3.0.24)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
+<a name="3.0.23"></a>
+## 3.0.23
+🗓 2022-03-30 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.22...@spectrum-css/actionmenu@3.0.23)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
+<a name="3.0.22"></a>
+## 3.0.22
+🗓 2022-03-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.21...@spectrum-css/actionmenu@3.0.22)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
+<a name="3.0.21"></a>
+## 3.0.21
+🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.20...@spectrum-css/actionmenu@3.0.21)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
+<a name="3.0.20"></a>
+## 3.0.20
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.19...@spectrum-css/actionmenu@3.0.20)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
+<a name="3.0.19"></a>
+## 3.0.19
+🗓 2022-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.18...@spectrum-css/actionmenu@3.0.19)
+
+**Note:** Version bump only for package @spectrum-css/actionmenu
+
+
+
+
+
 <a name="3.0.18"></a>
 ## 3.0.18
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@3.0.17...@spectrum-css/actionmenu@3.0.18)

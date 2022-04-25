@@ -81,9 +81,14 @@ function getCSSVariableReference(value) {
   return value;
 }
 
-function getCSSVar(prefix, key, value) {
+function getCSSVarName(prefix, key) {
   key = prefix ? `${prefix}-${key}` : key;
   key = `--spectrum-${key}`;
+  return key;
+}
+
+function getCSSVar(prefix, key, value) {
+  key = getCSSVarName(prefix, key);
   if (value[0] === '$') {
     let reference = getCSSVariableReference(value);
     return `  ${key}: var(${reference});
@@ -232,7 +237,14 @@ function generateDNAFiles() {
               continue;
             }
 
-            contents += getCSSVar(prefix, key, value);
+            if (value.startsWith('rgb(')) {
+              // Make -rgb variables for everything that's an actual rgb()
+              contents += getCSSVar(prefix, key + '-rgb', value.replace(/^rgb\((.*?)\)/, '$1'));
+              contents += getCSSVar(prefix, key, `rgb(var(${getCSSVarName(prefix, key)}-rgb))`);
+            }
+            else {
+              contents += getCSSVar(prefix, key, value);
+            }
           }
         });
 
