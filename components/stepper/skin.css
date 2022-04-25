@@ -174,3 +174,49 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+@media (forced-colors: active) {
+  .spectrum-Stepper {
+    --spectrum-textfield-m-quiet-texticon-border-color-disabled: GrayText;
+    --spectrum-textfield-m-texticon-border-color-disabled: GrayText;
+    --spectrum-textfield-m-texticon-border-color-hover: Highlight;
+    --spectrum-textfield-m-texticon-border-color-invalid: Highlight;
+    --spectrum-textfield-m-texticon-border-color-invalid-key-focus: Highlight;
+    --spectrum-textfield-m-texticon-border-color-invalid-mouse-focus: Highlight;
+    --spectrum-textfield-m-texticon-border-color-key-focus: Highlight;
+    --spectrum-textfield-m-texticon-border-color-mouse-focus: Highlight;
+    --spectrum-textfield-m-texticon-focus-ring-border-width: 2px;
+
+    &.is-keyboardFocused {
+      outline: 2px solid var(--spectrum-textfield-m-texticon-border-color-key-focus);
+      .spectrum-Stepper-input,
+      .spectrum-Stepper-buttons {
+        --spectrum-textfield-m-texticon-background-color: Canvas;
+        --spectrum-textfield-m-texticon-border-color: ButtonText;
+        --spectrum-textfield-m-texticon-text-color: CanvasText;
+      }
+    }
+
+    &.spectrum-Stepper--quiet {   
+    
+      &.is-keyboardFocused,
+      &.is-focused {
+        outline: none;
+    
+        .spectrum-Stepper-buttons,
+        .spectrum-Stepper-input {
+          forced-color-adjust: none;
+          box-shadow: 0 var(--spectrum-textfield-m-texticon-focus-ring-border-width) 0 0 var(--spectrum-textfield-m-texticon-border-color-key-focus);
+        }
+     
+        &.is-invalid {  
+          .spectrum-Stepper-input,
+          .spectrum-Stepper-buttons {
+            forced-color-adjust: none;
+            box-shadow: 0 var(--spectrum-textfield-m-texticon-focus-ring-border-width) 0 0 var(--spectrum-textfield-m-texticon-border-color-invalid);
+          }
+        }
+      }
+    }
+  }
+}
