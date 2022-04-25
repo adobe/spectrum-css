@@ -24,6 +24,7 @@ function concatIndex() {
     'dist/css/*.css',
     'dist/css/spectrum/*.css',
     'dist/css/express/*.css',
+    'custom.css'
   ])
     .pipe(concat('index.css'))
     .pipe(gulp.dest('dist/'));
