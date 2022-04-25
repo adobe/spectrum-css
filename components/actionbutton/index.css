@@ -13,16 +13,6 @@ governing permissions and limitations under the License.
 @import "../commons/basebutton.css";
 @import "./actionbutton-generated.css";
 
-.spectrum {
-  --spectrum-animation-duration-100: 130ms;
-
-  --spectrum-edge-to-visual-only-75: 4px;
-  --spectrum-edge-to-visual-only-100: 7px;
-  --spectrum-edge-to-visual-only-200: 8px;
-  --spectrum-edge-to-visual-only-300: 9px;
-}
-
-
 .spectrum-ActionButton--sizeS {
   --spectrum-actionbutton-min-width: var(--spectrum-component-minimum-width-75);
   --spectrum-actionbutton-height: var(--spectrum-component-height-75);
