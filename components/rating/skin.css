@@ -106,3 +106,12 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+@media (forced-colors: active) {
+  .spectrum-Rating {
+    &.is-focused {
+      outline: 1px solid var(--spectrum-alias-focus-ring-color);
+    }
+    --spectrum-rating-icon-color-disabled: GrayText;
+  }
+}
