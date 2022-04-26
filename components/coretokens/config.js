@@ -13,8 +13,7 @@ governing permissions and limitations under the License.
 const StyleDictionary = require('style-dictionary');
 const CSSSetsFormatter = require('style-dictionary-sets').CSSSetsFormatter;
 const NameKebabTransfom = require('style-dictionary-sets').NameKebabTransfom;
-const AttributeSetsTransform =
-  require('style-dictionary-sets').AttributeSetsTransform;
+const AttributeSetsTransform = require('style-dictionary-sets').AttributeSetsTransform;
 
 StyleDictionary.registerTransform(NameKebabTransfom);
 StyleDictionary.registerTransform(AttributeSetsTransform);
@@ -22,11 +21,14 @@ StyleDictionary.registerFormat(CSSSetsFormatter);
 
 const systemNames = ['express', 'spectrum', 'wireframe'];
 
-const tokenAttributesHaveSets = (tokenAttributes) => {
-  return typeof tokenAttributes === 'object' &&
-    !Array.isArray(tokenAttributes) &&
-    tokenAttributes !== null &&
-    'sets' in tokenAttributes;
+const getSets = (token) => {
+  return token.path.filter(
+    (part, index, array) => array[index - 1] == "sets"
+  );
+}
+
+const tokenHasSets = (token) => {
+  return token.path.includes('sets');
 }
 
 const generateFileConfig = (setName, subSystemName) => {
@@ -49,9 +51,9 @@ const generateFileConfig = (setName, subSystemName) => {
     format: CSSSetsFormatter.name,
     filter: (token) => {
       return (
-        tokenAttributesHaveSets(token.attributes) &&
-        token.attributes.sets.includes(subSystemName) &&
-        token.attributes.sets.includes(setName)
+        tokenHasSets(token) &&
+        getSets(token).includes(subSystemName) &&
+        getSets(token).includes(setName)
       );
     },
     options: {
@@ -73,9 +75,9 @@ const generateGlobalConfig = (subSystemName) => {
     format: CSSSetsFormatter.name,
     filter: (token) => {
       return (
-        tokenAttributesHaveSets(token.attributes) &&
-        token.attributes.sets.length === 1 &&
-        token.attributes.sets[0] === subSystemName
+        tokenHasSets(token) &&
+        getSets(token).length === 1 &&
+        getSets(token)[0] === subSystemName
       );
     },
     options: {
@@ -101,9 +103,9 @@ const generateGlobalSetConfig = (setName) => {
     format: CSSSetsFormatter.name,
     filter: (token) => {
       return (
-        tokenAttributesHaveSets(token.attributes) &&
-        token.attributes.sets.every(set => !systemNames.includes(set)) &&
-        token.attributes.sets.includes(setName)
+        tokenHasSets(token) &&
+        getSets(token).every(set => !systemNames.includes(set)) &&
+        getSets(token).includes(setName)
       );
     },
     options: {
@@ -126,9 +128,7 @@ module.exports = {
         {
           destination: 'global-vars.css',
           format: CSSSetsFormatter.name,
-          filter: (token) => {
-            return !('sets' in token.attributes)
-          },
+          filter: (token) => !tokenHasSets(token),
           options: {
             showFileHeader: false,
             outputReferences: true,
