@@ -6,6 +6,38 @@ description: |
   - If an icon and a label are both used, ensure that the element with the `.spectrum-ActionButton-label` class comes after the `.spectrum-Icon` element.
   - If the hold icon is used, ensure that the element with the `.spectrum-ActionButton-hold` class comes before the `.spectrum-Icon` element.
 sections:
+  - name: Custom Properties API
+    description: |
+      Define a subset of the following properties on your own class, such as `.custom-ActionButton`, to customize ActionButton.
+
+      These properties override all API options, but can be layered on top of them.
+
+      | Custom property                                   |
+      | ------------------------------------------------- |
+      |  `--custom-actionbutton-background-color-default` |
+      |  `--custom-actionbutton-background-color-hover` |
+      |  `--custom-actionbutton-background-color-down` |
+      |  `--custom-actionbutton-background-color-focus` |
+      |  `--custom-actionbutton-background-color-disabled` |
+      |  `--custom-actionbutton-border-color-default` |
+      |  `--custom-actionbutton-border-color-hover` |
+      |  `--custom-actionbutton-border-color-down` |
+      |  `--custom-actionbutton-border-color-focus` |
+      |  `--custom-actionbutton-border-color-disabled` |
+      |  `--custom-actionbutton-content-color-default` |
+      |  `--custom-actionbutton-content-color-hover` |
+      |  `--custom-actionbutton-content-color-down` |
+      |  `--custom-actionbutton-content-color-focus` |
+      |  `--custom-actionbutton-content-color-disabled` |
+      |  `--custom-actionbutton-min-width` |
+      |  `--custom-actionbutton-height` |
+      |  `--custom-actionbutton-icon-size` |
+      |  `--custom-actionbutton-font-size` |
+      |  `--custom-actionbutton-text-to-visual` |
+      |  `--custom-actionbutton-edge-to-hold-icon` |
+      |  `--custom-actionbutton-edge-to-visual` |
+      |  `--custom-actionbutton-edge-to-text` |
+      |  `--custom-actionbutton-edge-to-visual-only` |
   - name: Migration Guide
     description: |
       ### Action Button now required a class on its icon
@@ -1224,3 +1256,38 @@ examples:
           </div>
         </div>
       </div>
+
+  - id: actionbutton-api
+    name: Customized
+    markup: |
+      <style type="text/css">
+        .custom-ActionButton {
+          --custom-actionbutton-background-color-default: var(--spectrum-orange-200);
+          --custom-actionbutton-background-color-hover: var(--spectrum-orange-100);
+          --custom-actionbutton-background-color-down: var(--spectrum-orange-400);
+          --custom-actionbutton-background-color-focus: var(--spectrum-orange-100);
+
+          --custom-actionbutton-border-color-default: var(--spectrum-orange-400);
+          --custom-actionbutton-border-color-hover: var(--spectrum-orange-500);
+          --custom-actionbutton-border-color-down: var(--spectrum-orange-600);
+          --custom-actionbutton-border-color-focus: var(--spectrum-orange-500);
+
+          --custom-actionbutton-content-color-default: var(--spectrum-orange-1000);
+          --custom-actionbutton-content-color-hover: var(--spectrum-orange-1100);
+          --custom-actionbutton-content-color-down: var(--spectrum-orange-1000);
+          --custom-actionbutton-content-color-focus: var(--spectrum-orange-1300);
+
+          --custom-actionbutton-min-width: 24px;
+          --custom-actionbutton-height: 44px;
+
+          --custom-actionbutton-icon-size: 24px;
+          --custom-actionbutton-font-size: 26px;
+        }
+      </style>
+
+      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM custom-ActionButton">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+          <use xlink:href="#spectrum-icon-18-Edit" />
+        </svg>
+        <span class="spectrum-ActionButton-label">Edit</span>
+      </button>
