@@ -325,15 +325,15 @@ governing permissions and limitations under the License.
     border-color: var(--custom-actionbutton-border-color-hover, var(--spectrum-actionbutton-border-color-hover));
     color: var(--custom-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover));
   }
-  &:active {
-    background-color: var(--custom-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down));
-    border-color: var(--custom-actionbutton-border-color-down, var(--spectrum-actionbutton-border-color-down));
-    color: var(--custom-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down));
-  }
   &:focus-ring {
     background-color: var(--custom-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus));
     border-color: var(--custom-actionbutton-border-color-focus, var(--spectrum-actionbutton-border-color-focus));
     color: var(--custom-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus));
+  }
+  &:active {
+    background-color: var(--custom-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down));
+    border-color: var(--custom-actionbutton-border-color-down, var(--spectrum-actionbutton-border-color-down));
+    color: var(--custom-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down));
   }
   &:disabled,
   &.is-disabled {
