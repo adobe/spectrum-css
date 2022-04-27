@@ -29,6 +29,7 @@ sections:
       |  `--custom-actionbutton-content-color-down` |
       |  `--custom-actionbutton-content-color-focus` |
       |  `--custom-actionbutton-content-color-disabled` |
+      |  `--custom-actionbutton-focus-ring-color` |
       |  `--custom-actionbutton-min-width` |
       |  `--custom-actionbutton-height` |
       |  `--custom-actionbutton-icon-size` |
@@ -1276,6 +1277,8 @@ examples:
           --custom-actionbutton-content-color-hover: var(--spectrum-orange-1100);
           --custom-actionbutton-content-color-down: var(--spectrum-orange-1000);
           --custom-actionbutton-content-color-focus: var(--spectrum-orange-1300);
+
+          --custom-actionbutton-focus-ring-color: var(--spectrum-orange-800);
 
           --custom-actionbutton-min-width: 24px;
           --custom-actionbutton-height: 44px;

@@ -32,6 +32,8 @@ governing permissions and limitations under the License.
   --custom-actionbutton-content-color-focus: x;
   --custom-actionbutton-content-color-disabled: x;
 
+  --custom-actionbutton-focus-ring-color: x;
+
   --custom-actionbutton-min-width: x;
   --custom-actionbutton-height: x;
 
@@ -91,7 +93,7 @@ governing permissions and limitations under the License.
       --spectrum-actionbutton-border-color-down: transparent;
       --spectrum-actionbutton-border-color-focus: transparent;
 
-      &.spectrum-ActionButton--emphaszied {
+      &.spectrum-ActionButton--emphasized {
         --spectrum-actionbutton-background-color-default: var(--spectrum-accent-background-color-default);
         --spectrum-actionbutton-background-color-hover: var(--spectrum-accent-background-color-hover);
         --spectrum-actionbutton-background-color-down: var(--spectrum-accent-background-color-down);
