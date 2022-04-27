@@ -59,8 +59,8 @@ function bakeVars() {
       if (varName.indexOf('spectrum-global') !== -1) {
         logger.warn(`⚠️  ${pkg.name} directly uses global variable ${varName}`);
       }
-      else if (!allVars[varName]) {
-        if (!varName.startsWith('--custom') && componentVars.indexOf(varName) === -1) {
+      else if (!allVars[varName] && !varName.startsWith('--custom')) {
+        if (componentVars.indexOf(varName) === -1) {
           errors.push(`${pkg.name} uses undefined variable ${varName}`);
         }
         else {
