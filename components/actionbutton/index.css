@@ -28,7 +28,7 @@ governing permissions and limitations under the License.
   --spectrum-actionbutton-quiet-background-color-down: var(--spectrum-gray-200);
   --spectrum-actionbutton-quiet-background-color-focus: transparent;
 
-  --spectrum-actionbutton-content-color: var(--spectrum-neutral-content-color); /* todo: this may be named wrong */
+  --spectrum-actionbutton-content-color: var(--spectrum-neutral-content-color-default);
   --spectrum-actionbutton-content-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-actionbutton-content-color-down: var(--spectrum-neutral-content-color-down);
   --spectrum-actionbutton-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
