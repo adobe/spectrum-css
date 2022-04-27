@@ -390,7 +390,6 @@ a.spectrum-ActionButton {
   transform: logical rotate(0deg);
 }
 
-
 /* special cases for focus-ring */
 .spectrum-ActionButton {
   transition: border-color var(--custom-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
