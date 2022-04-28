@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/sidenav",
-  "version": "3.0.20",
+  "version": "3.0.21",
   "description": "The Spectrum CSS sidenav component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,12 +16,12 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": "^7.0.0"
+    "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
     "@spectrum-css/component-builder": "^3.1.1",
-    "@spectrum-css/icon": "^3.0.20",
-    "@spectrum-css/vars": "^7.3.0",
+    "@spectrum-css/icon": "^3.0.21",
+    "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
