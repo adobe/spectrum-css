@@ -1264,30 +1264,24 @@ examples:
     name: Customized
     markup: |
       <style type="text/css">
-        /* color customizations should not be done if forced-colors is set */
-        @media (forced-colors: none) {
-          .custom-ActionButton {
-            --custom-actionbutton-background-color-default: var(--spectrum-orange-200);
-            --custom-actionbutton-background-color-hover: var(--spectrum-orange-100);
-            --custom-actionbutton-background-color-down: var(--spectrum-orange-400);
-            --custom-actionbutton-background-color-focus: var(--spectrum-orange-100);
-
-            --custom-actionbutton-border-color-default: var(--spectrum-orange-400);
-            --custom-actionbutton-border-color-hover: var(--spectrum-orange-500);
-            --custom-actionbutton-border-color-down: var(--spectrum-orange-600);
-            --custom-actionbutton-border-color-focus: var(--spectrum-orange-500);
-
-            --custom-actionbutton-content-color-default: var(--spectrum-orange-1000);
-            --custom-actionbutton-content-color-hover: var(--spectrum-orange-1100);
-            --custom-actionbutton-content-color-down: var(--spectrum-orange-1000);
-            --custom-actionbutton-content-color-focus: var(--spectrum-orange-1300);
-
-            --custom-actionbutton-focus-ring-color: var(--spectrum-orange-800);
-          }
-        }
-
-        /* dimensional customizations can be done for all cases */
         .custom-ActionButton {
+          --custom-actionbutton-background-color-default: var(--spectrum-orange-200);
+          --custom-actionbutton-background-color-hover: var(--spectrum-orange-100);
+          --custom-actionbutton-background-color-down: var(--spectrum-orange-400);
+          --custom-actionbutton-background-color-focus: var(--spectrum-orange-100);
+
+          --custom-actionbutton-border-color-default: var(--spectrum-orange-400);
+          --custom-actionbutton-border-color-hover: var(--spectrum-orange-500);
+          --custom-actionbutton-border-color-down: var(--spectrum-orange-600);
+          --custom-actionbutton-border-color-focus: var(--spectrum-orange-500);
+
+          --custom-actionbutton-content-color-default: var(--spectrum-orange-1000);
+          --custom-actionbutton-content-color-hover: var(--spectrum-orange-1100);
+          --custom-actionbutton-content-color-down: var(--spectrum-orange-1000);
+          --custom-actionbutton-content-color-focus: var(--spectrum-orange-1300);
+
+          --custom-actionbutton-focus-ring-color: var(--spectrum-orange-800);
+
           --custom-actionbutton-min-width: 24px;
           --custom-actionbutton-height: 44px;
 
