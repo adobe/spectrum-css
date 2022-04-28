@@ -1,12 +1,12 @@
 :root {
   --spectrum-alias-colorhandle-outer-border-color: rgba(0,0,0,0.42);
-  --spectrum-alias-transparent-blue-background-color-hover: rgba(13,102,208,0.15);
-  --spectrum-alias-transparent-blue-background-color-down: rgba(9,90,186,0.3);
+  --spectrum-alias-transparent-blue-background-color-hover: rgba(0,87,190,0.15);
+  --spectrum-alias-transparent-blue-background-color-down: rgba(0,72,153,0.3);
   --spectrum-alias-transparent-blue-background-color-key-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color-mouse-focus: var(--spectrum-alias-transparent-blue-background-color-hover);
   --spectrum-alias-transparent-blue-background-color: var(--spectrum-alias-component-text-color-default);
-  --spectrum-alias-transparent-red-background-color-hover: rgba(201,37,45,0.15);
-  --spectrum-alias-transparent-red-background-color-down: rgba(187,18,26,0.3);
+  --spectrum-alias-transparent-red-background-color-hover: rgba(154,0,0,0.15);
+  --spectrum-alias-transparent-red-background-color-down: rgba(124,0,0,0.3);
   --spectrum-alias-transparent-red-background-color-key-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color-mouse-focus: var(--spectrum-alias-transparent-red-background-color-hover);
   --spectrum-alias-transparent-red-background-color: var(--spectrum-alias-component-text-color-default);
@@ -265,10 +265,10 @@
   --spectrum-alias-input-border-color-invalid-mouse-focus: var(--spectrum-semantic-negative-color-hover);
   --spectrum-alias-input-border-color-invalid-key-focus: var(--spectrum-alias-border-color-key-focus);
   --spectrum-alias-input-border-color-invalid: var(--spectrum-alias-input-border-color-invalid-default);
-  --spectrum-alias-background-color-yellow-default: var(--spectrum-global-color-static-yellow-600);
-  --spectrum-alias-background-color-yellow-hover: var(--spectrum-global-color-static-yellow-700);
-  --spectrum-alias-background-color-yellow-key-focus: var(--spectrum-global-color-static-yellow-700);
-  --spectrum-alias-background-color-yellow-down: var(--spectrum-global-color-static-yellow-800);
+  --spectrum-alias-background-color-yellow-default: var(--spectrum-global-color-static-yellow-300);
+  --spectrum-alias-background-color-yellow-hover: var(--spectrum-global-color-static-yellow-400);
+  --spectrum-alias-background-color-yellow-key-focus: var(--spectrum-global-color-static-yellow-400);
+  --spectrum-alias-background-color-yellow-down: var(--spectrum-global-color-static-yellow-500);
   --spectrum-alias-background-color-yellow: var(--spectrum-alias-background-color-yellow-default);
   --spectrum-alias-infieldbutton-background-color: var(--spectrum-global-color-gray-200);
   --spectrum-alias-infieldbutton-fill-loudnessLow-border-color-disabled: transparent;
@@ -352,7 +352,7 @@
   --spectrum-alias-tabitem-icon-color-emphasized: var(--spectrum-alias-tabitem-text-color-default);
   --spectrum-alias-tabitem-icon-color-emphasized-selected: var(--spectrum-alias-tabitem-text-color-emphasized-selected-default);
   --spectrum-alias-assetcard-selectionindicator-background-color-ordered: var(--spectrum-global-color-blue-500);
-  --spectrum-alias-assetcard-overlay-background-color: rgba(38,128,235,0.1);
+  --spectrum-alias-assetcard-overlay-background-color: rgba(27,127,245,0.1);
   --spectrum-alias-assetcard-border-color-selected: var(--spectrum-global-color-blue-500);
   --spectrum-alias-assetcard-border-color-selected-hover: var(--spectrum-global-color-blue-500);
   --spectrum-alias-assetcard-border-color-selected-down: var(--spectrum-global-color-blue-600);
@@ -410,7 +410,7 @@
   --spectrum-alias-border-color-translucent-darker: rgba(0,0,0,0.1);
   --spectrum-alias-focus-color: var(--spectrum-global-color-blue-400);
   --spectrum-alias-focus-ring-color: var(--spectrum-alias-focus-color);
-  --spectrum-alias-track-color-default: var(--spectrum-global-color-gray-400);
+  --spectrum-alias-track-color-default: var(--spectrum-global-color-gray-300);
   --spectrum-alias-track-fill-color-overbackground: var(--spectrum-global-color-static-white);
   --spectrum-alias-track-color-disabled: var(--spectrum-global-color-gray-300);
   --spectrum-alias-thumbnail-darksquare-background-color: var(--spectrum-global-color-gray-300);
