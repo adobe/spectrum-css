@@ -102,7 +102,13 @@ governing permissions and limitations under the License.
       --spectrum-actionbutton-background-color-down: var(--spectrum-gray-200);
       --spectrum-actionbutton-background-color-focus: transparent;
 
+      --spectrum-actionbutton-border-color-default: transparent;
+      --spectrum-actionbutton-border-color-hover: transparent;
+      --spectrum-actionbutton-border-color-down: transparent;
+      --spectrum-actionbutton-border-color-focus: transparent;
+
       --spectrum-actionbutton-background-color-disabled: transparent;
+      --spectrum-actionbutton-border-color-disabled: transparent;
     }
 
     &.is-selected {
