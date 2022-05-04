@@ -222,7 +222,8 @@ governing permissions and limitations under the License.
         --spectrum-actionbutton-content-color-focus: var(--custom-actionbutton-static-content-color, var(--spectrum-black));
 
         --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
-        --spectrum-actionbutton-border-color-disabled: transparent;      }
+        --spectrum-actionbutton-border-color-disabled: transparent;
+      }
     }
   }
 }
