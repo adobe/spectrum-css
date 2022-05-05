@@ -170,16 +170,6 @@ governing permissions and limitations under the License.
     --spectrum-calendar-day-today-border-color: ButtonText;
     --spectrum-calendar-day-today-text-color-disabled: GrayText;
     --spectrum-calendar-day-today-text-color: ButtonText;
-    &:not(.is-today) {
-      /* &:before {
-        content: none;
-      }  */
-    }
-    &.is-today {
-      /* &:before {
-        forced-color-adjust: auto;
-      } */
-    }
     &.is-range-selection {
       color: HighlightText;
       &.is-selection-start,
