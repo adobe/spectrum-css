@@ -206,3 +206,53 @@ governing permissions and limitations under the License.
 .spectrum-CloseButton-UIIcon {
   margin: 0
 }
+
+@media (forced-colors: active) {
+  .spectrum-CloseButton {
+    --spectrum-alias-component-icon-color-default: ButtonText;
+    --spectrum-alias-component-icon-color-disabled: GrayText;
+    --spectrum-alias-component-icon-color-down: Highlight;
+    --spectrum-alias-component-icon-color-hover: Highlight;
+    --spectrum-alias-component-icon-color-key-focus: Highlight;
+    --spectrum-alias-component-icon-color-mouse-focus: Highlight;
+    --spectrum-closebutton-m-black-background-color-down: ButtonFace;
+    --spectrum-closebutton-m-black-background-color-hover: ButtonFace;
+    --spectrum-closebutton-m-black-background-color-key-focus: ButtonFace;
+    --spectrum-closebutton-m-black-background-color-mouse-focus: ButtonFace;
+    --spectrum-closebutton-m-black-uiicon-color: ButtonText;
+    --spectrum-closebutton-m-black-uiicon-color-disabled: GrayText;
+    --spectrum-closebutton-m-black-uiicon-color-down: Highlight;
+    --spectrum-closebutton-m-black-uiicon-color-hover: Highlight;
+    --spectrum-closebutton-m-black-uiicon-color-key-focus: Highlight;
+    --spectrum-closebutton-m-black-uiicon-color-mouse-focus: Highlight;
+    --spectrum-closebutton-m-white-background-color-down: ButtonFace;
+    --spectrum-closebutton-m-white-background-color-hover: ButtonFace;
+    --spectrum-closebutton-m-white-background-color-key-focus: ButtonFace;
+    --spectrum-closebutton-m-white-background-color-mouse-focus: ButtonFace;
+    --spectrum-closebutton-m-white-uiicon-color: ButtonText;
+    --spectrum-closebutton-m-white-uiicon-color-disabled: GrayText;
+    --spectrum-closebutton-m-white-uiicon-color-down: Highlight;
+    --spectrum-closebutton-m-white-uiicon-color-hover: Highlight;
+    --spectrum-closebutton-m-white-uiicon-color-key-focus: Highlight;
+    --spectrum-closebutton-m-white-uiicon-color-mouse-focus: Highlight;
+    &:focus-ring {
+      &:after {
+        forced-color-adjust: none;
+        box-shadow: 0 0 0 var(--spectrum-alias-focus-ring-size) var(--spectrum-alias-component-icon-color-default);
+        border-radius: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: var(--spectrum-alias-focus-ring-gap);
+        transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
+                    margin var(--spectrum-global-animation-duration-100) ease-out;
+        
+      }
+    }
+  
+  }
+}

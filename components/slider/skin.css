@@ -169,3 +169,38 @@ governing permissions and limitations under the License.
     }
   }
 }
+@media (forced-colors: active) {
+  .spectrum-Slider {
+    .spectrum-Slider-handle {
+      &:before {
+        forced-color-adjust: none;
+      }
+    }
+    --spectrum-slider-m-handle-border-color-key-focus: Highlight;
+    --spectrum-alias-background-color-default: ButtonFace;
+    --spectrum-alias-focus-color: ButtonText;
+    --spectrum-alias-label-text-color: CanvasText;
+    --spectrum-alias-text-color-disabled: GrayText;
+    --spectrum-slider-m-handle-background-color: ButtonFace;
+    --spectrum-slider-m-handle-border-color: ButtonText;
+    --spectrum-slider-m-handle-border-color-disabled: GrayText;
+    --spectrum-slider-m-handle-border-color-down: Highlight;
+    --spectrum-slider-m-handle-border-color-hover: Highlight;
+    --spectrum-slider-m-handle-border-color-key-focus: Highlight;
+    --spectrum-slider-m-handle-focus-ring-color-key-focus: ButtonText;
+    --spectrum-slider-m-label-text-color: CanvasText;
+    --spectrum-slider-m-label-text-color-disabled: GrayText;
+    --spectrum-slider-m-tick-mark-color: ButtonText;
+    --spectrum-slider-m-track-color: ButtonText;  
+    --spectrum-slider-m-track-color-disabled: GrayText;
+    --spectrum-slider-m-track-fill-color: ButtonText;
+    --spectrum-slider-m-track-fill-color-disabled: GrayText;
+    --spectrum-slider-ramp-track-color-disabled: GrayText;
+  }
+  .spectrum-Slider--ramp {
+    .spectrum-Slider-handle {
+      /* We can't draw this one correctly without this hack : ( */
+      forced-color-adjust: none;    
+    }
+  }
+}
