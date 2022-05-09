@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.2"></a>
+## 4.0.2
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.1...@spectrum-css/menu@4.0.2)
+
+### 🐛 Bug fixes
+
+* menu WHCM ([feee3be](https://github.com/adobe/spectrum-css/commit/feee3be))
+
+
+
+
+
 <a name="4.0.1"></a>
 ## 4.0.1
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.0...@spectrum-css/menu@4.0.1)

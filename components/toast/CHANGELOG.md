@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.8"></a>
+## 7.0.8
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@7.0.7...@spectrum-css/toast@7.0.8)
+
+### 🐛 Bug fixes
+
+* toast WHCM ([0689d95](https://github.com/adobe/spectrum-css/commit/0689d95))
+
+
+
+
+
 <a name="7.0.7"></a>
 ## 7.0.7
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@7.0.6...@spectrum-css/toast@7.0.7)

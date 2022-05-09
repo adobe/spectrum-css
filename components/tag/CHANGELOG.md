@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.12"></a>
+## 3.3.12
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.11...@spectrum-css/tag@3.3.12)
+
+### 🐛 Bug fixes
+
+* tag WHCM ([2a87aed](https://github.com/adobe/spectrum-css/commit/2a87aed))
+
+
+
+
+
 <a name="3.3.11"></a>
 ## 3.3.11
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.10...@spectrum-css/tag@3.3.11)

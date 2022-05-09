@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.22"></a>
+## 3.0.22
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.21...@spectrum-css/radio@3.0.22)
+
+### 🐛 Bug fixes
+
+* radio WHCM ([8467a8d](https://github.com/adobe/spectrum-css/commit/8467a8d))
+
+
+
+
+
 <a name="3.0.21"></a>
 ## 3.0.21
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/radio@3.0.20...@spectrum-css/radio@3.0.21)

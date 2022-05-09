@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.5"></a>
+## 3.1.5
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.4...@spectrum-css/slider@3.1.5)
+
+### 🐛 Bug fixes
+
+* slider WHCM ([9ff8184](https://github.com/adobe/spectrum-css/commit/9ff8184))
+
+
+
+
+
 <a name="3.1.4"></a>
 ## 3.1.4
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.3...@spectrum-css/slider@3.1.4)

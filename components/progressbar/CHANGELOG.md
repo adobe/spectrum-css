@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.28"></a>
+## 1.0.28
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.27...@spectrum-css/progressbar@1.0.28)
+
+### 🐛 Bug fixes
+
+* progressbar WHCM ([2288a68](https://github.com/adobe/spectrum-css/commit/2288a68))
+
+
+
+
+
 <a name="1.0.27"></a>
 ## 1.0.27
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@1.0.26...@spectrum-css/progressbar@1.0.27)

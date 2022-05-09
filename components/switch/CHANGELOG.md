@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.21"></a>
+## 1.0.21
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.20...@spectrum-css/switch@1.0.21)
+
+### 🐛 Bug fixes
+
+* switch WHCM changes ([d2e1b49](https://github.com/adobe/spectrum-css/commit/d2e1b49))
+
+
+
+
+
 <a name="1.0.20"></a>
 ## 1.0.20
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.19...@spectrum-css/switch@1.0.20)

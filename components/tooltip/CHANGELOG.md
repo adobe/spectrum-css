@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.16"></a>
+## 3.1.16
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.15...@spectrum-css/tooltip@3.1.16)
+
+### 🐛 Bug fixes
+
+* tooltip WHCM ([e6e0a04](https://github.com/adobe/spectrum-css/commit/e6e0a04))
+
+
+
+
+
 <a name="3.1.15"></a>
 ## 3.1.15
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tooltip@3.1.14...@spectrum-css/tooltip@3.1.15)

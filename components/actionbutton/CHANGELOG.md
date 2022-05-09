@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.13"></a>
+## 1.1.13
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.12...@spectrum-css/actionbutton@1.1.13)
+
+### 🐛 Bug fixes
+
+* actionButton WHCM ([c81913f](https://github.com/adobe/spectrum-css/commit/c81913f))
+
+
+
+
+
 <a name="1.1.12"></a>
 ## 1.1.12
 🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.11...@spectrum-css/actionbutton@1.1.12)
