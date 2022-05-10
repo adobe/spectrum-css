@@ -39,6 +39,7 @@ In the `dist/vars/` folder, you'll find the following files:
 * `spectrum-global-unique.css`
 * `spectrum-large-unique.css`
 * `spectrum-light-unique.css`
+* `spectrum-lightest-unique.css`
 * `spectrum-medium-unique.css`
 
 These files can be imported instead of their non `-unique` counterparts for a slightly smaller bundle size.

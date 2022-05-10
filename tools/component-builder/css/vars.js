@@ -23,7 +23,8 @@ const varUtils = require('./lib/varUtils');
 let colorStops = [
   'darkest',
   'dark',
-  'light'
+  'light',
+  'lightest'
 ];
 
 let scales = [
