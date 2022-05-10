@@ -17,6 +17,7 @@ Ensure that you correctly scope any added tokens:
 
 * `.spectrum` - Global, unchanging tokens or tokens specific to the Spectrum flavor
 * `.spectrum--express` - Tokens specific to the Express flavor
+* `.spectrum--lightest` - Tokens specific to the light color stop (soon to be deprecated)
 * `.spectrum--light` - Tokens specific to the light color stop
 * `.spectrum--dark` - Tokens specific to the dark color stop
 * `.spectrum--darkest` - Tokens specific to the darkest color stop

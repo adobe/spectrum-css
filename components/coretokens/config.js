@@ -97,9 +97,17 @@ const generateGlobalSetConfig = (setName) => {
     'mobile': 'large'
   };
 
-  const selector = selectorMap[setName] ?? setName;
+  const fileName = selectorMap[setName] ?? setName;
+
+  let selectors = [`.spectrum--${fileName}`];
+
+  // Apply all light colors as lightest for backwards compat
+  if (setName === 'light') {
+    selectors.push('.spectrum--lightest');
+  }
+
   return {
-    destination: `${selector}-vars.css`,
+    destination: `${fileName}-vars.css`,
     format: CSSSetsFormatter.name,
     filter: (token) => {
       return (
@@ -109,7 +117,7 @@ const generateGlobalSetConfig = (setName) => {
       );
     },
     options: {
-      selector: `.spectrum--${selector}`,
+      selector: selectors.join(', '),
       showFileHeader: false,
       outputReferences: true,
       sets

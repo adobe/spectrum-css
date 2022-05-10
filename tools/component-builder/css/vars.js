@@ -23,7 +23,8 @@ const varUtils = require('./lib/varUtils');
 let colorStops = [
   'darkest',
   'dark',
-  'light'
+  'light',
+  'lightest'
 ];
 
 let scales = [
@@ -59,7 +60,7 @@ function bakeVars() {
       if (varName.indexOf('spectrum-global') !== -1) {
         logger.warn(`⚠️  ${pkg.name} directly uses global variable ${varName}`);
       }
-      else if (!allVars[varName] && !varName.startsWith('--custom')) {
+      else if (!allVars[varName] && !varName.startsWith('--custom') && !varName.startsWith('--highcontrast')) {
         if (componentVars.indexOf(varName) === -1) {
           errors.push(`${pkg.name} uses undefined variable ${varName}`);
         }
