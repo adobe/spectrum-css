@@ -61,8 +61,8 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css">
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-darkest.css">
 
-<!-- Include core tokens -->
-<link rel="stylesheet" href="node_modules/@spectrum-css/coretokens/dist/index.css">
+<!-- Include tokens -->
+<link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
 
 <!-- Include index-vars.css for all components you need -->
 <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">

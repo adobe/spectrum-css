@@ -125,7 +125,7 @@ function resolveValue(value, vars) {
 }
 
 const varDir = path.join(path.dirname(require.resolve('@spectrum-css/vars')), '..');
-const coreTokensFile = require.resolve('@spectrum-css/coretokens');
+const coreTokensFile = require.resolve('@spectrum-css/tokens');
 
 async function readDNAVariables(file) {
   let css = await fsp.readFile(path.join(varDir, 'css', file));

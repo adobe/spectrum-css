@@ -1,4 +1,4 @@
-# @spectrum-css/coretokens
+# @spectrum-css/tokens
 > Core tokens builder for Spectrum CSS
 
 This package uses StyleDictionary to build Spectrum core tokens for CSS.
