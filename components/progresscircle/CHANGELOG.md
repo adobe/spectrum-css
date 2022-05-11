@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.21"></a>
+## 1.0.21
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@1.0.20...@spectrum-css/progresscircle@1.0.21)
+
+### 🐛 Bug fixes
+
+* progresscircle WHCM ([c24e9d8](https://github.com/adobe/spectrum-css/commit/c24e9d8))
+
+
+
+
+
+<a name="1.0.20"></a>
+## 1.0.20
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@1.0.19...@spectrum-css/progresscircle@1.0.20)
+
+**Note:** Version bump only for package @spectrum-css/progresscircle
+
+
+
+
+
 <a name="1.0.19"></a>
 ## 1.0.19
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@1.0.18...@spectrum-css/progresscircle@1.0.19)

@@ -273,144 +273,132 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
   .spectrum-ActionButton {
-    --spectrum-actionbutton-m-emphasized-texticon-icon-color: ButtonText;
-    --spectrum-actionbutton-m-emphasized-texticon-icon-color-disabled: GrayText;
-    --spectrum-actionbutton-m-emphasized-texticon-icon-color-hover: ButtonText;
-    --spectrum-actionbutton-m-emphasized-texticon-icon-color-key-focus: ButtonText;
+    &:after {
+      forced-color-adjust: none;    
+    }
+    &.is-selected {
+      &:not(.is-disabled) {
+        .spectrum-ActionButton-label {
+          forced-color-adjust: none;
+        }
+      }
+    }
+    &.spectrum-ActionButton--staticBlack,
+    &.spectrum-ActionButton--staticWhite {
+      &.is-selected {
+        &:not(:disabled, .is-disabled) {
+          color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected);
+          background-color: var(--spectrum-actionbutton-m-quiet-textonly-background-color-selected);
+          border-color: var(--spectrum-actionbutton-m-quiet-textonly-border-color-selected);
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected);
+          }
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected) ! important;
+          }
+          .spectrum-Icon {
+            color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected) ! important;
+          }
+          &:hover,
+          &:active,
+          &:focus-visible,
+          &.is-keyboardFocused {
+            background-color: var(--spectrum-actionbutton-m-quiet-textonly-background-color-selected);
+            border-color: var(--spectrum-actionbutton-m-quiet-textonly-border-color-selected);
+            .spectrum-ActionButton-holdIcon {
+              color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected);
+            }
+  
+            .spectrum-ActionButton-label {
+              color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected);
+            }
+  
+            .spectrum-Icon {
+              color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected);
+            }
+          }
+        }
+        &:disabled,
+        &.is-disabled {
+          color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected-disabled);
+          background-color: var(--spectrum-actionbutton-m-quiet-textonly-background-color-selected-disabled);
+          border-color: var(--spectrum-actionbutton-m-quiet-textonly-border-color-selected-disabled);
+          .spectrum-ActionButton-holdIcon {
+            color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected-disabled);
+          }
+          .spectrum-ActionButton-label {
+            color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected-disabled);           
+          }
+          .spectrum-Icon {
+            color: var(--spectrum-actionbutton-m-quiet-textonly-text-color-selected-disabled);
+          }
+        }
+      }
+    }
+    --spectrum-actionbutton-focus-ring-gap: var(--spectrum-alias-component-focusring-gap-emphasized);
+    --spectrum-actionbutton-focus-ring-size: var(--spectrum-alias-component-focusring-size-emphasized);
+    --spectrum-actionbutton-focus-ring-color: ButtonText;
+
     --spectrum-actionbutton-m-emphasized-texticon-icon-color-selected: HighlightText;
     --spectrum-actionbutton-m-emphasized-texticon-icon-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-emphasized-texticon-icon-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-emphasized-texticon-icon-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-emphasized-texticon-icon-color-selected-key-focus: HighlightText;
-    --spectrum-actionbutton-m-emphasized-textonly-background-color: ButtonFace;
-    --spectrum-actionbutton-m-emphasized-textonly-background-color-disabled: ButtonFace;
-    --spectrum-actionbutton-m-emphasized-textonly-background-color-down: ButtonFace;
-    --spectrum-actionbutton-m-emphasized-textonly-background-color-hover: ButtonFace;
-    --spectrum-actionbutton-m-emphasized-textonly-background-color-key-focus: ButtonFace;
     --spectrum-actionbutton-m-emphasized-textonly-background-color-selected: Highlight;
     --spectrum-actionbutton-m-emphasized-textonly-background-color-selected-disabled: ButtonFace;
     --spectrum-actionbutton-m-emphasized-textonly-background-color-selected-down: Highlight;
     --spectrum-actionbutton-m-emphasized-textonly-background-color-selected-hover: Highlight;
     --spectrum-actionbutton-m-emphasized-textonly-background-color-selected-key-focus: Highlight;
-    --spectrum-actionbutton-m-emphasized-textonly-border-color: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-border-color-disabled: GrayText;
-    --spectrum-actionbutton-m-emphasized-textonly-border-color-down: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-border-color-hover: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-border-color-key-focus: ButtonText;
     --spectrum-actionbutton-m-emphasized-textonly-border-color-selected: HighlightText;
     --spectrum-actionbutton-m-emphasized-textonly-border-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-emphasized-textonly-border-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-emphasized-textonly-border-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-emphasized-textonly-border-color-selected-key-focus: HighlightText;
-    --spectrum-actionbutton-m-emphasized-textonly-hold-icon-color: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-hold-icon-color-disabled: GrayText;
-    --spectrum-actionbutton-m-emphasized-textonly-hold-icon-color-down: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-hold-icon-color-hover: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-hold-icon-color-key-focus: ButtonText;
     --spectrum-actionbutton-m-emphasized-textonly-hold-icon-color-selected: HighlightText;
-    --spectrum-actionbutton-m-emphasized-textonly-text-color: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-text-color-disabled: GrayText;
-    --spectrum-actionbutton-m-emphasized-textonly-text-color-down: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-text-color-hover: ButtonText;
-    --spectrum-actionbutton-m-emphasized-textonly-text-color-key-focus: ButtonText;
+    --spectrum-actionbutton-m-emphasized-textonly-text-color-down: HighlightText;
+    --spectrum-actionbutton-m-emphasized-textonly-text-color-hover: HighlightText;
     --spectrum-actionbutton-m-emphasized-textonly-text-color-selected: HighlightText;
     --spectrum-actionbutton-m-emphasized-textonly-text-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-emphasized-textonly-text-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-emphasized-textonly-text-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-emphasized-textonly-text-color-selected-key-focus: HighlightText;
-    --spectrum-actionbutton-m-quiet-textonly-background-color: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-background-color-disabled: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-background-color-down: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-background-color-hover: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-background-color-key-focus: ButtonFace;
     --spectrum-actionbutton-m-quiet-textonly-background-color-selected: Highlight;
     --spectrum-actionbutton-m-quiet-textonly-background-color-selected-disabled: ButtonFace;
     --spectrum-actionbutton-m-quiet-textonly-background-color-selected-down: Highlight;
     --spectrum-actionbutton-m-quiet-textonly-background-color-selected-hover: Highlight;
     --spectrum-actionbutton-m-quiet-textonly-background-color-selected-key-focus: Highlight;
     --spectrum-actionbutton-m-quiet-textonly-border-color: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-border-color-disabled: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-border-color-down: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-border-color-hover: ButtonFace;
-    --spectrum-actionbutton-m-quiet-textonly-border-color-key-focus: Highlight;
+    --spectrum-actionbutton-m-quiet-textonly-border-color-down: Highlight;
+    --spectrum-actionbutton-m-quiet-textonly-border-color-hover: Highlight;
     --spectrum-actionbutton-m-quiet-textonly-border-color-selected: HighlightText;
     --spectrum-actionbutton-m-quiet-textonly-border-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-quiet-textonly-border-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-quiet-textonly-border-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-quiet-textonly-border-color-selected-key-focus: HighlightText;
-    --spectrum-actionbutton-m-quiet-textonly-text-color: ButtonText;
-    --spectrum-actionbutton-m-quiet-textonly-text-color-disabled: GrayText;
-    --spectrum-actionbutton-m-quiet-textonly-text-color-down: ButtonText;
-    --spectrum-actionbutton-m-quiet-textonly-text-color-hover: ButtonText;
-    --spectrum-actionbutton-m-quiet-textonly-text-color-key-focus: ButtonText;
     --spectrum-actionbutton-m-quiet-textonly-text-color-selected: HighlightText;
     --spectrum-actionbutton-m-quiet-textonly-text-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-quiet-textonly-text-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-quiet-textonly-text-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-quiet-textonly-text-color-selected-key-focus: HighlightText;
-    --spectrum-actionbutton-m-texticon-icon-color: ButtonText;
-    --spectrum-actionbutton-m-texticon-icon-color-disabled: GrayText;
-    --spectrum-actionbutton-m-texticon-icon-color-hover: ButtonText;
-    --spectrum-actionbutton-m-texticon-icon-color-key-focus: ButtonText;
     --spectrum-actionbutton-m-texticon-icon-color-selected: HighlightText;
     --spectrum-actionbutton-m-texticon-icon-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-texticon-icon-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-texticon-icon-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-texticon-icon-color-selected-key-focus: HighlightText;
-    --spectrum-actionbutton-m-textonly-background-color: ButtonFace;
-    --spectrum-actionbutton-m-textonly-background-color-disabled: ButtonFace;
-    --spectrum-actionbutton-m-textonly-background-color-down: ButtonFace;
-    --spectrum-actionbutton-m-textonly-background-color-hover: ButtonFace;
-    --spectrum-actionbutton-m-textonly-background-color-key-focus: ButtonFace;
     --spectrum-actionbutton-m-textonly-background-color-selected: Highlight;
     --spectrum-actionbutton-m-textonly-background-color-selected-disabled: ButtonFace;
     --spectrum-actionbutton-m-textonly-background-color-selected-down: Highlight;
     --spectrum-actionbutton-m-textonly-background-color-selected-hover: Highlight;
     --spectrum-actionbutton-m-textonly-background-color-selected-key-focus: Highlight;
-    --spectrum-actionbutton-m-textonly-border-color: ButtonText;
-    --spectrum-actionbutton-m-textonly-border-color-disabled: GrayText;
-    --spectrum-actionbutton-m-textonly-border-color-down: ButtonText;
-    --spectrum-actionbutton-m-textonly-border-color-hover: ButtonText;
-    --spectrum-actionbutton-m-textonly-border-color-key-focus: Highlight;
     --spectrum-actionbutton-m-textonly-border-color-selected: HighlightText;
     --spectrum-actionbutton-m-textonly-border-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-textonly-border-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-textonly-border-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-textonly-border-color-selected-key-focus: HighlightText;
-    --spectrum-actionbutton-m-textonly-hold-icon-color: ButtonText;
-    --spectrum-actionbutton-m-textonly-hold-icon-color-disabled: GrayText;
-    --spectrum-actionbutton-m-textonly-hold-icon-color-down: ButtonText;
-    --spectrum-actionbutton-m-textonly-hold-icon-color-hover: ButtonText;
-    --spectrum-actionbutton-m-textonly-hold-icon-color-key-focus: ButtonText;
-    --spectrum-actionbutton-m-textonly-text-color: ButtonText;
-    --spectrum-actionbutton-m-textonly-text-color-disabled: GrayText;
-    --spectrum-actionbutton-m-textonly-text-color-down: ButtonText;
-    --spectrum-actionbutton-m-textonly-text-color-hover: ButtonText;
-    --spectrum-actionbutton-m-textonly-text-color-key-focus: ButtonText;
     --spectrum-actionbutton-m-textonly-text-color-selected: HighlightText;
     --spectrum-actionbutton-m-textonly-text-color-selected-disabled: GrayText;
     --spectrum-actionbutton-m-textonly-text-color-selected-down: HighlightText;
     --spectrum-actionbutton-m-textonly-text-color-selected-hover: HighlightText;
     --spectrum-actionbutton-m-textonly-text-color-selected-key-focus: HighlightText;
-
-    forced-color-adjust: none;
-    --spectrum-actionbutton-m-quiet-textonly-border-size-key-focus: 3px;
-    &.spectrum-ActionButton--quiet {
-      &.spectrum-ActionButton--emphasized {
-        &:not(:disabled, .is-disabled) {
-          &:hover {
-            background-color: var(--spectrum-actionbutton-m-emphasized-textonly-background-color-selected-hover);
-            border-color: var(--spectrum-actionbutton-m-emphasized-textonly-border-color-selected-hover);
-            color: var(--spectrum-actionbutton-m-emphasized-textonly-text-color-selected-hover);
-          }
-
-          &.is-active {
-            background-color: var(--spectrum-actionbutton-m-emphasized-textonly-background-color-selected-down);
-            border-color: var(--spectrum-actionbutton-m-emphasized-textonly-border-color-selected-down);
-            color: var(--spectrum-actionbutton-m-emphasized-textonly-text-color-selected-down);
-          }
-        }
-      }
-    }
   }
 }

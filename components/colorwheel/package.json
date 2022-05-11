@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/colorwheel",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "The Spectrum CSS Color Area component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -17,12 +17,12 @@
   },
   "peerDependencies": {
     "@spectrum-css/colorhandle": "^2.0.0",
-    "@spectrum-css/vars": "^7.0.0"
+    "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/colorhandle": "^2.0.5",
+    "@spectrum-css/colorhandle": "^2.0.6",
     "@spectrum-css/component-builder": "^3.1.1",
-    "@spectrum-css/vars": "^7.3.0",
+    "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

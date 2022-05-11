@@ -205,10 +205,12 @@ governing permissions and limitations under the License.
   .spectrum-Radio {
     --spectrum-radio-m-circle-background-color: ButtonFace;
     --spectrum-radio-m-circle-border-color-down: Highlight;
+    --spectrum-radio-m-circle-border-color-disabled: GrayText;
     --spectrum-radio-m-circle-border-color-hover: Highlight;
     --spectrum-radio-m-circle-border-color-key-focus: Highlight;
     --spectrum-radio-m-circle-border-color-selected-down: Highlight;
     --spectrum-radio-m-circle-border-color-selected-hover : Highlight;
+    --spectrum-radio-m-circle-border-color-selected-key-focus: Highlight;
     --spectrum-radio-m-circle-border-color-selected: Highlight;
     --spectrum-radio-m-circle-border-color: ButtonText;
     --spectrum-radio-m-emphasized-circle-background-color : var(--spectrum-alias-background-color-transparent);
@@ -228,6 +230,8 @@ governing permissions and limitations under the License.
     --spectrum-radio-m-text-color-down: CanvasText;
     --spectrum-radio-m-text-color-hover: CanvasText;
     --spectrum-radio-m-text-color: CanvasText;
+    --spectrum-radio-m-text-color-disabled: GrayText;
+
     &.is-invalid {
       .spectrum-Radio-input {
         &:checked + .spectrum-Radio-button {

@@ -8,9 +8,7 @@
   --spectrum-semantic-emphasized-border-color-down: var(--spectrum-global-color-indigo-700);
   --spectrum-semantic-emphasized-border-color-key-focus: var(--spectrum-global-color-indigo-600);
   --spectrum-semantic-neutral-background-color-default: var(--spectrum-global-color-static-gray-800);
-  --spectrum-semantic-informative-background-color: var(--spectrum-global-color-static-blue-500);
-  --spectrum-semantic-positive-background-color: var(--spectrum-global-color-static-green-500);
-  --spectrum-semantic-negative-background-color: var(--spectrum-global-color-static-red-500);
+  --spectrum-semantic-negative-background-color: var(--spectrum-global-color-static-red-600);
   --spectrum-semantic-negative-color-default: var(--spectrum-global-color-red-500);
   --spectrum-semantic-negative-color-hover: var(--spectrum-global-color-red-600);
   --spectrum-semantic-negative-color-dark: var(--spectrum-global-color-red-600);
@@ -28,7 +26,7 @@
   --spectrum-semantic-negative-background-color-hover: var(--spectrum-global-color-static-red-700);
   --spectrum-semantic-negative-background-color-down: var(--spectrum-global-color-static-red-800);
   --spectrum-semantic-negative-background-color-key-focus: var(--spectrum-global-color-static-red-700);
-  --spectrum-semantic-notice-background-color: var(--spectrum-global-color-static-orange-700);
+  --spectrum-semantic-notice-background-color: var(--spectrum-global-color-static-orange-600);
   --spectrum-semantic-notice-color-default: var(--spectrum-global-color-orange-500);
   --spectrum-semantic-notice-color-dark: var(--spectrum-global-color-orange-600);
   --spectrum-semantic-notice-border-color: var(--spectrum-global-color-orange-400);
@@ -42,6 +40,7 @@
   --spectrum-semantic-notice-background-color-hover: var(--spectrum-global-color-static-orange-700);
   --spectrum-semantic-notice-background-color-down: var(--spectrum-global-color-static-orange-800);
   --spectrum-semantic-notice-background-color-key-focus: var(--spectrum-global-color-static-orange-700);
+  --spectrum-semantic-positive-background-color: var(--spectrum-global-color-static-green-600);
   --spectrum-semantic-positive-color-default: var(--spectrum-global-color-green-500);
   --spectrum-semantic-positive-color-dark: var(--spectrum-global-color-green-600);
   --spectrum-semantic-positive-border-color: var(--spectrum-global-color-green-400);
@@ -51,10 +50,11 @@
   --spectrum-semantic-positive-text-color-small: var(--spectrum-global-color-green-600);
   --spectrum-semantic-positive-color-down: var(--spectrum-global-color-green-700);
   --spectrum-semantic-positive-color-key-focus: var(--spectrum-global-color-green-400);
-  --spectrum-semantic-positive-background-color-default: var(--spectrum-global-color-static-green-700);
-  --spectrum-semantic-positive-background-color-hover: var(--spectrum-global-color-static-green-800);
+  --spectrum-semantic-positive-background-color-default: var(--spectrum-global-color-static-green-600);
+  --spectrum-semantic-positive-background-color-hover: var(--spectrum-global-color-static-green-700);
   --spectrum-semantic-positive-background-color-down: var(--spectrum-global-color-static-green-800);
-  --spectrum-semantic-positive-background-color-key-focus: var(--spectrum-global-color-static-green-800);
+  --spectrum-semantic-positive-background-color-key-focus: var(--spectrum-global-color-static-green-700);
+  --spectrum-semantic-informative-background-color: var(--spectrum-global-color-static-blue-600);
   --spectrum-semantic-informative-color-default: var(--spectrum-global-color-blue-500);
   --spectrum-semantic-informative-color-dark: var(--spectrum-global-color-blue-600);
   --spectrum-semantic-informative-border-color: var(--spectrum-global-color-blue-400);

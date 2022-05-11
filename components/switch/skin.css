@@ -182,3 +182,59 @@ governing permissions and limitations under the License.
     }
   }
 }
+
+@media (forced-colors: active) {
+  .spectrum-Switch {
+    forced-color-adjust: none;
+    --spectrum-switch-m-emphasized-handle-border-color-selected: Highlight;
+    --spectrum-switch-m-emphasized-handle-border-color-selected-down: Highlight;
+    --spectrum-switch-m-emphasized-handle-border-color-selected-hover: Highlight;
+    --spectrum-switch-m-emphasized-handle-border-color-selected-key-focus: Highlight;
+    --spectrum-switch-m-emphasized-track-color-selected: Highlight;
+    --spectrum-switch-m-emphasized-track-color-selected-down: Highlight;
+    --spectrum-switch-m-emphasized-track-color-selected-hover: Highlight;
+    --spectrum-switch-m-emphasized-track-color-selected-key-focus: Highlight;
+    --spectrum-switch-m-focus-ring-color-key-focus: ButtonText;
+    --spectrum-switch-m-handle-background-color: ButtonFace;
+    --spectrum-switch-m-handle-border-color: ButtonText;
+    --spectrum-switch-m-handle-border-color-disabled: GrayText;
+    --spectrum-switch-m-handle-border-color-down: Highlight;
+    --spectrum-switch-m-handle-border-color-hover: Highlight;
+    --spectrum-switch-m-handle-border-color-key-focus: ButtonText;
+    --spectrum-switch-m-handle-border-color-selected: Highlight;
+    --spectrum-switch-m-handle-border-color-selected-disabled: GrayText;
+    --spectrum-switch-m-handle-border-color-selected-down: Highlight;
+    --spectrum-switch-m-handle-border-color-selected-hover: Highlight;
+    --spectrum-switch-m-handle-border-color-selected-key-focus: Highlight;
+    --spectrum-switch-m-text-color: CanvasText;
+    --spectrum-switch-m-text-color-disabled: GrayText;
+    --spectrum-switch-m-text-color-down: CanvasText;
+    --spectrum-switch-m-text-color-hover: CanvasText;
+    --spectrum-switch-m-text-color-selected-disabled: GrayText;
+    --spectrum-switch-m-track-color: ButtonFace;
+    --spectrum-switch-m-track-color-disabled: ButtonFace;
+    --spectrum-switch-m-track-color-selected: Highlight;
+    --spectrum-switch-m-track-color-selected-disabled: GrayText;
+    --spectrum-switch-m-track-color-selected-down: Highlight;
+    --spectrum-switch-m-track-color-selected-hover: Highlight;
+    --spectrum-switch-m-track-color-selected-key-focus: Highlight;
+    /* Add a box-shadow on the switch track when not checked*/ 
+    .spectrum-Switch-input:not(:checked) + .spectrum-Switch-switch {
+      box-shadow: inset 0 0 0 1px  var(--spectrum-switch-m-handle-border-color);
+    }
+    &:hover {
+      .spectrum-Switch-input:not(:checked) + .spectrum-Switch-switch {
+        box-shadow: inset 0 0 0 1px  var(--spectrum-switch-m-handle-border-color-hover);
+      }
+    }
+    /* Disabled is the same colour as when checked so no need to only do this when unchecked*/
+    .spectrum-Switch-input:disabled + .spectrum-Switch-switch {
+      box-shadow: inset 0 0 0 1px  var(--spectrum-switch-m-handle-border-color-disabled);
+    } 
+    &:hover {
+      .spectrum-Switch-input:disabled + .spectrum-Switch-switch {
+        box-shadow: inset 0 0 0 1px  var(--spectrum-switch-m-handle-border-color-disabled);
+      }
+    }
+  }
+}

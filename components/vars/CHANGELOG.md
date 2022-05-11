@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+# 8.0.0
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@7.3.0...@spectrum-css/vars@8.0.0)
+
+* feat!: update tokens with new colors, switch to deprecated token pkgs ([7282091](https://github.com/adobe/spectrum-css/commit/7282091))
+
+
+### 🛑 BREAKING CHANGES
+
+* this PR introduces a substantial change to the color palette
+
+
+
+
+
 <a name="7.3.0"></a>
 # 7.3.0
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/vars@7.2.0...@spectrum-css/vars@7.3.0)

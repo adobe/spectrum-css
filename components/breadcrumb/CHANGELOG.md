@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.20"></a>
+## 4.0.20
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.19...@spectrum-css/breadcrumb@4.0.20)
+
+### 🐛 Bug fixes
+
+* breadcrumb WHCM ([40c0900](https://github.com/adobe/spectrum-css/commit/40c0900))
+
+
+
+
+
+<a name="4.0.19"></a>
+## 4.0.19
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.18...@spectrum-css/breadcrumb@4.0.19)
+
+**Note:** Version bump only for package @spectrum-css/breadcrumb
+
+
+
+
+
 <a name="4.0.18"></a>
 ## 4.0.18
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.17...@spectrum-css/breadcrumb@4.0.18)

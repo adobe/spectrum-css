@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.11"></a>
+## 2.1.11
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.10...@spectrum-css/site@2.1.11)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
 <a name="2.1.10"></a>
 ## 2.1.10
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@2.1.9...@spectrum-css/site@2.1.10)
