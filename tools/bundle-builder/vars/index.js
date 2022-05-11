@@ -49,7 +49,7 @@ function getAllVars() {
       `${dirs.components}/vars/css/scales/*.css`,
       `${dirs.components}/vars/css/components/*.css`,
       `${dirs.components}/vars/css/globals/*.css`,
-      `${dirs.components}/coretokens/dist/index.css`
+      `${dirs.components}/tokens/dist/index.css`
     ])
       .pipe(concat('everything.css'))
       .pipe(through.obj(function getAllVars(file, enc, cb) {
@@ -160,10 +160,10 @@ const expressVarDir = path.join(dirs.components, 'expressvars', 'dist');
      .pipe(gulp.dest('dist/expressvars/'))
 }
 
-const coreTokensDir = path.join(dirs.components, 'coretokens', 'dist');
+const coreTokensDir = path.join(dirs.components, 'tokens', 'dist');
 function copyCoreTokens() {
   return gulp.src(path.join(varDir, '**/*.css'))
-    .pipe(gulp.dest('dist/coretokens/'))
+    .pipe(gulp.dest('dist/tokens/'))
 }
 
 exports.buildUnique = buildUnique;
