@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Tooltip {
   background-color: var(--spectrum-tooltip-neutral-background-color);
-
   color: var(--spectrum-tooltip-neutral-text-color);
 }
 
@@ -44,5 +43,19 @@ governing permissions and limitations under the License.
 
   .spectrum-Tooltip-tip {
     border-top-color: var(--spectrum-tooltip-positive-background-color);
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-Tooltip {
+    border: 1px solid transparent;
+  }
+  .spectrum-Tooltip-tip {
+    forced-color-adjust: none;
+    --spectrum-tooltip-background-color: CanvasText;
+    --spectrum-tooltip-neutral-background-color: CanvasText;
+    --spectrum-tooltip-negative-background-color: CanvasText;
+    --spectrum-tooltip-info-background-color: CanvasText;
+    --spectrum-tooltip-positive-background-color: CanvasText;
   }
 }

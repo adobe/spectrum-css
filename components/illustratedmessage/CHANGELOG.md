@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.4"></a>
+## 4.0.4
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@4.0.3...@spectrum-css/illustratedmessage@4.0.4)
+
+**Note:** Version bump only for package @spectrum-css/illustratedmessage
+
+
+
+
+
 <a name="4.0.3"></a>
 ## 4.0.3
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@4.0.2...@spectrum-css/illustratedmessage@4.0.3)

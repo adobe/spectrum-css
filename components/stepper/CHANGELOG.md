@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.24"></a>
+## 3.0.24
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.23...@spectrum-css/stepper@3.0.24)
+
+### 🐛 Bug fixes
+
+* stepper WHCM ([1b1695a](https://github.com/adobe/spectrum-css/commit/1b1695a))
+
+
+
+
+
+<a name="3.0.23"></a>
+## 3.0.23
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.22...@spectrum-css/stepper@3.0.23)
+
+**Note:** Version bump only for package @spectrum-css/stepper
+
+
+
+
+
 <a name="3.0.22"></a>
 ## 3.0.22
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.21...@spectrum-css/stepper@3.0.22)

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.22"></a>
+## 3.0.22
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.21...@spectrum-css/accordion@3.0.22)
+
+### 🐛 Bug fixes
+
+* accordion WHCM ([b255607](https://github.com/adobe/spectrum-css/commit/b255607))
+
+
+
+
+
+<a name="3.0.21"></a>
+## 3.0.21
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.20...@spectrum-css/accordion@3.0.21)
+
+**Note:** Version bump only for package @spectrum-css/accordion
+
+
+
+
+
 <a name="3.0.20"></a>
 ## 3.0.20
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/accordion@3.0.19...@spectrum-css/accordion@3.0.20)

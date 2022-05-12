@@ -68,6 +68,7 @@
   --spectrum-badge-s-fuchsia-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-fuchsia-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-fuchsia-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-fuchsia-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-fuchsia-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-fuchsia-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-fuchsia-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -165,6 +166,7 @@
   --spectrum-badge-s-indigo-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-indigo-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-indigo-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-indigo-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-indigo-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-indigo-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-indigo-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -262,6 +264,7 @@
   --spectrum-badge-s-informative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-informative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-informative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-informative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-informative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-informative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-informative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -359,6 +362,7 @@
   --spectrum-badge-s-magenta-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-magenta-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-magenta-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-magenta-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-magenta-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-magenta-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-magenta-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -456,6 +460,7 @@
   --spectrum-badge-s-negative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-negative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-negative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-negative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-negative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-negative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-negative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -553,6 +558,7 @@
   --spectrum-badge-s-neutral-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-neutral-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-neutral-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-neutral-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-neutral-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-neutral-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-neutral-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -650,6 +656,7 @@
   --spectrum-badge-s-positive-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-positive-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-positive-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-positive-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-positive-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-positive-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-positive-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -747,6 +754,7 @@
   --spectrum-badge-s-purple-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-purple-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-purple-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-purple-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-purple-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-purple-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-purple-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -788,7 +796,7 @@
   --spectrum-badge-s-seafoam-texticon-focus-ring-render: no;
   --spectrum-badge-s-seafoam-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-s-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-s-seafoam-texticon-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-texticon-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-texticon-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -802,21 +810,21 @@
   --spectrum-badge-s-seafoam-texticon-focus-ring-render-hover: no;
   --spectrum-badge-s-seafoam-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-s-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-s-seafoam-texticon-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-texticon-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-texticon-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-s-seafoam-texticon-focus-ring-render-key-focus: yes;
   --spectrum-badge-s-seafoam-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-s-seafoam-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-s-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-s-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-s-seafoam-texticon-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-texticon-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-texticon-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-s-seafoam-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-badge-s-seafoam-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-s-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-s-seafoam-texticon-border-color: transparent;
   --spectrum-badge-s-seafoam-texticon-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-s-seafoam-texticon-text-size: var(--spectrum-global-dimension-font-size-75);
@@ -844,6 +852,7 @@
   --spectrum-badge-s-seafoam-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-seafoam-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-seafoam-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-seafoam-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-seafoam-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-seafoam-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-seafoam-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -941,6 +950,7 @@
   --spectrum-badge-s-yellow-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-yellow-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-yellow-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-yellow-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-yellow-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-yellow-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-yellow-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1038,6 +1048,7 @@
   --spectrum-badge-s-fuchsia-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-fuchsia-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-fuchsia-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-fuchsia-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-fuchsia-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-fuchsia-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-fuchsia-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1135,6 +1146,7 @@
   --spectrum-badge-s-indigo-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-indigo-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-indigo-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-indigo-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-indigo-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-indigo-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-indigo-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1232,6 +1244,7 @@
   --spectrum-badge-s-informative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-informative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-informative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-informative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-informative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-informative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-informative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1329,6 +1342,7 @@
   --spectrum-badge-s-magenta-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-magenta-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-magenta-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-magenta-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-magenta-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-magenta-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-magenta-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1426,6 +1440,7 @@
   --spectrum-badge-s-negative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-negative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-negative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-negative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-negative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-negative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-negative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1523,6 +1538,7 @@
   --spectrum-badge-s-neutral-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-neutral-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-neutral-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-neutral-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-neutral-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-neutral-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-neutral-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1620,6 +1636,7 @@
   --spectrum-badge-s-positive-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-positive-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-positive-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-positive-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-positive-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-positive-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-positive-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1717,6 +1734,7 @@
   --spectrum-badge-s-purple-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-purple-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-purple-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-purple-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-purple-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-purple-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-purple-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1758,7 +1776,7 @@
   --spectrum-badge-s-seafoam-textonly-focus-ring-render: no;
   --spectrum-badge-s-seafoam-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-s-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-s-seafoam-textonly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-textonly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -1772,21 +1790,21 @@
   --spectrum-badge-s-seafoam-textonly-focus-ring-render-hover: no;
   --spectrum-badge-s-seafoam-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-s-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-s-seafoam-textonly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-textonly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-s-seafoam-textonly-focus-ring-render-key-focus: yes;
   --spectrum-badge-s-seafoam-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-s-seafoam-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-s-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-s-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-s-seafoam-textonly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-textonly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-textonly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-s-seafoam-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-s-seafoam-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-s-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-s-seafoam-textonly-border-color: transparent;
   --spectrum-badge-s-seafoam-textonly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-s-seafoam-textonly-text-size: var(--spectrum-global-dimension-font-size-75);
@@ -1814,6 +1832,7 @@
   --spectrum-badge-s-seafoam-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-seafoam-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-seafoam-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-seafoam-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-seafoam-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-seafoam-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-seafoam-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -1911,6 +1930,7 @@
   --spectrum-badge-s-yellow-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-yellow-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-yellow-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-yellow-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-yellow-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-yellow-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-yellow-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2008,6 +2028,7 @@
   --spectrum-badge-s-fuchsia-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-fuchsia-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-fuchsia-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-fuchsia-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-fuchsia-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-fuchsia-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-fuchsia-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2105,6 +2126,7 @@
   --spectrum-badge-s-indigo-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-indigo-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-indigo-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-indigo-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-indigo-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-indigo-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-indigo-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2202,6 +2224,7 @@
   --spectrum-badge-s-informative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-informative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-informative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-informative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-informative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-informative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-informative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2299,6 +2322,7 @@
   --spectrum-badge-s-magenta-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-magenta-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-magenta-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-magenta-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-magenta-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-magenta-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-magenta-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2396,6 +2420,7 @@
   --spectrum-badge-s-negative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-negative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-negative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-negative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-negative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-negative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-negative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2493,6 +2518,7 @@
   --spectrum-badge-s-neutral-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-neutral-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-neutral-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-neutral-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-neutral-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-neutral-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-neutral-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2590,6 +2616,7 @@
   --spectrum-badge-s-positive-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-positive-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-positive-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-positive-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-positive-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-positive-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-positive-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2687,6 +2714,7 @@
   --spectrum-badge-s-purple-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-purple-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-purple-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-purple-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-purple-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-purple-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-purple-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2728,7 +2756,7 @@
   --spectrum-badge-s-seafoam-icononly-focus-ring-render: no;
   --spectrum-badge-s-seafoam-icononly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-icononly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-s-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-s-seafoam-icononly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-icononly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-icononly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -2742,21 +2770,21 @@
   --spectrum-badge-s-seafoam-icononly-focus-ring-render-hover: no;
   --spectrum-badge-s-seafoam-icononly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-icononly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-s-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-s-seafoam-icononly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-icononly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-icononly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-s-seafoam-icononly-focus-ring-render-key-focus: yes;
   --spectrum-badge-s-seafoam-icononly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-s-seafoam-icononly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-s-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-s-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-s-seafoam-icononly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-icononly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-s-seafoam-icononly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-s-seafoam-icononly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-s-seafoam-icononly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-s-seafoam-icononly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-s-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-s-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-s-seafoam-icononly-border-color: transparent;
   --spectrum-badge-s-seafoam-icononly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-s-seafoam-icononly-text-size: var(--spectrum-global-dimension-font-size-75);
@@ -2784,6 +2812,7 @@
   --spectrum-badge-s-seafoam-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-seafoam-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-seafoam-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-seafoam-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-seafoam-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-seafoam-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-seafoam-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2881,6 +2910,7 @@
   --spectrum-badge-s-yellow-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-yellow-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-s-yellow-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-s-yellow-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-s-yellow-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-yellow-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-s-yellow-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -2979,6 +3009,7 @@
   --spectrum-badge-m-fuchsia-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-fuchsia-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-fuchsia-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-fuchsia-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-fuchsia-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-fuchsia-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-fuchsia-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3076,6 +3107,7 @@
   --spectrum-badge-m-indigo-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-indigo-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-indigo-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-indigo-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-indigo-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-indigo-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-indigo-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3173,6 +3205,7 @@
   --spectrum-badge-m-informative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-informative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-informative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-informative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-informative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-informative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-informative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3270,6 +3303,7 @@
   --spectrum-badge-m-magenta-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-magenta-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-magenta-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-magenta-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-magenta-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-magenta-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-magenta-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3367,6 +3401,7 @@
   --spectrum-badge-m-negative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-negative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-negative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-negative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-negative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-negative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-negative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3464,6 +3499,7 @@
   --spectrum-badge-m-neutral-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-neutral-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-neutral-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-neutral-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-neutral-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-neutral-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-neutral-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3561,6 +3597,7 @@
   --spectrum-badge-m-positive-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-positive-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-positive-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-positive-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-positive-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-positive-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-positive-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3658,6 +3695,7 @@
   --spectrum-badge-m-purple-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-purple-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-purple-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-purple-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-purple-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-purple-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-purple-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3698,7 +3736,7 @@
   --spectrum-badge-m-seafoam-texticon-focus-ring-render: no;
   --spectrum-badge-m-seafoam-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-m-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-m-seafoam-texticon-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-texticon-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-texticon-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -3712,21 +3750,21 @@
   --spectrum-badge-m-seafoam-texticon-focus-ring-render-hover: no;
   --spectrum-badge-m-seafoam-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-m-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-m-seafoam-texticon-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-texticon-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-texticon-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-m-seafoam-texticon-focus-ring-render-key-focus: yes;
   --spectrum-badge-m-seafoam-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-m-seafoam-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-m-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-m-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-m-seafoam-texticon-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-texticon-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-texticon-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-m-seafoam-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-badge-m-seafoam-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-m-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-m-seafoam-texticon-border-color: transparent;
   --spectrum-badge-m-seafoam-texticon-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-m-seafoam-texticon-text-size: var(--spectrum-global-dimension-font-size-100);
@@ -3755,6 +3793,7 @@
   --spectrum-badge-m-seafoam-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-seafoam-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-seafoam-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-seafoam-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-seafoam-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-seafoam-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-seafoam-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3852,6 +3891,7 @@
   --spectrum-badge-m-yellow-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-yellow-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-yellow-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-yellow-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-yellow-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-yellow-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-yellow-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -3949,6 +3989,7 @@
   --spectrum-badge-m-fuchsia-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-fuchsia-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-fuchsia-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-fuchsia-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-fuchsia-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-fuchsia-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-fuchsia-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4047,6 +4088,7 @@
   --spectrum-badge-m-indigo-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-indigo-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-indigo-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-indigo-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-indigo-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-indigo-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-indigo-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4145,6 +4187,7 @@
   --spectrum-badge-m-informative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-informative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-informative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-informative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-informative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-informative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-informative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4243,6 +4286,7 @@
   --spectrum-badge-m-magenta-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-magenta-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-magenta-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-magenta-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-magenta-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-magenta-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-magenta-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4341,6 +4385,7 @@
   --spectrum-badge-m-negative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-negative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-negative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-negative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-negative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-negative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-negative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4439,6 +4484,7 @@
   --spectrum-badge-m-neutral-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-neutral-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-neutral-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-neutral-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-neutral-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-neutral-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-neutral-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4537,6 +4583,7 @@
   --spectrum-badge-m-positive-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-positive-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-positive-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-positive-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-positive-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-positive-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-positive-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4635,6 +4682,7 @@
   --spectrum-badge-m-purple-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-purple-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-purple-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-purple-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-purple-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-purple-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-purple-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4676,7 +4724,7 @@
   --spectrum-badge-m-seafoam-textonly-focus-ring-render: no;
   --spectrum-badge-m-seafoam-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-m-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-m-seafoam-textonly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-textonly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -4690,21 +4738,21 @@
   --spectrum-badge-m-seafoam-textonly-focus-ring-render-hover: no;
   --spectrum-badge-m-seafoam-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-m-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-m-seafoam-textonly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-textonly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-m-seafoam-textonly-focus-ring-render-key-focus: yes;
   --spectrum-badge-m-seafoam-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-m-seafoam-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-m-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-m-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-m-seafoam-textonly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-textonly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-textonly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-m-seafoam-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-m-seafoam-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-m-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-m-seafoam-textonly-border-color: transparent;
   --spectrum-badge-m-seafoam-textonly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-m-seafoam-textonly-text-size: var(--spectrum-global-dimension-font-size-100);
@@ -4733,6 +4781,7 @@
   --spectrum-badge-m-seafoam-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-seafoam-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-seafoam-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-seafoam-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-seafoam-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-seafoam-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-seafoam-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4831,6 +4880,7 @@
   --spectrum-badge-m-yellow-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-yellow-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-yellow-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-yellow-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-yellow-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-yellow-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-yellow-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -4929,6 +4979,7 @@
   --spectrum-badge-m-fuchsia-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-fuchsia-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-fuchsia-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-fuchsia-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-fuchsia-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-fuchsia-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-fuchsia-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5027,6 +5078,7 @@
   --spectrum-badge-m-indigo-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-indigo-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-indigo-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-indigo-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-indigo-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-indigo-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-indigo-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5125,6 +5177,7 @@
   --spectrum-badge-m-informative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-informative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-informative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-informative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-informative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-informative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-informative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5223,6 +5276,7 @@
   --spectrum-badge-m-magenta-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-magenta-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-magenta-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-magenta-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-magenta-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-magenta-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-magenta-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5321,6 +5375,7 @@
   --spectrum-badge-m-negative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-negative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-negative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-negative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-negative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-negative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-negative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5419,6 +5474,7 @@
   --spectrum-badge-m-neutral-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-neutral-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-neutral-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-neutral-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-neutral-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-neutral-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-neutral-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5517,6 +5573,7 @@
   --spectrum-badge-m-positive-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-positive-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-positive-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-positive-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-positive-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-positive-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-positive-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5615,6 +5672,7 @@
   --spectrum-badge-m-purple-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-purple-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-purple-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-purple-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-purple-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-purple-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-purple-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5656,7 +5714,7 @@
   --spectrum-badge-m-seafoam-icononly-focus-ring-render: no;
   --spectrum-badge-m-seafoam-icononly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-icononly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-m-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-m-seafoam-icononly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-icononly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-icononly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -5670,21 +5728,21 @@
   --spectrum-badge-m-seafoam-icononly-focus-ring-render-hover: no;
   --spectrum-badge-m-seafoam-icononly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-icononly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-m-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-m-seafoam-icononly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-icononly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-icononly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-m-seafoam-icononly-focus-ring-render-key-focus: yes;
   --spectrum-badge-m-seafoam-icononly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-m-seafoam-icononly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-m-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-m-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-m-seafoam-icononly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-icononly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-m-seafoam-icononly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-m-seafoam-icononly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-m-seafoam-icononly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-m-seafoam-icononly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-m-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-m-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-m-seafoam-icononly-border-color: transparent;
   --spectrum-badge-m-seafoam-icononly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-m-seafoam-icononly-text-size: var(--spectrum-global-dimension-font-size-100);
@@ -5713,6 +5771,7 @@
   --spectrum-badge-m-seafoam-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-seafoam-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-seafoam-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-seafoam-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-seafoam-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-seafoam-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-seafoam-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5811,6 +5870,7 @@
   --spectrum-badge-m-yellow-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-yellow-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-m-yellow-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-m-yellow-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-m-yellow-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-yellow-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-m-yellow-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -5907,6 +5967,7 @@
   --spectrum-badge-l-fuchsia-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-fuchsia-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-fuchsia-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-fuchsia-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-fuchsia-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-fuchsia-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-fuchsia-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6003,6 +6064,7 @@
   --spectrum-badge-l-indigo-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-indigo-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-indigo-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-indigo-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-indigo-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-indigo-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-indigo-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6099,6 +6161,7 @@
   --spectrum-badge-l-informative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-informative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-informative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-informative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-informative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-informative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-informative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6195,6 +6258,7 @@
   --spectrum-badge-l-magenta-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-magenta-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-magenta-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-magenta-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-magenta-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-magenta-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-magenta-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6291,6 +6355,7 @@
   --spectrum-badge-l-negative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-negative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-negative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-negative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-negative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-negative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-negative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6387,6 +6452,7 @@
   --spectrum-badge-l-neutral-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-neutral-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-neutral-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-neutral-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-neutral-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-neutral-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-neutral-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6483,6 +6549,7 @@
   --spectrum-badge-l-positive-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-positive-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-positive-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-positive-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-positive-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-positive-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-positive-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6579,6 +6646,7 @@
   --spectrum-badge-l-purple-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-purple-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-purple-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-purple-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-purple-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-purple-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-purple-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6620,7 +6688,7 @@
   --spectrum-badge-l-seafoam-texticon-focus-ring-render: no;
   --spectrum-badge-l-seafoam-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-l-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-l-seafoam-texticon-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-texticon-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-texticon-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -6634,21 +6702,21 @@
   --spectrum-badge-l-seafoam-texticon-focus-ring-render-hover: no;
   --spectrum-badge-l-seafoam-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-l-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-l-seafoam-texticon-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-texticon-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-texticon-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-l-seafoam-texticon-focus-ring-render-key-focus: yes;
   --spectrum-badge-l-seafoam-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-l-seafoam-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-l-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-l-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-l-seafoam-texticon-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-texticon-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-texticon-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-l-seafoam-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-badge-l-seafoam-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-l-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-l-seafoam-texticon-border-color: transparent;
   --spectrum-badge-l-seafoam-texticon-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-l-seafoam-texticon-text-size: var(--spectrum-global-dimension-font-size-200);
@@ -6675,6 +6743,7 @@
   --spectrum-badge-l-seafoam-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-seafoam-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-seafoam-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-seafoam-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-seafoam-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-seafoam-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-seafoam-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6771,6 +6840,7 @@
   --spectrum-badge-l-yellow-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-yellow-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-yellow-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-yellow-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-yellow-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-yellow-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-yellow-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6867,6 +6937,7 @@
   --spectrum-badge-l-fuchsia-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-fuchsia-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-fuchsia-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-fuchsia-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-fuchsia-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-fuchsia-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-fuchsia-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -6963,6 +7034,7 @@
   --spectrum-badge-l-indigo-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-indigo-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-indigo-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-indigo-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-indigo-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-indigo-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-indigo-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7059,6 +7131,7 @@
   --spectrum-badge-l-informative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-informative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-informative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-informative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-informative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-informative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-informative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7155,6 +7228,7 @@
   --spectrum-badge-l-magenta-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-magenta-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-magenta-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-magenta-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-magenta-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-magenta-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-magenta-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7251,6 +7325,7 @@
   --spectrum-badge-l-negative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-negative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-negative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-negative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-negative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-negative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-negative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7347,6 +7422,7 @@
   --spectrum-badge-l-neutral-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-neutral-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-neutral-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-neutral-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-neutral-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-neutral-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-neutral-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7443,6 +7519,7 @@
   --spectrum-badge-l-positive-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-positive-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-positive-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-positive-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-positive-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-positive-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-positive-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7539,6 +7616,7 @@
   --spectrum-badge-l-purple-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-purple-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-purple-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-purple-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-purple-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-purple-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-purple-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7580,7 +7658,7 @@
   --spectrum-badge-l-seafoam-textonly-focus-ring-render: no;
   --spectrum-badge-l-seafoam-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-l-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-l-seafoam-textonly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-textonly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -7594,21 +7672,21 @@
   --spectrum-badge-l-seafoam-textonly-focus-ring-render-hover: no;
   --spectrum-badge-l-seafoam-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-l-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-l-seafoam-textonly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-textonly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-l-seafoam-textonly-focus-ring-render-key-focus: yes;
   --spectrum-badge-l-seafoam-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-l-seafoam-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-l-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-l-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-l-seafoam-textonly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-textonly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-textonly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-l-seafoam-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-l-seafoam-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-l-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-l-seafoam-textonly-border-color: transparent;
   --spectrum-badge-l-seafoam-textonly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-l-seafoam-textonly-text-size: var(--spectrum-global-dimension-font-size-200);
@@ -7635,6 +7713,7 @@
   --spectrum-badge-l-seafoam-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-seafoam-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-seafoam-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-seafoam-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-seafoam-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-seafoam-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-seafoam-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7731,6 +7810,7 @@
   --spectrum-badge-l-yellow-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-yellow-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-yellow-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-yellow-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-yellow-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-yellow-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-yellow-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7827,6 +7907,7 @@
   --spectrum-badge-l-fuchsia-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-fuchsia-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-fuchsia-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-fuchsia-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-fuchsia-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-fuchsia-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-fuchsia-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -7923,6 +8004,7 @@
   --spectrum-badge-l-indigo-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-indigo-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-indigo-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-indigo-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-indigo-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-indigo-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-indigo-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8019,6 +8101,7 @@
   --spectrum-badge-l-informative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-informative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-informative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-informative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-informative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-informative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-informative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8115,6 +8198,7 @@
   --spectrum-badge-l-magenta-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-magenta-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-magenta-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-magenta-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-magenta-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-magenta-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-magenta-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8211,6 +8295,7 @@
   --spectrum-badge-l-negative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-negative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-negative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-negative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-negative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-negative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-negative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8307,6 +8392,7 @@
   --spectrum-badge-l-neutral-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-neutral-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-neutral-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-neutral-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-neutral-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-neutral-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-neutral-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8403,6 +8489,7 @@
   --spectrum-badge-l-positive-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-positive-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-positive-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-positive-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-positive-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-positive-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-positive-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8499,6 +8586,7 @@
   --spectrum-badge-l-purple-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-purple-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-purple-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-purple-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-purple-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-purple-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-purple-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8540,7 +8628,7 @@
   --spectrum-badge-l-seafoam-icononly-focus-ring-render: no;
   --spectrum-badge-l-seafoam-icononly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-icononly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-l-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-l-seafoam-icononly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-icononly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-icononly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -8554,21 +8642,21 @@
   --spectrum-badge-l-seafoam-icononly-focus-ring-render-hover: no;
   --spectrum-badge-l-seafoam-icononly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-icononly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-l-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-l-seafoam-icononly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-icononly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-icononly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-l-seafoam-icononly-focus-ring-render-key-focus: yes;
   --spectrum-badge-l-seafoam-icononly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-l-seafoam-icononly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-l-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-l-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-l-seafoam-icononly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-icononly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-l-seafoam-icononly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-l-seafoam-icononly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-l-seafoam-icononly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-l-seafoam-icononly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-l-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-l-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-l-seafoam-icononly-border-color: transparent;
   --spectrum-badge-l-seafoam-icononly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-l-seafoam-icononly-text-size: var(--spectrum-global-dimension-font-size-200);
@@ -8595,6 +8683,7 @@
   --spectrum-badge-l-seafoam-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-seafoam-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-seafoam-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-seafoam-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-seafoam-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-seafoam-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-seafoam-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8691,6 +8780,7 @@
   --spectrum-badge-l-yellow-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-yellow-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-l-yellow-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-l-yellow-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-l-yellow-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-yellow-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-l-yellow-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8789,6 +8879,7 @@
   --spectrum-badge-xl-fuchsia-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-fuchsia-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-fuchsia-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-fuchsia-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-fuchsia-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-fuchsia-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-fuchsia-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8887,6 +8978,7 @@
   --spectrum-badge-xl-indigo-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-indigo-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-indigo-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-indigo-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-indigo-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-indigo-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-indigo-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -8985,6 +9077,7 @@
   --spectrum-badge-xl-informative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-informative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-informative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-informative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-informative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-informative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-informative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9083,6 +9176,7 @@
   --spectrum-badge-xl-magenta-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-magenta-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-magenta-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-magenta-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-magenta-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-magenta-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-magenta-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9181,6 +9275,7 @@
   --spectrum-badge-xl-negative-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-negative-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-negative-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-negative-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-negative-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-negative-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-negative-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9279,6 +9374,7 @@
   --spectrum-badge-xl-neutral-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-neutral-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-neutral-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-neutral-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-neutral-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-neutral-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-neutral-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9377,6 +9473,7 @@
   --spectrum-badge-xl-positive-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-positive-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-positive-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-positive-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-positive-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-positive-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-positive-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9475,6 +9572,7 @@
   --spectrum-badge-xl-purple-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-purple-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-purple-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-purple-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-purple-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-purple-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-purple-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9516,7 +9614,7 @@
   --spectrum-badge-xl-seafoam-texticon-focus-ring-render: no;
   --spectrum-badge-xl-seafoam-texticon-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-xl-seafoam-texticon-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-xl-seafoam-texticon-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-texticon-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -9530,21 +9628,21 @@
   --spectrum-badge-xl-seafoam-texticon-focus-ring-render-hover: no;
   --spectrum-badge-xl-seafoam-texticon-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-xl-seafoam-texticon-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-xl-seafoam-texticon-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-texticon-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-render-key-focus: yes;
   --spectrum-badge-xl-seafoam-texticon-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-xl-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-xl-seafoam-texticon-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-xl-seafoam-texticon-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-texticon-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-render-mouse-focus: no;
   --spectrum-badge-xl-seafoam-texticon-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-xl-seafoam-texticon-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-xl-seafoam-texticon-border-color: transparent;
   --spectrum-badge-xl-seafoam-texticon-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-xl-seafoam-texticon-text-size: var(--spectrum-global-dimension-font-size-300);
@@ -9573,6 +9671,7 @@
   --spectrum-badge-xl-seafoam-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-seafoam-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-seafoam-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-seafoam-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-seafoam-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-seafoam-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9671,6 +9770,7 @@
   --spectrum-badge-xl-yellow-texticon-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-yellow-texticon-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-yellow-texticon-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-yellow-texticon-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-yellow-texticon-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-yellow-texticon-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-yellow-texticon-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9769,6 +9869,7 @@
   --spectrum-badge-xl-fuchsia-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-fuchsia-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-fuchsia-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-fuchsia-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-fuchsia-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-fuchsia-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-fuchsia-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9867,6 +9968,7 @@
   --spectrum-badge-xl-indigo-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-indigo-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-indigo-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-indigo-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-indigo-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-indigo-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-indigo-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -9965,6 +10067,7 @@
   --spectrum-badge-xl-informative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-informative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-informative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-informative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-informative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-informative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-informative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10063,6 +10166,7 @@
   --spectrum-badge-xl-magenta-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-magenta-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-magenta-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-magenta-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-magenta-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-magenta-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-magenta-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10161,6 +10265,7 @@
   --spectrum-badge-xl-negative-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-negative-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-negative-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-negative-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-negative-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-negative-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-negative-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10259,6 +10364,7 @@
   --spectrum-badge-xl-neutral-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-neutral-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-neutral-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-neutral-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-neutral-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-neutral-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-neutral-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10357,6 +10463,7 @@
   --spectrum-badge-xl-positive-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-positive-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-positive-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-positive-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-positive-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-positive-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-positive-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10455,6 +10562,7 @@
   --spectrum-badge-xl-purple-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-purple-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-purple-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-purple-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-purple-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-purple-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-purple-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10496,7 +10604,7 @@
   --spectrum-badge-xl-seafoam-textonly-focus-ring-render: no;
   --spectrum-badge-xl-seafoam-textonly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-xl-seafoam-textonly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-xl-seafoam-textonly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-textonly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -10510,21 +10618,21 @@
   --spectrum-badge-xl-seafoam-textonly-focus-ring-render-hover: no;
   --spectrum-badge-xl-seafoam-textonly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-xl-seafoam-textonly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-xl-seafoam-textonly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-textonly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-render-key-focus: yes;
   --spectrum-badge-xl-seafoam-textonly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-xl-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-xl-seafoam-textonly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-xl-seafoam-textonly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-textonly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-xl-seafoam-textonly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-xl-seafoam-textonly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-xl-seafoam-textonly-border-color: transparent;
   --spectrum-badge-xl-seafoam-textonly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-xl-seafoam-textonly-text-size: var(--spectrum-global-dimension-font-size-300);
@@ -10553,6 +10661,7 @@
   --spectrum-badge-xl-seafoam-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-seafoam-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-seafoam-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-seafoam-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-seafoam-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-seafoam-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10651,6 +10760,7 @@
   --spectrum-badge-xl-yellow-textonly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-yellow-textonly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-yellow-textonly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-yellow-textonly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-yellow-textonly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-yellow-textonly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-yellow-textonly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10749,6 +10859,7 @@
   --spectrum-badge-xl-fuchsia-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-fuchsia-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-fuchsia-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-fuchsia-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-fuchsia-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-fuchsia-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-fuchsia-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10847,6 +10958,7 @@
   --spectrum-badge-xl-indigo-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-indigo-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-indigo-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-indigo-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-indigo-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-indigo-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-indigo-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -10945,6 +11057,7 @@
   --spectrum-badge-xl-informative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-informative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-informative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-informative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-informative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-informative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-informative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -11043,6 +11156,7 @@
   --spectrum-badge-xl-magenta-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-magenta-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-magenta-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-magenta-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-magenta-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-magenta-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-magenta-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -11141,6 +11255,7 @@
   --spectrum-badge-xl-negative-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-negative-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-negative-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-negative-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-negative-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-negative-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-negative-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -11239,6 +11354,7 @@
   --spectrum-badge-xl-neutral-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-neutral-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-neutral-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-neutral-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-neutral-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-neutral-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-neutral-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -11337,6 +11453,7 @@
   --spectrum-badge-xl-positive-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-positive-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-positive-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-positive-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-positive-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-positive-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-positive-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -11435,6 +11552,7 @@
   --spectrum-badge-xl-purple-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-purple-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-purple-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-purple-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-purple-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-purple-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-purple-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -11476,7 +11594,7 @@
   --spectrum-badge-xl-seafoam-icononly-focus-ring-render: no;
   --spectrum-badge-xl-seafoam-icononly-focus-ring-gap: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-border-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-xl-seafoam-icononly-background-color: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-xl-seafoam-icononly-text-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-icononly-icon-color-down: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-color-down: var(--spectrum-alias-background-color-transparent);
@@ -11490,21 +11608,21 @@
   --spectrum-badge-xl-seafoam-icononly-focus-ring-render-hover: no;
   --spectrum-badge-xl-seafoam-icononly-focus-ring-gap-hover: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-border-color-hover: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-xl-seafoam-icononly-background-color-hover: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-xl-seafoam-icononly-text-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-icononly-icon-color-key-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-render-key-focus: yes;
   --spectrum-badge-xl-seafoam-icononly-focus-ring-gap-key-focus: var(--spectrum-alias-focus-ring-gap);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-border-color-key-focus: var(--spectrum-alias-focus-ring-color);
-  --spectrum-badge-xl-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-800);
+  --spectrum-badge-xl-seafoam-icononly-background-color-key-focus: var(--spectrum-global-color-static-seafoam-700);
   --spectrum-badge-xl-seafoam-icononly-text-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-icononly-icon-color-mouse-focus: var(--spectrum-global-color-static-white);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-render-mouse-focus: no;
   --spectrum-badge-xl-seafoam-icononly-focus-ring-gap-mouse-focus: var(--spectrum-global-dimension-static-size-0);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-border-color-mouse-focus: var(--spectrum-alias-background-color-transparent);
-  --spectrum-badge-xl-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-700);
+  --spectrum-badge-xl-seafoam-icononly-background-color-mouse-focus: var(--spectrum-global-color-static-seafoam-600);
   --spectrum-badge-xl-seafoam-icononly-border-color: transparent;
   --spectrum-badge-xl-seafoam-icononly-text-baseline: var(--spectrum-global-dimension-size-100);
   --spectrum-badge-xl-seafoam-icononly-text-size: var(--spectrum-global-dimension-font-size-300);
@@ -11533,6 +11651,7 @@
   --spectrum-badge-xl-seafoam-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-seafoam-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-seafoam-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-seafoam-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-seafoam-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-seafoam-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);
@@ -11631,6 +11750,7 @@
   --spectrum-badge-xl-yellow-icononly-focus-ring-border-bottom-left-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-yellow-icononly-focus-ring-border-bottom-right-radius: var(--spectrum-global-dimension-size-75);
   --spectrum-badge-xl-yellow-icononly-focus-ring-border-width: var(--spectrum-alias-focus-ring-size);
+  --spectrum-badge-xl-yellow-icononly-focus-ring-border-radius: var(--spectrum-alias-focus-ring-border-radius-medium);
   --spectrum-badge-xl-yellow-icononly-border-top-left-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-yellow-icononly-border-top-right-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-badge-xl-yellow-icononly-border-bottom-right-radius: var(--spectrum-alias-border-radius-regular);

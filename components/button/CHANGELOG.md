@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.11"></a>
+## 6.0.11
+🗓 2022-05-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.10...@spectrum-css/button@6.0.11)
+
+### 🐛 Bug fixes
+
+* button WHCM ([495c409](https://github.com/adobe/spectrum-css/commit/495c409))
+* button WHCM disabled text ([124f923](https://github.com/adobe/spectrum-css/commit/124f923))
+* remove commented lines from button ([3f857b9](https://github.com/adobe/spectrum-css/commit/3f857b9))
+
+
+
+
+
+<a name="6.0.10"></a>
+## 6.0.10
+🗓 2022-04-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.9...@spectrum-css/button@6.0.10)
+
+**Note:** Version bump only for package @spectrum-css/button
+
+
+
+
+
 <a name="6.0.9"></a>
 ## 6.0.9
 🗓 2022-04-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.8...@spectrum-css/button@6.0.9)

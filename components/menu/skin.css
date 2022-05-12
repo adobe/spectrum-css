@@ -67,3 +67,45 @@ governing permissions and limitations under the License.
 .spectrum-Menu-sectionHeading {
   color: var(--spectrum-listheading-text-color);
 }
+
+@media (forced-colors: active) {
+  .spectrum-Menu-divider {
+    background-color: CanvasText;
+    forced-color-adjust: none;
+  }
+  .spectrum-Menu-item {
+    forced-color-adjust: none;
+
+    --spectrum-listheading-text-color: ButtonText;
+    --spectrum-listitem-m-texticon-background-color: ButtonFace;
+    --spectrum-listitem-m-texticon-background-color-disabled: ButtonFace;
+    --spectrum-listitem-m-texticon-background-color-down: ButtonFace;
+    --spectrum-listitem-m-texticon-background-color-hover: Highlight;
+    --spectrum-listitem-m-texticon-background-color-key-focus: Highlight;
+    --spectrum-listitem-m-texticon-divider-color: ButtonText;
+    --spectrum-listitem-m-texticon-focus-indicator-color: Highlight;
+    --spectrum-listitem-m-texticon-text-color: ButtonText;
+    --spectrum-listitem-m-texticon-text-color-disabled: GrayText;
+    --spectrum-listitem-m-texticon-text-color-hover: HighlightText;
+    --spectrum-listitem-m-texticon-text-color-key-focus: HighlightText;
+    --spectrum-listitem-m-texticon-text-color-selected: ButtonText;
+    --spectrum-listitem-m-texticon-ui-icon-color-selected: Highlight;
+    &:not(.is-disabled)
+    {
+      &:hover,
+      &:focus,
+      &.is-highlighted,
+      &.is-open,
+      &:focus-ring, 
+      &.is-focused {
+        &.is-selected {
+          .spectrum-Menu-checkmark {
+            color: HighlightText;
+          }
+        }
+        background-color: var(--spectrum-listitem-m-texticon-background-color-key-focus);
+        color: var(--spectrum-listitem-m-texticon-text-color-key-focus);
+      } 
+    }
+  }
+}
