@@ -10,6 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const path = require('path');
 const StyleDictionary = require('style-dictionary');
 const CSSSetsFormatter = require('style-dictionary-sets').CSSSetsFormatter;
 const NameKebabTransfom = require('style-dictionary-sets').NameKebabTransfom;
@@ -125,8 +126,9 @@ const generateGlobalSetConfig = (setName) => {
   }
 }
 
+const tokenGlob = path.dirname(require.resolve('@adobe/spectrum-tokens')) + '/src/**/*.json';
 module.exports = {
-  source: ['node_modules/@adobe/spectrum-tokens/src/**/*.json'],
+  source: [tokenGlob],
   platforms: {
     CSS: {
       buildPath: 'dist/css/',
