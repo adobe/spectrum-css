@@ -397,6 +397,6 @@ To publish prerelease versions:
 
 * First, be sure that you're working on a branch other than `main`.
 * Once your change(s) are ready to be committed, be aware of the severity of the change(s), and be sure to author your commit message so that Lerna understands how to increase the version number(s) of the affected components.
-* Once your changes are committed, run the following command to bump the version numbers (a `beta` release is shown in this example): `npx lerna publish --conventional-prerelease --preid beta --pre-dist-tag`
+* Once your changes are committed, run the following command to bump the version numbers (a `beta` release is shown in this example): `npx lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta`
 * Depending on the severity of your change(s), Lerna should show a preview of your version numbers that look something like: `@spectrum-css/tag: 3.3.8 => 3.3.9-beta.0`
 * If the version number(s) look correct, you should be ready to publish to npm by running: `npm publish`
