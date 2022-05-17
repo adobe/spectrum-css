@@ -96,6 +96,11 @@ async function getFolderDependencyOrder(packagesDir) {
    // Nobody relies on it, so it gets clipped, weird
    solution.push('@spectrum-css/expressvars');
 
+   // Build tokens first
+   // This is because not every package relies on tokens, but the builder needs tokens to bake vars
+   solution = solution.filter(p => p !== '@spectrum-css/tokens');
+   solution.unshift('@spectrum-css/tokens');
+
    return solution;
  }
 
