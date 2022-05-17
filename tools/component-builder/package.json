@@ -12,7 +12,8 @@
   },
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@spectrum-css/vars": "^4.3.1"
+    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/tokens": "^1.0.0-beta"
   },
   "dependencies": {
     "autoprefixer": "^6.5.3",

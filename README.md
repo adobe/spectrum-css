@@ -61,6 +61,9 @@ If you're targeting modern browsers, start by including the base set of variable
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-dark.css">
 <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-darkest.css">
 
+<!-- Include tokens -->
+<link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
+
 <!-- Include index-vars.css for all components you need -->
 <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
 <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
@@ -73,13 +76,28 @@ Then, make sure you've included the relevant classes to choose which scale and c
 <html class="spectrum spectrum--medium spectrum--light">
 ```
 
-**Note:**  If you are importing SVG icon sprite sheets, the `.spectrum--medium`/`.spectrum--large` classes should be added to the `<html>` element so UI icons render in the correct size in IE 11. For browsers that support custom properties, or if you're not using SVG sprite sheets for UI icons and are manually managing icon sizing in your implementation, `.spectrum--medium`/`.spectrum--large` can be added to the `<body>` or other element.
+To switch to Express, load vars from `@spectrum-css/expressvars` instead of `@spectrum-css/vars` and add the `.spectrum--express` class to the `<html>` element:
+
+```html
+<html class="spectrum spectrum--medium spectrum--light spectrum--express">
+<head>
+  <!-- Include only the scales your application needs -->
+  <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css">
+  <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-large.css">
+
+  <!-- Include only the colorstops your application needs -->
+  <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css">
+  <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-dark.css">
+</head>
+```
 
 Then you can use components by copy/pasting their code from [the documentation](http://opensource.adobe.com/spectrum-css/).
 
 With the magic of CSS custom properties, you can infinitely nest different color stops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
 
-Additionally, you can override variables and customize Spectrum CSS' look and feel by re-defining the custom properties in context, [like so](https://codepen.io/lazd/pen/ROvOPO). See the source in `components/*/index-vars.css` to determine which custom properties you can override.
+### Customizing components
+
+You can override variables and customize Spectrum CSS' look and feel by re-defining the custom properties in context. Look for the **Custom Property API** section in each component to determine which custom properties you can override. See [ActionButton for a complete example](https://opensource.adobe.com/spectrum-css/actionbutton.html#customized).
 
 ### Importing UI icons
 
