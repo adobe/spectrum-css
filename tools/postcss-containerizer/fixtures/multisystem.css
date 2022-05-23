@@ -1,0 +1,29 @@
+@container(--system: spectrum) {
+  .component {
+    --background-color: blue;
+    --border-color: darkblue;
+    .icon {
+      --color: gray;
+    }
+  }
+}
+
+@container(--system: express) {
+  .component {
+    --background-color: purple;
+    --border-color: darkpurple;
+    .icon {
+      --color: white;
+    }
+  }
+}
+
+@container(--system: next) {
+  .component {
+    --background-color: brown;
+    --border-color: darkbrown;
+    .icon {
+      --color: white;
+    }
+  }
+}

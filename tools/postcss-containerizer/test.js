@@ -21,6 +21,10 @@ function readFile(filename) {
   return fs.readFileSync(filename, 'utf8');
 }
 
-test('create variables', t => {
+test('create basic output for 2 systems', t => {
   return compare(t, 'basic.css', 'basic.css');
+});
+
+test('create output for 3 systems', t => {
+  return compare(t, 'multisystem.css', 'multisystem.css');
 });
