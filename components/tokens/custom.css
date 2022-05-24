@@ -20,10 +20,12 @@ governing permissions and limitations under the License.
 
 .spectrum {
   --system-spectrum: var(--ON);
+  --system: spectrum;
 }
 
 .spectrum--express {
   --system-express: var(--ON);
+  --system: express;
 }
 
 .spectrum {
