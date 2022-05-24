@@ -96,7 +96,7 @@ function checkCSS() {
       // For each color stop and scale, filter the variables for those matching the component
       let errors = [];
       usedTokens.forEach(tokenName => {
-        if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--custom') && !tokenName.startsWith('--highcontrast')) {
+        if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--custom') && !tokenName.startsWith('--system') && !tokenName.startsWith('--highcontrast')) {
           errors.push(`${pkg.name} uses undefined token ${tokenName}`);
         }
       });

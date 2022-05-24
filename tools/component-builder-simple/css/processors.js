@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 function getProcessors() {
   return [
     require('postcss-import'),
-    require('postcss-containerizer'),
     require('postcss-nested'),
+    require('postcss-containerizer'),
     require('postcss-inherit'),
     require('postcss-logical')(),
     require('./plugins/postcss-transform-logical')(),
