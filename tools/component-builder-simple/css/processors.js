@@ -19,17 +19,6 @@ function getProcessors() {
     require('./plugins/postcss-transform-logical')(),
     require('./plugins/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
-    require('postcss-svg'),
-    require('postcss-functions')({
-      functions: {
-        noscale: function (value) {
-          return value.toString().toUpperCase();
-        },
-        percent: function (value) {
-          return parseInt(value, 10) / 100;
-        }
-      }
-    }),
     require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
     require('postcss-dropunusedvars'),
     require('postcss-dropdupedvars'),
