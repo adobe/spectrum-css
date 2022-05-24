@@ -33,12 +33,11 @@ function getProcessors() {
     require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
     require('postcss-dropunusedvars'),
     require('postcss-dropdupedvars'),
-    require('postcss-droproot'),
     require('postcss-focus-ring'),
     require('postcss-discard-empty'),
     require('autoprefixer')({
       'browsers': [
-        'IE >= 10',
+        'last 2 Edge versions',
         'last 2 Chrome versions',
         'last 2 Firefox versions',
         'last 2 Safari versions',
