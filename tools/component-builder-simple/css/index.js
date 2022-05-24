@@ -17,6 +17,22 @@ const postcss = require('gulp-postcss');
 const postcssReal = require('postcss');
 const processors = require('./processors').processors;
 const fsp = require('fs').promises;
+const { parse } = require('postcss-values-parser');
+
+function getTokensUsedInValueNode(node, usedTokens) {
+  usedTokens = usedTokens ?? [];
+  if (node.nodes) {
+    node.nodes.forEach(subNode => {
+      if (subNode.type === 'word' && subNode.value.startsWith('--')) {
+        usedTokens.push(subNode.value);
+      }
+      else if (subNode.type === 'func') {
+        getTokensUsedInValueNode(subNode, usedTokens);
+      }
+    });
+  }
+  return usedTokens;
+}
 
 function getTokensUsedInCSS(root, coreTokens, componentTokens) {
   let usedTokens = [];
@@ -27,17 +43,20 @@ function getTokensUsedInCSS(root, coreTokens, componentTokens) {
     rule.walkDecls((decl) => {
       let matches = decl.value.match(/var\(.*?\)/g);
       if (matches) {
-        matches.forEach(function(match) {
-          let tokenName = match.replace(/var\((--[\w\-]+),?.*?\)/, '$1').trim();
-          if (coreTokens[tokenName]) {
-            coreTokensUsed[tokenName] = (coreTokensUsed[tokenName] ?? 0) + 1;
-          }
-          else if (componentTokens[tokenName]) {
-            componentTokensUsed[tokenName] = (componentTokensUsed[tokenName] ?? 0) + 1;
-          }
-          if (usedTokens.indexOf(tokenName) === -1) {
-            usedTokens.push(tokenName);
-          }
+        let parsed = parse(decl.value);
+        parsed.nodes.forEach(node => {
+          const usedTokensInValue = getTokensUsedInValueNode(node);
+          usedTokensInValue.forEach(tokenName => {
+            if (coreTokens[tokenName]) {
+              coreTokensUsed[tokenName] = (coreTokensUsed[tokenName] ?? 0) + 1;
+            }
+            else if (componentTokens[tokenName]) {
+              componentTokensUsed[tokenName] = (componentTokensUsed[tokenName] ?? 0) + 1;
+            }
+            if (usedTokens.indexOf(tokenName) === -1) {
+              usedTokens.push(tokenName);
+            }
+          });
         });
       }
     });
@@ -90,14 +109,21 @@ function checkCSS() {
       // Get tokens defined inside of the component
       let componentTokens = getTokensDefinedInCSS(root);
 
-      // Find all custom properties used in the component
+      // Find all tokens used in the component
       let { usedTokens, coreTokensUsed, componentTokensUsed } = getTokensUsedInCSS(root, coreTokens, componentTokens);
 
-      // For each color stop and scale, filter the variables for those matching the component
+      // Make sure the component doesn't use any undefined tokens
       let errors = [];
       usedTokens.forEach(tokenName => {
         if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--custom') && !tokenName.startsWith('--system') && !tokenName.startsWith('--highcontrast')) {
           errors.push(`${pkg.name} uses undefined token ${tokenName}`);
+        }
+      });
+
+      // Make sure all tokens defined in the component are used
+      Object.keys(componentTokens).forEach(tokenName => {
+        if (!usedTokens.includes(tokenName)) {
+          errors.push(`${pkg.name} defines ${tokenName}, but never uses it`);
         }
       });
 
