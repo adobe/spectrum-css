@@ -29,7 +29,8 @@ async function getDependencies(package) {
     dependencies = Object.keys(pkg.devDependencies).filter((dep) => {
       return dep.indexOf('@spectrum-css') === 0 &&
         dep !== '@spectrum-css/bundle-builder' &&
-        dep !== '@spectrum-css/component-builder';
+        dep !== '@spectrum-css/component-builder' &&
+        dep !== '@spectrum-css/component-builder-simple';
     });
   }
 
