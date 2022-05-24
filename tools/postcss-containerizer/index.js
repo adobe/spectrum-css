@@ -2,6 +2,8 @@ const postcss = require('postcss');
 
 function process(root) {
   const selectorMap = {};
+  const containersToRemove = [];
+
   root.walkAtRules(container => {
     if (container.name === 'container') {
       const [, identifier, value] = container.params.match(/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/);
@@ -17,7 +19,7 @@ function process(root) {
         identifierNode[identifierKey] = decl.value;
       });
 
-      container.remove();
+      containersToRemove.push(container);
     }
   });
 
@@ -56,12 +58,15 @@ function process(root) {
         prop,
         value: varString
       });
+      decl.raws.before = '\n  ';
 
       rule.append(decl);
     }
 
-    root.append(rule);
+    containersToRemove[0].parent.insertBefore(containersToRemove[0], rule);
   }
+
+  containersToRemove.forEach(container => container.remove());
 }
 
 module.exports = postcss.plugin('postcss-containerizer', function() {
