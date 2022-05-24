@@ -16,8 +16,9 @@ function process(root) {
           selectorPath.push(parent.selector);
           parent = parent.parent;
         }
-        const valueNode = selectorMap[selectorPath.join(' ')] = selectorMap[selectorPath.join(' ')] || {};
-        const identifierNode = valueNode[decl.prop] = valueNode[decl.prop] || {};
+        const selector = selectorPath.join(' ');
+        const selectorNode = selectorMap[selector] = selectorMap[selector] || {};
+        const identifierNode = selectorNode[decl.prop] = selectorNode[decl.prop] || {};
 
         identifierNode[identifierKey] = decl.value;
       });
@@ -34,6 +35,7 @@ function process(root) {
     });
 
     for (let [prop, values] of Object.entries(props)) {
+      // Add a declaration for each identifier
       const variableList = [];
       for (let [identifier, value] of Object.entries(values)) {
         const variableName = `--${identifier}-${prop.replace(/^--/, '')}`;
@@ -46,7 +48,7 @@ function process(root) {
         rule.append(decl);
       }
 
-      // Add the final rule
+      // Add the final declaration
       let varString = '';
       variableList.reverse().forEach((variable, i) => {
         varString += `var(${variable}`;
