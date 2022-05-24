@@ -2,9 +2,9 @@
   .component {
     --background-color: blue;
     --border-color: darkblue;
-    .icon {
-      --color: gray;
-    }
+  }
+  .component .icon {
+    --color: gray;
   }
 }
 
@@ -12,8 +12,9 @@
   .component {
     --background-color: purple;
     --border-color: darkpurple;
-    .icon {
-      --color: white;
-    }
+
+  }
+  .component .icon {
+    --color: white;
   }
 }

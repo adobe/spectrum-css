@@ -10,13 +10,7 @@ function process(root) {
 
       // Walk all declarations, find their selector, store in map
       container.walkDecls(decl => {
-        const selectorPath = [];
-        let parent = decl.parent;
-        while (parent !== container) {
-          selectorPath.push(parent.selector);
-          parent = parent.parent;
-        }
-        const selector = selectorPath.join(' ');
+        const selector = decl.parent.selector;
         const selectorNode = selectorMap[selector] = selectorMap[selector] || {};
         const identifierNode = selectorNode[decl.prop] = selectorNode[decl.prop] || {};
 

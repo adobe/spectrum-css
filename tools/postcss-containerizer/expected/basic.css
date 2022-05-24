@@ -6,7 +6,7 @@
     --system-express-border-color: var(--system-express) darkpurple;
     --border-color: var(--system-express-border-color, var(--system-spectrum-border-color))
 }
-.icon .component {
+.component .icon {
     --system-spectrum-color: var(--system-spectrum) gray;
     --system-express-color: var(--system-express) white;
     --color: var(--system-express-color, var(--system-spectrum-color))

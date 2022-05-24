@@ -8,7 +8,7 @@
     --system-next-border-color: var(--system-next) darkbrown;
     --border-color: var(--system-next-border-color, var(--system-express-border-color, var(--system-spectrum-border-color)))
 }
-.icon .component {
+.component .icon {
     --system-spectrum-color: var(--system-spectrum) gray;
     --system-express-color: var(--system-express) white;
     --system-next-color: var(--system-next) white;
