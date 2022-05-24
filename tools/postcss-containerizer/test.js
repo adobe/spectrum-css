@@ -28,3 +28,7 @@ test('create basic output for 2 systems', t => {
 test('create output for 3 systems', t => {
   return compare(t, 'multisystem.css', 'multisystem.css');
 });
+
+test('work when system container queries appear more than once', t => {
+  return compare(t, 'duplicatesystem.css', 'basic.css');
+});

@@ -1,0 +1,25 @@
+@container(--system: spectrum) {
+  .component {
+    --background-color: blue;
+    --border-color: darkblue;
+  }
+}
+
+@container(--system: spectrum) {
+  .component .icon {
+    --color: gray;
+  }
+}
+
+@container(--system: express) {
+  .component {
+    --background-color: purple;
+    --border-color: darkpurple;
+  }
+}
+
+@container(--system: express) {
+  .component .icon {
+    --color: white;
+  }
+}
