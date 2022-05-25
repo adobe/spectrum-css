@@ -8,6 +8,16 @@ npm install postcss-splitinator
 postcss -u postcss-splitinator -o dist/index.css src/index.css
 ```
 
+## Options
+
+### `options.getName = function(selector, prop)`
+
+Customize the creation of variable names. By default, as SUIT naming convention is assumed and variable names are created accordingly.
+
+### `options.processIdentifier = function(identifierValue, identifierName)`
+
+Customize the selectors that variables are placed in. Passed the value and key of the variable that was passed to the container, i.e. `identifierValue = spectrum` and `identifierName = system` for the example below. By default, `identifierName` is used as-is.
+
 ## Usage
 
 This plugin turns this:

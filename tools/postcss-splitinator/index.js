@@ -23,10 +23,10 @@ function process(root, options) {
   let lastRule = null;
   root.walkAtRules(container => {
     if (container.name === 'container') {
-      const [, identifier, identifierKey] = container.params.match(/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/);
+      const [, identifierName, identifierValue] = container.params.match(/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/);
 
       const rule = postcss.rule({
-        selector: `.${(options && typeof options.processIdentifier === 'function') ? options.processIdentifier(identifierKey) : identifierKey}`,
+        selector: `.${(options && typeof options.processIdentifier === 'function') ? options.processIdentifier(identifierValue, identifierName) : identifierValue}`,
         source: container.source
       });
 
@@ -38,7 +38,7 @@ function process(root, options) {
           // note: this doesn't support :where() and is likely brittle!
           const selectors = decl.parent.selector.split(/\s*,\s*/);
           selectors.forEach(selector => {
-            const variableName = getName(selector, decl.prop);
+            const variableName = typeof options.getName === 'function' ? options.getName(selector, decl.prop) : getName(selector, decl.prop);
             const newDecl = decl.clone({
               prop: variableName
             });
