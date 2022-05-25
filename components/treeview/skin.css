@@ -14,8 +14,8 @@ governing permissions and limitations under the License.
   --spectrum-treeview-item-background-color-selected: var(--spectrum-alias-highlight-selected);
   --spectrum-treeview-item-border-color-selected: var(--spectrum-global-color-blue-500);
 
-  --spectrum-treeview-item-background-color-quiet-selected: var(--spectrum-alias-highlight-hover);
-  --spectrum-treeview-item-border-color-quiet-selected: transparent;
+  /* --spectrum-treeview-item-background-color-quiet-selected: var(--spectrum-alias-highlight-hover);
+  --spectrum-treeview-item-border-color-quiet-selected: transparent; */
 
   /* todo: add missing variables below to DNA */
   --spectrum-treeview-item-icon-color: var(--spectrum-alias-icon-color);
@@ -65,7 +65,26 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-TreeView--quiet {
+.spectrum-TreeView--emphasized {
+  .spectrum-TreeView-item {
+    &.is-selected {
+      > .spectrum-TreeView-itemLink {
+        &:before {
+          background-color: var(--spectrum-treeview-item-background-color-quiet-selected);
+          border-color: transparent;
+        }
+
+        &:focus-ring {
+          &:before {
+            border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* .spectrum-TreeView--quiet {
   .spectrum-TreeView-item {
      &.is-selected {
       > .spectrum-TreeView-itemLink {
@@ -82,7 +101,7 @@ governing permissions and limitations under the License.
       }
     }
   }
-}
+} */
 
 .spectrum-TreeView-itemIcon {
   color: var(--spectrum-treeview-item-icon-color);

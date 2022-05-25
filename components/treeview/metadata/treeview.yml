@@ -124,12 +124,27 @@ examples:
         </li>
       </ul>
 
-  - id: treeview
-    name: Quiet
+  # - id: treeview
+  #   name: Quiet
+  #   description: |
+  #     A treeview with quiet selection.
+  #   markup: |
+  #     <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--quiet" style="width: 250px">
+  #       <li class="spectrum-TreeView-item">
+  #         <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
+  #       </li>
+
+  #       <li class="spectrum-TreeView-item is-selected">
+  #         <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
+  #       </li>
+  #     </ul>
+
+  - id: treeview-emphasized
+    name: Emphasized
     description: |
-      A treeview with quiet selection.
+      An emphasized treeview
     markup: |
-      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--quiet" style="width: 250px">
+      <ul class="spectrum-TreeView spectrum-TreeView--sizeM spectrum-TreeView--emphasized" style="width: 250px">
         <li class="spectrum-TreeView-item">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 1</span></a>
         </li>
@@ -137,7 +152,7 @@ examples:
         <li class="spectrum-TreeView-item is-selected">
           <a class="spectrum-TreeView-itemLink" href="#"><span class="spectrum-TreeView-itemLabel">Layer 2</span></a>
         </li>
-      </ul>
+      </ul>      
 
   - id: treeview
     name: Standalone
