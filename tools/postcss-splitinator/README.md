@@ -18,6 +18,14 @@ Customize the creation of variable names. By default, as SUIT naming convention 
 
 Customize the selectors that variables are placed in. Passed the value and key of the variable that was passed to the container, i.e. `identifierValue = spectrum` and `identifierName = system` for the example below. By default, `identifierName` is used as-is.
 
+### `options.noFlatVariables = false`
+
+Whether to avoid including flat variables in the output.
+
+### `options.noSelectors = false`
+
+Whether to avoid including selectors that use the flat variables in the output.
+
 ## Usage
 
 This plugin turns this:
