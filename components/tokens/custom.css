@@ -10,22 +10,34 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* This file contains overrides and additions to core tokens */
+/** This file contains overrides and additions to core tokens */
+
 :root {
+  /**
+    The following --ON and --OFF custom properties are used to power basic logic in our CSS.
+
+    Here's how it works:
+
+    1. A blank space is an intentional, valid empty value. Using this in any property declaration has no effect.
+    2. initial corresponds to the guaranteed-invalid value. Using this at the beginning of any property declaration causes it to be skipped in a var fallback chain
+
+    Source: https://www.w3.org/TR/css-variables-1/#guaranteed-invalid
+  */
   --ON: ;
-  --OFF: inherit;
+  --OFF: initial;
+
   --system-spectrum: var(--OFF);
   --system-express: var(--OFF);
 }
 
 .spectrum {
   --system-spectrum: var(--ON);
-  --system: spectrum;
+  --system: spectrum; /* this variable is unused at the moment, but will power container queries in the future */
 }
 
 .spectrum--express {
   --system-express: var(--ON);
-  --system: express;
+  --system: express; /* this variable is unused at the moment, but will power container queries in the future */
 }
 
 .spectrum {
