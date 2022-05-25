@@ -93,8 +93,8 @@ function buildCSS() {
 }
 
 let coreTokens = null;
-function checkCSS() {
-  return gulp.src('dist/index.css')
+function checkCSS(glob) {
+  return gulp.src(glob)
     .pipe(through.obj(async function doBake(file, enc, cb) {
       // Fetch core tokes once during the build
       if (coreTokens === null) {
@@ -135,8 +135,16 @@ function checkCSS() {
     }));
 }
 
-exports.checkCSS = checkCSS;
+function checkSourceCSS() {
+  return checkCSS('index.css');
+}
+
+function checkBuiltCSS() {
+  return checkCSS('dist/index.css');
+}
+
 exports.buildCSS = gulp.series(
+  checkSourceCSS,
   buildCSS,
-  checkCSS
+  checkBuiltCSS
 );
