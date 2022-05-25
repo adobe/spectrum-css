@@ -77,6 +77,6 @@ function process(root, options) {
   }
 }
 
-module.exports = postcss.plugin('postcss-containerizer', function(options) {
+module.exports = postcss.plugin('postcss-splitinator', function(options) {
   return (root, result) => process(root, options)
 });
