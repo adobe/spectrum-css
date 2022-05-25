@@ -51,7 +51,7 @@ This plugin turns this:
 
 Into this:
 
-```
+```css
 .spectrum {
   --system-component-background-color: blue;
   --system-component-selected-background-color: darkblue;
