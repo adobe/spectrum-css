@@ -14,10 +14,13 @@ const gulp = require('gulp');
 const path = require('path');
 const through = require('through2');
 const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+const concat = require('gulp-concat');
 const postcssReal = require('postcss');
-const processors = require('./processors').processors;
 const fsp = require('fs').promises;
 const { parse } = require('postcss-values-parser');
+const processorsFunction = require('./processors').getProcessors;
+const processors = processorsFunction();
 
 function getTokensUsedInValueNode(node, usedTokens) {
   usedTokens = usedTokens ?? [];
@@ -87,14 +90,61 @@ async function getCoreTokens() {
 }
 
 function buildCSS() {
-  return gulp.src('index.css')
+  return gulp.src([
+      'index.css',
+      'themes/spectrum.css', // spectrum comes first
+      'themes/*.css'
+    ])
+    .pipe(concat('index.css'))
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/'));
+}
+
+function buildCSSWithoutThemes() {
+  return gulp.src([
+      'index.css',
+      'themes/spectrum.css', // spectrum comes first
+      'themes/*.css'
+    ])
+    .pipe(concat('index-base.css'))
+    .pipe(postcss(processorsFunction(false, { noFlatVariables: true })))
+    .pipe(gulp.dest('dist/'));
+}
+
+function buildCSSThemeIndex() {
+  return gulp.src([
+      'themes/spectrum.css', // spectrum comes first
+      'themes/*.css'
+    ])
+    .pipe(concat('index-theme.css'))
+    .pipe(postcss(processorsFunction(true, { noSelectors: true })))
+    .pipe(gulp.dest('dist/'));
+}
+
+function buildCSSThemes() {
+  return gulp.src([
+      'themes/*.css'
+    ])
+    .pipe(postcss(processorsFunction(true, { noSelectors: true })))
+    .pipe(gulp.dest('dist/themes/'));
+}
+
+/**
+  Special case for express: it needs Spectrum base vars and needs to override them
+*/
+function buildExpressTheme() {
+  return gulp.src([
+      'dist/index-theme.css'
+    ])
+    .pipe(concat('express.css'))
+    .pipe(postcss(processorsFunction(true).concat(require('postcss-combininator'))))
+    .pipe(gulp.dest('dist/themes/'));
 }
 
 let coreTokens = null;
 function checkCSS(glob) {
   return gulp.src(glob)
+    .pipe(concat('index-combined.css'))
     .pipe(through.obj(async function doBake(file, enc, cb) {
       // Fetch core tokes once during the build
       if (coreTokens === null) {
@@ -136,7 +186,10 @@ function checkCSS(glob) {
 }
 
 function checkSourceCSS() {
-  return checkCSS('index.css');
+  return checkCSS([
+    'themes/*.css',
+    'index.css'
+  ]);
 }
 
 function checkBuiltCSS() {
@@ -145,6 +198,14 @@ function checkBuiltCSS() {
 
 exports.buildCSS = gulp.series(
   checkSourceCSS,
-  buildCSS,
+  gulp.parallel(
+    buildCSS,
+    buildCSSWithoutThemes,
+    gulp.series(
+      buildCSSThemes,
+      buildCSSThemeIndex,
+      buildExpressTheme
+    )
+  ),
   checkBuiltCSS
 );

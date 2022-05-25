@@ -11,20 +11,11 @@ governing permissions and limitations under the License.
 */
 
 /* This file contains overrides and additions to core tokens */
-:root {
-  --ON: ;
-  --OFF: inherit;
-  --system-spectrum: var(--OFF);
-  --system-express: var(--OFF);
-}
-
 .spectrum {
-  --system-spectrum: var(--ON);
   --system: spectrum;
 }
 
 .spectrum--express {
-  --system-express: var(--ON);
   --system: express;
 }
 

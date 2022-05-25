@@ -31,10 +31,11 @@ function getName(selector, prop) {
   return '--' + (`system-` + `${selectorParts.join('-')}-${prop.substr(2)}`).replace(/-+/g, '-').toLowerCase();
 }
 
-function process(root, options) {
+function process(root, options = {}) {
+  options.noFlatVariables = options.noFlatVariables ?? false;
+  options.noSelectors = options.noSelectors ?? false;
   const selectorMap = {};
 
-  let lastRule = null;
   root.walkAtRules(container => {
     if (container.name === 'container') {
       const [, identifierName, identifierValue] = container.params.match(/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/);
@@ -44,7 +45,9 @@ function process(root, options) {
         source: container.source
       });
 
-      container.parent.insertAfter(container, rule);
+      if (!options.noFlatVariables) {
+        container.parent.insertAfter(container, rule);
+      }
 
       container.walkDecls(decl => {
         if (decl.prop.startsWith('--')) {
@@ -57,7 +60,10 @@ function process(root, options) {
               prop: variableName
             });
             newDecl.raws.before = '\n  ';
-            rule.append(newDecl);
+
+            if (!options.noFlatVariables) {
+              rule.append(newDecl);
+            }
 
             const selectorNode = selectorMap[selector] = selectorMap[selector] || {};
 
@@ -81,28 +87,27 @@ function process(root, options) {
       });
 
       container.remove();
-
-      lastRule = rule;
     }
   });
 
-  for (let [selector, props] of Object.entries(selectorMap)) {
-    const rule = postcss.rule({
-      selector
-    });
-
-    for (let [prop, value] of Object.entries(props)) {
-      const decl = postcss.decl({
-        prop,
-        value
+  if (!options.noSelectors) {
+    for (let [selector, props] of Object.entries(selectorMap)) {
+      const rule = postcss.rule({
+        selector
       });
-      decl.raws.before = '\n  ';
 
-      rule.append(decl);
+      for (let [prop, value] of Object.entries(props)) {
+        const decl = postcss.decl({
+          prop,
+          value
+        });
+        decl.raws.before = '\n  ';
+
+        rule.append(decl);
+      }
+
+      root.append(rule);
     }
-
-    lastRule.parent.insertAfter(lastRule, rule);
-    lastRule = rule;
   }
 }
 

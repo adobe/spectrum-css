@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-function getProcessors() {
+function getProcessors(keepUnusedVars = false, splitinatorOptions = {}) {
   return [
     require('postcss-import'),
     require('postcss-nested'),
@@ -20,14 +20,15 @@ function getProcessors() {
           return 'spectrum--express';
         }
         return identifier;
-      }
+      },
+      ...splitinatorOptions
     }),
     require('postcss-inherit'),
     require('./plugins/postcss-transform-logical')(),
     require('./plugins/postcss-custom-properties-passthrough')(),
     require('postcss-calc'),
     require('./plugins/postcss-strip-comments')({ preserveTopdoc: false }),
-    require('postcss-dropunusedvars'),
+    !keepUnusedVars && require('postcss-dropunusedvars'),
     require('postcss-dropdupedvars'),
     require('postcss-focus-ring'),
     require('postcss-discard-empty'),
@@ -40,7 +41,7 @@ function getProcessors() {
         'last 2 iOS versions'
       ]
     })
-  ];
+  ].filter(Boolean);
 }
 
 exports.getProcessors = getProcessors;
