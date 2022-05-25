@@ -1,6 +1,8 @@
 const postcss = require('postcss');
 
 function getName(selector, prop) {
+  selector = selector.replace(/^:where\((.*?)\)$/, '$1');
+
   // This regex is designed to pull spectrum-ActionButton out of a selector
   let baseSelectorMatch = selector.match(/^\.([a-z]+-[\A-Z][^-. ]+)/);
   if (baseSelectorMatch) {
