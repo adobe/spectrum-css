@@ -14,7 +14,7 @@ function getName(selector, prop) {
 
   let selectorParts = selector.replace(/\s+/g, '').replace(/,/g, '').split('.');
 
-  return `--system-` + (`${selectorParts.join('-')}-${prop.substr(2)}`).replace(/-+/g, '-');
+  return `--system-` + (`${selectorParts.join('-')}-${prop.substr(2)}`).replace(/-+/g, '-').toLowerCase();
 }
 
 function process(root, options) {
@@ -46,7 +46,22 @@ function process(root, options) {
             rule.append(newDecl);
 
             const selectorNode = selectorMap[selector] = selectorMap[selector] || {};
-            selectorNode[decl.prop] = variableName;
+
+            // Check for fallbacks
+            // todo: use valueparser instead of a regex
+            const fallbackMatch = decl.value.match(/var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/);
+            if (fallbackMatch) {
+              const [, override, fallback] = fallbackMatch;
+
+              // The final declaration should have the override present
+              selectorNode[decl.prop] = `var(${override}, var(${variableName}))`;
+
+              // The system-level declaration should only have the fallback
+              newDecl.value = `var(${fallback})`;
+            }
+            else {
+              selectorNode[decl.prop] = `var(${variableName})`;
+            }
           })
         }
       });
@@ -65,7 +80,7 @@ function process(root, options) {
     for (let [prop, value] of Object.entries(props)) {
       const decl = postcss.decl({
         prop,
-        value: `var(${value})`
+        value
       });
       decl.raws.before = '\n  ';
 
