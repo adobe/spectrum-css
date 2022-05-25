@@ -14,7 +14,14 @@ function getProcessors() {
   return [
     require('postcss-import'),
     require('postcss-nested'),
-    require('postcss-containerizer'),
+    require('postcss-splitinator')({
+      processIdentifier: (identifier) => {
+        if (identifier === 'express') {
+          return 'spectrum--express';
+        }
+        return identifier;
+      }
+    }),
     require('postcss-inherit'),
     require('./plugins/postcss-transform-logical')(),
     require('./plugins/postcss-custom-properties-passthrough')(),

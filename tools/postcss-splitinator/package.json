@@ -1,0 +1,14 @@
+{
+  "name": "postcss-splitinator",
+  "version": "1.0.0-beta.0",
+  "description": "Turn container queryies into the var hack",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Larry Davis <lazdnet@gmail.com>",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "postcss": "^7.0.32"
+  }
+}
