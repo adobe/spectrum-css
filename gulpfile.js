@@ -42,12 +42,13 @@ async function checkPeerDependencies() {
     if (package.peerDependencies) {
       Object.keys(package.peerDependencies).forEach((dependency) => {
         let devDepVer = package.devDependencies[dependency].replace('^', '');
-        let peerDepVer = package.peerDependencies[dependency];
+        let peerDepVer = package.peerDependencies[dependency].replace('^', '');
+        
         if (devDepVer) {
-          if (!semver.satisfies(devDepVer, peerDepVer)) {
+          if (devDepVer !== peerDepVer) {
             console.error(`${component} has out of date peerDependencies ${dependency} (found ${devDepVer}, does not satisfy ${peerDepVer})`);
 
-            // Set a new peer dependency, stripping the beta version number
+            // Set the peer dependency version to be the same as the dev dependency version
             let newPeerDepVer = '^' + devDepVer.replace(/-\d+$/, '');
             package.peerDependencies[dependency] = newPeerDepVer
             console.error(`  Updated ${dependency} to ${newPeerDepVer}`);
