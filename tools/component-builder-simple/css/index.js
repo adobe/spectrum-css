@@ -96,7 +96,9 @@ function buildCSS() {
       'themes/*.css'
     ])
     .pipe(concat('index.css'))
-    .pipe(postcss(processors))
+    .pipe(postcss(processors, {
+      from: './index.css' // gulp-concat sets the file.path wrong, so override here
+    }))
     .pipe(gulp.dest('dist/'));
 }
 
@@ -107,7 +109,9 @@ function buildCSSWithoutThemes() {
       'themes/*.css'
     ])
     .pipe(concat('index-base.css'))
-    .pipe(postcss(processorsFunction(false, { noFlatVariables: true })))
+    .pipe(postcss(processorsFunction(false, { noFlatVariables: true }), {
+      from: './index.css' // gulp-concat sets the file.path wrong, so override here
+    }))
     .pipe(gulp.dest('dist/'));
 }
 
