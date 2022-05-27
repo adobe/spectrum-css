@@ -1,5 +1,5 @@
 /*
-Copyright 2021 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,53 +10,148 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-helptext.css";
+.spectrum-HelpText {
+  --spectrum-helptext-line-height: var(--spectrum-line-height-100);
+  --spectrum-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-helptext-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-helptext-disabled-content-color: var(--spectrum-disabled-content-color);
+
+  &.spectrum-HelpText--neutral {
+    --spectrum-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
+    --spectrum-helptext-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
+  }
+
+  &.spectrum-HelpText--negative {
+    --spectrum-helptext-content-color-default: var(--spectrum-negative-content-color);
+    --spectrum-helptext-icon-color-default: var(--spectrum-negative-content-color);
+  }
+
+  &.is-disabled {
+    --spectrum-helptext-content-color-default: var(--spectrum-helptext-disabled-content-color);
+    --spectrum-helptext-icon-color-default: var(--spectrum-helptext-disabled-content-color);
+  }
+
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    --spectrum-helptext-cjk-line-height: var(--spectrum-CJK-line-height-100);
+  }
+}
 
 .spectrum-HelpText--sizeS {
-  @remapvars {
-    find: /--spectrum-helptext(.*)-s-/;
-    filter: color;
-    replace: --spectrum-helptext$1-;
-  }
+  --spectrum-helptext-min-height: var(--spectrum-component-height-75);
+  --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-75);
+  --spectrum-helptext-font-size: var(--spectrum-font-size-75);
+  --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
+  --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-small);
+  --spectrum-helptext-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+  --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
 }
 
 .spectrum-HelpText--sizeM {
-  @remapvars {
-    find: /--spectrum-helptext(.*)-m-/;
-    filter: color;
-    replace: --spectrum-helptext$1-;
-  }
+  --spectrum-helptext-min-height: var(--spectrum-component-height-75);
+  --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-helptext-font-size: var(--spectrum-font-size-75);
+  --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
+  --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-medium);
+  --spectrum-helptext-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+  --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
 }
 
 .spectrum-HelpText--sizeL {
-  @remapvars {
-    find: /--spectrum-helptext(.*)-l-/;
-    filter: color;
-    replace: --spectrum-helptext$1-;
-  }
+  --spectrum-helptext-min-height: var(--spectrum-component-height-100);
+  --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-200);
+  --spectrum-helptext-font-size: var(--spectrum-font-size-100);
+  --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-100);
+  --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-large);
+  --spectrum-helptext-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+  --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
 }
 
 .spectrum-HelpText--sizeXL {
-  @remapvars {
-    find: /--spectrum-helptext(.*)-xl-/;
-    filter: color;
-    replace: --spectrum-helptext$1-;
+  --spectrum-helptext-min-height: var(--spectrum-component-height-200);
+  --spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-300);
+  --spectrum-helptext-font-size: var(--spectrum-font-size-200);
+  --spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-200);
+  --spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-extra-large);
+  --spectrum-helptext-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+  --spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+}
+
+@media (forced-colors: active) {
+  .spectrum-HelpText {
+    --highcontrast-helptext-content-color-default: CanvasText;
+    --highcontrast-helptext-icon-color-default: CanvasText;
+
+    forced-color-adjust: none;
+
+    .spectrum-HelpText-validationIcon,
+    .spectrum-HelpText-text {
+      forced-color-adjust: none;
+    }
   }
 }
 
 .spectrum-HelpText {
+  color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
   display: flex;
-  font-size: var(--spectrum-helptext-neutral-texticon-text-size);
+  font-size: var(--mod-helptext-font-size, var(--spectrum-helptext-font-size));
+  min-height: var(--mod-helptext-min-height, var(--spectrum-helptext-min-height));
+
   .spectrum-HelpText-validationIcon {
-    margin-inline-end: var(--spectrum-helptext-neutral-texticon-icon-gap);
-    padding-block: var(--spectrum-helptext-negative-texticon-icon-padding-top) var(--spectrum-helptext-negative-texticon-icon-padding-bottom);
+    margin-inline-end: var(--mod-helptext-text-to-visual, var(--spectrum-helptext-text-to-visual));
+    padding-block-start: var(--mod-helptext-top-to-workflow-icon, var(--spectrum-helptext-top-to-workflow-icon));
+    padding-block-end: var(--mod-helptext-bottom-to-workflow-icon, var(--spectrum-helptext-bottom-to-workflow-icon));
     flex-shrink: 0;
+    height: var(--mod-helptext-icon-size, var(--spectrum-helptext-icon-size));
+    width: var(--mod-helptext-icon-size, var(--spectrum-helptext-icon-size));
   }
+  
   .spectrum-HelpText-text {
-    margin-inline-end: var(--spectrum-helptext-neutral-texticon-icon-gap);
-    padding-block: var(--spectrum-helptext-neutral-textonly-text-padding-top) var(--spectrum-helptext-neutral-textonly-text-padding-bottom);
-    line-height: var(--spectrum-helptext-neutral-textonly-text-line-height);
-    text-transform: var(--spectrum-helptext-neutral-textonly-text-transform);
-    letter-spacing: var(--spectrum-helptext-neutral-textonly-text-letter-spacing);
+    padding-block-start: var(--mod-helptext-top-to-text, var(--spectrum-helptext-top-to-text));
+    padding-block-end: var(--mod-helptext-bottom-to-text, var(--spectrum-helptext-bottom-to-text));
+    line-height: var(--mod-helptext-line-height, var(--spectrum-helptext-line-height));
+  }
+
+  &:lang(ja),
+  &:lang(zh),
+  &:lang(ko) {
+    .spectrum-HelpText-text {
+      line-height: var(--mod-helptext-cjk-line-height, var(--spectrum-helptext-cjk-line-height));
+    }
+  }
+
+  &.spectrum-HelpText--neutral {
+    .spectrum-HelpText-text {
+      color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+    }
+
+    .spectrum-HelpText-validationIcon {
+      color: var(--highcontrast-helptext-icon-color-default, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
+    }
+  }
+
+  &.spectrum-HelpText--negative {
+    .spectrum-HelpText-text {
+      color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+    }
+
+    .spectrum-HelpText-validationIcon {
+      color: var(--highcontrast-helptext-icon-color-default, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-HelpText-text {
+      color: var(--highcontrast-helptext-content-color-default, var(--mod-helptext-content-color-default, var(--spectrum-helptext-content-color-default)));
+    }
+
+    .spectrum-HelpText-validationIcon {
+      color: var(--highcontrast-helptext-icon-color-default, var(--mod-helptext-icon-color-default, var(--spectrum-helptext-icon-color-default)));
+    }
   }
 }
