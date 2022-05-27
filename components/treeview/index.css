@@ -157,7 +157,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-TreeView--standalone {
+.spectrum-TreeView--detached {
   .spectrum-TreeView-itemLink {
     &:before {
       border-radius: var(--spectrum-treeview-item-border-radius);
