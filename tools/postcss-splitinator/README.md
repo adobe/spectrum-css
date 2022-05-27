@@ -31,7 +31,7 @@ Whether to avoid including selectors that use the flat variables in the output.
 This plugin turns this:
 
 ```css
-@container(--system: standard) {
+@container(--system: spectrum) {
   .component {
     --background-color: blue;
   }
