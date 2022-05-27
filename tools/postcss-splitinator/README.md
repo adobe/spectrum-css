@@ -66,8 +66,8 @@ Into this:
 }
 
 .spectrum--express {
-  --system-component-background-color: blue;
-  --system-component-selected-background-color: darkblue;
+  --system-component-background-color: purple;
+  --system-component-selected-background-color: darkpurple;
 }
 
 .component {
