@@ -21,5 +21,7 @@
 
   --spectrum-treeview-emphasized-text-color: var(--spectrum-global-dimension-font-size-900);
   --spectrum-treeview-item-emphasized-border-color-selected: transparent;
-  --spectrum-treeview-item-emphasized-background-color-selected: var(--spectrum-alias-highlight-hover);
+  /* --spectrum-treeview-item-emphasized-background-color-selected: var(--spectrum-alias-highlight-hover); */
+  --spectrum-treeview-item-emphasized-background-color-selected: rgba(0, 0, 0, 0.06);
+  --spectrum-treeview-item-corner-radius: var(--spectrum-alias-border-radius-regular);
 }
