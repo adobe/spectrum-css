@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/searchwithin",
-  "version": "3.4.15",
+  "version": "3.4.16",
   "description": "The Spectrum CSS searchwithin component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -16,15 +16,15 @@
     "build": "gulp"
   },
   "dependencies": {
-    "@spectrum-css/clearbutton": "^1.2.10",
-    "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/picker": "^1.2.7",
-    "@spectrum-css/textfield": "^3.2.2",
+    "@spectrum-css/clearbutton": "^1.2.11",
+    "@spectrum-css/icon": "^3.0.22",
+    "@spectrum-css/picker": "^1.2.8",
+    "@spectrum-css/textfield": "^3.2.3",
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
     "@spectrum-css/clearbutton": "1.0.0",
-    "@spectrum-css/component-builder": "^3.1.1",
+    "@spectrum-css/component-builder": "^3.1.2",
     "@spectrum-css/icon": "^3.0.1",
     "@spectrum-css/picker": "^1.0.1",
     "@spectrum-css/textfield": "^3.0.1",
