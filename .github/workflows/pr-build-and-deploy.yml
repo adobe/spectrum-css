@@ -1,0 +1,27 @@
+name: Build & Deploy Pull Requests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Use Node Active LTS version
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/gallium
+      - run: yarn
+      - run: yarn build
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=dist
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]
