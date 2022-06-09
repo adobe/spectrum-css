@@ -100,6 +100,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-TreeView-itemLabel {
+  font-size: var(--spectrum-treeview-item-text-font-size);
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
