@@ -67,7 +67,27 @@ governing permissions and limitations under the License.
     &.is-selected {
       > .spectrum-TreeView-itemLink {
         &:before {
-          background-color: var(--spectrum-treeview-item-emphasized-background-color-selected);
+          background-color: var(--spectrum-treeview-item-background-color-selected);
+          border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
+        }
+
+        &:focus-ring {
+          &:before {
+            background-color: var(--spectrum-treeview-item-background-color-selected);
+            border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
+          }
+        }
+      }
+    }
+  }
+}
+
+.spectrum-TreeView--detached {
+  .spectrum-TreeView-item {
+     &.is-selected {
+      > .spectrum-TreeView-itemLink {
+        &:before {
+          background-color: var(--spectrum-treeview-m-item-background-color-key-focus);
           border-color: transparent;
         }
 
@@ -80,25 +100,6 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-/* .spectrum-TreeView--quiet {
-  .spectrum-TreeView-item {
-     &.is-selected {
-      > .spectrum-TreeView-itemLink {
-        &:before {
-          background-color: var(--spectrum-treeview-item-background-color-quiet-selected);
-          border-color: transparent;
-        }
-
-        &:focus-ring {
-          &:before {
-            border-color: var(--spectrum-treeview-m-item-border-color-key-focus);
-          }
-        }
-      }
-    }
-  }
-} */
 
 .spectrum-TreeView-itemIcon {
   color: var(--spectrum-treeview-item-icon-color);

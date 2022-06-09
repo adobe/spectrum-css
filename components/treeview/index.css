@@ -171,6 +171,18 @@ governing permissions and limitations under the License.
   }
 }
 
+.spectrum-TreeView--emphasized {
+  .spectrum-TreeView-item {
+    &.is-selected {
+      > .spectrum-TreeView-itemLink:not(:focus-ring) {
+        &:before {
+          border-width: var(--spectrum-treeview-item-border-size-selected);
+        }
+      }
+    }
+  }
+}
+
 .spectrum-TreeView--thumbnail {
   .spectrum-TreeView-itemThumbnail {
     margin-inline-end: var(--spectrum-treeview-s-item-icon-gap);
