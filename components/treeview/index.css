@@ -103,6 +103,7 @@ governing permissions and limitations under the License.
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
+  z-index: 2;
 }
 
 .spectrum-TreeView-itemLink {
@@ -129,6 +130,8 @@ governing permissions and limitations under the License.
   .spectrum-TreeView-itemIcon {
     vertical-align: top;
     margin-inline-end: var(--spectrum-treeview-s-item-icon-gap);
+    position: relative;
+    z-index: 2;
   }
 
   &:before {
@@ -136,6 +139,7 @@ governing permissions and limitations under the License.
 
 
     position: absolute;
+    z-index: 1;
     inset-inline-start: var(--spectrum-treeview-item-border-size);
     inset-inline-end: 0;
 
@@ -169,6 +173,8 @@ governing permissions and limitations under the License.
 .spectrum-TreeView--thumbnail {
   .spectrum-TreeView-itemThumbnail {
     margin-inline-end: var(--spectrum-treeview-s-item-icon-gap);
+    position: relative;
+    z-index: 2;
   }
   .spectrum-TreeView-itemLink {
     box-sizing: content-box;
