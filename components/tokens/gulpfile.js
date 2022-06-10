@@ -24,10 +24,17 @@ function concatIndex() {
     'dist/css/*.css',
     'dist/css/spectrum/*.css',
     'dist/css/express/*.css',
-    'custom.css'
+    'custom-spectrum/*.css',
+    'custom-express/*.css'
   ])
     .pipe(concat('index.css'))
     .pipe(gulp.dest('dist/'));
+}
+
+function buildCustoms() {
+  buildCustomSpectrum = () => gulp.src('custom-spectrum/*.css').pipe(gulp.dest('dist/css/spectrum/'));
+  buildCustomExpress = () => gulp.src('custom-express/*.css').pipe(gulp.dest('dist/css/express'));
+  return buildCustomSpectrum() && buildCustomExpress();
 }
 
 function styleDictionary(cb) {
@@ -39,5 +46,6 @@ exports.clean = clean;
 exports.build = exports.buildLite = exports.buildMedium = exports.default = gulp.series(
   clean,
   styleDictionary,
-  concatIndex
+  concatIndex,
+  buildCustoms
 );

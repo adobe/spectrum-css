@@ -15,19 +15,3 @@ governing permissions and limitations under the License.
 .spectrum {
   --spectrum-animation-duration-100: 130ms;
 }
-
-.spectrum--medium {
-  /* edge-to-visual-only is used for icon-only buttons */
-  --spectrum-edge-to-visual-only-75: 4px;
-  --spectrum-edge-to-visual-only-100: 7px;
-  --spectrum-edge-to-visual-only-200: 10px;
-  --spectrum-edge-to-visual-only-300: 13px;
-}
-
-.spectrum--large {
-  /* edge-to-visual-only is used for icon-only buttons */
-  --spectrum-edge-to-visual-only-75: 5px;
-  --spectrum-edge-to-visual-only-100: 9px;
-  --spectrum-edge-to-visual-only-200: 13px;
-  --spectrum-edge-to-visual-only-300: 16px;
-}
