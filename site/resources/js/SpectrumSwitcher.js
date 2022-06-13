@@ -54,7 +54,6 @@ SpectrumSwitcher.Scales = [
 ];
 
 SpectrumSwitcher.ColorStops = [
-  'lightest',
   'light',
   'dark',
   'darkest'
@@ -76,10 +75,9 @@ SpectrumSwitcher.VarsVersionKeys = {
 };
 
 SpectrumSwitcher.ThemeKeys = {
-  '1': 'lightest',
-  '2': 'light',
-  '3': 'dark',
-  '4': 'darkest',
+  '1': 'light',
+  '2': 'dark',
+  '3': 'darkest',
 };
 
 SpectrumSwitcher.ScaleKeys = {
