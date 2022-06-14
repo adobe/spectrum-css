@@ -51,7 +51,7 @@ a.spectrum-CloseButton {
 
   &:focus-ring {
     /* kill the default ring */
-    box-shadow: none !important;
+    box-shadow: none;
 
     &:after {
       box-shadow: 0 0 0 var(--spectrum-closebutton-focus-ring-size) var(--spectrum-closebutton-focus-ring-color);

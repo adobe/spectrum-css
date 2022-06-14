@@ -137,7 +137,7 @@ governing permissions and limitations under the License.
 
   &:focus-ring {
     /* kill the default ring */
-    box-shadow: none !important;
+    box-shadow: none;
 
     &:after {
       box-shadow: 0 0 0 var(--spectrum-picker-focus-ring-size) var(--spectrum-picker-focus-ring-color);
