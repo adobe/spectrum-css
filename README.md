@@ -94,9 +94,9 @@ Then you can use components by copy/pasting their code from [the documentation](
 
 With the magic of CSS custom properties, you can infinitely nest different color stops and themes, [as illustrated here](https://codepen.io/lazd/pen/axXMRL).
 
-### Customizing components
+### Modifying components
 
-You can override variables and customize Spectrum CSS' look and feel by re-defining the custom properties in context. Look for the **Custom Property API** section in each component to determine which custom properties you can override. See [ActionButton for a complete example](https://opensource.adobe.com/spectrum-css/actionbutton.html#customized).
+You can override variables and modify Spectrum CSS' look and feel by re-defining the custom properties in context. Look for the **Custom Property API** section in each component to determine which custom properties you can override. See [ActionButton for a complete example](https://opensource.adobe.com/spectrum-css/actionbutton.html#modified).
 
 ### Importing UI icons
 

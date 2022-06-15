@@ -180,10 +180,10 @@ governing permissions and limitations under the License.
 
         --spectrum-actionbutton-border-color-disabled: transparent;
 
-        --spectrum-actionbutton-content-color-default: var(--custom-actionbutton-static-content-color, var(--spectrum-white));
-        --spectrum-actionbutton-content-color-hover: var(--custom-actionbutton-static-content-color, var(--spectrum-white));
-        --spectrum-actionbutton-content-color-down: var(--custom-actionbutton-static-content-color, var(--spectrum-white));
-        --spectrum-actionbutton-content-color-focus: var(--custom-actionbutton-static-content-color, var(--spectrum-white));
+        --spectrum-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+        --spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+        --spectrum-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+        --spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
 
         --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
       }
@@ -217,10 +217,10 @@ governing permissions and limitations under the License.
         --spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-900);
         --spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-900);
 
-        --spectrum-actionbutton-content-color-default: var(--custom-actionbutton-static-content-color, var(--spectrum-black));
-        --spectrum-actionbutton-content-color-hover: var(--custom-actionbutton-static-content-color, var(--spectrum-black));
-        --spectrum-actionbutton-content-color-down: var(--custom-actionbutton-static-content-color, var(--spectrum-black));
-        --spectrum-actionbutton-content-color-focus: var(--custom-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
 
         --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
         --spectrum-actionbutton-border-color-disabled: transparent;
@@ -319,43 +319,43 @@ governing permissions and limitations under the License.
   @inherit: %spectrum-BaseButton;
   position: relative;
 
-  min-inline-size: var(--custom-actionbutton-min-width, var(--spectrum-actionbutton-min-width));
-  height: var(--custom-actionbutton-height, var(--spectrum-actionbutton-height));
+  min-inline-size: var(--mod-actionbutton-min-width, var(--spectrum-actionbutton-min-width));
+  height: var(--mod-actionbutton-height, var(--spectrum-actionbutton-height));
 
-  border-radius: var(--custom-actionbutton-border-radius, var(--spectrum-actionbutton-border-radius));
-  border-width: var(--custom-actionbutton-border-width, var(--spectrum-actionbutton-border-width));
+  border-radius: var(--mod-actionbutton-border-radius, var(--spectrum-actionbutton-border-radius));
+  border-width: var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width));
 
   /* Start with text-only padding */
-  padding-inline-start: var(--custom-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text));
-  padding-inline-end: var(--custom-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text));
+  padding-inline-start: var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text));
+  padding-inline-end: var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text));
 
-  background-color: var(--highcontrast-actionbutton-background-color-default, var(--custom-actionbutton-background-color-default, var(--spectrum-actionbutton-background-color-default)));
-  border-color: var(--highcontrast-actionbutton-border-color-default, var(--custom-actionbutton-border-color-default, var(--spectrum-actionbutton-border-color-default)));
-  color: var(--highcontrast-actionbutton-content-color-default, var(--custom-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default)));
+  background-color: var(--highcontrast-actionbutton-background-color-default, var(--mod-actionbutton-background-color-default, var(--spectrum-actionbutton-background-color-default)));
+  border-color: var(--highcontrast-actionbutton-border-color-default, var(--mod-actionbutton-border-color-default, var(--spectrum-actionbutton-border-color-default)));
+  color: var(--highcontrast-actionbutton-content-color-default, var(--mod-actionbutton-content-color-default, var(--spectrum-actionbutton-content-color-default)));
 
   &:hover {
-    background-color: var(--highcontrast-actionbutton-background-color-hover, var(--custom-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
-    border-color: var(--highcontrast-actionbutton-border-color-hover, var(--custom-actionbutton-border-color-hover, var(--spectrum-actionbutton-border-color-hover)));
-    color: var(--highcontrast-actionbutton-content-color-hover, var(--custom-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover)));
+    background-color: var(--highcontrast-actionbutton-background-color-hover, var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover)));
+    border-color: var(--highcontrast-actionbutton-border-color-hover, var(--mod-actionbutton-border-color-hover, var(--spectrum-actionbutton-border-color-hover)));
+    color: var(--highcontrast-actionbutton-content-color-hover, var(--mod-actionbutton-content-color-hover, var(--spectrum-actionbutton-content-color-hover)));
   }
 
   &:focus-ring {
-    background-color: var(--highcontrast-actionbutton-background-color-focus, var(--custom-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
-    border-color: var(--highcontrast-actionbutton-border-color-focus, var(--custom-actionbutton-border-color-focus, var(--spectrum-actionbutton-border-color-focus)));
-    color: var(--highcontrast-actionbutton-content-color-focus, var(--custom-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
+    background-color: var(--highcontrast-actionbutton-background-color-focus, var(--mod-actionbutton-background-color-focus, var(--spectrum-actionbutton-background-color-focus)));
+    border-color: var(--highcontrast-actionbutton-border-color-focus, var(--mod-actionbutton-border-color-focus, var(--spectrum-actionbutton-border-color-focus)));
+    color: var(--highcontrast-actionbutton-content-color-focus, var(--mod-actionbutton-content-color-focus, var(--spectrum-actionbutton-content-color-focus)));
   }
 
   &:active {
-    background-color: var(--highcontrast-actionbutton-background-color-down, var(--custom-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down)));
-    border-color: var(--highcontrast-actionbutton-border-color-down, var(--custom-actionbutton-border-color-down, var(--spectrum-actionbutton-border-color-down)));
-    color: var(--highcontrast-actionbutton-content-color-down, var(--custom-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down)));
+    background-color: var(--highcontrast-actionbutton-background-color-down, var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down)));
+    border-color: var(--highcontrast-actionbutton-border-color-down, var(--mod-actionbutton-border-color-down, var(--spectrum-actionbutton-border-color-down)));
+    color: var(--highcontrast-actionbutton-content-color-down, var(--mod-actionbutton-content-color-down, var(--spectrum-actionbutton-content-color-down)));
   }
 
   &:disabled,
   &.is-disabled {
-    background-color: var(--highcontrast-actionbutton-background-color-disabled, var(--custom-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled)));
-    border-color: var(--highcontrast-actionbutton-border-color-disabled, var(--custom-actionbutton-border-color-disabled, var(--spectrum-actionbutton-border-color-disabled)));
-    color: var(--highcontrast-actionbutton-content-color-disabled, var(--custom-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled)));
+    background-color: var(--highcontrast-actionbutton-background-color-disabled, var(--mod-actionbutton-background-color-disabled, var(--spectrum-actionbutton-background-color-disabled)));
+    border-color: var(--highcontrast-actionbutton-border-color-disabled, var(--mod-actionbutton-border-color-disabled, var(--spectrum-actionbutton-border-color-disabled)));
+    color: var(--highcontrast-actionbutton-content-color-disabled, var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled)));
   }
 }
 
@@ -364,33 +364,33 @@ a.spectrum-ActionButton {
 }
 
 .spectrum-ActionButton-icon {
-  width: var(--custom-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
-  height: var(--custom-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
+  width: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
+  height: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
 
   color: inherit;
 
   & + .spectrum-ActionButton-label {
     /* Have gap on on the left */
-    padding-inline-start: var(--custom-actionbutton-text-to-visual, var(--spectrum-actionbutton-text-to-visual));
+    padding-inline-start: var(--mod-actionbutton-text-to-visual, var(--spectrum-actionbutton-text-to-visual));
 
     /* Have no padding on the right (it's built into the element) */
     padding-inline-end: 0;
   }
 
-  padding-inline-start: calc(-1 * (var(--custom-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--custom-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual))));
+  padding-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual))));
 }
 
 .spectrum-ActionButton-hold + .spectrum-ActionButton-icon,
 .spectrum-ActionButton-icon:only-child {
   /* Use icon-only padding, subtracted from the default text-only padding */
-  margin-inline-start: calc(-1 * (var(--custom-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--custom-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only))));
-  margin-inline-end: calc(-1 * (var(--custom-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--custom-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only))));
+  margin-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only))));
+  margin-inline-end: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only))));
 }
 
 .spectrum-ActionButton-label {
   @inherit: %spectrum-ButtonLabel;
 
-  font-size: var(--custom-actionbutton-font-size, var(--spectrum-actionbutton-font-size));
+  font-size: var(--mod-actionbutton-font-size, var(--spectrum-actionbutton-font-size));
   white-space: nowrap;
   color: inherit;
 
@@ -400,8 +400,8 @@ a.spectrum-ActionButton {
 
 .spectrum-ActionButton-hold {
   position: absolute;
-  inset-inline-end: calc(var(--custom-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--custom-actionbutton-border-width, var(--spectrum-actionbutton-border-width)));
-  inset-block-end: calc(var(--custom-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--custom-actionbutton-border-width, var(--spectrum-actionbutton-border-width)));
+  inset-inline-end: calc(var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width)));
+  inset-block-end: calc(var(--mod-actionbutton-edge-to-hold-icon, var(--spectrum-actionbutton-edge-to-hold-icon)) - var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width)));
 
   color: inherit;
 
@@ -410,17 +410,17 @@ a.spectrum-ActionButton {
 
 /* special cases for focus-ring */
 .spectrum-ActionButton {
-  transition: border-color var(--custom-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
+  transition: border-color var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
 
   &:after {
     position: absolute;
     inset: 0;
 
-    margin: calc((var(--custom-actionbutton-focus-ring-gap, var(--spectrum-actionbutton-focus-ring-gap)) + var(--custom-actionbutton-border-width, var(--spectrum-actionbutton-border-width))) * -1);
+    margin: calc((var(--mod-actionbutton-focus-ring-gap, var(--spectrum-actionbutton-focus-ring-gap)) + var(--mod-actionbutton-border-width, var(--spectrum-actionbutton-border-width))) * -1);
 
-    border-radius: var(--custom-actionbutton-focus-ring-border-radius, var(--spectrum-actionbutton-focus-ring-border-radius));
+    border-radius: var(--mod-actionbutton-focus-ring-border-radius, var(--spectrum-actionbutton-focus-ring-border-radius));
 
-    transition: box-shadow var(--custom-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
+    transition: box-shadow var(--mod-actionbutton-animation-duration, var(--spectrum-actionbutton-animation-duration)) ease-in-out;
 
     pointer-events: none;
     content: '';
@@ -430,7 +430,7 @@ a.spectrum-ActionButton {
     box-shadow: none !important;
 
     &:after {
-      box-shadow: 0 0 0 var(--custom-actionbutton-focus-ring-thickness, var(--spectrum-actionbutton-focus-ring-thickness)) var(--highcontrast-actionbutton-focus-ring-color, var(--custom-actionbutton-focus-ring-color, var(--spectrum-actionbutton-focus-ring-color)));
+      box-shadow: 0 0 0 var(--mod-actionbutton-focus-ring-thickness, var(--spectrum-actionbutton-focus-ring-thickness)) var(--highcontrast-actionbutton-focus-ring-color, var(--mod-actionbutton-focus-ring-color, var(--spectrum-actionbutton-focus-ring-color)));
     }
   }
 }

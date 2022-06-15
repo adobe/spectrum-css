@@ -11,7 +11,7 @@ On the `<html>` element, start with `.spectrum`, add in `.spectrum--light`, then
 
 ## Overrides and additions
 
-Custom overrides and additions to core tokens can be added to `custom.css`.
+Overrides and additions to core tokens can be added to `custom.css`.
 
 Ensure that you correctly scope any added tokens:
 
