@@ -11,7 +11,18 @@ governing permissions and limitations under the License.
 */
 
 /* This file contains overrides and additions to core tokens */
+.spectrum {
+  --system: spectrum;
+}
 
 .spectrum {
   --spectrum-animation-duration-100: 130ms;
+
+  --spectrum-font-family-base: adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-font-family-serif: adobe-clean-serif, 'Source Serif Pro', Georgia, serif;
+  --spectrum-font-family-code: 'Source Code Pro', Monaco, monospace;
+
+  --spectrum-line-height-large: 1.7;
+  --spectrum-line-height-medium: 1.5;
+  --spectrum-line-height-small: 1.3;
 }

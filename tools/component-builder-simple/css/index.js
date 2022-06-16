@@ -169,7 +169,7 @@ function checkCSS(glob) {
       // Make sure the component doesn't use any undefined tokens
       let errors = [];
       usedTokens.forEach(tokenName => {
-        if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--custom') && !tokenName.startsWith('--highcontrast')) {
+        if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--mod') && !tokenName.startsWith('--highcontrast')) {
           errors.push(`${pkg.name} uses undefined token ${tokenName}`);
         }
       });
