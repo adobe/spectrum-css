@@ -1,0 +1,43 @@
+{
+  "name": "@spectrum-css/component-builder-simple",
+  "version": "1.0.0-beta.0",
+  "description": "The Spectrum CSS simple component builder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "tools/component-builder"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@spectrum-css/tokens": "^1.0.0-beta"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.5.3",
+    "del": "^5.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-postcss": "^7.0.0",
+    "postcss": "^7.0.36",
+    "postcss-calc": "^6.0.0",
+    "postcss-splitinator": "^1.0.0-beta",
+    "postcss-combininator": "^1.0.0-beta",
+    "postcss-discard-empty": "^4.0.1",
+    "postcss-dropdupedvars": "^1.1.2",
+    "postcss-dropunusedvars": "^1.2.1",
+    "postcss-focus-ring": "^1.0.0",
+    "postcss-import": "^10.0.0",
+    "postcss-inherit": "^4.0.3",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-selector-parser": "^6.0.2",
+    "postcss-values-parser": "^3.1.1",
+    "through2": "^3.0.1"
+  }
+}

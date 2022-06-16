@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../commons/basebutton.css";
+@import "../commons/basebutton-coretokens.css";
 
 .spectrum-ActionButton {
   --spectrum-actionbutton-animation-duration: var(--spectrum-animation-duration-100);
@@ -376,7 +376,6 @@ a.spectrum-ActionButton {
     /* Have no padding on the right (it's built into the element) */
     padding-inline-end: 0;
   }
-
   padding-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual))));
 }
 
