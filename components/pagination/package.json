@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/pagination",
-  "version": "5.0.13",
+  "version": "5.0.14",
   "description": "The Spectrum CSS pagination component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^1.1.14",
-    "@spectrum-css/button": "^6.0.12",
-    "@spectrum-css/component-builder": "^3.1.2",
-    "@spectrum-css/icon": "^3.0.22",
-    "@spectrum-css/splitbutton": "^5.0.12",
-    "@spectrum-css/textfield": "^3.2.3",
+    "@spectrum-css/button": "^6.0.13",
+    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/icon": "^3.0.23",
+    "@spectrum-css/splitbutton": "^5.0.13",
+    "@spectrum-css/textfield": "^3.2.4",
     "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
   },

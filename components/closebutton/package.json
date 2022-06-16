@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/closebutton",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "The Spectrum CSS close button component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -19,8 +19,8 @@
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.1.2",
-    "@spectrum-css/icon": "^3.0.22",
+    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/icon": "^3.0.23",
     "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
   },

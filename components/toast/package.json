@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/toast",
-  "version": "7.0.9",
+  "version": "7.0.10",
   "description": "The Spectrum CSS toast component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -22,10 +22,10 @@
     "@spectrum-css/vars": "^8.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^6.0.12",
-    "@spectrum-css/closebutton": "^1.2.11",
-    "@spectrum-css/component-builder": "^3.1.2",
-    "@spectrum-css/icon": "^3.0.22",
+    "@spectrum-css/button": "^6.0.13",
+    "@spectrum-css/closebutton": "^1.2.12",
+    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/icon": "^3.0.23",
     "@spectrum-css/vars": "^8.0.0",
     "gulp": "^4.0.0"
   },

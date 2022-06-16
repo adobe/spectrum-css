@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.11"></a>
+## 1.2.11
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.10...@spectrum-css/logicbutton@1.2.11)
+
+**Note:** Version bump only for package @spectrum-css/logicbutton
+
+
+
+
+
 <a name="1.2.10"></a>
 ## 1.2.10
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.9...@spectrum-css/logicbutton@1.2.10)

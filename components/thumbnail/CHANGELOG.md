@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.17"></a>
+## 2.0.17
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.16...@spectrum-css/thumbnail@2.0.17)
+
+**Note:** Version bump only for package @spectrum-css/thumbnail
+
+
+
+
+
 <a name="2.0.16"></a>
 ## 2.0.16
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/thumbnail@2.0.15...@spectrum-css/thumbnail@2.0.16)

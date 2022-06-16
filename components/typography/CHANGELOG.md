@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.20"></a>
+## 4.0.20
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.19...@spectrum-css/typography@4.0.20)
+
+**Note:** Version bump only for package @spectrum-css/typography
+
+
+
+
+
 <a name="4.0.19"></a>
 ## 4.0.19
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.18...@spectrum-css/typography@4.0.19)

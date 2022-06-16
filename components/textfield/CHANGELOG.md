@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.4"></a>
+## 3.2.4
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.3...@spectrum-css/textfield@3.2.4)
+
+**Note:** Version bump only for package @spectrum-css/textfield
+
+
+
+
+
 <a name="3.2.3"></a>
 ## 3.2.3
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@3.2.2...@spectrum-css/textfield@3.2.3)

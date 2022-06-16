@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.14...@spectrum-css/actionbutton@2.0.0)
+
+### ✨ Features
+
+* split things out, combine things ([3a817bc](https://github.com/adobe/spectrum-css/commit/3a817bc))
+
+
+### 🐛 Bug fixes
+
+* removed theme styling from index.css ([fc3af46](https://github.com/adobe/spectrum-css/commit/fc3af46))
+* tweaks after merging in component-builder-simple ([ec8345a](https://github.com/adobe/spectrum-css/commit/ec8345a))
+
+
+* feat!: implement ActionButton core tokens (#1430) ([e6337d6](https://github.com/adobe/spectrum-css/commit/e6337d6)), closes [#1430](https://github.com/adobe/spectrum-css/issues/1430)
+* feat!: implement ActionButton core tokens (#1430) ([774d09e](https://github.com/adobe/spectrum-css/commit/774d09e)), closes [#1430](https://github.com/adobe/spectrum-css/issues/1430)
+
+
+### 🛑 BREAKING CHANGES
+
+* .spectrum-ActionButton-icon is now required on icons
+* .spectrum--express must be added to support Express ActionButton
+* .spectrum-ActionButton-icon is now required on icons
+* .spectrum--express must be added to support Express ActionButton
+
+
+
+
+
 <a name="1.1.14"></a>
 ## 1.1.14
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.13...@spectrum-css/actionbutton@1.1.14)

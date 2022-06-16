@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# 5.0.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.22...@spectrum-css/card@5.0.0)
+
+* feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
+
+
+### 🛑 BREAKING CHANGES
+
+* ActionButton changes icon markup
+
+
+
+
+
 <a name="4.0.22"></a>
 ## 4.0.22
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.21...@spectrum-css/card@4.0.22)

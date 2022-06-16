@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.23"></a>
+## 3.0.23
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.21...@spectrum-css/modal@3.0.23)
+
+### 🐛 Bug fixes
+
+* **modal:** prefer correct CSS value for height property ([8d152ef](https://github.com/adobe/spectrum-css/commit/8d152ef))
+
+
+
+
+
 <a name="3.0.22"></a>
 ## 3.0.22
 🗓 2022-06-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.21...@spectrum-css/modal@3.0.22)

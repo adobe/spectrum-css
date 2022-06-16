@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.0"></a>
+# 3.3.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.2.0...@spectrum-css/bundle-builder@3.3.0)
+
+### ✨ Features
+
+* add core tokens ([d0a07a1](https://github.com/adobe/spectrum-css/commit/d0a07a1))
+* add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
+
+
+
+
+
 <a name="3.2.0"></a>
 # 3.2.0
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@3.0.4...@spectrum-css/bundle-builder@3.2.0)

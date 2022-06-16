@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# 2.0.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.26...@spectrum-css/actiongroup@2.0.0)
+
+* feat!: updating to latest ActionButton with new markup ([3eef405](https://github.com/adobe/spectrum-css/commit/3eef405))
+
+
+### 🛑 BREAKING CHANGES
+
+* ActionButton changes icon markup
+
+
+
+
+
 <a name="1.0.26"></a>
 ## 1.0.26
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.25...@spectrum-css/actiongroup@1.0.26)

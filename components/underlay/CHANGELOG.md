@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.31"></a>
+## 2.0.31
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.30...@spectrum-css/underlay@2.0.31)
+
+**Note:** Version bump only for package @spectrum-css/underlay
+
+
+
+
+
 <a name="2.0.30"></a>
 ## 2.0.30
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.29...@spectrum-css/underlay@2.0.30)

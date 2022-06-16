@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.0"></a>
+# 3.2.0
+🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.1.2...@spectrum-css/component-builder@3.2.0)
+
+### ✨ Features
+
+* add core tokens ([f603e16](https://github.com/adobe/spectrum-css/commit/f603e16))
+* add core tokens ([d0a07a1](https://github.com/adobe/spectrum-css/commit/d0a07a1))
+* add simple component builder ([535126b](https://github.com/adobe/spectrum-css/commit/535126b))
+
+
+
+
+
 <a name="3.1.2"></a>
 ## 3.1.2
 🗓 2022-06-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/component-builder@3.1.1...@spectrum-css/component-builder@3.1.2)
