@@ -3,6 +3,9 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/cards/
 sections:
   - name: Migration Guide
     description: |
+      ### New Action Button markup
+      Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
+      
       ### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
       ### Use Spectrum Heading for title and Spectrum Detail for subtitle
@@ -22,7 +25,7 @@ examples:
               <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
               <div class="spectrum-Card-actionButton">
                 <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-More" />
                   </svg>
                 </button>
@@ -63,7 +66,7 @@ examples:
                 <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeXS">Card Title</div>
                 <div class="spectrum-Card-actionButton">
                   <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                    <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-icon-18-More" />
                     </svg>
                   </button>
@@ -109,7 +112,7 @@ examples:
               <div class="spectrum-Card-actionButton">
                 <div style="display: inline-block;">
                   <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                    <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                    <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
                       <use xlink:href="#spectrum-icon-18-More" />
                     </svg>
                   </button>
@@ -286,7 +289,7 @@ examples:
           <div class="spectrum-QuickActions spectrum-Card-actions">
             <div style="display: inline-block;">
               <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
                   <use xlink:href="#spectrum-icon-18-More" />
                 </svg>
               </button>
@@ -329,7 +332,7 @@ examples:
             <div class="spectrum-QuickActions spectrum-Card-actions">
               <div style="display: inline-block;">
                 <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-                  <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
                     <use xlink:href="#spectrum-icon-18-More" />
                   </svg>
                 </button>

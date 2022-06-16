@@ -3,6 +3,9 @@ description: Simply an action button with a Popover. Note that the `is-selected`
 sections:
 - name: Migration Guide
   description: |
+    ### New Action Button markup
+    Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
+
     ### Change workflow icon size to medium
     Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 examples:
@@ -10,7 +13,7 @@ examples:
     name: Standard
     markup: |
       <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-More" />
         </svg>
         <span class="spectrum-ActionButton-label">More Actions</span>
@@ -37,7 +40,7 @@ examples:
       <div class="dummy-spacing"></div>
 
       <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-More" />
         </svg>
       </button>
@@ -63,7 +66,7 @@ examples:
       <div class="dummy-spacing"></div>
 
       <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-        <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-More" />
         </svg>
         <span class="spectrum-ActionButton-label">More Actions</span>
