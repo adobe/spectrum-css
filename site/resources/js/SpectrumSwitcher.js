@@ -145,6 +145,14 @@ Object.defineProperty(SpectrumSwitcher.prototype, 'varsVersion', {
         sheet.setAttribute('href', sheet.href.replaceAll(expressName, defaultName));
       }
     });
+
+    if (varsVersion === 'express') {
+      document.documentElement.classList.add('spectrum--express');
+    }
+    else {
+      document.documentElement.classList.remove('spectrum--express');
+    }
+
     this._varsVersion = varsVersion;
   },
   get: function() {
