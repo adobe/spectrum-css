@@ -1,5 +1,10 @@
 name: Breadcrumbs
 SpectrumSiteSlug: https://spectrum.adobe.com/page/breadcrumbs/
+sections:
+- name: Migration Guide
+  description: |
+    ### New Action Button markup
+    Action Button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action Button.
 examples:
   - id: breadcrumb
     name: Standard
@@ -55,7 +60,7 @@ examples:
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeL">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
@@ -94,7 +99,7 @@ examples:
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
@@ -167,7 +172,7 @@ examples:
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeS spectrum-Breadcrumbs--multiline">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
@@ -206,7 +211,7 @@ examples:
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
@@ -256,7 +261,7 @@ examples:
         <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--sizeM">
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
@@ -295,7 +300,7 @@ examples:
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
@@ -347,7 +352,7 @@ examples:
           </li>
           <li class="spectrum-Breadcrumbs-item">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" disabled>
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-Breadcrumbs-folder" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-FolderOpen" />
               </svg>
             </button>
