@@ -17,18 +17,18 @@
   },
   "peerDependencies": {
     "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/tokens": "^1.0.1"
   },
   "devDependencies": {
     "@spectrum-css/checkbox": "^3.1.3",
-    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/fieldgroup": "^3.1.4",
     "@spectrum-css/icon": "^3.0.23",
     "@spectrum-css/picker": "^1.2.12",
     "@spectrum-css/radio": "^3.0.24",
     "@spectrum-css/stepper": "^3.0.26",
     "@spectrum-css/textfield": "^3.2.4",
-    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/tokens": "^1.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

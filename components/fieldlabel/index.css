@@ -10,34 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-fieldlabel.css";
-
 .spectrum-FieldLabel--sizeS {
-  @remapvars {
-    find: --spectrum-fieldlabel-s-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-font-size: var(--font-size-75);
 }
 
 .spectrum-FieldLabel--sizeM {
-  @remapvars {
-    find: --spectrum-fieldlabel-m-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-fieldlabel-font-size: var(--font-size-75);
 }
-
 .spectrum-FieldLabel--sizeL {
-  @remapvars {
-    find: --spectrum-fieldlabel-l-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-fieldlabel-font-size: var(--font-size-100);
 }
-
 .spectrum-FieldLabel--sizeXL {
-  @remapvars {
-    find: --spectrum-fieldlabel-xl-;
-    replace: --spectrum-fieldlabel-;
-  }
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-fieldlabel-font-size: var(--font-size-200);
 }
 
 .spectrum-FieldLabel {
@@ -45,11 +37,12 @@ governing permissions and limitations under the License.
 
   box-sizing: border-box;
 
-  padding-block: var(--spectrum-fieldlabel-padding-top) var(--spectrum-fieldlabel-padding-bottom);
+  /* padding-block: var(--spectrum-component-top-to-text-75) var(--spectrum-component-bottom-to-text-75); */
+  padding-block: var(--spectrum-fieldlabel-top-to-text) var(--spectrum-fieldlabel-bottom-to-text);
   padding-inline: 0;
 
   font-size: var(--spectrum-fieldlabel-text-size);
-  font-weight: var(--spectrum-fieldlabel-text-font-weight);
+  font-weight: var(--font-weight-400);
   line-height: var(--spectrum-fieldlabel-text-line-height);
 
   vertical-align: top;
