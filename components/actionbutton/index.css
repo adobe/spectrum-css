@@ -24,7 +24,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeS {
-  --spectrum-actionbutton-min-width: 10px;
+  --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-75) * 2) + var(--spectrum-workflow-icon-size-75));
   --spectrum-actionbutton-height: var(--spectrum-component-height-75);
 
   --spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-75);
@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeM {
-  --spectrum-actionbutton-min-width: 10px;
+  --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-100) * 2) + var(--spectrum-workflow-icon-size-100));
   --spectrum-actionbutton-height: var(--spectrum-component-height-100);
 
   --spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-100);
@@ -50,7 +50,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeL {
-  --spectrum-actionbutton-min-width: 10px;
+  --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-200) * 2) + var(--spectrum-workflow-icon-size-200));
   --spectrum-actionbutton-height: var(--spectrum-component-height-200);
 
   --spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-200);
@@ -63,7 +63,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeXL {
-  --spectrum-actionbutton-min-width: 10px;
+  --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-300) * 2) + var(--spectrum-workflow-icon-size-300));
   --spectrum-actionbutton-height: var(--spectrum-component-height-300);
 
   --spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-300);
