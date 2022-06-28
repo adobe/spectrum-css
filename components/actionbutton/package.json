@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/actionbutton",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The Spectrum CSS action button component",
   "license": "Apache-2.0",
   "main": "dist/index-vars.css",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@spectrum-css/component-builder-simple": "^1.0.0",
     "@spectrum-css/icon": "^3.0.23",
-    "@spectrum-css/tokens": "^1.0.0",
+    "@spectrum-css/tokens": "^1.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

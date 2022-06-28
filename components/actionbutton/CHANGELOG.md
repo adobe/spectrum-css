@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2022-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.0.0...@spectrum-css/actionbutton@2.0.1)
+
+### 🐛 Bug fixes
+
+* **actionbutton:** removes unsupported vars, uses new values ([1a351f3](https://github.com/adobe/spectrum-css/commit/1a351f3))
+* **actionbutton:** update to latest tokens pkg ([ccd2d65](https://github.com/adobe/spectrum-css/commit/ccd2d65))
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.14...@spectrum-css/actionbutton@2.0.0)
