@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,36 +10,20 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/components/spectrum-radio.css";
+.spectrum-spectrum-Radio--sizeS {
+  --spectrum-radio-height: var(--spectrum-component-height-75);
+}
 
-.spectrum-Radio {
-  @remapvars {
-    find: /--spectrum-radio-m(.*)/;
-    filter: color;
-    replace: --spectrum-radio$1;
-  }
+.spectrum-spectrum-Radio--sizeM {
+  --spectrum-radio-height: var(--spectrum-component-height-100);
+}
 
-  --spectrum-radio-radius: calc(var(--spectrum-radio-circle-diameter) / 2);
-  --spectrum-radio-border-width-checked: calc(
-    calc(var(--spectrum-radio-circle-diameter) / 2) -
-      calc(var(--spectrum-radio-circle-dot-size) / 2)
-  );
+.spectrum-spectrum-Radio--sizeL {
+  --spectrum-radio-height: var(--spectrum-component-height-200);
+}
 
-  --spectrum-radio-labelbelow-label-margin: var(
-      --spectrum-global-dimension-size-50
-    )
-    0 0 0;
-  --spectrum-radio-labelbelow-height: auto;
-
-  /* Hardcoded for wrapping study.
-  Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
-  --spectrum-radio-label-margin-top: var(--spectrum-global-dimension-size-75);
-
-  /* Fix for inconsistent line-height between browsers that would push the label 1px below the intended baseline */
-  /* more info: https://stackoverflow.com/questions/47700568/css-fonts-render-differently-in-firefox-and-chrome */
-  --spectrum-radio-label-line-height: 1.49;
+.spectrum-spectrum-Radio--sizeXL {
+  --spectrum-radio-height: var(--spectrum-component-height-300);
 }
 
 .spectrum-Radio {
@@ -87,42 +71,90 @@ governing permissions and limitations under the License.
 
   &:checked + .spectrum-Radio-button {
     &:before {
-      border-width: var(--spectrum-radio-border-width-checked);
+      border-width: var(--spectrum-radio-button-selection-indicator);
     }
   }
 
   &:focus-ring {
     + .spectrum-Radio-button {
       &:after {
-        margin: calc(var(--spectrum-alias-focus-ring-gap) * -1);
+        margin: calc(var(--spectrum-focus-ring-gap) * -1);
       }
     }
   }
 }
 
+.spectrum-Radio-label--sizeS {
+  --spectrum-text-to-control: var(--spectrum-text-to-control-75);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+
+  --spectrum-font-size: var(--spectrum-font-size-75);
+}
+
+.spectrum-Radio-label--sizeM {
+  --spectrum-text-to-control: var(--spectrum-text-to-control-100);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+
+  --spectrum-font-size: var(--spectrum-font-size-100);
+}
+
+.spectrum-Radio-label--sizeL {
+  --spectrum-text-to-control: var(--spectrum-text-to-control-200);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+
+  --spectrum-font-size: var(--spectrum-font-size-200);
+}
+
+.spectrum-Radio-label--sizeXL {
+  --spectrum-text-to-control: var(--spectrum-text-to-control-300);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-300);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+
+  --spectrum-font-size: var(--spectrum-font-size-300);
+}
+
 .spectrum-Radio-label {
   text-align: start;
-  margin-inline-start: var(--spectrum-radio-text-gap);
-  /* Hardcoded as no good way to calculate this */
-  margin-block-start: var(--spectrum-radio-label-margin-top);
+  margin-inline-start: var(--spectrum-text-to-control);
+  margin-block-start: var(--spectrum-radio-label-top-to-text);
+  margin-block-end: var(--spectrum-radio-label-bottom-to-text);
 
-  font-size: var(--spectrum-radio-text-size);
-  font-weight: var(--spectrum-radio-text-font-weight);
-  font-style: var(--spectrum-radio-text-font-style);
-  line-height: var(--spectrum-radio-text-line-height);
+  font-size: var(--spectrum-font-size);
+  /* font-weight: var(--spectrum-radio-text-font-weight); **** missing token resolves to 400 ****/
+  /* font-style: var(--spectrum-radio-text-font-style); **** missing token resolves to normal ****/
+  line-height: var(--spectrum-line-height-100);
 
-  transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: color var(--spectrum-animation-duration-100) ease-in-out;
+}
+
+.spectrum-Radio-button--sizeS {
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-small);
+}
+
+.spectrum-Radio-button--sizeM {
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
+}
+
+.spectrum-Radio-button--sizeL {
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-large);
+}
+
+.spectrum-Radio-button--sizeXL {
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-extra-large);
 }
 
 .spectrum-Radio-button {
   position: relative;
   box-sizing: border-box;
-  inline-size: var(--spectrum-radio-circle-diameter);
-  block-size: var(--spectrum-radio-circle-diameter);
+  inline-size: var(--spectrum-radio-button-control-size);
+  block-size: var(--spectrum-radio-button-control-size);
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
   margin: calc(
-      (var(--spectrum-radio-height) - var(--spectrum-radio-circle-diameter)) / 2
+      (var(--spectrum-radio-button-control-size) - var(--spectrum-border-width-200)) / 2
     )
     0;
 
@@ -135,15 +167,15 @@ governing permissions and limitations under the License.
     box-sizing: border-box;
     position: absolute;
 
-    width: var(--spectrum-radio-circle-diameter);
-    height: var(--spectrum-radio-circle-diameter);
+    width: var(--spectrum-radio-button-control-size);
+    height: var(--spectrum-radio-button-control-size);
 
-    border-radius: var(--spectrum-radio-radius);
-    border-width: var(--spectrum-radio-circle-border-size);
+    border-radius: var(--spectrum-corner-radius-100);
+    border-width: var(--spectrum-border-width-200);
     border-style: solid;
 
-    transition: border var(--spectrum-global-animation-duration-100) ease-in-out,
-      box-shadow var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: border var(--spectrum-animation-duration-100) ease-in-out,
+      box-shadow var(--spectrum-animation-duration-100) ease-in-out;
   }
 
   &:after {
@@ -155,10 +187,10 @@ governing permissions and limitations under the License.
     right: 0;
     bottom: 0;
     top: 0;
-    margin: var(--spectrum-alias-focus-ring-gap);
+    margin: var(--spectrum-focus-ring-gap);
 
-    transition: opacity var(--spectrum-global-animation-duration-100) ease-out,
-                margin var(--spectrum-global-animation-duration-100) ease-out;
+    transition: opacity var(--spectrum-animation-duration-100) ease-out,
+                margin var(--spectrum-animation-duration-100) ease-out;
   }
 }
 
@@ -166,7 +198,7 @@ governing permissions and limitations under the License.
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  block-size: var(--spectrum-radio-labelbelow-height);
+  block-size: auto;
 
   .spectrum-Radio-button {
     flex-shrink: 0;
@@ -175,6 +207,6 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Radio-label {
-    margin: var(--spectrum-radio-labelbelow-label-margin);
+    margin: var(--spectrum-spacing-75) 0 0;
   }
 }
