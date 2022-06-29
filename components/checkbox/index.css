@@ -18,30 +18,35 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-focus-ring-gap: var(--spectrum-focus-ring-gap);
   --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+  --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
 }
 
 .spectrum-Checkbox--sizeS {
   --spectrum-checkbox-height: var(--spectrum-component-height-75);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
+  --spectrum-checkbox-font-size: var(--spectrum-font-size-75);
 }
 
 .spectrum-Checkbox--sizeM {
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+  --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
 }
 
 .spectrum-Checkbox--sizeL {
   --spectrum-checkbox-height: var(--spectrum-component-height-200);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-200);
+  --spectrum-checkbox-font-size: var(--spectrum-font-size-200);
 }
 
 .spectrum-Checkbox--sizeXL {
   --spectrum-checkbox-height: var(--spectrum-component-height-300);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
+  --spectrum-checkbox-font-size: var(--spectrum-font-size-300);
 }
 
 .spectrum-Checkbox {
@@ -132,7 +137,7 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--spectrum-checkbox-text-to-control);
   /* margin-block-start: var(--spectrum-checkbox-text-padding-top); */
 
-  /* font-size: var(--spectrum-checkbox-text-size); */
+  font-size: var(--spectrum-checkbox-font-size);
   /* font-weight: var(--spectrum-checkbox-text-font-weight); */
   /* font-style: var(--spectrum-checkbox-text-font-style); */
   line-height: var(--spectrum-checkbox-line-height);
