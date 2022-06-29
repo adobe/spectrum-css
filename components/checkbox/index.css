@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox {
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
-  --spectrum-checkbox-control-border-width: var(--spectrum-border-width-200);
   --spectrum-checkbox-control-rounding: var(--spectrum-corner-radius-75);
+  --spectrum-checkbox-border-width: var(--spectrum-border-width-200);
   --spectrum-checkbox-focus-ring-gap: var(--spectrum-focus-ring-gap);
   --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
   --spectrum-checkbox-control-to-label-spacing: var(--spectrum-text-to-control-100);
@@ -164,7 +164,7 @@ governing permissions and limitations under the License.
     height: var(--spectrum-checkbox-control-size);
 
     border-radius: var(--spectrum-checkbox-control-rounding);
-    border-width: var(--spectrum-checkbox-control-border-width);
+    border-width: var(--spectrum-checkbox-border-width);
     border-style: solid;
 
     /* transition: border var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out; */
