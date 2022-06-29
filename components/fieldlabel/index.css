@@ -13,23 +13,23 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel--sizeS {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-75);
-  /* --spectrum-fieldlabel-font-size: var(--font-size-75);*/
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
 }
 
 .spectrum-FieldLabel--sizeM {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-75);
-  /* --spectrum-fieldlabel-font-size: var(--font-size-75);*/
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-75);
 }
 .spectrum-FieldLabel--sizeL {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-100);
-  /* --spectrum-fieldlabel-font-size: var(--font-size-100); */
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-100);
 }
 .spectrum-FieldLabel--sizeXL {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-200);
-  /* --spectrum-fieldlabel-font-size: var(--font-size-200); */
+  --spectrum-fieldlabel-font-size: var(--spectrum-font-size-200);
 }
 
 .spectrum-FieldLabel {
@@ -41,8 +41,8 @@ governing permissions and limitations under the License.
   padding-block: var(--spectrum-fieldlabel-top-to-text) var(--spectrum-fieldlabel-bottom-to-text);
   padding-inline: 0;
 
-  /* font-size: var(--spectrum-fieldlabel-text-size); */
-  /* font-weight: var(--font-weight-400);*/
+  font-size: var(--spectrum-fieldlabel-font-size);
+  font-weight: var(--spectrum-font-weight-regular);
   /* line-height: var(--spectrum-fieldlabel-text-line-height); */
 
   vertical-align: top;
