@@ -10,10 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* @import "../vars/css/scales/spectrum-large.css"; */
-/* @import "../vars/css/scales/spectrum-medium.css"; */
-/* @import "../vars/css/components/spectrum-checkbox.css"; */
-
 .spectrum-Checkbox {
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
 }
@@ -96,38 +92,6 @@ governing permissions and limitations under the License.
     }
   }
 }
-
-/* .spectrum-Checkbox--sizeS { */
-/*   @remapvars { */
-/*     find: /--spectrum-checkbox-s(.*)/; */
-/*     filter: color; */
-/*     replace: --spectrum-checkbox$1; */
-/*   } */
-/* } */
-
-/* .spectrum-Checkbox--sizeM { */
-/*   @remapvars { */
-/*     find: /--spectrum-checkbox-m(.*)/; */
-/*     filter: color; */
-/*     replace: --spectrum-checkbox$1; */
-/*   } */
-/* } */
-
-/* .spectrum-Checkbox--sizeL { */
-/*   @remapvars { */
-/*     find: /--spectrum-checkbox-l(.*)/; */
-/*     filter: color; */
-/*     replace: --spectrum-checkbox$1; */
-/*   } */
-/* } */
-
-/* .spectrum-Checkbox--sizeXL { */
-/*   @remapvars { */
-/*     find: /--spectrum-checkbox-xl(.*)/; */
-/*     filter: color; */
-/*     replace: --spectrum-checkbox$1; */
-/*   } */
-/* } */
 
 .spectrum-Checkbox.is-indeterminate {
   .spectrum-Checkbox-box,
