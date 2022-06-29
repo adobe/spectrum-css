@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.0.1...@spectrum-css/actionbutton@2.0.2)
+
+### 🐛 Bug fixes
+
+* **actionbutton:** adjust icon margin to match spec ([a95785b](https://github.com/adobe/spectrum-css/commit/a95785b))
+
+
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1
 🗓 2022-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.0.0...@spectrum-css/actionbutton@2.0.1)
