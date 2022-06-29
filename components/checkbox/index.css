@@ -18,6 +18,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-focus-ring-gap: var(--spectrum-focus-ring-gap);
   --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+  --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
   --spectrum-checkbox-animation-duration: var(--spectrum-animation-duration-100);
 }
@@ -26,6 +27,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-height: var(--spectrum-component-height-75);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
+  --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-checkbox-font-size: var(--spectrum-font-size-75);
 }
 
@@ -33,6 +35,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+  --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
 }
 
@@ -40,6 +43,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-height: var(--spectrum-component-height-200);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-200);
+  --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-checkbox-font-size: var(--spectrum-font-size-200);
 }
 
@@ -47,6 +51,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-height: var(--spectrum-component-height-300);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
+  --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-300);
   --spectrum-checkbox-font-size: var(--spectrum-font-size-300);
 }
 
@@ -136,7 +141,7 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-label {
   text-align: start;
   margin-inline-start: var(--spectrum-checkbox-text-to-control);
-  /* margin-block-start: var(--spectrum-checkbox-text-padding-top); */
+  margin-block-start: var(--spectrum-checkbox-top-to-text);
 
   font-size: var(--spectrum-checkbox-font-size);
   /* font-weight: var(--spectrum-checkbox-text-font-weight); */
