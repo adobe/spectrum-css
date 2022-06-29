@@ -232,7 +232,8 @@ a.spectrum-ActionButton {
   }
 
   &:focus-ring {
-    box-shadow: none !important;
+    /* kill the default ring */
+    box-shadow: none;
 
     &:after {
       box-shadow: 0 0 0 var(--mod-actionbutton-focus-ring-thickness, var(--spectrum-actionbutton-focus-ring-thickness)) var(--highcontrast-actionbutton-focus-ring-color, var(--mod-actionbutton-focus-ring-color, var(--spectrum-actionbutton-focus-ring-color)));

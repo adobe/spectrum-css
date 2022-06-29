@@ -137,7 +137,7 @@ governing permissions and limitations under the License.
 
   &:focus-ring {
     /* kill the default ring */
-    box-shadow: none !important;
+    box-shadow: none;
 
     &:after {
       box-shadow: 0 0 0 var(--spectrum-picker-focus-ring-size) var(--spectrum-picker-focus-ring-color);
@@ -157,6 +157,8 @@ governing permissions and limitations under the License.
   --spectrum-picker-texticon-border-radius: 0;
   --spectrum-picker-textonly-padding-left: 0;
   --spectrum-picker-textonly-padding-right: 0;
+  --spectrum-picker-quiet-background-color-key-focus: transparent;
+  --spectrum-picker-quiet-border-color-key-focus: var(--spectrum-global-color-blue-400);
 }
 
 .spectrum-Picker--quiet {
@@ -256,7 +258,7 @@ governing permissions and limitations under the License.
   &.is-focused {
     background-color: var(--spectrum-picker-m-texticon-background-color-key-focus);
     border-color: var(--spectrum-picker-m-texticon-border-color-key-focus);
-    box-shadow: 0 0 0 var(--spectrum-picker-texticon-border-size-increase-focus) var(--spectrum-picker-m-texticon-border-color-key-focus);
+    box-shadow: 0 0 0 var(--spectrum-picker-texticon-border-size-increase-focus) var(--spectrum-picker-quiet-border-color-key-focus);
     color: var(--spectrum-picker-m-texticon-text-color-key-focus);
 
     &.is-placeholder {
@@ -336,14 +338,17 @@ governing permissions and limitations under the License.
 
   &:focus-ring,
   &.is-focused {
-    background-color: var(--spectrum-picker-m-quiet-texticon-background-color-key-focus);
-    box-shadow: 0 2px 0 0 var(--spectrum-picker-m-texticon-border-color-key-focus);
+    background-color: var(--spectrum-picker-quiet-background-color-key-focus);
+    box-shadow: 0 2px 0 0 var(--spectrum-picker-quiet-border-color-key-focus);
 
     &.is-placeholder {
       color: var(--spectrum-picker-m-quiet-texticon-placeholder-text-color-key-focus);
     }
     .spectrum-Picker-menuIcon {
       color: var(--spectrum-picker-m-texticon-icon-color-key-focus)
+    }
+    &::after {
+      box-shadow: none;
     }
   }
 
@@ -354,8 +359,8 @@ governing permissions and limitations under the License.
 
     &:focus-ring,
     &.is-focused {
-      background-color: var(--spectrum-picker-m-quiet-texticon-background-color-key-focus);
-      box-shadow: 0 2px 0 0 var(--spectrum-picker-m-texticon-border-color-key-focus);
+      background-color: var(--spectrum-picker-quiet-background-color-key-focus);
+      box-shadow: 0 2px 0 0 var(--spectrum-picker-quiet-border-color-key-focus);
     }
   }
 
