@@ -12,22 +12,27 @@ governing permissions and limitations under the License.
 
 .spectrum-Checkbox {
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
+  --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
 }
 
 .spectrum-Checkbox--sizeS {
   --spectrum-checkbox-height: var(--spectrum-component-height-75);
+  --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
 }
 
 .spectrum-Checkbox--sizeM {
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
+  --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
 }
 
 .spectrum-Checkbox--sizeL {
   --spectrum-checkbox-height: var(--spectrum-component-height-200);
+  --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
 }
 
 .spectrum-Checkbox--sizeXL {
   --spectrum-checkbox-height: var(--spectrum-component-height-300);
+  --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
 }
 
 .spectrum-Checkbox {
@@ -75,7 +80,7 @@ governing permissions and limitations under the License.
 
   &:checked + .spectrum-Checkbox-box {
     &:before {
-      /* border-width: calc(var(--spectrum-checkbox-box-size) / 2); */
+      border-width: calc(var(--spectrum-checkbox-control-size) / 2);
     }
 
     .spectrum-Checkbox-checkmark {
@@ -97,7 +102,7 @@ governing permissions and limitations under the License.
   .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      /* border-width: calc(var(--spectrum-checkbox-box-size) / 2); */
+      border-width: calc(var(--spectrum-checkbox-control-size) / 2);
     }
 
     .spectrum-Checkbox-checkmark {
@@ -129,11 +134,11 @@ governing permissions and limitations under the License.
 .spectrum-Checkbox-box {
   position: relative;
   box-sizing: border-box;
-  /* inline-size: var(--spectrum-checkbox-box-size); */
-  /* block-size: var(--spectrum-checkbox-box-size); */
+  inline-size: var(--spectrum-checkbox-control-size);
+  block-size: var(--spectrum-checkbox-control-size);
 
   /* Fix vertical alignment when not wrapping since we're flex-start */
-  margin: calc((var(--spectrum-checkbox-height) - var(--spectrum-checkbox-box-size)) / 2) 0;
+  margin: calc((var(--spectrum-checkbox-height) - var(--spectrum-checkbox-control-size)) / 2) 0;
 
   flex-grow: 0;
   flex-shrink: 0;
@@ -146,11 +151,11 @@ governing permissions and limitations under the License.
     box-sizing: border-box;
     position: absolute;
 
-    /* width: var(--spectrum-checkbox-box-size); */
-    /* height: var(--spectrum-checkbox-box-size); */
+    width: var(--spectrum-checkbox-control-size);
+    height: var(--spectrum-checkbox-control-size);
 
     /* border-radius: var(--spectrum-checkbox-box-border-radius); */
-    /* border-width: var(--spectrum-checkbox-box-border-size); */
+    border-width: var(--spectrum-checkbox-box-border-size);
     border-style: solid;
 
     /* transition: border var(--spectrum-global-animation-duration-100) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100) ease-in-out; */
