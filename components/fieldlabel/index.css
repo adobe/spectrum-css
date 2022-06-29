@@ -38,12 +38,13 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
 
   /* padding-block: var(--spectrum-component-top-to-text-75) var(--spectrum-component-bottom-to-text-75); */
-  padding-block: var(--spectrum-fieldlabel-top-to-text) var(--spectrum-fieldlabel-bottom-to-text);
+  /* padding-block: var(--) var(--spectrum-fieldlabel-bottom-to-text); */
   padding-inline: 0;
 
   font-size: var(--spectrum-fieldlabel-font-size);
   font-weight: var(--spectrum-font-weight-regular);
-  /* line-height: var(--spectrum-fieldlabel-text-line-height); */
+  /* should be 19.5 coming from var(--spectrum-fieldlabel-text-line-height); */
+  line-height: calc(var(--spectrum-fieldlabel-font-size) * var(--spectrum-line-height-small));
 
   vertical-align: top;
 
