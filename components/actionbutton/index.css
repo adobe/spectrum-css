@@ -168,6 +168,9 @@ a.spectrum-ActionButton {
 
   width: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
   height: var(--mod-actionbutton-icon-size, var(--spectrum-actionbutton-icon-size));
+  
+  /* adjust icon positioning to match UI kit */
+  margin-inline-start: calc(-1 * (var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)) - var(--mod-actionbutton-edge-to-visual, var(--spectrum-actionbutton-edge-to-visual))));
 
   color: inherit;
 
