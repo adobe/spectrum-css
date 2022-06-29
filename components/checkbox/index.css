@@ -16,6 +16,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-control-border-width: var(--spectrum-border-width-200);
   --spectrum-checkbox-control-rounding: var(--spectrum-corner-radius-75);
   --spectrum-checkbox-focus-ring-gap: var(--spectrum-focus-ring-gap);
+  --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
 }
 
 .spectrum-Checkbox--sizeS {
@@ -129,7 +130,7 @@ governing permissions and limitations under the License.
   /* font-size: var(--spectrum-checkbox-text-size); */
   /* font-weight: var(--spectrum-checkbox-text-font-weight); */
   /* font-style: var(--spectrum-checkbox-text-font-style); */
-  /* line-height: var(--spectrum-checkbox-text-line-height); */
+  line-height: var(--spectrum-checkbox-line-height);
 
   /* transition: color var(--spectrum-global-animation-duration-100) ease-in-out; */
 }
