@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.0.2...@spectrum-css/actionbutton@2.0.3)
+
+### 🐛 Bug fixes
+
+* **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
+* **actionbutton:** match peer & dev deps for tokens package ([53df83d](https://github.com/adobe/spectrum-css/commit/53df83d))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.0.1...@spectrum-css/actionbutton@2.0.2)

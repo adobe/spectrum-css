@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.11"></a>
+## 1.2.11
+🗓 2022-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.10...@spectrum-css/picker@1.2.11)
+
+### 🐛 Bug fixes
+
+* **actionbutton, closebutton, picker:** remove `!important` declarations ([a26c212](https://github.com/adobe/spectrum-css/commit/a26c212))
+* **picker:** use proper colors for express quiet variant ([b54f299](https://github.com/adobe/spectrum-css/commit/b54f299))
+
+
+
+
+
 <a name="1.2.10"></a>
 ## 1.2.10
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.8...@spectrum-css/picker@1.2.10)
