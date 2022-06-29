@@ -13,23 +13,23 @@ governing permissions and limitations under the License.
 .spectrum-FieldLabel--sizeS {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-75);
-  --spectrum-fieldlabel-font-size: var(--font-size-75);
+  /* --spectrum-fieldlabel-font-size: var(--font-size-75);*/
 }
 
 .spectrum-FieldLabel--sizeM {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-75);
-  --spectrum-fieldlabel-font-size: var(--font-size-75);
+  /* --spectrum-fieldlabel-font-size: var(--font-size-75);*/
 }
 .spectrum-FieldLabel--sizeL {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-100);
-  --spectrum-fieldlabel-font-size: var(--font-size-100);
+  /* --spectrum-fieldlabel-font-size: var(--font-size-100); */
 }
 .spectrum-FieldLabel--sizeXL {
   --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-top-to-text-200);
-  --spectrum-fieldlabel-font-size: var(--font-size-200);
+  /* --spectrum-fieldlabel-font-size: var(--font-size-200); */
 }
 
 .spectrum-FieldLabel {
