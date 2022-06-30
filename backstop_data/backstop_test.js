@@ -152,7 +152,7 @@ module.exports = {
     ],
     waitTimeout: 300*1000 // 5 minutes
   },
-  readyTimeout: 180*1000, // 3 minute 
+  // readyTimeout: 180*1000, // 3 minute 
   asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
