@@ -18,4 +18,9 @@ governing permissions and limitations under the License.
   --spectrum-edge-to-visual-only-100: 9px;
   --spectrum-edge-to-visual-only-200: 13px;
   --spectrum-edge-to-visual-only-300: 16px;
+
+  --spectrum-radio-button-control-size-small: var(--spectrum-radio-button-control-size-small-mobile);
+  --spectrum-radio-button-control-size-medium: var(--spectrum-radio-button-control-size-medium-mobile);
+  --spectrum-radio-button-control-size-large: var(--spectrum-radio-button-control-size-large-mobile);
+  --spectrum-radio-button-control-size-extra-large: var(--spectrum-radio-button-control-size-extra-large-mobile);
 }
