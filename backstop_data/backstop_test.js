@@ -158,6 +158,6 @@ module.exports = {
   debug: false,
   debugWindow: false,
   fileNameTemplate: '{scenarioLabel}_{selectorIndex}_{selectorLabel}',
-  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
-  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --user "$(id -u):$(id -g)" --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
+  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --user "$(id -u):$(id -g)" --network host --shm-size 2048m docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
 };
