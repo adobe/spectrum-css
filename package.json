@@ -18,8 +18,8 @@
     "backstop:clean": "rm -rf backstop_data/bitmaps_test backstop_data/html_report",
     "backstop:docker:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=local",
     "backstop:docker:reference": "backstop reference --docker --config=backstop_data/backstop_test.js --env=local",
-    "backstop:ci:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
-    "backstop:ci:reference": "backstop reference --docker --config=backstop_data/backstop_test.js --env=ci",
+    "backstop:ci:test": "wait-on http://127.0.0.1:3000/docs/index.html && backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
+    "backstop:ci:reference": "wait-on http://127.0.0.1:3000/docs/index.html && backstop reference --docker --config=backstop_data/backstop_test.js --env=ci",
     "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=light,dark,darkest scales=medium,large",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepare": "gulp prepare",
@@ -61,7 +61,8 @@
     "markdown-it": "^12.3.2",
     "prismjs": "^1.23.0",
     "semver": "^6.3.0",
-    "through2": "^3.0.1"
+    "through2": "^3.0.1",
+    "wait-on": "^6.0.1"
   },
   "resolutions": {
     "axios": "^0.21.1",
