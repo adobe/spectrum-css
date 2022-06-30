@@ -91,7 +91,7 @@ if (env === 'local') {
 }
 else {
   report = 'CI';
-  captureLimit = 2;
+  captureLimit = 1;
 }
 
 // Generate vr testing scenarios
