@@ -71,13 +71,14 @@ governing permissions and limitations under the License.
 
   &:checked + .spectrum-Radio-button {
     &:before {
-      border-width: var(--spectrum-radio-button-selection-indicator);
+      border-width: calc((var(--spectrum-radio-button-control-size) / 2) - (var(--spectrum-radio-button-selection-indicator) / 2));
     }
   }
 
   &:focus-ring {
     + .spectrum-Radio-button {
       &:after {
+        border-width: var(--spectrum-focus-ring-thickness);
         margin: calc(var(--spectrum-focus-ring-gap) * -1);
       }
     }
@@ -170,7 +171,7 @@ governing permissions and limitations under the License.
     width: var(--spectrum-radio-button-control-size);
     height: var(--spectrum-radio-button-control-size);
 
-    border-radius: var(--spectrum-corner-radius-100);
+    border-radius: var(--spectrum-corner-radius-200);
     border-width: var(--spectrum-border-width-200);
     border-style: solid;
 
@@ -191,22 +192,5 @@ governing permissions and limitations under the License.
 
     transition: opacity var(--spectrum-animation-duration-100) ease-out,
                 margin var(--spectrum-animation-duration-100) ease-out;
-  }
-}
-
-.spectrum-Radio--labelBelow {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  block-size: auto;
-
-  .spectrum-Radio-button {
-    flex-shrink: 0;
-
-    margin: 0;
-  }
-
-  .spectrum-Radio-label {
-    margin: var(--spectrum-spacing-75) 0 0;
   }
 }
