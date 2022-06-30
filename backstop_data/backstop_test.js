@@ -12,9 +12,10 @@ governing permissions and limitations under the License.
 
 const scenarioConfigs = require('./backstop_scenarios');
 const scenarios = [];
-const excludedScenarios = new Set(['@spectrum-css/circleloader', '@spectrum-css/coachmark', 'index', 'getting-started']);
+const excludedScenarios = new Set(['@spectrum-css/progressbar', '@spectrum-css/progresscircle', '@spectrum-css/coachmark', '@spectrum-css/index', '@spectrum-css/get', '@spectrum-css/halo']);
 const themes = new Set().add('light');
 const scales = new Set().add('medium');
+const varsversions = new Set().add('default');
 const packageNameSet = new Set();
 const packageDependentMap = new Map(require('./packageDependentMap'));
 
@@ -64,6 +65,10 @@ rest.forEach(argv => {
     scales.clear();
     argv.slice('scales='.length).split(',').forEach(s => scales.add(s));
   }
+  else if (argv.startsWith('varsversions=')) {
+    varsversions.clear();
+    argv.slice('varsversions='.length).split(',').forEach(s => varsversions.add(s));
+  }
   else if (argv.startsWith('reference=')) {
     bitmapsRef = argv.slice('reference='.length);
   }
@@ -107,12 +112,15 @@ else {
 testingScenarios.map(specificScenarioConfig => {
   themes.forEach(t => {
     scales.forEach(s => {
-      const config = {...specificScenarioConfig};
-      config.label = `${config.label}-${t}-${s}`;
-      config.url = `http://${host}:3000/docs/${config.url}`;
-      config.scale = s;
-      config.theme = t;
-      scenarios.push(Object.assign({...baseScenarioConfig}, config));
+      varsversions.forEach(v => {
+        const config = {...specificScenarioConfig};
+        config.label = `${config.label}-${t}-${s}-${v}`;
+        config.url = `http://${host}:3000/docs/${config.url}`;
+        config.scale = s;
+        config.theme = t;
+        config.varsversion = v;
+        scenarios.push(Object.assign({...baseScenarioConfig}, config));
+      });
     });
   });
 });
@@ -126,7 +134,7 @@ module.exports = {
       height: 40960
     }
   ],
-  onReadyScript: 'puppet/onReady.js',
+  onReadyScript: 'onReady.js',
   scenarios,
   paths: {
     bitmaps_reference: bitmapsRef,
@@ -136,21 +144,20 @@ module.exports = {
     ci_report: 'backstop_data/ci_report'
   },
   report: [`${report}`],
-  engine: 'puppeteer',
+  engine: 'playwr',
   engineOptions: {
     ignoreHTTPSErrors: true,
     args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-gpu',
-      '--force-device-scale-factor=1',
-      '--disable-infobars=true',
-      '--hide-scrollbars'
-    ]
+      '--no-sandbox'
+    ],
+    waitTimeout: 300*1000 // 5 minutes
   },
+  readyTimeout: 180*1000, // 3 minute 
   asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
   debugWindow: false,
-  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m jianliao/backstopjs:{version} {backstopCommand} {args}'
+  fileNameTemplate: '{scenarioLabel}_{selectorIndex}_{selectorLabel}',
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
+  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --shm-size 2048m docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
 };

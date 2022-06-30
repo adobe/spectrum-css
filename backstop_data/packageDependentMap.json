@@ -9,21 +9,7 @@
   ],
   [
     "@spectrum-css/actionbutton",
-    [
-      "@spectrum-css/actionbar",
-      "@spectrum-css/actiongroup",
-      "@spectrum-css/actionmenu",
-      "@spectrum-css/breadcrumb",
-      "@spectrum-css/calendar",
-      "@spectrum-css/card",
-      "@spectrum-css/cyclebutton",
-      "@spectrum-css/dialog",
-      "@spectrum-css/divider",
-      "@spectrum-css/pagination",
-      "@spectrum-css/picker",
-      "@spectrum-css/quickaction",
-      "@spectrum-css/stepper"
-    ]
+    []
   ],
   [
     "@spectrum-css/actiongroup",
@@ -41,6 +27,10 @@
     [
       "@spectrum-css/card"
     ]
+  ],
+  [
+    "@spectrum-css/assetcard",
+    []
   ],
   [
     "@spectrum-css/assetlist",
@@ -72,11 +62,7 @@
       "@spectrum-css/inlinealert",
       "@spectrum-css/pagination",
       "@spectrum-css/popover",
-      "@spectrum-css/search",
-      "@spectrum-css/searchwithin",
       "@spectrum-css/splitbutton",
-      "@spectrum-css/tag",
-      "@spectrum-css/taggroup",
       "@spectrum-css/toast",
       "@spectrum-css/tray"
     ]
@@ -99,6 +85,7 @@
     "@spectrum-css/checkbox",
     [
       "@spectrum-css/actionbar",
+      "@spectrum-css/assetcard",
       "@spectrum-css/assetlist",
       "@spectrum-css/card",
       "@spectrum-css/fieldgroup",
@@ -106,6 +93,22 @@
       "@spectrum-css/miller",
       "@spectrum-css/quickaction",
       "@spectrum-css/table"
+    ]
+  ],
+  [
+    "@spectrum-css/clearbutton",
+    [
+      "@spectrum-css/search",
+      "@spectrum-css/searchwithin",
+      "@spectrum-css/tag",
+      "@spectrum-css/taggroup"
+    ]
+  ],
+  [
+    "@spectrum-css/closebutton",
+    [
+      "@spectrum-css/dialog",
+      "@spectrum-css/toast"
     ]
   ],
   [
@@ -157,6 +160,7 @@
     "@spectrum-css/divider",
     [
       "@spectrum-css/dialog",
+      "@spectrum-css/menu",
       "@spectrum-css/popover",
       "@spectrum-css/tray"
     ]
@@ -192,6 +196,10 @@
     ]
   ],
   [
+    "@spectrum-css/infieldbutton",
+    []
+  ],
+  [
     "@spectrum-css/inlinealert",
     []
   ],
@@ -202,11 +210,16 @@
     ]
   ],
   [
+    "@spectrum-css/logicbutton",
+    []
+  ],
+  [
     "@spectrum-css/menu",
     [
       "@spectrum-css/actionmenu",
       "@spectrum-css/inputgroup",
       "@spectrum-css/picker",
+      "@spectrum-css/pickerbutton",
       "@spectrum-css/popover",
       "@spectrum-css/tabs"
     ]
@@ -234,9 +247,14 @@
     "@spectrum-css/picker",
     [
       "@spectrum-css/fieldlabel",
-      "@spectrum-css/inputgroup",
       "@spectrum-css/searchwithin",
       "@spectrum-css/tabs"
+    ]
+  ],
+  [
+    "@spectrum-css/pickerbutton",
+    [
+      "@spectrum-css/inputgroup"
     ]
   ],
   [
@@ -245,7 +263,8 @@
       "@spectrum-css/actionbar",
       "@spectrum-css/actionmenu",
       "@spectrum-css/inputgroup",
-      "@spectrum-css/picker"
+      "@spectrum-css/picker",
+      "@spectrum-css/pickerbutton"
     ]
   ],
   [
@@ -314,6 +333,16 @@
     ]
   ],
   [
+    "@spectrum-css/swatch",
+    [
+      "@spectrum-css/swatchgroup"
+    ]
+  ],
+  [
+    "@spectrum-css/swatchgroup",
+    []
+  ],
+  [
     "@spectrum-css/switch",
     []
   ],
@@ -326,6 +355,12 @@
   [
     "@spectrum-css/tabs",
     []
+  ],
+  [
+    "@spectrum-css/tag",
+    [
+      "@spectrum-css/taggroup"
+    ]
   ],
   [
     "@spectrum-css/taggroup",
@@ -369,6 +404,7 @@
   [
     "@spectrum-css/typography",
     [
+      "@spectrum-css/assetcard",
       "@spectrum-css/card",
       "@spectrum-css/illustratedmessage"
     ]

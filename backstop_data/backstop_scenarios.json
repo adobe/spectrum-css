@@ -30,6 +30,11 @@
     "package": "@spectrum-css/asset"
   },
   {
+    "label": "assetcard",
+    "url": "assetcard.html",
+    "package": "@spectrum-css/assetcard"
+  },
+  {
     "label": "assetlist",
     "url": "assetlist.html",
     "package": "@spectrum-css/assetlist"
@@ -50,13 +55,13 @@
     "package": "@spectrum-css/breadcrumb"
   },
   {
-    "label": "button-cta",
-    "url": "button-cta.html",
+    "label": "button-accent",
+    "url": "button-accent.html",
     "package": "@spectrum-css/button"
   },
   {
-    "label": "button-over-background",
-    "url": "button-over-background.html",
+    "label": "button-negative",
+    "url": "button-negative.html",
     "package": "@spectrum-css/button"
   },
   {
@@ -70,8 +75,8 @@
     "package": "@spectrum-css/button"
   },
   {
-    "label": "button-warning",
-    "url": "button-warning.html",
+    "label": "button-staticcolor",
+    "url": "button-staticcolor.html",
     "package": "@spectrum-css/button"
   },
   {
@@ -108,6 +113,11 @@
     "label": "clearbutton",
     "url": "clearbutton.html",
     "package": "@spectrum-css/clearbutton"
+  },
+  {
+    "label": "closebutton",
+    "url": "closebutton.html",
+    "package": "@spectrum-css/closebutton"
   },
   {
     "label": "coachmark",
@@ -217,14 +227,12 @@
   {
     "label": "index",
     "url": "index.html",
-    "selectors": [],
-    "viewports": [
-      {
-        "label": "test",
-        "width": 1024,
-        "height": 768
-      }
-    ]
+    "package": "@spectrum-css/index"
+  },
+  {
+    "label": "infieldbutton",
+    "url": "infieldbutton.html",
+    "package": "@spectrum-css/infieldbutton"
   },
   {
     "label": "inlinealert",
@@ -287,6 +295,11 @@
     "package": "@spectrum-css/picker"
   },
   {
+    "label": "pickerbutton",
+    "url": "pickerbutton.html",
+    "package": "@spectrum-css/pickerbutton"
+  },
+  {
     "label": "popover",
     "url": "popover.html",
     "package": "@spectrum-css/popover"
@@ -294,18 +307,11 @@
   {
     "label": "progressbar",
     "url": "progressbar.html",
-    "removeSelectors": [
-      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example",
-      "#indeterminatewithlabel + .spectrum-CSSExample-container .spectrum-CSSExample-example"
-    ],
     "package": "@spectrum-css/progressbar"
   },
   {
     "label": "progresscircle",
     "url": "progresscircle.html",
-    "removeSelectors": [
-      "#indeterminate + .spectrum-CSSExample-container .spectrum-CSSExample-example"
-    ],
     "package": "@spectrum-css/progresscircle"
   },
   {
@@ -369,6 +375,16 @@
     "package": "@spectrum-css/stepper"
   },
   {
+    "label": "swatch",
+    "url": "swatch.html",
+    "package": "@spectrum-css/swatch"
+  },
+  {
+    "label": "swatchgroup",
+    "url": "swatchgroup.html",
+    "package": "@spectrum-css/swatchgroup"
+  },
+  {
     "label": "switch",
     "url": "switch.html",
     "package": "@spectrum-css/switch"
@@ -386,7 +402,7 @@
   {
     "label": "tag",
     "url": "tag.html",
-    "package": "@spectrum-css/tags"
+    "package": "@spectrum-css/tag"
   },
   {
     "label": "taggroup",

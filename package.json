@@ -20,7 +20,7 @@
     "backstop:docker:reference": "backstop reference --docker --config=backstop_data/backstop_test.js --env=local",
     "backstop:ci:test": "backstop test --docker --config=backstop_data/backstop_test.js --env=ci",
     "backstop:ci:reference": "backstop reference --docker --config=backstop_data/backstop_test.js --env=ci",
-    "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=lightest,light,dark,darkest scales=medium,large",
+    "backstop:test-all": "backstop test --docker --config=backstop_data/backstop_test.js --env=local themes=light,dark,darkest scales=medium,large",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "prepare": "gulp prepare",
     "watch": "gulp watch"
@@ -48,7 +48,7 @@
     "@commitlint/config-conventional": "^8.3.3",
     "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.39",
     "audit-ci": "^2.0.1",
-    "backstopjs-spectrum": "^5.0.14",
+    "backstopjs-spectrum": "6.15.0",
     "del": "^5.1.0",
     "gh-pages": "^3.0.0",
     "gulp": "^4.0.0",
