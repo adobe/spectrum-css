@@ -377,3 +377,42 @@ governing permissions and limitations under the License.
     color: var(--spectrum-picker-m-texticon-text-color-disabled);
   }
 }
+@media (forced-colors: active)
+{
+  .spectrum-Picker {
+    --spectrum-picker-focus-ring-color: Highlight;
+    --spectrum-picker-m-quiet-texticon-border-color-down: ButtonText;
+    --spectrum-picker-m-quiet-texticon-border-color: ButtonText;
+    --spectrum-picker-m-quiet-texticon-placeholder-text-color-key-focus: GrayText;
+    --spectrum-picker-m-texticon-border-color-error-key-focus: Highlight;
+    --spectrum-picker-m-texticon-placeholder-text-color-disabled: GrayText;
+    --spectrum-picker-m-texticon-placeholder-text-color-down: GrayText;
+    --spectrum-picker-m-texticon-placeholder-text-color-hover: GrayText;
+    --spectrum-picker-m-texticon-placeholder-text-color-key-focus: GrayText;
+    --spectrum-picker-m-texticon-placeholder-text-color-mouse-focus: GrayText;
+    --spectrum-picker-m-texticon-placeholder-text-color: GrayText;
+    --spectrum-picker-m-texticon-text-color-disabled: GrayText;
+    --spectrum-picker-m-texticon-text-color-key-focus: ButtonText;
+    --spectrum-picker-m-texticon-text-color: ButtonText;
+    --spectrum-picker-m-textonly-focusring-border-color-key-focus: Highlight;
+    --spectrum-picker-quiet-border-color-key-focus: Highlight;
+    &:focus-ring {
+      outline: 2px solid Highlight;
+    }
+    &:disabled,
+    .is-disabled {
+      border-color: GrayText;
+      border-width: var(--spectrum-picker-texticon-border-size);
+    }
+  }
+  .spectrum-Picker--quiet {
+    &:focus-ring,
+    &.is-focused {
+      forced-color-adjust: none;
+      outline: 0;
+      box-shadow: 0 1px 0 0 var(--spectrum-picker-focus-ring-color);
+    }
+  }
+}
+
+
