@@ -115,8 +115,8 @@ testingScenarios.map(specificScenarioConfig => {
       varsversions.forEach(v => {
         const config = {...specificScenarioConfig};
         config.label = `${config.label}-${t}-${s}-${v}`;
-        // config.url = `http://${host}:3000/docs/${config.url}`;
-        config.url = `https://main--spectrum-css.netlify.app/docs/${config.url}`;
+        config.url = `http://${host}:3000/docs/${config.url}`;
+        // config.url = `https://main--spectrum-css.netlify.app/docs/${config.url}`;
         config.scale = s;
         config.theme = t;
         config.varsversion = v;
@@ -145,7 +145,7 @@ module.exports = {
     ci_report: 'backstop_data/ci_report'
   },
   report: [`${report}`],
-  engine: 'puppeteer',
+  engine: 'playwright',
   engineOptions: {
     ignoreHTTPSErrors: true,
     args: [
@@ -160,6 +160,6 @@ module.exports = {
   debug: false,
   debugWindow: false,
   fileNameTemplate: '{scenarioLabel}_{selectorIndex}_{selectorLabel}',
-  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
-  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --user "$(id -u):$(id -g)" --network host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
+  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --user "$(id -u):$(id -g)" --network host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
 };
