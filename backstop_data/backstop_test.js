@@ -151,9 +151,9 @@ module.exports = {
       '--no-sandbox',
       // '--disable-dev-shm-usage'
     ],
-    // waitTimeout: 300*1000 // 5 minutes
+    waitTimeout: 300*1000 // 5 minutes
   },
-  // readyTimeout: 60*1000, // 3 minute 
+  readyTimeout: 60*1000, // 1 minute 
   asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
