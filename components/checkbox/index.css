@@ -202,6 +202,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Checkbox-checkmark,
 .spectrum-Checkbox-partialCheckmark {
+  color: var(--spectrum-gray-75);
+  
   position: absolute;
   inset-block-start: 50%;
   inset-inline-start: 50%;

@@ -20,11 +20,6 @@ governing permissions and limitations under the License.
   color: var(--spectrum-checkbox-m-text-color);
 }
 
-.spectrum-Checkbox-checkmark,
-.spectrum-Checkbox-partialCheckmark {
-  color: var(--spectrum-checkbox-m-checkmark-color);
-}
-
 .spectrum-Checkbox-box {
   &:before {
     forced-color-adjust: none;
