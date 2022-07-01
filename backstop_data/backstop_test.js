@@ -116,7 +116,6 @@ testingScenarios.map(specificScenarioConfig => {
         const config = {...specificScenarioConfig};
         config.label = `${config.label}-${t}-${s}-${v}`;
         config.url = `http://${host}:3000/docs/${config.url}`;
-        // config.url = `https://main--spectrum-css.netlify.app/docs/${config.url}`;
         config.scale = s;
         config.theme = t;
         config.varsversion = v;
@@ -150,7 +149,7 @@ module.exports = {
     ignoreHTTPSErrors: true,
     args: [
       '--no-sandbox',
-      '--disable-dev-shm-usage'
+      // '--disable-dev-shm-usage'
     ],
     // waitTimeout: 300*1000 // 5 minutes
   },
@@ -161,5 +160,4 @@ module.exports = {
   debugWindow: false,
   fileNameTemplate: '{scenarioLabel}_{selectorIndex}_{selectorLabel}',
   dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
-  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --user "$(id -u):$(id -g)" --network host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
 };
