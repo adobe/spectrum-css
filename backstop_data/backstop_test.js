@@ -115,8 +115,8 @@ testingScenarios.map(specificScenarioConfig => {
       varsversions.forEach(v => {
         const config = {...specificScenarioConfig};
         config.label = `${config.label}-${t}-${s}-${v}`;
-        // config.url = `http://${host}:3000/docs/${config.url}`;
-        config.url = `https://main--spectrum-css.netlify.app/docs/${config.url}`;
+        config.url = `http://${host}:3000/docs/${config.url}`;
+        // config.url = `https://main--spectrum-css.netlify.app/docs/${config.url}`;
         config.scale = s;
         config.theme = t;
         config.varsversion = v;
@@ -153,7 +153,7 @@ module.exports = {
     ],
     waitTimeout: 300*1000 // 5 minutes
   },
-  readyTimeout: 60*1000, // 3 minute 
+  // readyTimeout: 60*1000, // 3 minute 
   asyncCaptureLimit: captureLimit,
   asyncCompareLimit: 50,
   debug: false,
