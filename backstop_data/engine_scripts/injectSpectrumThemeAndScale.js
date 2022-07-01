@@ -13,9 +13,11 @@ governing permissions and limitations under the License.
 module.exports = function (page, scenario) {
   page.evaluate(`window._spectrumScale = '${scenario.scale}'`);
   page.evaluate(`window._spectrumTheme = '${scenario.theme}'`);
+  page.evaluate(`window._spectrumVarsVersion = '${scenario.varsversion}'`);
   page.evaluate(() => {
     const SCALES = ['medium', 'large'];
-    const THEMES = ['lightest', 'light', 'dark', 'darkest'];
+    const THEMES = ['light', 'dark', 'darkest'];
+    const VARS_VERSION = ['default', 'express'];
     const bodyElm = document.documentElement;
     if (window._spectrumScale && !bodyElm.classList.contains(window._spectrumScale)) {
       // Remove all the theme class
@@ -30,6 +32,13 @@ module.exports = function (page, scenario) {
         bodyElm.classList.remove(`spectrum--${t}`);
       });
       bodyElm.classList.toggle(`spectrum--${window._spectrumTheme}`);
+    }
+    if (window._spectrumVarsVersion && !bodyElm.classList.contains(window._spectrumVarsVersion)) {
+      // Remove all the vars version class
+      VARS_VERSION.forEach(v => {
+        bodyElm.classList.remove(`spectrum--${v}`);
+      });
+      bodyElm.classList.toggle(`spectrum--${window._spectrumVarsVersion}`);
     }
   });
 };
