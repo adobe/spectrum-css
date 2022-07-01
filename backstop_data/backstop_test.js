@@ -145,13 +145,14 @@ module.exports = {
     ci_report: 'backstop_data/ci_report'
   },
   report: [`${report}`],
-  engine: 'playwr',
+  engine: 'puppeteer',
   engineOptions: {
     ignoreHTTPSErrors: true,
     args: [
-      '--no-sandbox'
+      '--no-sandbox',
+      '--disable-dev-shm-usage'
     ],
-    waitTimeout: 300*1000 // 5 minutes
+    // waitTimeout: 300*1000 // 5 minutes
   },
   // readyTimeout: 60*1000, // 3 minute 
   asyncCaptureLimit: captureLimit,
@@ -159,6 +160,6 @@ module.exports = {
   debug: false,
   debugWindow: false,
   fileNameTemplate: '{scenarioLabel}_{selectorIndex}_{selectorLabel}',
-  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
-  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --user "$(id -u):$(id -g)" --network host --shm-size 2048m docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
+  // dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --network host --ipc=host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum-playwright:{version} {backstopCommand} {args}',
+  dockerCommandTemplate: 'docker run --rm -i -t=false --mount type=bind,source="{cwd}",target=/src --user "$(id -u):$(id -g)" --network host docker-adobe-spectrum-release.dr.corp.adobe.com/backstopjs-spectrum:{version} {backstopCommand} {args}'
 };
