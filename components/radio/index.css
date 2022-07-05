@@ -309,6 +309,7 @@ governing permissions and limitations under the License.
   inline-size: var(--spectrum-radio-button-control-size);
   block-size: var(--spectrum-radio-button-control-size);
   margin-block-start: var(--spectrum-radio-button-top-to-control);
+  margin-top: var(--spectrum-radio-button-top-to-control);
 
   flex-grow: 0;
   flex-shrink: 0;
