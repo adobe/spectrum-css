@@ -28,7 +28,4 @@ governing permissions and limitations under the License.
   --spectrum-radio-button-top-to-control-medium: var(--spectrum-radio-button-top-to-control-medium-mobile);
   --spectrum-radio-button-top-to-control-large: var(--spectrum-radio-button-top-to-control-large-mobile);
   --spectrum-radio-button-top-to-control-extra-large: var(--spectrum-radio-button-top-to-control-extra-large-mobile);
-
-  /* hot fix for missing small size */
-  --spectrum-radio-button-control-size-small: 16px;
 }

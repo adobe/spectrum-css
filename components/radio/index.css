@@ -280,7 +280,7 @@ governing permissions and limitations under the License.
     + .spectrum-Radio-button {
       &:after {
         border-width: var(--spectrum-radio-focus-ring-thickness);
-        margin: calc(var(--spectrum-radio-focus-ring-gap) * -1);
+
         border-color: var(--spectrum-radio-focus-ring-color);
       }
     }
