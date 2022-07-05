@@ -12,11 +12,16 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
   .spectrum-Radio {
-    /* button selector color */
+    /* selection indicator */
     --spectrum-radio-gray-default: var(--spectrum-gray-600);
-    /* states to be referenced in index.css file
     --spectrum-radio-gray-hover: var(--spectrum-gray-700);
     --spectrum-radio-gray-down: var(--spectrum-gray-800);
-    --spectrum-radio-gray-focus: var(--spectrum-gray-700); */
+    --spectrum-radio-gray-focus: var(--spectrum-gray-700);
+
+    /* selected selection indicator */
+    --spectrum-radio-selected-gray-default: var(--spectrum-gray-700);
+    --spectrum-radio-selected-gray-hover: var(--spectrum-gray-800);
+    --spectrum-radio-selected-gray-down: var(--spectrum-gray-900);
+    --spectrum-radio-selected-gray-focus: var(--spectrum-gray-800);
   }
 }
