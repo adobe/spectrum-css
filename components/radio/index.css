@@ -271,6 +271,7 @@ governing permissions and limitations under the License.
 
   &:checked + .spectrum-Radio-button {
     &:before {
+      /* half of element width minus half of indicator width is checked border width */
       border-width: calc((var(--spectrum-radio-button-control-size) / 2) - (var(--spectrum-radio-button-selection-indicator) / 2));
       border-color: var(--spectrum-radio-selected-gray-default);
     }
