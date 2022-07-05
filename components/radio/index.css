@@ -35,7 +35,6 @@ governing permissions and limitations under the License.
   --spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
 
  /* button selector all themes */
-  --spectrum-radio-corner-radius: var(--spectrum-corner-radius-200);
   --spectrum-radio-border-width: var(--spectrum-border-width-200);
 
   /* default radio size for no t-shirt size */
@@ -45,18 +44,42 @@ governing permissions and limitations under the License.
 
 .spectrum-Radio--sizeS {
   --spectrum-radio-height: var(--spectrum-component-height-75);
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-small);
+  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-75);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+
+  --spectrum-radio-font-size: var(--spectrum-font-size-75);
 }
 
 .spectrum-Radio--sizeM {
   --spectrum-radio-height: var(--spectrum-component-height-100);
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
+  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+
+  --spectrum-radio-font-size: var(--spectrum-font-size-100);
 }
 
 .spectrum-Radio--sizeL {
   --spectrum-radio-height: var(--spectrum-component-height-200);
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-large);
+  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-200);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+
+  --spectrum-radio-font-size: var(--spectrum-font-size-200);
 }
 
 .spectrum-Radio--sizeXL {
   --spectrum-radio-height: var(--spectrum-component-height-300);
+  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-extra-large);
+  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-300);
+  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-300);
+  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+
+  --spectrum-radio-font-size: var(--spectrum-font-size-300);
 }
 
 .spectrum-Radio {
@@ -171,39 +194,6 @@ governing permissions and limitations under the License.
   }
 }
 
-
-.spectrum-Radio-label--sizeS {
-  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-75);
-  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-75);
-  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
-
-  --spectrum-radio-font-size: var(--spectrum-font-size-75);
-}
-
-.spectrum-Radio-label--sizeM {
-  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
-  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
-  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
-
-  --spectrum-radio-font-size: var(--spectrum-font-size-100);
-}
-
-.spectrum-Radio-label--sizeL {
-  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-200);
-  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-200);
-  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
-
-  --spectrum-radio-font-size: var(--spectrum-font-size-200);
-}
-
-.spectrum-Radio-label--sizeXL {
-  --spectrum-radio-text-to-control: var(--spectrum-text-to-control-300);
-  --spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-300);
-  --spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
-
-  --spectrum-radio-font-size: var(--spectrum-font-size-300);
-}
-
 .spectrum-Radio-label {
   text-align: start;
   margin-inline-start: var(--spectrum-radio-text-to-control);
@@ -219,26 +209,6 @@ governing permissions and limitations under the License.
   transition: color var(--spectrum-radio-animation-duration) ease-in-out;
 }
 
-.spectrum-Radio-button {
-  /* default button for no tshirt size */
-  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
-}
-
-.spectrum-Radio-button--sizeS {
-  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-small);
-}
-
-.spectrum-Radio-button--sizeM {
-  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
-}
-
-.spectrum-Radio-button--sizeL {
-  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-large);
-}
-
-.spectrum-Radio-button--sizeXL {
-  --spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-extra-large);
-}
 
 .spectrum-Radio-button {
   position: relative;
@@ -264,7 +234,7 @@ governing permissions and limitations under the License.
     width: var(--spectrum-radio-button-control-size);
     height: var(--spectrum-radio-button-control-size);
 
-    border-radius: var(--spectrum-radio-corner-radius);
+    border-radius: 50%;
     border-width: var(--spectrum-radio-border-width);
 
     border-style: solid;

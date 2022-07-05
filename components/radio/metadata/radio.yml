@@ -14,6 +14,89 @@ sections:
         If you need a switch to look like it did before this change, add `.spectrum-Radio--emphasized`.
 examples:
   - id: radio
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--sizeS">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeS"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeS" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--sizeS">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeS"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeS" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--sizeM">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeM"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeM" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--sizeM">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeM"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeM" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--sizeL">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeL"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeL" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--sizeL">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeL"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeL" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+          <form>
+            <div class="spectrum-Radio spectrum-Radio--sizeXL">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeXL"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeXL" for="radio-0">Kittens</label>
+            </div>
+            <br>
+            <div class="spectrum-Radio spectrum-Radio--sizeXL">
+              <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+              <span class="spectrum-Radio-button spectrum-Radio-button--sizeXL"></span>
+              <label class="spectrum-Radio-label spectrum-Radio-label--sizeXL" for="radio-1">Puppies</label>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+
+  - id: radio
     name: Standard
     markup: |
       <div class="spectrum-Examples">
@@ -136,17 +219,6 @@ examples:
 
         </div>
       </div>
-
-  - id: radio-labelbelow
-    name: Label below
-    markup: |
-      <form>
-        <div class="spectrum-Radio spectrum-Radio--labelBelow">
-          <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-          <span class="spectrum-Radio-button"></span>
-          <label class="spectrum-Radio-label" for="radio-0">A label</label>
-        </div>
-      </form>
 
   - id: radio-wrapping
     name: Wrapping behavior
