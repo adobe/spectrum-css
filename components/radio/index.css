@@ -191,6 +191,25 @@ governing permissions and limitations under the License.
     }
   }
 
+  &.is-readOnly {
+    .spectrum-Radio-input:read-only {
+      cursor: initial;
+    }
+
+    & .spectrum-Radio-button {
+      position: fixed;
+      right: 100%;
+      bottom: 100%;
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(50%);
+    }
+
+    .spectrum-Radio-label {
+      margin-inline-start: auto;
+    }
+  }
+
+
   &--emphasized {
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
@@ -281,7 +300,6 @@ governing permissions and limitations under the License.
     + .spectrum-Radio-button {
       &:after {
         border-width: var(--spectrum-radio-focus-ring-thickness);
-
         border-color: var(--spectrum-radio-focus-ring-color);
       }
     }
