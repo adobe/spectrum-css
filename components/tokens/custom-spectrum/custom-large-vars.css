@@ -10,7 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* This file contains overrides and additions to core tokens */
+/*
+ * custom-large-vars.css
+ *
+ * This file contains custom token overrides and additions for mobile scale
+ * (large) components.
+ */
 
 .spectrum--large {
   /* edge-to-visual-only is used for icon-only buttons */
