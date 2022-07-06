@@ -117,14 +117,14 @@ governing permissions and limitations under the License.
 
   &:hover {
     .spectrum-Radio-button {
-      /* selection indicator */
+      /* selection indicator hover */
       &:before {
         border-color: var(--spectrum-radio-gray-hover);
       }
     }
 
-    /* selected selection indicator hover */
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
+      /* selected selection indicator hover */
       &:before {
         border-color: var(--spectrum-radio-selected-gray-hover);
       }
@@ -137,14 +137,14 @@ governing permissions and limitations under the License.
 
   &:active {
     .spectrum-Radio-button {
-      /* selection indicator */
+      /* selection indicator active */
       &:before {
         border-color: var(--spectrum-radio-gray-down);
       }
     }
 
-    /* selected selection indicator active */
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
+      /* selected selection indicator active */
       &:before {
         border-color: var(--spectrum-radio-selected-gray-down);
       }
@@ -157,13 +157,14 @@ governing permissions and limitations under the License.
 
   &:focus {
     .spectrum-Radio-button {
-      /* selection indicator */
+      /* selection indicator is focused state */
       &:before {
         border-color: var(--spectrum-radio-gray-focus);
       }
     }
 
     .spectrum-Radio-button {
+      /* focus ring is focused state */
       &:after {
         border-style: solid;
         border-color: var(--spectrum-radio-accent-color-focus);
@@ -173,8 +174,8 @@ governing permissions and limitations under the License.
       }
     }
 
-    /* selected selection indicator focus */
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
+      /* selected selection indicator is focused state */
       &:before {
         border-color: var(--spectrum-radio-selected-gray-focus);
       }
@@ -209,8 +210,8 @@ governing permissions and limitations under the License.
     }
   }
 
-
   &--emphasized {
+    /* selection indicator emphasized */
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
       &:before {
         border-color: var(--spectrum-radio-emphasized-accent-color-default);
@@ -218,6 +219,7 @@ governing permissions and limitations under the License.
     }
 
     &:hover {
+      /* selection indicator emphasized hover */
       .spectrum-Radio-input:checked + .spectrum-Radio-button {
         &:before {
           border-color: var(--spectrum-radio-emphasized-accent-color-hover);
@@ -226,6 +228,7 @@ governing permissions and limitations under the License.
     }
 
     &:active {
+      /* selection indicator emphasized active */
       .spectrum-Radio-input:checked + .spectrum-Radio-button {
         &:before {
           border-color: var(--spectrum-radio-emphasized-accent-color-down);
@@ -234,6 +237,7 @@ governing permissions and limitations under the License.
     }
 
     &:focus {
+      /* selection indicator emphasized focus */
       .spectrum-Radio-input:checked + .spectrum-Radio-button {
         &:before {
           border-color: var(--spectrum-radio-emphasized-accent-color-focus);
@@ -243,7 +247,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* disabled */
+/* selection indicator disabled */
 .spectrum-Radio .spectrum-Radio-input,
 .spectrum-Radio .spectrum-Radio-input:checked {
   &:disabled + .spectrum-Radio-button {
@@ -288,6 +292,7 @@ governing permissions and limitations under the License.
     cursor: default;
   }
 
+  /* selection indicator checked */
   &:checked + .spectrum-Radio-button {
     &:before {
       /* half of element width minus half of indicator width is checked border width */
@@ -296,6 +301,7 @@ governing permissions and limitations under the License.
     }
   }
 
+ /* focus ring is focused state */
   &:focus-ring {
     + .spectrum-Radio-button {
       &:after {
@@ -321,7 +327,6 @@ governing permissions and limitations under the License.
   transition: color var(--spectrum-radio-animation-duration) ease-in-out;
 }
 
-
 .spectrum-Radio-button {
   position: relative;
   box-sizing: border-box;
@@ -332,6 +337,7 @@ governing permissions and limitations under the License.
   flex-grow: 0;
   flex-shrink: 0;
 
+  /* selection indicator unchecked */
   &:before {
     display: block;
     z-index: 0;
@@ -352,7 +358,7 @@ governing permissions and limitations under the License.
       box-shadow var(--spectrum-radio-animation-duration) ease-in-out;
   }
 
-  /* focus ring */
+  /* focus ring is not focused state */
   &:after {
     border-radius: 50%;
 
