@@ -221,24 +221,24 @@ governing permissions and limitations under the License.
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
   .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-m-box-border-color-error);
+      border-color: var(--spectrum-checkbox-negative-color);
     }
   }
 
   .spectrum-Checkbox-label {
-    color: var(--spectrum-checkbox-m-text-color-error);
+    color: var(--spectrum-checkbox-negative-color);
   }
 
   &.is-indeterminate .spectrum-Checkbox-input:focus-ring,
   .spectrum-Checkbox-input:focus-ring {
     & + .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--spectrum-checkbox-m-box-border-color-error-hover);
+        border-color: var(--spectrum-checkbox-negative-color-hover);
       }
     }
 
     & ~ .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-m-text-color-error-hover);
+      color: var(--spectrum-checkbox-negative-color-hover);
     }
   }
 
@@ -246,12 +246,12 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--spectrum-checkbox-m-box-border-color-error-hover);
+        border-color: var(--spectrum-checkbox-negative-color-hover);
       }
     }
 
     .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-m-text-color-error-hover);
+      color: var(--spectrum-checkbox-negative-color-hover);
     }
   }
 
@@ -259,12 +259,12 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--spectrum-checkbox-m-box-border-color-error-down);
+        border-color: var(--spectrum-checkbox-negative-color-down);
       }
     }
 
     .spectrum-Checkbox-label {
-      color: var(--spectrum-checkbox-m-text-color-error-down);
+      color: var(--spectrum-checkbox-negative-color-down);
     }
   }
 }
