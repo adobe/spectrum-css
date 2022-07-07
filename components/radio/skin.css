@@ -8,14 +8,14 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
+/*
 .spectrum-Radio {
   /* todo: fix in DNA */
-  --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus: var(
+  /* --spectrum-radio-m-emphasized-circle-border-color-selected-key-focus: var(
     --spectrum-radio-m-emphasized-circle-border-color-selected-hover
   );
-}
-
+} */
+*/ /*
 .spectrum-Radio-input {
   &:checked + .spectrum-Radio-button {
     &:before {
@@ -164,7 +164,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Focus Overrides all */
+/* Focus Overrides all */ /*
 .spectrum-Radio {
   & .spectrum-Radio-input:focus-ring,
   &:hover .spectrum-Radio-input:focus-ring {
@@ -244,4 +244,4 @@ governing permissions and limitations under the License.
       }
     }
   }
-}
+} */

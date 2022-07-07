@@ -104,16 +104,16 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
 
           <form>
-            <div class="spectrum-Radio spectrum-Radio--sizeM">
+            <div class="spectrum-Radio">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-              <span class="spectrum-Radio-button spectrum-Radio-button--sizeM"></span>
-              <label class="spectrum-Radio-label spectrum-Radio-label--sizeM" for="radio-0">Kittens</label>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
-            <div class="spectrum-Radio spectrum-Radio--sizeM">
+            <div class="spectrum-Radio">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-              <span class="spectrum-Radio-button spectrum-Radio-button--sizeM"></span>
-              <label class="spectrum-Radio-label spectrum-Radio-label--sizeM" for="radio-1">Puppies</label>
+              <span class="spectrum-Radio-button"></span>
+              <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
             </div>
           </form>
 
@@ -123,13 +123,13 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Invalid</h4>
 
           <form>
-            <div class="spectrum-Radio spectrum-Radio--sizeM is-invalid">
+            <div class="spectrum-Radio is-invalid">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
-            <div class="spectrum-Radio spectrum-Radio--sizeM is-invalid">
+            <div class="spectrum-Radio is-invalid">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
@@ -142,13 +142,13 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
 
           <form>
-            <div class="spectrum-Radio spectrum-Radio--sizeM">
+            <div class="spectrum-Radio">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
-            <div class="spectrum-Radio spectrum-Radio--sizeM">
+            <div class="spectrum-Radio">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
@@ -161,13 +161,13 @@ examples:
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Read-only</h4>
 
           <form>
-            <div class="spectrum-Radio spectrum-Radio--sizeM is-readOnly">
+            <div class="spectrum-Radio is-readOnly">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" readonly="readonly">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
             </div>
             <br>
-            <div class="spectrum-Radio spectrum-Radio--sizeM is-readOnly">
+            <div class="spectrum-Radio is-readOnly">
               <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked readonly="readonly">
               <span class="spectrum-Radio-button"></span>
               <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
