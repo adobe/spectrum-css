@@ -16,16 +16,25 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
 
   --spectrum-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
-  /* --spectrum-checkbox-neutral-content-color-hover: var(--spectrum-neutral-content-color-hover); */
-  /* --spectrum-checkbox-neutral-content-color-down: var(--spectrum-neutral-content-color-down); */
-  /* --spectrum-checkbox-neutral-content-color-focus: var(--spectrum-neutral-content-color-key-focus); */
+  /* --spectrum-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover); */
+  /* --spectrum-checkbox-content-color-down: var(--spectrum-neutral-content-color-down); */
+  /* --spectrum-checkbox-content-color-focus: var(--spectrum-neutral-content-color-key-focus); */
+  --spectrum-checkbox-focus-ring-color: var(--spectrum-focus-ring-color);
+
+  /* --spectrum-checkbox-content-color-disabled: var(--diabled-content-color); */
+  /* --spectrum-checkbox-checkmark-color-disabled: var(--gray-75); */
+  /* --spectrum-checkbox-control-color-disabled: var(--gray-400); */
+  /* ? Declare a separate property for selected disabled ? */
 
   --spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
   --spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
   --spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1100);
   /* --spectrum-checkbox-invalid-color-focus: var(--spectrum-negative-color-1000); */
-  /* TODO: Update themes */
-  /* --spectrum-checkbox-border-color-default: var(--spectrum-gray-600); */
+
+  /* --spectrum-checkbox-emphasized-default: var(--accent-color-900); */
+  /* --spectrum-checkbox-emphasized-hover: var(--accent-color-1000); */
+  /* --spectrum-checkbox-emphasized-down: var(--accent-color-1100); */
+  /* --spectrum-checkbox-emphasized-focus: var(--accent-color-1000); */
 
   /* Checkbox */
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
@@ -94,7 +103,9 @@ governing permissions and limitations under the License.
   .spectrum-Checkbox-input {
     &:focus-ring + .spectrum-Checkbox-box {
       forced-color-adjust: none;
-      outline-color: var(--highcontrast-checkbox-focus-ring-color);
+      outline-color: var(--highcontrast-checkbox-focus-ring-color,
+                         var(--mod-checkbox-focus-ring-color,
+                             var(--spectrum-checkbox-focus-ring-color)));
       outline-style: auto;
       outline-offset: var(--highcontrast-checkbox-focus-ring-gap);
       outline-width: var(--highcontrast-focus-ring-size);
