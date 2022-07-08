@@ -101,22 +101,22 @@ governing permissions and limitations under the License.
     }
   }
   .spectrum-Checkbox {
-    --highcontrast-checkbox-border-color-default: Highlight;
-    --highcontrast-checkbox-border-color-invalid: ButtonText;
-    --highcontrast-checkbox-border-color-disabled: GrayText;
+    --highcontrast-checkbox-color-default: Highlight;
+    --highcontrast-checkbox-color-invalid: ButtonText;
+    --highcontrast-checkbox-color-disabled: GrayText;
 
     --highcontrast-checkbox-checkmark-color-default: ButtonFace;
 
     &.is-invalid {
       .spectrum-Checkbox-box {
         &:before {
-          border-color: var(--highcontrast-checkbox-border-color-invalid);
+          border-color: var(--highcontrast-checkbox-color-invalid);
         }
       }
       /* Used for disabled Checkboxes */
       &.is-indeterminate .spectrum-Checkbox-box {
           &:before {
-            border-color: var(--highcontrast-checkbox-border-color-disabled);
+            border-color: var(--highcontrast-checkbox-color-disabled);
           }
         }
       /* Extra-specific selectors added here to handle checked state */
@@ -147,13 +147,9 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     .spectrum-Checkbox-box {
       &:before {
-        border-color: var(
-          --highcontrast-checkbox-border-color-invalid,
-          var(
-            --mod-checkbox-invalid-color-default,
-            var(--spectrum-checkbox-invalid-color-default)
-          )
-        );
+        border-color: var(--highcontrast-checkbox-color-invalid,
+                          var(--mod-checkbox-invalid-color-default,
+                              var(--spectrum-checkbox-invalid-color-default)));
       }
     }
 
@@ -303,7 +299,7 @@ governing permissions and limitations under the License.
   /* :before is used to draw the box fill */
   &:before {
     forced-color-adjust: none;
-    border-color: var(--highcontrast-checkbox-border-color-default, var(--spectrum-checkbox-control-color-default));
+    border-color: var(--highcontrast-checkbox-color-default, var(--spectrum-checkbox-control-color-default));
     background-color: var(--spectrum-checkbox-checkmark-color-default);
 
     display: block;
