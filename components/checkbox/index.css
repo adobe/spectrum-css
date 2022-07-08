@@ -31,10 +31,10 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1100);
   /* --spectrum-checkbox-invalid-color-focus: var(--spectrum-negative-color-1000); */
 
-  /* --spectrum-checkbox-emphasized-default: var(--accent-color-900); */
-  /* --spectrum-checkbox-emphasized-hover: var(--accent-color-1000); */
-  /* --spectrum-checkbox-emphasized-down: var(--accent-color-1100); */
-  /* --spectrum-checkbox-emphasized-focus: var(--accent-color-1000); */
+  --spectrum-checkbox-emphasized-default: var(--spectrum-accent-color-900);
+  --spectrum-checkbox-emphasized-hover: var(--spectrum-accent-color-1000);
+  --spectrum-checkbox-emphasized-down: var(--spectrum-accent-color-1100);
+  /* --spectrum-checkbox-emphasized-focus: var(--spectrum-accent-color-1000); */
 
   /* Checkbox */
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
@@ -205,6 +205,34 @@ governing permissions and limitations under the License.
       .spectrum-Checkbox-label {
         color: var(--spectrum-checkbox-invalid-color-down);
       }
+    }
+  }
+}
+
+.spectrum-Checkbox--emphasized
+  .spectrum-Checkbox-input:checked
+  + .spectrum-Checkbox-box,
+.spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box,
+.spectrum-Checkbox--emphasized.is-indeterminate
+  .spectrum-Checkbox-input:focus-ring
+  + .spectrum-Checkbox-box {
+  &:before {
+    border-color: var(--spectrum-checkbox-emphasized-default);
+  }
+}
+.spectrum-Checkbox--emphasized:hover {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--spectrum-checkbox-emphasized-hover);
+    }
+  }
+}
+.spectrum-Checkbox--emphasized:active {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--spectrum-checkbox-emphasized-down);
     }
   }
 }

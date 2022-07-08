@@ -184,34 +184,34 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Checkbox--emphasized
-  .spectrum-Checkbox-input:checked
-  + .spectrum-Checkbox-box,
-.spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box,
-.spectrum-Checkbox--emphasized.is-indeterminate
-  .spectrum-Checkbox-input:focus-ring
-  + .spectrum-Checkbox-box {
-  &:before {
-    border-color: var(--spectrum-checkbox-m-emphasized-box-border-color-selected);
-  }
-}
-.spectrum-Checkbox--emphasized:hover {
-  &.is-indeterminate .spectrum-Checkbox-box,
-  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    &:before {
-      border-color: var(
-        --spectrum-checkbox-m-emphasized-box-border-color-selected-hover
-      );
-    }
-  }
-}
-.spectrum-Checkbox--emphasized:active {
-  &.is-indeterminate .spectrum-Checkbox-box,
-  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    &:before {
-      border-color: var(
-        --spectrum-checkbox-m-emphasized-box-border-color-selected-down
-      );
-    }
-  }
-}
+/* .spectrum-Checkbox--emphasized */
+/*   .spectrum-Checkbox-input:checked */
+/*   + .spectrum-Checkbox-box, */
+/* .spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box, */
+/* .spectrum-Checkbox--emphasized.is-indeterminate */
+/*   .spectrum-Checkbox-input:focus-ring */
+/*   + .spectrum-Checkbox-box { */
+/*   &:before { */
+/*     border-color: var(--spectrum-checkbox-m-emphasized-box-border-color-selected); */
+/*   } */
+/* } */
+/* .spectrum-Checkbox--emphasized:hover { */
+/*   &.is-indeterminate .spectrum-Checkbox-box, */
+/*   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box { */
+/*     &:before { */
+/*       border-color: var( */
+/*         --spectrum-checkbox-m-emphasized-box-border-color-selected-hover */
+/*       ); */
+/*     } */
+/*   } */
+/* } */
+/* .spectrum-Checkbox--emphasized:active { */
+/*   &.is-indeterminate .spectrum-Checkbox-box, */
+/*   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box { */
+/*     &:before { */
+/*       border-color: var( */
+/*         --spectrum-checkbox-m-emphasized-box-border-color-selected-down */
+/*       ); */
+/*     } */
+/*   } */
+/* } */
