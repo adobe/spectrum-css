@@ -31,10 +31,10 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1100);
   /* --spectrum-checkbox-invalid-color-focus: var(--spectrum-negative-color-1000); */
 
-  --spectrum-checkbox-emphasized-default: var(--spectrum-accent-color-900);
-  --spectrum-checkbox-emphasized-hover: var(--spectrum-accent-color-1000);
-  --spectrum-checkbox-emphasized-down: var(--spectrum-accent-color-1100);
-  /* --spectrum-checkbox-emphasized-focus: var(--spectrum-accent-color-1000); */
+  --spectrum-checkbox-emphasized-color-default: var(--spectrum-accent-color-900);
+  --spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-color-1000);
+  --spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-color-1100);
+  /* --spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-color-1000); */
 
   /* Checkbox */
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
@@ -112,9 +112,9 @@ governing permissions and limitations under the License.
     }
   }
   .spectrum-Checkbox {
-    --highcontrast-checkbox-color-default: Highlight;
-    --highcontrast-checkbox-color-invalid: ButtonText;
-    --highcontrast-checkbox-color-disabled: GrayText;
+    --highcontrast-checkbox-color-default: Highlight; /* aquamarine */
+    --highcontrast-checkbox-color-invalid: ButtonText; /* white */
+    --highcontrast-checkbox-color-disabled: GrayText; /* lime */
 
     --highcontrast-checkbox-checkmark-color-default: ButtonFace;
 
@@ -217,14 +217,14 @@ governing permissions and limitations under the License.
   .spectrum-Checkbox-input:focus-ring
   + .spectrum-Checkbox-box {
   &:before {
-    border-color: var(--spectrum-checkbox-emphasized-default);
+    border-color: var(--spectrum-checkbox-emphasized-color-default);
   }
 }
 .spectrum-Checkbox--emphasized:hover {
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-emphasized-hover);
+      border-color: var(--spectrum-checkbox-emphasized-color-hover);
     }
   }
 }
@@ -232,7 +232,7 @@ governing permissions and limitations under the License.
   &.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-emphasized-down);
+      border-color: var(--spectrum-checkbox-emphasized-color-down);
     }
   }
 }
@@ -272,6 +272,10 @@ governing permissions and limitations under the License.
 
   &:checked + .spectrum-Checkbox-box {
     &:before {
+      border-color: var(--highcontrast-checkbox-color-default,
+                      var(--mod-checkbox-control-color-default)
+                          var(--spectrum-checkbox-control-color-default));
+      background-color: var(--spectrum-checkbox-checkmark-color-default);
       border-width: calc(var(--spectrum-checkbox-control-size) / 2);
     }
 
@@ -294,6 +298,7 @@ governing permissions and limitations under the License.
   .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
+      border-color: var(--highcontrast-checkbox-color-default);
       border-width: calc(var(--spectrum-checkbox-control-size) / 2);
     }
 
@@ -323,6 +328,7 @@ governing permissions and limitations under the License.
   transition: color var(--spectrum-checkbox-animation-duration) ease-in-out;
 }
 
+/* Fix default checked/unchecked states for Checkbox-box */
 .spectrum-Checkbox-box {
   position: relative;
   box-sizing: border-box;
@@ -338,9 +344,7 @@ governing permissions and limitations under the License.
   /* :before is used to draw the box fill */
   &:before {
     forced-color-adjust: none;
-    border-color: var(--highcontrast-checkbox-color-default, var(--spectrum-checkbox-control-color-default));
-    background-color: var(--spectrum-checkbox-checkmark-color-default);
-
+    border-color: var(--highcontrast-checkbox-color-invalid);
     display: block;
     z-index: 0;
     content: '';
