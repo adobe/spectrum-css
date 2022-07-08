@@ -98,7 +98,7 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
 }
 
-/* Forced colors for Windows high Contrast mode */
+/* Windows high Contrast mode */
 @media (forced-colors: active) {
   .spectrum-Checkbox-input {
     &:focus-ring + .spectrum-Checkbox-box {
@@ -140,6 +140,31 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Standard Indeterminate */
+.spectrum-Checkbox.is-indeterminate {
+  .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--highcontrast-checkbox-color-default,
+                        var(--mod-checkbox-control-selected-color-default,
+                            var(--spectrum-checkbox-control-selected-color-default)));
+      border-width: calc(var(--spectrum-checkbox-control-size) / 2);
+    }
+
+    .spectrum-Checkbox-checkmark {
+      display: none;
+    }
+
+    .spectrum-Checkbox-partialCheckmark {
+      display: block;
+
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+/* Standard Default */
 .spectrum-Checkbox {
   color: var(--spectrum-checkbox-content-color-default);
 
@@ -209,6 +234,7 @@ governing permissions and limitations under the License.
   }
 }
 
+/* Emphasized */
 .spectrum-Checkbox--emphasized
   .spectrum-Checkbox-input:checked
   + .spectrum-Checkbox-box,
@@ -273,8 +299,8 @@ governing permissions and limitations under the License.
   &:checked + .spectrum-Checkbox-box {
     &:before {
       border-color: var(--highcontrast-checkbox-color-default,
-                      var(--mod-checkbox-control-color-default)
-                          var(--spectrum-checkbox-control-color-default));
+                        var(--mod-checkbox-control-selected-color-default,
+                            var(--spectrum-checkbox-control-selected-color-default)));
       background-color: var(--spectrum-checkbox-checkmark-color-default);
       border-width: calc(var(--spectrum-checkbox-control-size) / 2);
     }
@@ -290,27 +316,6 @@ governing permissions and limitations under the License.
       &:after {
         margin: calc(var(--spectrum-checkbox-focus-ring-gap) * -1);
       }
-    }
-  }
-}
-
-.spectrum-Checkbox.is-indeterminate {
-  .spectrum-Checkbox-box,
-  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    &:before {
-      border-color: var(--highcontrast-checkbox-color-default);
-      border-width: calc(var(--spectrum-checkbox-control-size) / 2);
-    }
-
-    .spectrum-Checkbox-checkmark {
-      display: none;
-    }
-
-    .spectrum-Checkbox-partialCheckmark {
-      display: block;
-
-      transform: scale(1);
-      opacity: 1;
     }
   }
 }
@@ -344,7 +349,9 @@ governing permissions and limitations under the License.
   /* :before is used to draw the box fill */
   &:before {
     forced-color-adjust: none;
-    border-color: var(--highcontrast-checkbox-color-invalid);
+    border-color: var(--highcontrast-checkbox-color-invalid,
+                      var(--mod-checkbox-control-color-default,
+                          --spectrum-checkbox-control-color-default));
     display: block;
     z-index: 0;
     content: '';
