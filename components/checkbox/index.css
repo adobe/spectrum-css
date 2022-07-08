@@ -147,7 +147,13 @@ governing permissions and limitations under the License.
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     .spectrum-Checkbox-box {
       &:before {
-        border-color: var(--highcontrast-checkbox-border-color-invalid, --spectrum-checkbox-invalid-color-default);
+        border-color: var(
+          --highcontrast-checkbox-border-color-invalid,
+          var(
+            --mod-checkbox-invalid-color-default,
+            var(--spectrum-checkbox-invalid-color-default)
+          )
+        );
       }
     }
 
