@@ -12,9 +12,7 @@ governing permissions and limitations under the License.
 
 /* Checkbox component tokens by t-shirt size */
 .spectrum-Checkbox {
-  --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
-  --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
-
+  /* Color */
   --spectrum-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
   /* --spectrum-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover); */
   /* --spectrum-checkbox-content-color-down: var(--spectrum-neutral-content-color-down); */
@@ -24,29 +22,36 @@ governing permissions and limitations under the License.
   /* --spectrum-checkbox-content-color-disabled: var(--diabled-content-color); */
   /* --spectrum-checkbox-checkmark-color-disabled: var(--gray-75); */
   /* --spectrum-checkbox-control-color-disabled: var(--gray-400); */
-  /* ? Declare a separate property for selected disabled ? */
 
   --spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
   --spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
   --spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1100);
   /* --spectrum-checkbox-invalid-color-focus: var(--spectrum-negative-color-1000); */
 
+  --spectrum-checkbox-control-selected-color-disabled: var(--spectrum-gray-400);
+  --spectrum-checkbox-checkmark-selected-color-default: var(--spectrum-gray-75);
+  --spectrum-checkbox-checkmark-selected-color-disabled: var(--spectrum-gray-75);
+
   --spectrum-checkbox-emphasized-color-default: var(--spectrum-accent-color-900);
   --spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-color-1000);
   --spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-color-1100);
   /* --spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-color-1000); */
 
-  /* Checkbox */
+  /* Font */
+  --spectrum-checkbox-font-size: var(--spectrum-font-size-100);
+  --spectrum-checkbox-line-height: var(--spectrum-line-height-100);
+
+  /* Size */
   --spectrum-checkbox-height: var(--spectrum-component-height-100);
   --spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
 
-  /* Checkmark */
   --spectrum-checkbox-checkmark-size: var(--spectrum-checkbox-checkmark-size-medium);
   --spectrum-checkbox-checkmark-color-default: var(--spectrum-gray-75);
 
   --spectrum-checkbox-border-width: var(--spectrum-border-width-200);
   --spectrum-checkbox-corner-radius: var(--spectrum-corner-radius-75);
 
+  /* Spacing */
   --spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
   --spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
   --spectrum-checkbox-focus-ring-gap: var(--spectrum-focus-ring-gap);
@@ -115,52 +120,10 @@ governing permissions and limitations under the License.
     --highcontrast-checkbox-color-default: Highlight; /* aquamarine */
     --highcontrast-checkbox-color-invalid: ButtonText; /* white */
     --highcontrast-checkbox-color-disabled: GrayText; /* lime */
+    --highcontrast-checkbox-color-background: Background; /* black */
 
+    --highcontrast-checkbox-focus-ring-color: ButtonText;
     --highcontrast-checkbox-checkmark-color-default: ButtonFace;
-
-    &.is-invalid {
-      .spectrum-Checkbox-box {
-        &:before {
-          border-color: var(--highcontrast-checkbox-color-invalid);
-        }
-      }
-      /* Used for disabled Checkboxes */
-      &.is-indeterminate .spectrum-Checkbox-box {
-          &:before {
-            border-color: var(--highcontrast-checkbox-color-disabled);
-          }
-        }
-      /* Extra-specific selectors added here to handle checked state */
-      /* .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box { */
-      /*   &:before { */
-      /*     border-color: var(--highcontrast-checkbox-border-color-default); */
-      /*   } */
-      /* } */
-    }
-  }
-}
-
-/* Standard Indeterminate */
-.spectrum-Checkbox.is-indeterminate {
-  .spectrum-Checkbox-box,
-  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    &:before {
-      border-color: var(--highcontrast-checkbox-color-default,
-                        var(--mod-checkbox-control-selected-color-default,
-                            var(--spectrum-checkbox-control-selected-color-default)));
-      border-width: calc(var(--spectrum-checkbox-control-size) / 2);
-    }
-
-    .spectrum-Checkbox-checkmark {
-      display: none;
-    }
-
-    .spectrum-Checkbox-partialCheckmark {
-      display: block;
-
-      transform: scale(1);
-      opacity: 1;
-    }
   }
 }
 
@@ -234,32 +197,125 @@ governing permissions and limitations under the License.
   }
 }
 
-/* Emphasized */
-.spectrum-Checkbox--emphasized
-  .spectrum-Checkbox-input:checked
-  + .spectrum-Checkbox-box,
-.spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box,
-.spectrum-Checkbox--emphasized.is-indeterminate
-  .spectrum-Checkbox-input:focus-ring
-  + .spectrum-Checkbox-box {
-  &:before {
-    border-color: var(--spectrum-checkbox-emphasized-color-default);
+/* Standard Disabled */
+.spectrum-Checkbox .spectrum-Checkbox-input,
+.spectrum-Checkbox .spectrum-Checkbox-input:checked {
+  &:disabled + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--highcontrast-checkbox-color-disabled,
+                        var(--mod-checkbox-control-selected-color-disabled,
+                            var(--spectrum-checkbox-control-selected-color-disabled)));
+      background-color: var(--highcontrast-checkbox-color-background,
+                            var(--mod-checkbox-checkmark-selected-color-disabled,
+                                var(--spectrum-checkbox-checkmark-selected-color-disabled)));
+    }
+  }
+
+  &:disabled ~ .spectrum-Checkbox-label {
+    forced-color-adjust: none;
+    color: var(--highcontrast-checkbox-color-disabled,
+                 var(--mod-checkbox-content-color-default,
+                     var(--spectrum-checkbox-content-color-default)));
   }
 }
-.spectrum-Checkbox--emphasized:hover {
-  &.is-indeterminate .spectrum-Checkbox-box,
+
+/* Standard Indeterminate */
+.spectrum-Checkbox.is-indeterminate {
+  .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-emphasized-color-hover);
+      border-color: var(--highcontrast-checkbox-color-default,
+                        var(--mod-checkbox-control-selected-color-default,
+                            var(--spectrum-checkbox-control-selected-color-default)));
+      border-width: calc(var(--spectrum-checkbox-control-size) / 2);
+    }
+
+    .spectrum-Checkbox-checkmark {
+      display: none;
+    }
+
+    .spectrum-Checkbox-partialCheckmark {
+      display: block;
+
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }
-.spectrum-Checkbox--emphasized:active {
-  &.is-indeterminate .spectrum-Checkbox-box,
+
+/* Standard Invalid */
+.spectrum-Checkbox.is-invalid.is-indeterminate {
+  .spectrum-Checkbox-box,
   .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     &:before {
-      border-color: var(--spectrum-checkbox-emphasized-color-down);
+      border-color: var(--highcontrast-checkbox-color-invalid,
+                        var(--mod-checkbox-invalid-color-default,
+                            var(--spectrum-checkbox-invalid-color-default)));
+      border-width: calc(var(--spectrum-checkbox-control-size) / 2);
     }
+  }
+}
+
+/* Standard Read-only */
+/*
+  readonly is not a valid attribute for input[type="checkbox"]
+  so we borrow the immutability of a disabled checkbox
+  while using the colors of a default checkbox
+*/
+.spectrum-Checkbox.is-readOnly {
+  border-color: var(--highcontrast-checkbox-color-invalid,
+                    var(--mod-checkbox-control-selected-color-default,
+                        var(--spectrum-checkbox-control-selected-color-default)));
+
+  &:hover {
+    .spectrum-Checkbox-box {
+      &:before {
+        border-color: var(--highcontrast-checkbox-selected-color-default,
+                          var(--mod-checkbox-control-selected-color-default,
+                              var(--spectrum-checkbox-control-selected-color-default)));
+      }
+    }
+    .spectrum-Checkbox-label {
+      color: var(--highcontrast-checkbox-color-invalid,
+                 var(--mod-checkbox-content-color-default,
+                     var(--spectrum-checkbox-content-color-default)));
+    }
+  }
+
+  &:active {
+    .spectrum-Checkbox-box {
+      &:before {
+        border-color: var(--highcontrast-checkbox-selected-color-default,
+                          var(--mod-checkbox-control-selected-color-default,
+                              var(--spectrum-checkbox-control-selected-color-default)));
+      }
+    }
+    .spectrum-Checkbox-label {
+      color: var(--highcontrast-checkbox-color-invalid,
+                 var(--mod-checkbox-content-color-default,
+                     var(--spectrum-checkbox-content-color-default)));
+    }
+  }
+}
+
+.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input,
+.spectrum-Checkbox.is-readOnly .spectrum-Checkbox-input:checked {
+  &:disabled + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--highcontrast-checkbox-color-invalid,
+                        var(--mod-checkbox-control-selected-color-default,
+                            var(--spectrum-checkbox-control-selected-color-default)));
+      background-color: var(--highcontrast-checkbox-color-background,
+                           var(--mod-checkbox-checkmark-selected-color-disabled,
+                                var(--spectrum-checkbox-checkmark-selected-color-default)));
+    }
+  }
+
+  &:disabled ~ .spectrum-Checkbox-label {
+    forced-color-adjust: none;
+    color: var(--highcontrast-checkbox-color-invalid,
+                 var(--mod-checkbox-content-color-default,
+                     var(--spectrum-checkbox-content-color-default)));
   }
 }
 
@@ -333,7 +389,6 @@ governing permissions and limitations under the License.
   transition: color var(--spectrum-checkbox-animation-duration) ease-in-out;
 }
 
-/* Fix default checked/unchecked states for Checkbox-box */
 .spectrum-Checkbox-box {
   position: relative;
   box-sizing: border-box;
@@ -415,3 +470,33 @@ governing permissions and limitations under the License.
   display: none;
 }
 
+/* Emphasized */
+.spectrum-Checkbox--emphasized
+  .spectrum-Checkbox-input:checked
+  + .spectrum-Checkbox-box,
+.spectrum-Checkbox--emphasized.is-indeterminate .spectrum-Checkbox-box,
+.spectrum-Checkbox--emphasized.is-indeterminate
+  .spectrum-Checkbox-input:focus-ring
+  + .spectrum-Checkbox-box {
+  &:before {
+    border-color: var(--highcontrast-checkbox-color-default,
+                      var(--mod-checkbox-emphasized-color-default,
+                          var(--spectrum-checkbox-emphasized-color-default)));
+  }
+}
+.spectrum-Checkbox--emphasized:hover {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--spectrum-checkbox-emphasized-color-hover);
+    }
+  }
+}
+.spectrum-Checkbox--emphasized:active {
+  &.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    &:before {
+      border-color: var(--spectrum-checkbox-emphasized-color-down);
+    }
+  }
+}
