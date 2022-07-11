@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-FieldGroup {
-  --spectrum-fieldgroup-margin: var(--spectrum-global-dimension-size-200);
-  --spectrum-fieldgroup-readonly-delineator: '\002c';
+  --spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
+  --spectrum-fieldgroup-readonly-delimiter: '\002c';
 }
 
 .spectrum-FieldGroup {
@@ -27,10 +27,11 @@ governing permissions and limitations under the License.
       display: none;
     }
 
+    /* ReadOnly checkbox fields delimited by commas */
     &:not(:last-child) {
       .spectrum-Checkbox-label {
         &:after {
-          content: var(--spectrum-fieldgroup-readonly-delineator)
+          content: var(--spectrum-fieldgroup-readonly-delimiter)
         }
       }
     }

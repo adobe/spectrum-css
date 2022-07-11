@@ -17,6 +17,32 @@ examples:
         </div>
       </div>
       <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
+          <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-disabled is-indeterminate is-readOnly">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" disabled>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Dash100" />
+              </svg>
+            </span>
+            <span class="spectrum-Checkbox-label">Checkbox</span>
+          </label>
+        <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-disabled is-indeterminate is-readOnly">
+          <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked disabled>
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
+            </svg>
+            <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Dash100" />
+            </svg>
+          </span>
+          <span class="spectrum-Checkbox-label">Checkbox</span>
+        </label>
+      </div>
+      <div class="spectrum-FieldGroup spectrum-FieldGroup--horizontal">
         <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
           <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
           <span class="spectrum-Checkbox-box">
@@ -73,7 +99,26 @@ examples:
           <span class="spectrum-Checkbox-label">Bits</span>
         </label>
       </div>
-    
+      <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+        <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
+          <input type="checkbox" class="spectrum-Checkbox-input">
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
+            </svg>
+          </span>
+          <span class="spectrum-Checkbox-label">Kibble</span>
+        </label>
+        <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
+          <input type="checkbox" class="spectrum-Checkbox-input" checked>
+          <span class="spectrum-Checkbox-box">
+            <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Checkmark100" />
+            </svg>
+          </span>
+          <span class="spectrum-Checkbox-label">Bits</span>
+        </label>
+      </div>
   - id: fieldgroup-readonly-checkboxes
     name: Read-only Checkboxes
     description: A group of read-only checkboxes that have been `checked`. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.
