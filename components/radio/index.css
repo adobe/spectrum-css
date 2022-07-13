@@ -276,8 +276,12 @@ governing permissions and limitations under the License.
       clip-path: inset(50%);
     }
 
-    .spectrum-Radio-label {
+    .spectrum-Radio-label,
+    /* ensure disabled readonly has normal text color */
+    & .spectrum-Radio-input:disabled ~ .spectrum-Radio-label,
+    & .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label, {
       margin-inline-start: auto;
+      color: inherit;
     }
   }
 
@@ -337,6 +341,7 @@ governing permissions and limitations under the License.
     }
   }
 
+ /* label disabled */
   &:disabled ~ .spectrum-Radio-label {
     color: var(--highcontrast-radio-disabled-content-color,
               var(--mod-radio-disabled-content-color,
