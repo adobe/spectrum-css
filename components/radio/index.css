@@ -43,6 +43,8 @@ governing permissions and limitations under the License.
   /* text styles all themes */
   --spectrum-radio-font-size: var(--spectrum-font-size-100);
   --spectrum-radio-line-height: var(--spectrum-line-height-100);
+  /* TODO: CJK language support */
+  /* --spectrum-radio-cjk-line-height: var(--spectrum-CJK-line-height-100); */
 
   /* animation all themes */
   --spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
@@ -147,6 +149,7 @@ governing permissions and limitations under the License.
     /* high contrast focus ring */
      --highcontrast-radio-focus-ring-color: ButtonText;
 
+     /* high contrast selector */
     --highcontrast-radio-button-border-color-default: ButtonText;
     --highcontrast-radio-button-border-color-hover: ButtonText;
     --highcontrast-radio-button-border-color-down: ButtonText;
@@ -175,7 +178,7 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
-      /* selected selection indicator hover */
+      /* checked selection indicator hover */
       &:before {
         border-color: var(--highcontrast-radio-button-checked-border-color-hover,
                           var(--mod-radio-button-checked-border-color-hover,
@@ -201,7 +204,7 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Radio-input:checked + .spectrum-Radio-button {
-      /* selected selection indicator active */
+      /* checked selection indicator active */
       &:before {
         border-color: var(--highcontrast-radio-button-checked-border-color-down,
                         var(--mod-radio-button-checked-border-color-down,
@@ -413,6 +416,7 @@ governing permissions and limitations under the License.
 
   font-size: var(--mod-radio-font-size,
                 var(--spectrum-radio-font-size));
+  /* TODO: font weight and style tokens */
   /* font-weight: var(--spectrum-radio-text-font-weight); **** missing token resolves to 400 ****/
   /* font-style: var(--spectrum-radio-text-font-style); **** missing token resolves to normal ****/
   color: var(--highcontrast-radio-neutral-content-color,
@@ -420,6 +424,8 @@ governing permissions and limitations under the License.
                 var(--spectrum-radio-neutral-content-color)));
   line-height: var(--mod-radio-line-height,
                   var(--spectrum-radio-line-height));
+  /* TODO: CJK language support */
+  /* line-height: var(--spectrum-radio-cjk-line-height); */
 
   transition: color var(--mod-radio-animation-duration,
                         var(--spectrum-radio-animation-duration)) ease-in-out;
@@ -454,11 +460,9 @@ governing permissions and limitations under the License.
     border-radius: 50%;
     border-width: var(--mod-radio-border-width,
                       var(--spectrum-radio-border-width));
-    /* border-color: var(--highcontrast-radio-gray-default,
-                      var(--mod-radio-gray-default,
-                          var(--spectrum-radio-gray-default))); */
-
-    border-color: var(--highcontrast-radio-button-border-color-default, var(--mod-radio-button-border-color-default, var(--spectrum-radio-button-border-color-default)));
+    border-color: var(--highcontrast-radio-button-border-color-default,
+                      var(--mod-radio-button-border-color-default,
+                          var(--spectrum-radio-button-border-color-default)));
     border-style: solid;
 
     transition: border var(--mod-radio-animation-duration,
