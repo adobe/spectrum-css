@@ -13,10 +13,10 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-      - name: Use Node Active LTS version
+      - name: Use Node LTS version
         uses: actions/setup-node@v3
         with:
-          node-version: lts/gallium
+          node-version: 16.15.0
       - name: Install dependencies
         run: yarn install
       - name: Build everything
@@ -24,10 +24,10 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
         with:
-          publish-dir: './dist'
+          publish-dir: 'dist'
           production-branch: 'main'
           production-deploy: false
-          netlify-config-path: './netlify.toml'
+          netlify-config-path: ./netlify.toml
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ github.event.pull_request.title }}
           enable-pull-request-comment: true
@@ -37,4 +37,4 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
+        timeout-minutes: 10
