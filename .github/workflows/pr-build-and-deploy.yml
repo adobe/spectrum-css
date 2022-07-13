@@ -24,9 +24,10 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.3
         with:
-          publish-dir: 'dist'
+          publish-dir: './dist'
           production-branch: 'main'
           production-deploy: false
+          netlify-config-path: './netlify.toml'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ github.event.pull_request.title }}
           enable-pull-request-comment: true
