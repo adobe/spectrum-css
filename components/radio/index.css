@@ -122,23 +122,23 @@ governing permissions and limitations under the License.
     --highcontrast-radio-neutral-content-color-down: ButtonText;
     --highcontrast-radio-neutral-content-color-focus: ButtonText;
 
-    /* high contrast selector */
-    /* --highcontrast-radio-gray-default: ButtonText;
-    --highcontrast-radio-gray-down: ButtonText;
-    --highcontrast-radio-gray-focus: Highlight;
-    --highcontrast-radio-gray-hover: Highlight; */
+     /* high contrast selector */
+    --highcontrast-radio-button-border-color-default: ButtonText;
+    --highcontrast-radio-button-border-color-hover: Highlight;
+    --highcontrast-radio-button-border-color-down: ButtonText;
+    --highcontrast-radio-button-border-color-focus: Highlight;
 
     /* high contrast emphasized selector */
     --highcontrast-radio-emphasized-accent-color: ButtonText;
-    --highcontrast-radio-emphasized-accent-color-hover: ButtonText;
-    --highcontrast-radio-emphasized-accent-color-down: Highlight;
+    --highcontrast-radio-emphasized-accent-color-hover: Highlight;
+    --highcontrast-radio-emphasized-accent-color-down: ButtonText;
     --highcontrast-radio-emphasized-accent-color-focus: Highlight;
 
-    /* high contrast selected selector */
-    /* --highcontrast-radio-selected-gray-default: Highlight; */
-    /* --highcontrast-radio-selected-gray-hover: Highlight; */
-    /* --highcontrast-radio-selected-gray-down: Highlight; */
-    /* --highcontrast-radio-selected-gray-focus: Highlight; */
+    /* high contrast checked selector */
+    --highcontrast-radio-button-checked-border-color-default: Highlight;
+    --highcontrast-radio-button-checked-border-color-hover: Highlight;
+    --highcontrast-radio-button-checked-border-color-down: Highlight;
+    --highcontrast-radio-button-checked-border-color-focus: Highlight;
 
     /* high contrast disabled text */
     --highcontrast-radio-disabled-content-color: GrayText;
@@ -147,13 +147,7 @@ governing permissions and limitations under the License.
     --highcontrast-radio-disabled-border-color: GrayText;
 
     /* high contrast focus ring */
-     --highcontrast-radio-focus-ring-color: ButtonText;
-
-     /* high contrast selector */
-    --highcontrast-radio-button-border-color-default: ButtonText;
-    --highcontrast-radio-button-border-color-hover: ButtonText;
-    --highcontrast-radio-button-border-color-down: ButtonText;
-    --highcontrast-radio-button-border-color-focus: ButtonText;
+     --highcontrast-radio-focus-ring-color: CanvasText;
   }
 }
 
