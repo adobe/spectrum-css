@@ -1,17 +1,22 @@
 name: Radio
 status: Verified
 SpectrumSiteSlug: https://spectrum.adobe.com/page/radio-button/
-description:
-  Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
+description: |
+  - Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
+  - Invalid radio buttons are signified only by alert [HelpText](helptext.html) included in [FieldGroup](fieldgroup.html).
+  - Radio buttons should not be used on their own, they should always be used within a [FieldGroup](fieldgroup.html).
 
-  Radio buttons should not be used on their own, they should always be used within a [FieldGroup](fieldgroup.html).
 sections:
   - name: Migration Guide
     description: |
-        ### Quiet and emphasized
-        Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
-        If you were using the `quiet` variant, the `.spectrum-Radio--quiet` class is no longer required and can be removed.
-        If you need a switch to look like it did before this change, add `.spectrum-Radio--emphasized`.
+      ### T-shirt sizing
+      Radio Button now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-RadioButton--size*` class. Default styling is medium.
+
+      ### Read-only
+      Radio Button now includes a read-only state in addition to the disabled state.
+      - Read-only radio buttons are disabled, but not all disabled radio buttons are read-only.
+      - Read-only radio buttons do not have a focus ring, but the button should be focusable.
+
 examples:
   - id: radio
     name: Sizing
