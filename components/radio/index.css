@@ -10,6 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* radio/index.css
+ *
+ * ::before is to style the input circle
+ * ::after is to style the Focus ring
+ *
+ */
+
 .spectrum-Radio {
   /* label text colors for all themes */
   --spectrum-radio-content-color-default: var(--spectrum-neutral-content-color-default);
@@ -36,6 +43,7 @@ governing permissions and limitations under the License.
 
   /* selection indicator all themes */
   --spectrum-radio-border-width: var(--spectrum-border-width-200);
+  --spectrum-radio-button-background-color: var(--spectrum-gray-75);
 
   /* spacing all themes */
   --spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
@@ -129,6 +137,7 @@ governing permissions and limitations under the License.
     --highcontrast-radio-button-border-color-hover: Highlight;
     --highcontrast-radio-button-border-color-down: ButtonText;
     --highcontrast-radio-button-border-color-focus: Highlight;
+    --highcontrast-radio-button-background-color: ButtonFace;
 
     /* high contrast emphasized selector */
     --highcontrast-radio-button-border-color-emphasized-default: ButtonText;
@@ -457,6 +466,10 @@ governing permissions and limitations under the License.
               var(--spectrum-radio-button-control-size));
     height: var(--mod-radio-button-control-size,
                 var(--spectrum-radio-button-control-size));
+
+    background-color: var(--highcontrast-radio-button-background-color,
+                          var(--mod-radio-button-background-color,
+                              var(--spectrum-radio-button-background-color)));
 
     border-radius: 50%;
     border-width: var(--mod-radio-border-width,
